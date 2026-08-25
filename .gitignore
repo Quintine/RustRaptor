@@ -1,8 +1,16 @@
-build/
-build-*/
-.cache/
-compile_commands.json
+# Original game data (copyrighted — user-supplied, never committed)
+original/
+game/
+*.GLB
+*.zip
+
+# Vendored raptor build output
+raptor/build/
+
+# Legacy prototype build output
+bin/
 *.o
-*.obj
-*.exe
-.DS_Store
+*.d
+
+# Local toolchain
+.local/
