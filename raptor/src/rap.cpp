@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
+#include <limits.h>
 #include "SDL.h"
 #include "common.h"
 #include "glbapi.h"
@@ -30,7 +31,6 @@
 #include "flame.h"
 #include "input.h"
 #include "joyapi.h"
-#include "i_lastscr.h"
 #include "fileids.h"
 #include "entypes.h"
 
@@ -109,8 +109,10 @@ int player_cx = PLAYERINITX;
 int player_cy = PLAYERINITY;
 int playerbasepic = 3;
 int startfadeflag;
-int g_oldsuper = -1;
-int g_oldshield = -1;
+// Shield level latched by RAP_ThinkStats at the end of each simulation step;
+// used there to detect fresh damage. This is NOT a display dirty flag --
+// RAP_DisplayStats redraws the shield bars unconditionally every frame.
+static int g_oldshield = -1;
 int startendwave = -1;
 int gl_cnt;
 int g_flash = 0;
@@ -118,6 +120,16 @@ char gpal[768];
 int end_wave;
 int playerpic = 4;
 int g_mapleft;
+
+// Interpolated player center, recomputed once per rendered frame and
+// consumed by draw code that cannot reach the Do_Game() locals.
+
+int g_ipcx, g_ipcy;
+static int pp_x, pp_y, pp_cx, pp_cy;
+
+// Simulation tick: 3/70 s written in units of 1/70000 s.
+
+#define RAP_SIM_STEP 3000
 
 int fadecnt;
 
@@ -209,8 +221,6 @@ ShutDown(
     int errcode
 )
 {
-    char* mem;
-
     if (!errcode && !godmode)
         WIN_Order();
 
@@ -220,13 +230,7 @@ ShutDown(
     //PTR_End();
     //KBD_End();
     
-    if (reg_flag)
-        mem = GLB_GetItem(FILE002_LASTSCR2_TXT);     //Get ANSI Screen Fullversion from GLB to char*
-    else
-        mem = GLB_GetItem(FILE001_LASTSCR1_TXT);     //Get ANSI Screen Shareware from GLB to char*
-
     closewindow();                                   //Close Main Window
-    I_LASTSCR(mem);                                  //Call to display ANSI Screen 
     GLB_FreeAll();
     IPT_CloJoy();                                    //Close Joystick
     SWD_End();
@@ -497,38 +501,28 @@ RAP_DisplayShieldLevel(
 }
 
 /***************************************************************************
-RAP_DisplayStats() - 
+RAP_ThinkStats () - Simulation-side half of the status logic: death
+                     sequence, wave-exit control and low-shield warnings.
+                     Split from RAP_DisplayStats so state changes stay
+                     locked to simulation steps while drawing runs at the
+                     presentation rate.
  ***************************************************************************/
+static int stats_damage = -1;
+static int stats_blinkflag = 1;
+
 void 
-RAP_DisplayStats(
+RAP_ThinkStats(
     void
 )
 {
-    char temp[24];
     int super, shield, loop, x, y;
-    char* pic;
-    GFX_PIC *h;
-    static int damage = -1;
-    static int blinkflag = 1;
 
-    // == DISPLAY SUPER SHIELD ========================
     super = OBJS_GetAmt(S_SUPER_SHIELD);
-    if (g_oldsuper != super)
-    {
-        RAP_DisplayShieldLevel(MAP_LEFT - 8, super);
-        g_oldsuper = super;
-    }
-    
-    // == DISPLAY NORM SHIELD ========================
     shield = OBJS_GetAmt(S_ENERGY);
-    if (g_oldshield != shield)
-    {
-        RAP_DisplayShieldLevel(MAP_RIGHT + 4, shield);
-    }
 
     if (shield <= 0 && !godmode)
     {
-        // BLOW UP SHIP IF ! IN GOD MODE ===================
+        // == BLOW UP SHIP IF ! IN GOD MODE ===================
         
         ANIMS_StartAnim(A_MED_AIR_EXPLO, playerx + (wrand()%32), playery + (wrand()%32));
         ANIMS_StartAnim(A_SMALL_AIR_EXPLO, playerx + (wrand()%32), playery + (wrand()%32));
@@ -565,7 +559,7 @@ RAP_DisplayStats(
         }
     }
 
-    // IF END OF WAVE FLY SHIP OFF SCREEN ===================
+    // == IF END OF WAVE FLY SHIP OFF SCREEN ===================
 
     if (startendwave != -1 && shield > 0)
     {
@@ -592,17 +586,17 @@ RAP_DisplayStats(
     {
         if (!(gl_cnt % 8))
         {
-            blinkflag ^= 1;
+            stats_blinkflag ^= 1;
             
-            if (blinkflag)
+            if (stats_blinkflag)
             {
-                if (damage)
+                if (stats_damage)
                 {
-                    damage--;
+                    stats_damage--;
                     
                     if ((haptic) && (control == 2))
                     {
-                        IPT_CalJoyRumbleHigh();                                                                   
+                        IPT_CalJoyRumbleHigh();
                     }
                 }
             }
@@ -613,30 +607,57 @@ RAP_DisplayStats(
             if (OBJS_LoseObj())
             {
                 SND_Patch(FX_CRASH, 127);
-                damage = 2;
+                stats_damage = 2;
             }
         }
         
-        if (blinkflag)
-        {
-            if (damage)
-            {
-                pic = GLB_GetItem(FILE111_WEPDEST_PIC);
-                h = (GFX_PIC*)pic;
-                GFX_PutSprite(pic, (320 - LE_LONG(h->width)) >> 1, MAP_BOTTOM - 9);
-            }
-            
-            if (startendwave == -1)
-                SND_Patch(FX_WARNING, 127);
-            
-            pic = GLB_GetItem(FILE110_SHLDLOW_PIC);
-            h = (GFX_PIC*)pic;
-            GFX_PutSprite(pic, (320 - LE_LONG(h->width)) >> 1, MAP_BOTTOM);
-        }
+        if (stats_blinkflag && startendwave == -1)
+            SND_Patch(FX_WARNING, 127);
     }
     
     g_oldshield = shield;
-    
+}
+
+/***************************************************************************
+RAP_DisplayStats() - 
+ ***************************************************************************/
+void 
+RAP_DisplayStats(
+    void
+)
+{
+    char temp[24];
+    int shield, loop, x, y;
+    char* pic;
+    GFX_PIC *h;
+
+    // == DISPLAY SUPER SHIELD ========================
+    // Both bars are redrawn on every rendered frame. They were once cached
+    // behind g_oldsuper/g_oldshield change checks, but RAP_ThinkStats now
+    // re-latches g_oldshield once per simulation step -- before this draw
+    // code ever runs -- so the checks could never fire again and the bars
+    // froze. Drawing is idempotent and cheap; the bars write straight into
+    // displayscreen outside the blitted map area, so this also restores
+    // them after menus or fades clear the sides.
+    RAP_DisplayShieldLevel(MAP_LEFT - 8, OBJS_GetAmt(S_SUPER_SHIELD));
+
+    // == DISPLAY NORM SHIELD ========================
+    shield = OBJS_GetAmt(S_ENERGY);
+    RAP_DisplayShieldLevel(MAP_RIGHT + 4, shield);
+
+    if (shield <= SHIELD_LOW && !godmode && stats_blinkflag)
+    {
+        if (stats_damage)
+        {
+            pic = GLB_GetItem(FILE111_WEPDEST_PIC);
+            h = (GFX_PIC*)pic;
+            GFX_PutSprite(pic, (320 - LE_LONG(h->width)) >> 1, MAP_BOTTOM - 9);
+        }
+        
+        pic = GLB_GetItem(FILE110_SHLDLOW_PIC);
+        h = (GFX_PIC*)pic;
+        GFX_PutSprite(pic, (320 - LE_LONG(h->width)) >> 1, MAP_BOTTOM);
+    }
     OBJS_DisplayStats();
     
     sprintf(temp, "%08u", plr.score);
@@ -809,7 +830,7 @@ Do_Game(
     void
 )
 {
-    int b2_flag, b3_flag, init_flag, rval, start_score, local_cnt;
+    int b2_flag, b3_flag, init_flag, rval, start_score;
     b2_flag = 0;
     b3_flag = 0;
     init_flag = 1;
@@ -852,11 +873,9 @@ Do_Game(
     memset(displaybuffer, 0, 64000);
     memset(displayscreen, 0, 64000);
     
-    local_cnt = GFX_GetFrameCount();
+    Uint32 sim_next = SDL_GetTicks() * 70;      // due time of next sim step
     
     g_flash = 0;
-    g_oldsuper = -1;
-    g_oldshield = -1;
     startendwave = -1;
     
     if (demo_flag == DEMO_RECORD)
@@ -871,6 +890,11 @@ Do_Game(
     do
     {
         num_shadows = num_gshadows = 0;
+
+        pp_x = playerx;
+        pp_y = playery;
+        pp_cx = player_cx;
+        pp_cy = player_cy;
         
         #ifdef __ANDROID__
         if (!I_GetNeedResize(true))
@@ -886,8 +910,6 @@ Do_Game(
             HELP_Win("OVERVW06_TXT");
             memset(displayscreen, 0, 64000);
             IPT_Start();
-            g_oldsuper = -1;
-            g_oldshield = -1;
             RAP_ClearSides();
             RAP_DisplayStats();
             SWD_SetClearFlag(1);
@@ -908,8 +930,6 @@ Do_Game(
             SWD_SetClearFlag(0);
             RAP_ClearSides();
             WIN_Pause();
-            g_oldsuper = -1;
-            g_oldshield = -1;
             RAP_ClearSides();
             RAP_DisplayStats();
             SWD_SetClearFlag(1);
@@ -1046,6 +1066,8 @@ Do_Game(
         
         gl_cnt++;
         
+        TILE_Scroll();
+        
         TILE_Think();
         ENEMY_Think();
         ESHOT_Think();
@@ -1057,27 +1079,10 @@ Do_Game(
         if (draw_player)
             SHADOW_Add(curship[playerpic + g_flash], playerx, playery);
         
-        TILE_Display();
-        SHADOW_DisplayGround();
-        ENEMY_DisplayGround();
-        SHADOW_DisplaySky();
-        ANIMS_DisplayGround();
+        SHADOW_Snapshot();
         
-        ENEMY_DisplaySky();
-        SHOTS_Display();
-        BONUS_Display();
-        ANIMS_DisplaySky();
-        
-        if (draw_player)
-        {
-            FLAME_Down(player_cx - o_engine[playerpic] - 3, player_cy + 15, 4, gl_cnt % 2);
-            FLAME_Down(player_cx + o_engine[playerpic] - 2, player_cy + 15, 4, gl_cnt % 2);
-            GFX_PutSprite((char*)GLB_GetItem(curship[playerpic + g_flash]), playerx, playery);
-            g_flash = 0;
-        }
-        
-        ANIMS_DisplayHigh();
-        ESHOT_Display();
+        // == FADE / PALETTE SIMULATION =====================================
+        // (advanced once per simulation step; was interleaved with drawing)
         
         if (fadeflag)
         {
@@ -1087,8 +1092,6 @@ Do_Game(
                 g_mapleft = MAP_LEFT;
                 GFX_SetPalette(gpal, 0);
                 fadeflag = 0;
-                g_oldsuper = -1;
-                g_oldshield = -1;
             }
             else
             {
@@ -1106,18 +1109,7 @@ Do_Game(
                 RAP_PaletteStuff();
         }
         
-        RAP_DisplayStats();
-        
-        while (GFX_GetFrameCount() - local_cnt < 3)
-        {
-        }
-        
-        local_cnt = GFX_GetFrameCount();
-        
-        if (fadeflag)
-            TILE_ShakeScreen();
-        else
-            TILE_DisplayScreen();
+        RAP_ThinkStats();
         
         if (startfadeflag)
         {
@@ -1147,6 +1139,85 @@ Do_Game(
             GFX_FadeIn(gpal, 64);
         }
         
+        // == PRESENTATION ==================================================
+        // Redraw interpolated frames until the next simulation step is due.
+        // When running behind (a blocking menu ate wall time), skip renders
+        // and let the simulation catch up -- the old tick-wait loop did the
+        // same because the frame counter kept counting during menus.
+        
+        if (SDL_GetTicks() * 70 - sim_next >= RAP_SIM_STEP)
+        {
+            sim_next += RAP_SIM_STEP;
+        }
+        else
+        {
+            for (;;)
+            {
+                Uint32 now = SDL_GetTicks() * 70;
+                Uint32 pend;
+                
+                if (now - sim_next >= RAP_SIM_STEP)
+                    break;
+                
+                pend = sim_next - now;      // time until the next sim step
+                
+                GFX_SetInterp(RAP_SIM_STEP - pend, RAP_SIM_STEP);
+                I_GetEvent();
+                
+                g_ipcx = GFX_InterpCoord(player_cx, pp_cx);
+                g_ipcy = GFX_InterpCoord(player_cy, pp_cy);
+                
+                TILE_Display();
+                SHADOW_DisplayGround();
+                ENEMY_DisplayGround();
+                SHADOW_DisplaySky();
+                ANIMS_DisplayGround();
+                
+                ENEMY_DisplaySky();
+                SHOTS_Display();
+                BONUS_Display();
+                ANIMS_DisplaySky();
+                
+                if (draw_player)
+                {
+                    int ipx = GFX_InterpCoord(playerx, pp_x);
+                    int ipy = GFX_InterpCoord(playery, pp_y);
+                    
+                    FLAME_Down(g_ipcx - o_engine[playerpic] - 3, g_ipcy + 15, 4, gl_cnt % 2);
+                    FLAME_Down(g_ipcx + o_engine[playerpic] - 2, g_ipcy + 15, 4, gl_cnt % 2);
+                    GFX_PutSprite((char*)GLB_GetItem(curship[playerpic + g_flash]), ipx, ipy);
+                }
+                
+                // Above-player layer (most air explosions register as
+                // HIGH_AIR); upstream draws it between the player and
+                // enemy shots -- dropping it made dying ships despawn
+                // without their explosion anims.
+                ANIMS_DisplayHigh();
+                ESHOT_Display();
+                
+                RAP_DisplayStats();
+                
+                if (fadeflag)
+                    TILE_ShakeScreen();
+                else
+                    TILE_DisplayScreen();
+                
+                if (!I_VsyncActive())
+                {
+                    now = SDL_GetTicks() * 70;
+                    if (sim_next - now > 280)
+                        SDL_Delay(1);
+                }
+            }
+            
+            sim_next += RAP_SIM_STEP;
+        }
+
+        // Muzzle-flash ship pic lasts exactly one simulation step, matching
+        // the original tick loop. Clearing it per rendered frame (inside the
+        // interpolation loop) made the flash vanish at display refresh rates.
+        g_flash = 0;
+        
         if (KBD_Key(SC_X) && KBD_Key(SC_ALT))
         {
             RAP_ClearSides();
@@ -1154,8 +1225,6 @@ Do_Game(
             IPT_End();
             WIN_AskExit();
             IPT_Start();
-            g_oldsuper = -1;
-            g_oldshield = -1;
             RAP_ClearSides();
             RAP_DisplayStats();
             SWD_SetClearFlag(1);
@@ -1196,8 +1265,6 @@ Do_Game(
                 #endif //__ANDROID__
 
                 IPT_Start();
-                g_oldsuper = -1;
-                g_oldshield = -1;
                 RAP_ClearSides();
                 RAP_DisplayStats();
                 SWD_SetClearFlag(1);
@@ -1320,27 +1387,13 @@ main(
         printf("GOD mode enabled\n");
     
     cur_diff = 0;
-
-    if (!access("FILE0001.GLB", 0) ||
-        !access("file0001.glb", 0) ||
-        RAP_CheckFileInPath("FILE0001.GLB") ||
-        RAP_CheckFileInPath("file0001.glb"))
+    if (GLB_SlotItems(1) > 0)
         gameflag[0] = 1;
 
-    if (!access("FILE0002.GLB", 0) ||
-        !access("file0002.glb", 0) ||
-        RAP_CheckFileInPath("FILE0002.GLB") ||
-        RAP_CheckFileInPath("file0002.glb"))
+    if (GLB_SlotItems(2) > 0)
         gameflag[1] = 1;
 
-    if ((!access("FILE0003.GLB", 0) && !access("FILE0004.GLB", 0)) || 
-        (!access("file0003.glb", 0) && !access("file0004.glb", 0)) ||
-        (!access("FILE0003.GLB", 0) && !access("file0004.glb", 0)) ||
-        (!access("file0003.glb", 0) && !access("FILE0004.GLB", 0)) ||
-        (RAP_CheckFileInPath("FILE0003.GLB") && RAP_CheckFileInPath("FILE0004.GLB")) ||
-        (RAP_CheckFileInPath("file0003.glb") && RAP_CheckFileInPath("file0004.glb")) ||
-        (RAP_CheckFileInPath("FILE0003.GLB") && RAP_CheckFileInPath("file0004.glb")) ||
-        (RAP_CheckFileInPath("file0003.glb") && RAP_CheckFileInPath("FILE0004.GLB")))
+    if (GLB_SlotItems(3) > 0 && GLB_SlotItems(4) > 0)
     {
         gameflag[2] = 1;
         gameflag[3] = 1;
@@ -1356,10 +1409,7 @@ main(
         if (gameflag[loop])
             numfiles++;
     }
-
-    if ((access("FILE0000.GLB", 0) && !RAP_CheckFileInPath("FILE0000.GLB")) &&
-        (access("file0000.glb", 0) && !RAP_CheckFileInPath("file0000.glb")) ||
-        !numfiles)
+    if (GLB_SlotItems(0) == 0 || !numfiles)
     {
         printf("All game data files NOT FOUND cannot proceed !!\n");
         SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR,

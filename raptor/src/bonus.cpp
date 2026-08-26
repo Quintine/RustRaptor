@@ -162,6 +162,15 @@ BONUS_Add(
     cur->x = MAP_LEFT + x;
     cur->y = y;
     cur->pos = wrand() % 16;
+    
+    cur->bx = cur->x - (BONUS_WIDTH / 2) + xpos[cur->pos];
+    cur->by = cur->y - (BONUS_HEIGHT / 2) + ypos[cur->pos];
+    cur->gx = cur->x - (glow_lx>>1) + xpos[cur->pos];
+    cur->gy = cur->y - (glow_ly>>1) + ypos[cur->pos];
+    cur->pbx = cur->bx;
+    cur->pby = cur->by;
+    cur->pgx = cur->gx;
+    cur->pgy = cur->gy;
 }
 
 /***************************************************************************
@@ -183,6 +192,11 @@ BONUS_Think(
     
     for (cur = first_bonus.next; &last_bonus != cur; cur = cur->next)
     {
+        cur->pbx = cur->bx;
+        cur->pby = cur->by;
+        cur->pgx = cur->gx;
+        cur->pgy = cur->gy;
+        
         cur->item = cur->lib->item + cur->curframe;
         
         cur->bx = cur->x - (BONUS_WIDTH / 2) + xpos[cur->pos];
@@ -264,16 +278,22 @@ BONUS_Display(
 )
 {
     BONUS *cur;
+    int ibx, iby, igx, igy;
     
     for (cur = first_bonus.next; &last_bonus != cur; cur = cur->next)
     {
+        ibx = GFX_InterpCoord(cur->bx, cur->pbx);
+        iby = GFX_InterpCoord(cur->by, cur->pby);
+        igx = GFX_InterpCoord(cur->gx, cur->pgx);
+        igy = GFX_InterpCoord(cur->gy, cur->pgy);
+        
         if (!cur->dflag)
         {
-            GFX_PutSprite((char*)GLB_GetItem(cur->item), cur->bx, cur->by);
-            GFX_ShadeShape(LIGHT, (char*)GLB_GetItem(glow[cur->curglow]), cur->gx, cur->gy);
+            GFX_PutSprite((char*)GLB_GetItem(cur->item), ibx, iby);
+            GFX_ShadeShape(LIGHT, (char*)GLB_GetItem(glow[cur->curglow]), igx, igy);
         }
         else
-            GFX_PutSprite((char*)GLB_GetItem(FILE10f_N$_PIC), cur->bx, cur->by);
+            GFX_PutSprite((char*)GLB_GetItem(FILE10f_N$_PIC), ibx, iby);
     }
 }
 

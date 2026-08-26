@@ -1,16 +1,12 @@
-# Original game data (copyrighted — user-supplied, never committed)
-original/
-game/
-*.GLB
-*.zip
+# Derived game data — extracted from the copyrighted originals, never commit
+data/
 
 # Vendored raptor build output
 raptor/build/
 
-# Legacy prototype build output
-bin/
-*.o
-*.d
+
+# Python bytecode
+__pycache__/
 
 # Local toolchain
 .local/

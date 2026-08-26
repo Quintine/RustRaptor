@@ -713,6 +713,10 @@ void ENEMY_Think(
     {
         curlib = sprite->lib;
         
+        sprite->px = sprite->x;
+        sprite->py = sprite->y;
+        sprite->eframe ^= 1;
+        
         if (LE_LONG(curlib->num_frames) > 1)
         {
             sprite->item = LE_LONG(curlib->item) + sprite->curframe;
@@ -1177,12 +1181,17 @@ ENEMY_DisplayGround(
 )
 {
     SPRITE_SHIP *spt;
+    int ix, iy;
     
     for (spt = first_enemy.next; &last_enemy != spt; spt = spt->next)
     {
         if (!spt->groundflag)
             continue;
-        GFX_PutSprite((char*)GLB_GetItem(spt->item), spt->x, spt->y);
+        
+        ix = GFX_InterpCoord(spt->x, spt->px);
+        iy = GFX_InterpCoord(spt->y, spt->py);
+        
+        GFX_PutSprite((char*)GLB_GetItem(spt->item), ix, iy);
     }
 }
 
@@ -1195,6 +1204,7 @@ ENEMY_DisplaySky(
 )
 {
     int i;
+    int ix, iy;
     SPRITE_SHIP *spt;
     
     for (spt = first_enemy.next; &last_enemy != spt; spt = spt->next)
@@ -1202,14 +1212,15 @@ ENEMY_DisplaySky(
         if (spt->groundflag)
             continue;
         
-        GFX_PutSprite((char*)GLB_GetItem(spt->item), spt->x, spt->y);
+        ix = GFX_InterpCoord(spt->x, spt->px);
+        iy = GFX_InterpCoord(spt->y, spt->py);
+        
+        GFX_PutSprite((char*)GLB_GetItem(spt->item), ix, iy);
         
         for (i = 0; i < LE_LONG(spt->lib->numengs); i++)
         {
-            FLAME_Up(spt->x + LE_SHORT(spt->lib->engx[i]), spt->y + LE_SHORT(spt->lib->engy[i]), LE_SHORT(spt->lib->englx[i]), spt->eframe);
+            FLAME_Up(ix + LE_SHORT(spt->lib->engx[i]), iy + LE_SHORT(spt->lib->engy[i]), LE_SHORT(spt->lib->englx[i]), spt->eframe);
         }
-        
-        spt->eframe ^= 1;
     }
 }
 

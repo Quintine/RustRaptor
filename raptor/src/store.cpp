@@ -265,7 +265,6 @@ STORE_Enter(
     GFX_DisplayUpdate();
     GFX_FadeIn(palette, 16);
     
-    SWD_SetFieldPtr(window, STOR_VEXIT);
     PTR_DrawCursor(1);
     
     OBJS_GetNum();

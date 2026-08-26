@@ -56,6 +56,8 @@ typedef struct SHOTS_S
     char *pic;                              // pointer to cur frame pic
     int x;                                  // cur shot center x
     int y;                                  // cur shot center y
+    int px;                                 // prev sim x (interp)
+    int py;                                 // prev sim y (interp)
     MOVEOBJ move;                           // MOVE stuff
     int speed;                              // cur speed
     int curframe;                           // current anim frame
@@ -65,6 +67,7 @@ typedef struct SHOTS_S
     int starty;                             // PLAYER Y OFFSET;
     SHOT_LIB *lib;
     int cnt;
+    int age;                                // sim steps survived (S_LINE purge in SHOTS_Think)
 }SHOTS;
 
 extern char *lashit[4];

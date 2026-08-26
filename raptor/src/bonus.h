@@ -21,6 +21,10 @@ typedef struct BONUS_S
     int by;                           // BONUS Y POSITION
     int gx;                           // GLOW X POSITION
     int gy;                           // GLOW Y POSITION
+    int pbx;                          // PREV SIM BX (INTERP)
+    int pby;                          // PREV SIM BY (INTERP)
+    int pgx;                          // PREV SIM GX (INTERP)
+    int pgy;                          // PREV SIM GY (INTERP)
     int pos;                          // POS IN CIRCLE
     int dflag;                        // DONEFLAG
     int countdown;                    // COUNTDOWN TO REMOVE

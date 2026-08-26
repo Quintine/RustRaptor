@@ -372,6 +372,11 @@ ESHOT_Shoot(
         InitMobj(&cur->move);
         MoveSobj(&cur->move, 1);
         
+        cur->x = cur->move.x;
+        cur->y = cur->move.y;
+        cur->px = cur->x;
+        cur->py = cur->y;
+        
         if (cur->move.x < 0 || cur->move.x >= 320)
             cur->move.done = 1;
         
@@ -398,6 +403,9 @@ ESHOT_Think(
     for (shot = first_eshot.next; shot!=&last_eshot; shot = shot->next)
     {
         lib = shot->lib;
+        
+        shot->px = shot->x;
+        shot->py = shot->y;
         
         shot->pic = lib->pic[shot->curframe];
         
@@ -512,17 +520,20 @@ ESHOT_Display(
 )
 {
     ESHOT *shot;
-    int loop, y;
+    int loop, y, ix, iy;
     GFX_PIC *h;
     
     for (shot = first_eshot.next; shot !=&last_eshot; shot = shot->next)
     {
+        ix = GFX_InterpCoord(shot->x, shot->px);
+        iy = GFX_InterpCoord(shot->y, shot->py);
+        
         if (shot->type == ES_LASER)
         {
-            for (loop = shot->y; loop < shot->move.y2; loop += 3)
-                GFX_PutSprite(shot->pic, shot->x, loop);
+            for (loop = iy; loop < shot->move.y2; loop += 3)
+                GFX_PutSprite(shot->pic, ix, loop);
             
-            GFX_PutSprite(elaspow[shot->curframe - 1], shot->x, shot->y);
+            GFX_PutSprite(elaspow[shot->curframe - 1], ix, iy);
             
             h = (GFX_PIC*)lashit[shot->curframe - 1];
             
@@ -530,10 +541,10 @@ ESHOT_Display(
             
             if (y > 0 && y < 200)
             {
-                GFX_PutSprite((char*)h, shot->x - (LE_LONG(h->width) >> 2), y);
+                GFX_PutSprite((char*)h, ix - (LE_LONG(h->width) >> 2), y);
             }
         }
         else
-            GFX_PutSprite(shot->pic, shot->x, shot->y);
+            GFX_PutSprite(shot->pic, ix, iy);
     }
 }

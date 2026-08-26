@@ -8,4 +8,5 @@ void SHADOW_MakeShades(void);
 void SHADOW_GAdd(int item, int x, int y);
 void SHADOW_Add(int item, int x, int y);
 void SHADOW_DisplayGround();
+void SHADOW_Snapshot(void);
 void SHADOW_DisplaySky();

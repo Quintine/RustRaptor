@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
+#include <sys/stat.h>
 #include "common.h"
 #include "glbapi.h"
 #include "vmemapi.h"
@@ -31,13 +32,10 @@ char* strupr(char* s)
 #define PATH_MAX MAX_PATH
 #endif // _MSC_VER
 
-#define _SCOTTGAME
 
 static const char* serial = "32768GLB";
 static char exePath[PATH_MAX];
 static int num_glbs;
-static KEYFILE g_key;
-static char prefix[5] = "FILE";
 static bool fVmem = 0;
 
 /*
@@ -55,11 +53,8 @@ typedef struct
 
 typedef struct
 {
-	char filepath[PATH_MAX];
 	ITEMINFO* item;
 	int      items;
-	FILE     *handle;
-	const char *permissions;
 }FILEDESC;
 
 #if SDL_BYTEORDER == SDL_BIG_ENDIAN
@@ -153,207 +148,155 @@ GLB_DeCrypt(
 }
 
 /*------------------------------------------------------------------------
-   GLB_FindFile() - Finds a file, opens it, and stores it's path
+   Data catalog: INDEX maps asset ids to files in category dirs
+   (music/, sprites/, ... — see tools/glbextract.py). Ids are engine
+   handles, (archive slot << 16) | item index, sorted ascending.
  ------------------------------------------------------------------------*/
-static FILE*
-GLB_FindFile(
-	int	return_on_failure,	         // INPUT : Don't bomb if file not open
-	int	filenum,                     // INPUT : file number
-	const char *permissions		     // INPUT : file access permissions
-)
+typedef struct
 {
-	const char* routine = "GLB_FindFile";
-	char filename[PATH_MAX];
-	char filenamelc[PATH_MAX];
-	FILE *handle;
-	FILEDESC* fd;
-	
-	/*
-	* Scott, the ASSERT function is a macro that will be compiled-out when
-	* not debugging ( DEBUG not defined ), otherwise it calls EXIT_Assert
-	* if the expression is false ( which bails out of your program and displays
-	* the expression, file & line number of the assertion ).  This is a standard
-	* way of checking variables for correct boundries during development, and
-	* makes it easy to remove extra logic for doing so by recompiling without
-	* DEBUG defined.
-	*/
-	ASSERT(filenum >= 0 && filenum < MAX_GLB_FILES);
-	
-	/*
-	* create a file name and attempt to open it local first, then if it
-	* fails use the exe path and try again.
-	*/
-	sprintf(filenamelc, "%s%04u.glb", "file", filenum);
-	if (!access(filenamelc, 0))
-		strcpy(filename, filenamelc);
-	else
-		sprintf(filename, "%s%04u.GLB", prefix, filenum);
-	
-	if ((handle = fopen(filename, permissions)) == NULL)
-	{
-		sprintf(filenamelc, "%s%s%04u.glb", exePath, "file", filenum);
-		if (!access(filenamelc, 0))
-			strcpy(filename, filenamelc);
-		else
-			sprintf(filename, "%s%s%04u.GLB", exePath, prefix, filenum);
-		
-		if ((handle = fopen(filename, permissions)) == NULL)
-		{
-			if (return_on_failure)
-				return NULL;
+	uint32_t id;
+	uint32_t size;
+	char     path[64];
+}CATENTRY;
 
-			sprintf(filename, "%s%04u.GLB", prefix, filenum);
-			EXIT_Error("GLB_FindFile: %s, Error #%d,%s",
-				filename, errno, strerror(errno));
-		}
-	}
-	
-	/*
-	* Keep file handle
-	*/
-	fd = &filedesc[filenum];
-
-	strcpy(fd->filepath, filename);
-	fd->permissions = permissions;
-	fd->handle = handle;
-
-	return handle;
-}
+static CATENTRY* catalog;
+static int catalog_n;
+static char dataRoot[PATH_MAX];     // "" when INDEX sits in the cwd
 
 /*------------------------------------------------------------------------
-   GLB_OpenFile() - Opens & Caches file handle
- ------------------------------------------------------------------------*/
-static FILE*
-GLB_OpenFile(
-	int	return_on_failure,	     // INPUT : Don't bomb if file not open
-	int	filenum,                 // INPUT : file number
-	const char *permissions		 // INPUT : file access permissions
-)
-{
-	FILEDESC* fd;
-
-	ASSERT(filenum >= 0 && filenum < MAX_GLB_FILES);
-
-	fd = &filedesc[filenum];
-
-	if (fd->handle == 0)
-		return GLB_FindFile(return_on_failure, filenum, permissions);
-	else if (fd->permissions != permissions)
-	{
-		fclose(fd->handle);
-		
-		if ((fd->handle = fopen(fd->filepath, permissions)) == NULL)
-		{
-			if (return_on_failure)
-				return NULL;
-
-			EXIT_Error("GLB_OpenFile: %s, Error #%d,%s",
-				fd->filepath, errno, strerror(errno));
-		}
-	}
-	else
-	{
-		fseek(fd->handle, 0L, SEEK_SET);
-	}
-	
-	return fd->handle;
-}
-
-/*------------------------------------------------------------------------
-   GLB_CloseFiles() - Closes all cached files.
+   GLB_LoadCatalog() - Parses INDEX (current directory first, then
+   exePath). Missing INDEX leaves the catalog empty; every slot then
+   reports zero items, which callers treat as "no data".
  ------------------------------------------------------------------------*/
 static void
-GLB_CloseFiles(
+GLB_LoadCatalog(
 	void
 )
 {
-	int j;
+	char path[PATH_MAX];
+	FILE *handle;
 
-	for (j = 0; j < MAX_GLB_FILES; j++)
+	if (catalog != NULL)
+		return;
+
+	strcpy(dataRoot, "");
+
+	handle = fopen("INDEX", "rb");
+	if (handle == NULL)
 	{
-		if (filedesc[j].handle)
-		{
-			fclose(filedesc[j].handle);
-			filedesc[j].handle = 0;
-		}
+		strcpy(dataRoot, exePath);
+		sprintf(path, "%sINDEX", exePath);
+		handle = fopen(path, "rb");
 	}
+	if (handle == NULL)
+		return;
+
+	while (true)
+	{
+		CATENTRY ce;
+
+		if (fscanf(handle, "%x %u %63s", &ce.id, &ce.size, ce.path) != 3)
+			break;
+
+		catalog = (CATENTRY*)realloc(catalog, (catalog_n + 1) * sizeof(CATENTRY));
+		if (catalog == NULL)
+			EXIT_Error("GLB_LoadCatalog: memory");
+
+		catalog[catalog_n++] = ce;
+	}
+
+	fclose(handle);
+}
+
+/***************************************************************************
+   GLB_SlotItems() - Returns number of catalog items in one archive slot
+ ***************************************************************************/
+int
+GLB_SlotItems(
+	int filenum                     // INPUT : archive slot number
+)
+{
+	int i;
+	int count;
+
+	GLB_LoadCatalog();
+
+	count = 0;
+	for (i = 0; i < catalog_n; i++)
+	{
+		if (catalog[i].id >> 16 == (uint32_t)filenum)
+			count++;
+	}
+
+	return count;
 }
 
 /*------------------------------------------------------------------------
-   GLB_NumItems() - Returns number of items in a .GLB file
+   GLB_CatFind() - Binary search of the catalog by asset id.
  ------------------------------------------------------------------------*/
-static int
-GLB_NumItems(
-	int filenum
+static CATENTRY*
+GLB_CatFind(
+	uint32_t id
 )
 {
-	KEYFILE key;
-	FILE *handle;
+	int lo;
+	int hi;
 
-	ASSERT(filenum >= 0 && filenum < num_glbs);
+	lo = 0;
+	hi = catalog_n - 1;
 
-	handle = GLB_OpenFile(1, filenum, "rb");
-	
-	if (handle == NULL)
-		return 0;
-
-	fseek(handle, 0L, SEEK_SET);
-	
-	if (!fread(&key, sizeof(KEYFILE), 1, handle))
+	while (lo <= hi)
 	{
-		EXIT_Error("GLB_NumItems: Read failed!");
+		int mid = (lo + hi) / 2;
+
+		if (catalog[mid].id == id)
+			return &catalog[mid];
+		else if (catalog[mid].id < id)
+			lo = mid + 1;
+		else
+			hi = mid - 1;
 	}
 
-#ifdef _SCOTTGAME
-	GLB_DeCrypt(serial, (uint8_t*)&key, sizeof(KEYFILE));
-#endif
-
-	return ((int)LE_ULONG(key.offset));
+	EXIT_Error("GLB_CatFind: id %x not in catalog", id);
+	return NULL;
 }
 
 /*--------------------------------------------------------------------------
- GLB_LoadIDT() Loads a item descriptor table from a GLB file.
+ GLB_FillSlot() - Fills one slot's item descriptors from the catalog.
+ Extracted payloads are stored pre-decrypted, so no item stays flagged
+ ITF_ENCODED.
  --------------------------------------------------------------------------*/
 static void
-GLB_LoadIDT(
-	FILEDESC* fd               // INPUT: file to load
+GLB_FillSlot(
+	FILEDESC* fd,                  // INPUT: slot descriptor to fill
+	int filenum                    // INPUT : archive slot number
 )
 {
-	FILE *handle;
-	int j;
-	int k;
-	int n;
-	KEYFILE key[10];
 	ITEMINFO* ii;
+	int i;
+	int n;
 
-	handle = fd->handle;
+	n = 0;
 	ii = fd->item;
 
-	fseek(handle, sizeof(KEYFILE), SEEK_SET);
-	
-	for (j = 0; j < fd->items; )
+	for (i = 0; i < catalog_n && n < fd->items; i++)
 	{
-		k = fd->items - j;
-		
-		if (k > ASIZE(key))
-			k = ASIZE(key);
+		CATENTRY* ce = &catalog[i];
+		const char* base;
 
-		fread(key, sizeof(KEYFILE), k, handle);
-		
-		for (n = 0; n < k; n++)
-		{
-#ifdef _SCOTTGAME
-			GLB_DeCrypt(serial, (void*)&key[n], sizeof(KEYFILE));
-#endif
-			if (LE_ULONG(key[n].opt) == GLB_ENCODED)
-				ii->flags |= ITF_ENCODED;
+		if (ce->id >> 16 != (uint32_t)filenum)
+			continue;
 
-			ii->size = LE_ULONG(key[n].filesize);
-			ii->offset = LE_ULONG(key[n].offset);
-			memcpy(ii->name, key[n].name, sizeof(ii->name));
-			ii++;
-		}
-		j += k;
+		base = strrchr(ce->path, '/');
+		base = (base != NULL) ? base + 1 : ce->path;
+
+		if (strlen(base) >= sizeof(ii->name))
+			EXIT_Error("GLB_FillSlot: item name too long: %s", base);
+
+		strcpy(ii->name, base);
+		ii->size = ce->size;
+		ii++;
+		n++;
 	}
 }
 
@@ -396,39 +339,32 @@ GLB_InitSystem(
 	num_glbs = innum;
 	ASSERT(num_glbs >= 1 && num_glbs <= MAX_GLB_FILES);
 
-	if (iprefix)
-	{
-		ASSERT(strlen(iprefix) < sizeof(prefix) - 1);
-
-		strcpy(prefix, iprefix);
-		strupr(prefix);
-	}
+	(void)iprefix;                 // archive-name prefixes are obsolete with the catalog
 	memset(filedesc, 0, sizeof(filedesc));
 	
 	/*
-	* Next, read in header of each file and allocate cache
+	* Parse the catalog, then set up one descriptor per non-empty slot
 	*/
+	GLB_LoadCatalog();
+
 	opened = 0;
 	for (filenum = 0; filenum < num_glbs; filenum++)
 	{
 		fd = &filedesc[filenum];
-		
-		if ((num = GLB_NumItems(filenum)) != 0)
+
+		if ((num = GLB_SlotItems(filenum)) != 0)
 		{
 			fd->items = num;
-			
+
 			/*
 			 * Note: calloc zeros out all memory that it allocates
 			*/
 			fd->item = (ITEMINFO*)calloc(num, sizeof(ITEMINFO));
-			
+
 			if (fd->item == NULL)
-				EXIT_Error("GLB_NumItems: memory ( init )");
-			
-			/*
-			* Load Item Descriptor Table for file
-			*/
-			GLB_LoadIDT(fd);
+				EXIT_Error("GLB_InitSystem: memory ( init )");
+
+			GLB_FillSlot(fd, filenum);
 			opened++;
 		}
 	}
@@ -446,14 +382,13 @@ GLB_Load(
 	int itemnum                   // INPUT: item in file number
 )
 {
-	FILE *handle;
 	ITEMINFO* ii;
+	char path[PATH_MAX];
+	FILE *f;
 
 	ASSERT(filenum >= 0 && filenum < num_glbs);
 
-	handle = filedesc[filenum].handle;
-	
-	if (handle == 0)
+	if (filedesc[filenum].item == NULL)
 		return 0;
 
 	ASSERT(itemnum < (WORD)filedesc[filenum].items);
@@ -467,14 +402,16 @@ GLB_Load(
 			memcpy(inmem, ii->vm_mem.obj, ii->size);
 		else
 		{
-			fseek(handle, ii->offset, SEEK_SET);
-			fread(inmem, ii->size, 1, handle);
-#ifdef _SCOTTGAME
-			if (ii->flags & ITF_ENCODED)
-			{
-				GLB_DeCrypt(serial, inmem, ii->size);
-			}
-#endif
+			CATENTRY* ce = GLB_CatFind(((uint32_t)filenum << 16) | (uint32_t)itemnum);
+			char path[PATH_MAX];
+
+			sprintf(path, "%s%s", dataRoot, ce->path);
+
+			f = fopen(path, "rb");
+			if (f == NULL || fread(inmem, ii->size, 1, f) != 1)
+				EXIT_Error("GLB_Load: read failed on %s", path);
+
+			fclose(f);
 		}
 	}
 	

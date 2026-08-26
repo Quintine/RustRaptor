@@ -77,6 +77,8 @@ typedef struct SPRITE_SHIP_S
     int sy;                           // START Y
     int x;                            // CENTER X POS;
     int y;                            // Y POS
+    int px;                           // PREV SIM CENTER X (INTERP)
+    int py;                           // PREV SIM Y POS (INTERP)
     int x2;                           // WIDTH
     int y2;                           // HEIGHT           
     int width;                        // WIDTH

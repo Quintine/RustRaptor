@@ -28,6 +28,7 @@ typedef struct TDELAY_S
 void TILE_Init(void);
 void TILE_Think(void);
 void TILE_Display(void);
+void TILE_Scroll(void);
 int TILE_IsHit(int damage, int x, int y);
 int TILE_Bomb(int damage, int x, int y);
 void TILE_Explode(TILESPOT *ts, int delay);

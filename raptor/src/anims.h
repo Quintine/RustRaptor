@@ -35,6 +35,8 @@ typedef struct ANIMS_S
     int item;
     int dx;
     int dy;
+    int pdx;                                 // PREV SIM DX (INTERP)
+    int pdy;                                 // PREV SIM DY (INTERP)
     int x;
     int y;
     int curframe;

@@ -43,8 +43,8 @@ extern int player_cx, player_cy;
 extern int startfadeflag;
 extern int startendwave;
 extern int gl_cnt;
-extern int g_oldsuper, g_oldshield;
 extern int playerx, playery;
+extern int g_ipcx, g_ipcy;
 extern char gdmodestr[];
 extern int playerbasepic;
 

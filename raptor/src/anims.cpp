@@ -253,6 +253,8 @@ ANIMS_StartAnim(
     cur->x = x - lib->xoff;
     cur->y = y - lib->yoff;
     cur->groundflag = lib->groundflag;
+    cur->dx = cur->pdx = cur->x;
+    cur->dy = cur->pdy = cur->y;
 }
 
 /***************************************************************************
@@ -275,6 +277,8 @@ ANIMS_StartGAnim(
     cur->x = x;
     cur->y = y;
     cur->groundflag = 0;
+    cur->dx = cur->pdx = cur->x;
+    cur->dy = cur->pdy = cur->y;
 }
 
 /***************************************************************************
@@ -301,6 +305,8 @@ ANIMS_StartEAnim(
     cur->x = x - lib->xoff;
     cur->y = y - lib->yoff;
     cur->groundflag = HIGH_AIR;
+    cur->dx = cur->pdx = cur->x;
+    cur->dy = cur->pdy = cur->y;
 }
 
 /***************************************************************************
@@ -325,6 +331,8 @@ ANIMS_StartAAnim(
     cur->x = x - lib->xoff;
     cur->y = y - lib->yoff;
     cur->groundflag = HIGH_AIR;
+    cur->dx = cur->pdx = cur->x;
+    cur->dy = cur->pdy = cur->y;
 }
 
 /***************************************************************************
@@ -341,6 +349,9 @@ ANIMS_Think(
     for (cur = first_anims.next; &last_anims != cur; cur = cur->next)
     {
         lib = cur->lib;
+        
+        cur->pdx = cur->dx;
+        cur->pdy = cur->dy;
         
         if (cur->curframe >= lib->numframes)
         {
@@ -403,18 +414,22 @@ ANIMS_DisplayGround(
 {
     ANIMS *cur;
     char *pic;
+    int idx, idy;
 
     for (cur = first_anims.next; &last_anims != cur; cur = cur->next)
     {
         if (cur->groundflag)
             continue;
         
+        idx = GFX_InterpCoord(cur->dx, cur->pdx);
+        idy = GFX_InterpCoord(cur->dy, cur->pdy);
+        
         pic = (char*)GLB_GetItem(cur->item);
         
         if (cur->lib->transparent)
-            GFX_ShadeShape(LIGHT, pic, cur->dx, cur->dy);
+            GFX_ShadeShape(LIGHT, pic, idx, idy);
         else
-            GFX_PutSprite(pic, cur->dx, cur->dy);
+            GFX_PutSprite(pic, idx, idy);
     }
 }
 
@@ -428,19 +443,23 @@ ANIMS_DisplaySky(
 {
     ANIMS *cur;
     char *pic;
+    int idx, idy;
 
     for (cur = first_anims.next; &last_anims != cur; cur = cur->next)
     {
         if (cur->groundflag != MID_AIR)
             continue;
         
+        idx = GFX_InterpCoord(cur->dx, cur->pdx);
+        idy = GFX_InterpCoord(cur->dy, cur->pdy);
+        
         pic = (char*)GLB_GetItem(cur->item);
         
         if (cur->lib->transparent)
-            GFX_ShadeShape(LIGHT, pic, cur->dx, cur->dy);
+            GFX_ShadeShape(LIGHT, pic, idx, idy);
         
         else
-            GFX_PutSprite(pic, cur->dx, cur->dy);
+            GFX_PutSprite(pic, idx, idy);
     }
 }
 
@@ -454,17 +473,21 @@ ANIMS_DisplayHigh(
 {
     ANIMS *cur;
     char *pic;
+    int idx, idy;
 
     for (cur = first_anims.next; &last_anims != cur; cur = cur->next)
     {
         if (cur->groundflag != HIGH_AIR)
             continue;
         
+        idx = GFX_InterpCoord(cur->dx, cur->pdx);
+        idy = GFX_InterpCoord(cur->dy, cur->pdy);
+        
         pic = (char*)GLB_GetItem(cur->item);
         
         if (cur->lib->transparent)
-            GFX_ShadeShape(LIGHT, pic, cur->dx, cur->dy);
+            GFX_ShadeShape(LIGHT, pic, idx, idy);
         else
-            GFX_PutSprite(pic, cur->dx, cur->dy);
+            GFX_PutSprite(pic, idx, idy);
     }
 }

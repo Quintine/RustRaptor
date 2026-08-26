@@ -112,6 +112,38 @@ GFX_GetFrameCount(
     return framecount;
 }
 
+/***************************************************************************
+GFX_SetInterp () - Sets the interpolation fraction (num/den, 0 <= num <=
+                    den) used by GFX_InterpCoord() for this rendered frame.
+ ***************************************************************************/
+static int gfx_interp_num = 1, gfx_interp_den = 1;
+
+void 
+GFX_SetInterp(
+    int num,               // INPUT : interpolated fraction numerator
+    int den                // INPUT : interpolated fraction denominator
+)
+{
+    if (den > 0 && num >= 0)
+    {
+        gfx_interp_num = num;
+        gfx_interp_den = den;
+    }
+}
+
+/***************************************************************************
+GFX_InterpCoord () - Interpolates between previous and current simulation
+                     position: prev + (cur - prev) * num/den.
+ ***************************************************************************/
+int 
+GFX_InterpCoord(
+    int cur,               // INPUT : current sim position
+    int prev               // INPUT : previous sim position
+)
+{
+    return prev + (int)(((long long)(cur - prev) * gfx_interp_num) / gfx_interp_den);
+}
+
 /*************************************************************************
    GFX_ClipLines ()
  *************************************************************************/

@@ -81,6 +81,8 @@ void GFX_UpdateTimer(void);
 void GFX_InitSystem(void);
 void GFX_InitVideo(char *curpal);
 int GFX_GetFrameCount(void);
+void GFX_SetInterp(int num, int den);
+int GFX_InterpCoord(int cur, int prev);
 int GFX_ClipLines(char **image, int *x, int *y, int *lx, int *ly);
 void GFX_SetPalette(char *curpal, int startpal);
 void GFX_FadeOut(int red, int green, int blue, int speed);

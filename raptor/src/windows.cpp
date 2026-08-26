@@ -212,7 +212,6 @@ WIN_Opts(
     
     opt_window = SWD_InitWindow(FILE13f_OPTS_SWD);
     
-    SWD_SetWindowPtr(opt_window);
     SWD_SetFieldText(opt_window, OPTS_DETAIL, detail[curd]);
     SWD_SetWinDrawFunc(opt_window, WIN_OptDraw);
     
@@ -564,7 +563,6 @@ WIN_AskBool(
     int rval;
     int dchold;
     int ask_window;
-    int px, py, lx, ly;
     SWD_DLG dlg;
 
     rval = 0;
@@ -582,9 +580,6 @@ WIN_AskBool(
     SND_Patch(FX_SWEP, 127);
     
     PTR_DrawCursor(1);
-    
-    SWD_GetFieldXYL(ask_window, ASK_YES, &px, &py, &lx, &ly);
-    PTR_SetPos(px + (lx >> 1), py + (ly >> 1));
     
     SWD_SetActiveField(ask_window, ASK_YES);
 
@@ -698,7 +693,6 @@ WIN_AskDiff(
 {
     SWD_DLG dlg;
     int rval, ask_window;
-    int px, py, lx, ly;
 
     rval = -1;
     
@@ -708,9 +702,6 @@ WIN_AskDiff(
     
     SWD_ShowAllWindows();
     GFX_DisplayUpdate();
-    
-    SWD_GetFieldXYL(ask_window, OKREG_MED, &px, &py, &lx, &ly);
-    PTR_SetPos(px + (lx >> 1), py + (ly >> 1));
     
     while (1)
     {
@@ -798,7 +789,6 @@ WIN_Register(
     
     GFX_FadeIn(palette, 16);
     
-    SWD_SetFieldPtr(window, REG_VIEWID);
     PTR_DrawCursor(1);
 
 #ifdef __ANDROID__
@@ -1086,7 +1076,6 @@ WIN_Hangar(
     char temp[44];
     SWD_DLG dlg;
     int opt, oldopt, pos, kflag, local_cnt, pic_cnt, window;
-    int x, y, lx, ly;
     int poslookup[4] = {
         HANG_MISSION, 
         HANG_SUPPLIES, 
@@ -1143,7 +1132,6 @@ WIN_Hangar(
         
         hangto = HANGTOMISSION;
         
-        SWD_SetWindowPtr(window);
         PTR_DrawCursor(1);
         
         while (1)
@@ -1277,8 +1265,6 @@ WIN_Hangar(
                     if (opt != oldopt)
                     {
                         oldopt = opt;
-                        SWD_GetFieldXYL(window, opt, &x, &y, &lx, &ly);
-                        PTR_SetPos(x + (lx>>1), y + (ly>>1));
                         oldopt = -1;
                         dlg.sfield = opt;
                         dlg.viewactive = 1;
@@ -1465,7 +1451,6 @@ WIN_ShipComp(
     SWD_DLG dlg;
     int rval, secret1, secret2, secret3, secret, cz1, cz2;
     int window;
-    int px, py, lx, ly;
 
     rval = 1;
     secret1 = 0;
@@ -1495,8 +1480,6 @@ WIN_ShipComp(
     GLB_LockItem(FILE12a_LIGHTON_PIC);
     GLB_LockItem(FILE12b_LIGHTOFF_PIC);
     
-    SWD_GetFieldXYL(window, COMP_AUTO, &px, &py, &lx, &ly);
-    PTR_SetPos(px + (lx >> 1), py + (ly >> 1));
     SWD_SetActiveField(window, COMP_AUTO);
     
     SWD_SetFieldItem(window, COMP_LITE1, FILE12b_LIGHTOFF_PIC);
@@ -1520,7 +1503,6 @@ WIN_ShipComp(
     
     GFX_FadeIn(palette, 16);
     
-    SWD_SetWindowPtr(window);
     PTR_DrawCursor(1);
     
     while (1)
@@ -2105,7 +2087,6 @@ WIN_MainMenu(
     
     SND_CacheIFX();
     
-    SWD_SetWindowPtr(window);
     PTR_DrawCursor(1);
     ltable[0] = 0;
     

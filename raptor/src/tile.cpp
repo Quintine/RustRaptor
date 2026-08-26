@@ -46,6 +46,13 @@ int startflat[4];
 int tilepos;
 int tileyoff;
 
+// Unwrapped scroll counters for interpolation. The raw tileyoff wraps by
+// MAP_BLOCKSIZE while the on-screen tile grid stays positionally continuous
+// (the wrap and the row shift cancel), so the visual offset must be derived
+// from a counter that never wraps.
+
+static int vscroll, vscroll_prev;
+
 TILESPOT tspots[MAX_STILES];
 TILESPOT *lastspot;
 int spark_delay;
@@ -423,20 +430,35 @@ TILE_Display(
 {
     char *pic;
     TILESPOT *ts;
+    int oy;
 
+    oy = GFX_InterpCoord(vscroll, vscroll_prev) - vscroll;
+    
     ts = tspots;
     
     do
     {
         pic = GLB_GetItem(ts->item);
         pic += 20;
-        TILE_Put(pic, ts->x, ts->y);
+        TILE_Put(pic, ts->x, ts->y + oy);
         
         if (ts == lastspot)
             break;
         
         ts++;
     } while (1);
+}
+
+/***************************************************************************
+TILE_Scroll () - Advances the map scroll one simulation step
+                  (moved out of TILE_Display for decoupled rendering)
+ ***************************************************************************/
+void 
+TILE_Scroll(
+    void
+)
+{
+    vscroll_prev = vscroll;
     
     tileyoff++;
     
@@ -459,6 +481,9 @@ TILE_Display(
             last_tile = 1;
         }
     }
+    
+    if (scroll_flag)
+        vscroll++;
 }
 
 /***************************************************************************

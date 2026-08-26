@@ -1878,69 +1878,6 @@ SWD_ShowAllWindows(
 }
 
 /***************************************************************************
-SWD_SetWindowPtr() - Sets Pointer to center of active field
- ***************************************************************************/
-void 
-SWD_SetWindowPtr(
-    int handle             // INPUT : number/handle of window
-)
-{
-    SWIN *curwin;
-    SFIELD *curfld;
-    curwin = g_wins[handle].win;
-    
-    if (!ptractive || handle == -1)
-        return;
-
-    if (active_field == -1 || !LE_LONG(curwin->numflds))
-    {
-        if (!g_wins[handle].flag || curwin == NULL)
-            return;
-        
-        PTR_SetPos(LE_LONG(curwin->x) + (LE_LONG(curwin->lx)>>1), LE_LONG(curwin->y) + (LE_LONG(curwin->ly)>>1));
-    }
-    else
-    {
-        curfld = (SFIELD*)((char*)curwin + LE_LONG(curwin->fldofs));
-        curfld += active_field;
-        
-        PTR_SetPos(LE_LONG(curfld->x) + (LE_LONG(curfld->lx)>>1), LE_LONG(curfld->y) + (LE_LONG(curfld->ly)>>1));
-    }
-}
-
-/***************************************************************************
-SWD_SetFieldPtr () - Sets Pointer on a field
- ***************************************************************************/
-void 
-SWD_SetFieldPtr(
-    int handle,            // INPUT : number/handle of window
-    int field              // INPUT : field
-)
-{
-    SWIN *curwin;
-    SFIELD *curfld;
-    curwin = g_wins[handle].win;
-    
-    if (!ptractive || handle == -1)
-        return;
-
-    if (field == -1 || !LE_LONG(curwin->numflds))
-    {
-        if (!g_wins[handle].flag || curwin == NULL)
-            return;
-        
-        PTR_SetPos(LE_LONG(curwin->x) + (LE_LONG(curwin->lx)>>1), LE_LONG(curwin->y) + (LE_LONG(curwin->ly)>>1));
-    }
-    else
-    {
-        curfld = (SFIELD*)((char*)curwin + LE_LONG(curwin->fldofs));
-        curfld += field;
-        
-        PTR_SetPos(LE_LONG(curfld->x) + (LE_LONG(curfld->lx)>>1), LE_LONG(curfld->y) + (LE_LONG(curfld->ly)>>1));
-    }
-}
-
-/***************************************************************************
  SWD_SetActiveWindow() - Sets the current working window
  ***************************************************************************/
 void 

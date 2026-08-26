@@ -779,6 +779,7 @@ SHOTS_PlayerShoot(
             cur->speed = lib->speed;
             cur->x = player_cx;
             cur->y = player_cy;
+            cur->age = 0;
             cur->move.x = (wrand() % enemy->width) + enemy->move.x - 1;
             cur->move.y = (wrand() % enemy->height) + enemy->move.y - 1;
             cur->move.x2 = player_cx;
@@ -1019,7 +1020,23 @@ SHOTS_Think(
     for (shot = first_shots.next; &last_shots != shot; shot = shot->next)
     {
         lib = shot->lib;
-        
+
+        // S_LINE tracers (laser turret) live exactly one simulation step:
+        // created during this iteration's input phase, they get ONE Think
+        // pass (position + damage) and are drawn by every render of this
+        // step, then purged here at the top of the NEXT Think. Upstream
+        // removed them inside the display pass, which no longer owns state.
+        // doneflag must NOT be used: it is hit/retire game state, and the
+        // turret's retire path never frees the shot, so reusing it leaked
+        // one pool slot per fire until SHOTS_Get() serviced no weapon.
+        if (lib->beam == S_LINE && ++shot->age > 1)
+        {
+            shot = SHOTS_Remove(shot);
+            continue;
+        }
+
+        shot->px = shot->x;
+        shot->py = shot->y;
         switch (lib->beam)
         {
         default:
@@ -1046,6 +1063,8 @@ SHOTS_Think(
             shot->pic = lib->pic[shot->curframe];
             shot->x = shot->move.x - lib->hlx;
             shot->y = shot->move.y;
+            shot->cnt++;
+            shot->cnt = shot->cnt % 4;
             
             for (enemy = first_enemy.next; &last_enemy != enemy; enemy = enemy->next)
             {
@@ -1257,12 +1276,15 @@ SHOTS_Display(
     void
 )
 {
-    int loop, x, y;
+    int loop, x, y, ix, iy;
     SHOTS *shot;
     GFX_PIC *h;
     
     for (shot = first_shots.next; shot != &last_shots; shot = shot->next)
     {
+        ix = GFX_InterpCoord(shot->x, shot->px);
+        iy = GFX_InterpCoord(shot->y, shot->py);
+        
         switch (shot->lib->beam)
         {
         default:
@@ -1270,37 +1292,37 @@ SHOTS_Display(
             break;
         
         case S_SHOOT:
-            GFX_PutSprite(shot->pic, shot->x, shot->y);
+            GFX_PutSprite(shot->pic, ix, iy);
             break;
         
         case S_LINE:
-            GFX_Line(player_cx + 1, player_cy, shot->move.x, shot->move.y, 69);
-            GFX_Line(player_cx - 1, player_cy, shot->move.x, shot->move.y, 69);
-            GFX_Line(player_cx, player_cy, shot->move.x, shot->move.y, 64);
-            shot = SHOTS_Remove(shot);
+            // Exists only during its birth step (purged by SHOTS_Think),
+            // so every rendered frame of that step draws the beam -- on a
+            // hitting tick too, which the old doneflag guard hid.
+            GFX_Line(g_ipcx + 1, g_ipcy, shot->move.x, shot->move.y, 69);
+            GFX_Line(g_ipcx - 1, g_ipcy, shot->move.x, shot->move.y, 69);
+            GFX_Line(g_ipcx, g_ipcy, shot->move.x, shot->move.y, 64);
             break;
         
         case S_BEAM:
-            for (loop = shot->move.y2; loop < shot->y; loop += 3)
+            for (loop = shot->move.y2; loop < iy; loop += 3)
             {
-                GFX_PutSprite(shot->pic, shot->x, loop);
+                GFX_PutSprite(shot->pic, ix, loop);
             }
             
             if (shot->lib->type == S_DEATH_RAY)
-                GFX_PutSprite(detpow[shot->cnt], shot->x - 4, shot->y);
+                GFX_PutSprite(detpow[shot->cnt], ix - 4, iy);
             else
-                GFX_PutSprite(laspow[shot->cnt], shot->x, shot->y);
+                GFX_PutSprite(laspow[shot->cnt], ix, iy);
             
             h = (GFX_PIC*)lashit[shot->cnt];
             
-            x = shot->x - (LE_LONG(h->width) >> 2);
+            x = ix - (LE_LONG(h->width) >> 2);
             y = shot->move.y2 - 8;
             
             if (y > 0)
                 GFX_PutSprite((char*)h, x, y);
             
-            shot->cnt++;
-            shot->cnt = shot->cnt % 4;
             break;
         }
     }

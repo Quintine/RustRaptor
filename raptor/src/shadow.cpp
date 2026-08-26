@@ -23,6 +23,26 @@ SHADOW shads[MAX_SHADOWS];
 SHADOW gshads[MAX_GSHADOWS];
 int num_shadows, num_gshadows;
 
+static SHADOW prev_shads[MAX_SHADOWS];
+static SHADOW prev_gshads[MAX_GSHADOWS];
+static int prev_num_shadows, prev_num_gshadows;
+
+/***************************************************************************
+SHADOW_Snapshot () - Latches this simulation step's shadows as previous
+                      positions for interpolated display
+ ***************************************************************************/
+void 
+SHADOW_Snapshot(
+    void
+)
+{
+    memcpy(prev_shads, shads, sizeof(shads));
+    memcpy(prev_gshads, gshads, sizeof(gshads));
+    
+    prev_num_shadows = num_shadows;
+    prev_num_gshadows = num_gshadows;
+}
+
 #define MAXZ  1280;
 
 /***************************************************************************
@@ -194,20 +214,20 @@ SHADOW_DisplaySky(
 )
 {
     char *pic;
-    SHADOW *cur;
-    cur = shads;
+    int i;
+    int ix, iy;
     
     if (opt_detail < 1)
         return;
     
-    while (--num_shadows != -1)
+    for (i = 0; i < num_shadows; i++)
     {
-        pic = GLB_GetItem(cur->item);
-        SHADOW_Draw(pic, cur->x, cur->y);
-        cur++;
+        ix = (i < prev_num_shadows) ? GFX_InterpCoord(shads[i].x, prev_shads[i].x) : shads[i].x;
+        iy = (i < prev_num_shadows) ? GFX_InterpCoord(shads[i].y, prev_shads[i].y) : shads[i].y;
+        
+        pic = GLB_GetItem(shads[i].item);
+        SHADOW_Draw(pic, ix, iy);
     }
-    
-    num_shadows = 0;
 }
 
 /***************************************************************************
@@ -219,18 +239,18 @@ SHADOW_DisplayGround(
 )
 {
     char *pic;
-    SHADOW *cur;
-    cur = gshads;
+    int i;
+    int ix, iy;
     
     if (opt_detail < 1)
         return;
     
-    while (--num_gshadows != -1)
+    for (i = 0; i < num_gshadows; i++)
     {
-        pic = GLB_GetItem(cur->item);
-        GFX_ShadeShape(DARK, (char*)pic, cur->x, cur->y);
-        cur++;
+        ix = (i < prev_num_gshadows) ? GFX_InterpCoord(gshads[i].x, prev_gshads[i].x) : gshads[i].x;
+        iy = (i < prev_num_gshadows) ? GFX_InterpCoord(gshads[i].y, prev_gshads[i].y) : gshads[i].y;
+        
+        pic = GLB_GetItem(gshads[i].item);
+        GFX_ShadeShape(DARK, (char*)pic, ix, iy);
     }
-    
-    num_gshadows = 0;
 }

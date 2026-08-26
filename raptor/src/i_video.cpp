@@ -84,6 +84,10 @@ static bool initialized = false;
 static bool nomouse = false;
 int usemouse = 1;
 
+// Set when the SDL renderer was created with present-vs-sync.
+
+static int vsync_active = 0;
+
 // Save screenshots in PNG format.
 
 // int png_screenshots = 0;
@@ -118,6 +122,11 @@ static int max_scaling_buffer_pixels = 16000000;
 // int fullscreen = true;
 int fullscreen; //Defined in VIDEO_LoadPrefs to read config from setup.ini
 
+
+// Borderless window: cover the desktop without decorations (compositor-
+// friendly, instant alt-tab). Read from Video/borderless in SETUP.INI.
+
+int borderless = 0;
 int txt_fullscreen;
 
 // Aspect ratio correction mode
@@ -208,6 +217,7 @@ void VIDEO_LoadPrefs(void)
     fullscreen = INI_GetPreferenceLong("Video", "fullscreen", 0);
     aspect_ratio_correct = INI_GetPreferenceLong("Video", "aspect_ratio_correct", 1);
     txt_fullscreen = INI_GetPreferenceLong("Video", "txt_fullscreen", 0);
+    borderless = INI_GetPreferenceLong("Video", "borderless", 0);
 }
 
 static bool MouseShouldBeGrabbed()
@@ -386,6 +396,8 @@ static bool ToggleFullScreenKeyShortcut(SDL_Keysym *sym)
             sym->scancode == SDL_SCANCODE_KP_ENTER) && (sym->mod & flags) != 0;
 }
 
+static void I_GetWindowPosition(int *x, int *y, int w, int h);
+
 static void I_ToggleFullScreen(void)
 {
     unsigned int flags = 0;
@@ -395,6 +407,38 @@ static void I_ToggleFullScreen(void)
     // restart again.
     if (fullscreen_width != 0 || fullscreen_height != 0)
     {
+        return;
+    }
+
+    if (borderless)
+    {
+        // Cycle between the borderless desktop window and a normal
+        // decorated window.
+        int x, y, w, h;
+
+        fullscreen = !fullscreen;
+
+        SDL_SetWindowBordered(screen, (SDL_bool) !fullscreen);
+
+        if (fullscreen)
+        {
+            SDL_DisplayMode borderless_mode;
+
+            SDL_SetWindowPosition(screen, 0, 0);
+
+            if (SDL_GetDesktopDisplayMode(video_display, &borderless_mode) == 0)
+            {
+                SDL_SetWindowSize(screen, borderless_mode.w, borderless_mode.h);
+            }
+        }
+        else
+        {
+            AdjustWindowSize();
+            I_GetWindowPosition(&x, &y, window_width, window_height);
+            SDL_SetWindowSize(screen, window_width, window_height);
+            SDL_SetWindowPosition(screen, x, y);
+        }
+
         return;
     }
 
@@ -740,7 +784,8 @@ void I_FinishUpdate (void)
             // When the window is resized (we're not in fullscreen mode),
             // save the new window size.
             flags = SDL_GetWindowFlags(screen);
-            if ((flags & SDL_WINDOW_FULLSCREEN_DESKTOP) == 0)
+            if ((flags & SDL_WINDOW_FULLSCREEN_DESKTOP) == 0 &&
+                !(borderless && fullscreen))
             {
                 SDL_GetWindowSize(screen, &window_width, &window_height);
 
@@ -1233,19 +1278,32 @@ static void SetVideoMode(void)
             window_flags |= SDL_WINDOW_FULLSCREEN;
         }
     }
-
-    // Running without window decorations is potentially useful if you're
-    // playing in three window mode and want to line up three game windows
-    // next to each other on a single desktop.
-    // Deliberately not documented because I'm not sure how useful this is yet.
-#if 0
-    if (M_ParmExists("-borderless"))
+    else if (borderless)
     {
+        // Cover the current desktop without decorations: no mode switch,
+        // the desktop resolution is used as-is.
+        SDL_DisplayMode borderless_mode;
+
+        if (SDL_GetDesktopDisplayMode(video_display, &borderless_mode) == 0)
+        {
+            w = borderless_mode.w;
+            h = borderless_mode.h;
+        }
+
         window_flags |= SDL_WINDOW_BORDERLESS;
     }
-#endif
 
-    I_GetWindowPosition(&x, &y, w, h);
+
+    if (borderless)
+    {
+        // A borderless desktop window sits at the origin.
+        x = 0;
+        y = 0;
+    }
+    else
+    {
+        I_GetWindowPosition(&x, &y, w, h);
+    }
 
     // Create window and renderer contexts. We set the window title
     // later anyway and leave the window position "undefined". If
@@ -1280,10 +1338,11 @@ static void SetVideoMode(void)
         video_display, SDL_GetError());
     }
 
-    // Turn on vsync if we aren't in a -timedemo
-    if (/*!singletics && */mode.refresh_rate > 0)
+    // Turn on vsync: the game loop paces simulation on a wall-clock
+    // accumulator, presentation is throttled by the display.
+    if (mode.refresh_rate > 0)
     {
-        // renderer_flags |= SDL_RENDERER_PRESENTVSYNC;
+        renderer_flags |= SDL_RENDERER_PRESENTVSYNC;
     }
 
     if (force_software_renderer)
@@ -1323,6 +1382,15 @@ static void SetVideoMode(void)
     {
         EXIT_Error("Error creating renderer for screen window: %s",
                 SDL_GetError());
+    }
+    
+    // Remember whether the created renderer actually vsyncs; the game loop
+    // uses this to decide between vsync pacing and its own delay guard.
+    {
+        SDL_RendererInfo rinfo;
+        
+        vsync_active = (SDL_GetRendererInfo(renderer, &rinfo) == 0 &&
+                        (rinfo.flags & SDL_RENDERER_PRESENTVSYNC) != 0);
     }
 
     // Important: Set the "logical size" of the rendering context. At the same
@@ -1579,6 +1647,14 @@ void I_SetMousePos(int x, int y)
     x = (int)((x + viewport.x) * sx);
     y = (int)(((y * actualheight) / (float)SCREENHEIGHT + viewport.y) * sy);
     SDL_WarpMouseInWindow(screen, x, y);
+}
+
+/***************************************************************************
+I_VsyncActive () - TRUE when the renderer presents with vsync
+ ***************************************************************************/
+int I_VsyncActive(void)
+{
+    return vsync_active;
 }
 
 void closewindow(void)

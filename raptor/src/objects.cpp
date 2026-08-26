@@ -595,10 +595,23 @@ OBJS_DisplayStats(
         }
         else
         {
+            static int dpos_gl = -1;
+            int new_step = (dpos_gl != gl_cnt);
+            
+            // The sweep advances once per simulation step, not once per
+            // rendered frame.
+            
+            if (new_step)
+                dpos_gl = gl_cnt;
+            
             GFX_VLine(dpos + 110, MAP_BOTTOM + 8, 3, 68);
             GFX_VLine(209 - dpos, MAP_BOTTOM + 8, 3, 68);
-            dpos++;
-            dpos %= 50;
+            
+            if (new_step)
+            {
+                dpos++;
+                dpos %= 50;
+            }
         }
     }
     
@@ -692,8 +705,6 @@ OBJS_Add(
     if (type >= S_LAST_OBJECT)
         return OBJ_ERROR;
     
-    g_oldsuper = -1;
-    g_oldshield = -1;
     
     lib = &obj_lib[type];
     

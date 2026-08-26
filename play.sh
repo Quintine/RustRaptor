@@ -1,27 +1,31 @@
 #!/bin/sh
-# Launch Raptor: Call of the Shadows (original engine + original data).
-# Requires: SDL2 (user-local build OK at ~/.local), GLB files in original/.
+# Launch Raptor: Call of the Shadows (original engine + extracted data).
+#
+# Layout:
+#   data/                asset tree the engine loads: INDEX catalog plus
+#                        music/, sprites/, ... (see docs/asset-pipeline.md)
+#   raptor/build/bin/    built engine
+#
+# The engine resolves the catalog and assets relative to its working
+# directory, so we run it from data/. Saves and SETUP.INI go to
+# ~/.local/share/Raptor (SDL pref path) — nothing is written into the repo.
 set -e
 cd "$(dirname "$0")"
+ROOT="$PWD"
 
-if [ ! -d original ]; then
-    echo "Extract the original game archive first:" >&2
-    echo "  unzip 'Raptor Call of the Shadows 2002 Registered.zip' -d original" >&2
+if [ ! -f data/INDEX ]; then
+    echo "Missing data/INDEX — restore the data/ asset tree" >&2
+    echo "  (see docs/asset-pipeline.md and tools/glbextract.py)" >&2
     exit 1
 fi
 
-mkdir -p game
-for i in 0 1 2 3 4; do
-    ln -sf "$PWD/original/Raptor Call of the Shadows/FILE000$i.GLB" "game/FILE000$i.GLB" 2>/dev/null
-done
-
-if [ ! -x game/raptor ]; then
+BIN=raptor/build/bin/raptor
+if [ ! -x "$BIN" ]; then
     echo "Building raptor (first run)..." >&2
     cmake -E make_directory raptor/build
     ( cd raptor/build && cmake .. -DCMAKE_BUILD_TYPE=Release ${CMAKE_PREFIX_PATH:+-DCMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH} && make -j"$(nproc)" )
-    cp raptor/build/bin/raptor game/
 fi
 
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$HOME/.local/lib"
-cd game
-exec ./raptor
+cd data
+exec "$ROOT/$BIN"

@@ -23,6 +23,7 @@ typedef struct
 
 void GLB_UseVM(void);
 int GLB_InitSystem(const char *exepath, int innum, const char *iprefix);
+int GLB_SlotItems(int filenum);
 char *GLB_LockItem(int handle);
 void GLB_UnlockItem(int handle);
 char *GLB_GetItem(int handle);
