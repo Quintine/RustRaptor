@@ -1,5 +1,6 @@
 #include <string.h>
 #include <stdio.h>
+#include "SDL.h"
 #include "common.h"
 #include "glbapi.h"
 #include "gfxapi.h"
@@ -182,6 +183,178 @@ WIN_OptDraw(
     GFX_PutSprite((char*)GLB_GetItem(FILE127_SLIDE_PIC), x + opt_vol[FX_VOL] - 2, y);
 }
 
+// WIN_Opts value rows: field + selection icon, keyboard order (matches the
+// dialog, top to bottom). The last two are the volume slider rows.
+
+#define OPT_ROWS 8
+#define OPT_VALUE_ROWS 6
+#define FILTER_COUNT 4
+
+static const int opt_filter_list[FILTER_COUNT] = { 0, 2, 3, 4 };
+
+static const struct
+{
+    int field;
+    int icon;
+} opt_rows[OPT_ROWS] = {
+    {OPTS_DETAIL,    OPTS_PIC1},
+    {OPTS_FILTER,    OPTS_PIC4},
+    {OPTS_SCANLINES, OPTS_PIC5},
+    {OPTS_RES,       OPTS_PIC6},
+    {OPTS_FULLSCR,   OPTS_PIC7},
+    {OPTS_ASPECT,    OPTS_PIC8},
+    {OPTS_VMUSIC,    OPTS_PIC2},
+    {OPTS_VFX,       OPTS_PIC3}
+};
+
+static const struct
+{
+    int w, h;
+} res_list[] = {
+    {640, 480}, {800, 600}, {960, 720}, {1280, 960},
+    {1600, 1200}, {1920, 1440}
+};
+
+#define RES_COUNT ((int)(sizeof(res_list) / sizeof(res_list[0])))
+
+static const char opt_detail_txt[2][16] = {
+    "LOW DETAIL",
+    "HIGH DETAIL"
+};
+
+static int opt_curd;
+static int opt_filter_idx;
+static int opt_scan;
+static int opt_res_idx;
+static int opt_avail[RES_COUNT];
+static int opt_fullscr;
+static int opt_aspect;
+
+static const char *OPTS_FilterText(char *buf)
+{
+    if (opt_filter_list[opt_filter_idx] == 0)
+        strcpy(buf, "FILTER OFF");
+    else
+        sprintf(buf, "FILTER SCALE %dX", opt_filter_list[opt_filter_idx]);
+    return buf;
+}
+
+static const char *OPTS_ScanText(char *buf)
+{
+    strcpy(buf, opt_scan ? "SCANLINES ON" : "SCANLINES OFF");
+    return buf;
+}
+
+static const char *OPTS_ResText(char *buf)
+{
+    sprintf(buf, "RESOLUTION %dX%d", res_list[opt_res_idx].w,
+            res_list[opt_res_idx].h);
+    return buf;
+}
+
+static const char *OPTS_FullscrText(char *buf)
+{
+    strcpy(buf, opt_fullscr ? "FULLSCREEN ON" : "FULLSCREEN OFF");
+    return buf;
+}
+
+static const char *OPTS_AspectText(char *buf)
+{
+    strcpy(buf, opt_aspect ? "ASPECT 4:3 ON" : "ASPECT 4:3 OFF");
+    return buf;
+}
+
+/***************************************************************************
+OPTS_ShowRow() - Moves the selection arrow icon to a row
+ ***************************************************************************/
+static void 
+OPTS_ShowRow(
+    int row
+)
+{
+    int loop;
+    
+    for (loop = 0; loop < OPT_ROWS; loop++)
+        SWD_SetFieldItem(opt_window, opt_rows[loop].icon, -1);
+    
+    SWD_SetFieldItem(opt_window, opt_rows[row].icon, FILE128_POINT_PIC);
+    SWD_ShowAllWindows();
+    GFX_DisplayUpdate();
+}
+
+/***************************************************************************
+OPTS_StepRow() - Apply one LEFT(-1)/RIGHT(+1) step to an options row:
+updates the row state, live-applies the video setting and refreshes the
+field text. Returns 1 when the caller should play the slider patch sound.
+ ***************************************************************************/
+static int 
+OPTS_StepRow(
+    int field,
+    int dir
+)
+{
+    char buf[24];
+    
+    switch (field)
+    {
+    case OPTS_VMUSIC:
+        opt_vol[MUSIC_VOL] += dir * 8;
+        if (opt_vol[MUSIC_VOL] < 0)
+            opt_vol[MUSIC_VOL] = 0;
+        if (opt_vol[MUSIC_VOL] > 127)
+            opt_vol[MUSIC_VOL] = 127;
+        return 0;
+    
+    case OPTS_VFX:
+        opt_vol[FX_VOL] += dir * 8;
+        if (opt_vol[FX_VOL] < 0)
+            opt_vol[FX_VOL] = 0;
+        if (opt_vol[FX_VOL] > 127)
+            opt_vol[FX_VOL] = 127;
+        return 1;
+    
+    case OPTS_DETAIL:
+        opt_curd ^= 1;
+        SWD_SetFieldText(opt_window, OPTS_DETAIL, opt_detail_txt[opt_curd]);
+        return 0;
+    
+    case OPTS_FILTER:
+        opt_filter_idx = (opt_filter_idx + dir + FILTER_COUNT) % FILTER_COUNT;
+        I_SetVideoFilter(opt_filter_list[opt_filter_idx]);
+        SWD_SetFieldText(opt_window, OPTS_FILTER, OPTS_FilterText(buf));
+        return 0;
+    
+    case OPTS_SCANLINES:
+        opt_scan ^= 1;
+        I_SetScanlines(opt_scan);
+        SWD_SetFieldText(opt_window, OPTS_SCANLINES, OPTS_ScanText(buf));
+        return 0;
+    
+    case OPTS_RES:
+        do
+        {
+            opt_res_idx = (opt_res_idx + dir + RES_COUNT) % RES_COUNT;
+        } while (!opt_avail[opt_res_idx]);
+        I_SetVideoResolution(res_list[opt_res_idx].w, res_list[opt_res_idx].h);
+        SWD_SetFieldText(opt_window, OPTS_RES, OPTS_ResText(buf));
+        return 0;
+    
+    case OPTS_FULLSCR:
+        opt_fullscr ^= 1;
+        I_SetFullscreen(opt_fullscr);
+        SWD_SetFieldText(opt_window, OPTS_FULLSCR, OPTS_FullscrText(buf));
+        return 0;
+    
+    case OPTS_ASPECT:
+        opt_aspect ^= 1;
+        I_SetAspectCorrect(opt_aspect);
+        SWD_SetFieldText(opt_window, OPTS_ASPECT, OPTS_AspectText(buf));
+        return 0;
+    }
+    
+    return 0;
+}
+
 /***************************************************************************
 WIN_Opts() - Sets Game Options
  ***************************************************************************/
@@ -192,35 +365,79 @@ WIN_Opts(
 {
     SWD_DLG dlg;
     int x, y, lx, ly;
-    int kbactive, patchflag, curd, cur_field;
+    int kbactive, patchflag, cur_field;
     int new_vol;
-    int fpics[3] = {
-        OPTS_PIC1, OPTS_PIC2, OPTS_PIC3
-    };
-    char detail[2][16] = {
-        "LOW DETAIL",
-        "HIGH DETAIL"
-    };
+    int loop, diff, best;
+    SDL_DisplayMode desktop;
+    char buf[24];
 
     kbactive = 0;
     patchflag = 0;
-    curd = opt_detail;
     cur_field = 0;
 
     opt_vol[MUSIC_VOL] = music_volume;
     opt_vol[FX_VOL] = fx_volume;
     
+    // Video row state from the live settings
+    
+    opt_curd = opt_detail;
+    opt_filter_idx = 0;
+    
+    for (loop = 0; loop < FILTER_COUNT; loop++)
+    {
+        if (opt_filter_list[loop] == I_GetVideoFilter())
+            opt_filter_idx = loop;
+    }
+    
+    opt_scan = I_GetScanlines();
+    opt_fullscr = fullscreen;
+    opt_aspect = aspect_ratio_correct;
+    
+    // Resolution presets: skip anything larger than the desktop, start on
+    // the preset closest in area to the current window size
+    
+    if (SDL_GetDesktopDisplayMode(0, &desktop) != 0)
+        desktop.w = desktop.h = 0;
+    
+    best = 0x7fffffff;
+    opt_res_idx = 0;
+    
+    for (loop = 0; loop < RES_COUNT; loop++)
+    {
+        opt_avail[loop] = 1;
+        
+        if (desktop.w && (res_list[loop].w > desktop.w
+                          || res_list[loop].h > desktop.h))
+        {
+            opt_avail[loop] = 0;
+            continue;
+        }
+        
+        diff = res_list[loop].w * res_list[loop].h
+             - window_width * window_height;
+        
+        if (diff < 0)
+            diff = -diff;
+        
+        if (diff < best)
+        {
+            best = diff;
+            opt_res_idx = loop;
+        }
+    }
+    
     opt_window = SWD_InitWindow(FILE13f_OPTS_SWD);
     
-    SWD_SetFieldText(opt_window, OPTS_DETAIL, detail[curd]);
+    SWD_SetFieldText(opt_window, OPTS_DETAIL, opt_detail_txt[opt_curd]);
+    SWD_SetFieldText(opt_window, OPTS_FILTER, OPTS_FilterText(buf));
+    SWD_SetFieldText(opt_window, OPTS_SCANLINES, OPTS_ScanText(buf));
+    SWD_SetFieldText(opt_window, OPTS_RES, OPTS_ResText(buf));
+    SWD_SetFieldText(opt_window, OPTS_FULLSCR, OPTS_FullscrText(buf));
+    SWD_SetFieldText(opt_window, OPTS_ASPECT, OPTS_AspectText(buf));
     SWD_SetWinDrawFunc(opt_window, WIN_OptDraw);
     
-    SWD_SetFieldItem(opt_window, OPTS_PIC1, -1);
-    SWD_SetFieldItem(opt_window, OPTS_PIC2, -1);
-    SWD_SetFieldItem(opt_window, OPTS_PIC3, -1);
-    
-    SWD_ShowAllWindows();
-    
+    OPTS_ShowRow(0);
+
     SND_Patch(FX_SWEP, 127);
     GFX_DisplayUpdate();
 
@@ -284,29 +501,11 @@ WIN_Opts(
             break;
         
         case SC_LEFT:
-            if (cur_field)
-            {
-                if (cur_field == 2)
-                    patchflag = 1;
-                opt_vol[cur_field - 1] -= 8;
-                if (opt_vol[cur_field - 1] < 0)
-                    opt_vol[cur_field - 1] = 0;
-                SWD_ShowAllWindows();
-                GFX_DisplayUpdate();
-            }
-            break;
-        
         case SC_RIGHT:
-            if (cur_field)
-            {
-                if (cur_field == 2)
-                    patchflag = 1;
-                opt_vol[cur_field - 1] += 8;
-                if (opt_vol[cur_field - 1] > 127)
-                    opt_vol[cur_field - 1] = 127;
-                SWD_ShowAllWindows();
-                GFX_DisplayUpdate();
-            }
+            patchflag = OPTS_StepRow(opt_rows[cur_field].field,
+                                     dlg.keypress == SC_RIGHT ? 1 : -1);
+            SWD_ShowAllWindows();
+            GFX_DisplayUpdate();
             break;
         
         case SC_UP:
@@ -314,33 +513,23 @@ WIN_Opts(
                 cur_field--;
             kbactive = 1;
             SND_Patch(FX_SWEP, 127);
-            SWD_SetFieldItem(opt_window, OPTS_PIC1, -1);
-            SWD_SetFieldItem(opt_window, OPTS_PIC2, -1);
-            SWD_SetFieldItem(opt_window, OPTS_PIC3, -1);
-            SWD_SetFieldItem(opt_window, fpics[cur_field], FILE128_POINT_PIC);
-            SWD_ShowAllWindows();
-            GFX_DisplayUpdate();
+            OPTS_ShowRow(cur_field);
             break;
         
         case SC_DOWN:
-            if (kbactive && cur_field < 2)
+            if (kbactive && cur_field < OPT_ROWS - 1)
                 cur_field++;
             kbactive = 1;
             SND_Patch(FX_SWEP, 127);
-            SWD_SetFieldItem(opt_window, OPTS_PIC1, -1);
-            SWD_SetFieldItem(opt_window, OPTS_PIC2, -1);
-            SWD_SetFieldItem(opt_window, OPTS_PIC3, -1);
-            SWD_SetFieldItem(opt_window, fpics[cur_field], FILE128_POINT_PIC);
-            SWD_ShowAllWindows();
-            GFX_DisplayUpdate();
+            OPTS_ShowRow(cur_field);
             break;
         
         case SC_ENTER:
-            if (!cur_field)
+            if (cur_field < OPT_VALUE_ROWS)
             {
                 dlg.cur_act = S_FLD_COMMAND;
                 dlg.cur_cmd = F_SELECT;
-                dlg.field = OPTS_DETAIL;
+                dlg.field = opt_rows[cur_field].field;
             }
             break;
         }
@@ -387,7 +576,7 @@ WIN_Opts(
             }
         }
         
-        opt_detail = curd;
+        opt_detail = opt_curd;
         
         if (fx_volume != opt_vol[FX_VOL])
             fx_volume = opt_vol[FX_VOL];
@@ -414,13 +603,22 @@ WIN_Opts(
                     INI_PutPreferenceLong("SoundFX", "Volume", fx_volume);
                 }
                 INI_PutPreferenceLong("Setup", "Detail", opt_detail);
+                INI_PutPreferenceLong("Video", "upscaler", I_GetVideoFilter());
+                INI_PutPreferenceLong("Video", "scanlines", I_GetScanlines());
+                INI_PutPreferenceLong("Video", "fullscreen", fullscreen);
+                INI_PutPreferenceLong("Video", "aspect_ratio_correct",
+                                      aspect_ratio_correct);
                 SND_Patch(FX_SWEP, 127);
                 goto exit_opts;
             
             case OPTS_DETAIL:
+            case OPTS_FILTER:
+            case OPTS_SCANLINES:
+            case OPTS_RES:
+            case OPTS_FULLSCR:
+            case OPTS_ASPECT:
                 SND_Patch(FX_SWEP, 127);
-                curd ^= 1;
-                SWD_SetFieldText(opt_window, OPTS_DETAIL, detail[curd]);
+                OPTS_StepRow(dlg.field, 1);
                 SWD_ShowAllWindows();
                 GFX_DisplayUpdate();
                 break;
@@ -431,8 +629,6 @@ WIN_Opts(
             SND_Patch(FX_SWEP, 127);
     }
 
-exit_opts:
-    
     SWD_SetWinDrawFunc(opt_window, NULL);
     
     SWD_DestroyWindow(opt_window);

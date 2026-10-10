@@ -194,3 +194,13 @@
 #define OPTS_000A 0x000a     // TEXT FIELD
 #define OPTS_VMUSIC 0x000b   // VIEW AREA
 #define OPTS_VFX 0x000c      // VIEW AREA
+#define OPTS_FILTER 0x000d   // BUTTON FIELD
+#define OPTS_SCANLINES 0x000e // BUTTON FIELD
+#define OPTS_RES 0x000f      // BUTTON FIELD
+#define OPTS_FULLSCR 0x0010  // BUTTON FIELD
+#define OPTS_ASPECT 0x0011   // BUTTON FIELD
+#define OPTS_PIC4 0x0012     // ICON
+#define OPTS_PIC5 0x0013     // ICON
+#define OPTS_PIC6 0x0014     // ICON
+#define OPTS_PIC7 0x0015     // ICON
+#define OPTS_PIC8 0x0016     // ICON

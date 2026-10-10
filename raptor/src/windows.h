@@ -25,6 +25,7 @@ void WIN_AskExit(void);
 void WIN_MainMenu(void);
 void WIN_MainLoop(void);
 void WIN_Pause(void);
+void WIN_Opts(void);
 int WIN_AskBool(const char *question);
 void WIN_WinGame(int game);
 void WIN_Msg(const char *msg);

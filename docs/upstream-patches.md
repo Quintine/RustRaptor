@@ -121,6 +121,40 @@ active. Exclusive `fullscreen_width/height` modes ignore it; if both
 `fullscreen=1` and `borderless=1` are set, `fullscreen` wins. The stale
 commented-out `-borderless` command-line snippet was removed.
 
+## Video: HD presentation filter (scale2x/scale3x)
+
+New `[Video]` SETUP.INI keys, read once at boot in `VIDEO_LoadPrefs`
+(`src/i_video.cpp`): `upscaler` (0 = off, 2/3/4 = scale2x/scale3x/
+2x scale2x, default 3) and `scanlines` (0/1, default 0). The filter is a
+presentation-level CPU pass over the final RGBA frame before it enters the
+streaming texture — no engine logic or asset changes; the 4:3 playfield is
+kept. Kernels are the AdvMAME scale2x/scale3x rules by Andrea Mazzoleni,
+reimplemented in-repo (`src/i_upscale.cpp`, GPLv2+-compatible; nothing
+vendored). Filtered frames render directly from the factor-sized streaming
+texture and bypass the nearest-integer intermediate (`texture_upscaled`),
+which only sharpens sub-integer fits of a 1x source. With `upscaler=0` the
+original four-stage pixel-perfect path is byte-for-byte unchanged. The
+scanline overlay darkens every third logical row (320x240 space) after the
+final copy, so it stays geometry-safe under every window mode. Like
+`Video/borderless`, these are hand-edited INI settings; `raptorsetup` is
+not extended.
+
+
+## Effects: machine-gun casings eject into world space
+
+Upstream's forward-gun muzzle effect (`A_PLAYER_SHOOT`, the GUNSTR
+diagonal streak art) is a player-relative anim: the streak is glued to
+the wingtip and flickers in place for its 4-step life, which at the
+decoupled presentation rate reads as shells vibrating at the gun rather
+than being ejected. This fork registers the same art once more as
+`A_PLAYER_EJECTA` (GROUND layer, `src/anims.cpp`) and spawns that at each
+wingtip's world position (`SHOTS_PlayerShoot` case `S_FORWARD_GUNS`) via
+`ANIMS_StartGAnim`. The casings therefore stay behind as the plane moves
+on and drift down with the map scroll (1 px per simulation step, ~23 px/s)
+for their 172 ms life. Sim-side timing is untouched: spawn cadence
+(shoot_rate 2), anim rate, RNG consumption and demo playback are
+identical to upstream; only the anim's reference frame changes.
+
 ## Input: no cursor snapping
 
 Dialog/menu code no longer warps the mouse cursor onto the default
@@ -131,6 +165,23 @@ select, the hangar keyboard navigation and the ship computer. Keyboard
 selection still highlights fields without moving the pointer. The
 mission-start `PTR_SetPos(playerx, playery)` in `Do_Game` is kept — it
 seeds mouse ship control, not menu focus.
+
+## UI: in-game options menu with runtime video settings
+
+The Options dialog now carries the HD-remaster video settings that were
+previously boot-only INI keys. `ui/OPTS_SWD` was re-authored (same catalog
+handle `0x1003f`; built by `tools/swdbuild.py` from
+`tools/opts_swd_spec.py`) from 13 to 23 fields, adding FILTER, SCANLINES,
+RESOLUTION, FULLSCREEN and ASPECT rows with selection icons beside the
+existing Music/FX/Detail rows, and new `OPTS_*` ids in `src/winids.h`.
+`src/i_video.cpp` gained runtime setters (`I_SetVideoFilter/Scanlines/
+VideoResolution/Fullscreen/AspectCorrect`) that only touch presentation
+resources — the factor-sized surface/texture pair was extracted from
+`SetVideoMode` into `RebuildStreamTextures` so the filter can change
+without re-creating the 8-bit screenbuffer. Changes live-apply from the
+dialog and persist to `[Video]` SETUP.INI keys (`upscaler`, `scanlines`,
+`fullscreen`, `aspect_ratio_correct`) on EXIT, and the dialog is also
+reachable in-mission via the O key (`Do_Game`, bracketed like F1 help).
 
 ## Deliberately unchanged
 

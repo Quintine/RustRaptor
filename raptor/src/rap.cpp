@@ -922,7 +922,22 @@ Do_Game(
             b3_flag = 0;
         }
         
-        if (KBD_IsKey(SC_P) || JOY_IsKeyInGameStart(Start))                                                                  
+        if (KBD_IsKey(SC_O))
+        {
+            SWD_SetClearFlag(0);
+            IPT_End();
+            WIN_Opts();
+            IPT_Start();
+            RAP_ClearSides();
+            RAP_DisplayStats();
+            SWD_SetClearFlag(1);
+            IMS_StartAck();
+            BUT_1 = BUT_2 = BUT_3 = BUT_4 = 0;
+            b2_flag = 0;
+            b3_flag = 0;
+        }
+        
+        if (KBD_IsKey(SC_P) || JOY_IsKeyInGameStart(Start))
         {
             while (IMS_IsAck())
             {

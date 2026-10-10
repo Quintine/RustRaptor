@@ -183,6 +183,9 @@ ANIMS_Init(
     
     // SUPER SHIELD
     ANIMS_Register(FILE149_SHIPGLOW_BLK, 4, HIGH_AIR, 1, 1, A_NORM);
+
+    // MACHINE-GUN EJECTA (world-space casing streaks, GUNSTR art)
+    ANIMS_Register(FILE1c7_GUNSTR_BLK, 4, GROUND, 0, 0, A_NORM);
 }
 
 /***************************************************************************

@@ -35,6 +35,7 @@ set(SOURCE_FILES
     src/glbapi.cpp
     src/i_video.cpp
     src/musapi.cpp
+    src/i_upscale.cpp
     src/movie_a.cpp
     src/ptrapi_a.cpp
     src/swdapi.cpp

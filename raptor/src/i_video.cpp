@@ -38,6 +38,7 @@
 #include "musapi.h"
 #include "prefapi.h"
 #include "joyapi.h"
+#include "i_upscale.h"
 
 // These are (1) the window (or the full screen) that our game is rendered to
 // and (2) the renderer that scales the texture (see below) into this window.
@@ -60,6 +61,12 @@ static SDL_Surface *screenbuffer = NULL;
 static SDL_Surface *argbbuffer = NULL;
 static SDL_Texture *texture = NULL;
 static SDL_Texture *texture_upscaled = NULL;
+
+// HD remaster: when the presentation upscaler is active, the filtered
+// factor-sized RGBA frame lands here before going into the streaming
+// texture.
+
+static SDL_Surface *argbbuffer_scaled = NULL;
 
 static SDL_Rect blit_rect = {
     0,
@@ -116,6 +123,13 @@ int fullscreen_width = 0, fullscreen_height = 0;
 // Maximum number of pixels to use for intermediate scale buffer.
 
 static int max_scaling_buffer_pixels = 16000000;
+
+// HD remaster: presentation-level pixel-art upscaler (0 = off, else 2/3/4)
+// and scanline overlay (0 = off, 1 = on). Read from [Video] upscaler /
+// [Video] scanlines in SETUP.INI at boot only; changing them needs a restart.
+
+static int upscale_factor = 3;
+static int scanlines = 0;
 
 // Run in full screen mode?  (int type for config code)
 
@@ -218,6 +232,14 @@ void VIDEO_LoadPrefs(void)
     aspect_ratio_correct = INI_GetPreferenceLong("Video", "aspect_ratio_correct", 1);
     txt_fullscreen = INI_GetPreferenceLong("Video", "txt_fullscreen", 0);
     borderless = INI_GetPreferenceLong("Video", "borderless", 0);
+    upscale_factor = INI_GetPreferenceLong("Video", "upscaler", 3);
+    scanlines = INI_GetPreferenceLong("Video", "scanlines", 0);
+
+    if (upscale_factor != 0 && upscale_factor != 2 && upscale_factor != 3
+        && upscale_factor != 4)
+    {
+        upscale_factor = 3;
+    }
 }
 
 static bool MouseShouldBeGrabbed()
@@ -854,24 +876,64 @@ void I_FinishUpdate (void)
 
     SDL_LowerBlit(screenbuffer, &blit_rect, argbbuffer, &blit_rect);
 
-    // Update the intermediate texture with the contents of the RGBA buffer.
+    if (upscale_factor > 1)
+    {
+        // HD remaster path: filter the RGBA frame into the factor-sized
+        // surface and stream it directly to screen. The source is already
+        // integer-scaled by the filter, so the nearest-integer intermediate
+        // (which exists to sharpen sub-integer fits of a 1x source) is not
+        // used here.
 
-    SDL_UpdateTexture(texture, NULL, argbbuffer->pixels, argbbuffer->pitch);
+        I_UpscaleFrame((uint32_t *) argbbuffer->pixels,
+                       argbbuffer->pitch / 4,
+                       SCREENWIDTH, SCREENHEIGHT,
+                       (uint32_t *) argbbuffer_scaled->pixels,
+                       argbbuffer_scaled->pitch / 4,
+                       upscale_factor);
 
-    // Make sure the pillarboxes are kept clear each frame.
+        SDL_UpdateTexture(texture, NULL, argbbuffer_scaled->pixels,
+                          argbbuffer_scaled->pitch);
 
-    SDL_RenderClear(renderer);
+        SDL_RenderClear(renderer);
+        SDL_SetRenderTarget(renderer, NULL);
+        SDL_RenderCopy(renderer, texture, NULL, NULL);
+    }
+    else
+    {
+        // Update the intermediate texture with the contents of the RGBA buffer.
 
-    // Render this intermediate texture into the upscaled texture
-    // using "nearest" integer scaling.
+        SDL_UpdateTexture(texture, NULL, argbbuffer->pixels, argbbuffer->pitch);
 
-    SDL_SetRenderTarget(renderer, texture_upscaled);
-    SDL_RenderCopy(renderer, texture, NULL, NULL);
+        // Make sure the pillarboxes are kept clear each frame.
 
-    // Finally, render this upscaled texture to screen using linear scaling.
+        SDL_RenderClear(renderer);
 
-    SDL_SetRenderTarget(renderer, NULL);
-    SDL_RenderCopy(renderer, texture_upscaled, NULL, NULL);
+        // Render this intermediate texture into the upscaled texture
+        // using "nearest" integer scaling.
+
+        SDL_SetRenderTarget(renderer, texture_upscaled);
+        SDL_RenderCopy(renderer, texture, NULL, NULL);
+
+        // Finally, render this upscaled texture to screen using linear scaling.
+
+        SDL_SetRenderTarget(renderer, NULL);
+        SDL_RenderCopy(renderer, texture_upscaled, NULL, NULL);
+    }
+
+    if (scanlines)
+    {
+        // Scanline overlay: every third logical row darkened. Logical size
+        // is 320xactualheight, so the lines stay evenly spaced physical rows
+        // under any window size.
+
+        SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
+        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 70);
+
+        for (int y = 1; y < actualheight; y += 3)
+        {
+            SDL_RenderDrawLine(renderer, 0, y, SCREENWIDTH, y);
+        }
+    }
 
     // Draw!
 
@@ -1242,6 +1304,7 @@ void I_GetWindowPosition(int *x, int *y, int w, int h)
     }
 }
 
+static void RebuildStreamTextures(void);
 static void SetVideoMode(void)
 {
     int w, h;
@@ -1452,6 +1515,33 @@ static void SetVideoMode(void)
         SDL_FillRect(argbbuffer, NULL, 0);
     }
 
+    // HD remaster: with the upscaler active, a factor-sized RGBA surface
+    // feeds the (factor-sized) streaming texture. Freed alongside
+    // argbbuffer above on every re-init.
+
+    RebuildStreamTextures();
+}
+
+// Rebuild the factor-sized RGBA surface and the streaming texture that
+// carry the frame at the current upscale_factor. Shared by SetVideoMode
+// (full re-init) and the runtime filter setter (I_SetVideoFilter).
+static void RebuildStreamTextures(void)
+{
+    if (argbbuffer_scaled != NULL)
+    {
+        SDL_FreeSurface(argbbuffer_scaled);
+        argbbuffer_scaled = NULL;
+    }
+
+    if (upscale_factor > 1)
+    {
+        argbbuffer_scaled = SDL_CreateRGBSurfaceWithFormat(0,
+                                        SCREENWIDTH * upscale_factor,
+                                        SCREENHEIGHT * upscale_factor,
+                                        32, pixel_format);
+        SDL_FillRect(argbbuffer_scaled, NULL, 0);
+    }
+
     if (texture != NULL)
     {
         SDL_DestroyTexture(texture);
@@ -1470,11 +1560,90 @@ static void SetVideoMode(void)
     texture = SDL_CreateTexture(renderer,
                                 pixel_format,
                                 SDL_TEXTUREACCESS_STREAMING,
-                                SCREENWIDTH, SCREENHEIGHT);
+                                upscale_factor > 1
+                                    ? SCREENWIDTH * upscale_factor
+                                    : SCREENWIDTH,
+                                upscale_factor > 1
+                                    ? SCREENHEIGHT * upscale_factor
+                                    : SCREENHEIGHT);
 
     // Initially create the upscaled texture for rendering to screen
 
     CreateUpscaledTexture(true);
+}
+
+//**************************************************************************
+// Runtime video option setters (in-game Options dialog)
+//
+// These only touch presentation resources. Never call SetVideoMode() from
+// here: it frees and recreates screenbuffer without re-pointing
+// I_VideoBuffer, so the game would keep drawing into freed memory.
+//**************************************************************************
+
+void I_SetVideoFilter(int factor)
+{
+    if (factor != 0 && factor != 2 && factor != 3 && factor != 4)
+        return;
+
+    if (factor == upscale_factor)
+        return;
+
+    upscale_factor = factor;
+    RebuildStreamTextures();
+}
+
+void I_SetScanlines(int on)
+{
+    scanlines = on ? 1 : 0;
+}
+
+void I_SetVideoResolution(int w, int h)
+{
+    if (fullscreen)
+        I_SetFullscreen(0);
+
+    window_width = w;
+    window_height = h;
+    AdjustWindowSize();
+    SDL_SetWindowSize(screen, window_width, window_height);
+
+    // The RESIZED event path in I_FinishUpdate adapts the textures.
+}
+
+void I_SetFullscreen(int on)
+{
+    fullscreen = on ? 1 : 0;
+
+    SDL_SetWindowFullscreen(screen,
+        fullscreen ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0);
+
+    if (!fullscreen)
+    {
+        AdjustWindowSize();
+        SDL_SetWindowSize(screen, window_width, window_height);
+    }
+}
+
+void I_SetAspectCorrect(int on)
+{
+    aspect_ratio_correct = on ? 1 : 0;
+    actualheight = aspect_ratio_correct ? SCREENHEIGHT_4_3 : SCREENHEIGHT;
+
+    SDL_RenderSetLogicalSize(renderer, SCREENWIDTH, actualheight);
+    AdjustWindowSize();
+    SDL_SetWindowSize(screen, window_width, window_height);
+    CreateUpscaledTexture(false);
+    palette_to_set = true;
+}
+
+int I_GetVideoFilter(void)
+{
+    return upscale_factor;
+}
+
+int I_GetScanlines(void)
+{
+    return scanlines;
 }
 
 void I_InitGraphics(uint8_t *pal)

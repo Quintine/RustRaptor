@@ -37,6 +37,7 @@ extern int window_width;
 extern int window_height;
 extern int fullscreen;
 extern int txt_fullscreen;
+extern int aspect_ratio_correct;
 
 extern pixel_t *I_VideoBuffer;
 
@@ -50,6 +51,15 @@ void I_GetMousePos(int *x, int *y);
 void I_SetMousePos(int x, int y);
 void I_SetGrabMouseCallback(grabmouse_callback_t func);
 void VIDEO_LoadPrefs(void);
+
+// Runtime video option setters (in-game Options dialog)
+void I_SetVideoFilter(int factor);   // 0/2/3/4, anything else is ignored
+void I_SetScanlines(int on);
+void I_SetVideoResolution(int w, int h);
+void I_SetFullscreen(int on);
+void I_SetAspectCorrect(int on);
+int I_GetVideoFilter(void);
+int I_GetScanlines(void);
 void closewindow(void);
 bool I_GetNeedResize(bool setonlypos);
 int I_VsyncActive(void);

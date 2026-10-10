@@ -70,6 +70,11 @@ typedef struct ANIMS_S
 #define A_ENERGY_GRAB          19
 #define A_SUPER_SHIELD         20
 
+// Machine-gun ejecta: same GUNSTR streak art dropped into world space at
+// the wingtips (ground layer, drifts with the map scroll) so casings stay
+// behind the plane instead of flicking in place at the gun.
+#define A_PLAYER_EJECTA        21
+
 void ANIMS_Clear(void);
 ANIMS *ANIMS_Remove(ANIMS *anim);
 void ANIMS_Init(void);

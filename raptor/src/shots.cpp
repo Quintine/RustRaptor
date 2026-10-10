@@ -633,7 +633,10 @@ SHOTS_PlayerShoot(
         cur->move.y2 = 0;
         cur->startx = player_cx;
         cur->starty = player_cy;
-        ANIMS_StartAnim(A_PLAYER_SHOOT, o_gun1[playerpic], 0);
+        // Casing streaks drop into world space (StartGAnim takes the
+        // top-left; the 8x8 GUNSTR art is centered on the muzzle by hand).
+        ANIMS_StartGAnim(A_PLAYER_EJECTA,
+                         player_cx + o_gun1[playerpic] - 4, player_cy - 4);
         
         cur = SHOTS_Get();
         if (!cur)
@@ -651,7 +654,8 @@ SHOTS_PlayerShoot(
         cur->move.y2 = 0;
         cur->startx = player_cx;
         cur->starty = player_cy;
-        ANIMS_StartAnim(A_PLAYER_SHOOT, -o_gun1[playerpic] - 1, 0);
+        ANIMS_StartGAnim(A_PLAYER_EJECTA,
+                         player_cx - o_gun1[playerpic] - 1 - 4, player_cy - 4);
         break;
     
     case S_PLASMA_GUNS:
