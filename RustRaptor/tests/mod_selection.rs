@@ -131,12 +131,12 @@ fn disabling_a_missing_installed_package_can_still_remove_its_dependents() {
     assert_eq!(plan.enabled, ids(&["other"]));
 }
 #[test]
-fn selecting_shipped_iron_coast_mission_selects_all_six_real_dependencies() {
+fn selecting_shipped_iron_coast_mission_selects_all_seven_real_dependencies() {
     let root = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("mods");
     let discovery = modding::discover(&root);
     assert!(discovery.errors.is_empty(), "{:?}", discovery.errors);
     let enabled = plan_enable(&discovery, &[], "iron_coast_mission_1").unwrap();
-    assert_eq!(enabled.len(), 7);
+    assert_eq!(enabled.len(), 8);
     assert_eq!(enabled.last().unwrap(), "iron_coast_mission_1");
     for id in [
         "iron_coast_scout",
@@ -145,6 +145,7 @@ fn selecting_shipped_iron_coast_mission_selects_all_six_real_dependencies() {
         "pulse_cannon",
         "seeker_swarm",
         "ion_lance",
+        "iron_coast_music",
     ] {
         assert!(enabled.contains(&id.to_string()));
         let removal = plan_disable(&discovery, &enabled, id);

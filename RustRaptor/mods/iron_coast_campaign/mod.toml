@@ -1,0 +1,14 @@
+id = "iron_coast_campaign"
+name = "Iron Coast — Complete Campaign"
+version = "1.0.0"
+api_version = 1
+description = "Six linked missions: Breakwater, Tidal Relay, Saltworks Convoy, Stormwall, Cinder Docks and Iron Crown. Selects each mission, its distinct boss, shared equipment and soundtrack. Individual mission mods remain playable separately."
+content = "content.json"
+
+[dependencies]
+iron_coast_mission_1 = "^1.0"
+iron_coast_mission_2 = "^1.0"
+iron_coast_mission_3 = "^1.0"
+iron_coast_mission_4 = "^1.0"
+iron_coast_mission_5 = "^1.0"
+iron_coast_mission_6 = "^1.0"

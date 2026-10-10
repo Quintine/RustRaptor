@@ -1,0 +1,47 @@
+# Full-catalog HD loading and caches
+
+The runtime can register the complete original picture catalog without retaining every decoded replacement in RAM. Registration accepts up to 8 MiB of JSON metadata, 8,192 sequences and 16,384 distinct asset IDs. Each sequence still has at most 512 declared frames. These are validation ceilings, not coverage claims.
+
+`HdAssets::load_lazy(root, catalog, cache_dir)` checks all sequence IDs before committing the manifest. Duplicate IDs, arithmetic overflow, unsupported formats and invalid sequence lengths reject the pack atomically. Each supplied frame must match the checked original payload SHA-256, logical canvas and `[0,0]` anchor. Its PNG path must resolve inside the pack, including symlinks. Missing files and individual source mismatches produce diagnostics and native-art fallback.
+
+Registration does not imply a PNG has been decoded. `registered_count()` reports source-checked candidates that have not been rejected; `validated_count()` and the compatibility alias `coverage()` report frames whose artwork has passed validation. First use checks PNG format, crop bounds, matching aspect ratio, at least 2× logical resolution, visible pixels and source-aware transparency. Transparent originals require transparent negative space; opaque originals accept opaque art. A failed frame returns `Ok(None)` from `sprite`, records one diagnostic and keeps native fallback until the pack is reloaded.
+
+`HdAssets::load` performs full eager validation using the same bounded caches. `validate_all()` can also validate a lazily registered pack; its report distinguishes registered, validated and rejected frames. Full validation can therefore be used in a CLI or audit without raising runtime memory limits. It validates supplied artwork and does not infer coverage for absent originals.
+
+## Memory bounds
+
+Each PNG is limited to 32 MiB on disk, 4,096 pixels per dimension, 4,194,304 total pixels and a 64 MiB decoder allocation limit. Reads are bounded even if a file grows after metadata inspection. A loaded frame retains at most its logical canvas at 4× resolution. Larger generated originals remain unchanged on disk.
+
+Three least-recently-used caches each have a 32 MiB ceiling:
+
+- Decoded atlas images, keyed by the exact source PNG SHA-256.
+- Cropped, resampled RGBA frames, keyed by PNG identity, original payload SHA-256, crop, canvas, anchor, alpha requirement and kernel version.
+- Indexed sprites, keyed by the derived frame identity, presentation scale and complete palette identity.
+
+Resident cached pixels total at most 96 MiB, irrespective of catalog coverage. Decoder input, resampling work buffers and returned owned sprites are additional bounded working allocations; callers should retain only currently needed sprites. Eviction removes cached pixels, not frame registrations or validated coverage. Adjacent crops reuse the decoded atlas; an atlas is not cloned in full merely to extract a small crop. Repeated draws copy only the final indexed canvas. Palette changes cannot reuse stale indexed colors.
+
+Source palette labels have a separate hard 32 MiB metadata ceiling. Frames using only ordinary colors need no label map. Frames containing animated labels retain one byte per original logical pixel; transparent and ordinary source locations use the ordinary class. Quantization restricts ordinary HD pixels to indices 0–239, water to 240–244 and fire to 245–249. Original glow/flash labels 250–255 remain exact. Newly visible HD pixels outside the original silhouette use ordinary colors. This prevents a bright static highlight from acquiring fire, water or blinking behavior. Cache color keys include the source class; equal RGB values in different classes cannot share an incorrect palette result.
+
+## Derived disk cache
+
+The optional cache belongs under the separate Rust profile cache, for example `RaptorReplica/cache/hd-art-v1`. It stores original-independent derived RGBA files; originals and raw generations are never overwritten. Each filename binds the source PNG hash, exact original payload hash, crop, logical dimensions, anchor, alpha policy and resampling kernel. Palette-dependent indexed sprites remain in memory only.
+
+A derived file has a versioned header, exact frame identity, dimensions and payload SHA-256. Reads recheck dimensions, byte count, alpha policy and checksum. A corrupted or escaping symlink cache entry is discarded and rebuilt from the checked PNG. Artwork continues to work if the cache is unwritable. Files are written to a new temporary file and atomically renamed; interruption may lose a cache entry, which is safe to regenerate.
+
+The disk cache is capped at 512 MiB. Older generated `.rgba` files are evicted when space is needed; unrelated files and original art are untouched. Delete this cache to reclaim space at any time. A changed PNG, original source payload, crop or kernel produces a different cache identity.
+
+## Validation
+
+`raptor-rust --data /absolute/path/to/data --validate-hd` fully validates the supplied pack and exits unsuccessfully if any supplied artwork fails. Its totals describe supplied frames; the full-catalog completion ledger separately records originals that are still missing replacements.
+
+Portable synthetic tests exercise a 5,753-frame manifest, full validation, adjacent atlas crops, memory eviction, palette changes and source animation classes at every scale, 4× residency, malformed PNGs, original hash mismatches, corrupted caches, disk eviction and escaping artwork/cache symlinks.
+
+Run the local original-data integration check with:
+
+```sh
+RAPTOR_TEST_DATA=/absolute/path/to/data \
+  cargo test --locked --lib hd::tests::original_hd_pack_validates_with_bounded_residency \
+  -- --ignored --nocapture
+```
+
+That check validates every supplied frame and renders it through `HdAssets::sprite` at scales 1–4 with the original palette. It checks dimensions, visible output and each cache ceiling. Visual review, animation alignment and terrain seams remain separate acceptance checks.

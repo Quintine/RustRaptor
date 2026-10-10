@@ -12,8 +12,8 @@ The registered game has three sectors with nine waves each. Archive slots are as
 - Rust MUS, GENMIDI FM synthesis and digital DSP mixing, with native PCM comparisons.
 - Menus, shop, equipment, mission selection, pilot slots, atomic saves, read-only legacy import and original AGX cinematics.
 - Local mods, dependencies/conflicts, explicit overrides/priority/hashes, bounded deterministic Rhai hooks and transactional commands.
-- In-game enable/disable and pending changes, save diagnostics, schemas, validation CLI and scripted Aurora example.
-- Optional source-hashed HD loader/setting; one accepted player-frame proof with original fallback.
+- In-game enable/disable and pending changes, save mismatch confirmation and backups, schemas, validation CLI and scripted Aurora example.
+- Optional source-hashed HD loader/setting; a complete reviewed light-player banking sequence and selected enemy/boss/equipment/projectile/effect artwork with original fallback.
 - C++/Rust replay recording and comparison tools, synthetic tests and local-original-data checks.
 
 ## Validation and remaining work
@@ -27,4 +27,4 @@ See [validation instructions](docs/rust-rewrite.md) and [HD coverage](docs/hd-ar
 
 ## New content
 
-Separate agents built Iron Coast mission 1, three individual weapon mods and three individual enemy mods using the public API. Each package ships local SD/HD artwork and procedurally generated sound effects, with definitions, scripts, images and sounds tracked together in Git. The mission dependencies and two controlled victories are documented in [Iron Coast](docs/iron-coast.md).
+Iron Coast has six individual mission mods, a campaign assembly, three individual weapon mods, three shared enemy mods, five distinct stage-boss mods and an original FM soundtrack package. New stages mix authored units with original enemies and their native movement paths. Each authored unit and mission supplies SD/HD artwork and synthesized sound effects; definitions, scripts, images, sounds and music are tracked together in Git. Dependency behavior, objectives and controlled playthroughs are documented in [Iron Coast](docs/iron-coast.md).

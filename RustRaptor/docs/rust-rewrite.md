@@ -37,11 +37,11 @@ Portable fixtures use synthetic assets and the bundled authored mod art/audio. O
 
 ## Profiles and settings
 
-Rust uses `$XDG_DATA_HOME/RaptorReplica/pilot-NNNN.json` and `mods/`, `$XDG_CONFIG_HOME/RaptorReplica/config.toml`, and `$XDG_CACHE_HOME/RaptorReplica/` for derived assets. Normal XDG defaults apply. Pilots record active package versions/hashes and script state/RNG. Missing or changed requirements block loading, without deleting equipment or replacing the save.
+Rust uses `$XDG_DATA_HOME/RaptorReplica/pilot-NNNN.json` and `mods/`, `$XDG_CONFIG_HOME/RaptorReplica/config.toml`, and `$XDG_CACHE_HOME/RaptorReplica/` for derived assets. Normal XDG defaults apply. Pilots record active package versions/hashes and script state/RNG. Missing, changed or reordered requirements show a compatibility prompt with Cancel selected and **Load anyway** available. Confirming keeps unavailable equipment, quantities, progression and inactive script state. The first subsequent write preserves the previous save in a hash-named `before-mod-change` backup. Corrupt files and unsafe structural values remain errors; inspecting or cancelling never modifies the file.
 
 Legacy `~/.local/share/Raptor/SETUP.INI` and pilot files are imported read-only. All difficulties, waves, portrait and training metadata are retained. Rust writes only its separate versioned files. Explicit CLI import output cannot be the original file.
 
-Options include scaling, scanlines, aspect correction, fullscreen/borderless, input bindings/controller, volumes and optional HD art. New/load pilot controls keep incompatible save slots separate. The Mods screen applies validated selections at the main menu; selections made during flight remain pending until returning there.
+Options include scaling, scanlines, aspect correction, fullscreen/borderless, input bindings/controller, volumes and optional HD art. New/load pilot controls show compatibility details for affected save slots. The Mods screen applies validated selections at the main menu; selections made during flight remain pending until returning there.
 
 The main menu leads to the Hangar, new/load/import pilots, options, mods and
 extras. The Hangar keeps flying, mission selection, the supply room, inventory,
@@ -71,7 +71,7 @@ SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy cargo run --locked -- \
   --screenshot ../.reference/menu.png
 ```
 
-Use real SDL video for interactive/display-performance checks. Dummy screenshots verify raster placement, not GPU/vsync performance. `--preview-mission ID` starts a mission; `--preview-cinematic intro|landing|death|end1|end2|end3` previews movies. Frame-limited runs do not save pilots/settings; cache stays within the selected profile.
+Use real SDL video for interactive/display-performance checks. Dummy screenshots verify raster placement, not GPU/vsync performance. `--preview-mission ID` starts a mission; `--preview-cinematic credits|intro|landing|death|end1|end2|end3` previews movies. Frame-limited runs do not save pilots/settings; cache stays within the selected profile.
 
 ## Controlled reference replays
 
@@ -96,6 +96,6 @@ All 1,889 available steps of DEMO1G1_REC match the captured fields: RNG, player 
 
 The Rust FM/DSP implementation has synthetic sample-by-sample native comparisons and a four-second original intro-music comparison at 44.1kHz. The checked sound bank also dispatches original and mod cues through the SDL callback; real-device output checks are documented in [sound validation](sound-validation.md). These establish those cases, not every track/input/output rate. The Rust core retains the original envelope/noise semantics and LGPL source provenance.
 
-The campaign checks cover all waves and difficulties with assistance, and first-mission tests win without replenishing pilot health or editing enemy state. Wider ordinary playtesting and more complete native state comparisons remain useful. Original cinematics decode/play locally; exact fade/transition/custom-palette fidelity has limited comparison coverage. Some menu layouts differ. Base-game HD coverage is partial; bundled mods supply SD/HD art. See [display measurements](performance.md).
+The campaign checks cover all waves and difficulties with assistance, and first-mission tests win without replenishing pilot health or editing enemy state. Wider ordinary playtesting and more complete native state comparisons remain useful. Normal startup includes the original logos, fanfare and intro. Native timing, sound-marker resolution, scene stops and custom logo palettes are checked in [intro validation](intro-validation.md). The refined menu uses an authored hangar backdrop and has a [42-frame screenshot review](menu-validation.md). Base-game HD coverage is partial; bundled mods supply SD/HD art. See [display measurements](performance.md).
 
 Scale2x/3x follows the [published algorithm](https://www.scale2x.it/algorithm); Scale4x applies Scale2x twice. WAV parsing follows the [RIFF chunk format](https://learn.microsoft.com/en-us/windows/win32/xaudio2/resource-interchange-file-format--riff-). Original catalog/reference assets remain outside version control. Authored mod artwork and sounds are tracked.

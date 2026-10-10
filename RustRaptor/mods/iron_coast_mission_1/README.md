@@ -1,9 +1,10 @@
 # Iron Coast — Mission 1: Breakwater
 
-Enable this package in the in-game Mods screen to select its six installed dependencies automatically:
+Enable this package in the in-game Mods screen to select its seven installed dependencies automatically:
 `iron_coast_scout`, `iron_coast_turret`, `iron_coast_boss`, `pulse_cannon`,
-`seeker_swarm`, and `ion_lance`. Each package is independent and version 1.0.0.
-Choose **Iron Coast 1 — Breakwater** in the mission list.
+`seeker_swarm`, `ion_lance`, and `iron_coast_music`. Each package is independent and version 1.0.0.
+Choose **Iron Coast 1 — Breakwater** in the mission list. The original
+Coastal Steel FM soundtrack loops during flight.
 
 Disable at least two harbor turrets and destroy the command ship to complete
 the raid. Scout waves arrive during the approach; two supply depots release
@@ -19,7 +20,7 @@ and new grants are skipped when there is no free slot.
 
 This mission uses explicit script completion. Its duration is a catalog hint;
 waiting out the timer cannot win. The boss stays in the firing corridor, and
-the two central turrets can be hit with starter forward guns. Equipment and
+surviving objective turrets stay on screen and can be hit with starter forward guns. Equipment and
 mission progress remain subject to the normal mod-save compatibility checks.
 
 The generated masters, packaged SD/HD PNGs and synthesized WAVs are included

@@ -1,0 +1,73 @@
+{
+  "tile_count": 216,
+  "tile_logical_size": [
+    32,
+    32
+  ],
+  "hd_tile_size": [
+    128,
+    128
+  ],
+  "sd_palette_colors": 256,
+  "palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+  "vertical_repeat": "12 rows forward + 12 rows reflected; matching boundary pixels",
+  "seam_checks_passed": true,
+  "convoy_transparent_pixels": 576,
+  "audio": {
+    "approach": {
+      "file": "audio/approach.wav",
+      "samples": 18742,
+      "seconds": 0.85,
+      "sha256": "a28313bd77d4018094e57fbc50b260ae8a5f22d5b4d6ed452373f39f427d9401"
+    },
+    "convoy_alarm": {
+      "file": "audio/convoy_alarm.wav",
+      "samples": 16537,
+      "seconds": 0.75,
+      "sha256": "08389ef8ac45bb115df6bba2151d806029b1d38825ee331ecd202cc125472103"
+    },
+    "boss_alarm": {
+      "file": "audio/boss_alarm.wav",
+      "samples": 24255,
+      "seconds": 1.1,
+      "sha256": "2c98af7153b009c4995b1a635737ebb5713ebbcd6c01c67f2ecf6a3c7ace00b3"
+    },
+    "cargo_salvage": {
+      "file": "audio/cargo_salvage.wav",
+      "samples": 11025,
+      "seconds": 0.5,
+      "sha256": "36caa1f67526ac451bb6bc0c592c4b5ef915a3facba76af5827469ce14ab596d"
+    },
+    "victory": {
+      "file": "audio/victory.wav",
+      "samples": 26460,
+      "seconds": 1.2,
+      "sha256": "f6c6d39051999411e8cb04480d2d74af130ed6df1eb9be77ea4dbb2da9ada8b3"
+    }
+  },
+  "actual_sd_unique_colors": 161,
+  "sd_pixels_match_original_palette": true,
+  "sources": {
+    "terrain-source-hd.png": {
+      "size": [
+        1086,
+        1448
+      ],
+      "sha256": "9373f258ccfb80eaaef1789b323bb5c907c4048a5fb436a51ba57ece632d7f9c"
+    },
+    "briefing-source-hd.png": {
+      "size": [
+        1586,
+        992
+      ],
+      "sha256": "99c2458dbf9874cb78156f08ffebcac440122c44823ecefb5b2945d12796b5fd"
+    },
+    "convoy-source-hd.png": {
+      "size": [
+        971,
+        1619
+      ],
+      "sha256": "24b41ec5cb78afbaca0263f8b3d1d58851b9ff15615a8416f905fce14fdad33f"
+    }
+  }
+}

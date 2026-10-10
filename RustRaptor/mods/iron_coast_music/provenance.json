@@ -1,0 +1,78 @@
+{
+  "title": "Coastal Steel",
+  "composer": "Original authored composition for RustRaptor Iron Coast",
+  "format": "MUS with explicit note velocities and standard GM programs",
+  "service_clock_hz": 70,
+  "tempo_bpm": 140,
+  "meter": "4/4",
+  "bars": 56,
+  "duration_ticks": 6720,
+  "duration_seconds": 96.0,
+  "tonality": "E minor with G-major contrast and B-major turnaround",
+  "sections": [
+    {
+      "name": "Approach",
+      "first_bar": 0,
+      "bars": 4
+    },
+    {
+      "name": "Breakwater riff",
+      "first_bar": 4,
+      "bars": 12
+    },
+    {
+      "name": "Offshore pursuit",
+      "first_bar": 16,
+      "bars": 12
+    },
+    {
+      "name": "Stormwall bridge",
+      "first_bar": 28,
+      "bars": 8
+    },
+    {
+      "name": "Citadel assault",
+      "first_bar": 36,
+      "bars": 16
+    },
+    {
+      "name": "Return to coast",
+      "first_bar": 52,
+      "bars": 4
+    }
+  ],
+  "channels": {
+    "0": 33,
+    "1": 30,
+    "2": 29,
+    "3": 81,
+    "4": 48,
+    "15": "standard percussion"
+  },
+  "instrument_preload_table": [
+    29,
+    30,
+    33,
+    48,
+    81,
+    136,
+    138,
+    142,
+    143,
+    145,
+    146,
+    147,
+    149
+  ],
+  "percussion_preload_encoding": "100 + MIDI percussion key (MUS convention)",
+  "events": 5520,
+  "notes": 2748,
+  "groups": 2855,
+  "max_events_per_tick": 24,
+  "file": "music/iron-coast.mus",
+  "bytes": 16700,
+  "sha256": "c0b5557877585d072e431b220531663de34f8364abc4f93dc17cc025c9801057",
+  "recipe": "build_music.py",
+  "sources": "Authored note sequences and deterministic arrangement; no original-game score or recording used",
+  "rendering": "Existing Rust MUS decoder and GENMIDI/OPL3 synthesizer; original instrument bank remains external"
+}

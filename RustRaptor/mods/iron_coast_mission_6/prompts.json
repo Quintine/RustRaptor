@@ -1,0 +1,19 @@
+{
+  "generator": "Built-in image_gen.imagegen tool",
+  "created": "2026-10-10",
+  "assets": [
+    {
+      "file": "art/terrain-source-hd.png",
+      "use_case": "stylized-concept",
+      "reference": "../iron_coast_mission_1/art/terrain-preview-hd.png",
+      "reference_role": "Style reference for sea, navy/steel palette and readable orthographic terrain; no copied tile pixels",
+      "prompt": "Use case: stylized-concept. Asset type: seamlessable scrolling terrain background for the finale of a top-down vertical arcade shoot-em-up, the Rust Raptor Iron Coast campaign. Primary request: Iron Crown offshore command citadel, an enormous dark steel naval fortress surrounded by cold navy sea, central reinforced rectangular flight deck with angular blast-door roofs, copper ventilation machinery, subdued amber runway stripes, bolted armor and a few red command lights. Camera is exactly orthographic straight down, zero perspective and no horizon. Portrait composition, width-to-height 3:4, continuous terrain fills entire image, central deck 70% of width with sea strips on BOTH left and right. Detailed 1990s military science-fiction pixel-art-inspired HD raster, crisp readable material edges, restrained weathered steel and copper palette, strong dark outlines appropriate to original Raptor gameplay. Match the reference's materials and navy sea, but create a distinct fortified headquarters rather than the coastal dock. No aircraft, no enemies, no turrets, no explosions, no sprites, no text, no logo, no watermark, no UI; structures only as backdrop. The lower and upper ends should each continue naturally in the vertical scrolling direction. Generate a complete finished terrain plate."
+    },
+    {
+      "file": "art/briefing-source-hd.png",
+      "use_case": "stylized-concept",
+      "prompt": "Use case: stylized-concept. Asset type: mission briefing artwork for a top-down military science-fiction arcade shooter, Rust Raptor Iron Coast campaign finale. Primary request: Iron Crown command citadel, an armored offshore headquarters with central launch deck, two tall angular command towers and docked dark gunmetal command cruisers, surrounded by cold navy ocean. Show the complex from high oblique aerial view at dusk, a lone compact Raptor fighter approaching from the lower-left, amber deck lights and small red command beacons, restrained copper and rusty steel detail. Wide landscape 8:5 composition suitable for a 320x200 logical canvas and 1280x800 HD plate, readable bold silhouettes, detailed classic 1990s game-painting aesthetic with crisp HD material treatment. The citadel is the main subject with enough sky and sea negative space for a briefing card to be placed separately by game UI. Keep atmosphere dramatic but no excessive bloom or lens flare. No text, no captions, no logo, no watermark, no UI."
+    }
+  ],
+  "packaging": "build_assets.py deterministically resizes, palette-quantizes the joined SD canvas, splits SD/HD tiles, reflects terrain for matching repeated vertical boundary pixels, and synthesizes original PCM16 mono WAV cues. No original catalog pixels are copied into this package."
+}

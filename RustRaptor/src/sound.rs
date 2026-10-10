@@ -1,23 +1,28 @@
-//! Checked package-local PCM WAV loading, independent of SDL2.
+//! Checked package-local PCM WAV and MUS loading, independent of SDL2.
 //! RIFF chunks are little-endian and padded to a two-byte boundary.
 use crate::{
     assets::Catalog,
-    audio::{DigitalSample, Mixer},
+    audio::{DigitalSample, Mixer, MusScore},
     content::{ContentId, Registry},
     simulation::SoundEvent,
 };
 use anyhow::{Context, Result, ensure};
-use std::{collections::BTreeMap, path::Path};
+use std::{collections::BTreeMap, io::Read, path::Path};
 
 /// Original FX IDs name empty catalog markers. Their digital device variant is
 /// four entries later, matching SND_Setup's SND_DIGITAL offset.
 const DIGITAL_VARIANT: u32 = 4;
 const MOD_CACHE_LIMIT: usize = 64 * 1024 * 1024;
+pub const MAX_MUSIC_BYTES: usize = 128 * 1024;
+const MAX_MUSIC_EVENTS: usize = 16384;
+const MAX_MUSIC_TICKS: u32 = 30 * 60 * 70;
+const MUSIC_CACHE_LIMIT: usize = 16 * 1024 * 1024;
 
 #[derive(Default)]
 pub struct SoundBank {
     original: BTreeMap<u32, DigitalSample>,
     mods: BTreeMap<ContentId, DigitalSample>,
+    music: BTreeMap<ContentId, MusScore>,
 }
 impl SoundBank {
     pub fn preload_originals(&mut self, catalog: &Catalog) -> Result<()> {
@@ -96,10 +101,89 @@ impl SoundBank {
     }
     pub fn clear_mods(&mut self) {
         self.mods.clear();
+        self.music.clear();
+    }
+    /// Cache validated package scores independently from the digital FX bus.
+    pub fn mod_music(&mut self, registry: &Registry, id: &ContentId) -> Result<MusScore> {
+        if !self.music.contains_key(id) {
+            let definition = registry
+                .music
+                .get(id)
+                .context("missing mod music definition")?;
+            let owner = registry.owners.get(id).context("missing music owner")?;
+            let root = registry
+                .asset_roots
+                .get(owner)
+                .context("missing music asset root")?;
+            let score =
+                load_music(root, &definition.file).with_context(|| format!("music {id}"))?;
+            if self.music.values().map(score_size).sum::<usize>() + score_size(&score)
+                > MUSIC_CACHE_LIMIT
+            {
+                self.music.clear();
+            }
+            self.music.insert(id.clone(), score);
+        }
+        Ok(self.music[id].clone())
     }
     pub fn original_count(&self) -> usize {
         self.original.len()
     }
+}
+fn score_size(score: &MusScore) -> usize {
+    score.groups.len() * std::mem::size_of::<(u32, Vec<crate::audio::MusicEvent>)>()
+        + score
+            .groups
+            .iter()
+            .map(|(_, events)| events.len() * std::mem::size_of::<crate::audio::MusicEvent>())
+            .sum::<usize>()
+}
+
+/// Extra limits apply only to untrusted mod tracks; the legacy MUS decoder and
+/// its native timing/controller compatibility remain unchanged.
+pub fn decode_music(bytes: &[u8]) -> Result<MusScore> {
+    ensure!(bytes.len() <= MAX_MUSIC_BYTES, "music exceeds 128 KiB");
+    let score = MusScore::decode(bytes)?;
+    let mut count = 0;
+    let mut at_tick = 0;
+    let mut simultaneous = 0;
+    for (tick, events) in &score.groups {
+        ensure!(
+            *tick <= MAX_MUSIC_TICKS,
+            "music duration exceeds 30 minutes"
+        );
+        count += events.len();
+        ensure!(count <= MAX_MUSIC_EVENTS, "music exceeds 16384 events");
+        if *tick != at_tick {
+            at_tick = *tick;
+            simultaneous = 0;
+        }
+        simultaneous += events.len();
+        ensure!(
+            simultaneous <= 256,
+            "music exceeds 256 events on one service tick"
+        );
+    }
+    ensure!(
+        score.groups.last().is_some_and(|(tick, _)| *tick > 0),
+        "music must have positive duration"
+    );
+    Ok(score)
+}
+
+pub fn load_music(root: &Path, file: &str) -> Result<MusScore> {
+    let path = crate::assets::contained(root, Path::new(file))?;
+    let metadata = std::fs::metadata(&path)?;
+    ensure!(metadata.is_file(), "music must be a regular file");
+    ensure!(
+        metadata.len() <= MAX_MUSIC_BYTES as u64,
+        "music exceeds 128 KiB"
+    );
+    let mut bytes = Vec::with_capacity(metadata.len() as usize);
+    std::fs::File::open(path)?
+        .take(MAX_MUSIC_BYTES as u64 + 1)
+        .read_to_end(&mut bytes)?;
+    decode_music(&bytes)
 }
 
 /// UI cues use the native metadata without consuming gameplay RNG.

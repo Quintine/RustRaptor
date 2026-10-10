@@ -1,0 +1,96 @@
+{
+  "tile_count": 216,
+  "logical_tile": [
+    32,
+    32
+  ],
+  "hd_tile": [
+    128,
+    128
+  ],
+  "palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+  "sd_pixels_match_original_palette": true,
+  "actual_sd_unique_colors": 141,
+  "seam_checks_passed": true,
+  "vertical_repeat": "12 rows forward +12 reflected, identical repeat boundary pixels",
+  "relay_transparent_pixels": 351,
+  "audio": {
+    "approach": {
+      "file": "audio/approach.wav",
+      "samples": 16537,
+      "rate": 22050,
+      "seconds": 0.75,
+      "peak": 7829,
+      "rms": 3153.22,
+      "sha256": "8ca7d8329943525350ef92272f4236d7ff51ba48032ee8f57c6fb8ff16701998"
+    },
+    "network_alarm": {
+      "file": "audio/network_alarm.wav",
+      "samples": 17640,
+      "rate": 22050,
+      "seconds": 0.8,
+      "peak": 8694,
+      "rms": 3201.74,
+      "sha256": "abd1ba4e83d9856e4d677f660117d50bd79ee30207153c2139ad982d5bc3bef4"
+    },
+    "relay_offline": {
+      "file": "audio/relay_offline.wav",
+      "samples": 9261,
+      "rate": 22050,
+      "seconds": 0.42,
+      "peak": 7942,
+      "rms": 3154.1,
+      "sha256": "4d8ce23e41249072374b0360985101b082e7e9e46a260b08a9990245cd9594bb"
+    },
+    "network_down": {
+      "file": "audio/network_down.wav",
+      "samples": 16537,
+      "rate": 22050,
+      "seconds": 0.75,
+      "peak": 7858,
+      "rms": 3153.51,
+      "sha256": "606908326f33c540326e6891dd64e56ab355cf6955cc682a75baad270087e345"
+    },
+    "boss_alarm": {
+      "file": "audio/boss_alarm.wav",
+      "samples": 23152,
+      "rate": 22050,
+      "seconds": 1.05,
+      "peak": 8575,
+      "rms": 3204.26,
+      "sha256": "6b93a055b2f137c7796d084ff7cbf085d257e3af2242232690b1963e2e103a1a"
+    },
+    "victory": {
+      "file": "audio/victory.wav",
+      "samples": 25357,
+      "rate": 22050,
+      "seconds": 1.15,
+      "peak": 7912,
+      "rms": 3153.91,
+      "sha256": "3072fce84886a4578eb6424ad3a19bf8cc824f0a83061ab4426548c17f4cca20"
+    }
+  },
+  "sources": {
+    "terrain-source-hd.png": {
+      "size": [
+        1086,
+        1448
+      ],
+      "sha256": "c24f2e66b9e86172061cc177d67c18a5bdc079df973d9b243a9d9b06cc40951d"
+    },
+    "briefing-source-hd.png": {
+      "size": [
+        1586,
+        992
+      ],
+      "sha256": "4119c37932f6e237b1a6b28c3305214b7a6c61fb30805ce8d5187ba2c92d66e1"
+    },
+    "relay-source-hd.png": {
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "b7e932e10f16448d5a28153ec27084472eb0ac51b905f146c2080bc4cfb658a6"
+    }
+  }
+}

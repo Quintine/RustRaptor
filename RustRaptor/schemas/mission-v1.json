@@ -64,6 +64,14 @@
       "format": "uint32",
       "minimum": 0.0
     },
+    "music_track": {
+      "description": "Package music registry ID. Mutually exclusive with legacy `music`.",
+      "default": null,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "name": {
       "type": "string"
     },

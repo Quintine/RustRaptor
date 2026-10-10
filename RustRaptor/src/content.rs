@@ -228,6 +228,9 @@ pub struct MissionDef {
     pub next: Option<ContentId>,
     #[serde(default)]
     pub music: Option<u32>,
+    /// Package music registry ID. Mutually exclusive with legacy `music`.
+    #[serde(default)]
+    pub music_track: Option<ContentId>,
     #[serde(default)]
     pub script: Option<String>,
     #[serde(default)]
@@ -257,6 +260,16 @@ pub struct SoundDef {
     #[serde(default = "one")]
     pub priority: u32,
 }
+#[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
+#[serde(deny_unknown_fields)]
+pub struct MusicDef {
+    pub id: ContentId,
+    pub name: String,
+    /// Package-local checked MUS score, played through original GENMIDI FM.
+    pub file: String,
+    #[serde(default = "yes")]
+    pub looping: bool,
+}
 fn sound_volume() -> i32 {
     127
 }
@@ -266,6 +279,8 @@ fn sound_pitch() -> i32 {
 #[derive(Debug, Clone, Default, Serialize, Deserialize, JsonSchema)]
 #[serde(deny_unknown_fields)]
 pub struct ContentPack {
+    #[serde(default)]
+    pub music: Vec<MusicDef>,
     #[serde(default)]
     pub sounds: Vec<SoundDef>,
     #[serde(default)]
@@ -283,6 +298,7 @@ pub struct ContentPack {
 }
 #[derive(Debug, Clone, Default)]
 pub struct Registry {
+    pub music: BTreeMap<ContentId, MusicDef>,
     pub sounds: BTreeMap<ContentId, SoundDef>,
     pub weapons: BTreeMap<ContentId, WeaponDef>,
     pub items: BTreeMap<ContentId, ItemDef>,
@@ -348,6 +364,7 @@ impl Registry {
         insert!(pack.missions, missions);
         insert!(pack.campaigns, campaigns);
         insert!(pack.sounds, sounds);
+        insert!(pack.music, music);
         ensure!(
             overrides.is_subset(&supplied),
             "override has no replacement definition"
@@ -489,6 +506,18 @@ impl Registry {
         }
         for m in self.missions.values() {
             label(&m.name, &m.script)?;
+            ensure!(
+                m.music.is_none() || m.music_track.is_none(),
+                "mission {} cannot select both music and music_track",
+                m.id
+            );
+            if let Some(track) = &m.music_track {
+                ensure!(
+                    self.music.contains_key(track),
+                    "mission {} references missing music track {track}",
+                    m.id
+                );
+            }
             art(&m.art)?;
             ensure!(
                 m.duration > 0
@@ -570,6 +599,23 @@ impl Registry {
                     && sound.priority <= 100000,
                 "invalid sound definition {}",
                 sound.id
+            );
+        }
+        for music in self.music.values() {
+            label(&music.name, &None)?;
+            let path = std::path::Path::new(&music.file);
+            ensure!(
+                !music.file.is_empty()
+                    && music.file.len() <= 512
+                    && !path.is_absolute()
+                    && path
+                        .components()
+                        .all(|component| matches!(component, std::path::Component::Normal(_)))
+                    && path
+                        .extension()
+                        .is_some_and(|extension| extension.eq_ignore_ascii_case("mus")),
+                "music {} requires a package-local .mus file without parent traversal",
+                music.id
             );
         }
         Ok(())
@@ -872,6 +918,7 @@ impl Registry {
                             ][sector - 1][wave - 1]
                         ))
                         .ok(),
+                    music_track: None,
                     script: None,
                     legacy_map: Some(id),
                 });

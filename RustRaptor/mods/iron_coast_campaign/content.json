@@ -1,0 +1,24 @@
+{
+  "campaigns": [
+    {
+      "id": "iron_coast_mission_1:campaign",
+      "name": "Iron Coast",
+      "art": {
+        "png": "art/briefing_sd.png",
+        "hd_png": "art/briefing_hd.png",
+        "logical_width": 320,
+        "logical_height": 200,
+        "frames": 1
+      },
+      "missions": [
+        "iron_coast_mission_1:mission_01",
+        "iron_coast_mission_2:mission_02",
+        "iron_coast_mission_3:mission_03",
+        "iron_coast_mission_4:mission_04",
+        "iron_coast_mission_5:mission_05",
+        "iron_coast_mission_6:mission_06"
+      ]
+    }
+  ],
+  "overrides": ["iron_coast_mission_1:campaign"]
+}

@@ -1,0 +1,213 @@
+{
+  "gating_checks": {
+    "completion_reward_exactly_7500_once": true,
+    "requires_three_relays_and_boss": true,
+    "restart_state_reset": true
+  },
+  "mission": "iron_coast_mission_2:mission_02",
+  "runs": [
+    {
+      "credit_gain": 11365,
+      "credits_final": 21365,
+      "credits_initial": 10000,
+      "digest": "47a61aa01bafca959c86bac2c2f59e32a07b647541d452d8a69b6ea38d6fa193",
+      "full_inventory": false,
+      "native_definitions_observed_moving": [
+        "base:enemy_0_20",
+        "base:enemy_0_23",
+        "base:enemy_0_56"
+      ],
+      "objectives": {
+        "iron_coast_boss_2:defeated": 1,
+        "iron_coast_mission_2:complete": 1,
+        "iron_coast_mission_2:debrief": 1,
+        "iron_coast_mission_2:network_down": 1,
+        "iron_coast_mission_2:phase": 4,
+        "iron_coast_mission_2:relays_disabled": 3,
+        "iron_coast_scout:defeated": 3,
+        "iron_coast_turret:defeated": 1
+      },
+      "outcome": "Complete",
+      "owned_pulse": false,
+      "played_cues": [
+        "iron_coast_boss_2:death",
+        "iron_coast_mission_2:approach",
+        "iron_coast_mission_2:boss_alarm",
+        "iron_coast_mission_2:network_alarm",
+        "iron_coast_mission_2:network_down",
+        "iron_coast_mission_2:relay_offline",
+        "iron_coast_mission_2:victory",
+        "iron_coast_scout:death",
+        "iron_coast_scout:shot",
+        "iron_coast_turret:death",
+        "iron_coast_turret:shot",
+        "pulse_cannon:fire",
+        "pulse_cannon:impact"
+      ],
+      "seen_enemies": [
+        "base:enemy_0_20",
+        "base:enemy_0_23",
+        "base:enemy_0_56",
+        "iron_coast_boss_2:unit",
+        "iron_coast_mission_2:relay",
+        "iron_coast_scout:unit",
+        "iron_coast_turret:unit"
+      ],
+      "shield_initial": 75,
+      "shield_remaining": 86,
+      "tick": 926
+    },
+    {
+      "credit_gain": 11365,
+      "credits_final": 11365,
+      "credits_initial": 0,
+      "digest": "33276f1cf85335210e6f7af661313698469eb27c7741f07e1a020fd57f707d05",
+      "full_inventory": false,
+      "native_definitions_observed_moving": [
+        "base:enemy_0_20",
+        "base:enemy_0_23",
+        "base:enemy_0_56"
+      ],
+      "objectives": {
+        "iron_coast_boss_2:defeated": 1,
+        "iron_coast_mission_2:complete": 1,
+        "iron_coast_mission_2:debrief": 1,
+        "iron_coast_mission_2:network_down": 1,
+        "iron_coast_mission_2:phase": 4,
+        "iron_coast_mission_2:relays_disabled": 3,
+        "iron_coast_scout:defeated": 3,
+        "iron_coast_turret:defeated": 1
+      },
+      "outcome": "Complete",
+      "owned_pulse": false,
+      "played_cues": [
+        "iron_coast_boss_2:death",
+        "iron_coast_mission_2:approach",
+        "iron_coast_mission_2:boss_alarm",
+        "iron_coast_mission_2:network_alarm",
+        "iron_coast_mission_2:network_down",
+        "iron_coast_mission_2:relay_offline",
+        "iron_coast_mission_2:victory",
+        "iron_coast_scout:death",
+        "iron_coast_scout:shot",
+        "iron_coast_turret:death",
+        "iron_coast_turret:shot",
+        "pulse_cannon:fire",
+        "pulse_cannon:impact"
+      ],
+      "seen_enemies": [
+        "base:enemy_0_20",
+        "base:enemy_0_23",
+        "base:enemy_0_56",
+        "iron_coast_boss_2:unit",
+        "iron_coast_mission_2:relay",
+        "iron_coast_scout:unit",
+        "iron_coast_turret:unit"
+      ],
+      "shield_initial": 100,
+      "shield_remaining": 78,
+      "tick": 926
+    },
+    {
+      "credit_gain": 11365,
+      "credits_final": 21365,
+      "credits_initial": 10000,
+      "digest": "89f47f6049473c2d591ed4d89afc34dcaddbec33b5a50fe0f0589ea1d7d2e430",
+      "full_inventory": false,
+      "native_definitions_observed_moving": [
+        "base:enemy_0_20",
+        "base:enemy_0_23",
+        "base:enemy_0_56"
+      ],
+      "objectives": {
+        "iron_coast_boss_2:defeated": 1,
+        "iron_coast_mission_2:complete": 1,
+        "iron_coast_mission_2:debrief": 1,
+        "iron_coast_mission_2:network_down": 1,
+        "iron_coast_mission_2:phase": 4,
+        "iron_coast_mission_2:relays_disabled": 3,
+        "iron_coast_scout:defeated": 3,
+        "iron_coast_turret:defeated": 1
+      },
+      "outcome": "Complete",
+      "owned_pulse": true,
+      "played_cues": [
+        "iron_coast_boss_2:death",
+        "iron_coast_mission_2:approach",
+        "iron_coast_mission_2:boss_alarm",
+        "iron_coast_mission_2:network_alarm",
+        "iron_coast_mission_2:network_down",
+        "iron_coast_mission_2:relay_offline",
+        "iron_coast_mission_2:victory",
+        "iron_coast_scout:death",
+        "iron_coast_scout:shot",
+        "iron_coast_turret:death",
+        "iron_coast_turret:shot",
+        "pulse_cannon:fire",
+        "pulse_cannon:impact"
+      ],
+      "seen_enemies": [
+        "base:enemy_0_20",
+        "base:enemy_0_23",
+        "base:enemy_0_56",
+        "iron_coast_boss_2:unit",
+        "iron_coast_mission_2:relay",
+        "iron_coast_scout:unit",
+        "iron_coast_turret:unit"
+      ],
+      "shield_initial": 75,
+      "shield_remaining": 74,
+      "tick": 928
+    },
+    {
+      "credit_gain": 11440,
+      "credits_final": 21440,
+      "credits_initial": 10000,
+      "digest": "0a57afc1944071b24cd42f0cce56789afd9a397d88dfb79de8ac44add2d6b155",
+      "full_inventory": true,
+      "native_definitions_observed_moving": [
+        "base:enemy_0_20",
+        "base:enemy_0_23",
+        "base:enemy_0_56"
+      ],
+      "objectives": {
+        "iron_coast_boss_2:defeated": 1,
+        "iron_coast_mission_2:complete": 1,
+        "iron_coast_mission_2:debrief": 1,
+        "iron_coast_mission_2:network_down": 1,
+        "iron_coast_mission_2:phase": 4,
+        "iron_coast_mission_2:relays_disabled": 3,
+        "iron_coast_scout:defeated": 4,
+        "iron_coast_turret:defeated": 1
+      },
+      "outcome": "Complete",
+      "owned_pulse": false,
+      "played_cues": [
+        "iron_coast_boss_2:death",
+        "iron_coast_mission_2:approach",
+        "iron_coast_mission_2:boss_alarm",
+        "iron_coast_mission_2:network_alarm",
+        "iron_coast_mission_2:network_down",
+        "iron_coast_mission_2:relay_offline",
+        "iron_coast_mission_2:victory",
+        "iron_coast_scout:death",
+        "iron_coast_scout:shot",
+        "iron_coast_turret:death",
+        "iron_coast_turret:shot"
+      ],
+      "seen_enemies": [
+        "base:enemy_0_20",
+        "base:enemy_0_23",
+        "base:enemy_0_56",
+        "iron_coast_boss_2:unit",
+        "iron_coast_mission_2:relay",
+        "iron_coast_scout:unit",
+        "iron_coast_turret:unit"
+      ],
+      "shield_initial": 75,
+      "shield_remaining": 82,
+      "tick": 930
+    }
+  ],
+  "strategy": "Held fire; y160; move at most 4 pixels/tick toward first living relay x, otherwise x144. No direct damage, shield or credit commands."
+}

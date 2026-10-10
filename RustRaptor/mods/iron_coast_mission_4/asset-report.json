@@ -1,0 +1,65 @@
+{
+  "tile_count": 216,
+  "logical_tile_size": [
+    32,
+    32
+  ],
+  "hd_tile_size": [
+    128,
+    128
+  ],
+  "terrain_period_rows": 24,
+  "mission_rows": 96,
+  "vertical_repeat": "12 forward rows followed by 12 reflected rows",
+  "seam_checks_passed": true,
+  "joined_tile_canvas_checks_passed": true,
+  "sd_pixels_match_original_palette": true,
+  "actual_sd_unique_colors": 116,
+  "palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+  "sources": {
+    "terrain-source-hd.png": {
+      "size": [
+        1086,
+        1448
+      ],
+      "sha256": "26ebf9dc9d2126b570d5ba07440fa758ebb3ab55628136779f71171d04c176b6"
+    },
+    "briefing-source-hd.png": {
+      "size": [
+        1586,
+        992
+      ],
+      "sha256": "d40f2d698f858cf43eb29706c7a2c64a07c3555e2a66ed3a600bdc8e3a183fe8"
+    }
+  },
+  "audio": {
+    "approach": {
+      "file": "audio/approach.wav",
+      "seconds": 0.9,
+      "sample_rate": 22050,
+      "samples": 19845,
+      "sha256": "4654bb0a5e3003b5ba153e9a2e8b2a7bb6ac188390057073502c04cfbe410922"
+    },
+    "battery_alarm": {
+      "file": "audio/battery_alarm.wav",
+      "seconds": 0.8,
+      "sample_rate": 22050,
+      "samples": 17640,
+      "sha256": "bc2d89f28344e650ed2efa16d79a2db53ed61d8c71b4445b3a8add3e20ce02fd"
+    },
+    "cruiser_alarm": {
+      "file": "audio/cruiser_alarm.wav",
+      "seconds": 1.1,
+      "sample_rate": 22050,
+      "samples": 24255,
+      "sha256": "76fa3ccc0c708c3d9481667eb1d8e6145e7486d1b3d9870a0f9fb989b8cd6adc"
+    },
+    "victory": {
+      "file": "audio/victory.wav",
+      "seconds": 1.15,
+      "sample_rate": 22050,
+      "samples": 25357,
+      "sha256": "a8c5f6613fc4f6c21da320ab47a94c79b90a29716d8103b0d9f146ec13117262"
+    }
+  }
+}

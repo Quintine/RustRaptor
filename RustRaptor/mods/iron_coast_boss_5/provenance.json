@@ -1,0 +1,40 @@
+{
+  "package": "iron_coast_boss_5",
+  "image_generation": {
+    "mode": "built-in image_gen",
+    "transparent_background": true,
+    "unit_prompt": "prompts/unit-hd-v1.txt",
+    "projectile_prompt": "prompts/projectile-hd-v1.txt",
+    "masters": [
+      "art/unit-generated-v1.png",
+      "art/projectile-generated-v1.png"
+    ]
+  },
+  "processing": "Whole-canvas proportional resize and transparent padding only; SD BOX derived from HD; no sprite repainting",
+  "audio": "Deterministic procedural synthesis by build_assets.py; no recordings",
+  "files": {
+    "README.md": "bd408b9bb5f31958ecad85b5ee9f2f2c3332aaaa633d5022f18e8be8ca5898b6",
+    "art/preview.png": "a952595930dbcb3f0c63fc1e064b744b60cb2bd85a3934f4e15e6b4b707b88de",
+    "art/projectile-generated-v1.png": "f16d4f48f61ffbdd1eac4102b856b5f3bfa3555dd0ae41784b9cd7499d52b955",
+    "art/projectile-hd.png": "39a7f5ed33f4d1e0d1683e7337b100ab4a04933f19b0939f2f26f4dfdbda588b",
+    "art/projectile-sd.png": "c441ded21f3dcfa6666256ac2e5444b8de3e8ab3b52b22080b36a5ad4eacd3d8",
+    "art/unit-generated-v1.png": "e138d470db1b0a9fa268b32ec8f9b1d9db3dcf41fb9c951acea609dbba5025db",
+    "art/unit-hd.png": "01bf000620057a06ca85b5b5d59e5e1ef56962726212b5f901916dfad83c86b1",
+    "art/unit-sd.png": "506094c4c1d1ad15c3f58484aab8057b829a53dea59f598a8632e6236dc4e21d",
+    "art-qa.json": "2c9e91834a66e74a26eb381986e2ccb3f32595d5d28e83742e37126d0a93ca0f",
+    "audio/death.wav": "91950d95cdd98a42359e9b65072904a15270a2a80308e1d93aa8a73295ee67d5",
+    "audio/shot.wav": "16bb1b201c746b41b93baf6faa4e7612c90ebce2168d888d8da7e0e222157bd9",
+    "audio/warning.wav": "dcf32a1fc3cdcb734e6aaa3ed0cfeac854e2b0c89b92a209d3b77c53dc820604",
+    "audio-recipe.json": "e36836dc27322d388598127ae4e57280161a8cb7cda331163498dfaf0956a06f",
+    "build_assets.py": "d0fd38749b47b5feceb1b1e9b93a0e29606121fa2660410b57442302fb30b1c3",
+    "content.json": "f58d3566ff3f2aae2a45f408589c5b9ec67453fd628fa31bc4f3eed85bd8c5eb",
+    "mod.toml": "9d67483df29ad894e4de7103b319ae9c2a1b82fce6d92aace6b473702177a1b1",
+    "prompts/projectile-hd-v1.txt": "29be8882da6c8a80016b76222bc33d26bb94063edef47570def7e09f67e881cb",
+    "prompts/unit-hd-v1.txt": "0c9cc47eead066d54853cf6d642c518684c1ca2e117d6f213b451c2250d0aa50",
+    "scripts/ai.rhai": "8bc1515ebc2dac9cf2343e23cef6d0f80d449af43e40d12423aeaa0804a388d1",
+    "validation/Cargo.lock": "48fdea0f5ef5b3117d50e53b690ac3f4736e4fc81ddea512ffd7f8e90c4c2873",
+    "validation/Cargo.toml": "3f46046bc70a37db7859e3c2361e9e6d61c70c6d8344c6cdb9eb37baabe7bb66",
+    "validation/src/lib.rs": "b8710178fac2e2918567f0d55da03cce6c280d2d09c59cedc00dcb1b8e8efd92",
+    "validation-results.json": "cd85594adb7b84d2bfb448afa1d52f5e470173d48f4a31b5be7247b5d2c33ff1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "decoder": "Rust MusScore::decode",
+  "synthesizer": "Rust Mixer using locally installed original GENMIDI_OP2",
+  "sample_rate": 22050,
+  "channels": 2,
+  "render_seconds": 100,
+  "score_seconds": 96,
+  "events": 5520,
+  "notes": 2748,
+  "max_events_per_tick": 24,
+  "max_simultaneous_notes": 10,
+  "unmatched_note_events": 0,
+  "dangling_notes": 0,
+  "peak_pcm16": 3558,
+  "clipped_samples": 0,
+  "all_one_second_blocks_non_silent": true,
+  "loop_after_96_seconds_non_silent": true,
+  "music_volume_zero_is_exactly_silent": true,
+  "sha256": "c0b5557877585d072e431b220531663de34f8364abc4f93dc17cc025c9801057",
+  "listening_review": "The existing FM engine rendered the preview. Full human listening and ordinary-play volume balance remain review items.",
+  "percussion_preload_encoding": "100 + MIDI percussion key",
+  "percussion_header_verification": "All eleven local original MUS scores with percussion contain 100+key for every emitted percussion key. Instrument declarations only; no original melody copied."
+}

@@ -1,0 +1,60 @@
+{
+  "actual_cues": [
+    "iron_coast_boss_2:shot",
+    "iron_coast_boss_2:warning"
+  ],
+  "actual_engine_tick": 271,
+  "dead_or_repeated_callbacks": "no commands",
+  "death_objective": 1,
+  "first_volley": [
+    [
+      136,
+      75,
+      0,
+      4,
+      true,
+      "iron_coast_boss_2:projectile"
+    ],
+    [
+      184,
+      75,
+      0,
+      4,
+      true,
+      "iron_coast_boss_2:projectile"
+    ]
+  ],
+  "mod": "iron_coast_boss_2",
+  "outcome": "Playing",
+  "package_validation": "passed; PNGs, sound decoding, manifest and script",
+  "per_entity_state_cleanup": "passed",
+  "queued_spawn_step_lethal_projectile": "passed",
+  "reused_entity_id_new_life": "counts once",
+  "reward": 1800,
+  "second_volley": [
+    [
+      148,
+      75,
+      -1,
+      4,
+      true,
+      "iron_coast_boss_2:projectile"
+    ],
+    [
+      172,
+      75,
+      1,
+      4,
+      true,
+      "iron_coast_boss_2:projectile"
+    ]
+  ],
+  "volley_ages": [
+    54,
+    108
+  ],
+  "warning_ages": [
+    42,
+    96
+  ]
+}

@@ -409,6 +409,24 @@ pub struct BitmapFont {
     glyphs: Vec<Option<Sprite>>,
     widths: Vec<usize>,
 }
+// Mod labels are UTF-8; catalog bitmap fonts have only 256 glyphs. Keep width
+// measurement and drawing on the same normalized character stream.
+fn bitmap_chars(text: &str) -> impl Iterator<Item = u8> + '_ {
+    text.chars().flat_map(|character| {
+        match character {
+            '\u{2010}'..='\u{2015}' | '\u{2212}' => [Some(b'-'), None, None],
+            '\u{2018}' | '\u{2019}' => [Some(b'\''), None, None],
+            '\u{201c}' | '\u{201d}' => [Some(b'"'), None, None],
+            '\u{2026}' => [Some(b'.'), Some(b'.'), Some(b'.')],
+            '\u{00a0}' => [Some(b' '), None, None],
+            character if character.is_control() => [Some(b' '), None, None],
+            character if (character as u32) <= 255 => [Some(character as u8), None, None],
+            _ => [Some(b'?'), None, None],
+        }
+        .into_iter()
+        .flatten()
+    })
+}
 impl BitmapFont {
     pub fn decode(bytes: &[u8]) -> Result<Self> {
         let height = crate::assets::i32_at(bytes, 0)?;
@@ -448,7 +466,7 @@ impl BitmapFont {
     }
     pub fn text(&self, canvas: &mut Canvas, x: i32, y: i32, text: &str, color: u16) {
         let mut cursor = x;
-        for ch in text.bytes() {
+        for ch in bitmap_chars(text) {
             if let Some(g) = &self.glyphs[ch as usize] {
                 let mut glyph = g.clone();
                 for p in &mut glyph.pixels {
@@ -470,11 +488,41 @@ impl BitmapFont {
     }
     /// Logical pixel width, including the same one-pixel glyph spacing as `text`.
     pub fn text_width(&self, text: &str) -> usize {
-        text.bytes()
+        bitmap_chars(text)
             .map(|byte| self.widths[byte as usize] + 1)
             .sum()
     }
     pub fn height(&self) -> usize {
         self.height
+    }
+}
+
+#[cfg(test)]
+mod font_label_tests {
+    use super::*;
+    #[test]
+    fn unicode_mod_punctuation_draws_and_measures_like_supported_glyphs() {
+        let font = BitmapFont {
+            height: 1,
+            glyphs: (0..256)
+                .map(|index| {
+                    Some(Sprite {
+                        width: 1,
+                        height: 1,
+                        pixels: vec![index as u16],
+                    })
+                })
+                .collect(),
+            widths: vec![1; 256],
+        };
+        let mut unicode = Canvas::new(2);
+        let mut ascii = Canvas::new(2);
+        let label = "Iron Coast — ‘Stormwall’…";
+        let normalized = "Iron Coast - 'Stormwall'...";
+        font.text(&mut unicode, 4, 4, label, 1);
+        font.text(&mut ascii, 4, 4, normalized, 1);
+        assert_eq!(unicode.image.pixels, ascii.image.pixels);
+        assert_eq!(font.text_width(label), font.text_width(normalized));
+        assert_eq!(font.text_width("未知"), font.text_width("??"));
     }
 }

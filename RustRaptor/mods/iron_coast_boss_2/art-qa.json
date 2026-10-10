@@ -1,0 +1,92 @@
+{
+  "logical_unit": [
+    96,
+    64
+  ],
+  "logical_projectile": [
+    8,
+    8
+  ],
+  "hd_scale": 8,
+  "frames": 1,
+  "alpha": "True RGBA; runtime palette mapping uses alpha >= 128",
+  "conversion": "Full source canvas Lanczos HD, BOX SD; no sprite redraw or catalog copies",
+  "files": [
+    {
+      "file": "art/unit-sd.png",
+      "size": [
+        96,
+        64
+      ],
+      "opaque_bounds": [
+        3,
+        3,
+        93,
+        62
+      ],
+      "source": "art/unit-generated-v1.png",
+      "alpha_min_max": [
+        0,
+        254
+      ],
+      "sha256": "0d41d6bf34f7812b684c724aa44c9477187dfbe7a38faa958f0d3887d7e9770d"
+    },
+    {
+      "file": "art/unit-hd.png",
+      "size": [
+        768,
+        512
+      ],
+      "opaque_bounds": [
+        20,
+        21,
+        748,
+        498
+      ],
+      "source": "art/unit-generated-v1.png",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "sha256": "272e1a206d40e06ddc54a0c9cb763db9a776647d3392c2a063cc551cfab939cb"
+    },
+    {
+      "file": "art/projectile-sd.png",
+      "size": [
+        8,
+        8
+      ],
+      "opaque_bounds": [
+        3,
+        2,
+        5,
+        5
+      ],
+      "source": "art/projectile-generated-v1.png",
+      "alpha_min_max": [
+        0,
+        225
+      ],
+      "sha256": "f871add4de5a44d6dff953d12369bcff56c2a1f65bdffc861d962b8d1b6616e4"
+    },
+    {
+      "file": "art/projectile-hd.png",
+      "size": [
+        64,
+        64
+      ],
+      "opaque_bounds": [
+        24,
+        13,
+        40,
+        49
+      ],
+      "source": "art/projectile-generated-v1.png",
+      "alpha_min_max": [
+        0,
+        255
+      ],
+      "sha256": "abd22235128301f609feebcc73bc3910ef248b678002cea88cf655efd739ffb6"
+    }
+  ]
+}

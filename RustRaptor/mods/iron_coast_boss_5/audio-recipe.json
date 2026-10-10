@@ -1,0 +1,38 @@
+{
+  "generator": "build_assets.py deterministic chirp/noise PCM synthesis; no recordings",
+  "files": {
+    "audio/warning.wav": {
+      "sample_rate": 22050,
+      "channels": 1,
+      "bits": 16,
+      "seed": 5501,
+      "duration_seconds": 0.28,
+      "samples": 6174,
+      "peak": 23592,
+      "rms": 7402.96485860664,
+      "sha256": "dcf32a1fc3cdcb734e6aaa3ed0cfeac854e2b0c89b92a209d3b77c53dc820604"
+    },
+    "audio/shot.wav": {
+      "sample_rate": 22050,
+      "channels": 1,
+      "bits": 16,
+      "seed": 5502,
+      "duration_seconds": 0.24,
+      "samples": 5292,
+      "peak": 23592,
+      "rms": 4267.066582997498,
+      "sha256": "16bb1b201c746b41b93baf6faa4e7612c90ebce2168d888d8da7e0e222157bd9"
+    },
+    "audio/death.wav": {
+      "sample_rate": 22050,
+      "channels": 1,
+      "bits": 16,
+      "seed": 5503,
+      "duration_seconds": 0.95,
+      "samples": 20948,
+      "peak": 23592,
+      "rms": 3232.3544431693276,
+      "sha256": "91950d95cdd98a42359e9b65072904a15270a2a80308e1d93aa8a73295ee67d5"
+    }
+  }
+}

@@ -27,7 +27,7 @@ fn run() -> Result<()> {
     );
     if args.iter().any(|a| a == "--help" || a == "-h") {
         println!(
-            "raptor-rust [--data DIR] [--mods DIR]\n  --verify-assets             Check catalog and all original mission definitions\n  --validate-mods ID,...      Validate selected local mod packages\n  --schemas DIR              Write mod API JSON schemas\n  --headless MISSION --ticks N  Deterministic simulation smoke run\n  --replay ASSET_NAME --trace FILE  Record legacy demo simulation states\n  --import-legacy FILE --output FILE\n  --smoke-frames N             Exit desktop after N rendered frames\n  --benchmark                 Report startup and frame timings (with --smoke-frames)\n  --screenshot FILE           Save the final desktop frame as PNG\n  --preview-mission ID         Start a mission directly\n  --preview-cinematic KIND     intro, landing, death, end1, end2, end3\n  --profile-root DIR           Use a separate pilot/config/cache directory\n  --enabled ID,...             Enable mods for headless/replay commands"
+            "raptor-rust [--data DIR] [--mods DIR]\n  --verify-assets             Check catalog and all original mission definitions\n  --validate-hd               Validate every supplied original-content HD frame\n  --validate-mods ID,...      Validate selected local mod packages\n  --schemas DIR              Write mod API JSON schemas\n  --headless MISSION --ticks N  Deterministic simulation smoke run\n  --replay ASSET_NAME --trace FILE  Record legacy demo simulation states\n  --import-legacy FILE --output FILE\n  --smoke-frames N             Exit desktop after N rendered frames\n  --benchmark                 Report startup and frame timings (with --smoke-frames)\n  --screenshot FILE           Save the final desktop frame as PNG\n  --preview-mission ID         Start a mission directly\n  --preview-cinematic KIND     credits, intro, landing, death, end1, end2, end3\n  --profile-root DIR           Use a separate pilot/config/cache directory\n  --enabled ID,...             Enable mods for headless/replay commands"
         );
         return Ok(());
     }
@@ -45,6 +45,28 @@ fn run() -> Result<()> {
         }
     });
     let catalog = Catalog::open(data)?;
+    if args.iter().any(|a| a == "--validate-hd") {
+        let hd_root = catalog.root.join("hd");
+        anyhow::ensure!(
+            hd_root.join("hd.json").is_file(),
+            "no HD pack at {}",
+            hd_root.display()
+        );
+        let mut hd = raptor_replica::hd::HdAssets::load_lazy(&hd_root, &catalog, None);
+        let report = hd.validate_all();
+        println!(
+            "HD pack: {} registered, {} validated, {} rejected supplied frames",
+            report.registered, report.validated, report.rejected
+        );
+        for diagnostic in &hd.diagnostics {
+            eprintln!("HD: {diagnostic}");
+        }
+        anyhow::ensure!(
+            report.registered > 0 && report.validated == report.registered && report.rejected == 0,
+            "HD pack validation failed"
+        );
+        return Ok(());
+    }
     let base = Registry::base(&catalog)?;
     if args.iter().any(|a| a == "--verify-assets") {
         println!(
@@ -181,6 +203,7 @@ fn run() -> Result<()> {
     {
         let movie = arg("--preview-cinematic")
             .map(|s| match s.as_str() {
+                "credits" => Ok(raptor_replica::cinematics::Kind::OpeningCredits),
                 "intro" => Ok(raptor_replica::cinematics::Kind::Intro),
                 "landing" => Ok(raptor_replica::cinematics::Kind::Landing),
                 "death" => Ok(raptor_replica::cinematics::Kind::Death),

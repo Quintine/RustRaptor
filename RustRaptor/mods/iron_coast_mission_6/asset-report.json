@@ -1,0 +1,69 @@
+{
+  "tile_count": 216,
+  "logical_tile_size": [
+    32,
+    32
+  ],
+  "hd_tile_size": [
+    128,
+    128
+  ],
+  "seam_checks_passed": true,
+  "decoded_tile_reassembly_passed": true,
+  "generated_pngs": 438,
+  "generated_wavs": 4,
+  "vertical_period": "12 forward rows + 12 reflected rows",
+  "sd_pixels_match_original_palette": true,
+  "sd_unique_colors": 160,
+  "palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+  "audio": {
+    "approach": {
+      "file": "audio/approach.wav",
+      "samples": 24255,
+      "seconds": 1.1,
+      "peak": 7411,
+      "rms": 3319.87,
+      "sha256": "652f6e4bca4da0e92bd843f39004d47119fc02392dfa28f2464290196bc230c0"
+    },
+    "fleet_alarm": {
+      "file": "audio/fleet_alarm.wav",
+      "samples": 19845,
+      "seconds": 0.9,
+      "peak": 8523,
+      "rms": 3368.67,
+      "sha256": "34ce6c29bf60504881726dc4dc8cf12f9f533ef2366413cfb7fd0c835dc4ec39"
+    },
+    "crown_alarm": {
+      "file": "audio/crown_alarm.wav",
+      "samples": 26460,
+      "seconds": 1.2,
+      "peak": 8522,
+      "rms": 3370.86,
+      "sha256": "9a0f6e349f3bcdc27e4f0565f457ead0cfb4b82ba90e97ea7f3b28e1b85d6e0e"
+    },
+    "victory": {
+      "file": "audio/victory.wav",
+      "samples": 35280,
+      "seconds": 1.6,
+      "peak": 7413,
+      "rms": 3319.41,
+      "sha256": "b8da1aa1948f8719f864e3f0df955bb73efdc4c658fba3d07e5f73c3b0701b90"
+    }
+  },
+  "sources": {
+    "terrain-source-hd.png": {
+      "size": [
+        1086,
+        1448
+      ],
+      "sha256": "0c41fe139307a3f4ec615e6e177dc138d3bb746d70087a2ff4b3522459871dd8"
+    },
+    "briefing-source-hd.png": {
+      "size": [
+        1586,
+        992
+      ],
+      "sha256": "baa350c0c2bd5bea2d0ef7599ff54c828e8a8bf8211dd31fd0c5fb5d8578c9fc"
+    }
+  }
+}

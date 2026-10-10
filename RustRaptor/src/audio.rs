@@ -152,6 +152,21 @@ impl DigitalSample {
             data: data[24..8 + length as usize - 16].to_vec(),
         })
     }
+    /// Duration at the mixer's actual quantized DSP pitch, rounded upward to
+    /// a caller's service clock. Empty or invalid samples have zero duration.
+    pub fn duration_ticks(&self, pitch: i32, clock_hz: u32) -> u64 {
+        if self.rate == 0 || self.data.is_empty() || clock_hz == 0 {
+            return 0;
+        }
+        let remaining = self.data.len().saturating_mul(256) / digital_step(self.rate, pitch);
+        (remaining as u64)
+            .saturating_mul(clock_hz as u64)
+            .div_ceil(11025)
+    }
+}
+fn digital_step(sample_rate: u32, pitch: i32) -> usize {
+    ((DSP_PITCH[pitch.clamp(0, 255) as usize] as u64 * sample_rate as u64 + 11025 / 2) / 11025)
+        .max(1) as usize
 }
 struct SampleVoice {
     sample: DigitalSample,
@@ -164,6 +179,7 @@ struct SampleVoice {
     priority: i32,
     volume: i32,
     pan: usize,
+    tag: Option<u32>,
 }
 pub struct AudioCapture {
     pub rate: u32,
@@ -203,6 +219,8 @@ pub struct Mixer {
     digital_channels: usize,
     digital_phase: u32,
     digital_hold: [i32; 2],
+    digital_hold_parts: [[i32; 2]; 8],
+    digital_hold_tags: [Option<u32>; 8],
     pub music_volume: u8,
     pub fx_volume: u8,
     last_fx_volume: u8,
@@ -251,6 +269,8 @@ impl Mixer {
             digital_channels: 2,
             digital_phase: 0,
             digital_hold: [0; 2],
+            digital_hold_parts: [[0; 2]; 8],
+            digital_hold_tags: [None; 8],
             music_volume: 85,
             fx_volume: 85,
             last_fx_volume: 85,
@@ -636,14 +656,35 @@ impl Mixer {
         volume: i32,
         priority: i32,
     ) {
+        self.sample_inner(sample, pan, pitch, volume, priority, None);
+    }
+    /// Queue a patch with the normal priority/overlap rules, retaining an
+    /// opaque caller tag so its voices can be stopped without cutting other FX.
+    pub fn sample_tagged(
+        &mut self,
+        tag: u32,
+        sample: DigitalSample,
+        pan: i32,
+        pitch: i32,
+        volume: i32,
+        priority: i32,
+    ) {
+        self.sample_inner(sample, pan, pitch, volume, priority, Some(tag));
+    }
+    fn sample_inner(
+        &mut self,
+        sample: DigitalSample,
+        pan: i32,
+        pitch: i32,
+        volume: i32,
+        priority: i32,
+        tag: Option<u32>,
+    ) {
         if sample.data.is_empty() || sample.rate == 0 {
             return;
         }
         let pan = pan.clamp(0, 255) as usize;
-        let step = ((DSP_PITCH[pitch.clamp(0, 255) as usize] as u64 * sample.rate as u64
-            + 11025 / 2)
-            / 11025)
-            .max(1) as usize;
+        let step = digital_step(sample.rate, pitch);
         let remaining = sample.data.len().saturating_mul(256) / step;
         if remaining == 0 {
             return;
@@ -695,6 +736,35 @@ impl Mixer {
             priority,
             volume: event_volume,
             pan,
+            tag,
+        });
+    }
+    /// Stop every voice carrying this tag, including its held DSP output.
+    /// Other tagged and ordinary voices continue on their existing positions.
+    pub fn stop_tagged(&mut self, tag: u32) {
+        for (index, voice) in self.digital.iter_mut().enumerate() {
+            if voice.as_ref().is_some_and(|voice| voice.tag == Some(tag)) {
+                *voice = None;
+            }
+            if self.digital_hold_tags[index] == Some(tag) {
+                self.digital_hold_tags[index] = None;
+                self.digital_hold_parts[index] = [0; 2];
+            }
+        }
+        self.refresh_digital_hold();
+    }
+    fn refresh_digital_hold(&mut self) {
+        if self.fx_volume == 0 {
+            self.digital_hold = [0; 2];
+            return;
+        }
+        self.digital_hold = std::array::from_fn(|channel| {
+            self.digital_hold_parts
+                .iter()
+                .map(|part| part[channel])
+                .sum::<i32>()
+                .clamp(-128, 127)
+                * 128
         });
     }
     pub fn start_capture(&mut self, seconds: u32) -> Result<()> {
@@ -731,12 +801,16 @@ impl Mixer {
         }
     }
     fn service_digital(&mut self) {
-        let mut sample = [0i32; 2];
-        for slot in &mut self.digital[..self.digital_channels] {
+        self.digital_hold_parts.fill([0; 2]);
+        self.digital_hold_tags.fill(None);
+        for (index, slot) in self.digital[..self.digital_channels].iter_mut().enumerate() {
             if let Some(v) = slot {
                 if let Some(value) = v.sample.data.get(v.position) {
-                    sample[0] += v.left[*value as usize] as i32;
-                    sample[1] += v.right[*value as usize] as i32;
+                    self.digital_hold_parts[index] = [
+                        v.left[*value as usize] as i32,
+                        v.right[*value as usize] as i32,
+                    ];
+                    self.digital_hold_tags[index] = v.tag;
                 }
                 v.fraction += v.step & 255;
                 let carry = usize::from(v.fraction >= 256);
@@ -748,7 +822,7 @@ impl Mixer {
                 }
             }
         }
-        self.digital_hold = sample.map(|v| v.clamp(-128, 127) * 128);
+        self.refresh_digital_hold();
     }
     pub fn mix(&mut self, out: &mut [i16]) {
         self.refresh_fx_volume();
@@ -882,6 +956,151 @@ mod tests {
     #[test]
     fn bad_digital_length() {
         assert!(DigitalSample::decode(&[3, 0, 68, 172, 99, 0, 0, 0, 128]).is_err());
+    }
+    #[test]
+    fn sample_duration_matches_actual_dsp_voice_expiry() {
+        let mut instruments = b"#OPL_II#".to_vec();
+        instruments.resize(8 + 175 * 36, 0);
+        for rate in [8000, 11025, 22050, 44100] {
+            for pitch in [-10, 0, 24, 65, 120, 128, 235, 255, 300] {
+                for clock in [70, 100] {
+                    let sample = DigitalSample {
+                        rate,
+                        data: vec![255; 1043],
+                    };
+                    let ticks = sample.duration_ticks(pitch, clock);
+                    assert!(ticks > 0);
+                    let mut mixer = Mixer::new(44100, &instruments).unwrap();
+                    mixer.sample(sample, 127, pitch, 127, 1);
+                    let mut buffer = vec![0; (44100 / clock) as usize * 2];
+                    for _ in 1..ticks {
+                        mixer.mix(&mut buffer);
+                        assert!(
+                            mixer.digital.iter().any(Option::is_some),
+                            "rate {rate}, pitch {pitch}, clock {clock}"
+                        );
+                    }
+                    mixer.mix(&mut buffer);
+                    assert!(
+                        mixer.digital.iter().all(Option::is_none),
+                        "rate {rate}, pitch {pitch}, clock {clock}"
+                    );
+                }
+            }
+        }
+        assert_eq!(
+            DigitalSample {
+                rate: 0,
+                data: vec![255]
+            }
+            .duration_ticks(128, 70),
+            0
+        );
+        assert_eq!(
+            DigitalSample {
+                rate: 11025,
+                data: vec![]
+            }
+            .duration_ticks(128, 70),
+            0
+        );
+    }
+    fn silent_mixer() -> Mixer {
+        let mut instruments = b"#OPL_II#".to_vec();
+        instruments.resize(8 + 175 * 36, 0);
+        let mut mixer = Mixer::new(44100, &instruments).unwrap();
+        mixer.music_volume = 0;
+        mixer.fx_volume = 127;
+        mixer
+    }
+    #[test]
+    fn tagged_stop_is_immediate_and_preserves_other_held_samples() {
+        let sample = DigitalSample {
+            rate: 11025,
+            data: vec![210; 100],
+        };
+        let mut combined = silent_mixer();
+        let mut reference = silent_mixer();
+        combined.sample_tagged(149, sample.clone(), 0, 128, 30, 1);
+        combined.sample_tagged(144, sample.clone(), 255, 128, 30, 1);
+        reference.sample_tagged(144, sample, 255, 128, 30, 1);
+        let mut first = [0; 8];
+        combined.mix(&mut first);
+        reference.mix(&mut [0; 8]);
+        assert!(first.iter().any(|value| *value != 0));
+        combined.stop_tagged(149);
+        let mut actual = [0; 2];
+        let mut expected = [0; 2];
+        // This frame precedes the next DSP service tick, so it checks that
+        // stop removes an already held contribution, not just the voice.
+        combined.mix(&mut actual);
+        reference.mix(&mut expected);
+        assert_eq!(actual, expected);
+        assert!(actual.iter().any(|value| *value != 0));
+        combined.stop_tagged(144);
+        combined.mix(&mut actual);
+        assert_eq!(actual, [0; 2]);
+    }
+    #[test]
+    fn tagged_stop_removes_all_matching_voices_and_keeps_ordinary_fx_positions() {
+        let sample = DigitalSample {
+            rate: 11025,
+            data: vec![210; 100],
+        };
+        let mut mixer = silent_mixer();
+        mixer.set_fx_channels(8);
+        mixer.sample_tagged(149, sample.clone(), 127, 120, 30, 1);
+        mixer.sample_tagged(149, sample.clone(), 127, 235, 30, 1);
+        mixer.sample(sample, 127, 128, 30, 1);
+        mixer.mix(&mut [0; 40]);
+        let ordinary_position = mixer
+            .digital
+            .iter()
+            .flatten()
+            .find(|voice| voice.tag.is_none())
+            .unwrap()
+            .position;
+        mixer.stop_tagged(149);
+        let voices: Vec<_> = mixer.digital.iter().flatten().collect();
+        assert_eq!(voices.len(), 1);
+        assert!(voices[0].tag.is_none());
+        assert_eq!(voices[0].position, ordinary_position);
+        let mut output = [0; 2];
+        mixer.mix(&mut output);
+        assert!(output.iter().any(|value| *value != 0));
+    }
+    #[test]
+    fn tagged_stop_cannot_restore_held_audio_after_muting() {
+        let sample = DigitalSample {
+            rate: 11025,
+            data: vec![210; 100],
+        };
+        let mut mixer = silent_mixer();
+        mixer.sample_tagged(149, sample.clone(), 127, 128, 30, 1);
+        mixer.sample(sample, 127, 128, 30, 1);
+        mixer.mix(&mut [0; 8]);
+        mixer.fx_volume = 0;
+        mixer.mix(&mut [0; 2]);
+        mixer.stop_tagged(149);
+        let mut output = [1; 2];
+        mixer.mix(&mut output);
+        assert_eq!(output, [0; 2]);
+    }
+    #[test]
+    fn tagged_stop_clears_last_held_value_after_a_voice_has_expired() {
+        let sample = DigitalSample {
+            rate: 11025,
+            data: vec![210],
+        };
+        let mut mixer = silent_mixer();
+        mixer.sample_tagged(149, sample, 127, 128, 30, 1);
+        mixer.mix(&mut [0; 8]);
+        assert!(mixer.digital.iter().all(Option::is_none));
+        assert_ne!(mixer.digital_hold, [0; 2]);
+        mixer.stop_tagged(149);
+        let mut output = [1; 2];
+        mixer.mix(&mut output);
+        assert_eq!(output, [0; 2]);
     }
 }
 

@@ -1,0 +1,44 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_boss_2:projectile",
+      "name": "Relay Warden radar pulse",
+      "damage": 3,
+      "speed": 4,
+      "cooldown": 54,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 8
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "iron_coast_boss_2:unit",
+      "name": "Relay Warden",
+      "health": 160,
+      "speed": 0,
+      "reward": 1800,
+      "ground": false,
+      "boss": true,
+      "cooldown": 54,
+      "art": {
+        "png": "art/unit-sd.png",
+        "hd_png": "art/unit-hd.png",
+        "logical_width": 96,
+        "logical_height": 64,
+        "frames": 1
+      },
+      "script": "scripts/ai.rhai"
+    }
+  ],
+  "sounds": [
+    { "id": "iron_coast_boss_2:shot", "name": "Relay Warden pulse volley", "file": "audio/shot.wav", "volume": 95, "pan": 127, "pitch": 128, "priority": 2 },
+    { "id": "iron_coast_boss_2:warning", "name": "Relay Warden radar charge", "file": "audio/warning.wav", "volume": 86, "pan": 127, "pitch": 128, "priority": 2 },
+    { "id": "iron_coast_boss_2:death", "name": "Relay Warden destruction", "file": "audio/death.wav", "volume": 120, "pan": 127, "pitch": 128, "priority": 4 }
+  ]
+}

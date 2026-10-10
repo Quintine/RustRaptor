@@ -6,9 +6,12 @@ pub mod content;
 pub mod desktop;
 pub mod hd;
 mod legacy_tables;
+#[cfg(feature = "desktop")]
+mod menu_art;
 pub mod mod_selection;
 pub mod modding;
 pub mod persistence;
 pub mod render;
 pub mod simulation;
 pub mod sound;
+pub mod terrain_hd;

@@ -1,0 +1,95 @@
+{
+  "pipeline": "Full-canvas proportional RGBA resize, centered clear padding, BOX reduction to SD; no bitmap redraw",
+  "logical_boss": [
+    96,
+    64
+  ],
+  "logical_projectile": [
+    8,
+    8
+  ],
+  "hd_scale": 8,
+  "frames": 1,
+  "origin": [
+    0,
+    0
+  ],
+  "alpha": "Preserved RGBA; runtime alpha below128 is transparent",
+  "sources": {
+    "art/unit-generated-v1.png": {
+      "size": [
+        1536,
+        1024
+      ],
+      "visible_margin_crop": null,
+      "sha256": "b5e1c404993e7b14b13dc0c2a9dde4dabbc1ab49936b62884af9b4f7c174c676"
+    },
+    "art/projectile-generated-v1.png": {
+      "size": [
+        1254,
+        1254
+      ],
+      "visible_margin_crop": [
+        502,
+        377,
+        752,
+        881
+      ],
+      "sha256": "75c5c376ff44d785082d4f0a4c714d68191c88881397840267a9c1255343760f"
+    }
+  },
+  "files": {
+    "art/unit-hd.png": {
+      "size": [
+        768,
+        512
+      ],
+      "opaque_bounds": [
+        45,
+        59,
+        724,
+        457
+      ],
+      "sha256": "048ce0e71464710826b3a4df83b6988f20a969b669577db20a866e70d134c730"
+    },
+    "art/unit-sd.png": {
+      "size": [
+        96,
+        64
+      ],
+      "opaque_bounds": [
+        6,
+        7,
+        90,
+        57
+      ],
+      "sha256": "419095cf2e14abb5bdea945e95cc5fa2f22ce9e84980080b46150ec19f727e7e"
+    },
+    "art/projectile-hd.png": {
+      "size": [
+        64,
+        64
+      ],
+      "opaque_bounds": [
+        21,
+        9,
+        43,
+        55
+      ],
+      "sha256": "7ed23b4124809260f1b44e5486b4093d2e4b746a8e997f0b15f567d5673b181c"
+    },
+    "art/projectile-sd.png": {
+      "size": [
+        8,
+        8
+      ],
+      "opaque_bounds": [
+        3,
+        1,
+        5,
+        6
+      ],
+      "sha256": "84e820daff78e441512da0792243973e006ef3ff42c4299cb976d86936ddefe4"
+    }
+  }
+}

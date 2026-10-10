@@ -1,0 +1,22 @@
+Iron Coast Mission 3 — Saltworks Convoy acceptance, 2026-10-10
+
+Actual original Catalog and eight real mod packages; no synthetic enemy movement.
+CLI: Validated 8 mods; 0 override(s).
+Starter cases: held fire, absolute position (144,160), no injected commands.
+Required native definitions 0_20, 0_21, 0_22, 0_73 were seen and moved in all starter cases.
+Original LegacyEnemy fields and authored paths remained present.
+
+initial_shield=75 initial_credits=10000 difficulty=1 tick=1184 shield=88 credits=21515 digest=95b32b25a10f6af8e1427ed6cf6cac21367d50018dd4450a885d02cc02cadc0f
+initial_shield=75 initial_credits=10000 difficulty=2 tick=1264 shield=83 credits=21515 digest=c5aa952a0f53d6b7b87574fd014818c6810eff003bc3ce19bc83374f0768bf5a
+initial_shield=75 initial_credits=10000 difficulty=3 tick=1264 shield=83 credits=21515 digest=cde61941255d4066007fe4204c01995eebe084457b1ff9d77cf34bda61b5e7c2
+initial_shield=100 initial_credits=0 difficulty=2 tick=1264 shield=83 credits=11515 digest=370209107c9fb991128ef0d303d9b53bb7c0a4cde67ea401502518b88701b0a9
+full_inventory=20 tick=1178 shield=82 credits=21715
+retained cargo/escorts/boss; full inventory; restart reset; gated completion; single reward: passed
+
+Essential cargo held at y44, escort turrets y74, Saltbreaker y24 after 2200 unattended steps.
+Full 20-slot flight preserved every non-energy equipment ID and count.
+Restart reset objectives; boss plus escorts cannot win without all cargo.
+7,500-credit scripted victory reward paid once.
+SD/HD terrain/cargo images inspected; tile seam/palette/alpha checks in asset-report.json.
+Five authored PCM16 mono22,050Hz cues decode during activation.
+Separate shared music package supplies validated 96-second original FM loop.

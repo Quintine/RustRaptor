@@ -1,0 +1,47 @@
+{
+  "api_version": 1,
+  "mod_version": "1.0.0",
+  "tool": "built-in image_gen.imagegen via imagegen skill",
+  "skill": "/home/quintine/.codex/skills/.system/imagegen/SKILL.md",
+  "generated_at": "2026-10-10",
+  "references": [
+    {
+      "asset": "sprites/SHIP10G1_PIC",
+      "asset_id_hex": "10306",
+      "role": "Inspected classic source for top-down orientation and industrial material language only; not copied into new art or tracked in Git",
+      "review_image": "data/hd/bosses/ship10g1-source.png"
+    },
+    {
+      "asset": "../iron_coast_boss/art/preview.png",
+      "role": "Iron Coast style reference, new boss uses a distinctly wider twin-turret silhouette"
+    }
+  ],
+  "assets": [
+    {
+      "file": "art/unit-generated-v1.png",
+      "prompt": "prompts/unit-hd-v1.txt",
+      "tool_output": "exec-b2e6eb12-8bd6-4c1a-8395-f990f837adff.png",
+      "accepted": true,
+      "sha256": "0d812437a71b65c34c467f892d918e70903c9f407ad2e6dc5e5d08d9b32828ec"
+    },
+    {
+      "file": "art/projectile-generated-v1.png",
+      "prompt": "prompts/projectile-hd-v1.txt",
+      "tool_output": "exec-c22fbaf6-60b7-4e57-a3fc-e2567d1159da.png",
+      "accepted": false,
+      "sha256": "c7bbc2e39911943398aaee11bcf381a6b466c83e631672f0299826373b195255"
+    },
+    {
+      "file": "art/projectile-generated-v2.png",
+      "prompt": "prompts/projectile-hd-v2.txt",
+      "tool_output": "exec-f140bd43-cd64-4202-bf49-3af441a64dae.png",
+      "accepted": true,
+      "sha256": "1f12188394c367ce531f79bf158140ac9a866b4ebb29131bd5f2b5009fa25a16"
+    }
+  ],
+  "projectile_revision": "First shell was too slender at 8x8 SD. v2 broadens the body and uses square framing; only v2 supplies runtime art.",
+  "pipeline": "build_assets.py preserves generated RGBA, resizes full boss canvas, contains shell canvas with padding, derives BOX SD and LANCZOS HD; no redraw or alpha reconstruction.",
+  "alpha": "Alpha preserved; engine uses alpha>=128 as indexed visibility. No outline or ground shadow added.",
+  "sounds": "Three deterministic, original synthesized 22050 Hz mono PCM16 WAVs; exact recipe and hashes in audio-recipe.json.",
+  "version_control": "All generated masters, shipped SD/HD PNGs, previews, prompts and WAVs intended for Git. Classic reference pixels remain outside this package."
+}

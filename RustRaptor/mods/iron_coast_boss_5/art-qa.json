@@ -1,0 +1,102 @@
+{
+  "alpha": "Preserved RGBA; runtime alpha>=128 indexed transparency",
+  "registration": "Whole-canvas proportional resize, fixed padding; single idle frame",
+  "files": [
+    {
+      "name": "unit",
+      "logical_size": [
+        96,
+        64
+      ],
+      "hd_scale": 8,
+      "origin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "master_sha256": "e138d470db1b0a9fa268b32ec8f9b1d9db3dcf41fb9c951acea609dbba5025db",
+      "master_size": [
+        1536,
+        1024
+      ],
+      "files": {
+        "art/unit-sd.png": {
+          "physical_size": [
+            96,
+            64
+          ],
+          "opaque_bounds": [
+            7,
+            5,
+            89,
+            57
+          ],
+          "transparent_pixels": 3690,
+          "sha256": "506094c4c1d1ad15c3f58484aab8057b829a53dea59f598a8632e6236dc4e21d"
+        },
+        "art/unit-hd.png": {
+          "physical_size": [
+            768,
+            512
+          ],
+          "opaque_bounds": [
+            58,
+            38,
+            710,
+            453
+          ],
+          "transparent_pixels": 235914,
+          "sha256": "01bf000620057a06ca85b5b5d59e5e1ef56962726212b5f901916dfad83c86b1"
+        }
+      }
+    },
+    {
+      "name": "projectile",
+      "logical_size": [
+        8,
+        8
+      ],
+      "hd_scale": 8,
+      "origin": [
+        0,
+        0
+      ],
+      "frames": 1,
+      "master_sha256": "f16d4f48f61ffbdd1eac4102b856b5f3bfa3555dd0ae41784b9cd7499d52b955",
+      "master_size": [
+        1254,
+        1254
+      ],
+      "files": {
+        "art/projectile-sd.png": {
+          "physical_size": [
+            8,
+            8
+          ],
+          "opaque_bounds": [
+            2,
+            3,
+            6,
+            6
+          ],
+          "transparent_pixels": 56,
+          "sha256": "c441ded21f3dcfa6666256ac2e5444b8de3e8ab3b52b22080b36a5ad4eacd3d8"
+        },
+        "art/projectile-hd.png": {
+          "physical_size": [
+            64,
+            64
+          ],
+          "opaque_bounds": [
+            19,
+            12,
+            45,
+            50
+          ],
+          "transparent_pixels": 3490,
+          "sha256": "39a7f5ed33f4d1e0d1683e7337b100ab4a04933f19b0939f2f26f4dfdbda588b"
+        }
+      }
+    }
+  ]
+}

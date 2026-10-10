@@ -1,0 +1,81 @@
+{
+  "date": "2026-10-10",
+  "scope": "Local actual original Catalog and real package PNG/WAV/MUS integration; no fake native AI",
+  "mission": "iron_coast_mission_5:mission_05",
+  "dependencies": [
+    "iron_coast_scout",
+    "iron_coast_turret",
+    "iron_coast_boss_5",
+    "pulse_cannon",
+    "seeker_swarm",
+    "ion_lance",
+    "iron_coast_music"
+  ],
+  "duration_hint_ticks": 2600,
+  "explicit_completion": true,
+  "bonus_credits": 15000,
+  "controlled_runs": [
+    {
+      "start_shield": 75,
+      "tick": 1818,
+      "outcome": "Complete",
+      "shield": 71,
+      "credits": 31950,
+      "coolant_used": 2,
+      "foundries": 2,
+      "boss": 1,
+      "digest": "bfadc0db9429242b2db05965860883c71a5efb94573eea3bed926ed955d3ccbb"
+    },
+    {
+      "start_shield": 75,
+      "tick": 1818,
+      "outcome": "Complete",
+      "shield": 71,
+      "credits": 31950,
+      "coolant_used": 2,
+      "foundries": 2,
+      "boss": 1,
+      "digest": "bfadc0db9429242b2db05965860883c71a5efb94573eea3bed926ed955d3ccbb"
+    },
+    {
+      "start_shield": 100,
+      "tick": 1818,
+      "outcome": "Complete",
+      "shield": 66,
+      "credits": 21950,
+      "coolant_used": 1,
+      "foundries": 2,
+      "boss": 1,
+      "digest": "91346253022d711331a482a3a7d90bfc0595d9bd3367fb7c10deab974459b696"
+    }
+  ],
+  "control_strategy": "Difficulty2, hold fire, y160, dx signum towards first living furnace x+8 else144; select coolant after first tick; Special on alternating frames only at shield<=65. No premium weapons, direct damage or shield edits during controlled flight.",
+  "checks": {
+    "identical_repeated_world_digest": true,
+    "full20_slots_preserved": true,
+    "full20_physical_slots_with4_reserve_super_shields_preserved": true,
+    "boss_alone_cannot_win": true,
+    "one_time_reward": true,
+    "restart_with_saved_script_state_resets_encounter": true,
+    "all6_native_libraries_seen_and_moving_each_run": true,
+    "native_libraries": [
+      "base:enemy_0_13",
+      "base:enemy_0_21",
+      "base:enemy_0_22",
+      "base:enemy_0_8",
+      "base:enemy_1_25",
+      "base:enemy_1_26"
+    ],
+    "sd_and_hd_forward_tiles_reconstruct_whole_canvas_exactly": true,
+    "vertical_repeat_boundaries_pixel_identical": true,
+    "nine_synthesized_monoPCM16_cues_nonzero_unclipped": true
+  },
+  "source_sha256": {
+    "mod.toml": "85c548f8cde83b06ccae983ba348f94ea0bf26e1896c2f4d5073902de22ff37a",
+    "content.json": "4f687cb6508bc19516211d712fc94b6f577eff75523678b279c689bf0c20cfda",
+    "scripts/coolant.rhai": "8bc97be0a048eba400fd4c2df558f5964e43883c8ce001bdfe1024486c6fc5e4",
+    "scripts/foundry.rhai": "cafdf0f3440cc8dcd3c6db21910f71c5f9abef7e9666ac83b1742b02601e8b30",
+    "scripts/mission.rhai": "4a971e6bbf6bed8757f53ac966a128ae7c783f5818088686e26f9c7bbd1194f8"
+  },
+  "proof_stdout": "start_shield=75 tick=1818 outcome=Complete shield=71 credits=31950 coolant_used=2 foundries=2 boss=1 digest=bfadc0db9429242b2db05965860883c71a5efb94573eea3bed926ed955d3ccbb\nclassic seen={\"base:enemy_0_13\", \"base:enemy_0_21\", \"base:enemy_0_22\", \"base:enemy_0_8\", \"base:enemy_1_25\", \"base:enemy_1_26\"}; moving={\"base:enemy_0_13\", \"base:enemy_0_21\", \"base:enemy_0_22\", \"base:enemy_0_8\", \"base:enemy_1_25\", \"base:enemy_1_26\"}\nstart_shield=75 tick=1818 outcome=Complete shield=71 credits=31950 coolant_used=2 foundries=2 boss=1 digest=bfadc0db9429242b2db05965860883c71a5efb94573eea3bed926ed955d3ccbb\nclassic seen={\"base:enemy_0_13\", \"base:enemy_0_21\", \"base:enemy_0_22\", \"base:enemy_0_8\", \"base:enemy_1_25\", \"base:enemy_1_26\"}; moving={\"base:enemy_0_13\", \"base:enemy_0_21\", \"base:enemy_0_22\", \"base:enemy_0_8\", \"base:enemy_1_25\", \"base:enemy_1_26\"}\nstart_shield=100 tick=1818 outcome=Complete shield=66 credits=21950 coolant_used=1 foundries=2 boss=1 digest=91346253022d711331a482a3a7d90bfc0595d9bd3367fb7c10deab974459b696\nclassic seen={\"base:enemy_0_13\", \"base:enemy_0_21\", \"base:enemy_0_22\", \"base:enemy_0_8\", \"base:enemy_1_25\", \"base:enemy_1_26\"}; moving={\"base:enemy_0_13\", \"base:enemy_0_21\", \"base:enemy_0_22\", \"base:enemy_0_8\", \"base:enemy_1_25\", \"base:enemy_1_26\"}\nfull inventory start: 20 physical slots preserved, reserves=0\nfull inventory start: 20 physical slots preserved, reserves=4\nobjectives and one-time reward: passed\nmission restart with saved state: reset correctly\n"
+}

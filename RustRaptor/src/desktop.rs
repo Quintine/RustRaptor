@@ -2,16 +2,19 @@
 use crate::{
     assets::{Catalog, Sprite},
     audio::{Mixer, MusScore},
-    cinematics::{Cinematic, Kind as MovieKind},
+    cinematics::{Cinematic, CinematicAudioEvent, Kind as MovieKind},
     content::{Art, ContentId, Registry, art_sprite_variant},
     hd::HdAssets,
     modding::{self, ActiveMods, Discovery},
-    persistence::{Config, Paths, Pilot},
+    persistence::{Config, Paths, Pilot, PilotLoad},
     render::{
         BitmapFont, Canvas, SpriteCache, legacy_light_table, nearest, prefers_nearest,
         shade_air_shadow, shade_ground_shadow, upscale,
     },
     simulation::{Clock, Input, Outcome, World},
+    terrain_hd::{
+        OverlayResult, Replacement as TerrainReplacement, TerrainHd, logical_sprite, selected_art,
+    },
 };
 use anyhow::{Context, Result, anyhow};
 use sdl2::{
@@ -55,9 +58,15 @@ enum Screen {
     Pilots,
     LegacyPilots,
     ConfirmDisable,
+    ConfirmLoadMods,
     Diagnostics,
     Bindings,
     Cinematic,
+}
+struct PendingPilotLoad {
+    loaded: PilotLoad,
+    slot: usize,
+    return_to: Screen,
 }
 struct PilotForm {
     name: String,
@@ -159,11 +168,16 @@ struct Host {
     discovery: Discovery,
     config: Config,
     hd: HdAssets,
+    hd_loaded: bool,
     read_only: bool,
     pending: Vec<String>,
     pilot: Pilot,
     slot: usize,
     pilot_error: Option<String>,
+    pending_load: Option<PendingPilotLoad>,
+    mismatch_confirmed: bool,
+    mismatch_backup_done: bool,
+    menu_art: crate::menu_art::MenuArt,
     queued_cycle: bool,
     queued_bomb: bool,
     awaiting_binding: Option<String>,
@@ -182,16 +196,23 @@ struct Host {
     pilot_slots: Vec<(usize, String)>,
     message: String,
     font: BitmapFont,
+    menu_font: BitmapFont,
     cache: SpriteCache,
+    terrain_hd: TerrainHd,
     raw: BTreeMap<u32, Sprite>,
     mod_art: BTreeMap<String, Sprite>,
     palette: [[u8; 3]; 256],
     shadow_table: [u8; 256],
     air_shadow_table: [u8; 256],
+    light_table: [u8; 256],
+    flame_tables: [[u8; 256]; 8],
     hud_state: HudState,
     audio: Option<AudioDevice<Mixer>>,
     sound_bank: crate::sound::SoundBank,
     desired_music: Option<u32>,
+    desired_mod_music: Option<ContentId>,
+    desired_music_loop: bool,
+    startup_intro_pending: bool,
     clock: Clock,
 }
 impl Host {
@@ -214,9 +235,20 @@ impl Host {
                 }
             };
         let mut pilot_error = None;
+        let mut pending_load = None;
         let mut pilot = if paths.save_path(0).exists() {
-            match Pilot::load(&paths.save_path(0), &active.registry, &active.pins) {
-                Ok(p) => p,
+            match Pilot::inspect_load(&paths.save_path(0), &active.registry, &active.pins) {
+                Ok(loaded) if loaded.compatibility.is_compatible() => loaded.pilot,
+                Ok(loaded) => {
+                    message = "Saved pilot uses different mods. Review before loading".into();
+                    pilot_error = Some(message.clone());
+                    pending_load = Some(PendingPilotLoad {
+                        loaded,
+                        slot: 0,
+                        return_to: Screen::Main,
+                    });
+                    Pilot::default()
+                }
                 Err(e) => {
                     message = format!("Saved pilot unavailable: {e:#}");
                     pilot_error = Some(message.clone());
@@ -241,14 +273,36 @@ impl Host {
             pilot.mods = active.pins.clone();
         }
         restore_scripts(&mut active.scripts, &pilot);
-        let hd = HdAssets::load(&catalog.root.join("hd"), &catalog);
+        let hd_loaded = config.hd_mode;
+        let hd = if hd_loaded {
+            HdAssets::load_lazy(
+                &catalog.root.join("hd"),
+                &catalog,
+                Some(&paths.cache.join("hd-art-v1")),
+            )
+        } else {
+            HdAssets::default()
+        };
         let palette = catalog.palette()?;
         let vga_palette = palette.map(|color| color.map(|component| component >> 2));
         let shadow_table = legacy_light_table(&vga_palette, -9);
         let air_shadow_table = legacy_light_table(&vga_palette, -6);
+        let light_table = legacy_light_table(&vga_palette, 9);
+        let flame_tables =
+            std::array::from_fn(|shade| legacy_light_table(&vga_palette, (8 - shade as i32) * 2));
         let font = BitmapFont::decode(&catalog.named("SYSTEM_FNT")?)?;
+        let menu_font = BitmapFont::decode(
+            &catalog
+                .named("FONT2_FNT")
+                .or_else(|_| catalog.named("SYSTEM_FNT"))?,
+        )?;
         let cache = SpriteCache::new(Some(paths.cache.join("sprites")));
         let pending = config.enabled_mods.clone();
+        let initial_screen = if pending_load.is_some() {
+            Screen::ConfirmLoadMods
+        } else {
+            Screen::Main
+        };
         Ok(Self {
             catalog,
             base,
@@ -258,11 +312,16 @@ impl Host {
             discovery,
             config,
             hd,
+            hd_loaded,
             read_only,
             pending,
             pilot,
             slot: 0,
             pilot_error,
+            pending_load,
+            mismatch_confirmed: false,
+            mismatch_backup_done: false,
+            menu_art: crate::menu_art::MenuArt::bundled(),
             queued_cycle: false,
             queued_bomb: false,
             awaiting_binding: None,
@@ -272,7 +331,7 @@ impl Host {
             world: None,
             cinematic: None,
             movie_return: Screen::Main,
-            screen: Screen::Main,
+            screen: initial_screen,
             previous: Screen::Main,
             selected: 0,
             shop_selling: false,
@@ -281,12 +340,16 @@ impl Host {
             pilot_slots: vec![],
             message,
             font,
+            menu_font,
             cache,
+            terrain_hd: TerrainHd::default(),
             raw: BTreeMap::new(),
             mod_art: BTreeMap::new(),
             palette,
             shadow_table,
             air_shadow_table,
+            light_table,
+            flame_tables,
             hud_state: HudState {
                 tick: 0,
                 shield: 100,
@@ -297,6 +360,9 @@ impl Host {
             audio: None,
             sound_bank: crate::sound::SoundBank::default(),
             desired_music: None,
+            desired_mod_music: None,
+            desired_music_loop: true,
+            startup_intro_pending: false,
             clock: Clock::default(),
         })
     }
@@ -330,6 +396,87 @@ impl Host {
                 .collect();
         }
     }
+    fn present_rgba(&mut self, image: &Canvas) -> Vec<u8> {
+        if self.world.is_none() && self.cinematic.is_none() {
+            self.menu_art
+                .compose(image, &self.palette, self.config.scanlines)
+        } else {
+            let palette = if let Some(movie) = &self.cinematic {
+                movie.palette(&self.palette)
+            } else {
+                mission_palette(&self.palette, self.world.as_ref())
+            };
+            image.rgba(&palette, self.config.scanlines)
+        }
+    }
+    fn validate_current_pilot(&self, pilot: &Pilot) -> Result<()> {
+        if self.mismatch_confirmed {
+            pilot.validate_tolerant(&self.active.registry)
+        } else {
+            pilot.validate(&self.active.registry, &self.active.pins)
+        }
+    }
+    fn write_pilot(&mut self, pilot: &Pilot) -> Result<()> {
+        let path = self.paths.save_path(self.slot);
+        if self.mismatch_confirmed && !self.mismatch_backup_done && path.exists() {
+            use sha2::Digest;
+            let original = std::fs::read(&path)?;
+            let hash = format!("{:x}", sha2::Sha256::digest(&original));
+            let backup = self.paths.data.join(format!(
+                "pilot-{:04}-before-mod-change-{}.json",
+                self.slot,
+                &hash[..12]
+            ));
+            if !backup.exists() {
+                crate::persistence::atomic_write(&backup, &original)?;
+            }
+            self.mismatch_backup_done = true;
+        }
+        pilot.save(&path)
+    }
+    fn load_pilot_into_hangar(&mut self, pilot: Pilot, slot: usize, confirmed: bool) {
+        restore_scripts(&mut self.active.scripts, &pilot);
+        self.pilot = pilot;
+        self.config.difficulty = self.pilot.difficulty;
+        self.slot = slot;
+        self.pilot_error = None;
+        self.mismatch_confirmed = confirmed;
+        self.mismatch_backup_done = false;
+        self.pending_load = None;
+        self.message = if confirmed {
+            format!("Loaded slot {slot:04}; unavailable content retained")
+        } else {
+            format!("Loaded pilot slot {slot:04}")
+        };
+        self.hangar();
+    }
+    fn request_pilot_load(&mut self, slot: usize, return_to: Screen) -> Result<()> {
+        let loaded = Pilot::inspect_load(
+            &self.paths.save_path(slot),
+            &self.active.registry,
+            &self.active.pins,
+        )?;
+        if loaded.compatibility.is_compatible() {
+            self.load_pilot_into_hangar(loaded.pilot, slot, false);
+        } else {
+            self.pending_load = Some(PendingPilotLoad {
+                loaded,
+                slot,
+                return_to,
+            });
+            self.message = "Review differences. Loading keeps unavailable content".into();
+            self.go(Screen::ConfirmLoadMods);
+        }
+        Ok(())
+    }
+    fn cancel_pilot_load(&mut self) {
+        let return_to = self
+            .pending_load
+            .take()
+            .map_or(Screen::Main, |pending| pending.return_to);
+        self.message = "Pilot load cancelled; save unchanged".into();
+        self.go(return_to);
+    }
     fn save_config(&self) -> Result<()> {
         if self.read_only {
             return Ok(());
@@ -352,9 +499,11 @@ impl Host {
             // Saving from Pause retains the last hangar inventory/progression
             // and its script snapshot, never half-completed mission state.
             let mut candidate = self.pilot.clone();
-            candidate.validate(&self.active.registry, &self.active.pins)?;
-            candidate.mods = self.active.pins.clone();
-            candidate.save(&self.paths.save_path(self.slot))?;
+            self.validate_current_pilot(&candidate)?;
+            if !self.mismatch_confirmed {
+                candidate.mods = self.active.pins.clone();
+            }
+            self.write_pilot(&candidate)?;
             self.pilot = candidate;
         } else {
             self.save()?;
@@ -375,11 +524,65 @@ impl Host {
         self.music("HANGAR_MUS");
     }
     fn music(&mut self, name: &str) {
-        self.desired_music = self.catalog.id(name).ok();
+        self.music_with_loop(name, true);
+    }
+    fn music_with_loop(&mut self, name: &str, looping: bool) {
+        let id = self.catalog.id(name).ok();
+        if self.desired_mod_music.is_none()
+            && id.is_some()
+            && self.desired_music == id
+            && self.desired_music_loop == looping
+        {
+            return;
+        }
+        self.desired_music_loop = looping;
+        self.desired_mod_music = None;
+        self.desired_music = id;
         let score = self.catalog.named(name).and_then(|b| MusScore::decode(&b));
         if let (Some(device), Ok(score)) = (&mut self.audio, score) {
-            device.lock().play_with_fade(score, true, true);
+            device
+                .lock()
+                .play_with_fade(score, looping, name != "APOGEE_MUS");
         }
+    }
+    fn mod_music(&mut self, id: &ContentId) -> Result<()> {
+        let definition = self
+            .active
+            .registry
+            .music
+            .get(id)
+            .context("mission music track is unavailable")?;
+        let looping = definition.looping;
+        if self.desired_mod_music.as_ref() == Some(id) && self.desired_music_loop == looping {
+            return Ok(());
+        }
+        let score = self.sound_bank.mod_music(&self.active.registry, id)?;
+        self.desired_music = None;
+        self.desired_mod_music = Some(id.clone());
+        self.desired_music_loop = looping;
+        if let Some(audio) = &mut self.audio {
+            audio.lock().play_with_fade(score, looping, true);
+        }
+        Ok(())
+    }
+    /// Reapply pending selection when the audio device is first attached.
+    fn resume_desired_music(&mut self) -> Result<()> {
+        let score = if let Some(id) = &self.desired_mod_music {
+            Some((self.sound_bank.mod_music(&self.active.registry, id)?, true))
+        } else if let Some(id) = self.desired_music {
+            Some((
+                MusScore::decode(&self.catalog.read(id)?)?,
+                self.catalog.id("APOGEE_MUS").ok() != Some(id),
+            ))
+        } else {
+            None
+        };
+        if let (Some(audio), Some((score, fade))) = (&mut self.audio, score) {
+            audio
+                .lock()
+                .play_with_fade(score, self.desired_music_loop, fade);
+        }
+        Ok(())
     }
     fn play_ui_sound(&mut self, name: &str) {
         let Some(device) = &mut self.audio else {
@@ -398,26 +601,38 @@ impl Host {
     }
     fn start(&mut self, id: ContentId) -> Result<()> {
         self.require_pilot()?;
-        self.pilot.mission = id.clone();
-        self.pilot.difficulty = self.config.difficulty;
-        self.active.scripts.states = self.pilot.script_state.clone();
-        self.active.scripts.rng = self.pilot.script_rng.clone();
-        self.world = Some(World::new(&id, &self.pilot, &self.active.registry)?);
-        self.hud_state = HudState::new(self.world.as_ref().unwrap());
-        if let Some(music) = self.active.registry.missions[&id].music {
+        anyhow::ensure!(
+            self.active.registry.missions.contains_key(&id),
+            "Saved mission {id} is unavailable. Choose Select mission in the hangar, or enable its mod."
+        );
+        let mut pilot = self.pilot.clone();
+        pilot.mission = id.clone();
+        pilot.difficulty = self.config.difficulty;
+        let world = World::new(&id, &pilot, &self.active.registry)?;
+        if let Some(track) = self.active.registry.missions[&id].music_track.clone() {
+            self.mod_music(&track)?;
+        } else if let Some(music) = self.active.registry.missions[&id].music {
+            self.desired_mod_music = None;
             self.desired_music = Some(music);
+            self.desired_music_loop = true;
             if let Ok(score) = self.catalog.read(music).and_then(|b| MusScore::decode(&b)) {
                 if let Some(audio) = &mut self.audio {
                     audio.lock().play_with_fade(score, true, true);
                 }
             }
         }
+        self.pilot = pilot;
+        self.active.scripts.states = self.pilot.script_state.clone();
+        self.active.scripts.rng = self.pilot.script_rng.clone();
+        self.world = Some(world);
+        self.hud_state = HudState::new(self.world.as_ref().unwrap());
         self.clock = Clock::default();
         self.go(Screen::Game);
         Ok(())
     }
     fn show_movie(&mut self, kind: MovieKind, return_to: Screen) -> Result<()> {
         let movie = Cinematic::load(&self.catalog, kind)?;
+        self.startup_intro_pending = false;
         self.cinematic = Some(movie);
         self.movie_return = return_to;
         match kind {
@@ -428,10 +643,31 @@ impl Host {
         self.go(Screen::Cinematic);
         Ok(())
     }
+    fn start_original_intro(&mut self, return_to: Screen) -> Result<()> {
+        match self.show_movie(MovieKind::OpeningCredits, return_to) {
+            Ok(()) => {
+                self.startup_intro_pending = true;
+                Ok(())
+            }
+            Err(_) => self.show_movie(MovieKind::Intro, return_to),
+        }
+    }
     fn finish_movie(&mut self) {
+        if let Some(audio) = &mut self.audio {
+            // The original movie player clears its outgoing patches on skip/end.
+            for tag in [104, 129, 144, 149, 179] {
+                audio.lock().stop_tagged(tag);
+            }
+        }
         self.cinematic = None;
+        if self.startup_intro_pending {
+            self.startup_intro_pending = false;
+            if self.show_movie(MovieKind::Intro, self.movie_return).is_ok() {
+                return;
+            }
+        }
         self.go(self.movie_return);
-        if self.screen == Screen::Main {
+        if matches!(self.screen, Screen::Main | Screen::ConfirmLoadMods) {
             self.music("MAINMENU_MUS");
         }
     }
@@ -596,6 +832,8 @@ impl Host {
                         }
                     )
                 })
+                .chain(self.pilot.inventory.iter().filter(|(id, _)| !self.active.registry.items.contains_key(*id))
+                    .map(|(id, n)| format!("[UNAVAILABLE] {id} x{n}")))
                 .collect(),
             Screen::ShopDetails => self
                 .shop_detail_item
@@ -622,6 +860,14 @@ impl Host {
                     )
                 })
                 .collect(),
+            Screen::ConfirmLoadMods => ["Cancel - keep current pilot".into(), "Load anyway".into()]
+                .into_iter()
+                .chain(self.pending_load.iter().flat_map(|pending| {
+                    let mut lines = vec![format!("Slot {:04}: {} / {}", pending.slot, pending.loaded.pilot.callsign, pending.loaded.pilot.name)];
+                    lines.extend(pending.loaded.compatibility.messages());
+                    lines.push("Unavailable equipment and progression remain saved. Choose another mission if needed. An original save backup is kept before writing changes.".into());
+                    lines.into_iter().flat_map(|line| wrap_text(&self.font, &line, 272)).collect::<Vec<_>>()
+                })).collect(),
             Screen::ConfirmDisable => [
                 "Yes, disable these mods".into(),
                 "Cancel - keep enabled".into(),
@@ -689,11 +935,11 @@ impl Host {
                     ["Training", "Rookie", "Veteran", "Elite"][self.config.difficulty as usize]
                 ),
                 format!("Resolution: {}x{}", self.config.width, self.config.height),
-                format!(
-                    "HD art: {} ({} frames)",
-                    if self.config.hd_mode { "on" } else { "off" },
-                    self.hd.coverage()
-                ),
+                if self.config.hd_mode {
+                    format!("HD art: on ({} supplied)", self.hd.registered_count())
+                } else {
+                    "HD art: off".into()
+                },
                 "Keyboard bindings".into(),
                 format!("Effects channels: {}", self.config.fx_channels),
                 "Save settings".into(),
@@ -733,8 +979,7 @@ impl Host {
                 "{error}. Restore matching mods, load a compatible pilot, or choose New pilot to create a separate pilot."
             ));
         }
-        self.pilot
-            .validate(&self.active.registry, &self.active.pins)
+        self.validate_current_pilot(&self.pilot)
     }
     fn slots(&self) -> Vec<usize> {
         let mut slots = std::fs::read_dir(&self.paths.data)
@@ -817,6 +1062,8 @@ impl Host {
         self.pilot_error = None;
         self.active.scripts.states.clear();
         self.active.scripts.rng.clear();
+        self.mismatch_confirmed = false;
+        self.pending_load = None;
         self.message = format!("New pilot in slot {slot:04}");
         Ok(())
     }
@@ -1003,6 +1250,8 @@ impl Host {
         self.config.difficulty = self.pilot.difficulty;
         self.slot = slot;
         self.pilot_error = None;
+        self.mismatch_confirmed = false;
+        self.pending_load = None;
         self.message = format!("Imported {} into slot {slot:04}", self.pilot.callsign);
         self.hangar();
         Ok(())
@@ -1012,12 +1261,14 @@ impl Host {
         self.check_saved_slot()?;
         let mut candidate = self.pilot.clone();
         edit(&mut candidate, &self.active.registry)?;
-        candidate.script_state = self.active.scripts.states.clone();
-        candidate.script_rng = self.active.scripts.rng.clone();
-        candidate.validate(&self.active.registry, &self.active.pins)?;
-        candidate.mods = self.active.pins.clone();
+        candidate.merge_runtime_snapshot(
+            &self.active.pins,
+            &self.active.scripts.states,
+            &self.active.scripts.rng,
+        );
+        self.validate_current_pilot(&candidate)?;
         if !self.read_only {
-            candidate.save(&self.paths.save_path(self.slot))?;
+            self.write_pilot(&candidate)?;
         }
         self.pilot = candidate;
         Ok(())
@@ -1025,8 +1276,12 @@ impl Host {
     fn check_saved_slot(&self) -> Result<()> {
         let path = self.paths.save_path(self.slot);
         if std::fs::symlink_metadata(&path).is_ok() {
-            Pilot::load(&path, &self.active.registry, &self.active.pins)
-                .with_context(|| format!("Existing pilot slot {:04} is unavailable; load matching mods or create a separate pilot", self.slot))?;
+            if self.mismatch_confirmed {
+                Pilot::inspect_load(&path, &self.active.registry, &self.active.pins)?;
+            } else {
+                Pilot::load(&path, &self.active.registry, &self.active.pins)
+                    .with_context(|| format!("Existing pilot slot {:04} is unavailable; load matching mods or create a separate pilot", self.slot))?;
+            }
         }
         Ok(())
     }
@@ -1056,10 +1311,15 @@ impl Host {
         }
         lines.extend(self.discovery.errors.clone());
         lines.extend(self.hd.diagnostics.clone());
-        lines.push(format!(
-            "HD art coverage: {} supplied frames; remaining artwork uses original sprites",
-            self.hd.coverage()
-        ));
+        lines.push(if self.hd_loaded {
+            format!(
+                "HD art: {} supplied frames, {} decoded; absent artwork uses original sprites",
+                self.hd.registered_count(),
+                self.hd.validated_count()
+            )
+        } else {
+            "HD pack not loaded; enable HD art in Options to inspect it".into()
+        });
         lines.push(format!(
             "Active order: {}",
             self.active
@@ -1114,20 +1374,48 @@ impl Host {
             config.save(&self.paths)?;
         }
         let saved = self.paths.save_path(self.slot);
-        match pilot_for_mods(&saved, &self.pilot, &candidate.registry, &candidate.pins) {
-            Ok(pilot) => {
-                restore_scripts(&mut candidate.scripts, &pilot);
-                self.pilot = pilot;
+        let inspected = if saved.exists() {
+            Pilot::inspect_load(&saved, &candidate.registry, &candidate.pins)
+        } else {
+            self.pilot
+                .validate_tolerant(&candidate.registry)
+                .map(|_| PilotLoad {
+                    pilot: self.pilot.clone(),
+                    compatibility: self
+                        .pilot
+                        .compatibility_report(&candidate.registry, &candidate.pins),
+                })
+        };
+        match inspected {
+            Ok(loaded) if loaded.compatibility.is_compatible() => {
+                restore_scripts(&mut candidate.scripts, &loaded.pilot);
+                self.pilot = loaded.pilot;
                 self.pilot_error = None;
+                self.mismatch_confirmed = false;
+                self.pending_load = None;
+            }
+            Ok(loaded) => {
+                self.pilot_error = Some("Pilot needs confirmation for the current mods".into());
+                self.pending_load = Some(PendingPilotLoad {
+                    loaded,
+                    slot: self.slot,
+                    return_to: Screen::Main,
+                });
             }
             Err(e) => self.pilot_error = Some(format!("Pilot slot {:04}: {e:#}", self.slot)),
         }
         self.config = config;
         self.active = candidate;
         self.sound_bank.clear_mods();
+        if self.desired_mod_music.is_some() {
+            self.music("MAINMENU_MUS");
+        }
         self.mod_art.clear();
-        if self.pilot_error.is_some() {
-            self.message = "Mods applied; restore saved mods or choose Load / New pilot".into();
+        if self.pending_load.is_some() {
+            self.message = "Mods applied; review pilot differences before loading".into();
+            self.go(Screen::ConfirmLoadMods);
+        } else if self.pilot_error.is_some() {
+            self.message = "Mods applied; choose Load / New pilot".into();
         } else {
             self.message = "Mods applied".into();
         }
@@ -1137,8 +1425,12 @@ impl Host {
         match self.screen {
             Screen::Main => match self.selected {
                 0 => {
-                    self.require_pilot()?;
-                    self.hangar();
+                    if self.pilot_error.is_some() && self.paths.save_path(self.slot).exists() {
+                        self.request_pilot_load(self.slot, Screen::Main)?;
+                    } else {
+                        self.require_pilot()?;
+                        self.hangar();
+                    }
                 }
                 1 => self.begin_pilot_form(true)?,
                 2 => self.go(Screen::Pilots),
@@ -1148,7 +1440,7 @@ impl Host {
                 }
                 4 => self.go(Screen::Mods),
                 5 => self.go(Screen::Extras),
-                6 => self.show_movie(MovieKind::Intro, Screen::Main)?,
+                6 => self.start_original_intro(Screen::Main)?,
                 7 => return Ok(false),
                 _ => {}
             },
@@ -1217,18 +1509,7 @@ impl Host {
                     .get(self.selected - 2)
                     .map(|(slot, _)| *slot)
                 {
-                    let p = Pilot::load(
-                        &self.paths.save_path(slot),
-                        &self.active.registry,
-                        &self.active.pins,
-                    )?;
-                    restore_scripts(&mut self.active.scripts, &p);
-                    self.pilot = p;
-                    self.config.difficulty = self.pilot.difficulty;
-                    self.slot = slot;
-                    self.pilot_error = None;
-                    self.message = format!("Loaded pilot slot {slot:04}");
-                    self.hangar();
+                    self.request_pilot_load(slot, Screen::Pilots)?;
                 }
             }
             Screen::LegacyPilots => {
@@ -1327,6 +1608,14 @@ impl Host {
                     }
                 }
             }
+            Screen::ConfirmLoadMods => {
+                if self.selected == 0 {
+                    self.cancel_pilot_load();
+                } else if self.selected == 1 {
+                    let pending = self.pending_load.take().context("No pending pilot load")?;
+                    self.load_pilot_into_hangar(pending.loaded.confirm_load(), pending.slot, true);
+                }
+            }
             Screen::ConfirmDisable => {
                 if self.selected == 0 {
                     if let Some(plan) = self.pending_disable.take() {
@@ -1379,7 +1668,9 @@ impl Host {
             },
             Screen::Results => {
                 self.return_main()?;
-                self.hangar();
+                if self.screen == Screen::Main {
+                    self.hangar();
+                }
             }
             _ => {}
         }
@@ -1486,7 +1777,11 @@ impl Host {
                 self.message = format!("Mod changes pending: {e:#}");
             }
         }
-        self.go(Screen::Main);
+        self.go(if self.pending_load.is_some() {
+            Screen::ConfirmLoadMods
+        } else {
+            Screen::Main
+        });
         self.music("MAINMENU_MUS");
         Ok(())
     }
@@ -1502,6 +1797,7 @@ impl Host {
                     .and_then(|id| self.shop_ids().iter().position(|candidate| candidate == id))
                     .map_or(0, |index| index + 1);
             }
+            Screen::ConfirmLoadMods => self.cancel_pilot_load(),
             Screen::ConfirmDisable => {
                 self.pending_disable = None;
                 self.message = "Mod selection unchanged".into();
@@ -1524,7 +1820,9 @@ impl Host {
             }
             Screen::Results => {
                 self.return_main()?;
-                self.hangar();
+                if self.screen == Screen::Main {
+                    self.hangar();
+                }
             }
             Screen::LegacyPilots => self.go(Screen::Pilots),
             Screen::Missions | Screen::Shop | Screen::Inventory => self.hangar(),
@@ -1544,20 +1842,30 @@ impl Host {
                 .as_mut()
                 .context("missing active cinematic")?;
             movie.advance(nanos)?;
-            let sounds = std::mem::take(&mut movie.sounds);
+            let sounds = std::mem::take(&mut movie.audio_events);
+            let music_events = std::mem::take(&mut movie.music_events);
             let finished = movie.finished();
+            for (name, looping) in music_events {
+                self.music_with_loop(name, looping);
+            }
             if let Some(audio) = &mut self.audio {
                 for event in sounds {
-                    match self.sound_bank.original(&self.catalog, event.asset) {
-                        Ok(sample) => audio.lock().sample(
-                            sample,
-                            event.pan,
-                            event.pitch,
-                            event.volume,
-                            event.priority,
-                        ),
-                        Err(error) => {
-                            self.message = format!("Cinematic sound unavailable: {error:#}")
+                    match event {
+                        CinematicAudioEvent::Stop(tag) => audio.lock().stop_tagged(tag),
+                        CinematicAudioEvent::Play(event) => {
+                            match self.sound_bank.original(&self.catalog, event.asset) {
+                                Ok(sample) => audio.lock().sample_tagged(
+                                    event.asset,
+                                    sample,
+                                    event.pan,
+                                    event.pitch,
+                                    event.volume,
+                                    event.priority,
+                                ),
+                                Err(error) => {
+                                    self.message = format!("Cinematic sound unavailable: {error:#}")
+                                }
+                            }
                         }
                     }
                 }
@@ -1645,7 +1953,11 @@ impl Host {
                 let mission = w.mission.clone();
                 let mut pilot = w.pilot(&self.pilot);
                 if outcome == Outcome::Complete {
-                    pilot.complete_mission(&self.active.registry)?;
+                    if self.mismatch_confirmed {
+                        pilot.complete_mission_tolerant(&self.active.registry)?;
+                    } else {
+                        pilot.complete_mission(&self.active.registry)?;
+                    }
                     self.edit_pilot(move |candidate, _| {
                         *candidate = pilot;
                         Ok(())
@@ -1844,6 +2156,27 @@ impl Host {
         }
         Ok(())
     }
+    fn native_sprite(&mut self, asset: u32, scale: usize) -> Result<Sprite> {
+        if self.config.hd_mode {
+            if let Some(sprite) = self.hd.sprite(asset, scale, &self.palette)? {
+                return Ok(sprite);
+            }
+        }
+        let original = self.raw(asset)?;
+        Ok(self
+            .cache
+            .get(&original, scale, prefers_nearest(asset))?
+            .clone())
+    }
+    fn native_blit(&mut self, canvas: &mut Canvas, asset: u32, x: f32, y: f32) -> Result<()> {
+        let sprite = self.native_sprite(asset, canvas.scale)?;
+        canvas.blit(
+            &sprite,
+            (x * canvas.scale as f32).round() as i32,
+            (y * canvas.scale as f32).round() as i32,
+        );
+        Ok(())
+    }
     fn projectiles(
         &mut self,
         canvas: &mut Canvas,
@@ -1856,30 +2189,90 @@ impl Host {
             let x = p.px as f32 + (p.x - p.px) as f32 * alpha;
             let y = p.py as f32 + (p.y - p.py) as f32 * alpha;
             if p.legacy.is_some() || p.legacy_enemy.is_some() {
+                if let Some(shot) = &p.legacy {
+                    let beam = crate::legacy_tables::weapons()
+                        .into_iter()
+                        .find(|lib| Some(lib.index) == def.legacy)
+                        .map_or(0, |lib| lib.beam);
+                    if beam == 1 {
+                        let from = [
+                            world.player.px as f32
+                                + (world.player.x - world.player.px) as f32 * alpha
+                                + 16.0,
+                            world.player.py as f32
+                                + (world.player.y - world.player.py) as f32 * alpha
+                                + 16.0,
+                        ];
+                        for (offset, color) in [(1.0, 69), (-1.0, 69), (0.0, 64)] {
+                            tracer_line(
+                                canvas,
+                                [from[0] + offset, from[1]],
+                                [shot.movement.x, shot.movement.y],
+                                color,
+                            );
+                        }
+                        continue;
+                    }
+                    if beam == 2 {
+                        let frame = shot.art_frame;
+                        let sprite_asset = World::projectile_asset(p, &self.active.registry)
+                            .context("native beam has no artwork")?
+                            + frame;
+                        let mut row = shot.movement.ty as f32;
+                        while row < y {
+                            self.native_blit(canvas, sprite_asset, x, row)?;
+                            row += 3.0;
+                        }
+                        let power_frame = p.age as u32 % 4;
+                        let death_ray = def.legacy == Some(14);
+                        self.native_blit(
+                            canvas,
+                            if death_ray { 0x10239 } else { 0x1023d } + power_frame,
+                            x - if death_ray { 4.0 } else { 0.0 },
+                            y,
+                        )?;
+                        let hit = self.raw(0x101f1 + power_frame)?;
+                        let hit_y = shot.movement.ty - 8;
+                        if hit_y > 0 {
+                            self.native_blit(
+                                canvas,
+                                0x101f1 + power_frame,
+                                x - (hit.width / 4) as f32,
+                                hit_y as f32,
+                            )?;
+                        }
+                        continue;
+                    }
+                }
+                if let Some(shot) = &p.legacy_enemy {
+                    if shot.kind == 5 {
+                        let frame = shot.art_frame % shot.frames.max(1);
+                        let mut row = y;
+                        while row < shot.movement.ty as f32 {
+                            self.native_blit(canvas, shot.asset + frame, x, row)?;
+                            row += 3.0;
+                        }
+                        self.native_blit(canvas, 0x10245 + frame, x, y)?;
+                        let hit = self.raw(0x101f1 + frame)?;
+                        let hit_y = shot.movement.ty - 8;
+                        if hit_y > 0 && hit_y < 200 {
+                            self.native_blit(
+                                canvas,
+                                0x101f1 + frame,
+                                x - (hit.width / 4) as f32,
+                                hit_y as f32,
+                            )?;
+                        }
+                        continue;
+                    }
+                }
                 if let Some(asset) = World::projectile_asset(p, &self.active.registry) {
                     let frame = if let Some(shot) = &p.legacy_enemy {
                         shot.art_frame % shot.frames.max(1)
                     } else {
                         p.legacy.as_ref().map_or(0, |shot| shot.art_frame)
                     };
-                    let original = self.raw(asset + frame)?;
-                    let hd = if self.config.hd_mode {
-                        self.hd.sprite(asset + frame, canvas.scale, &self.palette)?
-                    } else {
-                        None
-                    };
-                    let sprite = match hd {
-                        Some(sprite) => sprite,
-                        None => self
-                            .cache
-                            .get(&original, canvas.scale, prefers_nearest(asset + frame))?
-                            .clone(),
-                    };
-                    canvas.blit(
-                        &sprite,
-                        (x * canvas.scale as f32).round() as i32,
-                        (y * canvas.scale as f32).round() as i32,
-                    );
+                    self.native_blit(canvas, asset + frame, x, y)?;
                 }
             } else if matches!(def.behavior, crate::content::WeaponBehavior::Beam) {
                 canvas.rect(x as i32, 0, 2, world.player.y, 255);
@@ -1895,6 +2288,54 @@ impl Host {
                 )?;
             } else {
                 canvas.rect(x as i32, y as i32, 2, 4, if p.hostile { 34 } else { 255 });
+            }
+        }
+        Ok(())
+    }
+    fn secondary_effects(
+        &mut self,
+        canvas: &mut Canvas,
+        world: &World,
+        layer: u8,
+        alpha: f32,
+    ) -> Result<()> {
+        for effect in world
+            .visual_effects
+            .iter()
+            .filter(|effect| effect.kind.layer() == layer)
+        {
+            let (asset, frames) = effect.kind.artwork();
+            let asset = asset + effect.age.saturating_sub(1).min(frames - 1);
+            let original = self.raw(asset)?;
+            let x = effect.px as f32 + (effect.x - effect.px) as f32 * alpha
+                - if effect.kind.top_left() {
+                    0.0
+                } else {
+                    original.width as f32 / 2.0
+                };
+            let y = effect.py as f32 + (effect.y - effect.py) as f32 * alpha
+                - if effect.kind.top_left() {
+                    0.0
+                } else {
+                    original.height as f32 / 2.0
+                };
+            if effect.kind.lighting_mask() {
+                // These native shapes brighten existing palette indices;
+                // their stored mask colors are never foreground artwork.
+                let hd = if self.config.hd_mode {
+                    self.hd.sprite(asset, canvas.scale, &self.palette)?
+                } else {
+                    None
+                };
+                let mask = hd.unwrap_or_else(|| nearest(&original, canvas.scale));
+                canvas.shade(
+                    &mask,
+                    (x * canvas.scale as f32).round() as i32,
+                    (y * canvas.scale as f32).round() as i32,
+                    &self.light_table,
+                );
+            } else {
+                self.native_blit(canvas, asset, x, y)?;
             }
         }
         Ok(())
@@ -1943,15 +2384,14 @@ impl Host {
         )
     }
     fn shop_panel(&mut self, canvas: &mut Canvas) -> Result<()> {
-        canvas.rect(164, 43, 138, 126, closest(&self.palette, [15, 24, 42]));
-        canvas.rect(164, 43, 1, 126, 100);
+        self.menu_panel(canvas, 164, 43, 138, 126);
         let Some(id) = self
             .selected
             .checked_sub(1)
             .and_then(|index| self.shop_ids().get(index).cloned())
         else {
             for (index, line) in wrap_text(&self.font, "Choose BUY or SELL, then select equipment to view its image, price and flight behavior. Click this panel or press D/X for full details.", 126).iter().enumerate() {
-                self.font.text(canvas, 172, 51 + index as i32 * 10, line, 100);
+                self.font.text(canvas, 172, 51 + index as i32 * 10, line, 8);
             }
             return Ok(());
         };
@@ -1961,7 +2401,7 @@ impl Host {
             .take(2)
             .enumerate()
         {
-            self.font.text(canvas, 172, 45 + index as i32 * 8, line, 50);
+            self.font.text(canvas, 172, 45 + index as i32 * 8, line, 48);
         }
         if let Some(art) = self.active.registry.items[&id].art.clone() {
             let owner = self
@@ -1999,7 +2439,7 @@ impl Host {
                 (64 + (32 - height as i32) / 2) * canvas.scale as i32,
             );
         } else {
-            self.font.text(canvas, 172, 77, "NO IMAGE", 100);
+            self.font.text(canvas, 172, 77, "NO IMAGE", 144);
         }
         for (y, text) in [
             (64, info.kind.to_string()),
@@ -2012,7 +2452,7 @@ impl Host {
                 216,
                 y,
                 &fit_text(&self.font, &text, 82),
-                if y == 64 { 50 } else { 100 },
+                if y == 64 { 48 } else { 8 },
             );
         }
         for (index, line) in info.stats.iter().take(4).enumerate() {
@@ -2021,7 +2461,7 @@ impl Host {
                 172,
                 104 + index as i32 * 8,
                 &fit_text(&self.font, line, 126),
-                100,
+                8,
             );
         }
         for (index, line) in wrap_text(&self.font, &info.description, 126)
@@ -2029,8 +2469,7 @@ impl Host {
             .take(2)
             .enumerate()
         {
-            self.font
-                .text(canvas, 172, 136 + index as i32 * 8, line, 100);
+            self.font.text(canvas, 172, 136 + index as i32 * 8, line, 8);
         }
         let status = if self.shop_selling {
             format!("SELL: {}", info.sell)
@@ -2047,9 +2486,82 @@ impl Host {
                 172,
                 154 + index as i32 * 8,
                 line,
-                if status.ends_with("Ready") { 50 } else { 34 },
+                if status.ends_with("Ready") { 48 } else { 34 },
             );
         }
+        Ok(())
+    }
+    fn mission_panel(&mut self, canvas: &mut Canvas) -> Result<()> {
+        let Some(id) = self.missions().get(self.selected).cloned() else {
+            return Ok(());
+        };
+        let mission = self.active.registry.missions[&id].clone();
+        let owner = self
+            .active
+            .registry
+            .owners
+            .get(&id)
+            .cloned()
+            .unwrap_or_else(|| "base".into());
+        self.menu_panel(canvas, 152, 43, 150, 126);
+        for (index, line) in wrap_text(&self.font, &mission.name, 132)
+            .iter()
+            .take(2)
+            .enumerate()
+        {
+            self.font.text(canvas, 160, 48 + index as i32 * 9, line, 48);
+        }
+        if let Some(mut art) = mission.art.clone() {
+            let height = (132 * art.logical_height / art.logical_width).min(61);
+            art.logical_width = 132;
+            art.logical_height = height;
+            self.art(canvas, &art, &owner, 0, 160.0, 70.0)?;
+        } else if mission.columns > 0 {
+            let columns = mission.columns as usize;
+            let tile_width = (132 / columns.min(12)).max(1);
+            for position in 0..(columns * 4).min(mission.layout.len()) {
+                if position % columns >= 12 {
+                    continue;
+                }
+                if let Some(tile) = mission.tiles.get(mission.layout[position]) {
+                    let mut art = tile.art.clone();
+                    art.logical_width = tile_width as u32;
+                    art.logical_height = 15;
+                    self.art(
+                        canvas,
+                        &art,
+                        &owner,
+                        0,
+                        (160 + position % columns * tile_width) as f32,
+                        (70 + position / columns * 15) as f32,
+                    )?;
+                }
+            }
+        }
+        self.font.text(
+            canvas,
+            160,
+            138,
+            if self.pilot.completed.contains(&id) {
+                "STATUS  COMPLETE"
+            } else if self.pilot.mission == id {
+                "STATUS  NEXT MISSION"
+            } else {
+                "STATUS  AVAILABLE"
+            },
+            1,
+        );
+        self.font.text(
+            canvas,
+            160,
+            149,
+            &format!(
+                "{} DIFFICULTY",
+                ["TRAINING", "ROOKIE", "VETERAN", "ELITE"][self.config.difficulty as usize]
+            ),
+            144,
+        );
+        self.font.text(canvas, 160, 160, "ENTER / A TO LAUNCH", 8);
         Ok(())
     }
     fn menu_portrait(
@@ -2062,49 +2574,74 @@ impl Host {
         let name = ["WMALEID_PIC", "BMALEID_PIC", "WFMALEID_PIC", "BFMALEID_PIC"][portrait.min(3)];
         if let Ok(id) = self.catalog.id(name) {
             let image = self.raw(id)?;
+            let hd = if self.config.hd_mode {
+                self.hd.sprite(id, canvas.scale, &self.palette)?
+            } else {
+                None
+            };
             canvas.blit(
-                &nearest(&image, canvas.scale),
+                &hd.unwrap_or_else(|| nearest(&image, canvas.scale)),
                 x * canvas.scale as i32,
                 y * canvas.scale as i32,
             );
         }
         Ok(())
     }
+    fn menu_panel(&self, canvas: &mut Canvas, x: i32, y: i32, width: i32, height: i32) {
+        // Menus use the full-color illustration beneath a subtle navy tint.
+        // In-flight overlays remain indexed so they preserve the mission palette.
+        let panel = if self.world.is_none() {
+            crate::menu_art::MENU_PANEL
+        } else {
+            closest(&self.palette, [12, 20, 27])
+        };
+        let edge = closest(&self.palette, [58, 78, 89]);
+        canvas.rect(x, y, width, height, panel);
+        canvas.rect(x, y, width, 1, edge);
+        canvas.rect(x, y + height - 1, width, 1, edge);
+        canvas.rect(x, y, 1, height, edge);
+        canvas.rect(x + width - 1, y, 1, height, edge);
+    }
     fn classic_menu(&mut self, canvas: &mut Canvas) -> Result<()> {
-        let panel = closest(&self.palette, [10, 15, 32]);
-        let edge = closest(&self.palette, [70, 95, 115]);
-        canvas.rect(12, 42, 144, 126, panel);
-        canvas.rect(12, 42, 144, 1, edge);
-        canvas.rect(12, 167, 144, 1, edge);
-        self.font.text(canvas, 22, 49, "PILOT ID", 50);
+        self.menu_panel(canvas, 12, 42, 144, 126);
+        self.font.text(canvas, 22, 49, "PILOT IDENTIFICATION", 144);
         let portrait = self
             .pilot
             .legacy_progress
             .as_ref()
             .map_or(0, |p| portrait_index(p.portrait));
         self.menu_portrait(canvas, portrait, 22, 62)?;
-        self.font.text(
+        canvas.rect(21, 61, 42, 1, 144);
+        canvas.rect(21, 102, 42, 1, 144);
+        self.menu_font.text(
             canvas,
             70,
-            63,
-            &fit_text(&self.font, &self.pilot.callsign, 80),
-            50,
+            62,
+            &fit_text(&self.menu_font, &self.pilot.callsign.to_uppercase(), 78),
+            48,
         );
-        for (index, line) in wrap_text(&self.font, &self.pilot.name, 80)
+        for (index, line) in wrap_text(&self.font, &self.pilot.name, 78)
             .iter()
             .take(2)
             .enumerate()
         {
-            self.font.text(canvas, 70, 74 + index as i32 * 9, line, 100);
+            self.font.text(canvas, 70, 76 + index as i32 * 9, line, 8);
         }
+        self.font
+            .text(canvas, 70, 94, &format!("ID {:04}", self.slot), 144);
         self.font.text(
             canvas,
             22,
             110,
-            &format!("CREDITS: ${}", self.pilot.credits),
-            100,
+            &fit_text(
+                &self.font,
+                &format!("CREDITS  ${}", self.pilot.credits),
+                124,
+            ),
+            1,
         );
-        self.font.text(canvas, 22, 123, "NEXT MISSION", 50);
+        canvas.rect(22, 120, 124, 1, closest(&self.palette, [58, 78, 89]));
+        self.font.text(canvas, 22, 125, "NEXT MISSION", 144);
         let mission = self
             .active
             .registry
@@ -2117,74 +2654,81 @@ impl Host {
             .take(2)
             .enumerate()
         {
-            self.font
-                .text(canvas, 22, 134 + index as i32 * 9, line, 100);
+            self.font.text(canvas, 22, 136 + index as i32 * 9, line, 1);
         }
         self.font.text(
             canvas,
             22,
             157,
-            &format!(
-                "SLOT {:04} / {}",
-                self.slot,
-                ["TRAIN", "ROOKIE", "VETERAN", "ELITE"][self.config.difficulty as usize]
+            &fit_text(
+                &self.font,
+                &format!(
+                    "{} / {} MODS",
+                    ["TRAINING", "ROOKIE", "VETERAN", "ELITE"][self.config.difficulty as usize],
+                    self.active.pins.len()
+                ),
+                124,
             ),
-            100,
+            144,
         );
-        for (index, label) in self.rows().iter().enumerate() {
+        let labels: &[&str] = if self.screen == Screen::Main {
+            &[
+                "RETURN TO HANGAR",
+                "NEW PILOT",
+                "LOAD / IMPORT",
+                "OPTIONS",
+                "MODS",
+                "HELP / CREDITS",
+                "WATCH INTRO",
+                "QUIT",
+            ]
+        } else {
+            &[
+                "FLY MISSION",
+                "SELECT MISSION",
+                "SUPPLY ROOM",
+                "INVENTORY",
+                "SAVE PILOT",
+                "EDIT PILOT ID",
+                "MAIN MENU",
+            ]
+        };
+        for (index, label) in labels.iter().enumerate() {
             let y = 42 + index as i32 * 16;
-            canvas.rect(164, y, 136, 15, panel);
-            canvas.rect(
-                164,
-                y,
-                136,
-                1,
-                if index == self.selected { 50 } else { edge },
-            );
-            canvas.rect(164, y + 14, 136, 1, edge);
-            let asset = if self.screen == Screen::Main {
-                match index {
-                    0 => Some("MENU7_PIC"),
-                    3 => Some("MENU4_PIC"),
-                    7 => Some("MENU8_PIC"),
-                    _ => None,
-                }
-            } else {
-                None
-            };
-            let native = asset.and_then(|name| self.catalog.id(name).ok());
-            if let Some(asset) = native {
-                let image = self.raw(asset)?;
-                canvas.blit(
-                    &nearest(&image, canvas.scale),
-                    164 * canvas.scale as i32,
-                    y * canvas.scale as i32,
-                );
-            } else {
-                self.font.text(
-                    canvas,
-                    172,
-                    y + 5,
-                    &fit_text(&self.font, label, 124),
-                    if index == self.selected { 50 } else { 100 },
-                );
-            }
+            self.menu_panel(canvas, 164, y, 136, 15);
             if index == self.selected {
-                // Native button art must not cover the selection indicator.
-                canvas.rect(164, y, 136, 1, 50);
-                canvas.rect(164, y + 1, 3, 13, 50);
+                canvas.rect(165, y + 1, 134, 13, closest(&self.palette, [35, 42, 40]));
+                canvas.rect(164, y, 136, 1, 48);
+                canvas.rect(164, y + 1, 3, 13, 48);
             }
+            self.menu_font.text(
+                canvas,
+                174,
+                y + 3,
+                &fit_text(&self.menu_font, label, 120),
+                if index == self.selected { 48 } else { 1 },
+            );
         }
         Ok(())
     }
     fn hud_asset(&mut self, canvas: &mut Canvas, asset: u32, x: i32, y: i32) -> Result<()> {
+        self.ensure_hd();
+        if self.config.hd_mode {
+            if let Some(sprite) = self.hd.sprite(asset, canvas.scale, &self.palette)? {
+                canvas.blit(&sprite, x * canvas.scale as i32, y * canvas.scale as i32);
+                return Ok(());
+            }
+        }
         let original = self.raw(asset)?;
         let sprite = self.cache.get(&original, canvas.scale, true)?;
         canvas.blit(sprite, x * canvas.scale as i32, y * canvas.scale as i32);
         Ok(())
     }
     fn hud_weapon(&mut self, canvas: &mut Canvas, item: &ContentId) -> Result<()> {
-        let definition = &self.active.registry.items[item];
+        self.ensure_hd();
+        let Some(definition) = self.active.registry.items.get(item) else {
+            return Ok(());
+        };
         let Some(art) = definition.art.clone() else {
             return Ok(());
         };
@@ -2193,7 +2737,15 @@ impl Host {
             .asset
             .filter(|_| !(self.config.hd_mode && art.hd_png.is_some()))
         {
-            self.raw(asset)?
+            let detailed = if self.config.hd_mode {
+                self.hd.sprite(asset, canvas.scale, &self.palette)?
+            } else {
+                None
+            };
+            match detailed {
+                Some(sprite) => sprite,
+                None => self.raw(asset)?,
+            }
         } else {
             art_sprite_variant(
                 &self.catalog,
@@ -2291,7 +2843,43 @@ impl Host {
         }
         Ok(())
     }
+    fn ensure_hd(&mut self) {
+        if self.config.hd_mode && !self.hd_loaded {
+            self.hd = HdAssets::load_lazy(
+                &self.catalog.root.join("hd"),
+                &self.catalog,
+                Some(&self.paths.cache.join("hd-art-v1")),
+            );
+            self.hd_loaded = true;
+        }
+    }
+    fn player(&mut self, canvas: &mut Canvas, world: &World, alpha: f32) -> Result<()> {
+        if !world.draw_player {
+            return Ok(());
+        }
+        let position = [
+            world.player.px as f32 + (world.player.x - world.player.px) as f32 * alpha,
+            world.player.py as f32 + (world.player.y - world.player.py) as f32 * alpha,
+        ];
+        for [x, y] in player_flame_positions(position, world.player.bank) {
+            flame_down(
+                canvas,
+                x,
+                y,
+                4,
+                (world.tick % 2) as usize,
+                &self.flame_tables,
+            );
+        }
+        self.native_blit(
+            canvas,
+            player_asset_frame(&self.catalog, world)?,
+            position[0],
+            position[1],
+        )
+    }
     fn scene(&mut self, canvas: &mut Canvas) -> Result<()> {
+        self.ensure_hd();
         let Some(world) = self.world.clone() else {
             return Ok(());
         };
@@ -2299,113 +2887,156 @@ impl Host {
         let alpha = self.clock.alpha();
         let interp =
             |current: i32, previous: i32| previous as f32 + (current - previous) as f32 * alpha;
-        // Compose a joined terrain layer with a two-pixel gutter before filtering.
-        let mut terrain = Canvas::new(1);
-        terrain.image = Sprite {
-            width: 320,
-            height: 204,
-            pixels: vec![0; 320 * 204],
-        };
         let rows = if mission.columns > 0 {
             mission.layout.len() / mission.columns as usize
         } else {
             0
         };
         let offset = 200 - rows as i32 * 32 + world.scroll;
+        let phase = offset.rem_euclid(32);
+        let row_origin = offset - phase;
+        let owner = self.active.registry.owners[&world.mission].clone();
+        let mut visible_tiles = Vec::new();
         for (row, tiles) in mission
             .layout
             .chunks(mission.columns.max(1) as usize)
             .enumerate()
         {
-            let y = offset + row as i32 * 32;
-            if !(-34..202).contains(&y) {
+            let y = row_origin + row as i32 * 32;
+            if !(-66..234).contains(&y) {
                 continue;
             }
             for (col, index) in tiles.iter().enumerate() {
                 let n = row * mission.columns as usize + col;
-                let tile = &mission.tiles[*index];
-                let art = if if mission.legacy_map.is_some() {
-                    world.terrain_settled[n]
-                } else {
-                    world.terrain_dead[n]
-                } {
-                    tile.destroyed.as_ref().unwrap_or(&tile.art)
-                } else {
-                    &tile.art
-                };
-                let owner = self.active.registry.owners[&world.mission].clone();
-                let mut original = art.clone();
-                original.hd_png = None;
-                self.art(
-                    &mut terrain,
-                    &original,
-                    &owner,
-                    0,
-                    16.0 + col as f32 * 32.0,
-                    (y + 2) as f32,
-                )?;
+                let art = selected_art(
+                    &mission.tiles[*index],
+                    mission.legacy_map.is_some(),
+                    world.terrain_dead[n],
+                    world.terrain_settled[n],
+                );
+                let x = 16 + col as i32 * 32;
+                visible_tiles.push((art.clone(), x, y));
             }
         }
-        let bg = upscale(&terrain.image, canvas.scale)?;
+        let key = serde_json::to_vec(&(
+            &world.mission,
+            row_origin,
+            canvas.scale,
+            self.config.hd_mode,
+            &self.palette[..],
+            &self.active.pins,
+            &visible_tiles,
+        ))?;
         let shift = if world.tick > 0 { alpha - 1.0 } else { 0.0 };
-        canvas.blit(
-            &bg,
-            0,
-            (-2.0 * canvas.scale as f32 + shift * canvas.scale as f32).round() as i32,
-        );
-        if self.config.hd_mode {
-            // Keep detailed terrain on the presentation canvas. The joined
-            // SD layer underneath supplies context and fallback at its edges.
-            for (row, tiles) in mission
-                .layout
-                .chunks(mission.columns.max(1) as usize)
-                .enumerate()
-            {
-                let y = offset + row as i32 * 32;
-                if !(-34..202).contains(&y) {
-                    continue;
-                }
-                for (col, index) in tiles.iter().enumerate() {
-                    let n = row * mission.columns as usize + col;
-                    let tile = &mission.tiles[*index];
-                    let dead = if mission.legacy_map.is_some() {
-                        world.terrain_settled[n]
+        let translated_y = ((-34.0 + phase as f32 + shift) * canvas.scale as f32).round() as i32;
+        if let Some(bg) = self.terrain_hd.cached_layer(&key) {
+            canvas.blit(bg, 0, translated_y);
+        } else {
+            // Prepare a row-aligned strip with neighboring rows and a two-pixel
+            // filtering gutter. The 32 scroll phases only translate this layer.
+            let mut terrain = Canvas {
+                scale: 1,
+                image: Sprite {
+                    width: 320,
+                    height: 268,
+                    pixels: vec![0; 320 * 268],
+                },
+            };
+            let mut prepared_tiles = Vec::new();
+            for (art, x, y) in visible_tiles {
+                let source = if let Some(id) = art.asset {
+                    self.raw(id)?
+                } else {
+                    let key = format!("terrain-sd:{owner}:{}", serde_json::to_string(&art)?);
+                    if let Some(sprite) = self.mod_art.get(&key) {
+                        sprite.clone()
                     } else {
-                        world.terrain_dead[n]
-                    };
-                    let art = if dead {
-                        tile.destroyed.as_ref().unwrap_or(&tile.art)
-                    } else {
-                        &tile.art
-                    };
-                    if art.hd_png.is_some() {
-                        let owner = self.active.registry.owners[&world.mission].clone();
-                        self.art(
-                            canvas,
-                            art,
+                        let sprite = art_sprite_variant(
+                            &self.catalog,
+                            &self.active.registry,
                             &owner,
+                            &art,
                             0,
-                            16.0 + col as f32 * 32.0,
-                            y as f32 + shift,
+                            false,
                         )?;
+                        if self
+                            .mod_art
+                            .values()
+                            .map(|s| s.pixels.len() * 2)
+                            .sum::<usize>()
+                            + sprite.pixels.len() * 2
+                            > 128 * 1024 * 1024
+                        {
+                            self.mod_art.clear();
+                        }
+                        self.mod_art.insert(key, sprite.clone());
+                        sprite
+                    }
+                };
+                let detailed_original = source.width >= art.logical_width as usize * 2
+                    && source.height >= art.logical_height as usize * 2;
+                let original = logical_sprite(
+                    &source,
+                    art.logical_width as usize,
+                    art.logical_height as usize,
+                )?;
+                terrain.blit(&original, x, y + 34);
+                prepared_tiles.push((art, x, y, detailed_original));
+            }
+            let mut bg = upscale(&terrain.image, canvas.scale)?;
+            if self.config.hd_mode {
+                let mut replacements = Vec::new();
+                let mut labels = Vec::new();
+                for (art, x, y, detailed_original) in prepared_tiles {
+                    let replacement =
+                        if art.hd_png.is_some() || (art.png.is_some() && detailed_original) {
+                            let mut tile = Canvas {
+                                scale: canvas.scale,
+                                image: Sprite::blank(
+                                    art.logical_width as usize * canvas.scale,
+                                    art.logical_height as usize * canvas.scale,
+                                ),
+                            };
+                            self.art(&mut tile, &art, &owner, 0, 0.0, 0.0)?;
+                            Some(tile.image)
+                        } else if let Some(id) = art.asset {
+                            self.hd.sprite(id, canvas.scale, &self.palette)?
+                        } else {
+                            None
+                        };
+                    let Some(replacement) = replacement else {
+                        continue;
+                    };
+                    labels.push(art.asset.map(|id| format!("{id:05x}")).unwrap_or_else(|| {
+                        art.hd_png.clone().or(art.png.clone()).unwrap_or_default()
+                    }));
+                    replacements.push(TerrainReplacement {
+                        image: replacement,
+                        position: [x, y + 34],
+                        logical_size: [art.logical_width as usize, art.logical_height as usize],
+                    });
+                }
+                if !replacements.is_empty() {
+                    let composition =
+                        self.terrain_hd
+                            .compose(&bg, &replacements, canvas.scale, &self.palette);
+                    bg = composition.image;
+                    for (label, result) in labels.into_iter().zip(composition.results) {
+                        if result != OverlayResult::Applied {
+                            let diagnostic = format!(
+                                "HD terrain {label}: {result:?}; using joined original artwork"
+                            );
+                            if !self.hd.diagnostics.contains(&diagnostic) {
+                                self.hd.diagnostics.push(diagnostic);
+                            }
+                        }
                     }
                 }
             }
+            canvas.blit(&bg, 0, translated_y);
+            self.terrain_hd.retain_layer(key, bg);
         }
-        let dark = matches!(
-            world.mission.0.as_str(),
-            "base:sector_2_wave_8" | "base:sector_3_wave_3"
-        );
-        let player = self.catalog.id(if dark {
-            if world.player_flash {
-                "FPLAYER_PIC"
-            } else {
-                "DPLAYER_PIC"
-            }
-        } else {
-            "LPLAYER_PIC"
-        })?;
-        let player_frame = player + world.player.bank.clamp(0, 6) as u32;
+        let player_frame = player_asset_frame(&self.catalog, &world)?;
         for ground in [true, false] {
             let mut shadows = 0;
             for e in &world.enemies {
@@ -2451,6 +3082,7 @@ impl Host {
             }
             if !ground {
                 self.effects(canvas, &world, true, alpha)?;
+                self.secondary_effects(canvas, &world, 0, alpha)?;
             }
             for e in &world.enemies {
                 let def = self.active.registry.enemies[&e.definition].clone();
@@ -2476,6 +3108,13 @@ impl Host {
         }
         self.projectiles(canvas, &world, false, alpha)?;
         for pickup in &world.pickups {
+            let previous = pickup
+                .legacy
+                .as_ref()
+                .and_then(|legacy| legacy.previous_art_position)
+                .unwrap_or([pickup.x, pickup.y]);
+            let pickup_x = interp(pickup.x, previous[0]);
+            let pickup_y = interp(pickup.y, previous[1]);
             if pickup
                 .legacy
                 .as_ref()
@@ -2483,11 +3122,19 @@ impl Host {
             {
                 if let Ok(asset) = self.catalog.id("N$_PIC") {
                     let original = self.raw(asset)?;
-                    let sprite = self.cache.get(&original, canvas.scale, false)?.clone();
+                    let hd = if self.config.hd_mode {
+                        self.hd.sprite(asset, canvas.scale, &self.palette)?
+                    } else {
+                        None
+                    };
+                    let sprite = match hd {
+                        Some(sprite) => sprite,
+                        None => self.cache.get(&original, canvas.scale, false)?.clone(),
+                    };
                     canvas.blit(
                         &sprite,
-                        pickup.x * canvas.scale as i32,
-                        pickup.y * canvas.scale as i32,
+                        (pickup_x * canvas.scale as f32).round() as i32,
+                        (pickup_y * canvas.scale as f32).round() as i32,
                     );
                 }
                 continue;
@@ -2502,36 +3149,45 @@ impl Host {
                         .legacy
                         .as_ref()
                         .map_or((world.tick / 3) as u32, |legacy| legacy.art_frame),
-                    pickup.x as f32,
-                    pickup.y as f32,
+                    pickup_x,
+                    pickup_y,
                 )?;
             }
+            if let Some(legacy) = &pickup.legacy {
+                let asset = 0x10225 + legacy.glow_frame;
+                let mask = self.raw(asset)?;
+                let x = pickup_x + 8.0 - mask.width as f32 / 2.0;
+                let y = pickup_y + 8.0 - mask.height as f32 / 2.0;
+                let hd = if self.config.hd_mode {
+                    self.hd.sprite(asset, canvas.scale, &self.palette)?
+                } else {
+                    None
+                };
+                let mask = hd.unwrap_or_else(|| nearest(&mask, canvas.scale));
+                canvas.shade(
+                    &mask,
+                    (x * canvas.scale as f32).round() as i32,
+                    (y * canvas.scale as f32).round() as i32,
+                    &self.light_table,
+                );
+            }
         }
-        if world.draw_player {
-            let s = self.raw(player_frame)?;
-            let hd = if self.config.hd_mode {
-                self.hd.sprite(player_frame, canvas.scale, &self.palette)?
-            } else {
-                None
-            };
-            let scaled = match hd {
-                Some(sprite) => sprite,
-                None => self.cache.get(&s, canvas.scale, false)?.clone(),
-            };
-            canvas.blit(
-                &scaled,
-                (interp(world.player.x, world.player.px) * canvas.scale as f32) as i32,
-                (interp(world.player.y, world.player.py) * canvas.scale as f32) as i32,
-            );
-        }
+        self.secondary_effects(canvas, &world, 1, alpha)?;
+        self.player(canvas, &world, alpha)?;
         self.effects(canvas, &world, false, alpha)?;
+        self.secondary_effects(canvas, &world, 2, alpha)?;
         self.projectiles(canvas, &world, true, alpha)?;
         self.hud(canvas, &world)?;
         Ok(())
     }
     fn draw(&mut self) -> Result<Canvas> {
+        self.ensure_hd();
         let mut canvas = Canvas::new(self.config.scale);
-        canvas.clear(0);
+        canvas.clear(if self.world.is_some() {
+            0
+        } else {
+            crate::assets::TRANSPARENT
+        });
         if let Some(movie) = &self.cinematic {
             canvas.blit(&nearest(&movie.image, canvas.scale), 0, 0);
             return Ok(canvas);
@@ -2541,25 +3197,14 @@ impl Host {
             if self.screen == Screen::Game {
                 return Ok(canvas);
             }
-        } else if let Ok(id) = self.catalog.id("NEWMAIN_PIC") {
-            let s = self.raw(id)?;
-            canvas.blit(&nearest(&s, canvas.scale), 0, 0);
         }
         let classic = matches!(self.screen, Screen::Main | Screen::Hangar);
-        canvas.rect(
-            12,
-            8,
-            296,
-            if classic { 31 } else { 184 },
-            closest(&self.palette, [10, 15, 32]),
-        );
+        self.menu_panel(&mut canvas, 12, 8, 296, if classic { 31 } else { 184 });
         if classic {
-            canvas.rect(12, 170, 296, 21, closest(&self.palette, [10, 15, 32]));
+            self.menu_panel(&mut canvas, 12, 170, 296, 24);
         }
-        canvas.rect(12, 8, 296, 1, 100);
-        canvas.rect(12, 191, 296, 1, 100);
         let title = match self.screen {
-            Screen::Main => "RAPTOR / RUST",
+            Screen::Main => "RAPTOR",
             Screen::Hangar => "HANGAR",
             Screen::Extras => "HELP / CREDITS",
             Screen::PilotForm => {
@@ -2588,32 +3233,58 @@ impl Host {
             Screen::Pilots => "LOAD PILOT",
             Screen::LegacyPilots => "IMPORT LEGACY PILOT",
             Screen::ConfirmDisable => "ARE YOU SURE?",
+            Screen::ConfirmLoadMods => "LOAD WITH DIFFERENT MODS?",
             Screen::Diagnostics => "MOD / SAVE DIAGNOSTICS",
             Screen::Bindings => "KEYBOARD BINDINGS",
             Screen::Cinematic => "",
             Screen::Game => "",
         };
-        self.font.text(&mut canvas, 22, 17, title, 50);
+        self.menu_font.text(
+            &mut canvas,
+            22,
+            15,
+            &fit_text(&self.menu_font, title, 276),
+            48,
+        );
         self.font.text(
             &mut canvas,
             22,
             29,
-            &format!("PILOT {}  ${}", self.pilot.callsign, self.pilot.credits),
-            100,
+            &fit_text(
+                &self.font,
+                &format!("PILOT {}  ${}", self.pilot.callsign, self.pilot.credits),
+                276,
+            ),
+            8,
         );
         let rows = self.rows();
-        let card = if self.screen == Screen::Missions {
-            self.missions().get(self.selected).and_then(|id| {
-                self.active.registry.missions[id]
-                    .art
-                    .clone()
-                    .map(|art| (art, self.active.registry.owners[id].clone()))
-            })
-        } else {
-            None
-        };
+        let mission_card = self.screen == Screen::Missions;
         let shop = self.screen == Screen::Shop;
+        if self.screen == Screen::LegacyPilots && rows.is_empty() {
+            for (index, line) in [
+                "No original pilot saves found.",
+                "Original CASTLE saves can be imported here.",
+                "Press ESC / B to return to Load Pilot.",
+            ]
+            .iter()
+            .enumerate()
+            {
+                self.font
+                    .text(&mut canvas, 24, 51 + index as i32 * 14, line, 8);
+            }
+        }
         let first = self.selected.saturating_sub(8);
+        if !classic && rows.len() > 10 {
+            let visible = rows.len().saturating_sub(first).min(10);
+            canvas.rect(303, 44, 2, 110, closest(&self.palette, [42, 57, 65]));
+            canvas.rect(
+                303,
+                44 + (first * 110 / rows.len()) as i32,
+                2,
+                (visible * 110 / rows.len()).max(5) as i32,
+                144,
+            );
+        }
         for (index, row) in rows
             .iter()
             .enumerate()
@@ -2627,7 +3298,7 @@ impl Host {
                     y - 2,
                     if shop {
                         140
-                    } else if card.is_some() {
+                    } else if mission_card {
                         126
                     } else if self.screen == Screen::PilotForm {
                         214
@@ -2635,8 +3306,9 @@ impl Host {
                         280
                     },
                     10,
-                    closest(&self.palette, [25, 45, 65]),
+                    closest(&self.palette, [35, 42, 40]),
                 );
+                canvas.rect(20, y - 2, 2, 10, 48);
             }
             self.font.text(
                 &mut canvas,
@@ -2644,8 +3316,8 @@ impl Host {
                 y,
                 &if shop {
                     fit_text(&self.font, row, 132)
-                } else if card.is_some() {
-                    row.chars().take(20).collect::<String>()
+                } else if mission_card {
+                    fit_text(&self.font, row, 114)
                 } else {
                     fit_text(
                         &self.font,
@@ -2657,7 +3329,7 @@ impl Host {
                         },
                     )
                 },
-                if index == self.selected { 50 } else { 100 },
+                if index == self.selected { 48 } else { 1 },
             );
         }
         if classic {
@@ -2679,14 +3351,11 @@ impl Host {
             .enumerate()
             {
                 self.font
-                    .text(&mut canvas, 24, 112 + index as i32 * 10, line, 100);
+                    .text(&mut canvas, 24, 112 + index as i32 * 10, line, 8);
             }
         }
-        if let Some((mut art, owner)) = card {
-            let height = (150 * art.logical_height / art.logical_width).min(108);
-            art.logical_width = 150;
-            art.logical_height = height;
-            self.art(&mut canvas, &art, &owner, 0, 154.0, 52.0)?;
+        if mission_card {
+            self.mission_panel(&mut canvas)?;
         }
         if shop {
             self.shop_panel(&mut canvas)?;
@@ -2705,8 +3374,8 @@ impl Host {
                         &mut canvas,
                         22,
                         160,
-                        &summary.chars().take(52).collect::<String>(),
-                        100,
+                        &fit_text(&self.font, &summary, 276),
+                        144,
                     );
                 }
             }
@@ -2715,7 +3384,7 @@ impl Host {
                 22,
                 171,
                 "ENTER toggle/apply  <> priority  D/X details",
-                50,
+                144,
             );
         } else if self.screen == Screen::Help {
             let key = |action: &str| binding_label(&self.config, action);
@@ -2737,8 +3406,13 @@ impl Host {
             .iter()
             .enumerate()
             {
-                self.font
-                    .text(&mut canvas, 24, 49 + n as i32 * 14, line, 100);
+                self.font.text(
+                    &mut canvas,
+                    24,
+                    49 + n as i32 * 14,
+                    &fit_text(&self.font, line, 274),
+                    1,
+                );
             }
         } else if self.screen == Screen::Credits {
             for (n, line) in [
@@ -2751,8 +3425,7 @@ impl Host {
             .iter()
             .enumerate()
             {
-                self.font
-                    .text(&mut canvas, 24, 52 + n as i32 * 16, line, 100);
+                self.font.text(&mut canvas, 24, 52 + n as i32 * 16, line, 1);
             }
         } else {
             let hint = match self.screen {
@@ -2768,18 +3441,28 @@ impl Host {
                 Screen::Inventory => "ENTER equip  S sell  ESC back",
                 Screen::LegacyPilots => "ENTER import to a new Rust slot  ESC back",
                 Screen::ConfirmDisable => "Dependents shown above. ESC cancels",
+                Screen::ConfirmLoadMods => "ENTER/A choose  ESC/B cancels loading",
                 _ => "ENTER/A choose  ESC/B back",
             };
-            self.font.text(&mut canvas, 22, 171, hint, 50);
+            self.font.text(
+                &mut canvas,
+                22,
+                if classic { 173 } else { 171 },
+                &fit_text(&self.font, hint, 276),
+                144,
+            );
         }
         if !self.message.is_empty() {
             self.font.text(
                 &mut canvas,
                 22,
-                181,
+                if classic { 183 } else { 181 },
                 &fit_text(&self.font, &self.message, 276),
-                34,
+                menu_message_color(&self.message),
             );
+        } else if let Some(context) = menu_context(self.screen, self.selected) {
+            self.font
+                .text(&mut canvas, 22, 183, &fit_text(&self.font, context, 276), 8);
         }
         Ok(canvas)
     }
@@ -2787,8 +3470,163 @@ impl Host {
 const ACTIONS: [&str; 8] = [
     "up", "down", "left", "right", "fire", "special", "cycle", "bomb",
 ];
+fn player_asset_frame(catalog: &Catalog, world: &World) -> Result<u32> {
+    let dark = matches!(
+        world.mission.0.as_str(),
+        "base:sector_2_wave_8" | "base:sector_3_wave_3"
+    );
+    let family = if dark {
+        if world.player_flash {
+            "FPLAYER_PIC"
+        } else {
+            "DPLAYER_PIC"
+        }
+    } else {
+        "LPLAYER_PIC"
+    };
+    Ok(catalog.id(family)? + world.player.bank.clamp(0, 6) as u32)
+}
+fn player_flame_positions(position: [f32; 2], bank: i32) -> [[f32; 2]; 2] {
+    const ENGINE: [i32; 7] = [0, 1, 2, 3, 2, 1, 0];
+    let offset = ENGINE[bank.clamp(0, 6) as usize] as f32;
+    let [x, y] = [position[0] + 16.0, position[1] + 16.0];
+    [[x - offset - 3.0, y + 15.0], [x + offset - 2.0, y + 15.0]]
+}
+/// FLAME_Down shades the existing indexed canvas before the ship is composed.
+/// Native clipping changes the ramp's height; fixed-point division remains
+/// important for its 12-row phase, whose third row still selects shade one.
+fn flame_down(
+    canvas: &mut Canvas,
+    x: f32,
+    y: f32,
+    width: i32,
+    frame: usize,
+    tables: &[[u8; 256]; 8],
+) {
+    let base_x = x.floor() as i32;
+    let base_y = y.floor() as i32;
+    let left = base_x.max(0);
+    let right = (base_x + width).min(320);
+    let top = base_y.max(0);
+    let bottom = (base_y + [8, 12][frame % 2]).min(200);
+    if right <= left || bottom <= top {
+        return;
+    }
+    let scale = canvas.scale as i32;
+    let scaled_x = ((left as f32 + x - x.floor()) * scale as f32).round() as i32;
+    let scaled_y = ((top as f32 + y - y.floor()) * scale as f32).round() as i32;
+    let increment = (8_u32 << 16) / (bottom - top) as u32;
+    for row in 0..bottom - top {
+        let table = &tables[(row as u32 * increment >> 16) as usize];
+        let row_y = scaled_y + row * scale;
+        for yy in row_y.max(0)..(row_y + scale).min(canvas.image.height as i32) {
+            for xx in
+                scaled_x.max(0)..(scaled_x + (right - left) * scale).min(canvas.image.width as i32)
+            {
+                let pixel =
+                    &mut canvas.image.pixels[yy as usize * canvas.image.width + xx as usize];
+                if *pixel < 256 {
+                    *pixel = table[*pixel as usize] as u16;
+                }
+            }
+        }
+    }
+}
+/// Native S_LINE tracers use three indexed lines rather than a projectile icon.
+fn tracer_line(canvas: &mut Canvas, from: [f32; 2], to: [i32; 2], color: u16) {
+    let scale = canvas.scale as i32;
+    let [mut x, mut y] = from.map(|v| (v * scale as f32).round() as i32);
+    let [end_x, end_y] = to.map(|v| v * scale);
+    let dx = (end_x - x).abs();
+    let dy = -(end_y - y).abs();
+    let sx = if x < end_x { 1 } else { -1 };
+    let sy = if y < end_y { 1 } else { -1 };
+    let mut error = dx + dy;
+    loop {
+        for row in y.max(0)..(y + scale).min(canvas.image.height as i32) {
+            for column in x.max(0)..(x + scale).min(canvas.image.width as i32) {
+                canvas.image.pixels[row as usize * canvas.image.width + column as usize] = color;
+            }
+        }
+        if x == end_x && y == end_y {
+            break;
+        }
+        let doubled = error * 2;
+        if doubled >= dy {
+            error += dy;
+            x += sx;
+        }
+        if doubled <= dx {
+            error += dx;
+            y += sy;
+        }
+    }
+}
 fn portrait_asset_id(index: usize) -> i32 {
     [0x10116, 0x10119, 0x10117, 0x10118][index.min(3)]
+}
+fn menu_context(screen: Screen, selected: usize) -> Option<&'static str> {
+    let lines: &[&str] = match screen {
+        Screen::Main => &[
+            "Continue with the current pilot",
+            "Register a new pilot and choose difficulty",
+            "Load a pilot or import an original save",
+            "Graphics, sound and flight controls",
+            "Enable mods and review their dependencies",
+            "Flight controls and game credits",
+            "Play the original introduction",
+            "Exit Raptor",
+        ],
+        Screen::Hangar => &[
+            "Launch the next mission",
+            "Choose a campaign mission",
+            "Buy or sell equipment in the supply room",
+            "Select the equipment carried into flight",
+            "Save equipment and campaign progress",
+            "Change name, callsign or ID picture",
+            "Return to the main menu",
+        ],
+        _ => return None,
+    };
+    lines.get(selected).copied()
+}
+fn menu_message_color(message: &str) -> u16 {
+    if message.to_ascii_lowercase().contains("failed") {
+        return 34;
+    }
+    let informational = [
+        "Saved ",
+        "Loaded ",
+        "New pilot ",
+        "Imported ",
+        "Mods applied",
+        "Deselected ",
+        "Enabled ",
+        "Selected ",
+        "Sale complete",
+        "Purchase complete",
+        "Weapon equipped",
+        "Primary equipment",
+        "Settings saved",
+        "Default bindings",
+        "Binding change cancelled",
+        "Pilot ID",
+        "Mod selection unchanged",
+        "Pilot load cancelled",
+        "Mission complete",
+        "Enter ",
+        "Press ",
+        "Review differences",
+        "Changes pending",
+    ];
+    if informational
+        .iter()
+        .any(|prefix| message.starts_with(prefix))
+    {
+        8
+    } else {
+        34
+    }
 }
 fn portrait_index(value: i32) -> usize {
     match value {
@@ -3029,7 +3867,13 @@ fn menu_row_at(screen: Screen, selected: usize, rows: usize, x: i32, y: i32) -> 
         let selection = ((y - 42) / 16) as usize;
         return (selection < rows).then_some(selection);
     }
-    let right = if screen == Screen::Shop { 160 } else { 300 };
+    let right = if screen == Screen::Shop {
+        160
+    } else if screen == Screen::Missions {
+        146
+    } else {
+        300
+    };
     if !(20..right).contains(&x) || !(44..154).contains(&y) {
         return None;
     }
@@ -3212,6 +4056,7 @@ mod binding_tests {
         }
     }
 }
+#[cfg(test)]
 // A failed load uses a display placeholder; never validate that placeholder
 // in place of the existing file when mods are changed.
 fn pilot_for_mods(
@@ -3304,6 +4149,7 @@ pub fn run(
 ) -> Result<()> {
     let setup_start = Instant::now();
     let mut host = Host::new(catalog, base, paths, mods_root, frames.is_some())?;
+    let mission_preview = preview.is_some();
     if let Some(id) = preview {
         if frames.is_some() {
             host.new_pilot()?;
@@ -3312,6 +4158,11 @@ pub fn run(
     }
     if let Some(kind) = movie_preview {
         host.show_movie(kind, Screen::Main)?;
+    } else if !mission_preview && frames.is_none() {
+        let return_to = host.screen;
+        if let Err(error) = host.start_original_intro(return_to) {
+            host.message = format!("Original intro unavailable: {error:#}");
+        }
     }
     let sdl = sdl2::init().map_err(|e| anyhow!(e))?;
     let video = sdl.video().map_err(|e| anyhow!(e))?;
@@ -3390,13 +4241,11 @@ pub fn run(
         }
         Err(error) => host.message = format!("Audio unavailable: {error}"),
     }
-    if let Some(music) = host.desired_music {
-        if let Ok(score) = host.catalog.read(music).and_then(|b| MusScore::decode(&b)) {
-            if let Some(audio) = &mut host.audio {
-                audio.lock().play_with_fade(score, true, true);
-            }
+    if host.desired_music.is_some() || host.desired_mod_music.is_some() {
+        if let Err(error) = host.resume_desired_music() {
+            host.message = format!("Music unavailable: {error:#}");
         }
-    } else {
+    } else if host.cinematic.is_none() {
         host.music("MAINMENU_MUS");
     }
     let mut previous = Instant::now();
@@ -3605,7 +4454,9 @@ pub fn run(
                         Keycode::D
                             if !matches!(
                                 host.screen,
-                                Screen::ConfirmDisable | Screen::PilotForm
+                                Screen::ConfirmDisable
+                                    | Screen::ConfirmLoadMods
+                                    | Screen::PilotForm
                             ) =>
                         {
                             host.open_diagnostics()
@@ -3614,7 +4465,9 @@ pub fn run(
                             if host.world.is_none()
                                 && !matches!(
                                     host.screen,
-                                    Screen::ConfirmDisable | Screen::PilotForm
+                                    Screen::ConfirmDisable
+                                        | Screen::ConfirmLoadMods
+                                        | Screen::PilotForm
                                 ) =>
                         {
                             if let Err(e) = host.begin_pilot_form(true) {
@@ -3757,12 +4610,7 @@ pub fn run(
             mixer.fx_volume = host.config.fx_volume;
         }
         let image = host.draw()?;
-        let palette = if let Some(movie) = &host.cinematic {
-            movie.palette(&host.palette)
-        } else {
-            mission_palette(&host.palette, host.world.as_ref())
-        };
-        let rgba = image.rgba(&palette, host.config.scanlines);
+        let rgba = host.present_rgba(&image);
         texture.update(None, &rgba, image.image.width * 4)?;
         let (w, h) = canvas.output_size().map_err(|e| anyhow!(e))?;
         canvas.set_draw_color(sdl2::pixels::Color::BLACK);
@@ -3884,6 +4732,84 @@ mod tests {
         .unwrap();
         (dir, host)
     }
+    #[test]
+    fn catalog_equipment_uses_hd_in_the_hud_and_loads_only_when_requested() {
+        use sha2::{Digest, Sha256};
+        let (_dir, mut host) = ui_fixture();
+        let root = host.catalog.root.clone();
+        let source = [1_i32, 0, 0, 4, 4]
+            .into_iter()
+            .flat_map(i32::to_le_bytes)
+            .chain([5; 16])
+            .collect::<Vec<_>>();
+        std::fs::write(root.join("EQUIPMENT"), &source).unwrap();
+        let index = std::fs::read_to_string(root.join("INDEX")).unwrap();
+        std::fs::write(
+            root.join("INDEX"),
+            format!("{index}3 {} EQUIPMENT\n", source.len()),
+        )
+        .unwrap();
+        host.catalog = Catalog::open(&root).unwrap();
+        let hd_root = root.join("hd");
+        std::fs::create_dir(&hd_root).unwrap();
+        image::RgbaImage::from_pixel(32, 32, image::Rgba([255, 0, 0, 255]))
+            .save(hd_root.join("equipment.png"))
+            .unwrap();
+        let manifest = serde_json::json!({"format_version":1,"name":"HUD fixture","sequences":[{
+        "name":"Equipment","base_asset":3,"frame_count":1,"frames":[{
+            "frame":0,"file":"equipment.png","logical_width":4,"logical_height":4,
+            "origin":[0,0],"source_sha256":format!("{:x}",Sha256::digest(&source))
+        }]}]});
+        std::fs::write(
+            hd_root.join("hd.json"),
+            serde_json::to_vec(&manifest).unwrap(),
+        )
+        .unwrap();
+        host.active
+            .registry
+            .items
+            .get_mut(&"base:forward_guns".into())
+            .unwrap()
+            .art = Some(
+            serde_json::from_value(
+                serde_json::json!({"asset":3,"logical_width":4,"logical_height":4}),
+            )
+            .unwrap(),
+        );
+        host.palette[5] = [0, 255, 0];
+        host.palette[8] = [255, 0, 0];
+        assert!(!host.hd_loaded);
+        let mut sd = Canvas::new(4);
+        host.hud_weapon(&mut sd, &"base:forward_guns".into())
+            .unwrap();
+        assert_eq!(sd.image.pixels[8 * sd.image.width + 286 * 4], 5);
+        assert!(!host.hd_loaded);
+        let before = serde_json::to_value(&host.pilot).unwrap();
+        host.config.hd_mode = true;
+        for scale in [1, 4] {
+            let mut hd = Canvas::new(scale);
+            host.hud_weapon(&mut hd, &"base:forward_guns".into())
+                .unwrap();
+            assert_eq!(hd.image.pixels[2 * scale * hd.image.width + 286 * scale], 8);
+            assert_eq!(
+                hd.image.pixels.iter().filter(|&&p| p == 8).count(),
+                16 * scale * scale
+            );
+            let mut icon = Canvas::new(scale);
+            host.hud_asset(&mut icon, 3, 10, 20).unwrap();
+            assert_eq!(
+                icon.image.pixels[20 * scale * icon.image.width + 10 * scale],
+                8
+            );
+            assert_eq!(
+                icon.image.pixels.iter().filter(|&&p| p == 8).count(),
+                16 * scale * scale
+            );
+        }
+        assert!(host.hd_loaded);
+        assert_eq!(host.hd.coverage(), 1);
+        assert_eq!(serde_json::to_value(&host.pilot).unwrap(), before);
+    }
     fn game_input_fixture() -> (tempfile::TempDir, Host) {
         let (dir, mut host) = ui_fixture();
         let pack = serde_json::from_value(serde_json::json!({
@@ -3907,6 +4833,822 @@ mod tests {
             Some(World::new(&host.pilot.mission, &host.pilot, &host.active.registry).unwrap());
         host.screen = Screen::Game;
         (dir, host)
+    }
+    fn install_player_fixture(host: &mut Host) {
+        let mut index = std::fs::read_to_string(host.catalog.root.join("INDEX")).unwrap();
+        for (name, base, color) in [
+            ("LPLAYER_PIC", 0x1011a, 60),
+            ("DPLAYER_PIC", 0x20045, 70),
+            ("FPLAYER_PIC", 0x2004c, 80),
+        ] {
+            for bank in 0..7 {
+                let path = if bank == 0 {
+                    name.to_owned()
+                } else {
+                    format!("{name}.{bank}")
+                };
+                let mut bytes = Vec::new();
+                for value in [1_i32, 0, 0, 32, 32] {
+                    bytes.extend(value.to_le_bytes());
+                }
+                bytes.extend(vec![(color + bank) as u8; 1024]);
+                std::fs::write(host.catalog.root.join(&path), &bytes).unwrap();
+                index.push_str(&format!("{:x} {} {path}\n", base + bank, bytes.len()));
+            }
+        }
+        std::fs::write(host.catalog.root.join("INDEX"), index).unwrap();
+        host.catalog = Catalog::open(host.catalog.root.clone()).unwrap();
+    }
+    #[test]
+    fn original_player_mapping_retains_every_bank_and_only_dark_missions_use_flash_frames() {
+        let (_directory, mut host) = ui_fixture();
+        install_player_fixture(&mut host);
+        let mut world =
+            World::new(&host.pilot.mission, &host.pilot, &host.active.registry).unwrap();
+        for sector in 1..=3 {
+            for wave in 1..=9 {
+                world.mission = format!("base:sector_{sector}_wave_{wave}").as_str().into();
+                let dark = matches!((sector, wave), (2, 8) | (3, 3));
+                for flash in [false, true] {
+                    world.player_flash = flash;
+                    for bank in 0..7 {
+                        world.player.bank = bank;
+                        assert_eq!(
+                            player_asset_frame(&host.catalog, &world).unwrap(),
+                            if dark {
+                                if flash { 0x2004c } else { 0x20045 }
+                            } else {
+                                0x1011a
+                            } + bank as u32
+                        );
+                    }
+                }
+            }
+        }
+        world.player.bank = -3;
+        assert_eq!(player_asset_frame(&host.catalog, &world).unwrap(), 0x1011a);
+        world.player.bank = 20;
+        assert_eq!(player_asset_frame(&host.catalog, &world).unwrap(), 0x10120);
+    }
+    #[test]
+    fn original_engine_offsets_follow_all_banks_and_interpolated_positions() {
+        for (bank, left, right) in [
+            (0, 157.0, 158.0),
+            (1, 156.0, 159.0),
+            (2, 155.0, 160.0),
+            (3, 154.0, 161.0),
+            (4, 155.0, 160.0),
+            (5, 156.0, 159.0),
+            (6, 157.0, 158.0),
+        ] {
+            assert_eq!(
+                player_flame_positions([144.0, 120.0], bank),
+                [[left, 151.0], [right, 151.0]]
+            );
+        }
+        assert_eq!(
+            player_flame_positions([144.5, 120.25], 3),
+            [[154.5, 151.25], [161.5, 151.25]]
+        );
+    }
+    #[test]
+    fn original_flame_ramps_retain_fixed_point_phases_clipping_and_indexed_background() {
+        let tables = std::array::from_fn(|shade| [shade as u8 + 1; 256]);
+        for scale in 1..=4 {
+            for (x, y, frame, left, top, width, expected) in [
+                (10.0, 20.0, 0, 10, 20, 4, vec![0, 1, 2, 3, 4, 5, 6, 7]),
+                (
+                    10.0,
+                    20.0,
+                    1,
+                    10,
+                    20,
+                    4,
+                    vec![0, 0, 1, 1, 2, 3, 3, 4, 5, 5, 6, 7],
+                ),
+                (319.0, 194.0, 1, 319, 194, 1, vec![0, 1, 2, 3, 5, 6]),
+                (-2.0, -4.0, 1, 0, 0, 2, vec![0, 1, 2, 3, 4, 5, 6, 7]),
+            ] {
+                let mut canvas = Canvas::new(scale);
+                canvas.clear(37);
+                flame_down(&mut canvas, x, y, 4, frame, &tables);
+                let mut oracle = Canvas::new(scale);
+                oracle.clear(37);
+                for (row, shade) in expected.into_iter().enumerate() {
+                    oracle.rect(left, top + row as i32, width, 1, shade + 1);
+                }
+                assert_eq!(canvas.image, oracle.image);
+            }
+            let mut canvas = Canvas::new(scale);
+            canvas.clear(crate::assets::TRANSPARENT);
+            flame_down(&mut canvas, 10.0, 20.0, 4, 0, &tables);
+            assert!(
+                canvas
+                    .image
+                    .pixels
+                    .iter()
+                    .all(|pixel| *pixel == crate::assets::TRANSPARENT)
+            );
+        }
+    }
+    #[test]
+    fn original_player_draws_over_engine_shading_without_advancing_world_and_hides_both_on_death() {
+        let (_directory, mut host) = ui_fixture();
+        install_player_fixture(&mut host);
+        host.flame_tables =
+            std::array::from_fn(|_| std::array::from_fn(|pixel| (pixel + 1).min(255) as u8));
+        let mut world =
+            World::new(&host.pilot.mission, &host.pilot, &host.active.registry).unwrap();
+        world.player.bank = 0;
+        for scale in [1, 4] {
+            for (mission, flash, color) in [
+                ("base:sector_1_wave_1", false, 60),
+                ("base:sector_1_wave_1", true, 60),
+                ("base:sector_2_wave_8", false, 70),
+                ("base:sector_2_wave_8", true, 80),
+            ] {
+                world.mission = mission.into();
+                world.player_flash = flash;
+                host.config.hd_mode = true; // Original fallback until each HD family is accepted.
+                let before = world.digest();
+                let mut canvas = Canvas::new(scale);
+                canvas.clear(37);
+                host.player(&mut canvas, &world, 1.0).unwrap();
+                let pixel = |x: usize, y: usize| {
+                    canvas.image.pixels[y * scale * canvas.image.width + x * scale]
+                };
+                assert_eq!(pixel(160, 176), color);
+                assert_eq!(
+                    pixel(157, 191),
+                    color,
+                    "ship artwork must cover the first flame row"
+                );
+                assert_eq!(pixel(157, 192), 38);
+                assert_eq!(
+                    pixel(158, 192),
+                    39,
+                    "banked overlapping shade passes remain sequential"
+                );
+                assert_eq!(pixel(162, 192), 37);
+                assert_eq!(world.digest(), before);
+            }
+        }
+        world.draw_player = false;
+        let mut canvas = Canvas::new(4);
+        canvas.clear(37);
+        let before = world.digest();
+        host.player(&mut canvas, &world, 0.5).unwrap();
+        assert!(canvas.image.pixels.iter().all(|pixel| *pixel == 37));
+        assert_eq!(world.digest(), before);
+    }
+    #[test]
+    #[ignore = "requires original local catalog; writes indexed player flame/banking contacts"]
+    fn original_player_flames_and_flash_capture_complete_banking_families_in_sd_and_hd() {
+        let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
+        let catalog = Catalog::open(root.parent().unwrap().join("data")).unwrap();
+        let registry = Registry::base(&catalog).unwrap();
+        let temporary = tempfile::tempdir().unwrap();
+        let paths = Paths {
+            data: temporary.path().join("saves"),
+            config: temporary.path().join("config"),
+            cache: temporary.path().join("cache"),
+            legacy: temporary.path().join("legacy"),
+        };
+        let mut host = Host::new(
+            catalog,
+            registry,
+            paths,
+            temporary.path().join("mods"),
+            true,
+        )
+        .unwrap();
+        host.config.scale = 4;
+        let output = root.parent().unwrap().join(".reference/secondary-effects");
+        std::fs::create_dir_all(&output).unwrap();
+        for hd in [false, true] {
+            host.config.hd_mode = hd;
+            host.ensure_hd();
+            let mut contact = Sprite::blank(7 * 64 * 4, 6 * 64 * 4);
+            for (family, (mission, flash)) in [
+                ("base:sector_1_wave_1", false),
+                ("base:sector_2_wave_8", false),
+                ("base:sector_2_wave_8", true),
+            ]
+            .into_iter()
+            .enumerate()
+            {
+                for phase in 0..2 {
+                    for bank in 0..7 {
+                        let mut world =
+                            World::new(&mission.into(), &host.pilot, &host.active.registry)
+                                .unwrap();
+                        world.player.y = 100;
+                        world.player.py = 100;
+                        world.player.bank = bank;
+                        world.player_flash = flash;
+                        world.tick = 64 + phase as u64;
+                        let before = world.digest();
+                        let mut canvas = Canvas::new(4);
+                        // Original native water tile provides a textured indexed
+                        // background on which the light-table flames are visible.
+                        let tile = host.active.registry.missions
+                            [&ContentId::from("base:sector_1_wave_1")]
+                            .tiles[0]
+                            .art
+                            .asset
+                            .unwrap();
+                        let tile = nearest(&host.raw(tile).unwrap(), 4);
+                        for y in (0..800).step_by(tile.height) {
+                            for x in (0..1280).step_by(tile.width) {
+                                canvas.blit(&tile, x as i32, y as i32);
+                            }
+                        }
+                        host.player(&mut canvas, &world, 1.0).unwrap();
+                        for y in 0..64 * 4 {
+                            let source = (84 * 4 + y) * canvas.image.width + 128 * 4;
+                            let target = ((family * 2 + phase) * 64 * 4 + y) * contact.width
+                                + bank as usize * 64 * 4;
+                            contact.pixels[target..target + 64 * 4]
+                                .copy_from_slice(&canvas.image.pixels[source..source + 64 * 4]);
+                        }
+                        assert_eq!(world.digest(), before);
+                        if bank == 3 && phase == 1 {
+                            host.hud_state = HudState::new(&world);
+                            host.world = Some(world);
+                            host.screen = Screen::Game;
+                            let before = host.world.as_ref().unwrap().digest();
+                            let scene = host.draw().unwrap();
+                            image::save_buffer(
+                                output.join(format!(
+                                    "native-player-family-{family}-{}.png",
+                                    if hd { "hd" } else { "sd" }
+                                )),
+                                &host.present_rgba(&scene),
+                                scene.image.width as u32,
+                                scene.image.height as u32,
+                                image::ColorType::Rgba8,
+                            )
+                            .unwrap();
+                            assert_eq!(host.world.as_ref().unwrap().digest(), before);
+                            host.world = None;
+                        }
+                    }
+                }
+            }
+            let canvas = Canvas {
+                image: contact,
+                scale: 4,
+            };
+            image::save_buffer(
+                output.join(format!(
+                    "native-player-banking-flames-{}.png",
+                    if hd { "hd" } else { "sd" }
+                )),
+                &canvas.rgba(&host.palette, false),
+                canvas.image.width as u32,
+                canvas.image.height as u32,
+                image::ColorType::Rgba8,
+            )
+            .unwrap();
+        }
+    }
+    fn native_beam_fixture(index: u32) -> (tempfile::TempDir, Host, World) {
+        let (dir, mut host) = ui_fixture();
+        let lib = crate::legacy_tables::weapons()
+            .into_iter()
+            .find(|lib| lib.index == index)
+            .unwrap();
+        let id = ContentId::from("base:visual_beam");
+        let pack = serde_json::from_value(serde_json::json!({
+            "weapons":[{"id":id,"name":"Visual beam","legacy":index,"damage":1,"speed":0,"cooldown":2,"behavior":"beam","target":"all",
+                "art":{"asset":lib.asset,"logical_width":2,"logical_height":3,"frames":lib.frames}}]
+        })).unwrap();
+        host.active.registry.apply(pack, "base").unwrap();
+        for frame in 0..lib.frames {
+            host.raw.insert(
+                lib.asset + frame,
+                Sprite {
+                    width: 2,
+                    height: 3,
+                    pixels: vec![9; 6],
+                },
+            );
+        }
+        for base in [0x10239, 0x1023d, 0x10245] {
+            for frame in 0..4 {
+                host.raw.insert(
+                    base + frame,
+                    Sprite {
+                        width: 4,
+                        height: 4,
+                        pixels: vec![20 + frame as u16; 16],
+                    },
+                );
+            }
+        }
+        for frame in 0..4 {
+            host.raw.insert(
+                0x101f1 + frame,
+                Sprite {
+                    width: 16,
+                    height: 4,
+                    pixels: vec![30 + frame as u16; 64],
+                },
+            );
+        }
+        let mut world =
+            World::new(&host.pilot.mission, &host.pilot, &host.active.registry).unwrap();
+        world.projectiles.push(crate::simulation::Projectile {
+            entity: 1,
+            weapon: id,
+            x: 160,
+            y: 140,
+            px: 160,
+            py: 140,
+            vx: 0,
+            vy: 0,
+            hostile: false,
+            age: 1,
+            legacy: Some(crate::simulation::LegacyProjectile {
+                movement: crate::simulation::LineMove::new(160, 140, 160, 40),
+                speed: 0,
+                frame: 1,
+                art_frame: 0,
+                delay: false,
+                hit: false,
+                start: [160, 176],
+            }),
+            legacy_enemy: None,
+        });
+        (dir, host, world)
+    }
+    #[test]
+    fn original_beams_draw_the_full_shaft_power_and_impact_at_native_offsets() {
+        for index in [13, 14] {
+            let (_dir, mut host, world) = native_beam_fixture(index);
+            host.config.hd_mode = true; // No optional HD pack: exact original fallback.
+            let before = world.digest();
+            for scale in [1, 4] {
+                let mut actual = Canvas::new(scale);
+                host.projectiles(&mut actual, &world, false, 1.0).unwrap();
+                let pixel = |x: usize, y: usize| {
+                    actual.image.pixels[y * scale * actual.image.width + x * scale]
+                };
+                assert_eq!(
+                    pixel(160, 100),
+                    9,
+                    "beam shaft was reduced to one projectile icon"
+                );
+                assert_eq!(
+                    pixel(if index == 14 { 156 } else { 160 }, 142),
+                    21,
+                    "native power frame is cnt=1 on the first step"
+                );
+                assert_eq!(
+                    pixel(156, 32),
+                    31,
+                    "impact caps use width>>2 and endpoint-8"
+                );
+                assert_eq!(pixel(155, 32), 0);
+                assert_eq!(pixel(160, 24), 0);
+            }
+            assert_eq!(
+                world.digest(),
+                before,
+                "rendering must not advance beam state"
+            );
+        }
+    }
+    #[test]
+    fn original_enemy_lasers_repeat_downward_and_use_their_own_muzzle_frames() {
+        let (_dir, mut host, mut world) = native_beam_fixture(14);
+        for frame in 0..4 {
+            host.raw.insert(
+                0x10241 + frame,
+                Sprite {
+                    width: 2,
+                    height: 3,
+                    pixels: vec![9; 6],
+                },
+            );
+        }
+        let projectile = &mut world.projectiles[0];
+        projectile.hostile = true;
+        projectile.y = 40;
+        projectile.py = 40;
+        projectile.legacy = None;
+        projectile.legacy_enemy = Some(crate::simulation::EnemyProjectile {
+            movement: crate::simulation::LineMove::new(160, 40, 160, 140),
+            kind: 5,
+            asset: 0x10241,
+            frames: 4,
+            frame: 3,
+            art_frame: 2,
+            speed: 0,
+            maximum_speed: 6,
+            damage: 12,
+            position: 0,
+            enemy: 2,
+            gun: 0,
+        });
+        let before = world.digest();
+        let mut canvas = Canvas::new(1);
+        host.projectiles(&mut canvas, &world, true, 1.0).unwrap();
+        let pixel = |x: usize, y: usize| canvas.image.pixels[y * canvas.image.width + x];
+        assert_eq!(pixel(160, 41), 22);
+        assert_eq!(pixel(160, 100), 9);
+        assert_eq!(pixel(156, 132), 32);
+        assert_eq!(pixel(155, 132), 0);
+        assert_eq!(world.digest(), before);
+    }
+    #[test]
+    fn original_turret_tracer_has_three_palette_lines_and_uses_player_interpolation() {
+        let (_dir, mut host, world) = native_beam_fixture(5);
+        let before = world.digest();
+        let mut canvas = Canvas::new(1);
+        host.projectiles(&mut canvas, &world, false, 1.0).unwrap();
+        for (x, color) in [(159, 69), (160, 64), (161, 69)] {
+            assert_eq!(canvas.image.pixels[176 * 320 + x], color);
+        }
+        assert_eq!(canvas.image.pixels[150 * 320 + 160], 64);
+        assert_eq!(world.digest(), before);
+    }
+    #[test]
+    fn original_light_effects_transform_background_indices_and_preserve_mask_holes() {
+        let (_dir, mut host) = ui_fixture();
+        let mut world =
+            World::new(&host.pilot.mission, &host.pilot, &host.active.registry).unwrap();
+        let mut effect = crate::simulation::VisualEffect::new(
+            crate::simulation::VisualEffectKind::Shield,
+            100,
+            100,
+        );
+        effect.age = 1;
+        world.visual_effects.push(effect);
+        host.raw.insert(
+            0x10249,
+            Sprite {
+                width: 2,
+                height: 2,
+                pixels: vec![0, 99, crate::assets::TRANSPARENT, 5],
+            },
+        );
+        host.light_table = std::array::from_fn(|index| (index + 7).min(255) as u8);
+        host.config.hd_mode = true;
+        let before = world.digest();
+        for scale in [1, 4] {
+            let mut canvas = Canvas::new(scale);
+            canvas.clear(37);
+            host.secondary_effects(&mut canvas, &world, 2, 1.0).unwrap();
+            let pixel = |x: usize, y: usize| {
+                canvas.image.pixels[y * scale * canvas.image.width + x * scale]
+            };
+            assert_eq!(pixel(99, 99), 44);
+            assert_eq!(pixel(100, 99), 44);
+            assert_eq!(pixel(99, 100), 37);
+            assert_eq!(pixel(100, 100), 44);
+        }
+        // A supplied HD mask must use its own alpha, the original logical
+        // anchor and the indexed light table, regardless of foreground color.
+        use sha2::{Digest, Sha256};
+        let root = host.catalog.root.clone();
+        let mut source = [0_i32, 0, 0, 2, 2]
+            .into_iter()
+            .flat_map(i32::to_le_bytes)
+            .collect::<Vec<_>>();
+        source.extend([0_i32, 0, 0, 2].into_iter().flat_map(i32::to_le_bytes));
+        source.extend([0, 99]);
+        source.extend([1_i32, 1, 3, 1].into_iter().flat_map(i32::to_le_bytes));
+        source.push(5);
+        source.extend([0_i32, 0, -1, 0].into_iter().flat_map(i32::to_le_bytes));
+        std::fs::write(root.join("SHIELD"), &source).unwrap();
+        let index = std::fs::read_to_string(root.join("INDEX")).unwrap();
+        std::fs::write(
+            root.join("INDEX"),
+            format!("{index}10249 {} SHIELD\n", source.len()),
+        )
+        .unwrap();
+        host.catalog = Catalog::open(&root).unwrap();
+        let hd_root = root.join("hd");
+        std::fs::create_dir(&hd_root).unwrap();
+        let mask = image::RgbaImage::from_fn(8, 8, |x, y| {
+            image::Rgba([255, 0, 0, if x >= 4 && y < 4 { 255 } else { 0 }])
+        });
+        mask.save(hd_root.join("mask.png")).unwrap();
+        let manifest = serde_json::json!({"format_version":1,"name":"Light-mask fixture","sequences":[{
+        "name":"Shield","base_asset":0x10249,"frame_count":1,"frames":[{
+            "frame":0,"file":"mask.png","logical_width":2,"logical_height":2,
+            "origin":[0,0],"source_sha256":format!("{:x}",Sha256::digest(&source))
+        }]}]});
+        std::fs::write(
+            hd_root.join("hd.json"),
+            serde_json::to_vec(&manifest).unwrap(),
+        )
+        .unwrap();
+        host.hd = HdAssets::load_lazy(&hd_root, &host.catalog, None);
+        for scale in [1, 4] {
+            let mut canvas = Canvas::new(scale);
+            canvas.clear(37);
+            host.secondary_effects(&mut canvas, &world, 2, 1.0).unwrap();
+            let pixel = |x: usize, y: usize| {
+                canvas.image.pixels[y * scale * canvas.image.width + x * scale]
+            };
+            assert_eq!(pixel(99, 99), 37);
+            assert_eq!(pixel(100, 99), 44);
+            assert_eq!(pixel(99, 100), 37);
+            assert_eq!(pixel(100, 100), 37);
+            assert!(
+                !canvas.image.pixels.contains(&0),
+                "HD mask colors must not paint the background"
+            );
+        }
+        assert_eq!(host.hd.validated_count(), 1);
+        assert_eq!(world.digest(), before);
+    }
+    #[test]
+    #[ignore = "requires local original catalog; writes ignored native beam/effect captures"]
+    fn original_secondary_effects_capture_sd_and_hd_without_gameplay_mutation() {
+        use crate::simulation::{
+            EnemyProjectile, LegacyPickup, LegacyProjectile, LineMove, Pickup, Projectile,
+            VisualEffect, VisualEffectKind,
+        };
+        let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
+        let catalog = Catalog::open(root.parent().unwrap().join("data")).unwrap();
+        let registry = Registry::base(&catalog).unwrap();
+        let temporary = tempfile::tempdir().unwrap();
+        let paths = Paths {
+            data: temporary.path().join("saves"),
+            config: temporary.path().join("config"),
+            cache: temporary.path().join("cache"),
+            legacy: temporary.path().join("legacy"),
+        };
+        let mut host = Host::new(
+            catalog,
+            registry,
+            paths,
+            temporary.path().join("mods"),
+            true,
+        )
+        .unwrap();
+        host.config.scale = 4;
+        let mut world =
+            World::new(&host.pilot.mission, &host.pilot, &host.active.registry).unwrap();
+        world.tick = 200;
+        for (index, x, y, target_y) in [(13, 100, 150, 48), (14, 210, 140, 72), (5, 160, 76, 76)] {
+            let weapon = host
+                .active
+                .registry
+                .weapons
+                .values()
+                .find(|w| w.legacy == Some(index))
+                .unwrap();
+            world.projectiles.push(Projectile {
+                entity: index as u64,
+                weapon: weapon.id.clone(),
+                x,
+                y,
+                px: x,
+                py: y,
+                vx: 0,
+                vy: 0,
+                hostile: false,
+                age: 1,
+                legacy: Some(LegacyProjectile {
+                    movement: LineMove::new(x, y, x, target_y),
+                    speed: 0,
+                    frame: 1,
+                    art_frame: 0,
+                    delay: false,
+                    hit: false,
+                    start: [160, 176],
+                }),
+                legacy_enemy: None,
+            });
+        }
+        let enemy_weapon = host
+            .active
+            .registry
+            .weapons
+            .values()
+            .find(|w| w.legacy == Some(0))
+            .unwrap()
+            .id
+            .clone();
+        world.projectiles.push(Projectile {
+            entity: 100,
+            weapon: enemy_weapon,
+            x: 260,
+            y: 32,
+            px: 260,
+            py: 32,
+            vx: 0,
+            vy: 0,
+            hostile: true,
+            age: 1,
+            legacy: None,
+            legacy_enemy: Some(EnemyProjectile {
+                movement: LineMove::new(260, 32, 260, 156),
+                kind: 5,
+                asset: 0x10241,
+                frames: 4,
+                frame: 1,
+                art_frame: 0,
+                speed: 0,
+                maximum_speed: 6,
+                damage: 12,
+                position: 0,
+                enemy: 200,
+                gun: 0,
+            }),
+        });
+        for (kind, x, y, age) in [
+            (VisualEffectKind::SmokeDown, 40, 130, 3),
+            (VisualEffectKind::SmokeTrail, 288, 96, 2),
+            (VisualEffectKind::BlueSpark, 96, 48, 3),
+            (VisualEffectKind::OrangeSpark, 206, 72, 4),
+            (VisualEffectKind::EnergyGrab, 50, 52, 7),
+            (VisualEffectKind::Shield, 160, 176, 2),
+            (VisualEffectKind::Casing, 166, 176, 2),
+            (VisualEffectKind::LaserImpact, 160, 76, 2),
+        ] {
+            let mut effect = VisualEffect::new(kind, x, y);
+            effect.age = age;
+            world.visual_effects.push(effect);
+        }
+        world.pickups.push(Pickup {
+            entity: 300,
+            item: "base:energy".into(),
+            x: 60,
+            y: 106,
+            legacy: Some(LegacyPickup {
+                x: 68,
+                y: 114,
+                position: 0,
+                frame: 0,
+                art_frame: 0,
+                countdown: None,
+                glow_frame: 2,
+                previous_art_position: Some([60, 106]),
+            }),
+        });
+        host.hud_state = HudState::new(&world);
+        host.world = Some(world);
+        host.screen = Screen::Game;
+        let before = host.world.as_ref().unwrap().digest();
+        let output = root.parent().unwrap().join(".reference/secondary-effects");
+        std::fs::create_dir_all(&output).unwrap();
+        for hd in [false, true] {
+            host.config.hd_mode = hd;
+            for age in 1..=3 {
+                for projectile in &mut host.world.as_mut().unwrap().projectiles {
+                    if projectile.legacy.is_some() {
+                        projectile.age = age;
+                    }
+                    if let Some(enemy) = &mut projectile.legacy_enemy {
+                        enemy.art_frame = age - 1;
+                    }
+                }
+                let snapshot = host.world.as_ref().unwrap().digest();
+                let canvas = host.draw().unwrap();
+                image::save_buffer(
+                    output.join(format!(
+                        "native-effects-{}-{age}.png",
+                        if hd { "hd" } else { "sd" }
+                    )),
+                    &host.present_rgba(&canvas),
+                    canvas.image.width as u32,
+                    canvas.image.height as u32,
+                    image::ColorType::Rgba8,
+                )
+                .unwrap();
+                assert_eq!(host.world.as_ref().unwrap().digest(), snapshot);
+            }
+        }
+        // Rendering changed neither gameplay nor the initial frame state; the
+        // only fixture changes above intentionally selected animation frames.
+        let world = host.world.as_mut().unwrap();
+        for projectile in &mut world.projectiles {
+            if projectile.legacy.is_some() {
+                projectile.age = 1;
+            }
+            if let Some(enemy) = &mut projectile.legacy_enemy {
+                enemy.art_frame = 0;
+            }
+        }
+        assert_eq!(world.digest(), before);
+    }
+    fn music_fixture() -> (tempfile::TempDir, Host, ContentId) {
+        let (dir, mut host) = ui_fixture();
+        let root = host.mods_root.join("music_fixture");
+        std::fs::create_dir_all(&root).unwrap();
+        let body = [0x40, 0, 0, 0x90, 188, 100, 4, 0x80, 60, 4, 0x60];
+        let mut score = b"MUS\x1a".to_vec();
+        score.extend((body.len() as u16).to_le_bytes());
+        score.extend(16_u16.to_le_bytes());
+        score.extend(1_u16.to_le_bytes());
+        score.extend([0; 6]);
+        score.extend(body);
+        std::fs::write(root.join("theme.mus"), score).unwrap();
+        let id = ContentId::from("music_fixture:theme");
+        let pack = serde_json::from_value(
+            serde_json::json!({"music":[{"id":id,"name":"Fixture theme","file":"theme.mus"}]}),
+        )
+        .unwrap();
+        host.active.registry.apply(pack, "music_fixture").unwrap();
+        host.active
+            .registry
+            .asset_roots
+            .insert("music_fixture".into(), root);
+        host.active
+            .registry
+            .missions
+            .get_mut(&host.pilot.mission)
+            .unwrap()
+            .music_track = Some(id.clone());
+        (dir, host, id)
+    }
+    #[test]
+    fn mission_mod_music_identity_is_pending_before_audio_and_original_menus_clear_it() {
+        let (_dir, mut host, track) = music_fixture();
+        let mission = host.pilot.mission.clone();
+        host.start(mission).unwrap();
+        assert_eq!(host.desired_mod_music, Some(track.clone()));
+        assert_eq!(host.desired_music, None);
+        assert!(host.desired_music_loop);
+        assert!(host.audio.is_none());
+        std::fs::remove_file(host.mods_root.join("music_fixture/theme.mus")).unwrap();
+        host.mod_music(&track).unwrap();
+        host.resume_desired_music().unwrap();
+        assert_eq!(host.desired_mod_music, Some(track));
+        host.music("MAINMENU_MUS");
+        assert!(host.desired_mod_music.is_none());
+    }
+    #[test]
+    fn failed_mission_music_load_keeps_pilot_and_menu_state_unchanged() {
+        let (_dir, mut host, _track) = music_fixture();
+        std::fs::write(
+            host.mods_root.join("music_fixture/theme.mus"),
+            "broken music",
+        )
+        .unwrap();
+        let prior = serde_json::to_value(&host.pilot).unwrap();
+        assert!(host.start(host.pilot.mission.clone()).is_err());
+        assert_eq!(serde_json::to_value(&host.pilot).unwrap(), prior);
+        assert!(host.world.is_none());
+        assert!(host.screen == Screen::Main);
+        assert!(host.desired_mod_music.is_none());
+    }
+    #[test]
+    #[ignore = "opens a paused SDL audio device; run with SDL_AUDIODRIVER=dummy for deterministic host music validation"]
+    fn pending_mod_music_resumes_on_device_attach_without_restart_for_the_same_track() {
+        let (_dir, mut host, track) = music_fixture();
+        host.start(host.pilot.mission.clone()).unwrap();
+        let score = host
+            .sound_bank
+            .mod_music(&host.active.registry, &track)
+            .unwrap();
+        let mut instruments = b"#OPL_II#".to_vec();
+        for _ in 0..175 {
+            let mut instrument = [0; 36];
+            instrument[2] = 128;
+            for part in 0..2 {
+                let start = 4 + part * 16;
+                instrument[start..start + 6].copy_from_slice(&[0x21, 0xf2, 0x0f, 0, 0, 32]);
+                instrument[start + 7..start + 13].copy_from_slice(&[0x21, 0xf2, 0x0f, 0, 0, 0]);
+            }
+            instruments.extend(instrument);
+        }
+        let sdl = sdl2::init().unwrap();
+        let audio = sdl.audio().unwrap();
+        let desired = AudioSpecDesired {
+            freq: Some(44100),
+            channels: Some(2),
+            samples: Some(512),
+        };
+        let mut device = audio
+            .open_playback(None, &desired, |spec| {
+                Mixer::new(spec.freq as u32, &instruments).unwrap()
+            })
+            .unwrap();
+        device.lock().music_volume = host.config.music_volume;
+        host.audio = Some(device);
+        host.resume_desired_music().unwrap();
+        let mut reference = Mixer::new(44100, &instruments).unwrap();
+        reference.music_volume = host.config.music_volume;
+        reference.play_with_fade(score, true, true);
+        let mut actual = vec![0; 4410 * 2];
+        let mut expected = vec![0; actual.len()];
+        host.audio.as_mut().unwrap().lock().mix(&mut actual);
+        reference.mix(&mut expected);
+        assert_eq!(actual, expected);
+        assert!(actual.iter().any(|sample| *sample != 0));
+        host.mod_music(&track).unwrap();
+        host.audio.as_mut().unwrap().lock().mix(&mut actual);
+        reference.mix(&mut expected);
+        assert_eq!(
+            actual, expected,
+            "selecting the same namespaced track must preserve playback position"
+        );
     }
     #[test]
     fn desktop_action_pulses_accept_consecutive_real_taps() {
@@ -4565,6 +6307,432 @@ mod tests {
         assert_eq!(menu_row_at(Screen::Main, 1, 8, 200, 60), Some(1));
     }
     #[test]
+    fn mission_preview_is_not_an_action_hitbox() {
+        assert_eq!(menu_row_at(Screen::Missions, 0, 27, 160, 60), None);
+        assert_eq!(menu_row_at(Screen::Missions, 0, 27, 145, 60), Some(1));
+        assert_eq!(menu_row_at(Screen::Missions, 17, 27, 40, 60), Some(10));
+    }
+    #[test]
+    #[ignore = "requires original catalog and canonical terrain candidate; captures cached native mission terrain"]
+    fn canonical_terrain_live_scene_matches_fresh_composition_after_scroll_damage_and_mod_changes()
+    {
+        let project = std::path::Path::new(env!("CARGO_MANIFEST_DIR"))
+            .parent()
+            .unwrap();
+        let catalog = Catalog::open(project.join("data")).unwrap();
+        let base = Registry::base(&catalog).unwrap();
+        let temporary = tempfile::tempdir().unwrap();
+        let paths = Paths {
+            data: temporary.path().join("saves"),
+            config: temporary.path().join("config"),
+            cache: temporary.path().join("cache"),
+            legacy: temporary.path().join("legacy"),
+        };
+        let mut host =
+            Host::new(catalog, base, paths, temporary.path().join("mods"), true).unwrap();
+        let job_id =
+            std::env::var("RAPTOR_HD_TERRAIN_JOB").unwrap_or_else(|_| "terrain-10360-1036f".into());
+        assert!(
+            job_id
+                .chars()
+                .all(|c| c.is_ascii_alphanumeric() || c == '-')
+        );
+        let hd_root = project.join("data/hd");
+        let job_root = hd_root.join("jobs").join(&job_id);
+        let job: serde_json::Value =
+            serde_json::from_slice(&std::fs::read(job_root.join("job.json")).unwrap()).unwrap();
+        let candidate: serde_json::Value =
+            serde_json::from_slice(&std::fs::read(job_root.join("candidate.json")).unwrap())
+                .unwrap();
+        let pack_root = temporary.path().join("candidate");
+        for target in candidate["targets"].as_array().unwrap() {
+            let file = std::path::Path::new(target["file"].as_str().unwrap());
+            let destination = pack_root.join(file);
+            std::fs::create_dir_all(destination.parent().unwrap()).unwrap();
+            if !destination.exists() {
+                std::fs::copy(hd_root.join(file), destination).unwrap();
+            }
+        }
+        std::fs::write(
+            pack_root.join("hd.json"),
+            serde_json::to_vec(&serde_json::json!({
+                "format_version":1,"name":job_id,"sequences":candidate["sequences"]
+            }))
+            .unwrap(),
+        )
+        .unwrap();
+        host.hd = HdAssets::load_lazy(&pack_root, &host.catalog, None);
+        host.hd_loaded = true;
+        host.config.scale = 4;
+        host.config.hd_mode = true;
+        let sample = &job["targets"][0]["terrain_context"]["samples"][0];
+        let mission = ContentId::from(sample["mission"].as_str().unwrap());
+        let definition = &host.active.registry.missions[&mission];
+        let row_origin = 64 - sample["row"].as_i64().unwrap() as i32 * 32;
+        let scroll =
+            row_origin - 200 + (definition.layout.len() / definition.columns as usize) as i32 * 32;
+        let mut world = World::new(&mission, &host.pilot, &host.active.registry).unwrap();
+        world.tick = 64;
+        world.scroll = scroll;
+        host.world = Some(world);
+        host.screen = Screen::Game;
+        let output = project.join(".reference/terrain-hd").join(&job_id);
+        std::fs::create_dir_all(&output).unwrap();
+        let capture = |host: &mut Host, name: &str| {
+            let before = serde_json::json!({"world":host.world,"pilot":host.pilot,"states":host.active.scripts.states,"rng":host.active.scripts.rng});
+            let frame = host.draw().unwrap();
+            let rgba = host.present_rgba(&frame);
+            image::save_buffer(
+                output.join(format!("{name}.png")),
+                &rgba,
+                frame.image.width as u32,
+                frame.image.height as u32,
+                image::ColorType::Rgba8,
+            )
+            .unwrap();
+            assert_eq!(
+                serde_json::json!({"world":host.world,"pilot":host.pilot,"states":host.active.scripts.states,"rng":host.active.scripts.rng}),
+                before
+            );
+            frame.image
+        };
+        capture(&mut host, "native-candidate-phase-00");
+        let before = std::time::Instant::now();
+        for _ in 0..60 {
+            std::hint::black_box(host.draw().unwrap());
+        }
+        let cached_scene_mean_ms = before.elapsed().as_secs_f64() * 1000.0 / 60.0;
+        for phase in 1..32 {
+            host.world.as_mut().unwrap().scroll = scroll + phase;
+            let cached = host.draw().unwrap().image;
+            host.terrain_hd = TerrainHd::default();
+            let fresh = host.draw().unwrap().image;
+            assert_eq!(cached, fresh, "scroll phase {phase}");
+        }
+        capture(&mut host, "native-candidate-phase-31");
+        host.world.as_mut().unwrap().scroll = scroll;
+        let definition = &host.active.registry.missions[&mission];
+        let damaged = definition
+            .layout
+            .iter()
+            .enumerate()
+            .find(|(index, tile)| {
+                let y = row_origin + (*index / definition.columns as usize) as i32 * 32;
+                (0..160).contains(&y) && definition.tiles[**tile].destroyed.is_some()
+            })
+            .map(|(index, _)| index)
+            .or_else(|| {
+                definition
+                    .layout
+                    .iter()
+                    .enumerate()
+                    .find(|(_, tile)| {
+                        definition.tiles[**tile]
+                            .destroyed
+                            .as_ref()
+                            .is_some_and(|destroyed| {
+                                serde_json::to_value(destroyed).unwrap()
+                                    != serde_json::to_value(&definition.tiles[**tile].art).unwrap()
+                            })
+                    })
+                    .map(|(index, _)| index)
+            });
+        assert!(
+            damaged.is_some(),
+            "native fixture mission must include destroyed terrain"
+        );
+        if let Some(index) = damaged {
+            let damaged_row_origin = 64 - (index / definition.columns as usize) as i32 * 32;
+            host.world.as_mut().unwrap().scroll = damaged_row_origin - 200
+                + (definition.layout.len() / definition.columns as usize) as i32 * 32;
+            let intact = capture(&mut host, "native-candidate-destruction-intact");
+            host.world.as_mut().unwrap().terrain_dead[index] = true;
+            assert_eq!(
+                host.draw().unwrap().image,
+                intact,
+                "native tile keeps intact art until settled"
+            );
+            host.world.as_mut().unwrap().terrain_settled[index] = true;
+            let settled = capture(&mut host, "native-candidate-destroyed-settled");
+            assert_ne!(
+                settled, intact,
+                "destroyed tile must not reuse cached intact terrain"
+            );
+            host.terrain_hd = TerrainHd::default();
+            assert_eq!(
+                host.draw().unwrap().image,
+                settled,
+                "damaged cache matches fresh scene"
+            );
+        }
+        host.world.as_mut().unwrap().scroll = scroll;
+        // The prepared key includes mod pins in their active priority order.
+        // Verify it is not reused under a changed hash or reversed load order.
+        host.active.pins = vec![
+            modding::ModPin {
+                id: "test-a".into(),
+                version: "1".into(),
+                hash: "a".into(),
+            },
+            modding::ModPin {
+                id: "test-b".into(),
+                version: "1".into(),
+                hash: "b".into(),
+            },
+        ];
+        host.draw().unwrap();
+        let make_key = |host: &Host| {
+            let definition = &host.active.registry.missions[&mission];
+            let world = host.world.as_ref().unwrap();
+            let mut visible = Vec::new();
+            for (index, tile) in definition.layout.iter().enumerate() {
+                let y = row_origin + (index / definition.columns as usize) as i32 * 32;
+                if (-66..234).contains(&y) {
+                    visible.push((
+                        selected_art(
+                            &definition.tiles[*tile],
+                            true,
+                            world.terrain_dead[index],
+                            world.terrain_settled[index],
+                        )
+                        .clone(),
+                        16 + (index % definition.columns as usize) as i32 * 32,
+                        y,
+                    ));
+                }
+            }
+            serde_json::to_vec(&(
+                &mission,
+                row_origin,
+                host.config.scale,
+                host.config.hd_mode,
+                &host.palette[..],
+                &host.active.pins,
+                &visible,
+            ))
+            .unwrap()
+        };
+        assert!(host.terrain_hd.cached_layer(&make_key(&host)).is_some());
+        host.active.pins.reverse();
+        assert!(host.terrain_hd.cached_layer(&make_key(&host)).is_none());
+        host.draw().unwrap();
+        host.active.pins[0].hash.push_str("changed");
+        assert!(host.terrain_hd.cached_layer(&make_key(&host)).is_none());
+        host.draw().unwrap();
+        assert!(host.terrain_hd.prepared_bytes() <= 320 * 268 * 16 * 2 + 65536);
+        std::fs::write(output.join("native-scene-cache-proof.json"),serde_json::to_vec_pretty(&serde_json::json!({
+            "mission":mission,"row":sample["row"],"all_32_scroll_phases_equal_fresh":true,
+            "native_destroyed_placement_tested":damaged,"mod_order_and_hash_invalidate":true,
+            "cached_scene_mean_ms":cached_scene_mean_ms,"retained_strip_bytes":host.terrain_hd.prepared_bytes(),
+            "transition_lookup_bytes":host.terrain_hd.cache_bytes(),"registration":"Isolated candidate pack; global manifest unchanged"
+        })).unwrap()).unwrap();
+        println!(
+            "cached native scene mean {cached_scene_mean_ms:.3} ms; damaged placement {damaged:?}"
+        );
+    }
+    #[test]
+    #[ignore = "requires original catalog and authored mods; writes full menu/intro screenshot audit"]
+    fn every_menu_screen_and_original_intro_visual_audit() {
+        let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
+        let catalog = Catalog::open(root.parent().unwrap().join("data")).unwrap();
+        let base = Registry::base(&catalog).unwrap();
+        let temp = tempfile::tempdir().unwrap();
+        let paths = Paths {
+            data: temp.path().join("saves"),
+            config: temp.path().join("config"),
+            cache: temp.path().join("cache"),
+            legacy: temp.path().join("legacy"),
+        };
+        let mut host = Host::new(catalog, base, paths, root.join("mods"), false).unwrap();
+        host.config.scale = 4;
+        host.create_pilot("Aria".into(), "ACE".into(), 2).unwrap();
+        let output = root.parent().unwrap().join(".reference/ui-all");
+        std::fs::create_dir_all(&output).unwrap();
+        for entry in std::fs::read_dir(&output).unwrap() {
+            let path = entry.unwrap().path();
+            if path
+                .file_name()
+                .is_some_and(|name| name.to_string_lossy().starts_with("intro-"))
+                && path.extension().is_some_and(|extension| extension == "png")
+            {
+                std::fs::remove_file(path).unwrap();
+            }
+        }
+        let mut manifest = Vec::<serde_json::Value>::new();
+        let mut capture = |host: &mut Host, name: &str| {
+            let before = serde_json::json!({"pilot":host.pilot,"world":host.world,"states":host.active.scripts.states,"rng":host.active.scripts.rng});
+            let image = host.draw().unwrap();
+            let rgba = host.present_rgba(&image);
+            image::save_buffer(
+                output.join(format!("{name}.png")),
+                &rgba,
+                image.image.width as u32,
+                image.image.height as u32,
+                image::ColorType::Rgba8,
+            )
+            .unwrap();
+            assert_eq!(
+                serde_json::json!({"pilot":host.pilot,"world":host.world,"states":host.active.scripts.states,"rng":host.active.scripts.rng}),
+                before
+            );
+            manifest.push(serde_json::json!({"file":format!("{name}.png"),"selected":host.selected,"rows":host.rows()}));
+        };
+        for (screen, name, selected) in [
+            (Screen::Main, "01-main", 0),
+            (Screen::Hangar, "02-hangar", 4),
+            (Screen::Missions, "03-missions-original", 0),
+            (Screen::Missions, "04-missions-scroll", 20),
+            (Screen::Extras, "05-help-credits", 0),
+            (Screen::Help, "06-controls", 0),
+            (Screen::Credits, "07-credits", 0),
+            (Screen::Options, "08-options-top", 0),
+            (Screen::Options, "09-options-save", 13),
+            (Screen::Bindings, "10-keyboard-bindings", 0),
+            (Screen::Pilots, "11-pilot-archive", 2),
+            (Screen::LegacyPilots, "12-legacy-import-empty", 0),
+            (Screen::Inventory, "13-inventory", 0),
+        ] {
+            host.go(screen);
+            host.selected = selected;
+            host.message.clear();
+            capture(&mut host, name);
+        }
+        host.go(Screen::Main);
+        host.begin_pilot_form(true).unwrap();
+        host.type_pilot_text("Morgan");
+        host.pilot_field_key(Keycode::Return);
+        host.type_pilot_text("FALCON");
+        capture(&mut host, "14-new-pilot");
+        host.cancel_pilot_form();
+        host.hangar();
+        host.begin_pilot_form(false).unwrap();
+        capture(&mut host, "15-edit-pilot");
+        host.cancel_pilot_form();
+        let enabled =
+            crate::mod_selection::plan_enable(&host.discovery, &[], "iron_coast_mission_1")
+                .unwrap();
+        host.active =
+            ActiveMods::build(&host.base, &host.discovery, &enabled, Some(&host.catalog)).unwrap();
+        host.pending = enabled.clone();
+        host.pilot.mods = host.active.pins.clone();
+        host.pilot.credits = 500_000;
+        host.pilot
+            .inventory
+            .insert("pulse_cannon:equipment".into(), 1);
+        host.pilot
+            .inventory
+            .insert("seeker_swarm:equipment".into(), 1);
+        host.pilot.selected = Some("seeker_swarm:equipment".into());
+        host.hangar();
+        capture(&mut host, "16-hangar-with-mods");
+        host.go(Screen::Mods);
+        host.selected = host
+            .mod_ids()
+            .iter()
+            .position(|id| id == "iron_coast_mission_1")
+            .unwrap()
+            + 2;
+        capture(&mut host, "17-mod-manager-dependencies");
+        host.open_diagnostics();
+        capture(&mut host, "18-mod-details");
+        host.back().unwrap();
+        host.selected = host
+            .mod_ids()
+            .iter()
+            .position(|id| id == "iron_coast_mission_1")
+            .unwrap()
+            + 2;
+        host.activate().unwrap();
+        assert!(host.screen == Screen::ConfirmDisable);
+        capture(&mut host, "19-mod-disable-confirmation");
+        host.back().unwrap();
+        host.go(Screen::Missions);
+        host.selected = host
+            .missions()
+            .iter()
+            .position(|id| id.0 == "iron_coast_mission_1:mission_1")
+            .unwrap_or(host.missions().len() - 1);
+        capture(&mut host, "20-mod-mission");
+        for (name, id, hd, selling) in [
+            ("21-shop-original", "base:plasma_guns", false, false),
+            ("22-shop-mod-sd", "pulse_cannon:equipment", false, false),
+            ("23-shop-mod-hd", "pulse_cannon:equipment", true, false),
+            ("24-shop-sell", "pulse_cannon:equipment", true, true),
+        ] {
+            host.go(Screen::Shop);
+            host.shop_selling = selling;
+            host.config.hd_mode = hd;
+            let id = ContentId::from(id);
+            host.selected = host
+                .shop_ids()
+                .iter()
+                .position(|candidate| candidate == &id)
+                .unwrap()
+                + 1;
+            capture(&mut host, name);
+        }
+        host.open_shop_details();
+        capture(&mut host, "25-equipment-details-top");
+        host.selected = host.rows().len() - 1;
+        capture(&mut host, "26-equipment-details-scroll");
+        host.back().unwrap();
+        host.go(Screen::Inventory);
+        host.selected = host
+            .inventory_ids()
+            .iter()
+            .position(|id| id.0 == "pulse_cannon:equipment")
+            .unwrap();
+        capture(&mut host, "27-inventory-mod-equipped");
+        let mut changed = host.pilot.clone();
+        changed.mods[0].hash = "changed-source-content".into();
+        changed.save(&host.paths.save_path(9)).unwrap();
+        host.request_pilot_load(9, Screen::Pilots).unwrap();
+        assert!(host.screen == Screen::ConfirmLoadMods);
+        capture(&mut host, "28-pilot-mod-mismatch-confirmation");
+        host.cancel_pilot_load();
+        host.start(host.pilot.mission.clone()).unwrap();
+        host.go(Screen::Pause);
+        host.selected = 3;
+        host.message.clear();
+        capture(&mut host, "29-pause-save");
+        host.go(Screen::Results);
+        host.message = "Mission complete - pilot saved".into();
+        capture(&mut host, "30-flight-report");
+        host.world = None;
+        host.go(Screen::Main);
+        host.selected = 6;
+        host.activate().unwrap();
+        assert!(host.screen == Screen::Cinematic);
+        let mut checkpoints = [64, 260, 708, 810, 1142, 1394, 1524, 1640, 1691, 1776, 1861]
+            .into_iter()
+            .peekable();
+        let mut completed_at = 0;
+        for tick in 1..10000 {
+            host.update(Input::default(), 14_285_715).unwrap();
+            if checkpoints.peek() == Some(&tick) {
+                capture(&mut host, &format!("intro-{tick:04}"));
+                checkpoints.next();
+            }
+            if host.screen != Screen::Cinematic {
+                completed_at = tick;
+                break;
+            }
+        }
+        assert_eq!(completed_at, 1891);
+        assert!(host.screen == Screen::Main);
+        capture(&mut host, "31-after-intro");
+        assert_eq!(
+            host.desired_music,
+            Some(host.catalog.id("MAINMENU_MUS").unwrap())
+        );
+        std::fs::write(output.join("screens.json"),serde_json::to_vec_pretty(&serde_json::json!({"screens":manifest,"intro_complete_tick":completed_at,"fixture":"isolated profile; native assets, seven Iron Coast packages"})).unwrap()).unwrap();
+        println!(
+            "Full menu and original intro captures: {} (intro {} ticks)",
+            output.display(),
+            completed_at
+        );
+    }
+    #[test]
     #[ignore = "requires original catalog; writes ignored menu usability captures"]
     fn classic_main_hangar_registration_and_explicit_save_visual_capture() {
         let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
@@ -4587,7 +6755,7 @@ mod tests {
             let canvas = host.draw().unwrap();
             image::save_buffer(
                 output.join(format!("{name}.png")),
-                &canvas.rgba(&host.palette, false),
+                &host.present_rgba(&canvas),
                 canvas.image.width as u32,
                 canvas.image.height as u32,
                 image::ColorType::Rgba8,
@@ -4604,7 +6772,7 @@ mod tests {
             let canvas = host.draw().unwrap();
             assert_eq!(
                 canvas.image.pixels[(43 + selected * 16) * 4 * canvas.image.width + 164 * 4],
-                50
+                48
             );
             capture(&mut host, name);
         }
@@ -4673,7 +6841,7 @@ mod tests {
             host.message.clear();
             let before = serde_json::to_value(&host.pilot).unwrap();
             let canvas = host.draw().unwrap();
-            let rgba = canvas.rgba(&host.palette, false);
+            let rgba = host.present_rgba(&canvas);
             image::save_buffer(
                 output.join(format!("{name}.png")),
                 &rgba,
@@ -5221,5 +7389,152 @@ mod tests {
         assert_eq!(first[254], [0; 3]);
         world.palette_blue = true;
         assert_eq!(mission_palette(&base, Some(&world))[254], base[254]);
+    }
+    #[test]
+    fn mismatched_pilot_load_requires_confirmation_cancel_preserves_file_and_accept_backs_up() {
+        let (_dir, mut host) = ui_fixture();
+        let mut saved = host.pilot.clone();
+        saved.name = "Original".into();
+        saved.credits = 100;
+        saved.mods = vec![modding::ModPin {
+            id: "absent_pack".into(),
+            version: "1.0.0".into(),
+            hash: "original_hash".into(),
+        }];
+        saved.inventory.insert("absent_pack:weapon".into(), 1);
+        saved.selected = Some("absent_pack:weapon".into());
+        saved.completed.push("absent_pack:mission".into());
+        saved
+            .script_state
+            .insert("absent_pack".into(), serde_json::json!({"stage":3}));
+        saved.save(&host.paths.save_path(1)).unwrap();
+        let original = std::fs::read(host.paths.save_path(1)).unwrap();
+        let before = serde_json::to_value(&host.pilot).unwrap();
+        host.request_pilot_load(1, Screen::Pilots).unwrap();
+        assert!(host.screen == Screen::ConfirmLoadMods);
+        assert_eq!(host.selected, 0);
+        assert!(host.rows().iter().any(|line| line.contains("absent_pack")));
+        host.back().unwrap();
+        assert!(host.screen == Screen::Pilots);
+        assert_eq!(serde_json::to_value(&host.pilot).unwrap(), before);
+        assert_eq!(std::fs::read(host.paths.save_path(1)).unwrap(), original);
+        host.request_pilot_load(1, Screen::Pilots).unwrap();
+        host.selected = 1;
+        host.choose().unwrap();
+        assert!(host.screen == Screen::Hangar);
+        assert!(host.mismatch_confirmed);
+        host.require_pilot().unwrap();
+        assert_eq!(std::fs::read(host.paths.save_path(1)).unwrap(), original);
+        host.edit_pilot(|pilot, registry| pilot.buy(&"base:fixture".into(), registry))
+            .unwrap();
+        let updated = Pilot::inspect_load(&host.paths.save_path(1), &host.active.registry, &[])
+            .unwrap()
+            .pilot;
+        assert_eq!(updated.inventory[&ContentId::from("absent_pack:weapon")], 1);
+        assert!(updated.completed.contains(&"absent_pack:mission".into()));
+        assert_eq!(updated.mods, saved.mods);
+        assert_eq!(
+            updated.script_state["absent_pack"],
+            saved.script_state["absent_pack"]
+        );
+        let backups = std::fs::read_dir(&host.paths.data)
+            .unwrap()
+            .filter_map(|entry| {
+                let path = entry.ok()?.path();
+                path.file_name()?
+                    .to_str()?
+                    .contains("before-mod-change")
+                    .then_some(path)
+            })
+            .collect::<Vec<_>>();
+        assert_eq!(backups.len(), 1);
+        assert_eq!(std::fs::read(&backups[0]).unwrap(), original);
+        host.save_pilot_action().unwrap();
+        assert_eq!(
+            std::fs::read_dir(&host.paths.data)
+                .unwrap()
+                .filter_map(Result::ok)
+                .filter(|entry| entry
+                    .file_name()
+                    .to_string_lossy()
+                    .contains("before-mod-change"))
+                .count(),
+            1
+        );
+        host.go(Screen::Inventory);
+        assert!(host.rows().iter().any(|row| row.contains("[UNAVAILABLE]")));
+    }
+    #[test]
+    fn startup_mismatch_prompts_again_after_cancel_and_missing_mission_can_be_changed() {
+        let (_dir, host) = ui_fixture();
+        let mut saved = host.pilot.clone();
+        saved.mission = "absent_pack:mission".into();
+        saved.save(&host.paths.save_path(0)).unwrap();
+        let mut host =
+            Host::new(host.catalog, host.base, host.paths, host.mods_root, false).unwrap();
+        assert!(host.screen == Screen::ConfirmLoadMods);
+        host.back().unwrap();
+        assert!(host.screen == Screen::Main);
+        host.selected = 0;
+        host.choose().unwrap();
+        assert!(host.screen == Screen::ConfirmLoadMods);
+        host.selected = 1;
+        host.choose().unwrap();
+        assert!(
+            host.start("absent_pack:mission".into())
+                .unwrap_err()
+                .to_string()
+                .contains("Select mission")
+        );
+        assert!(host.world.is_none());
+        host.start("base:sector_1_wave_1".into()).unwrap();
+        assert!(host.screen == Screen::Game);
+    }
+    #[test]
+    fn result_back_preserves_confirmation_when_pending_mods_change_saved_requirements() {
+        let (_dir, mut host) = ui_fixture();
+        let mut saved = host.pilot.clone();
+        saved.mods.push(modding::ModPin {
+            id: "missing".into(),
+            version: "1.0.0".into(),
+            hash: "old".into(),
+        });
+        saved.save(&host.paths.save_path(0)).unwrap();
+        host.pending.push("not_installed".into());
+        // Invalid mod application retains its error, then an independently pending load
+        // must survive the Results back-to-main navigation.
+        host.request_pilot_load(0, Screen::Main).unwrap();
+        host.go(Screen::Results);
+        host.back().unwrap();
+        assert!(host.screen == Screen::ConfirmLoadMods);
+        assert!(host.pending_load.is_some());
+    }
+
+    #[test]
+    fn retained_missing_weapon_has_no_hud_art_and_oversized_merged_state_does_not_save() {
+        let (_dir, mut host) = ui_fixture();
+        host.mismatch_confirmed = true;
+        host.pilot.inventory.insert("absent:weapon".into(), 1);
+        host.pilot.selected = Some("absent:weapon".into());
+        host.hud_weapon(&mut Canvas::new(1), &"absent:weapon".into())
+            .unwrap();
+        host.pilot.script_state.insert(
+            "inactive".into(),
+            serde_json::json!("x".repeat(4 * 1024 * 1024 - 1000)),
+        );
+        host.active
+            .scripts
+            .states
+            .insert("active".into(), serde_json::json!("x".repeat(2000)));
+        let before = serde_json::to_value(&host.pilot).unwrap();
+        assert!(
+            host.edit_pilot(|pilot, _| {
+                pilot.credits += 1;
+                Ok(())
+            })
+            .is_err()
+        );
+        assert_eq!(serde_json::to_value(&host.pilot).unwrap(), before);
+        assert!(!host.paths.save_path(0).exists());
     }
 }

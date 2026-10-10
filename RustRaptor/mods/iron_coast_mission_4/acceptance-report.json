@@ -1,0 +1,92 @@
+{
+  "mission": "iron_coast_mission_4:mission_04",
+  "api_version": 1,
+  "duration": 3000,
+  "reward": 12000,
+  "png_files": 438,
+  "wav_files": 4,
+  "all_sd_hd_dimensions_checked": true,
+  "non_silent_pcm16_cues_checked": true,
+  "limits": "Automated deterministic input strategy; human balancing and final audiovisual approval require playtesting.",
+  "validation_status": "Passed final eight-package original-data engine and Rhai acceptance",
+  "required_kills": {
+    "iron_coast_turret:unit": 4,
+    "iron_coast_boss_4:unit": 1
+  },
+  "native_enemy_definitions": [
+    "base:enemy_0_73",
+    "base:enemy_0_74",
+    "base:enemy_0_23",
+    "base:enemy_0_24",
+    "base:enemy_1_25",
+    "base:enemy_1_26"
+  ],
+  "music_track": "iron_coast_music:iron_coast",
+  "dependencies": 7,
+  "packages_required": 8,
+  "tests_passed": 7,
+  "tests": [
+    "boss alone cannot win and completion reward paid once",
+    "failed loan returned and retry resets mission state",
+    "full20slot inventory unchanged and owned cannon survives failure",
+    "late surviving batteries remain reachable at tick1050",
+    "owned cannon and full20slot inventory complete without losing equipment",
+    "starter registration and default fixture complete with six native definitions seen and moving",
+    "successful replay retains script state without stale death flags"
+  ],
+  "difficulty": 2,
+  "input_strategy": {
+    "fire": "held",
+    "y": 160,
+    "target_priority": [
+      "turret",
+      "Stormwall Arsenal",
+      "aircraft"
+    ],
+    "visible_target_y": [
+      0,
+      130
+    ],
+    "goal_x": "enemy.x + enemy.width/2 -16",
+    "max_horizontal_pixels_per_step": 4,
+    "direct_enemy_damage_or_shield_refills_during_playthrough": false,
+    "purchased_weapons": false
+  },
+  "runs": [
+    {
+      "initial_shield": 75,
+      "initial_credits": 10000,
+      "tick": 1218,
+      "outcome": "Complete",
+      "remaining_shield": 63,
+      "final_credits": 27805,
+      "native_types_seen": 6,
+      "native_types_moving": 6
+    },
+    {
+      "initial_shield": 100,
+      "initial_credits": 0,
+      "tick": 1218,
+      "outcome": "Complete",
+      "remaining_shield": 88,
+      "final_credits": 17805,
+      "native_types_seen": 6,
+      "native_types_moving": 6
+    }
+  ],
+  "native_definition_integrity": "All six definitions retain base owner, original LegacyEnemy data/path and no Rhai script.",
+  "visual_review": {
+    "screenshots": [
+      ".reference/stormwall-sd-final.png",
+      ".reference/stormwall-hd-final.png"
+    ],
+    "resolution": [
+      1280,
+      800
+    ],
+    "rendered_frames": 600,
+    "stage": "approach and first battery",
+    "reviewed": true,
+    "observations": "Continuous terrain composition, correct SD/HD artwork, clear Pulse and native enemy effects, original aircraft visible; no unexpected sprite clipping observed. Separate Stormwall Arsenal package preview also reviewed."
+  }
+}

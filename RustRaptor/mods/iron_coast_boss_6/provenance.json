@@ -1,0 +1,25 @@
+{
+  "api_version": 1,
+  "mod_version": "1.0.0",
+  "generated_at": "2026-10-10",
+  "tool": "built-in image_gen.imagegen via imagegen skill",
+  "skill": "/home/quintine/.codex/skills/.system/imagegen/SKILL.md",
+  "reference_role": "Inspected original SHIP10G1 boss and authored Iron Coast command cruiser for overhead mechanical Raptor style. New silhouette and generated pixels, no original catalog pixels packaged.",
+  "assets": [
+    {
+      "file": "art/unit-generated-v1.png",
+      "prompt": "prompts/unit-hd-v1.txt",
+      "tool_output": "exec-5704a764-985a-426e-a30b-ea579fe6ff6d.png",
+      "sha256": "b5e1c404993e7b14b13dc0c2a9dde4dabbc1ab49936b62884af9b4f7c174c676"
+    },
+    {
+      "file": "art/projectile-generated-v1.png",
+      "prompt": "prompts/projectile-hd-v1.txt",
+      "tool_output": "exec-71e43e55-2cb7-47cf-a76c-a09492ded036.png",
+      "sha256": "75c5c376ff44d785082d4f0a4c714d68191c88881397840267a9c1255343760f"
+    }
+  ],
+  "pipeline": "build_assets.py proportional RGBA resizing, clear padding and BOX SD reduction. Projectile transparent margins cropped. No artwork redraw.",
+  "audio": "Deterministic standard-library synthesis in build_assets.py; three uncompressed 22050 Hz PCM16 mono WAVs. No recordings or external sound assets.",
+  "version_control": "Generated masters, SD/HD artwork, prompt text, source recipe, metadata and WAV sounds intended for Git per user request."
+}

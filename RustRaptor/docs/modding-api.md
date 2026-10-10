@@ -19,7 +19,7 @@ cargo run --no-default-features -- --data ../data --mods mods \
   --enabled aurora --headless aurora:field_trials --ticks 700
 ```
 
-The manager discovers the bundled `mods/` folder by default when no user mods folder exists. You can also copy `mods/aurora` into the `mods/` directory under `$XDG_DATA_HOME/RaptorReplica` (default `~/.local/share/RaptorReplica/mods/`), or start the Rust engine with `--mods mods`. Open **Mods**, toggle Aurora, then select **Apply selections**. Select its mission from the mission menu. Existing pilots can add mods while preserving required versions, hashes and relative load order; the next save records the expanded active set. Disabling, changing or reordering required mods blocks loading with details. Use another pilot for an incompatible set.
+The manager discovers the bundled `mods/` folder by default when no user mods folder exists. You can also copy `mods/aurora` into the `mods/` directory under `$XDG_DATA_HOME/RaptorReplica` (default `~/.local/share/RaptorReplica/mods/`), or start the Rust engine with `--mods mods`. Open **Mods**, toggle Aurora, then select **Apply selections**. Select its mission from the mission menu. Existing pilots can add mods while preserving required versions, hashes and relative load order; the next save records the expanded active set. Disabling, changing or reordering required mods shows compatibility details and asks whether to load anyway. Missing equipment and progression remain saved until their packages are restored.
 
 In the Mods screen, Enter toggles a package or activates the selected action. Enabling a package immediately checks versions, API compatibility, cycles and conflicts, then selects its installed dependencies recursively. A failed check leaves the selection unchanged. Disabling includes dependent mods and dependencies that become unused, preserving dependencies required by other remaining packages. A single-package disable toggles immediately; changes affecting multiple packages show an **Are you sure?** popup listing every affected mod, with Cancel selected initially. Cancel or Back preserves the pending selection. Rescan after editing a package on disk. Dependencies load before dependents; independent packages retain your chosen priority. Later explicit overrides win. Changes made through the pause menu remain pending until the main menu. Candidate registries and scripts are validated before the active set changes.
 
@@ -56,7 +56,7 @@ All package paths are relative. Absolute paths, parent traversal, symlinks and s
 
 ## Content definitions and overrides
 
-`content.json` has optional `weapons`, `items`, `enemies`, `missions`, `campaigns`, `sounds` and `overrides` arrays. Unknown fields are rejected. IDs have the form `namespace:name`, for example `aurora:pulse_cannon`. IDs are stable save references and unique across content types. Keep item and projectile IDs distinct: the item `aurora:pulse_cannon` refers to the weapon/projectile `aurora:pulse_projectile` through its `weapon` property.
+`content.json` has optional `weapons`, `items`, `enemies`, `missions`, `campaigns`, `sounds`, `music` and `overrides` arrays. Unknown fields are rejected. IDs have the form `namespace:name`, for example `aurora:pulse_cannon`. IDs are stable save references and unique across content types. Keep item and projectile IDs distinct: the item `aurora:pulse_cannon` refers to the weapon/projectile `aurora:pulse_projectile` through its `weapon` property.
 
 Items may include an optional `description` of up to 4096 UTF-8 bytes for shop information. The shop displays the description, artwork, effective target types, firing mode, price, ownership and inventory limits.
 
@@ -91,12 +91,19 @@ New definitions must belong to the package namespace. An existing definition may
 | Weapon/projectile | Damage, integer speed, cooldown in simulation ticks, targeting (`air`, `ground`, `all`), behavior (`straight`, `homing`, `beam`, `spread`, `bomb`, `energy_grab`), firing offsets, optional animation and script. Scripts can emit additional projectiles with explicit velocity. |
 | Item | Price, maximum and initial count, optional weapon, shield/credit effects, consumable/special flags, artwork and script. `initial_count` controls how many units a purchase or pickup adds. |
 | Enemy | Health, speed, rewards, air/ground and boss flags, firing cooldown, path points and repeat flag, weapon, dropped item, animation and script. Scripts can query entities and change enemy movement. |
-| Mission | Duration, `auto_complete` (default true), optional briefing artwork, ordered tick-based spawns, terrain tile definitions and row-major layout, column count, next mission, optional music asset and script. Scripts can manage objectives, spawn waves and decide success/failure. |
+| Mission | Duration, `auto_complete` (default true), optional briefing artwork, ordered tick-based spawns, terrain tile definitions and row-major layout, column count, next mission, optional legacy music asset or namespaced `music_track`, and script. Scripts can manage objectives, spawn waves and decide success/failure. |
 | Campaign | Name, optional menu artwork and ordered mission IDs. Missions and campaigns appear through the same registries as original content. |
+| Music | Namespaced ID, display name, package-relative MUS file and `looping` (default true). Mission `music_track` references this ID; playback uses original GENMIDI FM and the Music volume control. |
+
+For non-legacy missions, an explicit `next` takes priority. Otherwise progression
+uses the following entry in the first containing campaign, ordered by stable
+campaign ID. The last stage stays selected for replay, and completing it again
+does not duplicate its completion record. This lets an optional assembly mod
+join independently owned missions without overriding their scripts or artwork.
 
 Simulation uses integer coordinates in the original 320×200 logical canvas and runs at 70/3 Hz: one tick is 3/70 seconds. Artwork detail does not enlarge collision boxes. Script movement and projectile speed are bounded to 128 logical pixels per tick; spawn and movement coordinates must stay within ±32,768.
 
-JSON Schemas are checked into `schemas/`: `mod-v1.json`, `content-v1.json`, `hook-v1.json`, `weapon-projectile-v1.json`, `item-v1.json`, `enemy-v1.json`, `mission-v1.json` and `campaign-v1.json` and `sound-v1.json`. Schemas describe serialization shape; the validation CLI also checks references, numeric limits, package paths, dependencies, artwork and script compilation. Generate them from the Rust types with:
+JSON Schemas are checked into `schemas/`: `mod-v1.json`, `content-v1.json`, `hook-v1.json`, `weapon-projectile-v1.json`, `item-v1.json`, `enemy-v1.json`, `mission-v1.json`, `campaign-v1.json`, `sound-v1.json` and `music-v1.json`. Schemas describe serialization shape; the validation CLI also checks references, numeric limits, package paths, dependencies, artwork and script compilation. Generate them from the Rust types with:
 
 ```sh
 cargo run --no-default-features -- --schemas schemas
@@ -196,7 +203,11 @@ Rhai uses an explicit package allowlist for arithmetic, strings, collections, it
 
 Rust pilots use separate, versioned JSON files under `$XDG_DATA_HOME/RaptorReplica`, and settings use TOML under `$XDG_CONFIG_HOME/RaptorReplica`. Atomic writes replace completed saves after file and directory synchronization. Legacy saves are read and imported; their original bytes are not modified.
 
-Each pilot records the ordered mod IDs, package versions, full content hashes, script states and script RNG positions. Loading requires the same active pins and all referenced equipment, missions and progression. Changing a package without changing its version still changes its hash and blocks that save. Disabling a mod preserves its saved inventory and progression; it never silently discards them. Restore the matching package/version and load order, or use another pilot. This API does not yet provide mod save migrations.
+Each pilot records the ordered mod IDs, package versions, full content hashes, script states and script RNG positions. The load screen reports missing packages, changed versions or hashes, changed required load order, and unavailable equipment or missions. Changing a package without changing its version still changes its hash and therefore requires confirmation. Cancel leaves the current pilot and original save untouched; choosing to load accepts the differences for that pilot session.
+
+Unavailable equipment stays in the pilot's inventory with its saved quantity and occupies its original inventory slots, but cannot be fired, selected or traded until its definition is available. Unavailable completed missions remain recorded. If the saved current mission is missing, choose an available mission in the hangar before flying. Runtime saves retain inactive package pins, script state and script RNG alongside the active packages, so restoring a disabled package can recover its data. Current active versions and hashes are recorded after an accepted load is successfully saved; the original save is backed up before its first replacement. Structural corruption, unsupported save versions and invalid IDs still cannot be loaded. This API does not yet provide scripted mod save migrations, so a changed script must handle its earlier serializable state.
+
+For Rust tooling, `Pilot::inspect_load` returns the unmodified pilot and a structured `SaveCompatibility` report. `Pilot::load` remains strict for callers that require a fully matching environment. Only consume `PilotLoad::confirm_load` after explicit acceptance. Use `validate_tolerant` and `complete_mission_tolerant` for that accepted session, and `merge_runtime_snapshot` to retain saved state and pins belonging to inactive packages.
 
 ## Validation tests
 
@@ -209,3 +220,19 @@ An artwork definition may add `hd_png`, a separate package-relative PNG with the
 `sounds` definitions have `id`, `name`, `file` (relative path) and optional `volume` (0–127, default127), `pan` (0–255, default127), `pitch` (0–255, default128) and `priority` (0–100000, default1). Lower numeric priority wins, matching the original DSP. Play one with `#{op:"play_sound",sound:"your_mod:shot"}`. WAV inputs must be uncompressed PCM8/16, mono/stereo, 8–48kHz, at most30seconds/8MiB. Stereo is mixed to mono and converted to the original unsigned8-bit digital format; channel/pan/pitch/volume use the original mixer. Original DMX patches are also accepted. Invalid/missing audio rejects activation.
 
 For objective-driven missions set `auto_complete=false` and explicitly return `complete` or `fail`. Scripted endings dispatch `on_mission_end` in the same transaction. Commands can create further hook events, bounded by the shared execution budget and an8192-event tick limit.
+
+
+## Package mission music
+
+Register a track in the optional `music` array. A music definition contains `id`, `name`, a package-relative `.mus` `file` and optional `looping` (default `true`). A mission selects it with `music_track`; setting both `music_track` and legacy numeric `music` rejects activation. Declare a dependency on a separate music package so enabling the mission also selects its installed soundtrack. Music IDs use the same namespace, duplicate and explicit-override rules as other content. Winning overrides resolve their score from the winning package.
+
+```json
+{
+  "music": [{"id":"your_mod:theme", "name":"Mission theme", "file":"music/theme.mus", "looping":true}],
+  "missions": [{"id":"your_mod:mission", "name":"New mission", "duration":2000, "music_track":"your_mod:theme"}]
+}
+```
+
+Only checked MUS scores are accepted, played through the original GENMIDI FM synthesizer and the **Music volume** control. Digital effects keep their separate volume. External MIDI and SoundFont playback remain deferred. Scores are limited to 128 KiB, 16,384 events, 256 events per service tick and 30 minutes of score time. The MUS header, event types, controller values, primary-channel count and end marker are checked by the existing decoder. Zero-duration scores, missing files, escaping paths, invalid scores and unsupported formats reject activation with the package/file identified. Score bytes participate in the normal mod hash and pilot compatibility checks. A bounded score cache is cleared when mods are applied.
+
+The selected track starts with the mission, honors its loop flag, and can be scheduled before the SDL device is ready. Selecting the same active track preserves playback position; ordinary menus and classic cinematics select their original tracks. See [music validation](music-validation.md) for the registry, file, volume, loop and device-attachment checks.

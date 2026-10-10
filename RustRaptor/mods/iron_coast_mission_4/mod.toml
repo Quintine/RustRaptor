@@ -1,0 +1,16 @@
+id = "iron_coast_mission_4"
+name = "Iron Coast — Mission 4: Stormwall"
+version = "1.0.0"
+api_version = 1
+description = "Breach a storm-lashed cliff battery, silence four emplacements and destroy the Stormwall Arsenal. Original curved and crossing fighter patrols mix with Iron Coast scouts. Includes SD/HD storm-coast art, mission-only Pulse Cannon loan, warning cues and the Iron Coast soundtrack."
+content = "content.json"
+scripts = ["scripts/mission.rhai"]
+
+[dependencies]
+iron_coast_scout = "^1.0"
+iron_coast_turret = "^1.0"
+iron_coast_boss_4 = "^1.0"
+pulse_cannon = "^1.0"
+seeker_swarm = "^1.0"
+ion_lance = "^1.0"
+iron_coast_music = "^1.0"

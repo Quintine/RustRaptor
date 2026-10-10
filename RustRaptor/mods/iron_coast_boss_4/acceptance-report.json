@@ -1,0 +1,39 @@
+{
+  "validation": "Package-local actual Rust simulation and Rhai, release library; python3 validate.py",
+  "tests": {
+    "warning_precedes_three_shells_and_batteries_alternate": "passed",
+    "two_bosses_have_independent_state_and_death_counts_once": "passed",
+    "saved_script_state_and_rng_reproduce_identical_future": "passed",
+    "a_new_sortie_clears_reused_entity_death_guards": "passed",
+    "live_boss_enters_and_persists_in_safe_bounds_without_auto_completion": "passed",
+    "restored_dead_guard_does_not_hide_a_lethal_hit_on_the_reused_spawn_step": "passed"
+  },
+  "independent_cli": "Validated 1 mods; 0 overrides",
+  "test_difficulty": 3,
+  "full_definition_health": 160,
+  "original_difficulty_scaling": "Boss health is halved by the engine on difficulties 0 and 1, as for existing bosses.",
+  "sound_peak": 25558,
+  "sounds_non_silent": true,
+  "art_preview": "art/preview.png",
+  "sd_boss_opaque_bounds": [
+    3,
+    6,
+    93,
+    54
+  ],
+  "sd_shell_opaque_bounds": [
+    3,
+    2,
+    5,
+    6
+  ],
+  "safe_patrol_bounds": [
+    80,
+    145
+  ],
+  "persistent_y": 24,
+  "death_objective": "iron_coast_boss_4:defeated",
+  "mission_completion": "Never completes a mission itself",
+  "queued_spawn_regression": "Reproduced against old callback: missing death objective when restored dead flag survives a lethal spawn-step hit. Fixed lifecycle reset before survival guard; no dead commands; once-only objective/reward; duplicate callback safely ignored.",
+  "script_sha256": "f3cc133f6cf858d7fa4e3a6c7e424ad81aa5a66abfb64407572622314fc58f00"
+}

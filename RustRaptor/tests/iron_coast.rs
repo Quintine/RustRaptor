@@ -11,7 +11,8 @@ use std::{
     path::{Path, PathBuf},
 };
 
-const PACKAGES: [&str; 7] = [
+const PACKAGES: [&str; 8] = [
+    "iron_coast_music",
     "iron_coast_scout",
     "iron_coast_turret",
     "iron_coast_boss",
@@ -38,7 +39,7 @@ fn base() -> Registry {
     registry
 }
 
-fn fixture_resources(value: &Value, root: &Path) {
+fn fixture_resources(value: &Value, root: &Path, original: &Path) {
     match value {
         Value::Object(object) => {
             if let (Some(width), Some(height)) = (
@@ -62,6 +63,10 @@ fn fixture_resources(value: &Value, root: &Path) {
             if let Some(file) = object.get("file").and_then(Value::as_str) {
                 let path = root.join(file);
                 fs::create_dir_all(path.parent().unwrap()).unwrap();
+                if Path::new(file).extension().is_some_and(|ext| ext == "mus") {
+                    fs::copy(original.join(file), &path).unwrap();
+                    return;
+                }
                 // Small valid mono PCM16 WAV; integration checks use the actual cues.
                 let mut wav = Vec::new();
                 wav.extend_from_slice(b"RIFF");
@@ -80,12 +85,12 @@ fn fixture_resources(value: &Value, root: &Path) {
                 fs::write(path, wav).unwrap();
             }
             for child in object.values() {
-                fixture_resources(child, root);
+                fixture_resources(child, root, original);
             }
         }
         Value::Array(values) => {
             for child in values {
-                fixture_resources(child, root);
+                fixture_resources(child, root, original);
             }
         }
         _ => {}
@@ -101,7 +106,7 @@ fn active() -> (tempfile::TempDir, ActiveMods) {
         let root = temporary.path().join(id);
         fs::create_dir_all(&root).unwrap();
         let manifest_data = fs::read(original.join("mod.toml"))
-            .expect("all seven Iron Coast packages must be installed");
+            .expect("all eight Breakwater packages must be installed");
         let manifest: Manifest =
             toml::from_str(std::str::from_utf8(&manifest_data).unwrap()).unwrap();
         fs::write(root.join("mod.toml"), manifest_data).unwrap();
@@ -113,14 +118,14 @@ fn active() -> (tempfile::TempDir, ActiveMods) {
             fs::create_dir_all(path.parent().unwrap()).unwrap();
             fs::copy(original.join(script), path).unwrap();
         }
-        fixture_resources(&value, &root);
+        fixture_resources(&value, &root, &original);
     }
     let discovery = modding::discover(temporary.path());
     assert!(discovery.errors.is_empty(), "{:?}", discovery.errors);
     let enabled = PACKAGES.iter().map(|s| s.to_string()).collect::<Vec<_>>();
     let active = ActiveMods::build(&base(), &discovery, &enabled, None).unwrap();
     eprintln!(
-        "Iron Coast synthetic seven-package activation: {:.3}s",
+        "Iron Coast synthetic eight-package activation: {:.3}s",
         started.elapsed().as_secs_f64()
     );
     (temporary, active)
@@ -129,7 +134,7 @@ fn active() -> (tempfile::TempDir, ActiveMods) {
 #[test]
 fn campaign_dependencies_and_generated_footprints_validate_together() {
     let (_temporary, active) = active();
-    assert_eq!(active.pins.len(), 7);
+    assert_eq!(active.pins.len(), 8);
     let mission = &active.registry.missions[&MISSION.into()];
     assert!(!mission.auto_complete);
     assert_eq!(mission.columns, 9);
@@ -179,6 +184,31 @@ fn boss_alone_cannot_complete_and_reward_is_paid_once() {
         .step(Input::default(), &active.registry, &mut active.scripts)
         .unwrap();
     assert_eq!(world.player.credits, 5000);
+}
+
+#[test]
+fn missed_breakwater_objective_turrets_stay_reachable() {
+    let (_temporary, mut active) = active();
+    let mut world = World::new(&MISSION.into(), &Pilot::default(), &active.registry).unwrap();
+    world
+        .step(Input::default(), &active.registry, &mut active.scripts)
+        .unwrap();
+    let target = world
+        .spawn(&"iron_coast_turret:unit".into(), 40, 71, &active.registry)
+        .unwrap();
+    for _ in 0..60 {
+        world
+            .step(Input::default(), &active.registry, &mut active.scripts)
+            .unwrap();
+        let turret = world
+            .enemies
+            .iter()
+            .find(|unit| unit.entity == target)
+            .unwrap();
+        assert_eq!(turret.y, 72);
+        assert!(turret.health > 0);
+        assert_eq!(world.outcome, Outcome::Playing);
+    }
 }
 
 fn play(use_trial: bool) -> (World, Vec<(u64, String)>) {

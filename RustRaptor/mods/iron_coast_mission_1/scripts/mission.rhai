@@ -29,6 +29,13 @@ fn on_mission_start(event, state, random) {
 
 fn on_tick(event, state, random) {
     let commands=[];
+    // Keep required ground targets reachable even when an earlier pass misses.
+    for unit in event.entities {
+        if unit.definition == "iron_coast_turret:unit" && unit.health > 0 && unit.y >= 72 {
+            commands.push(#{op:"move",entity:unit.entity,x:unit.x,y:72});
+            commands.push(#{op:"velocity",entity:unit.entity,vx:0,vy:0});
+        }
+    }
     if event.tick>=280 && !state.dock_alarm {
         state.dock_alarm=true;
         commands.push(#{op:"objective",key:"iron_coast_mission_1:phase",value:2});

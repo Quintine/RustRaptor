@@ -496,6 +496,114 @@ pub struct Pilot {
     #[serde(default)]
     pub legacy_progress: Option<LegacyProgress>,
 }
+
+/// Differences the player can explicitly accept when loading a valid save.
+/// Missing content remains stored in the pilot until its package is restored.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum SaveMismatch {
+    MissingMod(ModPin),
+    ChangedMod {
+        saved: ModPin,
+        active: ModPin,
+    },
+    ChangedLoadOrder {
+        saved: Vec<String>,
+        active: Vec<String>,
+    },
+    MissingItem(ContentId),
+    ChangedItemCapacity {
+        id: ContentId,
+        saved: u32,
+        available: u32,
+    },
+    ChangedShieldCapacity {
+        saved: u32,
+        available: u32,
+    },
+    UnavailableSelectedItem(ContentId),
+    MissingMission(ContentId),
+    MissingCompletedMission(ContentId),
+}
+impl std::fmt::Display for SaveMismatch {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Self::MissingMod(pin) => write!(
+                f,
+                "Save requires mod {} {}; enable the matching mods in the Mods screen, or keep its saved content unavailable for now",
+                pin.id, pin.version
+            ),
+            Self::ChangedMod { saved, active } => {
+                let reason = match (saved.version != active.version, saved.hash != active.hash) {
+                    (true, true) => "version and content changed",
+                    (true, false) => "version changed",
+                    (false, true) => "content changed",
+                    (false, false) => "package changed",
+                };
+                write!(
+                    f,
+                    "Mod {}: saved {}, active {} ({reason})",
+                    saved.id, saved.version, active.version
+                )
+            }
+            Self::ChangedLoadOrder { saved, active } => write!(
+                f,
+                "Required mod load order changed: saved {}; active {}",
+                saved.join(", "),
+                active.join(", ")
+            ),
+            Self::MissingItem(id) => write!(
+                f,
+                "saved item {id} is unavailable; it will remain in the pilot"
+            ),
+            Self::ChangedItemCapacity {
+                id,
+                saved,
+                available,
+            } => write!(
+                f,
+                "Item {id}: saved quantity {saved} exceeds current capacity {available}; saved quantity will be retained"
+            ),
+            Self::ChangedShieldCapacity { saved, available } => write!(
+                f,
+                "Saved reserve shield charge {saved} exceeds current capacity {available}; saved charge will be retained"
+            ),
+            Self::UnavailableSelectedItem(id) => {
+                write!(f, "Equipped item {id} is unavailable as a selectable item")
+            }
+            Self::MissingMission(id) => write!(
+                f,
+                "Save mission {id} is unavailable; choose an available mission in the hangar"
+            ),
+            Self::MissingCompletedMission(id) => write!(
+                f,
+                "Completed mission {id} is unavailable; its progression will be retained"
+            ),
+        }
+    }
+}
+#[derive(Debug, Clone, Default, PartialEq, Eq)]
+pub struct SaveCompatibility {
+    pub issues: Vec<SaveMismatch>,
+}
+impl SaveCompatibility {
+    pub fn is_compatible(&self) -> bool {
+        self.issues.is_empty()
+    }
+    pub fn messages(&self) -> Vec<String> {
+        self.issues.iter().map(ToString::to_string).collect()
+    }
+}
+#[derive(Debug, Clone)]
+pub struct PilotLoad {
+    pub pilot: Pilot,
+    pub compatibility: SaveCompatibility,
+}
+impl PilotLoad {
+    /// Call only after the player accepts the reported compatibility changes.
+    pub fn confirm_load(self) -> Pilot {
+        self.pilot
+    }
+}
 impl Default for Pilot {
     fn default() -> Self {
         Self {
@@ -521,6 +629,14 @@ impl Default for Pilot {
 }
 impl Pilot {
     pub fn complete_mission(&mut self, registry: &Registry) -> Result<()> {
+        self.advance_mission(registry)?;
+        self.validate(registry, &self.mods)
+    }
+    pub fn complete_mission_tolerant(&mut self, registry: &Registry) -> Result<()> {
+        self.advance_mission(registry)?;
+        self.validate_tolerant(registry)
+    }
+    fn advance_mission(&mut self, registry: &Registry) -> Result<()> {
         let mission = registry
             .missions
             .get(&self.mission)
@@ -551,10 +667,22 @@ impl Pilot {
                 if self.difficulty == 0 && !progress.training_completed {
                     // Original graduation resets the training ship and awards
                     // three 25-unit shields plus the initial 10,000 credits.
+                    let unavailable = self
+                        .inventory
+                        .iter()
+                        .filter(|(id, _)| !registry.items.contains_key(*id))
+                        .map(|(id, count)| (id.clone(), *count))
+                        .collect::<BTreeMap<_, _>>();
+                    let unavailable_selected = self
+                        .selected
+                        .as_ref()
+                        .filter(|id| unavailable.contains_key(*id))
+                        .cloned();
                     self.inventory = [("base:forward_guns".into(), 1), ("base:energy".into(), 75)]
                         .into_iter()
                         .collect();
-                    self.selected = None;
+                    self.inventory.extend(unavailable);
+                    self.selected = unavailable_selected;
                     self.super_shield_reserves.clear();
                     self.shield_recharge_ticks = 0;
                     self.credits = 10000;
@@ -587,8 +715,23 @@ impl Pilot {
             self.legacy_progress = Some(progress);
         } else if let Some(next) = &mission.next {
             self.mission = next.clone();
+        } else if let Some(next) = registry
+            .campaigns
+            .values()
+            .find(|campaign| campaign.missions.contains(&self.mission))
+            .and_then(|campaign| {
+                campaign
+                    .missions
+                    .iter()
+                    .position(|id| id == &self.mission)
+                    .and_then(|position| campaign.missions.get(position + 1))
+            })
+        {
+            // Campaign order supplies progression without replacing mission
+            // definitions, their asset owners or their saved script identities.
+            self.mission = next.clone();
         }
-        self.validate(registry, &self.mods)
+        Ok(())
     }
     pub fn demo(sector: usize, registry: &Registry) -> Result<Self> {
         let mut p = Self {
@@ -629,16 +772,52 @@ impl Pilot {
         atomic_write(path, &serde_json::to_vec_pretty(self)?)
     }
     pub fn load(path: &Path, registry: &Registry, pins: &[ModPin]) -> Result<Self> {
-        let p: Self = serde_json::from_slice(&fs::read(path)?)?;
-        p.validate(registry, pins)?;
-        Ok(p)
+        let loaded = Self::inspect_load(path, registry, pins)?;
+        ensure!(
+            loaded.compatibility.is_compatible(),
+            "{}",
+            loaded.compatibility.messages().join("; ")
+        );
+        Ok(loaded.pilot)
     }
     pub fn validate(&self, registry: &Registry, pins: &[ModPin]) -> Result<()> {
+        self.validate_tolerant(registry)?;
+        let compatibility = self.compatibility_report(registry, pins);
+        ensure!(
+            compatibility.is_compatible(),
+            "{}",
+            compatibility.messages().join("; ")
+        );
+        Ok(())
+    }
+    /// Read and inspect without changing the save. Compatibility differences
+    /// require an explicit user decision; malformed saves remain hard errors.
+    pub fn inspect_load(path: &Path, registry: &Registry, pins: &[ModPin]) -> Result<PilotLoad> {
+        let pilot: Self = serde_json::from_slice(&fs::read(path)?)?;
+        pilot.validate_tolerant(registry)?;
+        let compatibility = pilot.compatibility_report(registry, pins);
+        Ok(PilotLoad {
+            pilot,
+            compatibility,
+        })
+    }
+    /// Validate save structure while retaining content that is currently absent
+    /// or changed. Runtime registry lookups decide which equipment can be used.
+    pub fn validate_tolerant(&self, _registry: &Registry) -> Result<()> {
         let p = self;
         ensure!(p.version == 1, "unsupported save version {}", p.version);
         ensure!(
             p.difficulty <= 3 && p.inventory_slots() <= 20 && p.shield_recharge_ticks <= 96,
             "invalid pilot difficulty/inventory"
+        );
+        // No valid API-v1 definition can exceed this quantity. Keep the same
+        // global bound even when its particular item definition is missing.
+        ensure!(
+            p.inventory
+                .values()
+                .chain(&p.super_shield_reserves)
+                .all(|count| *count <= 1_000_000),
+            "saved inventory quantity exceeds API limit"
         );
         ensure!(
             p.super_shield_reserves.is_empty()
@@ -646,53 +825,35 @@ impl Pilot {
                     .contains_key(&ContentId::from("base:super_shield")),
             "reserve shields require an equipped module"
         );
-        if let Some(item) = registry.items.get(&ContentId::from("base:super_shield")) {
-            ensure!(
-                p.super_shield_reserves
-                    .iter()
-                    .all(|charge| *charge <= item.max_count),
-                "saved reserve shield charge exceeds capacity"
-            );
-        }
-        let mut cursor = 0;
-        for required in &p.mods {
-            let position = pins[cursor..].iter().position(|pin| pin.id == required.id)
-                .with_context(|| format!("save requires mod {} {}; enable the matching mods in the saved load order in the Mods screen", required.id, required.version))? + cursor;
-            ensure!(
-                pins[position] == *required,
-                "save requires unchanged mod {} {} (content hash {}); restore that version/content or select another pilot",
-                required.id,
-                required.version,
-                required.hash
-            );
-            cursor = position + 1;
-        }
-        ensure!(
-            registry.missions.contains_key(&p.mission),
-            "save mission {} is unavailable",
-            p.mission
-        );
-        for (id, count) in &p.inventory {
-            ensure!(
-                registry.items.contains_key(id),
-                "saved item {id} is unavailable"
-            );
-            ensure!(
-                *count <= registry.items[id].max_count,
-                "saved quantity of {id} exceeds capacity"
-            );
+        p.mission.validate().context("invalid saved mission ID")?;
+        for id in p.inventory.keys() {
+            id.validate().context("invalid saved item ID")?;
         }
         if let Some(id) = &p.selected {
             ensure!(
-                p.inventory.get(id).is_some_and(|n| *n > 0)
-                    && registry.items.get(id).is_some_and(|i| i.special),
-                "equipped item {id} is unavailable"
+                p.inventory.get(id).is_some_and(|n| *n > 0),
+                "equipped item {id} is not owned"
             );
         }
         for id in &p.completed {
+            id.validate().context("invalid completed mission ID")?;
+        }
+        let mut mod_ids = std::collections::BTreeSet::new();
+        for pin in &p.mods {
+            ensure!(mod_ids.insert(&pin.id), "duplicate saved mod {}", pin.id);
             ensure!(
-                registry.missions.contains_key(id),
-                "completed mission {id} is unavailable"
+                !pin.id.is_empty()
+                    && pin.id.len() <= 128
+                    && pin
+                        .id
+                        .chars()
+                        .all(|c| c.is_ascii_lowercase() || c.is_ascii_digit() || "_-".contains(c))
+                    && !pin.version.is_empty()
+                    && pin.version.len() <= 128
+                    && !pin.hash.is_empty()
+                    && pin.hash.len() <= 256,
+                "invalid saved mod pin {}",
+                pin.id
             );
         }
         if let Some(progress) = &p.legacy_progress {
@@ -707,7 +868,101 @@ impl Pilot {
             serde_json::to_vec(&p.script_state)?.len() <= 4 * 1024 * 1024,
             "saved script state exceeds limit"
         );
+        ensure!(
+            serde_json::to_vec(&p.script_rng)?.len() <= 4 * 1024 * 1024,
+            "saved script RNG exceeds limit"
+        );
         Ok(())
+    }
+    pub fn compatibility_report(&self, registry: &Registry, pins: &[ModPin]) -> SaveCompatibility {
+        let mut issues = vec![];
+        for saved in &self.mods {
+            match pins.iter().find(|active| active.id == saved.id) {
+                None => issues.push(SaveMismatch::MissingMod(saved.clone())),
+                Some(active) if active != saved => issues.push(SaveMismatch::ChangedMod {
+                    saved: saved.clone(),
+                    active: active.clone(),
+                }),
+                _ => {}
+            }
+        }
+        let saved_order: Vec<_> = self
+            .mods
+            .iter()
+            .filter(|saved| pins.iter().any(|active| active.id == saved.id))
+            .map(|saved| saved.id.clone())
+            .collect();
+        let active_order: Vec<_> = pins
+            .iter()
+            .filter(|active| self.mods.iter().any(|saved| saved.id == active.id))
+            .map(|active| active.id.clone())
+            .collect();
+        if saved_order != active_order {
+            issues.push(SaveMismatch::ChangedLoadOrder {
+                saved: saved_order,
+                active: active_order,
+            });
+        }
+        if !registry.missions.contains_key(&self.mission) {
+            issues.push(SaveMismatch::MissingMission(self.mission.clone()));
+        }
+        for (id, count) in &self.inventory {
+            match registry.items.get(id) {
+                None => issues.push(SaveMismatch::MissingItem(id.clone())),
+                Some(item) if *count > item.max_count => {
+                    issues.push(SaveMismatch::ChangedItemCapacity {
+                        id: id.clone(),
+                        saved: *count,
+                        available: item.max_count,
+                    })
+                }
+                _ => {}
+            }
+        }
+        if let Some(item) = registry.items.get(&ContentId::from("base:super_shield")) {
+            if let Some(charge) = self
+                .super_shield_reserves
+                .iter()
+                .copied()
+                .find(|charge| *charge > item.max_count)
+            {
+                issues.push(SaveMismatch::ChangedShieldCapacity {
+                    saved: charge,
+                    available: item.max_count,
+                });
+            }
+        }
+        if let Some(id) = &self.selected {
+            if !registry.items.get(id).is_some_and(|item| item.special) {
+                issues.push(SaveMismatch::UnavailableSelectedItem(id.clone()));
+            }
+        }
+        for id in &self.completed {
+            if !registry.missions.contains_key(id) {
+                issues.push(SaveMismatch::MissingCompletedMission(id.clone()));
+            }
+        }
+        SaveCompatibility { issues }
+    }
+    /// Capture active runtime data without discarding state or pins belonging
+    /// to disabled packages. Active package order and hashes become current;
+    /// unavailable package pins remain recorded for future restoration.
+    pub fn merge_runtime_snapshot(
+        &mut self,
+        pins: &[ModPin],
+        states: &BTreeMap<String, serde_json::Value>,
+        rng: &BTreeMap<String, crate::simulation::LegacyRng>,
+    ) {
+        let missing: Vec<_> = self
+            .mods
+            .iter()
+            .filter(|saved| !pins.iter().any(|active| active.id == saved.id))
+            .cloned()
+            .collect();
+        self.mods = pins.to_vec();
+        self.mods.extend(missing);
+        self.script_state.extend(states.clone());
+        self.script_rng.extend(rng.clone());
     }
     pub fn buy(&mut self, id: &ContentId, registry: &Registry) -> Result<()> {
         let item = registry.items.get(id).context("unknown shop item")?;

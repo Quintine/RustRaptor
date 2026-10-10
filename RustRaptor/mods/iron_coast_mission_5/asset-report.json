@@ -1,0 +1,122 @@
+{
+  "tile_count": 216,
+  "tile_logical_size": [
+    32,
+    32
+  ],
+  "hd_tile_size": [
+    128,
+    128
+  ],
+  "vertical_repeat": "12 forward + 12 reflected rows; identical wrap-boundary pixels",
+  "seam_checks_passed": true,
+  "sd_pixels_match_original_palette": true,
+  "palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+  "audio": {
+    "approach": {
+      "file": "audio/approach.wav",
+      "rate": 22050,
+      "channels": 1,
+      "seconds": 1.1,
+      "frames": 24255,
+      "peak": 12490,
+      "sha256": "ca8442d5fd2251c403dcbb15079f070e5babca8c8014c368271e9ed34a3cae42"
+    },
+    "foundry_alarm": {
+      "file": "audio/foundry_alarm.wav",
+      "rate": 22050,
+      "channels": 1,
+      "seconds": 0.9,
+      "frames": 19845,
+      "peak": 7918,
+      "sha256": "e8264a354bf06bff0bc456ab00702daea8f9772e58c82d5bec33c9ed3494f020"
+    },
+    "heat_warning": {
+      "file": "audio/heat_warning.wav",
+      "rate": 22050,
+      "channels": 1,
+      "seconds": 0.65,
+      "frames": 14332,
+      "peak": 7916,
+      "sha256": "baadd49de8589263486ae6dfb59eca5f7e2d21fd822338edafd7b452437f1e06"
+    },
+    "slag_release": {
+      "file": "audio/slag_release.wav",
+      "rate": 22050,
+      "channels": 1,
+      "seconds": 0.4,
+      "frames": 8820,
+      "peak": 7469,
+      "sha256": "b37ec8cec74d779cb2a5f436df3868b00246641c75af1c17c5bb9d60ab137876"
+    },
+    "foundry_shot": {
+      "file": "audio/foundry_shot.wav",
+      "rate": 22050,
+      "channels": 1,
+      "seconds": 0.18,
+      "frames": 3969,
+      "peak": 12585,
+      "sha256": "c8d4cb17dd8ff8913f812491e9ceb6c1dc1b5c853abf526ab25c45cf2220d43a"
+    },
+    "foundry_shutdown": {
+      "file": "audio/foundry_shutdown.wav",
+      "rate": 22050,
+      "channels": 1,
+      "seconds": 0.9,
+      "frames": 19845,
+      "peak": 12289,
+      "sha256": "213e1ff6f39367aae3f2d02b069fd8a54ec40bbdf12eef0a9bcd63e82dfa2557"
+    },
+    "launch_alarm": {
+      "file": "audio/launch_alarm.wav",
+      "rate": 22050,
+      "channels": 1,
+      "seconds": 1.2,
+      "frames": 26460,
+      "peak": 7884,
+      "sha256": "1f70ae82488bdb8632c7a3e21a2d327b0f855d2ce9bbfb74e9e51db29f1153f8"
+    },
+    "coolant_use": {
+      "file": "audio/coolant_use.wav",
+      "rate": 22050,
+      "channels": 1,
+      "seconds": 0.55,
+      "frames": 12127,
+      "peak": 7497,
+      "sha256": "36cff3be3f73affdc3780e6e29c9e7732a5af4c833f9cb6f6016966ce71b52d4"
+    },
+    "victory": {
+      "file": "audio/victory.wav",
+      "rate": 22050,
+      "channels": 1,
+      "seconds": 1.2,
+      "frames": 26460,
+      "peak": 6795,
+      "sha256": "32e8d5d22837012a740a8fae5b0453bdcc1942e0332e63764e3074b8472b0b94"
+    }
+  },
+  "sources": {
+    "terrain-source-hd.png": {
+      "size": [
+        1086,
+        1448
+      ],
+      "sha256": "f33ff9456f90ad83ddb18f25cb91a73da373fdf129c20a656366d0e2f742f021"
+    },
+    "foundry-source-hd.png": {
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "5911b1abdf2245801c8dfe7abf8232d9fdb651253f7e79af0548502112e310e6"
+    },
+    "briefing-source-hd.png": {
+      "size": [
+        1586,
+        992
+      ],
+      "sha256": "c782efe09ad86c4085060a5ac9202586844571d1efadb30fe268de743e8d2740"
+    }
+  },
+  "foundry_transparent_pixels": 1206
+}

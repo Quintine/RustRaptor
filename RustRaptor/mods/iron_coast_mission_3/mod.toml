@@ -1,0 +1,16 @@
+id = "iron_coast_mission_3"
+name = "Iron Coast — Mission 3: Saltworks Convoy"
+version = "1.0.0"
+api_version = 1
+description = "Intercept three armored cargo transports through the salt flats, disable their two escorts and destroy the convoy command cruiser. New SD/HD saltworks terrain, cargo sprites and synthesized radio cues."
+content = "content.json"
+scripts = ["scripts/mission.rhai", "scripts/convoy.rhai"]
+
+[dependencies]
+iron_coast_scout = "^1.0"
+iron_coast_turret = "^1.0"
+iron_coast_boss_3 = "^1.0"
+pulse_cannon = "^1.0"
+seeker_swarm = "^1.0"
+ion_lance = "^1.0"
+iron_coast_music = "^1.0"

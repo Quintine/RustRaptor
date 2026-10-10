@@ -1,0 +1,11 @@
+{
+  "asset_authoring": "Built-in image_gen tool, transparent_background=true; no CLI fallback",
+  "original_game_art": "No original game assets copied into this package",
+  "artworks": [
+    {"master": "art/unit-generated-v1.png", "prompt": "prompts/unit-hd-v1.txt", "reference": "../iron_coast_boss/art/unit-hd.png", "reference_role": "Industrial materials and palette only; independently generated twin-fan silhouette", "output": ["art/unit-hd.png", "art/unit-sd.png"]},
+    {"master": "art/projectile-generated-v1.png", "prompt": "prompts/projectile-hd-v1.txt", "reference": null, "output": ["art/projectile-hd.png", "art/projectile-sd.png"]}
+  ],
+  "derivation": "build_assets.py applies only aspect-preserving fit, transparent padding and SD/HD resampling; original generated alpha is retained",
+  "sounds": "Original deterministic procedural chirps and seeded noise; build_assets.py --audio-only; no recordings or external audio assets",
+  "validation": ["art-qa.json logical and HD bounds", "audio-recipe.json PCM peaks and hashes", "validate.rs callback acceptance probe"]
+}

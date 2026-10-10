@@ -567,6 +567,271 @@ fn incompatible_save_pins_and_disabled_equipment_do_not_modify_the_save() {
 }
 
 #[test]
+fn inspected_saves_report_version_hash_and_order_changes_before_confirmation() {
+    use raptor_replica::persistence::SaveMismatch;
+    let registry = base();
+    let pin = |id: &str| modding::ModPin {
+        id: id.into(),
+        version: "1.0.0".into(),
+        hash: format!("{id}-old"),
+    };
+    let mut pilot = Pilot::default();
+    pilot.mods = vec![pin("alpha"), pin("beta")];
+    let mut changed_alpha = pin("alpha");
+    changed_alpha.version = "2.0.0".into();
+    let mut changed_beta = pin("beta");
+    changed_beta.hash = "new-content".into();
+    let pins = [changed_beta, changed_alpha];
+    let temp = tempfile::tempdir().unwrap();
+    let path = temp.path().join("pilot.json");
+    pilot.save(&path).unwrap();
+    let bytes = fs::read(&path).unwrap();
+    let inspected = Pilot::inspect_load(&path, &registry, &pins).unwrap();
+    assert!(!inspected.compatibility.is_compatible());
+    assert_eq!(inspected.compatibility.issues.len(), 3);
+    assert!(
+        matches!(&inspected.compatibility.issues[0], SaveMismatch::ChangedMod { saved, active }
+        if saved.id == "alpha" && active.version == "2.0.0")
+    );
+    assert!(
+        matches!(&inspected.compatibility.issues[1], SaveMismatch::ChangedMod { saved, active }
+        if saved.id == "beta" && active.hash == "new-content")
+    );
+    assert!(
+        matches!(&inspected.compatibility.issues[2], SaveMismatch::ChangedLoadOrder { saved, active }
+        if saved == &ids(&["alpha", "beta"]) && active == &ids(&["beta", "alpha"]))
+    );
+    assert!(
+        inspected
+            .compatibility
+            .messages()
+            .join("\n")
+            .contains("content changed")
+    );
+    assert!(Pilot::load(&path, &registry, &pins).is_err());
+    let confirmed = inspected.confirm_load();
+    assert_eq!(
+        serde_json::to_value(confirmed).unwrap(),
+        serde_json::to_value(pilot).unwrap()
+    );
+    assert_eq!(fs::read(path).unwrap(), bytes);
+}
+
+#[test]
+fn confirmed_missing_content_preserves_equipment_progression_and_script_state() {
+    use raptor_replica::persistence::SaveMismatch;
+    let registry = base();
+    let mut pilot = Pilot::default();
+    pilot.mods = vec![modding::ModPin {
+        id: "missing".into(),
+        version: "1.2.3".into(),
+        hash: "original-art-and-code".into(),
+    }];
+    let item: ContentId = "missing:weapon".into();
+    pilot.inventory.insert(item.clone(), 7);
+    pilot.selected = Some(item.clone());
+    pilot.mission = "missing:mission_2".into();
+    pilot.completed.push("missing:mission_1".into());
+    pilot
+        .script_state
+        .insert("missing/weapon.rhai".into(), json!({"charges": 27}));
+    pilot.script_rng.insert(
+        "missing/weapon.rhai".into(),
+        raptor_replica::simulation::LegacyRng::new(972),
+    );
+    let temp = tempfile::tempdir().unwrap();
+    let path = temp.path().join("pilot.json");
+    pilot.save(&path).unwrap();
+    let bytes = fs::read(&path).unwrap();
+    let loaded = Pilot::inspect_load(&path, &registry, &[]).unwrap();
+    assert!(
+        loaded
+            .compatibility
+            .issues
+            .iter()
+            .any(|issue| matches!(issue, SaveMismatch::MissingMod(_)))
+    );
+    assert!(
+        loaded
+            .compatibility
+            .issues
+            .iter()
+            .any(|issue| matches!(issue, SaveMismatch::MissingItem(id) if id == &item))
+    );
+    assert!(
+        loaded
+            .compatibility
+            .issues
+            .iter()
+            .any(|issue| matches!(issue, SaveMismatch::MissingMission(_)))
+    );
+    assert!(
+        loaded
+            .compatibility
+            .issues
+            .iter()
+            .any(|issue| matches!(issue, SaveMismatch::MissingCompletedMission(_)))
+    );
+    let confirmed = loaded.confirm_load();
+    assert_eq!(
+        serde_json::to_value(&confirmed).unwrap(),
+        serde_json::to_value(&pilot).unwrap()
+    );
+    confirmed.validate_tolerant(&registry).unwrap();
+    let mut world = World::new(&"base:sector_1_wave_1".into(), &confirmed, &registry).unwrap();
+    world
+        .step(
+            Input {
+                fire: true,
+                special: true,
+                ..Input::default()
+            },
+            &registry,
+            &mut ScriptRuntime::new(),
+        )
+        .unwrap();
+    let after = world.pilot(&confirmed);
+    assert_eq!(after.inventory[&item], 7);
+    assert_eq!(after.selected, Some(item));
+    assert_eq!(after.completed, confirmed.completed);
+    assert_eq!(after.script_state, confirmed.script_state);
+    assert_eq!(after.script_rng, confirmed.script_rng);
+    // Parked equipment cannot be destroyed by gameplay while its definition
+    // is unavailable. The old low-shield loss rule used selected blindly.
+    world.player.shield = 9;
+    world
+        .step(Input::default(), &registry, &mut ScriptRuntime::new())
+        .unwrap();
+    assert_eq!(
+        world.pilot(&confirmed).inventory[&ContentId::from("missing:weapon")],
+        7
+    );
+    assert_eq!(fs::read(path).unwrap(), bytes);
+}
+
+#[test]
+fn confirmed_snapshot_preserves_inactive_pins_and_script_data() {
+    let pin = |id: &str, version: &str| modding::ModPin {
+        id: id.into(),
+        version: version.into(),
+        hash: format!("{id}-{version}"),
+    };
+    let mut pilot = Pilot::default();
+    pilot.mods = vec![pin("alpha", "1.0.0"), pin("inactive", "1.5.0")];
+    pilot
+        .script_state
+        .insert("alpha/old.rhai".into(), json!({"old": 1}));
+    pilot
+        .script_state
+        .insert("inactive/ai.rhai".into(), json!({"kills": 17}));
+    pilot.script_rng.insert(
+        "inactive/ai.rhai".into(),
+        raptor_replica::simulation::LegacyRng::new(33),
+    );
+    let inactive_rng = pilot.script_rng.clone();
+    let current = [pin("new", "1.0.0"), pin("alpha", "2.0.0")];
+    let states = [("alpha/new.rhai".into(), json!({"ticks": 4}))]
+        .into_iter()
+        .collect();
+    let rng = [(
+        "alpha/new.rhai".into(),
+        raptor_replica::simulation::LegacyRng::new(91),
+    )]
+    .into_iter()
+    .collect();
+    pilot.merge_runtime_snapshot(&current, &states, &rng);
+    assert_eq!(
+        pilot.mods,
+        vec![
+            current[0].clone(),
+            current[1].clone(),
+            pin("inactive", "1.5.0")
+        ]
+    );
+    assert_eq!(pilot.script_state["inactive/ai.rhai"], json!({"kills": 17}));
+    assert_eq!(pilot.script_state["alpha/old.rhai"], json!({"old": 1}));
+    assert_eq!(pilot.script_state["alpha/new.rhai"], json!({"ticks": 4}));
+    assert_eq!(
+        pilot.script_rng["inactive/ai.rhai"],
+        inactive_rng["inactive/ai.rhai"]
+    );
+    assert_eq!(pilot.script_rng["alpha/new.rhai"], rng["alpha/new.rhai"]);
+}
+
+#[test]
+fn capacity_changes_are_reported_without_clamping_and_corrupt_saves_still_fail() {
+    use raptor_replica::persistence::SaveMismatch;
+    let registry = base();
+    let temp = tempfile::tempdir().unwrap();
+    let path = temp.path().join("pilot.json");
+    let mut pilot = Pilot::default();
+    pilot.inventory.insert("base:energy".into(), 105);
+    pilot.save(&path).unwrap();
+    let loaded = Pilot::inspect_load(&path, &registry, &[]).unwrap();
+    assert!(loaded.compatibility.issues.iter().any(|issue| matches!(issue,
+        SaveMismatch::ChangedItemCapacity { id, saved: 105, available: 100 } if id.0 == "base:energy")));
+    assert_eq!(
+        loaded.confirm_load().inventory[&ContentId::from("base:energy")],
+        105
+    );
+    let mut overflow = Pilot::default();
+    overflow
+        .inventory
+        .insert("missing:overflow".into(), u32::MAX);
+    for invalid in [
+        overflow,
+        Pilot {
+            version: 99,
+            ..Pilot::default()
+        },
+        Pilot {
+            difficulty: 4,
+            ..Pilot::default()
+        },
+        Pilot {
+            selected: Some("missing:not_owned".into()),
+            ..Pilot::default()
+        },
+        Pilot {
+            mission: "broken id".into(),
+            ..Pilot::default()
+        },
+    ] {
+        invalid.save(&path).unwrap();
+        let before = fs::read(&path).unwrap();
+        assert!(Pilot::inspect_load(&path, &registry, &[]).is_err());
+        assert_eq!(fs::read(&path).unwrap(), before);
+    }
+}
+
+#[test]
+fn tolerant_campaign_completion_retains_disabled_mod_progress_and_equipment() {
+    let mut registry = base();
+    registry
+        .missions
+        .get_mut(&ContentId::from("base:sector_1_wave_1"))
+        .unwrap()
+        .next = Some("base:sector_1_wave_1".into());
+    let mut pilot = Pilot::default();
+    pilot.inventory.insert("inactive:weapon".into(), 1);
+    pilot.selected = Some("inactive:weapon".into());
+    pilot.completed.push("inactive:mission_1".into());
+    pilot.complete_mission_tolerant(&registry).unwrap();
+    assert_eq!(pilot.inventory[&ContentId::from("inactive:weapon")], 1);
+    assert_eq!(pilot.selected, Some("inactive:weapon".into()));
+    assert!(
+        pilot
+            .completed
+            .contains(&ContentId::from("inactive:mission_1"))
+    );
+    assert!(
+        pilot
+            .completed
+            .contains(&ContentId::from("base:sector_1_wave_1"))
+    );
+}
+
+#[test]
 fn saved_script_state_and_rng_resume_the_same_callback_sequence() {
     let mut runtime = ScriptRuntime::new();
     let source = r#"fn on_tick(e,s,r) { let n=if s.contains("n") {s.n+1} else {1}; #{commands:[#{op:"credits",amount:r[0]}],state:#{n:n,last:r[0]}} }"#;

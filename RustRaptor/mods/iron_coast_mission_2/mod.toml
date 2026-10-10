@@ -1,0 +1,16 @@
+id = "iron_coast_mission_2"
+name = "Iron Coast — Mission 2: Tidal Relay"
+version = "1.0.0"
+api_version = 1
+description = "Disrupt three anchored radar relays across the tidal causeway, then destroy the command cruiser. Includes SD/HD communications-island terrain, relay artwork and synthesized mission cues."
+content = "content.json"
+scripts = ["scripts/mission.rhai", "scripts/relay.rhai"]
+
+[dependencies]
+iron_coast_scout = "^1.0"
+iron_coast_turret = "^1.0"
+iron_coast_boss_2 = "^1.0"
+iron_coast_music = "^1.0"
+pulse_cannon = "^1.0"
+seeker_swarm = "^1.0"
+ion_lance = "^1.0"

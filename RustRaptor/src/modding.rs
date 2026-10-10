@@ -461,6 +461,15 @@ impl ActiveMods {
                 crate::sound::decode(&bytes)
                     .with_context(|| format!("{owner}/{}: invalid sound", sound.file))?;
             }
+            if let Some(music) = registry.music.get(id) {
+                let root = registry
+                    .asset_roots
+                    .get(owner)
+                    .context("missing music root")?;
+                crate::sound::load_music(root, &music.file).with_context(|| {
+                    format!("{owner}/{}: invalid music {}", music.file, music.id)
+                })?;
+            }
             if let Some(m) = registry.missions.get(id) {
                 for tile in &m.tiles {
                     validate_art(owner, &tile.art)?;
@@ -769,6 +778,7 @@ pub fn write_schemas(root: &Path) -> Result<()> {
     schema!("mission-v1.json", crate::content::MissionDef);
     schema!("campaign-v1.json", crate::content::CampaignDef);
     schema!("sound-v1.json", crate::content::SoundDef);
+    schema!("music-v1.json", crate::content::MusicDef);
     Ok(())
 }
 #[cfg(test)]

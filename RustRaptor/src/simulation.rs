@@ -246,6 +246,10 @@ pub struct LegacyPickup {
     pub frame: u32,
     pub art_frame: u32,
     pub countdown: Option<u32>,
+    #[serde(skip)]
+    pub glow_frame: u32,
+    #[serde(skip)]
+    pub previous_art_position: Option<[i32; 2]>,
 }
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Effect {
@@ -256,6 +260,103 @@ pub struct Effect {
     pub age: u32,
     pub kind: EffectKind,
     pub ground: bool,
+}
+/// Secondary native animations are presentation only. Keeping their queue out
+/// of saved/replayed gameplay state also prevents render rates affecting RNG.
+#[derive(Debug, Clone)]
+pub struct VisualEffect {
+    pub x: i32,
+    pub y: i32,
+    pub px: i32,
+    pub py: i32,
+    pub age: u32,
+    pub kind: VisualEffectKind,
+    pub anchor: Option<u64>,
+    pub offset: [i32; 2],
+}
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum VisualEffectKind {
+    LaserImpact,
+    SmallAir,
+    SmallGround,
+    GroundBlueSpark,
+    GroundOrangeSpark,
+    GroundSparkle,
+    GroundFlare,
+    SmokeDown,
+    SmokeTrail,
+    BlueSpark,
+    OrangeSpark,
+    EnergyGrab,
+    Muzzle,
+    Casing,
+    Shield,
+}
+impl VisualEffectKind {
+    pub fn artwork(self) -> (u32, u32) {
+        match self {
+            Self::LaserImpact => (0x10229, 4),
+            Self::SmallAir => (0x101fc, 14),
+            Self::SmallGround => (0x1027d, 35),
+            Self::GroundBlueSpark => (0x1019c, 9),
+            Self::GroundOrangeSpark => (0x101a5, 9),
+            Self::GroundSparkle => (0x1026c, 17),
+            Self::GroundFlare => (0x10252, 26),
+            Self::SmokeDown => (0x1020e, 5),
+            Self::SmokeTrail => (0x1022d, 4),
+            Self::BlueSpark => (0x1019c, 9),
+            Self::OrangeSpark => (0x101a5, 9),
+            Self::EnergyGrab => (0x1018e, 14),
+            Self::Muzzle | Self::Casing => (0x101c7, 4),
+            Self::Shield => (0x10249, 4),
+        }
+    }
+    /// ANIMS_DisplayGround, ANIMS_DisplaySky, ANIMS_DisplayHigh order.
+    pub fn layer(self) -> u8 {
+        match self {
+            Self::Casing
+            | Self::SmallGround
+            | Self::GroundBlueSpark
+            | Self::GroundOrangeSpark
+            | Self::GroundSparkle
+            | Self::GroundFlare => 0,
+            Self::SmokeDown | Self::BlueSpark | Self::OrangeSpark | Self::Muzzle => 1,
+            Self::LaserImpact
+            | Self::SmallAir
+            | Self::SmokeTrail
+            | Self::EnergyGrab
+            | Self::Shield => 2,
+        }
+    }
+    pub fn lighting_mask(self) -> bool {
+        matches!(self, Self::SmokeDown | Self::SmokeTrail | Self::Shield)
+    }
+    pub fn top_left(self) -> bool {
+        matches!(self, Self::GroundBlueSpark | Self::GroundOrangeSpark)
+    }
+}
+impl VisualEffect {
+    pub fn new(kind: VisualEffectKind, x: i32, y: i32) -> Self {
+        Self {
+            x,
+            y,
+            px: x,
+            py: y,
+            age: 0,
+            kind,
+            anchor: None,
+            offset: [x, y],
+        }
+    }
+    fn attached(mut self, entity: u64) -> Self {
+        self.anchor = Some(entity);
+        self
+    }
+}
+fn visual_effect(existing: usize, effects: &mut Vec<VisualEffect>, effect: VisualEffect) {
+    if effects.len() + existing < 100 {
+        effects.push(effect);
+    }
 }
 #[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq, Eq)]
 pub enum EffectKind {
@@ -314,12 +415,18 @@ impl Effect {
         self
     }
 }
-fn original_effect(effects: &mut Vec<Effect>, effect: Effect) {
-    if effects.len() < 100 {
+fn original_effect(existing: usize, effects: &mut Vec<Effect>, effect: Effect) {
+    if effects.len() + existing < 100 {
         effects.push(effect);
     }
 }
-fn death_effects(effects: &mut Vec<Effect>, rng: &mut LegacyRng, enemy: &Enemy, explosion: i32) {
+fn death_effects(
+    visual_count: usize,
+    effects: &mut Vec<Effect>,
+    rng: &mut LegacyRng,
+    enemy: &Enemy,
+    explosion: i32,
+) {
     use EffectKind::*;
     let cx = enemy.x + enemy.width / 2;
     let cy = enemy.y + enemy.height / 2;
@@ -341,9 +448,9 @@ fn death_effects(effects: &mut Vec<Effect>, rng: &mut LegacyRng, enemy: &Enemy, 
         } else {
             Flare
         };
-        original_effect(effects, Effect::new(kind, x, y));
+        original_effect(visual_count, effects, Effect::new(kind, x, y));
     }
-    original_effect(effects, Effect::new(main, cx, cy));
+    original_effect(visual_count, effects, Effect::new(main, cx, cy));
     if matches!(explosion, 2 | 5 | 6) {
         let area = (enemy.width >> 4) * (enemy.height >> 4);
         for n in 0..area {
@@ -355,11 +462,12 @@ fn death_effects(effects: &mut Vec<Effect>, rng: &mut LegacyRng, enemy: &Enemy, 
                 } else {
                     Sparkle
                 };
-                original_effect(effects, Effect::new(kind, x, y));
-                original_effect(effects, Effect::new(SmallGround, x, y));
+                original_effect(visual_count, effects, Effect::new(kind, x, y));
+                original_effect(visual_count, effects, Effect::new(SmallGround, x, y));
             } else if explosion == 6 {
-                original_effect(effects, Effect::new(Flare, x, y).airborne());
+                original_effect(visual_count, effects, Effect::new(Flare, x, y).airborne());
                 original_effect(
+                    visual_count,
                     effects,
                     Effect::new(if n & 1 != 0 { LargeAir } else { AirBlast }, x, y),
                 );
@@ -369,7 +477,7 @@ fn death_effects(effects: &mut Vec<Effect>, rng: &mut LegacyRng, enemy: &Enemy, 
                 } else {
                     Effect::new(AirBlast, x, y).airborne()
                 };
-                original_effect(effects, effect);
+                original_effect(visual_count, effects, effect);
             }
         }
     }
@@ -402,6 +510,12 @@ pub struct World {
     pub projectiles: Vec<Projectile>,
     pub pickups: Vec<Pickup>,
     pub effects: Vec<Effect>,
+    #[serde(skip)]
+    pub visual_effects: Vec<VisualEffect>,
+    #[serde(skip)]
+    terrain_spark_delay: u32,
+    #[serde(skip)]
+    terrain_flare_delay: u32,
     pub terrain_health: Vec<i32>,
     pub terrain_dead: Vec<bool>,
     pub terrain_settled: Vec<bool>,
@@ -435,6 +549,12 @@ pub struct World {
     pub previous_shield: i32,
     #[serde(default)]
     pub shield_recharge_ticks: u32,
+    /// Charge retained from a save whose equipment capacity changed. It does
+    /// not increase the original 100-point combat shield.
+    #[serde(default, skip_serializing_if = "is_zero")]
+    pub energy_overflow: u32,
+    #[serde(default, skip_serializing_if = "is_zero")]
+    pub super_shield_overflow: u32,
     #[serde(skip)]
     pub events: Vec<HookEvent>,
 }
@@ -452,6 +572,11 @@ impl World {
             .get(&ContentId::from("base:energy"))
             .copied()
             .unwrap_or(100) as i32;
+        let super_shield = pilot
+            .inventory
+            .get(&ContentId::from("base:super_shield"))
+            .copied()
+            .unwrap_or(0);
         let wave = mission
             .0
             .rsplit('_')
@@ -469,12 +594,7 @@ impl World {
                 py: 160,
                 bank: 3,
                 shield: energy.clamp(1, 100),
-                super_shield: pilot
-                    .inventory
-                    .get(&ContentId::from("base:super_shield"))
-                    .copied()
-                    .unwrap_or(0)
-                    .min(100) as i32,
+                super_shield: super_shield.min(100) as i32,
                 super_shield_reserves: pilot.super_shield_reserves.clone(),
                 credits: pilot.credits,
                 inventory: pilot.inventory.clone(),
@@ -486,6 +606,9 @@ impl World {
             projectiles: vec![],
             pickups: vec![],
             effects: vec![],
+            visual_effects: vec![],
+            terrain_spark_delay: 0,
+            terrain_flare_delay: 0,
             terrain_health: m.layout.iter().map(|i| m.tiles[*i].health).collect(),
             terrain_dead: vec![false; m.layout.len()],
             terrain_settled: vec![false; m.layout.len()],
@@ -513,6 +636,8 @@ impl World {
             player_flash: false,
             previous_shield: initial_shield_latch(),
             shield_recharge_ticks: pilot.shield_recharge_ticks,
+            energy_overflow: (energy.max(0) as u32).saturating_sub(100),
+            super_shield_overflow: super_shield.saturating_sub(100),
             events: vec![],
         };
         out.event(
@@ -528,19 +653,46 @@ impl World {
         p.inventory = self.player.inventory.clone();
         p.super_shield_reserves = self.player.super_shield_reserves.clone();
         p.shield_recharge_ticks = self.shield_recharge_ticks;
-        p.inventory
-            .insert("base:energy".into(), self.player.shield.max(1) as u32);
+        p.inventory.insert(
+            "base:energy".into(),
+            (self.player.shield.max(0) as u32)
+                .saturating_add(self.energy_overflow)
+                .max(1),
+        );
         if p.inventory
             .contains_key(&ContentId::from("base:super_shield"))
         {
             p.inventory.insert(
                 "base:super_shield".into(),
-                self.player.super_shield.max(0) as u32,
+                (self.player.super_shield.max(0) as u32).saturating_add(self.super_shield_overflow),
             );
         }
         p.selected = self.player.selected.clone();
         p.mission = self.mission.clone();
         p
+    }
+    fn sync_retained_inventory(&mut self) {
+        if self.energy_overflow > 0 {
+            if let Some(charge) = self
+                .player
+                .inventory
+                .get_mut(&ContentId::from("base:energy"))
+            {
+                *charge = (self.player.shield.max(0) as u32).saturating_add(self.energy_overflow);
+            }
+        }
+        if self.super_shield_overflow > 0 {
+            if let Some(charge) = self
+                .player
+                .inventory
+                .get_mut(&ContentId::from("base:super_shield"))
+            {
+                *charge = (self.player.super_shield.max(0) as u32)
+                    .saturating_add(self.super_shield_overflow);
+            } else {
+                self.super_shield_overflow = 0;
+            }
+        }
     }
     fn entity(&mut self) -> u64 {
         let n = self.next_entity;
@@ -1050,23 +1202,35 @@ impl World {
             if def.boss && enemy.health < 50 && (self.tick + 1) & 2 != 0 && def.legacy.is_some() {
                 let x = enemy.x + self.rng.next_value() % enemy.width.max(1);
                 let y = enemy.y + self.rng.next_value() % enemy.height.max(1);
-                original_effect(&mut self.effects, Effect::new(EffectKind::SmallAir, x, y));
+                original_effect(
+                    self.visual_effects.len(),
+                    &mut self.effects,
+                    Effect::new(EffectKind::SmallAir, x, y),
+                );
             }
             if !def.ground && contains(enemy, self.player.x + 16, self.player.y + 16) {
                 enemy.health -= 16;
                 damage_player(
                     &mut self.player,
+                    self.energy_overflow,
+                    &mut self.super_shield_overflow,
                     enemy.width.max(enemy.height) >> 2,
                     self.difficulty,
                     &mut self.rng,
                     &mut self.sounds,
                     &mut self.sound_events,
+                    &mut self.visual_effects,
+                    self.effects.len(),
                     self.legacy_transition && self.end_timer.is_some(),
                 );
                 if def.legacy.is_some() {
                     let x = self.player.x + 16 + self.rng.next_value() % 8 - 4;
                     let y = self.player.y + 16 + self.rng.next_value() % 8 - 4;
-                    original_effect(&mut self.effects, Effect::new(EffectKind::SmallAir, x, y));
+                    original_effect(
+                        self.visual_effects.len(),
+                        &mut self.effects,
+                        Effect::new(EffectKind::SmallAir, x, y),
+                    );
                     play_legacy_sound(
                         &mut self.rng,
                         &mut self.sounds,
@@ -1090,9 +1254,16 @@ impl World {
                         self.player.x + 16,
                         self.player.y + 16,
                     );
-                    death_effects(&mut self.effects, &mut self.rng, enemy, legacy.fields[2]);
+                    death_effects(
+                        self.visual_effects.len(),
+                        &mut self.effects,
+                        &mut self.rng,
+                        enemy,
+                        legacy.fields[2],
+                    );
                 } else {
                     original_effect(
+                        self.visual_effects.len(),
                         &mut self.effects,
                         Effect::new(
                             if def.ground {
@@ -1131,6 +1302,8 @@ impl World {
                             frame: 0,
                             art_frame: 0,
                             countdown: None,
+                            glow_frame: 0,
+                            previous_art_position: None,
                         })
                     } else {
                         None
@@ -1205,11 +1378,15 @@ impl World {
             if (p.x - (self.player.x + 16)).abs() < 10 && (p.y - (self.player.y + 16)).abs() < 10 {
                 damage_player(
                     &mut self.player,
+                    self.energy_overflow,
+                    &mut self.super_shield_overflow,
                     registry.weapons[&p.weapon].damage,
                     self.difficulty,
                     &mut self.rng,
                     &mut self.sounds,
                     &mut self.sound_events,
+                    &mut self.visual_effects,
+                    self.effects.len(),
                     self.legacy_transition && self.end_timer.is_some(),
                 );
                 dead_shots.push(p.entity);
@@ -1221,8 +1398,15 @@ impl World {
                 const X: [i32; 16] = [-1, 0, 1, 2, 3, 3, 3, 2, 1, 0, -1, -2, -3, -3, -3, -2];
                 const Y: [i32; 16] = [-3, -3, -3, -2, -1, 0, 1, 2, 3, 3, 3, 2, 1, 0, -1, -2];
                 legacy.art_frame = legacy.frame;
+                if legacy.previous_art_position.is_some() {
+                    legacy.previous_art_position = Some([pickup.x, pickup.y]);
+                }
                 pickup.x = legacy.x - 8 + X[legacy.position];
                 pickup.y = legacy.y - 8 + Y[legacy.position];
+                if legacy.previous_art_position.is_none() {
+                    legacy.previous_art_position = Some([pickup.x, pickup.y]);
+                }
+                legacy.glow_frame = (legacy.glow_frame + 1) % 4;
                 legacy.y += 1;
                 if self.tick & 1 != 0 {
                     legacy.position = (legacy.position + 1) % 16;
@@ -1249,14 +1433,20 @@ impl World {
                         if self.player.inventory.contains_key(&pickup.item) {
                             self.player.super_shield_reserves.push(item.initial_count);
                         } else {
-                            self.player.super_shield = item.initial_count as i32;
+                            self.player.super_shield = item.initial_count.min(100) as i32;
+                            self.super_shield_overflow = item.initial_count.saturating_sub(100);
                             self.player
                                 .inventory
                                 .insert(pickup.item.clone(), item.initial_count);
                         }
                     }
                 } else if pickup.item.0 == "base:energy" && item.legacy == Some(16) {
-                    add_energy(&mut self.player, item.initial_count as i32);
+                    add_energy(
+                        &mut self.player,
+                        item.initial_count as i32,
+                        self.energy_overflow,
+                        self.super_shield_overflow,
+                    );
                 } else if item.credits == 0
                     && (self.player.inventory.contains_key(&pickup.item)
                         || inventory_slots(&self.player) < 20)
@@ -1266,9 +1456,7 @@ impl World {
                         .inventory
                         .entry(pickup.item.clone())
                         .or_default();
-                    *amount = amount
-                        .saturating_add(item.initial_count)
-                        .min(item.max_count);
+                    *amount = add_with_capacity(*amount, item.initial_count, item.max_count);
                     if item.special && self.player.selected.is_none() {
                         self.player.selected = Some(pickup.item.clone());
                     }
@@ -1379,6 +1567,7 @@ impl World {
                                 .credits
                                 .saturating_add(mission.tiles[mission.layout[pos]].reward);
                             original_effect(
+                                self.visual_effects.len(),
                                 &mut self.effects,
                                 Effect::new(EffectKind::GroundBlast, p.x, p.y),
                             );
@@ -1402,6 +1591,40 @@ impl World {
             }
         }
         self.effects.retain(|e| e.age <= e.kind.artwork().1);
+        for effect in &mut self.visual_effects {
+            effect.px = effect.x;
+            effect.py = effect.y;
+            match effect.anchor {
+                Some(0) => {
+                    effect.x = self.player.x + 16 + effect.offset[0];
+                    effect.y = self.player.y + 16 + effect.offset[1];
+                }
+                Some(entity) => {
+                    if let Some(enemy) = self.enemies.iter().find(|e| e.entity == entity) {
+                        effect.x = enemy.movement.x + effect.offset[0];
+                        effect.y = enemy.movement.y + effect.offset[1];
+                    }
+                }
+                None => {
+                    effect.x = effect.offset[0];
+                    effect.y = effect.offset[1];
+                }
+            }
+            if effect.age == 0 {
+                effect.px = effect.x;
+                effect.py = effect.y;
+            }
+            effect.age += 1;
+            // ANIMS_Think adjusts both the direction switch and adir table.
+            effect.offset[1] += match effect.kind {
+                VisualEffectKind::SmokeDown => 2,
+                VisualEffectKind::SmokeTrail => -2,
+                kind if kind.layer() == 0 && self.scroll != previous_scroll => 1,
+                _ => 0,
+            };
+        }
+        self.visual_effects
+            .retain(|effect| effect.age <= effect.kind.artwork().1);
         if self.difficulty < 3 {
             if equipment_used {
                 self.shield_recharge_ticks = 0;
@@ -1414,7 +1637,12 @@ impl World {
                             .get(&ContentId::from("base:energy"))
                             .is_some_and(|item| item.legacy == Some(16))
                     {
-                        add_energy(&mut self.player, 1);
+                        add_energy(
+                            &mut self.player,
+                            1,
+                            self.energy_overflow,
+                            self.super_shield_overflow,
+                        );
                     }
                     self.shield_recharge_ticks = 0;
                 }
@@ -1457,21 +1685,26 @@ impl World {
             && self.player.shield < self.previous_shield
             && self.player.super_shield < 1
         {
-            let lost = self.player.selected.clone().or_else(|| {
-                self.player
-                    .inventory
-                    .keys()
-                    .filter_map(|id| {
-                        registry
-                            .items
-                            .get(id)
-                            .and_then(|item| item.legacy)
-                            .filter(|legacy| matches!(legacy, 1..=14 | 18..=23))
-                            .map(|legacy| (legacy, id.clone()))
-                    })
-                    .max()
-                    .map(|(_, id)| id)
-            });
+            let lost = self
+                .player
+                .selected
+                .clone()
+                .filter(|id| registry.items.contains_key(id))
+                .or_else(|| {
+                    self.player
+                        .inventory
+                        .keys()
+                        .filter_map(|id| {
+                            registry
+                                .items
+                                .get(id)
+                                .and_then(|item| item.legacy)
+                                .filter(|legacy| matches!(legacy, 1..=14 | 18..=23))
+                                .map(|legacy| (legacy, id.clone()))
+                        })
+                        .max()
+                        .map(|(_, id)| id)
+                });
             if let Some(id) = lost {
                 let removed = self.player.inventory.remove(&id).is_some();
                 if removed && self.player.selected.as_ref() == Some(&id) {
@@ -1486,6 +1719,7 @@ impl World {
             );
         }
         self.previous_shield = self.player.shield;
+        self.sync_retained_inventory();
         self.event(self.mission.clone(),"on_tick",serde_json::json!({"tick":self.tick,"player_x":self.player.x,"player_y":self.player.y,"enemies":self.enemies.len()}));
         if self.outcome != Outcome::Playing {
             self.event(
@@ -1502,10 +1736,18 @@ impl World {
             // right-to-left: y consumes the first shared random value.
             let y = self.player.y + self.rng.next_value() % 32;
             let x = self.player.x + self.rng.next_value() % 32;
-            original_effect(&mut self.effects, Effect::new(EffectKind::MediumAir, x, y));
+            original_effect(
+                self.visual_effects.len(),
+                &mut self.effects,
+                Effect::new(EffectKind::MediumAir, x, y),
+            );
             let y = self.player.y + self.rng.next_value() % 32;
             let x = self.player.x + self.rng.next_value() % 32;
-            original_effect(&mut self.effects, Effect::new(EffectKind::SmallAir, x, y));
+            original_effect(
+                self.visual_effects.len(),
+                &mut self.effects,
+                Effect::new(EffectKind::SmallAir, x, y),
+            );
             if self.end_timer.is_some_and(|timer| timer > 24) {
                 let pan = if self.rng.next_value() % 2 == 0 {
                     30
@@ -1540,6 +1782,7 @@ impl World {
                     "FX_AIREXPLO2",
                 );
                 original_effect(
+                    self.visual_effects.len(),
                     &mut self.effects,
                     Effect::new(EffectKind::LargeAir, self.player.x + 16, self.player.y + 16),
                 );
@@ -1553,7 +1796,11 @@ impl World {
                     } else {
                         EffectKind::AirBlast
                     };
-                    original_effect(&mut self.effects, Effect::new(kind, x, y).airborne());
+                    original_effect(
+                        self.visual_effects.len(),
+                        &mut self.effects,
+                        Effect::new(kind, x, y).airborne(),
+                    );
                 }
                 play_legacy_sound(
                     &mut self.rng,
@@ -1747,11 +1994,15 @@ impl World {
                         state.movement.ty = self.player.y + 16 + self.rng.next_value() % 4 - 2;
                         damage_player(
                             &mut self.player,
+                            self.energy_overflow,
+                            &mut self.super_shield_overflow,
                             state.damage,
                             self.difficulty,
                             &mut self.rng,
                             &mut self.sounds,
                             &mut self.sound_events,
+                            &mut self.visual_effects,
+                            self.effects.len(),
                             self.legacy_transition && self.end_timer.is_some(),
                         );
                     }
@@ -1775,6 +2026,11 @@ impl World {
                         state.movement.y += 1;
                         state.position = (state.position + 1) % 16;
                     } else {
+                        visual_effect(
+                            self.effects.len(),
+                            &mut self.visual_effects,
+                            VisualEffect::new(VisualEffectKind::SmallAir, p.x + 4, p.y + 4),
+                        );
                         retired.push(p.entity);
                     }
                 }
@@ -1782,16 +2038,33 @@ impl World {
                     retired.push(p.entity);
                 }
                 if (p.x - self.player.x - 16).abs() < 16 && (p.y - self.player.y - 16).abs() < 16 {
+                    visual_effect(
+                        self.effects.len(),
+                        &mut self.visual_effects,
+                        VisualEffect::new(VisualEffectKind::SmallAir, p.x, p.y),
+                    );
                     damage_player(
                         &mut self.player,
+                        self.energy_overflow,
+                        &mut self.super_shield_overflow,
                         state.damage,
                         self.difficulty,
                         &mut self.rng,
                         &mut self.sounds,
                         &mut self.sound_events,
+                        &mut self.visual_effects,
+                        self.effects.len(),
                         self.legacy_transition && self.end_timer.is_some(),
                     );
                     retired.push(p.entity);
+                }
+                // Native enemy missiles trail smoke on odd surviving updates.
+                if state.kind == 4 && p.age & 1 != 0 && !retired.contains(&p.entity) {
+                    visual_effect(
+                        self.effects.len(),
+                        &mut self.visual_effects,
+                        VisualEffect::new(VisualEffectKind::SmokeTrail, p.x + 4, p.y),
+                    );
                 }
             }
         }
@@ -1831,11 +2104,53 @@ impl World {
         ];
         for position in neighbors.into_iter().flatten() {
             if position < mission.layout.len()
-                && mission.tiles[mission.layout[position]].destroyed.is_some()
+                && (mission.legacy_map.is_none()
+                    || mission.tiles[mission.layout[position]].destroyed.is_some())
                 && !self.terrain_dead[position]
             {
-                self.terrain_health[position] -= damage;
+                self.damage_terrain(position, damage, registry);
             }
+        }
+    }
+    fn damage_terrain(&mut self, position: usize, damage: i32, registry: &Registry) {
+        let mission = &registry.missions[&self.mission];
+        if self.terrain_dead[position]
+            || (mission.legacy_map.is_none() && self.terrain_health[position] <= 0)
+        {
+            return;
+        }
+        self.terrain_health[position] -= damage;
+        // Native maps defer explosions to TILE_Think's following pass. JSON
+        // maps use immediate destruction, including shots from original guns.
+        if mission.legacy_map.is_none() && self.terrain_health[position] <= 0 {
+            self.terrain_dead[position] = true;
+            self.terrain_settled[position] = true;
+            self.player.credits = self
+                .player
+                .credits
+                .saturating_add(mission.tiles[mission.layout[position]].reward);
+            let columns = mission.columns.max(1) as usize;
+            let rows = mission.layout.len() / columns;
+            let x = 32 + (position % columns) as i32 * 32;
+            let y = 216 - rows as i32 * 32 + self.scroll + (position / columns) as i32 * 32;
+            original_effect(
+                self.visual_effects.len(),
+                &mut self.effects,
+                Effect::new(EffectKind::GroundBlast, x, y),
+            );
+            play_legacy_sound(
+                &mut self.rng,
+                &mut self.sounds,
+                &mut self.sound_events,
+                "FX_GEXPLO",
+            );
+            position_sound(
+                &mut self.sound_events,
+                x,
+                y,
+                self.player.x + 16,
+                self.player.y + 16,
+            );
         }
     }
     fn think_legacy_terrain(&mut self, registry: &Registry) {
@@ -1874,6 +2189,7 @@ impl World {
                     frames: 10,
                 });
                 original_effect(
+                    self.visual_effects.len(),
                     &mut self.effects,
                     Effect::new(EffectKind::GroundBlast, x + 16, y + 16),
                 );
@@ -1888,7 +2204,27 @@ impl World {
                 continue;
             }
             if delay.frames < 0 {
-                self.rng.next_value(); // Ground sparkle horizontal offset.
+                let random = self.rng.next_value(); // Ground sparkle horizontal offset.
+                let x = 16 + (delay.position % columns) as i32 * 32 + 8 + random % 8;
+                let y = y + (delay.position as i32 - start as i32) / columns as i32 * 32 + 26;
+                self.terrain_spark_delay += 1;
+                self.terrain_flare_delay += 1;
+                if self.terrain_spark_delay > 2 {
+                    visual_effect(
+                        self.effects.len(),
+                        &mut self.visual_effects,
+                        VisualEffect::new(VisualEffectKind::GroundSparkle, x, y),
+                    );
+                    self.terrain_spark_delay = 0;
+                }
+                if self.terrain_flare_delay > 4 {
+                    visual_effect(
+                        self.effects.len(),
+                        &mut self.visual_effects,
+                        VisualEffect::new(VisualEffectKind::GroundFlare, x, y),
+                    );
+                    self.terrain_flare_delay = 0;
+                }
                 self.terrain_damage_neighbors(delay.position, 20, registry);
                 self.terrain_settled[delay.position] = true;
             } else {
@@ -1932,6 +2268,17 @@ impl World {
                 } else {
                     0
                 };
+            if matches!(lib.index, 6..=8) {
+                visual_effect(
+                    self.effects.len(),
+                    &mut self.visual_effects,
+                    VisualEffect::new(
+                        VisualEffectKind::SmokeDown,
+                        p.x + half_width,
+                        p.y + half_height * 2,
+                    ),
+                );
+            }
             // The original S_BEAM damage pass tests the uncorrected launch
             // column, then applies player-follow offsets to presentation.
             if lib.beam == 2 {
@@ -1985,7 +2332,7 @@ impl World {
                 // the hit tile and the original left/up/right neighbors.
                 if lib.target == 4 {
                     if let Some(position) = self.legacy_tile_hit(p.x, p.y, registry) {
-                        self.terrain_health[position] -= weapon.damage;
+                        self.damage_terrain(position, weapon.damage, registry);
                         self.terrain_damage_neighbors(position, weapon.damage, registry);
                         let columns = registry.missions[&self.mission].columns.max(1) as usize;
                         if position > columns {
@@ -2023,8 +2370,34 @@ impl World {
                         enemy.health -= damage;
                     }
                     state.hit = true;
-                    if matches!(lib.target, 0 | 1 | 3) {
-                        self.rng.next_value();
+                    let spark = match lib.target {
+                        0 | 1 | 3 => {
+                            if self.rng.next_value() % 2 != 0 {
+                                VisualEffectKind::BlueSpark
+                            } else {
+                                VisualEffectKind::OrangeSpark
+                            }
+                        }
+                        2 => VisualEffectKind::OrangeSpark,
+                        4 => VisualEffectKind::SmallGround,
+                        _ => VisualEffectKind::BlueSpark,
+                    };
+                    visual_effect(
+                        self.effects.len(),
+                        &mut self.visual_effects,
+                        VisualEffect::new(spark, p.x, p.y),
+                    );
+                    if lib.target == 5 {
+                        visual_effect(
+                            self.effects.len(),
+                            &mut self.visual_effects,
+                            VisualEffect::new(
+                                VisualEffectKind::EnergyGrab,
+                                enemy.width / 2,
+                                enemy.height / 2,
+                            )
+                            .attached(enemy.entity),
+                        );
                     }
                     if lib.target == 5
                         && registry.enemies[&enemy.definition]
@@ -2060,8 +2433,17 @@ impl World {
                     self.event(p.weapon.clone(),"on_hit",serde_json::json!({"entity":entity,"projectile":p.entity,"damage":damage,"x":p.x,"y":p.y}));
                 } else if matches!(lib.target, 0 | 2) {
                     if let Some(position) = self.legacy_tile_hit(p.x, p.y, registry) {
-                        self.terrain_health[position] -= weapon.damage;
-                        self.rng.next_value();
+                        self.damage_terrain(position, weapon.damage, registry);
+                        let kind = if self.rng.next_value() % 2 == 0 {
+                            VisualEffectKind::GroundBlueSpark
+                        } else {
+                            VisualEffectKind::GroundOrangeSpark
+                        };
+                        visual_effect(
+                            self.effects.len(),
+                            &mut self.visual_effects,
+                            VisualEffect::new(kind, p.x, p.y),
+                        );
                         state.movement.done = true;
                     }
                 }
@@ -2069,6 +2451,15 @@ impl World {
             if state.movement.done {
                 if state.delay {
                     state.delay = false;
+                    visual_effect(
+                        self.effects.len(),
+                        &mut self.visual_effects,
+                        VisualEffect::new(
+                            VisualEffectKind::SmokeDown,
+                            state.movement.x,
+                            state.movement.y,
+                        ),
+                    );
                     state.movement = LineMove::new(
                         state.movement.x,
                         state.movement.y,
@@ -2076,6 +2467,11 @@ impl World {
                         0,
                     );
                 } else if lib.index == 11 {
+                    visual_effect(
+                        self.effects.len(),
+                        &mut self.visual_effects,
+                        VisualEffect::new(VisualEffectKind::Shield, 0, 0).attached(0),
+                    );
                     for enemy in &mut self.enemies {
                         enemy.health -= weapon.damage;
                     }
@@ -2090,7 +2486,7 @@ impl World {
                         if mission.tiles[mission.layout[position]].destroyed.is_some()
                             && !self.terrain_dead[position]
                         {
-                            self.terrain_health[position] -= 20;
+                            self.damage_terrain(position, 20, registry);
                         }
                     }
                     retired.extend(
@@ -2126,6 +2522,19 @@ impl World {
     fn legacy_tile_hit(&self, x: i32, y: i32, registry: &Registry) -> Option<usize> {
         let mission = &registry.missions[&self.mission];
         let columns = mission.columns.max(1) as usize;
+        if mission.legacy_map.is_none() {
+            // JSON terrain keeps scrolling past the last row. Use exactly its
+            // presentation coordinates instead of the native clamped window.
+            let rows = mission.layout.len() / columns;
+            let column = (x - 16).div_euclid(32);
+            let row = (y - (200 - rows as i32 * 32 + self.scroll)).div_euclid(32);
+            if column < 0 || column >= columns as i32 || row < 0 || row >= rows as i32 {
+                return None;
+            }
+            let position = row as usize * columns + column as usize;
+            return (self.terrain_health[position] > 0 && !self.terrain_dead[position])
+                .then_some(position);
+        }
         let (row, y_offset) = self.terrain_window(registry);
         let column = (x - 16).div_euclid(32);
         let local_row = (y - y_offset).div_euclid(32);
@@ -2347,6 +2756,29 @@ impl World {
                 target[0] = x;
             }
             self.projectile(id, x, y, 0, -lib.speed, false)?;
+            match lib.index {
+                0 => visual_effect(
+                    self.effects.len(),
+                    &mut self.visual_effects,
+                    VisualEffect::new(VisualEffectKind::Casing, x, y),
+                ),
+                5 => visual_effect(
+                    self.effects.len(),
+                    &mut self.visual_effects,
+                    VisualEffect::new(VisualEffectKind::LaserImpact, x, y),
+                ),
+                6 => visual_effect(
+                    self.effects.len(),
+                    &mut self.visual_effects,
+                    VisualEffect::new(
+                        VisualEffectKind::Muzzle,
+                        offset - i32::from(shot_number != 0),
+                        1,
+                    )
+                    .attached(0),
+                ),
+                _ => (),
+            }
             self.projectiles.last_mut().unwrap().legacy = Some(LegacyProjectile {
                 movement: LineMove::new(x, y, target[0], target[1]),
                 speed: lib.speed,
@@ -2462,11 +2894,15 @@ impl World {
                 if *entity == 0 {
                     damage_player(
                         &mut self.player,
+                        self.energy_overflow,
+                        &mut self.super_shield_overflow,
                         *amount,
                         self.difficulty,
                         &mut self.rng,
                         &mut self.sounds,
                         &mut self.sound_events,
+                        &mut self.visual_effects,
+                        self.effects.len(),
                         self.legacy_transition && self.end_timer.is_some(),
                     );
                 } else {
@@ -2529,12 +2965,39 @@ impl World {
                     "inventory capacity exceeded"
                 );
                 let amount = self.player.inventory.entry(id.clone()).or_default();
-                *amount = amount.saturating_add(*count).min(def.max_count);
+                let previous = *amount;
+                *amount = add_with_capacity(previous, *count, def.max_count);
                 if id.0 == "base:super_shield" {
-                    self.player.super_shield = *amount as i32;
+                    if self.super_shield_overflow > 0 {
+                        add_retained_charge(
+                            &mut self.player.super_shield,
+                            &mut self.super_shield_overflow,
+                            amount.saturating_sub(previous),
+                        );
+                        *amount = (self.player.super_shield.max(0) as u32)
+                            .saturating_add(self.super_shield_overflow);
+                    } else if *amount > 100 {
+                        self.player.super_shield = 100;
+                        self.super_shield_overflow = amount.saturating_sub(100);
+                    } else {
+                        self.player.super_shield = *amount as i32;
+                    }
                 }
                 if id.0 == "base:energy" {
-                    self.player.shield = *amount as i32;
+                    if self.energy_overflow > 0 {
+                        add_retained_charge(
+                            &mut self.player.shield,
+                            &mut self.energy_overflow,
+                            amount.saturating_sub(previous),
+                        );
+                        *amount =
+                            (self.player.shield.max(0) as u32).saturating_add(self.energy_overflow);
+                    } else if *amount > 100 {
+                        self.player.shield = 100;
+                        self.energy_overflow = amount.saturating_sub(100);
+                    } else {
+                        self.player.shield = *amount as i32;
+                    }
                 }
             }
             Command::ConsumeItem { item, count } => {
@@ -2547,10 +3010,26 @@ impl World {
                 ensure!(*amount >= *count, "insufficient item quantity");
                 *amount -= count;
                 if id.0 == "base:super_shield" {
-                    self.player.super_shield = *amount as i32;
+                    if self.super_shield_overflow > 0 {
+                        consume_retained_charge(
+                            &mut self.player.super_shield,
+                            &mut self.super_shield_overflow,
+                            *count,
+                        );
+                    } else {
+                        self.player.super_shield = *amount as i32;
+                    }
                 }
                 if id.0 == "base:energy" {
-                    self.player.shield = *amount as i32;
+                    if self.energy_overflow > 0 {
+                        consume_retained_charge(
+                            &mut self.player.shield,
+                            &mut self.energy_overflow,
+                            *count,
+                        );
+                    } else {
+                        self.player.shield = *amount as i32;
+                    }
                 } else if id.0 != "base:super_shield" && *amount == 0 {
                     self.player.inventory.remove(&id);
                     if self.player.selected.as_ref() == Some(&id) {
@@ -2564,6 +3043,15 @@ impl World {
             Command::Shield { amount } => {
                 ensure!(amount.unsigned_abs() <= 100000, "invalid shield adjustment");
                 self.player.shield = (self.player.shield + amount).clamp(0, 100);
+                if self.energy_overflow > 0 {
+                    if let Some(charge) = self
+                        .player
+                        .inventory
+                        .get_mut(&ContentId::from("base:energy"))
+                    {
+                        *charge = (self.player.shield as u32).saturating_add(self.energy_overflow);
+                    }
+                }
             }
             Command::Effect { x, y } => {
                 ensure!(self.effects.len() < 4096, "too many effects");
@@ -2790,11 +3278,15 @@ fn accelerate(v: i32, direction: i32, cap: i32) -> i32 {
 }
 fn damage_player(
     p: &mut Player,
+    energy_overflow: u32,
+    super_shield_overflow: &mut u32,
     damage: i32,
     difficulty: u32,
     rng: &mut LegacyRng,
     sounds: &mut Vec<u32>,
     events: &mut Vec<SoundEvent>,
+    visuals: &mut Vec<VisualEffect>,
+    effect_count: usize,
     immune: bool,
 ) {
     if immune {
@@ -2807,45 +3299,82 @@ fn damage_player(
     };
     let super_id = ContentId::from("base:super_shield");
     if p.inventory.contains_key(&super_id) {
+        visual_effect(
+            effect_count,
+            visuals,
+            VisualEffect::new(VisualEffectKind::Shield, 0, 0).attached(0),
+        );
         // Original super shields absorb the whole hit, even when it exhausts them.
         // A zero-charge shield remains equipped until another hit removes it.
         p.super_shield -= damage;
         play_legacy_sound(rng, sounds, events, "FX_SHIT");
         if p.super_shield < 0 {
+            // The exhausted module is actually destroyed. Its retained charge
+            // must not migrate into a replacement module or revive this one.
+            *super_shield_overflow = 0;
             if p.super_shield_reserves.is_empty() {
                 p.super_shield = 0;
                 p.inventory.remove(&super_id);
             } else {
-                p.super_shield = p.super_shield_reserves.remove(0) as i32;
-                p.inventory.insert(super_id.clone(), p.super_shield as u32);
+                let charge = p.super_shield_reserves.remove(0);
+                p.super_shield = charge.min(100) as i32;
+                *super_shield_overflow = charge.saturating_sub(100);
+                p.inventory.insert(super_id.clone(), charge);
             }
         } else {
-            p.inventory.insert(super_id, p.super_shield as u32);
+            p.inventory.insert(
+                super_id,
+                (p.super_shield as u32).saturating_add(*super_shield_overflow),
+            );
         }
     } else {
         p.shield = (p.shield - damage).max(0);
         if let Some(charge) = p.inventory.get_mut(&ContentId::from("base:energy")) {
-            *charge = p.shield as u32;
+            *charge = (p.shield as u32).saturating_add(energy_overflow);
         }
         play_legacy_sound(rng, sounds, events, "FX_HIT");
     }
 }
-fn add_energy(p: &mut Player, amount: i32) {
+fn add_energy(p: &mut Player, amount: i32, energy_overflow: u32, super_shield_overflow: u32) {
     if !p.inventory.contains_key(&ContentId::from("base:energy")) {
         return;
     }
     if p.shield < 100 {
         p.shield = (p.shield + amount).clamp(0, 100);
-        p.inventory.insert("base:energy".into(), p.shield as u32);
+        p.inventory.insert(
+            "base:energy".into(),
+            (p.shield as u32).saturating_add(energy_overflow),
+        );
     } else if p
         .inventory
         .contains_key(&ContentId::from("base:super_shield"))
         && p.super_shield > 0
     {
         p.super_shield = (p.super_shield + (amount >> 2)).min(100);
-        p.inventory
-            .insert("base:super_shield".into(), p.super_shield as u32);
+        p.inventory.insert(
+            "base:super_shield".into(),
+            (p.super_shield as u32).saturating_add(super_shield_overflow),
+        );
     }
+}
+fn is_zero(value: &u32) -> bool {
+    *value == 0
+}
+fn add_with_capacity(current: u32, additional: u32, capacity: u32) -> u32 {
+    // A smaller replacement definition can prevent new acquisitions, but an
+    // additive action cannot destroy quantities already accepted from a save.
+    current.max(current.saturating_add(additional).min(capacity))
+}
+fn add_retained_charge(usable: &mut i32, overflow: &mut u32, additional: u32) {
+    let before = (*usable).max(0) as u32;
+    let after = before.saturating_add(additional).min(100);
+    *usable = after as i32;
+    *overflow = overflow.saturating_add(additional.saturating_sub(after.saturating_sub(before)));
+}
+fn consume_retained_charge(usable: &mut i32, overflow: &mut u32, count: u32) {
+    let before = (*usable).max(0) as u32;
+    *usable = before.saturating_sub(count) as i32;
+    *overflow = overflow.saturating_sub(count.saturating_sub(before));
 }
 fn inventory_slots(p: &Player) -> usize {
     p.inventory.len() + p.super_shield_reserves.len()

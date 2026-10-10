@@ -1,0 +1,67 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_boss_6:projectile",
+      "name": "Iron Crown cannon shell",
+      "damage": 3,
+      "speed": 4,
+      "cooldown": 54,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 8
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "iron_coast_boss_6:unit",
+      "name": "Iron Crown Command Dreadnought",
+      "health": 160,
+      "speed": 0,
+      "reward": 1800,
+      "ground": false,
+      "boss": true,
+      "cooldown": 54,
+      "art": {
+        "png": "art/unit-sd.png",
+        "hd_png": "art/unit-hd.png",
+        "logical_width": 96,
+        "logical_height": 64
+      },
+      "script": "scripts/ai.rhai"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "iron_coast_boss_6:warning",
+      "name": "Iron Crown charging warning",
+      "file": "audio/warning.wav",
+      "volume": 90,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 3
+    },
+    {
+      "id": "iron_coast_boss_6:shot",
+      "name": "Iron Crown heavy cannon",
+      "file": "audio/shot.wav",
+      "volume": 100,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_boss_6:death",
+      "name": "Iron Crown destruction",
+      "file": "audio/death.wav",
+      "volume": 120,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 4
+    }
+  ]
+}

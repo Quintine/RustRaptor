@@ -1,0 +1,82 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_boss_5:mortar",
+      "name": "Cinder Hammer furnace mortar",
+      "damage": 3,
+      "speed": 4,
+      "cooldown": 54,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 8
+      }
+    },
+    {
+      "id": "iron_coast_boss_5:plasma",
+      "name": "Cinder Hammer molten plasma",
+      "damage": 3,
+      "speed": 4,
+      "cooldown": 54,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 8
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "iron_coast_boss_5:unit",
+      "name": "Cinder Hammer",
+      "health": 160,
+      "speed": 0,
+      "reward": 1800,
+      "ground": false,
+      "boss": true,
+      "cooldown": 54,
+      "art": {
+        "png": "art/unit-sd.png",
+        "hd_png": "art/unit-hd.png",
+        "logical_width": 96,
+        "logical_height": 64
+      },
+      "script": "scripts/ai.rhai"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "iron_coast_boss_5:warning",
+      "name": "Cinder Hammer pressure warning",
+      "file": "audio/warning.wav",
+      "volume": 72,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_boss_5:shot",
+      "name": "Cinder Hammer furnace discharge",
+      "file": "audio/shot.wav",
+      "volume": 96,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_boss_5:death",
+      "name": "Cinder Hammer furnace rupture",
+      "file": "audio/death.wav",
+      "volume": 120,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 4
+    }
+  ]
+}

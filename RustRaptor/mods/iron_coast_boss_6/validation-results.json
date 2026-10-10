@@ -1,0 +1,46 @@
+{
+  "activation": true,
+  "alternating_volleys_verified": true,
+  "dead_entity_no_fire": true,
+  "exact_death_counters_and_rewards": true,
+  "immediate_kill_counted": true,
+  "independent_dependency_free_package": true,
+  "no_premature_mission_completion": true,
+  "per_entity_patrol_and_timers": true,
+  "runs": [
+    {
+      "dead_bosses_retired": true,
+      "defeated": 2,
+      "difficulty": 0,
+      "remaining_shield": 99,
+      "rewards": 3600,
+      "tick": 330
+    },
+    {
+      "dead_bosses_retired": true,
+      "defeated": 2,
+      "difficulty": 1,
+      "remaining_shield": 97,
+      "rewards": 3600,
+      "tick": 330
+    },
+    {
+      "dead_bosses_retired": true,
+      "defeated": 2,
+      "difficulty": 2,
+      "remaining_shield": 91,
+      "rewards": 3600,
+      "tick": 650
+    },
+    {
+      "dead_bosses_retired": true,
+      "defeated": 2,
+      "difficulty": 3,
+      "remaining_shield": 91,
+      "rewards": 3600,
+      "tick": 650
+    }
+  ],
+  "state_roundtrip": true,
+  "warning_lead_ticks": 9
+}

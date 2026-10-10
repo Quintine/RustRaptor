@@ -1,0 +1,28 @@
+{
+  "api_version": 1,
+  "mod_version": "1.0.0",
+  "tool": "built-in image_gen.imagegen via imagegen skill",
+  "skill": "/home/quintine/.codex/skills/.system/imagegen/SKILL.md",
+  "generated_at": "2026-10-10",
+  "style_reference": {
+    "path": "../iron_coast_boss/art/unit-hd.png",
+    "role": "Inspected generated Iron Coast boss artwork used only as material/style reference; new broad radar aircraft silhouette and unique projectile generated independently",
+    "original_catalog_pixels_copied": false
+  },
+  "assets": [
+    {
+      "file": "art/unit-generated-v1.png",
+      "prompt": "prompts/unit-hd-v1.txt",
+      "tool_output": "exec-28f23852-b44b-4461-89d2-eb72c6e150a0.png",
+      "sha256": "ef00f35f6df18d5590e7c64168fa071daf31b116dca36f86542f1852865ce5ab"
+    },
+    {
+      "file": "art/projectile-generated-v1.png",
+      "prompt": "prompts/projectile-hd-v1.txt",
+      "tool_output": "exec-7200b663-a79e-4899-a062-3d06a7bae851.png",
+      "sha256": "51fe35c238b299fbcac748278e6799c6e4bfe30439471ad064d8a696ca97b147"
+    }
+  ],
+  "pipeline": "build_assets.py: full-canvas alpha-preserving Lanczos HD / BOX SD, deterministic 22050Hz 16-bit mono sound synthesis",
+  "version_control": "All generated masters, shipped SD/HD PNGs, WAVs, prompts and provenance tracked in Git per user request"
+}

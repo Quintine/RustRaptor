@@ -1,0 +1,20 @@
+{
+  "cli": {
+    "command": "raptor-rust --data data --mods RustRaptor/mods --validate-mods iron_coast_boss_5",
+    "result": "1 mod validated; no overrides; scripts compile; package-local PNGs and WAVs accepted"
+  },
+  "test_command": "cargo test --locked --offline --manifest-path RustRaptor/mods/iron_coast_boss_5/validation/Cargo.toml --target-dir RustRaptor/target",
+  "tests": 5,
+  "passed": 5,
+  "actual_simulation": {
+    "duration_ticks": 600,
+    "boss_persistent": true,
+    "death_damage": 160,
+    "death_objective_count": 1,
+    "death_reward": 1800,
+    "post_death_ticks": 80,
+    "ghost_attacks": 0
+  },
+  "art": "SD/8xHD share logical96x64 and8x8 canvases; true alpha and opaque silhouettes do not touch canvas boundaries",
+  "sounds": "three non-silent mono22050Hz16-bit PCM WAVs, bounded peaks and faded boundaries"
+}
