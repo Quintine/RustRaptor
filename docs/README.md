@@ -1,9 +1,10 @@
 # RaptorReplica
 
-The retained C++ engine described below is the playable reference. An independent
-Rust rewrite is now selectable with `./play.sh --engine rust`; see
-[Rust implementation and validation](rust-rewrite.md), [modding API](modding-api.md)
-and [optional HD art](hd-art.md). Full Rust cutover acceptance remains in progress.
+RustRaptor is the default game in `../RustRaptor/`; see
+[Rust implementation and validation](../RustRaptor/docs/rust-rewrite.md),
+[modding API](../RustRaptor/docs/modding-api.md) and
+[optional HD art](../RustRaptor/docs/hd-art.md).
+The historical C++ reference is described below.
 
 A faithful, playable replica of **Raptor: Call of the Shadows** (Cygnus
 Studios, 1994) running the reconstructed original engine on Linux, with the
@@ -12,7 +13,7 @@ original game data extracted into a modern, editable asset tree.
 ## Quick start
 
 ```sh
-./play.sh
+./play.sh --engine legacy
 ```
 
 Builds the engine on first run, then launches fullscreen. Saves and

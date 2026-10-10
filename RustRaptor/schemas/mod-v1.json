@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Manifest",
+  "type": "object",
+  "required": [
+    "api_version",
+    "id",
+    "name",
+    "version"
+  ],
+  "properties": {
+    "api_version": {
+      "description": "Exact supported content/script API major version.",
+      "type": "integer",
+      "format": "uint32",
+      "minimum": 0.0
+    },
+    "conflicts": {
+      "description": "IDs which cannot be enabled at the same time as this package.",
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "content": {
+      "description": "Relative path to the JSON content pack. Defaults to `content.json`.",
+      "default": "content.json",
+      "type": "string"
+    },
+    "dependencies": {
+      "description": "Required mod IDs mapped to semantic version requirements.",
+      "default": {},
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "default": "",
+      "type": "string"
+    },
+    "id": {
+      "description": "Unique lowercase namespace; `base` is reserved for the original game.",
+      "type": "string"
+    },
+    "name": {
+      "description": "Display name shown in the in-game manager.",
+      "type": "string"
+    },
+    "scripts": {
+      "description": "Relative paths to every Rhai source referenced by this content pack.",
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "version": {
+      "description": "Semantic package version, saved together with a SHA-256 content hash.",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

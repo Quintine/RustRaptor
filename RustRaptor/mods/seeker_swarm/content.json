@@ -1,0 +1,76 @@
+{
+  "weapons": [
+    {
+      "id": "seeker_swarm:projectile",
+      "name": "Seeker Swarm Projectile",
+      "damage": 6,
+      "speed": 6,
+      "cooldown": 18,
+      "behavior": "homing",
+      "target": "all",
+      "offsets": [
+        [
+          -7,
+          -2
+        ],
+        [
+          0,
+          -5
+        ],
+        [
+          7,
+          -2
+        ]
+      ],
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 16,
+        "nearest": true
+      },
+      "script": "scripts/weapon.rhai"
+    }
+  ],
+  "items": [
+    {
+      "id": "seeker_swarm:equipment",
+      "name": "Seeker Swarm",
+      "price": 285000,
+      "max_count": 1,
+      "initial_count": 1,
+      "weapon": "seeker_swarm:projectile",
+      "special": true,
+      "consumable": false,
+      "art": {
+        "png": "art/equipment-sd.png",
+        "hd_png": "art/equipment-hd.png",
+        "logical_width": 16,
+        "logical_height": 16,
+        "nearest": true
+      },
+      "script": "scripts/equipment.rhai",
+      "description": "Selectable reusable special. Fires three homing missiles at air or ground enemies. Hits scatter fragments into up to two nearby enemies. Select it in Inventory or cycle specials, then use Fire or Special."
+    }
+  ],
+  "sounds": [
+    {
+      "id": "seeker_swarm:fire",
+      "name": "Seeker Swarm Fire",
+      "file": "audio/fire.wav",
+      "volume": 92,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 1
+    },
+    {
+      "id": "seeker_swarm:impact",
+      "name": "Seeker Swarm Impact",
+      "file": "audio/impact.wav",
+      "volume": 78,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    }
+  ]
+}

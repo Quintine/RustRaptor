@@ -1,9 +1,9 @@
 # Building and running
 
-For the independent Rust engine, use `./play.sh --engine rust`. Rust 1.88+,
+For RustRaptor, use `./play.sh` or `./RustRaptor/run.sh`. Rust 1.88+,
 Cargo and SDL2 development libraries are required. The launcher builds in release
 mode and sets the local SDL2 library path. See [Rust build/test commands and
-separate profile locations](rust-rewrite.md). The sections below describe the
+separate profile locations](../RustRaptor/docs/rust-rewrite.md). The sections below describe the
 retained C++ engine; its launcher now rebuilds the target before each launch.
 
 ## Requirements
@@ -18,7 +18,7 @@ retained C++ engine; its launcher now rebuilds the target before each launch.
 ## Build and run
 
 ```sh
-./play.sh
+./play.sh --engine legacy
 ```
 
 `play.sh` checks `data/INDEX`, builds `raptor/build/bin/raptor` on first run

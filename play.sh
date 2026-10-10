@@ -1,9 +1,9 @@
 #!/bin/sh
-# Keep the reference engine as the default until Rust parity is validated.
+# RustRaptor is the default; the original engine is an optional reference.
 set -eu
 cd "$(dirname "$0")"
 ROOT="$PWD"
-ENGINE=legacy
+ENGINE=rust
 if [ "${1:-}" = --engine ]; then
     [ "$#" -ge 2 ] || { echo 'Usage: ./play.sh --engine legacy|rust [arguments]' >&2; exit 2; }
     ENGINE="$2"
@@ -12,7 +12,7 @@ fi
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$HOME/.local/lib"
 case "$ENGINE" in
     rust)
-        exec cargo run --locked --release --manifest-path "$ROOT/Cargo.toml" --bin raptor-rust -- --data "$ROOT/data" "$@"
+        exec cargo run --locked --release --manifest-path "$ROOT/RustRaptor/Cargo.toml" --bin raptor-rust -- "$@"
         ;;
     legacy)
         if [ ! -f data/INDEX ]; then

@@ -1,5 +1,6 @@
 # Derived game data — extracted from the copyrighted originals, never commit
 data/
+RustRaptor/data/
 
 # Vendored raptor build output
 raptor/build/
@@ -13,9 +14,12 @@ __pycache__/
 
 # Rust builds and locally derived reference/preview data
 target/
+RustRaptor/target/
+RustRaptor/dist/
+RustRaptor/.reference/
 .reference/
 derived/
 
 # Decoded original style references are not shipped mod artwork.
-examples/mods/*/art/source/
+RustRaptor/mods/*/art/source/
 
