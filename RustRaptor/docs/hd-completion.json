@@ -19,11 +19,11 @@
   ],
   "stage_contract": "Every generated candidate stays distinct from review, registration and render reachability. Original-only fallback is temporary for every required picture. Native cinematics/fonts have explicit preservation exceptions, not HD claims.",
   "picture_status_counts": {
-    "inprogress": 1551,
+    "inprogress": 1534,
     "missing": 3127,
     "registered": 195,
     "renderreachable": 20,
-    "candidate": 860
+    "candidate": 877
   },
   "assets": {
     "10001": {
@@ -14968,7 +14968,7 @@
       },
       "candidate": {
         "manifest": "jobs/projectiles-1021d-10222/candidate.json",
-        "sha256": "50aebf1b9155957e1d74b6b2b68d8167f62a7fd5b8fd6c1504549c9a2c9fdbb1",
+        "sha256": "3a0625541a3a0abb5f9b6bad2d987e41e66dcf0325d26a13c9b2f9505b301862",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -15001,7 +15001,7 @@
       },
       "candidate": {
         "manifest": "jobs/projectiles-1021d-10222/candidate.json",
-        "sha256": "50aebf1b9155957e1d74b6b2b68d8167f62a7fd5b8fd6c1504549c9a2c9fdbb1",
+        "sha256": "3a0625541a3a0abb5f9b6bad2d987e41e66dcf0325d26a13c9b2f9505b301862",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -15034,7 +15034,7 @@
       },
       "candidate": {
         "manifest": "jobs/projectiles-1021d-10222/candidate.json",
-        "sha256": "50aebf1b9155957e1d74b6b2b68d8167f62a7fd5b8fd6c1504549c9a2c9fdbb1",
+        "sha256": "3a0625541a3a0abb5f9b6bad2d987e41e66dcf0325d26a13c9b2f9505b301862",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -15067,7 +15067,7 @@
       },
       "candidate": {
         "manifest": "jobs/projectiles-1021d-10222/candidate.json",
-        "sha256": "50aebf1b9155957e1d74b6b2b68d8167f62a7fd5b8fd6c1504549c9a2c9fdbb1",
+        "sha256": "3a0625541a3a0abb5f9b6bad2d987e41e66dcf0325d26a13c9b2f9505b301862",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -15100,7 +15100,7 @@
       },
       "candidate": {
         "manifest": "jobs/projectiles-1021d-10222/candidate.json",
-        "sha256": "50aebf1b9155957e1d74b6b2b68d8167f62a7fd5b8fd6c1504549c9a2c9fdbb1",
+        "sha256": "3a0625541a3a0abb5f9b6bad2d987e41e66dcf0325d26a13c9b2f9505b301862",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -15133,7 +15133,7 @@
       },
       "candidate": {
         "manifest": "jobs/projectiles-1021d-10222/candidate.json",
-        "sha256": "50aebf1b9155957e1d74b6b2b68d8167f62a7fd5b8fd6c1504549c9a2c9fdbb1",
+        "sha256": "3a0625541a3a0abb5f9b6bad2d987e41e66dcf0325d26a13c9b2f9505b301862",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -15166,8 +15166,17 @@
       },
       "candidate": {
         "manifest": "jobs/projectiles-10223-10224/candidate.json",
-        "sha256": "f4a2e45aea75bbd900653079a994f6315713fb2fb4249c582f9877f5723a1c0e",
+        "sha256": "9c362e95417cc6a7025bd70012890ca9126fa6236c19aa3721b320d9aa5c70ef",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "awaiting_independent_review",
+        "candidate_sha256": "9c362e95417cc6a7025bd70012890ca9126fa6236c19aa3721b320d9aa5c70ef",
+        "frame_bindings_sha256": "ea41284eec045c56c15e163e5cfb0c4106f79a4f47703112d91fa7c865e535a4",
+        "reviewed_at_utc": "2026-10-10T23:15:19.863642+00:00",
+        "runtime_qa": "jobs/projectiles-10223-10224/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Complete source/logical 1x/indexed 4x two-phase contact sheet inspected. Both muted lavender arches preserve the original opening, phase width, logical bounds and downward-facing shape. Fine generated ridges differ from source shading while colors remain subdued. Current HdAssets scales 1-4 validates source hashes/canvases/crops/palette classes with no diagnostics and exact logical masks. No placed Host scene occurrence is claimed. Native 2x/3x independent visual review is pending.",
+        "independent_review": null
       }
     },
     "10224": {
@@ -15199,8 +15208,17 @@
       },
       "candidate": {
         "manifest": "jobs/projectiles-10223-10224/candidate.json",
-        "sha256": "f4a2e45aea75bbd900653079a994f6315713fb2fb4249c582f9877f5723a1c0e",
+        "sha256": "9c362e95417cc6a7025bd70012890ca9126fa6236c19aa3721b320d9aa5c70ef",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "awaiting_independent_review",
+        "candidate_sha256": "9c362e95417cc6a7025bd70012890ca9126fa6236c19aa3721b320d9aa5c70ef",
+        "frame_bindings_sha256": "ea41284eec045c56c15e163e5cfb0c4106f79a4f47703112d91fa7c865e535a4",
+        "reviewed_at_utc": "2026-10-10T23:15:19.863642+00:00",
+        "runtime_qa": "jobs/projectiles-10223-10224/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Complete source/logical 1x/indexed 4x two-phase contact sheet inspected. Both muted lavender arches preserve the original opening, phase width, logical bounds and downward-facing shape. Fine generated ridges differ from source shading while colors remain subdued. Current HdAssets scales 1-4 validates source hashes/canvases/crops/palette classes with no diagnostics and exact logical masks. No placed Host scene occurrence is claimed. Native 2x/3x independent visual review is pending.",
+        "independent_review": null
       }
     },
     "10225": {
@@ -15674,13 +15692,18 @@
       "canonical_source_asset": "10231",
       "family_id": "projectiles-10231-10234",
       "job_id": "projectiles-10231-10234",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10231-10234/candidate.json",
+        "sha256": "0add4c306c32c1727b1ce12037da0eb5fafb2f1535b996fd2d5efd7ab322965f",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10232": {
@@ -15702,13 +15725,18 @@
       "canonical_source_asset": "10232",
       "family_id": "projectiles-10231-10234",
       "job_id": "projectiles-10231-10234",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10231-10234/candidate.json",
+        "sha256": "0add4c306c32c1727b1ce12037da0eb5fafb2f1535b996fd2d5efd7ab322965f",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10233": {
@@ -15730,13 +15758,18 @@
       "canonical_source_asset": "10233",
       "family_id": "projectiles-10231-10234",
       "job_id": "projectiles-10231-10234",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10231-10234/candidate.json",
+        "sha256": "0add4c306c32c1727b1ce12037da0eb5fafb2f1535b996fd2d5efd7ab322965f",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10234": {
@@ -15758,13 +15791,18 @@
       "canonical_source_asset": "10234",
       "family_id": "projectiles-10231-10234",
       "job_id": "projectiles-10231-10234",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10231-10234/candidate.json",
+        "sha256": "0add4c306c32c1727b1ce12037da0eb5fafb2f1535b996fd2d5efd7ab322965f",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10235": {
@@ -15786,13 +15824,18 @@
       "canonical_source_asset": "10235",
       "family_id": "projectiles-10235-10238",
       "job_id": "projectiles-10235-10238",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10235-10238/candidate.json",
+        "sha256": "4609d1a26a28475ad8a52556d2b195b31cc67a914fed22bb919d447ebaffab44",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10236": {
@@ -15814,13 +15857,18 @@
       "canonical_source_asset": "10236",
       "family_id": "projectiles-10235-10238",
       "job_id": "projectiles-10235-10238",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10235-10238/candidate.json",
+        "sha256": "4609d1a26a28475ad8a52556d2b195b31cc67a914fed22bb919d447ebaffab44",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10237": {
@@ -15842,13 +15890,18 @@
       "canonical_source_asset": "10237",
       "family_id": "projectiles-10235-10238",
       "job_id": "projectiles-10235-10238",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10235-10238/candidate.json",
+        "sha256": "4609d1a26a28475ad8a52556d2b195b31cc67a914fed22bb919d447ebaffab44",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10238": {
@@ -15870,13 +15923,18 @@
       "canonical_source_asset": "10238",
       "family_id": "projectiles-10235-10238",
       "job_id": "projectiles-10235-10238",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10235-10238/candidate.json",
+        "sha256": "4609d1a26a28475ad8a52556d2b195b31cc67a914fed22bb919d447ebaffab44",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10239": {
@@ -16162,13 +16220,18 @@
       "canonical_source_asset": "10241",
       "family_id": "projectiles-10241-10244",
       "job_id": "projectiles-10241-10244",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10241-10244/candidate.json",
+        "sha256": "0db6ed0d31acfdc62fc4abfa80a7a8b0d17f6ccfc19df08e7f084a5823b2910f",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10242": {
@@ -16190,13 +16253,18 @@
       "canonical_source_asset": "10242",
       "family_id": "projectiles-10241-10244",
       "job_id": "projectiles-10241-10244",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10241-10244/candidate.json",
+        "sha256": "0db6ed0d31acfdc62fc4abfa80a7a8b0d17f6ccfc19df08e7f084a5823b2910f",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10243": {
@@ -16218,13 +16286,18 @@
       "canonical_source_asset": "10243",
       "family_id": "projectiles-10241-10244",
       "job_id": "projectiles-10241-10244",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10241-10244/candidate.json",
+        "sha256": "0db6ed0d31acfdc62fc4abfa80a7a8b0d17f6ccfc19df08e7f084a5823b2910f",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10244": {
@@ -16246,13 +16319,18 @@
       "canonical_source_asset": "10244",
       "family_id": "projectiles-10241-10244",
       "job_id": "projectiles-10241-10244",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10241-10244/candidate.json",
+        "sha256": "0db6ed0d31acfdc62fc4abfa80a7a8b0d17f6ccfc19df08e7f084a5823b2910f",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10245": {
@@ -16546,13 +16624,27 @@
       "canonical_source_asset": "1024d",
       "family_id": "projectiles-1024d-10250",
       "job_id": "projectiles-1024d-10250",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-1024d-10250/candidate.json",
+        "sha256": "153ab82bdab15987be1e92a5779eaa8de4f7386ebf5cec35a60bb399de2c1916",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "awaiting_independent_review",
+        "candidate_sha256": "153ab82bdab15987be1e92a5779eaa8de4f7386ebf5cec35a60bb399de2c1916",
+        "frame_bindings_sha256": "94dc75d13ebfd9f497475693093f0fd1248efb688c0d9eda1d9d5793fa80ef67",
+        "reviewed_at_utc": "2026-10-10T23:46:53.278048+00:00",
+        "runtime_qa": "jobs/projectiles-1024d-10250/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Complete source/logical 1x/indexed 4x four-phase family sheet inspected. Original stepped masks, muted tan highlights and burgundy lower regions retain each phase, without luminous fire or silver metal. Fine husk grain is newly authored. Exact current HdAssets scales 1-4 validate all source hashes, canvases, crops and palette classes; no diagnostics. Native 2x/3x independent visual review and placed scene evidence are separate.",
+        "independent_review": null
       }
     },
     "1024e": {
@@ -16574,13 +16666,27 @@
       "canonical_source_asset": "1024e",
       "family_id": "projectiles-1024d-10250",
       "job_id": "projectiles-1024d-10250",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-1024d-10250/candidate.json",
+        "sha256": "153ab82bdab15987be1e92a5779eaa8de4f7386ebf5cec35a60bb399de2c1916",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "awaiting_independent_review",
+        "candidate_sha256": "153ab82bdab15987be1e92a5779eaa8de4f7386ebf5cec35a60bb399de2c1916",
+        "frame_bindings_sha256": "94dc75d13ebfd9f497475693093f0fd1248efb688c0d9eda1d9d5793fa80ef67",
+        "reviewed_at_utc": "2026-10-10T23:46:53.278048+00:00",
+        "runtime_qa": "jobs/projectiles-1024d-10250/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Complete source/logical 1x/indexed 4x four-phase family sheet inspected. Original stepped masks, muted tan highlights and burgundy lower regions retain each phase, without luminous fire or silver metal. Fine husk grain is newly authored. Exact current HdAssets scales 1-4 validate all source hashes, canvases, crops and palette classes; no diagnostics. Native 2x/3x independent visual review and placed scene evidence are separate.",
+        "independent_review": null
       }
     },
     "1024f": {
@@ -16602,13 +16708,27 @@
       "canonical_source_asset": "1024f",
       "family_id": "projectiles-1024d-10250",
       "job_id": "projectiles-1024d-10250",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-1024d-10250/candidate.json",
+        "sha256": "153ab82bdab15987be1e92a5779eaa8de4f7386ebf5cec35a60bb399de2c1916",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "awaiting_independent_review",
+        "candidate_sha256": "153ab82bdab15987be1e92a5779eaa8de4f7386ebf5cec35a60bb399de2c1916",
+        "frame_bindings_sha256": "94dc75d13ebfd9f497475693093f0fd1248efb688c0d9eda1d9d5793fa80ef67",
+        "reviewed_at_utc": "2026-10-10T23:46:53.278048+00:00",
+        "runtime_qa": "jobs/projectiles-1024d-10250/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Complete source/logical 1x/indexed 4x four-phase family sheet inspected. Original stepped masks, muted tan highlights and burgundy lower regions retain each phase, without luminous fire or silver metal. Fine husk grain is newly authored. Exact current HdAssets scales 1-4 validate all source hashes, canvases, crops and palette classes; no diagnostics. Native 2x/3x independent visual review and placed scene evidence are separate.",
+        "independent_review": null
       }
     },
     "10250": {
@@ -16630,13 +16750,27 @@
       "canonical_source_asset": "10250",
       "family_id": "projectiles-1024d-10250",
       "job_id": "projectiles-1024d-10250",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-1024d-10250/candidate.json",
+        "sha256": "153ab82bdab15987be1e92a5779eaa8de4f7386ebf5cec35a60bb399de2c1916",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "awaiting_independent_review",
+        "candidate_sha256": "153ab82bdab15987be1e92a5779eaa8de4f7386ebf5cec35a60bb399de2c1916",
+        "frame_bindings_sha256": "94dc75d13ebfd9f497475693093f0fd1248efb688c0d9eda1d9d5793fa80ef67",
+        "reviewed_at_utc": "2026-10-10T23:46:53.278048+00:00",
+        "runtime_qa": "jobs/projectiles-1024d-10250/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Complete source/logical 1x/indexed 4x four-phase family sheet inspected. Original stepped masks, muted tan highlights and burgundy lower regions retain each phase, without luminous fire or silver metal. Fine husk grain is newly authored. Exact current HdAssets scales 1-4 validate all source hashes, canvases, crops and palette classes; no diagnostics. Native 2x/3x independent visual review and placed scene evidence are separate.",
+        "independent_review": null
       }
     },
     "10251": {
@@ -16658,13 +16792,18 @@
       "canonical_source_asset": "10251",
       "family_id": "projectiles-10251-10251",
       "job_id": "projectiles-10251-10251",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10251-10251/candidate.json",
+        "sha256": "8894eaf43c54442e3a7f3360009f0ede6c34e8227af2393de948a9f8cae8ab49",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10252": {
@@ -21090,6 +21229,15 @@
         "manifest": "jobs/equipment-102c8-102cb/candidate.json",
         "sha256": "4d849e980722dd1ddc948d7a7faab98f268c8c97dc112689f3215286f863111b",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "awaiting_independent_review",
+        "candidate_sha256": "4d849e980722dd1ddc948d7a7faab98f268c8c97dc112689f3215286f863111b",
+        "frame_bindings_sha256": "36bf0449d29c08f9103ac305d98eb3f9d9f74b099d4ec0a0b23d0c036ff96177",
+        "reviewed_at_utc": "2026-10-10T23:08:40.560682+00:00",
+        "runtime_qa": "jobs/equipment-102c8-102cb/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Complete source/logical 1x/indexed 4x family sheet inspected by coordinator. Alternating left/right rod heights and red/amber bottom indicator phases preserve original positions; newly painted metal detail remains consistent, original opaque lower backing and negative spaces remain. Exact current HdAssets scales 1-4 validates source hashes/canvases/crops/palette classes with no diagnostics. Native 2x/3x independent visual review is pending.",
+        "independent_review": null
       }
     },
     "102c9": {
@@ -21123,6 +21271,15 @@
         "manifest": "jobs/equipment-102c8-102cb/candidate.json",
         "sha256": "4d849e980722dd1ddc948d7a7faab98f268c8c97dc112689f3215286f863111b",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "awaiting_independent_review",
+        "candidate_sha256": "4d849e980722dd1ddc948d7a7faab98f268c8c97dc112689f3215286f863111b",
+        "frame_bindings_sha256": "36bf0449d29c08f9103ac305d98eb3f9d9f74b099d4ec0a0b23d0c036ff96177",
+        "reviewed_at_utc": "2026-10-10T23:08:40.560682+00:00",
+        "runtime_qa": "jobs/equipment-102c8-102cb/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Complete source/logical 1x/indexed 4x family sheet inspected by coordinator. Alternating left/right rod heights and red/amber bottom indicator phases preserve original positions; newly painted metal detail remains consistent, original opaque lower backing and negative spaces remain. Exact current HdAssets scales 1-4 validates source hashes/canvases/crops/palette classes with no diagnostics. Native 2x/3x independent visual review is pending.",
+        "independent_review": null
       }
     },
     "102ca": {
@@ -21156,6 +21313,15 @@
         "manifest": "jobs/equipment-102c8-102cb/candidate.json",
         "sha256": "4d849e980722dd1ddc948d7a7faab98f268c8c97dc112689f3215286f863111b",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "awaiting_independent_review",
+        "candidate_sha256": "4d849e980722dd1ddc948d7a7faab98f268c8c97dc112689f3215286f863111b",
+        "frame_bindings_sha256": "36bf0449d29c08f9103ac305d98eb3f9d9f74b099d4ec0a0b23d0c036ff96177",
+        "reviewed_at_utc": "2026-10-10T23:08:40.560682+00:00",
+        "runtime_qa": "jobs/equipment-102c8-102cb/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Complete source/logical 1x/indexed 4x family sheet inspected by coordinator. Alternating left/right rod heights and red/amber bottom indicator phases preserve original positions; newly painted metal detail remains consistent, original opaque lower backing and negative spaces remain. Exact current HdAssets scales 1-4 validates source hashes/canvases/crops/palette classes with no diagnostics. Native 2x/3x independent visual review is pending.",
+        "independent_review": null
       }
     },
     "102cb": {
@@ -21189,6 +21355,15 @@
         "manifest": "jobs/equipment-102c8-102cb/candidate.json",
         "sha256": "4d849e980722dd1ddc948d7a7faab98f268c8c97dc112689f3215286f863111b",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "awaiting_independent_review",
+        "candidate_sha256": "4d849e980722dd1ddc948d7a7faab98f268c8c97dc112689f3215286f863111b",
+        "frame_bindings_sha256": "36bf0449d29c08f9103ac305d98eb3f9d9f74b099d4ec0a0b23d0c036ff96177",
+        "reviewed_at_utc": "2026-10-10T23:08:40.560682+00:00",
+        "runtime_qa": "jobs/equipment-102c8-102cb/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Complete source/logical 1x/indexed 4x family sheet inspected by coordinator. Alternating left/right rod heights and red/amber bottom indicator phases preserve original positions; newly painted metal detail remains consistent, original opaque lower backing and negative spaces remain. Exact current HdAssets scales 1-4 validates source hashes/canvases/crops/palette classes with no diagnostics. Native 2x/3x independent visual review is pending.",
+        "independent_review": null
       }
     },
     "102cc": {
@@ -23990,18 +24165,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
-        "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "sha256": "d4e71ccd788a547cf3775952dee92032375bcdd70bac3194bcc12eee1b2dd154",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
-        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
-        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
-        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
-        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
-        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
-        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10320": {
@@ -24033,18 +24198,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
-        "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "sha256": "d4e71ccd788a547cf3775952dee92032375bcdd70bac3194bcc12eee1b2dd154",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
-        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
-        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
-        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
-        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
-        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
-        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10321": {
@@ -24076,18 +24231,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
-        "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "sha256": "d4e71ccd788a547cf3775952dee92032375bcdd70bac3194bcc12eee1b2dd154",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
-        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
-        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
-        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
-        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
-        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
-        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10322": {
@@ -24119,18 +24264,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
-        "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "sha256": "d4e71ccd788a547cf3775952dee92032375bcdd70bac3194bcc12eee1b2dd154",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
-        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
-        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
-        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
-        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
-        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
-        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10323": {
@@ -24162,18 +24297,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
-        "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "sha256": "d4e71ccd788a547cf3775952dee92032375bcdd70bac3194bcc12eee1b2dd154",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
-        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
-        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
-        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
-        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
-        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
-        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10324": {
@@ -24205,18 +24330,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
-        "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "sha256": "d4e71ccd788a547cf3775952dee92032375bcdd70bac3194bcc12eee1b2dd154",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
-        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
-        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
-        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
-        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
-        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
-        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10325": {
@@ -24248,18 +24363,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
-        "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "sha256": "d4e71ccd788a547cf3775952dee92032375bcdd70bac3194bcc12eee1b2dd154",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
-        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
-        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
-        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
-        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
-        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
-        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10326": {
@@ -24291,18 +24396,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
-        "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "sha256": "d4e71ccd788a547cf3775952dee92032375bcdd70bac3194bcc12eee1b2dd154",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
-        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
-        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
-        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
-        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
-        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
-        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10327": {
@@ -25360,7 +25455,7 @@
       "family_id": "enemies-10346-10351",
       "job_id": "enemies-10346-10351",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -25388,7 +25483,7 @@
       "family_id": "enemies-10346-10351",
       "job_id": "enemies-10346-10351",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -25416,7 +25511,7 @@
       "family_id": "enemies-10346-10351",
       "job_id": "enemies-10346-10351",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -25444,7 +25539,7 @@
       "family_id": "enemies-10346-10351",
       "job_id": "enemies-10346-10351",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -25472,7 +25567,7 @@
       "family_id": "enemies-10346-10351",
       "job_id": "enemies-10346-10351",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -25500,7 +25595,7 @@
       "family_id": "enemies-10346-10351",
       "job_id": "enemies-10346-10351",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -25528,7 +25623,7 @@
       "family_id": "enemies-10346-10351",
       "job_id": "enemies-10346-10351",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -25556,7 +25651,7 @@
       "family_id": "enemies-10346-10351",
       "job_id": "enemies-10346-10351",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -25584,7 +25679,7 @@
       "family_id": "enemies-10346-10351",
       "job_id": "enemies-10346-10351",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -25612,7 +25707,7 @@
       "family_id": "enemies-10346-10351",
       "job_id": "enemies-10346-10351",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -25640,7 +25735,7 @@
       "family_id": "enemies-10346-10351",
       "job_id": "enemies-10346-10351",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -25668,7 +25763,7 @@
       "family_id": "enemies-10346-10351",
       "job_id": "enemies-10346-10351",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -30118,7 +30213,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30155,7 +30250,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30192,7 +30287,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30229,7 +30324,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30266,7 +30361,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30303,7 +30398,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30340,7 +30435,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30377,7 +30472,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30414,7 +30509,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30451,7 +30546,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30488,7 +30583,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30525,7 +30620,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30562,7 +30657,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30599,7 +30694,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30636,7 +30731,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -30673,7 +30768,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103d0-103df/candidate.json",
-        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "sha256": "3c3094f19c62789015e2635e9b9ace7b4d9b1d66decbee3c7db46131471d2417",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -49757,7 +49852,7 @@
       "family_id": "enemies-20055-20055",
       "job_id": "enemies-20055-20055",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -49846,7 +49941,7 @@
       "family_id": "enemies-20058-20058",
       "job_id": "enemies-20058-20058",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -49874,7 +49969,7 @@
       "family_id": "enemies-20059-20060",
       "job_id": "enemies-20059-20060",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -49902,7 +49997,7 @@
       "family_id": "enemies-20059-20060",
       "job_id": "enemies-20059-20060",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -49930,7 +50025,7 @@
       "family_id": "enemies-20059-20060",
       "job_id": "enemies-20059-20060",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -49958,7 +50053,7 @@
       "family_id": "enemies-20059-20060",
       "job_id": "enemies-20059-20060",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -49986,7 +50081,7 @@
       "family_id": "enemies-20059-20060",
       "job_id": "enemies-20059-20060",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50014,7 +50109,7 @@
       "family_id": "enemies-20059-20060",
       "job_id": "enemies-20059-20060",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50042,7 +50137,7 @@
       "family_id": "enemies-20059-20060",
       "job_id": "enemies-20059-20060",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50070,7 +50165,7 @@
       "family_id": "enemies-20059-20060",
       "job_id": "enemies-20059-20060",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50098,7 +50193,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50126,7 +50221,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50154,7 +50249,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50182,7 +50277,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50210,7 +50305,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50238,7 +50333,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50266,7 +50361,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50294,7 +50389,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50322,7 +50417,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50350,7 +50445,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50378,7 +50473,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50406,7 +50501,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50434,7 +50529,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50462,7 +50557,7 @@
       "family_id": "enemies-20061-2006e",
       "job_id": "enemies-20061-2006e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50919,7 +51014,7 @@
       "family_id": "enemies-2007c-2007f",
       "job_id": "enemies-2007c-2007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50947,7 +51042,7 @@
       "family_id": "enemies-2007c-2007f",
       "job_id": "enemies-2007c-2007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -50975,7 +51070,7 @@
       "family_id": "enemies-2007c-2007f",
       "job_id": "enemies-2007c-2007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -51003,7 +51098,7 @@
       "family_id": "enemies-2007c-2007f",
       "job_id": "enemies-2007c-2007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -51488,7 +51583,7 @@
       "family_id": "enemies-2008e-2008e",
       "job_id": "enemies-2008e-2008e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -51577,7 +51672,7 @@
       "family_id": "enemies-20091-20091",
       "job_id": "enemies-20091-20091",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
@@ -51666,7 +51761,7 @@
       "family_id": "enemies-20094-20094",
       "job_id": "enemies-20094-20094",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -51755,7 +51850,7 @@
       "family_id": "enemies-20097-20097",
       "job_id": "enemies-20097-20097",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -51900,7 +51995,7 @@
       "family_id": "enemies-2009c-2009c",
       "job_id": "enemies-2009c-2009c",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -51989,7 +52084,7 @@
       "family_id": "enemies-2009f-200a0",
       "job_id": "enemies-2009f-200a0",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -52017,7 +52112,7 @@
       "family_id": "enemies-2009f-200a0",
       "job_id": "enemies-2009f-200a0",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -52151,7 +52246,7 @@
       "family_id": "enemies-200a4-200a4",
       "job_id": "enemies-200a4-200a4",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -52504,7 +52599,7 @@
       "family_id": "enemies-200af-200af",
       "job_id": "enemies-200af-200af",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -52593,7 +52688,7 @@
       "family_id": "enemies-200b2-200b2",
       "job_id": "enemies-200b2-200b2",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -52682,7 +52777,7 @@
       "family_id": "enemies-200b5-200b5",
       "job_id": "enemies-200b5-200b5",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -53000,7 +53095,7 @@
       "family_id": "enemies-200c0-200c3",
       "job_id": "enemies-200c0-200c3",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -53028,7 +53123,7 @@
       "family_id": "enemies-200c0-200c3",
       "job_id": "enemies-200c0-200c3",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -53056,7 +53151,7 @@
       "family_id": "enemies-200c0-200c3",
       "job_id": "enemies-200c0-200c3",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -53084,7 +53179,7 @@
       "family_id": "enemies-200c0-200c3",
       "job_id": "enemies-200c0-200c3",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -53907,7 +54002,7 @@
       "family_id": "enemies-200dd-200e0",
       "job_id": "enemies-200dd-200e0",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -53935,7 +54030,7 @@
       "family_id": "enemies-200dd-200e0",
       "job_id": "enemies-200dd-200e0",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -53963,7 +54058,7 @@
       "family_id": "enemies-200dd-200e0",
       "job_id": "enemies-200dd-200e0",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -53991,7 +54086,7 @@
       "family_id": "enemies-200dd-200e0",
       "job_id": "enemies-200dd-200e0",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -54047,7 +54142,7 @@
       "family_id": "enemies-200e2-200e2",
       "job_id": "enemies-200e2-200e2",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -54136,7 +54231,7 @@
       "family_id": "enemies-200e5-200e5",
       "job_id": "enemies-200e5-200e5",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -54225,7 +54320,7 @@
       "family_id": "enemies-200e8-200e8",
       "job_id": "enemies-200e8-200e8",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -54713,7 +54808,7 @@
       "family_id": "enemies-200f8-200fd",
       "job_id": "enemies-200f8-200fd",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -54741,7 +54836,7 @@
       "family_id": "enemies-200f8-200fd",
       "job_id": "enemies-200f8-200fd",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -54769,7 +54864,7 @@
       "family_id": "enemies-200f8-200fd",
       "job_id": "enemies-200f8-200fd",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -54797,7 +54892,7 @@
       "family_id": "enemies-200f8-200fd",
       "job_id": "enemies-200f8-200fd",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -54825,7 +54920,7 @@
       "family_id": "enemies-200f8-200fd",
       "job_id": "enemies-200f8-200fd",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -54853,7 +54948,7 @@
       "family_id": "enemies-200f8-200fd",
       "job_id": "enemies-200f8-200fd",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -103734,7 +103829,7 @@
       "family_id": "enemies-30047-30047",
       "job_id": "enemies-30047-30047",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -103823,7 +103918,7 @@
       "family_id": "enemies-3004a-3004a",
       "job_id": "enemies-3004a-3004a",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -103912,7 +104007,7 @@
       "family_id": "enemies-3004d-3004d",
       "job_id": "enemies-3004d-3004d",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -104001,7 +104096,7 @@
       "family_id": "enemies-30050-30050",
       "job_id": "enemies-30050-30050",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -104090,7 +104185,7 @@
       "family_id": "enemies-30053-30053",
       "job_id": "enemies-30053-30053",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -104311,7 +104406,7 @@
       "family_id": "enemies-3005a-3005a",
       "job_id": "enemies-3005a-3005a",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -104400,7 +104495,7 @@
       "family_id": "enemies-3005d-3005d",
       "job_id": "enemies-3005d-3005d",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -104687,7 +104782,7 @@
       "family_id": "enemies-30066-30066",
       "job_id": "enemies-30066-30066",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -104776,7 +104871,7 @@
       "family_id": "enemies-30069-30069",
       "job_id": "enemies-30069-30069",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -104865,7 +104960,7 @@
       "family_id": "enemies-3006c-3006c",
       "job_id": "enemies-3006c-3006c",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -104954,7 +105049,7 @@
       "family_id": "enemies-3006f-3006f",
       "job_id": "enemies-3006f-3006f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -104982,7 +105077,7 @@
       "family_id": "enemies-30070-30071",
       "job_id": "enemies-30070-30071",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -105010,7 +105105,7 @@
       "family_id": "enemies-30070-30071",
       "job_id": "enemies-30070-30071",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -105211,7 +105306,7 @@
       "family_id": "enemies-30078-3007b",
       "job_id": "enemies-30078-3007b",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -105239,7 +105334,7 @@
       "family_id": "enemies-30078-3007b",
       "job_id": "enemies-30078-3007b",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -105267,7 +105362,7 @@
       "family_id": "enemies-30078-3007b",
       "job_id": "enemies-30078-3007b",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -105295,7 +105390,7 @@
       "family_id": "enemies-30078-3007b",
       "job_id": "enemies-30078-3007b",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -105829,7 +105924,7 @@
       "family_id": "enemies-3008d-3008d",
       "job_id": "enemies-3008d-3008d",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -105918,7 +106013,7 @@
       "family_id": "enemies-30090-30090",
       "job_id": "enemies-30090-30090",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -106007,7 +106102,7 @@
       "family_id": "enemies-30093-30093",
       "job_id": "enemies-30093-30093",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -106096,7 +106191,7 @@
       "family_id": "enemies-30096-30096",
       "job_id": "enemies-30096-30096",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -106185,7 +106280,7 @@
       "family_id": "enemies-30099-30099",
       "job_id": "enemies-30099-30099",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -106330,7 +106425,7 @@
       "family_id": "enemies-3009e-3009e",
       "job_id": "enemies-3009e-3009e",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -106760,7 +106855,7 @@
       "family_id": "enemies-300ad-300ad",
       "job_id": "enemies-300ad-300ad",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146488,7 +146583,7 @@
       "family_id": "enemies-4006f-4006f",
       "job_id": "enemies-4006f-4006f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146516,7 +146611,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146544,7 +146639,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146572,7 +146667,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146600,7 +146695,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146628,7 +146723,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146656,7 +146751,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146684,7 +146779,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146712,7 +146807,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146740,7 +146835,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146768,7 +146863,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146796,7 +146891,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146824,7 +146919,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146852,7 +146947,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146880,7 +146975,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146908,7 +147003,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -146936,7 +147031,7 @@
       "family_id": "enemies-40070-4007f",
       "job_id": "enemies-40070-4007f",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
@@ -147221,7 +147316,7 @@
       "family_id": "enemies-40089-40089",
       "job_id": "enemies-40089-40089",
       "status": "inprogress",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
@@ -194027,7 +194122,7 @@
       "owner": "/root/campaign_integration",
       "target_count": 4,
       "status_counts": {
-        "inprogress": 4
+        "candidate": 4
       },
       "job_file": "projectiles-10231-10234/job.json"
     },
@@ -194039,7 +194134,7 @@
       "owner": "/root/campaign_integration",
       "target_count": 4,
       "status_counts": {
-        "inprogress": 4
+        "candidate": 4
       },
       "job_file": "projectiles-10235-10238/job.json"
     },
@@ -194075,7 +194170,7 @@
       "owner": "/root/campaign_integration",
       "target_count": 4,
       "status_counts": {
-        "inprogress": 4
+        "candidate": 4
       },
       "job_file": "projectiles-10241-10244/job.json"
     },
@@ -194111,7 +194206,7 @@
       "owner": "/root/campaign_integration",
       "target_count": 4,
       "status_counts": {
-        "inprogress": 4
+        "candidate": 4
       },
       "job_file": "projectiles-1024d-10250/job.json"
     },
@@ -194123,7 +194218,7 @@
       "owner": "/root/campaign_integration",
       "target_count": 1,
       "status_counts": {
-        "inprogress": 1
+        "candidate": 1
       },
       "job_file": "projectiles-10251-10251/job.json"
     },
@@ -194972,7 +195067,7 @@
       "name": "COW_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 12,
       "status_counts": {
         "inprogress": 12
@@ -195056,7 +195151,7 @@
       "name": "TARG3G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195092,7 +195187,7 @@
       "name": "TARG6G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195104,7 +195199,7 @@
       "name": "TARG7G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 8,
       "status_counts": {
         "inprogress": 8
@@ -195116,7 +195211,7 @@
       "name": "TARG8G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 14,
       "status_counts": {
         "inprogress": 14
@@ -195140,7 +195235,7 @@
       "name": "TARG10G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 4,
       "status_counts": {
         "inprogress": 4
@@ -195200,7 +195295,7 @@
       "name": "TARG15G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195236,7 +195331,7 @@
       "name": "TARG18G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195272,7 +195367,7 @@
       "name": "TARG21G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195308,7 +195403,7 @@
       "name": "TARG24G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195356,7 +195451,7 @@
       "name": "SHIP05G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195392,7 +195487,7 @@
       "name": "SHIP09G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 2,
       "status_counts": {
         "inprogress": 2
@@ -195440,7 +195535,7 @@
       "name": "SHIP13G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195524,7 +195619,7 @@
       "name": "DSHP02G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195560,7 +195655,7 @@
       "name": "DSHP06G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195596,7 +195691,7 @@
       "name": "DSHP14G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195656,7 +195751,7 @@
       "name": "SHIP19G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 4,
       "status_counts": {
         "inprogress": 4
@@ -195728,7 +195823,7 @@
       "name": "SHIP23G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 4,
       "status_counts": {
         "inprogress": 4
@@ -195752,7 +195847,7 @@
       "name": "SHIP25G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195788,7 +195883,7 @@
       "name": "SHIP28G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195824,7 +195919,7 @@
       "name": "SHIP31G2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -195896,7 +195991,7 @@
       "name": "PERSON01_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 6,
       "status_counts": {
         "inprogress": 6
@@ -196316,7 +196411,7 @@
       "name": "SHIP05G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196352,7 +196447,7 @@
       "name": "SHIP08G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196388,7 +196483,7 @@
       "name": "SHIP11G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196424,7 +196519,7 @@
       "name": "SHIP14G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196460,7 +196555,7 @@
       "name": "SHIP17G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196508,7 +196603,7 @@
       "name": "SHIP21G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196544,7 +196639,7 @@
       "name": "SHIP24G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196604,7 +196699,7 @@
       "name": "SHIP29G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196640,7 +196735,7 @@
       "name": "SHIP32G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196676,7 +196771,7 @@
       "name": "SHIP35G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196712,7 +196807,7 @@
       "name": "SHIP38G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196724,7 +196819,7 @@
       "name": "SHIP39G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 2,
       "status_counts": {
         "inprogress": 2
@@ -196772,7 +196867,7 @@
       "name": "TANK02G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 4,
       "status_counts": {
         "inprogress": 4
@@ -196844,7 +196939,7 @@
       "name": "TANK08G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196880,7 +196975,7 @@
       "name": "TANK11G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196916,7 +197011,7 @@
       "name": "DSHP01G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196952,7 +197047,7 @@
       "name": "DSHP04G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -196988,7 +197083,7 @@
       "name": "DSHP07G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -197048,7 +197143,7 @@
       "name": "DSHP13G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -197168,7 +197263,7 @@
       "name": "STAG02G3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -197420,7 +197515,7 @@
       "name": "BASETRG2_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
@@ -197432,7 +197527,7 @@
       "name": "BASETRG3_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 16,
       "status_counts": {
         "inprogress": 16
@@ -197480,7 +197575,7 @@
       "name": "STAG03G4_PIC",
       "category": "Enemies and ground objects",
       "kind": "complete_family",
-      "owner": "/root/hd_enemies_02",
+      "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
         "inprogress": 1
