@@ -179,6 +179,8 @@ def operate(directory, action, owner, job=None, lease_id=None, outcome=None, err
                     response.update(changed=False, reason="request_already_started")
                 elif lease.get("phase") != "reserved":
                     response.update(changed=False, reason="legacy_request_requires_recovery_or_finish")
+                elif len(state["leases"]) > CAPACITY:
+                    response.update(changed=False, reason="active_request_accounting_over_capacity")
                 elif state.get("admissions_paused"):
                     response.update(changed=False, reason="admissions_paused")
                 else:

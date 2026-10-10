@@ -16,7 +16,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 from hd_art_source import decode
-from hd_candidate_review import proposal_frames
+from hd_candidate_review import proposal_frames, binding_digest
 from hd_art_audit import source_palette_name, checked_palette
 
 CATEGORY_SLUGS = {
@@ -171,7 +171,8 @@ def terrain_context(runtime):
                         samples[asset].append(sample)
     return {asset: {"roles": sorted(roles[asset]),
                     "state_partners": [f"{item:05x}" for item in sorted(partners[asset])],
-                    "neighbors": {direction: [f"{item:05x}" for item in sorted(items)] for direction, items in neighbors[asset].items()},
+                    "neighbors": {direction: [f"{item:05x}" for item in sorted(neighbors[asset].get(direction, []))]
+                                  for direction in ["north", "south", "west", "east"]},
                     "samples": samples[asset]}
             for asset in set(roles) | set(neighbors)}
 
@@ -180,7 +181,7 @@ def contract(family):
     terrain = family["kind"] == "contextual_terrain_shard"
     return {
         "generation": "Use built-in imagegen with inspected original source sheets. Produce newly authored detail, materials and lighting; nearest/ScaleNx enlargement alone is not HD completion.",
-        "submission_gate": "Before each new built-in imagegen request, acquire one of four shared reservations using tools/hd_generation_gate.py acquire --owner YOUR_TASK --job THIS_JOB. Submit only when acquired:true; report the actual outcome and exact service error afterward. Thirty-minute leases are renewable and never terminate existing calls. If denied or cooling down, prepare/review other jobs instead of repeating requests. Do not substitute scaling for a failed remaster.",
+        "submission_gate": "Prepare and inspect sources and save the prompt before acquiring. In one functions.exec orchestration, acquire one of four slots, start the reservation, submit built-in imagegen only when start.changed is true, then classify and report the actual result immediately after await before returning to the model or doing QA. See RustRaptor/docs/hd-generation-workflow.md. Started and legacy-unknown requests require explicit finish; only unstarted reservations expire. If denied or cooling down, prepare/review other jobs. Do not substitute scaling for a failed remaster.",
         "source_truth": "Keep every source orientation, silhouette, color identity, logical canvas, anchor and explicit source hash. Use each target's source_palette and source_palette_sha256; Apogee/Cygnus/Taiwan cards use their own palettes, not the gameplay palette. Inspect every frame before generating. Never invent poses or drop damaged/destroyed variants.",
         "ownership": "Only this job's target IDs may be proposed. Neighbor/context references and exact-source aliases are reference-only; never claim or overwrite another job's IDs.",
         "raw_output": "Keep raw generated PNG bytes, prompts, source references and provenance. Do not retouch generated RGB/alpha. Atlas/square margin crops are allowed only if they preserve all meaningful visible pixels and original aspect.",
@@ -258,7 +259,11 @@ def build(args):
                 candidates = {}
                 candidate_error = str(error)
         coordinator_review = read_json(directory / "coordinator-review.json")
-        if coordinator_review and coordinator_review.get("candidate_sha256") != candidate_digest:
+        review_changed = coordinator_review and (
+            coordinator_review.get("frame_bindings_sha256") != binding_digest(candidates)
+            if coordinator_review.get("frame_bindings_sha256") else
+            coordinator_review.get("candidate_sha256") != candidate_digest)
+        if review_changed:
             # A corrected proposal needs fresh review; an old approval or hold must
             # never silently apply to newly submitted artwork.
             coordinator_review = None
@@ -284,8 +289,11 @@ def build(args):
                     renderer["availability"] = "pipeline_pending"
             if 0x10225 <= asset <= 0x10228 and renderer["availability"] in ["unverified", "pipeline_pending"]:
                 renderer = {"availability": "alpha_shade_mask_path_available", "evidence": ["RustRaptor/src/desktop.rs:pickup glow mask path", "RustRaptor/src/render.rs:Canvas::shade"], "limits": "Shape-alpha and native light table semantics are supported; this adds no remastered mask artwork."}
-            if source["source_palette"] != "PALETTE_DAT" and renderer["availability"] in ["unverified", "pipeline_pending"]:
-                renderer = {"availability": "hd_card_playback_pending", "evidence": ["RustRaptor/docs/intro-validation.md"], "limits": "Classic card playback uses its authentic custom palette and original image. Correctly sourced HD artwork is a separate optional target; registration alone does not switch cinematics or implement a static custom-palette class policy."}
+            if source["source_palette"] != "PALETTE_DAT" and renderer["availability"] in ["unverified", "pipeline_pending", "hd_card_playback_pending"]:
+                opening_card = asset in [0x1002b, 0x1002d]
+                renderer = {"availability": "static_palette_opening_card_path_available" if opening_card else "static_palette_api_available_scene_pending",
+                            "evidence": ["RustRaptor/docs/hd-opening-cards.md", "RustRaptor/src/hd.rs:HdAssets::sprite_static_palette"],
+                            "limits": "The source-specific palette API supports all256 static colors. Optional Apogee/Cygnus still-card routing is implemented; Taiwan artwork has no verified native optional-HD scene. These code paths add no remastered artwork or actual-art scene coverage."}
             if prior.get("status") == "renderreachable" and source["hd"]:
                 status = "renderreachable"
             row = {"kind": "picture", "category": source["category"],
@@ -311,8 +319,13 @@ def build(args):
                       "status": status}
             if canonical[asset] != asset:
                 target["reuse_dependency_job"] = asset_jobs[canonical[asset]]
-            if asset in context:
-                target["terrain_context"] = context[asset]
+            if source["category"] == "Terrain":
+                target["terrain_context"] = context.get(asset, {
+                    "roles": [], "state_partners": [],
+                    "neighbors": {direction: [] for direction in ["north", "south", "west", "east"]},
+                    "samples": [], "registry_or_layout_referenced": False,
+                    "limits": "Unused catalog tile: no native mission neighbors or state partners were found. Source/runtime gallery review does not establish a native scene occurrence."
+                })
             target_rows.append(target)
         statuses = collections.Counter(row["status"] for row in target_rows)
         job = {"format_version": 1, "job_id": family["id"], "name": family["name"],

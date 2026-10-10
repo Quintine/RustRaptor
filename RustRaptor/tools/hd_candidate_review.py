@@ -62,6 +62,11 @@ def proposal_frames(proposal, expected=None):
     return rows
 
 
+def binding_digest(rows):
+    """Hash only renderer-bound fields, separately from artist review notes."""
+    return hashlib.sha256(json.dumps(rows, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
+
+
 def main():
     project = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
@@ -73,7 +78,8 @@ def main():
     args = parser.parse_args()
     if not 1 <= args.sheet_rows <= 64:
         parser.error("sheet-rows must be 1..64")
-    proposal = json.loads(args.candidate.read_text())
+    candidate_at_start = args.candidate.read_bytes()
+    proposal = json.loads(candidate_at_start)
     job_path = args.candidate.parent / "job.json"
     expected = None
     if job_path.is_file():
@@ -82,6 +88,8 @@ def main():
             raise ValueError("candidate job identity differs")
         expected = {target["asset"]: target for target in job["targets"]}
     rows = proposal_frames(proposal, expected)
+    bindings_at_start = binding_digest(rows)
+    static_cards = any(int(identity, 16) in [0x1002b, 0x1002d, 0x1002f] for identity in rows)
     manifest = {"format_version": 1, "name": "Isolated candidate review", "description": "Unregistered diagnostic pack", "sequences": proposal["sequences"]}
     profiles = ["debug", "release"] if args.profile == "auto" else [args.profile]
     libraries = [library for profile in profiles for library in (project / "target" / profile / "deps").glob("libraptor_replica-*.rlib")]
@@ -111,7 +119,10 @@ def main():
                 shutil.copyfile(source, destination)
         (isolated / "hd.json").write_text(json.dumps(manifest))
         binary = isolated / "review-bin"
-        subprocess.run(["rustc", "--edition=2021", str(project / "tools/hd_candidate_review.rs"), "--extern", f"raptor_replica={library}", "--extern", f"serde_json={serde}", "-L", f"dependency={dependency_directory}", "-L", "native=" + str(Path.home() / ".local/lib"), "-o", str(binary)], check=True)
+        compiler_args = ["rustc", "--edition=2021", str(project / "tools/hd_candidate_review.rs"), "--extern", f"raptor_replica={library}", "--extern", f"serde_json={serde}", "-L", f"dependency={dependency_directory}", "-L", "native=" + str(Path.home() / ".local/lib"), "-o", str(binary)]
+        if static_cards:
+            compiler_args.extend(["--cfg", "static_card_api"])
+        subprocess.run(compiler_args, check=True)
         environment = os.environ.copy()
         environment["LD_LIBRARY_PATH"] = str(Path.home() / ".local/lib") + os.pathsep + environment.get("LD_LIBRARY_PATH", "")
         subprocess.run([str(binary), str(args.data.resolve()), str(isolated), str(output)], check=True, env=environment)
@@ -120,10 +131,17 @@ def main():
                 raise ValueError("artwork changed during runtime review")
     qa_path = output / "runtime-qa.json"
     qa = json.loads(qa_path.read_text())
+    candidate_at_finish = args.candidate.read_bytes()
+    if binding_digest(proposal_frames(json.loads(candidate_at_finish), expected)) != bindings_at_start:
+        raise ValueError("candidate renderer bindings changed during runtime review")
     qa["library"] = str(library.relative_to(project))
     qa["library_modified_ns"] = library.stat().st_mtime_ns
-    qa["candidate_sha256"] = hashlib.sha256(args.candidate.read_bytes()).hexdigest()
+    qa["candidate_sha256"] = hashlib.sha256(candidate_at_finish).hexdigest()
+    qa["candidate_sha256_at_start"] = hashlib.sha256(candidate_at_start).hexdigest()
+    qa["candidate_notes_changed_during_review"] = candidate_at_start != candidate_at_finish
+    qa["frame_bindings_sha256"] = bindings_at_start
     qa["artwork_sha256"] = artwork_hashes
+    qa["static_card_palette_mode"] = static_cards
     qa["source_newer_than_library"] = any((project / "src" / name).stat().st_mtime_ns > library.stat().st_mtime_ns for name in ["assets.rs", "hd.rs"])
     qa["any_game_source_newer_than_library"] = any(path.stat().st_mtime_ns > library.stat().st_mtime_ns for path in (project / "src").glob("*.rs"))
     qa_path.write_text(json.dumps(qa, indent=2) + "\n")

@@ -1,15 +1,15 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **63**; **5,690** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
+The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **97**; **5,656** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
-| Player banking | 21 | 14 | 7 | 3 |
-| Bosses | 249 | 1 | 248 | 79 |
-| Enemies and ground objects | 419 | 10 | 409 | 183 |
-| Player and enemy projectiles | 51 | 4 | 47 | 18 |
+| Player banking | 21 | 21 | 0 | 3 |
+| Bosses | 249 | 4 | 245 | 79 |
+| Enemies and ground objects | 419 | 13 | 406 | 183 |
+| Player and enemy projectiles | 51 | 11 | 40 | 18 |
 | Explosions and effects | 281 | 12 | 269 | 25 |
-| Equipment and pickups | 47 | 6 | 41 | 23 |
+| Equipment and pickups | 47 | 20 | 27 | 23 |
 | Terrain | 4,535 | 16 | 4,519 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 0 | 150 | mixed static / animated |
 
@@ -52,6 +52,26 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Terrain 1036e | `0x1036e` | 1 / 1 |
 | Terrain 1036f | `0x1036f` | 1 / 1 |
 | Super Shield pickup | `0x102d0` | 1 / 1 |
+| Micro Missile | `0x102b3` | 2 / 2 |
+| Missile Pods | `0x102be` | 1 / 1 |
+| Mega Bomb | `0x102c5` | 1 / 1 |
+| Detect / Itembuy1 | `0x102d5` | 1 / 1 |
+| Itembuy2 | `0x102d6` | 1 / 1 |
+| Itembuy3 | `0x102d7` | 1 / 1 |
+| Itembuy4 | `0x102d8` | 1 / 1 |
+| Itembuy5 | `0x102d9` | 1 / 1 |
+| Bomb | `0x102da` | 1 / 1 |
+| SHIP14G1_PIC | `0x1030a` | 1 / 1 |
+| SHIP02G1_PIC | `0x102f9` | 1 / 1 |
+| SHIP12G1_PIC | `0x10308` | 1 / 1 |
+| SHIP17G1_PIC | `0x1030f` | 1 / 1 |
+| TARGT5G1_PIC | `0x1013c` | 1 / 1 |
+| Mini Gun | `0x102b6` | 4 / 4 |
+| Player firing-flash banking | `0x2004c` | 7 / 7 |
+| Dumb Missile | `0x101ba` | 3 / 3 |
+| Missile Pods / Air Missile | `0x101bd` | 2 / 2 |
+| Grd Missile | `0x101bf` | 2 / 2 |
+| SHIP11G1_PIC source-faithful HD candidate | `0x10307` | 1 / 1 |
 
 | Generation job | Status |
 | --- | --- |

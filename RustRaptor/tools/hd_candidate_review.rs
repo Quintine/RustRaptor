@@ -45,7 +45,14 @@ fn main() {
         ppm(&output.join(format!("{id:05x}-original.ppm")), &original, &palette);
         let mut masks = Vec::new(); let mut logical = None;
         for scale in 1..=4 {
-            let sprite = hd.sprite(id, scale, &palette).unwrap().expect("candidate rejected");
+            let sprite = if palette_name == "PALETTE_DAT" {
+                hd.sprite(id, scale, &palette)
+            } else {
+                #[cfg(static_card_api)]
+                { hd.sprite_static_palette(id, scale, &palette) }
+                #[cfg(not(static_card_api))]
+                { panic!("Static-card review requires the source-specific palette API in the selected library") }
+            }.unwrap().expect("candidate rejected");
             assert_eq!((sprite.width, sprite.height), (frame.logical_width as usize * scale, frame.logical_height as usize * scale));
             assert!(sprite.pixels.iter().any(|p| *p != TRANSPARENT));
             ppm(&output.join(format!("{id:05x}-hd-{scale}.ppm")), &sprite, &palette);
