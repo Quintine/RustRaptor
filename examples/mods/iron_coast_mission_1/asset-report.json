@@ -1,0 +1,79 @@
+{
+  "tile_count": 216,
+  "tile_logical_size": [
+    32,
+    32
+  ],
+  "hd_tile_size": [
+    128,
+    128
+  ],
+  "sd_palette_colors": 256,
+  "palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+  "vertical_repeat": "12 rows forward + 12 rows reflected; matching boundary pixels",
+  "seam_checks_passed": true,
+  "depot_transparent_pixels": 623,
+  "audio": {
+    "approach": {
+      "file": "audio/approach.wav",
+      "samples": 19845,
+      "seconds": 0.9,
+      "sha256": "148cf8ef6b521ef27dcca06f29af5d360f146c057a9b8dc1f793503993acb3cd"
+    },
+    "dock_alarm": {
+      "file": "audio/dock_alarm.wav",
+      "samples": 22050,
+      "seconds": 1.0,
+      "sha256": "441275e69c4070859962c75bae2736db17596dfd4d05a298c1d8128be6214180"
+    },
+    "boss_alarm": {
+      "file": "audio/boss_alarm.wav",
+      "samples": 24255,
+      "seconds": 1.1,
+      "sha256": "865d2e14156645071e4d918d406ff744e6bfd15f68360ce8d7888fce422d798f"
+    },
+    "victory": {
+      "file": "audio/victory.wav",
+      "samples": 26460,
+      "seconds": 1.2,
+      "sha256": "df9c2e3aaa2e2811b8f4920d7e0bfffa4edba0e57c65d0d9fb5520115e4ecc93"
+    },
+    "depot_open": {
+      "file": "audio/depot_open.wav",
+      "samples": 7717,
+      "seconds": 0.35,
+      "sha256": "373abe2cbf75f2d511a26705ed39837ded766f7a52ab7949a408399ad1ac3736"
+    },
+    "repair_use": {
+      "file": "audio/repair_use.wav",
+      "samples": 13230,
+      "seconds": 0.6,
+      "sha256": "0a56bbaa3bcfd486a06ce24ebfb31753c6e69d530b45b5ffb54ee7015a06741a"
+    }
+  },
+  "actual_sd_unique_colors": 122,
+  "sd_pixels_match_original_palette": true,
+  "sources": {
+    "terrain-source-hd.png": {
+      "size": [
+        1086,
+        1448
+      ],
+      "sha256": "1b31977372192fd1f597f7bd07fae9dd9a4d6004fcacca2278569b175bea5989"
+    },
+    "briefing-source-hd.png": {
+      "size": [
+        1586,
+        992
+      ],
+      "sha256": "f41f3197a0290e560271fcd5306f555a42522e46b33a4ed32e1d042659dd869f"
+    },
+    "depot-source-hd.png": {
+      "size": [
+        1254,
+        1254
+      ],
+      "sha256": "3aef4edd440c1eec7570ce5edce9825b1a65b55bf5472b8e594488874d45818c"
+    }
+  }
+}

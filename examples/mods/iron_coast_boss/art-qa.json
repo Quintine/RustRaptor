@@ -1,0 +1,41 @@
+{
+  "logical_size": [
+    96,
+    64
+  ],
+  "hd_scale": 8,
+  "origin": [
+    0,
+    0
+  ],
+  "frames": 2,
+  "frame_order": [
+    "idle",
+    "charged"
+  ],
+  "alpha": "Preserved RGBA; runtime uses alpha>=128 indexed transparency",
+  "registration": "Common full-canvas resize and equal padding for every frame",
+  "sources": [
+    {
+      "source": "art/unit-generated-v1.png",
+      "source_sha256": "87d644a5d584ad82e285241e3a5cdc58e5c61fa851415a4d6660e0ae83ec5e85",
+      "sd_opaque_bounds": [
+        25,
+        3,
+        71,
+        61
+      ]
+    },
+    {
+      "source": "art/unit-charge-generated-v1.png",
+      "source_sha256": "cc8401140982260b4675a0a28fd209b8ed8d636e4cd4fa98a9cdf2fed37b1bff",
+      "sd_opaque_bounds": [
+        25,
+        3,
+        71,
+        61
+      ]
+    }
+  ],
+  "animation_silhouette_overlap": 0.9985000050675504
+}

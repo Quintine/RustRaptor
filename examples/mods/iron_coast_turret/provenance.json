@@ -1,0 +1,30 @@
+{
+  "api_version": 1,
+  "mod_version": "1.0.0",
+  "tool": "built-in image_gen.imagegen via imagegen skill",
+  "skill": "/home/quintine/.codex/skills/.system/imagegen/SKILL.md",
+  "generated_at": "2026-10-10",
+  "source_reference": {
+    "asset_id_hex": "1033e",
+    "catalog_path": "sprites/SHIP37G1_PIC",
+    "sha256": "00a6f1bebfb75af8dafbef2b974417f95580827ebcf5181f5ba6712845eaf865",
+    "role": "Original silhouette/orientation/style reference inspected before imagegen. Original reference pixels excluded from Git under art/source/."
+  },
+  "assets": [
+    {
+      "file": "art/unit-generated-v1.png",
+      "prompt": "prompts/unit-hd-v1.txt",
+      "tool_output": "exec-6df0f241-f8a0-4552-80f6-e3d0aef35aad.png",
+      "sha256": "37a7be58863d84028b01f67b133ae694d070cfe8155d939c0cbe81ca4ab621a7"
+    },
+    {
+      "file": "art/projectile-generated-v1.png",
+      "prompt": "prompts/projectile-hd-v1.txt",
+      "tool_output": "exec-96076703-18b2-4aad-9bce-4eaceef4d8bd.png",
+      "note": "Common generated amber projectile copied into each independent package.",
+      "sha256": "386709d83ebf8a9e6c5119c785afc77152ae934780b3b0afcf8ede510622bc20"
+    }
+  ],
+  "pipeline": "build_assets.py: common full-canvas resize/padding, alpha-preserving RGBA SD/8xHD strips; no bitmap redraw",
+  "version_control": "Generated masters, shipped SD/HD artwork, previews and synthesized WAVs included in Git per user request. Original catalog reference pixels excluded."
+}

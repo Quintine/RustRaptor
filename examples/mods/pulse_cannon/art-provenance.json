@@ -1,0 +1,65 @@
+{
+  "package": "pulse_cannon",
+  "tool": "built-in image_gen",
+  "skill": "/home/quintine/.codex/skills/.system/imagegen/SKILL.md",
+  "reference_role": "Original catalog sprites inspected as style and scale references, not copied as mod artwork",
+  "reference_assets": [
+    "0x102b1",
+    "0x101cf"
+  ],
+  "sources": [
+    {
+      "kind": "equipment",
+      "path": "/home/quintine/.codex/generated_images/01a12340-dd1f-71e1-869a-0c9f61a82318/exec-663abae5-23a6-445b-888b-60b823c1c96a.png",
+      "prompt": "Use case: stylized-concept. Asset type: HD sprite for the equipment shop/inventory in a 1990s military science-fiction vertical shooter. Input image is an ORIGINAL STYLE REFERENCE ONLY, not an edit target. Generate a distinct Pulse Cannon: compact twin-barrel gun pod, squat armored gray metal body, restrained cyan capacitor accents and a red service panel. Top-down orthographic overhead view, barrel points exactly UP, no perspective tilt. Isolated single object centered on genuinely transparent 1024x1024 square canvas, silhouette occupying central 70% with at least 12% transparent margin. Style consistent with the reference: readable chunky military silhouette, muted gunmetal highlights, strongest light from upper-left, limited palette. Add restrained machined panel detail for HD view. No text, no labels, no glow outside silhouette, no ground shadow, no frames, no extra objects. Will be displayed at logical 16x16 pixels SD and 64x64 HD. Preserve clear shape when downsampled.",
+      "sha256": "01632fef820816f36ce56936e274c986e95d3be328e907b0a3ca812598265219",
+      "local_path": "art/equipment-generated-source.png"
+    },
+    {
+      "kind": "projectile",
+      "path": "/home/quintine/.codex/generated_images/01a12340-dd1f-71e1-869a-0c9f61a82318/exec-1c5c328f-a363-4b2a-9cf0-300f72806812.png",
+      "prompt": "Use case: stylized-concept. Asset type: isolated projectile sprite for a military science-fiction vertical shooter. Reference image is an ORIGINAL STYLE REFERENCE ONLY for chunky readable projectile pixels. Generate ONE short cyan-blue pulse bolt traveling exactly UP: rectangular bright pale core, stepped blue/cyan outer shell, compact tapered energy tail below. Orthographic straight-on top-down view, clean bounded silhouette, no weapon or spacecraft. Genuine transparent background. Tall narrow silhouette with width:height ratio 2:3, occupying central 65% height of a square canvas with large transparent margins. Restrained crisp pixel-inspired HD detailing matching 1990s Raptor, minimal colors, no expansive glow, no labels, no text, no shadow, no border, no multiple projectiles. Gamelogical canvas8x12 and32x48 HD.",
+      "sha256": "eac18f0856d0c4c75a9aa484a2c368bf70ccb2b7fb4358a603771253eea9ad7d",
+      "local_path": "art/projectile-generated-source.png"
+    }
+  ],
+  "conversion": "prepare_art.rs crops to alpha>=128 silhouette, fits with transparent margins, preserves aspect and reduces to logical SD/4xHD. SD nearest sampling alpha128; HD Lanczos3 alpha64. Pixel values quantized at runtime.",
+  "outputs": {
+    "art/equipment-generated-source.png": {
+      "sha256": "01632fef820816f36ce56936e274c986e95d3be328e907b0a3ca812598265219",
+      "bytes": 595039
+    },
+    "art/equipment-sd.png": {
+      "sha256": "210a81f92cc9463577461df87e0d80f87402e0470837f70f52cca881d11eeaac",
+      "bytes": 615
+    },
+    "art/equipment-hd.png": {
+      "sha256": "ffc12be3d453065fe02c9796b8bae9dc3e23296bd9156b811a8e4b4c9ab1f791",
+      "bytes": 5286
+    },
+    "art/projectile-generated-source.png": {
+      "sha256": "eac18f0856d0c4c75a9aa484a2c368bf70ccb2b7fb4358a603771253eea9ad7d",
+      "bytes": 801668
+    },
+    "art/projectile-sd.png": {
+      "sha256": "ba31c5397043be8e8138e7574c08fdaf351a7e110bf83645b4394242819afc60",
+      "bytes": 240
+    },
+    "art/projectile-hd.png": {
+      "sha256": "a359c389c218189b7a9d07bcd9f53b8a5a1a002fb1175ad80a9ce33c06ad78dc",
+      "bytes": 992
+    }
+  },
+  "sounds": {
+    "audio/fire.wav": {
+      "sha256": "8cc128db1209e04734267e571acb7aef9dd1ba230f71d909eacf6a0ed272b903",
+      "bytes": 5776,
+      "synthesis": "generate_audio.py PCM16 mono22050Hz"
+    },
+    "audio/impact.wav": {
+      "sha256": "d5cbbeddb0fdaadfc89000e86bd01e22cff31766f188eb64fcf96056e23aca2e",
+      "bytes": 7540,
+      "synthesis": "generate_audio.py PCM16 mono22050Hz"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_turret:projectile",
+      "name": "Iron Coast Turret cannon shell",
+      "damage": 3,
+      "speed": 3,
+      "cooldown": 70,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 8
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "iron_coast_turret:unit",
+      "name": "Iron Coast Turret",
+      "health": 30,
+      "speed": 0,
+      "reward": 120,
+      "ground": true,
+      "boss": false,
+      "cooldown": 70,
+      "art": {
+        "png": "art/unit-sd.png",
+        "hd_png": "art/unit-hd.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "frames": 1
+      },
+      "script": "scripts/ai.rhai",
+      "weapon": "iron_coast_turret:projectile"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "iron_coast_turret:shot",
+      "name": "Iron Coast Turret cannon",
+      "file": "audio/shot.wav",
+      "volume": 95,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_turret:death",
+      "name": "Iron Coast Turret destruction",
+      "file": "audio/death.wav",
+      "volume": 120,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 3
+    }
+  ]
+}

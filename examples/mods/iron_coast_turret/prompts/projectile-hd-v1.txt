@@ -1,0 +1,6 @@
+Use case: style-transfer
+Asset type: transparent HD projectile sprite for hostile cannon fire in a top-down military science-fiction shoot-em-up.
+Input: original Raptor ESHOT_BLK 8×8 amber projectile, enlarged nearest-neighbor, is a reference for color and readability.
+Primary request: a single small compact circular amber/orange energy shell viewed directly overhead, bright pale-yellow center fading to orange metal/plasma rim, dark crisp outer edge. Match the naval steel/amber Raptor remaster style. It will be reduced to an 8×8 logical square, so keep a simple readable round footprint and avoid microdetails. This is one ammunition projectile, no weapon or spacecraft.
+Composition: perfectly centered isolated circular sprite on square canvas, visible orb occupies about62% width/height with equal large transparent margins. Keep all glow contained inside the circular orb, no external haze, shadow, trail or rays. Do not stretch it.
+Constraints: true transparent background, no extra objects, no checkerboard or black background baked into pixels, no text, logos, watermarks, perspective or decorative framing.

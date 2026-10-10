@@ -1,0 +1,65 @@
+{
+  "package": "seeker_swarm",
+  "tool": "built-in image_gen",
+  "skill": "/home/quintine/.codex/skills/.system/imagegen/SKILL.md",
+  "reference_role": "Original catalog sprites inspected as style and scale references, not copied as mod artwork",
+  "reference_assets": [
+    "0x102b1",
+    "0x101cf"
+  ],
+  "sources": [
+    {
+      "kind": "equipment",
+      "path": "/home/quintine/.codex/generated_images/01a12340-dd1f-71e1-869a-0c9f61a82318/exec-a0a127b8-67e8-43f2-a080-cbfefceac7b2.png",
+      "prompt": "Use case: stylized-concept. Asset type: HD sprite for equipment shop/inventory in 1990s military science-fiction vertical shooter. Input image is an ORIGINAL STYLE REFERENCE ONLY, not an edit target. Generate a distinct Seeker Swarm launcher: compact gray armored missile pod with three narrow rocket tips pointing exactly UP, dark launch channels, restrained amber indicator dots and red service tab. Top-down orthographic overhead view, symmetrical compact military silhouette. Isolated single object centered on genuinely transparent 1024x1024 square canvas, silhouette central 70%, at least 12% transparent margin. Reference style: chunky readable silhouette, muted gunmetal, upper-left highlights, limited palette. Restrained machined detail appropriate HD. No text, labels, glow, shadows outside body, border, frame, extra objects. Display logical 16x16 SD and64x64 HD; make silhouette readable after reduction.",
+      "sha256": "29336ba6ae08bdb8c42feb257c6a7f9d05c174fa10643674602d1bd6c86797ff",
+      "local_path": "art/equipment-generated-source.png"
+    },
+    {
+      "kind": "projectile",
+      "path": "/home/quintine/.codex/generated_images/01a12340-dd1f-71e1-869a-0c9f61a82318/exec-defa402a-c1f2-4a56-923e-98d8b64f081e.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE isolated homing missile projectile sprite for a military science-fiction vertical shooter. Reference image is original STYLE reference for chunky readability ONLY. Generate a small slender naval gray missile pointing EXACTLY UP, white metal pointed nose, gray body with a narrow red band, two small fins, short amber engine exhaust directly below. Top-down orthographic overhead view, centered symmetric military silhouette. Genuine transparent square canvas with large margins; missile silhouette width:height1:2 and occupies central70%height. Palette gray slate white amber red, strongest light upper-left, crisp readable pixel-inspired HD detail. No spacecraft, no launcher, no multiplemissiles, no expansiveglow, no shadow, no text/labels/border. Logicalcanvas8x16 and32x64HD.",
+      "sha256": "59ed9ff1c0302955ff6d047c9527ba3f2c9c2ff15c5a9c07ebb86fc08887cf14",
+      "local_path": "art/projectile-generated-source.png"
+    }
+  ],
+  "conversion": "prepare_art.rs crops to alpha>=128 silhouette, fits with transparent margins, preserves aspect and reduces to logical SD/4xHD. SD nearest sampling alpha128; HD Lanczos3 alpha64. Pixel values quantized at runtime.",
+  "outputs": {
+    "art/equipment-generated-source.png": {
+      "sha256": "29336ba6ae08bdb8c42feb257c6a7f9d05c174fa10643674602d1bd6c86797ff",
+      "bytes": 528586
+    },
+    "art/equipment-sd.png": {
+      "sha256": "8b7d5dc945536f8b35b38bc37c4f607fbba7bb6da4cc00691c18576a72224764",
+      "bytes": 643
+    },
+    "art/equipment-hd.png": {
+      "sha256": "caeca8f6e4993dcbb6047974caf8dae442d2abe2043b516685602cece6f970df",
+      "bytes": 6002
+    },
+    "art/projectile-generated-source.png": {
+      "sha256": "59ed9ff1c0302955ff6d047c9527ba3f2c9c2ff15c5a9c07ebb86fc08887cf14",
+      "bytes": 256643
+    },
+    "art/projectile-sd.png": {
+      "sha256": "c382c66203efd29ef467951ae9213d95e24d760837e51221d2ec9addb519125c",
+      "bytes": 246
+    },
+    "art/projectile-hd.png": {
+      "sha256": "dc9ee59e6c461fba0373c842af4c12c8f25a1ed4b21eecb214888de7914f9d09",
+      "bytes": 1426
+    }
+  },
+  "sounds": {
+    "audio/fire.wav": {
+      "sha256": "08fc2bb9b9054954f9bc8fe378e6d3aaa26081f3eae172f4f3fa14c580b4c20a",
+      "bytes": 5776,
+      "synthesis": "generate_audio.py PCM16 mono22050Hz"
+    },
+    "audio/impact.wav": {
+      "sha256": "c32ab425f9e4be45a0921657cf76c845d1f9c432cd2bf64e6aa16be725c2c882",
+      "bytes": 7540,
+      "synthesis": "generate_audio.py PCM16 mono22050Hz"
+    }
+  }
+}

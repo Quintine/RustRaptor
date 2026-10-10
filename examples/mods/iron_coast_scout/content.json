@@ -1,0 +1,60 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_scout:projectile",
+      "name": "Iron Coast Scout cannon shell",
+      "damage": 2,
+      "speed": 3,
+      "cooldown": 54,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 8
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "iron_coast_scout:unit",
+      "name": "Iron Coast Scout",
+      "health": 14,
+      "speed": 0,
+      "reward": 75,
+      "ground": false,
+      "boss": false,
+      "cooldown": 54,
+      "art": {
+        "png": "art/unit-sd.png",
+        "hd_png": "art/unit-hd.png",
+        "logical_width": 24,
+        "logical_height": 24,
+        "frames": 1
+      },
+      "script": "scripts/ai.rhai",
+      "weapon": "iron_coast_scout:projectile"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "iron_coast_scout:shot",
+      "name": "Iron Coast Scout cannon",
+      "file": "audio/shot.wav",
+      "volume": 75,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_scout:death",
+      "name": "Iron Coast Scout destruction",
+      "file": "audio/death.wav",
+      "volume": 100,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 3
+    }
+  ]
+}

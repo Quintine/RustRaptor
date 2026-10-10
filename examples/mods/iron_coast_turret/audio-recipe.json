@@ -1,0 +1,23 @@
+{
+  "generator": "build_assets.py deterministic chirp/noise synthesis; no recordings",
+  "kind": "turret",
+  "seed": 37,
+  "files": {
+    "audio/shot.wav": {
+      "sample_rate": 22050,
+      "channels": 1,
+      "bits": 16,
+      "samples": 3969,
+      "peak": 25558,
+      "sha256": "0149d363391a8acfb61dbcbd76ba21a994dec58c4531b65fe0570e968b014308"
+    },
+    "audio/death.wav": {
+      "sample_rate": 22050,
+      "channels": 1,
+      "bits": 16,
+      "samples": 11466,
+      "peak": 25558,
+      "sha256": "3d891b723229608f96886f9fa15a33d39ab2f5e729177b98e9d0c0afebd24854"
+    }
+  }
+}

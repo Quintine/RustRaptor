@@ -1,0 +1,23 @@
+{
+  "generator": "build_assets.py deterministic chirp/noise synthesis; no recordings",
+  "kind": "boss",
+  "seed": 83,
+  "files": {
+    "audio/shot.wav": {
+      "sample_rate": 22050,
+      "channels": 1,
+      "bits": 16,
+      "samples": 5292,
+      "peak": 25558,
+      "sha256": "32d2e5ea26a9333f8163f7653c9b5a7dc00cf16ac9956f4abfbf32802ca459a7"
+    },
+    "audio/death.wav": {
+      "sample_rate": 22050,
+      "channels": 1,
+      "bits": 16,
+      "samples": 19845,
+      "peak": 25558,
+      "sha256": "3bf364c2fa21dbaca81af03e9d2e19552ede430912e1bd4fd967da0611a0c438"
+    }
+  }
+}

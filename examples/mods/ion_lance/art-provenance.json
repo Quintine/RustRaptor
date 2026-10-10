@@ -1,0 +1,65 @@
+{
+  "package": "ion_lance",
+  "tool": "built-in image_gen",
+  "skill": "/home/quintine/.codex/skills/.system/imagegen/SKILL.md",
+  "reference_role": "Original catalog sprites inspected as style and scale references, not copied as mod artwork",
+  "reference_assets": [
+    "0x102b1",
+    "0x101cf"
+  ],
+  "sources": [
+    {
+      "kind": "equipment",
+      "path": "/home/quintine/.codex/generated_images/01a12340-dd1f-71e1-869a-0c9f61a82318/exec-2c5afac0-cc57-42f9-a0ca-f01125ba186a.png",
+      "prompt": "Use case: stylized-concept. Asset type: HD sprite for equipment shop/inventory in 1990s military science-fiction vertical shooter. Input image is an ORIGINAL STYLE REFERENCE ONLY, not an edit target. Generate a distinct Ion Lance: compact single long railgun barrel pointing exactly UP from an armored gray rectangular gun pod, two subtle electric-blue induction rails, red service panel. Top-down orthographic overhead view, precise thin symmetrical military silhouette. Isolated single object centered on genuinely transparent 1024x1024 square canvas, silhouette central 70% with12% transparentmargin. Match reference muted gunmetal, chunky readability, upper-left highlight. Restrained panel/machined detail forHD. No text, labels, outside glow/shadows, frame, border, extraobjects. Displaylogical16x16SDand64x64HD, so silhouette must survive reduction.",
+      "sha256": "145215af5159eb196fc18c8c4f9f0e1c318ff552b9a83e4d8fc0d354309da4f5",
+      "local_path": "art/equipment-generated-source.png"
+    },
+    {
+      "kind": "projectile",
+      "path": "/home/quintine/.codex/generated_images/01a12340-dd1f-71e1-869a-0c9f61a82318/exec-da141e14-efd2-4a36-a56f-bbc33225674f.png",
+      "prompt": "Use case: stylized-concept. Asset type: ONE isolated ion beam pulse projectile sprite for a military science-fiction vertical shooter. Original input is STYLE reference only for readable chunky projectile palette. Generate a straight very narrow vertical electric blue/white ion lance beam traveling exactly UP: continuous thin pale core, bounded cobalt/cyan stepped edges, brightest pointed upper tip, slightly tapered bottom tail. No gun, no spacecraft, no extraneous light halo. Orthographic view, perfectly straight, centered, width:height1:8. Genuine transparent square canvas with generous sides and15%transparent top/bottom margin. Pixel-inspired military science-fiction HD detail, minimal colors, reference's crispbounded silhouette. No text, labels, shadows, frame, multiple objects. Intendedlogicalcanvas4x32 and16x128HD.",
+      "sha256": "1a1c19b40354554658a4b72073ed7a7aec9a2bfb185c20d9654a29e2eef75614",
+      "local_path": "art/projectile-generated-source.png"
+    }
+  ],
+  "conversion": "prepare_art.rs crops to alpha>=128 silhouette, fits with transparent margins, preserves aspect and reduces to logical SD/4xHD. SD nearest sampling alpha128; HD Lanczos3 alpha64. Pixel values quantized at runtime.",
+  "outputs": {
+    "art/equipment-generated-source.png": {
+      "sha256": "145215af5159eb196fc18c8c4f9f0e1c318ff552b9a83e4d8fc0d354309da4f5",
+      "bytes": 324909
+    },
+    "art/equipment-sd.png": {
+      "sha256": "bb366d1604bd54079cb5e4c23f7e14aa9da1c9f494e66be1f9f3b870e0adec40",
+      "bytes": 338
+    },
+    "art/equipment-hd.png": {
+      "sha256": "66aa9a088453059518d4f76d961518edc577729018262d270bc6c3d806f665e4",
+      "bytes": 2451
+    },
+    "art/projectile-generated-source.png": {
+      "sha256": "1a1c19b40354554658a4b72073ed7a7aec9a2bfb185c20d9654a29e2eef75614",
+      "bytes": 162173
+    },
+    "art/projectile-sd.png": {
+      "sha256": "d8d2376739d39c343e9afc242b48956fcc8e48bc09fbc626360f8b3c4a52b730",
+      "bytes": 308
+    },
+    "art/projectile-hd.png": {
+      "sha256": "671cae899e2c5c9fd180663255915faaefe14267ddc46bd33ccd04dc51ba0dd4",
+      "bytes": 1688
+    }
+  },
+  "sounds": {
+    "audio/fire.wav": {
+      "sha256": "c155d02643f92f4e06373987d97728052617fca36d8ee9e712199078e89480a6",
+      "bytes": 5776,
+      "synthesis": "generate_audio.py PCM16 mono22050Hz"
+    },
+    "audio/impact.wav": {
+      "sha256": "19b9be1a9fc960faa616a497535f5489c8d3021fc60f324aca9489c1be4a5ab6",
+      "bytes": 7540,
+      "synthesis": "generate_audio.py PCM16 mono22050Hz"
+    }
+  }
+}

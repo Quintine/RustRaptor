@@ -1,0 +1,71 @@
+{
+  "weapons": [
+    {
+      "id": "pulse_cannon:projectile",
+      "name": "Pulse Cannon Projectile",
+      "damage": 4,
+      "speed": 8,
+      "cooldown": 9,
+      "behavior": "straight",
+      "target": "all",
+      "offsets": [
+        [
+          -4,
+          -3
+        ],
+        [
+          4,
+          -3
+        ]
+      ],
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 12,
+        "nearest": true
+      },
+      "script": "scripts/weapon.rhai"
+    }
+  ],
+  "items": [
+    {
+      "id": "pulse_cannon:equipment",
+      "name": "Pulse Cannon",
+      "price": 6500,
+      "max_count": 1,
+      "initial_count": 1,
+      "weapon": "pulse_cannon:projectile",
+      "special": false,
+      "consumable": false,
+      "art": {
+        "png": "art/equipment-sd.png",
+        "hd_png": "art/equipment-hd.png",
+        "logical_width": 16,
+        "logical_height": 16,
+        "nearest": true
+      },
+      "script": "scripts/equipment.rhai"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "pulse_cannon:fire",
+      "name": "Pulse Cannon Fire",
+      "file": "audio/fire.wav",
+      "volume": 92,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 1
+    },
+    {
+      "id": "pulse_cannon:impact",
+      "name": "Pulse Cannon Impact",
+      "file": "audio/impact.wav",
+      "volume": 78,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    }
+  ]
+}

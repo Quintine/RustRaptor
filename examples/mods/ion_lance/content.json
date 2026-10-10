@@ -1,0 +1,67 @@
+{
+  "weapons": [
+    {
+      "id": "ion_lance:projectile",
+      "name": "Ion Lance Projectile",
+      "damage": 8,
+      "speed": 12,
+      "cooldown": 14,
+      "behavior": "beam",
+      "target": "all",
+      "offsets": [
+        [
+          0,
+          -4
+        ]
+      ],
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 4,
+        "logical_height": 32,
+        "nearest": true
+      },
+      "script": "scripts/weapon.rhai"
+    }
+  ],
+  "items": [
+    {
+      "id": "ion_lance:equipment",
+      "name": "Ion Lance",
+      "price": 22000,
+      "max_count": 1,
+      "initial_count": 1,
+      "weapon": "ion_lance:projectile",
+      "special": true,
+      "consumable": false,
+      "art": {
+        "png": "art/equipment-sd.png",
+        "hd_png": "art/equipment-hd.png",
+        "logical_width": 16,
+        "logical_height": 16,
+        "nearest": true
+      },
+      "script": "scripts/equipment.rhai"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "ion_lance:fire",
+      "name": "Ion Lance Fire",
+      "file": "audio/fire.wav",
+      "volume": 92,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 1
+    },
+    {
+      "id": "ion_lance:impact",
+      "name": "Ion Lance Impact",
+      "file": "audio/impact.wav",
+      "volume": 78,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    }
+  ]
+}
