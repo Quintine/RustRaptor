@@ -2,6 +2,7 @@
 #include <string.h>
 #include <time.h>
 #include <limits.h>
+#include <execinfo.h>
 #include "SDL.h"
 #include "common.h"
 #include "glbapi.h"
@@ -52,9 +53,19 @@ struct bday_t {
 
 int wRandSeed = 1;
 
-int wrand(void)
+__attribute__((noinline)) int wrand(void)
 {
     wRandSeed = ((long long)wRandSeed * 1103515245) + 12345;
+    static const bool trace_rng = getenv("RAPTOR_REFERENCE_RNG_TRACE") != NULL;
+    if (trace_rng && gl_cnt >= 242 && gl_cnt <= 247)
+    {
+        void *callers[2];
+        const int count = backtrace(callers, 2);
+        char **symbols = backtrace_symbols(callers, count);
+        fprintf(stderr, "reference RNG gl_cnt=%d seed=%d caller=%s\n",
+                gl_cnt, wRandSeed, symbols && count > 1 ? symbols[1] : "unknown");
+        free(symbols);
+    }
     
     return (wRandSeed >> 16) & 0x7fff;
 }
@@ -62,6 +73,53 @@ int wrand(void)
 void wsrand(int seed)
 {
     wRandSeed = seed;
+}
+
+// Opt-in development trace. Normal game launches never open a trace file.
+// Record after the complete simulation update, before rendering/interpolation.
+extern SHOTS first_shots, last_shots;
+extern ESHOT first_eshot, last_eshot;
+static void RAP_ReferenceStep()
+{
+    const char *path = getenv("RAPTOR_REFERENCE_TRACE");
+    if (!path || demo_mode != DEMO_PLAYBACK)
+        return;
+    static FILE *trace = NULL;
+    static int count = 0;
+    if (!trace)
+    {
+        trace = fopen(path, "w");
+        if (!trace)
+        {
+            perror("reference trace");
+            exit(1);
+        }
+    }
+    fprintf(trace, "{\"tick\":%d,\"rng\":%d,\"player\":[%d,%d,%d,%d,%d,%u],\"enemies\":[",
+            ++count, wRandSeed, playerx, playery, playerpic,
+            OBJS_GetAmt(S_ENERGY), OBJS_GetAmt(S_SUPER_SHIELD), plr.score);
+    int comma = 0;
+    for (SPRITE_SHIP *e = first_enemy.next; e != &last_enemy; e = e->next)
+    {
+        fprintf(trace, "%s[%d,%d,%d,%d,%d,%d,%d]", comma++ ? "," : "",
+                LE_LONG(e->lib->item), e->x, e->y, e->hits, e->curframe,
+                e->move.x, e->move.y);
+    }
+    fprintf(trace, "],\"projectiles\":[");
+    comma = 0;
+    for (ESHOT *p = first_eshot.next; p != &last_eshot; p = p->next)
+        fprintf(trace, "%s[%d,%d,%d,1]", comma++ ? "," : "", p->lib->item, p->x, p->y);
+    for (SHOTS *p = first_shots.next; p != &last_shots; p = p->next)
+        fprintf(trace, "%s[%d,%d,%d,0]", comma++ ? "," : "", p->lib->lumpnum, p->x, p->y);
+    fprintf(trace, "]}\n");
+    fflush(trace);
+    const char *limit = getenv("RAPTOR_REFERENCE_TICKS");
+    int ticks = limit ? atoi(limit) : 1000;
+    if (count >= (ticks > 0 && ticks <= 12000 ? ticks : 1000))
+    {
+        fclose(trace);
+        exit(0);
+    }
 }
 
 #define MAX_BDAY 6
@@ -1125,6 +1183,7 @@ Do_Game(
         }
         
         RAP_ThinkStats();
+        RAP_ReferenceStep();
         
         if (startfadeflag)
         {
@@ -1608,7 +1667,7 @@ main(
     
     RAP_ClearPlayer();
     
-    if (!godmode)
+    if (!godmode && !getenv("RAPTOR_REFERENCE_TRACE"))
         INTRO_Credits();
     
     if (demo_flag != DEMO_PLAYBACK)

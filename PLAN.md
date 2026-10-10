@@ -1,37 +1,30 @@
-# RaptorReplica — Raptor: Call of the Shadows
+# Rust rewrite milestones
 
-**Status: PLAYABLE** — original engine, original data, extracted into a
-modern asset tree. Full documentation lives in [`docs/`](docs/README.md):
+The C++ engine remains playable and retained as a reference. The Rust engine runs independently alongside it on branch `codex/rust-rewrite`. Both are selectable through `play.sh`. Original catalog/reference assets remain ignored; authored mod images and sounds are tracked in Git.
 
-- [docs/README.md](docs/README.md) — overview, layout, quick start
-- [docs/architecture.md](docs/architecture.md) — startup flow, asset handles, subsystems
-- [docs/glb-format.md](docs/glb-format.md) — reverse-engineered GLB archive format + cipher
-- [docs/asset-pipeline.md](docs/asset-pipeline.md) — data/ tree, INDEX catalog, editing content
-- [docs/building.md](docs/building.md) — dependencies, build, config/save paths
-- [docs/upstream-patches.md](docs/upstream-patches.md) — every diff against the vendored engine
+The registered game has three sectors with nine waves each. Archive slots are asset containers, not five independent campaigns.
 
-Run with `./play.sh`.
+## Implemented
 
-## The 5 mission packs
+- Checked asset decoders, typed namespaced registries and original content registration.
+- Independent integer simulation at 70/3 Hz; deterministic RNG and SDL2 input/interpolated indexed rendering.
+- Original / Scale2x / Scale3x / Scale4x modes, joined terrain filtering, sharp bitmap text and separate derived cache.
+- Rust MUS, GENMIDI FM synthesis and digital DSP mixing, with native PCM comparisons.
+- Menus, shop, equipment, mission selection, pilot slots, atomic saves, read-only legacy import and original AGX cinematics.
+- Local mods, dependencies/conflicts, explicit overrides/priority/hashes, bounded deterministic Rhai hooks and transactional commands.
+- In-game enable/disable and pending changes, save diagnostics, schemas, validation CLI and scripted Aurora example.
+- Optional source-hashed HD loader/setting; one accepted player-frame proof with original fallback.
+- C++/Rust replay recording and comparison tools, synthetic tests and local-original-data checks.
 
-The registered data ships 5 campaign packs (each mission: mountain → valley
-→ sky phases + boss). Pack presence is detected from catalog slots at boot;
-slot 2 or 3 present flips the engine to registered mode.
+## Acceptance gates
 
-## Roadmap (on top of the source)
+1. **Foundation and complete playable first mission:** verify the entire mission through its boss, damage, rewards, collision/order and RNG against the rebuilt reference. Short replay equality is evidence, not completion of this gate.
+2. **Complete game:** verify all 27 waves and four difficulties, equipment, training/campaign progression, cinematics, demos, menus and legacy imports.
+3. **Modding release:** finish lifecycle/error/save acceptance and stabilize API version 1.
+4. **Visual completion and cutover:** approve complete sprite sequences, check palette/layer/clipping/seam fidelity at 1080p and measure display performance. Make Rust the default only after preceding gates pass.
 
-1. Extra mission packs authored as new cataloged assets in the original
-   formats.
-2. QoL patches kept as documented diffs against upstream (see
-   [docs/upstream-patches.md](docs/upstream-patches.md)): resolution options,
-   audio device selection, keybind config surface. Landed so far: decoupled
-   interpolated rendering (presentation at display rate, simulation at the
-   original 70/3 Hz), borderless window mode (`Video/borderless`), removal
-   of menu cursor snapping.
-3. Track upstream (skynettx/raptor) and rebase the documented diffs.
+Not all gates have passed. See [validation instructions](docs/rust-rewrite.md) and [HD coverage](docs/hd-art.md). Online mod distribution, an editor, total conversions, external MIDI/SoundFonts and additional desktop targets remain outside scope.
 
-## Legal
+## New content
 
-- `raptor/` is GPLv2+; this project inherits GPL for anything built on it.
-- `data/` is derived from the user's own purchased copy (copyrighted);
-  it is gitignored and never committed.
+Separate agents are building Iron Coast mission 1, three individual weapon mods and three individual enemy mods using the public API. Each package will ship local SD/HD artwork and procedurally generated sound effects, with definitions, scripts, images and sounds tracked together in Git. These packages remain in development until validation and play tests pass.

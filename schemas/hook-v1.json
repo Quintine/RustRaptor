@@ -1,0 +1,420 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "HookResult",
+  "type": "object",
+  "properties": {
+    "commands": {
+      "description": "Transactional commands, applied in order only when the callback succeeds.",
+      "default": [],
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Command"
+      }
+    },
+    "state": {
+      "description": "JSON-serializable state shared by callbacks in this script; maximum 64 KiB.",
+      "default": null
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "Command": {
+      "oneOf": [
+        {
+          "description": "Add an enemy at an integer position in the original logical canvas.",
+          "type": "object",
+          "required": [
+            "enemy",
+            "op",
+            "x",
+            "y"
+          ],
+          "properties": {
+            "enemy": {
+              "type": "string"
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "spawn"
+              ]
+            },
+            "x": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "y": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "op",
+            "vx",
+            "vy",
+            "weapon",
+            "x",
+            "y"
+          ],
+          "properties": {
+            "hostile": {
+              "default": false,
+              "type": "boolean"
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "projectile"
+              ]
+            },
+            "vx": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "vy": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "weapon": {
+              "type": "string"
+            },
+            "x": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "y": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "amount",
+            "entity",
+            "op"
+          ],
+          "properties": {
+            "amount": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "entity": {
+              "description": "Enemy entity ID; zero addresses the player.",
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "damage"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "entity",
+            "op"
+          ],
+          "properties": {
+            "entity": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "despawn"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "entity",
+            "op",
+            "x",
+            "y"
+          ],
+          "properties": {
+            "entity": {
+              "description": "Existing enemy entity ID.",
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "move"
+              ]
+            },
+            "x": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "y": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "entity",
+            "op",
+            "vx",
+            "vy"
+          ],
+          "properties": {
+            "entity": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "velocity"
+              ]
+            },
+            "vx": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "vy": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "count",
+            "item",
+            "op"
+          ],
+          "properties": {
+            "count": {
+              "type": "integer",
+              "format": "uint32",
+              "minimum": 0.0
+            },
+            "item": {
+              "type": "string"
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "give_item"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "count",
+            "item",
+            "op"
+          ],
+          "properties": {
+            "count": {
+              "type": "integer",
+              "format": "uint32",
+              "minimum": 0.0
+            },
+            "item": {
+              "type": "string"
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "consume_item"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "amount",
+            "op"
+          ],
+          "properties": {
+            "amount": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "credits"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "amount",
+            "op"
+          ],
+          "properties": {
+            "amount": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "shield"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "op",
+            "x",
+            "y"
+          ],
+          "properties": {
+            "op": {
+              "type": "string",
+              "enum": [
+                "effect"
+              ]
+            },
+            "x": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "y": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "asset",
+            "op"
+          ],
+          "properties": {
+            "asset": {
+              "type": "integer",
+              "format": "uint32",
+              "minimum": 0.0
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "sound"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "op",
+            "sound"
+          ],
+          "properties": {
+            "op": {
+              "type": "string",
+              "enum": [
+                "play_sound"
+              ]
+            },
+            "sound": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "key",
+            "op",
+            "value"
+          ],
+          "properties": {
+            "key": {
+              "description": "Stable namespaced objective key, at most 128 bytes.",
+              "type": "string"
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "objective"
+              ]
+            },
+            "value": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "op"
+          ],
+          "properties": {
+            "op": {
+              "type": "string",
+              "enum": [
+                "complete"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "op"
+          ],
+          "properties": {
+            "op": {
+              "type": "string",
+              "enum": [
+                "fail"
+              ]
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

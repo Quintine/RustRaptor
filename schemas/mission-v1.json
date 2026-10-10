@@ -1,0 +1,221 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MissionDef",
+  "type": "object",
+  "required": [
+    "duration",
+    "id",
+    "name"
+  ],
+  "properties": {
+    "art": {
+      "default": null,
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Art"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "auto_complete": {
+      "default": true,
+      "type": "boolean"
+    },
+    "columns": {
+      "default": 0,
+      "type": "integer",
+      "format": "uint32",
+      "minimum": 0.0
+    },
+    "duration": {
+      "type": "integer",
+      "format": "uint64",
+      "minimum": 0.0
+    },
+    "id": {
+      "type": "string"
+    },
+    "layout": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "format": "uint",
+        "minimum": 0.0
+      }
+    },
+    "legacy_map": {
+      "default": null,
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "uint32",
+      "minimum": 0.0
+    },
+    "music": {
+      "default": null,
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "uint32",
+      "minimum": 0.0
+    },
+    "name": {
+      "type": "string"
+    },
+    "next": {
+      "default": null,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "script": {
+      "default": null,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "spawns": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SpawnDef"
+      }
+    },
+    "tiles": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/TileDef"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "Art": {
+      "type": "object",
+      "required": [
+        "logical_height",
+        "logical_width"
+      ],
+      "properties": {
+        "asset": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "frames": {
+          "default": 1,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "hd_png": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "logical_height": {
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "logical_width": {
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "nearest": {
+          "default": false,
+          "type": "boolean"
+        },
+        "png": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "SpawnDef": {
+      "type": "object",
+      "required": [
+        "enemy",
+        "tick",
+        "x",
+        "y"
+      ],
+      "properties": {
+        "difficulty": {
+          "default": 0,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "enemy": {
+          "type": "string"
+        },
+        "tick": {
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "x": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "y": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "additionalProperties": false
+    },
+    "TileDef": {
+      "type": "object",
+      "required": [
+        "art"
+      ],
+      "properties": {
+        "art": {
+          "$ref": "#/definitions/Art"
+        },
+        "destroyed": {
+          "default": null,
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Art"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "health": {
+          "default": 0,
+          "type": "integer",
+          "format": "int32"
+        },
+        "reward": {
+          "default": 0,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,5 +1,11 @@
 # Building and running
 
+For the independent Rust engine, use `./play.sh --engine rust`. Rust 1.88+,
+Cargo and SDL2 development libraries are required. The launcher builds in release
+mode and sets the local SDL2 library path. See [Rust build/test commands and
+separate profile locations](rust-rewrite.md). The sections below describe the
+retained C++ engine; its launcher now rebuilds the target before each launch.
+
 ## Requirements
 
 - Linux with X11 (developed and verified on Arch, Cinnamon)

@@ -1,0 +1,154 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WeaponDef",
+  "type": "object",
+  "required": [
+    "behavior",
+    "cooldown",
+    "damage",
+    "id",
+    "name",
+    "speed",
+    "target"
+  ],
+  "properties": {
+    "art": {
+      "default": null,
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Art"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "behavior": {
+      "$ref": "#/definitions/WeaponBehavior"
+    },
+    "cooldown": {
+      "type": "integer",
+      "format": "uint32",
+      "minimum": 0.0
+    },
+    "damage": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "id": {
+      "type": "string"
+    },
+    "legacy": {
+      "default": null,
+      "type": [
+        "integer",
+        "null"
+      ],
+      "format": "uint32",
+      "minimum": 0.0
+    },
+    "name": {
+      "type": "string"
+    },
+    "offsets": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "maxItems": 2,
+        "minItems": 2
+      }
+    },
+    "script": {
+      "default": null,
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "speed": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "target": {
+      "$ref": "#/definitions/Target"
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "Art": {
+      "type": "object",
+      "required": [
+        "logical_height",
+        "logical_width"
+      ],
+      "properties": {
+        "asset": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "frames": {
+          "default": 1,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "hd_png": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "logical_height": {
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "logical_width": {
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "nearest": {
+          "default": false,
+          "type": "boolean"
+        },
+        "png": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "Target": {
+      "type": "string",
+      "enum": [
+        "air",
+        "ground",
+        "all"
+      ]
+    },
+    "WeaponBehavior": {
+      "type": "string",
+      "enum": [
+        "straight",
+        "homing",
+        "beam",
+        "spread",
+        "bomb",
+        "energy_grab"
+      ]
+    }
+  }
+}

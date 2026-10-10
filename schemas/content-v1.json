@@ -1,0 +1,632 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ContentPack",
+  "type": "object",
+  "properties": {
+    "campaigns": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/CampaignDef"
+      }
+    },
+    "enemies": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/EnemyDef"
+      }
+    },
+    "items": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ItemDef"
+      }
+    },
+    "missions": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/MissionDef"
+      }
+    },
+    "overrides": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sounds": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SoundDef"
+      }
+    },
+    "weapons": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/WeaponDef"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "Art": {
+      "type": "object",
+      "required": [
+        "logical_height",
+        "logical_width"
+      ],
+      "properties": {
+        "asset": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "frames": {
+          "default": 1,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "hd_png": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "logical_height": {
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "logical_width": {
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "nearest": {
+          "default": false,
+          "type": "boolean"
+        },
+        "png": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "CampaignDef": {
+      "type": "object",
+      "required": [
+        "id",
+        "missions",
+        "name"
+      ],
+      "properties": {
+        "art": {
+          "default": null,
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Art"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "id": {
+          "type": "string"
+        },
+        "missions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "EnemyDef": {
+      "type": "object",
+      "required": [
+        "id",
+        "name"
+      ],
+      "properties": {
+        "art": {
+          "default": null,
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Art"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "boss": {
+          "default": false,
+          "type": "boolean"
+        },
+        "cooldown": {
+          "default": 10,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "drop": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ground": {
+          "default": false,
+          "type": "boolean"
+        },
+        "health": {
+          "default": 100,
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "maxItems": 2,
+            "minItems": 2
+          }
+        },
+        "repeat": {
+          "default": false,
+          "type": "boolean"
+        },
+        "reward": {
+          "default": 0,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "script": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "speed": {
+          "default": 2,
+          "type": "integer",
+          "format": "int32"
+        },
+        "weapon": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "ItemDef": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "price"
+      ],
+      "properties": {
+        "art": {
+          "default": null,
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Art"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "consumable": {
+          "default": false,
+          "type": "boolean"
+        },
+        "credits": {
+          "default": 0,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "id": {
+          "type": "string"
+        },
+        "initial_count": {
+          "default": 1,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "legacy": {
+          "default": null,
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "max_count": {
+          "default": 1,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "name": {
+          "type": "string"
+        },
+        "price": {
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "script": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shield": {
+          "default": 0,
+          "type": "integer",
+          "format": "int32"
+        },
+        "special": {
+          "default": false,
+          "type": "boolean"
+        },
+        "weapon": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "MissionDef": {
+      "type": "object",
+      "required": [
+        "duration",
+        "id",
+        "name"
+      ],
+      "properties": {
+        "art": {
+          "default": null,
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Art"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "auto_complete": {
+          "default": true,
+          "type": "boolean"
+        },
+        "columns": {
+          "default": 0,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "duration": {
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "id": {
+          "type": "string"
+        },
+        "layout": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "uint",
+            "minimum": 0.0
+          }
+        },
+        "legacy_map": {
+          "default": null,
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "music": {
+          "default": null,
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "name": {
+          "type": "string"
+        },
+        "next": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "script": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "spawns": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SpawnDef"
+          }
+        },
+        "tiles": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/TileDef"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "SoundDef": {
+      "type": "object",
+      "required": [
+        "file",
+        "id",
+        "name"
+      ],
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "pan": {
+          "default": 127,
+          "type": "integer",
+          "format": "int32"
+        },
+        "pitch": {
+          "default": 128,
+          "type": "integer",
+          "format": "int32"
+        },
+        "priority": {
+          "default": 1,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "volume": {
+          "default": 127,
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "additionalProperties": false
+    },
+    "SpawnDef": {
+      "type": "object",
+      "required": [
+        "enemy",
+        "tick",
+        "x",
+        "y"
+      ],
+      "properties": {
+        "difficulty": {
+          "default": 0,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "enemy": {
+          "type": "string"
+        },
+        "tick": {
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "x": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "y": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Target": {
+      "type": "string",
+      "enum": [
+        "air",
+        "ground",
+        "all"
+      ]
+    },
+    "TileDef": {
+      "type": "object",
+      "required": [
+        "art"
+      ],
+      "properties": {
+        "art": {
+          "$ref": "#/definitions/Art"
+        },
+        "destroyed": {
+          "default": null,
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Art"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "health": {
+          "default": 0,
+          "type": "integer",
+          "format": "int32"
+        },
+        "reward": {
+          "default": 0,
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    },
+    "WeaponBehavior": {
+      "type": "string",
+      "enum": [
+        "straight",
+        "homing",
+        "beam",
+        "spread",
+        "bomb",
+        "energy_grab"
+      ]
+    },
+    "WeaponDef": {
+      "type": "object",
+      "required": [
+        "behavior",
+        "cooldown",
+        "damage",
+        "id",
+        "name",
+        "speed",
+        "target"
+      ],
+      "properties": {
+        "art": {
+          "default": null,
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Art"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "behavior": {
+          "$ref": "#/definitions/WeaponBehavior"
+        },
+        "cooldown": {
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "damage": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "type": "string"
+        },
+        "legacy": {
+          "default": null,
+          "type": [
+            "integer",
+            "null"
+          ],
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "name": {
+          "type": "string"
+        },
+        "offsets": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "maxItems": 2,
+            "minItems": 2
+          }
+        },
+        "script": {
+          "default": null,
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "speed": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "target": {
+          "$ref": "#/definitions/Target"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "weapons": [
+    {
+      "id": "aurora:pulse_projectile",
+      "name": "Aurora Pulse",
+      "damage": 3,
+      "speed": 8,
+      "cooldown": 9,
+      "behavior": "straight",
+      "target": "all",
+      "offsets": [
+        [
+          0,
+          -4
+        ]
+      ],
+      "art": {
+        "asset": 65999,
+        "logical_width": 8,
+        "logical_height": 8,
+        "frames": 2
+      },
+      "script": "scripts/weapon.rhai"
+    },
+    {
+      "id": "aurora:drone_projectile",
+      "name": "Drone Pulse",
+      "damage": 3,
+      "speed": 3,
+      "cooldown": 32,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "asset": 65999,
+        "logical_width": 8,
+        "logical_height": 8,
+        "frames": 2
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "aurora:pulse_cannon",
+      "name": "Aurora Pulse Cannon",
+      "price": 4000,
+      "max_count": 1,
+      "weapon": "aurora:pulse_projectile",
+      "art": {
+        "asset": 66225,
+        "logical_width": 16,
+        "logical_height": 16
+      }
+    },
+    {
+      "id": "aurora:repair_cell",
+      "name": "Aurora Repair Cell",
+      "price": 100,
+      "max_count": 10,
+      "consumable": true,
+      "shield": 12,
+      "art": {
+        "asset": 66225,
+        "logical_width": 16,
+        "logical_height": 16
+      },
+      "script": "scripts/cell.rhai",
+      "special": true
+    }
+  ],
+  "enemies": [
+    {
+      "id": "aurora:weaver",
+      "name": "Aurora Weaver",
+      "health": 16,
+      "speed": 2,
+      "reward": 100,
+      "cooldown": 32,
+      "weapon": "aurora:drone_projectile",
+      "drop": "aurora:repair_cell",
+      "art": {
+        "asset": 66296,
+        "logical_width": 32,
+        "logical_height": 24
+      },
+      "script": "scripts/drone.rhai"
+    },
+    {
+      "id": "aurora:guardian",
+      "name": "Aurora Guardian",
+      "health": 160,
+      "speed": 1,
+      "reward": 1500,
+      "boss": true,
+      "cooldown": 20,
+      "weapon": "aurora:drone_projectile",
+      "drop": "aurora:repair_cell",
+      "path": [
+        [
+          0,
+          60
+        ],
+        [
+          40,
+          60
+        ],
+        [
+          -40,
+          60
+        ]
+      ],
+      "repeat": true,
+      "art": {
+        "asset": 66310,
+        "logical_width": 80,
+        "logical_height": 40
+      },
+      "script": "scripts/drone.rhai"
+    }
+  ],
+  "missions": [
+    {
+      "id": "aurora:field_trials",
+      "name": "Aurora Field Trials",
+      "duration": 650,
+      "spawns": [
+        {
+          "tick": 30,
+          "enemy": "aurora:weaver",
+          "x": 70,
+          "y": -24
+        },
+        {
+          "tick": 60,
+          "enemy": "aurora:weaver",
+          "x": 200,
+          "y": -24
+        },
+        {
+          "tick": 110,
+          "enemy": "aurora:weaver",
+          "x": 140,
+          "y": -24
+        },
+        {
+          "tick": 150,
+          "enemy": "aurora:weaver",
+          "x": 90,
+          "y": -24
+        },
+        {
+          "tick": 180,
+          "enemy": "aurora:weaver",
+          "x": 190,
+          "y": -24
+        },
+        {
+          "tick": 230,
+          "enemy": "aurora:weaver",
+          "x": 150,
+          "y": -24
+        },
+        {
+          "tick": 300,
+          "enemy": "aurora:guardian",
+          "x": 120,
+          "y": -40
+        }
+      ],
+      "tiles": [
+        {
+          "art": {
+            "asset": 66400,
+            "logical_width": 32,
+            "logical_height": 32
+          }
+        }
+      ],
+      "columns": 9,
+      "layout": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "script": "scripts/mission.rhai"
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "aurora:trials",
+      "name": "Aurora Trials",
+      "missions": [
+        "aurora:field_trials"
+      ]
+    }
+  ]
+}

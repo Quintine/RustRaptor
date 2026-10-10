@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SoundDef",
+  "type": "object",
+  "required": [
+    "file",
+    "id",
+    "name"
+  ],
+  "properties": {
+    "file": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "pan": {
+      "default": 127,
+      "type": "integer",
+      "format": "int32"
+    },
+    "pitch": {
+      "default": 128,
+      "type": "integer",
+      "format": "int32"
+    },
+    "priority": {
+      "default": 1,
+      "type": "integer",
+      "format": "uint32",
+      "minimum": 0.0
+    },
+    "volume": {
+      "default": 127,
+      "type": "integer",
+      "format": "int32"
+    }
+  },
+  "additionalProperties": false
+}

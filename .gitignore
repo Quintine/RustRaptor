@@ -10,3 +10,12 @@ __pycache__/
 
 # Local toolchain
 .local/
+
+# Rust builds and locally derived reference/preview data
+target/
+.reference/
+derived/
+
+# Decoded original style references are not shipped mod artwork.
+examples/mods/*/art/source/
+

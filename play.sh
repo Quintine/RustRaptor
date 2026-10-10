@@ -1,31 +1,34 @@
 #!/bin/sh
-# Launch Raptor: Call of the Shadows (original engine + extracted data).
-#
-# Layout:
-#   data/                asset tree the engine loads: INDEX catalog plus
-#                        music/, sprites/, ... (see docs/asset-pipeline.md)
-#   raptor/build/bin/    built engine
-#
-# The engine resolves the catalog and assets relative to its working
-# directory, so we run it from data/. Saves and SETUP.INI go to
-# ~/.local/share/Raptor (SDL pref path) — nothing is written into the repo.
-set -e
+# Keep the reference engine as the default until Rust parity is validated.
+set -eu
 cd "$(dirname "$0")"
 ROOT="$PWD"
-
-if [ ! -f data/INDEX ]; then
-    echo "Missing data/INDEX — restore the data/ asset tree" >&2
-    echo "  (see docs/asset-pipeline.md and tools/glbextract.py)" >&2
-    exit 1
+ENGINE=legacy
+if [ "${1:-}" = --engine ]; then
+    [ "$#" -ge 2 ] || { echo 'Usage: ./play.sh --engine legacy|rust [arguments]' >&2; exit 2; }
+    ENGINE="$2"
+    shift 2
 fi
-
-BIN=raptor/build/bin/raptor
-if [ ! -x "$BIN" ]; then
-    echo "Building raptor (first run)..." >&2
-    cmake -E make_directory raptor/build
-    ( cd raptor/build && cmake .. -DCMAKE_BUILD_TYPE=Release ${CMAKE_PREFIX_PATH:+-DCMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH} && make -j"$(nproc)" )
-fi
-
 export LD_LIBRARY_PATH="${LD_LIBRARY_PATH:+$LD_LIBRARY_PATH:}$HOME/.local/lib"
-cd data
-exec "$ROOT/$BIN"
+case "$ENGINE" in
+    rust)
+        exec cargo run --locked --release --manifest-path "$ROOT/Cargo.toml" --bin raptor-rust -- --data "$ROOT/data" "$@"
+        ;;
+    legacy)
+        if [ ! -f data/INDEX ]; then
+            echo 'Missing data/INDEX; see docs/asset-pipeline.md' >&2
+            exit 1
+        fi
+        CMAKE=cmake
+        if ! command -v cmake >/dev/null 2>&1; then
+            CMAKE="$HOME/.local/opt/cmake/bin/cmake"
+        fi
+        if [ ! -x raptor/build/bin/raptor ]; then
+            "$CMAKE" -S raptor -B raptor/build -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="$HOME/.local${CMAKE_PREFIX_PATH:+;$CMAKE_PREFIX_PATH}"
+        fi
+        "$CMAKE" --build raptor/build --target raptor --parallel "$(nproc)"
+        cd data
+        exec "$ROOT/raptor/build/bin/raptor" "$@"
+        ;;
+    *) echo "Unknown engine: $ENGINE (choose legacy or rust)" >&2; exit 2 ;;
+esac
