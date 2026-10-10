@@ -1,6 +1,6 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **97**; **5,656** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
+The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **165**; **5,588** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -8,10 +8,10 @@ The checked catalog contains **5,753 standalone picture frames**. The active loc
 | Bosses | 249 | 4 | 245 | 79 |
 | Enemies and ground objects | 419 | 13 | 406 | 183 |
 | Player and enemy projectiles | 51 | 11 | 40 | 18 |
-| Explosions and effects | 281 | 12 | 269 | 25 |
+| Explosions and effects | 281 | 69 | 212 | 25 |
 | Equipment and pickups | 47 | 20 | 27 | 23 |
 | Terrain | 4,535 | 16 | 4,519 | 4 |
-| Menus, portraits, HUD and other pictures | 150 | 0 | 150 | mixed static / animated |
+| Menus, portraits, HUD and other pictures | 150 | 11 | 139 | mixed static / animated |
 
 ## Registered pack and generation jobs
 
@@ -72,6 +72,15 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Missile Pods / Air Missile | `0x101bd` | 2 / 2 |
 | Grd Missile | `0x101bf` | 2 / 2 |
 | SHIP11G1_PIC source-faithful HD candidate | `0x10307` | 1 / 1 |
+| Blue sparks v1 | `0x1019c` | 9 / 9 |
+| Death ray hit companion v1 | `0x101f1` | 4 / 4 |
+| Original Raptor pilot portraits and ID pictures | `0x10111` | 9 / 9 |
+| Original English Raptor title | `0x10013` | 1 / 1 |
+| Original Chinese Raptor title | `0x10014` | 1 / 1 |
+| Platoon effect v1 | `0x10213` | 10 / 10 |
+| Air blast v1 | `0x102a0` | 16 / 16 |
+| Pickup light-mask glow v1 | `0x10225` | 4 / 4 |
+| Lightning and energy grab v1 | `0x1018e` | 14 / 14 |
 
 | Generation job | Status |
 | --- | --- |

@@ -2,7 +2,7 @@
 
 The Rust Options screen includes **HD art**. It starts disabled. Enable it to use reviewed artwork from `../data/hd/hd.json`; each missing or rejected frame keeps the selected original / 2x / 3x / 4x crisp treatment. The scale setting still determines the indexed rendering resolution, and the HD toggle can be changed while paused. HD art is presentation only: simulation, collision sizes, banking positions and save content IDs stay unchanged.
 
-The local base-game pack currently supplies **97 reviewed replacement frames**. Complete additions cover all twenty-one light, dark and firing-flash player poses, four fighters, four industrial bosses, four ground-defense targets and a five-frame opening bunker, fifteen equipment/pickup families, five complete projectile families, the twelve-frame energy ring and sixteen canonical terrain tiles. The complete catalog backlog and generation status are listed in [hd-backlog.md](hd-backlog.md).
+The local base-game pack currently supplies **165 reviewed replacement frames**. Complete additions cover all twenty-one light, dark and firing-flash player poses, four fighters, four industrial bosses, four ground-defense targets and a five-frame opening bunker, fifteen equipment/pickup families, five complete projectile families, the twelve-frame energy ring, nine blue-spark phases, four death-ray hit phases, fourteen lightning phases, ten platoon fragment phases, sixteen air-blast phases, four pickup glow masks, nine pilot portraits, both original title logos and sixteen canonical terrain tiles. The complete catalog backlog and generation status are listed in [hd-backlog.md](hd-backlog.md).
 
 | Reviewed artwork | Original asset IDs | Supplied / complete frames |
 | --- | --- | ---: |
@@ -35,6 +35,14 @@ The local base-game pack currently supplies **97 reviewed replacement frames**. 
 | Missile Pods / Air Missile 2 projectile | `0x101bd`–`0x101be` | 2 / 2 |
 | Ground Missile 2 projectile | `0x101bf`–`0x101c0` | 2 / 2 |
 | Energy ring | `0x101ae`–`0x101b9` | 12 / 12 |
+| Blue sparks | `0x1019c`–`0x101a4` | 9 / 9 |
+| Death-ray hits | `0x101f1`–`0x101f4` | 4 / 4 |
+| Lightning growth/retraction | `0x1018e`–`0x1019b` | 14 / 14 |
+| Platoon fragments | `0x10213`–`0x1021c` | 10 / 10 |
+| Air blast | `0x102a0`–`0x102af` | 16 / 16 |
+| Pickup glow light masks | `0x10225`–`0x10228` | 4 / 4 |
+| Pilot portraits, small and retained large variants | `0x10111`–`0x10119` | 9 / 9 |
+| Original English and Chinese title logos | `0x10013`, `0x10014` | 2 / 2 |
 | Canonical terrain set 1, first shard | `0x10360`–`0x1036f` | 16 / 16 |
 
 Every registered frame passed the exact original source hash, logical canvas, aspect, visible alpha and path checks. Complete contact sheets were inspected at source size and the 4× presentation size; per-frame geometry metrics and review evidence remain with each family. Their logical collision sizes are unchanged. Small contours and interpreted metal detail differ. Missing artwork keeps the crisp original fallback. HD remains an opt-in preview while the remaining catalog and game screenshots are reviewed.
@@ -51,7 +59,11 @@ Generated drafts are not active coverage. Earlier player atlas attempts and shor
 
 The firing family preserves all seven original poses and their localized amber reflections. Its distinct straight-frame contour points were checked explicitly: `(19,8)` remains opaque, `(11,12)` and `(11,13)` remain transparent, and `(11,14)` stays opaque. The MiniGun's four rotation phases and the seven newly registered missile phases passed complete sequence inspection; each missile retains its original exhaust length and fin layout. Native scene captures remain a separate reachability check. The additional `SHIP11G1_PIC` boss interprets its dark perimeter: logical alpha overlap is 82.9%, with 373 removed original occupied pixels (252 very dark) and 23 added pixels. Its towers, side machinery, center weapon and lower pods remain readable at every scale, but its alpha contour is not identical to the source.
 
-The first sixteen canonical terrain replacements passed independent review of every source/logical/4× frame, all 48 supplied mission contexts and all 755 declared cardinal neighbor pairs: 170 HD/HD and 585 HD/original. Actual native scene checks exercised all 32 cached scroll phases and content-hash/load-order invalidation. None of these sixteen IDs has a declared destroyed partner; the separate native destruction-cache proof therefore adds no HD debris coverage. Mixed detail contrast remains until neighboring tiles are remastered. The next terrain family has a corrected treeless `0x20111` and awaits renewed context review. Industrial terrain candidates retain source geometry but remain under review for recurring grain lines at some tile boundaries; they add no active coverage yet.
+The first sixteen canonical terrain replacements passed independent review of every source/logical/4× frame, all 48 supplied mission contexts and all 755 declared cardinal neighbor pairs: 170 HD/HD and 585 HD/original. Actual native scene checks exercised all 32 cached scroll phases and content-hash/load-order invalidation. None of these sixteen IDs has a declared destroyed partner; the separate native destruction-cache proof therefore adds no HD debris coverage. Mixed detail contrast remains until neighboring tiles are remastered. The next terrain family has a corrected treeless `0x20111` and passed independent source and complete neighborhood review. It and the first thirty-two industrial terrain candidates remain held for recurring grain lines at some composed tile boundaries; they add no active coverage yet.
+
+Four small pilot portraits (`0x10116`–`0x10119`) passed actual SDL main-menu SD/HD captures. Their faces, equipment and slanted ID-card backgrounds stay recognizable, and every surrounding UI pixel was identical. The five large portraits and both title logos have complete gallery review but no verified active UI route. The Chinese logo legitimately uses 478 original fire-class pixels; its HD output preserves that class and adds no water or blink labels.
+
+The newly reviewed effect families retain their complete phase ordering. Lightning branches are thinner and slightly cooler blue; the late AirBlast rim is thinner; PickupGlow uses a rounded interpreted contour rather than identical alpha. Actual `Canvas::shade` checks over original terrain confirm that pickup-mask holes preserve the background and mask RGB never paints foreground pixels. Other effects remain held where generation filled transparent holes, removed final fragments or made subdued smoke/embers too bright. A successfully decoded draft does not establish artistic approval.
 
 Original pixels and original-derived base-game artwork remain outside Git under `../data/hd/`. The separate authored mod packages include their generated SD/HD PNGs, sounds and provenance in Git. The new authored menu backdrop has its own packaged rendering path and is not counted as an original catalog sprite replacement.
 
