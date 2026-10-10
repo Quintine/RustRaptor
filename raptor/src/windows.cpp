@@ -629,6 +629,7 @@ WIN_Opts(
             SND_Patch(FX_SWEP, 127);
     }
 
+exit_opts:
     SWD_SetWinDrawFunc(opt_window, NULL);
     
     SWD_DestroyWindow(opt_window);
