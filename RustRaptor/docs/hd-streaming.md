@@ -16,11 +16,13 @@ Three least-recently-used caches each have a 32 MiB ceiling:
 
 - Decoded atlas images, keyed by the exact source PNG SHA-256.
 - Cropped, resampled RGBA frames, keyed by PNG identity, original payload SHA-256, crop, canvas, anchor, alpha requirement and kernel version.
-- Indexed sprites, keyed by the derived frame identity, presentation scale and complete palette identity.
+- Indexed sprites, keyed by the derived frame identity, presentation scale, complete palette identity and palette policy.
 
 Resident cached pixels total at most 96 MiB, irrespective of catalog coverage. Decoder input, resampling work buffers and returned owned sprites are additional bounded working allocations; callers should retain only currently needed sprites. Eviction removes cached pixels, not frame registrations or validated coverage. Adjacent crops reuse the decoded atlas; an atlas is not cloned in full merely to extract a small crop. Repeated draws copy only the final indexed canvas. Palette changes cannot reuse stale indexed colors.
 
 Source palette labels have a separate hard 32 MiB metadata ceiling. Frames using only ordinary colors need no label map. Frames containing animated labels retain one byte per original logical pixel; transparent and ordinary source locations use the ordinary class. Quantization restricts ordinary HD pixels to indices 0–239, water to 240–244 and fire to 245–249. Original glow/flash labels 250–255 remain exact. Newly visible HD pixels outside the original silhouette use ordinary colors. This prevents a bright static highlight from acquiring fire, water or blinking behavior. Cache color keys include the source class; equal RGB values in different classes cannot share an incorrect palette result.
+
+Standalone opening cards use `sprite_static_palette` with all 256 entries of their own unfaded palette. Its indexed cache policy is distinct from gameplay source classes; both share the same checked PNG and RGBA caches. Cinematic fades apply during presentation. See [hd-opening-cards.md](hd-opening-cards.md) for the route and fallback checks.
 
 ## Derived disk cache
 

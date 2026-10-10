@@ -152,6 +152,11 @@ pub struct CacheStats {
     pub disk_writes: usize,
     pub source_label_bytes: usize,
 }
+#[derive(Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
+enum PalettePolicy {
+    SourceClasses,
+    Static,
+}
 pub struct HdAssets {
     root: PathBuf,
     disk_cache: Option<PathBuf>,
@@ -159,7 +164,7 @@ pub struct HdAssets {
     png_info: BTreeMap<PathBuf, PngInfo>,
     atlases: LruCache<[u8; 32], RgbaImage>,
     rgba: LruCache<[u8; 32], RgbaImage>,
-    scaled: LruCache<([u8; 32], usize, [u8; 32]), Sprite>,
+    scaled: LruCache<([u8; 32], usize, [u8; 32], PalettePolicy), Sprite>,
     png_decodes: usize,
     disk_hits: usize,
     disk_writes: usize,
@@ -679,6 +684,25 @@ impl HdAssets {
         scale: usize,
         palette: &[[u8; 3]; 256],
     ) -> Result<Option<Sprite>> {
+        self.sprite_with_policy(id, scale, palette, PalettePolicy::SourceClasses)
+    }
+    /// Standalone cards use all 256 colors of their own unfaded static palette.
+    /// Gameplay cycling/flash classes do not apply; fades happen at presentation.
+    pub fn sprite_static_palette(
+        &mut self,
+        id: u32,
+        scale: usize,
+        palette: &[[u8; 3]; 256],
+    ) -> Result<Option<Sprite>> {
+        self.sprite_with_policy(id, scale, palette, PalettePolicy::Static)
+    }
+    fn sprite_with_policy(
+        &mut self,
+        id: u32,
+        scale: usize,
+        palette: &[[u8; 3]; 256],
+        policy: PalettePolicy,
+    ) -> Result<Option<Sprite>> {
         ensure!(
             (1..=4).contains(&scale),
             "HD presentation scale must be 1..4"
@@ -690,7 +714,7 @@ impl HdAssets {
             let requires_alpha = record.requires_alpha;
             if let Ok((_, info)) = self.png(&frame.file) {
                 let key = Self::frame_key(&frame, &info, requires_alpha);
-                if let Some(sprite) = self.scaled.get(&(key, scale, palette_key)).cloned() {
+                if let Some(sprite) = self.scaled.get(&(key, scale, palette_key, policy)).cloned() {
                     self.replacements.get_mut(&id).unwrap().validated = true;
                     return Ok(Some(sprite));
                 }
@@ -699,7 +723,7 @@ impl HdAssets {
         let Some((key, rgba)) = self.rgba_frame(id)? else {
             return Ok(None);
         };
-        let scaled_key = (key, scale, palette_key);
+        let scaled_key = (key, scale, palette_key, policy);
         let replacement = self.replacements.get(&id).unwrap();
         let frame = &replacement.frame;
         let width = frame.logical_width as usize * scale;
@@ -716,13 +740,20 @@ impl HdAssets {
             let rgb = [pixel[0], pixel[1], pixel[2]];
             let logical =
                 (index / width / scale) * frame.logical_width as usize + (index % width / scale);
-            let source_label = replacement
-                .source_labels
-                .as_ref()
-                .map_or(0, |labels| labels[logical]);
+            let source_label = if policy == PalettePolicy::SourceClasses {
+                replacement
+                    .source_labels
+                    .as_ref()
+                    .map_or(0, |labels| labels[logical])
+            } else {
+                0
+            };
             *destination = *colors
                 .entry((rgb, source_label))
-                .or_insert_with(|| closest(palette, rgb, source_label));
+                .or_insert_with(|| match policy {
+                    PalettePolicy::SourceClasses => closest(palette, rgb, source_label),
+                    PalettePolicy::Static => closest_in_range(palette, rgb, 0..256),
+                });
         }
         self.scaled
             .insert(scaled_key, sprite.clone(), sprite.pixels.len() * 2);
@@ -818,6 +849,9 @@ fn closest(palette: &[[u8; 3]; 256], rgb: [u8; 3], source_label: u8) -> u16 {
         250..=255 => return source_label as u16,
         _ => 0..240,
     };
+    closest_in_range(palette, rgb, range)
+}
+fn closest_in_range(palette: &[[u8; 3]; 256], rgb: [u8; 3], range: std::ops::Range<usize>) -> u16 {
     palette
         .iter()
         .enumerate()
@@ -976,6 +1010,67 @@ mod tests {
         }
         assert_eq!(animated.cache_stats().source_label_bytes, 4);
         assert!(animated.cache_stats().source_label_bytes <= MAX_SOURCE_LABEL_BYTES);
+    }
+    #[test]
+    fn static_card_palettes_use_all_colors_without_crossing_gameplay_cache_policy() {
+        let (dir, catalog, mut manifest) = fixture();
+        let rgb = [255, 100, 30];
+        RgbaImage::from_pixel(8, 8, image::Rgba([rgb[0], rgb[1], rgb[2], 255]))
+            .save(dir.path().join("hd/ship.png"))
+            .unwrap();
+        let mut source = fs::read(dir.path().join("source")).unwrap();
+        source[20..24].copy_from_slice(&[5, 242, 247, 253]);
+        fs::write(dir.path().join("source"), &source).unwrap();
+        manifest.sequences[0].frames[0].source_sha256 = format!("{:x}", Sha256::digest(&source));
+        let mut assets = pack(dir.path(), &catalog, &manifest);
+        let mut palette = [[0; 3]; 256];
+        for index in [7, 243, 247] {
+            palette[index] = [240, 90, 30];
+        }
+        palette[251] = rgb;
+        for scale in 1..=4 {
+            for static_palette in [true, false, true] {
+                let sprite = if static_palette {
+                    assets.sprite_static_palette(1, scale, &palette)
+                } else {
+                    assets.sprite(1, scale, &palette)
+                }
+                .unwrap()
+                .unwrap();
+                for y in 0..sprite.height {
+                    for x in 0..sprite.width {
+                        assert_eq!(
+                            sprite.pixels[y * sprite.width + x],
+                            if static_palette {
+                                251
+                            } else {
+                                [7, 243, 247, 253][(y / scale) * 2 + x / scale]
+                            },
+                            "palette policy collision: static={static_palette}, scale={scale}"
+                        );
+                    }
+                }
+            }
+        }
+        let before = assets.cache_stats();
+        assert_eq!(before.indexed_entries, 8);
+        assert_eq!(before.png_decodes, 1);
+        palette[251] = [0; 3];
+        palette[252] = rgb;
+        assert!(
+            assets
+                .sprite_static_palette(1, 4, &palette)
+                .unwrap()
+                .unwrap()
+                .pixels
+                .iter()
+                .all(|pixel| *pixel == 252)
+        );
+        let after = assets.cache_stats();
+        assert_eq!(after.indexed_entries, 9);
+        assert_eq!(after.png_decodes, before.png_decodes);
+        assert_eq!(after.rgba_bytes, before.rgba_bytes);
+        assert_eq!(after.disk_writes, before.disk_writes);
     }
     #[test]
     fn source_checked_pack_reports_partial_coverage_and_rejects_changed_data() {

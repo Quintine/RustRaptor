@@ -919,9 +919,57 @@ fn canonical_terrain_candidate_preserves_all_declared_contexts_and_neighbor_pair
     let mut contexts = Vec::new();
     let mut pairs = Vec::new();
     let mut pair_classes = BTreeMap::<&str, usize>::new();
+    let mut native_context_targets = Vec::new();
+    let mut gallery_only_unused_targets = Vec::new();
     for target in job["targets"].as_array().unwrap() {
         let target_name = target["asset"].as_str().unwrap();
         let id = u32::from_str_radix(target_name, 16).unwrap();
+        // Complete catalog coverage also includes unused pictures with no
+        // native placement. Validate their genuine source-bound art without
+        // inventing neighbors or presenting a gallery as a mission context.
+        let mut detailed = None;
+        for scale in 1..=4 {
+            let image = hd
+                .sprite(id, scale, &colors)
+                .unwrap()
+                .expect("candidate artwork rejected");
+            assert_eq!((image.width, image.height), (32 * scale, 32 * scale));
+            assert!(image.pixels.iter().all(|pixel| *pixel < TRANSPARENT));
+            if scale == 4 {
+                detailed = Some(image);
+            }
+        }
+        let unused = target["terrain_context"]["roles"]
+            .as_array()
+            .unwrap()
+            .is_empty();
+        if unused {
+            assert!(
+                target["terrain_context"]["samples"]
+                    .as_array()
+                    .unwrap()
+                    .is_empty()
+            );
+            assert!(
+                target["terrain_context"]["neighbors"]
+                    .as_object()
+                    .unwrap()
+                    .values()
+                    .all(|neighbors| neighbors.as_array().unwrap().is_empty())
+            );
+            let mut gallery = Canvas {
+                scale: 1,
+                image: solid(256, 128, 0),
+            };
+            gallery.blit(&upscale(&catalog.sprite(id).unwrap(), 4).unwrap(), 0, 0);
+            gallery.blit(&detailed.unwrap(), 128, 0);
+            let file = format!("{target_name}-runtime-unused-gallery.png");
+            save(&gallery.image, &output.join(&file));
+            gallery_only_unused_targets
+                .push(json!({"asset":target_name,"file":file,"native_occurrence":false}));
+        } else {
+            native_context_targets.push(target_name.to_owned());
+        }
         for (sample_index, sample) in target["terrain_context"]["samples"]
             .as_array()
             .unwrap()
@@ -984,19 +1032,21 @@ fn canonical_terrain_candidate_preserves_all_declared_contexts_and_neighbor_pair
                 local_pairs.push(json!({"target":target_name,"side":side,"neighbor":neighbor_name,"class":class}));
             }
         }
-        let mut sheet = Canvas {
-            scale: 1,
-            image: solid(1024, proofs.len().div_ceil(4).max(1) * 128, 0),
-        };
-        for (index, proof) in proofs.iter().enumerate() {
-            sheet.blit(proof, (index % 4 * 256) as i32, (index / 4 * 128) as i32);
-        }
-        let file = format!("{target_name}-runtime-cardinal-pairs.png");
-        save(&sheet.image, &output.join(&file));
-        for (index, mut pair) in local_pairs.into_iter().enumerate() {
-            pair["file"] = json!(file);
-            pair["sheet_cell"] = json!([index % 4, index / 4]);
-            pairs.push(pair);
+        if !proofs.is_empty() {
+            let mut sheet = Canvas {
+                scale: 1,
+                image: solid(1024, proofs.len().div_ceil(4) * 128, 0),
+            };
+            for (index, proof) in proofs.iter().enumerate() {
+                sheet.blit(proof, (index % 4 * 256) as i32, (index / 4 * 128) as i32);
+            }
+            let file = format!("{target_name}-runtime-cardinal-pairs.png");
+            save(&sheet.image, &output.join(&file));
+            for (index, mut pair) in local_pairs.into_iter().enumerate() {
+                pair["file"] = json!(file);
+                pair["sheet_cell"] = json!([index % 4, index / 4]);
+                pairs.push(pair);
+            }
         }
     }
     assert!(hd.diagnostics.is_empty(), "{:?}", hd.diagnostics);
@@ -1015,6 +1065,7 @@ fn canonical_terrain_candidate_preserves_all_declared_contexts_and_neighbor_pair
         .collect();
     let report = json!({"job_id":job_id,"contexts":contexts,"cardinal_pairs":pairs,"pair_classes":pair_classes,
         "registered":hd.registered_count(),"decoded":hd.validated_count(),"diagnostics":hd.diagnostics,
+        "native_context_targets":native_context_targets,"gallery_only_unused_targets":gallery_only_unused_targets,
         "targets_with_state_partners":partners,"state_partner_note":"Empty means this candidate has no declared damaged/destroyed partner; separate synthetic/source-bound tests verify state selection.",
         "panels":["Joined original ScaleNx","Exact HdAssets + TerrainHd composition"],
         "registration":"Isolated test pack only; global manifest and coverage untouched.","review":"Files require visual inspection; test success verifies reachability/canvas/indexing, not artistic acceptance."});

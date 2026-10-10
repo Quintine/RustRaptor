@@ -238,15 +238,16 @@ impl Sprite {
             "PNG exceeds 4096px"
         );
         let mut out = Self::blank(image.width() as usize, image.height() as usize);
-        // Palette art repeats colors extensively. Cache by RGB (alpha is handled
-        // separately) so terrain atlases do not search 256 entries per pixel.
+        // Plain mod PNGs carry no palette-animation metadata. Keep their colors
+        // out of the reserved water/fire/blink entries (240..=255), which change
+        // during gameplay. Cache repeated RGB values; alpha is handled separately.
         let mut colors = HashMap::<[u8; 3], u16>::new();
         for (dst, p) in out.pixels.iter_mut().zip(image.pixels()) {
             if p[3] < 128 {
                 continue;
             }
             *dst = *colors.entry([p[0], p[1], p[2]]).or_insert_with(|| {
-                palette
+                palette[..240]
                     .iter()
                     .enumerate()
                     .min_by_key(|(_, c)| {
@@ -424,5 +425,46 @@ mod tests {
         }
         b.extend([3, 4]);
         assert!(Sprite::decode(&b).is_err());
+    }
+    #[test]
+    fn ordinary_mod_png_does_not_acquire_animated_palette_indices() {
+        let mut palette = [[0; 3]; 256];
+        palette[238] = [3, 5, 7];
+        palette[239] = [250, 235, 250];
+        for (offset, color) in palette[240..].iter_mut().enumerate() {
+            *color = [255, 240 + offset as u8, 255];
+        }
+        let mut input = image::RgbaImage::new(19, 1);
+        for offset in 0..16 {
+            let color = palette[240 + offset];
+            input.put_pixel(
+                offset as u32,
+                0,
+                image::Rgba([color[0], color[1], color[2], 255]),
+            );
+        }
+        input.put_pixel(16, 0, image::Rgba([3, 5, 7, 255]));
+        input.put_pixel(17, 0, image::Rgba([255, 255, 255, 127]));
+        input.put_pixel(18, 0, image::Rgba([255, 240, 255, 128]));
+        let directory = tempfile::tempdir().unwrap();
+        let path = directory.path().join("ordinary-mod.png");
+        input.save(&path).unwrap();
+
+        let sprite = Sprite::png(&path, &palette).unwrap();
+        assert_eq!(&sprite.pixels[..16], &[239; 16]);
+        assert_eq!(sprite.pixels[16], 238);
+        assert_eq!(sprite.pixels[17], TRANSPARENT);
+        assert_eq!(sprite.pixels[18], 239);
+        let visible_colors = |active: &[[u8; 3]; 256]| {
+            sprite
+                .pixels
+                .iter()
+                .filter(|&&index| index != TRANSPARENT)
+                .map(|&index| active[index as usize])
+                .collect::<Vec<_>>()
+        };
+        let original_colors = visible_colors(&palette);
+        palette[240..].fill([20, 40, 60]);
+        assert_eq!(visible_colors(&palette), original_colors);
     }
 }

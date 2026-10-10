@@ -3189,7 +3189,21 @@ impl Host {
             crate::assets::TRANSPARENT
         });
         if let Some(movie) = &self.cinematic {
-            canvas.blit(&nearest(&movie.image, canvas.scale), 0, 0);
+            let replacement = if self.config.hd_mode {
+                if let Some((name, palette)) = movie.still_picture() {
+                    self.hd
+                        .sprite_static_palette(self.catalog.id(name)?, canvas.scale, palette)?
+                } else {
+                    None
+                }
+            } else {
+                None
+            };
+            canvas.blit(
+                &replacement.unwrap_or_else(|| nearest(&movie.image, canvas.scale)),
+                0,
+                0,
+            );
             return Ok(canvas);
         }
         if self.world.is_some() {
@@ -4944,6 +4958,229 @@ mod tests {
         }
         assert_eq!(host.hd.validated_count(), 1);
         assert!(host.hd.diagnostics.is_empty());
+    }
+    fn opening_card_fixture() -> (tempfile::TempDir, Host) {
+        use sha2::{Digest, Sha256};
+        let (dir, mut host) = ui_fixture();
+        let root = host.catalog.root.clone();
+        let hd_root = root.join("hd");
+        std::fs::create_dir(&hd_root).unwrap();
+        let mut index = std::fs::read_to_string(root.join("INDEX")).unwrap();
+        let mut sequences = Vec::new();
+        for (asset, name, palette_name, source_index, colors) in [
+            (
+                0x1002b,
+                "APOGEE_PIC",
+                "POGPAL_DAT",
+                5,
+                [[63, 0, 0], [0, 63, 0]],
+            ),
+            (
+                0x1002d,
+                "CYGNUS_PIC",
+                "CYGPAL_DAT",
+                7,
+                [[0, 0, 63], [63, 0, 0]],
+            ),
+        ] {
+            let source = [1_i32, 0, 0, 320, 200]
+                .into_iter()
+                .flat_map(i32::to_le_bytes)
+                .chain(vec![source_index; 320 * 200])
+                .collect::<Vec<_>>();
+            std::fs::write(root.join(name), &source).unwrap();
+            index.push_str(&format!("{asset:x} {} {name}\n", source.len()));
+            let mut palette = [0; 768];
+            palette[source_index as usize * 3..source_index as usize * 3 + 3]
+                .copy_from_slice(&[0, 63, 63]);
+            for (entry, color) in [(42, colors[0]), (250, colors[1])] {
+                palette[entry * 3..entry * 3 + 3].copy_from_slice(&color);
+            }
+            std::fs::write(root.join(palette_name), palette).unwrap();
+            index.push_str(&format!("{:x} 768 {palette_name}\n", asset + 1));
+            let file = format!("{name}.png");
+            image::RgbaImage::from_fn(640, 400, |x, _| {
+                let color = colors[usize::from(x >= 320)].map(|v| v * 4 + v / 16);
+                image::Rgba([color[0], color[1], color[2], 255])
+            })
+            .save(hd_root.join(&file))
+            .unwrap();
+            sequences.push(serde_json::json!({
+                "name":name,"base_asset":asset,"frame_count":1,"frames":[{
+                    "frame":0,"file":file,"logical_width":320,"logical_height":200,
+                    "origin":[0,0],"source_sha256":format!("{:x}",Sha256::digest(&source))
+                }]
+            }));
+        }
+        let mut score = b"MUS\x1a".to_vec();
+        score.extend(1_u16.to_le_bytes());
+        score.extend(16_u16.to_le_bytes());
+        score.extend([0; 8]);
+        score.push(0x60);
+        std::fs::write(root.join("APOGEE_MUS"), &score).unwrap();
+        index.push_str(&format!("9999 {} APOGEE_MUS\n", score.len()));
+        std::fs::write(root.join("INDEX"), index).unwrap();
+        std::fs::write(
+            hd_root.join("hd.json"),
+            serde_json::to_vec(&serde_json::json!({
+                "format_version":1,"name":"Opening card fixture","sequences":sequences
+            }))
+            .unwrap(),
+        )
+        .unwrap();
+        host.catalog = Catalog::open(&root).unwrap();
+        // Wrong-for-cards gameplay palette makes accidental global quantization
+        // visibly different from either source-specific static palette.
+        host.palette[8] = [255, 0, 0];
+        host.palette[9] = [0, 255, 0];
+        host.palette[10] = [0, 0, 255];
+        host.world =
+            Some(World::new(&host.pilot.mission, &host.pilot, &host.active.registry).unwrap());
+        host.show_movie(MovieKind::OpeningCredits, Screen::Main)
+            .unwrap();
+        (dir, host)
+    }
+    fn cinematic_audio_snapshot(movie: &Cinematic) -> Vec<serde_json::Value> {
+        movie
+            .audio_events
+            .iter()
+            .map(|event| match event {
+                CinematicAudioEvent::Play(sound) => serde_json::json!({"play":sound}),
+                CinematicAudioEvent::Stop(asset) => serde_json::json!({"stop":asset}),
+            })
+            .collect()
+    }
+    #[test]
+    fn supplied_hd_opening_cards_use_unfaded_source_palettes_without_advancing_movies_or_world() {
+        let (_dir, mut host) = opening_card_fixture();
+        assert!(!host.config.hd_mode);
+        host.config.scanlines = false;
+        let mut reference = Cinematic::load(&host.catalog, MovieKind::OpeningCredits).unwrap();
+        let pilot_before = serde_json::to_value(&host.pilot).unwrap();
+        let world_before = host.world.as_ref().unwrap().digest();
+        let rng_before = host.world.as_ref().unwrap().rng;
+        let mut drawn_cards = std::collections::BTreeSet::new();
+        let sample_ticks = [0, 32, 64, 184, 215, 247, 279, 311, 506, 537, 568];
+        for tick in 0..=569 {
+            let movie = host.cinematic.as_ref().unwrap();
+            assert_eq!(
+                movie.finished(),
+                reference.finished(),
+                "timing at tick {tick}"
+            );
+            assert_eq!(movie.image, reference.image);
+            assert_eq!(
+                movie.palette(&host.palette),
+                reference.palette(&host.palette)
+            );
+            assert_eq!(movie.music_events, reference.music_events);
+            assert_eq!(
+                cinematic_audio_snapshot(movie),
+                cinematic_audio_snapshot(&reference)
+            );
+            if sample_ticks.contains(&tick) {
+                let (name, _) = reference.still_picture().unwrap();
+                drawn_cards.insert(name);
+                let original = if name == "APOGEE_PIC" { 5 } else { 7 };
+                for scale in [1, 4] {
+                    host.config.scale = scale;
+                    for hd in [false, true] {
+                        host.config.hd_mode = hd;
+                        let canvas = host.draw().unwrap();
+                        let rgba = host.present_rgba(&canvas);
+                        assert_eq!(
+                            (canvas.image.width, canvas.image.height),
+                            (320 * scale, 200 * scale)
+                        );
+                        assert!(!canvas.image.pixels.contains(&crate::assets::TRANSPARENT));
+                        for (x, y) in [(0, 0), (80, 100), (240, 100), (319, 199)] {
+                            let pixel = y * scale * canvas.image.width + x * scale;
+                            let expected = if hd {
+                                if x < 160 { 42 } else { 250 }
+                            } else {
+                                original
+                            };
+                            assert_eq!(
+                                canvas.image.pixels[pixel], expected,
+                                "{name}, tick={tick}, scale={scale}, hd={hd}"
+                            );
+                            let color = reference.palette(&host.palette)[expected as usize];
+                            assert_eq!(
+                                &rgba[pixel * 4..pixel * 4 + 4],
+                                &[color[0], color[1], color[2], 255]
+                            );
+                        }
+                        assert_eq!(host.world.as_ref().unwrap().digest(), world_before);
+                        assert_eq!(host.world.as_ref().unwrap().rng, rng_before);
+                        assert_eq!(serde_json::to_value(&host.pilot).unwrap(), pilot_before);
+                        let movie = host.cinematic.as_ref().unwrap();
+                        assert_eq!(movie.image, reference.image);
+                        assert_eq!(
+                            movie.palette(&host.palette),
+                            reference.palette(&host.palette)
+                        );
+                        assert_eq!(movie.music_events, reference.music_events);
+                        assert_eq!(
+                            cinematic_audio_snapshot(movie),
+                            cinematic_audio_snapshot(&reference)
+                        );
+                    }
+                }
+            }
+            if reference.finished() {
+                assert_eq!(tick, 569);
+                break;
+            }
+            let nanos = 1_000_000_000_u64.div_ceil(70);
+            host.cinematic.as_mut().unwrap().advance(nanos).unwrap();
+            reference.advance(nanos).unwrap();
+        }
+        assert_eq!(drawn_cards, ["APOGEE_PIC", "CYGNUS_PIC"].into());
+        assert_eq!(
+            reference.music_events,
+            [("APOGEE_MUS", false), ("RINTRO_MUS", true)]
+        );
+        assert_eq!(reference.audio_events.len(), 2);
+        assert_eq!(host.hd.validated_count(), 2);
+        assert!(host.hd.diagnostics.is_empty());
+        // Fade phases reuse the same palette-bound indexed sprites rather than
+        // repeatedly quantizing against changing or completely black colors.
+        assert_eq!(host.hd.cache_stats().indexed_entries, 4);
+        assert_eq!(host.hd.cache_stats().png_decodes, 2);
+    }
+    #[test]
+    fn missing_or_source_mismatched_hd_opening_card_keeps_native_picture_and_palette() {
+        for mismatched in [false, true] {
+            let (_dir, mut host) = opening_card_fixture();
+            let manifest_path = host.catalog.root.join("hd/hd.json");
+            let mut manifest: serde_json::Value =
+                serde_json::from_slice(&std::fs::read(&manifest_path).unwrap()).unwrap();
+            if mismatched {
+                manifest["sequences"][0]["frames"][0]["source_sha256"] = "changed".into();
+            } else {
+                manifest["sequences"][0]["frames"] = serde_json::json!([]);
+            }
+            std::fs::write(manifest_path, serde_json::to_vec(&manifest).unwrap()).unwrap();
+            host.config.hd_mode = true;
+            host.config.scanlines = false;
+            host.cinematic
+                .as_mut()
+                .unwrap()
+                .advance(64 * 1_000_000_000_u64.div_ceil(70))
+                .unwrap();
+            for scale in [1, 4] {
+                host.config.scale = scale;
+                let canvas = host.draw().unwrap();
+                assert!(canvas.image.pixels.iter().all(|pixel| *pixel == 5));
+                let rgba = host.present_rgba(&canvas);
+                assert_eq!(&rgba[..4], &[0, 255, 255, 255]);
+            }
+            assert_eq!(host.hd.validated_count(), 0);
+            assert_eq!(
+                host.cinematic.as_ref().unwrap().music_events,
+                [("APOGEE_MUS", false)]
+            );
+        }
     }
     fn game_input_fixture() -> (tempfile::TempDir, Host) {
         let (dir, mut host) = ui_fixture();

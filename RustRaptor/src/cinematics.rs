@@ -414,6 +414,12 @@ impl Cinematic {
     pub fn finished(&self) -> bool {
         matches!(self.phase, Phase::Finished)
     }
+    /// Active standalone picture and its source palette, before any fade.
+    /// AGX delta films retain their original indexed frame composition.
+    pub fn still_picture(&self) -> Option<(&'static str, &[[u8; 3]; 256])> {
+        let clip = self.clips.get(self.current)?;
+        Some((clip.spec.name, clip.palette.as_ref()?))
+    }
     pub fn palette(&self, base: &[[u8; 3]; 256]) -> [[u8; 3]; 256] {
         let base = self
             .clips
@@ -668,6 +674,37 @@ mod tests {
         );
         assert_eq!(patches, [(314, 179), (431, 179)]);
         assert_eq!(movie.palette(&base), base);
+    }
+    #[test]
+    fn still_picture_exposes_each_unfaded_card_palette_and_excludes_agx_frames() {
+        let mut movie = synthetic_player(specs(Kind::OpeningCredits));
+        movie.clips[1].palette = Some([[200, 60, 40]; 256]);
+        let base = [[240, 20, 16]; 256];
+        let (name, palette) = movie.still_picture().unwrap();
+        assert_eq!(name, "APOGEE_PIC");
+        assert_eq!(*palette, [[80, 120, 200]; 256]);
+        assert_eq!(movie.palette(&base), [[0; 3]; 256]);
+        for _ in 0..32 {
+            tick(&mut movie);
+        }
+        assert_eq!(movie.palette(&base), [[40, 60, 100]; 256]);
+        assert_eq!(*movie.still_picture().unwrap().1, [[80, 120, 200]; 256]);
+        while movie.ticks < 247 {
+            tick(&mut movie);
+        }
+        let (name, palette) = movie.still_picture().unwrap();
+        assert_eq!(name, "CYGNUS_PIC");
+        assert_eq!(*palette, [[200, 60, 40]; 256]);
+        assert_eq!(movie.palette(&base), [[0; 3]; 256]);
+        while !movie.finished() {
+            tick(&mut movie);
+        }
+        assert!(movie.still_picture().is_none());
+        let mut intro = synthetic_player(specs(Kind::Intro));
+        while !intro.finished() {
+            assert!(intro.still_picture().is_none());
+            tick(&mut intro);
+        }
     }
     #[test]
     #[ignore = "requires original local game assets"]
