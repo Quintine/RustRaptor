@@ -4810,6 +4810,141 @@ mod tests {
         assert_eq!(host.hd.coverage(), 1);
         assert_eq!(serde_json::to_value(&host.pilot).unwrap(), before);
     }
+    #[test]
+    fn timed_currency_pickup_uses_hd_pixels_at_interpolated_native_position_without_mutation() {
+        use crate::simulation::{LegacyPickup, Pickup};
+        use sha2::{Digest, Sha256};
+
+        let (_dir, mut host) = ui_fixture();
+        install_player_fixture(&mut host);
+        let root = host.catalog.root.clone();
+        let source = [1_i32, 0, 0, 4, 4]
+            .into_iter()
+            .flat_map(i32::to_le_bytes)
+            .chain([5; 16])
+            .collect::<Vec<_>>();
+        std::fs::write(root.join("N$_PIC"), &source).unwrap();
+        let index = std::fs::read_to_string(root.join("INDEX")).unwrap();
+        std::fs::write(
+            root.join("INDEX"),
+            format!("{index}1000f {} N$_PIC\n", source.len()),
+        )
+        .unwrap();
+        host.catalog = Catalog::open(&root).unwrap();
+        let hd_root = root.join("hd");
+        std::fs::create_dir(&hd_root).unwrap();
+        image::RgbaImage::from_fn(16, 16, |x, _| {
+            image::Rgba(if x < 8 {
+                [255, 0, 0, 255]
+            } else {
+                [0, 0, 255, 255]
+            })
+        })
+        .save(hd_root.join("currency.png"))
+        .unwrap();
+        let manifest = serde_json::json!({"format_version":1,"name":"Timed currency fixture","sequences":[{
+        "name":"Currency","base_asset":0x1000f,"frame_count":1,"frames":[{
+            "frame":0,"file":"currency.png","logical_width":4,"logical_height":4,
+            "origin":[0,0],"source_sha256":format!("{:x}",Sha256::digest(&source))
+        }]}]});
+        std::fs::write(
+            hd_root.join("hd.json"),
+            serde_json::to_vec(&manifest).unwrap(),
+        )
+        .unwrap();
+        host.palette[5] = [0, 255, 0];
+        host.palette[8] = [255, 0, 0];
+        host.palette[9] = [0, 0, 255];
+        // The full scene also renders numeric HUD pictures; keep those separate
+        // from the currency asset used by both the HUD and this timed pickup.
+        for asset in 0x10005..=0x1000e {
+            host.raw.insert(asset, Sprite::blank(1, 1));
+        }
+        let mut world =
+            World::new(&host.pilot.mission, &host.pilot, &host.active.registry).unwrap();
+        world.draw_player = false;
+        world.player.selected = None;
+        world.tick = 17;
+        world.rng.seed = 0x1234567;
+        world.pickups.push(Pickup {
+            entity: 300,
+            item: "base:energy".into(),
+            x: 63,
+            y: 105,
+            legacy: Some(LegacyPickup {
+                x: 71,
+                y: 113,
+                position: 3,
+                frame: 1,
+                art_frame: 0,
+                countdown: Some(13),
+                glow_frame: 1,
+                previous_art_position: Some([60, 100]),
+            }),
+        });
+        let before = world.digest();
+        let rng_before = world.rng;
+        let pilot_before = serde_json::to_value(&host.pilot).unwrap();
+        host.world = Some(world);
+        for scale in [1, 4] {
+            for halfway in [false, true] {
+                host.clock = Clock::default();
+                assert_eq!(host.clock.advance(if halfway { 21_428_571 } else { 0 }), 0);
+                let alpha_before = host.clock.alpha();
+                assert_eq!(alpha_before, if halfway { 0.5 } else { 0.0 });
+                let [left, top] = match (scale, halfway) {
+                    (1, false) => [60, 100],
+                    (1, true) => [62, 103],
+                    (4, false) => [240, 400],
+                    (4, true) => [246, 410],
+                    _ => unreachable!(),
+                };
+                for hd in [false, true] {
+                    host.config.hd_mode = hd;
+                    let mut canvas = Canvas::new(scale);
+                    host.scene(&mut canvas).unwrap();
+                    // Inspect the pickup's complete footprint and one-pixel
+                    // border, far from the HUD's separate dollar glyph. This
+                    // fails if the timed-pickup branch falls back to source art,
+                    // uses collision-center coordinates or rounds before scaling.
+                    for y in top - 1..=top + 4 * scale {
+                        for x in left - 1..=left + 4 * scale {
+                            let expected = if (left..left + 4 * scale).contains(&x)
+                                && (top..top + 4 * scale).contains(&y)
+                            {
+                                if !hd {
+                                    5
+                                } else if x < left + 2 * scale {
+                                    8
+                                } else {
+                                    9
+                                }
+                            } else {
+                                0
+                            };
+                            assert_eq!(
+                                canvas.image.pixels[y * canvas.image.width + x],
+                                expected,
+                                "currency at ({x},{y}), scale={scale}, halfway={halfway}, hd={hd}"
+                            );
+                        }
+                    }
+                    let after = host.world.as_ref().unwrap();
+                    assert_eq!(after.digest(), before);
+                    assert_eq!(after.rng, rng_before);
+                    let pickup = after.pickups[0].legacy.as_ref().unwrap();
+                    // These presentation fields are intentionally not serialized
+                    // by World::digest, so verify them separately as well.
+                    assert_eq!(pickup.previous_art_position, Some([60, 100]));
+                    assert_eq!(pickup.glow_frame, 1);
+                    assert_eq!(host.clock.alpha(), alpha_before);
+                    assert_eq!(serde_json::to_value(&host.pilot).unwrap(), pilot_before);
+                }
+            }
+        }
+        assert_eq!(host.hd.validated_count(), 1);
+        assert!(host.hd.diagnostics.is_empty());
+    }
     fn game_input_fixture() -> (tempfile::TempDir, Host) {
         let (dir, mut host) = ui_fixture();
         let pack = serde_json::from_value(serde_json::json!({

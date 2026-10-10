@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Coordinate four advisory built-in imagegen submissions across HD workers.
 
-No API call is started or terminated by this tool. Leases last thirty minutes,
-may be renewed while a tool yields, and are released with the actual outcome.
+No API call is started or terminated by this tool. Unstarted reservations last
+thirty minutes. Started and legacy-unknown requests require an explicit finish.
 Workers without a lease should prepare/review other jobs, then try again.
 """
 import argparse
@@ -56,10 +56,13 @@ def status(directory, now=None):
             raise ValueError("unsupported gate state; do not erase active reservations")
         leases = [{"lease_id": identity, "owner": lease["owner"],
                    "job_id": lease["job_id"],
+                   "phase": lease.get("phase", "legacy_unknown"),
                    "age_seconds": max(0, int(now - lease["created_epoch"])),
                    "expires_at": utc(lease["expires_epoch"]),
                    "renewal_needed": now >= lease["expires_epoch"],
-                   "stale_reservation": now > lease["expires_epoch"] + EXPIRY_GRACE_SECONDS}
+                   "stale_reservation": lease.get("phase") == "reserved" and now > lease["expires_epoch"] + EXPIRY_GRACE_SECONDS,
+                   "owner_status_needed": lease.get("phase", "legacy_unknown") == "legacy_unknown"
+                       or (lease.get("phase") == "started" and now - lease["created_epoch"] >= LEASE_SECONDS)}
                   for identity, lease in state["leases"].items()]
         recent = []
         log = directory / "events.jsonl"
@@ -74,6 +77,8 @@ def status(directory, now=None):
         acquired = collections.Counter(event["owner"] for event in recent
                                        if event["event"] == "acquired")
         return {"action": "status", "timestamp_utc": utc(now), "capacity": CAPACITY,
+                "admissions_paused": state.get("admissions_paused", False),
+                "pause_reason": state.get("pause_reason"),
                 "active_reservations": len(leases), "leases": leases,
                 "cooldowns": [{"owner": owner, "remaining_seconds": int(row["cooldown_until"] - now)}
                               for owner, row in state["owners"].items()
@@ -97,14 +102,23 @@ def operate(directory, action, owner, job=None, lease_id=None, outcome=None, err
             raise ValueError("unsupported gate state; do not erase active reservations")
         events = []
         for identity, lease in list(state["leases"].items()):
-            if now > lease["expires_epoch"] + EXPIRY_GRACE_SECONDS:
+            if (lease.get("phase") == "reserved" and identity != lease_id
+                    and now > lease["expires_epoch"] + EXPIRY_GRACE_SECONDS):
                 del state["leases"][identity]
                 events.append({"event": "expired_stale_reservation", "lease_id": identity, "owner": lease["owner"], "job_id": lease["job_id"], "previous_expiry": utc(lease["expires_epoch"]), "note": "Reservation expiry only; no running imagegen call was interrupted."})
         response = {"action": action, "owner": owner, "capacity": CAPACITY}
-        if action == "acquire":
+        if action in ["pause", "resume"]:
+            state["admissions_paused"] = action == "pause"
+            state["pause_reason"] = job if action == "pause" else None
+            response.update(changed=True, admissions_paused=state["admissions_paused"])
+            events.append({"event": action, "owner": owner, "reason": state["pause_reason"],
+                           "note": "Admission policy only; existing tool requests are not interrupted."})
+        elif action == "acquire":
             if not job or not re.fullmatch(r"[A-Za-z0-9_.:-]{1,128}", job):
                 raise ValueError("valid job ID required")
-            if any(lease["owner"] == owner for lease in state["leases"].values()):
+            if state.get("admissions_paused"):
+                response.update(acquired=False, reason="admissions_paused", pause_reason=state.get("pause_reason"))
+            elif any(lease["owner"] == owner for lease in state["leases"].values()):
                 response.update(acquired=False, reason="owner_already_has_inflight_reservation")
             elif any(lease["job_id"] == job for lease in state["leases"].values()):
                 response.update(acquired=False, reason="job_already_reserved")
@@ -121,10 +135,35 @@ def operate(directory, action, owner, job=None, lease_id=None, outcome=None, err
                     response.update(acquired=False, reason="all_four_submission_slots_reserved")
                 else:
                     identity = str(uuid.uuid4())
-                    lease = {"owner": owner, "job_id": job, "created_epoch": now, "expires_epoch": now + LEASE_SECONDS}
+                    lease = {"owner": owner, "job_id": job, "created_epoch": now, "expires_epoch": now + LEASE_SECONDS, "phase": "reserved"}
                     state["leases"][identity] = lease
                     response.update(acquired=True, lease_id=identity, expires_at=utc(lease["expires_epoch"]), renewal_command=f"renew --owner {owner} --lease {identity}")
                     events.append({"event": "acquired", "lease_id": identity, "owner": owner, "job_id": job, "expires_at": utc(lease["expires_epoch"])})
+        elif action == "restore":
+            if lease_id in state["leases"]:
+                if state["leases"][lease_id]["owner"] != owner:
+                    raise ValueError("reservation belongs to another worker")
+                response.update(changed=False, reason="reservation_already_present")
+            else:
+                history = directory / "events.jsonl"
+                source = None
+                for line in history.read_text().splitlines() if history.is_file() else []:
+                    event = json.loads(line)
+                    if event.get("lease_id") == lease_id:
+                        if event.get("event") == "acquired":
+                            source = event
+                        elif event.get("event") in ["report", "release"]:
+                            source = None
+                if not source or source["owner"] != owner:
+                    raise ValueError("restore requires an unfinished recorded acquisition belonging to this owner")
+                created = datetime.datetime.fromisoformat(source["timestamp_utc"]).timestamp()
+                state["leases"][lease_id] = {"owner": owner, "job_id": source["job_id"],
+                                             "created_epoch": created, "expires_epoch": now + LEASE_SECONDS,
+                                             "phase": "legacy_unknown"}
+                response.update(changed=True, reason="unverified_expired_request_restored")
+                events.append({"event": "restored_unknown_request", "lease_id": lease_id,
+                               "owner": owner, "job_id": source["job_id"],
+                               "note": "Retain active-call accounting until the owner confirms completion. No tool was started or interrupted."})
         else:
             lease = state["leases"].get(lease_id)
             if lease is None:
@@ -135,6 +174,19 @@ def operate(directory, action, owner, job=None, lease_id=None, outcome=None, err
                 lease["expires_epoch"] = now + LEASE_SECONDS
                 response.update(changed=True, expires_at=utc(lease["expires_epoch"]))
                 events.append({"event": "renewed", "lease_id": lease_id, "owner": owner, "job_id": lease["job_id"], "expires_at": utc(lease["expires_epoch"])})
+            elif action == "start":
+                if lease.get("phase") == "started":
+                    response.update(changed=False, reason="request_already_started")
+                elif lease.get("phase") != "reserved":
+                    response.update(changed=False, reason="legacy_request_requires_recovery_or_finish")
+                elif state.get("admissions_paused"):
+                    response.update(changed=False, reason="admissions_paused")
+                else:
+                    lease.update(phase="started", started_epoch=now, expires_epoch=now + LEASE_SECONDS)
+                    response.update(changed=True, started_at=utc(now))
+                    events.append({"event": "started", "lease_id": lease_id, "owner": owner,
+                                   "job_id": lease["job_id"],
+                                   "note": "Owner is submitting the built-in imagegen request; this slot requires an explicit report or release."})
             else:
                 del state["leases"][lease_id]
                 event = {"event": action, "lease_id": lease_id, "owner": owner, "job_id": lease["job_id"]}
@@ -169,7 +221,7 @@ def operate(directory, action, owner, job=None, lease_id=None, outcome=None, err
 def main():
     project = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action", choices=["acquire", "renew", "release", "report", "status"])
+    parser.add_argument("action", choices=["acquire", "start", "renew", "release", "report", "restore", "pause", "resume", "status"])
     parser.add_argument("--owner")
     parser.add_argument("--job")
     parser.add_argument("--lease")
@@ -182,7 +234,7 @@ def main():
         return
     if not args.owner:
         parser.error("owner required for lease changes")
-    if args.action != "acquire" and not args.lease:
+    if args.action not in ["acquire", "pause", "resume"] and not args.lease:
         parser.error("lease ID required")
     if args.action == "report" and not args.outcome:
         parser.error("report needs an actual outcome")
