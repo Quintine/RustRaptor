@@ -19,11 +19,11 @@
   ],
   "stage_contract": "Every generated candidate stays distinct from review, registration and render reachability. Original-only fallback is temporary for every required picture. Native cinematics/fonts have explicit preservation exceptions, not HD claims.",
   "picture_status_counts": {
-    "inprogress": 1597,
+    "inprogress": 1551,
     "missing": 3127,
-    "registered": 145,
+    "registered": 195,
     "renderreachable": 20,
-    "candidate": 864
+    "candidate": 860
   },
   "assets": {
     "10001": {
@@ -6394,7 +6394,7 @@
       "canonical_source_asset": "1013b",
       "family_id": "enemies-1013b-1013b",
       "job_id": "enemies-1013b-1013b",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -6406,6 +6406,15 @@
         "manifest": "jobs/enemies-1013b-1013b/candidate.json",
         "sha256": "23be1ef3cca01b1c6b82b0984cbd07c8817b8c4a3a83edfe5c140828e0f5c9e2",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "23be1ef3cca01b1c6b82b0984cbd07c8817b8c4a3a83edfe5c140828e0f5c9e2",
+        "frame_bindings_sha256": "3f9313438b5d827243e11c473f6bb10f43669348b51cba66bb6a4a02cd5015e2",
+        "reviewed_at_utc": "2026-10-10T22:39:12.040481+00:00",
+        "runtime_qa": "jobs/enemies-1013b-1013b/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x family sheets inspected. Corrected quietbrown ground retains native concrete machinery and angle; Guns preserve four gray/white2x2patterns; MINE_BLK preserves two pink/dark-burgundy center states with goldcorners, slightly duller warm patches disclosed. Allfour scale source/canvas/alpha/hash/palette checks pass;40source-and-scale PPMs match independent reviewed evidence. No gun/mine live occurrence claimed.",
+        "independent_review": "hd_full_review independently approved exact eight-frame cohort after full two source/1x/4x pages and native2x/3x frames; evidence .reference/hd-full-review/soil-and-tiny-projectiles/."
       }
     },
     "1013c": {
@@ -6635,7 +6644,7 @@
       "canonical_source_asset": "10142",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -6647,6 +6656,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10143": {
@@ -6668,7 +6686,7 @@
       "canonical_source_asset": "10143",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -6680,6 +6698,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10144": {
@@ -6701,7 +6728,7 @@
       "canonical_source_asset": "10144",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -6713,6 +6740,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10145": {
@@ -6734,7 +6770,7 @@
       "canonical_source_asset": "10145",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -6746,6 +6782,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10146": {
@@ -6767,7 +6812,7 @@
       "canonical_source_asset": "10146",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -6779,6 +6824,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10147": {
@@ -6800,7 +6854,7 @@
       "canonical_source_asset": "10147",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -6812,6 +6866,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10148": {
@@ -6833,7 +6896,7 @@
       "canonical_source_asset": "10148",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -6845,6 +6908,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10149": {
@@ -6866,7 +6938,7 @@
       "canonical_source_asset": "10149",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -6878,6 +6950,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "1014a": {
@@ -6899,7 +6980,7 @@
       "canonical_source_asset": "1014a",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -6911,6 +6992,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "1014b": {
@@ -6932,7 +7022,7 @@
       "canonical_source_asset": "1014b",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -6944,6 +7034,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "1014c": {
@@ -6965,7 +7064,7 @@
       "canonical_source_asset": "1014c",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -6977,6 +7076,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "1014d": {
@@ -6998,7 +7106,7 @@
       "canonical_source_asset": "1014d",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -7010,6 +7118,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "1014e": {
@@ -7031,7 +7148,7 @@
       "canonical_source_asset": "1014e",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -7043,6 +7160,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "1014f": {
@@ -7064,7 +7190,7 @@
       "canonical_source_asset": "1014f",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -7076,6 +7202,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10150": {
@@ -7097,7 +7232,7 @@
       "canonical_source_asset": "10150",
       "family_id": "enemies-10142-10150",
       "job_id": "enemies-10142-10150",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -7109,6 +7244,15 @@
         "manifest": "jobs/enemies-10142-10150/candidate.json",
         "sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "7e35f017bc1e57b8188b4a990ffa0cfd149d79955a136d90eec3fc37cd2283b0",
+        "frame_bindings_sha256": "0879454d38539b509e82a23a2f0d44ed837a461e2a9decfcb291d82acb7b3ebb",
+        "reviewed_at_utc": "2026-10-10T22:17:40.638368+00:00",
+        "runtime_qa": "jobs/enemies-10142-10150/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10151": {
@@ -7130,7 +7274,7 @@
       "canonical_source_asset": "10151",
       "family_id": "enemies-10151-10151",
       "job_id": "enemies-10151-10151",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_enemies_02",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -7142,6 +7286,15 @@
         "manifest": "jobs/enemies-10151-10151/candidate.json",
         "sha256": "d03ac4e36903df6aabd012597e082c93b60aa5342aa58e28a53e337c724d58d6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "d03ac4e36903df6aabd012597e082c93b60aa5342aa58e28a53e337c724d58d6",
+        "frame_bindings_sha256": "5cb61e90f902e8f734f75edb7aa5bdc888398847d9bed218c4d355c5632aa400",
+        "reviewed_at_utc": "2026-10-10T22:17:40.639460+00:00",
+        "runtime_qa": "jobs/enemies-10151-10151/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10152": {
@@ -7173,15 +7326,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10153": {
@@ -7213,15 +7359,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10154": {
@@ -7253,15 +7392,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10155": {
@@ -7293,15 +7425,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10156": {
@@ -7333,15 +7458,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10157": {
@@ -7373,15 +7491,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10158": {
@@ -7413,15 +7524,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10159": {
@@ -7453,15 +7557,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "1015a": {
@@ -7493,15 +7590,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "1015b": {
@@ -7533,15 +7623,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "1015c": {
@@ -7573,15 +7656,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "1015d": {
@@ -7613,15 +7689,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "1015e": {
@@ -7653,15 +7722,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "1015f": {
@@ -7693,15 +7755,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10152-1015f/candidate.json",
-        "sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
+        "sha256": "b94ba2df23b91888f4d0b1139b6f9c0f4efcbf3ef9df7ba6e3eb9d086beba36d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "14ae1752978e410ddd02c00bb0976ef680ca0c20f57b6d70b1613e236d999c78",
-        "frame_bindings_sha256": "3ee9a53fbc0606b5b3be8f13c8fad0151cf85294399a428d8795857cc6f5405b",
-        "reason": "Fourteen-frame shutter draft rejected by artist for mask drift/alpha wisps; retain original until complete corrected family.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10160": {
@@ -7723,7 +7778,7 @@
       "canonical_source_asset": "10160",
       "family_id": "enemies-10160-10160",
       "job_id": "enemies-10160-10160",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -7735,6 +7790,15 @@
         "manifest": "jobs/enemies-10160-10160/candidate.json",
         "sha256": "90938e509abe1f82c9c7aba48e322697a36947808dc885a538a6b1e17ead8966",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "90938e509abe1f82c9c7aba48e322697a36947808dc885a538a6b1e17ead8966",
+        "frame_bindings_sha256": "40f5c35e34a333f4835b48b33821d5a627098dbf0f226fb7e664f1d58f3e30d6",
+        "reviewed_at_utc": "2026-10-10T22:39:12.042569+00:00",
+        "runtime_qa": "jobs/enemies-10160-10160/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x family sheets inspected. Corrected quietbrown ground retains native concrete machinery and angle; Guns preserve four gray/white2x2patterns; MINE_BLK preserves two pink/dark-burgundy center states with goldcorners, slightly duller warm patches disclosed. Allfour scale source/canvas/alpha/hash/palette checks pass;40source-and-scale PPMs match independent reviewed evidence. No gun/mine live occurrence claimed.",
+        "independent_review": "hd_full_review independently approved exact eight-frame cohort after full two source/1x/4x pages and native2x/3x frames; evidence .reference/hd-full-review/soil-and-tiny-projectiles/."
       }
     },
     "10161": {
@@ -7756,7 +7820,7 @@
       "canonical_source_asset": "10161",
       "family_id": "enemies-10161-10161",
       "job_id": "enemies-10161-10161",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_enemies_01",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -7770,11 +7834,13 @@
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       },
       "coordinator_review": {
-        "status": "held",
+        "status": "approved",
         "candidate_sha256": "4953f8cede0885181915a00638c6467bba60a47fde6e23a305bfba6d13085dd7",
-        "reason": "Ground foundation soil saturation/brightness needs independent confirmation after v2; prior orange-speckle presentation held.",
-        "coverage": "Candidate only; not active HD coverage.",
-        "frame_bindings_sha256": "886e37319d90dae029fc35d4bd46765045862fd05cd973387d4ff2d0ade83e05"
+        "frame_bindings_sha256": "886e37319d90dae029fc35d4bd46765045862fd05cd973387d4ff2d0ade83e05",
+        "reviewed_at_utc": "2026-10-10T22:17:40.651687+00:00",
+        "runtime_qa": "jobs/enemies-10161-10161/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10162": {
@@ -11533,7 +11599,7 @@
       "canonical_source_asset": "101c3",
       "family_id": "projectiles-101c3-101c6",
       "job_id": "projectiles-101c3-101c6",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_light_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -11545,6 +11611,15 @@
         "manifest": "jobs/projectiles-101c3-101c6/candidate.json",
         "sha256": "1193e3810f7be2063d3e29dfda07b060bd2c232d0df044303577099261140bf2",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "1193e3810f7be2063d3e29dfda07b060bd2c232d0df044303577099261140bf2",
+        "frame_bindings_sha256": "6a9c9e47bdafbc83c53d211d69e0ebff5bc083edd9fb35f068b834b91d3c1a1c",
+        "reviewed_at_utc": "2026-10-10T22:39:12.045361+00:00",
+        "runtime_qa": "jobs/projectiles-101c3-101c6/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x family sheets inspected. Corrected quietbrown ground retains native concrete machinery and angle; Guns preserve four gray/white2x2patterns; MINE_BLK preserves two pink/dark-burgundy center states with goldcorners, slightly duller warm patches disclosed. Allfour scale source/canvas/alpha/hash/palette checks pass;40source-and-scale PPMs match independent reviewed evidence. No gun/mine live occurrence claimed.",
+        "independent_review": "hd_full_review independently approved exact eight-frame cohort after full two source/1x/4x pages and native2x/3x frames; evidence .reference/hd-full-review/soil-and-tiny-projectiles/."
       }
     },
     "101c4": {
@@ -11566,7 +11641,7 @@
       "canonical_source_asset": "101c4",
       "family_id": "projectiles-101c3-101c6",
       "job_id": "projectiles-101c3-101c6",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_light_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -11578,6 +11653,15 @@
         "manifest": "jobs/projectiles-101c3-101c6/candidate.json",
         "sha256": "1193e3810f7be2063d3e29dfda07b060bd2c232d0df044303577099261140bf2",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "1193e3810f7be2063d3e29dfda07b060bd2c232d0df044303577099261140bf2",
+        "frame_bindings_sha256": "6a9c9e47bdafbc83c53d211d69e0ebff5bc083edd9fb35f068b834b91d3c1a1c",
+        "reviewed_at_utc": "2026-10-10T22:39:12.045361+00:00",
+        "runtime_qa": "jobs/projectiles-101c3-101c6/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x family sheets inspected. Corrected quietbrown ground retains native concrete machinery and angle; Guns preserve four gray/white2x2patterns; MINE_BLK preserves two pink/dark-burgundy center states with goldcorners, slightly duller warm patches disclosed. Allfour scale source/canvas/alpha/hash/palette checks pass;40source-and-scale PPMs match independent reviewed evidence. No gun/mine live occurrence claimed.",
+        "independent_review": "hd_full_review independently approved exact eight-frame cohort after full two source/1x/4x pages and native2x/3x frames; evidence .reference/hd-full-review/soil-and-tiny-projectiles/."
       }
     },
     "101c5": {
@@ -11599,7 +11683,7 @@
       "canonical_source_asset": "101c5",
       "family_id": "projectiles-101c3-101c6",
       "job_id": "projectiles-101c3-101c6",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_light_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -11611,6 +11695,15 @@
         "manifest": "jobs/projectiles-101c3-101c6/candidate.json",
         "sha256": "1193e3810f7be2063d3e29dfda07b060bd2c232d0df044303577099261140bf2",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "1193e3810f7be2063d3e29dfda07b060bd2c232d0df044303577099261140bf2",
+        "frame_bindings_sha256": "6a9c9e47bdafbc83c53d211d69e0ebff5bc083edd9fb35f068b834b91d3c1a1c",
+        "reviewed_at_utc": "2026-10-10T22:39:12.045361+00:00",
+        "runtime_qa": "jobs/projectiles-101c3-101c6/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x family sheets inspected. Corrected quietbrown ground retains native concrete machinery and angle; Guns preserve four gray/white2x2patterns; MINE_BLK preserves two pink/dark-burgundy center states with goldcorners, slightly duller warm patches disclosed. Allfour scale source/canvas/alpha/hash/palette checks pass;40source-and-scale PPMs match independent reviewed evidence. No gun/mine live occurrence claimed.",
+        "independent_review": "hd_full_review independently approved exact eight-frame cohort after full two source/1x/4x pages and native2x/3x frames; evidence .reference/hd-full-review/soil-and-tiny-projectiles/."
       }
     },
     "101c6": {
@@ -11632,7 +11725,7 @@
       "canonical_source_asset": "101c6",
       "family_id": "projectiles-101c3-101c6",
       "job_id": "projectiles-101c3-101c6",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_light_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -11644,6 +11737,15 @@
         "manifest": "jobs/projectiles-101c3-101c6/candidate.json",
         "sha256": "1193e3810f7be2063d3e29dfda07b060bd2c232d0df044303577099261140bf2",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "1193e3810f7be2063d3e29dfda07b060bd2c232d0df044303577099261140bf2",
+        "frame_bindings_sha256": "6a9c9e47bdafbc83c53d211d69e0ebff5bc083edd9fb35f068b834b91d3c1a1c",
+        "reviewed_at_utc": "2026-10-10T22:39:12.045361+00:00",
+        "runtime_qa": "jobs/projectiles-101c3-101c6/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x family sheets inspected. Corrected quietbrown ground retains native concrete machinery and angle; Guns preserve four gray/white2x2patterns; MINE_BLK preserves two pink/dark-burgundy center states with goldcorners, slightly duller warm patches disclosed. Allfour scale source/canvas/alpha/hash/palette checks pass;40source-and-scale PPMs match independent reviewed evidence. No gun/mine live occurrence claimed.",
+        "independent_review": "hd_full_review independently approved exact eight-frame cohort after full two source/1x/4x pages and native2x/3x frames; evidence .reference/hd-full-review/soil-and-tiny-projectiles/."
       }
     },
     "101c7": {
@@ -11985,7 +12087,7 @@
       "canonical_source_asset": "101d1",
       "family_id": "projectiles-101d1-101d2",
       "job_id": "projectiles-101d1-101d2",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -11997,6 +12099,15 @@
         "manifest": "jobs/projectiles-101d1-101d2/candidate.json",
         "sha256": "5da8b059289e3147b433adf1128d86aaf3417e4f1678213ac17e3e6dce8ee204",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "5da8b059289e3147b433adf1128d86aaf3417e4f1678213ac17e3e6dce8ee204",
+        "frame_bindings_sha256": "c98977717d0c25a92dce0166733f1cb3f5ded3b07cb853f15a312fa1e02af2a7",
+        "reviewed_at_utc": "2026-10-10T22:39:12.046771+00:00",
+        "runtime_qa": "jobs/projectiles-101d1-101d2/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x family sheets inspected. Corrected quietbrown ground retains native concrete machinery and angle; Guns preserve four gray/white2x2patterns; MINE_BLK preserves two pink/dark-burgundy center states with goldcorners, slightly duller warm patches disclosed. Allfour scale source/canvas/alpha/hash/palette checks pass;40source-and-scale PPMs match independent reviewed evidence. No gun/mine live occurrence claimed.",
+        "independent_review": "hd_full_review independently approved exact eight-frame cohort after full two source/1x/4x pages and native2x/3x frames; evidence .reference/hd-full-review/soil-and-tiny-projectiles/."
       }
     },
     "101d2": {
@@ -12018,7 +12129,7 @@
       "canonical_source_asset": "101d2",
       "family_id": "projectiles-101d1-101d2",
       "job_id": "projectiles-101d1-101d2",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -12030,6 +12141,15 @@
         "manifest": "jobs/projectiles-101d1-101d2/candidate.json",
         "sha256": "5da8b059289e3147b433adf1128d86aaf3417e4f1678213ac17e3e6dce8ee204",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "5da8b059289e3147b433adf1128d86aaf3417e4f1678213ac17e3e6dce8ee204",
+        "frame_bindings_sha256": "c98977717d0c25a92dce0166733f1cb3f5ded3b07cb853f15a312fa1e02af2a7",
+        "reviewed_at_utc": "2026-10-10T22:39:12.046771+00:00",
+        "runtime_qa": "jobs/projectiles-101d1-101d2/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x family sheets inspected. Corrected quietbrown ground retains native concrete machinery and angle; Guns preserve four gray/white2x2patterns; MINE_BLK preserves two pink/dark-burgundy center states with goldcorners, slightly duller warm patches disclosed. Allfour scale source/canvas/alpha/hash/palette checks pass;40source-and-scale PPMs match independent reviewed evidence. No gun/mine live occurrence claimed.",
+        "independent_review": "hd_full_review independently approved exact eight-frame cohort after full two source/1x/4x pages and native2x/3x frames; evidence .reference/hd-full-review/soil-and-tiny-projectiles/."
       }
     },
     "101d3": {
@@ -12051,13 +12171,18 @@
       "canonical_source_asset": "101d3",
       "family_id": "projectiles-101d3-101d3",
       "job_id": "projectiles-101d3-101d3",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-101d3-101d3/candidate.json",
+        "sha256": "83a97322ddb552d7ad3f610112b17f98512398730f83830a802ecb880f0f3bfc",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "101d4": {
@@ -12079,13 +12204,18 @@
       "canonical_source_asset": "101d4",
       "family_id": "projectiles-101d4-101d5",
       "job_id": "projectiles-101d4-101d5",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-101d4-101d5/candidate.json",
+        "sha256": "e5623dc010f16aeda8aaef2bb2537cd7722ad13c760a878bdde559c0c7325ffc",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "101d5": {
@@ -12107,13 +12237,18 @@
       "canonical_source_asset": "101d5",
       "family_id": "projectiles-101d4-101d5",
       "job_id": "projectiles-101d4-101d5",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-101d4-101d5/candidate.json",
+        "sha256": "e5623dc010f16aeda8aaef2bb2537cd7722ad13c760a878bdde559c0c7325ffc",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "101d6": {
@@ -14823,13 +14958,18 @@
       "canonical_source_asset": "1021d",
       "family_id": "projectiles-1021d-10222",
       "job_id": "projectiles-1021d-10222",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-1021d-10222/candidate.json",
+        "sha256": "50aebf1b9155957e1d74b6b2b68d8167f62a7fd5b8fd6c1504549c9a2c9fdbb1",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "1021e": {
@@ -14851,13 +14991,18 @@
       "canonical_source_asset": "1021e",
       "family_id": "projectiles-1021d-10222",
       "job_id": "projectiles-1021d-10222",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-1021d-10222/candidate.json",
+        "sha256": "50aebf1b9155957e1d74b6b2b68d8167f62a7fd5b8fd6c1504549c9a2c9fdbb1",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "1021f": {
@@ -14879,13 +15024,18 @@
       "canonical_source_asset": "1021f",
       "family_id": "projectiles-1021d-10222",
       "job_id": "projectiles-1021d-10222",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-1021d-10222/candidate.json",
+        "sha256": "50aebf1b9155957e1d74b6b2b68d8167f62a7fd5b8fd6c1504549c9a2c9fdbb1",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10220": {
@@ -14907,13 +15057,18 @@
       "canonical_source_asset": "10220",
       "family_id": "projectiles-1021d-10222",
       "job_id": "projectiles-1021d-10222",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-1021d-10222/candidate.json",
+        "sha256": "50aebf1b9155957e1d74b6b2b68d8167f62a7fd5b8fd6c1504549c9a2c9fdbb1",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10221": {
@@ -14935,13 +15090,18 @@
       "canonical_source_asset": "10221",
       "family_id": "projectiles-1021d-10222",
       "job_id": "projectiles-1021d-10222",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-1021d-10222/candidate.json",
+        "sha256": "50aebf1b9155957e1d74b6b2b68d8167f62a7fd5b8fd6c1504549c9a2c9fdbb1",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10222": {
@@ -14963,13 +15123,18 @@
       "canonical_source_asset": "10222",
       "family_id": "projectiles-1021d-10222",
       "job_id": "projectiles-1021d-10222",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-1021d-10222/candidate.json",
+        "sha256": "50aebf1b9155957e1d74b6b2b68d8167f62a7fd5b8fd6c1504549c9a2c9fdbb1",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10223": {
@@ -14991,13 +15156,18 @@
       "canonical_source_asset": "10223",
       "family_id": "projectiles-10223-10224",
       "job_id": "projectiles-10223-10224",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10223-10224/candidate.json",
+        "sha256": "f4a2e45aea75bbd900653079a994f6315713fb2fb4249c582f9877f5723a1c0e",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10224": {
@@ -15019,13 +15189,18 @@
       "canonical_source_asset": "10224",
       "family_id": "projectiles-10223-10224",
       "job_id": "projectiles-10223-10224",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/campaign_integration",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/projectiles-10223-10224/candidate.json",
+        "sha256": "f4a2e45aea75bbd900653079a994f6315713fb2fb4249c582f9877f5723a1c0e",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10225": {
@@ -20329,7 +20504,7 @@
       "canonical_source_asset": "102ba",
       "family_id": "equipment-102ba-102bd",
       "job_id": "equipment-102ba-102bd",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -20341,6 +20516,15 @@
         "manifest": "jobs/equipment-102ba-102bd/candidate.json",
         "sha256": "9afb1299bc1d503e86f9dc20fe619a48ffc1d570cca55e57148eb7d21717cb57",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "9afb1299bc1d503e86f9dc20fe619a48ffc1d570cca55e57148eb7d21717cb57",
+        "frame_bindings_sha256": "93efae0f34be6a1d01f104e18a7bf37c9ed9d6264a5d166ad4486c7193cc9a13",
+        "reviewed_at_utc": "2026-10-10T21:58:11.355684+00:00",
+        "runtime_qa": "jobs/equipment-102ba-102bd/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x complete family sheet inspected. GroundMissile H backing/three olive shafts, Turret rotating red barrels, distinct compressed Pulse state and four EnergyGrab loop phases/tabs stay coherent. Main transparent loops remain open. Late EnergyGrab fills two single-pixel peripheral ring holes as a disclosed contour interpretation. Current exact Rust allfour scales pass source/canvas/hash/crop/palette checks.",
+        "independent_review": "hd_full_review independently approved exact candidate9afb1299bc1d503e86f9dc20fe619a48ffc1d570cca55e57148eb7d21717cb57 after allsource/1x/4x and native2x/3x phases; eleven frames44 current outputs pass."
       }
     },
     "102bb": {
@@ -20362,7 +20546,7 @@
       "canonical_source_asset": "102bb",
       "family_id": "equipment-102ba-102bd",
       "job_id": "equipment-102ba-102bd",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -20374,6 +20558,15 @@
         "manifest": "jobs/equipment-102ba-102bd/candidate.json",
         "sha256": "9afb1299bc1d503e86f9dc20fe619a48ffc1d570cca55e57148eb7d21717cb57",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "9afb1299bc1d503e86f9dc20fe619a48ffc1d570cca55e57148eb7d21717cb57",
+        "frame_bindings_sha256": "93efae0f34be6a1d01f104e18a7bf37c9ed9d6264a5d166ad4486c7193cc9a13",
+        "reviewed_at_utc": "2026-10-10T21:58:11.355684+00:00",
+        "runtime_qa": "jobs/equipment-102ba-102bd/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x complete family sheet inspected. GroundMissile H backing/three olive shafts, Turret rotating red barrels, distinct compressed Pulse state and four EnergyGrab loop phases/tabs stay coherent. Main transparent loops remain open. Late EnergyGrab fills two single-pixel peripheral ring holes as a disclosed contour interpretation. Current exact Rust allfour scales pass source/canvas/hash/crop/palette checks.",
+        "independent_review": "hd_full_review independently approved exact candidate9afb1299bc1d503e86f9dc20fe619a48ffc1d570cca55e57148eb7d21717cb57 after allsource/1x/4x and native2x/3x phases; eleven frames44 current outputs pass."
       }
     },
     "102bc": {
@@ -20395,7 +20588,7 @@
       "canonical_source_asset": "102bc",
       "family_id": "equipment-102ba-102bd",
       "job_id": "equipment-102ba-102bd",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -20407,6 +20600,15 @@
         "manifest": "jobs/equipment-102ba-102bd/candidate.json",
         "sha256": "9afb1299bc1d503e86f9dc20fe619a48ffc1d570cca55e57148eb7d21717cb57",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "9afb1299bc1d503e86f9dc20fe619a48ffc1d570cca55e57148eb7d21717cb57",
+        "frame_bindings_sha256": "93efae0f34be6a1d01f104e18a7bf37c9ed9d6264a5d166ad4486c7193cc9a13",
+        "reviewed_at_utc": "2026-10-10T21:58:11.355684+00:00",
+        "runtime_qa": "jobs/equipment-102ba-102bd/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x complete family sheet inspected. GroundMissile H backing/three olive shafts, Turret rotating red barrels, distinct compressed Pulse state and four EnergyGrab loop phases/tabs stay coherent. Main transparent loops remain open. Late EnergyGrab fills two single-pixel peripheral ring holes as a disclosed contour interpretation. Current exact Rust allfour scales pass source/canvas/hash/crop/palette checks.",
+        "independent_review": "hd_full_review independently approved exact candidate9afb1299bc1d503e86f9dc20fe619a48ffc1d570cca55e57148eb7d21717cb57 after allsource/1x/4x and native2x/3x phases; eleven frames44 current outputs pass."
       }
     },
     "102bd": {
@@ -20428,7 +20630,7 @@
       "canonical_source_asset": "102bd",
       "family_id": "equipment-102ba-102bd",
       "job_id": "equipment-102ba-102bd",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -20440,6 +20642,15 @@
         "manifest": "jobs/equipment-102ba-102bd/candidate.json",
         "sha256": "9afb1299bc1d503e86f9dc20fe619a48ffc1d570cca55e57148eb7d21717cb57",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "9afb1299bc1d503e86f9dc20fe619a48ffc1d570cca55e57148eb7d21717cb57",
+        "frame_bindings_sha256": "93efae0f34be6a1d01f104e18a7bf37c9ed9d6264a5d166ad4486c7193cc9a13",
+        "reviewed_at_utc": "2026-10-10T21:58:11.355684+00:00",
+        "runtime_qa": "jobs/equipment-102ba-102bd/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x complete family sheet inspected. GroundMissile H backing/three olive shafts, Turret rotating red barrels, distinct compressed Pulse state and four EnergyGrab loop phases/tabs stay coherent. Main transparent loops remain open. Late EnergyGrab fills two single-pixel peripheral ring holes as a disclosed contour interpretation. Current exact Rust allfour scales pass source/canvas/hash/crop/palette checks.",
+        "independent_review": "hd_full_review independently approved exact candidate9afb1299bc1d503e86f9dc20fe619a48ffc1d570cca55e57148eb7d21717cb57 after allsource/1x/4x and native2x/3x phases; eleven frames44 current outputs pass."
       }
     },
     "102be": {
@@ -20531,7 +20742,7 @@
       "canonical_source_asset": "102c0",
       "family_id": "equipment-102c0-102c0",
       "job_id": "equipment-102c0-102c0",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -20543,6 +20754,15 @@
         "manifest": "jobs/equipment-102c0-102c0/candidate.json",
         "sha256": "0c2aa9331f560f5a4d26366c22c24f7977c06fbeaccae0e28598cee16bef044b",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "0c2aa9331f560f5a4d26366c22c24f7977c06fbeaccae0e28598cee16bef044b",
+        "frame_bindings_sha256": "6cf969ed6d30f0eeb511c5902e74c719f453662fc5e4898f6d7359a74895a05b",
+        "reviewed_at_utc": "2026-10-10T21:58:11.355348+00:00",
+        "runtime_qa": "jobs/equipment-102c0-102c0/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x complete family sheet inspected. GroundMissile H backing/three olive shafts, Turret rotating red barrels, distinct compressed Pulse state and four EnergyGrab loop phases/tabs stay coherent. Main transparent loops remain open. Late EnergyGrab fills two single-pixel peripheral ring holes as a disclosed contour interpretation. Current exact Rust allfour scales pass source/canvas/hash/crop/palette checks.",
+        "independent_review": "hd_full_review independently approved exact candidate0c2aa9331f560f5a4d26366c22c24f7977c06fbeaccae0e28598cee16bef044b after allsource/1x/4x and native2x/3x phases; eleven frames44 current outputs pass."
       }
     },
     "102c1": {
@@ -20564,7 +20784,7 @@
       "canonical_source_asset": "102c1",
       "family_id": "equipment-102c1-102c4",
       "job_id": "equipment-102c1-102c4",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -20576,6 +20796,15 @@
         "manifest": "jobs/equipment-102c1-102c4/candidate.json",
         "sha256": "6ed7753a18288a1c3c47e1e2ea954e3f7047a0c0e194b10899e6cfe89fb19a5d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "6ed7753a18288a1c3c47e1e2ea954e3f7047a0c0e194b10899e6cfe89fb19a5d",
+        "frame_bindings_sha256": "e6456714b8fcf944be5f81687b4e551b5dcdcef3bbd9e760e9bc11b4ec19dba9",
+        "reviewed_at_utc": "2026-10-10T21:58:11.356127+00:00",
+        "runtime_qa": "jobs/equipment-102c1-102c4/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x complete family sheet inspected. GroundMissile H backing/three olive shafts, Turret rotating red barrels, distinct compressed Pulse state and four EnergyGrab loop phases/tabs stay coherent. Main transparent loops remain open. Late EnergyGrab fills two single-pixel peripheral ring holes as a disclosed contour interpretation. Current exact Rust allfour scales pass source/canvas/hash/crop/palette checks.",
+        "independent_review": "hd_full_review independently approved exact candidate6ed7753a18288a1c3c47e1e2ea954e3f7047a0c0e194b10899e6cfe89fb19a5d after allsource/1x/4x and native2x/3x phases; eleven frames44 current outputs pass."
       }
     },
     "102c2": {
@@ -20597,7 +20826,7 @@
       "canonical_source_asset": "102c2",
       "family_id": "equipment-102c1-102c4",
       "job_id": "equipment-102c1-102c4",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -20609,6 +20838,15 @@
         "manifest": "jobs/equipment-102c1-102c4/candidate.json",
         "sha256": "6ed7753a18288a1c3c47e1e2ea954e3f7047a0c0e194b10899e6cfe89fb19a5d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "6ed7753a18288a1c3c47e1e2ea954e3f7047a0c0e194b10899e6cfe89fb19a5d",
+        "frame_bindings_sha256": "e6456714b8fcf944be5f81687b4e551b5dcdcef3bbd9e760e9bc11b4ec19dba9",
+        "reviewed_at_utc": "2026-10-10T21:58:11.356127+00:00",
+        "runtime_qa": "jobs/equipment-102c1-102c4/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x complete family sheet inspected. GroundMissile H backing/three olive shafts, Turret rotating red barrels, distinct compressed Pulse state and four EnergyGrab loop phases/tabs stay coherent. Main transparent loops remain open. Late EnergyGrab fills two single-pixel peripheral ring holes as a disclosed contour interpretation. Current exact Rust allfour scales pass source/canvas/hash/crop/palette checks.",
+        "independent_review": "hd_full_review independently approved exact candidate6ed7753a18288a1c3c47e1e2ea954e3f7047a0c0e194b10899e6cfe89fb19a5d after allsource/1x/4x and native2x/3x phases; eleven frames44 current outputs pass."
       }
     },
     "102c3": {
@@ -20630,7 +20868,7 @@
       "canonical_source_asset": "102c3",
       "family_id": "equipment-102c1-102c4",
       "job_id": "equipment-102c1-102c4",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -20642,6 +20880,15 @@
         "manifest": "jobs/equipment-102c1-102c4/candidate.json",
         "sha256": "6ed7753a18288a1c3c47e1e2ea954e3f7047a0c0e194b10899e6cfe89fb19a5d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "6ed7753a18288a1c3c47e1e2ea954e3f7047a0c0e194b10899e6cfe89fb19a5d",
+        "frame_bindings_sha256": "e6456714b8fcf944be5f81687b4e551b5dcdcef3bbd9e760e9bc11b4ec19dba9",
+        "reviewed_at_utc": "2026-10-10T21:58:11.356127+00:00",
+        "runtime_qa": "jobs/equipment-102c1-102c4/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x complete family sheet inspected. GroundMissile H backing/three olive shafts, Turret rotating red barrels, distinct compressed Pulse state and four EnergyGrab loop phases/tabs stay coherent. Main transparent loops remain open. Late EnergyGrab fills two single-pixel peripheral ring holes as a disclosed contour interpretation. Current exact Rust allfour scales pass source/canvas/hash/crop/palette checks.",
+        "independent_review": "hd_full_review independently approved exact candidate6ed7753a18288a1c3c47e1e2ea954e3f7047a0c0e194b10899e6cfe89fb19a5d after allsource/1x/4x and native2x/3x phases; eleven frames44 current outputs pass."
       }
     },
     "102c4": {
@@ -20663,7 +20910,7 @@
       "canonical_source_asset": "102c4",
       "family_id": "equipment-102c1-102c4",
       "job_id": "equipment-102c1-102c4",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -20675,6 +20922,15 @@
         "manifest": "jobs/equipment-102c1-102c4/candidate.json",
         "sha256": "6ed7753a18288a1c3c47e1e2ea954e3f7047a0c0e194b10899e6cfe89fb19a5d",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "6ed7753a18288a1c3c47e1e2ea954e3f7047a0c0e194b10899e6cfe89fb19a5d",
+        "frame_bindings_sha256": "e6456714b8fcf944be5f81687b4e551b5dcdcef3bbd9e760e9bc11b4ec19dba9",
+        "reviewed_at_utc": "2026-10-10T21:58:11.356127+00:00",
+        "runtime_qa": "jobs/equipment-102c1-102c4/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x complete family sheet inspected. GroundMissile H backing/three olive shafts, Turret rotating red barrels, distinct compressed Pulse state and four EnergyGrab loop phases/tabs stay coherent. Main transparent loops remain open. Late EnergyGrab fills two single-pixel peripheral ring holes as a disclosed contour interpretation. Current exact Rust allfour scales pass source/canvas/hash/crop/palette checks.",
+        "independent_review": "hd_full_review independently approved exact candidate6ed7753a18288a1c3c47e1e2ea954e3f7047a0c0e194b10899e6cfe89fb19a5d after allsource/1x/4x and native2x/3x phases; eleven frames44 current outputs pass."
       }
     },
     "102c5": {
@@ -20738,7 +20994,7 @@
       "canonical_source_asset": "102c6",
       "family_id": "equipment-102c6-102c7",
       "job_id": "equipment-102c6-102c7",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -20750,6 +21006,15 @@
         "manifest": "jobs/equipment-102c6-102c7/candidate.json",
         "sha256": "2b1a952dc476b92e8aecc6562062519efaf1dd960e43cf56fc46bb78138a2d05",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "2b1a952dc476b92e8aecc6562062519efaf1dd960e43cf56fc46bb78138a2d05",
+        "frame_bindings_sha256": "03a69155458a7b69edf3423ead112599c1062b7af8dff4cdbf18313e8062bfd1",
+        "reviewed_at_utc": "2026-10-10T21:58:11.355884+00:00",
+        "runtime_qa": "jobs/equipment-102c6-102c7/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x complete family sheet inspected. GroundMissile H backing/three olive shafts, Turret rotating red barrels, distinct compressed Pulse state and four EnergyGrab loop phases/tabs stay coherent. Main transparent loops remain open. Late EnergyGrab fills two single-pixel peripheral ring holes as a disclosed contour interpretation. Current exact Rust allfour scales pass source/canvas/hash/crop/palette checks.",
+        "independent_review": "hd_full_review independently approved exact candidate2b1a952dc476b92e8aecc6562062519efaf1dd960e43cf56fc46bb78138a2d05 after allsource/1x/4x and native2x/3x phases; eleven frames44 current outputs pass."
       }
     },
     "102c7": {
@@ -20771,7 +21036,7 @@
       "canonical_source_asset": "102c7",
       "family_id": "equipment-102c6-102c7",
       "job_id": "equipment-102c6-102c7",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -20783,6 +21048,15 @@
         "manifest": "jobs/equipment-102c6-102c7/candidate.json",
         "sha256": "2b1a952dc476b92e8aecc6562062519efaf1dd960e43cf56fc46bb78138a2d05",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "2b1a952dc476b92e8aecc6562062519efaf1dd960e43cf56fc46bb78138a2d05",
+        "frame_bindings_sha256": "03a69155458a7b69edf3423ead112599c1062b7af8dff4cdbf18313e8062bfd1",
+        "reviewed_at_utc": "2026-10-10T21:58:11.355884+00:00",
+        "runtime_qa": "jobs/equipment-102c6-102c7/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Full source/logical1x/indexed4x complete family sheet inspected. GroundMissile H backing/three olive shafts, Turret rotating red barrels, distinct compressed Pulse state and four EnergyGrab loop phases/tabs stay coherent. Main transparent loops remain open. Late EnergyGrab fills two single-pixel peripheral ring holes as a disclosed contour interpretation. Current exact Rust allfour scales pass source/canvas/hash/crop/palette checks.",
+        "independent_review": "hd_full_review independently approved exact candidate2b1a952dc476b92e8aecc6562062519efaf1dd960e43cf56fc46bb78138a2d05 after allsource/1x/4x and native2x/3x phases; eleven frames44 current outputs pass."
       }
     },
     "102c8": {
@@ -20804,13 +21078,18 @@
       "canonical_source_asset": "102c8",
       "family_id": "equipment-102c8-102cb",
       "job_id": "equipment-102c8-102cb",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/equipment-102c8-102cb/candidate.json",
+        "sha256": "4d849e980722dd1ddc948d7a7faab98f268c8c97dc112689f3215286f863111b",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "102c9": {
@@ -20832,13 +21111,18 @@
       "canonical_source_asset": "102c9",
       "family_id": "equipment-102c8-102cb",
       "job_id": "equipment-102c8-102cb",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/equipment-102c8-102cb/candidate.json",
+        "sha256": "4d849e980722dd1ddc948d7a7faab98f268c8c97dc112689f3215286f863111b",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "102ca": {
@@ -20860,13 +21144,18 @@
       "canonical_source_asset": "102ca",
       "family_id": "equipment-102c8-102cb",
       "job_id": "equipment-102c8-102cb",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/equipment-102c8-102cb/candidate.json",
+        "sha256": "4d849e980722dd1ddc948d7a7faab98f268c8c97dc112689f3215286f863111b",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "102cb": {
@@ -20888,13 +21177,18 @@
       "canonical_source_asset": "102cb",
       "family_id": "equipment-102c8-102cb",
       "job_id": "equipment-102c8-102cb",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/equipment-102c8-102cb/candidate.json",
+        "sha256": "4d849e980722dd1ddc948d7a7faab98f268c8c97dc112689f3215286f863111b",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "102cc": {
@@ -22307,7 +22601,7 @@
       "canonical_source_asset": "102fa",
       "family_id": "enemies-102fa-102fa",
       "job_id": "enemies-102fa-102fa",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -22319,6 +22613,15 @@
         "manifest": "jobs/enemies-102fa-102fa/candidate.json",
         "sha256": "70593424a01d1db7703c5d717c4677b7146d7bcc816e5de66239296b21c4e1c9",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "70593424a01d1db7703c5d717c4677b7146d7bcc816e5de66239296b21c4e1c9",
+        "frame_bindings_sha256": "cce77a60afa7f3d604d2bd5436e34c187f8c364ae8d753630486a6de2a66d485",
+        "reviewed_at_utc": "2026-10-10T22:17:40.646079+00:00",
+        "runtime_qa": "jobs/enemies-102fa-102fa/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "102fb": {
@@ -22413,7 +22716,7 @@
       "canonical_source_asset": "102fd",
       "family_id": "enemies-102fd-102fd",
       "job_id": "enemies-102fd-102fd",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -22425,6 +22728,15 @@
         "manifest": "jobs/enemies-102fd-102fd/candidate.json",
         "sha256": "f4c880c4dd23bbcafd79c5e3a2e352b1ec4293e27ac82c8dc4add08f540302ec",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "f4c880c4dd23bbcafd79c5e3a2e352b1ec4293e27ac82c8dc4add08f540302ec",
+        "frame_bindings_sha256": "d4d64268b27221e5fc89f94122e3f500561c89368a99bde20ae4d733db35cf5b",
+        "reviewed_at_utc": "2026-10-10T22:17:40.647054+00:00",
+        "runtime_qa": "jobs/enemies-102fd-102fd/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "102fe": {
@@ -22446,7 +22758,7 @@
       "canonical_source_asset": "102fe",
       "family_id": "enemies-102fe-102ff",
       "job_id": "enemies-102fe-102ff",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -22458,6 +22770,15 @@
         "manifest": "jobs/enemies-102fe-102ff/candidate.json",
         "sha256": "63e4518a283d737c15d350eeaa6b29a2ec8849aac017db9002f1a7199c8e21b9",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "63e4518a283d737c15d350eeaa6b29a2ec8849aac017db9002f1a7199c8e21b9",
+        "frame_bindings_sha256": "2e513f24b8391da8ab08e235469ee0c6721d06dfd1625e7732d81907ff9da357",
+        "reviewed_at_utc": "2026-10-10T22:17:40.648731+00:00",
+        "runtime_qa": "jobs/enemies-102fe-102ff/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "102ff": {
@@ -22479,7 +22800,7 @@
       "canonical_source_asset": "102ff",
       "family_id": "enemies-102fe-102ff",
       "job_id": "enemies-102fe-102ff",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -22491,6 +22812,15 @@
         "manifest": "jobs/enemies-102fe-102ff/candidate.json",
         "sha256": "63e4518a283d737c15d350eeaa6b29a2ec8849aac017db9002f1a7199c8e21b9",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "63e4518a283d737c15d350eeaa6b29a2ec8849aac017db9002f1a7199c8e21b9",
+        "frame_bindings_sha256": "2e513f24b8391da8ab08e235469ee0c6721d06dfd1625e7732d81907ff9da357",
+        "reviewed_at_utc": "2026-10-10T22:17:40.648731+00:00",
+        "runtime_qa": "jobs/enemies-102fe-102ff/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10300": {
@@ -22512,7 +22842,7 @@
       "canonical_source_asset": "10300",
       "family_id": "enemies-10300-10303",
       "job_id": "enemies-10300-10303",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_enemies_02",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -22524,6 +22854,15 @@
         "manifest": "jobs/enemies-10300-10303/candidate.json",
         "sha256": "f4df7dcebaa32cbfe864e0351cfc25702f405ab813de76b50a6e98cdbeb9bf6b",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "f4df7dcebaa32cbfe864e0351cfc25702f405ab813de76b50a6e98cdbeb9bf6b",
+        "frame_bindings_sha256": "b1febaed0587e3655c04a2eb0e85d8c0fa2af683ae574bb6a28429a2d8d4d792",
+        "reviewed_at_utc": "2026-10-10T22:17:40.642254+00:00",
+        "runtime_qa": "jobs/enemies-10300-10303/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10301": {
@@ -22545,7 +22884,7 @@
       "canonical_source_asset": "10301",
       "family_id": "enemies-10300-10303",
       "job_id": "enemies-10300-10303",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_enemies_02",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -22557,6 +22896,15 @@
         "manifest": "jobs/enemies-10300-10303/candidate.json",
         "sha256": "f4df7dcebaa32cbfe864e0351cfc25702f405ab813de76b50a6e98cdbeb9bf6b",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "f4df7dcebaa32cbfe864e0351cfc25702f405ab813de76b50a6e98cdbeb9bf6b",
+        "frame_bindings_sha256": "b1febaed0587e3655c04a2eb0e85d8c0fa2af683ae574bb6a28429a2d8d4d792",
+        "reviewed_at_utc": "2026-10-10T22:17:40.642254+00:00",
+        "runtime_qa": "jobs/enemies-10300-10303/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10302": {
@@ -22578,7 +22926,7 @@
       "canonical_source_asset": "10302",
       "family_id": "enemies-10300-10303",
       "job_id": "enemies-10300-10303",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_enemies_02",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -22590,6 +22938,15 @@
         "manifest": "jobs/enemies-10300-10303/candidate.json",
         "sha256": "f4df7dcebaa32cbfe864e0351cfc25702f405ab813de76b50a6e98cdbeb9bf6b",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "f4df7dcebaa32cbfe864e0351cfc25702f405ab813de76b50a6e98cdbeb9bf6b",
+        "frame_bindings_sha256": "b1febaed0587e3655c04a2eb0e85d8c0fa2af683ae574bb6a28429a2d8d4d792",
+        "reviewed_at_utc": "2026-10-10T22:17:40.642254+00:00",
+        "runtime_qa": "jobs/enemies-10300-10303/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10303": {
@@ -22611,7 +22968,7 @@
       "canonical_source_asset": "10303",
       "family_id": "enemies-10300-10303",
       "job_id": "enemies-10300-10303",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_enemies_02",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -22623,6 +22980,15 @@
         "manifest": "jobs/enemies-10300-10303/candidate.json",
         "sha256": "f4df7dcebaa32cbfe864e0351cfc25702f405ab813de76b50a6e98cdbeb9bf6b",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "f4df7dcebaa32cbfe864e0351cfc25702f405ab813de76b50a6e98cdbeb9bf6b",
+        "frame_bindings_sha256": "b1febaed0587e3655c04a2eb0e85d8c0fa2af683ae574bb6a28429a2d8d4d792",
+        "reviewed_at_utc": "2026-10-10T22:17:40.642254+00:00",
+        "runtime_qa": "jobs/enemies-10300-10303/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10304": {
@@ -22644,7 +23010,7 @@
       "canonical_source_asset": "10304",
       "family_id": "enemies-10304-10305",
       "job_id": "enemies-10304-10305",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_enemies_01",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -22656,6 +23022,15 @@
         "manifest": "jobs/enemies-10304-10305/candidate.json",
         "sha256": "1013e5b95c8a6943299afdf4c6020d7d7a7e7f3e2d538f4d999fe536e232f7b6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "1013e5b95c8a6943299afdf4c6020d7d7a7e7f3e2d538f4d999fe536e232f7b6",
+        "frame_bindings_sha256": "707c287d3bd7f723db73d61f2c352ef908985e2ad3c3f2ad839623a8f7af859e",
+        "reviewed_at_utc": "2026-10-10T22:17:40.644917+00:00",
+        "runtime_qa": "jobs/enemies-10304-10305/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10305": {
@@ -22677,7 +23052,7 @@
       "canonical_source_asset": "10305",
       "family_id": "enemies-10304-10305",
       "job_id": "enemies-10304-10305",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_enemies_01",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -22689,6 +23064,15 @@
         "manifest": "jobs/enemies-10304-10305/candidate.json",
         "sha256": "1013e5b95c8a6943299afdf4c6020d7d7a7e7f3e2d538f4d999fe536e232f7b6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "1013e5b95c8a6943299afdf4c6020d7d7a7e7f3e2d538f4d999fe536e232f7b6",
+        "frame_bindings_sha256": "707c287d3bd7f723db73d61f2c352ef908985e2ad3c3f2ad839623a8f7af859e",
+        "reviewed_at_utc": "2026-10-10T22:17:40.644917+00:00",
+        "runtime_qa": "jobs/enemies-10304-10305/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10306": {
@@ -22822,7 +23206,7 @@
       "canonical_source_asset": "10309",
       "family_id": "enemies-10309-10309",
       "job_id": "enemies-10309-10309",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_enemies_01",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -22834,6 +23218,15 @@
         "manifest": "jobs/enemies-10309-10309/candidate.json",
         "sha256": "39ac965a4174d9ed137071f57b2ac9fa6fca4baf44c1c3eb38eb87ffb14f30a2",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "39ac965a4174d9ed137071f57b2ac9fa6fca4baf44c1c3eb38eb87ffb14f30a2",
+        "frame_bindings_sha256": "002a98364531128a4ed7cd02bacc04af8e4fee142a0b14b323a2e73ed4ab940c",
+        "reviewed_at_utc": "2026-10-10T22:17:40.653307+00:00",
+        "runtime_qa": "jobs/enemies-10309-10309/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "1030a": {
@@ -23135,15 +23528,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10311-10314/candidate.json",
-        "sha256": "d36bc4d55929b306838d8333faa9ec0c09045376126dc4f1ca3044a82c973b75",
+        "sha256": "ee8a4589aab3c5ec075631bc4a807a16938d8e9cc1f5c1fac9df623e844672d5",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "d36bc4d55929b306838d8333faa9ec0c09045376126dc4f1ca3044a82c973b75",
-        "frame_bindings_sha256": "fdfcbb60e586a21a59e43a1338103c3f58ab180313b37fdd8d7b0b522cca9553",
-        "reason": "Helicopter family raw background has minimumalpha2 instead of clear transparent pixels; artist reports loader rejection. No alpha editing allowed.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10312": {
@@ -23175,15 +23561,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10311-10314/candidate.json",
-        "sha256": "d36bc4d55929b306838d8333faa9ec0c09045376126dc4f1ca3044a82c973b75",
+        "sha256": "ee8a4589aab3c5ec075631bc4a807a16938d8e9cc1f5c1fac9df623e844672d5",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "d36bc4d55929b306838d8333faa9ec0c09045376126dc4f1ca3044a82c973b75",
-        "frame_bindings_sha256": "fdfcbb60e586a21a59e43a1338103c3f58ab180313b37fdd8d7b0b522cca9553",
-        "reason": "Helicopter family raw background has minimumalpha2 instead of clear transparent pixels; artist reports loader rejection. No alpha editing allowed.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10313": {
@@ -23215,15 +23594,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10311-10314/candidate.json",
-        "sha256": "d36bc4d55929b306838d8333faa9ec0c09045376126dc4f1ca3044a82c973b75",
+        "sha256": "ee8a4589aab3c5ec075631bc4a807a16938d8e9cc1f5c1fac9df623e844672d5",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "d36bc4d55929b306838d8333faa9ec0c09045376126dc4f1ca3044a82c973b75",
-        "frame_bindings_sha256": "fdfcbb60e586a21a59e43a1338103c3f58ab180313b37fdd8d7b0b522cca9553",
-        "reason": "Helicopter family raw background has minimumalpha2 instead of clear transparent pixels; artist reports loader rejection. No alpha editing allowed.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10314": {
@@ -23255,15 +23627,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10311-10314/candidate.json",
-        "sha256": "d36bc4d55929b306838d8333faa9ec0c09045376126dc4f1ca3044a82c973b75",
+        "sha256": "ee8a4589aab3c5ec075631bc4a807a16938d8e9cc1f5c1fac9df623e844672d5",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "d36bc4d55929b306838d8333faa9ec0c09045376126dc4f1ca3044a82c973b75",
-        "frame_bindings_sha256": "fdfcbb60e586a21a59e43a1338103c3f58ab180313b37fdd8d7b0b522cca9553",
-        "reason": "Helicopter family raw background has minimumalpha2 instead of clear transparent pixels; artist reports loader rejection. No alpha editing allowed.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10315": {
@@ -23295,15 +23660,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10315-10316/candidate.json",
-        "sha256": "bf0eceaf732de6ecce15eceb3bfab8a57a53a371ee4754d17b9921312eb7fd87",
+        "sha256": "db80d26804a949b3a4b1a35ee5d465ff04e4fa52d15036022398be1b0abd1437",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "bf0eceaf732de6ecce15eceb3bfab8a57a53a371ee4754d17b9921312eb7fd87",
-        "frame_bindings_sha256": "20cadb610f7c298f9c6ff97c4d16745c8b63d43f5fe70ef2e6a5973f9672d558",
-        "reason": "Two-frame aircraft trail is too thick and framing drifts; artist rejected source mismatch.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10316": {
@@ -23335,15 +23693,8 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-10315-10316/candidate.json",
-        "sha256": "bf0eceaf732de6ecce15eceb3bfab8a57a53a371ee4754d17b9921312eb7fd87",
+        "sha256": "db80d26804a949b3a4b1a35ee5d465ff04e4fa52d15036022398be1b0abd1437",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      },
-      "coordinator_review": {
-        "status": "held",
-        "candidate_sha256": "bf0eceaf732de6ecce15eceb3bfab8a57a53a371ee4754d17b9921312eb7fd87",
-        "frame_bindings_sha256": "20cadb610f7c298f9c6ff97c4d16745c8b63d43f5fe70ef2e6a5973f9672d558",
-        "reason": "Two-frame aircraft trail is too thick and framing drifts; artist rejected source mismatch.",
-        "coverage": "Candidate only; not active HD coverage."
       }
     },
     "10317": {
@@ -23641,6 +23992,16 @@
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
         "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "held",
+        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
+        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
+        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
+        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
+        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
+        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10320": {
@@ -23674,6 +24035,16 @@
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
         "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "held",
+        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
+        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
+        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
+        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
+        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
+        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10321": {
@@ -23707,6 +24078,16 @@
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
         "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "held",
+        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
+        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
+        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
+        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
+        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
+        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10322": {
@@ -23740,6 +24121,16 @@
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
         "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "held",
+        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
+        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
+        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
+        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
+        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
+        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10323": {
@@ -23773,6 +24164,16 @@
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
         "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "held",
+        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
+        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
+        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
+        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
+        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
+        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10324": {
@@ -23806,6 +24207,16 @@
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
         "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "held",
+        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
+        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
+        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
+        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
+        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
+        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10325": {
@@ -23839,6 +24250,16 @@
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
         "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "held",
+        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
+        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
+        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
+        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
+        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
+        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10326": {
@@ -23872,6 +24293,16 @@
         "manifest": "jobs/enemies-1031f-10326/candidate.json",
         "sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "held",
+        "candidate_sha256": "1cf11921d21f841a4e131243988abe37e273b029aa209071d833f6a750910641",
+        "frame_bindings_sha256": "882d6d6f3e655be344244d4ec6d34a582c3f82fd6a1f9d84d65dd2ad2cb1af78",
+        "reviewed_at_utc": "2026-10-10T21:12:50.322631+00:00",
+        "hold_reason": "Complete eight-frame material/rotation geometry is coherent, but10326 introduces a small green indicator absent from matching original view. Correct only10326 through builtin generation, preserving other seven frames. Source binary and actualRust QA confirm10322 DOES have an authentic index253 green indicator and index252 red cue, so that earlier suspicion was incorrect. No raw editing/automatic palette stripping.",
+        "source_and_all_scale_visual_review": "All eight original/logical1x/indexed4x rows inspected against fresh actual Rust gallery. Existing blink labels252/253 in10321–10325 remain source-constrained, with full label counts except some253alpha coverage reduced at3/4x in10324.10326is ordinary and adds no animated labels; its new green is an artistic mismatch, not palette contamination.",
+        "runtime_qa": "jobs/enemies-1031f-10326/coordinator-runtime/runtime-qa.json",
+        "review_correction_at_utc": "2026-10-10T21:55:56.150987+00:00"
       }
     },
     "10327": {
@@ -23893,7 +24324,7 @@
       "canonical_source_asset": "10327",
       "family_id": "enemies-10327-10327",
       "job_id": "enemies-10327-10327",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -23905,6 +24336,15 @@
         "manifest": "jobs/enemies-10327-10327/candidate.json",
         "sha256": "1483fff0c31923cac70ac7893b18a7f8dd8d22d631d3352e6eded28c8f92e15a",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "1483fff0c31923cac70ac7893b18a7f8dd8d22d631d3352e6eded28c8f92e15a",
+        "frame_bindings_sha256": "5be0518eaa1f0b2cc01898e6e05799675a09a2f5f27325e3849f38b435afc2c5",
+        "reviewed_at_utc": "2026-10-10T22:17:40.649713+00:00",
+        "runtime_qa": "jobs/enemies-10327-10327/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10328": {
@@ -24152,7 +24592,7 @@
       "canonical_source_asset": "1032f",
       "family_id": "enemies-1032f-1032f",
       "job_id": "enemies-1032f-1032f",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_enemies_02",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -24164,6 +24604,15 @@
         "manifest": "jobs/enemies-1032f-1032f/candidate.json",
         "sha256": "c941c035b0a1234ce6c2723ca80dd41e4fb17bfe5b26f1447157b273d5df5e3c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "c941c035b0a1234ce6c2723ca80dd41e4fb17bfe5b26f1447157b273d5df5e3c",
+        "frame_bindings_sha256": "dadf1e455c5b63fd599c66bd50da70576b6e0e5e52f27fb71fe03c79450bfb88",
+        "reviewed_at_utc": "2026-10-10T22:17:40.652504+00:00",
+        "runtime_qa": "jobs/enemies-1032f-1032f/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10330": {
@@ -24213,7 +24662,7 @@
       "canonical_source_asset": "10331",
       "family_id": "enemies-10331-10331",
       "job_id": "enemies-10331-10331",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -24225,6 +24674,15 @@
         "manifest": "jobs/enemies-10331-10331/candidate.json",
         "sha256": "f6e54525652a62a3aadf9c4ce1edfaf114cb3184bc511305d4a4f935b9e4cbe3",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review": {
+        "status": "approved",
+        "candidate_sha256": "f6e54525652a62a3aadf9c4ce1edfaf114cb3184bc511305d4a4f935b9e4cbe3",
+        "frame_bindings_sha256": "de88c77c53b0120565a16fd2ac973c756e352fd45070dc5f818a797341d44da3",
+        "reviewed_at_utc": "2026-10-10T22:17:40.650747+00:00",
+        "runtime_qa": "jobs/enemies-10331-10331/coordinator-runtime/runtime-qa.json",
+        "source_and_all_scale_visual_review": "Whole original/logical1x/indexed4x family inspected. Source door apertures, guns/blink cues, tread phases, hover ripples/grate and static craft directions/ports/negative spaces remain coherent. Fresh allfour scales source/canvas/hash/alpha/palette checks pass; source and four scale pixels are byte-identical to independent reviewed runtime evidence. SHIP13(10309) brighter copper64/47/42→82/58/52 is an explicit approved material interpretation; TARG10v3 resolves orange-soil speckles while retaining native machinery.",
+        "independent_review": "hd_full_review approved all31 additional enemy frames after eleven source/1x/4x and seven native2x/3x pages; exact family hashes recorded .reference/hd-full-review/enemy-equipment-cohort/candidates.json."
       }
     },
     "10332": {
@@ -24312,13 +24770,18 @@
       "canonical_source_asset": "10334",
       "family_id": "enemies-10334-10334",
       "job_id": "enemies-10334-10334",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-10334-10334/candidate.json",
+        "sha256": "91b47ae46b1b5316015c4f4b68575b4c0ae2ae3f689250fc8df8584b0e17ba56",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10335": {
@@ -24340,13 +24803,18 @@
       "canonical_source_asset": "10335",
       "family_id": "enemies-10335-10335",
       "job_id": "enemies-10335-10335",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_enemies_01",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-10335-10335/candidate.json",
+        "sha256": "06c4fe884d9b7fd4ccb3778c5a14226a2e9ebad5637d926565500a401d294718",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "10336": {
@@ -29058,7 +29526,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29095,7 +29563,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29132,7 +29600,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29169,7 +29637,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29206,7 +29674,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29243,7 +29711,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29280,7 +29748,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29317,7 +29785,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29354,7 +29822,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29391,7 +29859,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29428,7 +29896,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29465,7 +29933,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29502,7 +29970,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29539,7 +30007,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29576,7 +30044,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29613,7 +30081,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-103c0-103cf/candidate.json",
-        "sha256": "1904e3a9f024c522af6b3d20feedae07f781cc923ce68517195a86150367cc01",
+        "sha256": "3b60736654d48b933215d20ed4b5f5c3ffa58b44705b2dc73e6a0ec65f0551e6",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -29636,7 +30104,7 @@
       "canonical_source_asset": "103d0",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -29647,6 +30115,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103d1": {
@@ -29668,7 +30141,7 @@
       "canonical_source_asset": "103d1",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -29679,6 +30152,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103d2": {
@@ -29700,7 +30178,7 @@
       "canonical_source_asset": "103d2",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -29711,6 +30189,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103d3": {
@@ -29732,7 +30215,7 @@
       "canonical_source_asset": "103d3",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -29743,6 +30226,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103d4": {
@@ -29764,7 +30252,7 @@
       "canonical_source_asset": "103d4",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -29775,6 +30263,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103d5": {
@@ -29796,7 +30289,7 @@
       "canonical_source_asset": "103d5",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -29807,6 +30300,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103d6": {
@@ -29828,7 +30326,7 @@
       "canonical_source_asset": "103d6",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -29839,6 +30337,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103d7": {
@@ -29860,7 +30363,7 @@
       "canonical_source_asset": "103d7",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -29871,6 +30374,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103d8": {
@@ -29892,7 +30400,7 @@
       "canonical_source_asset": "103d8",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -29903,6 +30411,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103d9": {
@@ -29924,7 +30437,7 @@
       "canonical_source_asset": "103d9",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -29935,6 +30448,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103da": {
@@ -29956,7 +30474,7 @@
       "canonical_source_asset": "103da",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -29967,6 +30485,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103db": {
@@ -29988,7 +30511,7 @@
       "canonical_source_asset": "103db",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -29999,6 +30522,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103dc": {
@@ -30020,7 +30548,7 @@
       "canonical_source_asset": "103dc",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -30031,6 +30559,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103dd": {
@@ -30052,7 +30585,7 @@
       "canonical_source_asset": "103dd",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -30063,6 +30596,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103de": {
@@ -30084,7 +30622,7 @@
       "canonical_source_asset": "103de",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -30095,6 +30633,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103df": {
@@ -30116,7 +30659,7 @@
       "canonical_source_asset": "103df",
       "family_id": "terrain-103d0-103df",
       "job_id": "terrain-103d0-103df",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -30127,6 +30670,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-103d0-103df/candidate.json",
+        "sha256": "f96f8ff7e7e75fe6eae088674183895ba6b194fc21c472f18c701938e7959e85",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "103e0": {
@@ -50746,13 +51294,18 @@
       "canonical_source_asset": "20088",
       "family_id": "enemies-20088-2008b",
       "job_id": "enemies-20088-2008b",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-20088-2008b/candidate.json",
+        "sha256": "88701a383dd4f283e591de4c13e9274249e8e8344d72c34a1380f57f751a4192",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "20089": {
@@ -50774,13 +51327,18 @@
       "canonical_source_asset": "20089",
       "family_id": "enemies-20088-2008b",
       "job_id": "enemies-20088-2008b",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-20088-2008b/candidate.json",
+        "sha256": "88701a383dd4f283e591de4c13e9274249e8e8344d72c34a1380f57f751a4192",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "2008a": {
@@ -50802,13 +51360,18 @@
       "canonical_source_asset": "2008a",
       "family_id": "enemies-20088-2008b",
       "job_id": "enemies-20088-2008b",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-20088-2008b/candidate.json",
+        "sha256": "88701a383dd4f283e591de4c13e9274249e8e8344d72c34a1380f57f751a4192",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "2008b": {
@@ -50830,13 +51393,18 @@
       "canonical_source_asset": "2008b",
       "family_id": "enemies-20088-2008b",
       "job_id": "enemies-20088-2008b",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-20088-2008b/candidate.json",
+        "sha256": "88701a383dd4f283e591de4c13e9274249e8e8344d72c34a1380f57f751a4192",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "2008c": {
@@ -52052,13 +52620,18 @@
       "canonical_source_asset": "200b3",
       "family_id": "enemies-200b3-200b3",
       "job_id": "enemies-200b3-200b3",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-200b3-200b3/candidate.json",
+        "sha256": "4a15e003c648453a383a79705ce7d50b5721e41fe892039f74a0a3f55b53d10d",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "200b4": {
@@ -52393,13 +52966,18 @@
       "canonical_source_asset": "200bf",
       "family_id": "enemies-200bf-200bf",
       "job_id": "enemies-200bf-200bf",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-200bf-200bf/candidate.json",
+        "sha256": "7cde307c378c582d9ca95ff7672eced0b1cbe0d884f5a517729671140211246a",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "200c0": {
@@ -101810,13 +102388,18 @@
       "canonical_source_asset": "3001a",
       "family_id": "enemies-3001a-3001d",
       "job_id": "enemies-3001a-3001d",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-3001a-3001d/candidate.json",
+        "sha256": "762394ef85c1813eebb6a743ed220773e4043cdf63b5fbb28e166376ba94de1c",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "3001b": {
@@ -101838,13 +102421,18 @@
       "canonical_source_asset": "3001b",
       "family_id": "enemies-3001a-3001d",
       "job_id": "enemies-3001a-3001d",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-3001a-3001d/candidate.json",
+        "sha256": "762394ef85c1813eebb6a743ed220773e4043cdf63b5fbb28e166376ba94de1c",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "3001c": {
@@ -101866,13 +102454,18 @@
       "canonical_source_asset": "3001c",
       "family_id": "enemies-3001a-3001d",
       "job_id": "enemies-3001a-3001d",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-3001a-3001d/candidate.json",
+        "sha256": "762394ef85c1813eebb6a743ed220773e4043cdf63b5fbb28e166376ba94de1c",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "3001d": {
@@ -101894,13 +102487,18 @@
       "canonical_source_asset": "3001d",
       "family_id": "enemies-3001a-3001d",
       "job_id": "enemies-3001a-3001d",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-3001a-3001d/candidate.json",
+        "sha256": "762394ef85c1813eebb6a743ed220773e4043cdf63b5fbb28e166376ba94de1c",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "3001e": {
@@ -103341,13 +103939,18 @@
       "canonical_source_asset": "3004e",
       "family_id": "enemies-3004e-3004e",
       "job_id": "enemies-3004e-3004e",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-3004e-3004e/candidate.json",
+        "sha256": "7aa2e93544532cc2ad41f4a8fe3d0e05b61007d28046b464e0cb0d835a2300c7",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "3004f": {
@@ -104200,13 +104803,18 @@
       "canonical_source_asset": "3006a",
       "family_id": "enemies-3006a-3006a",
       "job_id": "enemies-3006a-3006a",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
       "renderer": {
         "availability": "unverified",
         "evidence": []
+      },
+      "candidate": {
+        "manifest": "jobs/enemies-3006a-3006a/candidate.json",
+        "sha256": "42ad6556136c04b79a814ead1bcfd94755cd555eb6ab319c226d929eb2941228",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "3006b": {
@@ -105436,7 +106044,7 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-30094-30094/candidate.json",
-        "sha256": "273836e72589afdb01361fa3a3f18ac6ff5ef7bd0c25f9572f296e0f9427375b",
+        "sha256": "9aafa3d329aa380b07e4419d6679ec59271658d323e77d918d14e2a898cf2e9c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -108793,7 +109401,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -108830,7 +109438,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -108867,7 +109475,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -108904,7 +109512,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -108941,7 +109549,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -108978,7 +109586,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -109015,7 +109623,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -109052,7 +109660,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -109089,7 +109697,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -109126,7 +109734,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -109163,7 +109771,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -109200,7 +109808,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -109237,7 +109845,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -109274,7 +109882,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -109311,7 +109919,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3010d-3011c/candidate.json",
-        "sha256": "efed629fc574b6305232e9afd32e77605adc8eaea61ebf3b2e73b4e94d5ef2c6",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -109334,7 +109942,7 @@
       "canonical_source_asset": "3011c",
       "family_id": "terrain-3010d-3011c",
       "job_id": "terrain-3010d-3011c",
-      "status": "inprogress",
+      "status": "candidate",
       "owner": "iron_coast_6",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -109345,6 +109953,11 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-3010d-3011c/candidate.json",
+        "sha256": "e19417525dfd99e21e7e4eba7da4962f2d0fe6c8981a21b182792ef26cf2448e",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
     "3011d": {
@@ -127108,7 +127721,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127145,7 +127758,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127182,7 +127795,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127219,7 +127832,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127256,7 +127869,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127293,7 +127906,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127330,7 +127943,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127367,7 +127980,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127404,7 +128017,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127441,7 +128054,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127478,7 +128091,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127515,7 +128128,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127552,7 +128165,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127589,7 +128202,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127626,7 +128239,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -127663,7 +128276,7 @@
       },
       "candidate": {
         "manifest": "jobs/terrain-3033d-3034c/candidate.json",
-        "sha256": "96d56571eee10cb9263b0c3bc94805531bff45e1f0dc130e9204fbddcb3d27ac",
+        "sha256": "a29e627784e1f8d8e04f2ebe5ec2e5c24c4394cdb31509cb1b51556015d68c1c",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -146556,7 +147169,7 @@
       },
       "candidate": {
         "manifest": "jobs/enemies-40087-40087/candidate.json",
-        "sha256": "98e61a65de86d446f372661561ce00980cce63292b620ec902d5e7eebc85b5bb",
+        "sha256": "c2847b46f053926636c4dfc5f2d652bfcfbb3511436649cc82723f618bbd68e3",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       }
     },
@@ -192958,7 +193571,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
-        "candidate": 1
+        "registered": 1
       },
       "job_file": "enemies-1013b-1013b/job.json"
     },
@@ -192994,7 +193607,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 15,
       "status_counts": {
-        "candidate": 15
+        "registered": 15
       },
       "job_file": "enemies-10142-10150/job.json"
     },
@@ -193006,7 +193619,7 @@
       "owner": "/root/hd_enemies_02",
       "target_count": 1,
       "status_counts": {
-        "candidate": 1
+        "registered": 1
       },
       "job_file": "enemies-10151-10151/job.json"
     },
@@ -193030,7 +193643,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
-        "candidate": 1
+        "registered": 1
       },
       "job_file": "enemies-10160-10160/job.json"
     },
@@ -193042,7 +193655,7 @@
       "owner": "/root/hd_enemies_01",
       "target_count": 1,
       "status_counts": {
-        "candidate": 1
+        "registered": 1
       },
       "job_file": "enemies-10161-10161/job.json"
     },
@@ -193174,7 +193787,7 @@
       "owner": "/root/hd_light_player",
       "target_count": 4,
       "status_counts": {
-        "candidate": 4
+        "registered": 4
       },
       "job_file": "projectiles-101c3-101c6/job.json"
     },
@@ -193222,7 +193835,7 @@
       "owner": "/root/campaign_integration",
       "target_count": 2,
       "status_counts": {
-        "candidate": 2
+        "registered": 2
       },
       "job_file": "projectiles-101d1-101d2/job.json"
     },
@@ -193234,7 +193847,7 @@
       "owner": "/root/campaign_integration",
       "target_count": 1,
       "status_counts": {
-        "inprogress": 1
+        "candidate": 1
       },
       "job_file": "projectiles-101d3-101d3/job.json"
     },
@@ -193246,7 +193859,7 @@
       "owner": "/root/campaign_integration",
       "target_count": 2,
       "status_counts": {
-        "inprogress": 2
+        "candidate": 2
       },
       "job_file": "projectiles-101d4-101d5/job.json"
     },
@@ -193354,7 +193967,7 @@
       "owner": "/root/campaign_integration",
       "target_count": 6,
       "status_counts": {
-        "inprogress": 6
+        "candidate": 6
       },
       "job_file": "projectiles-1021d-10222/job.json"
     },
@@ -193366,7 +193979,7 @@
       "owner": "/root/campaign_integration",
       "target_count": 2,
       "status_counts": {
-        "inprogress": 2
+        "candidate": 2
       },
       "job_file": "projectiles-10223-10224/job.json"
     },
@@ -193630,7 +194243,7 @@
       "owner": "/root/hd_dark_player",
       "target_count": 4,
       "status_counts": {
-        "candidate": 4
+        "registered": 4
       },
       "job_file": "equipment-102ba-102bd/job.json"
     },
@@ -193666,7 +194279,7 @@
       "owner": "/root/hd_dark_player",
       "target_count": 1,
       "status_counts": {
-        "candidate": 1
+        "registered": 1
       },
       "job_file": "equipment-102c0-102c0/job.json"
     },
@@ -193678,7 +194291,7 @@
       "owner": "/root/hd_dark_player",
       "target_count": 4,
       "status_counts": {
-        "candidate": 4
+        "registered": 4
       },
       "job_file": "equipment-102c1-102c4/job.json"
     },
@@ -193702,7 +194315,7 @@
       "owner": "/root/hd_dark_player",
       "target_count": 2,
       "status_counts": {
-        "candidate": 2
+        "registered": 2
       },
       "job_file": "equipment-102c6-102c7/job.json"
     },
@@ -193714,7 +194327,7 @@
       "owner": "/root/hd_dark_player",
       "target_count": 4,
       "status_counts": {
-        "inprogress": 4
+        "candidate": 4
       },
       "job_file": "equipment-102c8-102cb/job.json"
     },
@@ -193894,7 +194507,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
-        "candidate": 1
+        "registered": 1
       },
       "job_file": "enemies-102fa-102fa/job.json"
     },
@@ -193930,7 +194543,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
-        "candidate": 1
+        "registered": 1
       },
       "job_file": "enemies-102fd-102fd/job.json"
     },
@@ -193942,7 +194555,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 2,
       "status_counts": {
-        "candidate": 2
+        "registered": 2
       },
       "job_file": "enemies-102fe-102ff/job.json"
     },
@@ -193954,7 +194567,7 @@
       "owner": "/root/hd_enemies_02",
       "target_count": 4,
       "status_counts": {
-        "candidate": 4
+        "registered": 4
       },
       "job_file": "enemies-10300-10303/job.json"
     },
@@ -193966,7 +194579,7 @@
       "owner": "/root/hd_enemies_01",
       "target_count": 2,
       "status_counts": {
-        "candidate": 2
+        "registered": 2
       },
       "job_file": "enemies-10304-10305/job.json"
     },
@@ -194014,7 +194627,7 @@
       "owner": "/root/hd_enemies_01",
       "target_count": 1,
       "status_counts": {
-        "candidate": 1
+        "registered": 1
       },
       "job_file": "enemies-10309-10309/job.json"
     },
@@ -194146,7 +194759,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
-        "candidate": 1
+        "registered": 1
       },
       "job_file": "enemies-10327-10327/job.json"
     },
@@ -194182,7 +194795,7 @@
       "owner": "/root/hd_enemies_02",
       "target_count": 1,
       "status_counts": {
-        "candidate": 1
+        "registered": 1
       },
       "job_file": "enemies-1032f-1032f/job.json"
     },
@@ -194206,7 +194819,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
-        "candidate": 1
+        "registered": 1
       },
       "job_file": "enemies-10331-10331/job.json"
     },
@@ -194242,7 +194855,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
-        "inprogress": 1
+        "candidate": 1
       },
       "job_file": "enemies-10334-10334/job.json"
     },
@@ -194254,7 +194867,7 @@
       "owner": "/root/hd_enemies_01",
       "target_count": 1,
       "status_counts": {
-        "inprogress": 1
+        "candidate": 1
       },
       "job_file": "enemies-10335-10335/job.json"
     },
@@ -194554,7 +195167,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 4,
       "status_counts": {
-        "inprogress": 4
+        "candidate": 4
       },
       "job_file": "enemies-20088-2008b/job.json"
     },
@@ -194962,7 +195575,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
-        "inprogress": 1
+        "candidate": 1
       },
       "job_file": "enemies-200b3-200b3/job.json"
     },
@@ -195034,7 +195647,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
-        "inprogress": 1
+        "candidate": 1
       },
       "job_file": "enemies-200bf-200bf/job.json"
     },
@@ -195478,7 +196091,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 4,
       "status_counts": {
-        "inprogress": 4
+        "candidate": 4
       },
       "job_file": "enemies-3001a-3001d/job.json"
     },
@@ -195790,7 +196403,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
-        "inprogress": 1
+        "candidate": 1
       },
       "job_file": "enemies-3004e-3004e/job.json"
     },
@@ -196042,7 +196655,7 @@
       "owner": "/root/iron_coast_2",
       "target_count": 1,
       "status_counts": {
-        "inprogress": 1
+        "candidate": 1
       },
       "job_file": "enemies-3006a-3006a/job.json"
     },
@@ -197206,7 +197819,7 @@
       "owner": "/root/hd_terrain_set_1",
       "target_count": 16,
       "status_counts": {
-        "inprogress": 16
+        "candidate": 16
       },
       "job_file": "terrain-103d0-103df/job.json"
     },
@@ -198730,8 +199343,7 @@
       "owner": "iron_coast_6",
       "target_count": 16,
       "status_counts": {
-        "candidate": 15,
-        "inprogress": 1
+        "candidate": 16
       },
       "job_file": "terrain-3010d-3011c/job.json"
     },

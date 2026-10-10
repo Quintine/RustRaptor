@@ -2,7 +2,7 @@
 
 The Rust Options screen includes **HD art**. It starts disabled. Enable it to use reviewed artwork from `../data/hd/hd.json`; each missing or rejected frame keeps the selected original / 2x / 3x / 4x crisp treatment. The scale setting still determines the indexed rendering resolution, and the HD toggle can be changed while paused. HD art is presentation only: simulation, collision sizes, banking positions and save content IDs stay unchanged.
 
-The local base-game pack currently supplies **165 reviewed replacement frames**. Complete additions cover all twenty-one light, dark and firing-flash player poses, four fighters, four industrial bosses, four ground-defense targets and a five-frame opening bunker, fifteen equipment/pickup families, five complete projectile families, the twelve-frame energy ring, nine blue-spark phases, four death-ray hit phases, fourteen lightning phases, ten platoon fragment phases, sixteen air-blast phases, four pickup glow masks, nine pilot portraits, both original title logos and sixteen canonical terrain tiles. The complete catalog backlog and generation status are listed in [hd-backlog.md](hd-backlog.md).
+The local base-game pack currently supplies **215 reviewed replacement frames**. Complete additions cover all twenty-one light, dark and firing-flash player poses, thirteen vehicle families, four industrial bosses, seven ground-defense targets, a bonus crate and complete five- and fifteen-frame opening bunkers, nineteen equipment/pickup families, seven complete projectile families, the twelve-frame energy ring, nine blue-spark phases, four death-ray hit phases, fourteen lightning phases, ten platoon fragment phases, sixteen air-blast phases, four pickup glow masks, nine pilot portraits, both original title logos and sixteen canonical terrain tiles. The complete catalog backlog and generation status are listed in [hd-backlog.md](hd-backlog.md).
 
 | Reviewed artwork | Original asset IDs | Supplied / complete frames |
 | --- | --- | ---: |
@@ -12,6 +12,10 @@ The local base-game pack currently supplies **165 reviewed replacement frames**.
 | First-mission fighter `SHIP01G1_PIC` | `0x102f8` | 1 / 1 |
 | First-mission fighter `SHIP27G1_PIC` | `0x10330` | 1 / 1 |
 | Fighters `SHIP02G1_PIC`, `SHIP14G1_PIC` | `0x102f9`, `0x1030a` | 2 / 2 |
+| `SHIP03`, `SHIP06`, `SHIP13`, `SHIP24`, `SHIP26`, `SHIP28` craft | `0x102fa`, `0x102fd`, `0x10309`, `0x10327`, `0x1032f`, `0x10331` | 6 / 6 |
+| `SHIP07` two-state craft | `0x102fe`–`0x102ff` | 2 / 2 |
+| `SHIP08` moving tread phases | `0x10300`–`0x10303` | 4 / 4 |
+| `SHIP09` hovercraft wake phases | `0x10304`–`0x10305` | 2 / 2 |
 | First-mission industrial boss `SHIP10G1_PIC` | `0x10306` | 1 / 1 |
 | Industrial bosses `SHIP12G1_PIC`, `SHIP17G1_PIC` | `0x10308`, `0x1030f` | 2 / 2 |
 | Industrial boss `SHIP11G1_PIC` | `0x10307` | 1 / 1 |
@@ -19,12 +23,20 @@ The local base-game pack currently supplies **165 reviewed replacement frames**.
 | Ground-defense targets `TARGT2G1_PIC`, `TARGT3G1_PIC` | `0x10139`, `0x1013a` | 2 / 2 |
 | Ground-defense target `TARGT5G1_PIC` | `0x1013c` | 1 / 1 |
 | Opening ground-defense bunker `TARGT6G1_PIC` | `0x1013d`–`0x10141` | 5 / 5 |
+| Opening ground-defense bunker `TARGT7G1_PIC` | `0x10142`–`0x10150` | 15 / 15 |
+| Ground targets `TARGT4G1_PIC`, `TARGT9G1_PIC` | `0x1013b`, `0x10160` | 2 / 2 |
+| Ground target `TARG10G1_PIC` | `0x10161` | 1 / 1 |
+| Bonus crate `BONUS1G1_PIC` | `0x10151` | 1 / 1 |
 | Forward Guns equipment | `0x102b0` | 1 / 1 |
 | Plasma Guns equipment | `0x102b1`–`0x102b2` | 2 / 2 |
 | Dumb Missile equipment | `0x102b5` | 1 / 1 |
 | Air Missile equipment | `0x102bf` | 1 / 1 |
 | Micro Missile equipment | `0x102b3`–`0x102b4` | 2 / 2 |
 | MiniGun equipment rotation | `0x102b6`–`0x102b9` | 4 / 4 |
+| Turret equipment rotation | `0x102ba`–`0x102bd` | 4 / 4 |
+| Ground Missile equipment | `0x102c0` | 1 / 1 |
+| Energy Grab equipment phases | `0x102c1`–`0x102c4` | 4 / 4 |
+| Pulse Cannon equipment phases | `0x102c6`–`0x102c7` | 2 / 2 |
 | Missile Pods equipment | `0x102be` | 1 / 1 |
 | Mega Bomb equipment | `0x102c5` | 1 / 1 |
 | Super Shield pickup | `0x102d0` | 1 / 1 |
@@ -34,6 +46,8 @@ The local base-game pack currently supplies **165 reviewed replacement frames**.
 | Dumb Missile projectile | `0x101ba`–`0x101bc` | 3 / 3 |
 | Missile Pods / Air Missile 2 projectile | `0x101bd`–`0x101be` | 2 / 2 |
 | Ground Missile 2 projectile | `0x101bf`–`0x101c0` | 2 / 2 |
+| Forward Guns / MiniGun firing patterns | `0x101c3`–`0x101c6` | 4 / 4 |
+| Mine pulse | `0x101d1`–`0x101d2` | 2 / 2 |
 | Energy ring | `0x101ae`–`0x101b9` | 12 / 12 |
 | Blue sparks | `0x1019c`–`0x101a4` | 9 / 9 |
 | Death-ray hits | `0x101f1`–`0x101f4` | 4 / 4 |
@@ -55,9 +69,13 @@ The first four equipment families' visible material masks overlap their original
 
 Small-scale differences remain visible. At 1×, each Plasma projectile loses one tail row: the original 8/6-pixel heights become 7/5 pixels, while 4× retains the original logical extents. The first energy effect's fine cardinal rays also contract under binary alpha at small scales; its 1× bounds become `(7,5)..(34,34)` against original `(3,2)..(38,37)`. At 4× the rays remain visible but end approximately 1–2 logical pixels inside the source extremes. Later rings use smoother, thinner contours. These differences affect presentation and are follow-up candidates for per-asset fallback; source collision dimensions remain unchanged.
 
-Generated drafts are not active coverage. Earlier player atlas attempts and shortened extreme-bank variants were rejected. The complete light family replaces the initial straight-frame proof; the dark family uses coherent lighting edits of those reviewed poses and the original dark palette. Its exact runtime logical-mask overlap is 87.3–91.4%, with centroid displacement below 0.68 pixels, bounds within one pixel and no clipped meaningful alpha. Other equipment families remain uncovered. A 3×3 shoreline prototype preserves the broad coastline and demonstrates the terrain renderer, but remains unregistered: repeated canonical tiles, neighbors and destroyed states need individual artwork and seam review. Original AGX cinematics retain their original artwork.
+Generated drafts are not active coverage. Earlier player atlas attempts and shortened extreme-bank variants were rejected. The complete light family replaces the initial straight-frame proof; the dark family uses coherent lighting edits of those reviewed poses and the original dark palette. Its exact runtime logical-mask overlap is 87.3–91.4%, with centroid displacement below 0.68 pixels, bounds within one pixel and no clipped meaningful alpha. The newly added Ground Missile, Turret, Pulse Cannon and Energy Grab families preserve their source phase differences. Late Energy Grab interprets two single-pixel peripheral ring holes as filled detail; the main transparent loop remains open. Other equipment families remain uncovered. A 3×3 shoreline prototype preserves the broad coastline and demonstrates the terrain renderer, but remains unregistered: repeated canonical tiles, neighbors and destroyed states need individual artwork and seam review. Original AGX cinematics retain their original artwork.
 
 The firing family preserves all seven original poses and their localized amber reflections. Its distinct straight-frame contour points were checked explicitly: `(19,8)` remains opaque, `(11,12)` and `(11,13)` remain transparent, and `(11,14)` stays opaque. The MiniGun's four rotation phases and the seven newly registered missile phases passed complete sequence inspection; each missile retains its original exhaust length and fin layout. Native scene captures remain a separate reachability check. The additional `SHIP11G1_PIC` boss interprets its dark perimeter: logical alpha overlap is 82.9%, with 373 removed original occupied pixels (252 very dark) and 23 added pixels. Its towers, side machinery, center weapon and lower pods remain readable at every scale, but its alpha contour is not identical to the source.
+
+The additional fifteen-frame bunker preserves its door apertures, gun and blink phases. Craft tread and hover-wake animations keep their distinct source poses and negative spaces. `SHIP13G1_PIC` has brighter detailed copper panels (mean occupied RGB about `64/47/42` becomes `82/58/52`); its original copper identity and asymmetric silhouette remain readable. `TARG10G1_PIC` uses a reviewed subdued soil correction; the superseded orange-speckled variants remain held.
+
+The two additional ground targets use subdued brown soil corrections; their machinery and original directions remain intact. The tiny gun sprites keep all four original gray/white patterns, and the mine keeps its pink then dark burgundy center with gold corners. These families have complete gallery review; it does not establish a placed gun or mine scene occurrence.
 
 The first sixteen canonical terrain replacements passed independent review of every source/logical/4× frame, all 48 supplied mission contexts and all 755 declared cardinal neighbor pairs: 170 HD/HD and 585 HD/original. Actual native scene checks exercised all 32 cached scroll phases and content-hash/load-order invalidation. None of these sixteen IDs has a declared destroyed partner; the separate native destruction-cache proof therefore adds no HD debris coverage. Mixed detail contrast remains until neighboring tiles are remastered. The next terrain family has a corrected treeless `0x20111` and passed independent source and complete neighborhood review. It and the first thirty-two industrial terrain candidates remain held for recurring grain lines at some composed tile boundaries; they add no active coverage yet.
 

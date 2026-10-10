@@ -1,15 +1,15 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **165**; **5,588** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
+The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **215**; **5,538** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
 | Player banking | 21 | 21 | 0 | 3 |
 | Bosses | 249 | 4 | 245 | 79 |
-| Enemies and ground objects | 419 | 13 | 406 | 183 |
-| Player and enemy projectiles | 51 | 11 | 40 | 18 |
+| Enemies and ground objects | 419 | 46 | 373 | 183 |
+| Player and enemy projectiles | 51 | 17 | 34 | 18 |
 | Explosions and effects | 281 | 69 | 212 | 25 |
-| Equipment and pickups | 47 | 20 | 27 | 23 |
+| Equipment and pickups | 47 | 31 | 16 | 23 |
 | Terrain | 4,535 | 16 | 4,519 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 11 | 139 | mixed static / animated |
 
@@ -81,6 +81,26 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Air blast v1 | `0x102a0` | 16 / 16 |
 | Pickup light-mask glow v1 | `0x10225` | 4 / 4 |
 | Lightning and energy grab v1 | `0x1018e` | 14 / 14 |
+| Grd Missile | `0x102c0` | 1 / 1 |
+| Turret | `0x102ba` | 4 / 4 |
+| Pulse Cannon | `0x102c6` | 2 / 2 |
+| Energy Grab | `0x102c1` | 4 / 4 |
+| TARGT7G1_PIC | `0x10142` | 15 / 15 |
+| BONUS1G1_PIC | `0x10151` | 1 / 1 |
+| SHIP08G1_PIC | `0x10300` | 4 / 4 |
+| SHIP09G1_PIC | `0x10304` | 2 / 2 |
+| SHIP03G1_PIC | `0x102fa` | 1 / 1 |
+| SHIP06G1_PIC | `0x102fd` | 1 / 1 |
+| SHIP07G1_PIC | `0x102fe` | 2 / 2 |
+| SHIP24G1_PIC | `0x10327` | 1 / 1 |
+| SHIP28G1_PIC | `0x10331` | 1 / 1 |
+| TARG10G1_PIC | `0x10161` | 1 / 1 |
+| SHIP26G1_PIC | `0x1032f` | 1 / 1 |
+| SHIP13G1_PIC | `0x10309` | 1 / 1 |
+| TARGT4G1_PIC | `0x1013b` | 1 / 1 |
+| TARGT9G1_PIC | `0x10160` | 1 / 1 |
+| Forward Guns / Mini Gun | `0x101c3` | 4 / 4 |
+| Enemy beam v1 | `0x101d1` | 2 / 2 |
 
 | Generation job | Status |
 | --- | --- |
