@@ -180,6 +180,10 @@ pub struct Enemy {
     pub shootagain: i32,
     pub shootcount: i32,
     pub shootflag: i32,
+    #[serde(default)]
+    pub energy_resistance: i32,
+    #[serde(default)]
+    pub shoot_disabled: bool,
     pub kami: u32,
     pub vx: i32,
     pub vy: i32,
@@ -245,7 +249,128 @@ pub struct LegacyPickup {
 pub struct Effect {
     pub x: i32,
     pub y: i32,
+    pub px: i32,
+    pub py: i32,
     pub age: u32,
+    pub kind: EffectKind,
+    pub ground: bool,
+}
+#[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq, Eq)]
+pub enum EffectKind {
+    GroundBlast,
+    SmallGround,
+    LargeAir,
+    MediumAir,
+    SmallAir,
+    AirBlast,
+    Energy,
+    Person,
+    Platoon,
+    Flare,
+    Sparkle,
+}
+impl EffectKind {
+    pub fn artwork(self) -> (u32, u32) {
+        match self {
+            Self::GroundBlast => (0x10164, 42),
+            Self::SmallGround => (0x1027d, 35),
+            Self::LargeAir => (0x101e5, 12),
+            Self::MediumAir => (0x101d8, 13),
+            Self::SmallAir => (0x101fc, 14),
+            Self::AirBlast => (0x102a0, 16),
+            Self::Energy => (0x101ae, 12),
+            Self::Person => (0x101f5, 7),
+            Self::Platoon => (0x10213, 10),
+            Self::Flare => (0x10252, 26),
+            Self::Sparkle => (0x1026c, 17),
+        }
+    }
+}
+impl Effect {
+    fn new(kind: EffectKind, x: i32, y: i32) -> Self {
+        Self {
+            x,
+            y,
+            px: x,
+            py: y,
+            age: 0,
+            kind,
+            ground: matches!(
+                kind,
+                EffectKind::GroundBlast
+                    | EffectKind::SmallGround
+                    | EffectKind::MediumAir
+                    | EffectKind::Person
+                    | EffectKind::Platoon
+                    | EffectKind::Flare
+                    | EffectKind::Sparkle
+            ),
+        }
+    }
+    fn airborne(mut self) -> Self {
+        self.ground = false;
+        self
+    }
+}
+fn original_effect(effects: &mut Vec<Effect>, effect: Effect) {
+    if effects.len() < 100 {
+        effects.push(effect);
+    }
+}
+fn death_effects(effects: &mut Vec<Effect>, rng: &mut LegacyRng, enemy: &Enemy, explosion: i32) {
+    use EffectKind::*;
+    let cx = enemy.x + enemy.width / 2;
+    let cy = enemy.y + enemy.height / 2;
+    let main = match explosion {
+        0 => MediumAir,
+        1 | 2 | 6 => LargeAir,
+        3 => SmallGround,
+        4 | 5 => GroundBlast,
+        7 => Person,
+        8 => Energy,
+        9 => Platoon,
+        _ => AirBlast,
+    };
+    if explosion == 4 {
+        let x = enemy.x + rng.next_value() % enemy.width.max(1);
+        let y = enemy.y + rng.next_value() % enemy.height.max(1);
+        let kind = if rng.next_value() % 2 == 0 {
+            Sparkle
+        } else {
+            Flare
+        };
+        original_effect(effects, Effect::new(kind, x, y));
+    }
+    original_effect(effects, Effect::new(main, cx, cy));
+    if matches!(explosion, 2 | 5 | 6) {
+        let area = (enemy.width >> 4) * (enemy.height >> 4);
+        for n in 0..area {
+            let x = enemy.x + rng.next_value() % enemy.width.max(1);
+            let y = enemy.y + rng.next_value() % enemy.height.max(1);
+            if explosion == 5 {
+                let kind = if rng.next_value() % 2 == 0 {
+                    Flare
+                } else {
+                    Sparkle
+                };
+                original_effect(effects, Effect::new(kind, x, y));
+                original_effect(effects, Effect::new(SmallGround, x, y));
+            } else if explosion == 6 {
+                original_effect(effects, Effect::new(Flare, x, y).airborne());
+                original_effect(
+                    effects,
+                    Effect::new(if n & 1 != 0 { LargeAir } else { AirBlast }, x, y),
+                );
+            } else {
+                let effect = if n & 1 != 0 {
+                    Effect::new(MediumAir, x, y)
+                } else {
+                    Effect::new(AirBlast, x, y).airborne()
+                };
+                original_effect(effects, effect);
+            }
+        }
+    }
 }
 #[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq, Eq)]
 pub enum Outcome {
@@ -283,6 +408,14 @@ pub struct World {
     pub difficulty: u32,
     pub outcome: Outcome,
     pub end_timer: Option<u32>,
+    #[serde(default)]
+    pub legacy_transition: bool,
+    #[serde(default = "visible_player")]
+    pub draw_player: bool,
+    #[serde(default)]
+    pub control_paused: bool,
+    #[serde(default)]
+    pub departure_delta: [i32; 2],
     pub scroll: i32,
     pub objectives: BTreeMap<String, i32>,
     pub sounds: Vec<u32>,
@@ -296,6 +429,8 @@ pub struct World {
     pub palette_blue: bool,
     pub special_held: bool,
     pub player_flash: bool,
+    #[serde(default = "initial_shield_latch")]
+    pub previous_shield: i32,
     #[serde(skip)]
     pub events: Vec<HookEvent>,
 }
@@ -354,6 +489,10 @@ impl World {
             difficulty: pilot.difficulty,
             outcome: Outcome::Playing,
             end_timer: None,
+            legacy_transition: m.legacy_map.is_some(),
+            draw_player: true,
+            control_paused: false,
+            departure_delta: [0, 0],
             scroll: 0,
             objectives: BTreeMap::new(),
             sounds: vec![],
@@ -367,6 +506,7 @@ impl World {
             palette_blue: false,
             special_held: false,
             player_flash: false,
+            previous_shield: initial_shield_latch(),
             events: vec![],
         };
         out.event(
@@ -467,6 +607,8 @@ impl World {
                 }
             }),
             shootflag: f.map_or(0, |f| f[15]),
+            energy_resistance: f.map_or(0, |f| f[13] >> 4),
+            shoot_disabled: false,
             kami: 0,
             vx: 0,
             vy: 0,
@@ -537,14 +679,37 @@ impl World {
         self.player_flash = false;
         self.player.px = self.player.x;
         self.player.py = self.player.y;
-        if let Some([x, y]) = input.absolute {
-            self.player.x = x.clamp(5, 282);
-            self.player.y = y.clamp(0, 160);
+        let input = if self.legacy_transition && self.control_paused && input.demo_bank.is_none() {
+            Input::default()
+        } else {
+            input
+        };
+        let ending = self.legacy_transition && self.end_timer.is_some();
+        if self.legacy_transition && self.control_paused && input.demo_bank.is_none() {
+            self.player.x += self.departure_delta[0];
+            self.player.y += self.departure_delta[1];
+        } else if let Some([x, y]) = input.absolute {
+            // Legacy demo playback writes recorded positions directly; the
+            // normal input boundary correction is bypassed by DEMO_GetNext.
+            self.player.x = if input.demo_bank.is_some() || ending {
+                x
+            } else {
+                x.clamp(5, 282)
+            };
+            self.player.y = if input.demo_bank.is_some() || ending {
+                y
+            } else {
+                y.clamp(0, 160)
+            };
         } else {
             self.player.vx = accelerate(self.player.vx, input.dx, 10);
             self.player.vy = accelerate(self.player.vy, input.dy, 8);
-            self.player.x = (self.player.x + self.player.vx).clamp(5, 282);
-            self.player.y = (self.player.y + self.player.vy).clamp(0, 160);
+            self.player.x += self.player.vx;
+            self.player.y += self.player.vy;
+            if !ending {
+                self.player.x = self.player.x.clamp(5, 282);
+                self.player.y = self.player.y.clamp(0, 160);
+            }
         }
         let delta = ((self.player.x - self.player.px).abs() >> 2).min(3);
         if let Some(bank) = input.demo_bank {
@@ -623,23 +788,13 @@ impl World {
         }
         self.special_held = input.special;
         if input.cycle && !self.cycle_held {
-            let mut specials: Vec<_> = self
-                .player
-                .inventory
-                .keys()
-                .filter(|id| registry.items.get(*id).is_some_and(|i| i.special))
-                .cloned()
-                .collect();
-            specials.sort_by_key(|id| (registry.items[id].legacy.unwrap_or(u32::MAX), id.clone()));
-            if !specials.is_empty() {
-                let next = self
-                    .player
-                    .selected
-                    .as_ref()
-                    .and_then(|id| specials.iter().position(|s| s == id))
-                    .map_or(0, |i| (i + 1) % specials.len());
-                self.player.selected = Some(specials[next].clone());
-            }
+            play_legacy_sound(
+                &mut self.rng,
+                &mut self.sounds,
+                &mut self.sound_events,
+                "FX_SWEP",
+            );
+            self.player.selected = next_special(&self.player, registry);
         }
         self.cycle_held = input.cycle;
         if input.bomb && !self.bomb_held {
@@ -655,9 +810,20 @@ impl World {
             }
         }
         self.bomb_held = input.bomb;
-        self.scroll += 1;
-        self.think_legacy_terrain(registry);
+        // Do_Game decrements startendwave after input, before world updates.
+        // At zero it still performs one final simulation/statistics pass.
+        let transition_finished = self.legacy_transition && self.end_timer == Some(0);
+        if self.legacy_transition {
+            self.end_timer = self.end_timer.and_then(|timer| timer.checked_sub(1));
+        }
         let mission = &registry.missions[&self.mission];
+        let previous_scroll = self.scroll;
+        self.scroll += 1;
+        if mission.legacy_map.is_some() {
+            let rows = mission.layout.len() / mission.columns.max(1) as usize;
+            self.scroll = self.scroll.min(rows.saturating_sub(8) as i32 * 32 + 56);
+        }
+        self.think_legacy_terrain(registry);
         while self.spawn_cursor < mission.spawns.len()
             && mission.spawns[self.spawn_cursor].tick <= self.tick
         {
@@ -710,17 +876,34 @@ impl World {
             } else {
                 enemy.x = enemy.movement.x;
                 enemy.y = enemy.movement.y;
-                let left = enemy.movement.advance(def.speed);
-                if enemy.movement.done && !def.path.is_empty() {
+                let kamikaze = def.legacy.as_ref().is_some_and(|l| l.fields[21] == 2);
+                let terminal_kami = kamikaze && enemy.kami == 2;
+                // MoveEobj keeps a terminal kamikaze moving past its target
+                // on subsequent steps; ordinary paths stop and retarget.
+                let left = if terminal_kami && enemy.movement.done {
+                    enemy.movement.advance_shot(def.speed);
+                    0
+                } else {
+                    enemy.movement.advance(def.speed)
+                };
+                if terminal_kami {
+                    if enemy.movement.y > 201
+                        || enemy.movement.x > 320 + enemy.width / 2
+                        || enemy.movement.y + enemy.width < 0
+                        || enemy.movement.x + enemy.width < 0
+                    {
+                        retired.push(enemy.entity);
+                    }
+                } else if enemy.movement.done && !def.path.is_empty() {
                     let count = def.path.len();
-                    if enemy.path_index >= count {
+                    if kamikaze {
+                        if enemy.kami == 1 {
+                            enemy.kami = 2;
+                        }
+                    } else if enemy.path_index >= count {
                         if def.repeat {
                             enemy.reversed = true;
                             enemy.path_index = count.saturating_sub(1);
-                        } else if def.legacy.as_ref().is_some_and(|l| l.fields[21] == 2)
-                            && enemy.kami < 2
-                        {
-                            enemy.kami += 1;
                         } else {
                             retired.push(enemy.entity);
                         }
@@ -740,7 +923,15 @@ impl World {
                         enemy.movement.initial();
                     }
                     enemy.movement.advance(left);
-                    if enemy.reversed {
+                    if kamikaze {
+                        // F_KAMI arms the chase when the last authored leg
+                        // starts, then aims at the player when that leg ends.
+                        if enemy.path_index < count - 1 {
+                            enemy.path_index += 1;
+                        } else if enemy.kami == 0 {
+                            enemy.kami = 1;
+                        }
+                    } else if enemy.reversed {
                         enemy.path_index = enemy.path_index.saturating_sub(1);
                         let min = def
                             .legacy
@@ -774,7 +965,11 @@ impl World {
                                 enemy.shootflag -= 1;
                                 if enemy.shootflag < 0 {
                                     enemy.shootflag = l.fields[3];
-                                    for gun in 0..l.fields[22].max(0) as usize {
+                                    for gun in 0..if enemy.shoot_disabled {
+                                        0
+                                    } else {
+                                        l.fields[22].max(0) as usize
+                                    } {
                                         shots.push((
                                             weapon.clone(),
                                             enemy.x + l.gun_x[gun] as i32,
@@ -841,8 +1036,9 @@ impl World {
                 continue;
             }
             if def.boss && enemy.health < 50 && (self.tick + 1) & 2 != 0 && def.legacy.is_some() {
-                self.rng.next_value();
-                self.rng.next_value();
+                let x = enemy.x + self.rng.next_value() % enemy.width.max(1);
+                let y = enemy.y + self.rng.next_value() % enemy.height.max(1);
+                original_effect(&mut self.effects, Effect::new(EffectKind::SmallAir, x, y));
             }
             if !def.ground && contains(enemy, self.player.x + 16, self.player.y + 16) {
                 enemy.health -= 16;
@@ -853,10 +1049,12 @@ impl World {
                     &mut self.rng,
                     &mut self.sounds,
                     &mut self.sound_events,
+                    self.legacy_transition && self.end_timer.is_some(),
                 );
                 if def.legacy.is_some() {
-                    self.rng.next_value();
-                    self.rng.next_value();
+                    let x = self.player.x + 16 + self.rng.next_value() % 8 - 4;
+                    let y = self.player.y + 16 + self.rng.next_value() % 8 - 4;
+                    original_effect(&mut self.effects, Effect::new(EffectKind::SmallAir, x, y));
                     play_legacy_sound(
                         &mut self.rng,
                         &mut self.sounds,
@@ -880,22 +1078,22 @@ impl World {
                         self.player.x + 16,
                         self.player.y + 16,
                     );
-                    let random_count = match legacy.fields[2] {
-                        2 | 6 => 2 * (enemy.width >> 4) * (enemy.height >> 4),
-                        4 => 3,
-                        5 => 3 * (enemy.width >> 4) * (enemy.height >> 4),
-                        _ => 0,
-                    };
-                    for _ in 0..random_count {
-                        self.rng.next_value();
-                    }
+                    death_effects(&mut self.effects, &mut self.rng, enemy, legacy.fields[2]);
+                } else {
+                    original_effect(
+                        &mut self.effects,
+                        Effect::new(
+                            if def.ground {
+                                EffectKind::GroundBlast
+                            } else {
+                                EffectKind::AirBlast
+                            },
+                            enemy.x + enemy.width / 2,
+                            enemy.y + enemy.height / 2,
+                        ),
+                    );
                 }
                 self.player.credits = self.player.credits.saturating_add(def.reward);
-                self.effects.push(Effect {
-                    x: enemy.x + enemy.width / 2,
-                    y: enemy.y + enemy.height / 2,
-                    age: 0,
-                });
                 events.push(HookEvent {
                     content: enemy.definition.clone(),
                     hook: "on_death",
@@ -945,6 +1143,16 @@ impl World {
         }
         self.events.extend(events);
         self.enemies.retain(|e| !retired.contains(&e.entity));
+        if self.legacy_transition
+            && mission.auto_complete
+            && !retired.is_empty()
+            && self.spawn_cursor == mission.spawns.len()
+            && self.enemies.is_empty()
+        {
+            // ENEMY_Remove arms departure before ESHOT_Think, so hostile
+            // shots on the final removal step cannot subtract energy.
+            self.end_timer = Some(60);
+        }
         for (id, x, y, legacy) in shots {
             if legacy.is_none_or(|(kind, _, _, _)| kind < 0)
                 || ((0..320).contains(&x) && (0..200).contains(&y))
@@ -990,6 +1198,7 @@ impl World {
                     &mut self.rng,
                     &mut self.sounds,
                     &mut self.sound_events,
+                    self.legacy_transition && self.end_timer.is_some(),
                 );
                 dead_shots.push(p.entity);
             }
@@ -1144,11 +1353,10 @@ impl World {
                                 .player
                                 .credits
                                 .saturating_add(mission.tiles[mission.layout[pos]].reward);
-                            self.effects.push(Effect {
-                                x: p.x,
-                                y: p.y,
-                                age: 0,
-                            });
+                            original_effect(
+                                &mut self.effects,
+                                Effect::new(EffectKind::GroundBlast, p.x, p.y),
+                            );
                         }
                     }
                 }
@@ -1161,24 +1369,28 @@ impl World {
                     || (p.x >= -32 && p.x <= 352 && p.y >= -64 && p.y <= 240 && p.age < 300))
         });
         for e in &mut self.effects {
+            e.px = e.x;
+            e.py = e.y;
             e.age += 1;
+            if e.ground && self.scroll != previous_scroll && e.age > 1 {
+                e.y += 1;
+            }
         }
-        self.effects.retain(|e| e.age < 20);
+        self.effects.retain(|e| e.age <= e.kind.artwork().1);
         self.tick += 1;
-        if self.player.shield <= 0 {
+        if self.legacy_transition {
+            if mission.auto_complete
+                && self.spawn_cursor == mission.spawns.len()
+                && self.enemies.is_empty()
+                && self.end_timer.is_none()
+                && !transition_finished
+            {
+                self.end_timer = Some(60);
+            }
+        } else if self.player.shield <= 0 {
             self.outcome = Outcome::Failed;
         } else if mission.auto_complete {
-            if mission.legacy_map.is_some() {
-                // ENEMY_Remove starts the original 60-tick departure only
-                // after the final spawn has been visited and all ships left.
-                if self.spawn_cursor == mission.spawns.len() && self.enemies.is_empty() {
-                    match self.end_timer {
-                        None => self.end_timer = Some(60),
-                        Some(0) => self.outcome = Outcome::Complete,
-                        Some(n) => self.end_timer = Some(n - 1),
-                    }
-                }
-            } else if self.tick >= mission.duration
+            if self.tick >= mission.duration
                 && self.spawn_cursor == mission.spawns.len()
                 && self
                     .enemies
@@ -1188,6 +1400,49 @@ impl World {
                 self.outcome = Outcome::Complete;
             }
         }
+        if mission.legacy_map.is_some() && self.tick >= 3 && self.tick % 2 == 1 {
+            // Palette index 254 consumes the original shared RNG, even when no frame is rendered.
+            self.palette_blue = self.rng.next_value() % 3 == 0;
+        }
+        if self.legacy_transition {
+            self.think_legacy_transition(transition_finished, input.demo_bank.is_some());
+        }
+        // RAP_ThinkStats follows palette simulation. A new hit at low energy
+        // destroys the equipped special, or the highest-numbered losable item.
+        // OBJS_LoseObj reports success even when no eligible item remains.
+        if self.player.shield <= 10
+            && self.player.shield < self.previous_shield
+            && self.player.super_shield < 1
+        {
+            let lost = self.player.selected.clone().or_else(|| {
+                self.player
+                    .inventory
+                    .keys()
+                    .filter_map(|id| {
+                        registry
+                            .items
+                            .get(id)
+                            .and_then(|item| item.legacy)
+                            .filter(|legacy| matches!(legacy, 1..=14 | 18..=23))
+                            .map(|legacy| (legacy, id.clone()))
+                    })
+                    .max()
+                    .map(|(_, id)| id)
+            });
+            if let Some(id) = lost {
+                let removed = self.player.inventory.remove(&id).is_some();
+                if removed && self.player.selected.as_ref() == Some(&id) {
+                    self.player.selected = next_special(&self.player, registry);
+                }
+            }
+            play_legacy_sound(
+                &mut self.rng,
+                &mut self.sounds,
+                &mut self.sound_events,
+                "FX_CRASH",
+            );
+        }
+        self.previous_shield = self.player.shield;
         self.event(self.mission.clone(),"on_tick",serde_json::json!({"tick":self.tick,"player_x":self.player.x,"player_y":self.player.y,"enemies":self.enemies.len()}));
         if self.outcome != Outcome::Playing {
             self.event(
@@ -1196,11 +1451,112 @@ impl World {
                 serde_json::json!({"success":self.outcome==Outcome::Complete,"tick":self.tick}),
             );
         }
-        if mission.legacy_map.is_some() && self.tick >= 3 && self.tick % 2 == 1 {
-            // Palette index 254 consumes the original shared RNG, even when no frame is rendered.
-            self.palette_blue = self.rng.next_value() % 3 == 0;
-        }
         Ok(())
+    }
+    fn think_legacy_transition(&mut self, finished: bool, demo: bool) {
+        if self.player.shield <= 0 {
+            // GCC evaluates the original ANIMS_StartAnim position arguments
+            // right-to-left: y consumes the first shared random value.
+            let y = self.player.y + self.rng.next_value() % 32;
+            let x = self.player.x + self.rng.next_value() % 32;
+            original_effect(&mut self.effects, Effect::new(EffectKind::MediumAir, x, y));
+            let y = self.player.y + self.rng.next_value() % 32;
+            let x = self.player.x + self.rng.next_value() % 32;
+            original_effect(&mut self.effects, Effect::new(EffectKind::SmallAir, x, y));
+            if self.end_timer.is_some_and(|timer| timer > 24) {
+                let pan = if self.rng.next_value() % 2 == 0 {
+                    30
+                } else {
+                    225
+                };
+                play_legacy_sound(
+                    &mut self.rng,
+                    &mut self.sounds,
+                    &mut self.sound_events,
+                    "FX_AIREXPLO",
+                );
+                if let Some(event) = self.sound_events.last_mut() {
+                    event.pan = pan;
+                }
+            }
+            if self.end_timer.is_none() {
+                self.end_timer = Some(60);
+            }
+            if self.end_timer == Some(24) {
+                self.draw_player = false;
+                play_legacy_sound(
+                    &mut self.rng,
+                    &mut self.sounds,
+                    &mut self.sound_events,
+                    "FX_AIREXPLO",
+                );
+                play_legacy_sound(
+                    &mut self.rng,
+                    &mut self.sounds,
+                    &mut self.sound_events,
+                    "FX_AIREXPLO2",
+                );
+                original_effect(
+                    &mut self.effects,
+                    Effect::new(EffectKind::LargeAir, self.player.x + 16, self.player.y + 16),
+                );
+                // Random positions are evaluated even after the animation pool
+                // fills, exactly as the original 512-effect request burst.
+                for index in 0..512 {
+                    let x = self.player.x - 16 + self.rng.next_value() % 32 * 2;
+                    let y = self.player.y - 16 + self.rng.next_value() % 32 * 2;
+                    let kind = if index & 1 != 0 {
+                        EffectKind::LargeAir
+                    } else {
+                        EffectKind::AirBlast
+                    };
+                    original_effect(&mut self.effects, Effect::new(kind, x, y).airborne());
+                }
+                play_legacy_sound(
+                    &mut self.rng,
+                    &mut self.sounds,
+                    &mut self.sound_events,
+                    "FX_AIREXPLO2",
+                );
+            }
+        } else if let Some(timer) = self.end_timer {
+            if timer == 40 {
+                self.control_paused = true;
+                self.departure_delta = [
+                    self.player.x - self.player.px,
+                    self.player.y - self.player.py,
+                ];
+                play_legacy_sound(
+                    &mut self.rng,
+                    &mut self.sounds,
+                    &mut self.sound_events,
+                    "FX_FLYBY",
+                );
+            }
+            if timer < 40 {
+                let dx = if self.player.x < 152 {
+                    8
+                } else if self.player.x > 168 {
+                    -8
+                } else {
+                    0
+                };
+                self.departure_delta = [dx, -4];
+                if !demo {
+                    let old_x = self.player.x;
+                    self.player.x += dx;
+                    self.player.y -= 4;
+                    bank_player(&mut self.player, old_x);
+                }
+            }
+        }
+        if finished {
+            self.outcome = if self.player.shield > 0 {
+                Outcome::Complete
+            } else {
+                Outcome::Failed
+            };
+        }
     }
     fn fire(&mut self, id: &ContentId, registry: &Registry) -> Result<()> {
         let Some(w) = registry.weapons.get(id) else {
@@ -1353,6 +1709,7 @@ impl World {
                             &mut self.rng,
                             &mut self.sounds,
                             &mut self.sound_events,
+                            self.legacy_transition && self.end_timer.is_some(),
                         );
                     }
                 } else {
@@ -1389,6 +1746,7 @@ impl World {
                         &mut self.rng,
                         &mut self.sounds,
                         &mut self.sound_events,
+                        self.legacy_transition && self.end_timer.is_some(),
                     );
                     retired.push(p.entity);
                 }
@@ -1472,11 +1830,10 @@ impl World {
                     position,
                     frames: 10,
                 });
-                self.effects.push(Effect {
-                    x: x + 16,
-                    y: y + 16,
-                    age: 0,
-                });
+                original_effect(
+                    &mut self.effects,
+                    Effect::new(EffectKind::GroundBlast, x + 16, y + 16),
+                );
                 // TILE_Explode changes its collision item immediately. Artwork waits
                 // for the delayed explosion and its second chain-damage pass.
                 self.terrain_dead[position] = true;
@@ -1581,6 +1938,23 @@ impl World {
             // A plotted shot tests its endpoint before retiring, even if MoveSobj
             // marked it done in the preceding step.
             if !skip_collision && !lib.effect {
+                // TILE_Bomb runs before ENEMY_DamageGround and affects both
+                // the hit tile and the original left/up/right neighbors.
+                if lib.target == 4 {
+                    if let Some(position) = self.legacy_tile_hit(p.x, p.y, registry) {
+                        self.terrain_health[position] -= weapon.damage;
+                        self.terrain_damage_neighbors(position, weapon.damage, registry);
+                        let columns = registry.missions[&self.mission].columns.max(1) as usize;
+                        if position > columns {
+                            self.terrain_damage_neighbors(
+                                position - columns,
+                                weapon.damage >> 1,
+                                registry,
+                            );
+                        }
+                        state.movement.done = true;
+                    }
+                }
                 let enemy = self
                     .enemies
                     .iter_mut()
@@ -1590,13 +1964,17 @@ impl World {
                         let ground = registry.enemies[&e.definition].ground;
                         contains(e, p.x, p.y)
                             && match lib.target {
-                                1 => !ground,
+                                1 | 5 => !ground,
                                 2 | 4 => ground,
                                 _ => true,
                             }
                     });
                 if let Some(enemy) = enemy {
-                    let damage = if lib.target == 4 { 5 } else { weapon.damage };
+                    let damage = match lib.target {
+                        4 => 5,
+                        5 => 1,
+                        _ => weapon.damage,
+                    };
                     enemy.health -= damage;
                     if self.difficulty == 0 && matches!(lib.target, 1 | 2) {
                         enemy.health -= damage;
@@ -1605,31 +1983,43 @@ impl World {
                     if matches!(lib.target, 0 | 1 | 3) {
                         self.rng.next_value();
                     }
+                    if lib.target == 5
+                        && registry.enemies[&enemy.definition]
+                            .legacy
+                            .as_ref()
+                            .is_some_and(|l| l.fields[5] != 0)
+                    {
+                        if enemy.energy_resistance > 0 {
+                            enemy.energy_resistance -= weapon.damage;
+                        } else {
+                            enemy.shoot_on = false;
+                            enemy.shoot_disabled = true;
+                            enemy.shootagain = -1;
+                            play_legacy_sound(
+                                &mut self.rng,
+                                &mut self.sounds,
+                                &mut self.sound_events,
+                                "FX_EGRAB",
+                            );
+                            position_sound(
+                                &mut self.sound_events,
+                                enemy.x + enemy.width / 2,
+                                enemy.y + enemy.width / 2,
+                                self.player.x + 16,
+                                self.player.y + 16,
+                            );
+                        }
+                    }
                     let entity = enemy.entity;
                     let enemy_id = enemy.definition.clone();
                     let health = enemy.health;
                     self.event(enemy_id,"on_hit",serde_json::json!({"entity":entity,"projectile":p.entity,"weapon":p.weapon,"damage":damage,"x":p.x,"y":p.y,"health":health}));
                     self.event(p.weapon.clone(),"on_hit",serde_json::json!({"entity":entity,"projectile":p.entity,"damage":damage,"x":p.x,"y":p.y}));
-                } else if matches!(lib.target, 0 | 2 | 4) {
-                    let mission = &registry.missions[&self.mission];
-                    let col = (p.x - 16).div_euclid(32);
-                    let row = (p.y
-                        + mission.layout.len() as i32 / mission.columns.max(1) as i32 * 32
-                        - 200
-                        - self.scroll)
-                        .div_euclid(32);
-                    if col >= 0 && col < mission.columns as i32 && row >= 0 {
-                        let pos = row as usize * mission.columns as usize + col as usize;
-                        if pos < self.terrain_health.len()
-                            && mission.tiles[mission.layout[pos]].destroyed.is_some()
-                            && !self.terrain_dead[pos]
-                        {
-                            self.terrain_health[pos] -= weapon.damage;
-                            if lib.target != 4 {
-                                self.rng.next_value();
-                            }
-                            state.movement.done = true;
-                        }
+                } else if matches!(lib.target, 0 | 2) {
+                    if let Some(position) = self.legacy_tile_hit(p.x, p.y, registry) {
+                        self.terrain_health[position] -= weapon.damage;
+                        self.rng.next_value();
+                        state.movement.done = true;
                     }
                 }
             }
@@ -1646,9 +2036,18 @@ impl World {
                     for enemy in &mut self.enemies {
                         enemy.health -= weapon.damage;
                     }
-                    for (health, dead) in self.terrain_health.iter_mut().zip(&self.terrain_dead) {
-                        if !dead {
-                            *health -= weapon.damage;
+                    let mission = &registry.missions[&self.mission];
+                    let columns = mission.columns.max(1) as usize;
+                    let (row, _) = self.terrain_window(registry);
+                    let start = row * columns;
+                    let end = (start + 8 * columns).min(mission.layout.len());
+                    // TILE_DamageAll uses a fixed 20 terrain damage and
+                    // includes the final visible tile, unlike TILE_IsHit.
+                    for position in start..end {
+                        if mission.tiles[mission.layout[position]].destroyed.is_some()
+                            && !self.terrain_dead[position]
+                        {
+                            self.terrain_health[position] -= 20;
                         }
                     }
                     retired.extend(
@@ -1680,6 +2079,26 @@ impl World {
         }
         self.projectiles.retain(|p| !retired.contains(&p.entity));
         Ok(())
+    }
+    fn legacy_tile_hit(&self, x: i32, y: i32, registry: &Registry) -> Option<usize> {
+        let mission = &registry.missions[&self.mission];
+        let columns = mission.columns.max(1) as usize;
+        let (row, y_offset) = self.terrain_window(registry);
+        let column = (x - 16).div_euclid(32);
+        let local_row = (y - y_offset).div_euclid(32);
+        if column < 0 || column >= columns as i32 || !(0..8).contains(&local_row) {
+            return None;
+        }
+        let slot = local_row as usize * columns + column as usize;
+        // The original TILE_IsHit/TILE_Bomb loop excludes lastspot itself.
+        if slot >= 8 * columns - 1 {
+            return None;
+        }
+        let position = row * columns + slot;
+        (position < mission.layout.len()
+            && mission.tiles[mission.layout[position]].destroyed.is_some()
+            && !self.terrain_dead[position])
+            .then_some(position)
     }
     fn fire_legacy(
         &mut self,
@@ -2005,6 +2424,7 @@ impl World {
                         &mut self.rng,
                         &mut self.sounds,
                         &mut self.sound_events,
+                        self.legacy_transition && self.end_timer.is_some(),
                     );
                 } else {
                     let e = self
@@ -2086,11 +2506,7 @@ impl World {
             }
             Command::Effect { x, y } => {
                 ensure!(self.effects.len() < 4096, "too many effects");
-                self.effects.push(Effect {
-                    x: *x,
-                    y: *y,
-                    age: 0,
-                });
+                self.effects.push(Effect::new(EffectKind::AirBlast, *x, *y));
             }
             Command::Sound { asset } => {
                 self.sounds.push(*asset);
@@ -2160,6 +2576,55 @@ impl World {
     pub fn reference_state(&self, registry: &Registry) -> serde_json::Value {
         serde_json::json!({"tick":self.tick,"rng":self.rng.seed,"player":[self.player.x,self.player.y,self.player.bank,self.player.shield,self.player.super_shield,self.player.credits],"enemies":self.enemies.iter().map(|e|serde_json::json!([registry.enemies[&e.definition].art.as_ref().and_then(|a|a.asset).unwrap_or(0),e.x,e.y,e.health,e.frame,e.movement.x,e.movement.y])).collect::<Vec<_>>(),"projectiles":self.projectiles.iter().filter(|p|p.hostile).chain(self.projectiles.iter().filter(|p|!p.hostile)).map(|p|serde_json::json!([Self::projectile_asset(p,registry).map(i64::from).unwrap_or(-1),p.x,p.y,p.hostile as u32])).collect::<Vec<_>>()})
     }
+}
+fn initial_shield_latch() -> i32 {
+    -1
+}
+fn visible_player() -> bool {
+    true
+}
+fn bank_player(player: &mut Player, old_x: i32) {
+    let delta = ((player.x - old_x).abs() >> 2).min(3);
+    if player.x < old_x {
+        if player.bank < 3 + delta {
+            player.bank += 1;
+        }
+    } else if player.x > old_x {
+        if player.bank > 3 - delta {
+            player.bank -= 1;
+        }
+    } else {
+        player.bank += (3 - player.bank).signum();
+    }
+}
+fn next_special(player: &Player, registry: &Registry) -> Option<ContentId> {
+    let mut specials: Vec<_> = player
+        .inventory
+        .iter()
+        .filter_map(|(id, count)| {
+            registry
+                .items
+                .get(id)
+                .filter(|item| *count > 0 && item.special)
+                .map(|item| ((item.legacy.unwrap_or(u32::MAX), id.clone()), id.clone()))
+        })
+        .collect();
+    specials.sort_by(|a, b| a.0.cmp(&b.0));
+    let after = player.selected.as_ref().map(|id| {
+        (
+            registry
+                .items
+                .get(id)
+                .and_then(|item| item.legacy)
+                .unwrap_or(u32::MAX),
+            id.clone(),
+        )
+    });
+    specials
+        .iter()
+        .find(|(key, _)| after.as_ref().is_none_or(|after| key > after))
+        .or_else(|| specials.first())
+        .map(|(_, id)| id.clone())
 }
 fn update_legacy_animation(enemy: &mut Enemy, lib: &crate::assets::LegacyEnemy) {
     let f = &lib.fields;
@@ -2269,7 +2734,11 @@ fn damage_player(
     rng: &mut LegacyRng,
     sounds: &mut Vec<u32>,
     events: &mut Vec<SoundEvent>,
+    immune: bool,
 ) {
+    if immune {
+        return;
+    }
     let damage = if difficulty == 0 && damage > 1 {
         damage >> 1
     } else {

@@ -28,8 +28,10 @@ repair kits, and the command ship arrives at step 720. Destroy at least two
 turrets and the command ship to finish. The boss stays in the playfield until
 killed; waiting out the mission duration cannot produce victory.
 
-The mission grants a trial Pulse Cannon, which fires alongside forward guns,
-and three field repairs. Cycle equipment to **Iron Coast Field Repair** and
+When inventory space allows, the mission grants a trial Pulse Cannon, which
+fires alongside forward guns, and three field repairs. Granted equipment
+remains with the pilot. A full inventory can still start; new grants are
+skipped while existing equipment is preserved. Cycle equipment to **Iron Coast Field Repair** and
 press the special button to restore 25 shield per repair. Depots drop extra
 repairs. Victory pays 5,000 credits plus ordinary enemy rewards. The central
 turrets and boss patrol overlap the starter-gun firing corridor; the mission
@@ -45,6 +47,7 @@ Script objectives are namespaced and saved with the pilot:
 | `iron_coast_boss:defeated` | Command ships destroyed |
 | `iron_coast_mission_1:depots_opened` | Supply depots destroyed |
 | `iron_coast_mission_1:complete` | All required targets destroyed |
+| `iron_coast_mission_1:trial_issued` | Trial weapon was granted or replenished |
 
 ## Art and audio
 
@@ -98,6 +101,32 @@ and actual headless runs through the scout waves and boss using starter guns
 and the trial Pulse Cannon. These tests use no original images and replace the
 generated assets with synthetic fixtures. Local package validation additionally checks
 the actual generated SD/HD images and WAV files.
+
+Release acceptance passes all six tests in **1.43 seconds**. Synthetic
+seven-package activation takes 0.179–0.290 seconds including fixture creation
+and PNG/WAV validation. Actual seven-package validation, including the generated
+SD/HD artwork and WAV files, passes in **2.234 seconds** with zero overrides.
+The two playable runs complete as follows:
+
+| Loadout | Completion step | Final shield | Credits |
+| --- | ---: | ---: | ---: |
+| Starter forward guns | 882 | 94 | 7,715 |
+| Trial Pulse Cannon plus forward guns | 786 | 92 | 7,715 |
+
+Both start at difficulty 2 with shield 100. The test holds fire, fixes the
+player at (144,160), selects field repairs on step 2 and presses the special
+button every 90 steps starting at step 61. The starter run removes the granted
+trial cannon after initial setup. Granted/dropped repairs heal through normal
+item callbacks; these runs use no direct shield refills, invulnerability,
+enemy damage commands or victory-objective mutations. They establish that
+the actual waves and boss can be completed under this controlled input, not
+that every normal-player route or loadout has been balanced.
+
+The default debug suite took 34.15 seconds for the earlier five-test version;
+the release result shows that its slowdown comes mainly from unoptimized
+simulation, serialization and scripting. PNG color memoization reduced the
+previous multi-minute asset validation overhead. Release measurements above
+exclude compilation.
 
 Visual approval remains provisional: sprite and terrain previews were
 inspected for readability, canvas alignment and transparency, with numeric

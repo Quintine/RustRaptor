@@ -502,6 +502,37 @@ fn missing_hook_does_not_advance_rng_or_state() {
 }
 
 #[test]
+fn saves_allow_added_mods_while_preserving_required_versions_and_order() {
+    let registry = base();
+    let pin = |id: &str| modding::ModPin {
+        id: id.into(),
+        version: "1.0.0".into(),
+        hash: format!("{id}-content"),
+    };
+    let a = pin("alpha");
+    let b = pin("beta");
+    let c = pin("extra");
+    let mut pilot = Pilot::default();
+    assert!(pilot.validate(&registry, &[a.clone(), b.clone()]).is_ok());
+    pilot.mods = vec![a.clone(), b.clone()];
+    pilot
+        .script_state
+        .insert("alpha/ai.rhai".into(), json!({"kills": 17}));
+    let dir = tempfile::tempdir().unwrap();
+    let path = dir.path().join("pilot.json");
+    pilot.save(&path).unwrap();
+    let before = fs::read(&path).unwrap();
+    let loaded = Pilot::load(&path, &registry, &[a.clone(), c, b.clone()]).unwrap();
+    assert_eq!(loaded.script_state, pilot.script_state);
+    assert!(Pilot::load(&path, &registry, &[b.clone(), a.clone()]).is_err());
+    assert!(Pilot::load(&path, &registry, &[a.clone()]).is_err());
+    let mut changed = b;
+    changed.version = "2.0.0".into();
+    assert!(Pilot::load(&path, &registry, &[a, changed]).is_err());
+    assert_eq!(fs::read(path).unwrap(), before);
+}
+
+#[test]
 fn incompatible_save_pins_and_disabled_equipment_do_not_modify_the_save() {
     let temp = tempfile::tempdir().unwrap();
     install(

@@ -24,11 +24,15 @@ const MISSION: &str = "iron_coast_mission_1:mission_01";
 
 fn base() -> Registry {
     let mut registry = Registry::default();
-    let pack:ContentPack=serde_json::from_value(json!({
+    let mut value = json!({
         "weapons":[{"id":"base:projectile_forward_guns","name":"Forward Guns","damage":1,"speed":8,"cooldown":2,"behavior":"straight","target":"all","legacy":0,"art":{"asset":42,"logical_width":4,"logical_height":8,"frames":4}}],
         "items":[{"id":"base:forward_guns","name":"Forward Guns","price":0,"max_count":1,"weapon":"base:projectile_forward_guns","legacy":0},{"id":"base:energy","name":"Shield","price":0,"max_count":100,"legacy":16}],
         "missions":[{"id":"base:sector_1_wave_1","name":"Base fixture","duration":1000}]
-    })).unwrap();
+    });
+    for n in 0..18 {
+        value["items"].as_array_mut().unwrap().push(json!({"id":format!("base:fixture_item_{n}"),"name":"Synthetic equipment","price":0,"max_count":1}));
+    }
+    let pack: ContentPack = serde_json::from_value(value).unwrap();
     registry.apply(pack, "base").unwrap();
     registry.validate().unwrap();
     registry
@@ -89,6 +93,7 @@ fn fixture_resources(value: &Value, root: &Path) {
 }
 
 fn active() -> (tempfile::TempDir, ActiveMods) {
+    let started = std::time::Instant::now();
     let temporary = tempfile::tempdir().unwrap();
     let source = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("examples/mods");
     for id in PACKAGES {
@@ -114,6 +119,10 @@ fn active() -> (tempfile::TempDir, ActiveMods) {
     assert!(discovery.errors.is_empty(), "{:?}", discovery.errors);
     let enabled = PACKAGES.iter().map(|s| s.to_string()).collect::<Vec<_>>();
     let active = ActiveMods::build(&base(), &discovery, &enabled, None).unwrap();
+    eprintln!(
+        "Iron Coast synthetic seven-package activation: {:.3}s",
+        started.elapsed().as_secs_f64()
+    );
     (temporary, active)
 }
 
@@ -210,7 +219,44 @@ fn play(use_trial: bool) -> (World, Vec<(u64, String)>) {
         let recovered: serde_json::Value = serde_json::from_str(&serialized).unwrap();
         assert_eq!(recovered["pulse_cannon/scripts/weapon.rhai"], *weapon_state);
     }
+    eprintln!(
+        "Iron Coast {} run: tick={} outcome={:?} shield={} credits={} repairs_remaining={}",
+        if use_trial {
+            "trial Pulse"
+        } else {
+            "starter guns"
+        },
+        world.tick,
+        world.outcome,
+        world.player.shield,
+        world.player.credits,
+        world
+            .player
+            .inventory
+            .get(&"iron_coast_mission_1:repair".into())
+            .copied()
+            .unwrap_or(0)
+    );
     (world, seen)
+}
+
+#[test]
+fn full_inventory_can_start_without_deleting_saved_equipment() {
+    let (_temporary, mut active) = active();
+    let mut pilot = Pilot::default();
+    for n in 0..18 {
+        pilot
+            .inventory
+            .insert(format!("base:fixture_item_{n}").as_str().into(), 1);
+    }
+    assert_eq!(pilot.inventory.len(), 20);
+    let mut world = World::new(&MISSION.into(), &pilot, &active.registry).unwrap();
+    world
+        .step(Input::default(), &active.registry, &mut active.scripts)
+        .unwrap();
+    assert_eq!(world.player.inventory, pilot.inventory);
+    assert_eq!(world.objectives["iron_coast_mission_1:trial_issued"], 0);
+    assert_eq!(world.outcome, Outcome::Playing);
 }
 
 #[test]

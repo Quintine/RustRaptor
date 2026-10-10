@@ -402,11 +402,19 @@ impl Pilot {
             p.difficulty <= 3 && p.inventory.len() <= 20,
             "invalid pilot difficulty/inventory"
         );
-        ensure!(
-            p.mods == pins,
-            "save requires these mod versions/content: {:?}; enable the matching mods in the Mods screen",
-            p.mods
-        );
+        let mut cursor = 0;
+        for required in &p.mods {
+            let position = pins[cursor..].iter().position(|pin| pin.id == required.id)
+                .with_context(|| format!("save requires mod {} {}; enable the matching mods in the saved load order in the Mods screen", required.id, required.version))? + cursor;
+            ensure!(
+                pins[position] == *required,
+                "save requires unchanged mod {} {} (content hash {}); restore that version/content or select another pilot",
+                required.id,
+                required.version,
+                required.hash
+            );
+            cursor = position + 1;
+        }
         ensure!(
             registry.missions.contains_key(&p.mission),
             "save mission {} is unavailable",

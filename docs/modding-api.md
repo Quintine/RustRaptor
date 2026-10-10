@@ -19,7 +19,7 @@ cargo run --no-default-features -- --data data --mods examples/mods \
   --enabled aurora --headless aurora:field_trials --ticks 700
 ```
 
-For the in-game manager, copy `examples/mods/aurora` into the `mods/` directory under `$XDG_DATA_HOME/RaptorReplica` (default `~/.local/share/RaptorReplica/mods/`), or start the Rust engine with `--mods examples/mods`. Open **Mods**, toggle Aurora, then select **Apply selections**. Select its mission from the mission menu. Mods alter the active content set; existing pilots retain the exact mod versions and hashes required by their saves. Use a separate new pilot when trying a different set of mods.
+For the in-game manager, copy `examples/mods/aurora` into the `mods/` directory under `$XDG_DATA_HOME/RaptorReplica` (default `~/.local/share/RaptorReplica/mods/`), or start the Rust engine with `--mods examples/mods`. Open **Mods**, toggle Aurora, then select **Apply selections**. Select its mission from the mission menu. Existing pilots can add mods while preserving required versions, hashes and relative load order; the next save records the expanded active set. Disabling, changing or reordering required mods blocks loading with details. Use another pilot for an incompatible set.
 
 In the Mods screen, Enter toggles a package or activates the selected action. Rescan after editing a package on disk. Load dependencies before dependents; independent packages retain your chosen priority. Later explicit overrides win. Changes made through the pause menu remain pending until the main menu. Candidate registries and scripts are validated before the active set changes.
 

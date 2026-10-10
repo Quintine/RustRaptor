@@ -20,9 +20,14 @@ fn run() -> Result<()> {
             .position(|s| s == key)
             .and_then(|i| args.get(i + 1))
     };
+    let benchmark = args.iter().any(|a| a == "--benchmark");
+    anyhow::ensure!(
+        !benchmark || arg("--smoke-frames").is_some(),
+        "--benchmark requires --smoke-frames"
+    );
     if args.iter().any(|a| a == "--help" || a == "-h") {
         println!(
-            "raptor-rust [--data DIR] [--mods DIR]\n  --verify-assets             Check catalog and all original mission definitions\n  --validate-mods ID,...      Validate selected local mod packages\n  --schemas DIR              Write mod API JSON schemas\n  --headless MISSION --ticks N  Deterministic simulation smoke run\n  --replay ASSET_NAME --trace FILE  Record legacy demo simulation states\n  --import-legacy FILE --output FILE\n  --smoke-frames N             Exit desktop after N rendered frames\n  --screenshot FILE           Save the final desktop frame as PNG\n  --preview-mission ID         Start a mission directly\n  --preview-cinematic KIND     intro, landing, death, end1, end2, end3\n  --profile-root DIR           Use a separate pilot/config/cache directory\n  --enabled ID,...             Enable mods for headless/replay commands"
+            "raptor-rust [--data DIR] [--mods DIR]\n  --verify-assets             Check catalog and all original mission definitions\n  --validate-mods ID,...      Validate selected local mod packages\n  --schemas DIR              Write mod API JSON schemas\n  --headless MISSION --ticks N  Deterministic simulation smoke run\n  --replay ASSET_NAME --trace FILE  Record legacy demo simulation states\n  --import-legacy FILE --output FILE\n  --smoke-frames N             Exit desktop after N rendered frames\n  --benchmark                 Report startup and frame timings (with --smoke-frames)\n  --screenshot FILE           Save the final desktop frame as PNG\n  --preview-mission ID         Start a mission directly\n  --preview-cinematic KIND     intro, landing, death, end1, end2, end3\n  --profile-root DIR           Use a separate pilot/config/cache directory\n  --enabled ID,...             Enable mods for headless/replay commands"
         );
         return Ok(());
     }
@@ -187,6 +192,7 @@ fn run() -> Result<()> {
                 .map(|s| ContentId::new(s))
                 .transpose()?,
             movie,
+            benchmark,
         )?;
     }
     #[cfg(not(feature = "desktop"))]

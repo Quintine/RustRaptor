@@ -1,12 +1,24 @@
 fn on_mission_start(event, state, random) {
-    #{commands:[
-        #{op:"give_item", item:"pulse_cannon:equipment", count:1},
-        #{op:"give_item", item:"iron_coast_mission_1:repair", count:3},
+    let commands=[
         #{op:"objective", key:"iron_coast_mission_1:phase", value:1},
         #{op:"objective", key:"iron_coast_mission_1:turrets_required", value:2},
         #{op:"objective", key:"iron_coast_mission_1:complete", value:0},
         #{op:"play_sound", sound:"iron_coast_mission_1:approach"}
-    ],state:#{dock_alarm:false,boss_alarm:false,complete:false}}
+    ];
+    // A full veteran inventory must not prevent a mission from starting.
+    // Existing equipment may receive its normal refill without adding a slot.
+    let slots=event.player.inventory.len();
+    if event.player.inventory.contains("iron_coast_mission_1:repair") || slots<20 {
+        commands.push(#{op:"give_item",item:"iron_coast_mission_1:repair",count:3});
+        if !event.player.inventory.contains("iron_coast_mission_1:repair") {slots+=1;}
+    }
+    let trial=0;
+    if event.player.inventory.contains("pulse_cannon:equipment") || slots<20 {
+        commands.push(#{op:"give_item",item:"pulse_cannon:equipment",count:1});
+        trial=1;
+    }
+    commands.push(#{op:"objective",key:"iron_coast_mission_1:trial_issued",value:trial});
+    #{commands:commands,state:#{dock_alarm:false,boss_alarm:false,complete:false}}
 }
 
 fn on_tick(event, state, random) {

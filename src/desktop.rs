@@ -7,7 +7,10 @@ use crate::{
     hd::HdAssets,
     modding::{self, ActiveMods, Discovery},
     persistence::{Config, Paths, Pilot},
-    render::{BitmapFont, Canvas, SpriteCache, nearest, upscale},
+    render::{
+        BitmapFont, Canvas, SpriteCache, legacy_light_table, nearest, prefers_nearest,
+        shade_air_shadow, shade_ground_shadow, upscale,
+    },
     simulation::{Clock, Input, Outcome, World},
 };
 use anyhow::{Context, Result, anyhow};
@@ -79,6 +82,8 @@ struct Host {
     raw: BTreeMap<u32, Sprite>,
     mod_art: BTreeMap<String, Sprite>,
     palette: [[u8; 3]; 256],
+    shadow_table: [u8; 256],
+    air_shadow_table: [u8; 256],
     audio: Option<AudioDevice<Mixer>>,
     mod_audio: BTreeMap<ContentId, DigitalSample>,
     desired_music: Option<u32>,
@@ -133,6 +138,9 @@ impl Host {
         restore_scripts(&mut active.scripts, &pilot);
         let hd = HdAssets::load(&catalog.root.join("hd"), &catalog);
         let palette = catalog.palette()?;
+        let vga_palette = palette.map(|color| color.map(|component| component >> 2));
+        let shadow_table = legacy_light_table(&vga_palette, -9);
+        let air_shadow_table = legacy_light_table(&vga_palette, -6);
         let font = BitmapFont::decode(&catalog.named("SYSTEM_FNT")?)?;
         let cache = SpriteCache::new(Some(paths.cache.join("sprites")));
         let pending = config.enabled_mods.clone();
@@ -165,6 +173,8 @@ impl Host {
             raw: BTreeMap::new(),
             mod_art: BTreeMap::new(),
             palette,
+            shadow_table,
+            air_shadow_table,
             audio: None,
             mod_audio: BTreeMap::new(),
             desired_music: None,
@@ -190,6 +200,7 @@ impl Host {
         self.pilot.script_rng = self.active.scripts.rng.clone();
         self.pilot
             .validate(&self.active.registry, &self.active.pins)?;
+        self.pilot.mods = self.active.pins.clone();
         self.pilot.save(&self.paths.save_path(self.slot))?;
         self.save_config()
     }
@@ -903,7 +914,11 @@ impl Host {
         let scaled = if sprite.width == art.logical_width as usize
             && sprite.height == art.logical_height as usize
         {
-            self.cache.get(&sprite, canvas.scale, art.nearest)?.clone()
+            let pixelated = art.nearest
+                || art
+                    .asset
+                    .is_some_and(|id| prefers_nearest(id + frame % art.frames));
+            self.cache.get(&sprite, canvas.scale, pixelated)?.clone()
         } else {
             let mut out = Sprite::blank(
                 art.logical_width as usize * canvas.scale,
@@ -935,6 +950,143 @@ impl Host {
                 self.mod_art.clear();
             }
             self.mod_art.insert(key, scaled);
+        }
+        Ok(())
+    }
+    fn shadow(
+        &mut self,
+        canvas: &mut Canvas,
+        art: &Art,
+        owner: &str,
+        frame: u32,
+        x: f32,
+        y: f32,
+        ground: bool,
+    ) -> Result<()> {
+        // Original masks retain their native canvas even when HD art is enabled.
+        // Mod masks use the supplied SD artwork and explicit logical dimensions.
+        let source = if let Some(asset) = art.asset {
+            self.raw(asset + frame % art.frames)?
+        } else {
+            art_sprite_variant(
+                &self.catalog,
+                &self.active.registry,
+                owner,
+                art,
+                frame,
+                false,
+            )?
+        };
+        let mask = if (source.width, source.height)
+            == (art.logical_width as usize, art.logical_height as usize)
+        {
+            source
+        } else {
+            let mut logical =
+                Sprite::blank(art.logical_width as usize, art.logical_height as usize);
+            for row in 0..logical.height {
+                for column in 0..logical.width {
+                    logical.pixels[row * logical.width + column] =
+                        source.pixels[(row * source.height / logical.height) * source.width
+                            + column * source.width / logical.width];
+                }
+            }
+            logical
+        };
+        if ground {
+            shade_ground_shadow(canvas, &mask, x, y, &self.shadow_table);
+        } else {
+            shade_air_shadow(canvas, &mask, x, y, &self.air_shadow_table);
+        }
+        Ok(())
+    }
+    fn projectiles(
+        &mut self,
+        canvas: &mut Canvas,
+        world: &World,
+        hostile: bool,
+        alpha: f32,
+    ) -> Result<()> {
+        for p in world.projectiles.iter().filter(|p| p.hostile == hostile) {
+            let def = self.active.registry.weapons[&p.weapon].clone();
+            let x = p.px as f32 + (p.x - p.px) as f32 * alpha;
+            let y = p.py as f32 + (p.y - p.py) as f32 * alpha;
+            if p.legacy.is_some() || p.legacy_enemy.is_some() {
+                if let Some(asset) = World::projectile_asset(p, &self.active.registry) {
+                    let frame = if let Some(shot) = &p.legacy_enemy {
+                        shot.art_frame % shot.frames.max(1)
+                    } else {
+                        p.legacy.as_ref().map_or(0, |shot| shot.art_frame)
+                    };
+                    let original = self.raw(asset + frame)?;
+                    let hd = if self.config.hd_mode {
+                        self.hd.sprite(asset + frame, canvas.scale, &self.palette)?
+                    } else {
+                        None
+                    };
+                    let sprite = match hd {
+                        Some(sprite) => sprite,
+                        None => self
+                            .cache
+                            .get(&original, canvas.scale, prefers_nearest(asset + frame))?
+                            .clone(),
+                    };
+                    canvas.blit(
+                        &sprite,
+                        (x * canvas.scale as f32).round() as i32,
+                        (y * canvas.scale as f32).round() as i32,
+                    );
+                }
+            } else if matches!(def.behavior, crate::content::WeaponBehavior::Beam) {
+                canvas.rect(x as i32, 0, 2, world.player.y, 255);
+            } else if let Some(art) = def.art {
+                let owner = self.active.registry.owners[&p.weapon].clone();
+                self.art(
+                    canvas,
+                    &art,
+                    &owner,
+                    p.age / 2,
+                    x - art.logical_width as f32 / 2.0,
+                    y - art.logical_height as f32 / 2.0,
+                )?;
+            } else {
+                canvas.rect(x as i32, y as i32, 2, 4, if p.hostile { 34 } else { 255 });
+            }
+        }
+        Ok(())
+    }
+    fn effects(
+        &mut self,
+        canvas: &mut Canvas,
+        world: &World,
+        ground: bool,
+        alpha: f32,
+    ) -> Result<()> {
+        for effect in world.effects.iter().filter(|e| e.ground == ground) {
+            let (asset, frames) = effect.kind.artwork();
+            let frame = effect.age.saturating_sub(1).min(frames - 1);
+            let original = self.raw(asset + frame)?;
+            let hd = if self.config.hd_mode {
+                self.hd.sprite(asset + frame, canvas.scale, &self.palette)?
+            } else {
+                None
+            };
+            let sprite = match hd {
+                Some(sprite) => sprite,
+                None => self
+                    .cache
+                    .get(&original, canvas.scale, prefers_nearest(asset + frame))?
+                    .clone(),
+            };
+            let x = effect.px as f32 + (effect.x - effect.px) as f32 * alpha
+                - original.width as f32 / 2.0;
+            let y = effect.py as f32 + (effect.y - effect.py) as f32 * alpha
+                - original.height as f32 / 2.0;
+            canvas.blit(
+                &sprite,
+                (x * canvas.scale as f32).round() as i32,
+                (y * canvas.scale as f32).round() as i32,
+            );
         }
         Ok(())
     }
@@ -1039,7 +1191,66 @@ impl Host {
                 }
             }
         }
+        let dark = matches!(
+            world.mission.0.as_str(),
+            "base:sector_2_wave_8" | "base:sector_3_wave_3"
+        );
+        let player = self.catalog.id(if dark {
+            if world.player_flash {
+                "FPLAYER_PIC"
+            } else {
+                "DPLAYER_PIC"
+            }
+        } else {
+            "LPLAYER_PIC"
+        })?;
+        let player_frame = player + world.player.bank.clamp(0, 6) as u32;
         for ground in [true, false] {
+            let mut shadows = 0;
+            for e in &world.enemies {
+                let def = self.active.registry.enemies[&e.definition].clone();
+                if def.ground != ground
+                    || def
+                        .legacy
+                        .as_ref()
+                        .is_some_and(|legacy| legacy.fields[11] == 0)
+                {
+                    continue;
+                }
+                if shadows >= if ground { 25 } else { 50 } {
+                    break;
+                }
+                if let Some(art) = def.art {
+                    let owner = self.active.registry.owners[&e.definition].clone();
+                    self.shadow(
+                        canvas,
+                        &art,
+                        &owner,
+                        if def.legacy.is_some() {
+                            e.art_frame
+                        } else {
+                            e.frame
+                        },
+                        interp(e.x, e.px),
+                        interp(e.y, e.py),
+                        ground,
+                    )?;
+                    shadows += 1;
+                }
+            }
+            if !ground && shadows < 50 && world.draw_player {
+                let mask = self.raw(player_frame)?;
+                shade_air_shadow(
+                    canvas,
+                    &mask,
+                    interp(world.player.x, world.player.px),
+                    interp(world.player.y, world.player.py),
+                    &self.air_shadow_table,
+                );
+            }
+            if !ground {
+                self.effects(canvas, &world, true, alpha)?;
+            }
             for e in &world.enemies {
                 let def = self.active.registry.enemies[&e.definition].clone();
                 if def.ground != ground {
@@ -1062,80 +1273,24 @@ impl Host {
                 }
             }
         }
-        for p in &world.projectiles {
-            let def = self.active.registry.weapons[&p.weapon].clone();
-            let x = interp(p.x, p.px);
-            let y = interp(p.y, p.py);
-            if p.legacy.is_some() || p.legacy_enemy.is_some() {
-                if let Some(asset) = World::projectile_asset(p, &self.active.registry) {
-                    let frame = if let Some(shot) = &p.legacy_enemy {
-                        shot.art_frame % shot.frames.max(1)
-                    } else {
-                        p.legacy.as_ref().map_or(0, |shot| shot.art_frame)
-                    };
-                    let original = self.raw(asset + frame)?;
-                    let hd = if self.config.hd_mode {
-                        self.hd.sprite(asset + frame, canvas.scale, &self.palette)?
-                    } else {
-                        None
-                    };
-                    let sprite = match hd {
-                        Some(sprite) => sprite,
-                        None => self.cache.get(&original, canvas.scale, false)?.clone(),
-                    };
-                    canvas.blit(
-                        &sprite,
-                        (x * canvas.scale as f32).round() as i32,
-                        (y * canvas.scale as f32).round() as i32,
-                    );
-                }
-                continue;
-            }
-            if matches!(def.behavior, crate::content::WeaponBehavior::Beam) {
-                canvas.rect(x as i32, 0, 2, world.player.y, 255);
-            } else if let Some(art) = def.art {
-                let owner = self.active.registry.owners[&p.weapon].clone();
-                self.art(
-                    canvas,
-                    &art,
-                    &owner,
-                    p.age / 2,
-                    x - art.logical_width as f32 / 2.0,
-                    y - art.logical_height as f32 / 2.0,
-                )?;
+        self.projectiles(canvas, &world, false, alpha)?;
+        if world.draw_player {
+            let s = self.raw(player_frame)?;
+            let hd = if self.config.hd_mode {
+                self.hd.sprite(player_frame, canvas.scale, &self.palette)?
             } else {
-                canvas.rect(x as i32, y as i32, 2, 4, if p.hostile { 34 } else { 255 });
-            }
+                None
+            };
+            let scaled = match hd {
+                Some(sprite) => sprite,
+                None => self.cache.get(&s, canvas.scale, false)?.clone(),
+            };
+            canvas.blit(
+                &scaled,
+                (interp(world.player.x, world.player.px) * canvas.scale as f32) as i32,
+                (interp(world.player.y, world.player.py) * canvas.scale as f32) as i32,
+            );
         }
-        let dark = matches!(
-            world.mission.0.as_str(),
-            "base:sector_2_wave_8" | "base:sector_3_wave_3"
-        );
-        let player = self.catalog.id(if dark {
-            if world.player_flash {
-                "FPLAYER_PIC"
-            } else {
-                "DPLAYER_PIC"
-            }
-        } else {
-            "LPLAYER_PIC"
-        })?;
-        let player_frame = player + world.player.bank.clamp(0, 6) as u32;
-        let s = self.raw(player_frame)?;
-        let hd = if self.config.hd_mode {
-            self.hd.sprite(player_frame, canvas.scale, &self.palette)?
-        } else {
-            None
-        };
-        let scaled = match hd {
-            Some(sprite) => sprite,
-            None => self.cache.get(&s, canvas.scale, false)?.clone(),
-        };
-        canvas.blit(
-            &scaled,
-            (interp(world.player.x, world.player.px) * canvas.scale as f32) as i32,
-            (interp(world.player.y, world.player.py) * canvas.scale as f32) as i32,
-        );
         for pickup in &world.pickups {
             if pickup
                 .legacy
@@ -1168,26 +1323,8 @@ impl Host {
                 )?;
             }
         }
-        for effect in &world.effects {
-            if let Ok(id) = self.catalog.id("AIRMED_BLK") {
-                if let Ok(s) = self.raw(id + effect.age as u32 / 2) {
-                    let scaled = self.cache.get(&s, canvas.scale, false)?.clone();
-                    canvas.blit(
-                        &scaled,
-                        (effect.x - s.width as i32 / 2) * canvas.scale as i32,
-                        (effect.y - s.height as i32 / 2) * canvas.scale as i32,
-                    );
-                }
-            } else {
-                canvas.rect(
-                    effect.x - effect.age as i32 / 2,
-                    effect.y - 2,
-                    effect.age as i32 + 2,
-                    4,
-                    50,
-                );
-            }
-        }
+        self.effects(canvas, &world, false, alpha)?;
+        self.projectiles(canvas, &world, true, alpha)?;
         // The original shield bars sit beside the playfield. A full-width
         // bottom panel would cover the player's engines at its initial y=160.
         canvas.rect(0, 0, 16, 200, 0);
@@ -1463,7 +1600,9 @@ pub fn run(
     screenshot: Option<PathBuf>,
     preview: Option<ContentId>,
     movie_preview: Option<MovieKind>,
+    benchmark: bool,
 ) -> Result<()> {
+    let setup_start = Instant::now();
     let mut host = Host::new(catalog, base, paths, mods_root, frames.is_some())?;
     if let Some(id) = preview {
         if frames.is_some() {
@@ -1541,11 +1680,15 @@ pub fn run(
         host.music("MAINMENU_MUS");
     }
     let mut previous = Instant::now();
+    let setup_ms = setup_start.elapsed().as_secs_f64() * 1000.0;
+    let mut work_times = Vec::new();
+    let mut frame_times = Vec::new();
     let mut count = 0u32;
     let mut cycle = false;
     let mut bomb = false;
     let mut quit = false;
     while !quit {
+        let frame_start = Instant::now();
         for event in events.poll_iter() {
             match event {
                 Event::Quit { .. } => quit = true,
@@ -1868,7 +2011,12 @@ pub fn run(
                 image::save_buffer(path, &presented, w, h, image::ColorType::Rgba8)?;
             }
         }
+        let work_ms = frame_start.elapsed().as_secs_f64() * 1000.0;
         canvas.present();
+        if benchmark && count >= 5 && !frames.is_some_and(|n| count + 1 >= n) {
+            work_times.push(work_ms);
+            frame_times.push(frame_start.elapsed().as_secs_f64() * 1000.0);
+        }
         count += 1;
         if frames.is_some_and(|n| count >= n) {
             quit = true;
@@ -1876,6 +2024,24 @@ pub fn run(
         if frames.is_some() {
             std::thread::sleep(Duration::from_millis(1));
         }
+    }
+    if benchmark && !work_times.is_empty() {
+        work_times.sort_by(f64::total_cmp);
+        frame_times.sort_by(f64::total_cmp);
+        let percentile = |values: &[f64], p: usize| values[(values.len() - 1) * p / 100];
+        println!(
+            "benchmark renderer={} size={}x{} scale={} hd={} startup_ms={setup_ms:.2} samples={} work_p50_ms={:.2} work_p95_ms={:.2} frame_p50_ms={:.2} frame_p95_ms={:.2}",
+            canvas.info().name,
+            host.config.width,
+            host.config.height,
+            host.config.scale,
+            host.config.hd_mode,
+            work_times.len(),
+            percentile(&work_times, 50),
+            percentile(&work_times, 95),
+            percentile(&frame_times, 50),
+            percentile(&frame_times, 95)
+        );
     }
     if frames.is_none() {
         host.config.save(&host.paths)?;

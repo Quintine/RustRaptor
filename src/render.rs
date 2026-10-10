@@ -4,6 +4,12 @@ use anyhow::{Result, ensure};
 use sha2::{Digest, Sha256};
 use std::{collections::BTreeMap, fs, path::PathBuf};
 
+/// Original tiny gun rounds and sparse final ground-explosion embers lose
+/// important pixels under edge filtering; preserve their exact pixel area.
+pub fn prefers_nearest(asset: u32) -> bool {
+    matches!(asset, 0x101c3..=0x101c6 | 0x10178..=0x1018d)
+}
+
 pub fn upscale(sprite: &Sprite, factor: usize) -> Result<Sprite> {
     ensure!(
         matches!(factor, 1 | 2 | 3 | 4),
@@ -109,6 +115,95 @@ pub fn nearest(sprite: &Sprite, factor: usize) -> Sprite {
         }
     }
     out
+}
+
+/// Original VGA light/dark lookup. Inputs are six-bit RGB components, not SDL
+/// eight-bit colors. GFX_Remap uses Manhattan distance and the last equal match.
+pub fn legacy_light_table(palette: &[[u8; 3]; 256], level: i32) -> [u8; 256] {
+    std::array::from_fn(|index| {
+        let target = palette[index].map(|component| (component as i32 + level).clamp(0, 63));
+        let mut best = 0;
+        let mut distance = i32::MAX;
+        for (candidate, color) in palette.iter().enumerate() {
+            let difference: i32 = (0..3)
+                .map(|channel| (color[channel] as i32 - target[channel]).abs())
+                .sum();
+            if difference <= distance {
+                best = candidate as u8;
+                distance = difference;
+            }
+        }
+        best
+    })
+}
+
+/// SHADOW_GAdd / GFX_ShadeShape: preserve native mask spans at offset (-3,+4).
+pub fn shade_ground_shadow(canvas: &mut Canvas, mask: &Sprite, x: f32, y: f32, table: &[u8; 256]) {
+    let scaled = nearest(mask, canvas.scale);
+    canvas.shade(
+        &scaled,
+        ((x - 3.0) * canvas.scale as f32).round() as i32,
+        ((y + 4.0) * canvas.scale as f32).round() as i32,
+        table,
+    );
+}
+
+fn shadow_project(coordinate: i32, center: i32) -> i32 {
+    // GFX_3DPoint: view=(160,100,1000), objectZ=1280, distance=200.
+    // Keep division before arithmetic shift; negative coordinates round down
+    // after the original signed integer division.
+    ((((coordinate as i64 - center as i64) * (200 << 11)) / 280) >> 11) as i32 + center
+}
+
+/// SHADOW_Draw's projected horizontal spans, with duplicate projected rows
+/// suppressed. Fractional positions translate the indexed mask smoothly on the
+/// high-resolution canvas; integer positions retain the original projection.
+pub fn shade_air_shadow(canvas: &mut Canvas, mask: &Sprite, x: f32, y: f32, table: &[u8; 256]) {
+    let base_x = x.floor() as i32 - 10;
+    let base_y = y.floor() as i32 + 20;
+    let fraction_x = (x - x.floor()) * (5.0 / 7.0);
+    let fraction_y = (y - y.floor()) * (5.0 / 7.0);
+    let scale = canvas.scale as f32;
+    let mut previous_row = None;
+    for row in 0..mask.height {
+        let source = &mask.pixels[row * mask.width..(row + 1) * mask.width];
+        if source.iter().all(|pixel| *pixel == TRANSPARENT) {
+            continue;
+        }
+        let projected_y = shadow_project(base_y + row as i32, 100);
+        if previous_row == Some(projected_y) {
+            continue;
+        }
+        previous_row = Some(projected_y);
+        let top = ((projected_y as f32 + fraction_y) * scale).round() as i32;
+        let bottom = ((projected_y as f32 + 1.0 + fraction_y) * scale).round() as i32;
+        let mut column = 0;
+        while column < mask.width {
+            if source[column] == TRANSPARENT {
+                column += 1;
+                continue;
+            }
+            let start = column;
+            while column < mask.width && source[column] != TRANSPARENT {
+                column += 1;
+            }
+            let left = ((shadow_project(base_x + start as i32, 160) as f32 + fraction_x) * scale)
+                .round() as i32;
+            let right =
+                ((shadow_project(base_x + column as i32 - 1, 160) as f32 + 1.0 + fraction_x)
+                    * scale)
+                    .round() as i32;
+            for yy in top.max(0)..bottom.min(canvas.image.height as i32) {
+                for xx in left.max(0)..right.min(canvas.image.width as i32) {
+                    let pixel =
+                        &mut canvas.image.pixels[yy as usize * canvas.image.width + xx as usize];
+                    if *pixel < 256 {
+                        *pixel = table[*pixel as usize] as u16;
+                    }
+                }
+            }
+        }
+    }
 }
 pub struct SpriteCache {
     memory: BTreeMap<String, Sprite>,
