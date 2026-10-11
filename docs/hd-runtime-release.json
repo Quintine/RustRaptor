@@ -1,44 +1,45 @@
 {
   "format_version": 1,
-  "status": "approved_2240_artwork_bundled_archive_execution_visual_review_and_native_ci_passed",
+  "status": "approved_2354_artwork_bundled_and_CLI_validated_successor_native_CI_pending",
   "release_scope": "Shared Linux and Windows original-content artwork with reviewed bounded HD loader fixes; simulation and mod content unchanged",
   "assembly": {
-    "approved_hd_frames": 2240,
-    "complete_sequences": 952,
+    "approved_hd_frames": 2354,
+    "complete_sequences": 970,
     "terrain_frames": 1376,
-    "remaining_original_pictures": 3513,
-    "handoff_manifest_sha256": "447a24c45af2a5e439e852336783f7a226ffbcc25a25de0fa793c96c45430f03",
-    "handoff_files": 1043,
-    "handoff_bytes": 2565869827,
-    "hd_manifest_sha256": "0442503bb6408fe354e2d345caa59f8f04e6422b190ead2f966cfd95230a0d5e",
-    "provenance_sha256": "cdf2288064cc135083754937af7902dd7d5cc348d30c6fdf9bac7db8a376d923",
+    "remaining_original_pictures": 3399,
+    "handoff_manifest_sha256": "8358fbade1bc37b4699745da9e5b89337497fa3d6dd6f2bba17bfc379541aed1",
+    "handoff_files": 1086,
+    "handoff_bytes": 2603556479,
+    "hd_manifest_sha256": "671561c6b9f18c4f3165eb25bd934dcded7a49c89f5896548e86538094a9fa88",
+    "provenance_sha256": "1d69d431a5d9cdfb1cbf282a6b6860915d0912a4ebb3bf284eb23a8eef425652",
     "baseline_1148_bindings_unchanged": true,
-    "data_files": 7493,
-    "data_bytes": 2579052685,
+    "data_files": 7536,
+    "data_bytes": 2616739337,
     "binary_sha256": "9688cdbd57b0d31049bac431a5bb2e864bb3ce7abbaca732634359ad7a53d8a9",
     "windows_binary_sha256": "ad2ee7f5cc8e90ea371eccf2a509cd99263c6c880a6d42e2886cdc017c24561b",
     "original_catalog_assets_unchanged": true,
     "other_rust_sources_unchanged": true,
-    "carried_2132_bindings_unchanged": true
+    "carried_2132_bindings_unchanged": true,
+    "carried_2240_bindings_unchanged": true
   },
   "validation": [
     {
       "case": "verify-assets",
-      "seconds": 0.16,
+      "seconds": 0.25,
       "output": "Verified 6449 assets; 27 missions, 528 enemies, 16 weapons, 24 items\n",
       "stderr": "",
       "passed": true
     },
     {
       "case": "validate-hd",
-      "seconds": 48.87,
-      "output": "HD pack: 2240 registered, 2240 validated, 0 rejected supplied frames\n",
+      "seconds": 54.71,
+      "output": "HD pack: 2354 registered, 2354 validated, 0 rejected supplied frames\n",
       "stderr": "",
       "passed": true
     },
     {
       "case": "validate-mods",
-      "seconds": 7.51,
+      "seconds": 8.57,
       "output": "Validated 45 mods; 1 override(s)\n",
       "stderr": "",
       "passed": true
@@ -46,8 +47,8 @@
   ],
   "source_picture_targets": 5753,
   "complete_remaster": false,
-  "visual_evidence": "Current 2,240-frame Linux and GNU Windows/Wine exports: representative 1080p gameplay in HD/SD, 16:9 menus, forced 4:3 classic intro and isolated PCM captures were reviewed. Source/native 1\u20134\u00d7 and context receipts bind artwork approval. Historical 1,148/2,132-frame proofs remain separately scoped.",
-  "prior_runtime_hd_frames": 2132,
+  "visual_evidence": "Current 2354 original artwork is bound to independently inspected complete-family source/native1\u20134 and focused controlled contexts, with 570 new exact source/scaled equalities and all 2240 prior bindings unchanged. Full desktop, intro, PCM and relocated-archive evidence below certifies the historical exact 2240 snapshots, not a fresh 2354 export.",
+  "prior_runtime_hd_frames": 2240,
   "archives": {
     "scope": "Immutable 2,240-frame snapshot exported from commit 09cc65c1a7e39b20d4635f8097ff6ef40670b4ef before additive proof documentation. Later exports must declare a new ZIP hash; these captures certify the exact pinned snapshots.",
     "linux": {
@@ -333,5 +334,76 @@
     "archive_execution": "Passed exact Linux 5c7a8880\u2026 and Windows b6204dac\u2026 snapshots: twelve Windows runs plus a separate full 16:9 menu addendum.",
     "closed_utc": "2026-10-11T22:54:07.490516+00:00",
     "terrain_cohesion_remaining": "Source/HD/original-fallback boundaries remain visible around the lower-left crater in sector 3 wave 4; final contextual material review is required as surrounding coverage closes."
+  },
+  "historical_2240_bundle_validation": {
+    "assembly": {
+      "approved_hd_frames": 2240,
+      "complete_sequences": 952,
+      "terrain_frames": 1376,
+      "remaining_original_pictures": 3513,
+      "handoff_manifest_sha256": "447a24c45af2a5e439e852336783f7a226ffbcc25a25de0fa793c96c45430f03",
+      "handoff_files": 1043,
+      "handoff_bytes": 2565869827,
+      "hd_manifest_sha256": "0442503bb6408fe354e2d345caa59f8f04e6422b190ead2f966cfd95230a0d5e",
+      "provenance_sha256": "cdf2288064cc135083754937af7902dd7d5cc348d30c6fdf9bac7db8a376d923",
+      "baseline_1148_bindings_unchanged": true,
+      "data_files": 7493,
+      "data_bytes": 2579052685,
+      "binary_sha256": "9688cdbd57b0d31049bac431a5bb2e864bb3ce7abbaca732634359ad7a53d8a9",
+      "windows_binary_sha256": "ad2ee7f5cc8e90ea371eccf2a509cd99263c6c880a6d42e2886cdc017c24561b",
+      "original_catalog_assets_unchanged": true,
+      "other_rust_sources_unchanged": true,
+      "carried_2132_bindings_unchanged": true
+    },
+    "validation": [
+      {
+        "case": "verify-assets",
+        "seconds": 0.16,
+        "output": "Verified 6449 assets; 27 missions, 528 enemies, 16 weapons, 24 items\n",
+        "stderr": "",
+        "passed": true
+      },
+      {
+        "case": "validate-hd",
+        "seconds": 48.87,
+        "output": "HD pack: 2240 registered, 2240 validated, 0 rejected supplied frames\n",
+        "stderr": "",
+        "passed": true
+      },
+      {
+        "case": "validate-mods",
+        "seconds": 7.51,
+        "output": "Validated 45 mods; 1 override(s)\n",
+        "stderr": "",
+        "passed": true
+      }
+    ],
+    "status": "closed_exact_archives_visual_PCM_and_native_Windows_CI",
+    "proof_commit": "a36d465cecd6cc6a0adc724e2ece35e1d2f1f4a3"
+  },
+  "successor_2354_validation": {
+    "approved_frames": 2354,
+    "new_frames": 114,
+    "complete_jobs_added": 18,
+    "terrain_bindings_unchanged": true,
+    "assembly_receipt": ".reference/hd-runtime-2354/assembly-receipt.json",
+    "assembly_receipt_sha256": "b7bc01d2f3f8934a40cfc4c1678e61f7c087c7c920868e1349c38c6fa3f6b40c",
+    "CLI_receipt": ".reference/hd-runtime-2354/cli-validation.json",
+    "CLI_receipt_sha256": "4fe0ff3a628259fd93ad520109819adcb58ede8568cf730ea8f9c891ff4107cb",
+    "canonical114_closure": {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/post2240-sprites114-canonical/canonical-closure.json",
+      "sha256": "175f7af05106425fd2717f70a95316d2673cb77fe65c9c68f8a3296a1dab59ef"
+    },
+    "new_source_native_1_to_4_equalities": 570,
+    "carried_2240_bindings_exact": true,
+    "reserved_color_coverage_only_new_DSHP_four": [
+      "200bb",
+      "200bc",
+      "200bd",
+      "200be"
+    ],
+    "source_and_executables_unchanged": true,
+    "native_Windows_CI": "pending publication and run",
+    "new_archive_execution": "not performed; exact passed 2240 archives retained as historical snapshots"
   }
 }
