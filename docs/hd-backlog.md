@@ -1,17 +1,17 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **215**; **5,538** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
+The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **441**; **5,312** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
 | Player banking | 21 | 21 | 0 | 3 |
-| Bosses | 249 | 4 | 245 | 79 |
-| Enemies and ground objects | 419 | 46 | 373 | 183 |
-| Player and enemy projectiles | 51 | 17 | 34 | 18 |
-| Explosions and effects | 281 | 69 | 212 | 25 |
-| Equipment and pickups | 47 | 31 | 16 | 23 |
-| Terrain | 4,535 | 16 | 4,519 | 4 |
-| Menus, portraits, HUD and other pictures | 150 | 11 | 139 | mixed static / animated |
+| Bosses | 249 | 33 | 216 | 79 |
+| Enemies and ground objects | 419 | 105 | 314 | 183 |
+| Player and enemy projectiles | 51 | 34 | 17 | 18 |
+| Explosions and effects | 281 | 91 | 190 | 25 |
+| Equipment and pickups | 47 | 47 | 0 | 23 |
+| Terrain | 4,535 | 96 | 4,439 | 4 |
+| Menus, portraits, HUD and other pictures | 150 | 14 | 136 | mixed static / animated |
 
 ## Registered pack and generation jobs
 
@@ -101,6 +101,103 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | TARGT9G1_PIC | `0x10160` | 1 / 1 |
 | Forward Guns / Mini Gun | `0x101c3` | 4 / 4 |
 | Enemy beam v1 | `0x101d1` | 2 / 2 |
+| Forward Laser | `0x102c8` | 4 / 4 |
+| Pulse Cannon v1 | `0x10223` | 2 / 2 |
+| SHIP16G1_PIC faithful HD candidate | `0x1030e` | 1 / 1 |
+| SHIP22G1_PIC | `0x10319` | 6 / 6 |
+| SHIP10G2_PIC | `0x200a1` | 1 / 1 |
+| SHIP16G2_PIC | `0x200a8` | 4 / 4 |
+| SHIP17G2_PIC | `0x200ac` | 1 / 1 |
+| SHIP18G2_PIC | `0x200ad` | 1 / 1 |
+| SHIP21G2_PIC | `0x200ce` | 6 / 6 |
+| SHIP34G2_PIC | `0x200eb` | 1 / 1 |
+| DUOBOSS_PIC | `0x20104` | 8 / 8 |
+| Terrain 2010d | `0x2010d` | 1 / 1 |
+| Terrain 2010e | `0x2010e` | 1 / 1 |
+| Terrain 2010f | `0x2010f` | 1 / 1 |
+| Terrain 20110 | `0x20110` | 1 / 1 |
+| Terrain 20111 | `0x20111` | 1 / 1 |
+| Terrain 20112 | `0x20112` | 1 / 1 |
+| Terrain 20113 | `0x20113` | 1 / 1 |
+| Terrain 20114 | `0x20114` | 1 / 1 |
+| Terrain 20115 | `0x20115` | 1 / 1 |
+| Terrain 20116 | `0x20116` | 1 / 1 |
+| Terrain 20117 | `0x20117` | 1 / 1 |
+| Terrain 20118 | `0x20118` | 1 / 1 |
+| Terrain 20119 | `0x20119` | 1 / 1 |
+| Terrain 2011a | `0x2011a` | 1 / 1 |
+| Terrain 2011b | `0x2011b` | 1 / 1 |
+| Terrain 2011c | `0x2011c` | 1 / 1 |
+| Terrain set3 intact industrial roof shard1 | `0x300ed` | 16 / 16 |
+| Terrain set 3 shard 2 | `0x300fd` | 16 / 16 |
+| SHIP21G1_PIC | `0x10317` | 2 / 2 |
+| SHIP23G1_PIC | `0x1031f` | 8 / 8 |
+| SHIP29G1_PIC | `0x10332` | 1 / 1 |
+| SHIP32G1_PIC | `0x10335` | 1 / 1 |
+| SHIP39G1_PIC | `0x10344` | 1 / 1 |
+| SHIP33G1_PIC | `0x10336` | 4 / 4 |
+| SHIP34G1_PIC | `0x1033a` | 2 / 2 |
+| SHIP30G1_PIC | `0x10333` | 1 / 1 |
+| Muzzle flash and casings replacement v4 | `0x101c7` | 4 / 4 |
+| Small air explosion replacement v2 | `0x101fc` | 14 / 14 |
+| Enemy coconut v1 | `0x1024d` | 4 / 4 |
+| SHIP19G1_PIC | `0x10311` | 4 / 4 |
+| SHIP31G1_PIC | `0x10334` | 1 / 1 |
+| SHIP36G1_PIC | `0x1033d` | 1 / 1 |
+| SHIP38G1_PIC | `0x10340` | 4 / 4 |
+| TARG1G2_PIC | `0x20053` | 1 / 1 |
+| TARG4G2_PIC | `0x20056` | 1 / 1 |
+| TARG9G2_PIC | `0x2006f` | 13 / 13 |
+| TARG11G2_PIC | `0x20080` | 8 / 8 |
+| TARG2G2_PIC | `0x20054` | 1 / 1 |
+| TARG5G2_PIC | `0x20057` | 1 / 1 |
+| TARG14G2_PIC | `0x2008d` | 1 / 1 |
+| TARG17G2_PIC | `0x20090` | 1 / 1 |
+| TARG20G2_PIC | `0x20093` | 1 / 1 |
+| TARG23G2_PIC | `0x20096` | 1 / 1 |
+| Energy | `0x102d1` | 4 / 4 |
+| Enemy laser power companion padded v3 | `0x10245` | 4 / 4 |
+| Bomb v2 | `0x101d3` | 1 / 1 |
+| Enemy missile v2 | `0x101d4` | 2 / 2 |
+| Itembuy6 | `0x102db` | 4 / 4 |
+| APOGEE_PIC | `0x1002b` | 1 / 1 |
+| CYGNUS_PIC | `0x1002d` | 1 / 1 |
+| TAIWARN_PIC | `0x1002f` | 1 / 1 |
+| Terrain 10390 | `0x10390` | 1 / 1 |
+| Terrain 10391 | `0x10391` | 1 / 1 |
+| Terrain 10392 | `0x10392` | 1 / 1 |
+| Terrain 10393 | `0x10393` | 1 / 1 |
+| Terrain 10394 | `0x10394` | 1 / 1 |
+| Terrain 10395 | `0x10395` | 1 / 1 |
+| Terrain 10396 | `0x10396` | 1 / 1 |
+| Terrain 10397 | `0x10397` | 1 / 1 |
+| Terrain 10398 | `0x10398` | 1 / 1 |
+| Terrain 10399 | `0x10399` | 1 / 1 |
+| Terrain 1039a | `0x1039a` | 1 / 1 |
+| Terrain 1039b | `0x1039b` | 1 / 1 |
+| Terrain 1039c | `0x1039c` | 1 / 1 |
+| Terrain 1039d | `0x1039d` | 1 / 1 |
+| Terrain 1039e | `0x1039e` | 1 / 1 |
+| Terrain 1039f | `0x1039f` | 1 / 1 |
+| Terrain 103a0 | `0x103a0` | 1 / 1 |
+| Terrain 103a1 | `0x103a1` | 1 / 1 |
+| Terrain 103a2 | `0x103a2` | 1 / 1 |
+| Terrain 103a3 | `0x103a3` | 1 / 1 |
+| Terrain 103a4 | `0x103a4` | 1 / 1 |
+| Terrain 103a5 | `0x103a5` | 1 / 1 |
+| Terrain 103a6 | `0x103a6` | 1 / 1 |
+| Terrain 103a7 | `0x103a7` | 1 / 1 |
+| Terrain 103a8 | `0x103a8` | 1 / 1 |
+| Terrain 103a9 | `0x103a9` | 1 / 1 |
+| Terrain 103aa | `0x103aa` | 1 / 1 |
+| Terrain 103ab | `0x103ab` | 1 / 1 |
+| Terrain 103ac | `0x103ac` | 1 / 1 |
+| Terrain 103ad | `0x103ad` | 1 / 1 |
+| Terrain 103ae | `0x103ae` | 1 / 1 |
+| Terrain 103af | `0x103af` | 1 / 1 |
+| Death Ray | `0x102cc` | 4 / 4 |
+| Death Ray padded v3 | `0x10231` | 4 / 4 |
+| Forward Laser padded v3 | `0x10235` | 4 / 4 |
 
 | Generation job | Status |
 | --- | --- |
@@ -123,7 +220,7 @@ The catalog also contains **303 AGX cinematic delta frames in 13 sequences** and
 2. Ground defenses, airborne enemies and complete boss animation sequences; share palettes and the original logical canvases, rather than treating each enemy frame as an unrelated illustration.
 3. Original projectiles and pickup/equipment animations. Tiny projectiles need careful readability checks; per-asset nearest fallback remains temporary until a clean remaster passes review.
 4. Explosions, flame/spark sequences and other effects. Check full animation timing, transparency and palette cycling, not only a still image.
-5. All four terrain sets, including unnamed catalog tiles. Generate with neighboring context and verify joined seams before changing runtime coverage.
+5. All four terrain sets, including unnamed catalog tiles. Generate from exact canonical source tiles or a literal native object assembly; use neighboring context for review rather than importing foreign scenery into artwork. Verify joined seams and destroyed-state pairs before changing runtime coverage.
 6. Every original menu background, portrait, HUD and retained unused picture. Gameplay UI text and button labels must remain readable and match their actions. Verify the preserved native cinematic/font paths separately.
 
 ## Reproduce the audit
@@ -134,7 +231,7 @@ python3 tools/hd_art_audit.py --data ../data \
 python3 tools/hd_job_queue.py --data ../data
 ```
 
-The JSON gives every picture's asset ID, path, logical dimensions, original header options, source hash and HD status, plus each declared animation/set. The [completion ledger](hd-completion.json) records every required picture and native-art verification target, including complete families, ownership and candidate/review/registration stages. Both contain metadata only. Original and original-derived artwork remains outside Git.
+The JSON gives every picture's asset ID, path, logical dimensions, original header options, source hash and HD status, plus each declared animation/set. The [completion ledger](hd-completion.json) records every required picture and native-art verification target, including complete families, ownership and candidate/review/registration stages. Both contain metadata only. Working originals, source references and generation/review drafts under `../data` remain outside this repository. The bundled original catalog and approved HD runtime snapshot under `data/` are tracked in Git; the snapshot is refreshed from reviewed development artwork when packaging.
 
 Folder totals: `sprites/`: 985, `tiles/`: 232, `misc/`: 4,536. These folders are not semantic categories; terrain and other pictures also live in `misc/`.
 

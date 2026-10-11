@@ -67,6 +67,49 @@ def binding_digest(rows):
     return hashlib.sha256(json.dumps(rows, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
 
 
+def freeze_library(project, library):
+    """Keep exact tested bytes and the original build time across Cargo rebuilds."""
+    before = library.stat()
+    payload = library.read_bytes()
+    after = library.stat()
+    identity = lambda value: (value.st_ino, value.st_size, value.st_mtime_ns)
+    if identity(before) != identity(after):
+        raise ValueError("Rust library changed while taking review snapshot; retry")
+    digest = hashlib.sha256(payload).hexdigest()
+    directory = project / "target/hd-review-libraries" / digest
+    directory.mkdir(parents=True, exist_ok=True)
+    frozen = directory / library.name
+    if frozen.exists():
+        if hashlib.sha256(frozen.read_bytes()).hexdigest() != digest:
+            raise ValueError("review library snapshot is corrupt")
+        if frozen.stat().st_mtime_ns != before.st_mtime_ns:
+            # Identical bytes rebuilt later must not make an old snapshot look
+            # fresh. Separate build times retain an honest source-age check.
+            frozen = directory / (library.stem + "-build-" + str(before.st_mtime_ns) + library.suffix)
+    if not frozen.exists():
+        descriptor, temporary = tempfile.mkstemp(prefix="library-", dir=directory)
+        try:
+            with os.fdopen(descriptor, "wb") as output:
+                output.write(payload)
+                output.flush()
+                os.fsync(output.fileno())
+            os.utime(temporary, ns=(before.st_atime_ns, before.st_mtime_ns))
+            os.chmod(temporary, 0o444)
+            try:
+                # Publish without replacing an identical snapshot another
+                # reviewer may already be using. Concurrent first readers
+                # must retain one stable inode as well as identical bytes.
+                os.link(temporary, frozen)
+            except FileExistsError:
+                pass
+        finally:
+            if os.path.exists(temporary):
+                os.unlink(temporary)
+    if hashlib.sha256(frozen.read_bytes()).hexdigest() != digest or frozen.stat().st_mtime_ns != before.st_mtime_ns:
+        raise ValueError("review library snapshot identity differs")
+    return frozen, digest, before
+
+
 def main():
     project = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
@@ -95,9 +138,10 @@ def main():
     libraries = [library for profile in profiles for library in (project / "target" / profile / "deps").glob("libraptor_replica-*.rlib")]
     if not libraries:
         raise ValueError("build the Rust game library before candidate review")
-    library = max(libraries, key=lambda path: path.stat().st_mtime_ns)
+    built_library = max(libraries, key=lambda path: path.stat().st_mtime_ns)
+    dependency_directory = built_library.parent
+    library, library_sha256, built_library_at_start = freeze_library(project, built_library)
     library_at_start = library.stat()
-    dependency_directory = library.parent
     serde = max(dependency_directory.glob("libserde_json-*.rlib"), key=lambda path: path.stat().st_mtime_ns)
     output = (args.output or args.candidate.parent / "runtime-review").resolve()
     output.mkdir(parents=True, exist_ok=True)
@@ -140,6 +184,9 @@ def main():
         raise ValueError("candidate renderer bindings changed during runtime review")
     qa["library"] = str(library.relative_to(project))
     qa["library_modified_ns"] = library_at_start.st_mtime_ns
+    qa["library_sha256"] = library_sha256
+    qa["library_build_origin"] = str(built_library.relative_to(project))
+    qa["library_build_origin_modified_ns"] = built_library_at_start.st_mtime_ns
     qa["candidate_sha256"] = hashlib.sha256(candidate_at_finish).hexdigest()
     qa["candidate_sha256_at_start"] = hashlib.sha256(candidate_at_start).hexdigest()
     qa["candidate_notes_changed_during_review"] = candidate_at_start != candidate_at_finish

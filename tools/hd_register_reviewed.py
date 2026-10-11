@@ -55,6 +55,8 @@ def approved_job(root, identity, project):
     library = (project / qa["library"]).resolve()
     if not library.is_relative_to(project / "target") or library.stat().st_mtime_ns != qa["library_modified_ns"]:
         raise ValueError(f"runtime library was replaced after review: {identity}")
+    if qa.get("library_sha256") and hashlib.sha256(library.read_bytes()).hexdigest() != qa["library_sha256"]:
+        raise ValueError(f"runtime library bytes changed after review: {identity}")
     for name in ["assets.rs", "hd.rs"]:
         if (project / "src" / name).stat().st_mtime_ns > qa["library_modified_ns"]:
             raise ValueError(f"asset/HD code changed after review: {identity}")
