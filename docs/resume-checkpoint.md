@@ -32,16 +32,18 @@ the relocation. See [repository layout](repository.md).
   all 22 mod hashes match existing Linux save pins. Windows paths respect
   APPDATA/LOCALAPPDATA and mods preserve exact bytes through Git checkouts.
   The exported folder launches via `run.cmd` from `/tmp` after relocation to
-  a path with spaces and Unicode; all hashes/mods validate. HD1080p gameplay,
-  original4:3 intro and music-muted SDL sound-effect capture pass. Local
-  evidence is in `.reference/windows/`. Native Windows CI also passes all279
+  a path with spaces and Unicode; all hashes/mods validate. HD gameplay at 1080p,
+  the original 4:3 intro and music-muted SDL sound-effect capture pass. Local
+  evidence is in `.reference/windows/`. Native Windows CI also passes all 279
   portable tests plus MSVC desktop/exported-folder checks at
   [the build run](https://github.com/Quintine/RustRaptor/actions/runs/38119440288).
-  The Windows executable additionally runs Iron Coast1 with all22mods enabled
+  A [second native run](https://github.com/Quintine/RustRaptor/actions/runs/38119943948)
+  also verifies the exact committed GNU runtime and launcher before its MSVC build.
+  The Windows executable additionally runs Iron Coast mission 1 with all 22 mods enabled
   and captures its custom music. Hardware display/audio/controller checks
   remain manual; automated runs use SDL dummy drivers.
   See [Windows build and validation](windows-build.md). The tracked catalog
-  remains the 340-frame reviewed snapshot while broader HD review continues.
+  now contains the immutable 800-frame reviewed snapshot while broader HD review continues.
 - Packaged executable now includes the `c0a6fd3` reviewed source checkpoint,
   including diagnostics navigation and interpolated Lightning effects. Its
   SHA-256 is `4b4304f625381cbbf1331e126c62ca0913d49a52e7a35191f12e734067660e66`.
@@ -50,7 +52,7 @@ the relocation. See [repository layout](repository.md).
   is selected. Fresh 1080p intro capture confirms black 240-pixel side borders.
 - `RustRaptor/bin/raptor-rust`, `lib/`, `data/` and
   `dist/RustRaptor-linux-x86_64.zip` exist. The latest snapshot includes all
-  6,449 original assets, 340 approved HD frames and 22 local mods. It was
+  6,449 original assets, 800 approved HD frames and 22 local mods. It was
   launched from a copied folder containing spaces, from `/tmp`, without Cargo.
 - Before shutdown, 320 default tests, the complete 42-image menu/intro audit,
   separate cinematic aspect regression, mod/catalog/HD validation and copied
@@ -58,7 +60,7 @@ the relocation. See [repository layout](repository.md).
 - Source navigation fixes are committed in `4b1edef`; the terrain compositor
   fix is committed in `ab23255`; Lightning weapon/API packages and authored
   art/audio are committed in `c0a6fd3`. The refreshed package validates all
-  22 mods and 340 supplied HD frames. Desktop builds use the isolated
+  22 mods and 800 supplied HD frames. Desktop builds use the isolated
   `target/desktop-runtime` directory to avoid competing headless artifacts.
 
 ## Next user fixes
@@ -87,9 +89,14 @@ its completed boss candidates and pending equipment review remain preserved.
 
 ## HD state and owners
 
-The original picture inventory is 5,753 IDs. The development pack now has 340
-registered frames across 122 complete sequences; 5,413 IDs remain unregistered.
-The packaged runtime has the same 340-frame approved snapshot. Existing raw
+The original picture inventory is 5,753 IDs. The approved handoff has 800
+registered frames across 340 complete sequences; 4,953 IDs remain unregistered.
+Both packaged runtimes have the same immutable 800-frame approved snapshot,
+with 6,742 original/HD data files and unchanged executable hashes. The assembler's
+`--hd-source` selects the private approved input rather than mutable working art.
+See [the current coordinator checkpoint](hd-coordinator-checkpoint.md) for
+active worker ownership and later admissions. The table below retains the
+earlier recovery assignments as historical context. Existing raw
 candidates are not counted as accepted remasters. Working originals, generated
 drafts and proof captures remain outside the Git root; the approved runtime
 snapshot and all authored mod artwork and sound are tracked in Git.

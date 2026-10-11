@@ -18,7 +18,7 @@ python3 tools/assemble_runtime.py --zip dist/RustRaptor-linux-x86_64.zip
 ```
 
 The assembler builds the desktop release, copies all catalog-listed files and
-the exact currently approved HD manifest and referenced PNGs, installs the
+the exact currently approved HD manifest, provenance and referenced PNGs, installs the
 binary and SDL2 shared library if linked, and checks the packaged catalog.
 Desktop packaging uses its own `target/desktop-runtime` build directory so
 concurrent headless asset reviews cannot replace the packaged executable.
@@ -26,6 +26,10 @@ concurrent headless asset reviews cannot replace the packaged executable.
 dependencies. Unapproved HD drafts, reference screenshots and the Cargo build
 cache are excluded from the zip. The exported `RustRaptor` folder can be moved
 or unpacked anywhere, including paths containing spaces.
+
+Use `--source-data PATH` for an original catalog and `--hd-source PATH` for
+a separately frozen, reviewed HD pack containing `hd.json`. This keeps
+the packaged artwork stable while artists continue working on later batches.
 
 The Linux binary targets Linux x86_64 and uses the operating system's C runtime
 and desktop/audio drivers. The included Windows x86_64 executable and SDL2 DLL
@@ -45,8 +49,8 @@ The current package was unpacked into a folder containing spaces and launched
 from `/tmp` with only its bundled SDL2 library on the library search path.
 Catalog validation checked 6,449 assets, 27 missions, 528 enemies, 16 weapons
 and 24 items. The refreshed 11 October bundle validates all 22 bundled mods
-and all 340 approved HD frames, with zero rejected supplied frames. Its
-runtime manifest verifies all 6,593 data files. The updated desktop executable
+and all 800 approved HD frames, with zero rejected supplied frames. Its
+runtime manifest verifies all 6,742 data files. The updated desktop executable
 also launches from `/tmp` with only the bundled library and an isolated profile.
 Menu and gameplay screenshots at 1280×800 and 1920×1080, plus stereo audio
 captures, completed successfully. Native `unzip` preserves the executable

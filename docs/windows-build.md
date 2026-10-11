@@ -63,7 +63,7 @@ The included GNU executable passed 279 portable tests under Wine 11.19,
 including Windows save replacement and preserving a locked existing save.
 All 22 installed mod hashes match their previous Linux hashes exactly.
 The shared catalog validates 6,449 assets and the current packaged HD snapshot
-validates all 340 supplied frames. The exporter verifies all 6,593 shared
+validates all 800 supplied frames. The exporter verifies all 6,742 shared
 data-file hashes and includes only checked Windows DLL dependencies.
 
 The exported zip passed CRC and manifest checks, then launched through
@@ -73,10 +73,15 @@ original intro retains its 4:3 viewport with 240-pixel black side borders.
 SDL captured three seconds of 44.1 kHz stereo audio; a separate capture with
 music muted verified nonzero original sound effects (251,682 nonzero samples).
 
-The [native Windows CI run](https://github.com/Quintine/RustRaptor/actions/runs/38119440288)
-also passed all 279 portable tests, built the MSVC desktop release and
+Two native Windows CI runs passed all 279 portable tests. The
+[first run](https://github.com/Quintine/RustRaptor/actions/runs/38119440288) built the MSVC desktop release and
 validated the exported folder's launcher, catalog, HD art, all mods and SDL
-gameplay from a path with spaces and Unicode. The local GNU build additionally
+gameplay from a path with spaces and Unicode. The
+[second run](https://github.com/Quintine/RustRaptor/actions/runs/38119943948)
+also checked the exact committed GNU executable, SDL2 DLL and launcher before
+building and validating MSVC. Those runs used the previous 340-frame artwork
+snapshot; the refreshed 800-frame package is checked separately under Wine.
+The local GNU build additionally
 ran Iron Coast mission 1 at 1080p with all 22 mods enabled and captured its
 custom music. Both runs used SDL's dummy output drivers for automation;
 physical Windows display, audio and controller hardware remain untested.

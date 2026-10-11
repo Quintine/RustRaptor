@@ -31,6 +31,8 @@ def checked_file(root, relative):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-data", type=Path)
+    parser.add_argument("--hd-source", type=Path,
+                        help="approved HD pack containing hd.json; defaults to SOURCE_DATA/hd")
     parser.add_argument("--skip-build", action="store_true")
     parser.add_argument("--zip", type=Path, help="export runtime, source, docs and mods; exclude build caches")
     args = parser.parse_args()
@@ -62,17 +64,27 @@ def main():
         if original.stat().st_size != int(length):
             raise ValueError(f"catalog size mismatch: {name}")
         files.add(name)
-    hd_path = source / "hd/hd.json"
+    hd_source = (args.hd_source or source / "hd").resolve()
+    hd_path = hd_source / "hd.json"
+    if args.hd_source and not hd_path.is_file():
+        raise ValueError(f"approved HD manifest is missing: {hd_path}")
     hd_bytes = hd_path.read_bytes() if hd_path.is_file() else None
     hd_frames = 0
+    hd_files = set()
     if hd_bytes:
         hd = json.loads(hd_bytes)
-        files.add("hd/hd.json")
+        hd_files.add("hd/hd.json")
+        if (hd_source / "provenance.json").is_file():
+            checked_file(hd_source, "provenance.json")
+            hd_files.add("hd/provenance.json")
         for sequence in hd["sequences"]:
             for frame in sequence["frames"]:
-                checked_file(source / "hd", frame["file"])
-                files.add("hd/" + frame["file"])
+                checked_file(hd_source, frame["file"])
+                hd_files.add("hd/" + frame["file"])
                 hd_frames += 1
+        if files.intersection(hd_files):
+            raise ValueError("HD pack paths conflict with the original catalog")
+        files.update(hd_files)
 
     staging = Path(tempfile.mkdtemp(prefix=".runtime-data-", dir=package))
     try:
@@ -81,6 +93,8 @@ def main():
             destination.parent.mkdir(parents=True, exist_ok=True)
             if name == "hd/hd.json":
                 destination.write_bytes(hd_bytes)
+            elif name in hd_files:
+                shutil.copy2(checked_file(hd_source, name.removeprefix("hd/")), destination)
             else:
                 shutil.copy2(checked_file(source, name), destination)
         previous = package / ".runtime-data-previous"
