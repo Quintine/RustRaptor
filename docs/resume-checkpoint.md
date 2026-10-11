@@ -31,6 +31,11 @@ the relocation. See [repository layout](repository.md).
   All 279 portable tests pass under Wine, including Windows save replacement;
   all 22 mod hashes match existing Linux save pins. Windows paths respect
   APPDATA/LOCALAPPDATA and mods preserve exact bytes through Git checkouts.
+  The exported folder launches via `run.cmd` from `/tmp` after relocation to
+  a path with spaces and Unicode; all hashes/mods validate. HD1080p gameplay,
+  original4:3 intro and music-muted SDL sound-effect capture pass. Local
+  evidence is in `.reference/windows/`; native Windows CI checks the pushed
+  source at [the build run](https://github.com/Quintine/RustRaptor/actions/runs/38119440288).
   See [Windows build and validation](windows-build.md). The tracked catalog
   remains the 340-frame reviewed snapshot while broader HD review continues.
 - Packaged executable now includes the `c0a6fd3` reviewed source checkpoint,

@@ -66,5 +66,12 @@ The shared catalog validates 6,449 assets and the current packaged HD snapshot
 validates all 340 supplied frames. The exporter verifies all 6,593 shared
 data-file hashes and includes only checked Windows DLL dependencies.
 
+The exported zip passed CRC and manifest checks, then launched through
+`run.cmd` from another working directory after extraction into a path with
+spaces and Unicode. Its HD gameplay capture renders at 1920×1080. The
+original intro retains its 4:3 viewport with 240-pixel black side borders.
+SDL captured three seconds of 44.1 kHz stereo audio; a separate capture with
+music muted verified nonzero original sound effects (251,682 nonzero samples).
+
 Wine checks exercise the Windows executable from Linux; native Windows
 builds and runtime checks are also configured in the workflow above.
