@@ -1,8 +1,8 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active external HD pack supplies **1,988**; **3,765** still await a registered replacement. All original IDs, including unused graphics and destroyed variants, remain required. Authored mod art is separate. Current coverage is 1,988 reviewed originals in 851 complete sequences after 9,940 exact source/scaled output comparisons. Released Linux/Windows Stage2 packages retain1,148 frames/ 421 sequences and 45 accepted mods; all 6,853 runtime files remain unchanged. Private future input ../data/hd/registered-class-review/handoff-1988-20261012/pack/ has handoff SHA `0506d008fba1a8d1916b46510e5d790139fda33113a0abf0d1684d452d6bf2ea`; parent alone selects a runtime update.
+The checked catalog contains **5,753 standalone picture frames**. The active external HD pack supplies **2,004**; **3,749** still await a registered replacement. Every original ID, including unused graphics and destroyed variants, remains required. Current coverage is 2,004 reviewed originals in 867 complete sequences after 10,020 exact source/scaled comparisons. Released Linux/Windows Stage2 packages retain 1,148 frames / 421 sequences and 45 accepted mods; all 6,853 runtime files remain unchanged. Private future input ../data/hd/registered-class-review/handoff-2004-20261012/pack/ has handoff SHA `7c55f9fef6388fce41cc00f6a641153129f813859d3511aeb13a4a4ce320c9f2`; parent alone selects a runtime update.
 
-Batch 1988 registers the exact direct EC complete 16 successor after fine green material review, unchanged15 binding/output carry, a different peer and separate367-case current 1972 integration. The old parent whole 16 hold remains historical; its raw map is not registered. Four other middle families remain whole-held64; C3 and remaining eight finish requests stay stopped/gated. The immutable 1988 cutoff contains 1090 historical independently approved unique unregistered pictures: 64 coordinator-held and 1026 pending full review. Original 12 locator/reference-byte gaps and Terrain2 hardware/final 13/Set4 ember gates remain. Mixed original/HD density islands, material/color differences and native 1 softness remain explicit limits.
+Batch 2004 registers complete 16 E0 after full untouched raw/source/native 1–4 material inspection, historical independent own 16/literal 192 proof, separate508-case exact current 1988 integration and whole 2004 canonical continuity. Water darkening, stronger relief, native 1 softness and mixed HD/original density are explicit qualifications. The immutable 2004 cutoff has 1,138 historically independent-approved unique unregistered pictures: 64 coordinator-held and 1,074 pending full review. Late source-detail, atlas-rule, green/olive and cellular-material whole-family holds remain unadmitted; individual component qualifications confer no partial admission. C3 and the remaining eight finish requests, Terrain2 hardware/final13 and Set4 ember methods stay gated. Original 12 locator/reference-byte gaps remain pending parent policy.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,7 +12,7 @@ Batch 1988 registers the exact direct EC complete 16 successor after fine green 
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 1,136 | 3,399 | 4 |
+| Terrain | 4,535 | 1,152 | 3,383 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 77 | 73 | mixed static / animated |
 
 ## Registered pack and generation jobs
@@ -872,6 +872,22 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | canonical-terrain-40275-40284 | `0x40275` | 16 / 16 |
 | canonical-terrain-40285-40294 | `0x40285` | 16 / 16 |
 | Terrain set 3 shard 16 | `0x301dd` | 16 / 16 |
+| Terrain 104e0 standalone correction | `0x104e0` | 1 / 1 |
+| Terrain 104e1 standalone correction | `0x104e1` | 1 / 1 |
+| Terrain 104e2 standalone correction | `0x104e2` | 1 / 1 |
+| Terrain 104e3 standalone correction | `0x104e3` | 1 / 1 |
+| Terrain 104e4 standalone correction | `0x104e4` | 1 / 1 |
+| Terrain 104e5 standalone correction | `0x104e5` | 1 / 1 |
+| Terrain 104e6 standalone correction | `0x104e6` | 1 / 1 |
+| Terrain 104e7 standalone correction | `0x104e7` | 1 / 1 |
+| Terrain 104e8 standalone correction | `0x104e8` | 1 / 1 |
+| Terrain 104e9 standalone correction | `0x104e9` | 1 / 1 |
+| Terrain 104ea standalone correction | `0x104ea` | 1 / 1 |
+| Terrain 104eb standalone correction | `0x104eb` | 1 / 1 |
+| Terrain 104ec standalone correction | `0x104ec` | 1 / 1 |
+| Terrain 104ed standalone correction | `0x104ed` | 1 / 1 |
+| Terrain 104ee standalone correction | `0x104ee` | 1 / 1 |
+| Terrain 104ef standalone correction | `0x104ef` | 1 / 1 |
 
 | Generation job | Status |
 | --- | --- |
