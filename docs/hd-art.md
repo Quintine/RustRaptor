@@ -2,7 +2,7 @@
 
 The Rust Options screen includes **HD art**. It starts disabled. Enable it to use reviewed artwork from the selected data directory's `hd/hd.json`; each missing or rejected frame keeps the selected original / 2x / 3x / 4x crisp treatment. The bundled runtime uses `data/`, while development artwork and review jobs live under `../data/`. The scale setting still determines the indexed rendering resolution, and the HD toggle can be changed while paused. HD art is presentation only: simulation, collision sizes, banking positions and save content IDs stay unchanged.
 
-The development base-game pack currently supplies **800 reviewed replacement frames in 340 complete sequences**. These include all twenty-one light, dark and firing-flash player poses, 223 boss frames, complete vehicle families, ground defenses and opening bunkers, all forty-seven equipment and pickup pictures, projectile and effect animations, eleven HUD picture glyphs, nine pilot portraits, both title logos, three standalone opening cards and 208 canonical terrain tiles. The tracked Linux/Windows playable snapshots now contain these 800 reviewed frames, copied by the root assembler from the frozen handoff. Later development approvals remain separate from this runtime checkpoint. The complete catalog backlog and generation status are listed in [hd-backlog.md](hd-backlog.md).
+The development base-game pack currently supplies **929 reviewed replacement frames in 377 complete sequences**. These include all twenty-one light, dark and firing-flash player poses, 223 boss frames, complete vehicle families, ground defenses and opening bunkers, all forty-seven equipment and pickup pictures, projectile and effect animations, eleven HUD picture glyphs, nine pilot portraits, both title logos, three standalone opening cards and 256 canonical terrain tiles. The tracked Linux/Windows playable snapshots contain the separately frozen 800 reviewed frames, copied by the root assembler and committed at `964ba93`. Later development approvals remain separate from this runtime checkpoint. The complete catalog backlog and generation status are listed in [hd-backlog.md](hd-backlog.md).
 
 | Reviewed artwork | Original asset IDs | Supplied / complete frames |
 | --- | --- | ---: |
@@ -29,6 +29,7 @@ The development base-game pack currently supplies **800 reviewed replacement fra
 | TANK01 tread phases | `0x200c8`–`0x200cb` | 4 / 4 |
 | TANK02 tread phases | `0x200cc`–`0x200cd` | 2 / 2 |
 | Additional source-bound craft | `0x2009e`, `0x30049` | 2 / 2 |
+| Fine-metal third-campaign craft | `0x3004c`, `0x3004f`, `0x30055`, `0x3005c`, `0x30065`, `0x30068`, `0x3006b`, `0x3006e`, `0x30073` | 9 / 9 |
 | Corrected third-campaign boss | `0x30044` | 1 / 1 |
 | First-mission industrial boss `SHIP10G1_PIC` | `0x10306` | 1 / 1 |
 | Industrial bosses `SHIP12G1_PIC`, `SHIP17G1_PIC` | `0x10308`, `0x1030f` | 2 / 2 |
@@ -95,6 +96,11 @@ The development base-game pack currently supplies **800 reviewed replacement fra
 | Muzzle flash and casing phases | `0x101c7`–`0x101ca` | 4 / 4 |
 | Small air explosion | `0x101fc`–`0x10209` | 14 / 14 |
 | Enemy laser power phases | `0x10245`–`0x10248` | 4 / 4 |
+| Death Ray and player laser power phases | `0x10239`–`0x10240` | 8 / 8 |
+| Laser impact phases | `0x10229`–`0x1022c` | 4 / 4 |
+| Shield light masks | `0x10249`–`0x1024c` | 4 / 4 |
+| Medium air explosion | `0x101d8`–`0x101e4` | 13 / 13 |
+| Small ground explosion | `0x1027d`–`0x1029f` | 35 / 35 |
 | Pilot portraits, small and retained large variants | `0x10111`–`0x10119` | 9 / 9 |
 | Original English and Chinese title logos | `0x10013`, `0x10014` | 2 / 2 |
 | Apogee, Cygnus and Taiwan standalone cards | `0x1002b`, `0x1002d`, `0x1002f` | 3 / 3 |
@@ -106,6 +112,9 @@ The development base-game pack currently supplies **800 reviewed replacement fra
 | Indicator, question and checkbox pictures | `0x1012a`–`0x1012e` | 5 / 5 |
 | BUY/SELL and item buttons | `0x10130`–`0x10135` | 6 / 6 |
 | Left/right double-chevron buttons | `0x10136`–`0x10137` | 2 / 2 |
+| Cyan-symbol and blank red buttons | `0x10121`–`0x10124` | 4 / 4 |
+| Buoy blink phases | `0x10162`–`0x10163` | 2 / 2 |
+| Alternate cursor and repeating menu texture | `0x50019`, `0x10019` | 2 / 2 |
 | Canonical terrain set 1, first shard | `0x10360`–`0x1036f` | 16 / 16 |
 | Canonical terrain set 2, corrected first shard | `0x2010d`–`0x2011c` | 16 / 16 |
 | Canonical industrial terrain, first two shards | `0x300ed`–`0x3010c` | 32 / 32 |
@@ -114,12 +123,14 @@ The development base-game pack currently supplies **800 reviewed replacement fra
 | Source coast, bridge and water terrain | `0x103e0`–`0x103ef` | 16 / 16 |
 | Agricultural ground and vegetation | `0x2011d`–`0x2013c` | 32 / 32 |
 | Fourth-campaign machinery and soil | `0x400d5`–`0x400f4` | 32 / 32 |
+| Fourth-campaign damaged structures and controls | `0x400f5`–`0x40114` | 32 / 32 |
+| Source shoreline, fences and rocks | `0x103f0`–`0x103ff` | 16 / 16 |
 
 Every registered frame passed the exact original source hash, logical canvas, aspect, visible alpha and path checks. Complete contact sheets were inspected at source size and the 4× presentation size; per-frame geometry metrics and review evidence remain with each family. Their logical collision sizes are unchanged. Small contours and interpreted metal detail differ. Missing artwork keeps the crisp original fallback. HD remains an opt-in preview while the remaining catalog and game screenshots are reviewed.
 
 An actual Rust `HdAssets::sprite` pass also checked all registered frames at scales 1–4 with the game palette: every output has the expected dimensions and visible pixels, and the pack reports no diagnostics. Complete 4× source/HD sheets from that runtime path were reviewed for readable projectiles, equipment alignment, banking progression and energy-ring timing stages. These sprite checks complement live gameplay captures and do not establish full-game visual completion.
 
-The current 800-frame snapshot passed 3,200 actual scale checks. All 4,000 original and rendered PPMs are byte-identical to independently accepted references, with both source-age guards clear and the tested immutable library pinned by SHA and original build time. All 730 ordinary sources introduce no reserved palette labels; 67 sources retain legitimate gameplay classes, and the three opening cards use their authentic static palettes. Historical smaller-pack proofs remain separate.
+The current 929-frame development snapshot passed 3,716 actual scale checks. All 4,645 original and rendered PPMs are byte-identical to independently accepted references, with both source-age guards clear and the tested immutable library pinned by SHA and original build time. All 846 ordinary sources introduce no reserved palette labels; 80 sources retain legitimate gameplay classes, and the three opening cards use their authentic static palettes. Historical smaller-pack proofs, including the packaged 800-frame snapshot, remain separate.
 
 The 189 additional boss frames passed complete source/1×/4× and native 2×/3× review across 56 full families. Opaque component panels, weapon apertures and source phases remain recognizable; fine material detail and minor contour interpretations are disclosed per family. These gallery decisions do not certify complete assembled-boss joins or native encounter placement. The shortened paired bottom feet in `0x200a2`, lost painted wing/strut cells in `0x30045`, Mole's missing initial blink, selected contracted hulls and the final EBOSS6 white-plate substitution remain held and are excluded.
 
@@ -230,3 +241,11 @@ python3 tools/hd_art_source.py --asset 1011d \
 Inspect every source frame before generating its replacement. Request the same orthographic camera, silhouette, canvas placement, orientation, material colors and lighting for every frame. Preserve the generated alpha. Do not substitute rotations of one frame for the original bank poses: compare the complete sequence at its logical size and at the intended display resolution. Verify that the nose, engine exits, wing extremes and animation pivots remain aligned and that no clipping or background halos appear.
 
 Keep image-generation prompts and provenance alongside the artwork. Never overwrite original catalog assets. The loader deliberately accepts partial coverage so a reviewed sprite can be previewed before the complete pack is ready, while preserving per-frame fallback.
+
+The 129-frame development addition has complete independent source/all-scale family review and coordinator inspection of every 42 source/native1/HD4 pages on eight unresampled boards. All 645 current PPMs match those accepted outputs exactly. Set4's next thirty-two tiles were checked with 70 native contexts, 719 joins and 27 states; the isolated 64-tile pack has 21 unique damage pairs with both HD partners and four fallback partners. The sixteen shoreline/fence/rock tiles passed all 83 current boards and 1,960 scale composition cases, with no declared damaged partners. Fine material and original-fallback density differences remain disclosed.
+
+Power and Impact retain their native phase masks and repaired source arms. Shield's independent actual patterned `Canvas::shade` proof preserves the original world center, deep holes and outside background, and is invariant to occupied mask RGB. Its higher-scale ring edges are smoother and the final 4× mask has 2,303 pixels against 2,304 source-expanded pixels. Smoke's matching mask has no demonstrated visible HD enhancement and remains held because every actual shaded output is byte-identical to its nearest-neighbor original.
+
+MediumAir's matte grain avoids the rejected ivory glints; exact peripheral source-cell losses remain disclosed. The final lower-left yellow cue is visibly stronger than the source, accepted with a 37% fall in complete penultimate-to-final intensity. SmallGround's first four tiny phases have stronger source-cell edge emphasis at higher scales, especially `0x10280`; review accepts their warm solid-core particle appearance, while recording tiny warm/brown losses and two adjacent tail additions. Both complete animation families retain source bounds, negative spaces and phase progression. LargeAir remains held for persistent painted ray and fading-ring losses.
+
+The new nine craft singles retain source arrays, machinery, forks, deck sections and dark hull backing, with precise small contour interpretations in their peer records. The alternate cursor retains all sixteen gold cells, thirty-six near-black cells and the nine-cell central hole, with warmer native gold shading accepted. Repeating texture connectors retain their source macro layout. Buoys retain exact native blink252/253 centers and the source's cyan/water240–244 palette classes; high-scale fringe and downward contour differences are accepted explicitly. BUTTON1–4 retains exact cyan glyph cells and the blank red panel. These are source-bound gallery approvals, without a new custom-menu or live Host reachability claim.

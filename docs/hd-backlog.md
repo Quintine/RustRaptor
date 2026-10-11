@@ -1,17 +1,17 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **800**; **4,953** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
+The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **929**; **4,824** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
 | Player banking | 21 | 21 | 0 | 3 |
 | Bosses | 249 | 223 | 26 | 79 |
-| Enemies and ground objects | 419 | 120 | 299 | 183 |
+| Enemies and ground objects | 419 | 129 | 290 | 183 |
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
-| Explosions and effects | 281 | 91 | 190 | 25 |
+| Explosions and effects | 281 | 155 | 126 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 208 | 4,327 | 4 |
-| Menus, portraits, HUD and other pictures | 150 | 45 | 105 | mixed static / animated |
+| Terrain | 4,535 | 256 | 4,279 | 4 |
+| Menus, portraits, HUD and other pictures | 150 | 53 | 97 | mixed static / animated |
 
 ## Registered pack and generation jobs
 
@@ -359,6 +359,43 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | CHKOFF_PIC / CHKON_PIC | `0x1012d` | 2 / 2 |
 | LIGHTON_PIC / LIGHTOFF_PIC | `0x1012a` | 2 / 2 |
 | QUESTION_PIC | `0x1012c` | 1 / 1 |
+| Terrain set4 shard3 | `0x400f5` | 16 / 16 |
+| Terrain set4 shard4 | `0x40105` | 16 / 16 |
+| Laser power companion padded replacement v2 | `0x1023d` | 4 / 4 |
+| Laser impact padded replacement v4 | `0x10229` | 4 / 4 |
+| Super shield glow padded replacement v4 | `0x10249` | 4 / 4 |
+| BUTTON1_PIC / BUTTON2_PIC / BUTTON3_PIC / BUTTON4_PIC | `0x10121` | 4 / 4 |
+| Death ray power companion padded replacement v2 | `0x10239` | 4 / 4 |
+| SHIP19G3_PIC | `0x30055` | 1 / 1 |
+| SHIP23G3_PIC | `0x3005c` | 1 / 1 |
+| SHIP10G3_PIC | `0x3004c` | 1 / 1 |
+| SHIP13G3_PIC | `0x3004f` | 1 / 1 |
+| SHIP28G3_PIC | `0x30065` | 1 / 1 |
+| SHIP31G3_PIC | `0x30068` | 1 / 1 |
+| SHIP34G3_PIC | `0x3006b` | 1 / 1 |
+| SHIP37G3_PIC | `0x3006e` | 1 / 1 |
+| BOUY1_PIC / BOUY2_PIC | `0x10162` | 2 / 2 |
+| Medium air explosion padded replacement v5 | `0x101d8` | 13 / 13 |
+| Terrain 103f0 standalone correction | `0x103f0` | 1 / 1 |
+| Terrain 103f1 standalone correction | `0x103f1` | 1 / 1 |
+| Terrain 103f2 standalone correction | `0x103f2` | 1 / 1 |
+| Terrain 103f3 standalone correction | `0x103f3` | 1 / 1 |
+| Terrain 103f4 standalone correction | `0x103f4` | 1 / 1 |
+| Terrain 103f5 standalone correction | `0x103f5` | 1 / 1 |
+| Terrain 103f6 standalone correction | `0x103f6` | 1 / 1 |
+| Terrain 103f7 standalone correction | `0x103f7` | 1 / 1 |
+| Terrain 103f8 standalone correction | `0x103f8` | 1 / 1 |
+| Terrain 103f9 standalone correction | `0x103f9` | 1 / 1 |
+| Terrain 103fa standalone correction | `0x103fa` | 1 / 1 |
+| Terrain 103fb standalone correction | `0x103fb` | 1 / 1 |
+| Terrain 103fc standalone correction | `0x103fc` | 1 / 1 |
+| Terrain 103fd standalone correction | `0x103fd` | 1 / 1 |
+| Terrain 103fe standalone correction | `0x103fe` | 1 / 1 |
+| Terrain 103ff standalone correction | `0x103ff` | 1 / 1 |
+| NEWCUR_PIC | `0x50019` | 1 / 1 |
+| STEXTURE_PIC | `0x10019` | 1 / 1 |
+| EAGLE1G3_PIC | `0x30073` | 1 / 1 |
+| Small ground blast padded replacement v6 | `0x1027d` | 35 / 35 |
 
 | Generation job | Status |
 | --- | --- |
