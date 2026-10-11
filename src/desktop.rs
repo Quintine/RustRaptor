@@ -7145,6 +7145,35 @@ mod tests {
         Ok(None)
     }
 
+    fn native_terrain_damage_placement(
+        definition: &crate::content::MissionDef,
+        row_origin: i32,
+    ) -> Option<usize> {
+        let changes_art = |tile: usize| {
+            definition.tiles[tile]
+                .destroyed
+                .as_ref()
+                .is_some_and(|destroyed| {
+                    serde_json::to_value(destroyed).unwrap()
+                        != serde_json::to_value(&definition.tiles[tile].art).unwrap()
+                })
+        };
+        let distinct = || {
+            definition
+                .layout
+                .iter()
+                .enumerate()
+                .filter(|(_, tile)| changes_art(**tile))
+        };
+        distinct()
+            .find(|(index, _)| {
+                let y = row_origin + (*index / definition.columns as usize) as i32 * 32;
+                (0..160).contains(&y)
+            })
+            .or_else(|| distinct().next())
+            .map(|(index, _)| index)
+    }
+
     fn terrain_sample_registry() -> Registry {
         let mut registry = Registry::default();
         let mission: crate::content::MissionDef = serde_json::from_value(serde_json::json!({
@@ -7158,6 +7187,23 @@ mod tests {
         .unwrap();
         registry.missions.insert(mission.id.clone(), mission);
         registry
+    }
+
+    #[test]
+    fn native_terrain_damage_fixture_skips_same_art_and_prefers_visible_changes() {
+        let registry = terrain_sample_registry();
+        let mut mission = registry.missions[&ContentId::from("base:sample_fixture")].clone();
+        let mut same_art = mission.tiles[0].clone();
+        same_art.destroyed = Some(same_art.art.clone());
+        mission.tiles.push(same_art);
+        mission.layout = vec![2, 1, 0];
+        assert_eq!(native_terrain_damage_placement(&mission, 64), Some(2));
+        assert_eq!(native_terrain_damage_placement(&mission, 1000), Some(2));
+        mission.columns = 1;
+        mission.layout = vec![0, 2, 0];
+        assert_eq!(native_terrain_damage_placement(&mission, -64), Some(2));
+        mission.layout = vec![2, 1];
+        assert_eq!(native_terrain_damage_placement(&mission, 64), None);
     }
 
     #[test]
@@ -7347,31 +7393,7 @@ mod tests {
         capture(&mut host, "native-candidate-phase-31");
         host.world.as_mut().unwrap().scroll = scroll;
         let definition = &host.active.registry.missions[&mission];
-        let damaged = definition
-            .layout
-            .iter()
-            .enumerate()
-            .find(|(index, tile)| {
-                let y = row_origin + (*index / definition.columns as usize) as i32 * 32;
-                (0..160).contains(&y) && definition.tiles[**tile].destroyed.is_some()
-            })
-            .map(|(index, _)| index)
-            .or_else(|| {
-                definition
-                    .layout
-                    .iter()
-                    .enumerate()
-                    .find(|(_, tile)| {
-                        definition.tiles[**tile]
-                            .destroyed
-                            .as_ref()
-                            .is_some_and(|destroyed| {
-                                serde_json::to_value(destroyed).unwrap()
-                                    != serde_json::to_value(&definition.tiles[**tile].art).unwrap()
-                            })
-                    })
-                    .map(|(index, _)| index)
-            });
+        let damaged = native_terrain_damage_placement(definition, row_origin);
         assert!(
             damaged.is_some(),
             "native fixture mission must include destroyed terrain"
@@ -7380,6 +7402,10 @@ mod tests {
             let damaged_row_origin = 64 - (index / definition.columns as usize) as i32 * 32;
             host.world.as_mut().unwrap().scroll = damaged_row_origin - 200
                 + (definition.layout.len() / definition.columns as usize) as i32 * 32;
+            // A destroyed-art sample can already have settled this placement.
+            // Start the independent damage check from a known intact state.
+            host.world.as_mut().unwrap().terrain_dead[index] = false;
+            host.world.as_mut().unwrap().terrain_settled[index] = false;
             let intact = capture(&mut host, "native-candidate-destruction-intact");
             host.world.as_mut().unwrap().terrain_dead[index] = true;
             assert_eq!(
