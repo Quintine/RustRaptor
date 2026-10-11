@@ -1,17 +1,17 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **441**; **5,312** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
+The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **697**; **5,056** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
 | Player banking | 21 | 21 | 0 | 3 |
-| Bosses | 249 | 33 | 216 | 79 |
-| Enemies and ground objects | 419 | 105 | 314 | 183 |
-| Player and enemy projectiles | 51 | 34 | 17 | 18 |
+| Bosses | 249 | 222 | 27 | 79 |
+| Enemies and ground objects | 419 | 116 | 303 | 183 |
+| Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 91 | 190 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 96 | 4,439 | 4 |
-| Menus, portraits, HUD and other pictures | 150 | 14 | 136 | mixed static / animated |
+| Terrain | 4,535 | 128 | 4,407 | 4 |
+| Menus, portraits, HUD and other pictures | 150 | 27 | 123 | mixed static / animated |
 
 ## Registered pack and generation jobs
 
@@ -198,6 +198,103 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Death Ray | `0x102cc` | 4 / 4 |
 | Death Ray padded v3 | `0x10231` | 4 / 4 |
 | Forward Laser padded v3 | `0x10235` | 4 / 4 |
+| SHIP22G2_PIC | `0x200d4` | 9 / 9 |
+| BASE1_PIC | `0x3000a` | 1 / 1 |
+| BASE5_PIC | `0x30011` | 1 / 1 |
+| TANK3_PIC | `0x30014` | 1 / 1 |
+| TANK6_PIC | `0x30017` | 1 / 1 |
+| MOON1T1_PIC | `0x30026` | 4 / 4 |
+| MOON1T3_PIC | `0x3002e` | 1 / 1 |
+| MARS2T1_PIC | `0x30031` | 1 / 1 |
+| MARS2T5_PIC | `0x30038` | 1 / 1 |
+| SHIP01G3_PIC | `0x30043` | 1 / 1 |
+| SHIP04G3_PIC | `0x30046` | 1 / 1 |
+| SHIP20G3_PIC | `0x30056` | 4 / 4 |
+| SHIP25G3_PIC | `0x3005e` | 3 / 3 |
+| SHIP26G3_PIC | `0x30061` | 3 / 3 |
+| CALI3_PIC | `0x4002b` | 1 / 1 |
+| IOBOSS2_PIC | `0x40048` | 4 / 4 |
+| IOBOSS6_PIC | `0x4005a` | 5 / 5 |
+| IOBOSS9_PIC | `0x40069` | 5 / 5 |
+| EBOSS1_PIC | `0x4008a` | 6 / 6 |
+| EBOSS2_PIC | `0x40090` | 7 / 7 |
+| EBOSS4_PIC | `0x4009e` | 7 / 7 |
+| EBOSS7_PIC | `0x400b3` | 7 / 7 |
+| BASE3_PIC | `0x3000c` | 4 / 4 |
+| BASE4_PIC | `0x30010` | 1 / 1 |
+| TANK2_PIC | `0x30013` | 1 / 1 |
+| TANK5_PIC | `0x30016` | 1 / 1 |
+| TANK8_PIC | `0x30019` | 1 / 1 |
+| MOON1T5_PIC | `0x30030` | 1 / 1 |
+| MARS2T3_PIC | `0x30033` | 4 / 4 |
+| MARS2T4_PIC | `0x30037` | 1 / 1 |
+| MARS2T7_PIC | `0x3003a` | 1 / 1 |
+| CALI2_PIC | `0x4002a` | 1 / 1 |
+| CALI5_PIC | `0x4002d` | 1 / 1 |
+| IOBOSS1_PIC | `0x40044` | 4 / 4 |
+| IOBOSS5_PIC | `0x40056` | 4 / 4 |
+| IOBOSS7_PIC | `0x4005f` | 5 / 5 |
+| EBOSS5_PIC | `0x400a5` | 7 / 7 |
+| EBOSS8_PIC | `0x400ba` | 7 / 7 |
+| EBOSS10_PIC | `0x400c8` | 6 / 6 |
+| DSHP16G2_PIC faithful HD candidate | `0x200b6` | 4 / 4 |
+| BASE2_PIC faithful HD candidate | `0x3000b` | 1 / 1 |
+| TANK1_PIC faithful HD candidate | `0x30012` | 1 / 1 |
+| TANK4_PIC faithful HD candidate | `0x30015` | 1 / 1 |
+| TANK7_PIC faithful HD candidate | `0x30018` | 1 / 1 |
+| MOON1T2_PIC faithful HD candidate | `0x3002a` | 4 / 4 |
+| MOON1T4_PIC faithful HD candidate | `0x3002f` | 1 / 1 |
+| MARS2T2_PIC faithful HD candidate | `0x30032` | 1 / 1 |
+| MARS2T6_PIC faithful HD candidate | `0x30039` | 1 / 1 |
+| CALI1_PIC faithful HD candidate | `0x4001c` | 14 / 14 |
+| CALI4_PIC faithful HD candidate | `0x4002c` | 1 / 1 |
+| IOBOSS3_PIC faithful HD candidate | `0x4004c` | 6 / 6 |
+| IOBOSS4_PIC faithful HD candidate | `0x40052` | 4 / 4 |
+| IOBOSS8_PIC faithful HD candidate | `0x40064` | 5 / 5 |
+| EBOSS3_PIC faithful HD candidate | `0x40097` | 7 / 7 |
+| EBOSS9_PIC faithful HD candidate | `0x400c1` | 7 / 7 |
+| EBOSS11_PIC faithful HD candidate | `0x400ce` | 6 / 6 |
+| Terrain 103b0 | `0x103b0` | 1 / 1 |
+| Terrain 103b1 | `0x103b1` | 1 / 1 |
+| Terrain 103b2 | `0x103b2` | 1 / 1 |
+| Terrain 103b3 | `0x103b3` | 1 / 1 |
+| Terrain 103b4 | `0x103b4` | 1 / 1 |
+| Terrain 103b5 | `0x103b5` | 1 / 1 |
+| Terrain 103b6 | `0x103b6` | 1 / 1 |
+| Terrain 103b7 | `0x103b7` | 1 / 1 |
+| Terrain 103b8 | `0x103b8` | 1 / 1 |
+| Terrain 103b9 | `0x103b9` | 1 / 1 |
+| Terrain 103ba | `0x103ba` | 1 / 1 |
+| Terrain 103bb | `0x103bb` | 1 / 1 |
+| Terrain 103bc | `0x103bc` | 1 / 1 |
+| Terrain 103bd | `0x103bd` | 1 / 1 |
+| Terrain 103be | `0x103be` | 1 / 1 |
+| Terrain 103bf | `0x103bf` | 1 / 1 |
+| Terrain 103c0 | `0x103c0` | 1 / 1 |
+| Terrain 103c1 | `0x103c1` | 1 / 1 |
+| Terrain 103c2 | `0x103c2` | 1 / 1 |
+| Terrain 103c3 | `0x103c3` | 1 / 1 |
+| Terrain 103c4 | `0x103c4` | 1 / 1 |
+| Terrain 103c5 | `0x103c5` | 1 / 1 |
+| Terrain 103c6 | `0x103c6` | 1 / 1 |
+| Terrain 103c7 | `0x103c7` | 1 / 1 |
+| Terrain 103c8 | `0x103c8` | 1 / 1 |
+| Terrain 103c9 | `0x103c9` | 1 / 1 |
+| Terrain 103ca | `0x103ca` | 1 / 1 |
+| Terrain 103cb | `0x103cb` | 1 / 1 |
+| Terrain 103cc | `0x103cc` | 1 / 1 |
+| Terrain 103cd | `0x103cd` | 1 / 1 |
+| Terrain 103ce | `0x103ce` | 1 / 1 |
+| Terrain 103cf | `0x103cf` | 1 / 1 |
+| Energy Grab two-frame padded correction v3 | `0x1021d` | 6 / 6 |
+| Enemy laser padded replacement v4 | `0x10241` | 4 / 4 |
+| Enemy plasma padded v2 | `0x10251` | 1 / 1 |
+| N0_PIC / N1_PIC / N2_PIC / N3_PIC / N4_PIC / N5_PIC / N6_PIC / N7_PIC / N8_PIC / N9_PIC / N$_PIC | `0x10005` | 11 / 11 |
+| SHLDLOW_PIC | `0x10010` | 1 / 1 |
+| CURSOR_PIC | `0x10012` | 1 / 1 |
+| SHIP40G1_PIC | `0x10345` | 1 / 1 |
+| TANK01G2_PIC | `0x200c8` | 4 / 4 |
+| DINO_PIC | `0x10328` | 6 / 6 |
 
 | Generation job | Status |
 | --- | --- |

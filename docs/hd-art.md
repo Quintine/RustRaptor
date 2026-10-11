@@ -2,7 +2,7 @@
 
 The Rust Options screen includes **HD art**. It starts disabled. Enable it to use reviewed artwork from the selected data directory's `hd/hd.json`; each missing or rejected frame keeps the selected original / 2x / 3x / 4x crisp treatment. The bundled runtime uses `data/`, while development artwork and review jobs live under `../data/`. The scale setting still determines the indexed rendering resolution, and the HD toggle can be changed while paused. HD art is presentation only: simulation, collision sizes, banking positions and save content IDs stay unchanged.
 
-The development base-game pack currently supplies **441 reviewed replacement frames in 179 complete sequences**. These include all twenty-one light, dark and firing-flash player poses, complete vehicle and boss families, ground defenses and opening bunkers, equipment and pickups, projectile and effect animations, nine pilot portraits, both title logos, three standalone opening cards and ninety-six canonical terrain tiles. A bundled runtime snapshot may have an earlier count until the next packaging refresh; its manifest is the authoritative count for that build. The complete catalog backlog and generation status are listed in [hd-backlog.md](hd-backlog.md).
+The development base-game pack currently supplies **697 reviewed replacement frames in 276 complete sequences**. These include all twenty-one light, dark and firing-flash player poses, 222 boss frames, complete vehicle families, ground defenses and opening bunkers, all forty-seven equipment and pickup pictures, projectile and effect animations, eleven HUD picture glyphs, nine pilot portraits, both title logos, three standalone opening cards and 128 canonical terrain tiles. The tracked playable snapshot at `26ed9cc` contains 340 reviewed frames and stays unchanged until the root assembler refreshes it. The complete catalog backlog and generation status are listed in [hd-backlog.md](hd-backlog.md).
 
 | Reviewed artwork | Original asset IDs | Supplied / complete frames |
 | --- | --- | ---: |
@@ -24,6 +24,9 @@ The development base-game pack currently supplies **441 reviewed replacement fra
 | Orange rotor aircraft phases | `0x10311`–`0x10314` | 4 / 4 |
 | Triple-cylinder and winged craft | `0x10334`, `0x1033d` | 2 / 2 |
 | Yellow rotor aircraft phases | `0x10340`–`0x10343` | 4 / 4 |
+| Dinosaur flight poses | `0x10328`–`0x1032d` | 6 / 6 |
+| Restored fork-and-rail fighter | `0x10345` | 1 / 1 |
+| TANK01 tread phases | `0x200c8`–`0x200cb` | 4 / 4 |
 | First-mission industrial boss `SHIP10G1_PIC` | `0x10306` | 1 / 1 |
 | Industrial bosses `SHIP12G1_PIC`, `SHIP17G1_PIC` | `0x10308`, `0x1030f` | 2 / 2 |
 | Industrial boss `SHIP11G1_PIC` | `0x10307` | 1 / 1 |
@@ -33,6 +36,7 @@ The development base-game pack currently supplies **441 reviewed replacement fra
 | Second-campaign four-phase boss | `0x200a8`–`0x200ab` | 4 / 4 |
 | Second-campaign six-phase boss | `0x200ce`–`0x200d3` | 6 / 6 |
 | Duo emergence phases | `0x20104`–`0x2010b` | 8 / 8 |
+| Additional independently reviewed boss cohorts | Exact 56 complete families in the completion ledger | 189 / 189 accepted cohort frames |
 | Ground-defense target `TARGT1G1_PIC` | `0x10138` | 1 / 1 |
 | Ground-defense targets `TARGT2G1_PIC`, `TARGT3G1_PIC` | `0x10139`, `0x1013a` | 2 / 2 |
 | Ground-defense target `TARGT5G1_PIC` | `0x1013c` | 1 / 1 |
@@ -75,6 +79,9 @@ The development base-game pack currently supplies **441 reviewed replacement fra
 | Death Ray projectile phases | `0x10231`–`0x10234` | 4 / 4 |
 | Forward Laser projectile phases | `0x10235`–`0x10238` | 4 / 4 |
 | Enemy coconut phases | `0x1024d`–`0x10250` | 4 / 4 |
+| Energy Grab projectile phases | `0x1021d`–`0x10222` | 6 / 6 |
+| Enemy laser projectile phases | `0x10241`–`0x10244` | 4 / 4 |
+| Plasma projectile picture | `0x10251` | 1 / 1 |
 | Energy ring | `0x101ae`–`0x101b9` | 12 / 12 |
 | Blue sparks | `0x1019c`–`0x101a4` | 9 / 9 |
 | Death-ray hits | `0x101f1`–`0x101f4` | 4 / 4 |
@@ -88,14 +95,25 @@ The development base-game pack currently supplies **441 reviewed replacement fra
 | Pilot portraits, small and retained large variants | `0x10111`–`0x10119` | 9 / 9 |
 | Original English and Chinese title logos | `0x10013`, `0x10014` | 2 / 2 |
 | Apogee, Cygnus and Taiwan standalone cards | `0x1002b`, `0x1002d`, `0x1002f` | 3 / 3 |
+| HUD number and symbol pictures | `0x10005`–`0x1000f` | 11 / 11 |
+| SHIELDS LOW warning and classic opaque cursor | `0x10010`, `0x10012` | 2 / 2 |
 | Canonical terrain set 1, first shard | `0x10360`–`0x1036f` | 16 / 16 |
 | Canonical terrain set 2, corrected first shard | `0x2010d`–`0x2011c` | 16 / 16 |
 | Canonical industrial terrain, first two shards | `0x300ed`–`0x3010c` | 32 / 32 |
 | Soil, foliage, shadow and rubble terrain | `0x10390`–`0x103af` | 32 / 32 |
+| Industrial, soil and canal terrain | `0x103b0`–`0x103cf` | 32 / 32 |
 
 Every registered frame passed the exact original source hash, logical canvas, aspect, visible alpha and path checks. Complete contact sheets were inspected at source size and the 4× presentation size; per-frame geometry metrics and review evidence remain with each family. Their logical collision sizes are unchanged. Small contours and interpreted metal detail differ. Missing artwork keeps the crisp original fallback. HD remains an opt-in preview while the remaining catalog and game screenshots are reviewed.
 
 An actual Rust `HdAssets::sprite` pass also checked all registered frames at scales 1–4 with the game palette: every output has the expected dimensions and visible pixels, and the pack reports no diagnostics. Complete 4× source/HD sheets from that runtime path were reviewed for readable projectiles, equipment alignment, banking progression and energy-ring timing stages. These sprite checks complement live gameplay captures and do not establish full-game visual completion.
+
+The current 697-frame snapshot passed 2,788 actual scale checks. All 3,485 original and rendered PPMs are byte-identical to independently accepted references, with both source-age guards clear and the tested immutable library pinned by SHA and original build time. All 644 ordinary sources introduce no reserved palette labels; fifty sources retain legitimate gameplay classes, and the three opening cards use their authentic static palettes. Historical smaller-pack proofs remain separate.
+
+The 189 additional boss frames passed complete source/1×/4× and native 2×/3× review across 56 full families. Opaque component panels, weapon apertures and source phases remain recognizable; fine material detail and minor contour interpretations are disclosed per family. These gallery decisions do not certify complete assembled-boss joins or native encounter placement. The shortened paired bottom feet in `0x200a2`, lost painted wing/strut cells in `0x30045`, Mole's missing initial blink, selected contracted hulls and the final EBOSS6 white-plate substitution remain held and are excluded.
+
+The six corrected dinosaur poses preserve every native source occupied cell, bound and centroid, including the formerly lost dorsal, belly and tail points. They contain new painted detail at higher scales. The restored `0x10345` fighter retains its fork teeth and lower rails; ten very dark outer corner/foot cells remain an accepted contour interpretation. TANK01 has stable hull landmarks and distinct tread phases; three or four external corner cells per pose round inward at 1× while every source cell retains occupancy at 2×–4×. Minor stationary surface shading variance is disclosed.
+
+All eleven HUD pictures retain their complete stroke layout and holes. Corrected N7's lower gold source cell becomes copper shading, with adjacent gold and the complete lower step still readable. The warning and cursor have source-bound gallery approval; the cursor retains opaque backing, all seventeen lit positions and the original index255 center. The corrected SYSTEM DAMAGED draft and other UI controls remain separate pending review. Native bitmap fonts keep their classic artwork.
 
 The complete light banking sequence uses matching silver/gunmetal materials, dark red accents and the seven distinct original roll poses. Its safe square crop rectangles remove transparent canvas margin without excluding any pixel with alpha at least 32. Independent Rust `image::Lanczos3` checks use the runtime's two resampling stages, first to the resident 128×128 canvas and then to the original 32×32 logical size. All seven frames have source silhouette overlap of 87.7–92.3%, bounds within one logical pixel and centroid displacement below 0.74 logical pixels. Full-sequence visual review also checked the nose, canopies, wing ends and engine exits; numeric overlap alone does not approve a frame.
 
@@ -114,6 +132,8 @@ The two additional ground targets use subdued brown soil corrections; their mach
 The first sixteen canonical terrain replacements passed independent review of every source/logical/4× frame, all 48 supplied mission contexts and all 755 declared cardinal neighbor pairs: 170 HD/HD and 585 HD/original. Actual native scene checks exercised all 32 cached scroll phases and content-hash/load-order invalidation. None of these sixteen IDs has a declared destroyed partner; the separate native destruction-cache proof therefore adds no HD debris coverage. The additional corrected terrain family preserves the treeless `0x20111`, and the thirty-two industrial tiles preserve source roof, wall and pipe geometry. Their final compositor review covers all 66 full pages and 1,706 cases: 1,379 neighbor pairs, 234 contexts and 93 state swaps. A texture-preserving edge/corner correction removes the earlier repeating grain ridges without moving source material boundaries. These forty-eight frames are now registered. Mixed HD/original detail contrast remains visible, and foreign destroyed partners still use original fallback; their appearances in state tests do not add HD debris coverage.
 
 The additional thirty-two terrain frames (`0x10390`–`0x103af`) preserve original grass/tree placement, cast-shadow polygons, pipe routes, rubble strips and destroyed structures. Complete independent review inspected all 61 context pages and 1,426 declared cases at scales 1–4, including the original `0x10395`/`0x10436` and `0x103ae`/`0x1045a`/`0x1045b` state relationships. The finer soil, leaves, rubble and metal texture is visibly denser than original fallback neighbors; no shifted pipe/coast, restored wreck, hole or new edge ridge was observed. Foreign partner artwork still uses original fallback.
+
+The next thirty-two terrain frames (`0x103b0`–`0x103cf`) passed every source/native scale and all 39 current grain-fixed context boards. Their 120 cardinal pairs and 33 full 3×3 contexts produce 612 scale cases with no palette-class drift or overlay-order difference. Source pipe, roof, soil and canal joins remain aligned without recurring grain ribs. These IDs declare no state partners, so the review adds no destroyed-partner or new Host-scroll coverage. Unremastered neighbors keep original fallback.
 
 The new rotor and hatch-to-turret families retain every original phase; the jungle leaves stay inside the source material region. Energy pickup trajectories retain all original opaque dark backing. Death Ray equipment keeps identical housing across its four light states, with four shared peripheral alpha additions disclosed. Its duplicate pale-gold phases and the gold flash duplicate medium phases use byte-identical source/raw/runtime aliases.
 
