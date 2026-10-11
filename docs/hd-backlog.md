@@ -1,8 +1,8 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active outer HD pack supplies **1,748**; **4,005** still await a registered HD replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. The outer pack contains1,748 reviewed originals in701 complete sequences after current8,740-PPM continuity. Completed Linux/Windows Stage2 packages retain1,148 frames/421 sequences and45 accepted mods, with every released binary/library/manifest/data byte unchanged. The private future input is ../data/hd/registered-class-review/handoff-1748-20261012/pack/, handoff SHA `62fcbf7d286125c065ab374bad3fde39fb3812b62fa057d5ece5d4a3d936ddde`; parent alone selects a runtime update.
+The checked catalog contains **5,753 standalone picture frames**. The active outer HD pack supplies **1,812**; **3,941** still await a registered HD replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. The outer pack contains 1,812 reviewed originals in 765 complete sequences after current 9,060-PPM continuity. Completed Linux/Windows Stage2 packages retain 1,148 frames / 421 sequences and 45 accepted mods, with every released binary/library/manifest/data byte unchanged. The private future input is ../data/hd/registered-class-review/handoff-1812-20261012/pack/, handoff SHA `2f408e91f30ca1dde263bf2ba3e6e182514abd145f7b3743756466e7e6e85e9f`; parent alone selects a runtime update.
 
-Batch1748 adds96 terrain pictures in six complete families:10480/10490, planted-green job5v2, continuous-grass job6v5, hardware job11v4 and fine-water job13v3. All47 selected full raws and24 complete source/native1–4 boards were coordinator-inspected; all8,740 current outputs match accepted references, both source guards false/all18 stable. Four exact accepted siblings promoted under existing parent identities preserve prior held mains/reviews/job bytes. Whole10460/10470 and source-rib/atlas-edge/material holds remain separate.546 independent approved unregistered pictures still require coordinator review, including16 with a missing-prompt gap requiring parent policy. There is no catalog-complete or seamless mixed-terrain claim.
+Batch 1812 adds 64 terrain pictures in four complete families: 104a0 and Terrain2 originals 14–16. All 21 selected full raws and 16 complete source/native 1–4 boards were coordinator-inspected. All 9,060 current source/scaled outputs match accepted references, both source guards are false, and all 18 recursive sources are stable. No sibling promotion occurred. Corrected 10460/10470 remain future-only despite independent approval; source-rib, atlas-edge and material/detail holds remain separate. The pending snapshot has 610 independently approved unregistered pictures, including 16 with a missing-prompt gap requiring parent policy. Mixed HD/original material islands remain an accepted limitation.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,7 +12,7 @@ Batch1748 adds96 terrain pictures in six complete families:10480/10490, planted-
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 896 | 3,639 | 4 |
+| Terrain | 4,535 | 960 | 3,575 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 77 | 73 | mixed static / animated |
 
 ## Registered pack and generation jobs
@@ -722,6 +722,70 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Terrain 201da | `0x201da` | 1 / 1 |
 | Terrain 201db | `0x201db` | 1 / 1 |
 | Terrain 201dc | `0x201dc` | 1 / 1 |
+| Terrain 104a0 standalone correction | `0x104a0` | 1 / 1 |
+| Terrain 104a1 standalone correction | `0x104a1` | 1 / 1 |
+| Terrain 104a2 standalone correction | `0x104a2` | 1 / 1 |
+| Terrain 104a3 standalone correction | `0x104a3` | 1 / 1 |
+| Terrain 104a4 standalone correction | `0x104a4` | 1 / 1 |
+| Terrain 104a5 standalone correction | `0x104a5` | 1 / 1 |
+| Terrain 104a6 standalone correction | `0x104a6` | 1 / 1 |
+| Terrain 104a7 standalone correction | `0x104a7` | 1 / 1 |
+| Terrain 104a8 standalone correction | `0x104a8` | 1 / 1 |
+| Terrain 104a9 standalone correction | `0x104a9` | 1 / 1 |
+| Terrain 104aa standalone correction | `0x104aa` | 1 / 1 |
+| Terrain 104ab standalone correction | `0x104ab` | 1 / 1 |
+| Terrain 104ac standalone correction | `0x104ac` | 1 / 1 |
+| Terrain 104ad standalone correction | `0x104ad` | 1 / 1 |
+| Terrain 104ae standalone correction | `0x104ae` | 1 / 1 |
+| Terrain 104af standalone correction | `0x104af` | 1 / 1 |
+| Terrain 201dd | `0x201dd` | 1 / 1 |
+| Terrain 201de | `0x201de` | 1 / 1 |
+| Terrain 201df | `0x201df` | 1 / 1 |
+| Terrain 201e0 | `0x201e0` | 1 / 1 |
+| Terrain 201e1 | `0x201e1` | 1 / 1 |
+| Terrain 201e2 | `0x201e2` | 1 / 1 |
+| Terrain 201e3 | `0x201e3` | 1 / 1 |
+| Terrain 201e4 | `0x201e4` | 1 / 1 |
+| Terrain 201e5 | `0x201e5` | 1 / 1 |
+| Terrain 201e6 | `0x201e6` | 1 / 1 |
+| Terrain 201e7 | `0x201e7` | 1 / 1 |
+| Terrain 201e8 | `0x201e8` | 1 / 1 |
+| Terrain 201e9 | `0x201e9` | 1 / 1 |
+| Terrain 201ea | `0x201ea` | 1 / 1 |
+| Terrain 201eb | `0x201eb` | 1 / 1 |
+| Terrain 201ec | `0x201ec` | 1 / 1 |
+| Terrain 201ed | `0x201ed` | 1 / 1 |
+| Terrain 201ee | `0x201ee` | 1 / 1 |
+| Terrain 201ef | `0x201ef` | 1 / 1 |
+| Terrain 201f0 | `0x201f0` | 1 / 1 |
+| Terrain 201f1 | `0x201f1` | 1 / 1 |
+| Terrain 201f2 | `0x201f2` | 1 / 1 |
+| Terrain 201f3 | `0x201f3` | 1 / 1 |
+| Terrain 201f4 | `0x201f4` | 1 / 1 |
+| Terrain 201f5 | `0x201f5` | 1 / 1 |
+| Terrain 201f6 | `0x201f6` | 1 / 1 |
+| Terrain 201f7 | `0x201f7` | 1 / 1 |
+| Terrain 201f8 | `0x201f8` | 1 / 1 |
+| Terrain 201f9 | `0x201f9` | 1 / 1 |
+| Terrain 201fa | `0x201fa` | 1 / 1 |
+| Terrain 201fb | `0x201fb` | 1 / 1 |
+| Terrain 201fc | `0x201fc` | 1 / 1 |
+| Terrain 201fd | `0x201fd` | 1 / 1 |
+| Terrain 201fe | `0x201fe` | 1 / 1 |
+| Terrain 201ff | `0x201ff` | 1 / 1 |
+| Terrain 20200 | `0x20200` | 1 / 1 |
+| Terrain 20201 | `0x20201` | 1 / 1 |
+| Terrain 20202 | `0x20202` | 1 / 1 |
+| Terrain 20203 | `0x20203` | 1 / 1 |
+| Terrain 20204 | `0x20204` | 1 / 1 |
+| Terrain 20205 | `0x20205` | 1 / 1 |
+| Terrain 20206 | `0x20206` | 1 / 1 |
+| Terrain 20207 | `0x20207` | 1 / 1 |
+| Terrain 20208 | `0x20208` | 1 / 1 |
+| Terrain 20209 | `0x20209` | 1 / 1 |
+| Terrain 2020a | `0x2020a` | 1 / 1 |
+| Terrain 2020b | `0x2020b` | 1 / 1 |
+| Terrain 2020c | `0x2020c` | 1 / 1 |
 
 | Generation job | Status |
 | --- | --- |
