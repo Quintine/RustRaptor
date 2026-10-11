@@ -188,17 +188,29 @@ Use the `op` field shown below. All fields listed are required unless stated oth
 | `despawn` | `entity` | Remove an existing enemy or projectile. |
 | `move` | `entity`, `x`, `y` | Move an enemy and rebase its movement path. |
 | `velocity` | `entity`, `vx`, `vy` | Set enemy velocity. |
+| `animation` | `entity`, `frame` (integer or null) | Pin the displayed frame of an existing nonlegacy enemy. The zero-based frame must be below its artwork's declared `frames`; null resumes automatic animation. |
 | `give_item` | `item`, `count` | Add registered inventory, clamped to item capacity; adding a new entry beyond the 20-item limit fails. |
 | `consume_item` | `item`, `count` | Remove owned inventory; insufficient quantity fails. |
 | `credits` | signed `amount` | Adjust credits with saturation at valid limits. |
 | `shield` | signed `amount` | Adjust ordinary shield, clamped to 0–100. |
-| `effect` | `x`, `y` | Add an explosion effect. |
+| `effect` | `x`, `y`, optional `kind` (`air_blast`) | Add a native effect at a bounded position. Kinds: `ground_blast`, `small_ground`, `large_air`, `medium_air`, `small_air`, `air_blast`, `energy`, `person`, `platoon`, `flare`, `sparkle`. |
 | `arc` | `x`, `y`, `to_x`, `to_y`, optional `ticks` (3), `anchor`, `to_anchor` | Draw cosmetic branching lightning with a hot white core, blue glow and flicker between two positions. Optional anchors are player (`0`) or existing enemy entity IDs. Endpoints must be within ±32,768; lifetime must be 1–12 simulation ticks; at most 256 arcs may be active. Pair with `damage` to attack. |
 | `sound` | numeric `asset` | Queue an original digital sound asset for playback. |
 | `play_sound` | namespaced `sound` ID | Queue a validated package-local sound. |
 | `objective` | `key`, integer `value` | Set an objective counter. Use a namespaced key. |
 | `complete` | none | Complete the mission. |
 | `fail` | none | Fail the mission. |
+
+`animation` supports visible boss phases without changing their collision
+canvas, movement, firing cadence or gameplay RNG. It requires an enemy with
+declared artwork and rejects original legacy enemies. A selected frame stays
+visible across simulation ticks until another command changes it or supplies
+null. Enemy snapshots include `pinned_art_frame` while a frame is selected.
+The override survives serialization of a world; pilots save the script state
+that determines the phase, and mission scripts should reset/reapply it at the
+appropriate spawn or mission-start callback. No live mission snapshot is
+implied by pilot saving. Invalid entities or frames roll back the whole command
+batch and callback tick like other command failures.
 
 Lightning arcs render in both SD and HD using irregular fractal channels, thin tapered forks and glow that brightens the scene. Geometry and brightness change with simulation age; each discharge receives a cosmetic seed derived from its creation tick and queue position so repeated shots vary. Drawing the same simulation state again gives the same image, and pausing freezes the effect. Arcs persist until their simulation lifetime expires. Forks are visual only and do not hit additional targets. Arcs use a separate cosmetic pool and consume no gameplay RNG, entity IDs or projectile capacity. The pool is excluded from saves and the gameplay digest. Invalid endpoints, lifetime or capacity reject the complete command batch and roll back the tick like other command failures.
 

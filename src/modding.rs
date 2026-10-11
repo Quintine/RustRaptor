@@ -535,6 +535,42 @@ impl ActiveMods {
         })
     }
 }
+/// Script names are independent of the legacy effect serialization format.
+#[derive(Debug, Clone, Copy, Default, Serialize, Deserialize, JsonSchema)]
+#[serde(rename_all = "snake_case")]
+pub enum ScriptEffectKind {
+    GroundBlast,
+    SmallGround,
+    LargeAir,
+    MediumAir,
+    SmallAir,
+    #[default]
+    AirBlast,
+    Energy,
+    Person,
+    Platoon,
+    Flare,
+    Sparkle,
+}
+
+impl From<ScriptEffectKind> for crate::simulation::EffectKind {
+    fn from(kind: ScriptEffectKind) -> Self {
+        match kind {
+            ScriptEffectKind::GroundBlast => Self::GroundBlast,
+            ScriptEffectKind::SmallGround => Self::SmallGround,
+            ScriptEffectKind::LargeAir => Self::LargeAir,
+            ScriptEffectKind::MediumAir => Self::MediumAir,
+            ScriptEffectKind::SmallAir => Self::SmallAir,
+            ScriptEffectKind::AirBlast => Self::AirBlast,
+            ScriptEffectKind::Energy => Self::Energy,
+            ScriptEffectKind::Person => Self::Person,
+            ScriptEffectKind::Platoon => Self::Platoon,
+            ScriptEffectKind::Flare => Self::Flare,
+            ScriptEffectKind::Sparkle => Self::Sparkle,
+        }
+    }
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
 #[serde(tag = "op", rename_all = "snake_case", deny_unknown_fields)]
 pub enum Command {
@@ -572,6 +608,11 @@ pub enum Command {
         vx: i32,
         vy: i32,
     },
+    /// Pin a nonlegacy enemy's artwork frame; null resumes automatic animation.
+    Animation {
+        entity: u64,
+        frame: Option<u32>,
+    },
     GiveItem {
         item: String,
         count: u32,
@@ -589,6 +630,8 @@ pub enum Command {
     Effect {
         x: i32,
         y: i32,
+        #[serde(default)]
+        kind: ScriptEffectKind,
     },
     /// Cosmetic lightning; pair with damage commands for gameplay effects.
     Arc {

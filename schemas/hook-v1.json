@@ -205,6 +205,36 @@
           "additionalProperties": false
         },
         {
+          "description": "Pin a nonlegacy enemy's artwork frame; null resumes automatic animation.",
+          "type": "object",
+          "required": [
+            "entity",
+            "op"
+          ],
+          "properties": {
+            "entity": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            },
+            "frame": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "format": "uint32",
+              "minimum": 0.0
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "animation"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
           "type": "object",
           "required": [
             "count",
@@ -302,6 +332,14 @@
             "y"
           ],
           "properties": {
+            "kind": {
+              "default": "air_blast",
+              "allOf": [
+                {
+                  "$ref": "#/definitions/ScriptEffectKind"
+                }
+              ]
+            },
             "op": {
               "type": "string",
               "enum": [
@@ -477,6 +515,23 @@
           },
           "additionalProperties": false
         }
+      ]
+    },
+    "ScriptEffectKind": {
+      "description": "Script names are independent of the legacy effect serialization format.",
+      "type": "string",
+      "enum": [
+        "ground_blast",
+        "small_ground",
+        "large_air",
+        "medium_air",
+        "small_air",
+        "air_blast",
+        "energy",
+        "person",
+        "platoon",
+        "flare",
+        "sparkle"
       ]
     }
   }

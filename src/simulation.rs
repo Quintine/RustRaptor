@@ -173,6 +173,8 @@ pub struct Enemy {
     pub movement: LineMove,
     pub frame: u32,
     pub art_frame: u32,
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub pinned_art_frame: Option<u32>,
     pub animation_on: bool,
     pub animation_frames: u32,
     pub multi: u32,
@@ -777,6 +779,7 @@ impl World {
             movement,
             frame: 0,
             art_frame: 0,
+            pinned_art_frame: None,
             animation_on: f.is_none_or(|f| f[10] != 1),
             animation_frames: f.map_or(1, |f| if f[10] == 2 { f[9] } else { f[7] }.max(1) as u32),
             multi: 0,
@@ -1142,6 +1145,9 @@ impl World {
                 enemy.frame = enemy.age / 3;
                 enemy.art_frame = enemy.frame;
                 enemy.shoot_on = true;
+            }
+            if let Some(frame) = enemy.pinned_art_frame {
+                enemy.art_frame = frame;
             }
             if enemy.shoot_on
                 && (def.legacy.is_some()
@@ -3078,6 +3084,28 @@ impl World {
                 e.vx = *vx;
                 e.vy = *vy;
             }
+            Command::Animation { entity, frame } => {
+                let e = self
+                    .enemies
+                    .iter_mut()
+                    .find(|e| e.entity == *entity)
+                    .context("animation target does not exist")?;
+                let definition = &registry.enemies[&e.definition];
+                ensure!(
+                    definition.legacy.is_none(),
+                    "scripted animation requires a nonlegacy enemy"
+                );
+                let art = definition
+                    .art
+                    .as_ref()
+                    .context("animation target has no artwork")?;
+                ensure!(
+                    frame.is_none_or(|frame| frame < art.frames),
+                    "animation frame exceeds declared artwork frames"
+                );
+                e.pinned_art_frame = *frame;
+                e.art_frame = frame.unwrap_or(e.frame);
+            }
             Command::GiveItem { item, count } => {
                 let id = ContentId::new(item)?;
                 let def = registry.items.get(&id).context("unknown item")?;
@@ -3174,9 +3202,13 @@ impl World {
                     }
                 }
             }
-            Command::Effect { x, y } => {
+            Command::Effect { x, y, kind } => {
+                ensure!(
+                    x.unsigned_abs() <= 32768 && y.unsigned_abs() <= 32768,
+                    "effect position exceeds world bounds"
+                );
                 ensure!(self.effects.len() < 4096, "too many effects");
-                self.effects.push(Effect::new(EffectKind::AirBlast, *x, *y));
+                self.effects.push(Effect::new((*kind).into(), *x, *y));
             }
             Command::Arc {
                 x,

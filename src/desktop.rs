@@ -7901,6 +7901,128 @@ mod tests {
         println!("Shop captures: {}", output.display());
     }
     #[test]
+    #[ignore = "requires original catalog and complete Stage2 artwork; writes isolated visual previews"]
+    fn iron_coast_stage2_art_and_shop_preview_captures_preserve_simulation() {
+        let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
+        let catalog_root = std::env::var_os("RAPTOR_TEST_DATA")
+            .map(PathBuf::from)
+            .unwrap_or_else(|| root.join("data"));
+        let catalog = Catalog::open(catalog_root).unwrap();
+        let registry = Registry::base(&catalog).unwrap();
+        let temp = tempfile::tempdir().unwrap();
+        let paths = Paths {
+            data: temp.path().join("saves"),
+            config: temp.path().join("config"),
+            cache: temp.path().join("cache"),
+            legacy: temp.path().join("legacy"),
+        };
+        let mut host = Host::new(catalog, registry, paths, root.join("mods"), true).unwrap();
+        let enabled =
+            crate::mod_selection::plan_enable(&host.discovery, &[], "iron_coast_stage2_campaign")
+                .unwrap();
+        host.active =
+            ActiveMods::build(&host.base, &host.discovery, &enabled, Some(&host.catalog)).unwrap();
+        host.config.scale = 4;
+        host.pilot.mods = host.active.pins.clone();
+        let output = root.join(".reference/iron-coast-stage2/visual");
+        std::fs::create_dir_all(&output).unwrap();
+        let capture = |host: &mut Host, name: &str| {
+            host.message.clear();
+            let before = serde_json::to_value(&host.pilot).unwrap();
+            let digest = host.world.as_ref().map(World::digest);
+            let canvas = host.draw().unwrap();
+            let rgba = host.present_rgba(&canvas);
+            image::save_buffer(
+                output.join(format!("{name}.png")),
+                &rgba,
+                canvas.image.width as u32,
+                canvas.image.height as u32,
+                image::ColorType::Rgba8,
+            )
+            .unwrap();
+            assert_eq!(serde_json::to_value(&host.pilot).unwrap(), before);
+            assert_eq!(host.world.as_ref().map(World::digest), digest);
+            rgba
+        };
+        for n in 1..=8 {
+            let mission: ContentId = format!("iron_coast_stage2_mission_{n}:mission_{n:02}")
+                .as_str()
+                .into();
+            host.pilot.mission = mission.clone();
+            host.start(mission).unwrap();
+            for _ in 0..180 {
+                host.world
+                    .as_mut()
+                    .unwrap()
+                    .step(
+                        Input {
+                            fire: true,
+                            ..Input::default()
+                        },
+                        &host.active.registry,
+                        &mut host.active.scripts,
+                    )
+                    .unwrap();
+            }
+            // Preview each declared boss artwork state on actual mission
+            // terrain. Combat completion/phase timing is tested separately.
+            let boss: ContentId = format!("iron_coast_stage2_boss_{n}:unit").as_str().into();
+            let definition = &host.active.registry.enemies[&boss];
+            let art = definition.art.as_ref().unwrap();
+            let width = art.logical_width;
+            let frames = art.frames;
+            let entity = host
+                .world
+                .as_mut()
+                .unwrap()
+                .spawn(&boss, (320 - width as i32) / 2, 12, &host.active.registry)
+                .unwrap();
+            host.screen = Screen::Game;
+            for frame in 0..frames {
+                host.world
+                    .as_mut()
+                    .unwrap()
+                    .apply_commands(
+                        &[crate::modding::Command::Animation {
+                            entity,
+                            frame: Some(frame),
+                        }],
+                        &host.active.registry,
+                    )
+                    .unwrap();
+                host.config.hd_mode = false;
+                let sd = capture(&mut host, &format!("mission-{n:02}-boss-{frame}-sd"));
+                host.config.hd_mode = true;
+                let hd = capture(&mut host, &format!("mission-{n:02}-boss-{frame}-hd"));
+                assert_ne!(sd, hd, "Stage2 supplied SD and HD art should differ");
+            }
+            host.world = None;
+        }
+        for namespace in ["iron_coast_railburst", "iron_coast_depth_charge"] {
+            let id: ContentId = format!("{namespace}:equipment").as_str().into();
+            host.pilot.credits = 4_000_000;
+            host.go(Screen::Shop);
+            host.selected = host
+                .shop_ids()
+                .iter()
+                .position(|candidate| candidate == &id)
+                .unwrap()
+                + 1;
+            assert!(!host.shop_info(&id).unwrap().description.is_empty());
+            host.config.hd_mode = false;
+            let sd = capture(&mut host, &format!("{namespace}-shop-sd"));
+            host.config.hd_mode = true;
+            let hd = capture(&mut host, &format!("{namespace}-shop-hd"));
+            assert_ne!(sd, hd);
+            host.open_shop_details();
+            capture(&mut host, &format!("{namespace}-details"));
+        }
+        host.go(Screen::Missions);
+        capture(&mut host, "mission-selection");
+        assert!(!host.paths.data.exists());
+        println!("Stage2 artwork preview captures: {}", output.display());
+    }
+    #[test]
     fn disabling_a_single_unneeded_mod_toggles_without_confirmation() {
         let (_dir, mut host) = ui_fixture();
         install_dependency_fixture(&mut host);
