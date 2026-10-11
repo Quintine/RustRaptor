@@ -1,6 +1,6 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **1,148**; **4,605** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
+The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **1,148**; **4,605** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit. Root has copied the exact reviewed 1,148-frame / 421-sequence pack into shared runtime data. New Linux/Windows archives await root's Stage2 export and validation; the previous 800-frame archives remain historical. Later reviewed candidates do not change this frozen pack.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
