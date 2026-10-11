@@ -1,0 +1,472 @@
+{
+  "status": "Author production acceptance passed; independent campaign/SD-HD Host review handled separately",
+  "package": "iron_coast_stage2_mission_7",
+  "version": "1.0.0",
+  "api_version": 1,
+  "actual_original_catalog": true,
+  "starter_fire_only": true,
+  "normal_movement_limit_pixels_per_tick": 4,
+  "near_shot_sidesteps": {
+    "hostile_y": [
+      136,
+      188
+    ],
+    "horizontal_distance_from_player_center": 24
+  },
+  "runs": [
+    {
+      "boss_only": false,
+      "classic_ids": [
+        "base:enemy_0_23",
+        "base:enemy_0_24",
+        "base:enemy_0_73",
+        "base:enemy_0_74",
+        "base:enemy_0_95",
+        "base:enemy_0_96"
+      ],
+      "credits": 56900,
+      "difficulty": 0,
+      "digest": "855a0b362de4cb0884822414bfe0b3cff3eb71d298f7e2c789f031101041e4c8",
+      "initial_credits": 10000,
+      "initial_shield": 75,
+      "inventory_preserved": true,
+      "inventory_slots": 2,
+      "maximum_live_enemies": 3,
+      "mission": 7,
+      "native_movement_ids": [
+        "base:enemy_0_23",
+        "base:enemy_0_24",
+        "base:enemy_0_73",
+        "base:enemy_0_74",
+        "base:enemy_0_95",
+        "base:enemy_0_96"
+      ],
+      "objectives": {
+        "iron_coast_stage2_boss_7:defeated": 1,
+        "iron_coast_stage2_boss_7:phase": 2,
+        "iron_coast_stage2_boss_7:safe_lane": 1,
+        "iron_coast_stage2_interceptor:defeated": 6,
+        "iron_coast_stage2_mission_7:complete": 1,
+        "iron_coast_stage2_mission_7:debrief": 1,
+        "iron_coast_stage2_mission_7:phase": 5,
+        "iron_coast_stage2_mission_7:required_siege": 4,
+        "iron_coast_stage2_mission_7:required_skimmers": 3,
+        "iron_coast_stage2_siege:defeated": 4,
+        "iron_coast_stage2_skimmer:defeated": 3
+      },
+      "outcome": "Complete",
+      "phase_frames": [
+        0,
+        1
+      ],
+      "rewards_once": true,
+      "shield": 100,
+      "sound_ids": [
+        "iron_coast_stage2_boss_7:death",
+        "iron_coast_stage2_boss_7:phase",
+        "iron_coast_stage2_boss_7:shot",
+        "iron_coast_stage2_boss_7:warning",
+        "iron_coast_stage2_interceptor:death",
+        "iron_coast_stage2_interceptor:shot",
+        "iron_coast_stage2_mission_7:approach",
+        "iron_coast_stage2_mission_7:boss_alarm",
+        "iron_coast_stage2_mission_7:escalation",
+        "iron_coast_stage2_mission_7:victory",
+        "iron_coast_stage2_siege:death",
+        "iron_coast_stage2_siege:shot",
+        "iron_coast_stage2_siege:warning",
+        "iron_coast_stage2_skimmer:death",
+        "iron_coast_stage2_skimmer:shot",
+        "iron_coast_stage2_skimmer:warning"
+      ],
+      "tick": 2637
+    },
+    {
+      "boss_only": false,
+      "classic_ids": [
+        "base:enemy_0_23",
+        "base:enemy_0_24",
+        "base:enemy_0_73",
+        "base:enemy_0_74",
+        "base:enemy_0_95",
+        "base:enemy_0_96"
+      ],
+      "credits": 56900,
+      "difficulty": 1,
+      "digest": "59e859f9435f608850e32ab68133aecd0fe75aab0c8127043c1b03aeffcf7595",
+      "initial_credits": 10000,
+      "initial_shield": 75,
+      "inventory_preserved": true,
+      "inventory_slots": 2,
+      "maximum_live_enemies": 3,
+      "mission": 7,
+      "native_movement_ids": [
+        "base:enemy_0_23",
+        "base:enemy_0_24",
+        "base:enemy_0_73",
+        "base:enemy_0_74",
+        "base:enemy_0_95",
+        "base:enemy_0_96"
+      ],
+      "objectives": {
+        "iron_coast_stage2_boss_7:defeated": 1,
+        "iron_coast_stage2_boss_7:phase": 2,
+        "iron_coast_stage2_boss_7:safe_lane": 1,
+        "iron_coast_stage2_interceptor:defeated": 6,
+        "iron_coast_stage2_mission_7:complete": 1,
+        "iron_coast_stage2_mission_7:debrief": 1,
+        "iron_coast_stage2_mission_7:phase": 5,
+        "iron_coast_stage2_mission_7:required_siege": 4,
+        "iron_coast_stage2_mission_7:required_skimmers": 3,
+        "iron_coast_stage2_siege:defeated": 4,
+        "iron_coast_stage2_skimmer:defeated": 3
+      },
+      "outcome": "Complete",
+      "phase_frames": [
+        0,
+        1
+      ],
+      "rewards_once": true,
+      "shield": 60,
+      "sound_ids": [
+        "iron_coast_stage2_boss_7:death",
+        "iron_coast_stage2_boss_7:phase",
+        "iron_coast_stage2_boss_7:shot",
+        "iron_coast_stage2_boss_7:warning",
+        "iron_coast_stage2_interceptor:death",
+        "iron_coast_stage2_interceptor:shot",
+        "iron_coast_stage2_mission_7:approach",
+        "iron_coast_stage2_mission_7:boss_alarm",
+        "iron_coast_stage2_mission_7:escalation",
+        "iron_coast_stage2_mission_7:victory",
+        "iron_coast_stage2_siege:death",
+        "iron_coast_stage2_siege:shot",
+        "iron_coast_stage2_siege:warning",
+        "iron_coast_stage2_skimmer:death",
+        "iron_coast_stage2_skimmer:shot",
+        "iron_coast_stage2_skimmer:warning"
+      ],
+      "tick": 2637
+    },
+    {
+      "boss_only": false,
+      "classic_ids": [
+        "base:enemy_0_23",
+        "base:enemy_0_24",
+        "base:enemy_0_73",
+        "base:enemy_0_74",
+        "base:enemy_0_95",
+        "base:enemy_0_96"
+      ],
+      "credits": 56900,
+      "difficulty": 2,
+      "digest": "a99d996194b23291ce8ba9442d2f21d161a2107f05ff0b5d2f7f613f05801f98",
+      "initial_credits": 10000,
+      "initial_shield": 75,
+      "inventory_preserved": true,
+      "inventory_slots": 2,
+      "maximum_live_enemies": 3,
+      "mission": 7,
+      "native_movement_ids": [
+        "base:enemy_0_23",
+        "base:enemy_0_24",
+        "base:enemy_0_73",
+        "base:enemy_0_74",
+        "base:enemy_0_95",
+        "base:enemy_0_96"
+      ],
+      "objectives": {
+        "iron_coast_stage2_boss_7:defeated": 1,
+        "iron_coast_stage2_boss_7:phase": 2,
+        "iron_coast_stage2_boss_7:safe_lane": 1,
+        "iron_coast_stage2_interceptor:defeated": 6,
+        "iron_coast_stage2_mission_7:complete": 1,
+        "iron_coast_stage2_mission_7:debrief": 1,
+        "iron_coast_stage2_mission_7:phase": 5,
+        "iron_coast_stage2_mission_7:required_siege": 4,
+        "iron_coast_stage2_mission_7:required_skimmers": 3,
+        "iron_coast_stage2_siege:defeated": 4,
+        "iron_coast_stage2_skimmer:defeated": 3
+      },
+      "outcome": "Complete",
+      "phase_frames": [
+        0,
+        1
+      ],
+      "rewards_once": true,
+      "shield": 60,
+      "sound_ids": [
+        "iron_coast_stage2_boss_7:death",
+        "iron_coast_stage2_boss_7:phase",
+        "iron_coast_stage2_boss_7:shot",
+        "iron_coast_stage2_boss_7:warning",
+        "iron_coast_stage2_interceptor:death",
+        "iron_coast_stage2_interceptor:shot",
+        "iron_coast_stage2_mission_7:approach",
+        "iron_coast_stage2_mission_7:boss_alarm",
+        "iron_coast_stage2_mission_7:escalation",
+        "iron_coast_stage2_mission_7:victory",
+        "iron_coast_stage2_siege:death",
+        "iron_coast_stage2_siege:shot",
+        "iron_coast_stage2_siege:warning",
+        "iron_coast_stage2_skimmer:death",
+        "iron_coast_stage2_skimmer:shot",
+        "iron_coast_stage2_skimmer:warning"
+      ],
+      "tick": 2777
+    },
+    {
+      "boss_only": false,
+      "classic_ids": [
+        "base:enemy_0_23",
+        "base:enemy_0_24",
+        "base:enemy_0_73",
+        "base:enemy_0_74",
+        "base:enemy_0_95",
+        "base:enemy_0_96"
+      ],
+      "credits": 56900,
+      "difficulty": 3,
+      "digest": "6e3ef516c543e57940d961112e513f96051dbceeb8367c17751aed906bd4367e",
+      "initial_credits": 10000,
+      "initial_shield": 75,
+      "inventory_preserved": true,
+      "inventory_slots": 2,
+      "maximum_live_enemies": 3,
+      "mission": 7,
+      "native_movement_ids": [
+        "base:enemy_0_23",
+        "base:enemy_0_24",
+        "base:enemy_0_73",
+        "base:enemy_0_74",
+        "base:enemy_0_95",
+        "base:enemy_0_96"
+      ],
+      "objectives": {
+        "iron_coast_stage2_boss_7:defeated": 1,
+        "iron_coast_stage2_boss_7:phase": 2,
+        "iron_coast_stage2_boss_7:safe_lane": 1,
+        "iron_coast_stage2_interceptor:defeated": 6,
+        "iron_coast_stage2_mission_7:complete": 1,
+        "iron_coast_stage2_mission_7:debrief": 1,
+        "iron_coast_stage2_mission_7:phase": 5,
+        "iron_coast_stage2_mission_7:required_siege": 4,
+        "iron_coast_stage2_mission_7:required_skimmers": 3,
+        "iron_coast_stage2_siege:defeated": 4,
+        "iron_coast_stage2_skimmer:defeated": 3
+      },
+      "outcome": "Complete",
+      "phase_frames": [
+        0,
+        1
+      ],
+      "rewards_once": true,
+      "shield": 60,
+      "sound_ids": [
+        "iron_coast_stage2_boss_7:death",
+        "iron_coast_stage2_boss_7:phase",
+        "iron_coast_stage2_boss_7:shot",
+        "iron_coast_stage2_boss_7:warning",
+        "iron_coast_stage2_interceptor:death",
+        "iron_coast_stage2_interceptor:shot",
+        "iron_coast_stage2_mission_7:approach",
+        "iron_coast_stage2_mission_7:boss_alarm",
+        "iron_coast_stage2_mission_7:escalation",
+        "iron_coast_stage2_mission_7:victory",
+        "iron_coast_stage2_siege:death",
+        "iron_coast_stage2_siege:shot",
+        "iron_coast_stage2_siege:warning",
+        "iron_coast_stage2_skimmer:death",
+        "iron_coast_stage2_skimmer:shot",
+        "iron_coast_stage2_skimmer:warning"
+      ],
+      "tick": 2777
+    },
+    {
+      "boss_only": false,
+      "classic_ids": [
+        "base:enemy_0_23",
+        "base:enemy_0_24",
+        "base:enemy_0_73",
+        "base:enemy_0_74",
+        "base:enemy_0_95",
+        "base:enemy_0_96"
+      ],
+      "credits": 46900,
+      "difficulty": 2,
+      "digest": "7bf8b1173aded78f27da0a3f1406128038b096258a4498adf711683ecb1565f4",
+      "initial_credits": 0,
+      "initial_shield": 100,
+      "inventory_preserved": true,
+      "inventory_slots": 2,
+      "maximum_live_enemies": 3,
+      "mission": 7,
+      "native_movement_ids": [
+        "base:enemy_0_23",
+        "base:enemy_0_24",
+        "base:enemy_0_73",
+        "base:enemy_0_74",
+        "base:enemy_0_95",
+        "base:enemy_0_96"
+      ],
+      "objectives": {
+        "iron_coast_stage2_boss_7:defeated": 1,
+        "iron_coast_stage2_boss_7:phase": 2,
+        "iron_coast_stage2_boss_7:safe_lane": 1,
+        "iron_coast_stage2_interceptor:defeated": 6,
+        "iron_coast_stage2_mission_7:complete": 1,
+        "iron_coast_stage2_mission_7:debrief": 1,
+        "iron_coast_stage2_mission_7:phase": 5,
+        "iron_coast_stage2_mission_7:required_siege": 4,
+        "iron_coast_stage2_mission_7:required_skimmers": 3,
+        "iron_coast_stage2_siege:defeated": 4,
+        "iron_coast_stage2_skimmer:defeated": 3
+      },
+      "outcome": "Complete",
+      "phase_frames": [
+        0,
+        1
+      ],
+      "rewards_once": true,
+      "shield": 70,
+      "sound_ids": [
+        "iron_coast_stage2_boss_7:death",
+        "iron_coast_stage2_boss_7:phase",
+        "iron_coast_stage2_boss_7:shot",
+        "iron_coast_stage2_boss_7:warning",
+        "iron_coast_stage2_interceptor:death",
+        "iron_coast_stage2_interceptor:shot",
+        "iron_coast_stage2_mission_7:approach",
+        "iron_coast_stage2_mission_7:boss_alarm",
+        "iron_coast_stage2_mission_7:escalation",
+        "iron_coast_stage2_mission_7:victory",
+        "iron_coast_stage2_siege:death",
+        "iron_coast_stage2_siege:shot",
+        "iron_coast_stage2_siege:warning",
+        "iron_coast_stage2_skimmer:death",
+        "iron_coast_stage2_skimmer:shot",
+        "iron_coast_stage2_skimmer:warning"
+      ],
+      "tick": 2777
+    },
+    {
+      "boss_only": false,
+      "classic_ids": [
+        "base:enemy_0_23",
+        "base:enemy_0_24",
+        "base:enemy_0_73",
+        "base:enemy_0_74",
+        "base:enemy_0_95",
+        "base:enemy_0_96"
+      ],
+      "credits": 56900,
+      "difficulty": 2,
+      "digest": "d3ff5a418a828efe7024ce6d1724d377e0991bee3f8e0ac77616f62713bd878c",
+      "initial_credits": 10000,
+      "initial_shield": 75,
+      "inventory_preserved": true,
+      "inventory_slots": 20,
+      "maximum_live_enemies": 3,
+      "mission": 7,
+      "native_movement_ids": [
+        "base:enemy_0_23",
+        "base:enemy_0_24",
+        "base:enemy_0_73",
+        "base:enemy_0_74",
+        "base:enemy_0_95",
+        "base:enemy_0_96"
+      ],
+      "objectives": {
+        "iron_coast_stage2_boss_7:defeated": 1,
+        "iron_coast_stage2_boss_7:phase": 2,
+        "iron_coast_stage2_boss_7:safe_lane": 1,
+        "iron_coast_stage2_interceptor:defeated": 6,
+        "iron_coast_stage2_mission_7:complete": 1,
+        "iron_coast_stage2_mission_7:debrief": 1,
+        "iron_coast_stage2_mission_7:phase": 5,
+        "iron_coast_stage2_mission_7:required_siege": 4,
+        "iron_coast_stage2_mission_7:required_skimmers": 3,
+        "iron_coast_stage2_siege:defeated": 4,
+        "iron_coast_stage2_skimmer:defeated": 3
+      },
+      "outcome": "Complete",
+      "phase_frames": [
+        0,
+        1
+      ],
+      "rewards_once": true,
+      "shield": 60,
+      "sound_ids": [
+        "iron_coast_stage2_boss_7:death",
+        "iron_coast_stage2_boss_7:phase",
+        "iron_coast_stage2_boss_7:shot",
+        "iron_coast_stage2_boss_7:warning",
+        "iron_coast_stage2_interceptor:death",
+        "iron_coast_stage2_interceptor:shot",
+        "iron_coast_stage2_mission_7:approach",
+        "iron_coast_stage2_mission_7:boss_alarm",
+        "iron_coast_stage2_mission_7:escalation",
+        "iron_coast_stage2_mission_7:victory",
+        "iron_coast_stage2_siege:death",
+        "iron_coast_stage2_siege:shot",
+        "iron_coast_stage2_siege:warning",
+        "iron_coast_stage2_skimmer:death",
+        "iron_coast_stage2_skimmer:shot",
+        "iron_coast_stage2_skimmer:warning"
+      ],
+      "tick": 2777
+    }
+  ],
+  "actual_production_mixer": [
+    {
+      "actual_mixer_peak": 4864,
+      "actual_mixer_rms": 1835.7426224827923,
+      "muted_exact_zero": true,
+      "sound": "iron_coast_stage2_mission_7:approach"
+    },
+    {
+      "actual_mixer_peak": 5760,
+      "actual_mixer_rms": 2242.4113306884624,
+      "muted_exact_zero": true,
+      "sound": "iron_coast_stage2_mission_7:boss_alarm"
+    },
+    {
+      "actual_mixer_peak": 4864,
+      "actual_mixer_rms": 1660.8207320478632,
+      "muted_exact_zero": true,
+      "sound": "iron_coast_stage2_mission_7:escalation"
+    },
+    {
+      "actual_mixer_peak": 4864,
+      "actual_mixer_rms": 2214.1028124276436,
+      "muted_exact_zero": true,
+      "sound": "iron_coast_stage2_mission_7:victory"
+    }
+  ],
+  "actual_mixer_cues_unclipped": true,
+  "actual_mute_exact_zero": true,
+  "per_entity_phase_isolation": true,
+  "actual_world_repeated_spawn_step_lethal_with_retained_state": true,
+  "death_and_rewards_once": true,
+  "PNG_source_and_output_dimensions_checked": true,
+  "external_proof_hashes": {
+    "validation-results.json": "d063d101d9e1d5cf1cb94240caba3ddef04b5183def5b6625ebe32d92951b28d",
+    "boss-validation-results.json": "ef20464533b00c35f63c1add0d3149dc9da341ec580f3221e389a62230143e0a",
+    "actual-audio-proof.json": "293e8f37a5e0ae776d6b0369207dc80f2e38b52c0c903de412bba9b4fbfc60d4",
+    "actual-mixer-all-cues.wav": "af00e983a61e1c26e1504a818fa524b31528fa8f44211cc6969bbc0f6e430124",
+    "asset-validation.json": "7a30c3aaf365a8ac16c97c1b519d93ca39f1723c96b1fac5f93fa88f7757a1f7",
+    "boss-art-contact.png": "444de75e4c171ddac84e2ae6f3f206e749e1fdc3a59d406aa4c66f7678519aa7",
+    "terrain-briefing-contact.png": "254895a2296d6972f9fa4132e21d95979b149be960600507633f44847398eb3b"
+  },
+  "reference_visibility_limits": "Art contact sheets are author visual inspection. Sound proof uses actual mixer without a liveSDL occurrence claim. Root/independent Host screenshots bind final gameplay presentation separately.",
+  "full_inventory_preserved": true,
+  "physical_reserve_capacity_checked": true,
+  "mandatory_reachable_after_4050_ticks": true,
+  "elapsed_duration_never_wins": true,
+  "every_step_deterministic_replay": true,
+  "serialized_script_state_continuation_at_every_boss_phase": true,
+  "restart_reset": true,
+  "failed_sortie_preserves_gear": true,
+  "mission_complete_and_debrief_explicit": true,
+  "layout_scroll_pixels": 12288
+}

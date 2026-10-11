@@ -1,0 +1,69 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_stage2_boss_3:shell",
+      "name": "Stormglass defense shell",
+      "damage": 3,
+      "speed": 4,
+      "cooldown": 64,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "png": "art/shell-sd.png",
+        "hd_png": "art/shell-hd.png",
+        "logical_width": 8,
+        "logical_height": 8,
+        "frames": 1
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "iron_coast_stage2_boss_3:unit",
+      "name": "Stormglass",
+      "health": 240,
+      "speed": 0,
+      "reward": 2400,
+      "ground": true,
+      "boss": true,
+      "cooldown": 64,
+      "art": {
+        "png": "art/unit-sd.png",
+        "hd_png": "art/unit-hd.png",
+        "logical_width": 104,
+        "logical_height": 72,
+        "frames": 1
+      },
+      "script": "scripts/ai.rhai"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "iron_coast_stage2_boss_3:warning",
+      "name": "Warning",
+      "file": "audio/warning.wav",
+      "volume": 70,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_stage2_boss_3:shot",
+      "name": "Shot",
+      "file": "audio/shot.wav",
+      "volume": 85,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_stage2_boss_3:death",
+      "name": "Death",
+      "file": "audio/death.wav",
+      "volume": 100,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    }
+  ]
+}

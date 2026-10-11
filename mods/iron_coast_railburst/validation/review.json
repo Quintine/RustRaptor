@@ -1,0 +1,283 @@
+{
+  "package": "iron_coast_railburst",
+  "portable_tests": {
+    "file": "tests/iron_coast_stage2_weapons.rs",
+    "passed": 9,
+    "balance_integration_passed": 1,
+    "cases": [
+      "independent activation and coexistence",
+      "shop half-price resale and duplicate rejection",
+      "rail aligned contact finite penetration",
+      "depth contact-only ground radius/falloff/cap",
+      "unselected/idle/misses without explosions",
+      "serialized state/RNG continuation and invalid-command rollback",
+      "explicit cooldown/reusable inventory",
+      "lethal primary contact continuation",
+      "full-slot inventory preservation",
+      "disable/re-enable saved equipment, exact mod pins and script state preserved without altering save"
+    ]
+  },
+  "native_decoder_blitter_audio": {
+    "assets": [
+      {
+        "all_scales": [
+          {
+            "height": 16,
+            "painted": 94,
+            "scale": 1,
+            "width": 16
+          },
+          {
+            "height": 32,
+            "painted": 376,
+            "scale": 2,
+            "width": 32
+          },
+          {
+            "height": 48,
+            "painted": 846,
+            "scale": 3,
+            "width": 48
+          },
+          {
+            "height": 64,
+            "painted": 1504,
+            "scale": 4,
+            "width": 64
+          }
+        ],
+        "clear_corner_alpha": true,
+        "frame": 0,
+        "frames": 1,
+        "hd": false,
+        "kind": "equipment",
+        "logical_canvas": [
+          16,
+          16
+        ],
+        "ordinary_palette_only": true,
+        "owner": "iron_coast_railburst",
+        "physical_canvas": [
+          16,
+          16
+        ]
+      },
+      {
+        "all_scales": [
+          {
+            "height": 16,
+            "painted": 92,
+            "scale": 1,
+            "width": 16
+          },
+          {
+            "height": 32,
+            "painted": 361,
+            "scale": 2,
+            "width": 32
+          },
+          {
+            "height": 48,
+            "painted": 809,
+            "scale": 3,
+            "width": 48
+          },
+          {
+            "height": 64,
+            "painted": 1434,
+            "scale": 4,
+            "width": 64
+          }
+        ],
+        "clear_corner_alpha": true,
+        "frame": 0,
+        "frames": 1,
+        "hd": true,
+        "kind": "equipment",
+        "logical_canvas": [
+          16,
+          16
+        ],
+        "ordinary_palette_only": true,
+        "owner": "iron_coast_railburst",
+        "physical_canvas": [
+          64,
+          64
+        ]
+      },
+      {
+        "all_scales": [
+          {
+            "height": 20,
+            "painted": 26,
+            "scale": 1,
+            "width": 4
+          },
+          {
+            "height": 40,
+            "painted": 104,
+            "scale": 2,
+            "width": 8
+          },
+          {
+            "height": 60,
+            "painted": 234,
+            "scale": 3,
+            "width": 12
+          },
+          {
+            "height": 80,
+            "painted": 416,
+            "scale": 4,
+            "width": 16
+          }
+        ],
+        "clear_corner_alpha": true,
+        "frame": 0,
+        "frames": 1,
+        "hd": false,
+        "kind": "projectile",
+        "logical_canvas": [
+          4,
+          20
+        ],
+        "ordinary_palette_only": true,
+        "owner": "iron_coast_railburst",
+        "physical_canvas": [
+          4,
+          20
+        ]
+      },
+      {
+        "all_scales": [
+          {
+            "height": 20,
+            "painted": 21,
+            "scale": 1,
+            "width": 4
+          },
+          {
+            "height": 40,
+            "painted": 87,
+            "scale": 2,
+            "width": 8
+          },
+          {
+            "height": 60,
+            "painted": 200,
+            "scale": 3,
+            "width": 12
+          },
+          {
+            "height": 80,
+            "painted": 352,
+            "scale": 4,
+            "width": 16
+          }
+        ],
+        "clear_corner_alpha": true,
+        "frame": 0,
+        "frames": 1,
+        "hd": true,
+        "kind": "projectile",
+        "logical_canvas": [
+          4,
+          20
+        ],
+        "ordinary_palette_only": true,
+        "owner": "iron_coast_railburst",
+        "physical_canvas": [
+          16,
+          80
+        ]
+      }
+    ],
+    "audio": [
+      {
+        "capture": "iron_coast_railburst-fire-mixed.wav",
+        "decoded_samples": 3528,
+        "decoder": "SoundBank::mod_sample",
+        "id": "iron_coast_railburst:fire",
+        "mixed_channels": 2,
+        "mixed_rate": 44100,
+        "mixer": "Mixer::sample through SoundBank::queue_mod",
+        "nonzero_output_samples": 6320,
+        "peak": 3200,
+        "source_rate": 22050
+      },
+      {
+        "capture": "iron_coast_railburst-impact-mixed.wav",
+        "decoded_samples": 5071,
+        "decoder": "SoundBank::mod_sample",
+        "id": "iron_coast_railburst:impact",
+        "mixed_channels": 2,
+        "mixed_rate": 44100,
+        "mixer": "Mixer::sample through SoundBank::queue_mod",
+        "nonzero_output_samples": 11168,
+        "peak": 2432,
+        "source_rate": 22050
+      }
+    ],
+    "scope": "Public PNG decoder, same Host art normalization, indexed Canvas blitter and actual SoundBank/Mixer. Synthetic backgrounds; no live desktop/gameplay claim."
+  },
+  "visual_inspection": "Inspected original style references separately, all four raw masters and actual indexed SD/HD gallery at logical and4x canvases. Readable compact silhouettes, neutral metal with cyan rail/orange charge roles, transparent borders. SD colors intentionally simplified by reduction; no reserved palette effects. Captures use synthetic palette backgrounds, not a live mission or actual shop pane.",
+  "limitations": [
+    "Private desktop Host/shop screenshots are delegated to root integration review.",
+    "Native point collision may skip exceptionally tiny targets for the speed16 rail shot.",
+    "Terrain cells receive native primary damage but are not available as scripted penetration/splash snapshots."
+  ],
+  "evidence_gallery_sha256": "c1b5d6ad1d286eb17fab1067143222a6071dff5e70a35d904757275767ec5a26",
+  "reproduction_byte_equality": {
+    "art/equipment-sd.png": true,
+    "art/equipment-hd.png": true,
+    "art/projectile-sd.png": true,
+    "art/projectile-hd.png": true,
+    "audio/fire.wav": true,
+    "audio/impact.wav": true
+  },
+  "native_build_bindings": {
+    "libraries": {
+      "raptor_replica": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/debug/libraptor_replica.rlib",
+        "sha256": "4fd737d3c6c808fd5de1ecfc1f9a41b0ef37e82dc1a186f005b8dc9c2360ccd5"
+      },
+      "image": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/debug/deps/libimage-25e356663b4aa6b0.rlib",
+        "sha256": "ea709066ea4c8c625efe3bf7f3741d7a68abfb7ef4b304837f1f0da20e5e2d58"
+      },
+      "serde_json": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/debug/deps/libserde_json-1d17875658175ae0.rlib",
+        "sha256": "e463d4b704418cc5a168d73818662f7a801a77d96e8ef3d6a121e90375e4532f"
+      }
+    },
+    "review_source_sha256": "32c4e836b7a01d159251427b2203dcf0d40f43bebef1def2f13a571e845d8ca3",
+    "validation_cases": [
+      {
+        "enabled": [
+          "iron_coast_railburst"
+        ],
+        "stdout": "Validated 1 mods; 0 override(s)",
+        "stderr": "",
+        "exit_code": 0
+      },
+      {
+        "enabled": [
+          "iron_coast_depth_charge"
+        ],
+        "stdout": "Validated 1 mods; 0 override(s)",
+        "stderr": "",
+        "exit_code": 0
+      },
+      {
+        "enabled": [
+          "iron_coast_railburst",
+          "iron_coast_depth_charge"
+        ],
+        "stdout": "Validated 2 mods; 0 override(s)",
+        "stderr": "",
+        "exit_code": 0
+      }
+    ],
+    "scope": "Frozen package copies; public asset, indexed Canvas and audio APIs; no live desktop or pilot mutations."
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "package": "iron_coast_stage2_music",
+  "api_version": 1,
+  "version": "1.0.0",
+  "result": "passed",
+  "deterministic_composer_regeneration": "byte-identical MUS and provenance after repeated generation",
+  "portable_music_api_tests": {
+    "passed": 7,
+    "failed": 0,
+    "command": "cargo test --locked --no-default-features --manifest-path RustRaptor/Cargo.toml --test music"
+  },
+  "independent_activation": true,
+  "native_checked_decoder": true,
+  "native_library_sha256": "3525beac85a8e592f5db81358901ae8f321460f106f3929246ff6af832deeb24",
+  "native_sources": {
+    "src/audio.rs": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+    "src/audio/opl3.rs": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+    "src/sound.rs": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b"
+  },
+  "original_instrument_bank_sha256": "fdc93c076bf44207299e61ec1bbcfafca421454bfa99dd14fa4e5dcada1547b9",
+  "validator_rust_sha256": "14868b5e7c43c01c9dfe8e0b0868ae4f2940620bf85c3874e083cdd7bca0dcd8",
+  "validator_recipe_sha256": "590720e80870f7f4f968b92880a84d6b4f8822e1ce05e0a7e4ed1d5d8c248a88",
+  "native_pcm_inspection": {
+    "sample_rate": 22050,
+    "channels": 2,
+    "pcm_bits": 16,
+    "clipped_samples_all_tracks_at_volume_85_and_127": 0,
+    "all_complete_seconds_audible": true,
+    "music_mute_exact_zero": true,
+    "single_play_tails_decay": true,
+    "percussion_declarations": "verified against used programs and 100 + GM percussion key",
+    "same_pitch_overlap_unmatched_or_dangling_notes": 0,
+    "opl_capacity": 18,
+    "listen_method": "Objective PCM, header, clock, note and instrument-bank inspection; no claim of human listening",
+    "limitations": [
+      "Native instrument waveforms have small nonzero DC means; no custom filtering or driver changes were applied.",
+      "Loops intentionally close a musical cadence; native envelopes and oscillator phases do not make sample-identical PCM splices.",
+      "Art/SD/HD review does not apply: this package contains only scores and reproduction/validation sources.",
+      "Full and boundary WAVs are ignored local QA outputs, not registered digital effects or required package assets."
+    ]
+  },
+  "preview_reproduction": "python3 mods/iron_coast_stage2_music/validate_music.py",
+  "local_evidence": "../.reference/iron-coast-stage2-music/native-validation.json",
+  "tracks": [
+    {
+      "id": "iron_coast_stage2_music:assault",
+      "score_sha256": "cff88d3276e90b957d6df92f636101cb148e56d6a9684ff8319d90f7421463b4",
+      "duration_ticks": 6533,
+      "duration_seconds": 93.32857142857142,
+      "events": 5162,
+      "notes": 2569,
+      "maximum_events_per_tick": 24,
+      "maximum_required_opl_voices": 12,
+      "default_volume_85": {
+        "clipped_samples": 0,
+        "dc_mean": 69.18367231865963,
+        "nonzero_samples": 4455116,
+        "peak": 2994,
+        "rms": 415.0117284494293
+      },
+      "maximum_volume_127": {
+        "clipped_samples": 0,
+        "dc_mean": 96.13358885890602,
+        "nonzero_samples": 4458171,
+        "peak": 5695,
+        "rms": 683.7804926027605
+      },
+      "loop_boundary_sample_delta": 16,
+      "nearby_maximum_sample_delta": 913,
+      "one_play_tail_rms": 4.223457869078616,
+      "looping_tail_rms": 384.95123487435717,
+      "section_pcm_inspection": [
+        {
+          "section": "Ignition",
+          "seconds": 6.667,
+          "rms": 351.242,
+          "dc_mean": 32.702,
+          "ac_rms": 349.716,
+          "left_rms": 348.113,
+          "right_rms": 354.343
+        },
+        {
+          "section": "Rivetline",
+          "seconds": 26.667,
+          "rms": 432.098,
+          "dc_mean": 56.845,
+          "ac_rms": 428.343,
+          "left_rms": 416.462,
+          "right_rms": 447.188
+        },
+        {
+          "section": "Container crosswind",
+          "seconds": 20.0,
+          "rms": 430.109,
+          "dc_mean": 60.882,
+          "ac_rms": 425.779,
+          "left_rms": 413.407,
+          "right_rms": 446.187
+        },
+        {
+          "section": "Drydock bridge",
+          "seconds": 13.333,
+          "rms": 388.74,
+          "dc_mean": 158.121,
+          "ac_rms": 355.129,
+          "left_rms": 422.695,
+          "right_rms": 351.52
+        },
+        {
+          "section": "Harbor assault",
+          "seconds": 20.0,
+          "rms": 429.783,
+          "dc_mean": 58.143,
+          "ac_rms": 425.832,
+          "left_rms": 415.234,
+          "right_rms": 443.855
+        },
+        {
+          "section": "Home bearing",
+          "seconds": 6.667,
+          "rms": 425.064,
+          "dc_mean": 66.546,
+          "ac_rms": 419.822,
+          "left_rms": 407.324,
+          "right_rms": 442.092
+        }
+      ],
+      "minimum_complete_second_ac_rms": 299.8780249693171
+    },
+    {
+      "id": "iron_coast_stage2_music:pursuit",
+      "score_sha256": "454f2f4478d67d17c669f7c79fae3106b0f1e1753855e81885befe9d046c064d",
+      "duration_ticks": 6400,
+      "duration_seconds": 91.42857142857143,
+      "events": 5620,
+      "notes": 2798,
+      "maximum_events_per_tick": 24,
+      "maximum_required_opl_voices": 10,
+      "default_volume_85": {
+        "clipped_samples": 0,
+        "dc_mean": 298.56022351285964,
+        "nonzero_samples": 4369524,
+        "peak": 3380,
+        "rms": 596.498760715444
+      },
+      "maximum_volume_127": {
+        "clipped_samples": 0,
+        "dc_mean": 329.3054494086099,
+        "nonzero_samples": 4375231,
+        "peak": 5924,
+        "rms": 851.5674189129206
+      },
+      "loop_boundary_sample_delta": 4,
+      "nearby_maximum_sample_delta": 867,
+      "one_play_tail_rms": 3.2440683704010826,
+      "looping_tail_rms": 634.3466454271086,
+      "section_pcm_inspection": [
+        {
+          "section": "Wake signal",
+          "seconds": 5.714,
+          "rms": 425.53,
+          "dc_mean": 42.941,
+          "ac_rms": 423.358,
+          "left_rms": 415.611,
+          "right_rms": 435.223
+        },
+        {
+          "section": "Undertow",
+          "seconds": 22.857,
+          "rms": 636.14,
+          "dc_mean": 375.349,
+          "ac_rms": 513.602,
+          "left_rms": 630.761,
+          "right_rms": 641.474
+        },
+        {
+          "section": "Crosscurrent",
+          "seconds": 22.857,
+          "rms": 646.284,
+          "dc_mean": 379.254,
+          "ac_rms": 523.306,
+          "left_rms": 641.119,
+          "right_rms": 651.408
+        },
+        {
+          "section": "Fog channel",
+          "seconds": 11.429,
+          "rms": 420.534,
+          "dc_mean": 32.688,
+          "ac_rms": 419.261,
+          "left_rms": 417.203,
+          "right_rms": 423.838
+        },
+        {
+          "section": "Raider wake",
+          "seconds": 22.857,
+          "rms": 640.104,
+          "dc_mean": 377.461,
+          "ac_rms": 516.969,
+          "left_rms": 634.875,
+          "right_rms": 645.292
+        },
+        {
+          "section": "Bearing reset",
+          "seconds": 5.714,
+          "rms": 627.901,
+          "dc_mean": 358.595,
+          "ac_rms": 515.431,
+          "left_rms": 622.267,
+          "right_rms": 633.484
+        }
+      ],
+      "minimum_complete_second_ac_rms": 357.95592768692705
+    },
+    {
+      "id": "iron_coast_stage2_music:finale",
+      "score_sha256": "75f7bb28e0fd3e3e1632b81651dde44a63e2220174576412923a4f67a8dc46d1",
+      "duration_ticks": 7467,
+      "duration_seconds": 106.67142857142858,
+      "events": 4836,
+      "notes": 2406,
+      "maximum_events_per_tick": 26,
+      "maximum_required_opl_voices": 12,
+      "default_volume_85": {
+        "clipped_samples": 0,
+        "dc_mean": -246.0077532208698,
+        "nonzero_samples": 5040764,
+        "peak": 3199,
+        "rms": 562.450135416922
+      },
+      "maximum_volume_127": {
+        "clipped_samples": 0,
+        "dc_mean": -220.1935161458704,
+        "nonzero_samples": 5043075,
+        "peak": 5190,
+        "rms": 751.9019131880304
+      },
+      "loop_boundary_sample_delta": 5,
+      "nearby_maximum_sample_delta": 1694,
+      "one_play_tail_rms": 4.714550257127835,
+      "looping_tail_rms": 446.96381073480205,
+      "section_pcm_inspection": [
+        {
+          "section": "Black horizon",
+          "seconds": 7.619,
+          "rms": 445.51,
+          "dc_mean": -178.859,
+          "ac_rms": 408.03,
+          "left_rms": 451.911,
+          "right_rms": 439.015
+        },
+        {
+          "section": "Beacon motif",
+          "seconds": 22.857,
+          "rms": 590.669,
+          "dc_mean": -295.959,
+          "ac_rms": 511.173,
+          "left_rms": 601.045,
+          "right_rms": 580.108
+        },
+        {
+          "section": "Danger current",
+          "seconds": 22.857,
+          "rms": 578.671,
+          "dc_mean": -294.397,
+          "ac_rms": 498.187,
+          "left_rms": 589.383,
+          "right_rms": 567.757
+        },
+        {
+          "section": "Eye of the tide",
+          "seconds": 15.238,
+          "rms": 394.546,
+          "dc_mean": 37.955,
+          "ac_rms": 392.716,
+          "left_rms": 405.907,
+          "right_rms": 382.848
+        },
+        {
+          "section": "The last breakwater",
+          "seconds": 30.476,
+          "rms": 634.283,
+          "dc_mean": -330.425,
+          "ac_rms": 541.418,
+          "left_rms": 644.539,
+          "right_rms": 623.857
+        },
+        {
+          "section": "Beacon return",
+          "seconds": 7.619,
+          "rms": 609.635,
+          "dc_mean": -309.531,
+          "ac_rms": 525.21,
+          "left_rms": 619.585,
+          "right_rms": 599.52
+        }
+      ],
+      "minimum_complete_second_ac_rms": 344.61837692343346
+    }
+  ],
+  "real_catalog_cli": {
+    "passed": true,
+    "validated_packages": 1,
+    "overrides": 0,
+    "command": "cargo run --locked --release --no-default-features --manifest-path RustRaptor/Cargo.toml -- --data RustRaptor/data --mods RustRaptor/mods --validate-mods iron_coast_stage2_music"
+  },
+  "reproduction_library_selection": {
+    "method": "Exact active Cargo --message-format=json compiler-artifact filenames",
+    "artifacts": {
+      "raptor_replica": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/release/libraptor_replica.rlib",
+        "sha256": "3525beac85a8e592f5db81358901ae8f321460f106f3929246ff6af832deeb24"
+      },
+      "serde_json": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/release/deps/libserde_json-89b5c242431768d3.rlib",
+        "sha256": "ba61a9b6a7f97c994c6fdb2ab5e50915a5d6b456664f31709fd05306d56e48bd"
+      }
+    },
+    "shared_desktop_build_mtime_failure_fixed": true,
+    "rerendered_previews_byte_identical_to_original_native_proof": true,
+    "all_three_score_bytes_unchanged": true
+  }
+}

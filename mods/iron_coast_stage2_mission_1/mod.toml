@@ -1,0 +1,13 @@
+id = "iron_coast_stage2_mission_1"
+name = "Iron Coast II — Mission 1: Nightbreak Inlet"
+version = "1.0.0"
+api_version = 1
+content = "content.json"
+scripts = ["scripts/mission.rhai"]
+description = "Nightbreak Inlet — an objective-driven Black Tide sortie with native aircraft, persistent required targets, its own boss, SD/HD terrain and generated effects."
+
+[dependencies]
+iron_coast_stage2_boss_1 = "^1.0"
+iron_coast_stage2_music = "^1.0"
+iron_coast_stage2_interceptor = "^1.0"
+iron_coast_stage2_siege = "^1.0"

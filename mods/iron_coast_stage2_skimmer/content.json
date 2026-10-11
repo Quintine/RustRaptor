@@ -1,0 +1,74 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_stage2_skimmer:gun",
+      "name": "Wakeknife firing controller",
+      "damage": 1,
+      "speed": 0,
+      "cooldown": 81,
+      "behavior": "scripted",
+      "target": "all",
+      "script": "scripts/gun.rhai"
+    },
+    {
+      "id": "iron_coast_stage2_skimmer:projectile",
+      "name": "Wakeknife shell",
+      "damage": 2,
+      "speed": 3,
+      "cooldown": 81,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 8,
+        "frames": 1
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "iron_coast_stage2_skimmer:unit",
+      "name": "Wakeknife",
+      "health": 26,
+      "speed": 1,
+      "reward": 140,
+      "ground": true,
+      "boss": false,
+      "cooldown": 81,
+      "weapon": "iron_coast_stage2_skimmer:gun",
+      "art": {
+        "png": "art/unit-sd.png",
+        "hd_png": "art/unit-hd.png",
+        "logical_width": 32,
+        "logical_height": 24,
+        "frames": 1
+      },
+      "script": "scripts/ai.rhai"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "iron_coast_stage2_skimmer:shot",
+      "name": "Wakeknife shot",
+      "file": "audio/shot.wav",
+      "volume": 80,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_stage2_skimmer:warning",
+      "name": "Wakeknife warning",
+      "file": "audio/warning.wav",
+      "volume": 62,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_stage2_skimmer:death",
+      "name": "Wakeknife death",
+      "file": "audio/death.wav",
+      "volume": 96,
+      "priority": 3
+    }
+  ]
+}

@@ -57,34 +57,31 @@ The [Windows workflow](../.github/workflows/windows.yml) runs simulation,
 modding and save tests on Windows, validates packaged assets and all local
 mods, captures SDL gameplay and publishes the zip as a workflow artifact.
 
-## Validation checkpoint: 11 October 2026
+## Current runtime and validation
 
-The included GNU executable passed 279 portable tests under Wine 11.19,
-including Windows save replacement and preserving a locked existing save.
-All 22 installed mod hashes match their previous Linux hashes exactly.
-The shared catalog validates 6,449 assets and the current packaged HD snapshot
-validates all 800 supplied frames. The exporter verifies all 6,742 shared
-data-file hashes and includes only checked Windows DLL dependencies.
+The included GNU executable uses the reviewed **1,148-frame HD snapshot**;
+the shared manifest binds **6,848 data files** and the package contains
+**45 installed mods**. Its SHA-256 is
+`a74cc4ea20ddc17a39fe4cbf2da2e7391a561d1975b114ec56dd35fb5ff38f2d`.
+The [1,148-frame native Windows run](https://github.com/Quintine/RustRaptor/actions/runs/38126069413)
+passed portable tests, exact committed GNU runtime checks, the MSVC desktop
+build and exported-folder catalog, HD, mod and SDL gameplay validation. That
+run preceded the Stage 2 content commit; it verifies the engine and the
+previous 22 mod packages.
 
-The exported zip passed CRC and manifest checks, then launched through
-`run.cmd` from another working directory after extraction into a path with
-spaces and Unicode. Its HD gameplay capture renders at 1920×1080. The
-original intro retains its 4:3 viewport with 240-pixel black side borders.
-SDL captured three seconds of 44.1 kHz stereo audio; a separate capture with
-music muted verified nonzero original sound effects (251,682 nonzero samples).
+The expanded workflow additionally completes all eight Black Tide missions
+and a saved finale replay with normal firing/input and paid repairs. It then
+checks all 45 mods and captures Stage 2 gameplay, FM music and music-muted
+sound effects from the MSVC package. Final archive relocation evidence is
+recorded after export and identifies the exact ZIP tested.
 
-Two native Windows CI runs passed all 279 portable tests. The
-[first run](https://github.com/Quintine/RustRaptor/actions/runs/38119440288) built the MSVC desktop release and
-validated the exported folder's launcher, catalog, HD art, all mods and SDL
-gameplay from a path with spaces and Unicode. The
-[second run](https://github.com/Quintine/RustRaptor/actions/runs/38119943948)
-also checked the exact committed GNU executable, SDL2 DLL and launcher before
-building and validating MSVC. Those runs used the previous 340-frame artwork
-snapshot. The [800-frame native Windows run](https://github.com/Quintine/RustRaptor/actions/runs/38121272504)
-also passed all 279 tests, the committed GNU runtime checks and the rebuilt
-MSVC package's complete HD, mod and SDL gameplay validation. The same snapshot
-passed the relocated-folder checks under Wine.
-The local GNU build additionally
-ran Iron Coast mission 1 at 1080p with all 22 mods enabled and captured its
-custom music. Both runs used SDL's dummy output drivers for automation;
+Earlier Windows checkpoints passed 279 portable tests under Wine 11.19,
+including save replacement and preservation of a locked existing save.
+The 800-frame/22-mod archive passed CRC, manifest and relocated Unicode/space
+folder checks through `run.cmd`, 1920×1080 HD rendering, exact 4:3 intro
+borders, stereo music and isolated original effects. Native Windows runs
+[38119440288](https://github.com/Quintine/RustRaptor/actions/runs/38119440288),
+[38119943948](https://github.com/Quintine/RustRaptor/actions/runs/38119943948)
+and [38121272504](https://github.com/Quintine/RustRaptor/actions/runs/38121272504)
+record those earlier snapshots. Automated SDL checks use dummy drivers;
 physical Windows display, audio and controller hardware remain untested.

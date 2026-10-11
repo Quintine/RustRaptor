@@ -35,6 +35,15 @@ be enabled individually; each mission selects its own dependencies.
 weapon mods. Enable them in Mods and buy them in the supply room. The cannon
 is a selected special that chains through nearby targets; the shield fires
 with your primary guns while Fire is held. Both ship SD/HD icons and sounds.
+
+**Iron Coast II: Black Tide** adds eight more missions, eight separate bosses,
+three shared enemy types and three original FM music tracks. Enable its campaign
+in **Mods**, apply at the main menu, then choose **Nightbreak Inlet** in the
+Hangar's mission menu to begin the linked campaign.
+The campaign selects its dependencies automatically. **Railburst Cannon**
+(685,000 credits) and **Depth Charge** (525,000 credits) are optional shop
+purchases; completing missions does not grant either weapon. Each mission,
+boss and weapon is also an individual mod. See [Stage 2](docs/iron-coast-stage2-design.md).
 For a user mods folder, pass `--mods DIR` or create
 `$XDG_DATA_HOME/RaptorReplica/mods/` on Linux or
 `%APPDATA%\RaptorReplica\mods\` on Windows. Saves and configuration use separate
@@ -60,7 +69,7 @@ Existing untouched Rust default bindings migrate to these controls.
 | Folder | Contents |
 | --- | --- |
 | `src/` | Engine, SDL host and validation CLI |
-| `mods/` | Aurora example; six Iron Coast missions, campaign assembly, music, five independent weapons, three shared enemies and five stage bosses |
+| `mods/` | 45 packages: Aurora example, two Iron Coast campaigns with 14 missions, seven weapons, shared enemies, bosses and original music |
 | `schemas/` | Version 1 mod API schemas |
 | `tests/` | Portable fixtures and opt-in original-data checks |
 | `tools/` | Replay comparator, content-table generator and asset reference tools |
@@ -75,7 +84,7 @@ See [repository layout](docs/repository.md).
 The engine supports original and 2×/3×/4× crisp scaling, plus an optional HD
 artwork setting. Bundled mods have SD/HD artwork; the reviewed base-game pack
 covers a complete light-player banking sequence and selected enemies, boss,
-equipment, projectiles, effects and terrain: 800 of 5,753 original pictures
+equipment, projectiles, effects and terrain: 1,148 of 5,753 original pictures
 are now included. [The HD backlog](docs/hd-backlog.md) records
 the remaining artwork and drafts awaiting review.
 
@@ -88,6 +97,7 @@ cases; wider playtesting and complete base-game HD coverage remain work in progr
 - [Mod API](docs/modding-api.md)
 - [AI mod authoring checklist](docs/mod-authoring-checklist.md)
 - [Iron Coast packages](docs/iron-coast.md)
+- [Iron Coast II: Black Tide](docs/iron-coast-stage2-design.md)
 - [Weapon prices and balance](docs/weapon-balance.md)
 - [Sprite and shadow validation](docs/visual-validation.md)
 - [Sound playback validation](docs/sound-validation.md)

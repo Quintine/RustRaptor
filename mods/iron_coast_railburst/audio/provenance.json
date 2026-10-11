@@ -1,0 +1,34 @@
+{
+  "tool": "original procedural Python synthesis",
+  "recipe": "generate_audio.py",
+  "source_recordings": [],
+  "deterministic_seed": "0x71ac092d",
+  "outputs": [
+    {
+      "file": "audio/fire.wav",
+      "sha256": "fbc829573e92ec4a824bb4ba00a3dff53c866685c0ff1270335d896a6cabdf7c",
+      "rate": 22050,
+      "channels": 1,
+      "bits": 16,
+      "frames": 3528,
+      "duration_seconds": 0.16,
+      "peak": 16253,
+      "rms": 2346.20609017488,
+      "dc_mean": 19.44331065759637,
+      "clipped_samples": 0
+    },
+    {
+      "file": "audio/impact.wav",
+      "sha256": "4a44c8f561c230f519ed926d849e7e0bff1db2f11cf705c67c70d2eccb1c8221",
+      "rate": 22050,
+      "channels": 1,
+      "bits": 16,
+      "frames": 5071,
+      "duration_seconds": 0.22997732426303855,
+      "peak": 15667,
+      "rms": 2250.0482951936838,
+      "dc_mean": 14.399132321041215,
+      "clipped_samples": 0
+    }
+  ]
+}

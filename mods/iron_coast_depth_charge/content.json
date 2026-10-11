@@ -1,0 +1,67 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_depth_charge:projectile",
+      "name": "Depth Charge Projectile",
+      "damage": 72,
+      "speed": 6,
+      "cooldown": 48,
+      "behavior": "straight",
+      "target": "ground",
+      "offsets": [
+        [
+          0,
+          -4
+        ]
+      ],
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 12,
+        "nearest": true
+      },
+      "script": "scripts/weapon.rhai"
+    }
+  ],
+  "items": [
+    {
+      "id": "iron_coast_depth_charge:equipment",
+      "name": "Depth Charge",
+      "price": 525000,
+      "max_count": 1,
+      "initial_count": 1,
+      "weapon": "iron_coast_depth_charge:projectile",
+      "special": true,
+      "consumable": false,
+      "art": {
+        "png": "art/equipment-sd.png",
+        "hd_png": "art/equipment-hd.png",
+        "logical_width": 16,
+        "logical_height": 16,
+        "nearest": true
+      },
+      "description": "Ground/naval blast, 36px radius. Selectable reusable ground/naval special. Ctrl launches a slow charge; a real ground hit deals 72 damage and splashes at most three other ground enemies within 36 pixels (36 inner / 20 outer). Deliberate 2.06-second cadence; no air damage or ammunition consumed. Alt/Shift selects weapons; Space drops mega bombs."
+    }
+  ],
+  "sounds": [
+    {
+      "id": "iron_coast_depth_charge:fire",
+      "name": "Depth Charge Fire",
+      "file": "audio/fire.wav",
+      "volume": 88,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 1
+    },
+    {
+      "id": "iron_coast_depth_charge:impact",
+      "name": "Depth Charge Impact",
+      "file": "audio/impact.wav",
+      "volume": 82,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+  "ordinary_palette_entries_only": true,
+  "audio": {
+    "approach": {
+      "path": "audio/approach.wav",
+      "sha256": "92fdd1f3ad28dc8a501385626cfed5c5a0c494890ad986bfdefe4ef876409220",
+      "sample_rate": 22050,
+      "bits": 16,
+      "channels": 1,
+      "samples": 17199,
+      "seconds": 0.78,
+      "seed": 2932,
+      "peak": 20316,
+      "recipe": "deterministic seeded chirp/noise, original synthesis, no recordings"
+    },
+    "target_alarm": {
+      "path": "audio/target_alarm.wav",
+      "sha256": "1a978f5a590b13fdcc6c69812d076227821995383d7535d060c9f8d7d6123b54",
+      "sample_rate": 22050,
+      "bits": 16,
+      "channels": 1,
+      "samples": 9261,
+      "seconds": 0.42,
+      "seed": 2933,
+      "peak": 15728,
+      "recipe": "deterministic seeded chirp/noise, original synthesis, no recordings"
+    },
+    "boss_alarm": {
+      "path": "audio/boss_alarm.wav",
+      "sha256": "752a7fc750ba466058a8fcab7f405a36ba643f53cce152f1948af9ac6fee2921",
+      "sample_rate": 22050,
+      "bits": 16,
+      "channels": 1,
+      "samples": 14332,
+      "seconds": 0.6499773242630386,
+      "seed": 2934,
+      "peak": 15728,
+      "recipe": "deterministic seeded chirp/noise, original synthesis, no recordings"
+    },
+    "salvage": {
+      "path": "audio/salvage.wav",
+      "sha256": "b8a73abb96986cec9e37063433356117a5fb79161a9fe5f15de966df40e89394",
+      "sample_rate": 22050,
+      "bits": 16,
+      "channels": 1,
+      "samples": 7056,
+      "seconds": 0.32,
+      "seed": 2935,
+      "peak": 20316,
+      "recipe": "deterministic seeded chirp/noise, original synthesis, no recordings"
+    },
+    "victory": {
+      "path": "audio/victory.wav",
+      "sha256": "d69675d0d6c6cf8738fc826c9743ebab74ebb5fa90c97661055628c35c8edc2c",
+      "sample_rate": 22050,
+      "bits": 16,
+      "channels": 1,
+      "samples": 24255,
+      "seconds": 1.1,
+      "seed": 2936,
+      "peak": 20316,
+      "recipe": "deterministic seeded chirp/noise, original synthesis, no recordings"
+    }
+  },
+  "target": {
+    "master": "art/target-source-v1.png",
+    "master_sha256": "8751d415ec5f95aadeb5c622c74f2ff945a4426fa5e2902f1e410773b5a9338a",
+    "master_size": [
+      1283,
+      1226
+    ],
+    "crop_runtime_invisible_padding": [
+      277,
+      270,
+      1006,
+      956
+    ],
+    "crop_threshold": 16,
+    "runtime_alpha_threshold": 128,
+    "logical_canvas": [
+      32,
+      32
+    ],
+    "hd_canvas": [
+      256,
+      256
+    ],
+    "sd_bounds": [
+      3,
+      4,
+      29,
+      28
+    ],
+    "hd_bounds": [
+      24,
+      30,
+      232,
+      226
+    ],
+    "frame_count": 1,
+    "origin": [
+      0,
+      0
+    ],
+    "generated_art_repainted": false
+  },
+  "terrain": {
+    "master_sha256": "8f2198d7827a25d53dd808d4ec7d79842db6152a7e3a0dddcf7ea47465056875",
+    "master_size": [
+      941,
+      1672
+    ],
+    "logical_joined_size": [
+      288,
+      512
+    ],
+    "hd_joined_size": [
+      1152,
+      2048
+    ],
+    "tiles": 288,
+    "period_rows": 32,
+    "repeat": "forward16 rows then reflected16 rows, both periodboundaries identical",
+    "joined_before_quantizing_and_splitting": true,
+    "seam_checks": true,
+    "briefing": "320x200 /1280x800 central wide crop from same genuine terrain master"
+  }
+}

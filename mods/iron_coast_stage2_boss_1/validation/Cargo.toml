@@ -1,0 +1,11 @@
+[package]
+name = "iron-coast-stage2-early-validation"
+version = "1.0.0"
+edition = "2024"
+[dependencies]
+raptor-replica = { path = "../../..", default-features = false }
+serde_json = "1"
+anyhow = "1"
+[[bin]]
+name = "validate-stage2-early"
+path = "validate.rs"

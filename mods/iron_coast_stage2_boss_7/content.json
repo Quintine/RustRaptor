@@ -1,0 +1,77 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_stage2_boss_7:shell",
+      "name": "Dreadnought cannon shell",
+      "damage": 3,
+      "speed": 3,
+      "cooldown": 84,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 6,
+        "logical_height": 12
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "iron_coast_stage2_boss_7:unit",
+      "name": "Dreadnought",
+      "health": 280,
+      "speed": 0,
+      "reward": 5000,
+      "ground": false,
+      "boss": true,
+      "cooldown": 10000,
+      "art": {
+        "png": "art/unit-sd.png",
+        "hd_png": "art/unit-hd.png",
+        "logical_width": 112,
+        "logical_height": 88,
+        "frames": 2
+      },
+      "script": "scripts/ai.rhai"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "iron_coast_stage2_boss_7:warning",
+      "name": "Dreadnought warning",
+      "file": "audio/warning.wav",
+      "volume": 90,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_stage2_boss_7:phase",
+      "name": "Dreadnought phase",
+      "file": "audio/phase.wav",
+      "volume": 110,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 3
+    },
+    {
+      "id": "iron_coast_stage2_boss_7:shot",
+      "name": "Dreadnought shot",
+      "file": "audio/shot.wav",
+      "volume": 110,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_stage2_boss_7:death",
+      "name": "Dreadnought death",
+      "file": "audio/death.wav",
+      "volume": 110,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 3
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "files": {
+    "alarm": {
+      "bits": 16,
+      "channels": 1,
+      "duration_seconds": 0.28,
+      "file": "audio/alarm.wav",
+      "first_last_samples": [
+        0,
+        0
+      ],
+      "peak": 22282,
+      "rms": 6783.547743523453,
+      "sample_rate": 22050,
+      "seed": 6201,
+      "sha256": "21abc6ed9b7e4e2843eaabe05885812009ebaf8d28d637ab67f2b614141851b0"
+    },
+    "approach": {
+      "bits": 16,
+      "channels": 1,
+      "duration_seconds": 0.45,
+      "file": "audio/approach.wav",
+      "first_last_samples": [
+        0,
+        0
+      ],
+      "peak": 22282,
+      "rms": 7004.925515451308,
+      "sample_rate": 22050,
+      "seed": 6200,
+      "sha256": "6fa43d6b5fb4debe39c1014282ddfbc362057197239d10b918181f45c200fcda"
+    },
+    "hazard": {
+      "bits": 16,
+      "channels": 1,
+      "duration_seconds": 0.22,
+      "file": "audio/hazard.wav",
+      "first_last_samples": [
+        0,
+        0
+      ],
+      "peak": 22282,
+      "rms": 7068.641271829282,
+      "sample_rate": 22050,
+      "seed": 6202,
+      "sha256": "f0f4b6f1fc9990acbf1492444e80e5be76c9e87170e6b3c403ee30048a0317ad"
+    },
+    "target_down": {
+      "bits": 16,
+      "channels": 1,
+      "duration_seconds": 0.36,
+      "file": "audio/target_down.wav",
+      "first_last_samples": [
+        0,
+        0
+      ],
+      "peak": 22282,
+      "rms": 4423.976739667795,
+      "sample_rate": 22050,
+      "seed": 6203,
+      "sha256": "40aa83ec659d7d3dca16291cb372a63b5ef6895c775299c3c194e636b0aa56b4"
+    },
+    "victory": {
+      "bits": 16,
+      "channels": 1,
+      "duration_seconds": 0.75,
+      "file": "audio/victory.wav",
+      "first_last_samples": [
+        0,
+        0
+      ],
+      "peak": 22282,
+      "rms": 7477.762781723981,
+      "sample_rate": 22050,
+      "seed": 6204,
+      "sha256": "c4c92eefa644faf14cf5da99fb431832719d621aaff5ed01b8ec1961ac3ee986"
+    }
+  },
+  "generator": "tools/build_assets.py deterministic sinusoidal chirps, seeded noise and faded envelopes; no recorded audio or third-party samples"
+}

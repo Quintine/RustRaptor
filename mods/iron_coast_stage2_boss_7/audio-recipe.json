@@ -1,0 +1,49 @@
+{
+  "generator": "build_finale_assets.py deterministic chirp/noise PCM synthesis; no recordings",
+  "files": {
+    "warning": {
+      "file": "audio/warning.wav",
+      "sample_rate": 22050,
+      "bits": 16,
+      "channels": 1,
+      "seconds": 0.32,
+      "seed": 7000,
+      "peak": 23592,
+      "rms": 11632.128475655247,
+      "sha256": "9b33b0ee424b6f6c852353911f50d854c58ce9d66611950e13096285317af84a"
+    },
+    "phase": {
+      "file": "audio/phase.wav",
+      "sample_rate": 22050,
+      "bits": 16,
+      "channels": 1,
+      "seconds": 0.5500226757369614,
+      "seed": 7001,
+      "peak": 23592,
+      "rms": 11946.01845529649,
+      "sha256": "cfc6be3cb81064338dce2cb7be2622246ddb04ddf7a479f78d134d408573aecf"
+    },
+    "shot": {
+      "file": "audio/shot.wav",
+      "sample_rate": 22050,
+      "bits": 16,
+      "channels": 1,
+      "seconds": 0.24997732426303854,
+      "seed": 7002,
+      "peak": 23592,
+      "rms": 3666.359841887208,
+      "sha256": "0de007c2f15ce1e132479fea8a4f9564bf83a063a75a8bb1be3bd36897989fac"
+    },
+    "death": {
+      "file": "audio/death.wav",
+      "sample_rate": 22050,
+      "bits": 16,
+      "channels": 1,
+      "seconds": 1.2499773242630385,
+      "seed": 7003,
+      "peak": 23592,
+      "rms": 3555.236318684341,
+      "sha256": "7100a330b86bede56340c752f98433b4527b3a98fc264ebd7685b2ee1a8299e2"
+    }
+  }
+}

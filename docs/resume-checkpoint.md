@@ -24,6 +24,32 @@ the relocation. See [repository layout](repository.md).
 
 ## Engine and package
 
+### Current runtime and Stage 2 work
+
+The `b8b8620` runtime checkpoint includes the reviewed **1,148-frame / 421-sequence**
+HD snapshot in both executables' shared catalog. It contains **6,848 data files**
+with unchanged original `INDEX`. Linux binary SHA-256 is
+`fdfcf03f126279246f3b762987e02fa7b385f07b4d31339732037462f9e52413`;
+Windows is `a74cc4ea20ddc17a39fe4cbf2da2e7391a561d1975b114ec56dd35fb5ff38f2d`.
+The engine now exposes checked script commands for boss animation frames and
+native impact-effect kinds. Original effect serialization remains compatible.
+
+**Iron Coast II: Black Tide** adds eight missions, eight bosses, three shared
+enemies, three original FM scores and two optional purchased weapons through
+23 individual packages. All eight missions pass starter-gun runs at difficulties
+0–3. All 23 package freezes and independent long-run checks are complete. The
+actual registered-pilot Veteran route saves between eight wins and a finale
+replay; all 34 Host artwork/shop/menu captures are inspected. Final relocated
+Linux/Windows archives are the remaining release checks. The ordinary source suites pass **310
+headless / 374 desktop** tests. [Stage 2 design and validation](iron-coast-stage2-design.md)
+records the new content and final acceptance scope.
+
+Original HD work continues under `hd_coordinator`; later approved candidates
+remain separate from the immutable packaged 1,148-frame snapshot. The paragraphs
+below preserve the earlier recovery and 800-frame package evidence.
+
+### Earlier package checkpoints
+
 - Windows support is now included: `bin/raptor-rust.exe`, adjacent `SDL2.dll`,
   `run.cmd`, `runtime-windows-manifest.json` and the Windows export tool/CI.
   The GNU executable SHA-256 is
@@ -89,7 +115,7 @@ are committed, and the executable and zip have been refreshed and launched.
 Root owns menu fixes. `iron_coast_5` temporarily owns the ground-target diagnosis;
 its completed boss candidates and pending equipment review remain preserved.
 
-## HD state and owners
+## Earlier HD state and recovery owners
 
 The original picture inventory is 5,753 IDs. The approved handoff has 800
 registered frames across 340 complete sequences; 4,953 IDs remain unregistered.

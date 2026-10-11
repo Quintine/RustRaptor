@@ -1,0 +1,50 @@
+{
+  "files": {
+    "death": {
+      "bits": 16,
+      "channels": 1,
+      "duration_seconds": 0.9,
+      "file": "audio/death.wav",
+      "first_last_samples": [
+        0,
+        0
+      ],
+      "peak": 22282,
+      "rms": 3349.2885088320336,
+      "sample_rate": 22050,
+      "seed": 6102,
+      "sha256": "4de60da0935fe95e590d8552f86105bac18eacbdd403f8d4e116eb759a29a4ad"
+    },
+    "shot": {
+      "bits": 16,
+      "channels": 1,
+      "duration_seconds": 0.19,
+      "file": "audio/shot.wav",
+      "first_last_samples": [
+        0,
+        0
+      ],
+      "peak": 22282,
+      "rms": 4079.843041899943,
+      "sample_rate": 22050,
+      "seed": 6101,
+      "sha256": "0dd2c70db82d4434a08601a96bc96e880fe1f6f1291ff68b30adbfb2353a211a"
+    },
+    "warning": {
+      "bits": 16,
+      "channels": 1,
+      "duration_seconds": 0.28,
+      "file": "audio/warning.wav",
+      "first_last_samples": [
+        0,
+        0
+      ],
+      "peak": 22282,
+      "rms": 6785.139084846579,
+      "sample_rate": 22050,
+      "seed": 6100,
+      "sha256": "145f14873499614ee86bf08e4731053d9e29d90f9a65a6f49ed3a6c07cb1a6f6"
+    }
+  },
+  "generator": "tools/build_assets.py deterministic sinusoidal chirps, seeded noise and faded envelopes; no recorded audio or third-party samples"
+}

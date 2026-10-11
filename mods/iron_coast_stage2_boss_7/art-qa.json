@@ -1,0 +1,102 @@
+{
+  "pipeline": "Complete meaningful-alpha cell crop with proportional fit; transparent centered padding; BOX SD reduction; no repaint",
+  "logical_size": [
+    112,
+    88
+  ],
+  "frames": 2,
+  "hd_scale": 4,
+  "origin": [
+    0,
+    0
+  ],
+  "crops": [
+    {
+      "frame": 0,
+      "cell": [
+        0,
+        0,
+        768,
+        768
+      ],
+      "alpha16_crop": [
+        32,
+        113,
+        736,
+        688
+      ],
+      "source_occupied_bounds": [
+        35,
+        115,
+        733,
+        685
+      ],
+      "fit_size": [
+        402,
+        328
+      ]
+    },
+    {
+      "frame": 1,
+      "cell": [
+        768,
+        0,
+        1536,
+        768
+      ],
+      "alpha16_crop": [
+        29,
+        112,
+        739,
+        688
+      ],
+      "source_occupied_bounds": [
+        32,
+        115,
+        737,
+        685
+      ],
+      "fit_size": [
+        404,
+        328
+      ]
+    }
+  ],
+  "projectile_crop_in_lower_cell": [
+    745,
+    34,
+    792,
+    162
+  ],
+  "files": {
+    "art/unit-sd.png": {
+      "size": [
+        224,
+        88
+      ],
+      "sha256": "15b54562c8fa7d375013aaa10084d3638eed820179a2e4a8728859143455762e"
+    },
+    "art/unit-hd.png": {
+      "size": [
+        896,
+        352
+      ],
+      "sha256": "53b30cf22b34616c4d0c4ad26de0ea42db82dabdd1cce7fadec875f6be5d661d"
+    },
+    "art/projectile-sd.png": {
+      "size": [
+        6,
+        12
+      ],
+      "sha256": "aa7b25252a07dcd2db86d8ae129ed290672dd6f01a0306beb269f1e6aac31eda"
+    },
+    "art/projectile-hd.png": {
+      "size": [
+        24,
+        48
+      ],
+      "sha256": "a9a6b9691f153f2c4fb84375620732c5e53ef0cf299ee1c2adc0df75833bdc61"
+    }
+  },
+  "phase_alignment": "Common centered logical canvas; collision bounds identical for every displayed phase"
+}

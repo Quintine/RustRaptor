@@ -1,0 +1,74 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_stage2_interceptor:gun",
+      "name": "Needlewing firing controller",
+      "damage": 1,
+      "speed": 0,
+      "cooldown": 69,
+      "behavior": "scripted",
+      "target": "all",
+      "script": "scripts/gun.rhai"
+    },
+    {
+      "id": "iron_coast_stage2_interceptor:projectile",
+      "name": "Needlewing shell",
+      "damage": 2,
+      "speed": 3,
+      "cooldown": 69,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 8,
+        "frames": 1
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "iron_coast_stage2_interceptor:unit",
+      "name": "Needlewing",
+      "health": 18,
+      "speed": 1,
+      "reward": 100,
+      "ground": false,
+      "boss": false,
+      "cooldown": 69,
+      "weapon": "iron_coast_stage2_interceptor:gun",
+      "art": {
+        "png": "art/unit-sd.png",
+        "hd_png": "art/unit-hd.png",
+        "logical_width": 24,
+        "logical_height": 24,
+        "frames": 1
+      },
+      "script": "scripts/ai.rhai"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "iron_coast_stage2_interceptor:shot",
+      "name": "Needlewing shot",
+      "file": "audio/shot.wav",
+      "volume": 72,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_stage2_interceptor:warning",
+      "name": "Needlewing warning",
+      "file": "audio/warning.wav",
+      "volume": 62,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_stage2_interceptor:death",
+      "name": "Needlewing death",
+      "file": "audio/death.wav",
+      "volume": 96,
+      "priority": 3
+    }
+  ]
+}

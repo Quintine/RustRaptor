@@ -1,0 +1,62 @@
+{
+  "approach": {
+    "path": "audio/approach.wav",
+    "sha256": "92fdd1f3ad28dc8a501385626cfed5c5a0c494890ad986bfdefe4ef876409220",
+    "sample_rate": 22050,
+    "bits": 16,
+    "channels": 1,
+    "samples": 17199,
+    "seconds": 0.78,
+    "seed": 2932,
+    "peak": 20316,
+    "recipe": "deterministic seeded chirp/noise, original synthesis, no recordings"
+  },
+  "target_alarm": {
+    "path": "audio/target_alarm.wav",
+    "sha256": "1a978f5a590b13fdcc6c69812d076227821995383d7535d060c9f8d7d6123b54",
+    "sample_rate": 22050,
+    "bits": 16,
+    "channels": 1,
+    "samples": 9261,
+    "seconds": 0.42,
+    "seed": 2933,
+    "peak": 15728,
+    "recipe": "deterministic seeded chirp/noise, original synthesis, no recordings"
+  },
+  "boss_alarm": {
+    "path": "audio/boss_alarm.wav",
+    "sha256": "752a7fc750ba466058a8fcab7f405a36ba643f53cce152f1948af9ac6fee2921",
+    "sample_rate": 22050,
+    "bits": 16,
+    "channels": 1,
+    "samples": 14332,
+    "seconds": 0.6499773242630386,
+    "seed": 2934,
+    "peak": 15728,
+    "recipe": "deterministic seeded chirp/noise, original synthesis, no recordings"
+  },
+  "salvage": {
+    "path": "audio/salvage.wav",
+    "sha256": "b8a73abb96986cec9e37063433356117a5fb79161a9fe5f15de966df40e89394",
+    "sample_rate": 22050,
+    "bits": 16,
+    "channels": 1,
+    "samples": 7056,
+    "seconds": 0.32,
+    "seed": 2935,
+    "peak": 20316,
+    "recipe": "deterministic seeded chirp/noise, original synthesis, no recordings"
+  },
+  "victory": {
+    "path": "audio/victory.wav",
+    "sha256": "d69675d0d6c6cf8738fc826c9743ebab74ebb5fa90c97661055628c35c8edc2c",
+    "sample_rate": 22050,
+    "bits": 16,
+    "channels": 1,
+    "samples": 24255,
+    "seconds": 1.1,
+    "seed": 2936,
+    "peak": 20316,
+    "recipe": "deterministic seeded chirp/noise, original synthesis, no recordings"
+  }
+}

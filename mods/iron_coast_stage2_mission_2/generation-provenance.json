@@ -1,0 +1,67 @@
+{
+  "tool": "builtin image_gen",
+  "utc": "2026-10-11T08:20:40.735611+00:00",
+  "original_builtin": "/home/quintine/.codex/generated_images/01a1245d-6057-70c2-a44c-c7a159ca21cb/exec-16d78ef7-420b-4d3d-b8f3-16fe655945b7.png",
+  "raw": "art/terrain-generated-v1.png",
+  "raw_sha256": "6d032b57afd4f40229a007af00b6678e1a37d6b062abfd4ccf48e076d994d41a",
+  "prompt": "prompts/terrain-v1.txt",
+  "prompt_sha256": "31fec494738c364447d2c953493274f5a29a095c5447d083e96d953db9d4c602",
+  "lease": "3754cc65-a70d-4647-955a-d26dd6b6c7a7",
+  "job": "stage2-undertow-terrain-v1",
+  "exact_gate_history": [
+    {
+      "timestamp_utc": "2026-10-11T08:18:25+00:00",
+      "event": "acquired",
+      "lease_id": "3754cc65-a70d-4647-955a-d26dd6b6c7a7",
+      "owner": "/root/iron_coast_2",
+      "job_id": "stage2-undertow-terrain-v1",
+      "expires_at": "2026-10-11T08:48:25+00:00"
+    },
+    {
+      "timestamp_utc": "2026-10-11T08:18:25+00:00",
+      "event": "started",
+      "lease_id": "3754cc65-a70d-4647-955a-d26dd6b6c7a7",
+      "owner": "/root/iron_coast_2",
+      "job_id": "stage2-undertow-terrain-v1",
+      "note": "Owner is submitting the built-in imagegen request; this slot requires an explicit report or release."
+    },
+    {
+      "timestamp_utc": "2026-10-11T08:18:49+00:00",
+      "event": "report",
+      "lease_id": "3754cc65-a70d-4647-955a-d26dd6b6c7a7",
+      "owner": "/root/iron_coast_2",
+      "job_id": "stage2-undertow-terrain-v1",
+      "outcome": "success"
+    }
+  ],
+  "reference_role": "Original Raptor palette/material style only",
+  "raw_preserved": true,
+  "authentic_style_reference_pins": {
+    "role": "authentic original palette/material style; new designs do not copy target geometry",
+    "sources": [
+      {
+        "asset_id": "10139",
+        "catalog_path": "sprites/TARGT2G1_PIC",
+        "original_payload_sha256": "16647e06c0121136adaede8ba6636f4eab4af33bb15be83c673b6201114412e3"
+      },
+      {
+        "asset_id": "10344",
+        "catalog_path": "sprites/SHIP39G1_PIC",
+        "original_payload_sha256": "7cb09e925ea7786b331d576c360aad09b5e18f35d0258ec78ab5ef2e50c2590e"
+      },
+      {
+        "asset_id": "400d5",
+        "catalog_path": "misc/unnamed.3295",
+        "original_payload_sha256": "52b3724f81fe97fc2884f45440e711776e253de93a26da2bcf1c9fe06241fd2f"
+      },
+      {
+        "asset_id": "4011f",
+        "catalog_path": "misc/unnamed.3369",
+        "original_payload_sha256": "ec08b9e0761eb2b408df6b5c4c71019b1f277478237cf336412d01672a7158ee"
+      }
+    ],
+    "palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "external_contact_sheet_sha256": "d92f7d68008a73d626dcc9125920b7b329d029ca87a01d28bc4005f80c4f9174",
+    "decoded_reference_images_excluded_from_package": true
+  }
+}

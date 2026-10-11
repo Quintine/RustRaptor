@@ -1,0 +1,74 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_stage2_siege:gun",
+      "name": "Bastion Crawler firing controller",
+      "damage": 1,
+      "speed": 0,
+      "cooldown": 86,
+      "behavior": "scripted",
+      "target": "all",
+      "script": "scripts/gun.rhai"
+    },
+    {
+      "id": "iron_coast_stage2_siege:projectile",
+      "name": "Bastion Crawler shell",
+      "damage": 3,
+      "speed": 3,
+      "cooldown": 86,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 8,
+        "frames": 1
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "iron_coast_stage2_siege:unit",
+      "name": "Bastion Crawler",
+      "health": 48,
+      "speed": 1,
+      "reward": 220,
+      "ground": true,
+      "boss": false,
+      "cooldown": 86,
+      "weapon": "iron_coast_stage2_siege:gun",
+      "art": {
+        "png": "art/unit-sd.png",
+        "hd_png": "art/unit-hd.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "frames": 1
+      },
+      "script": "scripts/ai.rhai"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "iron_coast_stage2_siege:shot",
+      "name": "Bastion Crawler shot",
+      "file": "audio/shot.wav",
+      "volume": 80,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_stage2_siege:warning",
+      "name": "Bastion Crawler warning",
+      "file": "audio/warning.wav",
+      "volume": 62,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_stage2_siege:death",
+      "name": "Bastion Crawler death",
+      "file": "audio/death.wav",
+      "volume": 96,
+      "priority": 3
+    }
+  ]
+}

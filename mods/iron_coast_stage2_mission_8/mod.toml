@@ -1,0 +1,14 @@
+id = "iron_coast_stage2_mission_8"
+name = "Iron Coast II 8: Black Tide"
+version = "1.0.0"
+api_version = 1
+description = "Black Tide: native classic waves, persistent naval defense objectives and a phased final carrier. Starter-gun viable, inventory safe, joined SD/HD terrain and original PCM cues."
+content = "content.json"
+scripts = ["scripts/mission.rhai"]
+
+[dependencies]
+iron_coast_stage2_interceptor = "^1.0"
+iron_coast_stage2_siege = "^1.0"
+iron_coast_stage2_skimmer = "^1.0"
+iron_coast_stage2_boss_8 = "^1.0"
+iron_coast_stage2_music = "^1.0"

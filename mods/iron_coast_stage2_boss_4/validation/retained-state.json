@@ -1,0 +1,86 @@
+{
+  "abandoned_live_replays": 1205,
+  "actual_native_collision_lives": 1205,
+  "actual_phase_transition_warnings": [
+    {
+      "actual_spawn_health": 140,
+      "difficulty": 0,
+      "high_phase_warnings": [
+        1,
+        77
+      ],
+      "new_phase_warning_ticks": 14,
+      "old_phase_latch_absent": true,
+      "phase2_release": 92,
+      "phase2_warning": 78
+    },
+    {
+      "actual_spawn_health": 140,
+      "difficulty": 1,
+      "high_phase_warnings": [
+        1,
+        77
+      ],
+      "new_phase_warning_ticks": 14,
+      "old_phase_latch_absent": false,
+      "phase2_release": 92,
+      "phase2_warning": 78
+    },
+    {
+      "actual_spawn_health": 280,
+      "difficulty": 2,
+      "high_phase_warnings": [
+        1,
+        77
+      ],
+      "new_phase_warning_ticks": 14,
+      "old_phase_latch_absent": false,
+      "phase2_release": 92,
+      "phase2_warning": 78
+    },
+    {
+      "actual_spawn_health": 280,
+      "difficulty": 3,
+      "high_phase_warnings": [
+        1,
+        77
+      ],
+      "new_phase_warning_ticks": 14,
+      "old_phase_latch_absent": false,
+      "phase2_release": 92,
+      "phase2_warning": 78
+    }
+  ],
+  "checkpoint_json_roundtrips": 9,
+  "difficulty_kills": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "distinct_ids": 1200,
+  "duplicate_callback_commands": 0,
+  "enabled": [
+    "iron_coast_stage2_boss_4"
+  ],
+  "fixture": "actual bundled Catalog; test-only stationary lethal projectile; native World collision, death, reward and retained ScriptRuntime",
+  "legacy_960_guard_migration": true,
+  "maximum_abandoned_state_bytes": 2790,
+  "maximum_death_state_bytes": 2724,
+  "migration_state_bytes": 2724,
+  "owner": "iron_coast_stage2_boss_4",
+  "package_pins_at_execution": [
+    {
+      "hash": "15e83a8cf65d8c7d1b9ac89328c63bc5628699f233cd82e0b63c28c30412bb61",
+      "id": "iron_coast_stage2_boss_4",
+      "version": "1.0.0"
+    }
+  ],
+  "retired_guard_capacity": 128,
+  "reused_id_lives": 5,
+  "reward_per_life": 2800,
+  "scope": "callback lifecycle/bounded-state proof, not mission combat balance",
+  "target_shield_restore": 0,
+  "two_live_clocks_retained": true,
+  "unit": "iron_coast_stage2_boss_4:unit"
+}

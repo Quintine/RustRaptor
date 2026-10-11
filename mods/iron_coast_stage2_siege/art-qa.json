@@ -1,0 +1,105 @@
+{
+  "all_occupied_input_alpha_retained_in_crop": true,
+  "frames": [
+    {
+      "crop_all_alpha_ge_1": [
+        0,
+        37,
+        1224,
+        1230
+      ],
+      "frames": 1,
+      "hd_alpha128_bounds": [
+        50,
+        54,
+        211,
+        200
+      ],
+      "hd_canvas": [
+        256,
+        256
+      ],
+      "hd_sha256": "9fe5a2b6754952f7e26cb59de52de8518465f1ee3aa03add89e421121dbe80a9",
+      "kind": "unit",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "logical_origin": [
+        0,
+        0
+      ],
+      "occupied_fit": [
+        224,
+        218
+      ],
+      "offset_hd": [
+        16,
+        19
+      ],
+      "raw_dimensions": [
+        1254,
+        1254
+      ],
+      "raw_sha256": "549b42781c0dda763c0f1f7be2a7890403d31a2369e3c90653c97122616dd81a",
+      "sd_alpha128_bounds": [
+        7,
+        7,
+        27,
+        25
+      ],
+      "sd_sha256": "09087ebf54d35b2b18fa08dc713fef7f753232f49ae0068902bbe11f3e0f6933"
+    },
+    {
+      "crop_all_alpha_ge_1": [
+        103,
+        39,
+        1176,
+        1133
+      ],
+      "frames": 1,
+      "hd_alpha128_bounds": [
+        25,
+        19,
+        37,
+        47
+      ],
+      "hd_canvas": [
+        64,
+        64
+      ],
+      "hd_sha256": "499f421139817f4a08b40fba5af7d0eb8ab0cb45d569c0d30c41e27f869b29a2",
+      "kind": "projectile",
+      "logical_canvas": [
+        8,
+        8
+      ],
+      "logical_origin": [
+        0,
+        0
+      ],
+      "occupied_fit": [
+        47,
+        48
+      ],
+      "offset_hd": [
+        8,
+        8
+      ],
+      "raw_dimensions": [
+        1254,
+        1254
+      ],
+      "raw_sha256": "13350afdc0fd4bb020413f947959c9ee0ead42add29ff68f2df236962d78439b",
+      "sd_alpha128_bounds": [
+        4,
+        3,
+        5,
+        6
+      ],
+      "sd_sha256": "9a288b63300997374de9a1a160b7e671cb2112e90e81de6be3eb52ee03770019"
+    }
+  ],
+  "method": "prepare_art.rs: unchanged genuine alpha master, crop only transparent margin, aspect-preserving centered fit, premultiplied-alpha Lanczos3 HD8x and renderer-aligned floor-nearest SD; original images are style references only",
+  "source_unchanged": true
+}

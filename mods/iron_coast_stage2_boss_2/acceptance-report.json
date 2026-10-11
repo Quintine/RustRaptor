@@ -1,0 +1,127 @@
+{
+  "utc": "2026-10-11T08:51:02.199238+00:00",
+  "status": "author_checked_review_ready",
+  "real_catalog": true,
+  "engine_source_hashes_at_report": {
+    "src/assets.rs": "4cdf11a229f6ca4c6183fb545dba43e9a2323f839f7a095292045aa13a773ddc",
+    "src/content.rs": "7f35df7100c450ba4bb30a0fdc90101c115b5ae42a7aac57829441c5b7761647",
+    "src/modding.rs": "f37d67004392f5726121e58a995900cd7062016e3f060ea131b0df38995e2912",
+    "src/simulation.rs": "0ec9f6da11ab82c1461868a7b147e4cdb14689fa7373bd0c24067d9014e9583a",
+    "src/render.rs": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+    "src/sound.rs": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+    "src/persistence.rs": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+    "Cargo.lock": "aac0a22725250ab35828223f8d129e4d2a4e6113cf81463e59600da3a59ffdea"
+  },
+  "catalog_file_hashes": {
+    "data/INDEX": "4ce78e5e638b6603114dd233ceaa41f386c0963ba4aa02ecf88ce0215b096681",
+    "data/misc/PALETTE_DAT": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "data/misc/GENMIDI_OP2": "fdc93c076bf44207299e61ec1bbcfafca421454bfa99dd14fa4e5dcada1547b9"
+  },
+  "compiled_validation_binary_sha256": "98f43eef5943061a18a465e95e8089189be793b9f8cbac275b8ebe982953567b",
+  "full_external_result_sha256": "63f97c1f8cab57452ee9235124551178fe2593c5e40f4a5ecd6e2aa9bf0cd19e",
+  "cli": {
+    "selected_packages": 10,
+    "overrides": 0,
+    "log_sha256": "c9401f44dc4fa438f75ccc00223e95f79cfa8bffcd1c8db5c106963f7b474822"
+  },
+  "visual_limits": "Author inspected native indexed SD1/HD4 Canvas/PNG-loader diagnostics, exact new source masters and SD/HD final art. Terrain in owned captures uses a simplified row sampler. Live SDL/Host captures and independent eight-stage progression are root-owned; no live device or whole-map rendering claim.",
+  "package": "iron_coast_stage2_boss_2",
+  "content_sha256": "e664d46f2cd4a20b7dff8030e6f8932fc5abeb321590e02b53d8a782687d3bda",
+  "scripts": {
+    "scripts/ai.rhai": "2e794a01968fc418b86f07c8704276fdfaf35443f07a0f1a1975e52c0f7adc7c"
+  },
+  "asset_report_sha256": "aae01dfc03415a0995e6512fce62af1a740093691f3272a8b3f101eb3f983084",
+  "raw_identity_checks": [
+    {
+      "package": "iron_coast_stage2_boss_2",
+      "role": "unit_or_terrain",
+      "raw": "mods/iron_coast_stage2_boss_2/art/unit-generated-v1.png",
+      "raw_sha256": "ed272f27c8aa31f3292ff584a3cf0ff1ec2a7fdf8213105e503c64fc133389d0",
+      "builtin_byte_identical": true,
+      "raw_dimensions": [
+        972,
+        1619
+      ],
+      "raw_alpha": "RGBA",
+      "reported_success": true
+    },
+    {
+      "package": "iron_coast_stage2_boss_2",
+      "role": "projectile",
+      "raw": "mods/iron_coast_stage2_boss_2/art/projectile-generated-v1.png",
+      "raw_sha256": "9cc6e7e6cac60f045050bdefe1c84f5fc7185bcb585b87b7a7df5b2206a38ebb",
+      "builtin_byte_identical": true,
+      "raw_dimensions": [
+        887,
+        1774
+      ],
+      "raw_alpha": "RGBA",
+      "reported_success": true
+    }
+  ],
+  "standalone_world_kill": {
+    "boss": "iron_coast_stage2_boss_2:unit",
+    "cues": [
+      "iron_coast_stage2_boss_2:death",
+      "iron_coast_stage2_boss_2:shot",
+      "iron_coast_stage2_boss_2:warning"
+    ],
+    "digest_before_extra_step": "ffe7a5201733c36b665fbec556de6e17f9e2b7093a854913904a8690a37a129e",
+    "minimum_observed_health": 0,
+    "serialized_script_state_bytes": 98,
+    "shield": 75,
+    "tick": 412
+  },
+  "all_difficulty_phase_checks": [
+    {
+      "actual_spawn_max_health": 200,
+      "boss": "iron_coast_stage2_boss_2:unit",
+      "difficulty": 0,
+      "half_health_phase": 2,
+      "initial_phase": 1,
+      "phase_timer_reset": true
+    },
+    {
+      "actual_spawn_max_health": 200,
+      "boss": "iron_coast_stage2_boss_2:unit",
+      "difficulty": 1,
+      "half_health_phase": 2,
+      "initial_phase": 1,
+      "phase_timer_reset": true
+    },
+    {
+      "actual_spawn_max_health": 400,
+      "boss": "iron_coast_stage2_boss_2:unit",
+      "difficulty": 2,
+      "half_health_phase": 2,
+      "initial_phase": 1,
+      "phase_timer_reset": true
+    },
+    {
+      "actual_spawn_max_health": 400,
+      "boss": "iron_coast_stage2_boss_2:unit",
+      "difficulty": 3,
+      "half_health_phase": 2,
+      "initial_phase": 1,
+      "phase_timer_reset": true
+    }
+  ],
+  "early_duplicate_callback_scope": "Direct Rhai hook protocol checks register an already-dead spawn silently and count its death once; independent actual lethal-spawn World review remains separate.",
+  "sound_mixer_checks": [
+    {
+      "fx_mute_zero": true,
+      "mixed_peak": 3072,
+      "sound": "iron_coast_stage2_boss_2:death"
+    },
+    {
+      "fx_mute_zero": true,
+      "mixed_peak": 2688,
+      "sound": "iron_coast_stage2_boss_2:shot"
+    },
+    {
+      "fx_mute_zero": true,
+      "mixed_peak": 1920,
+      "sound": "iron_coast_stage2_boss_2:warning"
+    }
+  ]
+}

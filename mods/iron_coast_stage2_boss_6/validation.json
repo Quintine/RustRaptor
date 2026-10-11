@@ -1,0 +1,51 @@
+{
+  "portable_tests": 4,
+  "difficulty_tests": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "real_world_persistence_ticks": 600,
+  "full_health_core_absent": true,
+  "half_instance_health_core_present": true,
+  "lethal_damage_actual_death_once": true,
+  "post_death_no_ghost_ticks": 120,
+  "warning_and_staggered_attack_order": "passed",
+  "serialized_continuation": "passed",
+  "independent_clocks_and_restart": "passed",
+  "real_catalog_associated_mission": {
+    "difficulty": 2,
+    "digest": "29996d8347709ca945f19742afbc5f3174ca13d493bb5e479bee28a9cc843dae",
+    "ending_credits": 61870,
+    "ending_shield": 97,
+    "full_20_slots": false,
+    "input_policy": "Forward guns only, always Fire, bottom y160, closest visible enemy aim with max4 horizontal pixels per tick",
+    "max_enemies": 3,
+    "mod_sound_events": 63,
+    "moving_native_definitions": [
+      "base:enemy_0_10",
+      "base:enemy_0_13",
+      "base:enemy_0_6",
+      "base:enemy_0_8"
+    ],
+    "objectives": {
+      "iron_coast_stage2_boss_6:defeated": 1,
+      "iron_coast_stage2_mission_6:complete": 1,
+      "iron_coast_stage2_mission_6:debrief": 1,
+      "iron_coast_stage2_mission_6:field_repair": 1,
+      "iron_coast_stage2_mission_6:hazard_lane": 0,
+      "iron_coast_stage2_mission_6:phase": 4,
+      "iron_coast_stage2_mission_6:targets_destroyed": 3,
+      "iron_coast_stage2_mission_6:targets_required": 3,
+      "iron_coast_stage2_siege:defeated": 7,
+      "iron_coast_stage2_skimmer:defeated": 7
+    },
+    "observed_damage": 32,
+    "starting_credits": 10000,
+    "starting_shield": 75,
+    "step_digest_sha256": "f2a6a5126338a36221ff65e842d37a1a8723e220de7b0bcff6c08a073af20bd3",
+    "tick": 2737
+  },
+  "route_limits": "Actualindexedloader and mixer; no liveSDL/1080p claim"
+}

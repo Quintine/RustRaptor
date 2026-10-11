@@ -48,6 +48,13 @@ jobs:
           Expand-Archive "$env:RUNNER_TEMP\SDL2.zip" "$env:RUNNER_TEMP\sdl2"
       - name: Run portable simulation, mod and Windows save tests
         run: cargo test --locked --no-default-features
+      - name: Complete Black Tide with carried pilot saves and paid repairs
+        shell: pwsh
+        run: |
+          $env:RAPTOR_TEST_DATA = "$env:GITHUB_WORKSPACE\data"
+          $env:RAPTOR_STAGE2_REPORT = "$env:RUNNER_TEMP\stage2-route.json"
+          cargo test --release --locked --no-default-features --test iron_coast_stage2 starter_ship_completes_all_eight_missions_with_paid_repairs_and_finale_replay -- --ignored --nocapture
+          if ($LASTEXITCODE -ne 0) { throw "Native Windows campaign continuation failed" }
       - name: Check the included Windows executable and launcher
         shell: pwsh
         run: |
@@ -85,10 +92,38 @@ jobs:
           $env:SDL_AUDIODRIVER = "dummy"
           & $exe --profile-root "$env:RUNNER_TEMP\raptor-profile" --smoke-frames 32 --preview-mission base:sector_1_wave_1 --screenshot "$env:GITHUB_WORKSPACE\dist\windows-gameplay.png"
           if ($LASTEXITCODE -ne 0) { throw "Windows SDL gameplay failed" }
+          $stageProfile = "$env:RUNNER_TEMP\stage2-profile"
+          New-Item -ItemType Directory -Force "$stageProfile\config" | Out-Null
+          $selection = (Get-ChildItem "$package\mods" -Directory | Where-Object { Test-Path "$($_.FullName)\mod.toml" } | ForEach-Object { '"' + $_.Name + '"' }) -join ","
+          @"
+          enabled_mods = [$selection]
+          hd_mode = true
+          scale = 4
+          width = 1920
+          height = 1080
+          "@ | Set-Content "$stageProfile\config\config.toml" -Encoding utf8
+          $env:RAPTOR_AUDIO_CAPTURE = "$env:GITHUB_WORKSPACE\dist\windows-stage2-audio.wav"
+          $env:RAPTOR_AUDIO_CAPTURE_SECONDS = "3"
+          & $exe --profile-root $stageProfile --smoke-frames 240 --preview-mission iron_coast_stage2_mission_1:mission_01 --screenshot "$env:GITHUB_WORKSPACE\dist\windows-stage2.png"
+          if ($LASTEXITCODE -ne 0) { throw "Windows Stage2 SDL gameplay failed" }
+          if (!(Test-Path $env:RAPTOR_AUDIO_CAPTURE)) { throw "Windows Stage2 audio capture missing" }
+          python -c "import array, wave; w=wave.open(r'$env:RAPTOR_AUDIO_CAPTURE'); p=array.array('h',w.readframes(w.getnframes())); assert w.getframerate()==44100 and w.getnchannels()==2 and w.getnframes()>=44100 and sum(x!=0 for x in p)>1000"
+          if ($LASTEXITCODE -ne 0) { throw "Windows Stage2 audio was empty or malformed" }
+          Add-Content "$stageProfile\config\config.toml" "music_volume = 0"
+          $env:RAPTOR_AUDIO_CAPTURE = "$env:GITHUB_WORKSPACE\dist\windows-stage2-sfx.wav"
+          & $exe --profile-root $stageProfile --smoke-frames 240 --preview-mission iron_coast_stage2_mission_8:mission_08
+          if ($LASTEXITCODE -ne 0) { throw "Windows Stage2 sound-effect gameplay failed" }
+          python -c "import array, wave; w=wave.open(r'$env:RAPTOR_AUDIO_CAPTURE'); p=array.array('h',w.readframes(w.getnframes())); assert w.getframerate()==44100 and w.getnchannels()==2 and w.getnframes()>=44100 and sum(x!=0 for x in p)>1000"
+          if ($LASTEXITCODE -ne 0) { throw "Windows Stage2 sound effects were silent" }
+          Remove-Item Env:RAPTOR_AUDIO_CAPTURE
+          Remove-Item Env:RAPTOR_AUDIO_CAPTURE_SECONDS
       - uses: actions/upload-artifact@v4
         with:
           name: RustRaptor-windows-x86_64
           path: |
             dist/RustRaptor-windows-x86_64.zip
             dist/windows-gameplay.png
+            dist/windows-stage2.png
+            dist/windows-stage2-audio.wav
+            dist/windows-stage2-sfx.wav
           if-no-files-found: error

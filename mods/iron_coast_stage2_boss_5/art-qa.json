@@ -1,0 +1,60 @@
+{
+  "files": {
+    "unit-hd.png": {
+      "opaque_bounds": [
+        34,
+        36,
+        414,
+        186
+      ],
+      "sha256": "72dd1a498dbfc9be8626be76c5f29880875bf9dde35f6b6d2bc4d8112529447b",
+      "size": [
+        448,
+        224
+      ],
+      "transparent_pixels": 69532
+    },
+    "unit-sd.png": {
+      "opaque_bounds": [
+        9,
+        9,
+        103,
+        47
+      ],
+      "sha256": "924369d0d8ab2e084b7a7c0a1a881cadf6aea71b2afa7676ef42ae148e32a669",
+      "size": [
+        112,
+        56
+      ],
+      "transparent_pixels": 4348
+    }
+  },
+  "ordinary_palette": {
+    "ordinary_indices": [
+      0,
+      239
+    ],
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "source": "PALETTE_DAT"
+  },
+  "raw_sha256": "dec2fcb94a0ad8f280c8eadc9f10be7f54f777ff4e4ba829714335e446dd3deb",
+  "raw_size": [
+    1774,
+    887
+  ],
+  "recipe": {
+    "frames": 1,
+    "hd_scale": 4,
+    "logical_canvas": [
+      112,
+      56
+    ],
+    "method": "Fit complete untouched RGBA master proportionally into fixed padded canvas; no silhouette crop, alpha removal or painted changes.",
+    "origin": [
+      0,
+      0
+    ]
+  },
+  "recipe_sha256": "3482e6671b8d6ec63d0f8c1df15fd288ae5d9af8fab19f11f9932ea0837a4f77",
+  "visual_status": "Both generated masters and derivedSD/HD reviewed; actual Rust indexed SD/HD outputs inspected independently in isolated reference evidence. No live-scene/1080p claim."
+}

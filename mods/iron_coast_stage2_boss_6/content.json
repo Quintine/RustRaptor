@@ -1,0 +1,76 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_stage2_boss_6:shell",
+      "name": "Emberwake heavy cannon",
+      "damage": 3,
+      "speed": 4,
+      "cooldown": 96,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "asset": 66006,
+        "logical_width": 8,
+        "logical_height": 8,
+        "frames": 2
+      }
+    },
+    {
+      "id": "iron_coast_stage2_boss_6:core",
+      "name": "Emberwake center cannon",
+      "damage": 4,
+      "speed": 3,
+      "cooldown": 96,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "asset": 66006,
+        "logical_width": 8,
+        "logical_height": 8,
+        "frames": 2
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "iron_coast_stage2_boss_6:unit",
+      "name": "Emberwake",
+      "health": 360,
+      "speed": 0,
+      "reward": 7500,
+      "ground": true,
+      "boss": true,
+      "cooldown": 96,
+      "art": {
+        "png": "art/unit-sd.png",
+        "hd_png": "art/unit-hd.png",
+        "logical_width": 112,
+        "logical_height": 72
+      },
+      "script": "scripts/ai.rhai"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "iron_coast_stage2_boss_6:warning",
+      "name": "Emberwake warning",
+      "file": "audio/warning.wav",
+      "volume": 76,
+      "priority": 3
+    },
+    {
+      "id": "iron_coast_stage2_boss_6:shot",
+      "name": "Emberwake shot",
+      "file": "audio/shot.wav",
+      "volume": 88,
+      "priority": 3
+    },
+    {
+      "id": "iron_coast_stage2_boss_6:death",
+      "name": "Emberwake death",
+      "file": "audio/death.wav",
+      "volume": 110,
+      "priority": 2
+    }
+  ]
+}

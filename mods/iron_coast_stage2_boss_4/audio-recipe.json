@@ -1,0 +1,38 @@
+{
+  "warning": {
+    "path": "audio/warning.wav",
+    "sha256": "70865f6e434074019ffb06dcf2e7c9304347286bbdca61ccdbb4c23739aaaa66",
+    "sample_rate": 22050,
+    "bits": 16,
+    "channels": 1,
+    "samples": 7938,
+    "seconds": 0.36,
+    "seed": 2932,
+    "peak": 15728,
+    "recipe": "deterministic seeded chirp/noise, original synthesis, no recordings"
+  },
+  "shot": {
+    "path": "audio/shot.wav",
+    "sha256": "c0741c7e5ab40386855ebf0b61b628b24d44777e2315e187eecf9f542c45dc5b",
+    "sample_rate": 22050,
+    "bits": 16,
+    "channels": 1,
+    "samples": 4410,
+    "seconds": 0.2,
+    "seed": 2933,
+    "peak": 20316,
+    "recipe": "deterministic seeded chirp/noise, original synthesis, no recordings"
+  },
+  "death": {
+    "path": "audio/death.wav",
+    "sha256": "0a407eedc9a9d5869362a62e3134c8ba55ecdd91e6c79f9b0158134b03261be6",
+    "sample_rate": 22050,
+    "bits": 16,
+    "channels": 1,
+    "samples": 20948,
+    "seconds": 0.9500226757369614,
+    "seed": 2934,
+    "peak": 20316,
+    "recipe": "deterministic seeded chirp/noise, original synthesis, no recordings"
+  }
+}

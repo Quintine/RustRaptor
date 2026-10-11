@@ -1,0 +1,194 @@
+{
+  "status": "Author production acceptance passed; independent campaign/SD-HD Host review handled separately",
+  "package": "iron_coast_stage2_boss_8",
+  "version": "1.0.0",
+  "api_version": 1,
+  "actual_original_catalog": true,
+  "starter_fire_only": true,
+  "normal_movement_limit_pixels_per_tick": 4,
+  "near_shot_sidesteps": {
+    "hostile_y": [
+      136,
+      188
+    ],
+    "horizontal_distance_from_player_center": 24
+  },
+  "runs": [
+    {
+      "boss_only": true,
+      "classic_ids": [],
+      "credits": 19000,
+      "difficulty": 0,
+      "digest": "82a8828e680e89c203740ba3b807925ad84c36e674569db5d3d80e55e98c3696",
+      "initial_credits": 10000,
+      "initial_shield": 75,
+      "inventory_preserved": true,
+      "inventory_slots": 2,
+      "maximum_live_enemies": 1,
+      "mission": 8,
+      "native_movement_ids": [],
+      "objectives": {
+        "iron_coast_stage2_boss_8:defeated": 1,
+        "iron_coast_stage2_boss_8:phase": 3,
+        "iron_coast_stage2_boss_8:safe_lane": 1
+      },
+      "outcome": "Playing",
+      "phase_frames": [
+        0,
+        1,
+        2
+      ],
+      "rewards_once": true,
+      "shield": 75,
+      "sound_ids": [
+        "iron_coast_stage2_boss_8:death",
+        "iron_coast_stage2_boss_8:phase",
+        "iron_coast_stage2_boss_8:warning"
+      ],
+      "tick": 186
+    },
+    {
+      "boss_only": true,
+      "classic_ids": [],
+      "credits": 19000,
+      "difficulty": 1,
+      "digest": "d2fb5d93ca6b5fd0459181e16accc15f2d9c36cf72f485d5466c1d2ec8439291",
+      "initial_credits": 10000,
+      "initial_shield": 75,
+      "inventory_preserved": true,
+      "inventory_slots": 2,
+      "maximum_live_enemies": 1,
+      "mission": 8,
+      "native_movement_ids": [],
+      "objectives": {
+        "iron_coast_stage2_boss_8:defeated": 1,
+        "iron_coast_stage2_boss_8:phase": 3,
+        "iron_coast_stage2_boss_8:safe_lane": 1
+      },
+      "outcome": "Playing",
+      "phase_frames": [
+        0,
+        1,
+        2
+      ],
+      "rewards_once": true,
+      "shield": 75,
+      "sound_ids": [
+        "iron_coast_stage2_boss_8:death",
+        "iron_coast_stage2_boss_8:phase",
+        "iron_coast_stage2_boss_8:warning"
+      ],
+      "tick": 186
+    },
+    {
+      "boss_only": true,
+      "classic_ids": [],
+      "credits": 19000,
+      "difficulty": 2,
+      "digest": "fedb0de99190f972a895d86902cdd87dcfef31ae2e5c247765a70aa73a0d72c3",
+      "initial_credits": 10000,
+      "initial_shield": 75,
+      "inventory_preserved": true,
+      "inventory_slots": 2,
+      "maximum_live_enemies": 1,
+      "mission": 8,
+      "native_movement_ids": [],
+      "objectives": {
+        "iron_coast_stage2_boss_8:defeated": 1,
+        "iron_coast_stage2_boss_8:phase": 3,
+        "iron_coast_stage2_boss_8:safe_lane": 2
+      },
+      "outcome": "Playing",
+      "phase_frames": [
+        0,
+        1,
+        2
+      ],
+      "rewards_once": true,
+      "shield": 75,
+      "sound_ids": [
+        "iron_coast_stage2_boss_8:death",
+        "iron_coast_stage2_boss_8:phase",
+        "iron_coast_stage2_boss_8:shot",
+        "iron_coast_stage2_boss_8:warning"
+      ],
+      "tick": 366
+    },
+    {
+      "boss_only": true,
+      "classic_ids": [],
+      "credits": 19000,
+      "difficulty": 3,
+      "digest": "0648e781f17a72f6e5144a5c816d7abd2b8fd09106145697451c62f26ff6eb05",
+      "initial_credits": 10000,
+      "initial_shield": 75,
+      "inventory_preserved": true,
+      "inventory_slots": 2,
+      "maximum_live_enemies": 1,
+      "mission": 8,
+      "native_movement_ids": [],
+      "objectives": {
+        "iron_coast_stage2_boss_8:defeated": 1,
+        "iron_coast_stage2_boss_8:phase": 3,
+        "iron_coast_stage2_boss_8:safe_lane": 2
+      },
+      "outcome": "Playing",
+      "phase_frames": [
+        0,
+        1,
+        2
+      ],
+      "rewards_once": true,
+      "shield": 75,
+      "sound_ids": [
+        "iron_coast_stage2_boss_8:death",
+        "iron_coast_stage2_boss_8:phase",
+        "iron_coast_stage2_boss_8:shot",
+        "iron_coast_stage2_boss_8:warning"
+      ],
+      "tick": 366
+    }
+  ],
+  "actual_production_mixer": [
+    {
+      "actual_mixer_peak": 6016,
+      "actual_mixer_rms": 689.7685176927112,
+      "muted_exact_zero": true,
+      "sound": "iron_coast_stage2_boss_8:death"
+    },
+    {
+      "actual_mixer_peak": 6016,
+      "actual_mixer_rms": 1565.0945326081744,
+      "muted_exact_zero": true,
+      "sound": "iron_coast_stage2_boss_8:phase"
+    },
+    {
+      "actual_mixer_peak": 5888,
+      "actual_mixer_rms": 318.4385906261991,
+      "muted_exact_zero": true,
+      "sound": "iron_coast_stage2_boss_8:shot"
+    },
+    {
+      "actual_mixer_peak": 4864,
+      "actual_mixer_rms": 955.2234502984105,
+      "muted_exact_zero": true,
+      "sound": "iron_coast_stage2_boss_8:warning"
+    }
+  ],
+  "actual_mixer_cues_unclipped": true,
+  "actual_mute_exact_zero": true,
+  "per_entity_phase_isolation": true,
+  "actual_world_repeated_spawn_step_lethal_with_retained_state": true,
+  "death_and_rewards_once": true,
+  "PNG_source_and_output_dimensions_checked": true,
+  "external_proof_hashes": {
+    "validation-results.json": "d063d101d9e1d5cf1cb94240caba3ddef04b5183def5b6625ebe32d92951b28d",
+    "boss-validation-results.json": "ef20464533b00c35f63c1add0d3149dc9da341ec580f3221e389a62230143e0a",
+    "actual-audio-proof.json": "293e8f37a5e0ae776d6b0369207dc80f2e38b52c0c903de412bba9b4fbfc60d4",
+    "actual-mixer-all-cues.wav": "af00e983a61e1c26e1504a818fa524b31528fa8f44211cc6969bbc0f6e430124",
+    "asset-validation.json": "7a30c3aaf365a8ac16c97c1b519d93ca39f1723c96b1fac5f93fa88f7757a1f7",
+    "boss-art-contact.png": "444de75e4c171ddac84e2ae6f3f206e749e1fdc3a59d406aa4c66f7678519aa7",
+    "terrain-briefing-contact.png": "254895a2296d6972f9fa4132e21d95979b149be960600507633f44847398eb3b"
+  },
+  "reference_visibility_limits": "Art contact sheets are author visual inspection. Sound proof uses actual mixer without a liveSDL occurrence claim. Root/independent Host screenshots bind final gameplay presentation separately."
+}

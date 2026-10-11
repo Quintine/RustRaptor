@@ -98,6 +98,21 @@ another special never disables it. Its pulses consume no equipment.
 
 ## Economy and limits
 
+Stage 2 adds two reusable selected specials, measured separately through the
+same real `World::step` and script path for 700 ticks (30 seconds).
+**Railburst Cannon**, priced at **685,000**, delivered 44.80 damage/s to an
+aligned air or ground target and 102.40 combined across its three-target
+forward column. It dealt zero damage to off-axis fixtures. Its narrow alignment
+requirement and finite penetration put it below Lightning Cannon's more flexible
+chain utility. **Depth Charge**, priced at **525,000**, delivered 36.00 damage/s
+to an aligned ground target and 74.00 combined in its bounded ground cluster.
+Air and off-axis fixtures took zero damage. With starter guns, the corresponding
+single-ground results were 67.93 and 59.13 damage/s. These prices reflect their
+specialist roles; campaign missions do not loan or award either item.
+The complete observations and fixture constraints are in
+[Railburst](../mods/iron_coast_railburst/validation/balance.json) and
+[Depth Charge](../mods/iron_coast_depth_charge/validation/balance.json).
+
 Controlled first-mission runs starting with 100 energy and zero credits earned
 42,775 credits at difficulty 1 and 59,025 at difficulty 2 with starter guns.
 The in-game registration flow starts with 10,000 credits and 75 energy, matching

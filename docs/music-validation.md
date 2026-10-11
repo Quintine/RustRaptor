@@ -57,3 +57,21 @@ LD_LIBRARY_PATH="$HOME/.local/lib" SDL_AUDIODRIVER=dummy cargo test --locked \
 These checks validate the engine path using synthetic scores. Composition,
 listening review and original-data in-game soundtrack captures are separate
 release checks for each music package.
+
+## Black Tide soundtrack
+
+`mods/iron_coast_stage2_music` contains three original compositions: **Rivetline
+Assault** (D minor, 144 BPM, 93.33 seconds), **Undertow Pursuit** (F-sharp minor,
+168 BPM, 91.43 seconds), and **Black Tide Rising** (C minor, 126 BPM, 106.67 seconds).
+Five FM channels and percussion use the bundled original GENMIDI instruments.
+They introduce no original-score copies or replacements. Mission definitions
+choose their namespaced IDs and the usual Music setting controls playback.
+
+The package's real decoder and FM renderer checks cover every second, peak
+levels at normal/full volume, exact mute, voice counts, looping boundaries and
+one-play release tails. Recomposition and all six full/boundary PCM renders
+reproduce byte-for-byte. `validate_music.py` resolves the exact active Cargo
+library artifacts instead of guessing from modification time, so separate
+desktop and headless builds cannot select incompatible Serde dependencies.
+The package README documents the composition and reproduction commands.
+These are automated score/PCM checks; physical speaker listening is separate.

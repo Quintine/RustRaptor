@@ -1,0 +1,13 @@
+id = "iron_coast_stage2_mission_2"
+name = "Iron Coast II — Mission 2: Undertow Run"
+version = "1.0.0"
+api_version = 1
+content = "content.json"
+scripts = ["scripts/mission.rhai"]
+description = "Undertow Run — an objective-driven Black Tide sortie with native aircraft, persistent required targets, its own boss, SD/HD terrain and generated effects."
+
+[dependencies]
+iron_coast_stage2_boss_2 = "^1.0"
+iron_coast_stage2_music = "^1.0"
+iron_coast_stage2_interceptor = "^1.0"
+iron_coast_stage2_skimmer = "^1.0"

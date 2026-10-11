@@ -1,0 +1,61 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_stage2_boss_2:projectile",
+      "name": "Undertow naval missile",
+      "damage": 4,
+      "speed": 4,
+      "cooldown": 72,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 16
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "iron_coast_stage2_boss_2:unit",
+      "name": "Undertow",
+      "health": 400,
+      "speed": 0,
+      "reward": 16000,
+      "ground": true,
+      "boss": true,
+      "cooldown": 72,
+      "art": {
+        "png": "art/unit-sd.png",
+        "hd_png": "art/unit-hd.png",
+        "logical_width": 48,
+        "logical_height": 80
+      },
+      "script": "scripts/ai.rhai"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "iron_coast_stage2_boss_2:warning",
+      "name": "Undertow warning",
+      "file": "audio/warning.wav",
+      "volume": 76,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_stage2_boss_2:shot",
+      "name": "Undertow shot",
+      "file": "audio/shot.wav",
+      "volume": 88,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_stage2_boss_2:death",
+      "name": "Undertow death",
+      "file": "audio/death.wav",
+      "volume": 110,
+      "priority": 2
+    }
+  ]
+}

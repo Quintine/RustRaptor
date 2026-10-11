@@ -1,0 +1,261 @@
+{
+  "title": "Iron Coast II: Black Tide \u2014 Original Soundtrack",
+  "authorship": "Original note sequences, harmony, arrangement and deterministic composer authored by Codex for this project.",
+  "service_clock_hz": 70,
+  "recipe": "build_music.py",
+  "recipe_sha256": "7fc846417f7993b9236b06228bbeba78f6158905f548d0387b8f30c5b1166063",
+  "percussion_preload_encoding": "100 + GM percussion key (MUS convention)",
+  "source_policy": "No proprietary/original-game melody, MIDI, recording or generated audio model is used. Stage1 recipe read only for MUS serialization contract.",
+  "rendering": "Native Rust MusScore decoder and Mixer, using separately installed original GENMIDI FM instruments.",
+  "loop_design": "Four-bar dominant-to-tonic returns, explicit per-note releases and all-notes-off at final service tick; next score downbeat starts on the same tonic. FM waveform phases are native, not a sample-exact PCM splice.",
+  "tracks": [
+    {
+      "id": "iron_coast_stage2_music:assault",
+      "title": "Rivetline Assault",
+      "file": "music/assault.mus",
+      "tempo_bpm": 144,
+      "meter": "4/4",
+      "bars": 56,
+      "duration_ticks": 6533,
+      "duration_seconds": 93.32857142857142,
+      "tonality": "D minor, B-flat/F contrast, A-major dominant and D tonic return",
+      "sections": [
+        {
+          "name": "Ignition",
+          "first_bar": 0,
+          "bars": 4
+        },
+        {
+          "name": "Rivetline",
+          "first_bar": 4,
+          "bars": 16
+        },
+        {
+          "name": "Container crosswind",
+          "first_bar": 20,
+          "bars": 12
+        },
+        {
+          "name": "Drydock bridge",
+          "first_bar": 32,
+          "bars": 8
+        },
+        {
+          "name": "Harbor assault",
+          "first_bar": 40,
+          "bars": 12
+        },
+        {
+          "name": "Home bearing",
+          "first_bar": 52,
+          "bars": 4
+        }
+      ],
+      "programs": {
+        "0": 34,
+        "1": 30,
+        "2": 29,
+        "3": 81,
+        "4": 48
+      },
+      "percussion_keys": [
+        36,
+        38,
+        41,
+        42,
+        43,
+        45,
+        47,
+        49
+      ],
+      "instrument_preload_table": [
+        29,
+        30,
+        34,
+        48,
+        81,
+        136,
+        138,
+        141,
+        142,
+        143,
+        145,
+        147,
+        149
+      ],
+      "events": 5162,
+      "notes": 2569,
+      "max_events_per_tick": 24,
+      "max_simultaneous_notes": 9,
+      "bytes": 15039,
+      "sha256": "cff88d3276e90b957d6df92f636101cb148e56d6a9684ff8319d90f7421463b4",
+      "dangling_notes": 0
+    },
+    {
+      "id": "iron_coast_stage2_music:pursuit",
+      "title": "Undertow Pursuit",
+      "file": "music/pursuit.mus",
+      "tempo_bpm": 168,
+      "meter": "4/4",
+      "bars": 64,
+      "duration_ticks": 6400,
+      "duration_seconds": 91.42857142857143,
+      "tonality": "F-sharp minor, D/E rising chase and C-sharp-major return",
+      "sections": [
+        {
+          "name": "Wake signal",
+          "first_bar": 0,
+          "bars": 4
+        },
+        {
+          "name": "Undertow",
+          "first_bar": 4,
+          "bars": 16
+        },
+        {
+          "name": "Crosscurrent",
+          "first_bar": 20,
+          "bars": 16
+        },
+        {
+          "name": "Fog channel",
+          "first_bar": 36,
+          "bars": 8
+        },
+        {
+          "name": "Raider wake",
+          "first_bar": 44,
+          "bars": 16
+        },
+        {
+          "name": "Bearing reset",
+          "first_bar": 60,
+          "bars": 4
+        }
+      ],
+      "programs": {
+        "0": 33,
+        "1": 28,
+        "2": 80,
+        "3": 10,
+        "4": 50
+      },
+      "percussion_keys": [
+        36,
+        38,
+        41,
+        42,
+        43,
+        45,
+        47,
+        49
+      ],
+      "instrument_preload_table": [
+        10,
+        28,
+        33,
+        50,
+        80,
+        136,
+        138,
+        141,
+        142,
+        143,
+        145,
+        147,
+        149
+      ],
+      "events": 5620,
+      "notes": 2798,
+      "max_events_per_tick": 24,
+      "max_simultaneous_notes": 9,
+      "bytes": 16369,
+      "sha256": "454f2f4478d67d17c669f7c79fae3106b0f1e1753855e81885befe9d046c064d",
+      "dangling_notes": 0
+    },
+    {
+      "id": "iron_coast_stage2_music:finale",
+      "title": "Black Tide Rising",
+      "file": "music/finale.mus",
+      "tempo_bpm": 126,
+      "meter": "4/4",
+      "bars": 56,
+      "duration_ticks": 7467,
+      "duration_seconds": 106.67142857142858,
+      "tonality": "C minor heroic/danger motif, A-flat/E-flat contrast and G-major dominant",
+      "sections": [
+        {
+          "name": "Black horizon",
+          "first_bar": 0,
+          "bars": 4
+        },
+        {
+          "name": "Beacon motif",
+          "first_bar": 4,
+          "bars": 12
+        },
+        {
+          "name": "Danger current",
+          "first_bar": 16,
+          "bars": 12
+        },
+        {
+          "name": "Eye of the tide",
+          "first_bar": 28,
+          "bars": 8
+        },
+        {
+          "name": "The last breakwater",
+          "first_bar": 36,
+          "bars": 16
+        },
+        {
+          "name": "Beacon return",
+          "first_bar": 52,
+          "bars": 4
+        }
+      ],
+      "programs": {
+        "0": 38,
+        "1": 30,
+        "2": 61,
+        "3": 81,
+        "4": 48
+      },
+      "percussion_keys": [
+        36,
+        38,
+        41,
+        42,
+        43,
+        45,
+        46,
+        47,
+        49
+      ],
+      "instrument_preload_table": [
+        30,
+        38,
+        48,
+        61,
+        81,
+        136,
+        138,
+        141,
+        142,
+        143,
+        145,
+        146,
+        147,
+        149
+      ],
+      "events": 4836,
+      "notes": 2406,
+      "max_events_per_tick": 26,
+      "max_simultaneous_notes": 9,
+      "bytes": 14065,
+      "sha256": "75f7bb28e0fd3e3e1632b81651dde44a63e2220174576412923a4f67a8dc46d1",
+      "dangling_notes": 0
+    }
+  ]
+}

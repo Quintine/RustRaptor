@@ -1,0 +1,127 @@
+{
+  "pipeline": "Complete meaningful-alpha cell crop with proportional fit; transparent centered padding; BOX SD reduction; no repaint",
+  "logical_size": [
+    112,
+    112
+  ],
+  "frames": 3,
+  "hd_scale": 4,
+  "origin": [
+    0,
+    0
+  ],
+  "crops": [
+    {
+      "frame": 0,
+      "cell": [
+        0,
+        0,
+        512,
+        768
+      ],
+      "alpha16_crop": [
+        6,
+        68,
+        511,
+        610
+      ],
+      "source_occupied_bounds": [
+        9,
+        70,
+        508,
+        607
+      ],
+      "fit_size": [
+        395,
+        424
+      ]
+    },
+    {
+      "frame": 1,
+      "cell": [
+        512,
+        0,
+        1024,
+        768
+      ],
+      "alpha16_crop": [
+        3,
+        68,
+        510,
+        610
+      ],
+      "source_occupied_bounds": [
+        6,
+        71,
+        506,
+        607
+      ],
+      "fit_size": [
+        397,
+        424
+      ]
+    },
+    {
+      "frame": 2,
+      "cell": [
+        1024,
+        0,
+        1536,
+        768
+      ],
+      "alpha16_crop": [
+        0,
+        67,
+        507,
+        610
+      ],
+      "source_occupied_bounds": [
+        4,
+        70,
+        504,
+        607
+      ],
+      "fit_size": [
+        396,
+        424
+      ]
+    }
+  ],
+  "projectile_crop_in_lower_cell": [
+    744,
+    38,
+    792,
+    163
+  ],
+  "files": {
+    "art/unit-sd.png": {
+      "size": [
+        336,
+        112
+      ],
+      "sha256": "1bcd1672ede1667668234600f3528665da2704b4ccb90f1a04fa74e255432ecf"
+    },
+    "art/unit-hd.png": {
+      "size": [
+        1344,
+        448
+      ],
+      "sha256": "c2fc5ceab44b869af905ef6bf35f292a2f0fc09808a849f8b298970390800858"
+    },
+    "art/projectile-sd.png": {
+      "size": [
+        6,
+        12
+      ],
+      "sha256": "36b0259a2840865be4011cf31a82c3817483b849a36a9a7d72d1644317b82b81"
+    },
+    "art/projectile-hd.png": {
+      "size": [
+        24,
+        48
+      ],
+      "sha256": "fcc6d3a532e1b2d62be6a5d18905cd08dd35f4f08e29040cf224942c2dc4509a"
+    }
+  },
+  "phase_alignment": "Common centered logical canvas; collision bounds identical for every displayed phase"
+}

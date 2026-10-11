@@ -8018,7 +8018,43 @@ mod tests {
             capture(&mut host, &format!("{namespace}-details"));
         }
         host.go(Screen::Missions);
-        capture(&mut host, "mission-selection");
+        for (n, name) in [(1, "nightbreak"), (8, "black-tide")] {
+            let id: ContentId = format!("iron_coast_stage2_mission_{n}:mission_{n:02}")
+                .as_str()
+                .into();
+            host.selected = host
+                .missions()
+                .iter()
+                .position(|candidate| candidate == &id)
+                .unwrap();
+            capture(&mut host, &format!("mission-selection-{name}"));
+        }
+        host.pending = enabled.clone();
+        host.go(Screen::Mods);
+        let ordered_rows = host.mod_ids();
+        host.selected = ordered_rows
+            .iter()
+            .position(|id| id == "iron_coast_stage2_campaign")
+            .unwrap()
+            + 2;
+        let campaign_row = host.selected;
+        capture(&mut host, "stage2-mod-manager");
+        host.open_diagnostics();
+        capture(&mut host, "stage2-dependency-details");
+        host.back().unwrap();
+        assert!(host.screen == Screen::Mods);
+        assert_eq!(host.selected, campaign_row);
+        host.activate().unwrap();
+        assert!(host.screen == Screen::ConfirmDisable);
+        assert_eq!(host.selected, 1, "Cancel must be the default choice");
+        assert_eq!(host.pending_disable.as_ref().unwrap().removed.len(), 23);
+        capture(&mut host, "stage2-disable-confirmation-first");
+        host.selected = host.rows().len() - 1;
+        capture(&mut host, "stage2-disable-confirmation-last");
+        host.back().unwrap();
+        assert!(host.screen == Screen::Mods);
+        assert_eq!(host.pending, enabled);
+        assert_eq!(host.mod_ids(), ordered_rows);
         assert!(!host.paths.data.exists());
         println!("Stage2 artwork preview captures: {}", output.display());
     }

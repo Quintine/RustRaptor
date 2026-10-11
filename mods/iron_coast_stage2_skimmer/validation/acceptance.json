@@ -1,0 +1,49 @@
+{
+  "api_version": 1,
+  "owned_package": "iron_coast_stage2_skimmer",
+  "portable_actual_world_tests": {
+    "command": "cargo test --locked --no-default-features --test stage2_enemies -- --nocapture",
+    "passed": 9,
+    "failed": 0,
+    "test_log_sha256": "1ceb868b5dcb07efd054f529a5356069c1837dd45f27f536886124782256d862",
+    "coverage": [
+      "independent and Stage1 coexistence activation",
+      "exact engine cooldown/finite burst/warning ticks",
+      "distinct bounded movement and escape without reward",
+      "actual ground/air collision filtering and damaged crawler shell loss",
+      "actual death rewards/objectives once and reused IDs after queued early kills",
+      "full serialized World plus Rhai state and RNG deterministic continuation",
+      "260 deaths per package with bounded128 history/live state",
+      "shipped PNG dimensions/padding/unchanged source SHA and all9SoundBank/Mixer nonzero unclipped effects",
+      "no invisible/passed-unit warning/projectile from muzzle-coordinate event"
+    ]
+  },
+  "shipped_assets": {
+    "SD_HD_PNGs": 4,
+    "unchanged_generated_masters": 2,
+    "WAV_effects": 3,
+    "alpha_and_alignment": "checked; equal logical canvas/aspect;one frame;origin0,0;opaque content leaves padding"
+  },
+  "local_visual_review": {
+    "actual_palette_outputs": 16,
+    "modes": [
+      "SD",
+      "HD"
+    ],
+    "scales": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "reserved_animated_palette_indices": 0,
+    "scope": "Actual art_sprite_variant plus identical desktop scaling branch, full diagnostic gallery visually inspected; not a live SDL Host scene. Fine HD details simplify in SD. Full raw masters inspected earlier; unedited generator bytes and exact hashes retained."
+  },
+  "real_catalog_validation": "Included assets and scripts passed real-catalog activation; final whole-folder pins and CLI reruns are recorded outside package in .reference/stage2-enemies/final-handoff.json to avoid recursive content hashes.",
+  "limits": [
+    "No whole-campaign balance or live SDL scene claim by this package owner; mission owners and independent reviewer validate integration.",
+    "Ordinary targets may escape; required mission targets must be held by mission logic.",
+    "Custom AI state is capped128 per package; dense enemy spawning remains a mission-author balance responsibility.",
+    "No platform source or launcher changes."
+  ]
+}

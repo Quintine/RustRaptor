@@ -1,0 +1,29 @@
+{
+  "title": "Stormglass Refinery",
+  "required_target_kills": 4,
+  "boss_arrival_tick": 2100,
+  "duration_hint_ticks": 3300,
+  "objective_timeout": false,
+  "completion_reward": 14500,
+  "target_reward": 450,
+  "target_salvage_shield": 12,
+  "equipment_loans": false,
+  "classic_ids": [
+    "base:enemy_0_73",
+    "base:enemy_2_25",
+    "base:enemy_0_20",
+    "base:enemy_0_79",
+    "base:enemy_0_74",
+    "base:enemy_2_26",
+    "base:enemy_0_21",
+    "base:enemy_0_22"
+  ],
+  "shared_units": [
+    "iron_coast_stage2_interceptor:unit",
+    "iron_coast_stage2_siege:unit"
+  ],
+  "music_track": "iron_coast_stage2_music:assault",
+  "terrain_layout_rows": 256,
+  "terrain_repeat_period_rows": 32,
+  "terrain_visual_scroll_span": 8192
+}

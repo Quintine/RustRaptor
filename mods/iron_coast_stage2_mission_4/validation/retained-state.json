@@ -1,0 +1,61 @@
+{
+  "abandoned_live_replays": 0,
+  "actual_native_collision_lives": 1205,
+  "actual_phase_transition_warnings": [],
+  "checkpoint_json_roundtrips": 9,
+  "difficulty_kills": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "distinct_ids": 1200,
+  "duplicate_callback_commands": 0,
+  "enabled": [
+    "iron_coast_stage2_boss_4",
+    "iron_coast_stage2_interceptor",
+    "iron_coast_stage2_mission_4",
+    "iron_coast_stage2_music",
+    "iron_coast_stage2_skimmer"
+  ],
+  "fixture": "actual bundled Catalog; test-only stationary lethal projectile; native World collision, death, reward and retained ScriptRuntime",
+  "legacy_960_guard_migration": true,
+  "maximum_abandoned_state_bytes": 0,
+  "maximum_death_state_bytes": 2713,
+  "migration_state_bytes": 2724,
+  "owner": "iron_coast_stage2_mission_4",
+  "package_pins_at_execution": [
+    {
+      "hash": "f3bee341196458f566e68577f6de9562b022fff0ecf5f0ae01b239900cb9d73d",
+      "id": "iron_coast_stage2_boss_4",
+      "version": "1.0.0"
+    },
+    {
+      "hash": "026d61084d595ee3a0db524420e47708c5fef469702b11730bffe7b91fd4c70a",
+      "id": "iron_coast_stage2_interceptor",
+      "version": "1.0.0"
+    },
+    {
+      "hash": "d57e82ed2278609ef7635d722c526605c831e0c5d34a01c88a79a204b07f51d9",
+      "id": "iron_coast_stage2_music",
+      "version": "1.0.0"
+    },
+    {
+      "hash": "683b5a6e6793d43f003fb7d9afd5950aa8360cc9bc06792ef328b0270906b4f2",
+      "id": "iron_coast_stage2_skimmer",
+      "version": "1.0.0"
+    },
+    {
+      "hash": "f48edc677e3817e3c40c44e324407d9b1396d5ed2795047608caa802f2be7761",
+      "id": "iron_coast_stage2_mission_4",
+      "version": "1.0.0"
+    }
+  ],
+  "retired_guard_capacity": 128,
+  "reused_id_lives": 5,
+  "reward_per_life": 500,
+  "scope": "callback lifecycle/bounded-state proof, not mission combat balance",
+  "target_shield_restore": 12,
+  "two_live_clocks_retained": false,
+  "unit": "iron_coast_stage2_mission_4:target"
+}

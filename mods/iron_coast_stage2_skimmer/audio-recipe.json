@@ -1,0 +1,38 @@
+{
+  "generator": "generate_audio.py standard Python seeded chirp/filtered noise; no original recordings",
+  "files": [
+    {
+      "file": "audio/shot.wav",
+      "seed": 8300,
+      "duration_seconds": 0.14,
+      "samples": 3087,
+      "format": "mono PCM16 little endian",
+      "sample_rate": 22050,
+      "peak": 20316,
+      "rms": 0.10664457043373429,
+      "sha256": "24739207f5328b933b3313ae7aeb85b1735f595794be4357f9de1c05f4535840"
+    },
+    {
+      "file": "audio/warning.wav",
+      "seed": 8301,
+      "duration_seconds": 0.19002267573696144,
+      "samples": 4190,
+      "format": "mono PCM16 little endian",
+      "sample_rate": 22050,
+      "peak": 13107,
+      "rms": 0.13314642240991556,
+      "sha256": "76c6c0237ac100aca9eb08b55c1646a295f14dd343d19b714d0e4b81b9ba90a7"
+    },
+    {
+      "file": "audio/death.wav",
+      "seed": 8302,
+      "duration_seconds": 0.56,
+      "samples": 12348,
+      "format": "mono PCM16 little endian",
+      "sample_rate": 22050,
+      "peak": 24248,
+      "rms": 0.11432585809234382,
+      "sha256": "de494506026ee9a5ec56c5fb090cdc9ce34f2d3dad2a114488fd34c886ae6ef5"
+    }
+  ]
+}

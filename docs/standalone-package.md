@@ -45,17 +45,16 @@ Re-run the assembler after engine changes, new approved HD registrations or
 mod edits to refresh the package. The runtime snapshot contains approved art
 only; it does not claim the full original HD catalog is complete.
 
-The current package was unpacked into a folder containing spaces and launched
-from `/tmp` with only its bundled SDL2 library on the library search path.
-Catalog validation checked 6,449 assets, 27 missions, 528 enemies, 16 weapons
-and 24 items. The refreshed 11 October bundle validates all 22 bundled mods
-and all 800 approved HD frames, with zero rejected supplied frames. Its
-runtime manifest verifies all 6,742 data files. The updated desktop executable
-also launches from `/tmp` with only the bundled library and an isolated profile.
-Menu and gameplay screenshots at 1280×800 and 1920×1080, plus stereo audio
-captures, completed successfully. Native `unzip` preserves the executable
-permissions stored in the archive.
-An original-intro capture at 1080p also confirms a 1440×1080 video area and
-black 240-pixel side borders when gameplay stretching is enabled. Removing
-the copied catalog produces an error at the copied data path, with no fallback
-to the development checkout.
+The current runtime contains **6,449 catalog entries, 1,148 approved HD frames
+and 6,848 data files**. There are **45 bundled mod packages**, including the
+23 packages for [Iron Coast II: Black Tide](iron-coast-stage2-design.md).
+All installed mods pass catalog validation; Stage 2 adds no overrides. The
+one existing override belongs to the Stage 1 campaign progression package.
+
+The earlier 800-frame/22-mod archives passed relocated-folder launch, 1080p
+SDL rendering, music and isolated sound-effect captures. Their original-intro
+capture confirms a 1440×1080 video area with black 240-pixel side borders.
+Removing the copied catalog reports its own missing path rather than using a
+development checkout. The final Stage 2 archive checks are recorded after
+export so their evidence refers to the exact distributed bytes. Native
+`unzip` preserves the executable permissions stored in the Linux archive.

@@ -1,0 +1,13 @@
+id = "iron_coast_stage2_mission_5"
+name = "Black Tide — Mission 5: Skybreaker Arsenal"
+version = "1.0.0"
+api_version = 1
+description = "Raid a cliffside airborne-weapon test facility, destroy both test batteries and bring down the Skybreaker flying fortress. Objective-driven standalone mission with SD/HD terrain, classic native foes and new audio."
+content = "content.json"
+scripts = ["scripts/mission.rhai", "scripts/target.rhai"]
+
+[dependencies]
+iron_coast_stage2_boss_5 = "^1.0"
+iron_coast_stage2_music = "^1.0"
+iron_coast_stage2_interceptor = "^1.0"
+iron_coast_stage2_siege = "^1.0"

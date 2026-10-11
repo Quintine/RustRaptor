@@ -1,0 +1,48 @@
+{
+  "scope": "Actual Rust PNG decoder + ordinary palette conversion + logical fitting + indexed Canvas + real World snapshots. Full desktop Host scene independent.",
+  "pages": {
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick1200-hd.ppm": "1062b1d7806231dae60720c30e49989378e05f317075cdc021d23a694ebd578d",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick1200-sd.ppm": "ed14038a0873979393182258a099967cf02d0b1db72b630bb6d6d5954c2e0f10",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick1800-hd.ppm": "9c4b1d44061aa5574b766370b83ed16c3a045b1ac0538d86268a707bf9c08c4d",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick1800-sd.ppm": "02299971ba9aeb83c62c79fd4924ff4c79acbd4ab976cedae10f1adc4668ad85",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick2299-hd.ppm": "bfa16a8217e097cd6891062c0d246a160c3db3f27c140840abbc9c6d539f8506",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick2299-sd.ppm": "3e589a709fadf02b57a66c8215f6b336bd3a7245a3e13546bfa0cb3e7c12761a",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick2313-hd.ppm": "5e97ecf9dc86b264fde3f7f23727e4d1751d73124cdfa162ab0b39b6e742597f",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick2313-sd.ppm": "b992a3af5e7198c5cf5b14a694197b91e06a2dc417540c7880746b54b1b52b12",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick2325-hd.ppm": "91b68c0a4a02b9027fcf2aebf4f185f444d00c422e940f4a1714079ee411a92b",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick2325-sd.ppm": "7d0020dff6c4896ad36490ad1c3d80e75d4149a978396aa3f41af88660ef8c1f",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick2370-hd.ppm": "d9387a256bc5b6072b448dd974a118803b15d1ec1fadf2e9d09258e95dbad608",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick2370-sd.ppm": "92393944ae63719fae8a2eebfa1d091a44409ed9fb4e75c766f0971827cd950a",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick2427-hd.ppm": "3d9062a83b5ee297bab45df00e5a456da82a6520ed6b35709ffbebf2e141381e",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick2427-sd.ppm": "c2b71e7808893f27808527515bc3ad7b97b0819f892203d4187d9e530d1247ad",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick2441-hd.ppm": "c04befcaa1483c665403cf1a18a7c6864e386f4160a4c090ab94b3b0603a2c3a",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick2441-sd.ppm": "3f9800b7533ce7c412291cf99eead11871c2f287706991586794f81024a861db",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick300-hd.ppm": "a61050e7a44c03a05401308059b5c30663c9bdbc2940ee4e1cecb6eaf715baed",
+    "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/captures/stage4-tick300-sd.ppm": "9b6ed2a54b8b7b72c63c84b0a4550baea29e38f38e1e21b1b128f76e1843f030"
+  },
+  "visual_review": {
+    "terrain": "Paired SD1x/HD4x scenes retain contiguous terrain across horizontal tiles and reflected rows, dark central flight corridor, intact drainage/dam walls and no tile seams seen.",
+    "targets": "All four required target silhouettes individually readable with transparent padding, consistent32x32 alignment; narrow pair touches collision canvas boundaries but visible artwork remains separate.",
+    "boss": "Distinct tracked refinery crawler / teal hydraulic mobile dam hull, bilateral structure and stable104x72/64 canvases; high-detail source and pixel SD share alignment.",
+    "telegraph": "Both phase warning arcs inspected in actual Rust views; cosmetic blue strokes end before damaging volley. Bright amber source v2 retains11SD foreground pixels and223peak for visible projectiles.",
+    "limitations": "This static indexed compositor does not claim desktop HUD/interpolation/shadow/audio callback screenshots; root independently covers real Host scenes."
+  },
+  "reviewed_pages": [
+    "world-scenes.png",
+    "stage4-target-warning-shot.png"
+  ],
+  "gallery_paths_outside_package": true,
+  "bounded_phase_recheck": {
+    "gallery": "/home/quintine/Projects/RaptorReplica/.reference/iron-coast-3-stage2/bounded-render-review/stage4-current-rows.png",
+    "gallery_sha256": "39608462eb8340717a29b70e964b3451af19676c834c0a5ffee5aab346441398",
+    "reviewed_current_rows": [
+      300,
+      1800,
+      2427,
+      2441
+    ],
+    "views": "Paired actual SD1x and HD4x; gallery SD enlarged nearest for inspection, raw PPMs retained.",
+    "decision": "Accepted. Required targets and boss remain aligned/readable, warning arcs and bright shell pixels visible, terrain joins intact. Historical original visual report preserved in full-folder pre-correction archive.",
+    "limits": "Static indexed World views; no new live Host/cinematic assertion."
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "status": "Author production acceptance passed; independent campaign/SD-HD Host review handled separately",
+  "package": "iron_coast_stage2_boss_7",
+  "version": "1.0.0",
+  "api_version": 1,
+  "actual_original_catalog": true,
+  "starter_fire_only": true,
+  "normal_movement_limit_pixels_per_tick": 4,
+  "near_shot_sidesteps": {
+    "hostile_y": [
+      136,
+      188
+    ],
+    "horizontal_distance_from_player_center": 24
+  },
+  "runs": [
+    {
+      "boss_only": true,
+      "classic_ids": [],
+      "credits": 15000,
+      "difficulty": 0,
+      "digest": "e5aca1589b55c31281dfc382ec0d5f9fb01a4f7a24b6975dc8a97fe6e9175fdd",
+      "initial_credits": 10000,
+      "initial_shield": 75,
+      "inventory_preserved": true,
+      "inventory_slots": 2,
+      "maximum_live_enemies": 1,
+      "mission": 7,
+      "native_movement_ids": [],
+      "objectives": {
+        "iron_coast_stage2_boss_7:defeated": 1,
+        "iron_coast_stage2_boss_7:phase": 2,
+        "iron_coast_stage2_boss_7:safe_lane": 1
+      },
+      "outcome": "Playing",
+      "phase_frames": [
+        0,
+        1
+      ],
+      "rewards_once": true,
+      "shield": 75,
+      "sound_ids": [
+        "iron_coast_stage2_boss_7:death",
+        "iron_coast_stage2_boss_7:phase",
+        "iron_coast_stage2_boss_7:shot",
+        "iron_coast_stage2_boss_7:warning"
+      ],
+      "tick": 147
+    },
+    {
+      "boss_only": true,
+      "classic_ids": [],
+      "credits": 15000,
+      "difficulty": 1,
+      "digest": "9de49462e7a59a0cbcfbd46afc24ddd42f608bbfc7b07f3d2466d45acdb5e30e",
+      "initial_credits": 10000,
+      "initial_shield": 75,
+      "inventory_preserved": true,
+      "inventory_slots": 2,
+      "maximum_live_enemies": 1,
+      "mission": 7,
+      "native_movement_ids": [],
+      "objectives": {
+        "iron_coast_stage2_boss_7:defeated": 1,
+        "iron_coast_stage2_boss_7:phase": 2,
+        "iron_coast_stage2_boss_7:safe_lane": 1
+      },
+      "outcome": "Playing",
+      "phase_frames": [
+        0,
+        1
+      ],
+      "rewards_once": true,
+      "shield": 75,
+      "sound_ids": [
+        "iron_coast_stage2_boss_7:death",
+        "iron_coast_stage2_boss_7:phase",
+        "iron_coast_stage2_boss_7:shot",
+        "iron_coast_stage2_boss_7:warning"
+      ],
+      "tick": 147
+    },
+    {
+      "boss_only": true,
+      "classic_ids": [],
+      "credits": 15000,
+      "difficulty": 2,
+      "digest": "21d9b8ec00afa0244f781cb6c5c5568d9652f188200c29d7c09235993e323ebe",
+      "initial_credits": 10000,
+      "initial_shield": 75,
+      "inventory_preserved": true,
+      "inventory_slots": 2,
+      "maximum_live_enemies": 1,
+      "mission": 7,
+      "native_movement_ids": [],
+      "objectives": {
+        "iron_coast_stage2_boss_7:defeated": 1,
+        "iron_coast_stage2_boss_7:phase": 2,
+        "iron_coast_stage2_boss_7:safe_lane": 1
+      },
+      "outcome": "Playing",
+      "phase_frames": [
+        0,
+        1
+      ],
+      "rewards_once": true,
+      "shield": 75,
+      "sound_ids": [
+        "iron_coast_stage2_boss_7:death",
+        "iron_coast_stage2_boss_7:phase",
+        "iron_coast_stage2_boss_7:shot",
+        "iron_coast_stage2_boss_7:warning"
+      ],
+      "tick": 287
+    },
+    {
+      "boss_only": true,
+      "classic_ids": [],
+      "credits": 15000,
+      "difficulty": 3,
+      "digest": "88904874de5850d9fa7be6741d13883e788bd26ff2b50aaf1e86aa9666987cc3",
+      "initial_credits": 10000,
+      "initial_shield": 75,
+      "inventory_preserved": true,
+      "inventory_slots": 2,
+      "maximum_live_enemies": 1,
+      "mission": 7,
+      "native_movement_ids": [],
+      "objectives": {
+        "iron_coast_stage2_boss_7:defeated": 1,
+        "iron_coast_stage2_boss_7:phase": 2,
+        "iron_coast_stage2_boss_7:safe_lane": 1
+      },
+      "outcome": "Playing",
+      "phase_frames": [
+        0,
+        1
+      ],
+      "rewards_once": true,
+      "shield": 75,
+      "sound_ids": [
+        "iron_coast_stage2_boss_7:death",
+        "iron_coast_stage2_boss_7:phase",
+        "iron_coast_stage2_boss_7:shot",
+        "iron_coast_stage2_boss_7:warning"
+      ],
+      "tick": 287
+    }
+  ],
+  "actual_production_mixer": [
+    {
+      "actual_mixer_peak": 5888,
+      "actual_mixer_rms": 690.400834298453,
+      "muted_exact_zero": true,
+      "sound": "iron_coast_stage2_boss_7:death"
+    },
+    {
+      "actual_mixer_peak": 6016,
+      "actual_mixer_rms": 1565.0945326081744,
+      "muted_exact_zero": true,
+      "sound": "iron_coast_stage2_boss_7:phase"
+    },
+    {
+      "actual_mixer_peak": 5504,
+      "actual_mixer_rms": 312.4530044662717,
+      "muted_exact_zero": true,
+      "sound": "iron_coast_stage2_boss_7:shot"
+    },
+    {
+      "actual_mixer_peak": 4864,
+      "actual_mixer_rms": 955.2234502984105,
+      "muted_exact_zero": true,
+      "sound": "iron_coast_stage2_boss_7:warning"
+    }
+  ],
+  "actual_mixer_cues_unclipped": true,
+  "actual_mute_exact_zero": true,
+  "per_entity_phase_isolation": true,
+  "actual_world_repeated_spawn_step_lethal_with_retained_state": true,
+  "death_and_rewards_once": true,
+  "PNG_source_and_output_dimensions_checked": true,
+  "external_proof_hashes": {
+    "validation-results.json": "d063d101d9e1d5cf1cb94240caba3ddef04b5183def5b6625ebe32d92951b28d",
+    "boss-validation-results.json": "ef20464533b00c35f63c1add0d3149dc9da341ec580f3221e389a62230143e0a",
+    "actual-audio-proof.json": "293e8f37a5e0ae776d6b0369207dc80f2e38b52c0c903de412bba9b4fbfc60d4",
+    "actual-mixer-all-cues.wav": "af00e983a61e1c26e1504a818fa524b31528fa8f44211cc6969bbc0f6e430124",
+    "asset-validation.json": "7a30c3aaf365a8ac16c97c1b519d93ca39f1723c96b1fac5f93fa88f7757a1f7",
+    "boss-art-contact.png": "444de75e4c171ddac84e2ae6f3f206e749e1fdc3a59d406aa4c66f7678519aa7",
+    "terrain-briefing-contact.png": "254895a2296d6972f9fa4132e21d95979b149be960600507633f44847398eb3b"
+  },
+  "reference_visibility_limits": "Art contact sheets are author visual inspection. Sound proof uses actual mixer without a liveSDL occurrence claim. Root/independent Host screenshots bind final gameplay presentation separately."
+}

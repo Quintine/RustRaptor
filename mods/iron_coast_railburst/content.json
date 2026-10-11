@@ -1,0 +1,67 @@
+{
+  "weapons": [
+    {
+      "id": "iron_coast_railburst:projectile",
+      "name": "Railburst Cannon Projectile",
+      "damage": 42,
+      "speed": 16,
+      "cooldown": 22,
+      "behavior": "straight",
+      "target": "all",
+      "offsets": [
+        [
+          0,
+          -4
+        ]
+      ],
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 4,
+        "logical_height": 20,
+        "nearest": true
+      },
+      "script": "scripts/weapon.rhai"
+    }
+  ],
+  "items": [
+    {
+      "id": "iron_coast_railburst:equipment",
+      "name": "Railburst Cannon",
+      "price": 685000,
+      "max_count": 1,
+      "initial_count": 1,
+      "weapon": "iron_coast_railburst:projectile",
+      "special": true,
+      "consumable": false,
+      "art": {
+        "png": "art/equipment-sd.png",
+        "hd_png": "art/equipment-hd.png",
+        "logical_width": 16,
+        "logical_height": 16,
+        "nearest": true
+      },
+      "description": "Pierces up to 3 aligned targets. Selectable reusable special. Ctrl fires a fast rail slug at air or ground targets. A real hit penetrates up to two more enemies ahead within a narrow 24-pixel lane, with falling damage (42/32/22). Best against aligned armor; no ammunition consumed. Alt/Shift selects weapons; Space drops mega bombs."
+    }
+  ],
+  "sounds": [
+    {
+      "id": "iron_coast_railburst:fire",
+      "name": "Railburst Cannon Fire",
+      "file": "audio/fire.wav",
+      "volume": 88,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 1
+    },
+    {
+      "id": "iron_coast_railburst:impact",
+      "name": "Railburst Cannon Impact",
+      "file": "audio/impact.wav",
+      "volume": 82,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    }
+  ]
+}

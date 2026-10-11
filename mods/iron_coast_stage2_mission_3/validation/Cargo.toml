@@ -1,0 +1,19 @@
+[package]
+name = "iron-coast-stage2-mission-3-validation"
+version = "1.0.0"
+edition = "2024"
+publish = false
+
+[workspace]
+
+[dependencies]
+raptor-replica = { path = "../../..", default-features = false }
+serde_json = "1"
+
+[[bin]]
+name = "validate"
+path = "validate.rs"
+
+[[bin]]
+name = "retained-state"
+path = "retained_state.rs"

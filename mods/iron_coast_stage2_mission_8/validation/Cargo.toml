@@ -1,0 +1,9 @@
+[package]
+name = "iron-coast-stage2-finale-validation"
+version = "1.0.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+raptor-replica = { path = "../../..", default-features = false }
+serde_json = "1"

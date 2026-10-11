@@ -1,0 +1,394 @@
+{
+  "utc": "2026-10-11T08:51:02.199238+00:00",
+  "status": "author_checked_review_ready",
+  "real_catalog": true,
+  "engine_source_hashes_at_report": {
+    "src/assets.rs": "4cdf11a229f6ca4c6183fb545dba43e9a2323f839f7a095292045aa13a773ddc",
+    "src/content.rs": "7f35df7100c450ba4bb30a0fdc90101c115b5ae42a7aac57829441c5b7761647",
+    "src/modding.rs": "f37d67004392f5726121e58a995900cd7062016e3f060ea131b0df38995e2912",
+    "src/simulation.rs": "0ec9f6da11ab82c1461868a7b147e4cdb14689fa7373bd0c24067d9014e9583a",
+    "src/render.rs": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+    "src/sound.rs": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+    "src/persistence.rs": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+    "Cargo.lock": "aac0a22725250ab35828223f8d129e4d2a4e6113cf81463e59600da3a59ffdea"
+  },
+  "catalog_file_hashes": {
+    "data/INDEX": "4ce78e5e638b6603114dd233ceaa41f386c0963ba4aa02ecf88ce0215b096681",
+    "data/misc/PALETTE_DAT": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "data/misc/GENMIDI_OP2": "fdc93c076bf44207299e61ec1bbcfafca421454bfa99dd14fa4e5dcada1547b9"
+  },
+  "compiled_validation_binary_sha256": "98f43eef5943061a18a465e95e8089189be793b9f8cbac275b8ebe982953567b",
+  "full_external_result_sha256": "63f97c1f8cab57452ee9235124551178fe2593c5e40f4a5ecd6e2aa9bf0cd19e",
+  "cli": {
+    "selected_packages": 10,
+    "overrides": 0,
+    "log_sha256": "c9401f44dc4fa438f75ccc00223e95f79cfa8bffcd1c8db5c106963f7b474822"
+  },
+  "visual_limits": "Author inspected native indexed SD1/HD4 Canvas/PNG-loader diagnostics, exact new source masters and SD/HD final art. Terrain in owned captures uses a simplified row sampler. Live SDL/Host captures and independent eight-stage progression are root-owned; no live device or whole-map rendering claim.",
+  "package": "iron_coast_stage2_mission_2",
+  "content_sha256": "ae66b60e1d7da60951188af7f71844bb87072616c5ac36a4d852de0890ba8915",
+  "scripts": {
+    "scripts/mission.rhai": "4f7950e48a428e992cb01f8ca12f0a71d162b472088360fdcc1c33fe3f27d088"
+  },
+  "asset_report_sha256": "f66b1c529efd7af95d5c9d1d526d61e28006b37946c1eef58434bf66ecc2a6d9",
+  "raw_identity_checks": [
+    {
+      "package": "iron_coast_stage2_mission_2",
+      "role": "unit_or_terrain",
+      "raw": "mods/iron_coast_stage2_mission_2/art/terrain-generated-v1.png",
+      "raw_sha256": "6d032b57afd4f40229a007af00b6678e1a37d6b062abfd4ccf48e076d994d41a",
+      "builtin_byte_identical": true,
+      "raw_dimensions": [
+        992,
+        1586
+      ],
+      "raw_alpha": "RGB",
+      "reported_success": true
+    }
+  ],
+  "mission_acceptance": {
+    "enabled_packages": [
+      "iron_coast_stage2_music",
+      "iron_coast_stage2_interceptor",
+      "iron_coast_stage2_skimmer",
+      "iron_coast_stage2_boss_2",
+      "iron_coast_stage2_mission_2"
+    ],
+    "late_fight_fixture": {
+      "boss_remains": true,
+      "playing_beyond_declared_duration": true,
+      "reachable_required_units": 4,
+      "scope": "Persistence-only difficulty3 fixture restoring shield10000 before each step to suppress pilot death; ordinary balance runs above have no health/damage cheats.",
+      "scroll": 5000,
+      "terrain_covered": true,
+      "terrain_rows": 4096,
+      "tick": 5000
+    },
+    "missing_one_required_death_blocks_victory": true,
+    "mission": "iron_coast_stage2_mission_2:mission_02",
+    "required_deaths": 4,
+    "runs": [
+      {
+        "captures": [
+          500,
+          1600,
+          2000,
+          2350,
+          2500
+        ],
+        "credit_gain": 52260,
+        "credits": 62260,
+        "cues": [
+          "iron_coast_stage2_boss_2:death",
+          "iron_coast_stage2_boss_2:shot",
+          "iron_coast_stage2_boss_2:warning",
+          "iron_coast_stage2_interceptor:death",
+          "iron_coast_stage2_interceptor:shot",
+          "iron_coast_stage2_mission_2:approach",
+          "iron_coast_stage2_mission_2:boss_alarm",
+          "iron_coast_stage2_mission_2:objective",
+          "iron_coast_stage2_mission_2:victory",
+          "iron_coast_stage2_skimmer:death",
+          "iron_coast_stage2_skimmer:warning"
+        ],
+        "difficulty": 2,
+        "digest": "f8c878a6ecfbc3d3a56150162e4d71885f7db1ea9e6cb2016360a5696064a64b",
+        "full20_inventory": false,
+        "initial_credits": 10000,
+        "initial_shield": 75,
+        "native_classes_moving": [
+          "base:enemy_0_20",
+          "base:enemy_0_23",
+          "base:enemy_0_56"
+        ],
+        "objectives": {
+          "iron_coast_stage2_boss_2:defeated": 1,
+          "iron_coast_stage2_interceptor:defeated": 7,
+          "iron_coast_stage2_mission_2:complete": 1,
+          "iron_coast_stage2_mission_2:debrief": 1,
+          "iron_coast_stage2_mission_2:phase": 3,
+          "iron_coast_stage2_skimmer:defeated": 4
+        },
+        "purchased_new_gear": false,
+        "replay_reset": true,
+        "reward_once": true,
+        "serialized_state_rng_round_trip_identical": true,
+        "shield": 61,
+        "tick": 2681
+      },
+      {
+        "captures": [],
+        "credit_gain": 52260,
+        "credits": 52260,
+        "cues": [
+          "iron_coast_stage2_boss_2:death",
+          "iron_coast_stage2_boss_2:shot",
+          "iron_coast_stage2_boss_2:warning",
+          "iron_coast_stage2_interceptor:death",
+          "iron_coast_stage2_interceptor:shot",
+          "iron_coast_stage2_mission_2:approach",
+          "iron_coast_stage2_mission_2:boss_alarm",
+          "iron_coast_stage2_mission_2:objective",
+          "iron_coast_stage2_mission_2:victory",
+          "iron_coast_stage2_skimmer:death",
+          "iron_coast_stage2_skimmer:warning"
+        ],
+        "difficulty": 2,
+        "digest": "ed00cbc8d9fac2657f4b09bc693f02b12f95ef4438265e6246b9ef65327c5907",
+        "full20_inventory": false,
+        "initial_credits": 0,
+        "initial_shield": 100,
+        "native_classes_moving": [
+          "base:enemy_0_20",
+          "base:enemy_0_23",
+          "base:enemy_0_56"
+        ],
+        "objectives": {
+          "iron_coast_stage2_boss_2:defeated": 1,
+          "iron_coast_stage2_interceptor:defeated": 7,
+          "iron_coast_stage2_mission_2:complete": 1,
+          "iron_coast_stage2_mission_2:debrief": 1,
+          "iron_coast_stage2_mission_2:phase": 3,
+          "iron_coast_stage2_skimmer:defeated": 4
+        },
+        "purchased_new_gear": false,
+        "replay_reset": true,
+        "reward_once": true,
+        "serialized_state_rng_round_trip_identical": true,
+        "shield": 86,
+        "tick": 2681
+      },
+      {
+        "captures": [],
+        "credit_gain": 52960,
+        "credits": 62960,
+        "cues": [
+          "iron_coast_stage2_boss_2:death",
+          "iron_coast_stage2_boss_2:shot",
+          "iron_coast_stage2_boss_2:warning",
+          "iron_coast_stage2_interceptor:death",
+          "iron_coast_stage2_mission_2:approach",
+          "iron_coast_stage2_mission_2:boss_alarm",
+          "iron_coast_stage2_mission_2:objective",
+          "iron_coast_stage2_mission_2:victory",
+          "iron_coast_stage2_skimmer:death"
+        ],
+        "difficulty": 2,
+        "digest": "2ccfa180d79b3a658808daa291e5f4fe6878a2aca204af09101f275ef31133d5",
+        "full20_inventory": true,
+        "initial_credits": 10000,
+        "initial_shield": 75,
+        "native_classes_moving": [
+          "base:enemy_0_20",
+          "base:enemy_0_23",
+          "base:enemy_0_56"
+        ],
+        "objectives": {
+          "iron_coast_stage2_boss_2:defeated": 1,
+          "iron_coast_stage2_interceptor:defeated": 8,
+          "iron_coast_stage2_mission_2:complete": 1,
+          "iron_coast_stage2_mission_2:debrief": 1,
+          "iron_coast_stage2_mission_2:phase": 3,
+          "iron_coast_stage2_skimmer:defeated": 4
+        },
+        "purchased_new_gear": false,
+        "replay_reset": true,
+        "reward_once": true,
+        "serialized_state_rng_round_trip_identical": true,
+        "shield": 67,
+        "tick": 2497
+      },
+      {
+        "captures": [],
+        "credit_gain": 52360,
+        "credits": 62360,
+        "cues": [
+          "iron_coast_depth_charge:fire",
+          "iron_coast_depth_charge:impact",
+          "iron_coast_stage2_boss_2:death",
+          "iron_coast_stage2_boss_2:shot",
+          "iron_coast_stage2_boss_2:warning",
+          "iron_coast_stage2_interceptor:death",
+          "iron_coast_stage2_interceptor:shot",
+          "iron_coast_stage2_mission_2:approach",
+          "iron_coast_stage2_mission_2:boss_alarm",
+          "iron_coast_stage2_mission_2:objective",
+          "iron_coast_stage2_mission_2:victory",
+          "iron_coast_stage2_skimmer:death"
+        ],
+        "difficulty": 2,
+        "digest": "e4ce9155cdf895fb91986381918e2a026c193b396905937852c790d853341df9",
+        "full20_inventory": false,
+        "initial_credits": 10000,
+        "initial_shield": 75,
+        "native_classes_moving": [
+          "base:enemy_0_20",
+          "base:enemy_0_23",
+          "base:enemy_0_56"
+        ],
+        "objectives": {
+          "iron_coast_stage2_boss_2:defeated": 1,
+          "iron_coast_stage2_interceptor:defeated": 8,
+          "iron_coast_stage2_mission_2:complete": 1,
+          "iron_coast_stage2_mission_2:debrief": 1,
+          "iron_coast_stage2_mission_2:phase": 3,
+          "iron_coast_stage2_skimmer:defeated": 4
+        },
+        "purchased_new_gear": true,
+        "replay_reset": true,
+        "reward_once": true,
+        "serialized_state_rng_round_trip_identical": true,
+        "shield": 61,
+        "tick": 2411
+      },
+      {
+        "captures": [],
+        "credit_gain": 49860,
+        "credits": 59860,
+        "cues": [
+          "iron_coast_stage2_boss_2:death",
+          "iron_coast_stage2_boss_2:shot",
+          "iron_coast_stage2_boss_2:warning",
+          "iron_coast_stage2_interceptor:death",
+          "iron_coast_stage2_interceptor:shot",
+          "iron_coast_stage2_mission_2:approach",
+          "iron_coast_stage2_mission_2:boss_alarm",
+          "iron_coast_stage2_mission_2:objective",
+          "iron_coast_stage2_mission_2:victory",
+          "iron_coast_stage2_skimmer:death"
+        ],
+        "difficulty": 0,
+        "digest": "64bf7056e9435040d9ed9f4dec830520012b2eacb146aa248bdce07505ee4008",
+        "full20_inventory": false,
+        "initial_credits": 10000,
+        "initial_shield": 75,
+        "native_classes_moving": [
+          "base:enemy_0_20",
+          "base:enemy_0_23",
+          "base:enemy_0_56"
+        ],
+        "objectives": {
+          "iron_coast_stage2_boss_2:defeated": 1,
+          "iron_coast_stage2_interceptor:defeated": 3,
+          "iron_coast_stage2_mission_2:complete": 1,
+          "iron_coast_stage2_mission_2:debrief": 1,
+          "iron_coast_stage2_mission_2:phase": 3,
+          "iron_coast_stage2_skimmer:defeated": 4
+        },
+        "purchased_new_gear": false,
+        "replay_reset": true,
+        "reward_once": true,
+        "serialized_state_rng_round_trip_identical": true,
+        "shield": 71,
+        "tick": 2481
+      },
+      {
+        "captures": [],
+        "credit_gain": 51710,
+        "credits": 61710,
+        "cues": [
+          "iron_coast_stage2_boss_2:death",
+          "iron_coast_stage2_boss_2:shot",
+          "iron_coast_stage2_boss_2:warning",
+          "iron_coast_stage2_interceptor:death",
+          "iron_coast_stage2_interceptor:shot",
+          "iron_coast_stage2_mission_2:approach",
+          "iron_coast_stage2_mission_2:boss_alarm",
+          "iron_coast_stage2_mission_2:objective",
+          "iron_coast_stage2_mission_2:victory",
+          "iron_coast_stage2_skimmer:death"
+        ],
+        "difficulty": 1,
+        "digest": "ad1c91a7f38918e4d20bbf16aa0893fe56108333b91e1c9e4f47cd8f6419cd51",
+        "full20_inventory": false,
+        "initial_credits": 10000,
+        "initial_shield": 75,
+        "native_classes_moving": [
+          "base:enemy_0_20",
+          "base:enemy_0_23",
+          "base:enemy_0_56"
+        ],
+        "objectives": {
+          "iron_coast_stage2_boss_2:defeated": 1,
+          "iron_coast_stage2_interceptor:defeated": 5,
+          "iron_coast_stage2_mission_2:complete": 1,
+          "iron_coast_stage2_mission_2:debrief": 1,
+          "iron_coast_stage2_mission_2:phase": 3,
+          "iron_coast_stage2_skimmer:defeated": 4
+        },
+        "purchased_new_gear": false,
+        "replay_reset": true,
+        "reward_once": true,
+        "serialized_state_rng_round_trip_identical": true,
+        "shield": 65,
+        "tick": 2481
+      },
+      {
+        "captures": [],
+        "credit_gain": 52260,
+        "credits": 62260,
+        "cues": [
+          "iron_coast_stage2_boss_2:death",
+          "iron_coast_stage2_boss_2:shot",
+          "iron_coast_stage2_boss_2:warning",
+          "iron_coast_stage2_interceptor:death",
+          "iron_coast_stage2_interceptor:shot",
+          "iron_coast_stage2_mission_2:approach",
+          "iron_coast_stage2_mission_2:boss_alarm",
+          "iron_coast_stage2_mission_2:objective",
+          "iron_coast_stage2_mission_2:victory",
+          "iron_coast_stage2_skimmer:death",
+          "iron_coast_stage2_skimmer:warning"
+        ],
+        "difficulty": 3,
+        "digest": "e48078a8b8e49c101186aa4ad9bb6fcfcd767c10679e706340d68367879ba2bb",
+        "full20_inventory": false,
+        "initial_credits": 10000,
+        "initial_shield": 75,
+        "native_classes_moving": [
+          "base:enemy_0_20",
+          "base:enemy_0_23",
+          "base:enemy_0_56"
+        ],
+        "objectives": {
+          "iron_coast_stage2_boss_2:defeated": 1,
+          "iron_coast_stage2_interceptor:defeated": 7,
+          "iron_coast_stage2_mission_2:complete": 1,
+          "iron_coast_stage2_mission_2:debrief": 1,
+          "iron_coast_stage2_mission_2:phase": 3,
+          "iron_coast_stage2_skimmer:defeated": 4
+        },
+        "purchased_new_gear": false,
+        "replay_reset": true,
+        "reward_once": true,
+        "serialized_state_rng_round_trip_identical": true,
+        "shield": 61,
+        "tick": 2681
+      }
+    ]
+  },
+  "normal_control_strategy": "Held Fire; mouseposition moves\u22644 logicalpx/tick, y160, aim at required living convoy centers then boss then ordinary visible enemies. No damage/shield/credit cheats or loans.",
+  "purchased_gear_fixture_scope": "The controlled shop preflight funds the 1,210,000-credit cost of owning both optional weapons before the sortie. It checks actual Pilot.buy/selection and gear preservation, and leaves10,000 credits for gameplay. It does not claim a newly registered pilot can afford both weapons.",
+  "sound_mixer_checks": [
+    {
+      "fx_mute_zero": true,
+      "mixed_peak": 2176,
+      "sound": "iron_coast_stage2_mission_2:approach"
+    },
+    {
+      "fx_mute_zero": true,
+      "mixed_peak": 2176,
+      "sound": "iron_coast_stage2_mission_2:boss_alarm"
+    },
+    {
+      "fx_mute_zero": true,
+      "mixed_peak": 2176,
+      "sound": "iron_coast_stage2_mission_2:objective"
+    },
+    {
+      "fx_mute_zero": true,
+      "mixed_peak": 2560,
+      "sound": "iron_coast_stage2_mission_2:victory"
+    }
+  ]
+}

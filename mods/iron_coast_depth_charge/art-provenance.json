@@ -1,0 +1,68 @@
+{
+  "tool": "built-in image_gen through imagegen skill",
+  "skill": "/home/quintine/.codex/skills/.system/imagegen/SKILL.md",
+  "style_reference_catalog_ids": [
+    "102b6",
+    "101cb"
+  ],
+  "style_reference_delivery": "Original catalog inspected separately; decoded originals are not included in this mod. The generated artwork is newly authored.",
+  "source_records": [
+    "art/generation-equipment-v1.json",
+    "art/generation-projectile-v1.json"
+  ],
+  "prompt_records": "prompts.json",
+  "conversion_recipe": "prepare_art.rs",
+  "conversion": "Fit alpha>=128 source bounds preserving aspect into one logical pixel margin; SD Triangle reduction and HD4x Lanczos3; binary final alpha128. Raw masters remain byte-identical to builtin outputs. Faint master glow outside the fitting bounds is not a separate in-game effect.",
+  "canvases": {
+    "equipment_sd": [
+      16,
+      16
+    ],
+    "equipment_hd": [
+      64,
+      64
+    ],
+    "projectile_sd": [
+      8,
+      12
+    ],
+    "projectile_hd": [
+      32,
+      48
+    ]
+  },
+  "animation_frames": 1,
+  "palette": "Engine maps ordinary PNG artwork to original palette0..239; no reserved palette effects requested.",
+  "audio_recipe": "generate_audio.py",
+  "audio_provenance": "audio/provenance.json",
+  "outputs": [
+    {
+      "path": "art/equipment-generated-source-v1.png",
+      "sha256": "669202bb78951419c9a1f61070be5dba7a55d8bfe096a071ae9cde86a8e26d3a"
+    },
+    {
+      "path": "art/equipment-hd.png",
+      "sha256": "b906ee08176c1fe429d61fcb22fe0ea06a513d11efb063def6639809466274ea"
+    },
+    {
+      "path": "art/equipment-sd.png",
+      "sha256": "61a9a9edc3fdb257e7f82e70c61d1fd3688728cd9c65cadf2b2e50e82fb789fd"
+    },
+    {
+      "path": "art/projectile-generated-source-v1.png",
+      "sha256": "0bc76b678c0d2db073ccf76ba2162465b3beb7fd78d505d875c95c594daeb29d"
+    },
+    {
+      "path": "art/projectile-hd.png",
+      "sha256": "1fb0ef6030151d68a477546711f8af120eb2563541d117147c6c2ee4f42f730d"
+    },
+    {
+      "path": "art/projectile-sd.png",
+      "sha256": "80a98973fa5e887bec6d90e603b50cef693f7ea69d00b3b8608569a1e59e0776"
+    }
+  ],
+  "recipe_hashes": {
+    "prepare_art.rs": "bd1d0514317e5063989f2371b9ca9fd71756cb502b0066d9932f6f39031de3f6",
+    "generate_audio.py": "a554a3a0e2b8f5432705fe32006c87998984b6e27430ac5a77b163c313760fce"
+  }
+}
