@@ -1,8 +1,8 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active external HD pack supplies **1,908**; **3,845** still await a registered replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. Current coverage is 1,908 reviewed originals in 846 complete sequences after 9,540 exact source/scaled output comparisons. Linux/Windows Stage2 packages retain 1,148 frames / 421 sequences and 45 accepted mods, with every released binary/library/manifest/data byte unchanged. Private future input ../data/hd/registered-class-review/handoff-1908-20261012/pack/ has handoff SHA `640faef409660fa93f94dfc8648f83c5ed0de39de51a4138f5545e2757bfcc57`; parent alone selects a runtime update.
+The checked catalog contains **5,753 standalone picture frames**. The active external HD pack supplies **1,972**; **3,781** still await a registered replacement. All original IDs, including unused graphics and destroyed variants, remain required. Authored mod art is separate. Current coverage is 1,972 reviewed originals in 850 complete sequences after 9,860 exact source/scaled output comparisons. Released Linux/Windows Stage2 packages retain 1,148 frames / 421 sequences and 45 accepted mods; all 6,853 runtime files remain unchanged. Private future input ../data/hd/registered-class-review/handoff-1972-20261012/pack/ has handoff SHA `86b95b17cfe96d2b23b5b13390e7fa25fac734525e009a3cfdc861a2dba77078`; parent alone selects a runtime update.
 
-Batch1908 admits three exact complete Terrain1 B0/C0/D0 families after full48 source/raw/material inspection, additive2622-case/277-delta cross-family joins/static states and whole-pack continuity. Five middle Terrain3 families remain whole-held for ten finish components across80 frames. Source-only char301c3 and green301ec methods are bounded and preserve every historical artifact; remaining eight corrections are gated. Both current source-age guards are false and all18 recursive sources stable. The frozen1908 pending cutoff has1026 historical independent-approved unregistered pictures:80 whole-family coordinator material-held and946 pending coordinator review. Original12 actual request provenance is independently verified additively, while its locator/reference-byte gaps remain without admission. Mixed HD/original density/value rectangles and native1 softness remain explicit material limits. Whole-family atlas-divider, source-rib, panel-position, low-scale lavender/ember and square-finish holds stay separate.
+Batch1972 admits four exact complete Set4 original25–28 families after all five raw masters and64 source/current material inspection, independent810-case combined joins/static states and whole-pack continuity. Five middle Terrain3 families remain historically coordinator-held80. C3 has exhausted its one-successor limit and remains held; EC has a different-peer complete16 successor approval pending coordinator review, counted once with its old parent IDs. Remaining eight finish corrections, Terrain2 original22/23 and Set4 ember methods stay gated. The immutable1972 pending cutoff contains1042 historical independently approved unique unregistered pictures:80 coordinator-held and962 pending full review. Original12 locator/reference-byte gaps remain without admission. Mixed HD/original density/value rectangles and native1 softness remain explicit limits; whole-family source-geometry and material holds are preserved.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,7 +12,7 @@ Batch1908 admits three exact complete Terrain1 B0/C0/D0 families after full48 so
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 1,056 | 3,479 | 4 |
+| Terrain | 4,535 | 1,120 | 3,415 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 77 | 73 | mixed static / animated |
 
 ## Registered pack and generation jobs
@@ -867,6 +867,10 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Terrain 104dd standalone correction | `0x104dd` | 1 / 1 |
 | Terrain 104de standalone correction | `0x104de` | 1 / 1 |
 | Terrain 104df standalone correction | `0x104df` | 1 / 1 |
+| canonical-terrain-40255-40264 | `0x40255` | 16 / 16 |
+| canonical-terrain-40265-40274 | `0x40265` | 16 / 16 |
+| canonical-terrain-40275-40284 | `0x40275` | 16 / 16 |
+| canonical-terrain-40285-40294 | `0x40285` | 16 / 16 |
 
 | Generation job | Status |
 | --- | --- |
