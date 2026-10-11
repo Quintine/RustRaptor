@@ -39,6 +39,8 @@ the relocation. See [repository layout](repository.md).
   [the build run](https://github.com/Quintine/RustRaptor/actions/runs/38119440288).
   A [second native run](https://github.com/Quintine/RustRaptor/actions/runs/38119943948)
   also verifies the exact committed GNU runtime and launcher before its MSVC build.
+  The [800-frame native run](https://github.com/Quintine/RustRaptor/actions/runs/38121272504)
+  passes all 279 tests and both runtime checks with the refreshed art and all mods.
   The Windows executable additionally runs Iron Coast mission 1 with all 22 mods enabled
   and captures its custom music. Hardware display/audio/controller checks
   remain manual; automated runs use SDL dummy drivers.

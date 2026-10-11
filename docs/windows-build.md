@@ -80,7 +80,10 @@ gameplay from a path with spaces and Unicode. The
 [second run](https://github.com/Quintine/RustRaptor/actions/runs/38119943948)
 also checked the exact committed GNU executable, SDL2 DLL and launcher before
 building and validating MSVC. Those runs used the previous 340-frame artwork
-snapshot; the refreshed 800-frame package is checked separately under Wine.
+snapshot. The [800-frame native Windows run](https://github.com/Quintine/RustRaptor/actions/runs/38121272504)
+also passed all 279 tests, the committed GNU runtime checks and the rebuilt
+MSVC package's complete HD, mod and SDL gameplay validation. The same snapshot
+passed the relocated-folder checks under Wine.
 The local GNU build additionally
 ran Iron Coast mission 1 at 1080p with all 22 mods enabled and captured its
 custom music. Both runs used SDL's dummy output drivers for automation;
