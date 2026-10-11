@@ -7050,6 +7050,187 @@ mod tests {
         assert_eq!(menu_row_at(Screen::Missions, 0, 27, 145, 60), Some(1));
         assert_eq!(menu_row_at(Screen::Missions, 17, 27, 40, 60), Some(10));
     }
+    #[derive(Debug, PartialEq, Eq)]
+    struct NativeTerrainSample {
+        target_index: usize,
+        asset: u32,
+        mission: ContentId,
+        row: usize,
+        column: usize,
+        placement: usize,
+        settled: bool,
+    }
+
+    // A catalog shard can begin with tiles that never occur in a native map.
+    // Check the real layout before treating a job's sample as gameplay evidence.
+    fn first_native_terrain_sample(
+        job: &serde_json::Value,
+        registry: &Registry,
+    ) -> anyhow::Result<Option<NativeTerrainSample>> {
+        use anyhow::{Context, ensure};
+        let targets = job["targets"]
+            .as_array()
+            .context("terrain job has no targets")?;
+        for (target_index, target) in targets.iter().enumerate() {
+            let context = &target["terrain_context"];
+            let samples = context["samples"]
+                .as_array()
+                .context("terrain target has no sample list")?;
+            if samples.is_empty() {
+                ensure!(
+                    context["registry_or_layout_referenced"].as_bool() == Some(false),
+                    "terrain target {} has no occurrence samples but is not explicitly unused",
+                    target["asset"]
+                );
+                continue;
+            }
+            let asset = u32::from_str_radix(
+                target["asset"]
+                    .as_str()
+                    .context("terrain target has no asset ID")?,
+                16,
+            )?;
+            let sample = &samples[0];
+            let mission = ContentId::from(
+                sample["mission"]
+                    .as_str()
+                    .context("sample has no mission")?,
+            );
+            let definition = registry
+                .missions
+                .get(&mission)
+                .context("sample mission is absent from the registry")?;
+            let row = usize::try_from(sample["row"].as_u64().context("sample has invalid row")?)?;
+            let column = usize::try_from(
+                sample["column"]
+                    .as_u64()
+                    .context("sample has invalid column")?,
+            )?;
+            let columns = definition.columns as usize;
+            ensure!(
+                columns > 0 && column < columns,
+                "sample column is outside the mission"
+            );
+            let placement = row
+                .checked_mul(columns)
+                .and_then(|value| value.checked_add(column))
+                .context("sample placement overflows")?;
+            let tile_index = *definition
+                .layout
+                .get(placement)
+                .context("sample row is outside the mission")?;
+            let tile = definition
+                .tiles
+                .get(tile_index)
+                .context("sample references an invalid mission tile")?;
+            let settled = if tile.art.asset == Some(asset) {
+                false
+            } else {
+                ensure!(
+                    tile.destroyed.as_ref().and_then(|art| art.asset) == Some(asset),
+                    "sample target {asset:x} does not occur at {mission} row {row}, column {column}"
+                );
+                true
+            };
+            return Ok(Some(NativeTerrainSample {
+                target_index,
+                asset,
+                mission,
+                row,
+                column,
+                placement,
+                settled,
+            }));
+        }
+        Ok(None)
+    }
+
+    fn terrain_sample_registry() -> Registry {
+        let mut registry = Registry::default();
+        let mission: crate::content::MissionDef = serde_json::from_value(serde_json::json!({
+            "id":"base:sample_fixture", "name":"Sample fixture", "duration":10,
+            "columns":2, "layout":[0, 1], "tiles":[
+                {"art":{"asset":16,"logical_width":32,"logical_height":32},
+                 "destroyed":{"asset":17,"logical_width":32,"logical_height":32}},
+                {"art":{"asset":18,"logical_width":32,"logical_height":32}}
+            ]
+        }))
+        .unwrap();
+        registry.missions.insert(mission.id.clone(), mission);
+        registry
+    }
+
+    #[test]
+    fn native_terrain_sample_skips_unused_targets_and_verifies_the_live_layout() {
+        let registry = terrain_sample_registry();
+        let mut job = serde_json::json!({"targets":[
+            {"asset":"0f", "terrain_context":{"samples":[],"registry_or_layout_referenced":false}},
+            {"asset":"10", "terrain_context":{"samples":[
+                {"mission":"base:sample_fixture","row":0,"column":0}
+            ]}},
+            {"asset":"12", "terrain_context":{"samples":[
+                {"mission":"base:sample_fixture","row":0,"column":1}
+            ]}}
+        ]});
+        assert_eq!(
+            first_native_terrain_sample(&job, &registry).unwrap(),
+            Some(NativeTerrainSample {
+                target_index: 1,
+                asset: 16,
+                mission: "base:sample_fixture".into(),
+                row: 0,
+                column: 0,
+                placement: 0,
+                settled: false,
+            })
+        );
+        job["targets"][1]["asset"] = "11".into();
+        assert!(
+            first_native_terrain_sample(&job, &registry)
+                .unwrap()
+                .unwrap()
+                .settled
+        );
+        job["targets"][1]["asset"] = "12".into();
+        assert!(
+            first_native_terrain_sample(&job, &registry)
+                .unwrap_err()
+                .to_string()
+                .contains("does not occur")
+        );
+        job["targets"][1]["terrain_context"]["samples"][0]["column"] = 2.into();
+        assert!(
+            first_native_terrain_sample(&job, &registry)
+                .unwrap_err()
+                .to_string()
+                .contains("column")
+        );
+        job["targets"][1]["terrain_context"]["samples"][0]["column"] = 0.into();
+        job["targets"][1]["terrain_context"]["samples"][0]["row"] = 1.into();
+        assert!(
+            first_native_terrain_sample(&job, &registry)
+                .unwrap_err()
+                .to_string()
+                .contains("row")
+        );
+    }
+
+    #[test]
+    fn native_terrain_sample_reports_an_entirely_unused_shard_without_a_fake_occurrence() {
+        let registry = terrain_sample_registry();
+        let mut job = serde_json::json!({"targets":[
+            {"asset":"0f", "terrain_context":{"samples":[],"registry_or_layout_referenced":false}},
+            {"asset":"ff", "terrain_context":{"samples":[],"registry_or_layout_referenced":false}}
+        ]});
+        assert_eq!(first_native_terrain_sample(&job, &registry).unwrap(), None);
+        job["targets"][1]["terrain_context"]["registry_or_layout_referenced"] = true.into();
+        assert!(
+            first_native_terrain_sample(&job, &registry)
+                .unwrap_err()
+                .to_string()
+                .contains("not explicitly unused")
+        );
+    }
     #[test]
     #[ignore = "requires original catalog and canonical terrain candidate; captures cached native mission terrain"]
     fn canonical_terrain_live_scene_matches_fresh_composition_after_scroll_damage_and_mod_changes()
@@ -7079,6 +7260,21 @@ mod tests {
         let job_root = hd_root.join("jobs").join(&job_id);
         let job: serde_json::Value =
             serde_json::from_slice(&std::fs::read(job_root.join("job.json")).unwrap()).unwrap();
+        let output = project.join(".reference/terrain-hd").join(&job_id);
+        std::fs::create_dir_all(&output).unwrap();
+        let Some(sample) = first_native_terrain_sample(&job, &host.active.registry).unwrap() else {
+            std::fs::write(
+                output.join("native-scene-cache-proof.json"),
+                serde_json::to_vec_pretty(&serde_json::json!({
+                    "job":job_id,"status":"no_native_occurrence",
+                    "native_scene_validated":false,"all_32_scroll_phases_equal_fresh":false,
+                    "native_destroyed_placement_tested":null,"mod_order_and_hash_invalidate":false,
+                    "limits":"Every target is explicitly unused in native maps. Gallery or synthetic review remains necessary; no native gameplay validation was run."
+                })).unwrap(),
+            ).unwrap();
+            println!("{job_id}: no native occurrence; native scene validation was not run");
+            return;
+        };
         let candidate: serde_json::Value =
             serde_json::from_slice(&std::fs::read(job_root.join("candidate.json")).unwrap())
                 .unwrap();
@@ -7103,19 +7299,20 @@ mod tests {
         host.hd_loaded = true;
         host.config.scale = 4;
         host.config.hd_mode = true;
-        let sample = &job["targets"][0]["terrain_context"]["samples"][0];
-        let mission = ContentId::from(sample["mission"].as_str().unwrap());
+        let mission = sample.mission.clone();
         let definition = &host.active.registry.missions[&mission];
-        let row_origin = 64 - sample["row"].as_i64().unwrap() as i32 * 32;
+        let row_origin = 64 - sample.row as i32 * 32;
         let scroll =
             row_origin - 200 + (definition.layout.len() / definition.columns as usize) as i32 * 32;
         let mut world = World::new(&mission, &host.pilot, &host.active.registry).unwrap();
         world.tick = 64;
         world.scroll = scroll;
+        if sample.settled {
+            world.terrain_dead[sample.placement] = true;
+            world.terrain_settled[sample.placement] = true;
+        }
         host.world = Some(world);
         host.screen = Screen::Game;
-        let output = project.join(".reference/terrain-hd").join(&job_id);
-        std::fs::create_dir_all(&output).unwrap();
         let capture = |host: &mut Host, name: &str| {
             let before = serde_json::json!({"world":host.world,"pilot":host.pilot,"states":host.active.scripts.states,"rng":host.active.scripts.rng});
             let frame = host.draw().unwrap();
@@ -7140,7 +7337,7 @@ mod tests {
             std::hint::black_box(host.draw().unwrap());
         }
         let cached_scene_mean_ms = before.elapsed().as_secs_f64() * 1000.0 / 60.0;
-        for phase in 1..32 {
+        for phase in 0..32 {
             host.world.as_mut().unwrap().scroll = scroll + phase;
             let cached = host.draw().unwrap().image;
             host.terrain_hd = TerrainHd::default();
@@ -7259,13 +7456,17 @@ mod tests {
         host.draw().unwrap();
         assert!(host.terrain_hd.prepared_bytes() <= 320 * 268 * 16 * 2 + 65536);
         std::fs::write(output.join("native-scene-cache-proof.json"),serde_json::to_vec_pretty(&serde_json::json!({
-            "mission":mission,"row":sample["row"],"all_32_scroll_phases_equal_fresh":true,
+            "job":job_id,"status":"native_scene_validated","native_scene_validated":true,
+            "asset":format!("{:x}",sample.asset),"target_index":sample.target_index,
+            "mission":mission,"row":sample.row,"column":sample.column,"sample_settled":sample.settled,
+            "all_32_scroll_phases_equal_fresh":true,
             "native_destroyed_placement_tested":damaged,"mod_order_and_hash_invalidate":true,
             "cached_scene_mean_ms":cached_scene_mean_ms,"retained_strip_bytes":host.terrain_hd.prepared_bytes(),
             "transition_lookup_bytes":host.terrain_hd.cache_bytes(),"registration":"Isolated candidate pack; global manifest unchanged"
         })).unwrap()).unwrap();
         println!(
-            "cached native scene mean {cached_scene_mean_ms:.3} ms; damaged placement {damaged:?}"
+            "{job_id}: target {:x} at {mission} row {}, column {}; all 32 phases matched; cached native scene mean {cached_scene_mean_ms:.3} ms; damaged placement {damaged:?}",
+            sample.asset, sample.row, sample.column,
         );
     }
     #[test]
