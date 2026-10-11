@@ -1,8 +1,8 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active outer HD pack supplies **1,652**; **4,101** still await a registered HD replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. The outer pack contains1,652 reviewed originals in605 complete sequences after exact current8,260-PPM continuity. Root's completed Linux/Windows Stage2 packages retain1,148 frames/421 sequences and45 accepted mods, with every released binary/library/manifest/data byte unchanged. The private future input is ../data/hd/registered-class-review/handoff-1652-20261011/pack/, handoff SHA `2b89b62f0b673a2fbbff31441307af0fd6bfa9fe89fa33c893a7399acd801556`; parent alone chooses a runtime update.
+The checked catalog contains **5,753 standalone picture frames**. The active outer HD pack supplies **1,748**; **4,005** still await a registered HD replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. The outer pack contains1,748 reviewed originals in701 complete sequences after current8,740-PPM continuity. Completed Linux/Windows Stage2 packages retain1,148 frames/421 sequences and45 accepted mods, with every released binary/library/manifest/data byte unchanged. The private future input is ../data/hd/registered-class-review/handoff-1748-20261012/pack/, handoff SHA `62fcbf7d286125c065ab374bad3fde39fb3812b62fa057d5ece5d4a3d936ddde`; parent alone selects a runtime update.
 
-Batch1652 adds187 pictures in15 complete jobs:176 terrain, three damaged-craft singles and eight complete menu words. Coordinator reviewed219 proposals with135 full raw-image views and35 complete source/native1–4 boards, excluding whole10460/10470 for fourteen coarse cellular material holds. The exact source-dark3014c correction sibling is registered directly; its old held main stays unchanged. All8,260 current outputs match accepted references with both source guards false and all18 recursive source pins stable. Earlier1465/1289/1148 inputs remain immutable history. Later qualified approvals, provenance gaps and source-material corrections remain outside1652 pending coordinator review; no blanket HD completion, seamless mixed terrain or live Host proof is claimed.
+Batch1748 adds96 terrain pictures in six complete families:10480/10490, planted-green job5v2, continuous-grass job6v5, hardware job11v4 and fine-water job13v3. All47 selected full raws and24 complete source/native1–4 boards were coordinator-inspected; all8,740 current outputs match accepted references, both source guards false/all18 stable. Four exact accepted siblings promoted under existing parent identities preserve prior held mains/reviews/job bytes. Whole10460/10470 and source-rib/atlas-edge/material holds remain separate.546 independent approved unregistered pictures still require coordinator review, including16 with a missing-prompt gap requiring parent policy. There is no catalog-complete or seamless mixed-terrain claim.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,7 +12,7 @@ Batch1652 adds187 pictures in15 complete jobs:176 terrain, three damaged-craft s
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 800 | 3,735 | 4 |
+| Terrain | 4,535 | 896 | 3,639 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 77 | 73 | mixed static / animated |
 
 ## Registered pack and generation jobs
@@ -626,6 +626,102 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | DSHP09G3_PIC | `0x3009b` | 1 / 1 |
 | DSHP17G3_PIC | `0x300a2` | 1 / 1 |
 | MENU1_PIC / MENU2_PIC / MENU3_PIC / MENU4_PIC / MENU5_PIC / MENU6_PIC / MENU7_PIC / MENU8_PIC | `0x10023` | 8 / 8 |
+| Terrain 10480 standalone correction | `0x10480` | 1 / 1 |
+| Terrain 10481 standalone correction | `0x10481` | 1 / 1 |
+| Terrain 10482 standalone correction | `0x10482` | 1 / 1 |
+| Terrain 10483 standalone correction | `0x10483` | 1 / 1 |
+| Terrain 10484 standalone correction | `0x10484` | 1 / 1 |
+| Terrain 10485 standalone correction | `0x10485` | 1 / 1 |
+| Terrain 10486 standalone correction | `0x10486` | 1 / 1 |
+| Terrain 10487 standalone correction | `0x10487` | 1 / 1 |
+| Terrain 10488 standalone correction | `0x10488` | 1 / 1 |
+| Terrain 10489 standalone correction | `0x10489` | 1 / 1 |
+| Terrain 1048a standalone correction | `0x1048a` | 1 / 1 |
+| Terrain 1048b standalone correction | `0x1048b` | 1 / 1 |
+| Terrain 1048c standalone correction | `0x1048c` | 1 / 1 |
+| Terrain 1048d standalone correction | `0x1048d` | 1 / 1 |
+| Terrain 1048e standalone correction | `0x1048e` | 1 / 1 |
+| Terrain 1048f standalone correction | `0x1048f` | 1 / 1 |
+| Terrain 10490 standalone correction | `0x10490` | 1 / 1 |
+| Terrain 10491 standalone correction | `0x10491` | 1 / 1 |
+| Terrain 10492 standalone correction | `0x10492` | 1 / 1 |
+| Terrain 10493 standalone correction | `0x10493` | 1 / 1 |
+| Terrain 10494 standalone correction | `0x10494` | 1 / 1 |
+| Terrain 10495 standalone correction | `0x10495` | 1 / 1 |
+| Terrain 10496 standalone correction | `0x10496` | 1 / 1 |
+| Terrain 10497 standalone correction | `0x10497` | 1 / 1 |
+| Terrain 10498 standalone correction | `0x10498` | 1 / 1 |
+| Terrain 10499 standalone correction | `0x10499` | 1 / 1 |
+| Terrain 1049a standalone correction | `0x1049a` | 1 / 1 |
+| Terrain 1049b standalone correction | `0x1049b` | 1 / 1 |
+| Terrain 1049c standalone correction | `0x1049c` | 1 / 1 |
+| Terrain 1049d standalone correction | `0x1049d` | 1 / 1 |
+| Terrain 1049e standalone correction | `0x1049e` | 1 / 1 |
+| Terrain 1049f standalone correction | `0x1049f` | 1 / 1 |
+| Terrain 2014d | `0x2014d` | 1 / 1 |
+| Terrain 2014e | `0x2014e` | 1 / 1 |
+| Terrain 2014f | `0x2014f` | 1 / 1 |
+| Terrain 20150 | `0x20150` | 1 / 1 |
+| Terrain 20151 | `0x20151` | 1 / 1 |
+| Terrain 20152 | `0x20152` | 1 / 1 |
+| Terrain 20153 | `0x20153` | 1 / 1 |
+| Terrain 20154 | `0x20154` | 1 / 1 |
+| Terrain 20155 | `0x20155` | 1 / 1 |
+| Terrain 20156 | `0x20156` | 1 / 1 |
+| Terrain 20157 | `0x20157` | 1 / 1 |
+| Terrain 20158 | `0x20158` | 1 / 1 |
+| Terrain 20159 | `0x20159` | 1 / 1 |
+| Terrain 2015a | `0x2015a` | 1 / 1 |
+| Terrain 2015b | `0x2015b` | 1 / 1 |
+| Terrain 2015c | `0x2015c` | 1 / 1 |
+| Terrain 2015d | `0x2015d` | 1 / 1 |
+| Terrain 2015e | `0x2015e` | 1 / 1 |
+| Terrain 2015f | `0x2015f` | 1 / 1 |
+| Terrain 20160 | `0x20160` | 1 / 1 |
+| Terrain 20161 | `0x20161` | 1 / 1 |
+| Terrain 20162 | `0x20162` | 1 / 1 |
+| Terrain 20163 | `0x20163` | 1 / 1 |
+| Terrain 20164 | `0x20164` | 1 / 1 |
+| Terrain 20165 | `0x20165` | 1 / 1 |
+| Terrain 20166 | `0x20166` | 1 / 1 |
+| Terrain 20167 | `0x20167` | 1 / 1 |
+| Terrain 20168 | `0x20168` | 1 / 1 |
+| Terrain 20169 | `0x20169` | 1 / 1 |
+| Terrain 2016a | `0x2016a` | 1 / 1 |
+| Terrain 2016b | `0x2016b` | 1 / 1 |
+| Terrain 2016c | `0x2016c` | 1 / 1 |
+| Terrain 201ad | `0x201ad` | 1 / 1 |
+| Terrain 201ae | `0x201ae` | 1 / 1 |
+| Terrain 201af | `0x201af` | 1 / 1 |
+| Terrain 201b0 | `0x201b0` | 1 / 1 |
+| Terrain 201b1 | `0x201b1` | 1 / 1 |
+| Terrain 201b2 | `0x201b2` | 1 / 1 |
+| Terrain 201b3 | `0x201b3` | 1 / 1 |
+| Terrain 201b4 | `0x201b4` | 1 / 1 |
+| Terrain 201b5 | `0x201b5` | 1 / 1 |
+| Terrain 201b6 | `0x201b6` | 1 / 1 |
+| Terrain 201b7 | `0x201b7` | 1 / 1 |
+| Terrain 201b8 | `0x201b8` | 1 / 1 |
+| Terrain 201b9 | `0x201b9` | 1 / 1 |
+| Terrain 201ba | `0x201ba` | 1 / 1 |
+| Terrain 201bb | `0x201bb` | 1 / 1 |
+| Terrain 201bc | `0x201bc` | 1 / 1 |
+| Terrain 201cd | `0x201cd` | 1 / 1 |
+| Terrain 201ce | `0x201ce` | 1 / 1 |
+| Terrain 201cf | `0x201cf` | 1 / 1 |
+| Terrain 201d0 | `0x201d0` | 1 / 1 |
+| Terrain 201d1 | `0x201d1` | 1 / 1 |
+| Terrain 201d2 | `0x201d2` | 1 / 1 |
+| Terrain 201d3 | `0x201d3` | 1 / 1 |
+| Terrain 201d4 | `0x201d4` | 1 / 1 |
+| Terrain 201d5 | `0x201d5` | 1 / 1 |
+| Terrain 201d6 | `0x201d6` | 1 / 1 |
+| Terrain 201d7 | `0x201d7` | 1 / 1 |
+| Terrain 201d8 | `0x201d8` | 1 / 1 |
+| Terrain 201d9 | `0x201d9` | 1 / 1 |
+| Terrain 201da | `0x201da` | 1 / 1 |
+| Terrain 201db | `0x201db` | 1 / 1 |
+| Terrain 201dc | `0x201dc` | 1 / 1 |
 
 | Generation job | Status |
 | --- | --- |
