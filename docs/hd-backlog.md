@@ -1,8 +1,8 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The external HD pack supplies **2,068**; **3,685** await a registered replacement. Every original ID, including unused graphics and destroyed variants, remains required. Current coverage is 2,068 reviewed originals in 871 complete sequences after 10,340 exact source/scaled comparisons. Packaged runtime retains 1,148 frames/421 sequences and 45 mods; all 6,853 runtime files remain unchanged. Private future input ../data/hd/registered-class-review/handoff-2068-20261012/pack/ has SHA `dc8a623c1bc5cb857ee7cccdba2cb437195db37ac4b42524ed92f202ea686594`; root selects a runtime update.
+The checked catalog contains **5,753 standalone picture frames**. The external HD pack supplies **2,100**; **3,653** await a registered replacement. Every original ID, including unused graphics and destroyed variants, remains required. Coverage is 2,100 reviewed originals in 873 complete sequences after 10,500 exact source/scaled comparisons. Packaged runtime retains 1,148 frames/421 sequences and 45 mods; all 6,853 runtime files remain unchanged. Private future input ../data/hd/registered-class-review/handoff-2100-20261012/pack/ has SHA `7b8bd66bd0583f45dc8faa6dc23c531a84ab7b68c6a6ca47fc720122a2dc006c`; root selects a runtime update.
 
-Batch 2068 registers exact complete 32 Terrain3 middle22/23 after full untouched raw/source/native 1–4 material inspection, historical independent own16/old96 proof, separate 438-case current 2036 integration and whole 2068 canonical continuity. Stronger faceted gray relief, quiet marks/native 1 softness,30255 ordinary-orange darkening and mixed-original density islands qualify approval. The immutable2068 cutoff has 1,266 independent-qualified unique unregistered pictures: 64 coordinator whole-family held and 1,202 pending full review. Prior cutoffs remain unchanged. Cellular material, missing source cues, native1 yellow loss, olive/green, atlas rules and other whole-family holds remain unadmitted. Component qualifications confer no partial admission. C3/eight finish calls, Terrain2 hardware/final13 and Set4 ember methods stay gated; original 12 policy/locator/reference-byte gaps remain pending.
+Batch 2100 registers exact complete 32 Terrain3 middle24/25 after full untouched raw/source/native 1–4 material inspection, historical independent own16/old96 proof, separate 575-case current 2068 integration and whole 2100 continuity. Stronger cap relief, quiet marks/native 1 softening and mixed-original density qualify approval. The immutable 2100 cutoff has 1,282 independent-qualified unique unregistered pictures: 64 coordinator whole-family held and 1,218 pending full review. Earlier cutoffs remain immutable. Cellular material, missing source cues, native 1 yellow loss, olive/green, atlas rules and other whole-family holds remain unadmitted; component qualifications confer no partial admission. C3/eight finish calls, Terrain2 hardware/final13 and Set4 ember methods stay gated; original 12 policy/locator/reference-byte gaps remain pending.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,7 +12,7 @@ Batch 2068 registers exact complete 32 Terrain3 middle22/23 after full untouched
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 1,216 | 3,319 | 4 |
+| Terrain | 4,535 | 1,248 | 3,287 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 77 | 73 | mixed static / animated |
 
 ## Registered pack and generation jobs
@@ -892,6 +892,8 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Terrain set 3 shard 21 | `0x3022d` | 16 / 16 |
 | Terrain set 3 shard 22 | `0x3023d` | 16 / 16 |
 | Terrain set 3 shard 23 | `0x3024d` | 16 / 16 |
+| Terrain set 3 shard 24 | `0x3025d` | 16 / 16 |
+| Terrain set 3 shard 25 | `0x3026d` | 16 / 16 |
 
 | Generation job | Status |
 | --- | --- |
