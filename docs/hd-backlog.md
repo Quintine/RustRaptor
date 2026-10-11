@@ -2,6 +2,8 @@
 
 The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **1,148**; **4,605** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit. Root has copied the exact reviewed 1,148-frame / 421-sequence pack into shared runtime data. New Linux/Windows archives await root's Stage2 export and validation; the previous 800-frame archives remain historical. Later reviewed candidates do not change this frozen pack.
 
+There are52 additional independently approved frames in eight complete jobs with coordinator visual inspection and exact immutable output continuity, recorded in ../data/hd/registered-class-review/later-approved-52-ready.json (SHA9513c48f9df2555fd246c021ee6eb1faec71c6945d3c4ed15986e14ec84dbec0). They remain unregistered, so the coverage counts below are unchanged. Terrain10420–1042f is under exclusive independent review; four explicit200e1/200e4/200e7/200ea v2 siblings await a review slot. The23 shop-icon diagnostic has a confirmed monitor support/tip hold and establishes no completed coverage.
+
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
 | Player banking | 21 | 21 | 0 | 3 |
