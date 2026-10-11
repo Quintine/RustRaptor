@@ -1,8 +1,8 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active external HD pack supplies **2,004**; **3,749** still await a registered replacement. Every original ID, including unused graphics and destroyed variants, remains required. Current coverage is 2,004 reviewed originals in 867 complete sequences after 10,020 exact source/scaled comparisons. Released Linux/Windows Stage2 packages retain 1,148 frames / 421 sequences and 45 accepted mods; all 6,853 runtime files remain unchanged. Private future input ../data/hd/registered-class-review/handoff-2004-20261012/pack/ has handoff SHA `7c55f9fef6388fce41cc00f6a641153129f813859d3511aeb13a4a4ce320c9f2`; parent alone selects a runtime update.
+The checked catalog contains **5,753 standalone picture frames**. The active external HD pack supplies **2,036**; **3,717** still await a registered replacement. Every original ID, including unused graphics and destroyed variants, remains required. Current coverage is 2,036 reviewed originals in 869 complete sequences after 10,180 exact source/scaled comparisons. Released Linux/Windows Stage2 packages retain 1,148 frames / 421 sequences and 45 accepted mods; all 6,853 runtime files remain unchanged. Private future input ../data/hd/registered-class-review/handoff-2036-20261012/pack/ has handoff SHA `4494b2379d401672ccdebee824ef7b86dbdca61698565d8819474a36ff77fc97`; root alone selects a runtime update.
 
-Batch 2004 registers complete 16 E0 after full untouched raw/source/native 1–4 material inspection, historical independent own 16/literal 192 proof, separate508-case exact current 1988 integration and whole 2004 canonical continuity. Water darkening, stronger relief, native 1 softness and mixed HD/original density are explicit qualifications. The immutable 2004 cutoff has 1,138 historically independent-approved unique unregistered pictures: 64 coordinator-held and 1,074 pending full review. Late source-detail, atlas-rule, green/olive and cellular-material whole-family holds remain unadmitted; individual component qualifications confer no partial admission. C3 and the remaining eight finish requests, Terrain2 hardware/final13 and Set4 ember methods stay gated. Original 12 locator/reference-byte gaps remain pending parent policy.
+Batch 2036 registers exact complete32 Terrain3 middle20/21 after full untouched raw/source/native 1–4 material inspection, historical independent own16/old96 proof, separate430-case current2004 integration and whole2036 canonical continuity. Stronger gray relief, quiet faint marks/native1 softness and HD/original density islands are explicit qualifications. The immutable2036 cutoff has 1,234 independent-qualified unique unregistered pictures:64 coordinator whole-family held and1,170 pending full review. Prior2004 and earlier cutoffs remain unchanged. Cellular material, missing source cues, native1 yellow-tip loss, olive/green, atlas rules and other independent whole-family holds remain unadmitted. Component qualifications confer no partial admission. C3 and the eight finish calls, Terrain2 hardware/final13 and Set4 ember methods remain gated; original12 policy/locator/reference-byte gaps remain pending.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,7 +12,7 @@ Batch 2004 registers complete 16 E0 after full untouched raw/source/native 1–4
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 1,152 | 3,383 | 4 |
+| Terrain | 4,535 | 1,184 | 3,351 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 77 | 73 | mixed static / animated |
 
 ## Registered pack and generation jobs
@@ -888,6 +888,8 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Terrain 104ed standalone correction | `0x104ed` | 1 / 1 |
 | Terrain 104ee standalone correction | `0x104ee` | 1 / 1 |
 | Terrain 104ef standalone correction | `0x104ef` | 1 / 1 |
+| Terrain set 3 shard 20 | `0x3021d` | 16 / 16 |
+| Terrain set 3 shard 21 | `0x3022d` | 16 / 16 |
 
 | Generation job | Status |
 | --- | --- |
