@@ -110,6 +110,57 @@ def freeze_library(project, library):
     return frozen, digest, before
 
 
+def select_compatible_serde_json(project, library, dependency_directory, output, candidates=None):
+    """Compile-check serde's trait identity against the exact frozen game library.
+
+    Cargo can leave several feature graphs in one deps directory. A newer
+    serde_json may use a different serde_core instance from Manifest, so its
+    build time cannot establish compatibility.
+    """
+    candidates = sorted(candidates if candidates is not None else
+                        dependency_directory.glob("libserde_json-*.rlib"))
+    if not candidates:
+        raise ValueError("build serde_json before candidate review")
+    output.mkdir(parents=True, exist_ok=True)
+    report = {
+        "method": "rustc metadata compile of Manifest Deserialize and Serialize against exact frozen libraries",
+        "raptor_library_sha256": hashlib.sha256(library.read_bytes()).hexdigest(),
+        "attempts": [],
+    }
+    evidence = output / "dependency-selection.json"
+    with tempfile.TemporaryDirectory(prefix="serde-compatibility-", dir=output) as temporary:
+        directory = Path(temporary)
+        source = directory / "probe.rs"
+        source.write_text("""fn main() {
+    let manifest: raptor_replica::hd::Manifest = serde_json::from_slice(b"{}").unwrap();
+    let _ = serde_json::to_vec(&manifest).unwrap();
+}
+""")
+        for candidate in candidates:
+            frozen, digest, original = freeze_library(project, candidate)
+            result = subprocess.run([
+                "rustc", "--edition=2021", "--emit=metadata", str(source),
+                "--extern", f"raptor_replica={library}",
+                "--extern", f"serde_json={frozen}",
+                "-L", f"dependency={dependency_directory}",
+                "-o", str(directory / "probe.rmeta"),
+            ], capture_output=True, text=True)
+            report["attempts"].append({
+                "build_origin": str(candidate.relative_to(project)),
+                "library": str(frozen.relative_to(project)),
+                "sha256": digest,
+                "build_origin_modified_ns": original.st_mtime_ns,
+                "compatible": result.returncode == 0,
+                "compiler_stderr": result.stderr,
+            })
+            if result.returncode == 0:
+                report["selected"] = report["attempts"][-1]
+                evidence.write_text(json.dumps(report, indent=2) + "\n")
+                return frozen, report
+    evidence.write_text(json.dumps(report, indent=2) + "\n")
+    raise ValueError(f"no compiler-compatible serde_json for the selected Rust library; see {evidence}")
+
+
 def main():
     project = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser(description=__doc__)
@@ -142,9 +193,9 @@ def main():
     dependency_directory = built_library.parent
     library, library_sha256, built_library_at_start = freeze_library(project, built_library)
     library_at_start = library.stat()
-    serde = max(dependency_directory.glob("libserde_json-*.rlib"), key=lambda path: path.stat().st_mtime_ns)
     output = (args.output or args.candidate.parent / "runtime-review").resolve()
     output.mkdir(parents=True, exist_ok=True)
+    serde, serde_selection = select_compatible_serde_json(project, library, dependency_directory, output)
     pack_root = (args.data / "hd").resolve()
     artwork_hashes = {}
     with tempfile.TemporaryDirectory(prefix="isolated-pack-", dir=output) as temporary:
@@ -187,6 +238,7 @@ def main():
     qa["library_sha256"] = library_sha256
     qa["library_build_origin"] = str(built_library.relative_to(project))
     qa["library_build_origin_modified_ns"] = built_library_at_start.st_mtime_ns
+    qa["serde_json_dependency"] = serde_selection
     qa["candidate_sha256"] = hashlib.sha256(candidate_at_finish).hexdigest()
     qa["candidate_sha256_at_start"] = hashlib.sha256(candidate_at_start).hexdigest()
     qa["candidate_notes_changed_during_review"] = candidate_at_start != candidate_at_finish
