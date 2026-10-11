@@ -3,7 +3,7 @@
   "platform": "Linux x86_64",
   "catalog_entries": 6449,
   "approved_hd_frames": 340,
-  "binary_sha256": "4b164987d9fabf7388d2fc66168a9f2aedc71392d42a6ce4066e3607684b1479",
+  "binary_sha256": "4b4304f625381cbbf1331e126c62ca0913d49a52e7a35191f12e734067660e66",
   "data_files": 6593,
   "data_bytes": 195469368,
   "files": {
@@ -6602,11 +6602,11 @@
     "data/ui/WINGAME_SWD": "304630a1223419d69723902ffd22c2c4eea0388491e37dfca663fcbe78e99aff"
   },
   "system_dependencies": [
-    "\tlinux-vdso.so.1 (0x00007f23a012d000)",
-    "\tlibSDL2-2.0.so.0 => /home/quintine/.local/lib/libSDL2-2.0.so.0 (0x00007f239f400000)",
-    "\tlibgcc_s.so.1 => /usr/lib/libgcc_s.so.1 (0x00007f23a00d9000)",
-    "\tlibm.so.6 => /usr/lib/libm.so.6 (0x00007f239f6c9000)",
-    "\tlibc.so.6 => /usr/lib/libc.so.6 (0x00007f239f000000)",
-    "\t/lib64/ld-linux-x86-64.so.2 => /usr/lib64/ld-linux-x86-64.so.2 (0x00007f23a012f000)"
+    "\tlinux-vdso.so.1 (0x00007fcb5dcd3000)",
+    "\tlibSDL2-2.0.so.0 => /home/quintine/.local/lib/libSDL2-2.0.so.0 (0x00007fcb5ce00000)",
+    "\tlibgcc_s.so.1 => /usr/lib/libgcc_s.so.1 (0x00007fcb5dc7f000)",
+    "\tlibm.so.6 => /usr/lib/libm.so.6 (0x00007fcb5db48000)",
+    "\tlibc.so.6 => /usr/lib/libc.so.6 (0x00007fcb5ca00000)",
+    "\t/lib64/ld-linux-x86-64.so.2 => /usr/lib64/ld-linux-x86-64.so.2 (0x00007fcb5dcd5000)"
   ]
 }

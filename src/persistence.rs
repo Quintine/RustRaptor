@@ -20,9 +20,16 @@ pub struct Paths {
 }
 impl Paths {
     pub fn discover() -> Result<Self> {
-        let home = PathBuf::from(std::env::var_os("HOME").context("HOME is unset")?);
-        let dir = |name: &str, fallback: &str| {
-            std::env::var_os(name)
+        #[cfg(windows)]
+        return Self::windows_from_env(|name| std::env::var_os(name));
+        #[cfg(not(windows))]
+        Self::unix_from_env(|name| std::env::var_os(name))
+    }
+    #[cfg(any(not(windows), test))]
+    fn unix_from_env(mut env: impl FnMut(&str) -> Option<std::ffi::OsString>) -> Result<Self> {
+        let home = PathBuf::from(env("HOME").context("HOME is unset")?);
+        let mut dir = |name: &str, fallback: &str| {
+            env(name)
                 .map(PathBuf::from)
                 .unwrap_or_else(|| home.join(fallback))
         };
@@ -31,6 +38,31 @@ impl Paths {
             config: dir("XDG_CONFIG_HOME", ".config").join("RaptorReplica"),
             cache: dir("XDG_CACHE_HOME", ".cache").join("RaptorReplica"),
             legacy: home.join(".local/share/Raptor"),
+        })
+    }
+    #[cfg(any(windows, test))]
+    fn windows_from_env(mut env: impl FnMut(&str) -> Option<std::ffi::OsString>) -> Result<Self> {
+        let mut dir = |name: &str| {
+            env(name)
+                .filter(|value| !value.is_empty())
+                .map(PathBuf::from)
+        };
+        let profile = dir("USERPROFILE");
+        // Respect redirected application-data folders. A normal Windows login
+        // provides these variables; USERPROFILE also supports stripped-down
+        // launch environments without relying on Unix HOME or XDG variables.
+        let roaming = dir("APPDATA")
+            .or_else(|| profile.as_ref().map(|p| p.join("AppData/Roaming")))
+            .context("APPDATA and USERPROFILE are unset; cannot locate Windows saves")?;
+        let local = dir("LOCALAPPDATA")
+            .or_else(|| profile.as_ref().map(|p| p.join("AppData/Local")))
+            .context("LOCALAPPDATA and USERPROFILE are unset; cannot locate Windows cache")?;
+        Ok(Self {
+            data: roaming.join("RaptorReplica"),
+            config: roaming.join("RaptorReplica"),
+            cache: local.join("RaptorReplica/cache"),
+            // The legacy SDL_GetPrefPath("", "Raptor") location on Windows.
+            legacy: roaming.join("Raptor"),
         })
     }
     pub fn mods(&self) -> PathBuf {
@@ -452,7 +484,15 @@ pub fn atomic_write(path: &Path, data: &[u8]) -> Result<()> {
     let result = (|| -> Result<()> {
         file.write_all(data)?;
         file.sync_all()?;
-        fs::rename(&temp, path)?;
+        // Release the temporary handle before replacement. rename replaces an
+        // existing destination on Windows as well as Unix; never remove the
+        // previous save first or retry by copying over it.
+        drop(file);
+        fs::rename(&temp, path)
+            .with_context(|| format!("cannot atomically replace {}", path.display()))?;
+        // Directory handles opened by ordinary File::open cannot be synced on
+        // Windows. The file itself was synced before its name was committed.
+        #[cfg(unix)]
         fs::File::open(parent)?.sync_all()?;
         Ok(())
     })();
@@ -1167,6 +1207,112 @@ fn decrypt(bytes: &[u8], key: &[u8]) -> Vec<u8> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    fn environment(values: &[(&str, &str)]) -> impl FnMut(&str) -> Option<std::ffi::OsString> {
+        let values = values
+            .iter()
+            .map(|(key, value)| (key.to_string(), std::ffi::OsString::from(value)))
+            .collect::<BTreeMap<_, _>>();
+        move |key| values.get(key).cloned()
+    }
+    #[test]
+    fn windows_paths_respect_redirected_data_folders_without_home() {
+        let paths = Paths::windows_from_env(environment(&[
+            ("APPDATA", "redirected-roaming"),
+            ("LOCALAPPDATA", "redirected-local"),
+            ("HOME", "unused-unix-home"),
+            ("XDG_DATA_HOME", "unused-xdg-data"),
+            ("XDG_CONFIG_HOME", "unused-xdg-config"),
+            ("XDG_CACHE_HOME", "unused-xdg-cache"),
+        ]))
+        .unwrap();
+        let roaming = Path::new("redirected-roaming");
+        assert_eq!(paths.data, roaming.join("RaptorReplica"));
+        assert_eq!(paths.config, roaming.join("RaptorReplica"));
+        assert_eq!(paths.mods(), roaming.join("RaptorReplica/mods"));
+        assert_eq!(
+            paths.save_path(3),
+            roaming.join("RaptorReplica/pilot-0003.json")
+        );
+        assert_eq!(paths.legacy, roaming.join("Raptor"));
+        assert_eq!(
+            paths.cache,
+            Path::new("redirected-local").join("RaptorReplica/cache")
+        );
+    }
+    #[test]
+    fn windows_paths_fall_back_to_unicode_user_profile() {
+        let profile = "profile-Quintine-é-雪";
+        let paths = Paths::windows_from_env(environment(&[("USERPROFILE", profile)])).unwrap();
+        let profile = Path::new(profile);
+        assert_eq!(paths.data, profile.join("AppData/Roaming/RaptorReplica"));
+        assert_eq!(paths.config, paths.data);
+        assert_eq!(
+            paths.cache,
+            profile.join("AppData/Local/RaptorReplica/cache")
+        );
+        assert_eq!(paths.legacy, profile.join("AppData/Roaming/Raptor"));
+    }
+    #[test]
+    fn windows_missing_or_empty_application_paths_fall_back_independently() {
+        let paths = Paths::windows_from_env(environment(&[
+            ("USERPROFILE", "profile"),
+            ("APPDATA", "roaming-redirect"),
+            ("LOCALAPPDATA", ""),
+        ]))
+        .unwrap();
+        assert_eq!(
+            paths.data,
+            Path::new("roaming-redirect").join("RaptorReplica")
+        );
+        assert_eq!(
+            paths.cache,
+            Path::new("profile").join("AppData/Local/RaptorReplica/cache")
+        );
+        let paths = Paths::windows_from_env(environment(&[
+            ("USERPROFILE", "profile"),
+            ("APPDATA", ""),
+            ("LOCALAPPDATA", "local-redirect"),
+        ]))
+        .unwrap();
+        assert_eq!(
+            paths.data,
+            Path::new("profile").join("AppData/Roaming/RaptorReplica")
+        );
+        assert_eq!(
+            paths.cache,
+            Path::new("local-redirect").join("RaptorReplica/cache")
+        );
+    }
+    #[test]
+    fn windows_missing_profile_has_an_actionable_error() {
+        let error = Paths::windows_from_env(environment(&[("HOME", "unix-home")])).unwrap_err();
+        assert!(error.to_string().contains("APPDATA and USERPROFILE"));
+        let error = Paths::windows_from_env(environment(&[("APPDATA", "roaming")])).unwrap_err();
+        assert!(error.to_string().contains("LOCALAPPDATA and USERPROFILE"));
+    }
+    #[test]
+    fn unix_paths_keep_home_and_xdg_behavior() {
+        let paths = Paths::unix_from_env(environment(&[("HOME", "unix-home")])).unwrap();
+        let home = Path::new("unix-home");
+        assert_eq!(paths.data, home.join(".local/share/RaptorReplica"));
+        assert_eq!(paths.config, home.join(".config/RaptorReplica"));
+        assert_eq!(paths.cache, home.join(".cache/RaptorReplica"));
+        assert_eq!(paths.legacy, home.join(".local/share/Raptor"));
+        let paths = Paths::unix_from_env(environment(&[
+            ("HOME", "unix-home"),
+            ("XDG_DATA_HOME", "custom-data"),
+            ("XDG_CONFIG_HOME", "custom-config"),
+            ("XDG_CACHE_HOME", "custom-cache"),
+        ]))
+        .unwrap();
+        assert_eq!(paths.data, Path::new("custom-data").join("RaptorReplica"));
+        assert_eq!(
+            paths.config,
+            Path::new("custom-config").join("RaptorReplica")
+        );
+        assert_eq!(paths.cache, Path::new("custom-cache").join("RaptorReplica"));
+        assert!(Paths::unix_from_env(environment(&[("APPDATA", "roaming")])).is_err());
+    }
     #[test]
     fn writes_replace_atomically() {
         let tmp = tempfile::tempdir().unwrap();
@@ -1175,5 +1321,54 @@ mod tests {
         atomic_write(&p, b"second").unwrap();
         assert_eq!(fs::read(p).unwrap(), b"second");
         assert_eq!(fs::read_dir(tmp.path()).unwrap().count(), 1);
+    }
+    #[test]
+    fn replacement_failure_preserves_the_destination_and_cleans_the_temporary() {
+        let tmp = tempfile::tempdir().unwrap();
+        let p = tmp.path().join("save.json");
+        fs::create_dir(&p).unwrap();
+        let sentinel = p.join("keep-original");
+        fs::write(&sentinel, b"original contents").unwrap();
+        let error = atomic_write(&p, b"new save").unwrap_err();
+        assert!(error.to_string().contains("cannot atomically replace"));
+        assert_eq!(fs::read(sentinel).unwrap(), b"original contents");
+        assert_eq!(fs::read_dir(tmp.path()).unwrap().count(), 1);
+    }
+    #[test]
+    fn temporary_name_collision_and_unicode_backup_are_preserved() {
+        let tmp = tempfile::tempdir().unwrap();
+        let p = tmp.path().join("pilot-é-雪.json");
+        let stale = tmp
+            .path()
+            .join(format!(".pilot-é-雪.json.{}.0.tmp", std::process::id()));
+        fs::write(&stale, b"interrupted write").unwrap();
+        atomic_write(&p, b"original pilot").unwrap();
+        let backup = tmp.path().join("pilot-é-雪.original.json");
+        atomic_write(&backup, &fs::read(&p).unwrap()).unwrap();
+        atomic_write(&p, b"updated pilot").unwrap();
+        assert_eq!(fs::read(&p).unwrap(), b"updated pilot");
+        assert_eq!(fs::read(&backup).unwrap(), b"original pilot");
+        assert_eq!(fs::read(&stale).unwrap(), b"interrupted write");
+        assert_eq!(fs::read_dir(tmp.path()).unwrap().count(), 3);
+    }
+    #[cfg(windows)]
+    #[test]
+    fn locked_windows_save_is_never_deleted_before_replacement() {
+        use std::os::windows::fs::OpenOptionsExt;
+        let tmp = tempfile::tempdir().unwrap();
+        let p = tmp.path().join("save.json");
+        atomic_write(&p, b"original pilot").unwrap();
+        let locked = OpenOptions::new()
+            .read(true)
+            .share_mode(0)
+            .open(&p)
+            .unwrap();
+        assert!(atomic_write(&p, b"updated pilot").is_err());
+        assert!(p.exists());
+        assert_eq!(fs::read_dir(tmp.path()).unwrap().count(), 1);
+        drop(locked);
+        assert_eq!(fs::read(&p).unwrap(), b"original pilot");
+        atomic_write(&p, b"updated pilot").unwrap();
+        assert_eq!(fs::read(&p).unwrap(), b"updated pilot");
     }
 }

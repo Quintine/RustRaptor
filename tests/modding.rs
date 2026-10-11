@@ -204,6 +204,61 @@ fn package_hash_covers_added_assets_and_manifest_changes() {
 }
 
 #[test]
+fn nested_package_hash_is_portable_and_preserves_existing_linux_order() {
+    let temp = tempfile::tempdir().unwrap();
+    let root = temp.path().join("fixture");
+    // Intentionally independent of the TOML serializer and native path spelling.
+    // The fixed digest uses UTF-8 component ordering (art/... before art-qa.json),
+    // forward slash names, little-endian u64 byte lengths and these exact bytes.
+    // The BMP/supplementary names also distinguish UTF-8 from UTF-16 ordering.
+    let files: &[(&str, &[u8])] = &[
+        ("art/deep/hull.bin", b"\x00\x7f\xff"),
+        ("art/hull-é.png", b"synthetic PNG bytes\r\n"),
+        ("art/\u{e000}.bin", b"bmp filename"),
+        ("art/\u{10000}.bin", b"supplementary filename"),
+        ("art-qa.json", b"{\"ok\":true}\n"),
+        ("content.json", b"{}"),
+        ("mod.toml", b"id = \"fixture\"\nname = \"Portable fixture\"\nversion = \"1.0.0\"\napi_version = 1\ncontent = \"content.json\"\nscripts = [\"scripts/weapon.rhai\"]\n"),
+        ("scripts/weapon.rhai", b"fn on_tick(event, state, random) { #{ commands: [], state: state } }\n"),
+    ];
+    // Reverse creation order to ensure directory enumeration cannot set the hash.
+    for (name, data) in files.iter().rev() {
+        let path = root.join(name);
+        fs::create_dir_all(path.parent().unwrap()).unwrap();
+        fs::write(path, data).unwrap();
+    }
+    let discovered = modding::discover(temp.path());
+    assert!(discovered.errors.is_empty(), "{:?}", discovered.errors);
+    assert_eq!(
+        discovered.mods["fixture"].hash,
+        "1c851b694b601dc9658d0bbbc6a6edd2d5359571c5b558cf0c3f076afa08cf3d"
+    );
+}
+
+#[cfg(unix)]
+#[test]
+fn ambiguous_windows_filename_components_and_non_utf8_names_are_rejected() {
+    use std::os::unix::ffi::OsStringExt;
+    for filename in ["art\\hull.bin", "hull.bin:extra"] {
+        let temp = tempfile::tempdir().unwrap();
+        install(temp.path(), "alpha", "alpha", json!({}));
+        fs::write(temp.path().join("alpha").join(filename), b"ambiguous asset").unwrap();
+        let discovered = modding::discover(temp.path());
+        assert!(discovered.mods.is_empty());
+        assert_eq!(discovered.errors.len(), 1);
+        assert!(discovered.errors[0].contains("ambiguous Windows"));
+    }
+    let temp = tempfile::tempdir().unwrap();
+    install(temp.path(), "alpha", "alpha", json!({}));
+    let filename = std::ffi::OsString::from_vec(b"asset-\xff.bin".to_vec());
+    fs::write(temp.path().join("alpha").join(filename), b"invalid name").unwrap();
+    let discovered = modding::discover(temp.path());
+    assert!(discovered.mods.is_empty());
+    assert_eq!(discovered.errors.len(), 1);
+    assert!(discovered.errors[0].contains("filenames must be UTF-8"));
+}
+
+#[test]
 fn package_paths_depth_and_size_are_bounded() {
     let temp = tempfile::tempdir().unwrap();
     let mut m = install(temp.path(), "traversal", "traversal", json!({}));

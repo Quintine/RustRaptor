@@ -1,9 +1,11 @@
-# Preserve the catalog and packaged Linux runtime byte for byte on checkout.
+# Preserve the catalog and packaged runtimes byte for byte on checkout.
 /data/** -text -diff
 /bin/** -text -diff
 /lib/** -text -diff
+/mods/** -text
 /data/INDEX diff
 /data/hd/hd.json diff
 
 # The launcher must retain Unix line endings.
 *.sh text eol=lf
+*.cmd text eol=crlf

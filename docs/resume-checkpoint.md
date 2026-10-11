@@ -24,9 +24,18 @@ the relocation. See [repository layout](repository.md).
 
 ## Engine and package
 
+- Windows support is now included: `bin/raptor-rust.exe`, adjacent `SDL2.dll`,
+  `run.cmd`, `runtime-windows-manifest.json` and the Windows export tool/CI.
+  The GNU executable SHA-256 is
+  `e414d2df745369115082439414099f528aca8457f9c58d1c1745eb1b511fc484`.
+  All 279 portable tests pass under Wine, including Windows save replacement;
+  all 22 mod hashes match existing Linux save pins. Windows paths respect
+  APPDATA/LOCALAPPDATA and mods preserve exact bytes through Git checkouts.
+  See [Windows build and validation](windows-build.md). The tracked catalog
+  remains the 340-frame reviewed snapshot while broader HD review continues.
 - Packaged executable now includes the `c0a6fd3` reviewed source checkpoint,
   including diagnostics navigation and interpolated Lightning effects. Its
-  SHA-256 is `4b164987d9fabf7388d2fc66168a9f2aedc71392d42a6ce4066e3607684b1479`.
+  SHA-256 is `4b4304f625381cbbf1331e126c62ca0913d49a52e7a35191f12e734067660e66`.
   The original `fdf2ff0` checkpoint supplied standalone RustRaptor, widescreen
   menus and always-4:3 original cinematics, including when gameplay stretching
   is selected. Fresh 1080p intro capture confirms black 240-pixel side borders.

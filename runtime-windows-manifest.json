@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "platform": "Windows x86_64",
+  "target": "x86_64-pc-windows-gnu",
+  "catalog_entries": 6449,
+  "approved_hd_frames": 340,
+  "shared_data_manifest": "runtime-manifest.json",
+  "dependencies": {
+    "raptor-rust.exe": [
+      "api-ms-win-core-synch-l1-2-0.dll",
+      "api-ms-win-crt-environment-l1-1-0.dll",
+      "api-ms-win-crt-heap-l1-1-0.dll",
+      "api-ms-win-crt-locale-l1-1-0.dll",
+      "api-ms-win-crt-math-l1-1-0.dll",
+      "api-ms-win-crt-private-l1-1-0.dll",
+      "api-ms-win-crt-runtime-l1-1-0.dll",
+      "api-ms-win-crt-stdio-l1-1-0.dll",
+      "api-ms-win-crt-string-l1-1-0.dll",
+      "bcryptprimitives.dll",
+      "kernel32.dll",
+      "ntdll.dll",
+      "sdl2.dll"
+    ],
+    "SDL2.dll": [
+      "advapi32.dll",
+      "gdi32.dll",
+      "imm32.dll",
+      "kernel32.dll",
+      "msvcrt.dll",
+      "ole32.dll",
+      "oleaut32.dll",
+      "setupapi.dll",
+      "shell32.dll",
+      "user32.dll",
+      "version.dll",
+      "winmm.dll"
+    ]
+  },
+  "files": {
+    "bin/raptor-rust.exe": "e414d2df745369115082439414099f528aca8457f9c58d1c1745eb1b511fc484",
+    "bin/SDL2.dll": "53e8fa7e9ed43c30bd650c39396f0d9d2067d2fff0b926c9433b75202592e4aa",
+    "bin/SDL2-WINDOWS-LICENSE.txt": "97f35b302b361680ec1e891e95d2d52097bb95abff361434916d99dc1305f127",
+    "run.cmd": "b007382d9ed3560191856514a9ebd4e429801fc25428840e304bb297f3553269"
+  },
+  "launcher": "run.cmd",
+  "validation": "PE imports and complete shared data hashes; see docs/windows-build.md"
+}

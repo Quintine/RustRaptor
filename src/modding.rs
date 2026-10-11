@@ -20,7 +20,7 @@ use sha2::{Digest, Sha256};
 use std::{
     collections::{BTreeMap, BTreeSet},
     fs,
-    path::{Path, PathBuf},
+    path::{Component, Path, PathBuf},
 };
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
 #[serde(deny_unknown_fields)]
@@ -108,6 +108,25 @@ fn read_package_file(root: &Path, relative: &Path) -> Result<Vec<u8>> {
     );
     Ok(data)
 }
+fn package_hash_name(relative: &Path) -> Result<String> {
+    let mut parts = Vec::new();
+    for component in relative.components() {
+        let Component::Normal(name) = component else {
+            anyhow::bail!("package hash paths must contain only relative filename components");
+        };
+        let name = name.to_str().context("package filenames must be UTF-8")?;
+        // A literal backslash is a Unix filename but a Windows separator;
+        // a colon can address a Windows drive or alternate data stream. Do not
+        // turn either into an alias when generating portable hash keys.
+        ensure!(
+            !name.contains(['\\', ':']),
+            "package filenames contain an ambiguous Windows separator or colon: {name}"
+        );
+        parts.push(name);
+    }
+    ensure!(!parts.is_empty(), "empty package hash path");
+    Ok(parts.join("/"))
+}
 fn load_package(path: &Path) -> Result<InstalledMod> {
     ensure!(
         fs::symlink_metadata(path)?.is_dir(),
@@ -117,7 +136,10 @@ fn load_package(path: &Path) -> Result<InstalledMod> {
     let mut files = Vec::new();
     let mut bytes = 0;
     walk(&root, &root, &mut files, &mut bytes, 0)?;
-    files.sort();
+    // Compare UTF-8 component strings on every platform. Whole-path string
+    // ordering would place art-qa.json before art/... and invalidate existing
+    // Linux saves, whose v1 hashes used PathBuf's component ordering.
+    files.sort_by(|(a, _), (b, _)| a.split('/').cmp(b.split('/')));
     let manifest_data = read_package_file(&root, Path::new("mod.toml"))?;
     ensure!(
         manifest_data.len() <= 64 * 1024,
@@ -174,10 +196,7 @@ fn load_package(path: &Path) -> Result<InstalledMod> {
     }
     let mut hash = Sha256::new();
     hash.update(b"raptor-mod-package-v1\0");
-    for relative in files {
-        let name = relative
-            .to_str()
-            .context("package filenames must be UTF-8")?;
+    for (name, relative) in files {
         let data = read_package_file(&root, &relative)?;
         hash.update((name.len() as u64).to_le_bytes());
         hash.update(name.as_bytes());
@@ -250,7 +269,7 @@ pub fn discover(root: &Path) -> Discovery {
 fn walk(
     root: &Path,
     current: &Path,
-    files: &mut Vec<PathBuf>,
+    files: &mut Vec<(String, PathBuf)>,
     bytes: &mut u64,
     depth: usize,
 ) -> Result<()> {
@@ -261,6 +280,7 @@ fn walk(
     for e in fs::read_dir(current)? {
         let e = e?;
         let relative = e.path().strip_prefix(root)?.to_path_buf();
+        let name = package_hash_name(&relative)?;
         ensure!(
             !e.file_type()?.is_symlink(),
             "mod packages may not contain symlinks"
@@ -280,7 +300,7 @@ fn walk(
                 .checked_add(e.metadata()?.len())
                 .context("package size overflow")?;
             ensure!(*bytes <= MAX_PACKAGE_BYTES, "mod package exceeds 256 MiB");
-            files.push(relative);
+            files.push((name, relative));
             ensure!(files.len() <= MAX_FILES, "mod package has too many files");
         }
     }

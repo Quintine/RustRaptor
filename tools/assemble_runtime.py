@@ -127,12 +127,14 @@ def main():
     if args.zip:
         archive = args.zip.resolve()
         archive.parent.mkdir(parents=True, exist_ok=True)
-        skipped = {"target", "dist", ".reference", "__pycache__", ".git"}
+        skipped = {"target", "dist", ".reference", ".local", "derived", "__pycache__", ".git"}
         with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as output:
             for path in sorted(package.rglob("*")):
                 relative = path.relative_to(package)
                 if path.is_file() and not skipped.intersection(relative.parts) and path.resolve() != archive:
                     if any(part.startswith(".runtime-data-") for part in relative.parts):
+                        continue
+                    if len(relative.parts) >= 4 and relative.parts[0] == "mods" and relative.parts[2:4] == ("art", "source"):
                         continue
                     output.write(path, str(Path("RustRaptor") / relative))
     print(json.dumps({key: value for key, value in report.items() if key not in {"files", "system_dependencies"}}, indent=2))

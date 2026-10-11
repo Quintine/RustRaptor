@@ -1,0 +1,76 @@
+name: Windows build and validation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "mods/**"
+      - "data/**"
+      - "art/**"
+      - "Cargo.toml"
+      - "Cargo.lock"
+      - "run.cmd"
+      - "runtime-manifest.json"
+      - ".gitattributes"
+      - "tools/assemble_windows.py"
+      - "tools/assemble_runtime.py"
+      - ".github/workflows/windows.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install the pinned Rust toolchain
+        run: |
+          rustup toolchain install 1.99.0 --profile minimal
+          rustup default 1.99.0
+      - name: Download and verify the official SDL2 SDK
+        shell: pwsh
+        run: |
+          $url = "https://github.com/libsdl-org/SDL/releases/download/release-2.32.10/SDL2-devel-2.32.10-VC.zip"
+          Invoke-WebRequest $url -OutFile "$env:RUNNER_TEMP\SDL2.zip"
+          $expected = "af347939395a58b365846aaea27391e69f9ec9d4dd650d6ac40802159b418a6e"
+          if ((Get-FileHash "$env:RUNNER_TEMP\SDL2.zip" -Algorithm SHA256).Hash.ToLower() -ne $expected) {
+            throw "SDL2 SDK checksum mismatch"
+          }
+          Expand-Archive "$env:RUNNER_TEMP\SDL2.zip" "$env:RUNNER_TEMP\sdl2"
+      - name: Run portable simulation, mod and Windows save tests
+        run: cargo test --locked --no-default-features
+      - name: Build and package Windows desktop
+        run: python tools/assemble_windows.py --target x86_64-pc-windows-msvc --sdl2-dir "$env:RUNNER_TEMP\sdl2\SDL2-2.32.10" --zip dist/RustRaptor-windows-x86_64.zip
+      - name: Validate packaged data, HD artwork, mods and SDL gameplay
+        shell: pwsh
+        run: |
+          $portable = "$env:RUNNER_TEMP\Portable Windows Ω folder"
+          Expand-Archive "$env:GITHUB_WORKSPACE\dist\RustRaptor-windows-x86_64.zip" $portable
+          $package = "$portable\RustRaptor"
+          $exe = "$package\bin\raptor-rust.exe"
+          Set-Location $env:RUNNER_TEMP
+          & "$package\run.cmd" --verify-assets
+          if ($LASTEXITCODE -ne 0) { throw "Catalog validation failed" }
+          & $exe --validate-hd
+          if ($LASTEXITCODE -ne 0) { throw "HD validation failed" }
+          $mods = (Get-ChildItem "$package\mods" -Directory | Where-Object { Test-Path "$($_.FullName)\mod.toml" } | ForEach-Object { $_.Name }) -join ","
+          & $exe --mods "$package\mods" --profile-root "$env:RUNNER_TEMP\raptor-profile" --validate-mods $mods
+          if ($LASTEXITCODE -ne 0) { throw "Mod validation failed" }
+          $env:SDL_VIDEODRIVER = "dummy"
+          $env:SDL_AUDIODRIVER = "dummy"
+          & $exe --profile-root "$env:RUNNER_TEMP\raptor-profile" --smoke-frames 32 --preview-mission base:sector_1_wave_1 --screenshot "$env:GITHUB_WORKSPACE\dist\windows-gameplay.png"
+          if ($LASTEXITCODE -ne 0) { throw "Windows SDL gameplay failed" }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: RustRaptor-windows-x86_64
+          path: |
+            dist/RustRaptor-windows-x86_64.zip
+            dist/windows-gameplay.png
+          if-no-files-found: error

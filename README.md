@@ -1,6 +1,6 @@
 # RustRaptor
 
-The independent Linux Rust game and its complete local mod packages live here.
+The independent Linux and Windows Rust game and its complete local mod packages live here.
 SDL2 handles platform services; gameplay, asset decoding, rendering, audio,
 saving and mod scripting run in Rust.
 
@@ -16,6 +16,9 @@ and the bundled `mods/`. `./run.sh` launches that executable without Cargo or
 the old engine; paths remain valid after moving the folder. For development,
 the launcher falls back to Cargo when no packaged executable is present.
 `--data DIR` selects another catalog. Some optional comparison tests use retained source.
+On Windows, double-click `run.cmd`; it starts the included
+`bin/raptor-rust.exe` with its adjacent SDL2 DLL and the same data and mods.
+See [Windows builds and packaging](docs/windows-build.md).
 
 Refresh the executable and copied original/approved-HD data with
 `python3 tools/assemble_runtime.py`. Add `--zip dist/RustRaptor-linux-x86_64.zip`
@@ -33,8 +36,9 @@ weapon mods. Enable them in Mods and buy them in the supply room. The cannon
 is a selected special that chains through nearby targets; the shield fires
 with your primary guns while Fire is held. Both ship SD/HD icons and sounds.
 For a user mods folder, pass `--mods DIR` or create
-`$XDG_DATA_HOME/RaptorReplica/mods/`. Saves and configuration use separate XDG
-`RaptorReplica` directories, with read-only legacy import.
+`$XDG_DATA_HOME/RaptorReplica/mods/` on Linux or
+`%APPDATA%\RaptorReplica\mods\` on Windows. Saves and configuration use separate
+user profile directories, with read-only legacy import.
 
 Enter the **Hangar** to fly, choose missions, visit the supply room, manage
 equipment or **Save pilot**. New pilots have editable names, callsigns and ID
@@ -61,7 +65,7 @@ Existing untouched Rust default bindings migrate to these controls.
 | `tests/` | Portable fixtures and opt-in original-data checks |
 | `tools/` | Replay comparator, content-table generator and asset reference tools |
 | `docs/` | API, artwork, build and validation documentation |
-| `bin/`, `data/`, `lib/` | Local standalone runtime and any bundled SDL2 library |
+| `bin/`, `data/`, `lib/` | Included Linux/Windows executables, shared data and SDL2 runtimes |
 | `target/` | Local Cargo builds, excluded from Git |
 
 The bundled executable, libraries, original game catalog and approved HD assets

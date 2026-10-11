@@ -5,11 +5,12 @@ Cargo commands from this folder. The public remote is
 [Quintine/RustRaptor](https://github.com/Quintine/RustRaptor), on branch
 `codex/rust-rewrite`.
 
-The repository includes the Linux executable in `bin/`, its bundled libraries
-in `lib/`, the complete original game catalog and approved HD snapshot in
+The repository includes Linux and Windows executables in `bin/`, the Windows
+SDL2 DLL beside its executable, Linux libraries in `lib/`, and the complete
+original game catalog and approved HD snapshot in
 `data/`, and `runtime-manifest.json`. All authored mod definitions, scripts,
 SD/HD artwork, sounds and music are included. A fresh checkout can launch the
-bundled game with `./run.sh` without compiling it.
+bundled game with `./run.sh` on Linux or `run.cmd` on Windows without compiling it.
 
 Build output in `target/`, local review evidence in `.reference/`, generation
 source references and duplicate zip exports in `dist/` are ignored. Working
