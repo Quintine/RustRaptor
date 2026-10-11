@@ -34,8 +34,12 @@ the relocation. See [repository layout](repository.md).
   The exported folder launches via `run.cmd` from `/tmp` after relocation to
   a path with spaces and Unicode; all hashes/mods validate. HD1080p gameplay,
   original4:3 intro and music-muted SDL sound-effect capture pass. Local
-  evidence is in `.reference/windows/`; native Windows CI checks the pushed
-  source at [the build run](https://github.com/Quintine/RustRaptor/actions/runs/38119440288).
+  evidence is in `.reference/windows/`. Native Windows CI also passes all279
+  portable tests plus MSVC desktop/exported-folder checks at
+  [the build run](https://github.com/Quintine/RustRaptor/actions/runs/38119440288).
+  The Windows executable additionally runs Iron Coast1 with all22mods enabled
+  and captures its custom music. Hardware display/audio/controller checks
+  remain manual; automated runs use SDL dummy drivers.
   See [Windows build and validation](windows-build.md). The tracked catalog
   remains the 340-frame reviewed snapshot while broader HD review continues.
 - Packaged executable now includes the `c0a6fd3` reviewed source checkpoint,

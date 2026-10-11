@@ -73,5 +73,10 @@ original intro retains its 4:3 viewport with 240-pixel black side borders.
 SDL captured three seconds of 44.1 kHz stereo audio; a separate capture with
 music muted verified nonzero original sound effects (251,682 nonzero samples).
 
-Wine checks exercise the Windows executable from Linux; native Windows
-builds and runtime checks are also configured in the workflow above.
+The [native Windows CI run](https://github.com/Quintine/RustRaptor/actions/runs/38119440288)
+also passed all 279 portable tests, built the MSVC desktop release and
+validated the exported folder's launcher, catalog, HD art, all mods and SDL
+gameplay from a path with spaces and Unicode. The local GNU build additionally
+ran Iron Coast mission 1 at 1080p with all 22 mods enabled and captured its
+custom music. Both runs used SDL's dummy output drivers for automation;
+physical Windows display, audio and controller hardware remain untested.

@@ -9,11 +9,13 @@ on:
       - "mods/**"
       - "data/**"
       - "art/**"
+      - "bin/**"
       - "Cargo.toml"
       - "Cargo.lock"
       - "run.cmd"
       - "runtime-manifest.json"
       - ".gitattributes"
+      - "runtime-windows-manifest.json"
       - "tools/assemble_windows.py"
       - "tools/assemble_runtime.py"
       - ".github/workflows/windows.yml"
@@ -46,6 +48,22 @@ jobs:
           Expand-Archive "$env:RUNNER_TEMP\SDL2.zip" "$env:RUNNER_TEMP\sdl2"
       - name: Run portable simulation, mod and Windows save tests
         run: cargo test --locked --no-default-features
+      - name: Check the included Windows executable and launcher
+        shell: pwsh
+        run: |
+          $package = $env:GITHUB_WORKSPACE
+          $manifest = Get-Content "$package\runtime-windows-manifest.json" -Raw | ConvertFrom-Json
+          foreach ($entry in $manifest.files.PSObject.Properties) {
+            $actual = (Get-FileHash (Join-Path $package $entry.Name) -Algorithm SHA256).Hash.ToLower()
+            if ($actual -ne $entry.Value) { throw "Bundled Windows hash mismatch: $($entry.Name)" }
+          }
+          Set-Location $env:RUNNER_TEMP
+          & "$package\run.cmd" --verify-assets
+          if ($LASTEXITCODE -ne 0) { throw "Included Windows launcher failed" }
+          $env:SDL_VIDEODRIVER = "dummy"
+          $env:SDL_AUDIODRIVER = "dummy"
+          & "$package\run.cmd" --profile-root "$env:RUNNER_TEMP\bundled-profile" --smoke-frames 32 --preview-mission base:sector_1_wave_1
+          if ($LASTEXITCODE -ne 0) { throw "Included Windows SDL gameplay failed" }
       - name: Build and package Windows desktop
         run: python tools/assemble_windows.py --target x86_64-pc-windows-msvc --sdl2-dir "$env:RUNNER_TEMP\sdl2\SDL2-2.32.10" --zip dist/RustRaptor-windows-x86_64.zip
       - name: Validate packaged data, HD artwork, mods and SDL gameplay
