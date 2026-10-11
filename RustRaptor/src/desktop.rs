@@ -32,6 +32,12 @@ use std::{
     time::{Duration, Instant},
 };
 
+const MENU_WIDTH: usize = 400;
+const MENU_HEIGHT: usize = 225;
+const MENU_OFFSET: [i32; 2] = [40, 12];
+const MAIN_MENU_X: i32 = 248;
+const MAIN_MENU_Y: i32 = 62;
+
 impl AudioCallback for Mixer {
     type Channel = i16;
     fn callback(&mut self, out: &mut [i16]) {
@@ -2711,6 +2717,144 @@ impl Host {
         }
         Ok(())
     }
+    fn main_menu(&mut self, canvas: &mut Canvas) -> Result<()> {
+        use crate::menu_art::{
+            MENU_ACCENT, MENU_CARD, MENU_FOCUS, MENU_MUTED, MENU_RULE, MENU_TEXT,
+        };
+
+        // The illustration leaves the right side open for navigation. Keep the
+        // ship and coastal view exposed instead of framing the entire screen.
+        let mut title = Canvas {
+            scale: canvas.scale * 2,
+            image: Sprite::blank(
+                self.menu_font.text_width("RAPTOR") * canvas.scale * 2,
+                self.menu_font.height() * canvas.scale * 2,
+            ),
+        };
+        self.menu_font.text(&mut title, 0, 0, "RAPTOR", MENU_TEXT);
+        canvas.blit(
+            &title.image,
+            (MAIN_MENU_X + 10) * canvas.scale as i32,
+            22 * canvas.scale as i32,
+        );
+        self.font.text(
+            canvas,
+            MAIN_MENU_X + 10,
+            43,
+            "CALL OF THE SHADOWS",
+            MENU_MUTED,
+        );
+        canvas.rect(MAIN_MENU_X, MAIN_MENU_Y - 5, 136, 1, MENU_RULE);
+        for (index, label) in [
+            "RETURN TO HANGAR",
+            "NEW PILOT",
+            "LOAD / IMPORT",
+            "OPTIONS",
+            "MODS",
+            "HELP / CREDITS",
+            "WATCH INTRO",
+            "QUIT",
+        ]
+        .iter()
+        .enumerate()
+        {
+            let y = MAIN_MENU_Y + index as i32 * 16;
+            if index == self.selected {
+                canvas.rect(MAIN_MENU_X, y, 136, 15, MENU_FOCUS);
+                canvas.rect(MAIN_MENU_X, y + 1, 2, 13, MENU_ACCENT);
+            }
+            self.menu_font.text(
+                canvas,
+                MAIN_MENU_X + 10,
+                y + 3,
+                &fit_text(&self.menu_font, label, 120),
+                if index == self.selected {
+                    MENU_ACCENT
+                } else {
+                    MENU_TEXT
+                },
+            );
+        }
+
+        canvas.rect(20, 24, 144, 91, MENU_CARD);
+        canvas.rect(20, 24, 32, 1, MENU_ACCENT);
+        self.font
+            .text(canvas, 30, 31, "PILOT IDENTIFICATION", MENU_MUTED);
+        let portrait = self
+            .pilot
+            .legacy_progress
+            .as_ref()
+            .map_or(0, |progress| portrait_index(progress.portrait));
+        self.menu_portrait(canvas, portrait, 30, 45)?;
+        self.menu_font.text(
+            canvas,
+            78,
+            45,
+            &fit_text(&self.menu_font, &self.pilot.callsign.to_uppercase(), 72),
+            MENU_ACCENT,
+        );
+        for (index, line) in wrap_text(&self.font, &self.pilot.name, 72)
+            .iter()
+            .take(2)
+            .enumerate()
+        {
+            self.font
+                .text(canvas, 78, 59 + index as i32 * 9, line, MENU_TEXT);
+        }
+        self.font
+            .text(canvas, 78, 79, &format!("ID {:04}", self.slot), MENU_MUTED);
+        self.font.text(
+            canvas,
+            30,
+            92,
+            &fit_text(
+                &self.font,
+                &format!("CREDITS  ${}", self.pilot.credits),
+                120,
+            ),
+            MENU_TEXT,
+        );
+        let mission = self
+            .active
+            .registry
+            .missions
+            .get(&self.pilot.mission)
+            .map(|mission| mission.name.as_str())
+            .unwrap_or(&self.pilot.mission.0);
+        self.font.text(
+            canvas,
+            30,
+            104,
+            &fit_text(&self.font, &format!("NEXT  {mission}"), 120),
+            MENU_MUTED,
+        );
+
+        canvas.rect(20, 204, 364, 18, MENU_CARD);
+        self.font.text(
+            canvas,
+            30,
+            207,
+            "UP/DOWN choose  ENTER/A accept  ESC/B back",
+            MENU_MUTED,
+        );
+        let context = if self.message.is_empty() {
+            menu_context(Screen::Main, self.selected).unwrap_or("")
+        } else {
+            &self.message
+        };
+        self.font.text(
+            canvas,
+            30,
+            216,
+            &fit_text(&self.font, context, 344),
+            if self.message.to_ascii_lowercase().contains("failed") {
+                34
+            } else {
+                MENU_TEXT
+            },
+        );
+        Ok(())
+    }
     fn hud_asset(&mut self, canvas: &mut Canvas, asset: u32, x: i32, y: i32) -> Result<()> {
         self.ensure_hd();
         if self.config.hd_mode {
@@ -3181,8 +3325,35 @@ impl Host {
         Ok(())
     }
     fn draw(&mut self) -> Result<Canvas> {
+        let canvas = self.draw_content()?;
+        if self.world.is_none() && self.cinematic.is_none() && self.screen != Screen::Main {
+            let mut frame = Canvas {
+                scale: canvas.scale,
+                image: Sprite::blank(MENU_WIDTH * canvas.scale, MENU_HEIGHT * canvas.scale),
+            };
+            frame.blit(
+                &canvas.image,
+                MENU_OFFSET[0] * canvas.scale as i32,
+                MENU_OFFSET[1] * canvas.scale as i32,
+            );
+            Ok(frame)
+        } else {
+            Ok(canvas)
+        }
+    }
+    fn draw_content(&mut self) -> Result<Canvas> {
         self.ensure_hd();
-        let mut canvas = Canvas::new(self.config.scale);
+        let mut canvas = if self.screen == Screen::Main && self.cinematic.is_none() {
+            Canvas {
+                scale: self.config.scale,
+                image: Sprite::blank(
+                    MENU_WIDTH * self.config.scale,
+                    MENU_HEIGHT * self.config.scale,
+                ),
+            }
+        } else {
+            Canvas::new(self.config.scale)
+        };
         canvas.clear(if self.world.is_some() {
             0
         } else {
@@ -3211,6 +3382,10 @@ impl Host {
             if self.screen == Screen::Game {
                 return Ok(canvas);
             }
+        }
+        if self.screen == Screen::Main {
+            self.main_menu(&mut canvas)?;
+            return Ok(canvas);
         }
         let classic = matches!(self.screen, Screen::Main | Screen::Hangar);
         self.menu_panel(&mut canvas, 12, 8, 296, if classic { 31 } else { 184 });
@@ -3874,7 +4049,16 @@ fn wrap_text(font: &BitmapFont, text: &str, width: usize) -> Vec<String> {
     lines
 }
 fn menu_row_at(screen: Screen, selected: usize, rows: usize, x: i32, y: i32) -> Option<usize> {
-    if matches!(screen, Screen::Main | Screen::Hangar) {
+    if screen == Screen::Main {
+        if !(MAIN_MENU_X..MAIN_MENU_X + 136).contains(&x)
+            || !(MAIN_MENU_Y..MAIN_MENU_Y + 128).contains(&y)
+        {
+            return None;
+        }
+        let selection = ((y - MAIN_MENU_Y) / 16) as usize;
+        return (selection < rows).then_some(selection);
+    }
+    if screen == Screen::Hangar {
         if !(164..300).contains(&x) || !(42..170).contains(&y) {
             return None;
         }
@@ -3966,10 +4150,10 @@ fn adjust_option(config: &mut Config, selected: usize, direction: i32) -> bool {
         }
         8 => config.difficulty = cycle(config.difficulty as i32, 4) as u32,
         9 => {
-            (config.width, config.height) = if (config.width, config.height) == (1280, 960) {
+            (config.width, config.height) = if (config.width, config.height) == (1280, 720) {
                 (1920, 1080)
             } else {
-                (1280, 960)
+                (1280, 720)
             };
         }
         10 => config.hd_mode = !config.hd_mode,
@@ -4150,6 +4334,46 @@ fn viewport(w: u32, h: u32, aspect: bool) -> Rect {
         Rect::new(0, 0, w, h)
     }
 }
+fn presentation_viewport(host: &Host, w: u32, h: u32) -> Rect {
+    if host.cinematic.is_some() {
+        // The original movies use non-square pixels. Always present them at
+        // 4:3, independently of the optional gameplay stretching setting.
+        viewport(w, h, true)
+    } else if host.world.is_none() {
+        let width = w.min(h * 16 / 9);
+        let height = h.min(w * 9 / 16);
+        Rect::new(
+            ((w - width) / 2) as i32,
+            ((h - height) / 2) as i32,
+            width,
+            height,
+        )
+    } else {
+        viewport(w, h, host.config.aspect_correct)
+    }
+}
+fn menu_point(host: &Host, w: u32, h: u32, x: i32, y: i32) -> Option<[i32; 2]> {
+    let rect = presentation_viewport(host, w, h);
+    if !rect.contains_point((x, y)) || rect.width() == 0 || rect.height() == 0 {
+        return None;
+    }
+    if host.world.is_none() && host.cinematic.is_none() {
+        let point = [
+            (x - rect.x()) * MENU_WIDTH as i32 / rect.width() as i32,
+            (y - rect.y()) * MENU_HEIGHT as i32 / rect.height() as i32,
+        ];
+        Some(if host.screen == Screen::Main {
+            point
+        } else {
+            [point[0] - MENU_OFFSET[0], point[1] - MENU_OFFSET[1]]
+        })
+    } else {
+        Some([
+            (x - rect.x()) * 320 / rect.width() as i32,
+            (y - rect.y()) * 200 / rect.height() as i32,
+        ])
+    }
+}
 pub fn run(
     catalog: Catalog,
     base: Registry,
@@ -4205,6 +4429,17 @@ pub fn run(
             .build()?,
     };
     let creator = canvas.texture_creator();
+    let sidebar_image = host.menu_art.sidebars();
+    let mut sidebar_texture = creator.create_texture_static(
+        PixelFormatEnum::RGBA32,
+        sidebar_image.width(),
+        sidebar_image.height(),
+    )?;
+    sidebar_texture.update(
+        None,
+        sidebar_image.as_raw(),
+        sidebar_image.width() as usize * 4,
+    )?;
     let mut texture = creator.create_texture_streaming(
         PixelFormatEnum::RGBA32,
         (320 * host.config.scale) as u32,
@@ -4336,9 +4571,9 @@ pub fn run(
                         continue;
                     }
                     let (w, h) = canvas.window().size();
-                    let rect = viewport(w, h, host.config.aspect_correct);
-                    let yy = (y - rect.y()) * 200 / rect.height() as i32;
-                    let xx = (x - rect.x()) * 320 / rect.width() as i32;
+                    let Some([xx, yy]) = menu_point(&host, w, h, x, y) else {
+                        continue;
+                    };
                     if host.screen == Screen::PilotForm
                         && (252..292).contains(&xx)
                         && (46..86).contains(&yy)
@@ -4625,12 +4860,40 @@ pub fn run(
         }
         let image = host.draw()?;
         let rgba = host.present_rgba(&image);
+        if (texture.query().width, texture.query().height)
+            != (image.image.width as u32, image.image.height as u32)
+        {
+            texture = creator.create_texture_streaming(
+                PixelFormatEnum::RGBA32,
+                image.image.width as u32,
+                image.image.height as u32,
+            )?;
+        }
         texture.update(None, &rgba, image.image.width * 4)?;
         let (w, h) = canvas.output_size().map_err(|e| anyhow!(e))?;
         canvas.set_draw_color(sdl2::pixels::Color::BLACK);
         canvas.clear();
+        let destination = presentation_viewport(&host, w, h);
+        if host.world.is_some()
+            && host.cinematic.is_none()
+            && (destination.width() < w || destination.height() < h)
+        {
+            canvas
+                .copy(&sidebar_texture, None, None)
+                .map_err(|e| anyhow!(e))?;
+            canvas.set_draw_color(sdl2::pixels::Color::RGB(65, 54, 39));
+            if destination.x() > 0 {
+                canvas
+                    .draw_line((destination.x() - 1, 0), (destination.x() - 1, h as i32))
+                    .map_err(|e| anyhow!(e))?;
+                let right = destination.x() + destination.width() as i32;
+                canvas
+                    .draw_line((right, 0), (right, h as i32))
+                    .map_err(|e| anyhow!(e))?;
+            }
+        }
         canvas
-            .copy(&texture, None, viewport(w, h, host.config.aspect_correct))
+            .copy(&texture, None, destination)
             .map_err(|e| anyhow!(e))?;
         if frames.is_some_and(|n| count + 1 >= n) {
             if let Some(path) = &screenshot {
@@ -5049,6 +5312,24 @@ mod tests {
                 CinematicAudioEvent::Stop(asset) => serde_json::json!({"stop":asset}),
             })
             .collect()
+    }
+    #[test]
+    fn cinematics_keep_four_three_when_gameplay_stretching_is_enabled() {
+        let (_directory, mut host) = opening_card_fixture();
+        host.config.aspect_correct = false;
+        for (width, height) in [(1280, 720), (1280, 800), (1920, 1080)] {
+            let rect = presentation_viewport(&host, width, height);
+            assert!((rect.width() * 3).abs_diff(rect.height() * 4) <= 3);
+        }
+        assert_eq!(
+            presentation_viewport(&host, 1920, 1080),
+            Rect::new(240, 0, 1440, 1080)
+        );
+        host.cinematic = None;
+        assert_eq!(
+            presentation_viewport(&host, 1920, 1080),
+            Rect::new(0, 0, 1920, 1080)
+        );
     }
     #[test]
     fn supplied_hd_opening_cards_use_unfaded_source_palettes_without_advancing_movies_or_world() {
@@ -6136,8 +6417,8 @@ mod tests {
                     Screen::Main,
                     7,
                     host.rows().len(),
-                    200,
-                    47 + row as i32 * 16
+                    MAIN_MENU_X + 20,
+                    MAIN_MENU_Y + 5 + row as i32 * 16
                 ),
                 Some(row)
             );
@@ -6676,7 +6957,10 @@ mod tests {
         assert_eq!(menu_row_at(Screen::Shop, 1, 20, 170, 60), None);
         assert_eq!(menu_row_at(Screen::Shop, 1, 20, 159, 60), Some(1));
         assert_eq!(menu_row_at(Screen::Shop, 1, 20, 40, 154), None);
-        assert_eq!(menu_row_at(Screen::Main, 1, 8, 200, 60), Some(1));
+        assert_eq!(
+            menu_row_at(Screen::Main, 1, 8, MAIN_MENU_X + 20, MAIN_MENU_Y + 18),
+            Some(1)
+        );
     }
     #[test]
     fn mission_preview_is_not_an_action_hitbox() {
@@ -7143,8 +7427,11 @@ mod tests {
             host.selected = selected;
             let canvas = host.draw().unwrap();
             assert_eq!(
-                canvas.image.pixels[(43 + selected * 16) * 4 * canvas.image.width + 164 * 4],
-                48
+                canvas.image.pixels[(MAIN_MENU_Y as usize + 1 + selected * 16)
+                    * 4
+                    * canvas.image.width
+                    + MAIN_MENU_X as usize * 4],
+                crate::menu_art::MENU_ACCENT
             );
             capture(&mut host, name);
         }
@@ -7746,6 +8033,57 @@ mod tests {
     fn full_hd_window_retains_centered_four_three_viewport() {
         assert_eq!(viewport(1920, 1080, true), Rect::new(240, 0, 1440, 1080));
         assert_eq!(viewport(1920, 1080, false), Rect::new(0, 0, 1920, 1080));
+    }
+    #[test]
+    fn widescreen_menus_map_every_action_and_keep_gameplay_in_four_three() {
+        let (_directory, mut host) = ui_fixture();
+        for (width, height) in [(1280, 720), (1280, 800), (1920, 1080)] {
+            let rect = presentation_viewport(&host, width, height);
+            assert_eq!(rect.width() * 9, rect.height() * 16);
+            for row in 0..8 {
+                let logical = [MAIN_MENU_X + 20, MAIN_MENU_Y + row * 16 + 5];
+                let point = menu_point(
+                    &host,
+                    width,
+                    height,
+                    rect.x() + logical[0] * rect.width() as i32 / MENU_WIDTH as i32,
+                    rect.y() + logical[1] * rect.height() as i32 / MENU_HEIGHT as i32,
+                )
+                .unwrap();
+                assert_eq!(
+                    menu_row_at(Screen::Main, 7, 8, point[0], point[1]),
+                    Some(row as usize)
+                );
+            }
+            assert!(menu_point(&host, width, height, -1, -1).is_none());
+        }
+        host.go(Screen::Hangar);
+        let point = menu_point(
+            &host,
+            1920,
+            1080,
+            (MENU_OFFSET[0] + 200) * 1920 / MENU_WIDTH as i32,
+            (MENU_OFFSET[1] + 111) * 1080 / MENU_HEIGHT as i32,
+        )
+        .unwrap();
+        assert_eq!(
+            menu_row_at(Screen::Hangar, 0, 7, point[0], point[1]),
+            Some(4)
+        );
+        let menu = host.draw().unwrap();
+        assert_eq!(
+            (menu.image.width, menu.image.height),
+            (
+                MENU_WIDTH * host.config.scale,
+                MENU_HEIGHT * host.config.scale
+            )
+        );
+        host.world =
+            Some(World::new(&host.pilot.mission, &host.pilot, &host.active.registry).unwrap());
+        assert_eq!(
+            presentation_viewport(&host, 1920, 1080),
+            Rect::new(240, 0, 1440, 1080)
+        );
     }
     #[test]
     fn palette_effects_do_not_consume_simulation_rng() {

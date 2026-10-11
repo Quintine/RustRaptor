@@ -1,16 +1,19 @@
 //! Full-color menu illustration; indexed gameplay and movie palettes stay separate.
 use crate::{assets::TRANSPARENT, render::Canvas};
-use image::{
-    RgbaImage,
-    imageops::{FilterType, resize},
-};
+use image::{DynamicImage, RgbaImage, imageops::FilterType};
 use std::collections::BTreeMap;
 
 pub const MENU_PANEL: u16 = 257;
+pub const MENU_CARD: u16 = 258;
+pub const MENU_FOCUS: u16 = 259;
+pub const MENU_TEXT: u16 = 260;
+pub const MENU_MUTED: u16 = 261;
+pub const MENU_ACCENT: u16 = 262;
+pub const MENU_RULE: u16 = 263;
 
 pub struct MenuArt {
     original: RgbaImage,
-    resized: BTreeMap<usize, RgbaImage>,
+    resized: BTreeMap<(usize, usize, usize), RgbaImage>,
 }
 impl MenuArt {
     pub fn bundled() -> Self {
@@ -28,21 +31,38 @@ impl MenuArt {
         palette: &[[u8; 3]; 256],
         scanlines: bool,
     ) -> Vec<u8> {
-        let background = self.resized.entry(canvas.scale).or_insert_with(|| {
-            resize(
-                &self.original,
-                canvas.image.width as u32,
-                canvas.image.height as u32,
-                FilterType::Lanczos3,
-            )
-        });
+        let background = self
+            .resized
+            .entry((canvas.scale, canvas.image.width, canvas.image.height))
+            .or_insert_with(|| {
+                DynamicImage::ImageRgba8(self.original.clone())
+                    .resize_to_fill(
+                        canvas.image.width as u32,
+                        canvas.image.height as u32,
+                        FilterType::Lanczos3,
+                    )
+                    .into_rgba8()
+            });
         let mut rgba = background.as_raw().clone();
         for (i, index) in canvas.image.pixels.iter().enumerate() {
-            let color = if *index == MENU_PANEL {
+            let color = if matches!(*index, MENU_PANEL | MENU_CARD | MENU_FOCUS) {
+                let (tint, opacity) = match *index {
+                    MENU_CARD => ([10u16, 17, 23], 72),
+                    MENU_FOCUS => ([49u16, 38, 27], 82),
+                    _ => ([12u16, 18, 29], 85),
+                };
                 [0, 1, 2].map(|channel| {
-                    (([12u16, 18, 29][channel] * 85 + rgba[i * 4 + channel] as u16 * 15) / 100)
-                        as u8
+                    ((tint[channel] * opacity + rgba[i * 4 + channel] as u16 * (100 - opacity))
+                        / 100) as u8
                 })
+            } else if *index == MENU_TEXT {
+                [221, 225, 224]
+            } else if *index == MENU_MUTED {
+                [147, 163, 171]
+            } else if *index == MENU_ACCENT {
+                [237, 180, 105]
+            } else if *index == MENU_RULE {
+                [65, 79, 85]
             } else if *index == TRANSPARENT {
                 [rgba[i * 4], rgba[i * 4 + 1], rgba[i * 4 + 2]]
             } else {
@@ -56,6 +76,18 @@ impl MenuArt {
             rgba[i * 4 + 3] = 255;
         }
         rgba
+    }
+    pub fn sidebars(&self) -> RgbaImage {
+        let mut image = DynamicImage::ImageRgba8(self.original.clone())
+            .resize_to_fill(800, 450, FilterType::Lanczos3)
+            .into_rgba8();
+        for pixel in image.pixels_mut() {
+            for channel in &mut pixel.0[..3] {
+                *channel = (*channel as u16 * 23 / 100) as u8;
+            }
+            pixel[3] = 255;
+        }
+        image
     }
 }
 

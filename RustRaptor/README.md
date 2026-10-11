@@ -17,9 +17,17 @@ Or from this folder:
 cargo test --locked
 ```
 
-Supply the original game catalog in `../data/` or `RustRaptor/data/`. You can
-select another catalog with `--data DIR`. No C++ checkout or build is needed to
-build or play the Rust game. Some optional comparison tests use retained source.
+The self-contained runtime uses `bin/raptor-rust`, its sibling `data/` catalog
+and the bundled `mods/`. `./run.sh` launches that executable without Cargo or
+the old engine; paths remain valid after moving the folder. For development,
+the launcher falls back to Cargo when no packaged executable is present.
+`--data DIR` selects another catalog. Some optional comparison tests use retained source.
+
+Refresh the executable and copied original/approved-HD data with
+`python3 tools/assemble_runtime.py`. Add `--zip dist/RustRaptor-linux-x86_64.zip`
+to export a distributable folder containing the runtime, mods, source and API
+documentation, excluding build caches and review drafts. See
+[standalone packaging](docs/standalone-package.md).
 
 The **Mods** screen discovers the bundled `mods/` packages when no user mods
 folder exists. Enable **Iron Coast Campaign** to select all six mission mods,
@@ -55,6 +63,7 @@ Existing untouched Rust default bindings migrate to these controls.
 | `tests/` | Portable fixtures and opt-in original-data checks |
 | `tools/` | Replay comparator, content-table generator and asset reference tools |
 | `docs/` | API, artwork, build and validation documentation |
+| `bin/`, `data/`, `lib/` | Local standalone runtime and any bundled SDL2 library |
 | `target/` | Local Cargo builds, excluded from Git |
 
 All bundled mod definitions, scripts, SD/HD PNGs, WAVs, generation prompts and

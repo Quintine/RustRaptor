@@ -471,7 +471,11 @@ impl BitmapFont {
                 let mut glyph = g.clone();
                 for p in &mut glyph.pixels {
                     if *p != TRANSPARENT {
-                        *p = (*p + color.saturating_sub(1)).min(255);
+                        *p = if color > TRANSPARENT {
+                            color
+                        } else {
+                            (*p + color.saturating_sub(1)).min(255)
+                        };
                     }
                 }
                 canvas.blit(
@@ -481,7 +485,7 @@ impl BitmapFont {
                 );
             }
             cursor += self.widths[ch as usize] as i32 + 1;
-            if cursor > 314 {
+            if cursor > (canvas.image.width / canvas.scale) as i32 - 6 {
                 break;
             }
         }

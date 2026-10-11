@@ -6,7 +6,20 @@ use raptor_replica::{
     persistence::{Paths, Pilot},
     simulation::{Input, World},
 };
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
+
+fn package_at(executable: &Path, working: &Path, development: &Path) -> PathBuf {
+    let directory = executable.parent().unwrap_or(working);
+    if directory.file_name().is_some_and(|name| name == "bin") {
+        return directory.parent().unwrap_or(directory).to_owned();
+    }
+    for candidate in [directory, working] {
+        if candidate.join("data/INDEX").is_file() {
+            return candidate.to_owned();
+        }
+    }
+    development.to_owned()
+}
 fn main() {
     if let Err(e) = run() {
         eprintln!("{e:#}");
@@ -36,15 +49,20 @@ fn run() -> Result<()> {
         println!("Wrote API v1 schemas to {path}");
         return Ok(());
     }
-    let package = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+    let package = package_at(
+        &std::env::current_exe()?,
+        &std::env::current_dir()?,
+        Path::new(env!("CARGO_MANIFEST_DIR")),
+    );
     let data = arg("--data").map(PathBuf::from).unwrap_or_else(|| {
-        if package.join("data/INDEX").is_file() {
+        if package.join("data/INDEX").is_file() || package.join("bin/raptor-rust").is_file() {
             package.join("data")
         } else {
             package.join("../data")
         }
     });
-    let catalog = Catalog::open(data)?;
+    let catalog = Catalog::open(&data)
+        .with_context(|| format!("Could not open game data at {}", data.display()))?;
     if args.iter().any(|a| a == "--validate-hd") {
         let hd_root = catalog.root.join("hd");
         anyhow::ensure!(
@@ -236,4 +254,34 @@ fn run() -> Result<()> {
     }
     #[cfg(feature = "desktop")]
     Ok(())
+}
+
+#[cfg(test)]
+mod package_tests {
+    use super::*;
+    #[test]
+    fn relocated_bin_uses_its_own_package_even_when_catalog_is_missing() {
+        assert_eq!(
+            package_at(
+                Path::new("/copied/RustRaptor/bin/raptor-rust"),
+                Path::new("/elsewhere"),
+                Path::new("/old/build")
+            ),
+            Path::new("/copied/RustRaptor")
+        );
+    }
+    #[test]
+    fn direct_executable_prefers_its_sibling_data_over_working_directory() {
+        let folder = tempfile::tempdir().unwrap();
+        std::fs::create_dir(folder.path().join("data")).unwrap();
+        std::fs::write(folder.path().join("data/INDEX"), "").unwrap();
+        assert_eq!(
+            package_at(
+                &folder.path().join("raptor-rust"),
+                Path::new("/elsewhere"),
+                Path::new("/old/build")
+            ),
+            folder.path()
+        );
+    }
 }

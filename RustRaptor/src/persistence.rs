@@ -69,7 +69,7 @@ impl Default for Config {
             borderless: false,
             aspect_correct: true,
             width: 1280,
-            height: 960,
+            height: 720,
             music_volume: 85,
             fx_volume: 85,
             fx_channels: 2,
