@@ -70,8 +70,25 @@ All 2,240 approved frames use the default presentation policies. The
 passed portable tests, all eight Black Tide missions and saved finale replay,
 the exact included GNU executable, fresh MSVC build, original assets, all
 45 mods, SDL captures, FM music and isolated effects. That run used the
-previous 2,132-frame artwork snapshot. Fresh archive execution and CI checks
-for the 2,240-frame successor are recorded separately in
+previous 2,132-frame artwork snapshot. The
+[2,240-frame native Windows run](https://github.com/Quintine/RustRaptor/actions/runs/38180655261)
+also passed every workflow check, including a fresh MSVC package.
+
+The exported 2,240-frame GNU ZIP passes complete CRC, original/data/mod/source
+hashes and Unicode/space relocation through `run.cmd` under Wine 11.19. Six
+1920×1080 HD/SD original mission captures, isolated stereo music and effects,
+the forced 4:3 intro and a separate 16:9 main-menu capture were reviewed.
+Both three-second recordings contain audio without clipping. ZIP SHA-256 is
+`b6204dacd56b7fba80072ae773d10f28ce5eab3fb7153d8a3a74b0ec8c4ccdca`.
+The first test attempt used a Wine CMD wrapper that altered a quoted Unicode
+profile path and incorrectly loaded defaults; it remains recorded. Forwarding
+the already quoted argument verbatim fixed the review harness, and the fresh
+complete proof passed. The game launcher and executable were unchanged.
+
+These representative captures still show original sprites awaiting admission
+and visible terrain grain/value boundaries; full HD coverage and final terrain
+cohesion remain unfinished. The exact exported snapshot predates this additive
+proof documentation. Full pins and historical receipts are in
 [the runtime release receipt](hd-runtime-release.json).
 
 The [1,148-frame native Windows run](https://github.com/Quintine/RustRaptor/actions/runs/38126069413)
