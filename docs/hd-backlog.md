@@ -1,8 +1,8 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active external HD pack supplies **1,972**; **3,781** still await a registered replacement. All original IDs, including unused graphics and destroyed variants, remain required. Authored mod art is separate. Current coverage is 1,972 reviewed originals in 850 complete sequences after 9,860 exact source/scaled output comparisons. Released Linux/Windows Stage2 packages retain 1,148 frames / 421 sequences and 45 accepted mods; all 6,853 runtime files remain unchanged. Private future input ../data/hd/registered-class-review/handoff-1972-20261012/pack/ has handoff SHA `86b95b17cfe96d2b23b5b13390e7fa25fac734525e009a3cfdc861a2dba77078`; parent alone selects a runtime update.
+The checked catalog contains **5,753 standalone picture frames**. The active external HD pack supplies **1,988**; **3,765** still await a registered replacement. All original IDs, including unused graphics and destroyed variants, remain required. Authored mod art is separate. Current coverage is 1,988 reviewed originals in 851 complete sequences after 9,940 exact source/scaled output comparisons. Released Linux/Windows Stage2 packages retain1,148 frames/ 421 sequences and 45 accepted mods; all 6,853 runtime files remain unchanged. Private future input ../data/hd/registered-class-review/handoff-1988-20261012/pack/ has handoff SHA `0506d008fba1a8d1916b46510e5d790139fda33113a0abf0d1684d452d6bf2ea`; parent alone selects a runtime update.
 
-Batch1972 admits four exact complete Set4 original25–28 families after all five raw masters and64 source/current material inspection, independent810-case combined joins/static states and whole-pack continuity. Five middle Terrain3 families remain historically coordinator-held80. C3 has exhausted its one-successor limit and remains held; EC has a different-peer complete16 successor approval pending coordinator review, counted once with its old parent IDs. Remaining eight finish corrections, Terrain2 original22/23 and Set4 ember methods stay gated. The immutable1972 pending cutoff contains1042 historical independently approved unique unregistered pictures:80 coordinator-held and962 pending full review. Original12 locator/reference-byte gaps remain without admission. Mixed HD/original density/value rectangles and native1 softness remain explicit limits; whole-family source-geometry and material holds are preserved.
+Batch 1988 registers the exact direct EC complete 16 successor after fine green material review, unchanged15 binding/output carry, a different peer and separate367-case current 1972 integration. The old parent whole 16 hold remains historical; its raw map is not registered. Four other middle families remain whole-held64; C3 and remaining eight finish requests stay stopped/gated. The immutable 1988 cutoff contains 1090 historical independently approved unique unregistered pictures: 64 coordinator-held and 1026 pending full review. Original 12 locator/reference-byte gaps and Terrain2 hardware/final 13/Set4 ember gates remain. Mixed original/HD density islands, material/color differences and native 1 softness remain explicit limits.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,7 +12,7 @@ Batch1972 admits four exact complete Set4 original25–28 families after all fiv
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 1,120 | 3,415 | 4 |
+| Terrain | 4,535 | 1,136 | 3,399 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 77 | 73 | mixed static / animated |
 
 ## Registered pack and generation jobs
@@ -871,6 +871,7 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | canonical-terrain-40265-40274 | `0x40265` | 16 / 16 |
 | canonical-terrain-40275-40284 | `0x40275` | 16 / 16 |
 | canonical-terrain-40285-40294 | `0x40285` | 16 / 16 |
+| Terrain set 3 shard 16 | `0x301dd` | 16 / 16 |
 
 | Generation job | Status |
 | --- | --- |
