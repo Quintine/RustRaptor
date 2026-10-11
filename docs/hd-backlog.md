@@ -1,8 +1,8 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active outer HD pack supplies **1,812**; **3,941** still await a registered HD replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. The outer pack contains 1,812 reviewed originals in 765 complete sequences after current 9,060-PPM continuity. Completed Linux/Windows Stage2 packages retain 1,148 frames / 421 sequences and 45 accepted mods, with every released binary/library/manifest/data byte unchanged. The private future input is ../data/hd/registered-class-review/handoff-1812-20261012/pack/, handoff SHA `2f408e91f30ca1dde263bf2ba3e6e182514abd145f7b3743756466e7e6e85e9f`; parent alone selects a runtime update.
+The checked catalog contains **5,753 standalone picture frames**. The active outer HD pack supplies **1,844**; **3,909** still await a registered HD replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. Current coverage is 1,844 reviewed originals in 797 complete sequences after 9,220 exact source/scaled output comparisons. Linux/Windows Stage2 packages retain 1,148 frames/ 421 sequences and 45 accepted mods, with every released binary/library/manifest/data byte unchanged. Private future input ../data/hd/registered-class-review/handoff-1844-20261012/pack/ has handoff SHA `d10580305bfcb17f738849dc02356a35911c093ab7cb1140c1627caa443edf42`; parent alone selects a runtime update.
 
-Batch 1812 adds 64 terrain pictures in four complete families: 104a0 and Terrain2 originals 14–16. All 21 selected full raws and 16 complete source/native 1–4 boards were coordinator-inspected. All 9,060 current source/scaled outputs match accepted references, both source guards are false, and all 18 recursive sources are stable. No sibling promotion occurred. Corrected 10460/10470 remain future-only despite independent approval; source-rib, atlas-edge and material/detail holds remain separate. The pending snapshot has 610 independently approved unregistered pictures, including 16 with a missing-prompt gap requiring parent policy. Mixed HD/original material islands remain an accepted limitation.
+Batch1844 adds corrected 10460/10470 complete 32 after independent context review, coordinator inspection of32 full raws/eight complete source/current scale boards and whole 1844 continuity. Fourteen genuine fine-material corrections preserve source rail/mesh/ridge geometry; seven/eleven unchanged siblings and all held history remain exact. Two accepted sibling promotions preserve old mains separately. Both source-age guards are false and all 18 recursive sources stable. Mixed HD/original grain/value islands, stronger source shade relief and retained irregular mottling are accepted qualifications. The pending snapshot has 738 independently approved unregistered pictures; 16 original 12 targets retain a missing-prompt provenance gap. Whole-family source-rib, border, panel-position, lavender/ember legibility and square-finish holds remain separate.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,7 +12,7 @@ Batch 1812 adds 64 terrain pictures in four complete families: 104a0 and Terrain
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 960 | 3,575 | 4 |
+| Terrain | 4,535 | 992 | 3,543 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 77 | 73 | mixed static / animated |
 
 ## Registered pack and generation jobs
@@ -786,6 +786,38 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Terrain 2020a | `0x2020a` | 1 / 1 |
 | Terrain 2020b | `0x2020b` | 1 / 1 |
 | Terrain 2020c | `0x2020c` | 1 / 1 |
+| Terrain 10460 standalone correction | `0x10460` | 1 / 1 |
+| Terrain 10461 standalone correction | `0x10461` | 1 / 1 |
+| Terrain 10462 standalone correction | `0x10462` | 1 / 1 |
+| Terrain 10463 standalone correction | `0x10463` | 1 / 1 |
+| Terrain 10464 standalone correction | `0x10464` | 1 / 1 |
+| Terrain 10465 standalone correction | `0x10465` | 1 / 1 |
+| Terrain 10466 standalone correction | `0x10466` | 1 / 1 |
+| Terrain 10467 standalone correction | `0x10467` | 1 / 1 |
+| Terrain 10468 standalone correction | `0x10468` | 1 / 1 |
+| Terrain 10469 standalone correction | `0x10469` | 1 / 1 |
+| Terrain 1046a standalone correction | `0x1046a` | 1 / 1 |
+| Terrain 1046b standalone correction | `0x1046b` | 1 / 1 |
+| Terrain 1046c standalone correction | `0x1046c` | 1 / 1 |
+| Terrain 1046d standalone correction | `0x1046d` | 1 / 1 |
+| Terrain 1046e standalone correction | `0x1046e` | 1 / 1 |
+| Terrain 1046f standalone correction | `0x1046f` | 1 / 1 |
+| Terrain 10470 standalone correction | `0x10470` | 1 / 1 |
+| Terrain 10471 standalone correction | `0x10471` | 1 / 1 |
+| Terrain 10472 standalone correction | `0x10472` | 1 / 1 |
+| Terrain 10473 standalone correction | `0x10473` | 1 / 1 |
+| Terrain 10474 standalone correction | `0x10474` | 1 / 1 |
+| Terrain 10475 standalone correction | `0x10475` | 1 / 1 |
+| Terrain 10476 standalone correction | `0x10476` | 1 / 1 |
+| Terrain 10477 standalone correction | `0x10477` | 1 / 1 |
+| Terrain 10478 standalone correction | `0x10478` | 1 / 1 |
+| Terrain 10479 standalone correction | `0x10479` | 1 / 1 |
+| Terrain 1047a standalone correction | `0x1047a` | 1 / 1 |
+| Terrain 1047b standalone correction | `0x1047b` | 1 / 1 |
+| Terrain 1047c standalone correction | `0x1047c` | 1 / 1 |
+| Terrain 1047d standalone correction | `0x1047d` | 1 / 1 |
+| Terrain 1047e standalone correction | `0x1047e` | 1 / 1 |
+| Terrain 1047f standalone correction | `0x1047f` | 1 / 1 |
 
 | Generation job | Status |
 | --- | --- |
