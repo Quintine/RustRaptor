@@ -1,8 +1,8 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active outer HD pack supplies **1,465**; **4,288** still await a registered HD replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. The external development pack contains1465 reviewed originals in545 complete sequences after exact current7325-PPM continuity. Root's completed Linux/Windows Stage2 packages retain1148 frames/421 sequences and45 accepted mods, with every released binary/library/manifest/data byte unchanged. The private future input is ../data/hd/registered-class-review/handoff-1465-20261011/pack/, manifest SHA `92cb019a147728e72e966708e0651e094d0a6a2137d8026797bc9be2ea9a1d4d`; parent alone chooses a runtime update.
+The checked catalog contains **5,753 standalone picture frames**. The active outer HD pack supplies **1,652**; **4,101** still await a registered HD replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. The outer pack contains1,652 reviewed originals in605 complete sequences after exact current8,260-PPM continuity. Root's completed Linux/Windows Stage2 packages retain1,148 frames/421 sequences and45 accepted mods, with every released binary/library/manifest/data byte unchanged. The private future input is ../data/hd/registered-class-review/handoff-1652-20261011/pack/, handoff SHA `2b89b62f0b673a2fbbff31441307af0fd6bfa9fe89fa33c893a7399acd801556`; parent alone chooses a runtime update.
 
-Batch1465 adds176 complete-family terrain frames: Set4 original13–16 with corrected401b4, Terrain2 original4 and7, Terrain1 10430/40, and Terrain3 original5/7/8. All68 eligible untouched full raws and22 complete source/native1–4 boards were inspected; current outputs match exact accepted references with both source guards false and all18 recursive source pins stable. Earlier1289 and1148 inputs remain immutable history. Terrain2 original5 is wholly excluded for six lost source-green planted-row materials despite its retained prior independent approval. Original6 green repairs,3014c pit correction, rotor, reserved-edge lamps, monitor and worm animation materials remain held or under exact exclusive review. No blanket HD completion, seamless mixed terrain or live Host proof is claimed.
+Batch1652 adds187 pictures in15 complete jobs:176 terrain, three damaged-craft singles and eight complete menu words. Coordinator reviewed219 proposals with135 full raw-image views and35 complete source/native1–4 boards, excluding whole10460/10470 for fourteen coarse cellular material holds. The exact source-dark3014c correction sibling is registered directly; its old held main stays unchanged. All8,260 current outputs match accepted references with both source guards false and all18 recursive source pins stable. Earlier1465/1289/1148 inputs remain immutable history. Later qualified approvals, provenance gaps and source-material corrections remain outside1652 pending coordinator review; no blanket HD completion, seamless mixed terrain or live Host proof is claimed.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,8 +12,8 @@ Batch1465 adds176 complete-family terrain frames: Set4 original13–16 with corr
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 624 | 3,911 | 4 |
-| Menus, portraits, HUD and other pictures | 150 | 66 | 84 | mixed static / animated |
+| Terrain | 4,535 | 800 | 3,735 | 4 |
+| Menus, portraits, HUD and other pictures | 150 | 77 | 73 | mixed static / animated |
 
 ## Registered pack and generation jobs
 
@@ -566,6 +566,66 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Terrain set 3 shard 5 | `0x3012d` | 16 / 16 |
 | Terrain set 3 shard 7 | `0x3014d` | 16 / 16 |
 | Terrain set 3 shard 8 | `0x3015d` | 16 / 16 |
+| Terrain 10450 standalone correction | `0x10450` | 1 / 1 |
+| Terrain 10451 standalone correction | `0x10451` | 1 / 1 |
+| Terrain 10452 standalone correction | `0x10452` | 1 / 1 |
+| Terrain 10453 standalone correction | `0x10453` | 1 / 1 |
+| Terrain 10454 standalone correction | `0x10454` | 1 / 1 |
+| Terrain 10455 standalone correction | `0x10455` | 1 / 1 |
+| Terrain 10456 standalone correction | `0x10456` | 1 / 1 |
+| Terrain 10457 standalone correction | `0x10457` | 1 / 1 |
+| Terrain 10458 standalone correction | `0x10458` | 1 / 1 |
+| Terrain 10459 standalone correction | `0x10459` | 1 / 1 |
+| Terrain 1045a standalone correction | `0x1045a` | 1 / 1 |
+| Terrain 1045b standalone correction | `0x1045b` | 1 / 1 |
+| Terrain 1045c standalone correction | `0x1045c` | 1 / 1 |
+| Terrain 1045d standalone correction | `0x1045d` | 1 / 1 |
+| Terrain 1045e standalone correction | `0x1045e` | 1 / 1 |
+| Terrain 1045f standalone correction | `0x1045f` | 1 / 1 |
+| Terrain set 3 shard 6 | `0x3013d` | 16 / 16 |
+| canonical-terrain-401e5-401f4 | `0x401e5` | 16 / 16 |
+| Terrain 2019d | `0x2019d` | 1 / 1 |
+| Terrain 2019e | `0x2019e` | 1 / 1 |
+| Terrain 2019f | `0x2019f` | 1 / 1 |
+| Terrain 201a0 | `0x201a0` | 1 / 1 |
+| Terrain 201a1 | `0x201a1` | 1 / 1 |
+| Terrain 201a2 | `0x201a2` | 1 / 1 |
+| Terrain 201a3 | `0x201a3` | 1 / 1 |
+| Terrain 201a4 | `0x201a4` | 1 / 1 |
+| Terrain 201a5 | `0x201a5` | 1 / 1 |
+| Terrain 201a6 | `0x201a6` | 1 / 1 |
+| Terrain 201a7 | `0x201a7` | 1 / 1 |
+| Terrain 201a8 | `0x201a8` | 1 / 1 |
+| Terrain 201a9 | `0x201a9` | 1 / 1 |
+| Terrain 201aa | `0x201aa` | 1 / 1 |
+| Terrain 201ab | `0x201ab` | 1 / 1 |
+| Terrain 201ac | `0x201ac` | 1 / 1 |
+| Terrain set 3 shard 11 | `0x3018d` | 16 / 16 |
+| Terrain set 3 shard 12 | `0x3019d` | 16 / 16 |
+| Terrain 2017d | `0x2017d` | 1 / 1 |
+| Terrain 2017e | `0x2017e` | 1 / 1 |
+| Terrain 2017f | `0x2017f` | 1 / 1 |
+| Terrain 20180 | `0x20180` | 1 / 1 |
+| Terrain 20181 | `0x20181` | 1 / 1 |
+| Terrain 20182 | `0x20182` | 1 / 1 |
+| Terrain 20183 | `0x20183` | 1 / 1 |
+| Terrain 20184 | `0x20184` | 1 / 1 |
+| Terrain 20185 | `0x20185` | 1 / 1 |
+| Terrain 20186 | `0x20186` | 1 / 1 |
+| Terrain 20187 | `0x20187` | 1 / 1 |
+| Terrain 20188 | `0x20188` | 1 / 1 |
+| Terrain 20189 | `0x20189` | 1 / 1 |
+| Terrain 2018a | `0x2018a` | 1 / 1 |
+| Terrain 2018b | `0x2018b` | 1 / 1 |
+| Terrain 2018c | `0x2018c` | 1 / 1 |
+| Terrain set 3 shard 9 | `0x3016d` | 16 / 16 |
+| Terrain set 3 shard 10 | `0x3017d` | 16 / 16 |
+| canonical-terrain-401f5-40204 | `0x401f5` | 16 / 16 |
+| canonical-terrain-40205-40214 | `0x40205` | 16 / 16 |
+| DSHP08G3_PIC | `0x3009a` | 1 / 1 |
+| DSHP09G3_PIC | `0x3009b` | 1 / 1 |
+| DSHP17G3_PIC | `0x300a2` | 1 / 1 |
+| MENU1_PIC / MENU2_PIC / MENU3_PIC / MENU4_PIC / MENU5_PIC / MENU6_PIC / MENU7_PIC / MENU8_PIC | `0x10023` | 8 / 8 |
 
 | Generation job | Status |
 | --- | --- |
