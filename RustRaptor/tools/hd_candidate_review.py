@@ -96,6 +96,7 @@ def main():
     if not libraries:
         raise ValueError("build the Rust game library before candidate review")
     library = max(libraries, key=lambda path: path.stat().st_mtime_ns)
+    library_at_start = library.stat()
     dependency_directory = library.parent
     serde = max(dependency_directory.glob("libserde_json-*.rlib"), key=lambda path: path.stat().st_mtime_ns)
     output = (args.output or args.candidate.parent / "runtime-review").resolve()
@@ -129,21 +130,24 @@ def main():
         for relative, digest in artwork_hashes.items():
             if hashlib.sha256((pack_root / relative).read_bytes()).hexdigest() != digest:
                 raise ValueError("artwork changed during runtime review")
+    library_at_finish = library.stat()
+    if (library_at_start.st_ino, library_at_start.st_size, library_at_start.st_mtime_ns) != (library_at_finish.st_ino, library_at_finish.st_size, library_at_finish.st_mtime_ns):
+        raise ValueError("Rust library changed during runtime review; rebuild and rerun")
     qa_path = output / "runtime-qa.json"
     qa = json.loads(qa_path.read_text())
     candidate_at_finish = args.candidate.read_bytes()
     if binding_digest(proposal_frames(json.loads(candidate_at_finish), expected)) != bindings_at_start:
         raise ValueError("candidate renderer bindings changed during runtime review")
     qa["library"] = str(library.relative_to(project))
-    qa["library_modified_ns"] = library.stat().st_mtime_ns
+    qa["library_modified_ns"] = library_at_start.st_mtime_ns
     qa["candidate_sha256"] = hashlib.sha256(candidate_at_finish).hexdigest()
     qa["candidate_sha256_at_start"] = hashlib.sha256(candidate_at_start).hexdigest()
     qa["candidate_notes_changed_during_review"] = candidate_at_start != candidate_at_finish
     qa["frame_bindings_sha256"] = bindings_at_start
     qa["artwork_sha256"] = artwork_hashes
     qa["static_card_palette_mode"] = static_cards
-    qa["source_newer_than_library"] = any((project / "src" / name).stat().st_mtime_ns > library.stat().st_mtime_ns for name in ["assets.rs", "hd.rs"])
-    qa["any_game_source_newer_than_library"] = any(path.stat().st_mtime_ns > library.stat().st_mtime_ns for path in (project / "src").glob("*.rs"))
+    qa["source_newer_than_library"] = any((project / "src" / name).stat().st_mtime_ns > library_at_start.st_mtime_ns for name in ["assets.rs", "hd.rs"])
+    qa["any_game_source_newer_than_library"] = any(path.stat().st_mtime_ns > library_at_start.st_mtime_ns for path in (project / "src").glob("*.rs"))
     qa_path.write_text(json.dumps(qa, indent=2) + "\n")
     identities = sorted(rows)
     pages = []
