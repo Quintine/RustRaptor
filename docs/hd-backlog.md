@@ -1,16 +1,16 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **1,037**; **4,716** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
+The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **1,071**; **4,682** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
 | Player banking | 21 | 21 | 0 | 3 |
 | Bosses | 249 | 232 | 17 | 79 |
-| Enemies and ground objects | 419 | 148 | 271 | 183 |
+| Enemies and ground objects | 419 | 150 | 269 | 183 |
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 164 | 117 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 320 | 4,215 | 4 |
+| Terrain | 4,535 | 352 | 4,183 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 60 | 90 | mixed static / animated |
 
 ## Registered pack and generation jobs
@@ -415,6 +415,10 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | SHIP18G1_PIC faithful HD candidate | `0x10310` | 1 / 1 |
 | SHIP12G2_PIC faithful HD candidate | `0x200a3` | 1 / 1 |
 | EBOSS6_PIC faithful HD candidate | `0x400ac` | 7 / 7 |
+| STAG01G3_PIC | `0x300ac` | 1 / 1 |
+| DSHP11G3_PIC | `0x3009d` | 1 / 1 |
+| canonical-terrain-40155-40164 | `0x40155` | 16 / 16 |
+| canonical-terrain-40165-40174 | `0x40165` | 16 / 16 |
 
 | Generation job | Status |
 | --- | --- |
