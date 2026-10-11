@@ -24,20 +24,24 @@ the relocation. See [repository layout](repository.md).
 
 ## Engine and package
 
-- Packaged executable checkpoint: `fdf2ff0`, standalone RustRaptor, widescreen
+- Packaged executable now includes the `c0a6fd3` reviewed source checkpoint,
+  including diagnostics navigation and interpolated Lightning effects. Its
+  SHA-256 is `4b164987d9fabf7388d2fc66168a9f2aedc71392d42a6ce4066e3607684b1479`.
+  The original `fdf2ff0` checkpoint supplied standalone RustRaptor, widescreen
   menus and always-4:3 original cinematics, including when gameplay stretching
   is selected. Fresh 1080p intro capture confirms black 240-pixel side borders.
 - `RustRaptor/bin/raptor-rust`, `lib/`, `data/` and
   `dist/RustRaptor-linux-x86_64.zip` exist. The latest snapshot includes all
-  6,449 original assets, 221 approved HD frames and 22 local mods. It was
+  6,449 original assets, 340 approved HD frames and 22 local mods. It was
   launched from a copied folder containing spaces, from `/tmp`, without Cargo.
 - Before shutdown, 320 default tests, the complete 42-image menu/intro audit,
   separate cinematic aspect regression, mod/catalog/HD validation and copied
   1280×800/1080p SDL/audio smoke checks passed. Later fixes require fresh checks.
 - Source navigation fixes are committed in `4b1edef`; the terrain compositor
-  fix is committed in `ab23255`. Uncommitted Lightning weapon/API packages
-  are preserved. Review and commit them separately; do not discard their work.
-  The executable/package must be refreshed after source or accepted-art changes.
+  fix is committed in `ab23255`; Lightning weapon/API packages and authored
+  art/audio are committed in `c0a6fd3`. The refreshed package validates all
+  22 mods and 340 supplied HD frames. Desktop builds use the isolated
+  `target/desktop-runtime` directory to avoid competing headless artifacts.
 
 ## Next user fixes
 
@@ -55,8 +59,10 @@ the relocation. See [repository layout](repository.md).
 
 The resumed source suite passes 333 tests with 31 optional checks ignored.
 The original menu/intro audit passes and completes at 1,891 service ticks.
-These checks include pending Lightning API/mod changes, which still require
-independent review and a refreshed packaged executable before release.
+The subsequent independent Lightning review found and fixed attached-effect
+interpolation and missing mod/script/hook command-error context. All 72 focused
+API, modding and weapon checks pass after those fixes. The reviewed packages
+are committed, and the executable and zip have been refreshed and launched.
 
 Root owns menu fixes. `iron_coast_5` temporarily owns the ground-target diagnosis;
 its completed boss candidates and pending equipment review remain preserved.
@@ -65,7 +71,7 @@ its completed boss candidates and pending equipment review remain preserved.
 
 The original picture inventory is 5,753 IDs. The development pack now has 340
 registered frames across 122 complete sequences; 5,413 IDs remain unregistered.
-The packaged runtime still has its earlier 221-frame snapshot. Existing raw
+The packaged runtime has the same 340-frame approved snapshot. Existing raw
 candidates are not counted as accepted remasters. Working originals, generated
 drafts and proof captures remain outside the Git root; the approved runtime
 snapshot and all authored mod artwork and sound are tracked in Git.

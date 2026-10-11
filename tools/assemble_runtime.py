@@ -41,10 +41,14 @@ def main():
     environment = os.environ.copy()
     local_lib = Path.home() / ".local/lib"
     environment["LD_LIBRARY_PATH"] = str(local_lib) + ":" + environment.get("LD_LIBRARY_PATH", "")
+    # Asset-review helpers also build a headless release. Keep the desktop
+    # artifact separate so concurrent validation cannot replace this binary.
+    desktop_target = package / "target/desktop-runtime"
     if not args.skip_build:
-        subprocess.run(["cargo", "build", "--locked", "--release", "--bin", "raptor-rust", "--features", "desktop"],
+        subprocess.run(["cargo", "build", "--locked", "--release", "--target-dir", str(desktop_target),
+                        "--bin", "raptor-rust", "--features", "desktop"],
                        cwd=package, env=environment, check=True)
-    executable = package / "target/release/raptor-rust"
+    executable = desktop_target / "release/raptor-rust"
     if not executable.is_file():
         raise ValueError("release executable is missing; run without --skip-build")
 

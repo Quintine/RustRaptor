@@ -58,7 +58,8 @@ do not invent unsupported fields or callbacks.
   Keep volumes and repetition comfortable and avoid playing hit sounds on misses.
 - [ ] Track final assets, required source masters, prompts, provenance and
   reproducible preparation/synthesis recipes with the package. Never commit
-  original game pixels, the extracted catalog or local reference captures.
+  decoded style-reference images or local review captures into a mod. The
+  approved original/HD runtime catalog is tracked separately in `data/`.
 
 ## 5. Price and balance equipment
 
