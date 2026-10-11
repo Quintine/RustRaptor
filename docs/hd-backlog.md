@@ -1,17 +1,17 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **929**; **4,824** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
+The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **1,037**; **4,716** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
 | Player banking | 21 | 21 | 0 | 3 |
-| Bosses | 249 | 223 | 26 | 79 |
-| Enemies and ground objects | 419 | 129 | 290 | 183 |
+| Bosses | 249 | 232 | 17 | 79 |
+| Enemies and ground objects | 419 | 148 | 271 | 183 |
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
-| Explosions and effects | 281 | 155 | 126 | 25 |
+| Explosions and effects | 281 | 164 | 117 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 256 | 4,279 | 4 |
-| Menus, portraits, HUD and other pictures | 150 | 53 | 97 | mixed static / animated |
+| Terrain | 4,535 | 320 | 4,215 | 4 |
+| Menus, portraits, HUD and other pictures | 150 | 60 | 90 | mixed static / animated |
 
 ## Registered pack and generation jobs
 
@@ -396,6 +396,25 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | STEXTURE_PIC | `0x10019` | 1 / 1 |
 | EAGLE1G3_PIC | `0x30073` | 1 / 1 |
 | Small ground blast padded replacement v6 | `0x1027d` | 35 / 35 |
+| Terrain set4 shard5 | `0x40115` | 16 / 16 |
+| Terrain set4 shard6 | `0x40125` | 16 / 16 |
+| TANK01G3_PIC | `0x30074` | 4 / 4 |
+| TANK04G3_PIC | `0x30080` | 5 / 5 |
+| TANK05G3_PIC | `0x30085` | 4 / 4 |
+| TANK07G3_PIC | `0x3008b` | 2 / 2 |
+| TEXTURE_PIC | `0x10018` | 1 / 1 |
+| SIDETEXL_PIC / SIDETEXR_PIC | `0x50005` | 2 / 2 |
+| Orange sparks padded replacement v3 | `0x101a5` | 9 / 9 |
+| CDIF1_PIC / CDIF2_PIC / CDIF3_PIC / CDIF4_PIC | `0x1001a` | 4 / 4 |
+| TANK10G3_PIC | `0x3008f` | 1 / 1 |
+| TANK13G3_PIC | `0x30092` | 1 / 1 |
+| DSHP03G3_PIC | `0x30095` | 1 / 1 |
+| DSHP06G3_PIC | `0x30098` | 1 / 1 |
+| Terrain set4 shard7 | `0x40135` | 16 / 16 |
+| Terrain set4 shard8 | `0x40145` | 16 / 16 |
+| SHIP18G1_PIC faithful HD candidate | `0x10310` | 1 / 1 |
+| SHIP12G2_PIC faithful HD candidate | `0x200a3` | 1 / 1 |
+| EBOSS6_PIC faithful HD candidate | `0x400ac` | 7 / 7 |
 
 | Generation job | Status |
 | --- | --- |
