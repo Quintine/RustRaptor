@@ -1,19 +1,19 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **1,148**; **4,605** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit. Root has copied the exact reviewed 1,148-frame / 421-sequence pack into shared runtime data. Root completed and validated both final Stage2 Linux/Windows archives at1,148 frames; the previous800-frame archives remain historical. Later reviewed candidates do not change this frozen pack.
+The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **1,289**; **4,464** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit. Root completed the frozen1148-frame /421-sequence Stage2 Linux/Windows packages. The external development pack now contains1289 reviewed originals in474 complete sequences; the141 additions were registered after full current6445-PPM continuity, not copied into those packages. All accepted runtime binaries/libraries/manifests/data and45mods remain unchanged. The immutable future input is ../data/hd/registered-class-review/handoff-1289-20261011/pack/, manifest SHA `a61a4063171f9d58ebe3dcfcd7590aa405ce77ca1e32121dba2b65ef886015e6`.
 
-There are **141 additional independently approved frames in23 complete jobs** with coordinator source/raw/native-scale inspection and current exact output continuity, recorded in ../data/hd/registered-class-review/later-approved-141-ready.json (SHA `ee561301a1b30a7eaf3f15796dd9bba76d9956a6c49c8aa1921f54ba959ff373`). All705 accepted source/scaled PPMs match; the membership audit verifies unique IDs and zero overlap with1,148. They remain unregistered, so coverage counts below are unchanged. The later cohort adds Flare26v13, static6 and phase35 to the preserved74 input. Shading, edge losses and phase-material differences remain explicit. Complete shop23 advice establishes no family approval. Another112 independently approved terrain frames await separate coordinator inspection/current continuity. Active reviews cover Terrain3 jobs5–8, Terrain2 jobs6–9, corrected Set4 job14 and Terrain1 family10450; later Set4 jobs17/18 are reserved. Root's real Host and startup source changes retain their historical epochs, and no combined1,289 registration or runtime snapshot has been performed.
+Batch1289 registers23 complete jobs: preserved74 plus Flare26v13, ADPIC4/smalllogo/BASEv4 and PLATOON6/DMOON7/TARG1/11/TARG2/11. Every accepted source/scaled output matches exact current c0c3/pairedSerde proof with both age guards false and all18 recursive sources stable. Earlier preparation journals, held variants and explicit shading/contour/phase qualifications remain unchanged. Another192 independently approved terrain frames await coordinator preparation; they do not count below. Shop/WORMDN remain diagnostic advice, while Rotor, planted-row20161–63 and source-pit3014c remain whole-family holds. The original5753 catalog is unfinished.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
 | Player banking | 21 | 21 | 0 | 3 |
 | Bosses | 249 | 232 | 17 | 79 |
-| Enemies and ground objects | 419 | 151 | 268 | 183 |
+| Enemies and ground objects | 419 | 211 | 208 | 183 |
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
-| Explosions and effects | 281 | 176 | 105 | 25 |
+| Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 416 | 4,119 | 4 |
-| Menus, portraits, HUD and other pictures | 150 | 60 | 90 | mixed static / animated |
+| Terrain | 4,535 | 448 | 4,087 | 4 |
+| Menus, portraits, HUD and other pictures | 150 | 66 | 84 | mixed static / animated |
 
 ## Registered pack and generation jobs
 
@@ -442,6 +442,59 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Terrain 1041f standalone correction | `0x1041f` | 1 / 1 |
 | canonical-terrain-40175-40184 | `0x40175` | 16 / 16 |
 | canonical-terrain-40185-40194 | `0x40185` | 16 / 16 |
+| SHIP25G1_PIC | `0x1032e` | 1 / 1 |
+| Terrain 10400 standalone correction | `0x10400` | 1 / 1 |
+| Terrain 10401 standalone correction | `0x10401` | 1 / 1 |
+| Terrain 10402 standalone correction | `0x10402` | 1 / 1 |
+| Terrain 10403 standalone correction | `0x10403` | 1 / 1 |
+| Terrain 10404 standalone correction | `0x10404` | 1 / 1 |
+| Terrain 10405 standalone correction | `0x10405` | 1 / 1 |
+| Terrain 10406 standalone correction | `0x10406` | 1 / 1 |
+| Terrain 10407 standalone correction | `0x10407` | 1 / 1 |
+| Terrain 10408 standalone correction | `0x10408` | 1 / 1 |
+| Terrain 10409 standalone correction | `0x10409` | 1 / 1 |
+| Terrain 1040a standalone correction | `0x1040a` | 1 / 1 |
+| Terrain 1040b standalone correction | `0x1040b` | 1 / 1 |
+| Terrain 1040c standalone correction | `0x1040c` | 1 / 1 |
+| Terrain 1040d standalone correction | `0x1040d` | 1 / 1 |
+| Terrain 1040e standalone correction | `0x1040e` | 1 / 1 |
+| Terrain 1040f standalone correction | `0x1040f` | 1 / 1 |
+| Sparkle padded replacement v11 | `0x1026c` | 17 / 17 |
+| IOTARG_PIC | `0x40036` | 14 / 14 |
+| SHIP02G2_PIC | `0x20099` | 1 / 1 |
+| DSHP01G2_PIC | `0x200ae` | 1 / 1 |
+| DSHP05G2_PIC | `0x200b1` | 1 / 1 |
+| DSHP13G2_PIC | `0x200b4` | 1 / 1 |
+| Terrain 10420 standalone correction | `0x10420` | 1 / 1 |
+| Terrain 10421 standalone correction | `0x10421` | 1 / 1 |
+| Terrain 10422 standalone correction | `0x10422` | 1 / 1 |
+| Terrain 10423 standalone correction | `0x10423` | 1 / 1 |
+| Terrain 10424 standalone correction | `0x10424` | 1 / 1 |
+| Terrain 10425 standalone correction | `0x10425` | 1 / 1 |
+| Terrain 10426 standalone correction | `0x10426` | 1 / 1 |
+| Terrain 10427 standalone correction | `0x10427` | 1 / 1 |
+| Terrain 10428 standalone correction | `0x10428` | 1 / 1 |
+| Terrain 10429 standalone correction | `0x10429` | 1 / 1 |
+| Terrain 1042a standalone correction | `0x1042a` | 1 / 1 |
+| Terrain 1042b standalone correction | `0x1042b` | 1 / 1 |
+| Terrain 1042c standalone correction | `0x1042c` | 1 / 1 |
+| Terrain 1042d standalone correction | `0x1042d` | 1 / 1 |
+| Terrain 1042e standalone correction | `0x1042e` | 1 / 1 |
+| Terrain 1042f standalone correction | `0x1042f` | 1 / 1 |
+| SHIP24G2_PIC | `0x200e1` | 1 / 1 |
+| SHIP27G2_PIC | `0x200e4` | 1 / 1 |
+| SHIP30G2_PIC | `0x200e7` | 1 / 1 |
+| SHIP33G2_PIC | `0x200ea` | 1 / 1 |
+| NUMBER_PIC | `0x10129` | 1 / 1 |
+| SHIP04G1_PIC | `0x102fb` | 1 / 1 |
+| Flare source-material three-frame correction sibling v13 | `0x10252` | 26 / 26 |
+| ADPIC1_PIC / ADPIC2_PIC / ADPIC3_PIC / ADPIC4_PIC | `0x1001e` | 4 / 4 |
+| SMRAPLOG_PIC | `0x10015` | 1 / 1 |
+| BASETRG1_PIC | `0x4006e` | 1 / 1 |
+| PLATOON2_PIC | `0x200f2` | 6 / 6 |
+| TARG1G4_PIC | `0x40006` | 11 / 11 |
+| DMOONTRG_PIC | `0x40080` | 7 / 7 |
+| TARG2G4_PIC | `0x40011` | 11 / 11 |
 
 | Generation job | Status |
 | --- | --- |

@@ -1,6 +1,6 @@
 # HD coordinator checkpoint — 11 October 2026
 
-The reviewed external development pack contains **1,148 original picture frames in 421 complete sequences**. Root has copied the exact **1,148-frame / 421-sequence** handoff into shared Linux/Windows runtime data. Root completed and validated both final Stage2 Linux/Windows archives at this exact snapshot; the previous **800-frame / 340-sequence** archives and `964ba93` assembly are historical. Root owns runtime data, binaries, libraries and archives; coordinator owns external development registration and this metadata. Bundled originals and approved runtime art are tracked under this repository's data/. Working originals, prompts, job candidates and review evidence remain external under ../data/.
+The reviewed external development pack contains **1,289 original picture frames in474 complete sequences**. Root has copied the exact **1,148-frame / 421-sequence** handoff into shared Linux/Windows runtime data. Root completed and validated both final Stage2 Linux/Windows archives at this exact snapshot; the previous **800-frame / 340-sequence** archives and `964ba93` assembly are historical. Root owns runtime data, binaries, libraries and archives; coordinator owns external development registration and this metadata. Bundled originals and approved runtime art are tracked under this repository's data/. Working originals, prompts, job candidates and review evidence remain external under ../data/.
 
 ## Verified development coverage
 
@@ -8,15 +8,15 @@ The reviewed external development pack contains **1,148 original picture frames 
 | --- | ---: |
 | Player banking | 21 / 21 |
 | Bosses | 232 / 249 |
-| Enemies and ground objects | 151 / 419 |
+| Enemies and ground objects | 211 / 419 |
 | Player and enemy projectiles | 45 / 51 |
-| Explosions and effects | 176 / 281 |
+| Explosions and effects | 219 / 281 |
 | Equipment and pickups | 47 / 47 |
-| Terrain | 416 / 4,535 |
-| Menus, portraits, HUD and other pictures | 60 / 150 |
-| Total | 1,148 / 5,753 |
+| Terrain | 448 / 4,535 |
+| Menus, portraits, HUD and other pictures | 66 / 150 |
+| Total | 1,289 / 5,753 |
 
-All 6,449 catalog entries and 5,753 pictures were audited with zero HD source/hash/canvas/ID errors. **4,605 pictures still await registration**. The current ledger contains 1,128 registered, 20 render-reachable, 1,755 candidate, 1,019 in-progress and 1,831 missing pictures. Candidate status establishes neither artistic approval nor a live occurrence. Unused and damaged IDs remain required. The303 AGX delta frames and four bitmap fonts retain their separate classic-art preservation policies.
+All 6,449 catalog entries and 5,753 pictures were audited with zero HD source/hash/canvas/ID errors. **4,464 pictures still await registration**. The current ledger contains1269 registered,20 render-reachable,2451 candidate,990 in-progress and1023 missing pictures. Candidate status establishes neither artistic approval nor a live occurrence. Unused and damaged IDs remain required. The303 AGX delta frames and four bitmap fonts retain their separate classic-art preservation policies.
 
 ## Historical Stage2 API 1,148 output proof
 
@@ -103,9 +103,9 @@ Root completed Stage2 acceptance at committed/pushed `51ab388ea0e3cbe111dbe3d65b
 
 The temporary reviewer and shared Cargo exclusions have ended. Original HD production and exclusive reviews resume; coordinator may update owned documentation and outer development registrations. Packaged RustRaptor/data1148, runtime manifests/executables and all accepted Stage2 mods remain immutable until root coordinates another runtime snapshot. Artists share the existing four-slot generation gate. No mod art counts toward the original5753 catalog.
 
-## Current later artwork preparation
+## Preserved141-frame preparation and subsequent registration
 
-../data/hd/registered-class-review/later-approved-141-ready.json, SHA `ee561301a1b30a7eaf3f15796dd9bba76d9956a6c49c8aa1921f54ba959ff373`, closes **141 unregistered original frames /23 complete jobs /705 accepted PPMs**. Membership audit SHA `967bfba455559134e2afaa665b81019969801900a6342e6cb8394019badd01d1` proves unique IDs and zero overlap with frozen1148. Earlier74/100/106 journals remain exact. A possible1289 pack has not yet been assembled, registered or handed to root.
+../data/hd/registered-class-review/later-approved-141-ready.json, SHA `ee561301a1b30a7eaf3f15796dd9bba76d9956a6c49c8aa1921f54ba959ff373`, closed **141 then-unregistered original frames /23 complete jobs /705 accepted PPMs** before the subsequent outer1289 registration. Membership audit SHA `967bfba455559134e2afaa665b81019969801900a6342e6cb8394019badd01d1` proves unique IDs and zero overlap with frozen1148. Earlier74/100/106 journals remain exact. The1289 pack has now been verified and registered externally, with an immutable private input handed to root; no runtime copy/export has been performed.
 
 The preserved74 cohort now has an aggregate current startup probe: all370 accepted PPMs match, report `a6db05524ca6ecff463d36b9cedcddd0665c7f6e7a6de5b098dbbab63f413b10`. Flare26v13 adds130 exact source/scaled outputs, comparison `7a6c9ebe54fa9ec5b91d1f66aee682de8cf274e55dd1693d318107553a54312b`, with all seven full raws and nine complete comparison/phase pages inspected. Corrected66 has no ivory hotspot, exact378-cell footprint/two-cell hole and restrained warmer amber grain; final A/B tails restore original dim brown fade with qualified local peaks and one4x fringe sample. Earlier contour/hole-boundary qualifications remain; whole26 source-cell identity is not claimed.
 
@@ -117,23 +117,34 @@ Phase35 comprises complete PLATOON2/6, DMOON/7, TARG1G4/11 and TARG2G4/11. All f
 
 Coordinator alone registers external development artwork and refreshes the audit/ledger. Queue offsets change after admission; use durable original job IDs. Artists never approve/register their own artwork. Only coordinator-owned paths are committed here; docs/hd-full-review.md remains reviewer-owned. Root alone assembles tracked runtime and controls loader/alpha/shader/encoder policy.
 
-- hd_full_review exclusively reviews original Terrain3 jobs5/6. Fresh isolated/union32 proof covers948 declared cases at all four scales with7584 case invocations; all96 planned pages are inspected, while material/self-join judgment remains pending. Foreign state partners stay original.
-- iron_coast_3 exclusively reviews original Terrain3 jobs7/8 after author freeze; authoritative context is admitted first32 plus shard4/16. Held shard3 and unreviewed neighbors remain original fallback.
-- iron_coast_5 approved all32 original Terrain2 jobs4/5 with finer ground/water and visible fallback-island limits; coordinator preparation is pending. It next reserves jobs8/9, disjoint from Windows6/7.
-- windows_persistence exclusively reviews original Terrain2 jobs6/7. The authoritative80 pack contains admitted first48 plus current target32; unregistered4/5 remain original or separately labeled auxiliary context. Historical unpinned Host evidence remains limited.
-- iron_coast_2 approved original Set4 job13/16 and jobs15/16/32; coordinator preparation is pending. Whole job14 remains held for401b4 macroblock material, with no partial-family registration. Jobs17/18 are reserved next.
-- iron_coast_6 exclusively reviews the corrected full job14 sibling c6917626; only401b4 changes, other15 bindings remain exact. Its closed Rotor2 verdict holds both phases for unequal material treatment and low-scale painted backing/blade loss. Distinct source-driven corrections to both phases are reserved to hd_enemies_01, with old family preserved.
-- terrain_capture_fixture approved complete10430 and10440, including10440's eight authentic wrecks and corrected4c flat face; coordinator preparation is pending. It exclusively reviews frozen10450 next. Foreign intact/wreck partners remain original fallback; no live Host claim.
+- hd_full_review closed original Terrain3 jobs5/6: original5 APPROVE16, whole6 held only3014c darker-source pit drift. All96 planned boards and948 declared cases are bound. It now exclusively provides WORMDN8 material/animation advice, without an admission request.
+- iron_coast_3 approved original Terrain3 jobs7/8/32 with full source/context/state review; coordinator preparation is pending. Original9/10 are its next exclusive scope. Authoritative context remains admitted first48; later unregistered neighbors are separately labeled diagnostics.
+- iron_coast_5 approved original Terrain2 jobs4/5/32 with finer ground/water and visible fallback-island limits; coordinator preparation is pending. It exclusively reserves original8/9.
+- windows_persistence closed original Terrain2 jobs6/7: whole6 held for20161/62/63 planted-source green readability/narrowing, original7 APPROVE16. It next reserves original10/11. First48 are authoritative context; every later unregistered tile stays original or auxiliary context only.
+- iron_coast_2 approved original Set4 job13/16 and jobs15/16/32; coordinator preparation is pending. Its next exclusive scope is original17/18. Original14's held main remains preserved; no partial-family registration occurred.
+- iron_coast_6 approved corrected original14 full16, with other15 binding/output identity and the source-ground macroblock repair bound. It now reserves original Terrain3 jobs11/12. Closed Rotor2 material/low-scale holds and its later failed genuine trials remain separate.
+- terrain_capture_fixture approved complete10430 and10440, including10440's eight authentic wrecks and corrected4c flat face; coordinator preparation is pending. It exclusively reviews frozen10450. Foreign intact/wreck partners remain original fallback; no live Host claim.
 - campaign_release_review has completed/frozen original Set4 jobs31–33 and resumes the remaining queue. The separate401b4 correction and frozen jobs15/16 retain all provenance/history; only iron6 reviews the corrected job14 sibling.
 - hd_enemies_01 preserves all prepared enemy families and explicit sibling proposals. DSHP19 reserved-edge omissions,30052 connector failures and the APE service refusal remain held. Rotor's connected phase0 backing strip is original opaque artwork, requiring genuine correction rather than coverage statistics alone.
 - hd_dark_player preserves shop23 diagnostic history and its inherited19 bindings. E7/EB/F6 corrections have improved source masks/shading; monitor tips/mounting/left edge remain held. WORMDN eight phases request material/animation advice, not admission. HANGP rounding, FACESTAT/copyright layout and SCREEN fringe remain separate holds.
 - campaign_integration preserves approved Flare/LargeAir/Sparkle input. Ground42 outlined decay grain/gold-to-olive, Person ivory resampling and smoke visible-enhancement issues remain held; no RGB compensation is allowed to stand in for source artwork.
 - Terrain3 middle and late children continue source-locked production under the shared gate. Middle has191 held targets/158 preserved raws through corrected shard16, with301ae missing under a no-retry service hold. Late has336 complete held targets through57. Coarse/checker grain, brighter remnants and fallback material rectangles remain unapproved.
 
-Another112 independently approved terrain frames await coordinator inspection and exact current continuity:10430/16,10440/16, Set4 job13/16 and jobs15/16/32, Terrain2 jobs4/5/32. They are not counted as prepared141 or registered1148. Terrain1 has128 registered tiles, Terrain2 has48, Terrain3 has48 and Terrain4 has192. Every other proposal is held or awaits its exact review; no general catalog-complete claim is made.
+Another192 independently approved terrain frames await coordinator inspection/current continuity:10430/16,10440/16, Set4 jobs13/14-corrected/15/16/64, Terrain2 jobs4/5/7/48 and Terrain3 jobs5/7/8/48. They are excluded from registered1289. Terrain1 has160 registered tiles, Terrain2 has48, Terrain3 has48 and Terrain4 has192. Every other proposal is held or awaits its exact review; no general catalog-complete claim is made.
 
 ## Startup PNG source epoch and current continuity
 
 Root's real assets.rs/modding.rs optimization shares checked_png validation extracted from the existing decoder; root independently compared6682 referenced PNG indexed outputs and passed five rejection/output regressions. Prior API and Host proof epochs retain their literal historical flags. Coordinator's frozen1148 startup proof now reproduces all5740 accepted PPMs, SHA `d07e0228538f562a1338724119af000306db199ef4792d7fd14c31e4b333e447`, on actual4cad6385/ba61 compatible Serde. Both invocation guards are false;17 prior/after top-level source pins are stable and nested OPL3 is separately pinned at closure, without inventing a missing preflight hash. Every398 pack file remains exact across private1148, external registration and packaged runtime, continuity SHA `a786b51a3c56e9b911e21eed6eb6020b45511112c86b926f640230151284bd1b`; original INDEX remains unchanged.
 
 Current later74, Flare26, static6 and phase35 proofs use immutable c0c3cfc7d4784afaf60342bf7f02b7db25fcd803c1fdc01faffd027116582338 with compiler-selected Serde ba61a9b6a7f97c994c6fdb2ab5e50915a5d6b456664f31709fd05306d56e48bd. Both age guards are false and all18 recursive Rust source hashes/mtimes remain exact through each invocation. The complete catalog remains unfinished. Continue source-driven work and exclusive review, then perform combined continuity before later registration; keep packaged1148 and approved Stage2 content frozen.
+
+
+## Closed1289 outer development registration
+
+Batch1289 registers141 frames/23 complete jobs only after full current6445 accepted source/scaled PPM matches, no diagnostics, both source guards false and all18 recursive source hashes/mtimes stable. Combined proof SHA `9dc65ca9244e9cf6b11b7ebe5f215496f93d625f1e4800f6d2546102491f6ee2`; approval SHA `ffee98a9a086c022df268f1eb41ddab1d57c2dcbc4243528d5b9f2c3ea3b0fb8`; registration SHA `d61b8197c6d357e854fbf3f230d65d6d47414fd5cf0ca0162144b93e8873090d`. Outer hd.json SHA is `a105eb4fc4d851313d1885a5602ced0843d775641218ffa252c2fc0c0f000416`. Its sequence map equals the privately rendered1289 proposal exactly.81 new contact pages are hash-recorded, not falsely described as newly viewed; exact accepted rasters retain the preceding complete visual judgments. No new combined terrain seam, Host assembly, timing or UI-route proof is inferred.
+
+The canonical registration tool required11 explicit accepted siblings to become mains. Their prior mains and coordinator reviews are preserved in exact SHA-named snapshots, with promotion records per job. No generated PNG/crop/explicit sibling changed. The official queue refresh preserves698 pre-refresh metadata files;75 job.json changes are limited to owner/status/count/review metadata. Source/target/native-context/contract declarations remain exact, receipt `dfc14393b7e5408577bf11103e35d071d3ad2046730ffa3fef1d081699ab584d`. Current coverage audit SHA `d06a6035ee3fc95a62ee8379d96a0605ea2ba936361a1b0180445b9eb36e2804` has zero HD errors; ledger SHA `231afe112d21c242b55939efeee7b1ec36644a15744ae27b30d14e39498b79dc` retains source-required5753 scope and no unused-picture exclusions.
+
+The immutable future input is ../data/hd/registered-class-review/handoff-1289-20261011/pack/,1289 frames/474 sequences,467 files/781747237 bytes. Every file has a private inode and verified source/destination hash. Handoff manifest SHA `a61a4063171f9d58ebe3dcfcd7590aa405ce77ca1e32121dba2b65ef886015e6`; proof includes the exact current output closure, approval/registration, ledger/audit and source snapshots. Parent alone controls a later runtime copy/export. Shared RustRaptor/data, packaged manifests/executables/libraries and all45 accepted mods stay at the completed1148 release snapshot.
+
+Subsequent exact peer decisions remain separate: Terrain3 original5 APPROVE16 but whole6 held for3014c red-brown pit drift; original7/8 APPROVE32. Terrain2 original6 whole16 held for20161/62/63 planted-green loss, original7 APPROVE16. Corrected Set4 original14 sibling APPROVE16 preserves15 outputs and removes401b4 macroblocks; original held main remains intact. Rotorv6 still fails connected opaque source backing and another painted blade cell despite improved phase material; a single bounded genuine contrasting-backdrop/background-removal trial is reserved, without manual pixel or loader compensation. WORMDN8 requests material/animation advice only. All these held/proposed/approved-but-unprepared scopes remain outside1289.
