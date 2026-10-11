@@ -30,6 +30,7 @@ CATEGORY_SLUGS = {
     "Menus, portraits, HUD and other pictures": "interface-other",
 }
 STAGES = ["missing", "inprogress", "candidate", "reviewed", "registered", "renderreachable"]
+LEDGER_SCHEMA = "family_review_refs_v1"
 
 
 def read_json(path, default=None):
@@ -41,6 +42,89 @@ def write_json(path, value):
     temporary = path.with_name(path.name + f".{os.getpid()}.tmp")
     temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n")
     temporary.replace(path)
+
+
+def coordinator_review_for_asset(ledger, identity, hd_root):
+    """Resolve old inline or new hash-bound reviews without changing any stage.
+
+    This is evidence retrieval, not approval of a candidate or registration.
+    The existing queue/registration validators still check the actual frame map.
+    """
+    row = ledger["assets"][identity]
+    if "coordinator_review_ref" not in row:
+        return row.get("coordinator_review")
+    if ledger.get("ledger_schema") != LEDGER_SCHEMA:
+        raise ValueError("unknown family-review ledger schema")
+    reference = row["coordinator_review_ref"]
+    if reference != row.get("job_id"):
+        raise ValueError("asset review reference differs from its job")
+    family = ledger.get("family_reviews", {}).get(reference)
+    if not family:
+        raise ValueError(f"missing family review: {reference}")
+    receipt = family["receipt"]
+    path = Path(receipt["path"])
+    payload = (path if path.is_absolute() else hd_root / path).read_bytes()
+    if hashlib.sha256(payload).hexdigest() != receipt["sha256"]:
+        raise ValueError(f"family review receipt changed: {reference}")
+    review = json.loads(payload)
+    for key in ["status", "candidate_sha256", "frame_bindings_sha256"]:
+        if family.get(key) != review.get(key):
+            raise ValueError(f"family review summary differs: {reference}")
+    if "runtime_qa" in family and family["runtime_qa"] != review.get("runtime_qa"):
+        raise ValueError(f"family runtime reference differs: {reference}")
+    return review
+
+
+def normalize_ledger(ledger, hd_root, jobs=None):
+    """Store each unchanged external review once; never re-expand asset rows.
+
+    Only ledger representation changes. Source, owner, renderer, candidate and
+    derived status fields are retained verbatim, including unused catalog IDs.
+    Missing or divergent receipts abort rather than synthesizing evidence.
+    """
+    if ledger.get("format_version") != 1:
+        raise ValueError("unsupported completion ledger format")
+    if ledger.get("ledger_schema") not in [None, LEDGER_SCHEMA]:
+        raise ValueError("unknown completion ledger schema")
+    hd_root = Path(hd_root).resolve()
+    jobs = Path(jobs or hd_root / "jobs").resolve()
+    assets = {}
+    family_reviews = dict(ledger.get("family_reviews", {}))
+    receipts = {}
+    candidate_identities = {}
+    for identity, source in ledger["assets"].items():
+        row = dict(source)
+        review = coordinator_review_for_asset(ledger, identity, hd_root)
+        if review is not None:
+            job_id = row["job_id"]
+            if not isinstance(job_id, str) or Path(job_id).name != job_id or job_id in [".", ".."]:
+                raise ValueError("review job must be a direct directory name")
+            if job_id not in receipts:
+                path = jobs / job_id / "coordinator-review.json"
+                payload = path.read_bytes()
+                relative = str(path.relative_to(hd_root)) if path.is_relative_to(hd_root) else str(path)
+                receipts[job_id] = (json.loads(payload), {
+                    "path": relative, "sha256": hashlib.sha256(payload).hexdigest()})
+            external, receipt = receipts[job_id]
+            if review != external:
+                raise ValueError(f"ledger and external review differ: {job_id}")
+            candidate = row.get("candidate")
+            if job_id in candidate_identities and candidate_identities[job_id] != candidate:
+                raise ValueError(f"family has different candidate identities: {job_id}")
+            candidate_identities[job_id] = candidate
+            family = {key: review.get(key) for key in
+                      ["status", "candidate_sha256", "frame_bindings_sha256"]}
+            family["receipt"] = receipt
+            if "runtime_qa" in review:
+                family["runtime_qa"] = review["runtime_qa"]
+            if job_id in family_reviews and family_reviews[job_id] != family:
+                raise ValueError(f"family has different review identities: {job_id}")
+            family_reviews[job_id] = family
+            row.pop("coordinator_review", None)
+            row["coordinator_review_ref"] = job_id
+        assets[identity] = row
+    return {**ledger, "ledger_schema": LEDGER_SCHEMA,
+            "assets": assets, "family_reviews": dict(sorted(family_reviews.items()))}
 
 
 def index_entries(data):
@@ -398,7 +482,7 @@ def build(args):
               "all_art_targets": len(ledger_assets), "no_unreferenced_picture_exclusions": True},
               "stages": STAGES, "stage_contract": "Every generated candidate stays distinct from review, registration and render reachability. Original-only fallback is temporary for every required picture. Native cinematics/fonts have explicit preservation exceptions, not HD claims.",
               "picture_status_counts": dict(counts), "assets": dict(sorted(ledger_assets.items())), "jobs": jobs}
-    write_json(args.ledger, ledger)
+    write_json(args.ledger, normalize_ledger(ledger, args.data / "hd", args.jobs))
     write_json(args.jobs / "index.json", {"format_version": 1, "scope": ledger["scope"], "jobs": jobs})
     queues(args.jobs, jobs, ledger_assets)
     print(json.dumps({"scope": ledger["scope"], "picture_status_counts": dict(counts),

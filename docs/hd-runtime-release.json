@@ -1,0 +1,78 @@
+{
+  "format_version": 1,
+  "status": "approved_artwork_bundled_and_cli_validated",
+  "release_scope": "Shared Linux and Windows original-content artwork; gameplay and executable bytes unchanged from Stage2 release",
+  "source_commit": "0e8a27c7288a388dc335ec71233358af42cb3aa5",
+  "assembly": {
+    "approved_hd_frames": 2132,
+    "complete_sequences": 875,
+    "terrain_frames": 1280,
+    "remaining_original_pictures": 3621,
+    "handoff_manifest_sha256": "b4d241bac313e73229c0ac3d435fb7d0b597b4c52ee16ac63096c52690f7eed2",
+    "handoff_files": 965,
+    "handoff_bytes": 2344550086,
+    "hd_manifest_sha256": "f88eb9210a58a9ca6b6a53702fd4c2fc81fe361960f904002e2bbe8e528c8366",
+    "provenance_sha256": "3e386dfdd6917daa81adcddd87c55062be4bde56f91e67bb6b5ed7833c405129",
+    "baseline_1148_bindings_unchanged": true,
+    "original_catalog_binary_and_sources_unchanged": true,
+    "data_files": 7415,
+    "data_bytes": 2357732944,
+    "binary_sha256": "7e62ae1b0e8d18670a7c6c3d4f6419878f696f62ba4c7dd2ee9ebf7545f648de",
+    "windows_binary_sha256": "63d040f5d5c76bad15a74ab1ef54ca992a0fd9cd8b7a46f8506d8cce4fbec275"
+  },
+  "validation": [
+    {
+      "case": "verify-assets",
+      "seconds": 0.21,
+      "output": "Verified 6449 assets; 27 missions, 528 enemies, 16 weapons, 24 items\n",
+      "passed": true
+    },
+    {
+      "case": "validate-hd",
+      "seconds": 50.1,
+      "output": "HD pack: 2132 registered, 2132 validated, 0 rejected supplied frames\n",
+      "passed": true
+    },
+    {
+      "case": "validate-mods",
+      "seconds": 7.15,
+      "output": "Validated 45 mods; 1 override(s)\n",
+      "passed": true
+    }
+  ],
+  "source_picture_targets": 5753,
+  "complete_remaster": false,
+  "visual_evidence": "Approved source/native1\u20134/context receipts plus root-inspected actual1080p mission captures",
+  "prior_runtime_hd_frames": 1148,
+  "archives": "Existing Stage2 ZIPs remain historical1148 snapshot until new export validation completes",
+  "exclusions": "Unapproved generation candidates and held artwork are not bundled",
+  "native_visual_review": {
+    "scope": "Three actual original-mission desktop captures using unchangedStage2 executable and approved2132 data; SDL dummy/software at1920x1080",
+    "cases": [
+      {
+        "case": "original-s1w6-hd",
+        "mission": "base:sector_1_wave_6",
+        "seconds": 16.21,
+        "benchmark": "benchmark renderer=software size=1920x1080 scale=4 hd=true startup_ms=3508.63 samples=534 work_p50_ms=4.94 work_p95_ms=17.05 frame_p50_ms=10.88 frame_p95_ms=28.37",
+        "screenshot_sha256": "1c8af1f10f2eb1ed855a1ba05b8944216a54478d424db7f23fb1da108c94bd3b"
+      },
+      {
+        "case": "original-s2w2-hd",
+        "mission": "base:sector_2_wave_2",
+        "seconds": 11.99,
+        "benchmark": "benchmark renderer=software size=1920x1080 scale=4 hd=true startup_ms=3024.16 samples=534 work_p50_ms=3.67 work_p95_ms=5.91 frame_p50_ms=9.09 frame_p95_ms=12.26",
+        "screenshot_sha256": "b8f0e63d401ce7c5de8f2fb75feaafdc9cdc93f892f60a3cce3537b34f3a052b"
+      },
+      {
+        "case": "original-s3w4-hd",
+        "mission": "base:sector_3_wave_4",
+        "seconds": 11.64,
+        "benchmark": "benchmark renderer=software size=1920x1080 scale=4 hd=true startup_ms=3193.15 samples=534 work_p50_ms=3.88 work_p95_ms=6.83 frame_p50_ms=9.41 frame_p95_ms=13.05",
+        "screenshot_sha256": "be38b36a76ce72b3334e2830df98dcb876b87d2e2cf82dac01880e999e556bcb"
+      }
+    ],
+    "all_three_full_frames_inspected": true,
+    "findings": "Player, HUD, canal, building and sprite layers retain source placements without new clipping. Mixed original/HD terrain density patches remain visible until remaining original pictures are remastered.",
+    "limits": "Representative startup scenes; not whole-mission completion, fullHD coverage, whole-map seamlessness or hardware performance certification"
+  }
+}
