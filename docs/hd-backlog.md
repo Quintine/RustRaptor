@@ -1,8 +1,8 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **1,289**; **4,464** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit. Root completed the frozen1148-frame /421-sequence Stage2 Linux/Windows packages. The external development pack now contains1289 reviewed originals in474 complete sequences; the141 additions were registered after full current6445-PPM continuity, not copied into those packages. All accepted runtime binaries/libraries/manifests/data and45mods remain unchanged. The immutable future input is ../data/hd/registered-class-review/handoff-1289-20261011/pack/, manifest SHA `a61a4063171f9d58ebe3dcfcd7590aa405ce77ca1e32121dba2b65ef886015e6`.
+The checked catalog contains **5,753 standalone picture frames**. The active outer HD pack supplies **1,465**; **4,288** still await a registered HD replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. The external development pack contains1465 reviewed originals in545 complete sequences after exact current7325-PPM continuity. Root's completed Linux/Windows Stage2 packages retain1148 frames/421 sequences and45 accepted mods, with every released binary/library/manifest/data byte unchanged. The private future input is ../data/hd/registered-class-review/handoff-1465-20261011/pack/, manifest SHA `92cb019a147728e72e966708e0651e094d0a6a2137d8026797bc9be2ea9a1d4d`; parent alone chooses a runtime update.
 
-Batch1289 registers23 complete jobs: preserved74 plus Flare26v13, ADPIC4/smalllogo/BASEv4 and PLATOON6/DMOON7/TARG1/11/TARG2/11. Every accepted source/scaled output matches exact current c0c3/pairedSerde proof with both age guards false and all18 recursive sources stable. Earlier preparation journals, held variants and explicit shading/contour/phase qualifications remain unchanged. Another192 independently approved terrain frames await coordinator preparation; they do not count below. Shop/WORMDN remain diagnostic advice, while Rotor, planted-row20161–63 and source-pit3014c remain whole-family holds. The original5753 catalog is unfinished.
+Batch1465 adds176 complete-family terrain frames: Set4 original13–16 with corrected401b4, Terrain2 original4 and7, Terrain1 10430/40, and Terrain3 original5/7/8. All68 eligible untouched full raws and22 complete source/native1–4 boards were inspected; current outputs match exact accepted references with both source guards false and all18 recursive source pins stable. Earlier1289 and1148 inputs remain immutable history. Terrain2 original5 is wholly excluded for six lost source-green planted-row materials despite its retained prior independent approval. Original6 green repairs,3014c pit correction, rotor, reserved-edge lamps, monitor and worm animation materials remain held or under exact exclusive review. No blanket HD completion, seamless mixed terrain or live Host proof is claimed.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,7 +12,7 @@ Batch1289 registers23 complete jobs: preserved74 plus Flare26v13, ADPIC4/smalllo
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 448 | 4,087 | 4 |
+| Terrain | 4,535 | 624 | 3,911 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 66 | 84 | mixed static / animated |
 
 ## Registered pack and generation jobs
@@ -495,6 +495,77 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | TARG1G4_PIC | `0x40006` | 11 / 11 |
 | DMOONTRG_PIC | `0x40080` | 7 / 7 |
 | TARG2G4_PIC | `0x40011` | 11 / 11 |
+| canonical-terrain-40195-401a4 | `0x40195` | 16 / 16 |
+| canonical-terrain-401a5-401b4 | `0x401a5` | 16 / 16 |
+| canonical-terrain-401b5-401c4 | `0x401b5` | 16 / 16 |
+| canonical-terrain-401c5-401d4 | `0x401c5` | 16 / 16 |
+| Terrain 2013d | `0x2013d` | 1 / 1 |
+| Terrain 2013e | `0x2013e` | 1 / 1 |
+| Terrain 2013f | `0x2013f` | 1 / 1 |
+| Terrain 20140 | `0x20140` | 1 / 1 |
+| Terrain 20141 | `0x20141` | 1 / 1 |
+| Terrain 20142 | `0x20142` | 1 / 1 |
+| Terrain 20143 | `0x20143` | 1 / 1 |
+| Terrain 20144 | `0x20144` | 1 / 1 |
+| Terrain 20145 | `0x20145` | 1 / 1 |
+| Terrain 20146 | `0x20146` | 1 / 1 |
+| Terrain 20147 | `0x20147` | 1 / 1 |
+| Terrain 20148 | `0x20148` | 1 / 1 |
+| Terrain 20149 | `0x20149` | 1 / 1 |
+| Terrain 2014a | `0x2014a` | 1 / 1 |
+| Terrain 2014b | `0x2014b` | 1 / 1 |
+| Terrain 2014c | `0x2014c` | 1 / 1 |
+| Terrain 2016d | `0x2016d` | 1 / 1 |
+| Terrain 2016e | `0x2016e` | 1 / 1 |
+| Terrain 2016f | `0x2016f` | 1 / 1 |
+| Terrain 20170 | `0x20170` | 1 / 1 |
+| Terrain 20171 | `0x20171` | 1 / 1 |
+| Terrain 20172 | `0x20172` | 1 / 1 |
+| Terrain 20173 | `0x20173` | 1 / 1 |
+| Terrain 20174 | `0x20174` | 1 / 1 |
+| Terrain 20175 | `0x20175` | 1 / 1 |
+| Terrain 20176 | `0x20176` | 1 / 1 |
+| Terrain 20177 | `0x20177` | 1 / 1 |
+| Terrain 20178 | `0x20178` | 1 / 1 |
+| Terrain 20179 | `0x20179` | 1 / 1 |
+| Terrain 2017a | `0x2017a` | 1 / 1 |
+| Terrain 2017b | `0x2017b` | 1 / 1 |
+| Terrain 2017c | `0x2017c` | 1 / 1 |
+| Terrain 10430 standalone correction | `0x10430` | 1 / 1 |
+| Terrain 10431 standalone correction | `0x10431` | 1 / 1 |
+| Terrain 10432 standalone correction | `0x10432` | 1 / 1 |
+| Terrain 10433 standalone correction | `0x10433` | 1 / 1 |
+| Terrain 10434 standalone correction | `0x10434` | 1 / 1 |
+| Terrain 10435 standalone correction | `0x10435` | 1 / 1 |
+| Terrain 10436 standalone correction | `0x10436` | 1 / 1 |
+| Terrain 10437 standalone correction | `0x10437` | 1 / 1 |
+| Terrain 10438 standalone correction | `0x10438` | 1 / 1 |
+| Terrain 10439 standalone correction | `0x10439` | 1 / 1 |
+| Terrain 1043a standalone correction | `0x1043a` | 1 / 1 |
+| Terrain 1043b standalone correction | `0x1043b` | 1 / 1 |
+| Terrain 1043c standalone correction | `0x1043c` | 1 / 1 |
+| Terrain 1043d standalone correction | `0x1043d` | 1 / 1 |
+| Terrain 1043e standalone correction | `0x1043e` | 1 / 1 |
+| Terrain 1043f standalone correction | `0x1043f` | 1 / 1 |
+| Terrain 10440 standalone correction | `0x10440` | 1 / 1 |
+| Terrain 10441 standalone correction | `0x10441` | 1 / 1 |
+| Terrain 10442 standalone correction | `0x10442` | 1 / 1 |
+| Terrain 10443 standalone correction | `0x10443` | 1 / 1 |
+| Terrain 10444 standalone correction | `0x10444` | 1 / 1 |
+| Terrain 10445 standalone correction | `0x10445` | 1 / 1 |
+| Terrain 10446 standalone correction | `0x10446` | 1 / 1 |
+| Terrain 10447 standalone correction | `0x10447` | 1 / 1 |
+| Terrain 10448 standalone correction | `0x10448` | 1 / 1 |
+| Terrain 10449 standalone correction | `0x10449` | 1 / 1 |
+| Terrain 1044a standalone correction | `0x1044a` | 1 / 1 |
+| Terrain 1044b standalone correction | `0x1044b` | 1 / 1 |
+| Terrain 1044c standalone correction | `0x1044c` | 1 / 1 |
+| Terrain 1044d standalone correction | `0x1044d` | 1 / 1 |
+| Terrain 1044e standalone correction | `0x1044e` | 1 / 1 |
+| Terrain 1044f standalone correction | `0x1044f` | 1 / 1 |
+| Terrain set 3 shard 5 | `0x3012d` | 16 / 16 |
+| Terrain set 3 shard 7 | `0x3014d` | 16 / 16 |
+| Terrain set 3 shard 8 | `0x3015d` | 16 / 16 |
 
 | Generation job | Status |
 | --- | --- |
