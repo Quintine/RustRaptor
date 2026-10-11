@@ -34,6 +34,10 @@ Boss10310 preserves the right disc, skirt and feet, accepting two RGB4 corners p
 
 Orange9 retains warm ray/fragment/fade character despite stronger4x cell-edge outlines and small adjacent additions. Three alpha16/17/19 exterior specks in101a8 are excluded, while meaningful alpha32 contour pixels are retained. Original alpha, source masks and raw RGB evidence stay distinct. Smoke4 remains held because every actual shaded output equals original nearest-neighbor output, so no visible HD improvement is established.
 
+## Private development1,037 input
+
+A separate immutable development input is published at ../data/hd/registered-class-review/handoff-1037-20261011/pack/. Its handoff-manifest.json SHA is `51a857fc9a1e584e00ece4800436e3c9411de5c1fba8a25e527c65d1ee542d4f`; hd.json SHA is `707ab815114579828bcb823cc3e62efa80ea05b54ae83e83dc30c5730cde0e96`. It contains1,037 frames/396 complete sequences,366 distinct files/569,685,991 bytes, with source INDEX, complete source/scale proof and original build identity pinned. Every file is a private copy with verified bytes and a distinct inode; future development mutation cannot change the handoff. This is a reviewable future assembly input, not authorization to refresh the existing800 runtime files or archives. The original packaged800 handoff remains untouched.
+
 ## Frozen Linux/Windows800 history
 
 The separate historical runtime-800-current/combined-review.json remains unchanged:3,200 scales/4,000 accepted PPMs using immutablef71826f4eec106d59a55c12380ee1437a3cfeddf6f9d145480624ff5e5b8eaa5. Historical929 and979 closures remain separate and are not retroactively associated with a newer library. Root's later test-only terrain capture fixes did not alter the production desktop prefix, loader, compositor or shaders.
