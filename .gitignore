@@ -1,28 +1,14 @@
-# Derived game data — extracted from the copyrighted originals, never commit
-data/
-RustRaptor/data/
-RustRaptor/bin/
-RustRaptor/lib/
-RustRaptor/runtime-manifest.json
-
-# Vendored raptor build output
-raptor/build/
-
-
-# Python bytecode
+# Cargo output, local tooling, review evidence and duplicate export archives.
+/target/
+/dist/
+/.reference/
+/.local/
+/derived/
+/.runtime-data-*
 __pycache__/
 
-# Local toolchain
-.local/
+# Decoded source-reference images are not shipped mod artwork.
+/mods/*/art/source/
 
-# Rust builds and locally derived reference/preview data
-target/
-RustRaptor/target/
-RustRaptor/dist/
-RustRaptor/.reference/
-.reference/
-derived/
-
-# Decoded original style references are not shipped mod artwork.
-RustRaptor/mods/*/art/source/
-
+# The playable bundle is intentionally tracked: bin/, lib/, data/ and
+# runtime-manifest.json. Authored mod images, sounds and music are tracked too.
