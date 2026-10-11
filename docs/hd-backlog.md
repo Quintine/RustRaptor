@@ -1,8 +1,8 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active outer HD pack supplies **1,844**; **3,909** still await a registered HD replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. Current coverage is 1,844 reviewed originals in 797 complete sequences after 9,220 exact source/scaled output comparisons. Linux/Windows Stage2 packages retain 1,148 frames/ 421 sequences and 45 accepted mods, with every released binary/library/manifest/data byte unchanged. Private future input ../data/hd/registered-class-review/handoff-1844-20261012/pack/ has handoff SHA `d10580305bfcb17f738849dc02356a35911c093ab7cb1140c1627caa443edf42`; parent alone selects a runtime update.
+The checked catalog contains **5,753 standalone picture frames**. The active outer HD pack supplies **1,860**; **3,893** still await a registered HD replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. Current coverage is 1,860 reviewed originals in 798 complete sequences after 9,300 exact source/scaled output comparisons. Linux/Windows Stage2 packages retain 1,148 frames / 421 sequences and 45 accepted mods, with every released binary/library/manifest/data byte unchanged. Private future input ../data/hd/registered-class-review/handoff-1860-20261012/pack/ has handoff SHA `fc3cf1667c33ff9b2990ce3a88c88a7a477893e0b9a7e42473a95508fbc5aaf0`; parent alone selects a runtime update.
 
-Batch1844 adds corrected 10460/10470 complete 32 after independent context review, coordinator inspection of32 full raws/eight complete source/current scale boards and whole 1844 continuity. Fourteen genuine fine-material corrections preserve source rail/mesh/ridge geometry; seven/eleven unchanged siblings and all held history remain exact. Two accepted sibling promotions preserve old mains separately. Both source-age guards are false and all 18 recursive sources stable. Mixed HD/original grain/value islands, stronger source shade relief and retained irregular mottling are accepted qualifications. The pending snapshot has 738 independently approved unregistered pictures; 16 original 12 targets retain a missing-prompt provenance gap. Whole-family source-rib, border, panel-position, lavender/ember legibility and square-finish holds remain separate.
+Batch 1860 admits only original Terrain3 family 19, complete 3020d–3021c, after coordinator material inspection of all 96 selected raws and source/current scales across families 14–19 plus exact whole-pack continuity. The other five complete families remain held for ten coarse material components; their 80 frames are not partially admitted. Historical reports and all art remain unchanged. Both source-age guards are false and all 18 recursive sources stable. The frozen pending cutoff records 914 historical independent-approved unregistered pictures: 80 whole-family coordinator material-held and 834 still pending coordinator review. Actual original12 historical prompt/request evidence has been recovered additively, pending independent verification and parent policy; no candidate locator edit or admission follows. Mixed HD/original grain/value rectangles, stronger relief and quieter low-scale detail remain explicit limitations. Whole-family source-rib, border, panel-position, lavender/ember legibility and square-finish holds remain separate.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,7 +12,7 @@ Batch1844 adds corrected 10460/10470 complete 32 after independent context revie
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 992 | 3,543 | 4 |
+| Terrain | 4,535 | 1,008 | 3,527 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 77 | 73 | mixed static / animated |
 
 ## Registered pack and generation jobs
@@ -818,6 +818,7 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Terrain 1047d standalone correction | `0x1047d` | 1 / 1 |
 | Terrain 1047e standalone correction | `0x1047e` | 1 / 1 |
 | Terrain 1047f standalone correction | `0x1047f` | 1 / 1 |
+| Terrain set 3 shard 19 | `0x3020d` | 16 / 16 |
 
 | Generation job | Status |
 | --- | --- |
