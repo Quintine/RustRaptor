@@ -6,9 +6,25 @@ helper or packaging shell process remained at recovery. The image-generation
 gate was paused with zero active leases, and has now been resumed. Recover each
 worker from its existing outputs before submitting another generation request.
 
+## Repository relocation and GitHub
+
+`RustRaptor/` is now the Git root, including its `.git/` metadata. Migration
+commit `8f45979` preserves history and is pushed to the public
+[Quintine/RustRaptor](https://github.com/Quintine/RustRaptor) repository on
+`codex/rust-rewrite`. Run all Git commands from `RustRaptor/`, with paths such
+as `src/desktop.rs` and `docs/hd-backlog.md`.
+
+The user explicitly requested that the bundled game and data be included in
+Git. `bin/`, `lib/`, `data/` and `runtime-manifest.json` are tracked; caches,
+review files and duplicate zip exports are ignored. All 6,566 runtime data
+hashes match in a fresh public GitHub checkout, which validates all 6,449
+original catalog entries. Its SDL game also launched from `/tmp` using only
+the bundled library and an isolated profile. Pending source, mod and artwork-review work survived
+the relocation. See [repository layout](repository.md).
+
 ## Engine and package
 
-- Last committed engine checkpoint: `fdf2ff0`, standalone RustRaptor, widescreen
+- Packaged executable checkpoint: `fdf2ff0`, standalone RustRaptor, widescreen
   menus and always-4:3 original cinematics, including when gameplay stretching
   is selected. Fresh 1080p intro capture confirms black 240-pixel side borders.
 - `RustRaptor/bin/raptor-rust`, `lib/`, `data/` and
@@ -18,28 +34,41 @@ worker from its existing outputs before submitting another generation request.
 - Before shutdown, 320 default tests, the complete 42-image menu/intro audit,
   separate cinematic aspect regression, mod/catalog/HD validation and copied
   1280×800/1080p SDL/audio smoke checks passed. Later fixes require fresh checks.
-- Uncommitted lightning weapon/API packages and terrain compositor improvements
+- Source navigation fixes are committed in `4b1edef`; the terrain compositor
+  fix is committed in `ab23255`. Uncommitted Lightning weapon/API packages
   are preserved. Review and commit them separately; do not discard their work.
   The executable/package must be refreshed after source or accepted-art changes.
 
 ## Next user fixes
 
 1. Mod/save diagnostics: parent and selection are now preserved when details
-   are reopened. The Escape regression passes; full screenshot audit is running.
+   are reopened. The Escape regression and fresh 42-capture screenshot audit
+   pass, including repeated details, confirmation and back navigation.
 2. Installed mod rows now stay in ID order through toggles and priority changes,
    with dependency and confirmation behavior preserved. Navigation tests pass.
 3. Default Forward Guns still appear to miss miscellaneous buildings/cars.
-   Expand actual original-content coverage beyond the earlier ten-unit test.
+   Actual original-data checks now cover all 889 destructible terrain
+   definitions, 17 early wave 6/7 occurrences, all 110 classic ground units
+   and four early native spawn paths. These pass. Some industrial pieces are
+   deliberately indestructible in the original tables; the exact reported
+   object remains unidentified, so no speculative native collision change was made.
+
+The resumed source suite passes 333 tests with 31 optional checks ignored.
+The original menu/intro audit passes and completes at 1,891 service ticks.
+These checks include pending Lightning API/mod changes, which still require
+independent review and a refreshed packaged executable before release.
 
 Root owns menu fixes. `iron_coast_5` temporarily owns the ground-target diagnosis;
 its completed boss candidates and pending equipment review remain preserved.
 
 ## HD state and owners
 
-The original picture inventory is 5,753 IDs; 221 are registered and 5,532 remain
-unregistered. Existing raw candidates are not counted as accepted remasters.
-All original/generated base pixels and proof captures remain ignored; authored
-mod artwork and sound belong in Git.
+The original picture inventory is 5,753 IDs. The development pack now has 340
+registered frames across 122 complete sequences; 5,413 IDs remain unregistered.
+The packaged runtime still has its earlier 221-frame snapshot. Existing raw
+candidates are not counted as accepted remasters. Working originals, generated
+drafts and proof captures remain outside the Git root; the approved runtime
+snapshot and all authored mod artwork and sound are tracked in Git.
 
 | Agent | Recover and continue |
 | --- | --- |

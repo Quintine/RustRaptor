@@ -267,16 +267,34 @@ fn real_forward_guns_damage_classic_and_iron_coast_ground_units() {
     // movement and scripts intact while isolating their actual collisions.
     let mission: ContentPack = serde_json::from_value(json!({"missions":[{"id":"test:ground_range","name":"Ground range","duration":10000,"auto_complete":false}]})).unwrap();
     active.registry.apply(mission, "test").unwrap();
-    let first = &base.missions[&ContentId::from("base:sector_1_wave_1")];
-    let mut ground: Vec<_> = first
+    // Retain the original ten-case kill assertions. Additional native enemies
+    // include the 100-health secret cow; a starter pilot may die in this fixed
+    // firing lane, so those cases check damage without claiming combat wins.
+    let must_destroy: std::collections::BTreeSet<_> = base.missions
+        [&ContentId::from("base:sector_1_wave_1")]
         .spawns
         .iter()
         .map(|spawn| spawn.enemy.clone())
         .filter(|id| base.enemies[id].ground && !base.enemies[id].boss)
         .collect();
+    let mut ground: Vec<_> = base
+        .missions
+        .values()
+        .filter(|mission| mission.legacy_map.is_some())
+        .flat_map(|mission| mission.spawns.iter())
+        .map(|spawn| spawn.enemy.clone())
+        .filter(|id| base.enemies[id].ground && !base.enemies[id].boss)
+        .collect();
     ground.sort();
     ground.dedup();
-    assert!(!ground.is_empty());
+    assert!(
+        ground.len() > 5,
+        "exercise every native ground unit referenced by the 27 maps"
+    );
+    eprintln!(
+        "Auditing {} original non-boss ground definitions",
+        ground.len()
+    );
     ground.extend(
         [
             "iron_coast_turret:unit",
@@ -288,60 +306,410 @@ fn real_forward_guns_damage_classic_and_iron_coast_ground_units() {
         .map(ContentId::from),
     );
     let mut observations = Vec::new();
+    let mut undamaged = Vec::new();
     for id in ground {
         let pilot = Pilot {
             mission: "test:ground_range".into(),
             ..starter()
         };
-        let mut world = World::new(&pilot.mission, &pilot, &active.registry).unwrap();
-        let entity = world.spawn(&id, 144, 24, &active.registry).unwrap();
-        let initial = world.enemies[0].health;
-        let mut lowest = initial;
-        for _ in 0..120 {
-            // Normal bounded absolute mouse movement aligns the ship with the
-            // observed ground target; health and projectiles are never injected.
-            let target = world.enemies.iter().find(|enemy| enemy.entity == entity);
-            let Some(enemy) = target else {
+        let mut attempts = Vec::new();
+        let mut final_world = None;
+        let mut final_entity = 0;
+        let mut lowest = active.registry.enemies[&id].health;
+        let initial = lowest;
+        for attempt in 0..2 {
+            let mut world = World::new(&pilot.mission, &pilot, &active.registry).unwrap();
+            let entity = world.spawn(&id, 144, 24, &active.registry).unwrap();
+            lowest = initial;
+            for _ in 0..120 {
+                // Normal bounded absolute mouse movement aligns the ship with the
+                // observed ground target; health and projectiles are never injected.
+                let target = world.enemies.iter().find(|enemy| enemy.entity == entity);
+                let Some(enemy) = target else {
+                    break;
+                };
+                // The first attempt preserves the original ten-case firing lane.
+                // If it cannot reach an additional native target, a second ordinary
+                // input strategy uses a closer lane and leads horizontal movement.
+                // Narrow moving units can outrun shots aimed at their old position;
+                // hostile secret units can kill a stationary pilot before a distant
+                // shot reaches them. Neither case establishes a collision defect.
+                let y = if attempt == 0 { 160 } else { 80 };
+                let lead = if attempt == 0 {
+                    0
+                } else {
+                    let velocity = active.registry.enemies[&id].legacy.as_ref().map_or(
+                        0,
+                        |legacy| match legacy.fields[21] {
+                            4 => -active.registry.enemies[&id].speed,
+                            5 => active.registry.enemies[&id].speed,
+                            _ => 0,
+                        },
+                    );
+                    let flight_steps = ((y + 16 - enemy.y - enemy.height / 2).max(0) + 11) / 12;
+                    velocity * flight_steps
+                };
+                let x = (enemy.x + enemy.width / 2 - 16 + lead).clamp(5, 282);
+                world
+                    .step(
+                        Input {
+                            fire: true,
+                            absolute: Some([x, y]),
+                            ..Input::default()
+                        },
+                        &active.registry,
+                        &mut active.scripts,
+                    )
+                    .unwrap();
+                if let Some(enemy) = world.enemies.iter().find(|enemy| enemy.entity == entity) {
+                    lowest = lowest.min(enemy.health);
+                }
+            }
+            attempts.push(json!({
+                "control": if attempt == 0 { "current-position aim at y160" } else { "movement lead at y80" },
+                "lowest_observed_health": lowest,
+                "ticks": world.tick,
+                "outcome": format!("{:?}", world.outcome),
+                "remaining_shield": world.player.shield
+            }));
+            final_entity = entity;
+            final_world = Some(world);
+            if lowest < initial {
                 break;
-            };
-            let x = (enemy.x + enemy.width / 2 - 16).clamp(5, 282);
-            world
-                .step(
-                    Input {
-                        fire: true,
-                        absolute: Some([x, 160]),
-                        ..Input::default()
-                    },
-                    &active.registry,
-                    &mut active.scripts,
-                )
-                .unwrap();
-            if let Some(enemy) = world.enemies.iter().find(|enemy| enemy.entity == entity) {
-                lowest = lowest.min(enemy.health);
             }
         }
-        assert!(lowest < initial, "starter machine gun did not damage {id}");
-        assert!(
-            !world.enemies.iter().any(|enemy| enemy.entity == entity),
-            "starter machine gun did not destroy {id}; lowest health {lowest}"
-        );
-        assert_eq!(
-            world.player.credits,
-            pilot.credits + active.registry.enemies[&id].reward,
-            "incorrect kill reward for {id}"
-        );
+        let world = final_world.unwrap();
+        let entity = final_entity;
+        if lowest >= initial {
+            undamaged.push(format!(
+                "{id}: health {initial}, tick {}, outcome {:?}",
+                world.tick, world.outcome
+            ));
+        }
+        let target_present = world.enemies.iter().any(|enemy| enemy.entity == entity);
+        let destroyed = !target_present && lowest <= 0;
+        if must_destroy.contains(&id) || active.registry.enemies[&id].legacy.is_none() {
+            assert!(
+                destroyed,
+                "starter machine gun did not destroy {id}; lowest health {lowest}, outcome {:?}",
+                world.outcome
+            );
+        }
+        if destroyed {
+            assert_eq!(
+                world.player.credits,
+                pilot.credits + active.registry.enemies[&id].reward,
+                "incorrect kill reward for {id}"
+            );
+        }
         observations.push(json!({
             "id": id,
             "name": active.registry.enemies[&id].name,
             "initial_health": initial,
             "lowest_observed_health": lowest,
-            "destroyed": true,
+            "destroyed": destroyed,
+            "escaped": !target_present && !destroyed,
+            "outcome": format!("{:?}", world.outcome),
             "ticks": world.tick,
             "reward": world.player.credits - pilot.credits,
             "remaining_shield": world.player.shield
+            ,"attempts": attempts
         }));
     }
     if let Some(path) = std::env::var_os("RAPTOR_GROUND_REPORT") {
+        std::fs::write(path, serde_json::to_vec_pretty(&observations).unwrap()).unwrap();
+    }
+    assert!(
+        undamaged.is_empty(),
+        "Ground definitions never damaged: {undamaged:?}"
+    );
+}
+
+#[test]
+#[ignore = "requires locally installed original catalog"]
+fn real_forward_guns_damage_every_classic_destructible_terrain_definition() {
+    use std::collections::BTreeMap;
+    let catalog = catalog();
+    let mut registry = Registry::base(&catalog).unwrap();
+    // Buildings, parked cars and other scenery are native terrain, not EnemyDef.
+    // Use every intact/destruction pair actually referenced by the 27 maps.
+    let mut definitions = BTreeMap::new();
+    for mission in registry
+        .missions
+        .values()
+        .filter(|m| m.legacy_map.is_some())
+    {
+        for tile in &mission.tiles {
+            if tile.destroyed.is_some() {
+                definitions
+                    .entry(tile.art.asset.unwrap())
+                    .or_insert_with(|| tile.clone());
+            }
+        }
+    }
+    assert!(definitions.len() > 100);
+    eprintln!(
+        "Auditing {} original destructible terrain definitions",
+        definitions.len()
+    );
+    let mission_id = ContentId::from("base:sector_1_wave_1");
+    let background = registry.missions[&mission_id]
+        .tiles
+        .iter()
+        .find(|tile| tile.destroyed.is_none())
+        .unwrap()
+        .clone();
+    let mut observations = Vec::new();
+    for (asset, tile) in definitions {
+        let mission = registry.missions.get_mut(&mission_id).unwrap();
+        mission.spawns.clear();
+        mission.auto_complete = false;
+        mission.duration = 10000;
+        mission.tiles = vec![background.clone(), tile.clone()];
+        mission.layout = vec![0; 90];
+        let position = 4 * 9 + 4;
+        mission.layout[position] = 1;
+        let pilot = starter();
+        let mut world = World::new(&mission_id, &pilot, &registry).unwrap();
+        let mut scripts = ScriptRuntime::new();
+        let mut sounds = 0;
+        for _ in 0..100 {
+            shoot(&mut world, &registry, &mut scripts, 1);
+            sounds += world.sound_events.iter().filter(|s| s.asset == 139).count();
+        }
+        assert!(
+            world.terrain_dead[position],
+            "classic tile {asset:05x} was not destroyed; health {} from {}",
+            world.terrain_health[position], tile.health
+        );
+        assert!(
+            world.terrain_settled[position],
+            "classic tile {asset:05x} never settled"
+        );
+        assert_eq!(
+            world.player.credits,
+            pilot.credits + tile.reward,
+            "classic tile {asset:05x} reward"
+        );
+        assert_eq!(sounds, 1, "classic tile {asset:05x} ground-explosion sound");
+        observations.push(json!({"asset":format!("{asset:05x}"),"original_health":tile.health,"reward":tile.reward,"destroyed":true,"settled":true,"ticks":world.tick}));
+    }
+    if let Some(path) = std::env::var_os("RAPTOR_TERRAIN_REPORT") {
+        std::fs::write(path, serde_json::to_vec_pretty(&observations).unwrap()).unwrap();
+    }
+}
+
+#[test]
+#[ignore = "requires locally installed original catalog"]
+fn real_wave_6_and_7_early_terrain_hits_match_visible_original_map_positions() {
+    let catalog = catalog();
+    let mut registry = Registry::base(&catalog).unwrap();
+    let mut observations = Vec::new();
+    let mut destroyed_count = 0;
+    let mut static_count = 0;
+    for wave in [6, 7] {
+        let id = ContentId::new(format!("base:sector_1_wave_{wave}")).unwrap();
+        let original = registry.missions[&id].clone();
+        // Keep the complete original layout, art, tile rules and native map
+        // identity. Only enemy spawns are suppressed to isolate terrain hits.
+        let mut quiet = original.clone();
+        quiet.spawns.clear();
+        quiet.auto_complete = false;
+        registry.missions.insert(id.clone(), quiet);
+        for row in 130..150 {
+            for col in 0..9 {
+                let position = row * 9 + col;
+                let tile = &original.tiles[original.layout[position]];
+                let asset = tile.art.asset.unwrap();
+                // Include every destructible object in the early map section,
+                // plus the explicitly static industrial/fence artwork nearby.
+                let destructible = tile.destroyed.is_some();
+                let static_landmark = matches!(asset, 0x1045c..=0x1045f);
+                if !destructible && !static_landmark {
+                    continue;
+                }
+                let pilot = Pilot {
+                    mission: id.clone(),
+                    ..starter()
+                };
+                let mut world = World::new(&id, &pilot, &registry).unwrap();
+                let mut scripts = ScriptRuntime::new();
+                let rows = original.layout.len() / 9;
+                // This is exactly scene()'s original terrain row position:
+                // 200 - rows*32 + scroll + row*32. Advance ordinary idle
+                // steps until the tested row is at y=40, then fire normally.
+                let idle = (40 - (200 - rows as i32 * 32 + row as i32 * 32)).max(0);
+                for _ in 0..idle {
+                    world
+                        .step(Input::default(), &registry, &mut scripts)
+                        .unwrap();
+                }
+                assert_eq!(200 - rows as i32 * 32 + world.scroll + row as i32 * 32, 40);
+                let initial_health = world.terrain_health[position];
+                for _ in 0..70 {
+                    world
+                        .step(
+                            Input {
+                                fire: true,
+                                absolute: Some([16 + col as i32 * 32, 160]),
+                                ..Input::default()
+                            },
+                            &registry,
+                            &mut scripts,
+                        )
+                        .unwrap();
+                }
+                if destructible {
+                    assert!(
+                        world.terrain_dead[position],
+                        "wave{wave} row{row} col{col} asset{asset:05x} remains alive at its displayed position, health {}",
+                        world.terrain_health[position]
+                    );
+                    assert!(world.terrain_settled[position]);
+                    destroyed_count += 1;
+                } else {
+                    assert_eq!(world.terrain_health[position], initial_health);
+                    assert!(!world.terrain_dead[position]);
+                    static_count += 1;
+                }
+                observations.push(json!({"wave":wave,"row":row,"col":col,"asset":format!("{asset:05x}"),"destructible":destructible,"initial_health":initial_health,"final_health":world.terrain_health[position],"dead":world.terrain_dead[position],"settled":world.terrain_settled[position],"idle_steps":idle,"normal_fire_steps":70,"credits_gained":world.player.credits-pilot.credits}));
+            }
+        }
+    }
+    assert_eq!(destroyed_count, 17);
+    assert!(static_count >= 4);
+    if let Some(path) = std::env::var_os("RAPTOR_EARLY_TERRAIN_REPORT") {
+        std::fs::write(path, serde_json::to_vec_pretty(&observations).unwrap()).unwrap();
+    }
+}
+
+#[test]
+#[ignore = "requires locally installed original catalog"]
+fn real_wave_6_and_7_early_ground_spawns_use_original_visible_positions() {
+    let catalog = catalog();
+    let mut registry = Registry::base(&catalog).unwrap();
+    let mut observations = Vec::new();
+    for wave in [6, 7] {
+        let id = ContentId::new(format!("base:sector_1_wave_{wave}")).unwrap();
+        let original = registry.missions[&id].clone();
+        let early: Vec<_> = original
+            .spawns
+            .iter()
+            .filter(|spawn| {
+                // Native difficulty codes 0..2 are disabled secret placements.
+                // These four early ordinary emplacements are enabled at all levels.
+                spawn.tick <= 600
+                    && spawn.difficulty == 3
+                    && registry.enemies[&spawn.enemy].ground
+                    && !registry.enemies[&spawn.enemy].boss
+            })
+            .cloned()
+            .collect();
+        assert_eq!(early.len(), 2);
+        for spawn in early {
+            let mut isolated = original.clone();
+            isolated.spawns = vec![spawn.clone()];
+            isolated.auto_complete = false;
+            registry.missions.insert(id.clone(), isolated);
+            let pilot = Pilot {
+                mission: id.clone(),
+                ..starter()
+            };
+            let mut world = World::new(&id, &pilot, &registry).unwrap();
+            let mut scripts = ScriptRuntime::new();
+            let def = &registry.enemies[&spawn.enemy];
+            let art = def.art.as_ref().unwrap();
+            assert_eq!(def.legacy.as_ref().unwrap().fields[21], 3);
+            let expected_x = spawn.x + 16 - art.logical_width as i32 / 2;
+            let expected_y = spawn.y - art.logical_height as i32 / 2 + 1;
+            let mut observed_spawn = None;
+            let mut first_damage = None;
+            let mut entity = None;
+            let mut lowest = def.health;
+            let mut last_health = None;
+            for _ in 0..spawn.tick + 400 {
+                // Capped mouse movement is achievable with ordinary controls.
+                // Full original terrain remains present, including objects
+                // that can intercept bullets before the emplacement is hit.
+                let desired = (expected_x + art.logical_width as i32 / 2 - 16).clamp(5, 282);
+                let x = world.player.x + (desired - world.player.x).clamp(-4, 4);
+                world
+                    .step(
+                        Input {
+                            fire: true,
+                            absolute: Some([x, 160]),
+                            ..Input::default()
+                        },
+                        &registry,
+                        &mut scripts,
+                    )
+                    .unwrap();
+                if let Some(enemy) = world
+                    .enemies
+                    .iter()
+                    .find(|enemy| enemy.definition == spawn.enemy)
+                {
+                    if entity.is_none() {
+                        entity = Some(enemy.entity);
+                        assert_eq!([enemy.x, enemy.y], [expected_x, expected_y]);
+                        assert_eq!(enemy.age, 1);
+                        assert_eq!(world.tick, spawn.tick + 1);
+                        observed_spawn = Some(
+                            json!({"world_tick":world.tick,"position":[enemy.x,enemy.y],"previous_position":[enemy.px,enemy.py],"width":enemy.width,"height":enemy.height}),
+                        );
+                    }
+                    lowest = lowest.min(enemy.health);
+                    last_health = Some(enemy.health);
+                    if first_damage.is_none() && enemy.health < def.health {
+                        let hit_points: Vec<_> = world
+                            .projectiles
+                            .iter()
+                            .filter(|projectile| {
+                                projectile.weapon == ContentId::from("base:projectile_forward_guns")
+                                    && projectile.legacy.as_ref().is_some_and(|shot| shot.hit)
+                                    && projectile.x > enemy.x
+                                    && projectile.x < enemy.x + enemy.width - 1
+                                    && projectile.y > enemy.y
+                                    && projectile.y < enemy.y + enemy.height - 1
+                            })
+                            .map(|projectile| [projectile.x, projectile.y])
+                            .collect();
+                        assert!(
+                            !hit_points.is_empty(),
+                            "first damage lacks a default-gun collision point"
+                        );
+                        first_damage = Some(
+                            json!({"world_tick":world.tick,"health":enemy.health,"logical_bounds":[enemy.x,enemy.y,enemy.width,enemy.height],"interpolation_start":[enemy.px,enemy.py],"hit_points":hit_points}),
+                        );
+                    }
+                } else if entity.is_some() {
+                    break;
+                }
+            }
+            assert!(entity.is_some(), "wave {wave} never spawns {}", spawn.enemy);
+            assert!(
+                lowest < def.health,
+                "wave {wave} default gun never damages {}",
+                spawn.enemy
+            );
+            assert!(
+                last_health.is_some_and(|health| health <= 0),
+                "wave {wave} target escaped rather than being destroyed: {} / health {last_health:?}",
+                spawn.enemy
+            );
+            assert!(
+                !world
+                    .enemies
+                    .iter()
+                    .any(|enemy| Some(enemy.entity) == entity)
+            );
+            assert_eq!(format!("{:?}", world.outcome), "Playing");
+            assert!(world.player.credits >= pilot.credits + def.reward);
+            observations.push(json!({"wave":wave,"id":spawn.enemy,"name":def.name,"native_spawn_tick":spawn.tick,"native_spawn_position":[spawn.x,spawn.y],"observed_spawn":observed_spawn,"first_damage":first_damage,"initial_health":def.health,"lowest_observed_health":lowest,"destroyed":true,"finished_tick":world.tick,"remaining_shield":world.player.shield,"credits_gained":world.player.credits-pilot.credits}));
+        }
+    }
+    assert_eq!(observations.len(), 4);
+    if let Some(path) = std::env::var_os("RAPTOR_EARLY_SPAWN_REPORT") {
         std::fs::write(path, serde_json::to_vec_pretty(&observations).unwrap()).unwrap();
     }
 }

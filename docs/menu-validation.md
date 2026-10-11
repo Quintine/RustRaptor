@@ -15,6 +15,9 @@ priority without moving the cursor. Returning from details or a disable
 confirmation restores the selected mod and its list position. Opening details
 again while already in diagnostics preserves its parent, so Escape always
 returns one level. Portable regressions exercise these navigation sequences.
+The 42-capture audit was rerun after the navigation fixes on 11 October and
+all four current contact sheets were visually reviewed; panels, focus,
+confirmation text and shop information remain readable and correctly placed.
 
 The audit also verifies the complete startup reaches its return screen at exactly 1,891 70 Hz service ticks and restores menu music. Cancelling a mod-mismatch prompt preserves the original save; accepting it displays unavailable equipment without silently discarding it.
 
@@ -25,4 +28,8 @@ RAPTOR_TEST_DATA="$PWD/../data" LD_LIBRARY_PATH="$HOME/.local/lib" \
   cargo test --locked --lib every_menu_screen_and_original_intro_visual_audit -- --ignored
 ```
 
-Captures and the action-row manifest stay ignored in `../.reference/ui-all/`. The background was generated with the imagegen skill's built-in image generation tool; the exact prompt and provenance are tracked in `art/menu-background-v1.prompt.txt` and `art/provenance.json`. Original cinematic pixels remain outside Git.
+Captures and the action-row manifest remain local in `../.reference/ui-all/`,
+outside the current Git root. The background was generated with the imagegen
+skill's built-in image generation tool; its prompt and provenance are tracked
+in `art/menu-background-v1.prompt.txt` and `art/provenance.json`. The packaged
+original cinematics are now included in tracked `data/`.
