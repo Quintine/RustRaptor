@@ -1,21 +1,21 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The external HD pack supplies **2,132**; **3,621** await a registered replacement. Every original ID, including unused graphics and destroyed variants, remains required. Coverage is 2,132 reviewed originals in 875 complete sequences after 10,660 exact source/scaled comparisons. The shared Linux/Windows runtime now contains the exact approved **2,132-frame / 875-sequence** snapshot, including **1,280 terrain frames**. Root verified all **6,449 original assets and 27 missions**, **2,132 registered / 2,132 validated / zero rejected HD frames**, and **45 mods / one override**. Assembly contains **7,415 data files / 2,357,732,944 bytes**; the Linux and Windows binaries remain unchanged. The earlier **1,148-frame / 421-sequence** Stage2 release and its archives remain preserved history. Exact publication receipts are `.reference/hd-runtime-2132/assembly-receipt.json` (`efd99333d15b54dd0d4ff00a64505ef6d48ff5fc32ed746b3fd0f09a85400102`) and `validation-receipt.json` (`61802ad2b40c19daa23d57c227ecc6b7a77f7115b9c52d7537708b9bb86581c6`).
+The checked catalog contains **5,753 standalone picture frames**. The development pack supplies **2,240**; **3,513** await a registered replacement. Every original ID, including unused graphics and destroyed variants, remains required. Coverage is 952 complete sequences, with source/material/current-default and affected-context receipts kept separately. The bundled Linux/Windows artwork remains the published **2,132-frame / 875-sequence** snapshot while root assembles this new approved handoff. The 2,132 artwork publication verified **6,449 original assets, 27 missions, zero rejected HD frames and 45 mods / one override**; its assembly has **7,415 files / 2,357,732,944 bytes**. Those receipts remain `.reference/hd-runtime-2132/assembly-receipt.json` and `validation-receipt.json`. Root subsequently rebuilt the executables for the approved loader epoch: Linux `9688cdbd57b0d31049bac431a5bb2e864bb3ce7abbaca732634359ad7a53d8a9`, Windows `ad2ee7f5cc8e90ea371eccf2a509cd99263c6c880a6d42e2886cdc017c24561b`. The earlier **1,148-frame / 421-sequence** release and archives remain history.
 
-Batch 2132 registers exact complete 32 Terrain3 original26/28 after full untouched raw/source/native 1–4 material inspection, historical independent own16/old96 proof, separate1010-case current2100 integration and whole 2132 continuity. Stronger cap relief, quiet marks/native 1 softening and mixed-original density qualify approval. The immutable 2132 cutoff has 1,298 independent-qualified unique unregistered pictures: 64 coordinator whole-family held and 1,234 pending full review. Earlier cutoffs remain immutable. Cellular material, missing source cues, native 1 yellow loss, olive/green, atlas rules and other whole-family holds remain unadmitted; component qualifications confer no partial admission. User resumed new disjoint originals and separate source-first correction siblings; every rejected history and concrete hold stays preserved. Original12 policy/locator/reference-byte gaps remain pending.
+The current admission adds 96 source-qualified terrain pictures, Micro Missile2 and ten complete opaque UI/catalog pictures. Independent material judgments, exact current output and genuine affected-context review bind every addition. Historical cutoffs and rejected/held raws remain immutable; future qualified drafts stay unadmitted until their own source/context closure. Genuine geometry and functional-cue failures remain held. This cutpoint includes no optional cue/alpha policy.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
 | Player banking | 21 | 21 | 0 | 3 |
 | Bosses | 249 | 232 | 17 | 79 |
 | Enemies and ground objects | 419 | 211 | 208 | 183 |
-| Player and enemy projectiles | 51 | 45 | 6 | 18 |
+| Player and enemy projectiles | 51 | 47 | 4 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 1,280 | 3,255 | 4 |
-| Menus, portraits, HUD and other pictures | 150 | 77 | 73 | mixed static / animated |
+| Terrain | 4,535 | 1,376 | 3,159 | 4 |
+| Menus, portraits, HUD and other pictures | 150 | 87 | 63 | mixed static / animated |
 
-The completion ledger keeps `format_version: 1` and adds `ledger_schema: family_review_refs_v1`. Each asset carries a stable `coordinator_review_ref`; `family_reviews` stores the family status, candidate/binding identities and exact full external receipt path/SHA once. All 6,060 asset source, owner, candidate, renderer and status fields remain exact; 2,051 asset reviews resolve to 319 unchanged external family receipts. Normalization reduces the ledger from 53,594,880 to 8,406,611 bytes (84.31%) and changes no approval or artwork. The frozen 2,132 handoff retains its original full ledger bytes.
+The completion ledger retains `format_version: 1` with `ledger_schema: family_review_refs_v1`. Each approved asset uses a stable `coordinator_review_ref`; `family_reviews` stores the candidate/binding identities and exact full immutable external receipt once. The original 2,132 normalization reduced 53,594,880 bytes to 8,406,611 (84.31%) without changing approval or artwork. New registrations update only their own status/evidence; native preservation has a separate closed record.
 
 ## Registered pack and generation jobs
 
@@ -898,6 +898,83 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Terrain set 3 shard 25 | `0x3026d` | 16 / 16 |
 | Terrain set 3 shard 26 | `0x3027d` | 16 / 16 |
 | Terrain set 3 shard 28 | `0x3029d` | 16 / 16 |
+| Terrain 203cd | `0x203cd` | 1 / 1 |
+| Terrain 203ce | `0x203ce` | 1 / 1 |
+| Terrain 203cf | `0x203cf` | 1 / 1 |
+| Terrain 203d0 | `0x203d0` | 1 / 1 |
+| Terrain 203d1 | `0x203d1` | 1 / 1 |
+| Terrain 203d2 | `0x203d2` | 1 / 1 |
+| Terrain 203d3 | `0x203d3` | 1 / 1 |
+| Terrain 203d4 | `0x203d4` | 1 / 1 |
+| Terrain 203d5 | `0x203d5` | 1 / 1 |
+| Terrain 203d6 | `0x203d6` | 1 / 1 |
+| Terrain 203d7 | `0x203d7` | 1 / 1 |
+| Terrain 203d8 | `0x203d8` | 1 / 1 |
+| Terrain 203d9 | `0x203d9` | 1 / 1 |
+| Terrain 203da | `0x203da` | 1 / 1 |
+| Terrain 203db | `0x203db` | 1 / 1 |
+| Terrain 203dc | `0x203dc` | 1 / 1 |
+| Terrain 203dd | `0x203dd` | 1 / 1 |
+| Terrain 203de | `0x203de` | 1 / 1 |
+| Terrain 203df | `0x203df` | 1 / 1 |
+| Terrain 203e0 | `0x203e0` | 1 / 1 |
+| Terrain 203e1 | `0x203e1` | 1 / 1 |
+| Terrain 203e2 | `0x203e2` | 1 / 1 |
+| Terrain 203e3 | `0x203e3` | 1 / 1 |
+| Terrain 203e4 | `0x203e4` | 1 / 1 |
+| Terrain 203e5 | `0x203e5` | 1 / 1 |
+| Terrain 203e6 | `0x203e6` | 1 / 1 |
+| Terrain 203e7 | `0x203e7` | 1 / 1 |
+| Terrain 203e8 | `0x203e8` | 1 / 1 |
+| Terrain 203e9 | `0x203e9` | 1 / 1 |
+| Terrain 203ea | `0x203ea` | 1 / 1 |
+| Terrain 203eb | `0x203eb` | 1 / 1 |
+| Terrain 203ec | `0x203ec` | 1 / 1 |
+| Terrain set 3 shard 30 | `0x302bd` | 16 / 16 |
+| Terrain set 3 shard 33 | `0x302ed` | 16 / 16 |
+| canonical-403d5 | `0x403d5` | 1 / 1 |
+| canonical-403d6 | `0x403d6` | 1 / 1 |
+| canonical-403d7 | `0x403d7` | 1 / 1 |
+| canonical-403d8 | `0x403d8` | 1 / 1 |
+| canonical-403d9 | `0x403d9` | 1 / 1 |
+| canonical-403da | `0x403da` | 1 / 1 |
+| canonical-403db | `0x403db` | 1 / 1 |
+| canonical-403dc | `0x403dc` | 1 / 1 |
+| canonical-403dd | `0x403dd` | 1 / 1 |
+| canonical-403de | `0x403de` | 1 / 1 |
+| canonical-403df | `0x403df` | 1 / 1 |
+| canonical-403e0 | `0x403e0` | 1 / 1 |
+| canonical-403e1 | `0x403e1` | 1 / 1 |
+| canonical-403e2 | `0x403e2` | 1 / 1 |
+| canonical-403e3 | `0x403e3` | 1 / 1 |
+| canonical-403e4 | `0x403e4` | 1 / 1 |
+| canonical-403e5 | `0x403e5` | 1 / 1 |
+| canonical-403e6 | `0x403e6` | 1 / 1 |
+| canonical-403e7 | `0x403e7` | 1 / 1 |
+| canonical-403e8 | `0x403e8` | 1 / 1 |
+| canonical-403e9 | `0x403e9` | 1 / 1 |
+| canonical-403ea | `0x403ea` | 1 / 1 |
+| canonical-403eb | `0x403eb` | 1 / 1 |
+| canonical-403ec | `0x403ec` | 1 / 1 |
+| canonical-403ed | `0x403ed` | 1 / 1 |
+| canonical-403ee | `0x403ee` | 1 / 1 |
+| canonical-403ef | `0x403ef` | 1 / 1 |
+| canonical-403f0 | `0x403f0` | 1 / 1 |
+| canonical-403f1 | `0x403f1` | 1 / 1 |
+| canonical-403f2 | `0x403f2` | 1 / 1 |
+| canonical-403f3 | `0x403f3` | 1 / 1 |
+| canonical-403f4 | `0x403f4` | 1 / 1 |
+| Micro Missile source-only padded geometry successor v4 | `0x101c1` | 2 / 2 |
+| STORE_PIC | `0x1010e` | 1 / 1 |
+| REGISTER_PIC | `0x10110` | 1 / 1 |
+| MKING_PIC | `0x50000` | 1 / 1 |
+| NCREDIT_PIC | `0x50001` | 1 / 1 |
+| NEWMAIN_PIC | `0x50002` | 1 / 1 |
+| NEWORDER_PIC | `0x50003` | 1 / 1 |
+| ORDEREG_PIC | `0x50004` | 1 / 1 |
+| SDL_PIC | `0x60000` | 1 / 1 |
+| SHIPCOMP_PIC opaque fullraw diagnostic | `0x1010d` | 1 / 1 |
+| HANGER_PIC_fullcanvas_sourceonly | `0x1010a` | 1 / 1 |
 
 | Generation job | Status |
 | --- | --- |
@@ -944,3 +1021,19 @@ Native animation registrations, pickup masks and beam impact/power companion arr
 The terrain backlog contains **4,524 distinct payload hashes** and **4,524 distinct decoded images** across 4,535 catalog IDs. Duplicate IDs can share the same reviewed treatment; they still require explicit source-bound metadata. The canonical HD terrain renderer is validated: intact/destroyed source-bound tiles, shared HD edge/corner treatment and palette-class preservation are implemented. This adds no artwork coverage; each generated tile still requires its own contextual seam review.
 
 The Python inventory matches the Rust decoder's complete picture ID and logical-dimension inventory. The shipped **27 missions** reference **512 of 528 enemy definitions**, which reduce to **260 of 262 distinct art sequences**, and **4,217 terrain frames**, including destroyed variants. Enemy names may alias the same artwork; the category table counts each asset ID once and the sequence count deduplicates identical base/frame ranges.
+
+## Closed 2240 admission and current proof
+
+Batch 2240 adds **108 originals in 17 complete candidate jobs / 77 manifest sequences**: six complete terrain families (`203cd`–`203ec`, `302bd`–`302cc`, `302ed`–`302fc`, `403d5`–`403f4`), complete Micro Missile2 (`101c1`–`101c2`), eight opaque UI/catalog originals, SHIPCOMP `1010d` and the genuine full-canvas HANGER `1010a` successor. Coverage is **2,240 / 5,753 pictures**, **952 complete sequences**, **1,376 terrain pictures** and **3,513 unregistered originals**. All old 2,132 frame bindings remain exact. Selected genuine raws and sibling candidates remain unchanged; explicit canonical metadata promotions preserve every prior candidate/job/review byte.
+
+Current default proof uses immutable library `7b7292703f64edfbf1095c1030d38b87d7576b3b84ee02731608e667301de4f9`, paired Serde `ba61a9b6a7f97c994c6fdb2ab5e50915a5d6b456664f31709fd05306d56e48bd` and exact 18-source epoch `921752d978024461827d239250d49b4fbfcc0e2e3ecd4b80dc3d682050961efb`; both freshness flags are false. Historical c0c3 invocations keep their original source epochs. Optional frame policies remain absent in this cutpoint.
+
+Exact continuity combines sealed unchanged 2,132 proof `cc71ce9b7363ed4116146e968a0c0cddb80843373bc52bd469a001d82078bd5e` (8,528 gameplay and 152 static rasters) with **540 newly checked source/native1–4 files**. All new outputs match the independently inspected complete-family references. This certifies 8,960 gameplay-scale outputs by composed exact proof; it is not a new whole-2,240 render. Canonical107 closure is `ccdd960c0bbd5d0efb75c6b1969a2894412603e0957cc305a30fb596d0e7d2af`; HANGER1 closure is `fab954a3dbfb2085870d48ff249afdd1d3a37d9f9ffb7db5562f7fef307aa2aa`. Ordinary sources gain no reserved labels; authentic `203d3` fire indices retain their 245–249 class footprint rather than a fixed literal 248 value.
+
+Affected-context review `e146685ba78ed12dcd0abdb9b8c9dcf1cab2033070efe3af916a832f6355e7b8`, closure `7aa9ac8fdaf2d123b2976fbd469d597a73953e83cfbbd27e579df57248702837`, binds **1,212 genuine declarations**, 2,424 two-mode rows, 2,116 exact historical aliases and 308 affected rows represented by **131 changed full canvases**. All 48 complete source/context/sequence pages were inspected; 47 genuine ordered state placements retain their exact historical inputs. The conservative first 498-canvas raster is retained; its 367 extra canvases prove 2,936 old/current equalities. No growing-pack rerender was needed. All 4,799 final evidence files were rechecked before admission.
+
+Approval `a937c04748d659d063bdc49bfa21d709111d348d281fb467916620bd5ce16ba6`, registration `9533f04471f4364cb39973fa86bb0cf212eba5ef0dd3f318676c7ebe592d9d04` and bookkeeping `07d6853a344ae60c0772becf15cb3497edb04b87f80eb014413489f521089d32` bind the new cutpoint. Current hd.json is `0442503bb6408fe354e2d345caa59f8f04e6422b190ead2f966cfd95230a0d5e`; provenance is `cdf2288064cc135083754937af7902dd7d5cc348d30c6fdf9bac7db8a376d923`. Immutable `../data/hd/registered-class-review/handoff-2240-20261012/pack/` contains **1,043 private-inode files / 2,565,869,827 bytes**, handoff `447a24c45af2a5e439e852336783f7a226ffbcc25a25de0fa793c96c45430f03`. Root owns publication, runtime validation and exports.
+
+Qualified differences remain explicit: stronger relief/quiet ground marks, prominent rectangular HD/original grain and exposure islands, tiny ordinary `203e0` green-to-olive/brown variation, reconstructed UI type/material and Micro Missile2's darker gray-blue/warmer fin and three lost4x edge samples. The earlier false allscale-green claim is corrected through separate root qualification; its independent hold is preserved. Full words, margins and HANGER pillars/doors/floor remain intact. Original fallback art is not approved by association. No seamless/universal terrain, live Host/timing/UI occurrence or catalog-completion claim follows.
+
+The closed **307 native preservation records** are separate from all **5,753 required HD pictures**. Receipt `09540020f050604d9ebf20dacf94c178e91589f62178ea74e95bef8f72c76dfe` verifies 303 AGX deltas and four original bitmap fonts: 280 deltas are displayed, LANDING `100dd` controls a native fade, and the 22 SPACE deltas were originally unused. Host loads SYSTEM `10001` and FONT2 `10004`; GAME `10002` was originally unused. FONT1 `10003` appears in 24 original SWD fields but current UI styling substitutes its use. These ledger rows now read `native_preserved`, with `remaster_required: false` and `HD_remastered: false`; they add no generated-art coverage or inferred Host route.
