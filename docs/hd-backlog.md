@@ -1,8 +1,8 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The external HD pack supplies **2,100**; **3,653** await a registered replacement. Every original ID, including unused graphics and destroyed variants, remains required. Coverage is 2,100 reviewed originals in 873 complete sequences after 10,500 exact source/scaled comparisons. Packaged runtime retains 1,148 frames/421 sequences and 45 mods; all 6,853 runtime files remain unchanged. Private future input ../data/hd/registered-class-review/handoff-2100-20261012/pack/ has SHA `7b8bd66bd0583f45dc8faa6dc23c531a84ab7b68c6a6ca47fc720122a2dc006c`; root selects a runtime update.
+The checked catalog contains **5,753 standalone picture frames**. The external HD pack supplies **2,132**; **3,621** await a registered replacement. Every original ID, including unused graphics and destroyed variants, remains required. Coverage is 2,132 reviewed originals in 875 complete sequences after 10,660 exact source/scaled comparisons. The shared Linux/Windows runtime now contains the exact approved **2,132-frame / 875-sequence** snapshot, including **1,280 terrain frames**. Root verified all **6,449 original assets and 27 missions**, **2,132 registered / 2,132 validated / zero rejected HD frames**, and **45 mods / one override**. Assembly contains **7,415 data files / 2,357,732,944 bytes**; the Linux and Windows binaries remain unchanged. The earlier **1,148-frame / 421-sequence** Stage2 release and its archives remain preserved history. Exact publication receipts are `.reference/hd-runtime-2132/assembly-receipt.json` (`efd99333d15b54dd0d4ff00a64505ef6d48ff5fc32ed746b3fd0f09a85400102`) and `validation-receipt.json` (`61802ad2b40c19daa23d57c227ecc6b7a77f7115b9c52d7537708b9bb86581c6`).
 
-Batch 2100 registers exact complete 32 Terrain3 middle24/25 after full untouched raw/source/native 1–4 material inspection, historical independent own16/old96 proof, separate 575-case current 2068 integration and whole 2100 continuity. Stronger cap relief, quiet marks/native 1 softening and mixed-original density qualify approval. The immutable 2100 cutoff has 1,282 independent-qualified unique unregistered pictures: 64 coordinator whole-family held and 1,218 pending full review. Earlier cutoffs remain immutable. Cellular material, missing source cues, native 1 yellow loss, olive/green, atlas rules and other whole-family holds remain unadmitted; component qualifications confer no partial admission. C3/eight finish calls, Terrain2 hardware/final13 and Set4 ember methods stay gated; original 12 policy/locator/reference-byte gaps remain pending.
+Batch 2132 registers exact complete 32 Terrain3 original26/28 after full untouched raw/source/native 1–4 material inspection, historical independent own16/old96 proof, separate1010-case current2100 integration and whole 2132 continuity. Stronger cap relief, quiet marks/native 1 softening and mixed-original density qualify approval. The immutable 2132 cutoff has 1,298 independent-qualified unique unregistered pictures: 64 coordinator whole-family held and 1,234 pending full review. Earlier cutoffs remain immutable. Cellular material, missing source cues, native 1 yellow loss, olive/green, atlas rules and other whole-family holds remain unadmitted; component qualifications confer no partial admission. User resumed new disjoint originals and separate source-first correction siblings; every rejected history and concrete hold stays preserved. Original12 policy/locator/reference-byte gaps remain pending.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,8 +12,10 @@ Batch 2100 registers exact complete 32 Terrain3 middle24/25 after full untouched
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 1,248 | 3,287 | 4 |
+| Terrain | 4,535 | 1,280 | 3,255 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 77 | 73 | mixed static / animated |
+
+The completion ledger keeps `format_version: 1` and adds `ledger_schema: family_review_refs_v1`. Each asset carries a stable `coordinator_review_ref`; `family_reviews` stores the family status, candidate/binding identities and exact full external receipt path/SHA once. All 6,060 asset source, owner, candidate, renderer and status fields remain exact; 2,051 asset reviews resolve to 319 unchanged external family receipts. Normalization reduces the ledger from 53,594,880 to 8,406,611 bytes (84.31%) and changes no approval or artwork. The frozen 2,132 handoff retains its original full ledger bytes.
 
 ## Registered pack and generation jobs
 
@@ -894,6 +896,8 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Terrain set 3 shard 23 | `0x3024d` | 16 / 16 |
 | Terrain set 3 shard 24 | `0x3025d` | 16 / 16 |
 | Terrain set 3 shard 25 | `0x3026d` | 16 / 16 |
+| Terrain set 3 shard 26 | `0x3027d` | 16 / 16 |
+| Terrain set 3 shard 28 | `0x3029d` | 16 / 16 |
 
 | Generation job | Status |
 | --- | --- |
