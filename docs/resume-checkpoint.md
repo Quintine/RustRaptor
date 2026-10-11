@@ -47,10 +47,19 @@ and binds the documentation-only aggregate successor hash. All 34 Host
 artwork/shop/menu pictures are reviewed; the six changed phase pictures were
 inspected again and the other 28 remain byte-identical. Ordinary release suites
 pass **315 headless / 380 desktop** tests, with 26/36 deliberate original-data
-and capture tests ignored. Final Linux/Windows archive relocation checks are
-in progress against the corrected runtimes; previous archive receipts remain
-historical. [Stage 2 design and validation](iron-coast-stage2-design.md)
-records content, controls, prices and acceptance scope.
+and capture tests ignored. Corrected Linux/Windows archives pass full integrity,
+Unicode/space relocation, first/final mission 1080p rendering, separate music
+and effects recordings and the original intro's forced 4:3 framing. All 45 mod
+hashes match and combined catalog validation passes; the Windows CLI review's
+CSV-quoting correction is retained as a separate addendum. The
+[corrected native Windows run](https://github.com/Quintine/RustRaptor/actions/runs/38129755440)
+also checks the eight-sortie saved route, displayed phases and both shadow
+layers, SD/HD shop captures and packaged MSVC audio/gameplay. Final documentation
+exports receive strict whole-archive successor checks requiring identical
+runtime, libraries, launchers, data and mods. Previous runtime receipts remain
+historical. [Stage 2 design and validation](iron-coast-stage2-design.md) and
+[standalone packages](standalone-package.md) record content, controls, prices
+and acceptance scope.
 
 Original HD work continues under `hd_coordinator`; later approved candidates
 remain separate from the immutable packaged 1,148-frame snapshot. The paragraphs

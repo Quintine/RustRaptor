@@ -104,8 +104,11 @@ sorties and a saved finale replay at all four difficulties from the same
 registered-pilot baseline, using paid Energy repairs. Authors check full
 inventories, purchased weapons and delayed objective completion. The aggregate
 README subsequently corrects the mission-selection instructions; its separate
-successor receipt verifies that every content, script, image and sound file
-remains identical. The final saved route binds the successor package hash.
+successor receipt compares all 4,480 package files: only that README changes,
+and the other 4,479 files and the other 22 package hashes remain identical.
+The final saved route binds the successor package hash. A pilot saved with
+the preceding README hash still receives the normal changed-mod confirmation;
+this review does not bypass the saved content-hash check.
 Control policies vary, so these are achievable fixture outcomes rather than
 predictions of player earnings or difficulty.
 
@@ -154,3 +157,11 @@ Set `RAPTOR_TEST_DATA` for a deliberate catalog override, and
 Windows archive checks use extracted copies, 1080p SDL rendering and separate
 music/effect PCM captures. These entry smoke checks are distinct from full
 headless combat acceptance; automated SDL uses dummy drivers.
+
+The [corrected native Windows run](https://github.com/Quintine/RustRaptor/actions/runs/38129755440)
+passes on source commit `0e8a27c`, including the eight-mission saved route,
+phase sprites/shadows, actual SD/HD Host previews, all 45 packaged mods and
+isolated FM music/sound-effect captures. The same corrected included GNU
+executable passes relocated Wine checks. Final archive documentation refreshes
+are checked separately against the complete runtime proofs; see
+[standalone packages](standalone-package.md).

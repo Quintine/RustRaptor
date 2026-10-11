@@ -75,11 +75,36 @@ normal firing/input and paid repairs. It validates all 45 mods, the MSVC
 package and actual FM music plus music-muted sound effects. That run precedes
 the displayed-phase fix and PNG-validation optimization.
 
-The current workflow additionally checks phase sprites and ground/air shadows
-in SD/HD, then asserts distinct consecutive phases in actual Host previews
-with shop/menu captures. The corrected included executable and final archive
-receive fresh relocation and SDL/audio checks; the receipt identifies the
-exact ZIP tested. These checks use isolated profiles and preserve user saves.
+The [corrected Stage 2 native run](https://github.com/Quintine/RustRaptor/actions/runs/38129755440)
+checks source commit `0e8a27c`: portable simulation/mod/save tests, all eight
+sorties and a saved finale replay, the exact included GNU executable/launcher,
+and a fresh MSVC export. Phase sprites and both ground/air shadow layers pass
+in SD/HD; actual Host previews assert distinct consecutive phases and produce
+34 boss/shop/menu captures. Exported-folder checks validate all 45 mods, all
+original catalog entries and 1,148 supplied HD frames, SDL gameplay, FM music
+and isolated sound effects.
+
+The corrected included GNU archive also passes complete CRC/data/runtime/mod
+hash checks, Unicode/space relocation through `run.cmd`, four 1080p first/final
+mission captures and the original intro's exact 4:3 borders under Wine 11.19.
+Separate three-second music-only and effects-only recordings contain stereo
+audio without clipping. The full runtime receipt binds ZIP SHA-256
+`4c48ca7f6fd532db5247820182c1fb00fcf94def605f69b727f10ed3fcd3b008`.
+A narrow additive check confirms `Validated 45 mods; 1 override(s)` after
+correcting unquoted CSV forwarding in the review harness; the original receipt
+remains preserved. Gameplay profiles already enabled all 45 mods.
+
+Quote comma-separated ID lists when invoking the validation CLI through CMD:
+
+```bat
+run.cmd --validate-mods "iron_coast_stage2_campaign,iron_coast_campaign"
+```
+
+Final ZIP successors allow documented metadata/exporter changes and require
+identical engine, DLL, launcher, data, source and mod payloads outside that
+explicit allowance. The inherited runtime proof and fresh static integrity
+refresh remain separately identified. These checks use isolated profiles and
+preserve user saves; see [standalone package validation](standalone-package.md).
 
 Earlier Windows checkpoints passed 279 portable tests under Wine 11.19,
 including save replacement and preservation of a locked existing save.

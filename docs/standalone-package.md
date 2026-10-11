@@ -51,10 +51,33 @@ and 6,848 data files**. There are **45 bundled mod packages**, including the
 All installed mods pass catalog validation; Stage 2 adds no overrides. The
 one existing override belongs to the Stage 1 campaign progression package.
 
-The earlier 800-frame/22-mod archives passed relocated-folder launch, 1080p
-SDL rendering, music and isolated sound-effect captures. Their original-intro
-capture confirms a 1440×1080 video area with black 240-pixel side borders.
-Removing the copied catalog reports its own missing path rather than using a
-development checkout. The final Stage 2 archive checks are recorded after
-export so their evidence refers to the exact distributed bytes. Native
-`unzip` preserves the executable permissions stored in the Linux archive.
+The corrected Stage 2 Linux and Windows archives pass CRC, complete data and
+mod hashes, and relocated launch from `/tmp` in folders containing spaces and
+Unicode. Both launchers capture the first mission and finale at 1920×1080 in
+HD, with separate three-second music-only and effects-only stereo recordings.
+Every recording contains audio without clipping. The original intro occupies
+1440×1080 with black 240-pixel side borders even when gameplay aspect correction
+is disabled. The pictures have been visually inspected. These entry captures
+complement the full simulation campaign/save checks; they do not claim a full
+interactive playthrough. Native `unzip` preserves Linux executable permissions.
+
+The full runtime proofs bind Linux ZIP SHA-256
+`07c81928ccfdd25bf05316cce74e17d42a0c4f00dfa6e67da48b6e97192fe861`
+and Windows ZIP SHA-256
+`4c48ca7f6fd532db5247820182c1fb00fcf94def605f69b727f10ed3fcd3b008`.
+Final exports refresh documentation and packaging metadata. A strict successor
+check compares complete archive membership and payloads and requires identical
+game executables, platform libraries, launchers, data, all mod packages and
+content hashes. It separately identifies permitted documentation/manifest and
+exporter-tool changes; the runtime proof is retained rather than relabeled as
+a fresh SDL run on different ZIP bytes. Local receipts are stored under
+`.reference/iron-coast-stage2/` and the Linux review directory in the parent
+workspace.
+
+Linux all-mod startup measured 7.3–13.5 seconds in the relocation checks.
+Windows/Wine timings were measured under shared compilation load and are not
+directly comparable. Automated captures use SDL dummy drivers and the software
+renderer; physical display/audio/controller and hardware frame rates remain
+manual checks. Removing the copied catalog reports its own missing path rather
+than using a development checkout. Earlier 800-frame/22-mod receipts remain
+historical and are not used to approve the corrected runtime.
