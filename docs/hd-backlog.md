@@ -1,8 +1,8 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active outer HD pack supplies **1,860**; **3,893** still await a registered HD replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. Current coverage is 1,860 reviewed originals in 798 complete sequences after 9,300 exact source/scaled output comparisons. Linux/Windows Stage2 packages retain 1,148 frames / 421 sequences and 45 accepted mods, with every released binary/library/manifest/data byte unchanged. Private future input ../data/hd/registered-class-review/handoff-1860-20261012/pack/ has handoff SHA `fc3cf1667c33ff9b2990ce3a88c88a7a477893e0b9a7e42473a95508fbc5aaf0`; parent alone selects a runtime update.
+The checked catalog contains **5,753 standalone picture frames**. The active external HD pack supplies **1,908**; **3,845** still await a registered replacement. All original IDs, including unnamed/unused graphics and destroyed variants, remain required. Authored mod art is separate. Current coverage is 1,908 reviewed originals in 846 complete sequences after 9,540 exact source/scaled output comparisons. Linux/Windows Stage2 packages retain 1,148 frames / 421 sequences and 45 accepted mods, with every released binary/library/manifest/data byte unchanged. Private future input ../data/hd/registered-class-review/handoff-1908-20261012/pack/ has handoff SHA `640faef409660fa93f94dfc8648f83c5ed0de39de51a4138f5545e2757bfcc57`; parent alone selects a runtime update.
 
-Batch 1860 admits only original Terrain3 family 19, complete 3020d–3021c, after coordinator material inspection of all 96 selected raws and source/current scales across families 14–19 plus exact whole-pack continuity. The other five complete families remain held for ten coarse material components; their 80 frames are not partially admitted. Historical reports and all art remain unchanged. Both source-age guards are false and all 18 recursive sources stable. The frozen pending cutoff records 914 historical independent-approved unregistered pictures: 80 whole-family coordinator material-held and 834 still pending coordinator review. Actual original12 historical prompt/request evidence has been recovered additively, pending independent verification and parent policy; no candidate locator edit or admission follows. Mixed HD/original grain/value rectangles, stronger relief and quieter low-scale detail remain explicit limitations. Whole-family source-rib, border, panel-position, lavender/ember legibility and square-finish holds remain separate.
+Batch1908 admits three exact complete Terrain1 B0/C0/D0 families after full48 source/raw/material inspection, additive2622-case/277-delta cross-family joins/static states and whole-pack continuity. Five middle Terrain3 families remain whole-held for ten finish components across80 frames. Source-only char301c3 and green301ec methods are bounded and preserve every historical artifact; remaining eight corrections are gated. Both current source-age guards are false and all18 recursive sources stable. The frozen1908 pending cutoff has1026 historical independent-approved unregistered pictures:80 whole-family coordinator material-held and946 pending coordinator review. Original12 actual request provenance is independently verified additively, while its locator/reference-byte gaps remain without admission. Mixed HD/original density/value rectangles and native1 softness remain explicit material limits. Whole-family atlas-divider, source-rib, panel-position, low-scale lavender/ember and square-finish holds stay separate.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
@@ -12,7 +12,7 @@ Batch 1860 admits only original Terrain3 family 19, complete 3020d–3021c, afte
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 219 | 62 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 1,008 | 3,527 | 4 |
+| Terrain | 4,535 | 1,056 | 3,479 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 77 | 73 | mixed static / animated |
 
 ## Registered pack and generation jobs
@@ -819,6 +819,54 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | Terrain 1047e standalone correction | `0x1047e` | 1 / 1 |
 | Terrain 1047f standalone correction | `0x1047f` | 1 / 1 |
 | Terrain set 3 shard 19 | `0x3020d` | 16 / 16 |
+| Terrain 104b0 standalone correction | `0x104b0` | 1 / 1 |
+| Terrain 104b1 standalone correction | `0x104b1` | 1 / 1 |
+| Terrain 104b2 standalone correction | `0x104b2` | 1 / 1 |
+| Terrain 104b3 standalone correction | `0x104b3` | 1 / 1 |
+| Terrain 104b4 standalone correction | `0x104b4` | 1 / 1 |
+| Terrain 104b5 standalone correction | `0x104b5` | 1 / 1 |
+| Terrain 104b6 standalone correction | `0x104b6` | 1 / 1 |
+| Terrain 104b7 standalone correction | `0x104b7` | 1 / 1 |
+| Terrain 104b8 standalone correction | `0x104b8` | 1 / 1 |
+| Terrain 104b9 standalone correction | `0x104b9` | 1 / 1 |
+| Terrain 104ba standalone correction | `0x104ba` | 1 / 1 |
+| Terrain 104bb standalone correction | `0x104bb` | 1 / 1 |
+| Terrain 104bc standalone correction | `0x104bc` | 1 / 1 |
+| Terrain 104bd standalone correction | `0x104bd` | 1 / 1 |
+| Terrain 104be standalone correction | `0x104be` | 1 / 1 |
+| Terrain 104bf standalone correction | `0x104bf` | 1 / 1 |
+| Terrain 104c0 standalone correction | `0x104c0` | 1 / 1 |
+| Terrain 104c1 standalone correction | `0x104c1` | 1 / 1 |
+| Terrain 104c2 standalone correction | `0x104c2` | 1 / 1 |
+| Terrain 104c3 standalone correction | `0x104c3` | 1 / 1 |
+| Terrain 104c4 standalone correction | `0x104c4` | 1 / 1 |
+| Terrain 104c5 standalone correction | `0x104c5` | 1 / 1 |
+| Terrain 104c6 standalone correction | `0x104c6` | 1 / 1 |
+| Terrain 104c7 standalone correction | `0x104c7` | 1 / 1 |
+| Terrain 104c8 standalone correction | `0x104c8` | 1 / 1 |
+| Terrain 104c9 standalone correction | `0x104c9` | 1 / 1 |
+| Terrain 104ca standalone correction | `0x104ca` | 1 / 1 |
+| Terrain 104cb standalone correction | `0x104cb` | 1 / 1 |
+| Terrain 104cc standalone correction | `0x104cc` | 1 / 1 |
+| Terrain 104cd standalone correction | `0x104cd` | 1 / 1 |
+| Terrain 104ce standalone correction | `0x104ce` | 1 / 1 |
+| Terrain 104cf standalone correction | `0x104cf` | 1 / 1 |
+| Terrain 104d0 standalone correction | `0x104d0` | 1 / 1 |
+| Terrain 104d1 standalone correction | `0x104d1` | 1 / 1 |
+| Terrain 104d2 standalone correction | `0x104d2` | 1 / 1 |
+| Terrain 104d3 standalone correction | `0x104d3` | 1 / 1 |
+| Terrain 104d4 standalone correction | `0x104d4` | 1 / 1 |
+| Terrain 104d5 standalone correction | `0x104d5` | 1 / 1 |
+| Terrain 104d6 standalone correction | `0x104d6` | 1 / 1 |
+| Terrain 104d7 standalone correction | `0x104d7` | 1 / 1 |
+| Terrain 104d8 standalone correction | `0x104d8` | 1 / 1 |
+| Terrain 104d9 standalone correction | `0x104d9` | 1 / 1 |
+| Terrain 104da standalone correction | `0x104da` | 1 / 1 |
+| Terrain 104db standalone correction | `0x104db` | 1 / 1 |
+| Terrain 104dc standalone correction | `0x104dc` | 1 / 1 |
+| Terrain 104dd standalone correction | `0x104dd` | 1 / 1 |
+| Terrain 104de standalone correction | `0x104de` | 1 / 1 |
+| Terrain 104df standalone correction | `0x104df` | 1 / 1 |
 
 | Generation job | Status |
 | --- | --- |
