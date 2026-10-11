@@ -436,24 +436,27 @@ impl ActiveMods {
                     .get(owner)
                     .context("missing PNG root")?;
                 let path = contained(root, Path::new(png))?;
-                let palette = catalog
-                    .map(|cat| cat.palette())
-                    .transpose()?
-                    .unwrap_or([[0; 3]; 256]);
-                let sprite = crate::assets::Sprite::png(&path, &palette)?;
+                // Retain catalog palette validation even though no indexed output
+                // is needed here. Rendering still uses Sprite::png unchanged.
+                if let Some(catalog) = catalog {
+                    catalog.palette()?;
+                }
+                let image = crate::assets::checked_png(&path)?;
+                let width = image.width() as usize;
+                let height = image.height() as usize;
                 ensure!(
-                    sprite.width % art.frames as usize == 0,
+                    width % art.frames as usize == 0,
                     "{owner}/{png}: PNG strip width must divide evenly into frames"
                 );
                 ensure!(
-                    sprite.width / art.frames as usize * art.logical_height as usize
-                        == sprite.height * art.logical_width as usize,
+                    width / art.frames as usize * art.logical_height as usize
+                        == height * art.logical_width as usize,
                     "{owner}/{png}: artwork canvas aspect differs from logical canvas"
                 );
                 if art.hd_png.as_ref() == Some(png) {
                     ensure!(
-                        sprite.width / art.frames as usize >= 2 * art.logical_width as usize
-                            && sprite.height >= 2 * art.logical_height as usize,
+                        width / art.frames as usize >= 2 * art.logical_width as usize
+                            && height >= 2 * art.logical_height as usize,
                         "{owner}/{png}: HD artwork needs at least twice the logical resolution"
                     );
                 }

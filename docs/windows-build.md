@@ -62,18 +62,24 @@ mods, captures SDL gameplay and publishes the zip as a workflow artifact.
 The included GNU executable uses the reviewed **1,148-frame HD snapshot**;
 the shared manifest binds **6,848 data files** and the package contains
 **45 installed mods**. Its SHA-256 is
-`a74cc4ea20ddc17a39fe4cbf2da2e7391a561d1975b114ec56dd35fb5ff38f2d`.
+`63d040f5d5c76bad15a74ab1ef54ca992a0fd9cd8b7a46f8506d8cce4fbec275`.
 The [1,148-frame native Windows run](https://github.com/Quintine/RustRaptor/actions/runs/38126069413)
 passed portable tests, exact committed GNU runtime checks, the MSVC desktop
 build and exported-folder catalog, HD, mod and SDL gameplay validation. That
 run preceded the Stage 2 content commit; it verifies the engine and the
 previous 22 mod packages.
 
-The expanded workflow additionally completes all eight Black Tide missions
-and a saved finale replay with normal firing/input and paid repairs. It then
-checks all 45 mods and captures Stage 2 gameplay, FM music and music-muted
-sound effects from the MSVC package. Final archive relocation evidence is
-recorded after export and identifies the exact ZIP tested.
+The [first Stage 2 native run](https://github.com/Quintine/RustRaptor/actions/runs/38127321917)
+also completes all eight Black Tide missions and a saved finale replay with
+normal firing/input and paid repairs. It validates all 45 mods, the MSVC
+package and actual FM music plus music-muted sound effects. That run precedes
+the displayed-phase fix and PNG-validation optimization.
+
+The current workflow additionally checks phase sprites and ground/air shadows
+in SD/HD, then asserts distinct consecutive phases in actual Host previews
+with shop/menu captures. The corrected included executable and final archive
+receive fresh relocation and SDL/audio checks; the receipt identifies the
+exact ZIP tested. These checks use isolated profiles and preserve user saves.
 
 Earlier Windows checkpoints passed 279 portable tests under Wine 11.19,
 including save replacement and preservation of a locked existing save.

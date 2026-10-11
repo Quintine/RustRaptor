@@ -3221,7 +3221,7 @@ impl Host {
                         if def.legacy.is_some() {
                             e.art_frame
                         } else {
-                            e.frame
+                            e.pinned_art_frame.unwrap_or(e.frame)
                         },
                         interp(e.x, e.px),
                         interp(e.y, e.py),
@@ -3258,7 +3258,7 @@ impl Host {
                         if def.legacy.is_some() {
                             e.art_frame
                         } else {
-                            e.frame
+                            e.pinned_art_frame.unwrap_or(e.frame)
                         },
                         interp(e.x, e.px),
                         interp(e.y, e.py),
@@ -5529,6 +5529,114 @@ mod tests {
         }
         std::fs::write(host.catalog.root.join("INDEX"), index).unwrap();
         host.catalog = Catalog::open(host.catalog.root.clone()).unwrap();
+    }
+    #[test]
+    fn scripted_enemy_phase_frames_reach_sd_hd_sprites_and_both_shadow_layers() {
+        let (_directory, mut host) = ui_fixture();
+        install_player_fixture(&mut host);
+        let root = host.catalog.root.clone();
+        let mut palette = [0_u8; 768];
+        palette[5 * 3] = 63;
+        palette[8 * 3 + 1] = 63;
+        palette[70 * 3 + 2] = 63;
+        std::fs::write(root.join("PALETTE_DAT"), palette).unwrap();
+        let mut index = std::fs::read_to_string(root.join("INDEX")).unwrap();
+        for id in 0x10005..=0x1000f {
+            let name = format!("HUD_{id:x}");
+            let bytes = [1_i32, 0, 0, 1, 1]
+                .into_iter()
+                .flat_map(i32::to_le_bytes)
+                .chain([0_u8])
+                .collect::<Vec<_>>();
+            std::fs::write(root.join(&name), &bytes).unwrap();
+            index.push_str(&format!("{id:x} {} {name}\n", bytes.len()));
+        }
+        std::fs::write(root.join("INDEX"), index).unwrap();
+        host.catalog = Catalog::open(&root).unwrap();
+        host.palette = host.catalog.palette().unwrap();
+        host.shadow_table = [9; 256];
+        host.air_shadow_table = [9; 256];
+        let artwork = root.join("phases.png");
+        let mut strip = image::RgbaImage::new(8, 4);
+        for y in 0..4 {
+            for x in 0..2 {
+                strip.put_pixel(x, y, image::Rgba([255, 0, 0, 255]));
+            }
+        }
+        for y in 0..2 {
+            for x in 4..8 {
+                strip.put_pixel(x, y, image::Rgba([0, 255, 0, 255]));
+            }
+        }
+        strip.save(&artwork).unwrap();
+        image::imageops::resize(&strip, 32, 16, image::imageops::FilterType::Nearest)
+            .save(root.join("phases-hd.png"))
+            .unwrap();
+        let pack = serde_json::from_value(serde_json::json!({"enemies":[{
+            "id":"fixture:phase","name":"Phase fixture","health":10,
+            "art":{"png":"phases.png","hd_png":"phases-hd.png",
+                "logical_width":4,"logical_height":4,"frames":2,"nearest":true}
+        }]}))
+        .unwrap();
+        host.active.registry.apply(pack, "fixture").unwrap();
+        host.active
+            .registry
+            .asset_roots
+            .insert("fixture".into(), root);
+        for ground in [true, false] {
+            host.active
+                .registry
+                .enemies
+                .get_mut(&"fixture:phase".into())
+                .unwrap()
+                .ground = ground;
+            let mut world =
+                World::new(&host.pilot.mission, &host.pilot, &host.active.registry).unwrap();
+            world.draw_player = false;
+            let entity = world
+                .spawn(&"fixture:phase".into(), 100, 80, &host.active.registry)
+                .unwrap();
+            host.world = Some(world);
+            for hd in [false, true] {
+                host.config.hd_mode = hd;
+                for scale in [1, 4] {
+                    let mut pictures = Vec::new();
+                    for frame in [Some(0), Some(1), None] {
+                        host.world
+                            .as_mut()
+                            .unwrap()
+                            .apply_commands(
+                                &[crate::modding::Command::Animation { entity, frame }],
+                                &host.active.registry,
+                            )
+                            .unwrap();
+                        let digest = host.world.as_ref().unwrap().digest();
+                        let mut canvas = Canvas::new(scale);
+                        canvas.clear(70);
+                        host.scene(&mut canvas).unwrap();
+                        let expected = if frame == Some(1) { 8 } else { 5 };
+                        assert_eq!(
+                            canvas.image.pixels[80 * scale * canvas.image.width + 100 * scale],
+                            expected
+                        );
+                        assert_eq!(host.world.as_ref().unwrap().digest(), digest);
+                        pictures.push(canvas.image);
+                    }
+                    assert_eq!(pictures[0], pictures[2], "reset restores normal animation");
+                    assert_ne!(pictures[0], pictures[1]);
+                    let shadow_changes = pictures[0]
+                        .pixels
+                        .iter()
+                        .zip(&pictures[1].pixels)
+                        .filter(|(a, b)| **a != **b && (**a == 9 || **b == 9))
+                        .count();
+                    assert!(
+                        shadow_changes > 0,
+                        "phase mask must reach ground={ground}, HD={hd}, scale={scale} shadow"
+                    );
+                }
+            }
+        }
     }
     #[test]
     fn original_player_mapping_retains_every_bank_and_only_dark_missions_use_flash_frames() {
@@ -7978,6 +8086,8 @@ mod tests {
                 .spawn(&boss, (320 - width as i32) / 2, 12, &host.active.registry)
                 .unwrap();
             host.screen = Screen::Game;
+            let mut previous_sd = None;
+            let mut previous_hd = None;
             for frame in 0..frames {
                 host.world
                     .as_mut()
@@ -7995,6 +8105,14 @@ mod tests {
                 host.config.hd_mode = true;
                 let hd = capture(&mut host, &format!("mission-{n:02}-boss-{frame}-hd"));
                 assert_ne!(sd, hd, "Stage2 supplied SD and HD art should differ");
+                if let Some(previous) = previous_sd {
+                    assert_ne!(sd, previous, "SD boss {n} must show phase frame {frame}");
+                }
+                if let Some(previous) = previous_hd {
+                    assert_ne!(hd, previous, "HD boss {n} must show phase frame {frame}");
+                }
+                previous_sd = Some(sd);
+                previous_hd = Some(hd);
             }
             host.world = None;
         }

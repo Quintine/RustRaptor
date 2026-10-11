@@ -99,8 +99,13 @@ and pointer input complete all eight sorties, saving and loading the pilot,
 script state and RNG between each, then replay the finale. Three normal Energy
 purchases are paid from carried credits. The route finishes the first eight
 with 334,910 credits, and the saved replay with 396,520; equipment stays owned
-and rewards are not duplicated. Authors also check every mission at all four
-difficulties, starter gear, full inventories and delayed objective completion.
+and rewards are not duplicated. Independent review also completes the eight
+sorties and a saved finale replay at all four difficulties from the same
+registered-pilot baseline, using paid Energy repairs. Authors check full
+inventories, purchased weapons and delayed objective completion. The aggregate
+README subsequently corrects the mission-selection instructions; its separate
+successor receipt verifies that every content, script, image and sound file
+remains identical. The final saved route binds the successor package hash.
 Control policies vary, so these are achievable fixture outcomes rather than
 predictions of player earnings or difficulty.
 
@@ -112,10 +117,24 @@ review inspected 232 decoded SD/HD outputs at scales 1–4 and checked 75 native
 sound effects with nonzero output and exact FX mute. The music package records
 separate complete-score FM and loop-boundary validation.
 
-The ordinary suites pass 310 headless and 374 desktop tests. Final focused
+Script-pinned boss phase artwork reaches both sprites and shadows; resetting a
+pin restores normal animation. A synthetic Host regression covers ground and
+air enemies in SD/HD at scales 1 and 4, and the real artwork previews assert
+that consecutive boss phases produce distinct displayed pixels.
+
+PNG activation still fully decodes artwork and retains the same size, canvas,
+HD-resolution and catalog-palette checks. It now avoids converting validation
+images to indexed pixels only to discard them. Paired checks with all 45 mods
+reduce active content construction from 26.9 to 7.0 seconds; all 6,682 unique
+referenced PNGs produce byte-identical indexed output. Actual package startup
+is measured separately during relocation tests.
+
+The ordinary suites pass 315 headless and 380 desktop tests. Final focused
 checks pass four portable campaign checks plus the real saved route, nine
 weapon tests, nine shared-enemy tests, six animation/effect API tests and the
-ignored Host preview check. All 34 Host captures were visually inspected:
+ignored Host preview check. All 34 Host captures were visually inspected; after the phase fix, the six
+changed SD/HD phase pictures were inspected again and the other 28 remained
+byte-identical:
 SD/HD boss artwork on each mission's terrain, both shop modes, weapon details,
 Nightbreak/finale mission cards, dependencies and the disable confirmation.
 Bosses in these pictures are deliberate art previews; actual combat phase

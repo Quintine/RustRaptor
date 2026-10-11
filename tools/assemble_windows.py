@@ -9,7 +9,7 @@ import struct
 import subprocess
 import zipfile
 
-from assemble_runtime import checked_file, digest
+from assemble_runtime import checked_file, digest, iter_archive_files
 
 
 SYSTEM_DLLS = {
@@ -173,14 +173,9 @@ def main():
         archive.parent.mkdir(parents=True, exist_ok=True)
         skipped = {"target", "dist", ".reference", ".local", "derived", "__pycache__", ".git", "lib"}
         with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as output:
-            for path in sorted(package.rglob("*")):
+            for path in iter_archive_files(package, archive, skipped,
+                                           excluded_files=(Path("bin/raptor-rust"),)):
                 relative = path.relative_to(package)
-                if not path.is_file() or skipped.intersection(relative.parts) or path.resolve() == archive:
-                    continue
-                if relative == Path("bin/raptor-rust") or any(part.startswith(".runtime-data-") for part in relative.parts):
-                    continue
-                if len(relative.parts) >= 4 and relative.parts[0] == "mods" and relative.parts[2:4] == ("art", "source"):
-                    continue
                 output.write(path, str(Path("RustRaptor") / relative))
     print(json.dumps(report, indent=2))
 

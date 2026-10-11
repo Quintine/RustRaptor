@@ -28,6 +28,28 @@ def checked_file(root, relative):
     return resolved
 
 
+def iter_archive_files(package, archive, skipped, excluded_files=()):
+    """Yield the same sorted archive files without walking excluded subtrees."""
+    def excluded(relative):
+        return (skipped.intersection(relative.parts)
+                or any(part.startswith(".runtime-data-") for part in relative.parts)
+                or (len(relative.parts) >= 4 and relative.parts[0] == "mods"
+                    and relative.parts[2:4] == ("art", "source")))
+
+    files = []
+    for directory, directories, names in os.walk(package, followlinks=False):
+        parent = Path(directory)
+        directories[:] = [name for name in directories
+                          if not excluded((parent / name).relative_to(package))]
+        for name in names:
+            path = parent / name
+            relative = path.relative_to(package)
+            if (not excluded(relative) and relative not in excluded_files and path.is_file()
+                    and path.resolve() != archive):
+                files.append(path)
+    yield from sorted(files)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source-data", type=Path)
@@ -143,14 +165,9 @@ def main():
         archive.parent.mkdir(parents=True, exist_ok=True)
         skipped = {"target", "dist", ".reference", ".local", "derived", "__pycache__", ".git"}
         with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as output:
-            for path in sorted(package.rglob("*")):
+            for path in iter_archive_files(package, archive, skipped):
                 relative = path.relative_to(package)
-                if path.is_file() and not skipped.intersection(relative.parts) and path.resolve() != archive:
-                    if any(part.startswith(".runtime-data-") for part in relative.parts):
-                        continue
-                    if len(relative.parts) >= 4 and relative.parts[0] == "mods" and relative.parts[2:4] == ("art", "source"):
-                        continue
-                    output.write(path, str(Path("RustRaptor") / relative))
+                output.write(path, str(Path("RustRaptor") / relative))
     print(json.dumps({key: value for key, value in report.items() if key not in {"files", "system_dependencies"}}, indent=2))
 
 

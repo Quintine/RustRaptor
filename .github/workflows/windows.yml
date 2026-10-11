@@ -73,6 +73,18 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "Included Windows SDL gameplay failed" }
       - name: Build and package Windows desktop
         run: python tools/assemble_windows.py --target x86_64-pc-windows-msvc --sdl2-dir "$env:RUNNER_TEMP\sdl2\SDL2-2.32.10" --zip dist/RustRaptor-windows-x86_64.zip
+      - name: Check displayed boss phases and SD HD shop artwork
+        shell: pwsh
+        run: |
+          $separator = [char]31
+          $sdkLibrary = "$env:RUNNER_TEMP\sdl2\SDL2-2.32.10\lib\x64"
+          $env:CARGO_ENCODED_RUSTFLAGS = "-L${separator}native=$sdkLibrary${separator}-C${separator}target-feature=+crt-static"
+          $env:PATH = "$env:GITHUB_WORKSPACE\bin;$env:PATH"
+          cargo test --release --locked --target x86_64-pc-windows-msvc --target-dir target/windows-runtime --lib scripted_enemy_phase_frames_reach_sd_hd_sprites_and_both_shadow_layers -- --nocapture
+          if ($LASTEXITCODE -ne 0) { throw "Windows phase sprite and shadow regression failed" }
+          cargo test --release --locked --target x86_64-pc-windows-msvc --target-dir target/windows-runtime --lib iron_coast_stage2_art_and_shop_preview_captures_preserve_simulation -- --ignored --nocapture
+          if ($LASTEXITCODE -ne 0) { throw "Windows Stage2 SD HD phase and shop preview failed" }
+          Remove-Item Env:CARGO_ENCODED_RUSTFLAGS
       - name: Validate packaged data, HD artwork, mods and SDL gameplay
         shell: pwsh
         run: |
@@ -126,4 +138,5 @@ jobs:
             dist/windows-stage2.png
             dist/windows-stage2-audio.wav
             dist/windows-stage2-sfx.wav
+            .reference/iron-coast-stage2/visual/*.png
           if-no-files-found: error

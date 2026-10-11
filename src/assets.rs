@@ -220,23 +220,7 @@ impl Sprite {
         Ok(out)
     }
     pub fn png(path: &Path, palette: &[[u8; 3]; 256]) -> Result<Self> {
-        let mut reader = image::ImageReader::open(path)?.with_guessed_format()?;
-        ensure!(
-            reader.format() == Some(image::ImageFormat::Png),
-            "mod artwork must be PNG"
-        );
-        let mut limits = image::Limits::default();
-        limits.max_image_width = Some(4096);
-        limits.max_image_height = Some(4096);
-        limits.max_alloc = Some(64 * 1024 * 1024);
-        reader.limits(limits);
-        let image = reader.decode()?.into_rgba8();
-        ensure!(
-            image.width() <= 4096
-                && image.height() <= 4096
-                && image.width() as u64 * image.height() as u64 <= 4_194_304,
-            "PNG exceeds 4096px"
-        );
+        let image = checked_png(path)?;
         let mut out = Self::blank(image.width() as usize, image.height() as usize);
         // Plain mod PNGs carry no palette-animation metadata. Keep their colors
         // out of the reserved water/fire/blink entries (240..=255), which change
@@ -262,6 +246,29 @@ impl Sprite {
         Ok(out)
     }
 }
+/// Fully decode untrusted PNG artwork with the renderer's existing limits.
+/// Validation needs only the checked canvas, not indexed color conversion.
+pub(crate) fn checked_png(path: &Path) -> Result<image::RgbaImage> {
+    let mut reader = image::ImageReader::open(path)?.with_guessed_format()?;
+    ensure!(
+        reader.format() == Some(image::ImageFormat::Png),
+        "mod artwork must be PNG"
+    );
+    let mut limits = image::Limits::default();
+    limits.max_image_width = Some(4096);
+    limits.max_image_height = Some(4096);
+    limits.max_alloc = Some(64 * 1024 * 1024);
+    reader.limits(limits);
+    let image = reader.decode()?.into_rgba8();
+    ensure!(
+        image.width() <= 4096
+            && image.height() <= 4096
+            && image.width() as u64 * image.height() as u64 <= 4_194_304,
+        "PNG exceeds 4096px"
+    );
+    Ok(image)
+}
+
 #[derive(Debug, Clone)]
 pub struct LegacyMap {
     pub tiles: Vec<(u16, u16)>,

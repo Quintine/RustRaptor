@@ -26,23 +26,31 @@ the relocation. See [repository layout](repository.md).
 
 ### Current runtime and Stage 2 work
 
-The `b8b8620` runtime checkpoint includes the reviewed **1,148-frame / 421-sequence**
-HD snapshot in both executables' shared catalog. It contains **6,848 data files**
-with unchanged original `INDEX`. Linux binary SHA-256 is
-`fdfcf03f126279246f3b762987e02fa7b385f07b4d31339732037462f9e52413`;
-Windows is `a74cc4ea20ddc17a39fe4cbf2da2e7391a561d1975b114ec56dd35fb5ff38f2d`.
-The engine now exposes checked script commands for boss animation frames and
-native impact-effect kinds. Original effect serialization remains compatible.
+The current Linux and Windows runtimes include the reviewed **1,148-frame /
+421-sequence** HD snapshot and **6,848 data files**, with unchanged original
+`INDEX`. Linux binary SHA-256 is
+`7e62ae1b0e8d18670a7c6c3d4f6419878f696f62ba4c7dd2ee9ebf7545f648de`;
+Windows is `63d040f5d5c76bad15a74ab1ef54ca992a0fd9cd8b7a46f8506d8cce4fbec275`.
+Checked script commands control nonlegacy boss animation frames and native
+impact-effect kinds. The renderer applies phase pins to sprites and both
+shadow layers; clearing a pin restores ordinary animation. Original effect
+serialization remains compatible. PNG activation fully decodes with the same
+limits while avoiding discarded palette conversion; all 6,682 referenced PNG
+outputs compare byte-identically and five rejection/output regressions pass.
 
 **Iron Coast II: Black Tide** adds eight missions, eight bosses, three shared
 enemies, three original FM scores and two optional purchased weapons through
-23 individual packages. All eight missions pass starter-gun runs at difficulties
-0–3. All 23 package freezes and independent long-run checks are complete. The
-actual registered-pilot Veteran route saves between eight wins and a finale
-replay; all 34 Host artwork/shop/menu captures are inspected. Final relocated
-Linux/Windows archives are the remaining release checks. The ordinary source suites pass **310
-headless / 374 desktop** tests. [Stage 2 design and validation](iron-coast-stage2-design.md)
-records the new content and final acceptance scope.
+23 individual packages. Independent review completes the eight missions plus
+saved finale replay at difficulties 0–3 from registered-pilot starting gear,
+with paid repairs. The final root Veteran route saves/loads between nine wins
+and binds the documentation-only aggregate successor hash. All 34 Host
+artwork/shop/menu pictures are reviewed; the six changed phase pictures were
+inspected again and the other 28 remain byte-identical. Ordinary release suites
+pass **315 headless / 380 desktop** tests, with 26/36 deliberate original-data
+and capture tests ignored. Final Linux/Windows archive relocation checks are
+in progress against the corrected runtimes; previous archive receipts remain
+historical. [Stage 2 design and validation](iron-coast-stage2-design.md)
+records content, controls, prices and acceptance scope.
 
 Original HD work continues under `hd_coordinator`; later approved candidates
 remain separate from the immutable packaged 1,148-frame snapshot. The paragraphs

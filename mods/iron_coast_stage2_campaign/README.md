@@ -3,8 +3,8 @@
 Enable **Iron Coast II — Black Tide** in the game's Mods screen. Dependency
 selection brings in all eight missions, their individual bosses, the shared
 coastal enemies, the three-track soundtrack and two optional shop weapons.
-Apply the selection at the main menu, choose this campaign in the hangar and
-start Nightbreak Inlet. Normal pilot saves retain the campaign and package pins.
+Apply the selection at the main menu, then select Nightbreak Inlet in the
+Hangar's mission menu. Normal pilot saves retain the campaign and package pins.
 
 The individual mission, boss, enemy and weapon mods can also be enabled
 separately. Removing a required mod shows the dependent packages before the
