@@ -2,7 +2,7 @@
 
 The Rust Options screen includes **HD art**. It starts disabled. Enable it to use reviewed artwork from the selected data directory's `hd/hd.json`; each missing or rejected frame keeps the selected original / 2x / 3x / 4x crisp treatment. The bundled runtime uses `data/`, while development artwork and review jobs live under `../data/`. The scale setting still determines the indexed rendering resolution, and the HD toggle can be changed while paused. HD art is presentation only: simulation, collision sizes, banking positions and save content IDs stay unchanged.
 
-The development base-game pack currently supplies **1,071 reviewed replacement frames in 400 complete sequences**. These include all twenty-one light, dark and firing-flash player poses, 232 boss frames, complete vehicle families, ground defenses and opening bunkers, all forty-seven equipment and pickup pictures, projectile and effect animations, eleven HUD picture glyphs, nine pilot portraits, four difficulty portraits, both title logos, three standalone opening cards and 352 canonical terrain tiles. The tracked Linux/Windows playable snapshots contain the separately frozen 800 reviewed frames, copied by the root assembler and committed at `964ba93`. Later development approvals remain separate from this runtime checkpoint. The complete catalog backlog and generation status are listed in [hd-backlog.md](hd-backlog.md).
+The development base-game pack currently supplies **1,148 reviewed replacement frames in 421 complete sequences**. These include all twenty-one light, dark and firing-flash player poses, 232 boss frames, complete vehicle families, ground defenses and opening bunkers, all forty-seven equipment and pickup pictures, projectile and effect animations, eleven HUD picture glyphs, nine pilot portraits, four difficulty portraits, both title logos, three standalone opening cards and 416 canonical terrain tiles. The tracked Linux/Windows playable snapshots contain the separately frozen 800 reviewed frames, copied by the root assembler and committed at `964ba93`. Later development approvals remain separate from this runtime checkpoint. The complete catalog backlog and generation status are listed in [hd-backlog.md](hd-backlog.md).
 
 | Reviewed artwork | Original asset IDs | Supplied / complete frames |
 | --- | --- | ---: |
@@ -32,6 +32,7 @@ The development base-game pack currently supplies **1,071 reviewed replacement f
 | Fine-metal third-campaign craft | `0x3004c`, `0x3004f`, `0x30055`, `0x3005c`, `0x30065`, `0x30068`, `0x3006b`, `0x3006e`, `0x30073` | 9 / 9 |
 | Additional third-campaign hull and pod craft | `0x3008f`, `0x30092`, `0x30095`, `0x30098` | 4 / 4 |
 | Restored gray structure and dark-post craft | `0x300ac`, `0x3009d` | 2 / 2 |
+| Fourth-campaign asymmetric ground structure | `0x40088` | 1 / 1 |
 | Third-campaign tread, slat and fork families | `0x30074`–`0x30077`, `0x30080`–`0x30088`, `0x3008b`–`0x3008c` | 15 / 15 |
 | Corrected third-campaign boss | `0x30044` | 1 / 1 |
 | Restored asymmetric hull and lower-bridge bosses | `0x10310`, `0x200a3` | 2 / 2 |
@@ -106,6 +107,7 @@ The development base-game pack currently supplies **1,071 reviewed replacement f
 | Laser impact phases | `0x10229`–`0x1022c` | 4 / 4 |
 | Shield light masks | `0x10249`–`0x1024c` | 4 / 4 |
 | Medium air explosion | `0x101d8`–`0x101e4` | 13 / 13 |
+| Repaired large air explosion | `0x101e5`–`0x101f0` | 12 / 12 |
 | Small ground explosion | `0x1027d`–`0x1029f` | 35 / 35 |
 | Pilot portraits, small and retained large variants | `0x10111`–`0x10119` | 9 / 9 |
 | Original English and Chinese title logos | `0x10013`, `0x10014` | 2 / 2 |
@@ -126,6 +128,7 @@ The development base-game pack currently supplies **1,071 reviewed replacement f
 | Canonical terrain set 1, first shard | `0x10360`–`0x1036f` | 16 / 16 |
 | Canonical terrain set 2, corrected first shard | `0x2010d`–`0x2011c` | 16 / 16 |
 | Canonical industrial terrain, first two shards | `0x300ed`–`0x3010c` | 32 / 32 |
+| Further destroyed industrial terrain | `0x3011d`–`0x3012c` | 16 / 16 |
 | Soil, foliage, shadow and rubble terrain | `0x10390`–`0x103af` | 32 / 32 |
 | Industrial, soil and canal terrain | `0x103b0`–`0x103cf` | 32 / 32 |
 | Source coast, bridge and water terrain | `0x103e0`–`0x103ef` | 16 / 16 |
@@ -135,13 +138,15 @@ The development base-game pack currently supplies **1,071 reviewed replacement f
 | Fourth-campaign radar, damage and controls | `0x40115`–`0x40134` | 32 / 32 |
 | Fourth-campaign cracked soil and rock terrain | `0x40135`–`0x40154` | 32 / 32 |
 | Fourth-campaign rocks, cracks and upper foliage | `0x40155`–`0x40174` | 32 / 32 |
+| Fourth-campaign lower foliage, cliffs and rocky ground | `0x40175`–`0x40194` | 32 / 32 |
 | Source shoreline, fences and rocks | `0x103f0`–`0x103ff` | 16 / 16 |
+| Intact and damaged buildings, rocks and crossings | `0x10410`–`0x1041f` | 16 / 16 |
 
 Every registered frame passed the exact original source hash, logical canvas, aspect, visible alpha and path checks. Complete contact sheets were inspected at source size and the 4× presentation size; per-frame geometry metrics and review evidence remain with each family. Their logical collision sizes are unchanged. Small contours and interpreted metal detail differ. Missing artwork keeps the crisp original fallback. HD remains an opt-in preview while the remaining catalog and game screenshots are reviewed.
 
 An actual Rust `HdAssets::sprite` pass also checked all registered frames at scales 1–4 with the game palette: every output has the expected dimensions and visible pixels, and the pack reports no diagnostics. Complete 4× source/HD sheets from that runtime path were reviewed for readable projectiles, equipment alignment, banking progression and energy-ring timing stages. These sprite checks complement live gameplay captures and do not establish full-game visual completion.
 
-The current 1,071-frame development snapshot passed 4,284 actual scale checks. All 5,355 original and rendered PPMs are byte-identical to independently accepted references, with both source-age guards clear and the tested immutable library pinned by SHA and original build time. All 985 ordinary sources introduce no reserved palette labels; 83 sources retain legitimate gameplay classes, and the three opening cards use their authentic static palettes. Historical smaller-pack proofs, including the packaged 800-frame snapshot, remain separate.
+The current 1,148-frame development snapshot passed 4,592 actual scale checks against the final Stage2 API source build. All 5,740 original and rendered PPMs are byte-identical to independently accepted references. Both source-age guards are clear, every Rust source hash remains unchanged through closure, and the actual immutable release library is pinned by SHA and original build time. All 1058 ordinary sources introduce no reserved palette labels; 87 sources retain legitimate gameplay classes, and the three opening cards use their authentic static palettes. Historical smaller-pack proofs, including development1,071 and the packaged800 snapshot, remain separate. The earlier1,148 attempt has identical pixels but an honestly recorded broad stale-source flag after root's intervening formatting/API changes; it is retained as supplementary evidence.
 
 The 189 additional boss frames passed complete source/1×/4× and native 2×/3× review across 56 full families. Opaque component panels, weapon apertures and source phases remain recognizable; fine material detail and minor contour interpretations are disclosed per family. These gallery decisions do not certify complete assembled-boss joins or native encounter placement. The shortened paired bottom feet in `0x200a2`, lost painted wing/strut cells in `0x30045`, Mole's missing initial blink, other contracted hulls remain held and are excluded. The later repaired asymmetric hull, lower bridge and complete EBOSS6 phases are reviewed separately below.
 
@@ -276,3 +281,11 @@ LargeAir's newer v9 still remains held: repaired first/late pairs improve the ea
 A further 34-frame development batch adds two complete craft singles and thirty-two terrain tiles. All 170 source/scaled PPMs match independently accepted references, and all ten complete source/native1/HD4 pages on two boards were inspected before registration. The gray structure300ac retains its upper crossbar, central inset and lower supports. Dark craft3009d retains its posts, pods, aperture and feet, with two very dark native corner losses accepted and all higher-scale source cells plus genuine252/253 cues retained.
 
 Terrain40155–40174 retains source crack branches, rock counts/offsets and divots. Corrected40157 preserves the authentic short upper-left fragment and lower-left branch;4015b excludes the rejected foreign right crack and bottom rock. Coarser standalone soil against surrounding atlas gravel remains an accepted density difference. Upper foliage40172/73 retains source organic outlines and shadows with finer leaves. Its lower40179/7a partners remain original fallback in the actual160-tile review pack. Their separate complete four-HD-cell object diagnostic is context-only and does not admit those lower two. Twenty-two native contexts/eighty-two cardinal pairs produce544 current scale compositions; no state partners exist, and ten unused IDs remain gallery-only. Original-fallback contrast and future HD-neighbor re-review remain explicit.
+
+The next77-frame batch adds six complete job families: the repaired twelve-phase large air explosion, STAG02, destroyed industrial terrain3011d–3012c, terrain10410–1041f and fourth-campaign40175–40194. Their candidate manifests contain21 sequences because10410 uses sixteen standalone tile sequences. All385 source/scaled PPMs match independent references, and all twenty complete source/native1/HD4 pages on six unresampled boards were actually inspected before registration.
+
+LargeAirv11 restores the original seven-cell inner lip and four of five upper-shoulder cells, keeping the authentic flash/rays, expanding core, hollow rings and detached fading fragments. Remaining dim perimeter/endpoint changes and stronger hot grain in the corrected two phases are accepted explicitly; earlier v6/v9 holds remain unchanged. The opaque STAG02 structure retains its original asymmetric walls, outer rails, clipped stacks and central machinery; fine wear and darker mean gray are accepted after internal visual comparison, rather than an alpha-only test.
+
+The industrial destroyed cohort retains surviving straight gray frame segments, source dark scorch/rubble routing and warm original flecks. Brighter crack/rubble detail and fallback grain contrast are disclosed. Four other gray-remnant failures in the preceding3010d–3011c family remain held, with no partial-family admission. Terrain10410–1041f preserves original intact/damaged panel geometry, separate rock groups and stippled crossing rhythm. Authentic new destroyed targets10410/12/14 and whole-family state proof are bound; foreign partners remain original. Its rough chipped1041f material and2/3 palette blockiness remain accepted differences. The other10400 family is still held on unsupported rectangular organic-ground panels in10406.
+
+The lower bush40179/7a is now independently reviewed in the target scope and admitted with source organic outlines/shadows, completing the previously context-only four-cell object. The cliff and ground cohort preserves slope directions, rock positions and original brown/orange region boundaries. Its genuine no-gridv2 raw is the accepted binding; rejected gridlinedv1 remains preserved. Six unused IDs remain gallery-only; the selected40178 scene is authentic source-layout supporting evidence, while independently repeated liveHost or whole-map seamlessness is not claimed.

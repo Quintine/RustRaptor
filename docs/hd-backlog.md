@@ -1,16 +1,16 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **1,071**; **4,682** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
+The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **1,148**; **4,605** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
 | Player banking | 21 | 21 | 0 | 3 |
 | Bosses | 249 | 232 | 17 | 79 |
-| Enemies and ground objects | 419 | 150 | 269 | 183 |
+| Enemies and ground objects | 419 | 151 | 268 | 183 |
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
-| Explosions and effects | 281 | 164 | 117 | 25 |
+| Explosions and effects | 281 | 176 | 105 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 352 | 4,183 | 4 |
+| Terrain | 4,535 | 416 | 4,119 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 60 | 90 | mixed static / animated |
 
 ## Registered pack and generation jobs
@@ -419,6 +419,27 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | DSHP11G3_PIC | `0x3009d` | 1 / 1 |
 | canonical-terrain-40155-40164 | `0x40155` | 16 / 16 |
 | canonical-terrain-40165-40174 | `0x40165` | 16 / 16 |
+| Large air explosion padded replacement v10 | `0x101e5` | 12 / 12 |
+| STAG02G4_PIC | `0x40088` | 1 / 1 |
+| Terrain set 3 shard 4 | `0x3011d` | 16 / 16 |
+| Terrain 10410 standalone correction | `0x10410` | 1 / 1 |
+| Terrain 10411 standalone correction | `0x10411` | 1 / 1 |
+| Terrain 10412 standalone correction | `0x10412` | 1 / 1 |
+| Terrain 10413 standalone correction | `0x10413` | 1 / 1 |
+| Terrain 10414 standalone correction | `0x10414` | 1 / 1 |
+| Terrain 10415 standalone correction | `0x10415` | 1 / 1 |
+| Terrain 10416 standalone correction | `0x10416` | 1 / 1 |
+| Terrain 10417 standalone correction | `0x10417` | 1 / 1 |
+| Terrain 10418 standalone correction | `0x10418` | 1 / 1 |
+| Terrain 10419 standalone correction | `0x10419` | 1 / 1 |
+| Terrain 1041a standalone correction | `0x1041a` | 1 / 1 |
+| Terrain 1041b standalone correction | `0x1041b` | 1 / 1 |
+| Terrain 1041c standalone correction | `0x1041c` | 1 / 1 |
+| Terrain 1041d standalone correction | `0x1041d` | 1 / 1 |
+| Terrain 1041e standalone correction | `0x1041e` | 1 / 1 |
+| Terrain 1041f standalone correction | `0x1041f` | 1 / 1 |
+| canonical-terrain-40175-40184 | `0x40175` | 16 / 16 |
+| canonical-terrain-40185-40194 | `0x40185` | 16 / 16 |
 
 | Generation job | Status |
 | --- | --- |
