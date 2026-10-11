@@ -59,15 +59,20 @@ mods, captures SDL gameplay and publishes the zip as a workflow artifact.
 
 ## Current runtime and validation
 
-The included GNU executable uses the reviewed **2,132-frame HD snapshot**;
-the shared manifest binds **7,415 data files** and the package contains
+The included GNU executable uses the reviewed **2,240-frame HD snapshot**;
+the shared manifest binds **7,493 data files** and the package contains
 **45 installed mods**. Its SHA-256 is
 `ad2ee7f5cc8e90ea371eccf2a509cd99263c6c880a6d42e2886cdc017c24561b`.
 This build includes the bounded opaque-background rounding and optional
 per-frame presentation policies documented in [hd-streaming.md](hd-streaming.md).
-Existing approved artwork uses the default policies. Fresh archive execution
-and native Windows CI checks for this successor are recorded separately from
-the historical checks below; they are not inherited from unchanged artwork.
+All 2,240 approved frames use the default presentation policies. The
+[updated-loader native Windows run](https://github.com/Quintine/RustRaptor/actions/runs/38177332195)
+passed portable tests, all eight Black Tide missions and saved finale replay,
+the exact included GNU executable, fresh MSVC build, original assets, all
+45 mods, SDL captures, FM music and isolated effects. That run used the
+previous 2,132-frame artwork snapshot. Fresh archive execution and CI checks
+for the 2,240-frame successor are recorded separately in
+[the runtime release receipt](hd-runtime-release.json).
 
 The [1,148-frame native Windows run](https://github.com/Quintine/RustRaptor/actions/runs/38126069413)
 passed portable tests, exact committed GNU runtime checks, the MSVC desktop

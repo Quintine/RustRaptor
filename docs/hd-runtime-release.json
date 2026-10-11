@@ -1,53 +1,57 @@
 {
   "format_version": 1,
-  "status": "approved_artwork_and_updated_loader_bundled_cli_validated",
+  "status": "approved_2240_artwork_bundled_cli_validated_archive_execution_pending",
   "release_scope": "Shared Linux and Windows original-content artwork with reviewed bounded HD loader fixes; simulation and mod content unchanged",
   "assembly": {
-    "approved_hd_frames": 2132,
-    "complete_sequences": 875,
-    "terrain_frames": 1280,
-    "remaining_original_pictures": 3621,
-    "handoff_manifest_sha256": "b4d241bac313e73229c0ac3d435fb7d0b597b4c52ee16ac63096c52690f7eed2",
-    "handoff_files": 965,
-    "handoff_bytes": 2344550086,
-    "hd_manifest_sha256": "f88eb9210a58a9ca6b6a53702fd4c2fc81fe361960f904002e2bbe8e528c8366",
-    "provenance_sha256": "3e386dfdd6917daa81adcddd87c55062be4bde56f91e67bb6b5ed7833c405129",
+    "approved_hd_frames": 2240,
+    "complete_sequences": 952,
+    "terrain_frames": 1376,
+    "remaining_original_pictures": 3513,
+    "handoff_manifest_sha256": "447a24c45af2a5e439e852336783f7a226ffbcc25a25de0fa793c96c45430f03",
+    "handoff_files": 1043,
+    "handoff_bytes": 2565869827,
+    "hd_manifest_sha256": "0442503bb6408fe354e2d345caa59f8f04e6422b190ead2f966cfd95230a0d5e",
+    "provenance_sha256": "cdf2288064cc135083754937af7902dd7d5cc348d30c6fdf9bac7db8a376d923",
     "baseline_1148_bindings_unchanged": true,
-    "data_files": 7415,
-    "data_bytes": 2357732944,
+    "data_files": 7493,
+    "data_bytes": 2579052685,
     "binary_sha256": "9688cdbd57b0d31049bac431a5bb2e864bb3ce7abbaca732634359ad7a53d8a9",
     "windows_binary_sha256": "ad2ee7f5cc8e90ea371eccf2a509cd99263c6c880a6d42e2886cdc017c24561b",
     "original_catalog_assets_unchanged": true,
-    "other_rust_sources_unchanged": true
+    "other_rust_sources_unchanged": true,
+    "carried_2132_bindings_unchanged": true
   },
   "validation": [
     {
       "case": "verify-assets",
-      "seconds": 0.21,
+      "seconds": 0.16,
       "output": "Verified 6449 assets; 27 missions, 528 enemies, 16 weapons, 24 items\n",
+      "stderr": "",
       "passed": true
     },
     {
       "case": "validate-hd",
-      "seconds": 50.1,
-      "output": "HD pack: 2132 registered, 2132 validated, 0 rejected supplied frames\n",
+      "seconds": 48.87,
+      "output": "HD pack: 2240 registered, 2240 validated, 0 rejected supplied frames\n",
+      "stderr": "",
       "passed": true
     },
     {
       "case": "validate-mods",
-      "seconds": 7.15,
+      "seconds": 7.51,
       "output": "Validated 45 mods; 1 override(s)\n",
+      "stderr": "",
       "passed": true
     }
   ],
   "source_picture_targets": 5753,
   "complete_remaster": false,
-  "visual_evidence": "Approved source/native1\u20134/context receipts plus root-inspected actual1080p mission captures",
-  "prior_runtime_hd_frames": 1148,
-  "archives": "Existing Stage2 ZIPs remain historical1148 snapshot until new export validation completes",
+  "visual_evidence": "Approved current source/native1\u20134/context receipts. Historical2132 desktop captures remain explicitly scoped; fresh2240 exported SDL captures pending.",
+  "prior_runtime_hd_frames": 2132,
+  "archives": "Fresh2240 Linux and Windows exports/execution checks pending; historical1148 archive receipts remain separate.",
   "exclusions": "Unapproved generation candidates and held artwork are not bundled",
   "native_visual_review": {
-    "scope": "Three actual original-mission desktop captures using unchangedStage2 executable and approved2132 data; SDL dummy/software at1920x1080",
+    "scope": "Historical2132 artwork: three original-mission captures using unchanged Stage2 executable; SDL dummy/software1920x1080. Retained as historical evidence, not relabeled2240.",
     "cases": [
       {
         "case": "original-s1w6-hd",
@@ -97,12 +101,74 @@
     "matched_python_tests_passed": 19,
     "existing_python_hd_tests_passed": 7,
     "format_and_diff_checks": "passed",
-    "full_default_raster_continuity": "in progress; no inherited current-renderer claim",
+    "full_default_raster_continuity": {
+      "receipt_sha256": "cc71ce9b7363ed4116146e968a0c0cddb80843373bc52bd469a001d82078bd5e",
+      "frames": 2132,
+      "gameplay_rasters": 8528,
+      "static_interface_rasters": 152,
+      "different_pixels": 0,
+      "warm_cache_draws": 2132,
+      "legacy_cache_keys_reused": 2127,
+      "new_cache_writes": 0,
+      "png_decodes_on_warm_cache": 0,
+      "scope": "Exact previous-versus-updated loader rasters, canvases, transparency and metadata; no new Host hardware claim"
+    },
     "new_archive_execution": "pending final export",
     "portable_library_and_integration_suite": "passed: cargo test --locked --no-default-features --tests",
     "unchanged_baseline_pins": {
       "original_data": 6450,
       "unchanged_other_rust_sources": 17
+    },
+    "scope": "Updated-loader initial2132 snapshot; original default-raster continuity and code tests remain exact historical receipts."
+  },
+  "loader_source_commit": "e95d060b0ce7e07c112df38bc3b5486fc80a9b66",
+  "native_windows_ci": [
+    {
+      "source_commit": "a02c9b0679a2ad48179cb3249a570d31b35ef9eb",
+      "hd_frames": 2132,
+      "conclusion": "success",
+      "url": "https://github.com/Quintine/RustRaptor/actions/runs/38176764620"
+    },
+    {
+      "source_commit": "e95d060b0ce7e07c112df38bc3b5486fc80a9b66",
+      "hd_frames": 2132,
+      "conclusion": "success",
+      "url": "https://github.com/Quintine/RustRaptor/actions/runs/38177332195"
     }
+  ],
+  "successor_2240_validation": {
+    "utc": "2026-10-11T22:23:01.493969+00:00",
+    "canonical_107_closure_sha256": "ccdd960c0bbd5d0efb75c6b1969a2894412603e0957cc305a30fb596d0e7d2af",
+    "hanger_supplement_closure_sha256": "fab954a3dbfb2085870d48ff249afdd1d3a37d9f9ffb7db5562f7fef307aa2aa",
+    "affected_terrain_integration_receipt_sha256": "e146685ba78ed12dcd0abdb9b8c9dcf1cab2033070efe3af916a832f6355e7b8",
+    "affected_terrain_integration_closure_sha256": "7aa9ac8fdaf2d123b2976fbd469d597a73953e83cfbbd27e579df57248702837",
+    "changed_compositions_reviewed": 131,
+    "carried_2132_bindings_exact": true,
+    "optional_frame_policies_used": false,
+    "fresh_cli": [
+      {
+        "case": "verify-assets",
+        "seconds": 0.16,
+        "output": "Verified 6449 assets; 27 missions, 528 enemies, 16 weapons, 24 items\n",
+        "stderr": "",
+        "passed": true
+      },
+      {
+        "case": "validate-hd",
+        "seconds": 48.87,
+        "output": "HD pack: 2240 registered, 2240 validated, 0 rejected supplied frames\n",
+        "stderr": "",
+        "passed": true
+      },
+      {
+        "case": "validate-mods",
+        "seconds": 7.51,
+        "output": "Validated 45 mods; 1 override(s)\n",
+        "stderr": "",
+        "passed": true
+      }
+    ],
+    "native_windows_ci": "pending successor commit",
+    "archive_execution": "pending final export"
   }
 }
