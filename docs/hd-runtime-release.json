@@ -1,8 +1,7 @@
 {
   "format_version": 1,
-  "status": "approved_artwork_bundled_and_cli_validated",
-  "release_scope": "Shared Linux and Windows original-content artwork; gameplay and executable bytes unchanged from Stage2 release",
-  "source_commit": "0e8a27c7288a388dc335ec71233358af42cb3aa5",
+  "status": "approved_artwork_and_updated_loader_bundled_cli_validated",
+  "release_scope": "Shared Linux and Windows original-content artwork with reviewed bounded HD loader fixes; simulation and mod content unchanged",
   "assembly": {
     "approved_hd_frames": 2132,
     "complete_sequences": 875,
@@ -14,11 +13,12 @@
     "hd_manifest_sha256": "f88eb9210a58a9ca6b6a53702fd4c2fc81fe361960f904002e2bbe8e528c8366",
     "provenance_sha256": "3e386dfdd6917daa81adcddd87c55062be4bde56f91e67bb6b5ed7833c405129",
     "baseline_1148_bindings_unchanged": true,
-    "original_catalog_binary_and_sources_unchanged": true,
     "data_files": 7415,
     "data_bytes": 2357732944,
-    "binary_sha256": "7e62ae1b0e8d18670a7c6c3d4f6419878f696f62ba4c7dd2ee9ebf7545f648de",
-    "windows_binary_sha256": "63d040f5d5c76bad15a74ab1ef54ca992a0fd9cd8b7a46f8506d8cce4fbec275"
+    "binary_sha256": "9688cdbd57b0d31049bac431a5bb2e864bb3ce7abbaca732634359ad7a53d8a9",
+    "windows_binary_sha256": "ad2ee7f5cc8e90ea371eccf2a509cd99263c6c880a6d42e2886cdc017c24561b",
+    "original_catalog_assets_unchanged": true,
+    "other_rust_sources_unchanged": true
   },
   "validation": [
     {
@@ -74,5 +74,35 @@
     "all_three_full_frames_inspected": true,
     "findings": "Player, HUD, canal, building and sprite layers retain source placements without new clipping. Mixed original/HD terrain density patches remain visible until remaining original pictures are remastered.",
     "limits": "Representative startup scenes; not whole-mission completion, fullHD coverage, whole-map seamlessness or hardware performance certification"
+  },
+  "gameplay_baseline_source_commit": "0e8a27c7288a388dc335ec71233358af42cb3aa5",
+  "loader_source_sha256": "73f912a225c8b280789fda3cbf4bd26deb4632beff5bcd8d30a7b1fa8c93dd1d",
+  "loader_epoch_sha256": "921752d978024461827d239250d49b4fbfcc0e2e3ecd4b80dc3d682050961efb",
+  "prior_executables": {
+    "linux_sha256": "7e62ae1b0e8d18670a7c6c3d4f6419878f696f62ba4c7dd2ee9ebf7545f648de",
+    "windows_sha256": "63d040f5d5c76bad15a74ab1ef54ca992a0fd9cd8b7a46f8506d8cce4fbec275",
+    "scope": "2132 artwork publication before loader update; historical native capture evidence below uses these executables"
+  },
+  "updated_loader_validation": {
+    "utc": "2026-10-11T21:38:31.029538+00:00",
+    "approved_hd_registered": 2132,
+    "approved_hd_validated": 2132,
+    "rejected": 0,
+    "original_assets_verified": 6449,
+    "mods_validated": 45,
+    "overrides": 1,
+    "focused_rust_hd_tests_passed": 40,
+    "headless_library_tests_passed": 84,
+    "headless_library_tests_ignored": 3,
+    "matched_python_tests_passed": 19,
+    "existing_python_hd_tests_passed": 7,
+    "format_and_diff_checks": "passed",
+    "full_default_raster_continuity": "in progress; no inherited current-renderer claim",
+    "new_archive_execution": "pending final export",
+    "portable_library_and_integration_suite": "passed: cargo test --locked --no-default-features --tests",
+    "unchanged_baseline_pins": {
+      "original_data": 6450,
+      "unchanged_other_rust_sources": 17
+    }
   }
 }

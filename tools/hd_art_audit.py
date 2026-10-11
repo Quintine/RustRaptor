@@ -12,6 +12,7 @@ import struct
 from pathlib import Path
 from PIL import Image
 from hd_art_source import decode
+from hd_frame_policy import FRAME_KEYS, validate_frame_policy
 
 CATEGORIES = ["Player banking", "Bosses", "Enemies and ground objects", "Player and enemy projectiles", "Explosions and effects", "Equipment and pickups", "Terrain", "Menus, portraits, HUD and other pictures"]
 
@@ -23,8 +24,16 @@ def checked_palette(payload):
         raise ValueError("invalid VGA palette")
     return [tuple((min(v, 63) << 2) | (min(v, 63) >> 4) for v in payload[n:n + 3]) for n in range(0, 768, 3)]
 
+def integer_rounded_aspect(width, height, logical_width, logical_height):
+    """One common scale rounded by less than half a pixel on each axis."""
+    return min(width, height, logical_width, logical_height) > 0 and (
+        2 * abs(width * logical_height - height * logical_width)
+        < logical_width + logical_height
+    )
+
 def validate_hd_frame(root, frame, payload, picture):
     """Mirror loader checks; artistic approval is deliberately a separate step."""
+    validate_frame_policy(frame, payload)
     if frame["source_sha256"] != hashlib.sha256(payload).hexdigest():
         raise ValueError("original source hash changed")
     if [frame["logical_width"], frame["logical_height"]] != list(picture.size):
@@ -45,17 +54,26 @@ def validate_hd_frame(root, frame, payload, picture):
         if max(source.size) > 4096 or source.width * source.height > 4_194_304:
             raise ValueError("PNG dimensions exceed runtime limit")
         image = source.convert("RGBA")
+    png_size = image.size
+    source_alpha_min, source_alpha_max = picture.getchannel("A").getextrema()
     if frame.get("crop") is not None:
         x, y, width, height = frame["crop"]
         if min(x, y) < 0 or min(width, height) <= 0 or x + width > image.width or y + height > image.height:
             raise ValueError("atlas crop exceeds PNG")
         image = image.crop((x, y, x + width, y + height))
-    if image.width * picture.height != image.height * picture.width:
-        raise ValueError("PNG aspect differs from original canvas")
+    rounded = image.width * picture.height != image.height * picture.width
+    if rounded and not (
+        source_alpha_min == source_alpha_max == 255
+        and image.size == png_size
+        and integer_rounded_aspect(image.width, image.height, picture.width, picture.height)
+    ):
+        raise ValueError("PNG aspect differs from original canvas; only a full opaque frame may use subpixel integer rounding")
     if image.width < picture.width * 2 or image.height < picture.height * 2:
         raise ValueError("artwork needs at least twice the logical resolution")
     alpha_min, alpha_max = image.getchannel("A").getextrema()
-    if picture.getchannel("A").getextrema()[0] == 0 and alpha_min != 0:
+    if rounded and (alpha_min, alpha_max) != (255, 255):
+        raise ValueError("HD integer-aspect rounding requires a fully opaque source and PNG")
+    if source_alpha_min == 0 and alpha_min != 0:
         raise ValueError("transparent original needs a transparent HD background")
     if alpha_max < 128:
         raise ValueError("artwork has no visible pixels")
@@ -176,8 +194,9 @@ def audit(data, project, runtime_path=None):
             if not 1 <= sequence["frame_count"] <= 512 or len(sequence["frames"]) > sequence["frame_count"]:
                 raise ValueError("HD pack has invalid frame count")
             for frame in sequence["frames"]:
-                if set(frame) - {"frame","file","logical_width","logical_height","origin","source_sha256","crop"}:
+                if set(frame) - FRAME_KEYS:
                     raise ValueError("unknown HD frame fields")
+                validate_frame_policy(frame)
                 asset = sequence["base_asset"] + frame["frame"]
                 if not 0 <= frame["frame"] < sequence["frame_count"] or asset in supplied:
                     raise ValueError("HD pack has duplicate ID or invalid frame index")

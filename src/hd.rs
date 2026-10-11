@@ -60,6 +60,18 @@ pub struct Frame {
     /// Optional pixel rectangle [x, y, width, height] in an atlas PNG.
     #[serde(default)]
     pub crop: Option<[u32; 4]>,
+    /// Explicit, independently reviewed gameplay-only source250..255 alpha
+    /// coverage. Does not assign reserved labels to ordinary source cells.
+    #[serde(default, skip_serializing_if = "is_false")]
+    pub preserve_reserved_coverage: bool,
+    /// Up to64 sorted unique [x,y] ordinary original cells, sampled from
+    /// untouched resident RGBA with nearest only at gameplay scale1.
+    /// Other cells/scales and static palettes retain their existing sampler.
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub native_nearest_cues: Vec<[u32; 2]>,
+}
+fn is_false(value: &bool) -> bool {
+    !*value
 }
 struct Replacement {
     frame: Frame,
@@ -369,6 +381,15 @@ impl HdAssets {
     fn frame_key(frame: &Frame, info: &PngInfo, requires_alpha: bool) -> [u8; 32] {
         let mut digest = Sha256::new();
         digest.update(KERNEL_VERSION);
+        let (width, height) = frame
+            .crop
+            .map(|[_, _, width, height]| (width, height))
+            .unwrap_or((info.width, info.height));
+        if !exact_aspect(width, height, frame.logical_width, frame.logical_height) {
+            // Only the new rounded opaque path needs a new validation identity.
+            // Existing exact-aspect cache keys and raster bytes stay unchanged.
+            digest.update(b"full-frame-opaque-rounding-v1");
+        }
         digest.update(info.digest);
         digest.update(frame.source_sha256.as_bytes());
         digest.update(frame.logical_width.to_le_bytes());
@@ -380,6 +401,18 @@ impl HdAssets {
         if let Some(crop) = frame.crop {
             for value in crop {
                 digest.update(value.to_le_bytes());
+            }
+        }
+        // Preserve exact legacy disk/indexed cache keys when both policies are
+        // absent/default. Every opt-in has a distinct, versioned namespace.
+        if frame.preserve_reserved_coverage || !frame.native_nearest_cues.is_empty() {
+            digest.update(b"raptor-hd-frame-presentation-policy-v1");
+            digest.update([u8::from(frame.preserve_reserved_coverage)]);
+            digest.update((frame.native_nearest_cues.len() as u32).to_le_bytes());
+            for cue in &frame.native_nearest_cues {
+                for coordinate in cue {
+                    digest.update(coordinate.to_le_bytes());
+                }
             }
         }
         digest.finalize().into()
@@ -395,16 +428,22 @@ impl HdAssets {
         let requires_alpha = record.requires_alpha;
         let result = (|| -> Result<([u8; 32], RgbaImage)> {
             let (path, info) = self.png(&frame.file)?;
-            let (width, height) = frame_dimensions(&frame, &info)?;
+            let (width, height) = frame_dimensions(&frame, &info, requires_alpha)?;
+            let requires_opaque =
+                !exact_aspect(width, height, frame.logical_width, frame.logical_height);
             let key = Self::frame_key(&frame, &info, requires_alpha);
             if let Some(rgba) = self.rgba.get(&key) {
                 return Ok((key, rgba.clone()));
             }
             let target_width = width.min(frame.logical_width * 4);
             let target_height = height.min(frame.logical_height * 4);
-            if let Some(rgba) =
-                self.read_disk_cache(&key, target_width, target_height, requires_alpha)
-            {
+            if let Some(rgba) = self.read_disk_cache(
+                &key,
+                target_width,
+                target_height,
+                requires_alpha,
+                requires_opaque,
+            ) {
                 self.disk_hits += 1;
                 self.rgba.insert(key, rgba.clone(), rgba.as_raw().len());
                 return Ok((key, rgba));
@@ -436,6 +475,9 @@ impl HdAssets {
                 rgba
             };
             validate_rgba(&rgba, requires_alpha)?;
+            // Check every original PNG pixel before resampling can round a tiny
+            // alpha defect back to 255. Full-frame selection retains all pixels.
+            validate_opaque_rounding(&rgba, requires_opaque)?;
             // Keep at most the highest usable 4x resolution, never generator originals.
             if rgba.width() > target_width || rgba.height() > target_height {
                 rgba = imageops::resize(&rgba, target_width, target_height, FilterType::Lanczos3);
@@ -469,6 +511,7 @@ impl HdAssets {
         width: u32,
         height: u32,
         requires_alpha: bool,
+        requires_opaque: bool,
     ) -> Option<RgbaImage> {
         let path = self.cache_path(key)?;
         if !path.exists() {
@@ -505,6 +548,7 @@ impl HdAssets {
             let rgba = RgbaImage::from_raw(width, height, bytes[CACHE_HEADER..].to_vec())
                 .context("derived cache image dimensions")?;
             validate_rgba(&rgba, requires_alpha)?;
+            validate_opaque_rounding(&rgba, requires_opaque)?;
             Ok(rgba)
         })();
         match read {
@@ -734,10 +778,24 @@ impl HdAssets {
         for (index, (destination, pixel)) in
             sprite.pixels.iter_mut().zip(resized.pixels()).enumerate()
         {
-            if pixel[3] < 128 {
-                continue;
-            }
-            let rgb = [pixel[0], pixel[1], pixel[2]];
+            let pixel = if policy == PalettePolicy::SourceClasses
+                && scale == 1
+                && !frame.native_nearest_cues.is_empty()
+                && frame
+                    .native_nearest_cues
+                    .binary_search(&[(index % width) as u32, (index / width) as u32])
+                    .is_ok()
+            {
+                // Exact nearest sample center, using integer ratios to avoid
+                // temporary canvases/float boundary rounding. No RGB remap.
+                let x = ((2 * (index % width) as u64 + 1) * rgba.width() as u64
+                    / (2 * frame.logical_width as u64)) as u32;
+                let y = ((2 * (index / width) as u64 + 1) * rgba.height() as u64
+                    / (2 * frame.logical_height as u64)) as u32;
+                rgba.get_pixel(x, y)
+            } else {
+                pixel
+            };
             let logical =
                 (index / width / scale) * frame.logical_width as usize + (index % width / scale);
             let source_label = if policy == PalettePolicy::SourceClasses {
@@ -748,6 +806,19 @@ impl HdAssets {
             } else {
                 0
             };
+            if pixel[3] < 128 {
+                // Require meaningful existing alpha support in the bounded
+                // resident logical cell; missing/mostly empty artwork remains
+                // transparent. This guard is not source-fidelity approval.
+                let supported = policy == PalettePolicy::SourceClasses
+                    && frame.preserve_reserved_coverage
+                    && (250..=255).contains(&source_label)
+                    && reserved_cell_supported(&rgba, frame, logical);
+                if !supported {
+                    continue;
+                }
+            }
+            let rgb = [pixel[0], pixel[1], pixel[2]];
             *destination = *colors
                 .entry((rgb, source_label))
                 .or_insert_with(|| match policy {
@@ -759,6 +830,35 @@ impl HdAssets {
             .insert(scaled_key, sprite.clone(), sprite.pixels.len() * 2);
         Ok(Some(sprite))
     }
+}
+/// At most 5x5 samples: resident RGBA is capped at4x logical dimensions.
+/// Fractional cell edges support valid non-integral2x..4x source canvases.
+/// Both mean alpha and alpha>=128 area must cover at least half the cell.
+fn reserved_cell_supported(rgba: &RgbaImage, frame: &Frame, logical: usize) -> bool {
+    let sx = rgba.width() as f64 / frame.logical_width as f64;
+    let sy = rgba.height() as f64 / frame.logical_height as f64;
+    let x = logical % frame.logical_width as usize;
+    let y = logical / frame.logical_width as usize;
+    let (x0, x1, y0, y1) = (
+        x as f64 * sx,
+        ((x + 1) as f64 * sx).min(rgba.width() as f64),
+        y as f64 * sy,
+        ((y + 1) as f64 * sy).min(rgba.height() as f64),
+    );
+    let mut alpha = 0.0;
+    let mut covered = 0.0;
+    for yy in y0.floor() as u32..y1.ceil() as u32 {
+        for xx in x0.floor() as u32..x1.ceil() as u32 {
+            let weight = (x1.min(xx as f64 + 1.0) - x0.max(xx as f64)).max(0.0)
+                * (y1.min(yy as f64 + 1.0) - y0.max(yy as f64)).max(0.0);
+            let a = rgba.get_pixel(xx, yy)[3];
+            alpha += weight * a as f64;
+            if a >= 128 {
+                covered += weight;
+            }
+        }
+    }
+    alpha >= 128.0 * sx * sy && covered >= 0.5 * sx * sy
 }
 fn bounded_read(path: &Path, limit: u64) -> Result<Vec<u8>> {
     let file = fs::File::open(path)?;
@@ -786,7 +886,26 @@ fn image_limits() -> image::Limits {
     limits.max_alloc = Some(64 * 1024 * 1024);
     limits
 }
-fn frame_dimensions(frame: &Frame, png: &PngInfo) -> Result<(u32, u32)> {
+fn exact_aspect(width: u32, height: u32, logical_width: u32, logical_height: u32) -> bool {
+    width as u128 * logical_height as u128 == height as u128 * logical_width as u128
+}
+/// A common scale must fit both integer dimensions with less than half a pixel
+/// of rounding on each axis. Strict inequality excludes an overlap consisting
+/// only of conflicting half-way ties (for example, a square PNG with unequal axes).
+fn integer_rounded_aspect(
+    width: u32,
+    height: u32,
+    logical_width: u32,
+    logical_height: u32,
+) -> bool {
+    if width == 0 || height == 0 || logical_width == 0 || logical_height == 0 {
+        return false;
+    }
+    let a = width as u128 * logical_height as u128;
+    let b = height as u128 * logical_width as u128;
+    2 * a.abs_diff(b) < logical_width as u128 + logical_height as u128
+}
+fn frame_dimensions(frame: &Frame, png: &PngInfo, requires_alpha: bool) -> Result<(u32, u32)> {
     let (width, height) = if let Some([x, y, width, height]) = frame.crop {
         ensure!(
             width > 0
@@ -800,8 +919,17 @@ fn frame_dimensions(frame: &Frame, png: &PngInfo) -> Result<(u32, u32)> {
         (png.width, png.height)
     };
     ensure!(
-        width as u64 * frame.logical_height as u64 == height as u64 * frame.logical_width as u64,
-        "HD frame aspect must match the original canvas"
+        exact_aspect(width, height, frame.logical_width, frame.logical_height)
+            || (!requires_alpha
+                && width == png.width
+                && height == png.height
+                && integer_rounded_aspect(
+                    width,
+                    height,
+                    frame.logical_width,
+                    frame.logical_height,
+                )),
+        "HD frame aspect must match the original canvas; only a full opaque frame may use subpixel integer rounding"
     );
     ensure!(
         width as u64 >= frame.logical_width as u64 * 2
@@ -809,6 +937,13 @@ fn frame_dimensions(frame: &Frame, png: &PngInfo) -> Result<(u32, u32)> {
         "HD artwork must supply at least twice the logical resolution"
     );
     Ok((width, height))
+}
+fn validate_opaque_rounding(rgba: &RgbaImage, requires_opaque: bool) -> Result<()> {
+    ensure!(
+        !requires_opaque || rgba.pixels().all(|pixel| pixel[3] == 255),
+        "HD integer-aspect rounding requires a fully opaque source and PNG"
+    );
+    Ok(())
 }
 fn validate_rgba(rgba: &RgbaImage, requires_alpha: bool) -> Result<()> {
     ensure!(
@@ -829,6 +964,28 @@ fn validate_frame(frame: &Frame, original: &Sprite, source: &[u8]) -> Result<()>
         original.width,
         original.height
     );
+    ensure!(
+        frame.native_nearest_cues.len() <= 64,
+        "native nearest cue list exceeds64 cells"
+    );
+    ensure!(
+        frame.native_nearest_cues.windows(2).all(|w| w[0] < w[1]),
+        "native nearest cues must be sorted and unique"
+    );
+    ensure!(
+        frame.native_nearest_cues.is_empty() || !original.pixels.contains(&TRANSPARENT),
+        "native nearest cues are limited to opaque original gameplay canvases"
+    );
+    for &[x, y] in &frame.native_nearest_cues {
+        ensure!(
+            x < frame.logical_width && y < frame.logical_height,
+            "native nearest cue outside original logical canvas"
+        );
+        ensure!(
+            original.pixels[y as usize * original.width + x as usize] < 240,
+            "native nearest cue must be an ordinary original source cell"
+        );
+    }
     ensure!(
         frame.origin == [0, 0],
         "HD format 1 preserves the original top-left anchor [0, 0]"
@@ -877,6 +1034,8 @@ mod tests {
             origin: [0, 0],
             source_sha256: format!("{:x}", Sha256::digest(source)),
             crop: None,
+            preserve_reserved_coverage: false,
+            native_nearest_cues: Vec::new(),
         }
     }
     #[test]
@@ -1532,6 +1691,559 @@ mod tests {
                 .diagnostics
                 .iter()
                 .any(|message| message.contains("limit") || message.contains("dimension"))
+        );
+    }
+    fn aspect_info(width: u32, height: u32) -> PngInfo {
+        PngInfo {
+            size: 0,
+            modified: None,
+            digest: [0; 32],
+            width,
+            height,
+        }
+    }
+    fn aspect_frame(width: u32, height: u32) -> Frame {
+        let mut f = frame(b"synthetic source");
+        f.logical_width = width;
+        f.logical_height = height;
+        f
+    }
+    #[test]
+    fn opaque_full_frame_accepts_only_common_scale_integer_rounding() {
+        let mut f = aspect_frame(320, 200);
+        let info = aspect_info(1586, 992);
+        assert_eq!(frame_dimensions(&f, &info, false).unwrap(), (1586, 992));
+        f.crop = Some([0, 0, 1586, 992]);
+        assert_eq!(frame_dimensions(&f, &info, false).unwrap(), (1586, 992));
+        // Swapping both logical and artwork axes retains the same rule.
+        let portrait = aspect_frame(200, 320);
+        assert!(frame_dimensions(&portrait, &aspect_info(992, 1586), false).is_ok());
+        // The PNG can be generated at any common scale, not just an integer one.
+        assert!(frame_dimensions(&aspect_frame(8, 5), &aspect_info(17, 11), false).is_ok());
+        for (width, height) in [
+            (1280, 799),
+            (1280, 801),
+            (1587, 991),
+            (1586, 993),
+            (1024, 1024),
+        ] {
+            assert!(
+                frame_dimensions(&aspect_frame(320, 200), &aspect_info(width, height), false)
+                    .is_err()
+            );
+        }
+        // Equal square axes cannot be rounded in conflicting directions at a tie.
+        assert!(!integer_rounded_aspect(5, 6, 2, 2));
+        assert!(!integer_rounded_aspect(0, 6, 2, 2));
+        assert!(!integer_rounded_aspect(5, 6, 0, 2));
+        // Arithmetic is bounded even for values beyond valid image dimensions.
+        assert!(integer_rounded_aspect(
+            u32::MAX,
+            u32::MAX,
+            u32::MAX,
+            u32::MAX
+        ));
+        assert!(!integer_rounded_aspect(u32::MAX, 1, 1, u32::MAX));
+    }
+    #[test]
+    fn rounded_exception_never_admits_transparent_sources_partial_crops_or_low_resolution() {
+        let mut f = aspect_frame(320, 200);
+        assert!(frame_dimensions(&f, &aspect_info(1586, 992), true).is_err());
+        f.crop = Some([1, 0, 1586, 992]);
+        assert!(frame_dimensions(&f, &aspect_info(1587, 992), false).is_err());
+        f.crop = Some([0, 0, 1586, 992]);
+        assert!(frame_dimensions(&f, &aspect_info(1600, 1000), false).is_err());
+        // Exact-ratio atlas crops and transparent artwork keep existing semantics.
+        f.crop = Some([8, 8, 1280, 800]);
+        assert!(frame_dimensions(&f, &aspect_info(1600, 1000), true).is_ok());
+        assert!(frame_dimensions(&aspect_frame(8, 5), &aspect_info(15, 10), false).is_err());
+    }
+    #[test]
+    fn rounded_dimensions_generated_by_one_scale_are_accepted() {
+        // Independent fixtures generated by conventional nearest-integer rounding
+        // at 1/64 scale steps, including ties, portrait ratios and tiny canvases.
+        let mut checked = 0;
+        for logical_width in 1_u32..=16 {
+            for logical_height in 1_u32..=16 {
+                for scale_numerator in 128_u32..=1024 {
+                    let width = (logical_width * scale_numerator + 32) / 64;
+                    let height = (logical_height * scale_numerator + 32) / 64;
+                    assert!(integer_rounded_aspect(
+                        width,
+                        height,
+                        logical_width,
+                        logical_height
+                    ));
+                    checked += 1;
+                }
+            }
+        }
+        assert_eq!(checked, 229632);
+    }
+    fn rectangular_opaque_fixture() -> (tempfile::TempDir, Catalog, Manifest) {
+        let (dir, _, mut manifest) = fixture();
+        let mut source = [1_i32, 0, 0, 8, 5]
+            .into_iter()
+            .flat_map(i32::to_le_bytes)
+            .collect::<Vec<_>>();
+        source.extend([7_u8; 40]);
+        fs::write(dir.path().join("source"), &source).unwrap();
+        fs::write(
+            dir.path().join("INDEX"),
+            format!("00001 {} source\n", source.len()),
+        )
+        .unwrap();
+        let catalog = Catalog::open(dir.path()).unwrap();
+        let f = &mut manifest.sequences[0].frames[0];
+        f.logical_width = 8;
+        f.logical_height = 5;
+        f.source_sha256 = format!("{:x}", Sha256::digest(&source));
+        manifest.sequences[0].frame_count = 1;
+        RgbaImage::from_pixel(17, 11, image::Rgba([80, 100, 120, 255]))
+            .save(dir.path().join("hd/ship.png"))
+            .unwrap();
+        (dir, catalog, manifest)
+    }
+    #[test]
+    fn actual_rounded_png_loads_all_scales_and_warms_its_validated_disk_cache() {
+        let (dir, catalog, manifest) = rectangular_opaque_fixture();
+        let cache = dir.path().join("cache");
+        let mut first = lazy_pack(dir.path(), &catalog, &manifest, Some(&cache));
+        for scale in 1..=4 {
+            let sprite = first.sprite(1, scale, &[[0; 3]; 256]).unwrap().unwrap();
+            assert_eq!((sprite.width, sprite.height), (8 * scale, 5 * scale));
+            assert!(sprite.pixels.iter().all(|pixel| *pixel != TRANSPARENT));
+        }
+        assert!(first.diagnostics.is_empty(), "{:?}", first.diagnostics);
+        assert_eq!(first.cache_stats().png_decodes, 1);
+        assert_eq!(first.cache_stats().disk_writes, 1);
+        let mut warm = lazy_pack(dir.path(), &catalog, &manifest, Some(&cache));
+        warm.sprite(1, 4, &[[0; 3]; 256]).unwrap().unwrap();
+        assert_eq!(warm.cache_stats().disk_hits, 1);
+        assert_eq!(warm.cache_stats().png_decodes, 0);
+        assert!(warm.diagnostics.is_empty());
+    }
+    #[test]
+    fn a_single_nonopaque_raw_pixel_cannot_be_hidden_by_resampling_or_a_warm_cache() {
+        let (dir, catalog, manifest) = rectangular_opaque_fixture();
+        let cache = dir.path().join("cache");
+        let mut first = lazy_pack(dir.path(), &catalog, &manifest, Some(&cache));
+        first.sprite(1, 4, &[[0; 3]; 256]).unwrap().unwrap();
+        for alpha in [0, 128, 254] {
+            // An isolated defect well above the four-times resident resolution.
+            let mut raw = RgbaImage::from_pixel(161, 101, image::Rgba([80, 100, 120, 255]));
+            raw.put_pixel(160, 100, image::Rgba([80, 100, 120, alpha]));
+            raw.save(dir.path().join("hd/ship.png")).unwrap();
+            let mut changed = lazy_pack(dir.path(), &catalog, &manifest, Some(&cache));
+            assert!(changed.sprite(1, 4, &[[0; 3]; 256]).unwrap().is_none());
+            assert_eq!(changed.cache_stats().disk_hits, 0);
+            assert_eq!(changed.cache_stats().disk_writes, 0);
+            assert!(
+                changed
+                    .diagnostics
+                    .iter()
+                    .any(|line| line.contains("fully opaque"))
+            );
+        }
+    }
+    #[test]
+    fn checksum_valid_nonopaque_rounded_cache_is_rebuilt_from_original_png() {
+        let (dir, catalog, manifest) = rectangular_opaque_fixture();
+        let cache = dir.path().join("cache");
+        let mut first = lazy_pack(dir.path(), &catalog, &manifest, Some(&cache));
+        first.sprite(1, 4, &[[0; 3]; 256]).unwrap().unwrap();
+        let path = fs::read_dir(&cache)
+            .unwrap()
+            .next()
+            .unwrap()
+            .unwrap()
+            .path();
+        let mut bytes = fs::read(&path).unwrap();
+        bytes[CACHE_HEADER + 3] = 254;
+        let checksum = Sha256::digest(&bytes[CACHE_HEADER..]);
+        bytes[48..80].copy_from_slice(&checksum);
+        fs::write(&path, bytes).unwrap();
+        let mut changed = lazy_pack(dir.path(), &catalog, &manifest, Some(&cache));
+        assert!(changed.sprite(1, 4, &[[0; 3]; 256]).unwrap().is_some());
+        assert_eq!(changed.cache_stats().disk_hits, 0);
+        assert_eq!(changed.cache_stats().png_decodes, 1);
+        assert!(
+            changed
+                .diagnostics
+                .iter()
+                .any(|line| line.contains("fully opaque"))
+        );
+        let mut healed = lazy_pack(dir.path(), &catalog, &manifest, Some(&cache));
+        healed.sprite(1, 4, &[[0; 3]; 256]).unwrap().unwrap();
+        assert_eq!(healed.cache_stats().disk_hits, 1);
+    }
+    #[test]
+    fn rounded_cache_identity_is_separate_and_exact_frame_keys_are_unchanged() {
+        fn previous_key(frame: &Frame, info: &PngInfo, requires_alpha: bool) -> [u8; 32] {
+            let mut digest = Sha256::new();
+            digest.update(KERNEL_VERSION);
+            digest.update(info.digest);
+            digest.update(frame.source_sha256.as_bytes());
+            digest.update(frame.logical_width.to_le_bytes());
+            digest.update(frame.logical_height.to_le_bytes());
+            for value in frame.origin {
+                digest.update(value.to_le_bytes());
+            }
+            digest.update([u8::from(requires_alpha), u8::from(frame.crop.is_some())]);
+            if let Some(crop) = frame.crop {
+                for value in crop {
+                    digest.update(value.to_le_bytes());
+                }
+            }
+            digest.finalize().into()
+        }
+        let mut f = aspect_frame(320, 200);
+        for info in [aspect_info(1600, 1000), aspect_info(1280, 800)] {
+            for requires_alpha in [false, true] {
+                assert_eq!(
+                    HdAssets::frame_key(&f, &info, requires_alpha),
+                    previous_key(&f, &info, requires_alpha)
+                );
+            }
+        }
+        f.crop = Some([10, 20, 1280, 800]);
+        assert_eq!(
+            HdAssets::frame_key(&f, &aspect_info(1600, 1000), false),
+            previous_key(&f, &aspect_info(1600, 1000), false)
+        );
+        f.crop = Some([0, 0, 1586, 992]);
+        assert_ne!(
+            HdAssets::frame_key(&f, &aspect_info(1586, 992), false),
+            previous_key(&f, &aspect_info(1586, 992), false)
+        );
+    }
+}
+
+#[cfg(test)]
+mod policy_proposal_tests {
+    use super::*;
+    fn frame() -> Frame {
+        Frame {
+            frame: 0,
+            file: "a.png".into(),
+            logical_width: 2,
+            logical_height: 2,
+            origin: [0, 0],
+            source_sha256: "00".into(),
+            crop: None,
+            preserve_reserved_coverage: false,
+            native_nearest_cues: Vec::new(),
+        }
+    }
+    fn assets(label: u8, mode: bool, rgba: RgbaImage) -> (tempfile::TempDir, HdAssets) {
+        let dir = tempfile::tempdir().unwrap();
+        rgba.save(dir.path().join("a.png")).unwrap();
+        let mut f = frame();
+        f.preserve_reserved_coverage = mode;
+        let mut h = HdAssets {
+            root: dir.path().to_path_buf(),
+            ..HdAssets::default()
+        };
+        h.replacements.insert(
+            1,
+            Replacement {
+                frame: f,
+                requires_alpha: true,
+                source_labels: Some(vec![label, 0, 0, 0]),
+                validated: false,
+                rejected: false,
+            },
+        );
+        (dir, h)
+    }
+    fn feathered() -> RgbaImage {
+        let mut raw = RgbaImage::new(8, 8);
+        for y in 0..4 {
+            for x in 1..4 {
+                raw.put_pixel(x, y, image::Rgba([0, 220, 80, 255]));
+            }
+        }
+        raw
+    }
+    #[test]
+    fn reserved_opt_in_restores_supported_feathered_cell_at_every_scale() {
+        let (_dir, mut h) = assets(253, true, feathered());
+        for scale in 1..=4 {
+            let s = h.sprite(1, scale, &[[0; 3]; 256]).unwrap().unwrap();
+            for y in 0..scale {
+                for x in 0..scale {
+                    assert_eq!(s.pixels[y * s.width + x], 253);
+                }
+            }
+            assert_eq!(*s.pixels.last().unwrap(), TRANSPARENT);
+        }
+    }
+    #[test]
+    fn default_keeps_alpha_cutoff_before_existing_source_labels() {
+        let (_dir, mut h) = assets(253, false, feathered());
+        let s = h.sprite(1, 4, &[[0; 3]; 256]).unwrap().unwrap();
+        assert_eq!(s.pixels[0], TRANSPARENT);
+        assert_eq!(s.pixels[1], 253);
+    }
+    #[test]
+    fn opt_in_does_not_restore_missing_or_sparse_reserved_art() {
+        for sparse in [false, true] {
+            let mut raw = RgbaImage::new(8, 8);
+            for y in 4..8 {
+                for x in 4..8 {
+                    raw.put_pixel(x, y, image::Rgba([240, 20, 30, 255]));
+                }
+            }
+            if sparse {
+                raw.put_pixel(3, 3, image::Rgba([0, 255, 0, 255]));
+            }
+            let (_dir, mut h) = assets(253, true, raw);
+            for scale in 1..=4 {
+                let s = h.sprite(1, scale, &[[0; 3]; 256]).unwrap().unwrap();
+                assert_eq!(s.pixels[0], TRANSPARENT, "missing lamp was invented");
+            }
+        }
+    }
+    #[test]
+    fn no_new_reserved_or_water_fire_coverage_at_non_flash_locations() {
+        for label in [0, 239, 240, 244, 245, 249] {
+            let (_dir, mut h) = assets(label, true, feathered());
+            let s = h.sprite(1, 4, &[[0; 3]; 256]).unwrap().unwrap();
+            assert_eq!(s.pixels[0], TRANSPARENT, "only250..255 may be preserved");
+            assert!(s.pixels.iter().all(|&i| i == TRANSPARENT || i < 250));
+        }
+    }
+    #[test]
+    fn source_cue_policy_never_changes_static_palette_alpha() {
+        let (_a, mut legacy) = assets(253, false, feathered());
+        let (_b, mut policy) = assets(253, true, feathered());
+        let mut p = [[0; 3]; 256];
+        p[255] = [0, 220, 80];
+        for scale in 1..=4 {
+            assert_eq!(
+                legacy
+                    .sprite_static_palette(1, scale, &p)
+                    .unwrap()
+                    .unwrap()
+                    .pixels,
+                policy
+                    .sprite_static_palette(1, scale, &p)
+                    .unwrap()
+                    .unwrap()
+                    .pixels
+            );
+        }
+    }
+    #[test]
+    fn legacy_frame_serialization_and_cache_identity_stay_exact() {
+        let f = frame();
+        let serialized = serde_json::to_value(&f).unwrap();
+        assert!(serialized.get("preserve_reserved_coverage").is_none());
+        assert!(serialized.get("native_nearest_cues").is_none());
+        let round: Frame = serde_json::from_value(serialized).unwrap();
+        assert!(!round.preserve_reserved_coverage);
+        assert!(round.native_nearest_cues.is_empty());
+        let info = PngInfo {
+            size: 1,
+            modified: None,
+            digest: [19; 32],
+            width: 8,
+            height: 8,
+        };
+        // Old algorithm independently enumerated, with no policy namespace.
+        let mut old = Sha256::new();
+        old.update(KERNEL_VERSION);
+        old.update(info.digest);
+        old.update(f.source_sha256.as_bytes());
+        old.update(f.logical_width.to_le_bytes());
+        old.update(f.logical_height.to_le_bytes());
+        for v in f.origin {
+            old.update(v.to_le_bytes());
+        }
+        old.update([1, 0]);
+        assert_eq!(
+            HdAssets::frame_key(&f, &info, true),
+            <[u8; 32]>::from(old.finalize())
+        );
+        let mut coverage = f.clone();
+        coverage.preserve_reserved_coverage = true;
+        let mut nearest = f.clone();
+        nearest.native_nearest_cues = vec![[0, 0]];
+        assert_ne!(
+            HdAssets::frame_key(&f, &info, true),
+            HdAssets::frame_key(&coverage, &info, true)
+        );
+        assert_ne!(
+            HdAssets::frame_key(&coverage, &info, true),
+            HdAssets::frame_key(&nearest, &info, true)
+        );
+        assert_ne!(
+            HdAssets::frame_key(&nearest, &info, true),
+            HdAssets::frame_key(&f, &info, true)
+        );
+    }
+    #[test]
+    fn native_nearest_is_restricted_to_opaque_original_canvas() {
+        let mut f = frame();
+        f.native_nearest_cues = vec![[0, 0]];
+        let mut original = Sprite::blank(2, 2);
+        original.pixels.fill(1);
+        f.source_sha256 = format!("{:x}", Sha256::digest(b"data"));
+        assert!(validate_frame(&f, &original, b"data").is_ok());
+        original.pixels[0] = TRANSPARENT;
+        assert!(validate_frame(&f, &original, b"data").is_err());
+    }
+    #[test]
+    fn malformed_policy_metadata_fails_strictly() {
+        let mut j = serde_json::to_value(frame()).unwrap();
+        j["native_nearest_cues"] = "yes".into();
+        assert!(serde_json::from_value::<Frame>(j).is_err());
+        let mut j = serde_json::to_value(frame()).unwrap();
+        j["preserve_reserved_coverage"] = "yes".into();
+        assert!(serde_json::from_value::<Frame>(j).is_err());
+    }
+    #[test]
+    fn fractional_resident_cell_guard_is_bounded_and_requires_majority_support() {
+        let f = frame();
+        let opaque = RgbaImage::from_pixel(5, 5, image::Rgba([1, 2, 3, 255]));
+        for i in 0..4 {
+            assert!(reserved_cell_supported(&opaque, &f, i));
+        }
+        let empty = RgbaImage::new(5, 5);
+        for i in 0..4 {
+            assert!(!reserved_cell_supported(&empty, &f, i));
+        }
+        let faint = RgbaImage::from_pixel(5, 5, image::Rgba([1, 2, 3, 127]));
+        for i in 0..4 {
+            assert!(!reserved_cell_supported(&faint, &f, i));
+        }
+    }
+    #[test]
+    fn fractional_last_cell_does_not_read_outside_resident_canvas() {
+        let mut f = frame();
+        f.logical_width = 56;
+        f.logical_height = 40;
+        let rgba = RgbaImage::from_pixel(219, 157, image::Rgba([1, 2, 3, 255]));
+        for logical in 0..56 * 40 {
+            assert!(reserved_cell_supported(&rgba, &f, logical));
+        }
+    }
+    #[test]
+    fn ordinary_cue_coordinates_reject_duplicates_order_reserved_bounds_and_excess() {
+        let source = b"data";
+        let mut f = frame();
+        f.source_sha256 = format!("{:x}", Sha256::digest(source));
+        let mut original = Sprite::blank(2, 2);
+        original.pixels.fill(5);
+        for cells in [
+            vec![[0, 0], [0, 0]],
+            vec![[1, 0], [0, 0]],
+            vec![[2, 0]],
+            vec![[0, 2]],
+            vec![[0, 0]; 65],
+        ] {
+            f.native_nearest_cues = cells;
+            assert!(validate_frame(&f, &original, source).is_err());
+        }
+        f.native_nearest_cues = vec![[0, 0]];
+        for label in [240, 244, 245, 249, 250, 255, TRANSPARENT] {
+            original.pixels[0] = label;
+            assert!(validate_frame(&f, &original, source).is_err());
+        }
+        original.pixels[0] = 239;
+        assert!(validate_frame(&f, &original, source).is_ok());
+    }
+    #[test]
+    fn nearest_cue_cache_identity_includes_every_sorted_coordinate() {
+        let info = PngInfo {
+            size: 1,
+            modified: None,
+            digest: [19; 32],
+            width: 8,
+            height: 8,
+        };
+        let mut a = frame();
+        a.native_nearest_cues = vec![[0, 0], [1, 0]];
+        let mut b = a.clone();
+        b.native_nearest_cues[1] = [1, 1];
+        assert_ne!(
+            HdAssets::frame_key(&a, &info, false),
+            HdAssets::frame_key(&b, &info, false)
+        );
+    }
+    #[test]
+    fn hidden_bright_rgb_cannot_invent_alpha_for_a_missing_reserved_lamp() {
+        let mut raw = RgbaImage::from_pixel(8, 8, image::Rgba([0, 255, 255, 0]));
+        for y in 4..8 {
+            for x in 4..8 {
+                raw.put_pixel(x, y, image::Rgba([255, 20, 20, 255]));
+            }
+        }
+        let (_dir, mut h) = assets(254, true, raw);
+        for scale in 1..=4 {
+            let s = h.sprite(1, scale, &[[0; 3]; 256]).unwrap().unwrap();
+            assert_eq!(s.pixels[0], TRANSPARENT);
+        }
+    }
+    #[test]
+    fn native_ordinary_cue_reads_generated_rgb_without_changing_other_pixels_or_static_mode() {
+        let dir = tempfile::tempdir().unwrap();
+        let mut raw = RgbaImage::from_pixel(8, 8, image::Rgba([0, 0, 0, 255]));
+        raw.put_pixel(2, 2, image::Rgba([255, 150, 30, 255]));
+        raw.save(dir.path().join("a.png")).unwrap();
+        let make = |cues| {
+            let mut f = frame();
+            f.native_nearest_cues = cues;
+            let mut h = HdAssets {
+                root: dir.path().to_path_buf(),
+                ..HdAssets::default()
+            };
+            h.replacements.insert(
+                1,
+                Replacement {
+                    frame: f,
+                    requires_alpha: false,
+                    source_labels: None,
+                    validated: false,
+                    rejected: false,
+                },
+            );
+            h
+        };
+        let mut old = make(Vec::new());
+        let mut cue = make(vec![[0, 0]]);
+        let mut palette = [[0; 3]; 256];
+        palette[7] = [255, 150, 30];
+        palette[254] = [255, 150, 30];
+        for scale in 1..=4 {
+            let before = old.sprite(1, scale, &palette).unwrap().unwrap();
+            let after = cue.sprite(1, scale, &palette).unwrap().unwrap();
+            if scale == 1 {
+                assert_eq!(before.pixels[0], 0);
+                assert_eq!(after.pixels[0], 7);
+                assert_eq!(&before.pixels[1..], &after.pixels[1..]);
+            } else {
+                assert_eq!(before.pixels, after.pixels);
+            }
+            assert_eq!(
+                old.sprite_static_palette(1, scale, &palette)
+                    .unwrap()
+                    .unwrap()
+                    .pixels,
+                cue.sprite_static_palette(1, scale, &palette)
+                    .unwrap()
+                    .unwrap()
+                    .pixels
+            );
+        }
+        // A missing ordinary raw cue remains black; no original palette index
+        // or color is copied into artwork by this policy.
+        raw.put_pixel(2, 2, image::Rgba([0, 0, 0, 255]));
+        raw.save(dir.path().join("a.png")).unwrap();
+        let mut missing = make(vec![[0, 0]]);
+        assert_eq!(
+            missing.sprite(1, 1, &palette).unwrap().unwrap().pixels[0],
+            0
         );
     }
 }

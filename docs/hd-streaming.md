@@ -6,6 +6,17 @@ The runtime can register the complete original picture catalog without retaining
 
 Registration does not imply a PNG has been decoded. `registered_count()` reports source-checked candidates that have not been rejected; `validated_count()` and the compatibility alias `coverage()` report frames whose artwork has passed validation. First use checks PNG format, crop bounds, matching aspect ratio, at least 2× logical resolution, visible pixels and source-aware transparency. Transparent originals require transparent negative space; opaque originals accept opaque art. A failed frame returns `Ok(None)` from `sprite`, records one diagnostic and keeps native fallback until the pack is reloaded.
 
+A fully opaque original may also use a complete, fully opaque PNG whose dimensions result from rounding one common scale by less than half a pixel on each axis. This accepts a generated 1,586×992 background for a 320×200 original without discarding its border. It does not permit partial crops, transparent artwork, square canvases with unequal axes, or arbitrary aspect changes. Every raw alpha value is checked before downsampling; rounded-frame cache entries use a separate identity and repeat the opacity check.
+
+## Optional frame presentation policies
+
+Both policies below default to disabled. They require explicit frame metadata and source/art review; loader validation alone does not approve a remaster.
+
+- `preserve_reserved_coverage: true` retains an original gameplay palette label 250–255 at a feathered edge only when its resident logical cell has mean alpha of at least 128 and at least half its area has alpha of 128 or greater. Missing or sparse artwork stays transparent. Ordinary colors, water/fire classes and static-card rendering keep their existing behavior.
+- `native_nearest_cues: [[x, y], ...]` samples the unchanged resident RGBA at the nearest pixel for up to 64 explicitly listed original cells, only at gameplay scale 1. Coordinates must be sorted lexicographically, unique, within an opaque original canvas, and refer to ordinary source indices below 240. This can preserve a small raw-supported warning color that averaging dulls. It does not recolor artwork or reconstruct absent details; other cells, higher scales and static-card rendering keep their existing sampler.
+
+Opt-in metadata participates in both derived and indexed cache identities. Frames without these policies retain their previous cache keys and pixels. The candidate and original-art audit tools validate the same metadata restrictions as the Rust loader.
+
 `HdAssets::load` performs full eager validation using the same bounded caches. `validate_all()` can also validate a lazily registered pack; its report distinguishes registered, validated and rejected frames. Full validation can therefore be used in a CLI or audit without raising runtime memory limits. It validates supplied artwork and does not infer coverage for absent originals.
 
 ## Memory bounds

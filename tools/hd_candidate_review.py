@@ -15,7 +15,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw
 
-FRAME_KEYS = {"frame", "file", "logical_width", "logical_height", "origin", "source_sha256", "crop"}
+from hd_frame_policy import FRAME_KEYS, validate_frame_policy
 
 
 def proposal_frames(proposal, expected=None):
@@ -30,6 +30,7 @@ def proposal_frames(proposal, expected=None):
         for frame in sequence["frames"]:
             if set(frame) - FRAME_KEYS:
                 raise ValueError("unknown manifest frame fields")
+            validate_frame_policy(frame)
             if not 0 <= frame["frame"] < sequence["frame_count"]:
                 raise ValueError("frame outside sequence")
             identity = f"{base + frame['frame']:05x}"
