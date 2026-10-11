@@ -189,7 +189,7 @@ impl TerrainHd {
                 .min(tile.image.width / 2)
                 .min(tile.image.height / 2)
                 .max(1);
-            let edges = self.tile_edges(tile, &accepted, &detailed, context, scale, palette);
+            let edges = self.tile_edges(tile, &accepted, &detailed, context, scale, band, palette);
             let weights: [usize; 8] = std::array::from_fn(|distance| edge_weight(distance, band));
             for sy in 0..tile.image.height {
                 let yy = top as i64 + sy as i64;
@@ -236,14 +236,21 @@ impl TerrainHd {
                         {
                             let corner = (vside - 2) * 2 + hside;
                             (
-                                edges.corners[corner].color(original, raw, palette),
+                                edges.corners[corner]
+                                    .color(hdistance, vdistance, band, original, raw, palette),
                                 hdistance.min(vdistance),
                             )
                         } else if let Some((side, distance)) = horizontal {
-                            (edges.color(side, sy, original, raw, palette), distance)
+                            (
+                                edges.color(side, sy, distance, original, raw, palette),
+                                distance,
+                            )
                         } else {
                             let (side, distance) = vertical.unwrap();
-                            (edges.color(side, sx, original, raw, palette), distance)
+                            (
+                                edges.color(side, sx, distance, original, raw, palette),
+                                distance,
+                            )
                         };
                     image.pixels[destination] =
                         self.transition(target, raw, weights[distance], palette);
@@ -320,6 +327,7 @@ impl TerrainHd {
         detailed: &Sprite,
         context: &Sprite,
         scale: usize,
+        band: usize,
         palette: &[[u8; 3]; 256],
     ) -> EdgeTargets {
         let [width, height] = tile.logical_size;
@@ -352,18 +360,29 @@ impl TerrainHd {
             } else {
                 tile.image.width
             };
-            (0..length)
-                .map(|offset| {
+            // Pair pristine detail at each mirrored distance across the join.
+            // Repeating only the outer edge's sample throughout this band
+            // stretches fine grain into ribs even when the source art joins.
+            (0..length * band)
+                .map(|sample| {
+                    let offset = sample / band;
+                    let distance = (sample % band) as i64;
                     let points = match side {
-                        0 => [[left - 1, top + offset as i64], [left, top + offset as i64]],
-                        1 => [
-                            [right - 1, top + offset as i64],
-                            [right, top + offset as i64],
+                        0 => [
+                            [left - 1 - distance, top + offset as i64],
+                            [left + distance, top + offset as i64],
                         ],
-                        2 => [[left + offset as i64, top - 1], [left + offset as i64, top]],
+                        1 => [
+                            [right - 1 - distance, top + offset as i64],
+                            [right + distance, top + offset as i64],
+                        ],
+                        2 => [
+                            [left + offset as i64, top - 1 - distance],
+                            [left + offset as i64, top + distance],
+                        ],
                         _ => [
-                            [left + offset as i64, bottom - 1],
-                            [left + offset as i64, bottom],
+                            [left + offset as i64, bottom - 1 - distance],
+                            [left + offset as i64, bottom + distance],
                         ],
                     };
                     self.shared_target(detailed, context, &points, palette)
@@ -380,19 +399,33 @@ impl TerrainHd {
             let by = if vside == 2 { top } else { bottom };
             CornerTarget {
                 complete,
-                target: if complete {
-                    self.shared_target(
-                        detailed,
-                        context,
-                        &[[bx - 1, by - 1], [bx, by - 1], [bx - 1, by], [bx, by]],
-                        palette,
-                    )
+                // The same distance-aware rule applies in both axes at four
+                // HD tiles' intersection, avoiding a flat corner-color patch.
+                targets: if complete {
+                    (0..band * band)
+                        .map(|sample| {
+                            let dx = (sample % band) as i64;
+                            let dy = (sample / band) as i64;
+                            self.shared_target(
+                                detailed,
+                                context,
+                                &[
+                                    [bx - 1 - dx, by - 1 - dy],
+                                    [bx + dx, by - 1 - dy],
+                                    [bx - 1 - dx, by + dy],
+                                    [bx + dx, by + dy],
+                                ],
+                                palette,
+                            )
+                        })
+                        .collect()
                 } else {
-                    None
+                    Vec::new()
                 },
             }
         });
         EdgeTargets {
+            band,
             adjacent,
             sides,
             corners,
@@ -479,6 +512,7 @@ impl TerrainHd {
 }
 
 struct EdgeTargets {
+    band: usize,
     adjacent: [bool; 4],
     sides: [Vec<Option<(u16, u16)>>; 4],
     corners: [CornerTarget; 4],
@@ -488,6 +522,7 @@ impl EdgeTargets {
         &self,
         side: usize,
         offset: usize,
+        distance: usize,
         original: u16,
         raw: u16,
         palette: &[[u8; 3]; 256],
@@ -495,21 +530,29 @@ impl EdgeTargets {
         if !self.adjacent[side] {
             return original;
         }
-        self.sides[side][offset]
+        self.sides[side][offset * self.band + distance]
             .filter(|(_, source)| same_material(original, *source, palette))
             .map_or(raw, |(target, _)| target)
     }
 }
 struct CornerTarget {
     complete: bool,
-    target: Option<(u16, u16)>,
+    targets: Vec<Option<(u16, u16)>>,
 }
 impl CornerTarget {
-    fn color(&self, original: u16, raw: u16, palette: &[[u8; 3]; 256]) -> u16 {
+    fn color(
+        &self,
+        horizontal_distance: usize,
+        vertical_distance: usize,
+        band: usize,
+        original: u16,
+        raw: u16,
+        palette: &[[u8; 3]; 256],
+    ) -> u16 {
         if !self.complete {
             return original;
         }
-        self.target
+        self.targets[vertical_distance * band + horizontal_distance]
             .filter(|(_, source)| same_material(original, *source, palette))
             .map_or(raw, |(target, _)| target)
     }

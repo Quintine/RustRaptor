@@ -223,6 +223,64 @@ fn shared_hd_edges_preserve_original_hard_material_boundaries_and_mixed_fallback
 }
 
 #[test]
+fn compatible_hd_grain_is_preserved_across_edge_and_corner_bands() {
+    for scale in [1, 2, 3, 4] {
+        let width = 32 * scale;
+        let context = solid(width * 2, width * 2, 40);
+        let mut pristine = context.clone();
+        let mut replacements = Vec::new();
+        // Four detailed surfaces already agree at every mirrored distance
+        // from their joins. Their grain must stay two-dimensional, including
+        // the four-way corner, rather than become a repeated edge sample.
+        for row in 0..2 {
+            for column in 0..2 {
+                let mut image = solid(width, width, 0);
+                for y in 0..width {
+                    for x in 0..width {
+                        let dx = if column == 0 { width - 1 - x } else { x };
+                        let dy = if row == 0 { width - 1 - y } else { y };
+                        let color = 100 + ((dx * 17 + dy * 29 + dx * dy * 7) % 100) as u16;
+                        image.pixels[y * width + x] = color;
+                        pristine.pixels[(row * width + y) * pristine.width + column * width + x] =
+                            color;
+                    }
+                }
+                replacements.push(Replacement {
+                    image,
+                    position: [(column * 32) as i32, (row * 32) as i32],
+                    logical_size: [32, 32],
+                });
+            }
+        }
+        let mut compositor = TerrainHd::default();
+        let composed = compositor.compose(&context, &replacements, scale, &palette());
+        let band = 2 * scale;
+        for offset in 4 * scale..60 * scale {
+            for depth in width - band..width + band {
+                assert_eq!(
+                    at(&composed.image, depth, offset),
+                    at(&pristine, depth, offset),
+                    "compatible horizontal grain was stretched at scale {scale}"
+                );
+                assert_eq!(
+                    at(&composed.image, offset, depth),
+                    at(&pristine, offset, depth),
+                    "compatible vertical/corner grain was stretched at scale {scale}"
+                );
+            }
+        }
+        replacements.reverse();
+        assert_eq!(
+            composed.image,
+            compositor
+                .compose(&context, &replacements, scale, &palette())
+                .image
+        );
+        assert_eq!(compositor.cache_bytes(), 2 * 1024 * 1024);
+    }
+}
+
+#[test]
 fn negative_gutters_and_fractional_scroll_move_the_completed_layer_together() {
     for scale in [1, 2, 3, 4] {
         let context = solid(320 * scale, 204 * scale, 30);
