@@ -1,6 +1,6 @@
 # Shipped weapon prices and balance
 
-The three independent weapon mods use the original game's credit scale. Their
+The five independent weapon mods use the original game's credit scale. The first three
 initial example prices of 6,500, 14,000 and 22,000 made reusable upgrades cheaper
 than much weaker original equipment. The revised prices preserve their firing,
 damage, scripts, sounds and artwork.
@@ -10,17 +10,20 @@ damage, scripts, sounds and artwork.
 | Pulse Cannon | 185,000 | Just above the 175,600-credit Micro Missile primary upgrade. It adds similar sustained damage and also adds a spread burst every third volley. |
 | Seeker Swarm | 285,000 | Above the 250,650-credit Mini Gun. Its three missiles track air and ground enemies and hits fragment into at most two nearby enemies. It remains below the 512,850-credit instant Turret. |
 | Ion Lance | 425,000 | Below the Turret and the 950,000-credit Death Ray. Its lower damage per target trades against immediate hits and the ability to pierce several enemies in one column. |
+| Lightning Cannon | 825,000 | Above the original 725,000-credit Pulse Cannon and below the 950,000-credit Death Ray. Its strong immediate forward hit can chain to three nearby enemies, but it needs an initial target in its aiming lane and the chain has a strict 48-pixel reach. |
+| Lightning Shield | 155,000 | A supplementary primary below the 175,600-credit Micro Missile. It adds only a little damage and reaches roughly 12 pixels beyond the pilot's hull; its value comes from covering close airborne threats in every direction while the other guns fire. |
 
 Pulse Cannon is always equipped and fires alongside other primary guns. Seeker
-Swarm and Ion Lance occupy the selected special slot and fire with Fire or
-Special while selected. All three are reusable, consume no ammunition and have
+Swarm, Ion Lance and Lightning Cannon occupy the selected special slot and fire with Fire or
+Special while selected. Lightning Shield is always equipped and pulses only while
+Fire is held; it does not occupy the selected slot. All five are reusable, consume no ammunition and have
 a maximum inventory count of one. Each equipment definition includes a shop
 description stating these controls and its target behavior.
 
 ## Controlled damage observations
 
 The local benchmark loads the original asset catalog and original registered
-weapons, plus all six shipped weapon/enemy packages. Every weapon runs through
+weapons, plus eight shipped weapon/enemy packages. Every weapon runs through
 the real `World::step` simulation and real scripts at difficulty 2. Each scene
 holds Fire for 700 steps, exactly 30 seconds at 70/3 Hz, against 32×32 fixtures
 with 1,000,000 health. The pilot remains at the initial position with no other
@@ -44,6 +47,8 @@ cooldown.
 | Mod Pulse Cannon | 185,000 | 24.00 | 24.00 | 0 |
 | Seeker Swarm | 285,000 | 23.40 | 23.40 | 23.40 |
 | Ion Lance | 425,000 | 26.67 | 26.67 | 0 |
+| Lightning Cannon | 825,000 | 41.60 | 41.60 | 0 |
+| Lightning Shield | 155,000 | 0 | 0 | 0 |
 
 The original forward laser's native beam damage pass reaches ground enemies
 despite its historical air target metadata; the observations use its actual
@@ -66,13 +71,39 @@ in the same column: 53.33 combined. It delivered 80.00 combined across three
 overlapping column targets. It dealt zero damage to targets outside its launch
 column. It is a brief aimed beam, rather than a screen-wide attack.
 
+Lightning Cannon fires every 18 ticks and hits the first target for 32 damage.
+In a chain scene with 40 pixels between target centers, it delivered 41.60,
+26.00, 15.60 and 10.40 damage/s to four distinct targets, for 93.60 combined.
+A fifth neighboring target took zero damage. Each hop chooses the nearest
+living, previously unhit target within 48 pixels of the previous hit; it can
+chain through air and ground targets and never revisits a target. It missed an
+isolated target 76 pixels to the right of its narrow forward acquisition lane.
+Its 825,000-credit price reflects better single-target output than the original
+Pulse Cannon plus bounded cluster utility, while staying below the Death Ray's
+80.00 aligned damage/s. Cluster performance alone does not guarantee campaign
+performance: spaced enemies break the chain and weak targets reduce its useful
+damage through overkill.
+
+Lightning Shield cannot reach the normal distant fixtures. Against a stationary
+aircraft with its hull 28 pixels from the pilot's center, it delivered **5.87
+damage/s**. The equivalent ground fixture took zero damage. Against five close
+aircraft it dealt 5.87 to each of the four closest targets, for 23.47 combined,
+and zero to the fifth. The 28-pixel distance is measured to the nearest point on
+the enemy hull, so it reaches only about 12 pixels beyond the pilot's own hull.
+Its 155,000-credit price treats this as supplemental coverage near the ship,
+below the Micro Missile and mod Pulse Cannon upgrades. Its short reach requires
+dangerous proximity, and it provides no protection from collisions or bullets.
+Firing alongside Forward Guns preserves its 5.87 close-target damage/s; selecting
+another special never disables it. Its pulses consume no equipment.
+
 ## Economy and limits
 
 Controlled first-mission runs starting with 100 energy and zero credits earned
 42,775 credits at difficulty 1 and 59,025 at difficulty 2 with starter guns.
 The in-game registration flow starts with 10,000 credits and 75 energy, matching
 the original hangar setup. Compared with the latter controlled gross
-reward, these prices represent approximately 3.13, 4.83 and 7.20 such payouts.
+reward, the first three prices represent approximately 3.13, 4.83 and 7.20 such payouts.
+Lightning Cannon costs about 13.98 and Lightning Shield about 2.63 such payouts.
 Repairs and other purchases increase the saving time; later missions have
 different rewards. This comparison sets a progression tier and does not promise
 an exact purchase mission.
@@ -94,14 +125,30 @@ without granting a permanent shop upgrade or a repeatable resale reward.
 Run the local-only test from the repository root with the original catalog:
 
 ```sh
-RAPTOR_BALANCE_REPORT="$PWD/.reference/weapon-balance.json" \
-  cargo test --release --manifest-path RustRaptor/Cargo.toml \
+RAPTOR_TEST_DATA="$PWD/data" RAPTOR_BALANCE_REPORT="$PWD/.reference/weapon-balance.json" \
+  cargo test --release \
   --no-default-features --test weapon_balance -- --ignored --nocapture
 ```
 
 `RAPTOR_TEST_DATA` can override the catalog directory. The optional JSON report
-records all 96 observations: fifteen weapons in six scenes, plus the three
-primary upgrades combined with Forward Guns against air and ground. Assertions
+records all 120 observations: seventeen weapons in six scenes, the three original
+primary upgrade comparisons with Forward Guns, four additional proximity/chain
+scenes for each lightning weapon, and four lightning/Forward Guns comparisons. Assertions
 check all-target homing, column piercing, off-axis beam misses, target survival
 and unchanged pilot shields. The test uses the Rust engine without SDL or C++.
-Original data and locally written reference reports stay outside Git.
+The bundled original data is tracked; locally written reference reports stay outside Git. The portable
+weapon tests additionally check range boundaries, chain gaps, repeated-hit
+exclusion, kills, cooldown, absence of input, removed equipment, combined loadouts
+and deterministic continuation.
+
+The opt-in visual proof uses the actual package icons, original palette and
+public arc renderer in SD and HD. It writes local, ignored captures:
+
+```sh
+cargo test --locked --no-default-features --test weapons_mods \
+  lightning_mods_render_real_icons_and_discharge_arcs_in_sd_and_hd \
+  -- --ignored --nocapture
+```
+
+Both packages include a numeric `balance-report.json`; these observations do
+not include original game artwork or catalog data.

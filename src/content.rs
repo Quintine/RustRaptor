@@ -92,6 +92,8 @@ pub enum WeaponBehavior {
     Spread,
     Bomb,
     EnergyGrab,
+    /// Fire through on_fire only, without an automatic engine projectile.
+    Scripted,
 }
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
 #[serde(deny_unknown_fields)]
@@ -423,6 +425,11 @@ impl Registry {
         };
         for w in self.weapons.values() {
             label(&w.name, &w.script)?;
+            ensure!(
+                !matches!(w.behavior, WeaponBehavior::Scripted) || w.script.is_some(),
+                "scripted weapon {} requires a script",
+                w.id
+            );
             ensure!(
                 w.damage > 0
                     && w.damage <= 100000

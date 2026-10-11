@@ -140,14 +140,25 @@
       ]
     },
     "WeaponBehavior": {
-      "type": "string",
-      "enum": [
-        "straight",
-        "homing",
-        "beam",
-        "spread",
-        "bomb",
-        "energy_grab"
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "straight",
+            "homing",
+            "beam",
+            "spread",
+            "bomb",
+            "energy_grab"
+          ]
+        },
+        {
+          "description": "Fire through on_fire only, without an automatic engine projectile.",
+          "type": "string",
+          "enum": [
+            "scripted"
+          ]
+        }
       ]
     }
   }

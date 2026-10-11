@@ -29,8 +29,8 @@ For development and tests:
 export LD_LIBRARY_PATH="$HOME/.local/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
 cargo test --locked
 cargo test --locked --no-default-features
-RAPTOR_TEST_DATA="$PWD/../data" cargo test --locked
-RAPTOR_TEST_DATA="$PWD/../data" cargo test --locked -- --ignored
+RAPTOR_TEST_DATA="$PWD/data" cargo test --locked
+RAPTOR_TEST_DATA="$PWD/data" cargo test --locked -- --ignored
 ```
 
 Portable fixtures use synthetic assets and the bundled authored mod art/audio. Original integration checks are opt-in and local. Native audio comparisons compile a small retained-source harness with g++ and SDL2 headers; pure Rust playback itself uses no C++ runtime.
@@ -62,12 +62,12 @@ migrate on load; custom combinations are preserved.
 ## Local asset and platform checks
 
 ```sh
-cargo run --locked --no-default-features -- --data ../data --verify-assets
-cargo run --locked --no-default-features -- --data ../data --mods mods --validate-mods aurora
-cargo run --locked --no-default-features -- --data ../data --mods mods \
+cargo run --locked --no-default-features -- --data data --verify-assets
+cargo run --locked --no-default-features -- --data data --mods mods --validate-mods aurora
+cargo run --locked --no-default-features -- --data data --mods mods \
   --enabled aurora --headless aurora:field_trials --ticks 700
 SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=dummy cargo run --locked -- \
-  --data ../data --profile-root ../.reference/smoke --smoke-frames 5 \
+  --data data --profile-root ../.reference/smoke --smoke-frames 5 \
   --screenshot ../.reference/menu.png
 ```
 
@@ -85,7 +85,7 @@ cmake --build ../raptor/build --target raptor --parallel 8
   RAPTOR_REFERENCE_TRACE="$PWD/../.reference/cpp-demo.jsonl" \
   RAPTOR_REFERENCE_TICKS=1889 \
   ../raptor/build/bin/raptor PLAY "$PWD/demos/DEMO1G1_REC")
-cargo run --locked --no-default-features -- --data ../data \
+cargo run --locked --no-default-features -- --data data \
   --replay DEMO1G1_REC --ticks 1889 --trace ../.reference/rust-demo.jsonl
 python3 tools/compare_replays.py ../.reference/cpp-demo.jsonl ../.reference/rust-demo.jsonl
 ```
@@ -98,4 +98,4 @@ The Rust FM/DSP implementation has synthetic sample-by-sample native comparisons
 
 The campaign checks cover all waves and difficulties with assistance, and first-mission tests win without replenishing pilot health or editing enemy state. Wider ordinary playtesting and more complete native state comparisons remain useful. Normal startup includes the original logos, fanfare and intro. Native timing, sound-marker resolution, scene stops and custom logo palettes are checked in [intro validation](intro-validation.md). The refined menu uses an authored hangar backdrop and has a [42-frame screenshot review](menu-validation.md). Base-game HD coverage is partial; bundled mods supply SD/HD art. See [display measurements](performance.md).
 
-Scale2x/3x follows the [published algorithm](https://www.scale2x.it/algorithm); Scale4x applies Scale2x twice. WAV parsing follows the [RIFF chunk format](https://learn.microsoft.com/en-us/windows/win32/xaudio2/resource-interchange-file-format--riff-). Original catalog/reference assets remain outside version control. Authored mod artwork and sounds are tracked.
+Scale2x/3x follows the [published algorithm](https://www.scale2x.it/algorithm); Scale4x applies Scale2x twice. WAV parsing follows the [RIFF chunk format](https://learn.microsoft.com/en-us/windows/win32/xaudio2/resource-interchange-file-format--riff-). The playable catalog, approved runtime HD assets and authored mod artwork/sounds are tracked. Working source references and review captures remain outside the repository.

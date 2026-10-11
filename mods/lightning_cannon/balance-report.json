@@ -1,0 +1,204 @@
+{
+  "difficulty": 2,
+  "fire_steps": 700,
+  "rate": "70/3 Hz",
+  "target_health": 1000000,
+  "target_size": [
+    32,
+    32
+  ],
+  "rows": [
+    {
+      "damage": [
+        1248
+      ],
+      "damage_per_second": [
+        41.6
+      ],
+      "item": "lightning_cannon:equipment",
+      "price": 825000,
+      "scene": "aligned_air",
+      "seconds": 30.0,
+      "ticks": 700,
+      "with_forward_guns": false
+    },
+    {
+      "damage": [
+        1248
+      ],
+      "damage_per_second": [
+        41.6
+      ],
+      "item": "lightning_cannon:equipment",
+      "price": 825000,
+      "scene": "aligned_ground",
+      "seconds": 30.0,
+      "ticks": 700,
+      "with_forward_guns": false
+    },
+    {
+      "damage": [
+        0
+      ],
+      "damage_per_second": [
+        0.0
+      ],
+      "item": "lightning_cannon:equipment",
+      "price": 825000,
+      "scene": "off_axis_air",
+      "seconds": 30.0,
+      "ticks": 700,
+      "with_forward_guns": false
+    },
+    {
+      "damage": [
+        0
+      ],
+      "damage_per_second": [
+        0.0
+      ],
+      "item": "lightning_cannon:equipment",
+      "price": 825000,
+      "scene": "off_axis_ground",
+      "seconds": 30.0,
+      "ticks": 700,
+      "with_forward_guns": false
+    },
+    {
+      "damage": [
+        1248,
+        0
+      ],
+      "damage_per_second": [
+        41.6,
+        0.0
+      ],
+      "item": "lightning_cannon:equipment",
+      "price": 825000,
+      "scene": "column",
+      "seconds": 30.0,
+      "ticks": 700,
+      "with_forward_guns": false
+    },
+    {
+      "damage": [
+        780,
+        1248,
+        468
+      ],
+      "damage_per_second": [
+        26.0,
+        41.6,
+        15.6
+      ],
+      "item": "lightning_cannon:equipment",
+      "price": 825000,
+      "scene": "cluster",
+      "seconds": 30.0,
+      "ticks": 700,
+      "with_forward_guns": false
+    },
+    {
+      "damage": [
+        0
+      ],
+      "damage_per_second": [
+        0.0
+      ],
+      "item": "lightning_cannon:equipment",
+      "price": 825000,
+      "scene": "close_air",
+      "seconds": 30.0,
+      "ticks": 700,
+      "with_forward_guns": false
+    },
+    {
+      "damage": [
+        0
+      ],
+      "damage_per_second": [
+        0.0
+      ],
+      "item": "lightning_cannon:equipment",
+      "price": 825000,
+      "scene": "close_ground",
+      "seconds": 30.0,
+      "ticks": 700,
+      "with_forward_guns": false
+    },
+    {
+      "damage": [
+        1248,
+        780,
+        468,
+        312,
+        0
+      ],
+      "damage_per_second": [
+        41.6,
+        26.0,
+        15.6,
+        10.4,
+        0.0
+      ],
+      "item": "lightning_cannon:equipment",
+      "price": 825000,
+      "scene": "chain",
+      "seconds": 30.0,
+      "ticks": 700,
+      "with_forward_guns": false
+    },
+    {
+      "damage": [
+        0,
+        0,
+        1248,
+        0,
+        0
+      ],
+      "damage_per_second": [
+        0.0,
+        0.0,
+        41.6,
+        0.0,
+        0.0
+      ],
+      "item": "lightning_cannon:equipment",
+      "price": 825000,
+      "scene": "close_cluster",
+      "seconds": 30.0,
+      "ticks": 700,
+      "with_forward_guns": false
+    },
+    {
+      "damage": [
+        1942
+      ],
+      "damage_per_second": [
+        64.73333333333333
+      ],
+      "item": "lightning_cannon:equipment",
+      "price": 825000,
+      "scene": "aligned_air",
+      "seconds": 30.0,
+      "ticks": 700,
+      "with_forward_guns": true
+    },
+    {
+      "damage": [
+        0
+      ],
+      "damage_per_second": [
+        0.0
+      ],
+      "item": "lightning_cannon:equipment",
+      "price": 825000,
+      "scene": "close_air",
+      "seconds": 30.0,
+      "ticks": 700,
+      "with_forward_guns": true
+    }
+  ],
+  "method": "Real World::step and shipped scripts; 700 Fire steps (30 seconds); stationary 32x32 surviving targets; no player damage. Reproduce with tests/weapon_balance.rs.",
+  "limitations": "Controlled fixture observations, not a claim of equal campaign difficulty. Original catalog and preview pixels remain outside Git."
+}

@@ -122,8 +122,8 @@ Original terrain asset `0x10360` and military sprite `0x102f6` were decoded and
 inspected before generating the new art with the built-in imagegen skill.
 Mission, enemy and weapon packages include generated masters, packaged
 SD/HD art, WAV files and prompt/provenance metadata in Git. The assembly owns
-its SD/HD campaign portrait; the soundtrack package owns its MUS composition. Original style-reference images and original
-game data remain outside Git. Mission sources are a generated shoreline texture,
+its SD/HD campaign portrait; the soundtrack package owns its MUS composition. Original style-reference images remain external; the packaged original
+game data is tracked in Git. Mission sources are a generated shoreline texture,
 harbor briefing backdrop and transparent supply depot. The source images
 remain unchanged; the build step normalizes logical footprints and derives
 palette SD versions and HD counterparts.

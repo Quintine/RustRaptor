@@ -28,6 +28,10 @@ folder exists. Enable **Iron Coast Campaign** to select all six mission mods,
 their enemies, distinct bosses, weapons and original soundtrack automatically,
 then apply at the main menu. Missions, bosses and the three weapons can also
 be enabled individually; each mission selects its own dependencies.
+**Lightning Cannon** and **Lightning Shield** are two additional independent
+weapon mods. Enable them in Mods and buy them in the supply room. The cannon
+is a selected special that chains through nearby targets; the shield fires
+with your primary guns while Fire is held. Both ship SD/HD icons and sounds.
 For a user mods folder, pass `--mods DIR` or create
 `$XDG_DATA_HOME/RaptorReplica/mods/`. Saves and configuration use separate XDG
 `RaptorReplica` directories, with read-only legacy import.
@@ -52,7 +56,7 @@ Existing untouched Rust default bindings migrate to these controls.
 | Folder | Contents |
 | --- | --- |
 | `src/` | Engine, SDL host and validation CLI |
-| `mods/` | Aurora example; six Iron Coast missions, campaign assembly, music, three weapons, three shared enemies and five stage bosses |
+| `mods/` | Aurora example; six Iron Coast missions, campaign assembly, music, five independent weapons, three shared enemies and five stage bosses |
 | `schemas/` | Version 1 mod API schemas |
 | `tests/` | Portable fixtures and opt-in original-data checks |
 | `tools/` | Replay comparator, content-table generator and asset reference tools |
@@ -77,6 +81,7 @@ cases; wider playtesting and complete base-game HD coverage remain work in progr
 
 - [Build and validation](docs/rust-rewrite.md)
 - [Mod API](docs/modding-api.md)
+- [AI mod authoring checklist](docs/mod-authoring-checklist.md)
 - [Iron Coast packages](docs/iron-coast.md)
 - [Weapon prices and balance](docs/weapon-balance.md)
 - [Sprite and shadow validation](docs/visual-validation.md)

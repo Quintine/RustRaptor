@@ -347,6 +347,356 @@ impl Canvas {
         out
     }
 }
+
+/// Render cosmetic arcs on either the SD or HD indexed canvas. Geometry depends
+/// only on the arc's coordinates, seed and age, never gameplay RNG or the
+/// number of frames drawn. Ordinary palette entries avoid animated terrain hues.
+pub fn draw_lightning_arcs(
+    canvas: &mut Canvas,
+    arcs: &[crate::simulation::LightningArc],
+    palette: &[[u8; 3]; 256],
+) {
+    draw_lightning_arcs_at(canvas, arcs, palette, |arc| {
+        [
+            [arc.x as f32, arc.y as f32],
+            [arc.to_x as f32, arc.to_y as f32],
+        ]
+    });
+}
+
+/// Follow attached ships at the same interpolated positions as their sprites.
+/// Detached endpoints keep their last simulation position. Rendering never
+/// changes arc lifetime, anchors, saved state or either gameplay RNG.
+pub fn draw_world_lightning_arcs(
+    canvas: &mut Canvas,
+    world: &crate::simulation::World,
+    palette: &[[u8; 3]; 256],
+    alpha: f32,
+) {
+    let endpoint = |anchor: Option<crate::simulation::LightningAnchor>, x: i32, y: i32| {
+        let Some(anchor) = anchor else {
+            return [x as f32, y as f32];
+        };
+        let position = if anchor.entity == 0 {
+            Some((
+                world.player.px,
+                world.player.py,
+                world.player.x,
+                world.player.y,
+            ))
+        } else {
+            world
+                .enemies
+                .iter()
+                .find(|enemy| enemy.entity == anchor.entity)
+                .map(|enemy| (enemy.px, enemy.py, enemy.x, enemy.y))
+        };
+        position.map_or([x as f32, y as f32], |(px, py, current_x, current_y)| {
+            [
+                (px as f32 + (current_x as f32 - px as f32) * alpha + anchor.offset[0] as f32)
+                    .clamp(-32768.0, 32768.0),
+                (py as f32 + (current_y as f32 - py as f32) * alpha + anchor.offset[1] as f32)
+                    .clamp(-32768.0, 32768.0),
+            ]
+        })
+    };
+    draw_lightning_arcs_at(canvas, &world.lightning_arcs, palette, |arc| {
+        [
+            endpoint(arc.anchor, arc.x, arc.y),
+            endpoint(arc.to_anchor, arc.to_x, arc.to_y),
+        ]
+    });
+}
+
+fn draw_lightning_arcs_at(
+    canvas: &mut Canvas,
+    arcs: &[crate::simulation::LightningArc],
+    palette: &[[u8; 3]; 256],
+    endpoints: impl Fn(&crate::simulation::LightningArc) -> [[f32; 2]; 2],
+) {
+    if !arcs.iter().any(|arc| arc.age < arc.ticks) || canvas.scale == 0 {
+        return;
+    }
+    // Keep a light field until all channels have been drawn. Taking the maximum
+    // avoids bright beads at every segment join, and quantizes the glow only
+    // once rather than losing its falloff to repeated palette rounding.
+    let mut light = vec![0u8; canvas.image.pixels.len()];
+    let falloff: [u8; 513] = std::array::from_fn(|i| {
+        let distance_squared = i as f32 / 32.0;
+        (255.0 * (0.86 * (-distance_squared / 0.55).exp() + 0.14 * (-distance_squared / 4.5).exp()))
+            .round() as u8
+    });
+    for arc in arcs.iter().filter(|arc| arc.age < arc.ticks) {
+        let [from, to] = endpoints(arc);
+        let direction = [to[0] - from[0], to[1] - from[1]];
+        let length = direction[0].hypot(direction[1]);
+        let mut noise = (arc.x as u32).wrapping_mul(0x9e37_79b9)
+            ^ (arc.y as u32).wrapping_mul(0x85eb_ca6b)
+            ^ (arc.to_x as u32).wrapping_mul(0xc2b2_ae35)
+            ^ (arc.to_y as u32).rotate_left(11)
+            ^ arc.age.wrapping_mul(0x27d4_eb2d)
+            ^ arc.seed;
+        let depth = ((length / 2.5).max(1.0).log2().ceil() as u32).clamp(2, 7);
+        let mut points = vec![from];
+        lightning_path(
+            from,
+            to,
+            (length * 0.17).clamp(1.5, 18.0),
+            depth,
+            &mut noise,
+            &mut points,
+        );
+        let pulse = match arc.age % 3 {
+            0 => 1.0,
+            1 => 0.74,
+            _ => 0.92,
+        } * (1.0 - 0.22 * arc.age as f32 / arc.ticks as f32);
+        let mut last_energy = pulse;
+        for (i, segment) in points.windows(2).enumerate() {
+            let energy = if i + 2 == points.len() {
+                pulse
+            } else {
+                pulse * (0.86 + lightning_noise(&mut noise) * 0.14)
+            };
+            lightning_channel(
+                canvas,
+                &mut light,
+                &falloff,
+                segment,
+                [last_energy, energy],
+                1.0,
+            );
+            last_energy = energy;
+        }
+        // Fine, dying forks follow the discharge direction. They are cosmetic;
+        // the mod's explicit damage commands still decide which ships are hit.
+        if length > 4.0 {
+            let forward = [direction[0] / length, direction[1] / length];
+            for _ in 0..((length / 30.0) as usize).clamp(1, 5) {
+                let index = 1 + (lightning_noise(&mut noise) * (points.len() - 2) as f32) as usize;
+                let root = points[index];
+                let side = if lightning_noise(&mut noise) < 0.5 {
+                    -1.0
+                } else {
+                    1.0
+                };
+                let spread = side * (0.45 + lightning_noise(&mut noise) * 0.8);
+                let reach = (length * (0.2 + lightning_noise(&mut noise) * 0.3)).clamp(4.0, 28.0);
+                let tip = [
+                    root[0] + (forward[0] - forward[1] * spread) * reach,
+                    root[1] + (forward[1] + forward[0] * spread) * reach,
+                ];
+                let mut fork = vec![root];
+                lightning_path(root, tip, reach * 0.2, 3, &mut noise, &mut fork);
+                for (i, segment) in fork.windows(2).enumerate() {
+                    let taper =
+                        |n: usize| pulse * 0.9 * (1.0 - n as f32 / (fork.len() - 1) as f32).sqrt();
+                    lightning_channel(
+                        canvas,
+                        &mut light,
+                        &falloff,
+                        segment,
+                        [taper(i), taper(i + 1)],
+                        0.45,
+                    );
+                }
+            }
+        }
+    }
+
+    // Add blue light to the existing scene, with a near-white hot core. Cache
+    // only the palette pairs actually used; avoid animated terrain entries.
+    LIGHTNING_COLORS.with(|colors| {
+        let mut colors = colors.borrow_mut();
+        let colors = colors.get_or_insert_with(|| LightningColors::new(palette));
+        if colors.palette != *palette {
+            *colors = LightningColors::new(palette);
+        }
+        for (pixel, energy) in canvas.image.pixels.iter_mut().zip(light) {
+            if energy >= 8 {
+                *pixel = colors.add_light(*pixel, usize::from(energy) / 8);
+            }
+        }
+    });
+}
+
+// A palette-keyed per-thread cache avoids repeating nearest-color searches
+// during every flicker frame. Cached values are pure, so draw order/history
+// cannot change the image; tests and previews may use different palettes.
+std::thread_local! {
+    static LIGHTNING_COLORS: std::cell::RefCell<Option<LightningColors>> = const {
+        std::cell::RefCell::new(None)
+    };
+}
+struct LightningColors {
+    palette: [[u8; 3]; 256],
+    brightness: [u32; 256],
+    emission: [[f32; 3]; 32],
+    blend: [[u16; 257]; 32],
+}
+impl LightningColors {
+    fn new(palette: &[[u8; 3]; 256]) -> Self {
+        Self {
+            palette: *palette,
+            brightness: palette
+                .map(|rgb| 3 * u32::from(rgb[0]) + 6 * u32::from(rgb[1]) + u32::from(rgb[2])),
+            emission: std::array::from_fn(|level| {
+                let n = level as f32 / 31.0;
+                [230.0 * n.powf(2.5), 255.0 * n.powf(0.8), 255.0 * n.sqrt()]
+            }),
+            blend: [[u16::MAX; 257]; 32],
+        }
+    }
+    fn add_light(&mut self, pixel: u16, level: usize) -> u16 {
+        let background = usize::from(pixel.min(TRANSPARENT));
+        let result = &mut self.blend[level][background];
+        if *result == u16::MAX {
+            let (rgb, brightness) = if background < 256 {
+                (self.palette[background], self.brightness[background])
+            } else {
+                ([0; 3], 0)
+            };
+            let target: [i32; 3] = std::array::from_fn(|i| {
+                (f32::from(rgb[i]) + self.emission[level][i])
+                    .min(255.0)
+                    .round() as i32
+            });
+            *result = self.palette[..240]
+                .iter()
+                .enumerate()
+                .filter(|(index, _)| self.brightness[*index] >= brightness)
+                .min_by_key(|(_, candidate)| {
+                    (0..3)
+                        .map(|i| (i32::from(candidate[i]) - target[i]).pow(2))
+                        .sum::<i32>()
+                })
+                .map_or(pixel, |(index, _)| index as u16);
+        }
+        *result
+    }
+}
+
+// A local cosmetic hash stream: never touch the simulation or script RNG.
+fn lightning_noise(state: &mut u32) -> f32 {
+    *state = state.wrapping_add(0x9e37_79b9);
+    let mut hash = *state;
+    hash = (hash ^ (hash >> 16)).wrapping_mul(0x85eb_ca6b);
+    hash = (hash ^ (hash >> 13)).wrapping_mul(0xc2b2_ae35);
+    hash ^= hash >> 16;
+    (hash >> 8) as f32 / 16_777_216.0
+}
+
+fn lightning_path(
+    from: [f32; 2],
+    to: [f32; 2],
+    displacement: f32,
+    depth: u32,
+    noise: &mut u32,
+    points: &mut Vec<[f32; 2]>,
+) {
+    if depth == 0 {
+        points.push(to);
+        return;
+    }
+    let dx = to[0] - from[0];
+    let dy = to[1] - from[1];
+    let length = dx.hypot(dy).max(0.001);
+    let along = 0.35 + lightning_noise(noise) * 0.3;
+    let bend = (lightning_noise(noise) * 2.0 - 1.0) * displacement;
+    let mid = [
+        from[0] + dx * along - dy / length * bend,
+        from[1] + dy * along + dx / length * bend,
+    ];
+    lightning_path(from, mid, displacement * 0.6, depth - 1, noise, points);
+    lightning_path(mid, to, displacement * 0.6, depth - 1, noise, points);
+}
+
+fn lightning_channel(
+    canvas: &Canvas,
+    light: &mut [u8],
+    falloff: &[u8; 513],
+    segment: &[[f32; 2]],
+    energy: [f32; 2],
+    width: f32,
+) {
+    let scale = canvas.scale as f32;
+    let [x, y] = segment[0].map(|n| n * scale);
+    let [to_x, to_y] = segment[1].map(|n| n * scale);
+    let dx = to_x - x;
+    let dy = to_y - y;
+    // Clip before rasterizing: valid API coordinates can be well offscreen.
+    // Beyond 2.7 logical pixels the falloff is below the first visible level.
+    let pad = 2.7 * scale * width;
+    let mut start: f32 = 0.0;
+    let mut end: f32 = 1.0;
+    for (direction, distance) in [
+        (-dx, x + pad),
+        (dx, canvas.image.width as f32 - 1.0 + pad - x),
+        (-dy, y + pad),
+        (dy, canvas.image.height as f32 - 1.0 + pad - y),
+    ] {
+        if direction == 0.0 {
+            if distance < 0.0 {
+                return;
+            }
+        } else if direction < 0.0 {
+            start = start.max(distance / direction);
+        } else {
+            end = end.min(distance / direction);
+        }
+        if start > end {
+            return;
+        }
+    }
+    let bounds = [
+        [
+            (x + dx * start).min(x + dx * end),
+            (x + dx * start).max(x + dx * end),
+        ],
+        [
+            (y + dy * start).min(y + dy * end),
+            (y + dy * start).max(y + dy * end),
+        ],
+    ];
+    let major_x = dx.abs() >= dy.abs();
+    let (major, minor, major_origin, minor_origin, major_delta, minor_delta) = if major_x {
+        (0, 1, x, y, dx, dy)
+    } else {
+        (1, 0, y, x, dy, dx)
+    };
+    let size = [canvas.image.width as i32, canvas.image.height as i32];
+    let first = ((bounds[major][0] - pad).floor() as i32).max(0);
+    let last = ((bounds[major][1] + pad).ceil() as i32).min(size[major] - 1);
+    let length_squared = (dx * dx + dy * dy).max(0.000_001);
+    // Walk a narrow strip along the major axis instead of visiting the entire
+    // diagonal bounding rectangle. Work is bounded by the visible canvas.
+    for a in first..=last {
+        let t = if major_delta.abs() > 0.001 {
+            ((a as f32 - major_origin) / major_delta).clamp(start, end)
+        } else {
+            start
+        };
+        let center = minor_origin + minor_delta * t;
+        let minor_pad = pad * std::f32::consts::SQRT_2;
+        let low = ((center - minor_pad).floor() as i32).max(0);
+        let high = ((center + minor_pad).ceil() as i32).min(size[minor] - 1);
+        for b in low..=high {
+            let (column, row) = if major_x { (a, b) } else { (b, a) };
+            let px = column as f32 - x;
+            let py = row as f32 - y;
+            let along = ((px * dx + py * dy) / length_squared).clamp(0.0, 1.0);
+            let distance_squared = ((px - dx * along).powi(2) + (py - dy * along).powi(2))
+                / (scale * scale * width * width);
+            let lookup = (distance_squared * 32.0).round() as usize;
+            if let Some(brightness) = falloff.get(lookup) {
+                let strength = energy[0] + (energy[1] - energy[0]) * along;
+                let brightness = (f32::from(*brightness) * strength).round() as u8;
+                let pixel = &mut light[row as usize * canvas.image.width + column as usize];
+                *pixel = (*pixel).max(brightness);
+            }
+        }
+    }
+}
 #[cfg(test)]
 mod tests {
     use super::*;

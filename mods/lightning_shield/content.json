@@ -1,0 +1,55 @@
+{
+  "weapons": [
+    {
+      "id": "lightning_shield:projectile",
+      "name": "Lightning Shield Discharge",
+      "damage": 2,
+      "speed": 0,
+      "cooldown": 8,
+      "behavior": "scripted",
+      "target": "air",
+      "script": "scripts/weapon.rhai"
+    }
+  ],
+  "items": [
+    {
+      "id": "lightning_shield:equipment",
+      "name": "Lightning Shield",
+      "description": "Always-equipped reusable proximity weapon. Hold Fire to charge a glowing electric ring that follows your hull and zaps up to four airborne ships within a very short range from its edge for 2 damage each. Fires alongside your other primary guns and selected special; no selection or ammunition needed. Does not absorb damage or stop enemy bullets.",
+      "price": 155000,
+      "max_count": 1,
+      "initial_count": 1,
+      "weapon": "lightning_shield:projectile",
+      "special": false,
+      "consumable": false,
+      "art": {
+        "png": "art/equipment-sd.png",
+        "hd_png": "art/equipment-hd.png",
+        "logical_width": 16,
+        "logical_height": 16,
+        "nearest": true
+      },
+      "script": "scripts/equipment.rhai"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "lightning_shield:fire",
+      "name": "Lightning Shield Discharge",
+      "file": "audio/fire.wav",
+      "volume": 68,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    },
+    {
+      "id": "lightning_shield:impact",
+      "name": "Lightning Shield Contact",
+      "file": "audio/impact.wav",
+      "volume": 54,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    }
+  ]
+}

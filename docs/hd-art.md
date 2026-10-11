@@ -1,8 +1,8 @@
 # Optional HD artwork
 
-The Rust Options screen includes **HD art**. It starts disabled. Enable it to use reviewed artwork from `../data/hd/hd.json`; each missing or rejected frame keeps the selected original / 2x / 3x / 4x crisp treatment. The scale setting still determines the indexed rendering resolution, and the HD toggle can be changed while paused. HD art is presentation only: simulation, collision sizes, banking positions and save content IDs stay unchanged.
+The Rust Options screen includes **HD art**. It starts disabled. Enable it to use reviewed artwork from the selected data directory's `hd/hd.json`; each missing or rejected frame keeps the selected original / 2x / 3x / 4x crisp treatment. The bundled runtime uses `data/`, while development artwork and review jobs live under `../data/`. The scale setting still determines the indexed rendering resolution, and the HD toggle can be changed while paused. HD art is presentation only: simulation, collision sizes, banking positions and save content IDs stay unchanged.
 
-The local base-game pack currently supplies **215 reviewed replacement frames**. Complete additions cover all twenty-one light, dark and firing-flash player poses, thirteen vehicle families, four industrial bosses, seven ground-defense targets, a bonus crate and complete five- and fifteen-frame opening bunkers, nineteen equipment/pickup families, seven complete projectile families, the twelve-frame energy ring, nine blue-spark phases, four death-ray hit phases, fourteen lightning phases, ten platoon fragment phases, sixteen air-blast phases, four pickup glow masks, nine pilot portraits, both original title logos and sixteen canonical terrain tiles. The complete catalog backlog and generation status are listed in [hd-backlog.md](hd-backlog.md).
+The development base-game pack currently supplies **340 reviewed replacement frames in 122 complete sequences**. These include all twenty-one light, dark and firing-flash player poses, complete vehicle and boss families, ground defenses and opening bunkers, equipment and pickups, projectile and effect animations, nine pilot portraits, both title logos and sixty-four canonical terrain tiles. A bundled runtime snapshot may have an earlier count until the next packaging refresh; its manifest is the authoritative count for that build. The complete catalog backlog and generation status are listed in [hd-backlog.md](hd-backlog.md).
 
 | Reviewed artwork | Original asset IDs | Supplied / complete frames |
 | --- | --- | ---: |
@@ -16,9 +16,20 @@ The local base-game pack currently supplies **215 reviewed replacement frames**.
 | `SHIP07` two-state craft | `0x102fe`–`0x102ff` | 2 / 2 |
 | `SHIP08` moving tread phases | `0x10300`–`0x10303` | 4 / 4 |
 | `SHIP09` hovercraft wake phases | `0x10304`–`0x10305` | 2 / 2 |
+| `SHIP21` industrial platform wakes | `0x10317`–`0x10318` | 2 / 2 |
+| `SHIP23` complete rotating craft | `0x1031f`–`0x10326` | 8 / 8 |
+| `SHIP29`, `SHIP30`, `SHIP32`, `SHIP39` craft | `0x10332`, `0x10333`, `0x10335`, `0x10344` | 4 / 4 |
+| `SHIP33` pod deployment | `0x10336`–`0x10339` | 4 / 4 |
+| `SHIP34` orb light states | `0x1033a`–`0x1033b` | 2 / 2 |
 | First-mission industrial boss `SHIP10G1_PIC` | `0x10306` | 1 / 1 |
 | Industrial bosses `SHIP12G1_PIC`, `SHIP17G1_PIC` | `0x10308`, `0x1030f` | 2 / 2 |
 | Industrial boss `SHIP11G1_PIC` | `0x10307` | 1 / 1 |
+| Industrial boss `SHIP16G1_PIC` | `0x1030e` | 1 / 1 |
+| `SHIP22` complete hatch phases | `0x10319`–`0x1031e` | 6 / 6 |
+| Second-campaign static bosses | `0x200a1`, `0x200ac`, `0x200ad`, `0x200eb` | 4 / 4 |
+| Second-campaign four-phase boss | `0x200a8`–`0x200ab` | 4 / 4 |
+| Second-campaign six-phase boss | `0x200ce`–`0x200d3` | 6 / 6 |
+| Duo emergence phases | `0x20104`–`0x2010b` | 8 / 8 |
 | Ground-defense target `TARGT1G1_PIC` | `0x10138` | 1 / 1 |
 | Ground-defense targets `TARGT2G1_PIC`, `TARGT3G1_PIC` | `0x10139`, `0x1013a` | 2 / 2 |
 | Ground-defense target `TARGT5G1_PIC` | `0x1013c` | 1 / 1 |
@@ -37,6 +48,7 @@ The local base-game pack currently supplies **215 reviewed replacement frames**.
 | Ground Missile equipment | `0x102c0` | 1 / 1 |
 | Energy Grab equipment phases | `0x102c1`–`0x102c4` | 4 / 4 |
 | Pulse Cannon equipment phases | `0x102c6`–`0x102c7` | 2 / 2 |
+| Forward Laser equipment phases | `0x102c8`–`0x102cb` | 4 / 4 |
 | Missile Pods equipment | `0x102be` | 1 / 1 |
 | Mega Bomb equipment | `0x102c5` | 1 / 1 |
 | Super Shield pickup | `0x102d0` | 1 / 1 |
@@ -48,6 +60,8 @@ The local base-game pack currently supplies **215 reviewed replacement frames**.
 | Ground Missile 2 projectile | `0x101bf`–`0x101c0` | 2 / 2 |
 | Forward Guns / MiniGun firing patterns | `0x101c3`–`0x101c6` | 4 / 4 |
 | Mine pulse | `0x101d1`–`0x101d2` | 2 / 2 |
+| Pulse Cannon projectile phases | `0x10223`–`0x10224` | 2 / 2 |
+| Enemy coconut phases | `0x1024d`–`0x10250` | 4 / 4 |
 | Energy ring | `0x101ae`–`0x101b9` | 12 / 12 |
 | Blue sparks | `0x1019c`–`0x101a4` | 9 / 9 |
 | Death-ray hits | `0x101f1`–`0x101f4` | 4 / 4 |
@@ -55,9 +69,13 @@ The local base-game pack currently supplies **215 reviewed replacement frames**.
 | Platoon fragments | `0x10213`–`0x1021c` | 10 / 10 |
 | Air blast | `0x102a0`–`0x102af` | 16 / 16 |
 | Pickup glow light masks | `0x10225`–`0x10228` | 4 / 4 |
+| Muzzle flash and casing phases | `0x101c7`–`0x101ca` | 4 / 4 |
+| Small air explosion | `0x101fc`–`0x10209` | 14 / 14 |
 | Pilot portraits, small and retained large variants | `0x10111`–`0x10119` | 9 / 9 |
 | Original English and Chinese title logos | `0x10013`, `0x10014` | 2 / 2 |
 | Canonical terrain set 1, first shard | `0x10360`–`0x1036f` | 16 / 16 |
+| Canonical terrain set 2, corrected first shard | `0x2010d`–`0x2011c` | 16 / 16 |
+| Canonical industrial terrain, first two shards | `0x300ed`–`0x3010c` | 32 / 32 |
 
 Every registered frame passed the exact original source hash, logical canvas, aspect, visible alpha and path checks. Complete contact sheets were inspected at source size and the 4× presentation size; per-frame geometry metrics and review evidence remain with each family. Their logical collision sizes are unchanged. Small contours and interpreted metal detail differ. Missing artwork keeps the crisp original fallback. HD remains an opt-in preview while the remaining catalog and game screenshots are reviewed.
 
@@ -77,13 +95,13 @@ The additional fifteen-frame bunker preserves its door apertures, gun and blink 
 
 The two additional ground targets use subdued brown soil corrections; their machinery and original directions remain intact. The tiny gun sprites keep all four original gray/white patterns, and the mine keeps its pink then dark burgundy center with gold corners. These families have complete gallery review; it does not establish a placed gun or mine scene occurrence.
 
-The first sixteen canonical terrain replacements passed independent review of every source/logical/4× frame, all 48 supplied mission contexts and all 755 declared cardinal neighbor pairs: 170 HD/HD and 585 HD/original. Actual native scene checks exercised all 32 cached scroll phases and content-hash/load-order invalidation. None of these sixteen IDs has a declared destroyed partner; the separate native destruction-cache proof therefore adds no HD debris coverage. Mixed detail contrast remains until neighboring tiles are remastered. The next terrain family has a corrected treeless `0x20111` and passed independent source and complete neighborhood review. It and the first thirty-two industrial terrain candidates remain held for recurring grain lines at some composed tile boundaries; they add no active coverage yet.
+The first sixteen canonical terrain replacements passed independent review of every source/logical/4× frame, all 48 supplied mission contexts and all 755 declared cardinal neighbor pairs: 170 HD/HD and 585 HD/original. Actual native scene checks exercised all 32 cached scroll phases and content-hash/load-order invalidation. None of these sixteen IDs has a declared destroyed partner; the separate native destruction-cache proof therefore adds no HD debris coverage. The additional corrected terrain family preserves the treeless `0x20111`, and the thirty-two industrial tiles preserve source roof, wall and pipe geometry. Their final compositor review covers all 66 full pages and 1,706 cases: 1,379 neighbor pairs, 234 contexts and 93 state swaps. A texture-preserving edge/corner correction removes the earlier repeating grain ridges without moving source material boundaries. These forty-eight frames are now registered. Mixed HD/original detail contrast remains visible, and foreign destroyed partners still use original fallback; their appearances in state tests do not add HD debris coverage.
 
-Four small pilot portraits (`0x10116`–`0x10119`) passed actual SDL main-menu SD/HD captures. Their faces, equipment and slanted ID-card backgrounds stay recognizable, and every surrounding UI pixel was identical. The five large portraits and both title logos have complete gallery review but no verified active UI route. The Chinese logo legitimately uses 478 original fire-class pixels; its HD output preserves that class and adds no water or blink labels.
+Four small pilot portraits (`0x10116`–`0x10119`) passed actual SDL main-menu SD/HD captures in the new 400×225 layout at logical position `(30,45)`. All eight captures and the comparison board were reviewed; their faces, equipment and slanted ID-card backgrounds stay recognizable, and every surrounding UI pixel was identical. The five large portraits and both title logos have complete gallery review but no verified active UI route. The Chinese logo legitimately uses 478 original fire-class pixels; its HD output preserves that class and adds no water or blink labels.
 
 The newly reviewed effect families retain their complete phase ordering. Lightning branches are thinner and slightly cooler blue; the late AirBlast rim is thinner; PickupGlow uses a rounded interpreted contour rather than identical alpha. Actual `Canvas::shade` checks over original terrain confirm that pickup-mask holes preserve the background and mask RGB never paints foreground pixels. Other effects remain held where generation filled transparent holes, removed final fragments or made subdued smoke/embers too bright. A successfully decoded draft does not establish artistic approval.
 
-Original pixels and original-derived base-game artwork remain outside Git under `../data/hd/`. The separate authored mod packages include their generated SD/HD PNGs, sounds and provenance in Git. The new authored menu backdrop has its own packaged rendering path and is not counted as an original catalog sprite replacement.
+Working originals, source references and generation/review drafts under `../data/` remain outside the repository. The bundled original catalog and approved HD runtime snapshot under this repository's `data/` are tracked in Git, as are the bundled game, libraries and runtime manifest. Authored mod packages include their generated SD/HD PNGs, sounds and provenance in Git. The new authored menu backdrop has its own packaged rendering path and is not counted as an original catalog sprite replacement.
 
 The sources were decoded with `tools/hd_art_source.py`, inspected, and passed to the **built-in image_gen tool** using the imagegen skill. Sources, raw generations, prompts, contact sheets, frame metadata and review notes remain in local family folders (`enemies/`, `bosses/`, `effects/`, `equipment/`, `player-light/`, `player-dark/`, and `terrain/`). The superseded initial straight-player proof and its exact generation prompt remain saved locally at:
 
@@ -96,7 +114,7 @@ That proof PNG has real alpha transparency, is 1254×1254, and was copied unchan
 
 ## Pack format
 
-The following is metadata only; artwork belongs in a separately distributed local pack. This example shows one entry from the complete seven-frame light family. Decimal IDs are shown alongside their hexadecimal meaning.
+The following shows pack metadata; artwork paths resolve within the selected pack. The bundled approved pack and its artwork are tracked in `data/hd/`. This example shows one entry from the complete seven-frame light family. Decimal IDs are shown alongside their hexadecimal meaning.
 
 ```json
 {
@@ -136,7 +154,7 @@ Original source locations also constrain palette classes: ordinary art uses indi
 
 HD frames are resampled directly to the selected presentation canvas and quantized to the game palette. They bypass ScaleNx filtering, preserve transparent pixels and use the normal layer order. Indexed output allows palette effects to apply consistently; subtle RGB shades and alpha edges are reduced by the original palette and binary sprite transparency. The validated [terrain renderer](hd-terrain.md) overlays canonical, full-opaque HD tiles on the joined original layer. It shares HD edges and corners where source material classes agree, transitions HD/original boundaries over two logical pixels, and preserves water/fire/flash palette classes. Intact and destroyed IDs are independent targets. The renderer adds no remaster coverage by itself; each terrain family needs the same contextual review before registration.
 
-The metadata-only [completion ledger](hd-completion.json) tracks every one of the 5,753 original picture IDs, including unused enemies, damaged variants, HUD graphics and unnamed terrain. It separates missing, in-progress, candidate, reviewed, registered and render-reachable stages. `tools/hd_job_queue.py` creates 674 disjoint picture jobs, plus 13 classic cinematic and four bitmap-font verification jobs. Original AGX artwork and sharp native glyphs have explicit preservation policies; they are never reported as AI remasters. The ignored `data/hd/jobs/queues/` files assign continuous enemy, boss, equipment/UI, effect/projectile and terrain work with exact source hashes, complete animation families and neighbor/state references. Exact-payload aliases may share reviewed artwork while retaining each ID's source binding.
+The metadata-only [completion ledger](hd-completion.json) tracks every one of the 5,753 original picture IDs, including unused enemies, damaged variants, HUD graphics and unnamed terrain. It separates missing, in-progress, candidate, reviewed, registered and render-reachable stages. `tools/hd_job_queue.py` creates 674 disjoint picture jobs, plus 13 classic cinematic and four bitmap-font verification jobs. Original AGX artwork and sharp native glyphs have explicit preservation policies; they are never reported as AI remasters. The external `../data/hd/jobs/queues/` files assign continuous enemy, boss, equipment/UI, effect/projectile and terrain work with exact source hashes, complete animation families and neighbor/state references. Exact-payload aliases may share reviewed artwork while retaining each ID's source binding.
 
 Workers can validate an isolated proposal with `python3 tools/hd_candidate_review.py --candidate ../data/hd/jobs/JOB_ID/candidate.json`. The helper hard-links raw artwork into a temporary pack, links against the newest built Rust game library, and exports all scales 1–4 plus source/logical/4× contact sheets. It records raw artwork hashes and the library identity, warns when asset-loader source is newer than the build, and pages large reviews in groups of sixteen frames to avoid an unbounded giant image. Every page listed in `runtime-contact-sheets.json` requires inspection. It never edits the active pack or generated pixels. A successful gallery still needs coordinator visual approval and separate scene/context evidence.
 

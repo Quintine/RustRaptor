@@ -358,6 +358,28 @@ fn visual_effect(existing: usize, effects: &mut Vec<VisualEffect>, effect: Visua
         effects.push(effect);
     }
 }
+/// Presentation-only lightning, with a lifetime measured in simulation ticks.
+/// The queue is excluded from saved gameplay state and the deterministic digest.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct LightningArc {
+    pub x: i32,
+    pub y: i32,
+    pub to_x: i32,
+    pub to_y: i32,
+    pub ticks: u32,
+    pub age: u32,
+    /// Cosmetic variation between discharges, without advancing gameplay RNG.
+    pub seed: u32,
+    pub anchor: Option<LightningAnchor>,
+    pub to_anchor: Option<LightningAnchor>,
+}
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub struct LightningAnchor {
+    pub entity: u64,
+    /// Endpoint displacement from the entity's top-left origin at creation.
+    pub offset: [i32; 2],
+}
+pub const MAX_LIGHTNING_ARCS: usize = 256;
 #[derive(Debug, Clone, Copy, Serialize, Deserialize, PartialEq, Eq)]
 pub enum EffectKind {
     GroundBlast,
@@ -513,6 +535,8 @@ pub struct World {
     #[serde(skip)]
     pub visual_effects: Vec<VisualEffect>,
     #[serde(skip)]
+    pub lightning_arcs: Vec<LightningArc>,
+    #[serde(skip)]
     terrain_spark_delay: u32,
     #[serde(skip)]
     terrain_flare_delay: u32,
@@ -607,6 +631,7 @@ impl World {
             pickups: vec![],
             effects: vec![],
             visual_effects: vec![],
+            lightning_arcs: vec![],
             terrain_spark_delay: 0,
             terrain_flare_delay: 0,
             terrain_health: m.layout.iter().map(|i| m.tiles[*i].health).collect(),
@@ -1327,6 +1352,8 @@ impl World {
             }
         }
         self.events.extend(events);
+        // Capture the final position before retiring an anchor's enemy.
+        self.update_lightning_arcs();
         self.enemies.retain(|e| !retired.contains(&e.entity));
         if self.legacy_transition
             && mission.auto_complete
@@ -1348,6 +1375,9 @@ impl World {
                     let definition = enemy.definition.clone();
                     self.event(definition,"on_fire",serde_json::json!({"entity":entity,"weapon":id,"x":x,"y":y,"hostile":true,"tick":self.tick}));
                 }
+            }
+            if matches!(registry.weapons[&id].behavior, WeaponBehavior::Scripted) {
+                continue;
             }
             if let Some((kind, entity, speed, gun)) = legacy.filter(|(kind, _, _, _)| *kind >= 0) {
                 self.enemy_projectile(&id, x, y, kind, entity, speed, gun)?;
@@ -1625,6 +1655,10 @@ impl World {
         }
         self.visual_effects
             .retain(|effect| effect.age <= effect.kind.artwork().1);
+        for arc in &mut self.lightning_arcs {
+            arc.age += 1;
+        }
+        self.lightning_arcs.retain(|arc| arc.age < arc.ticks);
         if self.difficulty < 3 {
             if equipment_used {
                 self.shield_recharge_ticks = 0;
@@ -1720,6 +1754,7 @@ impl World {
         }
         self.previous_shield = self.player.shield;
         self.sync_retained_inventory();
+        self.update_lightning_arcs();
         self.event(self.mission.clone(),"on_tick",serde_json::json!({"tick":self.tick,"player_x":self.player.x,"player_y":self.player.y,"enemies":self.enemies.len()}));
         if self.outcome != Outcome::Playing {
             self.event(
@@ -1856,6 +1891,14 @@ impl World {
             return Ok(());
         }
         self.cooldowns.insert(id.clone(), w.cooldown);
+        if matches!(w.behavior, WeaponBehavior::Scripted) {
+            self.event(
+                id.clone(),
+                "on_fire",
+                serde_json::json!({"entity":0,"hostile":false,"x":self.player.x+16,"y":self.player.y,"tick":self.tick}),
+            );
+            return Ok(());
+        }
         if let Some(index) = w.legacy {
             if let Some(legacy) = crate::legacy_tables::weapons()
                 .into_iter()
@@ -2839,6 +2882,14 @@ impl World {
                     let owner = &registry.owners[&event.content];
                     let mut e = event.event;
                     e["entities"] = serde_json::to_value(&self.enemies)?;
+                    for (snapshot, enemy) in e["entities"]
+                        .as_array_mut()
+                        .expect("enemy snapshot array")
+                        .iter_mut()
+                        .zip(&self.enemies)
+                    {
+                        snapshot["ground"] = registry.enemies[&enemy.definition].ground.into();
+                    }
                     e["player"] = serde_json::to_value(&self.player)?;
                     e["objectives"] = serde_json::to_value(&self.objectives)?;
                     e["projectiles"] = serde_json::to_value(&self.projectiles)?;
@@ -2847,7 +2898,10 @@ impl World {
                         e["tick"] = self.tick.into();
                     }
                     let commands = scripts.invoke(owner, path, event.hook, &e, self.rng.seed)?;
-                    self.apply_commands(&commands, registry)?;
+                    self.apply_commands(&commands, registry).map_err(|error| {
+                        let context = format!("{owner}/{path}::{}: {error}", event.hook);
+                        error.context(context)
+                    })?;
                 }
             }
         }
@@ -2857,9 +2911,76 @@ impl World {
         let mut candidate = self.clone();
         for command in commands {
             candidate.command(command, registry)?;
+            if matches!(command, Command::Move { .. } | Command::Despawn { .. }) {
+                candidate.update_lightning_arcs();
+            }
         }
         *self = candidate;
         Ok(())
+    }
+    fn lightning_anchor(
+        &self,
+        entity: Option<u64>,
+        x: i32,
+        y: i32,
+    ) -> Result<Option<LightningAnchor>> {
+        let Some(entity) = entity else {
+            return Ok(None);
+        };
+        let [origin_x, origin_y] = if entity == 0 {
+            [self.player.x, self.player.y]
+        } else {
+            let enemy = self
+                .enemies
+                .iter()
+                .find(|enemy| enemy.entity == entity)
+                .context("arc anchor does not exist")?;
+            [enemy.x, enemy.y]
+        };
+        Ok(Some(LightningAnchor {
+            entity,
+            offset: [
+                x.checked_sub(origin_x)
+                    .context("arc anchor offset overflow")?,
+                y.checked_sub(origin_y)
+                    .context("arc anchor offset overflow")?,
+            ],
+        }))
+    }
+    fn update_lightning_arcs(&mut self) {
+        let player = [self.player.x, self.player.y];
+        let enemies = &self.enemies;
+        for arc in &mut self.lightning_arcs {
+            for (anchor, x, y) in [
+                (&mut arc.anchor, &mut arc.x, &mut arc.y),
+                (&mut arc.to_anchor, &mut arc.to_x, &mut arc.to_y),
+            ] {
+                let Some(attachment) = *anchor else {
+                    continue;
+                };
+                let origin = if attachment.entity == 0 {
+                    Some(player)
+                } else {
+                    enemies
+                        .iter()
+                        .find(|enemy| enemy.entity == attachment.entity)
+                        .map(|enemy| [enemy.x, enemy.y])
+                };
+                if let Some([origin_x, origin_y]) = origin {
+                    // An offscreen anchor cannot expand the cosmetic API's
+                    // coordinate bounds or make movement fail gameplay.
+                    *x = origin_x
+                        .saturating_add(attachment.offset[0])
+                        .clamp(-32768, 32768);
+                    *y = origin_y
+                        .saturating_add(attachment.offset[1])
+                        .clamp(-32768, 32768);
+                } else {
+                    // Retain the last visible position when its ship disappears.
+                    *anchor = None;
+                }
+            }
+        }
     }
     fn command(&mut self, c: &Command, registry: &Registry) -> Result<()> {
         match c {
@@ -3056,6 +3177,40 @@ impl World {
             Command::Effect { x, y } => {
                 ensure!(self.effects.len() < 4096, "too many effects");
                 self.effects.push(Effect::new(EffectKind::AirBlast, *x, *y));
+            }
+            Command::Arc {
+                x,
+                y,
+                to_x,
+                to_y,
+                ticks,
+                anchor,
+                to_anchor,
+            } => {
+                ensure!(
+                    [x, y, to_x, to_y].iter().all(|n| n.unsigned_abs() <= 32768),
+                    "arc position exceeds world bounds"
+                );
+                ensure!((1..=12).contains(ticks), "arc lifetime must be 1–12 ticks");
+                ensure!(
+                    self.lightning_arcs.len() < MAX_LIGHTNING_ARCS,
+                    "too many lightning arcs"
+                );
+                let anchor = self.lightning_anchor(*anchor, *x, *y)?;
+                let to_anchor = self.lightning_anchor(*to_anchor, *to_x, *to_y)?;
+                self.lightning_arcs.push(LightningArc {
+                    x: *x,
+                    y: *y,
+                    to_x: *to_x,
+                    to_y: *to_y,
+                    ticks: *ticks,
+                    age: 0,
+                    seed: (self.tick as u32).wrapping_mul(0x1656_67b1)
+                        ^ ((self.tick >> 32) as u32)
+                        ^ (self.lightning_arcs.len() as u32).wrapping_mul(0x9e37_79b9),
+                    anchor,
+                    to_anchor,
+                });
             }
             Command::Sound { asset } => {
                 self.sounds.push(*asset);

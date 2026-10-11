@@ -1,0 +1,55 @@
+{
+  "weapons": [
+    {
+      "id": "lightning_cannon:projectile",
+      "name": "Lightning Cannon Discharge",
+      "damage": 32,
+      "speed": 0,
+      "cooldown": 18,
+      "behavior": "scripted",
+      "target": "all",
+      "script": "scripts/weapon.rhai"
+    }
+  ],
+  "items": [
+    {
+      "id": "lightning_cannon:equipment",
+      "name": "Lightning Cannon",
+      "description": "Selectable reusable special. Fires a powerful lightning bolt into the nearest air or ground target in a narrow lane ahead, then chains through up to three nearby enemies with decreasing damage. Select it in Inventory or cycle specials, then use Fire or Special. No ammunition is consumed.",
+      "price": 825000,
+      "max_count": 1,
+      "initial_count": 1,
+      "weapon": "lightning_cannon:projectile",
+      "special": true,
+      "consumable": false,
+      "art": {
+        "png": "art/equipment-sd.png",
+        "hd_png": "art/equipment-hd.png",
+        "logical_width": 16,
+        "logical_height": 16,
+        "nearest": true
+      },
+      "script": "scripts/equipment.rhai"
+    }
+  ],
+  "sounds": [
+    {
+      "id": "lightning_cannon:fire",
+      "name": "Lightning Cannon Discharge",
+      "file": "audio/fire.wav",
+      "volume": 92,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 1
+    },
+    {
+      "id": "lightning_cannon:impact",
+      "name": "Lightning Cannon Contact",
+      "file": "audio/impact.wav",
+      "volume": 78,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    }
+  ]
+}

@@ -320,6 +320,69 @@
           "additionalProperties": false
         },
         {
+          "description": "Cosmetic lightning; pair with damage commands for gameplay effects.",
+          "type": "object",
+          "required": [
+            "op",
+            "to_x",
+            "to_y",
+            "x",
+            "y"
+          ],
+          "properties": {
+            "anchor": {
+              "description": "Follow this entity's movement; zero is the player. Endpoints remain absolute coordinates at creation, preserving their initial offset.",
+              "default": null,
+              "type": [
+                "integer",
+                "null"
+              ],
+              "format": "uint64",
+              "minimum": 0.0
+            },
+            "op": {
+              "type": "string",
+              "enum": [
+                "arc"
+              ]
+            },
+            "ticks": {
+              "default": 3,
+              "type": "integer",
+              "format": "uint32",
+              "maximum": 12.0,
+              "minimum": 1.0
+            },
+            "to_anchor": {
+              "description": "Optional independent anchor for the destination endpoint.",
+              "default": null,
+              "type": [
+                "integer",
+                "null"
+              ],
+              "format": "uint64",
+              "minimum": 0.0
+            },
+            "to_x": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "to_y": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "y": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
           "type": "object",
           "required": [
             "asset",

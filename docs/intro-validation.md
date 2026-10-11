@@ -47,20 +47,20 @@ Run the portable decoder, timing and cue checks from the repository root:
 
 ```sh
 LD_LIBRARY_PATH="$HOME/.local/lib" cargo test --locked \
-  --manifest-path RustRaptor/Cargo.toml --lib cinematics::tests
+  --lib cinematics::tests
 ```
 
 Run the original catalog integration checks locally:
 
 ```sh
 LD_LIBRARY_PATH="$HOME/.local/lib" RAPTOR_TEST_DATA="$PWD/data" \
-  cargo test --locked --manifest-path RustRaptor/Cargo.toml \
+  cargo test --locked \
   --lib cinematics::tests -- --ignored
 ```
 
 The checks cover both card palettes, complete logo and introduction durations,
 music and sound cue times, all original cinematic delta decoding, all sequence
-rates and rendering-rate independence. Original assets and screenshot captures
-remain outside version control. The retained native source supplies the frame
+rates and rendering-rate independence. Original cinematic assets are included in tracked `data/`; local screenshot
+captures remain outside the repository. The retained native source supplies the frame
 rates and cue placement; these checks are not a frame-by-frame native video or
 whole-sequence PCM comparison.

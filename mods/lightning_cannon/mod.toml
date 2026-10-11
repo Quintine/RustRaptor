@@ -1,0 +1,7 @@
+id = "lightning_cannon"
+name = "Lightning Cannon"
+version = "1.0.0"
+api_version = 1
+description = "Selectable reusable special. Fires a powerful lightning bolt into the nearest air or ground target in a narrow lane ahead, then chains through up to three nearby enemies with decreasing damage. Select it in Inventory or cycle specials, then use Fire or Special. No ammunition is consumed."
+content = "content.json"
+scripts = ["scripts/weapon.rhai", "scripts/equipment.rhai"]

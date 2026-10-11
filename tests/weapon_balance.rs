@@ -10,17 +10,19 @@ use raptor_replica::{
 use serde_json::{Value, json};
 use std::{fs, path::Path};
 
-const COMBAT_MODS: [&str; 6] = [
+const COMBAT_MODS: [&str; 8] = [
     "pulse_cannon",
     "seeker_swarm",
     "ion_lance",
+    "lightning_cannon",
+    "lightning_shield",
     "iron_coast_scout",
     "iron_coast_turret",
     "iron_coast_boss",
 ];
 const TICKS: usize = 700;
 const HEALTH: i32 = 1_000_000;
-const WEAPONS: [&str; 15] = [
+const WEAPONS: [&str; 17] = [
     "base:forward_guns",
     "base:plasma_guns",
     "base:micro_missile",
@@ -36,6 +38,8 @@ const WEAPONS: [&str; 15] = [
     "pulse_cannon:equipment",
     "seeker_swarm:equipment",
     "ion_lance:equipment",
+    "lightning_cannon:equipment",
+    "lightning_shield:equipment",
 ];
 fn fixture(active: &mut ActiveMods) {
     let pack: ContentPack = serde_json::from_value(json!({
@@ -188,6 +192,40 @@ fn original_and_mod_weapons_report_controlled_damage_locally() {
             true,
         ));
     }
+    for item in ["lightning_cannon:equipment", "lightning_shield:equipment"] {
+        for (scene, targets) in [
+            ("close_air", vec![("air", 188, 160)]),
+            ("close_ground", vec![("ground", 188, 160)]),
+            (
+                "chain",
+                vec![
+                    ("air", 144, 80),
+                    ("ground", 184, 80),
+                    ("air", 224, 80),
+                    ("air", 264, 80),
+                    ("air", 264, 120),
+                ],
+            ),
+            (
+                "close_cluster",
+                vec![
+                    ("air", 104, 160),
+                    ("air", 184, 160),
+                    ("air", 144, 120),
+                    ("air", 144, 196),
+                    ("air", 188, 160),
+                ],
+            ),
+        ] {
+            rows.push(observe(&mut active, item, scene, &targets, false));
+        }
+        for (scene, targets) in [
+            ("aligned_air", vec![("air", 144, 80)]),
+            ("close_air", vec![("air", 188, 160)]),
+        ] {
+            rows.push(observe(&mut active, item, scene, &targets, true));
+        }
+    }
     let report = json!({"difficulty":2,"rate":"70/3 Hz","target_size":[32,32],
         "target_health":HEALTH,"fire_steps":TICKS,"rows":rows});
     if let Some(path) = std::env::var_os("RAPTOR_BALANCE_REPORT") {
@@ -222,4 +260,32 @@ fn original_and_mod_weapons_report_controlled_damage_locally() {
         "ion beam should damage both column targets equally"
     );
     assert_eq!(row("ion_lance:equipment", "off_axis_air")["damage"][0], 0);
+    assert_eq!(
+        row("lightning_cannon:equipment", "off_axis_air")["damage"][0],
+        0
+    );
+    assert_eq!(
+        row("lightning_cannon:equipment", "chain")["damage"],
+        json!([1248, 780, 468, 312, 0])
+    );
+    assert_eq!(
+        row("lightning_shield:equipment", "aligned_air")["damage"][0],
+        0
+    );
+    assert_eq!(
+        row("lightning_shield:equipment", "close_air")["damage"][0],
+        176
+    );
+    assert_eq!(
+        row("lightning_shield:equipment", "close_ground")["damage"][0],
+        0
+    );
+    let close = row("lightning_shield:equipment", "close_cluster")["damage"]
+        .as_array()
+        .unwrap();
+    assert_eq!(close.iter().map(|v| v.as_i64().unwrap()).sum::<i64>(), 704);
+    assert_eq!(
+        close[4], 0,
+        "a fifth ship stays outside the four-target pulse cap"
+    );
 }

@@ -3337,6 +3337,7 @@ impl Host {
         self.effects(canvas, &world, false, alpha)?;
         self.secondary_effects(canvas, &world, 2, alpha)?;
         self.projectiles(canvas, &world, true, alpha)?;
+        crate::render::draw_world_lightning_arcs(canvas, &world, &self.palette, alpha);
         self.hud(canvas, &world)?;
         Ok(())
     }
@@ -3958,11 +3959,12 @@ fn shop_info(
             WeaponBehavior::Spread => "Spread",
             WeaponBehavior::Bomb => "Blast",
             WeaponBehavior::EnergyGrab => "Disables guns",
+            WeaponBehavior::Scripted => "Custom discharge",
         };
         stats.push(format!(
             "{}{}",
             behavior,
-            if weapon.script.is_some() {
+            if weapon.script.is_some() && !matches!(weapon.behavior, WeaponBehavior::Scripted) {
                 " / scripted"
             } else {
                 ""

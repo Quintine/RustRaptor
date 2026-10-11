@@ -1,0 +1,7 @@
+id = "lightning_shield"
+name = "Lightning Shield"
+version = "1.0.0"
+api_version = 1
+description = "Always-equipped reusable proximity weapon. Hold Fire to charge an electric ring around your hull and zap up to four nearby airborne ships from its edge for a little damage. Fires alongside your forward guns and selected special; no selection or ammunition needed. Does not absorb damage or stop enemy bullets."
+content = "content.json"
+scripts = ["scripts/weapon.rhai", "scripts/equipment.rhai"]

@@ -570,6 +570,23 @@ pub enum Command {
         x: i32,
         y: i32,
     },
+    /// Cosmetic lightning; pair with damage commands for gameplay effects.
+    Arc {
+        x: i32,
+        y: i32,
+        to_x: i32,
+        to_y: i32,
+        #[serde(default = "arc_ticks")]
+        #[schemars(range(min = 1, max = 12))]
+        ticks: u32,
+        /// Follow this entity's movement; zero is the player. Endpoints remain
+        /// absolute coordinates at creation, preserving their initial offset.
+        #[serde(default)]
+        anchor: Option<u64>,
+        /// Optional independent anchor for the destination endpoint.
+        #[serde(default)]
+        to_anchor: Option<u64>,
+    },
     Sound {
         asset: u32,
     },
@@ -583,6 +600,9 @@ pub enum Command {
     },
     Complete,
     Fail,
+}
+fn arc_ticks() -> u32 {
+    3
 }
 #[derive(Debug, Clone, Serialize, Deserialize, JsonSchema)]
 #[serde(deny_unknown_fields)]

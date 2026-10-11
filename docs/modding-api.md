@@ -9,13 +9,13 @@ This is an experimental API for the Rust engine. It provides local content packa
 Validate the package against your original game data:
 
 ```sh
-cargo run --no-default-features -- --data ../data --mods mods --validate-mods aurora
+cargo run --no-default-features -- --data data --mods mods --validate-mods aurora
 ```
 
 Run its mission without a window:
 
 ```sh
-cargo run --no-default-features -- --data ../data --mods mods \
+cargo run --no-default-features -- --data data --mods mods \
   --enabled aurora --headless aurora:field_trials --ticks 700
 ```
 
@@ -88,7 +88,7 @@ New definitions must belong to the package namespace. An existing definition may
 
 | Definition | Properties and behavior |
 | --- | --- |
-| Weapon/projectile | Damage, integer speed, cooldown in simulation ticks, targeting (`air`, `ground`, `all`), behavior (`straight`, `homing`, `beam`, `spread`, `bomb`, `energy_grab`), firing offsets, optional animation and script. Scripts can emit additional projectiles with explicit velocity. |
+| Weapon/projectile | Damage, integer speed, cooldown in simulation ticks, targeting (`air`, `ground`, `all`), behavior (`straight`, `homing`, `beam`, `spread`, `bomb`, `energy_grab`, `scripted`), firing offsets, optional animation and script. Scripts can emit additional projectiles with explicit velocity. `scripted` requires a script and emits no automatic projectile. |
 | Item | Price, maximum and initial count, optional weapon, shield/credit effects, consumable/special flags, artwork and script. `initial_count` controls how many units a purchase or pickup adds. |
 | Enemy | Health, speed, rewards, air/ground and boss flags, firing cooldown, path points and repeat flag, weapon, dropped item, animation and script. Scripts can query entities and change enemy movement. |
 | Mission | Duration, `auto_complete` (default true), optional briefing artwork, ordered tick-based spawns, terrain tile definitions and row-major layout, column count, next mission, optional legacy music asset or namespaced `music_track`, and script. Scripts can manage objectives, spawn waves and decide success/failure. |
@@ -124,7 +124,7 @@ An `art` object requires exactly one of `asset` (an original numeric catalog ID)
 
 PNG animations are horizontal strips of equally sized frames. For example, four 64×64 frames use a 256×64 PNG and may declare logical dimensions of 16×16. The strip width must divide evenly by `frames`; supply consistent canvases and alignment across frames. Alpha below 128 is transparent. Opaque colors are mapped to ordinary entries 0–239 of the selected game palette. Plain PNGs carry no palette-animation labels, so their highlights cannot acquire reserved water, fire or blinking indices 240–255. Artwork already detailed enough for the selected rendering scale bypasses automatic sprite enlargement. Original asset animations use consecutive catalog IDs and retain their native palette labels. Terrain artwork and destroyed terrain replacements follow the same format.
 
-Artwork dimensions and decoding allocation are bounded. PNGs may be up to 4096 pixels in either direction, with at most 4,194,304 pixels and a 64 MiB decoding allocation limit. Logical dimensions are separately validated and stay independent of physical PNG resolution. The extracted original catalog and local base-game remaster proofs stay outside version control; authored mod artwork and sounds are included in Git.
+Artwork dimensions and decoding allocation are bounded. PNGs may be up to 4096 pixels in either direction, with at most 4,194,304 pixels and a 64 MiB decoding allocation limit. Logical dimensions are separately validated and stay independent of physical PNG resolution. The packaged original catalog, approved runtime remasters and authored mod artwork/sounds are included in Git; working remaster proofs and source references remain external.
 
 ## Rhai callbacks
 
@@ -151,7 +151,7 @@ fn on_fire(event, state, random) {
 | --- | --- |
 | `on_spawn` | Enemy: `entity`, `x`, `y`. |
 | `on_tick` | Enemy: `entity`, `x`, `y`, `health`, `tick`, `player_x`, `player_y`. Mission: `tick`, `player_x`, `player_y`. |
-| `on_fire` | Weapon or firing enemy: `entity`, `x`, `y`, `hostile`, `tick`; enemy callbacks also include `weapon`. Player entity is zero. The normal shot has already been emitted. Enemy callbacks run for each emitted gun shot. |
+| `on_fire` | Weapon or firing enemy: `entity`, `x`, `y`, `hostile`, `tick`; enemy callbacks also include `weapon`. Player entity is zero. The normal shot has already been emitted, except for `scripted` weapons, whose script supplies all attacks. Enemy callbacks run for each gun discharge. |
 | `on_hit` | Weapon/projectile and damaged enemy: `entity`, `projectile`, `damage`, `x`, `y`; enemy events also include `weapon` and remaining `health`. Scripted enemy damage uses `scripted = true` and omits projectile-specific fields. |
 | `on_death` | Enemy: `entity`, `x`, `y`. The entity is retired; use queries to act on surviving entities. |
 | `on_pickup` | Item: pickup `entity`. The item and its standard effects have already been awarded. |
@@ -159,7 +159,9 @@ fn on_fire(event, state, random) {
 | `on_mission_start` | Mission: `tick = 0`. Runs when the first simulation step dispatches events. |
 | `on_mission_end` | Mission: `success`, `tick`. |
 
-Every dispatched event also includes `tick`, `player`, `entities`, `projectiles`, `pickups` and `objectives`. `player` is a snapshot including position, velocity, shields, credits, inventory and selected equipment. `entities` is the current enemy array; each entry includes `entity`, `definition`, position, health, animation and movement state. Projectiles and pickups likewise carry stable entity IDs. These are read-only snapshots: return commands to change the simulation. Later callbacks in a tick can observe commands committed by earlier callbacks. Events raised by commands, such as a spawned enemy, are dispatched on the following tick.
+Every dispatched event also includes `tick`, `player`, `entities`, `projectiles`, `pickups` and `objectives`. `player` is a snapshot including position, velocity, shields, credits, inventory and selected equipment. `entities` is the current enemy array; each entry includes `entity`, `definition`, position, `width`, `height`, health, animation, movement state and the definition's `ground` boolean. Filter on `ground` when an attack affects only airborne or ground targets. Projectiles and pickups likewise carry stable entity IDs. These are read-only snapshots: return commands to change the simulation. Later callbacks in a tick can observe commands committed by earlier callbacks. Events raised by commands, such as a spawned enemy, are dispatched in subsequent batches of the same tick, within the 8,192-event limit. Rejected command batches report the mod, script path and callback, and roll back that simulation step and script state.
+
+Use `behavior: "scripted"` for hitscan, chain lightning, proximity zaps or other attacks implemented entirely with commands. Player selection, firing input and weapon cooldowns still apply. An owned item with `special: false` fires its weapon alongside other ordinary equipment when Fire is held; `special: true` makes it selectable. Neither player nor enemy scripted weapons receive a default engine projectile. A script may explicitly emit `projectile`, or pair `damage` with `arc` for an immediate visible discharge. `target` describes the weapon's capability for the shop and governs explicit projectiles; scripts must enforce the intended targets and range for their own `damage` commands.
 
 `state` is JSON-serializable and shared by all callbacks in the same script file. It starts as an empty map, is keyed by `mod_id/script_path`, and is saved with the pilot. Avoid values dependent on wall time, filesystem access or rendering rate. `random` contains 32 deterministic nonnegative integers in the range 0–32,767. Each successful callback advances that script's saved RNG by exactly 32 values, whether or not the script reads them. Missing callbacks do not advance state or RNG.
 
@@ -191,11 +193,16 @@ Use the `op` field shown below. All fields listed are required unless stated oth
 | `credits` | signed `amount` | Adjust credits with saturation at valid limits. |
 | `shield` | signed `amount` | Adjust ordinary shield, clamped to 0–100. |
 | `effect` | `x`, `y` | Add an explosion effect. |
+| `arc` | `x`, `y`, `to_x`, `to_y`, optional `ticks` (3), `anchor`, `to_anchor` | Draw cosmetic branching lightning with a hot white core, blue glow and flicker between two positions. Optional anchors are player (`0`) or existing enemy entity IDs. Endpoints must be within ±32,768; lifetime must be 1–12 simulation ticks; at most 256 arcs may be active. Pair with `damage` to attack. |
 | `sound` | numeric `asset` | Queue an original digital sound asset for playback. |
 | `play_sound` | namespaced `sound` ID | Queue a validated package-local sound. |
 | `objective` | `key`, integer `value` | Set an objective counter. Use a namespaced key. |
 | `complete` | none | Complete the mission. |
 | `fail` | none | Fail the mission. |
+
+Lightning arcs render in both SD and HD using irregular fractal channels, thin tapered forks and glow that brightens the scene. Geometry and brightness change with simulation age; each discharge receives a cosmetic seed derived from its creation tick and queue position so repeated shots vary. Drawing the same simulation state again gives the same image, and pausing freezes the effect. Arcs persist until their simulation lifetime expires. Forks are visual only and do not hit additional targets. Arcs use a separate cosmetic pool and consume no gameplay RNG, entity IDs or projectile capacity. The pool is excluded from saves and the gameplay digest. Invalid endpoints, lifetime or capacity reject the complete command batch and roll back the tick like other command failures.
+
+`anchor` attaches the starting endpoint, and `to_anchor` independently attaches the destination. Supply absolute world coordinates at creation; each endpoint preserves its offset from the anchor's top-left `x/y` origin as the ship moves. Omitting an anchor keeps that endpoint fixed. Both anchors may be `0` to make a ring segment follow the player, or use `anchor: 0` and `to_anchor: enemy.entity` for a ship-to-ship bolt. Anchor IDs must exist when the command runs; a missing anchor rejects the batch. Endpoints update after simulation movement and API movement commands, and freeze at their last position when the anchored enemy disappears. Cosmetic coordinates clamp to ±32,768 when an attached ship moves beyond those bounds.
 
 Rhai uses an explicit package allowlist for arithmetic, strings, collections, iteration and function helpers. The default language/time packages are excluded, so wall-clock timestamps and native `sleep` cannot be reached, including through function pointers. There are no exposed filesystem, network or OS interfaces. Dynamic `eval` and imports are disabled. Limits are 100,000 operations per callback and a shared 500,000-operation budget per simulation tick; 32 call levels; expression depths of 64/32; arrays of 4,096 entries; maps of 1,024 entries; strings of 16 KiB; 256 commands per callback; and 64 KiB of serialized state per script. See the [Rhai execution-limit API](https://docs.rs/rhai/latest/rhai/struct.Engine.html) for the underlying engine controls. Scripts cannot increase these limits.
 
