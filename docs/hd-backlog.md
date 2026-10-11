@@ -1,17 +1,17 @@
 # Original artwork HD backlog
 
-The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **697**; **5,056** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
+The checked catalog contains **5,753 standalone picture frames**. The active local HD pack supplies **800**; **4,953** have no registered HD replacement. These counts include unnamed graphics outside `sprites/`. Scale2x/3x/4x filtering is crisp scaling, not a newly authored HD replacement. Authored mod SD/HD art is separate from this original-catalog audit.
 
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
 | Player banking | 21 | 21 | 0 | 3 |
-| Bosses | 249 | 222 | 27 | 79 |
-| Enemies and ground objects | 419 | 116 | 303 | 183 |
+| Bosses | 249 | 223 | 26 | 79 |
+| Enemies and ground objects | 419 | 120 | 299 | 183 |
 | Player and enemy projectiles | 51 | 45 | 6 | 18 |
 | Explosions and effects | 281 | 91 | 190 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 128 | 4,407 | 4 |
-| Menus, portraits, HUD and other pictures | 150 | 27 | 123 | mixed static / animated |
+| Terrain | 4,535 | 208 | 4,327 | 4 |
+| Menus, portraits, HUD and other pictures | 150 | 45 | 105 | mixed static / animated |
 
 ## Registered pack and generation jobs
 
@@ -295,6 +295,70 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | SHIP40G1_PIC | `0x10345` | 1 / 1 |
 | TANK01G2_PIC | `0x200c8` | 4 / 4 |
 | DINO_PIC | `0x10328` | 6 / 6 |
+| Terrain 2011d | `0x2011d` | 1 / 1 |
+| Terrain 2011e | `0x2011e` | 1 / 1 |
+| Terrain 2011f | `0x2011f` | 1 / 1 |
+| Terrain 20120 | `0x20120` | 1 / 1 |
+| Terrain 20121 | `0x20121` | 1 / 1 |
+| Terrain 20122 | `0x20122` | 1 / 1 |
+| Terrain 20123 | `0x20123` | 1 / 1 |
+| Terrain 20124 | `0x20124` | 1 / 1 |
+| Terrain 20125 | `0x20125` | 1 / 1 |
+| Terrain 20126 | `0x20126` | 1 / 1 |
+| Terrain 20127 | `0x20127` | 1 / 1 |
+| Terrain 20128 | `0x20128` | 1 / 1 |
+| Terrain 20129 | `0x20129` | 1 / 1 |
+| Terrain 2012a | `0x2012a` | 1 / 1 |
+| Terrain 2012b | `0x2012b` | 1 / 1 |
+| Terrain 2012c | `0x2012c` | 1 / 1 |
+| Terrain 2012d | `0x2012d` | 1 / 1 |
+| Terrain 2012e | `0x2012e` | 1 / 1 |
+| Terrain 2012f | `0x2012f` | 1 / 1 |
+| Terrain 20130 | `0x20130` | 1 / 1 |
+| Terrain 20131 | `0x20131` | 1 / 1 |
+| Terrain 20132 | `0x20132` | 1 / 1 |
+| Terrain 20133 | `0x20133` | 1 / 1 |
+| Terrain 20134 | `0x20134` | 1 / 1 |
+| Terrain 20135 | `0x20135` | 1 / 1 |
+| Terrain 20136 | `0x20136` | 1 / 1 |
+| Terrain 20137 | `0x20137` | 1 / 1 |
+| Terrain 20138 | `0x20138` | 1 / 1 |
+| Terrain 20139 | `0x20139` | 1 / 1 |
+| Terrain 2013a | `0x2013a` | 1 / 1 |
+| Terrain 2013b | `0x2013b` | 1 / 1 |
+| Terrain 2013c | `0x2013c` | 1 / 1 |
+| SLIDE_PIC | `0x10127` | 1 / 1 |
+| POINT_PIC | `0x10128` | 1 / 1 |
+| Terrain set 4 shard 1 | `0x400d5` | 16 / 16 |
+| Terrain set 4 shard 2 | `0x400e5` | 16 / 16 |
+| BUYLGT_PIC / BUYDRK_PIC / SELLGT_PIC / SELLDRK_PIC | `0x10130` | 4 / 4 |
+| Terrain 103e0 | `0x103e0` | 1 / 1 |
+| Terrain 103e1 | `0x103e1` | 1 / 1 |
+| Terrain 103e2 | `0x103e2` | 1 / 1 |
+| Terrain 103e3 | `0x103e3` | 1 / 1 |
+| Terrain 103e4 | `0x103e4` | 1 / 1 |
+| Terrain 103e5 | `0x103e5` | 1 / 1 |
+| Terrain 103e6 | `0x103e6` | 1 / 1 |
+| Terrain 103e7 | `0x103e7` | 1 / 1 |
+| Terrain 103e8 | `0x103e8` | 1 / 1 |
+| Terrain 103e9 | `0x103e9` | 1 / 1 |
+| Terrain 103ea | `0x103ea` | 1 / 1 |
+| Terrain 103eb | `0x103eb` | 1 / 1 |
+| Terrain 103ec | `0x103ec` | 1 / 1 |
+| Terrain 103ed | `0x103ed` | 1 / 1 |
+| Terrain 103ee | `0x103ee` | 1 / 1 |
+| Terrain 103ef | `0x103ef` | 1 / 1 |
+| PREV_PIC / NEXT_PIC | `0x10136` | 2 / 2 |
+| SHIP02G3_PIC faithful HD candidate | `0x30044` | 1 / 1 |
+| SHIP07G2_PIC | `0x2009e` | 1 / 1 |
+| SHIP07G3_PIC | `0x30049` | 1 / 1 |
+| TANK02G2_PIC | `0x200cc` | 2 / 2 |
+| BUYITEM_PIC / SELLITEM_PIC | `0x10134` | 2 / 2 |
+| WEPDEST_PIC | `0x10011` | 1 / 1 |
+| SMBOMB_PIC / SMSHIELD_PIC__ | `0x102df` | 2 / 2 |
+| CHKOFF_PIC / CHKON_PIC | `0x1012d` | 2 / 2 |
+| LIGHTON_PIC / LIGHTOFF_PIC | `0x1012a` | 2 / 2 |
+| QUESTION_PIC | `0x1012c` | 1 / 1 |
 
 | Generation job | Status |
 | --- | --- |
