@@ -8,6 +8,14 @@ Gameplay uses the original 320×200 simulation canvas, presented at 4:3 with asp
 
 The widescreen mouse check covers all eight main actions at 1280×720, 1280×800 and 1920×1080, secondary-screen offsets and clicks outside the viewport. The full 42-frame menu/intro audit was rerun after the layout change. A relocated packaged SDL executable also rendered menu and gameplay captures at 1280×800 and 1920×1080, with nonzero stereo audio captures. Those screenshots are under ignored `.reference/standalone-package/`.
 
+Installed mod rows stay in stable ID order through activation, dependency
+selection, disabling and priority changes. Requested load priority remains
+separate and is visible in diagnostics; arrow-key changes report the new
+priority without moving the cursor. Returning from details or a disable
+confirmation restores the selected mod and its list position. Opening details
+again while already in diagnostics preserves its parent, so Escape always
+returns one level. Portable regressions exercise these navigation sequences.
+
 The audit also verifies the complete startup reaches its return screen at exactly 1,891 70 Hz service ticks and restores menu music. Cancelling a mod-mismatch prompt preserves the original save; accepting it displays unavailable equipment without silently discarding it.
 
 Run the local audit from `RustRaptor/`:

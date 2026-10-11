@@ -189,6 +189,8 @@ struct Host {
     awaiting_binding: Option<String>,
     diagnostic_mod: Option<String>,
     diagnostic_return: Screen,
+    diagnostic_selection: usize,
+    mods_selection: usize,
     pending_disable: Option<crate::mod_selection::DisablePlan>,
     world: Option<World>,
     cinematic: Option<Cinematic>,
@@ -333,6 +335,8 @@ impl Host {
             awaiting_binding: None,
             diagnostic_mod: None,
             diagnostic_return: Screen::Main,
+            diagnostic_selection: 0,
+            mods_selection: 0,
             pending_disable: None,
             world: None,
             cinematic: None,
@@ -373,8 +377,15 @@ impl Host {
         })
     }
     fn go(&mut self, screen: Screen) {
+        if self.screen == Screen::Mods {
+            self.mods_selection = self.selected;
+        }
         self.screen = screen;
-        self.selected = 0;
+        self.selected = if screen == Screen::Mods {
+            self.mods_selection.min(self.rows().len().saturating_sub(1))
+        } else {
+            0
+        };
         if screen == Screen::Shop {
             self.shop_selling = false;
         }
@@ -905,13 +916,7 @@ impl Host {
                 .collect(),
             Screen::Mods => {
                 let mut r = vec!["Apply selections".into(), "Rescan installed mods".into()];
-                let mut ids = self.pending.clone();
-                for id in self.discovery.mods.keys() {
-                    if !ids.contains(id) {
-                        ids.push(id.clone());
-                    }
-                }
-                for id in ids {
+                for id in self.mod_ids() {
                     if let Some(m) = self.discovery.mods.get(&id) {
                         r.push(format!(
                             "[{}] {} {}",
@@ -966,18 +971,9 @@ impl Host {
         }
     }
     fn mod_ids(&self) -> Vec<String> {
-        let mut ids = self
-            .pending
-            .iter()
-            .filter(|id| self.discovery.mods.contains_key(*id))
-            .cloned()
-            .collect::<Vec<_>>();
-        for id in self.discovery.mods.keys() {
-            if !ids.contains(id) {
-                ids.push(id.clone());
-            }
-        }
-        ids
+        // Installed rows stay in ID order. Activation priority is a separate
+        // pending list, so toggles and dependency selection cannot move rows.
+        self.discovery.mods.keys().cloned().collect()
     }
     fn require_pilot(&self) -> Result<()> {
         if let Some(error) = &self.pilot_error {
@@ -1310,6 +1306,13 @@ impl Host {
                         manifest.conflicts.join(", ")
                     }
                 ));
+                if let Some(priority) = self.pending.iter().position(|id| id == mod_id) {
+                    lines.push(format!(
+                        "Requested load priority: {} / {} (later overrides win)",
+                        priority + 1,
+                        self.pending.len()
+                    ));
+                }
             }
         }
         if let Some(e) = &self.pilot_error {
@@ -1335,6 +1338,7 @@ impl Host {
                 .collect::<Vec<_>>()
                 .join(", ")
         ));
+        lines.push(format!("Pending order: {}", self.pending.join(", ")));
         lines.extend(self.active.registry.overrides.clone());
         for m in self.discovery.mods.values() {
             lines.push(format!(
@@ -1358,12 +1362,16 @@ impl Host {
             .collect()
     }
     fn open_diagnostics(&mut self) {
+        if self.screen == Screen::Diagnostics {
+            return;
+        }
         self.diagnostic_mod = if self.screen == Screen::Mods && self.selected >= 2 {
             self.mod_ids().get(self.selected - 2).cloned()
         } else {
             None
         };
         self.diagnostic_return = self.screen;
+        self.diagnostic_selection = self.selected;
         self.go(Screen::Diagnostics);
         self.play_ui_sound("FX_SWEP");
     }
@@ -1727,8 +1735,11 @@ impl Host {
                     };
                     if next != n {
                         self.pending.swap(n, next);
-                        // Keep the selected mod under the cursor as the order changes.
-                        self.selected = next + 2;
+                        self.message = format!(
+                            "Load priority {} / {}; later overrides win",
+                            next + 1,
+                            self.pending.len()
+                        );
                         self.play_ui_sound("FX_SWEP");
                     }
                 }
@@ -1818,7 +1829,12 @@ impl Host {
                 self.go(self.previous)
             }
             Screen::Mods if self.world.is_some() => self.go(Screen::Pause),
-            Screen::Diagnostics => self.go(self.diagnostic_return),
+            Screen::Diagnostics => {
+                self.go(self.diagnostic_return);
+                self.selected = self
+                    .diagnostic_selection
+                    .min(self.rows().len().saturating_sub(1));
+            }
             Screen::Bindings => {
                 self.awaiting_binding = None;
                 self.save_config()?;
@@ -6767,6 +6783,70 @@ mod tests {
         assert_eq!(host.slots(), vec![0, 1]);
     }
     #[test]
+    fn mod_diagnostics_reopening_preserves_parent_and_selected_row() {
+        let (_dir, mut host) = ui_fixture();
+        install_dependency_fixture(&mut host);
+        host.go(Screen::Mods);
+        host.selected = 3;
+        host.open_diagnostics();
+        assert!(host.screen == Screen::Diagnostics);
+        assert_eq!(host.diagnostic_mod.as_deref(), Some("dependent"));
+        host.move_selection(3);
+        host.open_diagnostics(); // A second D press must not replace its parent.
+        assert!(host.diagnostic_return == Screen::Mods);
+        assert_eq!(host.diagnostic_mod.as_deref(), Some("dependent"));
+        host.back().unwrap();
+        assert!(host.screen == Screen::Mods);
+        assert_eq!(host.selected, 3);
+        host.back().unwrap();
+        assert!(host.screen == Screen::Main);
+
+        host.go(Screen::Options);
+        host.selected = 8;
+        host.open_diagnostics();
+        host.open_diagnostics();
+        host.back().unwrap();
+        assert!(host.screen == Screen::Options);
+        assert_eq!(host.selected, 8);
+    }
+    #[test]
+    fn mod_rows_and_cursor_stay_fixed_through_dependency_enable_disable_and_priority() {
+        let (_dir, mut host) = ui_fixture();
+        install_dependency_fixture(&mut host);
+        host.go(Screen::Mods);
+        let installed = host.mod_ids();
+        let row = installed.iter().position(|id| id == "dependent").unwrap() + 2;
+        host.selected = row;
+        host.activate().unwrap();
+        assert_eq!(host.mod_ids(), installed);
+        assert_eq!(host.selected, row);
+        assert_eq!(host.pending, vec!["dependency", "dependent"]);
+        host.adjust(-1);
+        assert_eq!(host.pending, vec!["dependent", "dependency"]);
+        assert_eq!(host.mod_ids(), installed);
+        assert_eq!(host.selected, row);
+        host.activate().unwrap();
+        assert!(host.screen == Screen::ConfirmDisable);
+        host.back().unwrap();
+        assert!(host.screen == Screen::Mods);
+        assert_eq!(host.selected, row);
+        host.activate().unwrap();
+        host.selected = 0;
+        host.activate().unwrap();
+        assert!(host.screen == Screen::Mods);
+        assert!(host.pending.is_empty());
+        assert_eq!(host.mod_ids(), installed);
+        assert_eq!(host.selected, row);
+
+        host.selected = 2;
+        host.activate().unwrap();
+        host.activate().unwrap(); // Standalone dependency disables immediately.
+        assert!(host.screen == Screen::Mods);
+        assert!(host.pending.is_empty());
+        assert_eq!(host.selected, 2);
+        assert_eq!(host.mod_ids(), installed);
+    }
+    #[test]
     fn selecting_a_mod_selects_its_installed_dependency_without_applying() {
         let (_dir, mut host) = ui_fixture();
         install_dependency_fixture(&mut host);
@@ -7289,9 +7369,15 @@ mod tests {
             .unwrap()
             + 2;
         capture(&mut host, "17-mod-manager-dependencies");
+        let mod_rows = host.mod_ids();
+        let mod_selection = host.selected;
         host.open_diagnostics();
         capture(&mut host, "18-mod-details");
+        host.open_diagnostics();
         host.back().unwrap();
+        assert!(host.screen == Screen::Mods);
+        assert_eq!(host.mod_ids(), mod_rows);
+        assert_eq!(host.selected, mod_selection);
         host.selected = host
             .mod_ids()
             .iter()
@@ -7302,6 +7388,7 @@ mod tests {
         assert!(host.screen == Screen::ConfirmDisable);
         capture(&mut host, "19-mod-disable-confirmation");
         host.back().unwrap();
+        assert_eq!(host.selected, mod_selection);
         host.go(Screen::Missions);
         host.selected = host
             .missions()

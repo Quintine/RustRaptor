@@ -24,10 +24,10 @@ worker from its existing outputs before submitting another generation request.
 
 ## Next user fixes
 
-1. Mod/save diagnostics: Escape can get trapped after details are reopened from
-   diagnostics, replacing its parent with itself. Preserve parent and selection.
-2. Keep installed mod rows stable when enabled/disabled. Load priority must be
-   separate from the displayed order; dependencies and confirmation stay intact.
+1. Mod/save diagnostics: parent and selection are now preserved when details
+   are reopened. The Escape regression passes; full screenshot audit is running.
+2. Installed mod rows now stay in ID order through toggles and priority changes,
+   with dependency and confirmation behavior preserved. Navigation tests pass.
 3. Default Forward Guns still appear to miss miscellaneous buildings/cars.
    Expand actual original-content coverage beyond the earlier ten-unit test.
 
@@ -43,20 +43,20 @@ mod artwork and sound belong in Git.
 
 | Agent | Recover and continue |
 | --- | --- |
-| hd_coordinator | Sole global manifest/ledger owner; register fresh approved29boss frames, keepMole9hold; audit all recoveredrequests before resuming |
-| hd_full_review | Terrain corpus49/66pagesreviewed; pages50–66remain;48terrainframeholdstaysuntilfullreview |
-| hd_terrain_render | Frozen compositor SHA b30b4a65…;29bossframesapproved,Mole9held;8newportraitscreenssaved,7/fullboardinspectionremain |
-| campaign_integration | 34effect/projectilefamilies303IDsraw; detailed RESTART.md preserved; severalgeometry/brightness/layout corrections and independentreviewsremain |
-| campaign_release_review | Terrain4queue84jobs1344IDs; recover currentraw/contextcandidates andholds |
-| hd_dark_player | Equipment/HUDdigits, acceptedandheldfamilies; reconcilecurrentmanifest before newgeneration |
-| hd_enemies_01 | Enemy01queue139IDs; sourcegeometryholds,SHIP25connectionfailure,APE4service-refusalpending |
-| hd_terrain_set_1 | Terrain1queue42jobs672IDs; first16registered; recover alreadycompleted103e0output andsubsequentcandidateholds |
-| hd_terrain_set_2 | Terrain2queue90jobs1437IDs; continue savedcanonicalchunks andall-contextreview |
-| iron_coast_2 | Frozenenemy03firstdrafts59families138IDs; recovered45familyenemy02queuecontinues, old11familiesfrozen |
-| iron_coast_3 | Boss01queue26families83IDs; recovered11completedatlasfamiliesneedbindings/QA; previous15candidatespreserved |
-| iron_coast_4 | Boss02queue27families83IDs; approvedsubset/corrections,connectionfailurecooldowns |
-| iron_coast_5 | Boss03complete25families82IDs/328scalechecks; equipment8reviewpending; temporarygroundgunbugassignment |
-| iron_coast_6 | Terrain3queue68jobs1082IDs, withmiddleandlateshards; preserve strictdestroyedgeometryholds |
+| hd_coordinator | Sole manifest/ledger owner; 29 boss and 48 terrain frames await final registration checks; retain Mole9 hold |
+| hd_full_review | All 66 terrain pages and 1,706 cases now reviewed; exact-hash terrain approval saved |
+| hd_terrain_render | Frozen compositor SHA b30b4a65…; 29 boss frames approved, Mole9 held; all eight new portrait screenshots approved |
+| campaign_integration | 34 effect/projectile families, 303 IDs have raw outputs; geometry, brightness and layout corrections continue |
+| campaign_release_review | Terrain 4: 84 jobs, 1,344 IDs; 64 candidates saved, half await further visual/Host QA |
+| hd_dark_player | Equipment and HUD digits; reconcile accepted frames, preserve pending Death Ray/Energy review |
+| hd_enemies_01 | Enemy 1: 139 IDs; source geometry holds, SHIP25 connection failures and APE service refusal preserved |
+| hd_terrain_set_1 | Terrain 1: 42 jobs, 672 IDs; first 16 registered; 80 other candidates and explicit rejected scenery remain |
+| hd_terrain_set_2 | Terrain 2: 90 jobs, 1,437 IDs; continue canonical chunks and full neighboring-context review |
+| iron_coast_2 | Enemy 3: 59 families, 138 raw IDs; recovered 45-family enemy 2 queue continues, old 11 families frozen |
+| iron_coast_3 | Boss 1: 26 families, 83 IDs; 11 recovered atlas families need binding/QA; previous 15 candidates preserved |
+| iron_coast_4 | Boss 2: 27 families, 83 IDs; continue corrections, complete reviews and respect service cooldowns |
+| iron_coast_5 | Boss 3: 25 families, 82 candidates and 328 scale checks; temporarily auditing every destructible classic tile for ground-gun misses |
+| iron_coast_6 | Terrain 3: 68 jobs, 1,082 IDs with middle/late shards; retain destroyed-state geometry holds |
 
 ## Durable worker evidence
 
