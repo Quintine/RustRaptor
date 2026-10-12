@@ -24,6 +24,7 @@ class StandaloneTerrainRegistrationTest(unittest.TestCase):
         ["10530", "10532", "10533", "10534", "10537", "10538", "10539", "1053a", "1053b", "1053c", "1053d", "1053f"],
         ["10540", "10541", "10542", "10543", "10545", "10546", "10547", "10548", "10549", "1054a", "1054b", "1054d", "1054e"],
     ]
+    START_ASSET = 0x10530
 
     def setUp(self):
         temporary = tempfile.TemporaryDirectory()
@@ -43,12 +44,12 @@ class StandaloneTerrainRegistrationTest(unittest.TestCase):
         palette = bytes(value // 4 for value in range(256) for _ in range(3))
         self.palette = self.data / "misc/PALETTE_DAT"
         self.palette.write_bytes(palette)
-        self.entries = ["1052f 0 tiles/STARTG1TILES"]
+        self.entries = [f"{self.START_ASSET-1:05x} 0 tiles/STARTG1TILES"]
         self.jobs = []
         self.pictures = []
         all_bindings = {}
         for number, selected in enumerate(self.SELECTED):
-            start = 0x10530 + number * 16
+            start = self.START_ASSET + number * 16
             identity = f"terrain-{start:05x}-{start+15:05x}"
             directory = self.hd / "jobs" / identity
             directory.mkdir(parents=True)
@@ -115,7 +116,8 @@ class StandaloneTerrainRegistrationTest(unittest.TestCase):
                       "standalone_selection": {**selection, "material_approvals": approvals}}
             self.jobs.append({"id": identity, "directory": directory, "candidate": candidate,
                               "job": job, "review": review, "qa": qa})
-        self.entries.append("10550 0 tiles/ENDG1TILES")
+        end = self.START_ASSET + len(self.SELECTED) * 16
+        self.entries.append(f"{end:05x} 0 tiles/ENDG1TILES")
         (self.data / "INDEX").write_text("\n".join(self.entries) + "\n")
         self.context_candidate_path = self.hd / "context-candidate.json"
         self.write(self.context_candidate_path, {"sequences": sum([row["candidate"]["sequences"] for row in self.jobs], [])})
@@ -140,7 +142,7 @@ class StandaloneTerrainRegistrationTest(unittest.TestCase):
                 "receipt": self.ref(self.context_path), "selected_assets": row["candidate"]["selected_assets"],
                 "selected_frame_bindings_sha256": binding_digest(proposal_frames(row["candidate"]))}
             self.write(row["directory"] / "coordinator-review.json", row["review"])
-        self.audit = {"assets": self.pictures, "sequences": {"Terrain": [{"name": "Terrain set 1", "frames": list(range(0x10530, 0x10550))}]},
+        self.audit = {"assets": self.pictures, "sequences": {"Terrain": [{"name": "Terrain set 1", "frames": list(range(self.START_ASSET, end))}]},
                       "terrain": {"runtime_hd_composition_supported": True}}
         self.write(self.hd / "coverage-audit.json", self.audit)
         self.write(self.hd / "runtime-content-audit.json", {})
@@ -484,6 +486,355 @@ class StandaloneTerrainRegistrationTest(unittest.TestCase):
         candidate["sequences"][0]["frames"].pop()
         self.save("candidate", candidate)
         with self.assertRaisesRegex(ValueError, "omits source IDs"): self.approve()
+
+
+class CarriedRegisteredTerrainRegistrationTest(unittest.TestCase):
+    """Master74 adds two definitions while its fourteen active siblings stay exact."""
+    START_ASSET = 0x2059d
+    SELECTED = [["205a3", "205a4"]]
+    sha = staticmethod(StandaloneTerrainRegistrationTest.sha)
+    write = staticmethod(StandaloneTerrainRegistrationTest.write)
+    ref = StandaloneTerrainRegistrationTest.ref
+    approve = StandaloneTerrainRegistrationTest.approve
+    save = StandaloneTerrainRegistrationTest.save
+
+    def setUp(self):
+        StandaloneTerrainRegistrationTest.setUp(self)
+        row = self.jobs[0]
+        peer = json.loads((row["directory"] / "peer.json").read_text())
+        carried = [record for record in peer["records"] if record["asset"] not in self.SELECTED[0]]
+        self.carried = {record["asset"]: record["selected_frame_binding"] for record in carried}
+        self.baseline = {"format_version": 1, "sequences": [
+            {"base_asset": int(asset, 16), "frame_count": 1, "frames": [frame]}
+            for asset, frame in self.carried.items()]}
+        self.write(self.hd / "hd.json", self.baseline)
+        accepted = copy.deepcopy(row["qa"])
+        accepted["frame_bindings_sha256"] = binding_digest(self.carried)
+        accepted["frames"] = [{"asset": asset, "source_sha256": frame["source_sha256"], "logical_canvas": [4, 4],
+                              "hd_masks": [{"scale": n} for n in range(1, 5)]}
+                             for asset, frame in self.carried.items()]
+        accepted["artwork_sha256"] = {frame["file"]: self.sha((self.hd / frame["file"]).read_bytes())
+                                      for frame in self.carried.values()}
+        self.accepted_path = self.hd / "accepted-carried-runtime-qa.json"
+        self.write(self.accepted_path, accepted)
+        self.write(self.hd / "provenance.json", {"registered_frame_count": 14, "reviewed_sequence_additions": [{
+            "job_id": row["id"], "assets": sorted(self.carried), "frames": 14,
+            "frame_bindings_sha256": binding_digest(self.carried), "runtime_qa": self.ref(self.accepted_path)["path"]}]})
+        candidate = copy.deepcopy(row["candidate"])
+        candidate["original_fallback_assets"] = []
+        candidate["carried_registered_assets"] = sorted(self.carried)
+        candidate["carried_registered_identity"] = {
+            "baseline": self.ref(self.hd / "hd.json"), "provenance": self.ref(self.hd / "provenance.json"),
+            "registration_record_index": 0, "accepted_runtime_qa": self.ref(self.accepted_path),
+            "frame_bindings_sha256": binding_digest(self.carried),
+            "frames": {record["asset"]: {"frame_binding": record["selected_frame_binding"],
+                        "source_sha256": record["source_payload_sha256"], "raw_sha256": record["full_untouched_raw_sha256"]}
+                       for record in carried}}
+        self.resign(candidate)
+        self.write(self.hd / "context-future_projection.json", {
+            "format_version": 1, "sequences": self.baseline["sequences"] + candidate["sequences"]})
+        self.reseal_context(baseline=self.ref(self.hd / "hd.json"),
+                            future=self.ref(self.hd / "context-future_projection.json"))
+
+    def resign(self, candidate):
+        """Reseal hypothetical claims so tests reach the actual semantic guards."""
+        digest = binding_digest(proposal_frames(candidate))
+        for key in ["qa", "review"]:
+            self.jobs[0][key]["frame_bindings_sha256"] = digest
+        self.resign_identity(candidate)
+
+    def resign_identity(self, candidate):
+        row = self.jobs[0]
+        row["candidate"] = candidate
+        self.save("candidate", candidate)
+        candidate_sha = self.ref(row["directory"] / "candidate.json")["sha256"]
+        for key in ["qa", "review"]:
+            row[key]["candidate_sha256"] = candidate_sha
+        evidence = row["review"]["standalone_selection"]
+        for key in ["full_inventory", "selected_assets", "original_fallback_assets", "carried_registered_assets", "carried_registered_identity"]:
+            if key in candidate:
+                evidence[key] = copy.deepcopy(candidate[key])
+            else:
+                evidence.pop(key, None)
+        self.save("qa", row["qa"]); self.save("review", row["review"])
+
+    def reseal_context(self, baseline=None, future=None, proposal=None):
+        context = json.loads(self.context_path.read_text())
+        authority = context["standalone_selection_context"]
+        if baseline is not None: authority["baseline"] = baseline
+        if future is not None: authority["future_projection"] = future
+        if proposal is not None:
+            self.write(self.context_candidate_path, proposal)
+            authority["candidate"] = self.ref(self.context_candidate_path)
+            bindings = proposal_frames(proposal)
+            authority["selected_assets"] = sorted(bindings)
+            authority["frame_bindings_sha256"] = binding_digest(bindings)
+        closure_path = self.hd / "context-changed_case_closure.json"
+        closure = json.loads(closure_path.read_text())
+        for field, value in [("candidate_sha256", authority["candidate"]["sha256"]),
+                             ("frame_bindings_sha256", authority["frame_bindings_sha256"]),
+                             ("baseline_sha256", authority["baseline"]["sha256"]),
+                             ("future_projection_sha256", authority["future_projection"]["sha256"])]:
+            closure[field] = value
+        self.write(closure_path, closure)
+        authority["changed_case_closure"] = self.ref(closure_path)
+        self.write(self.context_path, context)
+        self.jobs[0]["review"]["standalone_selection"]["contextual_approval"]["receipt"] = self.ref(self.context_path)
+        self.save("review", self.jobs[0]["review"])
+
+    @contextlib.contextmanager
+    def original_fixture(self):
+        files = {path: (path.read_bytes(), path.stat().st_mtime_ns) for path in self.hd.rglob("*") if path.is_file()}
+        jobs = copy.deepcopy(self.jobs)
+        try:
+            yield
+        finally:
+            for path in self.hd.rglob("*"):
+                if path.is_file() and path not in files: path.unlink()
+            for path, (payload, stamp) in files.items():
+                path.write_bytes(payload); os.utime(path, ns=(stamp, stamp))
+            self.jobs = jobs
+
+    def test_exact_two_new_fourteen_carried_contract_passes_without_approving_siblings_again(self):
+        candidate, review, rows = self.approve()
+        self.assertEqual(set(rows), {"205a3", "205a4"})
+        self.assertEqual(len(candidate["full_inventory"]), 16)
+        self.assertEqual(len(candidate["carried_registered_assets"]), 14)
+        self.assertEqual(candidate["original_fallback_assets"], [])
+        self.assertEqual(set(review["standalone_selection"]["material_approvals"]), set(rows))
+
+    def test_real_registration_adds_only_two_and_preserves_all_fourteen_complete_frames(self):
+        before = proposal_frames(json.loads((self.hd / "hd.json").read_text()))
+        argv = ["registrar", "--hd-root", str(self.hd), "--job", self.jobs[0]["id"]]
+        with patch.object(registrar, "__file__", str(self.project / "tools/hd_register_reviewed.py")), patch("sys.argv", argv), contextlib.redirect_stdout(io.StringIO()):
+            registrar.main()  # Temporary synthetic pack only; no production invocation.
+        active = proposal_frames(json.loads((self.hd / "hd.json").read_text()))
+        self.assertEqual(len(active), 16)
+        self.assertEqual({asset: active[asset] for asset in before}, before)
+        additions = json.loads((self.hd / "provenance.json").read_text())["reviewed_sequence_additions"]
+        self.assertEqual([row["frames"] for row in additions], [14, 2])
+        self.assertEqual(additions[-1]["assets"], ["205a3", "205a4"])
+        self.assertEqual(additions[-1]["approval_scope"], "complete_standalone_terrain_selection_with_unchanged_registered_siblings")
+        self.assertEqual(additions[-1]["carried_registered_assets"], sorted(before))
+
+    def test_duplicate_new_request_is_rejected_without_pack_write(self):
+        before = {name: (self.hd / name).read_bytes() for name in ["hd.json", "provenance.json"]}
+        argv = ["registrar", "--hd-root", str(self.hd), "--job", self.jobs[0]["id"], "--job", self.jobs[0]["id"]]
+        with patch.object(registrar, "__file__", str(self.project / "tools/hd_register_reviewed.py")), patch("sys.argv", argv):
+            with self.assertRaisesRegex(ValueError, "duplicate registered ID"): registrar.main()
+        self.assertEqual(before, {name: (self.hd / name).read_bytes() for name in before})
+
+    def test_carried_partition_category_cross_job_and_animation_mismatches_reject(self):
+        for mutation in ["missing_carried", "duplicate_carried", "new_overlap", "fallback_overlap", "fallback_instead_of_carry",
+                         "foreign_carried", "short_inventory", "cross_job", "category", "kind", "whole_family",
+                         "no_explicit_selection", "animation", "partial_animation", "boolean_count", "boolean_frame",
+                         "duplicate_sequence", "duplicate_target"]:
+            with self.subTest(mutation=mutation), self.original_fixture():
+                candidate = copy.deepcopy(self.jobs[0]["candidate"])
+                if mutation == "missing_carried": candidate["carried_registered_assets"].pop()
+                elif mutation == "duplicate_carried": candidate["carried_registered_assets"].append("2059d")
+                elif mutation == "new_overlap": candidate["carried_registered_assets"].append("205a3")
+                elif mutation == "fallback_overlap": candidate["original_fallback_assets"] = ["2059d"]
+                elif mutation == "fallback_instead_of_carry":
+                    candidate["original_fallback_assets"] = candidate.pop("carried_registered_assets"); candidate.pop("carried_registered_identity")
+                elif mutation == "foreign_carried": candidate["carried_registered_assets"][0] = "10530"
+                elif mutation == "short_inventory": candidate["full_inventory"].pop()
+                elif mutation == "cross_job":
+                    self.jobs[0]["job"]["job_id"] = "terrain-10530-1053f"
+                    self.save("job", self.jobs[0]["job"])
+                elif mutation == "category": candidate["category"] = "Enemies"
+                elif mutation == "kind": candidate["kind"] = "animation_sequence"
+                elif mutation == "whole_family": candidate["complete_family"] = True
+                elif mutation == "no_explicit_selection": candidate.pop("complete_standalone_selection")
+                elif mutation == "animation":
+                    candidate["sequences"][0]["frame_count"] = 2
+                    candidate["sequences"][0]["frames"].append({**candidate["sequences"][0]["frames"][0], "frame": 1})
+                elif mutation == "partial_animation": candidate["sequences"][0]["frame_count"] = 2
+                elif mutation == "boolean_count": candidate["sequences"][0]["frame_count"] = True
+                elif mutation == "boolean_frame": candidate["sequences"][0]["frames"][0]["frame"] = False
+                elif mutation == "duplicate_sequence": candidate["sequences"].append(candidate["sequences"][0])
+                else:
+                    self.jobs[0]["job"]["targets"].append(self.jobs[0]["job"]["targets"][0]); self.save("job", self.jobs[0]["job"])
+                self.resign_identity(candidate)
+                if mutation == "fallback_instead_of_carry":
+                    # The legacy original-fallback schema still parses, but
+                    # cannot register over already active siblings.
+                    argv = ["registrar", "--hd-root", str(self.hd), "--job", self.jobs[0]["id"]]
+                    with patch.object(registrar, "__file__", str(self.project / "tools/hd_register_reviewed.py")), patch("sys.argv", argv):
+                        with self.assertRaisesRegex(ValueError, "original fallback already"): registrar.main()
+                else:
+                    with self.assertRaises(ValueError): self.approve()
+
+    def test_changed_carried_complete_binding_rejects_even_with_rehashed_candidate(self):
+        for mutation in ["raw_path", "crop", "canvas", "origin", "source", "optional_policy", "frame_index", "omitted_record", "extra_record", "digest"]:
+            with self.subTest(mutation=mutation), self.original_fixture():
+                candidate = copy.deepcopy(self.jobs[0]["candidate"])
+                identity = candidate["carried_registered_identity"]
+                record = identity["frames"]["2059d"]
+                frame = record["frame_binding"]
+                if mutation == "raw_path": frame["file"] = identity["frames"]["2059e"]["frame_binding"]["file"]
+                elif mutation == "crop": frame["crop"] = [0, 0, 4, 4]
+                elif mutation == "canvas": frame["logical_width"] = 8
+                elif mutation == "origin": frame["origin"] = [1, 0]
+                elif mutation == "source": record["source_sha256"] = "0" * 64
+                elif mutation == "optional_policy": frame["native_nearest_cues"] = [[0, 0]]
+                elif mutation == "frame_index": frame["frame"] = 1
+                elif mutation == "omitted_record": identity["frames"].pop("2059d")
+                elif mutation == "extra_record": identity["frames"]["205a3"] = record
+                else: identity["frame_bindings_sha256"] = "0" * 64
+                self.resign(candidate)
+                with self.assertRaises(ValueError): self.approve()
+
+    def test_actual_carried_raw_change_rejects_even_with_forged_new_raw_hash_and_preserved_mtime(self):
+        candidate = copy.deepcopy(self.jobs[0]["candidate"])
+        record = candidate["carried_registered_identity"]["frames"]["2059d"]
+        raw = self.hd / record["frame_binding"]["file"]
+        stamp = raw.stat().st_mtime_ns
+        raw.write_bytes(raw.read_bytes() + b"changed carried art")
+        os.utime(raw, ns=(stamp, stamp))
+        record["raw_sha256"] = self.sha(raw.read_bytes())
+        self.resign(candidate)
+        with self.assertRaisesRegex(ValueError, "carried raw artwork changed"): self.approve()
+
+    def test_matching_carried_raw_symlink_cannot_escape_hd_root(self):
+        raw = self.hd / self.carried["2059d"]["file"]
+        outside = self.hd.parent / "outside-carried.png"
+        outside.write_bytes(raw.read_bytes())
+        raw.unlink(); raw.symlink_to(outside)
+        with self.assertRaisesRegex(ValueError, "escapes HD root"): self.approve()
+
+    def test_candidate_and_review_carried_identities_must_agree(self):
+        review = copy.deepcopy(self.jobs[0]["review"])
+        review["standalone_selection"]["carried_registered_identity"]["frame_bindings_sha256"] = "0" * 64
+        self.save("review", review)
+        with self.assertRaisesRegex(ValueError, "review carried identity differs"): self.approve()
+
+    def test_rehashed_actual_baseline_changes_cannot_replace_accepted_carry_identity(self):
+        for mutation in ["raw_path", "crop", "canvas", "origin", "source", "optional_policy"]:
+            with self.subTest(mutation=mutation), self.original_fixture():
+                baseline = copy.deepcopy(self.baseline)
+                frame = baseline["sequences"][0]["frames"][0]
+                if mutation == "raw_path": frame["file"] = baseline["sequences"][1]["frames"][0]["file"]
+                elif mutation == "crop": frame["crop"] = [0, 0, 4, 4]
+                elif mutation == "canvas": frame["logical_width"] = 8
+                elif mutation == "origin": frame["origin"] = [1, 0]
+                elif mutation == "source": frame["source_sha256"] = "0" * 64
+                else: frame["preserve_reserved_coverage"] = True
+                self.write(self.hd / "hd.json", baseline)
+                candidate = copy.deepcopy(self.jobs[0]["candidate"])
+                identity = candidate["carried_registered_identity"]
+                identity["baseline"] = self.ref(self.hd / "hd.json")
+                identity["frames"]["2059d"]["frame_binding"] = frame
+                identity["frame_bindings_sha256"] = binding_digest({**self.carried, "2059d": frame})
+                self.resign(candidate)
+                with self.assertRaises(ValueError): self.approve()
+
+    def test_current_baseline_and_accepted_registration_receipts_are_exact(self):
+        for mutation in ["wrong_baseline_path", "stale_baseline_hash", "missing_baseline", "wrong_provenance_path",
+                         "stale_provenance", "wrong_record_index", "boolean_record_index", "other_job_record", "wrong_count",
+                         "wrong_accepted_path", "changed_accepted_hash", "changed_accepted_digest", "changed_accepted_source",
+                         "changed_accepted_scale", "duplicate_accepted_scale", "duplicate_accepted_id"]:
+            with self.subTest(mutation=mutation), self.original_fixture():
+                candidate = copy.deepcopy(self.jobs[0]["candidate"])
+                identity = candidate["carried_registered_identity"]
+                if mutation == "wrong_baseline_path": identity["baseline"] = self.ref(self.hd / "context-baseline.json")
+                elif mutation == "stale_baseline_hash": identity["baseline"]["sha256"] = "0" * 64
+                elif mutation == "missing_baseline": identity.pop("baseline")
+                elif mutation == "wrong_provenance_path": identity["provenance"] = self.ref(self.hd / "context-baseline.json")
+                elif mutation == "stale_provenance": identity["provenance"]["sha256"] = "0" * 64
+                elif mutation == "wrong_record_index": identity["registration_record_index"] = -1
+                elif mutation == "boolean_record_index": identity["registration_record_index"] = False
+                elif mutation in ["other_job_record", "wrong_count"]:
+                    path = self.hd / "provenance.json"; provenance = json.loads(path.read_text())
+                    entry = provenance["reviewed_sequence_additions"][0]
+                    if mutation == "other_job_record": entry["job_id"] = "terrain-10530-1053f"
+                    else: entry["frames"] = 13
+                    self.write(path, provenance); identity["provenance"] = self.ref(path)
+                elif mutation == "wrong_accepted_path": identity["accepted_runtime_qa"] = self.ref(self.jobs[0]["directory"] / "runtime-qa.json")
+                elif mutation == "changed_accepted_hash": identity["accepted_runtime_qa"]["sha256"] = "0" * 64
+                else:
+                    accepted = json.loads(self.accepted_path.read_text())
+                    if mutation == "changed_accepted_digest": accepted["frame_bindings_sha256"] = "0" * 64
+                    elif mutation == "changed_accepted_source": accepted["frames"][0]["source_sha256"] = "0" * 64
+                    elif mutation == "changed_accepted_scale": accepted["frames"][0]["hd_masks"][0]["scale"] = True
+                    elif mutation == "duplicate_accepted_scale": accepted["frames"][0]["hd_masks"].append({"scale": 4})
+                    else: accepted["frames"].append(accepted["frames"][0])
+                    self.write(self.accepted_path, accepted); identity["accepted_runtime_qa"] = self.ref(self.accepted_path)
+                self.resign(candidate)
+                with self.assertRaises((ValueError, OSError)): self.approve()
+
+    def test_baseline_cannot_hide_carried_tile_in_boolean_or_partial_animation(self):
+        for mutation in ["boolean_count", "boolean_frame", "partial_animation", "full_animation", "empty_sequence", "missing_sibling", "duplicate_sibling", "already_selected"]:
+            with self.subTest(mutation=mutation), self.original_fixture():
+                baseline = copy.deepcopy(self.baseline)
+                if mutation == "boolean_count": baseline["sequences"][0]["frame_count"] = True
+                elif mutation == "boolean_frame": baseline["sequences"][0]["frames"][0]["frame"] = False
+                elif mutation == "partial_animation": baseline["sequences"][0]["frame_count"] = 2
+                elif mutation == "full_animation":
+                    baseline["sequences"][0]["frame_count"] = 2
+                    baseline["sequences"][0]["frames"].append({**baseline["sequences"][1]["frames"][0], "frame": 1})
+                    baseline["sequences"].pop(1)
+                elif mutation == "empty_sequence": baseline["sequences"].append({"base_asset": 0x2059d, "frame_count": 1, "frames": []})
+                elif mutation == "missing_sibling": baseline["sequences"].pop()
+                elif mutation == "duplicate_sibling": baseline["sequences"].append(baseline["sequences"][0])
+                else: baseline["sequences"].append(self.jobs[0]["candidate"]["sequences"][0])
+                self.write(self.hd / "hd.json", baseline)
+                candidate = copy.deepcopy(self.jobs[0]["candidate"])
+                candidate["carried_registered_identity"]["baseline"] = self.ref(self.hd / "hd.json")
+                self.resign(candidate)
+                with self.assertRaises(ValueError): self.approve()
+
+    def test_correctly_rehashed_future_projection_cannot_change_any_carried_or_new_binding(self):
+        for mutation in ["omitted_carry", "omitted_new", "foreign_asset", "changed_carry", "changed_new", "boolean_frame", "boolean_count", "partial_animation", "empty_sequence", "duplicate_id", "wrong_baseline", "registered_context_overlap"]:
+            with self.subTest(mutation=mutation), self.original_fixture():
+                path = self.hd / "context-future_projection.json"
+                future = json.loads(path.read_text())
+                if mutation == "omitted_carry": future["sequences"].pop(0)
+                elif mutation == "omitted_new": future["sequences"].pop()
+                elif mutation == "foreign_asset": future["sequences"][0]["base_asset"] = 0x10530
+                elif mutation == "changed_carry": future["sequences"][0]["frames"][0]["crop"] = [0, 0, 4, 4]
+                elif mutation == "changed_new": future["sequences"][-1]["frames"][0]["origin"] = [1, 0]
+                elif mutation == "boolean_frame": future["sequences"][0]["frames"][0]["frame"] = False
+                elif mutation == "boolean_count": future["sequences"][0]["frame_count"] = True
+                elif mutation == "partial_animation": future["sequences"][0]["frame_count"] = 2
+                elif mutation == "empty_sequence": future["sequences"].append({"base_asset": 0x205a3, "frame_count": 1, "frames": []})
+                elif mutation == "duplicate_id": future["sequences"].append(future["sequences"][0])
+                elif mutation == "wrong_baseline":
+                    self.reseal_context(baseline=self.ref(self.hd / "context-baseline.json"))
+                else:
+                    proposal = json.loads(self.context_candidate_path.read_text())
+                    proposal["sequences"].append(self.baseline["sequences"][0])
+                    self.reseal_context(proposal=proposal)
+                if mutation not in ["wrong_baseline", "registered_context_overlap"]:
+                    self.write(path, future); self.reseal_context(future=self.ref(path))
+                with self.assertRaises((ValueError, KeyError)): self.approve()
+
+    def test_carried_original_source_symlink_or_bytes_cannot_be_replaced(self):
+        target = self.jobs[0]["job"]["targets"][0]
+        source = self.data / target["source_path"]
+        payload = source.read_bytes()
+        source.write_bytes(payload[:-1] + b"\xff")
+        with self.assertRaisesRegex(ValueError, "original inventory source differs"): self.approve()
+        source.write_bytes(payload)
+        outside = self.data.parent / "outside-carried-source"
+        outside.write_bytes(payload)
+        source.unlink(); source.symlink_to(outside)
+        with self.assertRaisesRegex(ValueError, "INDEX path escapes"): self.approve()
+
+    def test_pending_or_missing_new_material_and_context_are_not_authorized_by_carried_content(self):
+        for mutation in ["pending", "missing_material", "missing_context", "wrong_material", "same_reviewer"]:
+            with self.subTest(mutation=mutation), self.original_fixture():
+                review = copy.deepcopy(self.jobs[0]["review"])
+                if mutation == "pending": review["status"] = "PENDING"
+                elif mutation == "missing_material": review["standalone_selection"]["material_approvals"].pop("205a3")
+                elif mutation == "missing_context": review["standalone_selection"].pop("contextual_approval")
+                elif mutation == "wrong_material": review["standalone_selection"]["material_approvals"]["205a3"]["source_sha256"] = "0" * 64
+                else:
+                    peer_path = self.jobs[0]["directory"] / "peer.json"; peer = json.loads(peer_path.read_text()); peer["reviewer"] = peer["author"]
+                    self.write(peer_path, peer)
+                    for approval in review["standalone_selection"]["material_approvals"].values(): approval["independent_review"] = self.ref(peer_path)
+                self.save("review", review)
+                with self.assertRaises(ValueError): self.approve()
 
 
 if __name__ == "__main__":

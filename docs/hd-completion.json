@@ -19,10 +19,10 @@
   ],
   "stage_contract": "Every generated candidate stays distinct from review, registration and render reachability. Original-only fallback is temporary for every required picture. Native cinematics/fonts have explicit preservation exceptions, not HD claims.",
   "picture_status_counts": {
-    "registered": 4276,
-    "inprogress": 302,
+    "registered": 4330,
+    "inprogress": 257,
     "renderreachable": 20,
-    "candidate": 1008,
+    "candidate": 999,
     "missing": 147
   },
   "assets": {
@@ -25906,7 +25906,7 @@
       "canonical_source_asset": "10352",
       "family_id": "bosses-10352-1035a",
       "job_id": "bosses-10352-1035a",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_4",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -25940,7 +25940,7 @@
       "canonical_source_asset": "10353",
       "family_id": "bosses-10352-1035a",
       "job_id": "bosses-10352-1035a",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_4",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -25974,7 +25974,7 @@
       "canonical_source_asset": "10354",
       "family_id": "bosses-10352-1035a",
       "job_id": "bosses-10352-1035a",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_4",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -26008,7 +26008,7 @@
       "canonical_source_asset": "10355",
       "family_id": "bosses-10352-1035a",
       "job_id": "bosses-10352-1035a",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_4",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -26042,7 +26042,7 @@
       "canonical_source_asset": "10356",
       "family_id": "bosses-10352-1035a",
       "job_id": "bosses-10352-1035a",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_4",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -26076,7 +26076,7 @@
       "canonical_source_asset": "10357",
       "family_id": "bosses-10352-1035a",
       "job_id": "bosses-10352-1035a",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_4",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -26110,7 +26110,7 @@
       "canonical_source_asset": "10358",
       "family_id": "bosses-10352-1035a",
       "job_id": "bosses-10352-1035a",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_4",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -26144,7 +26144,7 @@
       "canonical_source_asset": "10359",
       "family_id": "bosses-10352-1035a",
       "job_id": "bosses-10352-1035a",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_4",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -26178,7 +26178,7 @@
       "canonical_source_asset": "1035a",
       "family_id": "bosses-10352-1035a",
       "job_id": "bosses-10352-1035a",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_4",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -46868,7 +46868,7 @@
       "canonical_source_asset": "10590",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -46879,7 +46879,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "10591": {
       "kind": "picture",
@@ -46900,7 +46906,7 @@
       "canonical_source_asset": "10591",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -46911,7 +46917,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "10592": {
       "kind": "picture",
@@ -46932,7 +46944,7 @@
       "canonical_source_asset": "10592",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -46943,7 +46955,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "10593": {
       "kind": "picture",
@@ -46964,7 +46982,7 @@
       "canonical_source_asset": "10593",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -46975,7 +46993,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "10594": {
       "kind": "picture",
@@ -46996,7 +47020,7 @@
       "canonical_source_asset": "10594",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47007,7 +47031,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "10595": {
       "kind": "picture",
@@ -47028,7 +47058,7 @@
       "canonical_source_asset": "10595",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47039,7 +47069,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "10596": {
       "kind": "picture",
@@ -47060,7 +47096,7 @@
       "canonical_source_asset": "10596",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47071,7 +47107,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "10597": {
       "kind": "picture",
@@ -47092,7 +47134,7 @@
       "canonical_source_asset": "10597",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47103,7 +47145,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "10598": {
       "kind": "picture",
@@ -47124,7 +47172,7 @@
       "canonical_source_asset": "10598",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47135,7 +47183,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "10599": {
       "kind": "picture",
@@ -47156,7 +47210,7 @@
       "canonical_source_asset": "10599",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47167,7 +47221,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "1059a": {
       "kind": "picture",
@@ -47188,7 +47248,7 @@
       "canonical_source_asset": "1059a",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47199,7 +47259,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "1059b": {
       "kind": "picture",
@@ -47220,7 +47286,7 @@
       "canonical_source_asset": "1059b",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47231,7 +47297,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "1059c": {
       "kind": "picture",
@@ -47252,7 +47324,7 @@
       "canonical_source_asset": "1059c",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47263,7 +47335,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "1059d": {
       "kind": "picture",
@@ -47284,7 +47362,7 @@
       "canonical_source_asset": "1059d",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47295,7 +47373,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "1059e": {
       "kind": "picture",
@@ -47348,7 +47432,7 @@
       "canonical_source_asset": "1059f",
       "family_id": "terrain-10590-1059f",
       "job_id": "terrain-10590-1059f",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47359,7 +47443,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-10590-1059f/candidate.json",
+        "sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-10590-1059f"
     },
     "105a0": {
       "kind": "picture",
@@ -47380,7 +47470,7 @@
       "canonical_source_asset": "105a0",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47391,7 +47481,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105a1": {
       "kind": "picture",
@@ -47412,7 +47508,7 @@
       "canonical_source_asset": "105a1",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47423,7 +47519,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105a2": {
       "kind": "picture",
@@ -47444,7 +47546,7 @@
       "canonical_source_asset": "105a2",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47455,7 +47557,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105a3": {
       "kind": "picture",
@@ -47476,7 +47584,7 @@
       "canonical_source_asset": "105a3",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47487,7 +47595,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105a4": {
       "kind": "picture",
@@ -47540,7 +47654,7 @@
       "canonical_source_asset": "105a5",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47551,7 +47665,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105a6": {
       "kind": "picture",
@@ -47572,7 +47692,7 @@
       "canonical_source_asset": "105a6",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47583,7 +47703,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105a7": {
       "kind": "picture",
@@ -47636,7 +47762,7 @@
       "canonical_source_asset": "105a8",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47647,7 +47773,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105a9": {
       "kind": "picture",
@@ -47668,7 +47800,7 @@
       "canonical_source_asset": "105a9",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -47679,7 +47811,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105aa": {
       "kind": "picture",
@@ -47700,7 +47838,7 @@
       "canonical_source_asset": "105aa",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -47711,7 +47849,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105ab": {
       "kind": "picture",
@@ -47732,7 +47876,7 @@
       "canonical_source_asset": "105ab",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47743,7 +47887,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105ac": {
       "kind": "picture",
@@ -47764,7 +47914,7 @@
       "canonical_source_asset": "105ac",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47775,7 +47925,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105ad": {
       "kind": "picture",
@@ -47796,7 +47952,7 @@
       "canonical_source_asset": "105ad",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47807,7 +47963,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105ae": {
       "kind": "picture",
@@ -47828,7 +47990,7 @@
       "canonical_source_asset": "105ae",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47839,7 +48001,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105af": {
       "kind": "picture",
@@ -47860,7 +48028,7 @@
       "canonical_source_asset": "105af",
       "family_id": "terrain-105a0-105af",
       "job_id": "terrain-105a0-105af",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -47871,7 +48039,13 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "candidate": {
+        "manifest": "jobs/terrain-105a0-105af/candidate.json",
+        "sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+        "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
+      },
+      "coordinator_review_ref": "terrain-105a0-105af"
     },
     "105b0": {
       "kind": "picture",
@@ -49524,7 +49698,7 @@
       "canonical_source_asset": "105e3",
       "family_id": "terrain-105e0-105ef",
       "job_id": "terrain-105e0-105ef",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -49940,7 +50114,7 @@
       "canonical_source_asset": "105f0",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -49972,7 +50146,7 @@
       "canonical_source_asset": "105f1",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -50004,7 +50178,7 @@
       "canonical_source_asset": "105f2",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -50068,7 +50242,7 @@
       "canonical_source_asset": "105f4",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -50100,7 +50274,7 @@
       "canonical_source_asset": "105f5",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -50132,7 +50306,7 @@
       "canonical_source_asset": "105f6",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -50164,7 +50338,7 @@
       "canonical_source_asset": "105f7",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -50196,7 +50370,7 @@
       "canonical_source_asset": "105f8",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -50228,7 +50402,7 @@
       "canonical_source_asset": "105f9",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -50260,7 +50434,7 @@
       "canonical_source_asset": "105fa",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -50292,7 +50466,7 @@
       "canonical_source_asset": "105fb",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -50324,7 +50498,7 @@
       "canonical_source_asset": "105fc",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -50356,7 +50530,7 @@
       "canonical_source_asset": "105fd",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -50388,7 +50562,7 @@
       "canonical_source_asset": "105fe",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -50420,7 +50594,7 @@
       "canonical_source_asset": "105ff",
       "family_id": "terrain-105f0-105ff",
       "job_id": "terrain-105f0-105ff",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_1",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -219798,7 +219972,7 @@
       "owner": "/root/iron_coast_4",
       "target_count": 9,
       "status_counts": {
-        "candidate": 9
+        "registered": 9
       },
       "job_file": "bosses-10352-1035a/job.json"
     },
@@ -222969,7 +223143,8 @@
       "owner": "/root/hd_terrain_set_1",
       "target_count": 16,
       "status_counts": {
-        "inprogress": 16
+        "registered": 15,
+        "inprogress": 1
       },
       "job_file": "terrain-10590-1059f/job.json"
     },
@@ -222981,7 +223156,8 @@
       "owner": "/root/hd_terrain_set_1",
       "target_count": 16,
       "status_counts": {
-        "inprogress": 16
+        "registered": 14,
+        "inprogress": 2
       },
       "job_file": "terrain-105a0-105af/job.json"
     },
@@ -223029,7 +223205,8 @@
       "owner": "/root/hd_terrain_set_1",
       "target_count": 16,
       "status_counts": {
-        "inprogress": 16
+        "inprogress": 15,
+        "registered": 1
       },
       "job_file": "terrain-105e0-105ef/job.json"
     },
@@ -223041,7 +223218,8 @@
       "owner": "/root/hd_terrain_set_1",
       "target_count": 16,
       "status_counts": {
-        "inprogress": 16
+        "registered": 15,
+        "inprogress": 1
       },
       "job_file": "terrain-105f0-105ff/job.json"
     },
@@ -229402,6 +229580,26 @@
       },
       "runtime_qa": "registered-class-review/batch-3592-final-successor-metadata/jobs/terrain-10570-1057f/runtime-qa-exact-alias.json"
     },
+    "terrain-10590-1059f": {
+      "status": "approved",
+      "candidate_sha256": "0719d10e0aadae8bc56abfe809e6f74816dafa58fcd5c415fa9c9a67a86a7cec",
+      "frame_bindings_sha256": "02f89e460bc1599d6d8d265d4f355a3859f6f3f22b13735b0024ef6cf4d8fa27",
+      "receipt": {
+        "path": "jobs/terrain-10590-1059f/coordinator-review.json",
+        "sha256": "54b2d7df511f4d89f598f935c0793de036333c41fee3c831bc766b35bb7565cd"
+      },
+      "runtime_qa": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/batch-4350-final-successor-metadata/jobs/terrain-10590-1059f/runtime-qa-exact-alias.json"
+    },
+    "terrain-105a0-105af": {
+      "status": "approved",
+      "candidate_sha256": "b0c75ea3051187577e9ac4372230f5818d75b6258f8ee5a35f00678e41a7faa8",
+      "frame_bindings_sha256": "537caf9f5c0d4e7699a6ce94c57c108dcf493aff7da94849f6c63a8f903070e3",
+      "receipt": {
+        "path": "jobs/terrain-105a0-105af/coordinator-review.json",
+        "sha256": "67db33c5e7623a92213bafbda52b4d4b5b9c23a9c289bf1d33c13e507a96cda0"
+      },
+      "runtime_qa": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/batch-4350-final-successor-metadata/jobs/terrain-105a0-105af/runtime-qa-exact-alias.json"
+    },
     "terrain-2010d-2011c": {
       "status": "approved",
       "candidate_sha256": "e65fe2737df0f02746cd5024decd6d00e6aeffa0574566e24b7ab803c592e3fb",
@@ -231203,7 +231401,7 @@
   "native_stage_contract": "native_preserved applies only to307 closed native cinematics/fonts with remaster_required=false and HD_remastered=false. It does not enter the picture HD stage counts.",
   "runtime_release_evidence": {
     "runtime4296": {
-      "status": "ROOT_RUNTIME4296_VALIDATION_CLOSED_REMOTE_PUBLICATION_AND_NEW_WINDOWS_CI_PENDING",
+      "status": "PUBLISHED4296_REMOTE_HEAD_CONFIRMED_EXACT_NATIVE_WINDOWS_CI_SUCCESS",
       "approved_frames": 4296,
       "complete_sequences": 2483,
       "terrain_frames": 3262,
@@ -231261,6 +231459,36 @@
           "sha256": "49878cb4dc04608dcc9ae6abfd481dddf5b9f9648589d930ce990ec1f6d3badd",
           "size": 3849,
           "mtime_ns": 1791777473590168070
+        },
+        "publication.json": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-runtime-4296/publication.json",
+          "sha256": "881c9ff9fb5233a486e0874221356407c8a424c8af7eeffbb21416c5f0627c99",
+          "size": 3028,
+          "mtime_ns": 1791778173231537976
+        },
+        "windows-ci-first-running-observation.json": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-runtime-4296/windows-ci-first-running-observation.json",
+          "sha256": "e30dc2e80a29352952c0a9403adf03b81abc32e10547d662215498636c8ce0bb",
+          "size": 4564,
+          "mtime_ns": 1791778308761572597
+        },
+        "windows-ci-success-20261012.json": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-runtime-4296/windows-ci-success-20261012.json",
+          "sha256": "2a65d2dd54e0f9e06d93beb3a1a2aee4ec458ef0e6bf04272edb4e29c1e1b6d0",
+          "size": 2765,
+          "mtime_ns": 1791780100288777467
+        },
+        "windows-ci-final-api-20261012.json": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-runtime-4296/windows-ci-final-api-20261012.json",
+          "sha256": "aed1f027596206a4bdb95a813c53305fb2f6e18626afb6cfd93c0505a0e5b918",
+          "size": 5928,
+          "mtime_ns": 1791780063035424388
+        },
+        "windows-ci-completed-log-20261012.txt": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-runtime-4296/windows-ci-completed-log-20261012.txt",
+          "sha256": "6cebabc6e1b7d29b8daa1feca24fc7324d54650cb781af86d31753831d7300ed",
+          "size": 259865,
+          "mtime_ns": 1791780064990156393
         }
       },
       "screenshots_physically_viewed_by_root": 6,
@@ -231269,13 +231497,13 @@
       "material_consistency_followup": "Warmer rectangular fine grain and value joins; retain source-bound qualifications and review bounded affected terrain later.",
       "no_whole_campaign_or_whole_map_seamless_claim": true,
       "source18_both_executables_original6450_and_prior3592_bindings_exact": true,
-      "last_remote_confirmed_runtime_frames": 3592,
-      "last_remote_confirmed_commit": "b72d2be1f7bb41341c083624baca6762a59bdc0a",
+      "last_remote_confirmed_runtime_frames": 4296,
+      "last_remote_confirmed_commit": "ca438faf45cac4518d852d55abae9fe2a2d4ffbb",
       "prior_exact3592_windows_success": {
         "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-runtime-3592/windows-ci-success.json",
         "sha256": "3cf8905415760196b583beb89a61c9ff90358fab478e9fd1a17bad49c22f1e63"
       },
-      "new4296_windows_CI_success_claimed": false,
+      "new4296_windows_CI_success_claimed": true,
       "root_workflow_timeout_minutes": {
         "before": 30,
         "after": 60
@@ -231302,7 +231530,143 @@
         "actual_permanent_refusals": 8,
         "policy_limited_original12_family_frames": 16,
         "no_extra_admission": true
+      },
+      "published_changed_paths": 479,
+      "published_new_artwork_files": 469,
+      "published_new_frames": 704,
+      "new4296_windows_CI_first_observation": {
+        "run": 38202643090,
+        "head": "ca438faf45cac4518d852d55abae9fe2a2d4ffbb",
+        "observed_utc": "2026-10-12T04:11:48.761378+00:00",
+        "status": "in_progress",
+        "conclusion": null,
+        "artifact_observed": false,
+        "url": "https://github.com/Quintine/RustRaptor/actions/runs/38202643090"
+      },
+      "new4296_windows_CI_completed_success": {
+        "run": 38202643090,
+        "head": "ca438faf45cac4518d852d55abae9fe2a2d4ffbb",
+        "completed_at": "2026-10-12T04:33:03Z",
+        "status": "completed",
+        "conclusion": "success",
+        "all_steps_succeeded": 15,
+        "url": "https://github.com/Quintine/RustRaptor/actions/runs/38202643090",
+        "actual_checks": {
+          "hd_registered": 4296,
+          "hd_validated": 4296,
+          "supplied_frames_rejected": 0,
+          "mods_validated": 45,
+          "overrides": 1,
+          "portable_simulation_mod_windows_save_tests": "SUCCESS",
+          "carried_pilot_black_tide_and_paid_repairs": "SUCCESS",
+          "included_executable_and_launcher": "SUCCESS",
+          "native_windows_build_package": "SUCCESS",
+          "boss_phases_and_sd_hd_shop": "SUCCESS",
+          "packaged_data_mod_sdl_gameplay": "SUCCESS",
+          "stage2_music": {
+            "rate": 44100,
+            "frames": 132300,
+            "nonzero_samples": 261955
+          },
+          "stage2_music_muted_sound_effects": {
+            "rate": 44100,
+            "frames": 132300,
+            "nonzero_samples": 210858
+          }
+        },
+        "artifact": {
+          "id": 11727230004,
+          "node_id": "MDg6QXJ0aWZhY3QxMTcyNzIzMDAwNA==",
+          "name": "RustRaptor-windows-x86_64",
+          "size_in_bytes": 6311100791,
+          "url": "https://api.github.com/repos/Quintine/RustRaptor/actions/artifacts/11727230004",
+          "archive_download_url": "https://api.github.com/repos/Quintine/RustRaptor/actions/artifacts/11727230004/zip",
+          "expired": false,
+          "digest": "sha256:a86a35305225751c5a7e0c560b538cef7e8898eaba6fe7d9c8284b56f553f8aa",
+          "created_at": "2026-10-12T04:32:59Z",
+          "updated_at": "2026-10-12T04:32:59Z",
+          "expires_at": "2027-01-10T04:09:33Z",
+          "workflow_run": {
+            "id": 38202643090,
+            "repository_id": 1413963700,
+            "head_repository_id": 1413963700,
+            "head_branch": "codex/rust-rewrite",
+            "head_sha": "ca438faf45cac4518d852d55abae9fe2a2d4ffbb"
+          }
+        },
+        "artifact_page": "https://github.com/Quintine/RustRaptor/actions/runs/38202643090/artifacts/11727230004",
+        "scope": {
+          "completed_api_and_logs_fetched": true,
+          "zip_downloaded": false,
+          "zip_extracted_or_locally_executed": false,
+          "audio_listened_to_locally": false,
+          "bundled_local_binaries_replaced": false,
+          "earlier_running_observations_retained": true,
+          "workflow_timeout_minutes": 60
+        }
       }
+    },
+    "external4350": {
+      "status": "EXTERNAL4350_REGISTERED_INDEPENDENT_SOURCE_COMPONENT_MATERIAL_CONTEXT_AND_METADATA_CLOSED_ROOT_DELIVERY_PENDING",
+      "approved_frames": 4350,
+      "complete_sequences": 2529,
+      "terrain_frames": 3307,
+      "remaining_required_originals": 1403,
+      "frames_added": 54,
+      "jobs_added": 5,
+      "sequences_added": 46,
+      "registration": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/batch-4350-registration.json",
+        "sha256": "b6f7347a7cc5286733cb53b4826cc0157db24814f25f8180c0a4de6442bcae29",
+        "size": 319,
+        "mtime_ns": 1791787378855353343,
+        "mode": 33152
+      },
+      "post_registration": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/batch-4350-post-registration.json",
+        "sha256": "1c00959e0719c1ca75d3afe244696aeeeba7974372f9415e60e846efab758281",
+        "size": 3262,
+        "mtime_ns": 1791787594248723176,
+        "mode": 33152
+      },
+      "final_preparation": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/batch-4350-final-successor-metadata/final-successor-preparation.json",
+        "sha256": "4187e1681315e2dd1dc0c5e2471222b2650290be810f4d62ebb425afa54e8bed",
+        "size": 57610,
+        "mtime_ns": 1791786689760262619,
+        "mode": 33188
+      },
+      "independent_final_metadata_audit": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-final54-metadata-independent-audit-default7b/independent-final54-metadata-source-context-and-header-audit.json",
+        "sha256": "d1fed9982ef122f3a05e619b30c428caac1c982d342101ed0cac4a679b45dd56",
+        "size": 43199,
+        "mtime_ns": 1791787160947347640,
+        "mode": 33188
+      },
+      "actual_six_peer_context_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/.reference/hd-full-review/small54-final4350-six-peer-global-context-aggregate-default7b/independent-six-peer-full54-final4350-context-aggregate.json",
+        "sha256": "d142ae1355776929c1bcb592e4a8f5c417b45211f26ebc094c7119c093259907",
+        "size": 14852931,
+        "mtime_ns": 1791784555940275545,
+        "mode": 420
+      },
+      "actual_six_peer_context_closure": {
+        "path": "/home/quintine/Projects/RaptorReplica/.reference/hd-full-review/small54-final4350-six-peer-global-context-aggregate-default7b-strict-closure.json",
+        "sha256": "ab4c4865d2c52369af14812f222d4c0ff4a71ab1971870f2dc2bbf0a8e9e440c"
+      },
+      "actual_2200_native_pages": 726,
+      "full_old2483_sequence_prefix_preserved": true,
+      "new46_full_header_order_bijection": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/batch-4350-sequence-header-and-order-resolution.json",
+        "sha256": "5cc7cf1472236e59858d813deadcc326639d5ec99473a96d594c09ea6e6e9888",
+        "size": 20527,
+        "mtime_ns": 1791787350821152314,
+        "mode": 33152
+      },
+      "last_remote_confirmed_runtime_frames": 4296,
+      "last_remote_confirmed_commit": "ca438faf45cac4518d852d55abae9fe2a2d4ffbb",
+      "new4350_bundled_runtime_or_Git_or_Windows_CI_success_claimed": false,
+      "next_later_392_70_144_sixsingles_and_two_soil_admission_not_granted": true
     }
   }
 }

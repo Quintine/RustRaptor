@@ -31,6 +31,8 @@ def asset_list(value, label):
 def standalone_selection(candidate, job, rows):
     """Standalone means a complete one-frame definition, never an animation slice."""
     if candidate.get("complete_standalone_selection") is not True:
+        if candidate.get("carried_registered_assets") or candidate.get("carried_registered_identity"):
+            raise ValueError("carried artwork requires an explicit standalone Terrain selection")
         return None
     if candidate.get("complete_family") is not False:
         raise ValueError("standalone selection must not claim whole-family approval")
@@ -42,8 +44,21 @@ def standalone_selection(candidate, job, rows):
     full = asset_list(candidate.get("full_inventory"), "full_inventory")
     selected = asset_list(candidate.get("selected_assets"), "selected_assets")
     fallback = asset_list(candidate.get("original_fallback_assets"), "original_fallback_assets")
-    if full != inventory or selected != set(rows) or not selected or selected & fallback or selected | fallback != full:
+    carried = asset_list(candidate.get("carried_registered_assets", []), "carried_registered_assets")
+    if (full != inventory or selected != set(rows) or not selected or
+            selected & fallback or selected & carried or fallback & carried or
+            selected | fallback | carried != full):
         raise ValueError("standalone selected/fallback partition differs from complete job inventory")
+    if carried:
+        # This is the reviewed additive contract for one original sixteen-tile
+        # inventory, not a general permission to slice other content families.
+        if (job.get("job_id") != "terrain-2059d-205ac" or
+                selected != {"205a3", "205a4"} or len(full) != 16 or
+                len(carried) != 14 or fallback or
+                not isinstance(candidate.get("carried_registered_identity"), dict)):
+            raise ValueError("carried selection differs from the reviewed master74 two-new/fourteen-carried scope")
+    elif candidate.get("carried_registered_identity"):
+        raise ValueError("carried identity has no registered siblings")
     if candidate.get("targets"):
         asset_list([target["asset"] for target in candidate["targets"]], "candidate targets")
     inventory_job = candidate.get("inventory_job_id", job["job_id"])
@@ -55,8 +70,106 @@ def standalone_selection(candidate, job, rows):
                 len(sequence["frames"]) != 1 or type(sequence["frames"][0]["frame"]) is not int or
                 sequence["frames"][0]["frame"] != 0):
             raise ValueError("standalone selection contains an animation or partial sequence")
-    return {key: sorted(value) for key, value in [
+    selection = {key: sorted(value) for key, value in [
         ("full_inventory", full), ("selected_assets", selected), ("original_fallback_assets", fallback)]}
+    if carried:
+        selection["carried_registered_assets"] = sorted(carried)
+    return selection
+
+
+def same_json(left, right):
+    """Identity includes JSON types: False is not the integer frame zero."""
+    return json.dumps(left, sort_keys=True, separators=(",", ":")) == json.dumps(right, sort_keys=True, separators=(",", ":"))
+
+
+def require_standalone_membership(proposal, assets):
+    """A retained frame zero cannot be hidden inside a partial animation."""
+    for sequence in proposal["sequences"]:
+        base = sequence["base_asset"]
+        base = int(base, 16) if isinstance(base, str) else base
+        if type(sequence["frame_count"]) is not int:
+            raise ValueError("carried context sequence count must be an integer")
+        members = {f"{base + offset:05x}" for offset in range(sequence["frame_count"])}
+        if (assets is None or members & assets) and (
+                type(sequence["frame_count"]) is not int or sequence["frame_count"] != 1 or
+                len(sequence["frames"]) != 1 or type(sequence["frames"][0]["frame"]) is not int or
+                sequence["frames"][0]["frame"] != 0):
+            raise ValueError("carried/new Terrain identity contains an animation or partial sequence")
+
+
+def validate_carried_registered_identity(root, candidate, job, rows, review):
+    """Authenticate already accepted siblings; never approve or insert them again."""
+    carried = set(candidate.get("carried_registered_assets", []))
+    if not carried:
+        return
+    identity = candidate["carried_registered_identity"]
+    evidence = review.get("standalone_selection", {})
+    if not same_json(identity, evidence.get("carried_registered_identity")):
+        raise ValueError("review carried identity differs from candidate")
+    baseline = identity.get("baseline", {})
+    if baseline.get("path") != "hd.json":
+        raise ValueError("carried baseline must identify the current HD manifest")
+    manifest = receipt_json(root, baseline)
+    active = proposal_frames(manifest)
+    require_standalone_membership(manifest, carried)
+    if set(rows) & set(active) or not carried <= set(active):
+        raise ValueError("carried baseline omits siblings or already includes new selected IDs")
+    records = identity.get("frames", {})
+    if not isinstance(records, dict) or set(records) != carried:
+        raise ValueError("carried identity omits or adds registered IDs")
+    targets = {target["asset"]: target for target in job["targets"]}
+    provenance = identity.get("provenance", {})
+    if provenance.get("path") != "provenance.json":
+        raise ValueError("carried provenance must identify the current registration evidence")
+    additions = receipt_json(root, provenance).get("reviewed_sequence_additions", [])
+    index = identity.get("registration_record_index")
+    if type(index) is not int or not 0 <= index < len(additions):
+        raise ValueError("unsafe carried registration record index")
+    registered = additions[index]
+    if (registered.get("job_id") != job["job_id"] or
+            asset_list(registered.get("assets"), "registered carried assets") != carried or
+            type(registered.get("frames")) is not int or registered["frames"] != 14 or
+            registered.get("frame_bindings_sha256") != identity.get("frame_bindings_sha256")):
+        raise ValueError("carried registration belongs to another job or frame map")
+    accepted_receipt = identity.get("accepted_runtime_qa", {})
+    if accepted_receipt.get("path") != registered.get("runtime_qa"):
+        raise ValueError("carried evidence is not the previously registered runtime receipt")
+    accepted = receipt_json(root, accepted_receipt)
+    accepted_frames = {frame["asset"]: frame for frame in accepted.get("frames", [])}
+    if (accepted.get("diagnostics") or accepted.get("frame_bindings_sha256") != identity.get("frame_bindings_sha256") or
+            len(accepted_frames) != len(accepted.get("frames", [])) or set(accepted_frames) != carried):
+        raise ValueError("previously registered carried runtime evidence differs")
+    bindings = {}
+    for asset in sorted(carried):
+        record = records[asset]
+        frame = active[asset]
+        if not isinstance(record, dict) or not same_json(record.get("frame_binding"), frame):
+            raise ValueError(f"carried complete registered frame changed: {asset}")
+        target = targets[asset]
+        if (type(frame.get("frame")) is not int or frame["frame"] != 0 or
+                type(frame.get("logical_width")) is not int or type(frame.get("logical_height")) is not int or
+                [frame["logical_width"], frame["logical_height"]] != target["logical_canvas"] or
+                frame.get("origin") != target["origin"] or
+                frame.get("source_sha256") != target["source_sha256"] or
+                record.get("source_sha256") != target["source_sha256"]):
+            raise ValueError(f"carried native source/canvas/origin differs: {asset}")
+        if set(frame) - {"frame", "file", "crop", "logical_width", "logical_height", "origin", "source_sha256"}:
+            raise ValueError(f"carried master74 frame has an unreviewed optional policy: {asset}")
+        raw = contained(root, frame["file"])
+        measurement = accepted_frames[asset]
+        masks = measurement.get("hd_masks", [])
+        if (measurement.get("source_sha256") != frame["source_sha256"] or
+                measurement.get("logical_canvas") != target["logical_canvas"] or len(masks) != 4 or
+                any(type(mask["scale"]) is not int for mask in masks) or
+                {mask["scale"] for mask in masks} != {1, 2, 3, 4}):
+            raise ValueError(f"previously registered carried source/scales differ: {asset}")
+        accepted_raw = accepted.get("artwork_sha256", {}).get(frame["file"])
+        if (record.get("raw_sha256") != accepted_raw or
+                hashlib.sha256(raw.read_bytes()).hexdigest() != accepted_raw):
+            raise ValueError(f"carried raw artwork changed: {asset}")
+        bindings[asset] = frame
+    if identity.get("frame_bindings_sha256") != binding_digest(bindings):
+        raise ValueError("carried complete frame digest differs")
 
 
 def receipt_json(root, receipt):
@@ -179,8 +292,17 @@ def approved_standalone_evidence(root, selection, review, rows, qa):
     if any(sequence["frame_count"] != 1 or len(sequence["frames"]) != 1 or sequence["frames"][0]["frame"] != 0
            for sequence in proposal["sequences"]):
         raise ValueError("combined context candidate includes animation slices")
-    for key in ["baseline", "future_projection"]:
-        receipt_json(root, authority.get(key))
+    baseline = receipt_json(root, authority.get("baseline"))
+    future = receipt_json(root, authority.get("future_projection"))
+    if selection.get("carried_registered_assets"):
+        identity = evidence["carried_registered_identity"]
+        active = proposal_frames(baseline)
+        projected = proposal_frames(future)
+        if (authority["baseline"]["sha256"] != identity["baseline"]["sha256"] or
+                set(active) & set(bindings) or not same_json(projected, {**active, **bindings})):
+            raise ValueError("carried context is not the exact current baseline plus new definitions")
+        require_standalone_membership(proposal, None)
+        require_standalone_membership(future, set(rows) | set(selection["carried_registered_assets"]))
     closure = receipt_json(root, authority.get("changed_case_closure"))
     if (closure.get("status") != "CLOSED_QUALIFIED_CONTEXT" or
             closure.get("candidate_sha256") != authority["candidate"]["sha256"] or
@@ -268,6 +390,7 @@ def approved_job(root, identity, project):
             raise ValueError(f"raw artwork changed since review: {asset}")
     if selection is not None:
         pictures, payloads = authentic_terrain_inventory(root, job)
+        validate_carried_registered_identity(root, candidate, job, rows, review)
         for asset, frame in rows.items():
             validate_hd_frame(root, frame, payloads[asset], pictures[asset])
         approved_standalone_evidence(root, selection, review, rows, qa)
@@ -310,7 +433,8 @@ def main():
             raise ValueError("original fallback already has registered HD artwork")
         overlaps = set(rows) & set(active)
         if overlaps:
-            if overlaps == set(rows) and all(rows[asset] == active[asset] for asset in rows):
+            if (not candidate.get("carried_registered_assets") and overlaps == set(rows) and
+                    all(rows[asset] == active[asset] for asset in rows)):
                 continue
             raise ValueError(f"duplicate registered ID; review a replacement explicitly: {sorted(overlaps)}")
         manifest["sequences"].extend(candidate["sequences"])
@@ -336,6 +460,10 @@ def main():
             additions[-1]["approval_scope"] = "complete_standalone_terrain_selection"
             additions[-1]["original_fallback_assets"] = candidate["original_fallback_assets"]
             additions[-1]["full_inventory"] = candidate["full_inventory"]
+            if candidate.get("carried_registered_assets"):
+                additions[-1]["approval_scope"] = "complete_standalone_terrain_selection_with_unchanged_registered_siblings"
+                additions[-1]["carried_registered_assets"] = candidate["carried_registered_assets"]
+                additions[-1]["carried_registered_identity"] = candidate["carried_registered_identity"]
     if additions and not args.dry_run:
         # Do not overwrite another registration completed during validation.
         if manifest_path.read_bytes() != original_manifest or provenance_path.read_bytes() != original_provenance:
