@@ -63,15 +63,14 @@ def validate_hd_frame(root, frame, payload, picture):
         image = image.crop((x, y, x + width, y + height))
     rounded = image.width * picture.height != image.height * picture.width
     if rounded and not (
-        source_alpha_min == source_alpha_max == 255
-        and image.size == png_size
+        image.size == png_size
         and integer_rounded_aspect(image.width, image.height, picture.width, picture.height)
     ):
-        raise ValueError("PNG aspect differs from original canvas; only a full opaque frame may use subpixel integer rounding")
+        raise ValueError("PNG aspect differs from original canvas; only a full frame may use subpixel integer rounding")
     if image.width < picture.width * 2 or image.height < picture.height * 2:
         raise ValueError("artwork needs at least twice the logical resolution")
     alpha_min, alpha_max = image.getchannel("A").getextrema()
-    if rounded and (alpha_min, alpha_max) != (255, 255):
+    if rounded and source_alpha_min != 0 and (alpha_min, alpha_max) != (255, 255):
         raise ValueError("HD integer-aspect rounding requires a fully opaque source and PNG")
     if source_alpha_min == 0 and alpha_min != 0:
         raise ValueError("transparent original needs a transparent HD background")

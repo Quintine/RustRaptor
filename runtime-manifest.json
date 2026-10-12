@@ -3,7 +3,7 @@
   "platform": "Linux x86_64",
   "catalog_entries": 6449,
   "approved_hd_frames": 4978,
-  "binary_sha256": "9688cdbd57b0d31049bac431a5bb2e864bb3ce7abbaca732634359ad7a53d8a9",
+  "binary_sha256": "43aef5c389866edd5ccad381d27952f26b329a88e537c8e26a88988d6fdd4fcd",
   "data_files": 8986,
   "data_bytes": 7104297543,
   "files": {
@@ -8995,11 +8995,11 @@
     "data/ui/WINGAME_SWD": "304630a1223419d69723902ffd22c2c4eea0388491e37dfca663fcbe78e99aff"
   },
   "system_dependencies": [
-    "\tlinux-vdso.so.1 (0x00007f68a0e56000)",
-    "\tlibSDL2-2.0.so.0 => /home/quintine/.local/lib/libSDL2-2.0.so.0 (0x00007f68a0000000)",
-    "\tlibgcc_s.so.1 => /usr/lib/libgcc_s.so.1 (0x00007f68a0e02000)",
-    "\tlibm.so.6 => /usr/lib/libm.so.6 (0x00007f68a02c9000)",
-    "\tlibc.so.6 => /usr/lib/libc.so.6 (0x00007f689fc00000)",
-    "\t/lib64/ld-linux-x86-64.so.2 => /usr/lib64/ld-linux-x86-64.so.2 (0x00007f68a0e58000)"
+    "\tlinux-vdso.so.1 (0x00007f9063d21000)",
+    "\tlibSDL2-2.0.so.0 => /home/quintine/Projects/RaptorReplica/RustRaptor/lib/libSDL2-2.0.so.0 (0x00007f9063000000)",
+    "\tlibgcc_s.so.1 => /usr/lib/libgcc_s.so.1 (0x00007f90633d3000)",
+    "\tlibm.so.6 => /usr/lib/libm.so.6 (0x00007f906329c000)",
+    "\tlibc.so.6 => /usr/lib/libc.so.6 (0x00007f9062c00000)",
+    "\t/lib64/ld-linux-x86-64.so.2 => /usr/lib64/ld-linux-x86-64.so.2 (0x00007f9063d23000)"
   ]
 }

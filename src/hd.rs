@@ -386,9 +386,13 @@ impl HdAssets {
             .map(|[_, _, width, height]| (width, height))
             .unwrap_or((info.width, info.height));
         if !exact_aspect(width, height, frame.logical_width, frame.logical_height) {
-            // Only the new rounded opaque path needs a new validation identity.
-            // Existing exact-aspect cache keys and raster bytes stay unchanged.
-            digest.update(b"full-frame-opaque-rounding-v1");
+            // Preserve exact and rounded-opaque identities. Newly eligible
+            // transparent rounded frames have their own alpha-validation namespace.
+            if requires_alpha {
+                digest.update(b"full-frame-transparent-rounding-v1");
+            } else {
+                digest.update(b"full-frame-opaque-rounding-v1");
+            }
         }
         digest.update(info.digest);
         digest.update(frame.source_sha256.as_bytes());
@@ -429,8 +433,8 @@ impl HdAssets {
         let result = (|| -> Result<([u8; 32], RgbaImage)> {
             let (path, info) = self.png(&frame.file)?;
             let (width, height) = frame_dimensions(&frame, &info, requires_alpha)?;
-            let requires_opaque =
-                !exact_aspect(width, height, frame.logical_width, frame.logical_height);
+            let requires_opaque = !requires_alpha
+                && !exact_aspect(width, height, frame.logical_width, frame.logical_height);
             let key = Self::frame_key(&frame, &info, requires_alpha);
             if let Some(rgba) = self.rgba.get(&key) {
                 return Ok((key, rgba.clone()));
@@ -905,7 +909,8 @@ fn integer_rounded_aspect(
     let b = height as u128 * logical_width as u128;
     2 * a.abs_diff(b) < logical_width as u128 + logical_height as u128
 }
-fn frame_dimensions(frame: &Frame, png: &PngInfo, requires_alpha: bool) -> Result<(u32, u32)> {
+// Dimension eligibility is independent of alpha; rgba_frame checks source-aware alpha.
+fn frame_dimensions(frame: &Frame, png: &PngInfo, _requires_alpha: bool) -> Result<(u32, u32)> {
     let (width, height) = if let Some([x, y, width, height]) = frame.crop {
         ensure!(
             width > 0
@@ -920,8 +925,7 @@ fn frame_dimensions(frame: &Frame, png: &PngInfo, requires_alpha: bool) -> Resul
     };
     ensure!(
         exact_aspect(width, height, frame.logical_width, frame.logical_height)
-            || (!requires_alpha
-                && width == png.width
+            || (width == png.width
                 && height == png.height
                 && integer_rounded_aspect(
                     width,
@@ -929,7 +933,7 @@ fn frame_dimensions(frame: &Frame, png: &PngInfo, requires_alpha: bool) -> Resul
                     frame.logical_width,
                     frame.logical_height,
                 )),
-        "HD frame aspect must match the original canvas; only a full opaque frame may use subpixel integer rounding"
+        "HD frame aspect must match the original canvas; only a full frame may use subpixel integer rounding"
     );
     ensure!(
         width as u64 >= frame.logical_width as u64 * 2
@@ -1746,9 +1750,9 @@ mod tests {
         assert!(!integer_rounded_aspect(u32::MAX, 1, 1, u32::MAX));
     }
     #[test]
-    fn rounded_exception_never_admits_transparent_sources_partial_crops_or_low_resolution() {
+    fn rounded_exception_never_admits_partial_crops_or_low_resolution() {
         let mut f = aspect_frame(320, 200);
-        assert!(frame_dimensions(&f, &aspect_info(1586, 992), true).is_err());
+        assert!(frame_dimensions(&f, &aspect_info(1586, 992), true).is_ok());
         f.crop = Some([1, 0, 1586, 992]);
         assert!(frame_dimensions(&f, &aspect_info(1587, 992), false).is_err());
         f.crop = Some([0, 0, 1586, 992]);
@@ -1882,6 +1886,13 @@ mod tests {
         fn previous_key(frame: &Frame, info: &PngInfo, requires_alpha: bool) -> [u8; 32] {
             let mut digest = Sha256::new();
             digest.update(KERNEL_VERSION);
+            let (width, height) = frame
+                .crop
+                .map(|[_, _, width, height]| (width, height))
+                .unwrap_or((info.width, info.height));
+            if !exact_aspect(width, height, frame.logical_width, frame.logical_height) {
+                digest.update(b"full-frame-opaque-rounding-v1");
+            }
             digest.update(info.digest);
             digest.update(frame.source_sha256.as_bytes());
             digest.update(frame.logical_width.to_le_bytes());
@@ -1912,10 +1923,250 @@ mod tests {
             previous_key(&f, &aspect_info(1600, 1000), false)
         );
         f.crop = Some([0, 0, 1586, 992]);
-        assert_ne!(
+        assert_eq!(
             HdAssets::frame_key(&f, &aspect_info(1586, 992), false),
             previous_key(&f, &aspect_info(1586, 992), false)
         );
+        assert_ne!(
+            HdAssets::frame_key(&f, &aspect_info(1586, 992), true),
+            previous_key(&f, &aspect_info(1586, 992), true)
+        );
+    }
+    #[test]
+    fn transparent_full_frame_uses_the_same_strict_rounding_bounds() {
+        for (lw, lh, width, height) in [
+            (40, 32, 1402, 1122), // observed natural generator canvas
+            (32, 40, 1122, 1402),
+            (8, 5, 101, 63),
+            (5, 8, 63, 101),
+        ] {
+            let mut f = aspect_frame(lw, lh);
+            let info = aspect_info(width, height);
+            for requires_alpha in [false, true] {
+                assert_eq!(
+                    frame_dimensions(&f, &info, requires_alpha).unwrap(),
+                    (width, height)
+                );
+            }
+            f.crop = Some([0, 0, width, height]);
+            assert_eq!(frame_dimensions(&f, &info, true).unwrap(), (width, height));
+        }
+        let mut f = aspect_frame(8, 5);
+        for crop in [
+            [0, 0, 100, 63], // strict rounding fits, but selection is not whole PNG
+            [1, 0, 100, 63],
+            [0, 0, 101, 62],
+            [0, 0, 0, 63],
+            [u32::MAX, 0, 101, 63],
+        ] {
+            f.crop = Some(crop);
+            for requires_alpha in [false, true] {
+                assert!(frame_dimensions(&f, &aspect_info(101, 63), requires_alpha).is_err());
+            }
+        }
+        f.crop = None;
+        for info in [aspect_info(101, 64), aspect_info(15, 10), aspect_info(0, 0)] {
+            assert!(frame_dimensions(&f, &info, true).is_err());
+        }
+        assert!(frame_dimensions(&aspect_frame(2, 2), &aspect_info(5, 6), true).is_err());
+        // Existing exact-aspect transparent atlas extraction is unchanged.
+        f.crop = Some([1, 1, 16, 10]);
+        assert!(frame_dimensions(&f, &aspect_info(101, 63), true).is_ok());
+    }
+    fn rectangular_transparent_rounded_fixture() -> (tempfile::TempDir, Catalog, Manifest) {
+        let (dir, _, mut manifest) = fixture();
+        let mut source = [0_i32, 0, 0, 8, 5]
+            .into_iter()
+            .flat_map(i32::to_le_bytes)
+            .collect::<Vec<_>>();
+        for y in 1_i32..4 {
+            source.extend(
+                [2_i32, y, y * 8 + 2, 4]
+                    .into_iter()
+                    .flat_map(i32::to_le_bytes),
+            );
+            source.extend(if y == 2 { [7, 252, 253, 7] } else { [7; 4] });
+        }
+        source.extend([0_i32, 0, -1, 0].into_iter().flat_map(i32::to_le_bytes));
+        fs::write(dir.path().join("source"), &source).unwrap();
+        fs::write(
+            dir.path().join("INDEX"),
+            format!("00001 {} source\n", source.len()),
+        )
+        .unwrap();
+        let catalog = Catalog::open(dir.path()).unwrap();
+        let original = Sprite::decode(&source).unwrap();
+        assert_eq!((original.width, original.height), (8, 5));
+        assert!(original.pixels.contains(&TRANSPARENT));
+        assert_eq!(original.pixels[2 * 8 + 3], 252);
+        assert_eq!(original.pixels[2 * 8 + 4], 253);
+        let f = &mut manifest.sequences[0].frames[0];
+        f.logical_width = 8;
+        f.logical_height = 5;
+        f.source_sha256 = format!("{:x}", Sha256::digest(&source));
+        manifest.sequences[0].frame_count = 1;
+        // Large enough to exercise resident 4x downsampling. This test geometry
+        // has broad alpha support; it does not assert arbitrary source fidelity.
+        let mut raw = RgbaImage::new(101, 63);
+        for y in 12..51 {
+            for x in 25..76 {
+                raw.put_pixel(x, y, image::Rgba([80, 100, 120, 255]));
+            }
+        }
+        raw.save(dir.path().join("hd/ship.png")).unwrap();
+        (dir, catalog, manifest)
+    }
+    #[test]
+    fn transparent_rounded_png_is_identical_cold_and_warm_at_all_scales() {
+        for explicit_full_crop in [false, true] {
+            let (dir, catalog, mut manifest) = rectangular_transparent_rounded_fixture();
+            if explicit_full_crop {
+                manifest.sequences[0].frames[0].crop = Some([0, 0, 101, 63]);
+            }
+            let cache = dir.path().join("cache");
+            let mut cold = lazy_pack(dir.path(), &catalog, &manifest, Some(&cache));
+            let palette = [[0; 3]; 256];
+            let mut expected = Vec::new();
+            for scale in 1..=4 {
+                let sprite = cold.sprite(1, scale, &palette).unwrap().unwrap();
+                assert_eq!((sprite.width, sprite.height), (8 * scale, 5 * scale));
+                assert_eq!(sprite.pixels[0], TRANSPARENT);
+                assert_eq!(sprite.pixels[sprite.pixels.len() - 1], TRANSPARENT);
+                assert!(sprite.pixels.iter().any(|p| *p != TRANSPARENT));
+                for (x, label) in [(3, 252), (4, 253)] {
+                    let i = (2 * scale + scale / 2) * sprite.width + x * scale + scale / 2;
+                    assert_eq!(
+                        sprite.pixels[i], label,
+                        "original lamp class at scale {scale}"
+                    );
+                }
+                expected.push(sprite.pixels);
+            }
+            let (_, resident) = cold.rgba_frame(1).unwrap().unwrap();
+            assert_eq!(resident.dimensions(), (32, 20));
+            assert!(resident.pixels().any(|p| p[3] == 0));
+            assert!(resident.pixels().any(|p| p[3] >= 128));
+            assert_eq!(cold.cache_stats().png_decodes, 1);
+            assert_eq!(cold.cache_stats().disk_writes, 1);
+            assert!(cold.diagnostics.is_empty(), "{:?}", cold.diagnostics);
+            let mut warm = lazy_pack(dir.path(), &catalog, &manifest, Some(&cache));
+            for scale in 1..=4 {
+                let sprite = warm.sprite(1, scale, &palette).unwrap().unwrap();
+                assert_eq!(sprite.pixels, expected[scale - 1]);
+            }
+            assert_eq!(warm.cache_stats().disk_hits, 1);
+            assert_eq!(warm.cache_stats().png_decodes, 0);
+            assert_eq!(warm.cache_stats().disk_writes, 0);
+            assert!(warm.diagnostics.is_empty());
+        }
+    }
+    #[test]
+    fn checksum_valid_rounded_transparent_cache_still_requires_background_and_visible_art() {
+        let (dir, catalog, manifest) = rectangular_transparent_rounded_fixture();
+        let cache = dir.path().join("cache");
+        let palette = [[0; 3]; 256];
+        let mut cold = lazy_pack(dir.path(), &catalog, &manifest, Some(&cache));
+        let expected = (1..=4)
+            .map(|scale| cold.sprite(1, scale, &palette).unwrap().unwrap().pixels)
+            .collect::<Vec<_>>();
+        let path = fs::read_dir(&cache)
+            .unwrap()
+            .next()
+            .unwrap()
+            .unwrap()
+            .path();
+        for alpha in [255, 0, 127] {
+            let mut bytes = fs::read(&path).unwrap();
+            for p in bytes[CACHE_HEADER..].chunks_exact_mut(4) {
+                p[3] = alpha;
+            }
+            if alpha == 127 {
+                // Keep a transparent background so this reaches the distinct
+                // no-visible-art check instead of the missing-background check.
+                bytes[CACHE_HEADER + 3] = 0;
+            }
+            let checksum = Sha256::digest(&bytes[CACHE_HEADER..]);
+            bytes[48..80].copy_from_slice(&checksum);
+            fs::write(&path, bytes).unwrap();
+            let mut rebuilt = lazy_pack(dir.path(), &catalog, &manifest, Some(&cache));
+            for scale in 1..=4 {
+                assert_eq!(
+                    rebuilt.sprite(1, scale, &palette).unwrap().unwrap().pixels,
+                    expected[scale - 1]
+                );
+            }
+            assert_eq!(rebuilt.cache_stats().disk_hits, 0);
+            assert_eq!(rebuilt.cache_stats().png_decodes, 1);
+            assert_eq!(rebuilt.cache_stats().disk_writes, 1);
+            let reason = if alpha == 255 {
+                "transparent background"
+            } else {
+                "no visible pixels"
+            };
+            assert!(rebuilt.diagnostics.iter().any(|d| d.contains(reason)));
+            let mut healed = lazy_pack(dir.path(), &catalog, &manifest, Some(&cache));
+            for scale in 1..=4 {
+                assert_eq!(
+                    healed.sprite(1, scale, &palette).unwrap().unwrap().pixels,
+                    expected[scale - 1]
+                );
+            }
+            assert_eq!(healed.cache_stats().disk_hits, 1);
+            assert_eq!(healed.cache_stats().png_decodes, 0);
+            assert!(healed.diagnostics.is_empty());
+        }
+    }
+    #[test]
+    fn transparent_rounded_raw_and_resident_keep_both_alpha_validations() {
+        let (dir, catalog, manifest) = rectangular_transparent_rounded_fixture();
+        for alpha in [255, 0, 127] {
+            let mut raw = RgbaImage::from_pixel(101, 63, image::Rgba([80, 100, 120, alpha]));
+            if alpha == 127 {
+                raw.put_pixel(0, 0, image::Rgba([0, 0, 0, 0]));
+            }
+            raw.save(dir.path().join("hd/ship.png")).unwrap();
+            let mut assets = lazy_pack(dir.path(), &catalog, &manifest, None);
+            assert!(assets.sprite(1, 4, &[[0; 3]; 256]).unwrap().is_none());
+            let reason = if alpha == 255 {
+                "transparent background"
+            } else {
+                "no visible pixels"
+            };
+            assert!(assets.diagnostics.iter().any(|d| d.contains(reason)));
+            assert_eq!(assets.cache_stats().disk_writes, 0);
+        }
+        // Valid raw alpha alone cannot bypass validation after resident filtering.
+        let mut raw = RgbaImage::new(101, 63);
+        raw.put_pixel(50, 31, image::Rgba([80, 100, 120, 255]));
+        assert!(validate_rgba(&raw, true).is_ok());
+        raw.save(dir.path().join("hd/ship.png")).unwrap();
+        let mut assets = lazy_pack(dir.path(), &catalog, &manifest, None);
+        assert!(assets.sprite(1, 4, &[[0; 3]; 256]).unwrap().is_none());
+        assert!(
+            assets
+                .diagnostics
+                .iter()
+                .any(|d| d.contains("no visible pixels"))
+        );
+    }
+    #[test]
+    fn transparent_rounded_fixture_rejects_changed_canvas_anchor_and_malformed_png() {
+        let (dir, catalog, manifest) = rectangular_transparent_rounded_fixture();
+        for (logical_width, origin) in [(9, [0, 0]), (8, [1, 0])] {
+            let mut changed = manifest.clone();
+            changed.sequences[0].frames[0].logical_width = logical_width;
+            changed.sequences[0].frames[0].origin = origin;
+            let mut assets = lazy_pack(dir.path(), &catalog, &changed, None);
+            assert_eq!(assets.registered_count(), 0);
+            assert!(assets.sprite(1, 4, &[[0; 3]; 256]).unwrap().is_none());
+            assert_eq!(assets.cache_stats().png_decodes, 0);
+        }
+        fs::write(dir.path().join("hd/ship.png"), b"not a PNG").unwrap();
+        let mut assets = lazy_pack(dir.path(), &catalog, &manifest, None);
+        assert!(assets.sprite(1, 4, &[[0; 3]; 256]).unwrap().is_none());
+        assert_eq!(assets.cache_stats().png_decodes, 0);
+        assert_eq!(assets.cache_stats().disk_writes, 0);
+        assert!(!assets.diagnostics.is_empty());
     }
 }
 
