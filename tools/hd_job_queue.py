@@ -325,6 +325,7 @@ def build(args):
         expected = {f"{asset:05x}": pictures[asset] for asset in family["assets"]}
         candidate_path = directory / "candidate.json"
         candidates = {}
+        proposal = {}
         candidate_error = None
         candidate_digest = None
         if candidate_path.is_file():
@@ -351,6 +352,16 @@ def build(args):
             # A corrected proposal needs fresh review; an old approval or hold must
             # never silently apply to newly submitted artwork.
             coordinator_review = None
+        if coordinator_review and coordinator_review.get("status") == "approved" and proposal.get("complete_standalone_selection"):
+            # Explicit Terrain selections must satisfy the same source, peer,
+            # partition and runtime guard as registration. A fallback ID never
+            # inherits the approval of the selected standalone definitions.
+            try:
+                from hd_register_reviewed import approved_job
+                approved_job((args.data / "hd").resolve(), family["id"], Path(__file__).resolve().parents[1])
+            except (ValueError, KeyError, TypeError, OSError) as error:
+                coordinator_review = None
+                candidate_error = f"standalone selection approval rejected: {error}"
         target_rows = []
         for asset in family["assets"]:
             source = pictures[asset]

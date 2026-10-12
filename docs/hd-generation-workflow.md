@@ -68,3 +68,27 @@ The four-slot gate retains started requests and old requests with unknown status
 After interruption, recover the original yielded cell or saved result before any new submission. Report a recovered completion, or release a reservation only after confirming no request was submitted/running. Do not infer completion from age. `status` reads lease phases, ages, admission state and recent outcomes without changing reservations. Root can pause new admissions while reconciling unknown calls; existing calls may still finish and report. Eligibility currently uses the first available slot with one request per owner, without a FIFO queue.
 
 Exact sanitized service errors and UTC report times stay in ignored `data/hd/jobs/.imagegen-gate/events.jsonl`. Connection failures impose a 60–600-second cooldown and at most three failures per job in a thirty-minute retry batch. During denial or cooldown, prepare or review another job. Do not replace a failed remaster with scaled original art.
+
+## Registering reviewed standalone terrain
+
+`hd_register_reviewed.py` accepts an explicit `complete_standalone_selection`
+only for a `Terrain` / `contextual_terrain_shard` job. This selection contains
+complete one-frame definitions, with `frame_count = 1` and `frame = 0`; it cannot
+approve part of an animation. `complete_family` must remain false. Its
+`full_inventory`, `selected_assets` and `original_fallback_assets` must describe
+the complete original shard and a disjoint, exhaustive partition. Fallback IDs
+retain their outstanding status and cannot silently retain a previous HD binding.
+
+Each selected ID needs an independent material decision bound to its exact source,
+raw PNG and renderer fields, plus current loader evidence at scales 1–4. The full
+inventory is checked against original catalog terrain ranges, payloads, palette,
+canvas and origins. A separate independent context receipt binds the combined
+selection, baseline, future projection and closed changed-case proof. Registration
+and queue approval reject missing, stale or unrelated evidence. Whole animation
+families continue to require every original frame.
+
+Run the tool regression checks with
+`python3 -m unittest discover -s tools -p 'test_hd_*.py'`. They include successful
+registration of separately approved selections and rejection of incomplete
+animations, held material, inconsistent inventory, stale artifacts and incorrect
+context bindings.
