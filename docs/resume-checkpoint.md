@@ -1,4 +1,59 @@
-# Restart checkpoint — 11 October 2026
+# Restart checkpoint — 13 October 2026
+
+The latest power outage interrupted the HD review workers, but their completed
+outputs and the next playable asset bundle survived. The Git root is this
+`RustRaptor` folder on branch `codex/rust-rewrite`, with public remote
+[Quintine/RustRaptor](https://github.com/Quintine/RustRaptor). The last confirmed
+publication is `5224219771538ef420fefdcb4ac5e671ff76a06a`, containing 5,069
+reviewed original pictures. Its native Windows workflow
+[38279526351](https://github.com/Quintine/RustRaptor/actions/runs/38279526351)
+passed 341 tests, loaded all 5,069 HD frames with zero rejects, validated all
+45 mods, and passed Unicode relocation, SDL gameplay and mixed/SFX-only PCM
+checks. These automated results do not establish hardware or listening quality.
+
+The recovered next bundle contains **5,131 reviewed pictures / 3,310 complete
+sequences**, including **4,045 terrain pictures**. It adds 62 source-native
+terrain singletons. Both bundled executables and the Rust source remain
+unchanged. Actual packaged CLI validation passed all 5,131 frames with zero
+rejects and 45 mods / one override. Root reviewed five full 1080p screenshots
+before the outage and two additional original Sector 3 Wave 2/7 screenshots
+after recovery. Visible texture differences where HD meets original terrain
+remain documented; complete visual coverage is still in progress. At this
+checkpoint the 5,131 publication and its native Windows workflow are pending.
+Later publication receipts take precedence over this recorded observation.
+
+**622 original pictures remain:** 490 terrain, 89 enemies/ground objects,
+36 UI/other and seven boss pictures. Of the remaining terrain, 168 have
+qualified material candidates awaiting context, metadata or admission work;
+322 retain concrete art holds, prior selection exclusions or actual tool
+refusals. A generated draft is not counted as an approved remaster. Permanent
+refusals and failed repair methods must remain visible, without automatic retry.
+
+Recovered work is divided as follows:
+
+| Work | Recovery owner / saved evidence |
+| --- | --- |
+| 62-frame bundle, runtime validation and Git publication | Root; `.reference/hd-root-next-publication-after5069/` |
+| External registration and four HD coverage documents | HD coordinator; `.reference/hd-coordinator-compact62-canonical-registration-5131-20261013/` |
+| Six qualified terrain candidates | Iron Coast 2 private metadata writer; Iron Coast 3 independent metadata audit; current 5,131 baseline |
+| 29 qualified terrain candidates | Middle independent physical review of 63 changed compositions; Full's technical outputs are frozen |
+| 59 qualified terrain candidates | Iron Coast 5 independent physical review of 313 compositions, followed by current-baseline source comparison |
+| 73 qualified terrain candidates | Campaign release reviewer combines five source plans; Dark player closes six current intrinsic-QA gaps |
+| Held terrain repairs | Terrain sets 1/2 inspect histories and perform distinct local edits; Iron Coast 6 investigates existing sampling behavior |
+| Native Windows | Windows persistence observes the exact published commit; no duplicate large artifact download |
+
+Read the current [HD coordinator checkpoint](hd-coordinator-checkpoint.md) and
+[coverage backlog](hd-backlog.md) for accepted counts and qualifications. Private
+review evidence lives in `.reference/` and the external `../data/hd/` workspace;
+approved artwork, original game data, Linux/Windows executables and all authored
+mod media remain tracked inside this self-contained folder. Recover an existing
+terminal receipt before running a writer or image request again, and retain
+literal previous review roles and output hashes. Root owns Git and runtime
+packaging; the coordinator owns external canonical metadata and coverage docs.
+
+The following 11 October checkpoint is preserved as historical evidence.
+
+# Earlier restart checkpoint — 11 October 2026
 
 The shutdown interrupted the final coordinated stop before the unified note
 was written. Work is preserved on `codex/rust-rewrite`; no game, Cargo, review
