@@ -1,54 +1,58 @@
 {
   "format_version": 1,
-  "status": "approved_2354_artwork_bundled_and_CLI_validated_successor_native_CI_pending",
+  "status": "approved_2935_artwork_bundled_CLI_and_current_software_SDL_validated_successor_native_CI_pending",
   "release_scope": "Shared Linux and Windows original-content artwork with reviewed bounded HD loader fixes; simulation and mod content unchanged",
   "assembly": {
-    "approved_hd_frames": 2354,
-    "complete_sequences": 970,
-    "terrain_frames": 1376,
-    "remaining_original_pictures": 3399,
-    "handoff_manifest_sha256": "8358fbade1bc37b4699745da9e5b89337497fa3d6dd6f2bba17bfc379541aed1",
-    "handoff_files": 1086,
-    "handoff_bytes": 2603556479,
-    "hd_manifest_sha256": "671561c6b9f18c4f3165eb25bd934dcded7a49c89f5896548e86538094a9fa88",
-    "provenance_sha256": "1d69d431a5d9cdfb1cbf282a6b6860915d0912a4ebb3bf284eb23a8eef425652",
+    "approved_hd_frames": 2935,
+    "complete_sequences": 1447,
+    "terrain_frames": 1936,
+    "remaining_original_pictures": 2818,
+    "handoff_manifest_sha256": "4a7920c5721579cb9540b8b6d21d6fbfa318c567bf52fe871492884c1ab7e508",
+    "handoff_files": 1366,
+    "handoff_bytes": 3429930337,
+    "hd_manifest_sha256": "5c584d0b977c5b365d8d14d08f898cd76cb61abbf319dc845fb353298ed2d329",
+    "provenance_sha256": "e571ab07823a6d61a843aeef4c3b934ba1aa6bd83c6f91fb4fb0b4e64849d898",
     "baseline_1148_bindings_unchanged": true,
-    "data_files": 7536,
-    "data_bytes": 2616739337,
+    "data_files": 7816,
+    "data_bytes": 3443113195,
     "binary_sha256": "9688cdbd57b0d31049bac431a5bb2e864bb3ce7abbaca732634359ad7a53d8a9",
     "windows_binary_sha256": "ad2ee7f5cc8e90ea371eccf2a509cd99263c6c880a6d42e2886cdc017c24561b",
     "original_catalog_assets_unchanged": true,
     "other_rust_sources_unchanged": true,
     "carried_2132_bindings_unchanged": true,
-    "carried_2240_bindings_unchanged": true
+    "carried_2240_bindings_unchanged": true,
+    "carried_2354_bindings_unchanged": true
   },
   "validation": [
     {
       "case": "verify-assets",
-      "seconds": 0.25,
+      "seconds": 0.18,
       "output": "Verified 6449 assets; 27 missions, 528 enemies, 16 weapons, 24 items\n",
       "stderr": "",
+      "exit": 0,
       "passed": true
     },
     {
       "case": "validate-hd",
-      "seconds": 54.71,
-      "output": "HD pack: 2354 registered, 2354 validated, 0 rejected supplied frames\n",
+      "seconds": 66.26,
+      "output": "HD pack: 2935 registered, 2935 validated, 0 rejected supplied frames\n",
       "stderr": "",
+      "exit": 0,
       "passed": true
     },
     {
       "case": "validate-mods",
-      "seconds": 8.57,
+      "seconds": 8.33,
       "output": "Validated 45 mods; 1 override(s)\n",
       "stderr": "",
+      "exit": 0,
       "passed": true
     }
   ],
   "source_picture_targets": 5753,
   "complete_remaster": false,
-  "visual_evidence": "Current 2354 original artwork is bound to independently inspected complete-family source/native1\u20134 and focused controlled contexts, with 570 new exact source/scaled equalities and all 2240 prior bindings unchanged. Full desktop, intro, PCM and relocated-archive evidence below certifies the historical exact 2240 snapshots, not a fresh 2354 export.",
-  "prior_runtime_hd_frames": 2240,
+  "visual_evidence": "2935 includes581 independently inspected original replacements,2905 exact source/native1\u20134 equalities and sealed affectedneighbor/state proofs. Rootfresh1920\u00d71080 SDLsoftware Host captures coverSector2Wave7,Sector3Wave4 and16:9 mainmenu, plus nonzero unclipped combinedstereo audio. Observed HD/original density boundaries remain. Historical2240 Linux/Wine ZIP/intro/isolatedaudio evidence is not relabeled as a2935 export.",
+  "prior_runtime_hd_frames": 2354,
   "archives": {
     "scope": "Immutable 2,240-frame snapshot exported from commit 09cc65c1a7e39b20d4635f8097ff6ef40670b4ef before additive proof documentation. Later exports must declare a new ZIP hash; these captures certify the exact pinned snapshots.",
     "linux": {
@@ -290,6 +294,13 @@
       "conclusion": "success",
       "url": "https://github.com/Quintine/RustRaptor/actions/runs/38180655261",
       "scope": "Native Windows portable tests; all eight Black Tide sorties with carried pilot, paid repairs and saved finale; included GNU runtime; fresh MSVC package; boss/shop/menu captures; catalog, 2,240 HD frames, 45 mods, SDL, FM music, isolated sound effects and artifact checks."
+    },
+    {
+      "head_sha": "4479d7489b118f231fe289383ee85fa44b193ea9",
+      "artwork_frames": 2354,
+      "conclusion": "success",
+      "url": "https://github.com/Quintine/RustRaptor/actions/runs/38183746763",
+      "scope": "Native Windows portable/save/mod tests, all8 BlackTide sorties/carriedpilots/paidrepairs, includedGNU executable/launcher, freshMSVC package, boss/shop assets,2354HD/45mods/SDL/FM music and isolated effects/artifact checks"
     }
   ],
   "successor_2240_validation": {
@@ -403,7 +414,130 @@
       "200be"
     ],
     "source_and_executables_unchanged": true,
-    "native_Windows_CI": "pending publication and run",
+    "native_Windows_CI": {
+      "head_sha": "4479d7489b118f231fe289383ee85fa44b193ea9",
+      "artwork_frames": 2354,
+      "conclusion": "success",
+      "url": "https://github.com/Quintine/RustRaptor/actions/runs/38183746763",
+      "scope": "Native Windows portable/save/mod tests, all8 BlackTide sorties/carriedpilots/paidrepairs, includedGNU executable/launcher, freshMSVC package, boss/shop assets,2354HD/45mods/SDL/FM music and isolated effects/artifact checks"
+    },
     "new_archive_execution": "not performed; exact passed 2240 archives retained as historical snapshots"
+  },
+  "historical_2354_bundle_validation": {
+    "assembly": {
+      "approved_hd_frames": 2354,
+      "complete_sequences": 970,
+      "terrain_frames": 1376,
+      "remaining_original_pictures": 3399,
+      "handoff_manifest_sha256": "8358fbade1bc37b4699745da9e5b89337497fa3d6dd6f2bba17bfc379541aed1",
+      "handoff_files": 1086,
+      "handoff_bytes": 2603556479,
+      "hd_manifest_sha256": "671561c6b9f18c4f3165eb25bd934dcded7a49c89f5896548e86538094a9fa88",
+      "provenance_sha256": "1d69d431a5d9cdfb1cbf282a6b6860915d0912a4ebb3bf284eb23a8eef425652",
+      "baseline_1148_bindings_unchanged": true,
+      "data_files": 7536,
+      "data_bytes": 2616739337,
+      "binary_sha256": "9688cdbd57b0d31049bac431a5bb2e864bb3ce7abbaca732634359ad7a53d8a9",
+      "windows_binary_sha256": "ad2ee7f5cc8e90ea371eccf2a509cd99263c6c880a6d42e2886cdc017c24561b",
+      "original_catalog_assets_unchanged": true,
+      "other_rust_sources_unchanged": true,
+      "carried_2132_bindings_unchanged": true,
+      "carried_2240_bindings_unchanged": true
+    },
+    "validation": [
+      {
+        "case": "verify-assets",
+        "seconds": 0.25,
+        "output": "Verified 6449 assets; 27 missions, 528 enemies, 16 weapons, 24 items\n",
+        "stderr": "",
+        "passed": true
+      },
+      {
+        "case": "validate-hd",
+        "seconds": 54.71,
+        "output": "HD pack: 2354 registered, 2354 validated, 0 rejected supplied frames\n",
+        "stderr": "",
+        "passed": true
+      },
+      {
+        "case": "validate-mods",
+        "seconds": 8.57,
+        "output": "Validated 45 mods; 1 override(s)\n",
+        "stderr": "",
+        "passed": true
+      }
+    ],
+    "proof_commit": "4479d7489b118f231fe289383ee85fa44b193ea9",
+    "native_windows_ci": {
+      "conclusion": "success",
+      "url": "https://github.com/Quintine/RustRaptor/actions/runs/38183746763"
+    }
+  },
+  "successor_2935_validation": {
+    "approved_frames": 2935,
+    "new_frames": 581,
+    "complete_source_jobs_added": 42,
+    "complete_sequences_added": 477,
+    "terrain_frames_added": 560,
+    "carried_2354_bindings_exact": true,
+    "new_optional_frame_policies": [],
+    "source_and_executables_unchanged": true,
+    "assembly_receipt": ".reference/hd-runtime-2935/assembly-receipt.json",
+    "assembly_receipt_sha256": "f7f449cd36bdd5e563ee18d775046de329faf3bf38a52391915dbe2435c36867",
+    "CLI_receipt": ".reference/hd-runtime-2935/cli-validation.json",
+    "CLI_receipt_sha256": "f5aabdc303603f4cd97dced41ae4942834ac5f1ba5b954fe66a9003f4f1ac9c0",
+    "root_current_desktop_visual_receipt": ".reference/hd-runtime-2935/desktop/root-visual-review.json",
+    "root_current_desktop_visual_receipt_sha256": "38de0caa85f6c225078ab3dcdd467a7bce68b8ee054f27497fd2006ac01c39a9",
+    "actual_software_Host_screenshots": [
+      {
+        "case": "original-s2w7-hd",
+        "mission": "base:sector_2_wave_7",
+        "exit": 0,
+        "seconds": 17.99,
+        "screenshot": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-runtime-2935/desktop/original-s2w7-hd.png",
+        "screenshot_sha256": "b360b0b8594a3fe7656e1d3c8aafd04401de5b7982887d5469b61c020ae7fc65",
+        "benchmark_lines": [
+          "benchmark renderer=software size=1920x1080 scale=4 hd=true startup_ms=7533.14 samples=534 work_p50_ms=8.85 work_p95_ms=20.83 frame_p50_ms=8.85 frame_p95_ms=20.83"
+        ],
+        "stderr": "",
+        "audio": {
+          "channels": 2,
+          "rate": 44100,
+          "frames": 373760,
+          "sample_bytes": 2,
+          "peak": 21448,
+          "nonzero_samples": 742785,
+          "sha256": "85d55a522539405f5846dd52e63f2547de3b7efdd4bff5233599f758e613c665"
+        }
+      },
+      {
+        "case": "original-s3w4-hd",
+        "mission": "base:sector_3_wave_4",
+        "exit": 0,
+        "seconds": 16.62,
+        "screenshot": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-runtime-2935/desktop/original-s3w4-hd.png",
+        "screenshot_sha256": "7e242926c48b9b625e1a2d273ca1dc4dce2c389f07d15e87d484fc632e541a54",
+        "benchmark_lines": [
+          "benchmark renderer=software size=1920x1080 scale=4 hd=true startup_ms=7533.03 samples=534 work_p50_ms=9.03 work_p95_ms=17.68 frame_p50_ms=9.03 frame_p95_ms=17.68"
+        ],
+        "stderr": ""
+      },
+      {
+        "case": "main-menu",
+        "mission": null,
+        "exit": 0,
+        "seconds": 11.49,
+        "screenshot": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-runtime-2935/desktop/main-menu.png",
+        "screenshot_sha256": "8efc94fee3686a42f0f69ad9a500549882ddc3d2348db5170bb423154161fcce",
+        "benchmark_lines": [
+          "benchmark renderer=software size=1920x1080 scale=4 hd=true startup_ms=7533.26 samples=114 work_p50_ms=12.38 work_p95_ms=13.84 frame_p50_ms=12.39 frame_p95_ms=13.85"
+        ],
+        "stderr": ""
+      }
+    ],
+    "canonical581_component_continuity_sha256": "595f7facf24e4128c0931fa2caf2a4035550e187d7a7e9f7efaee9a9402413e0",
+    "new_source_native_1_to_4_equalities": 2905,
+    "native_Windows_CI": "pending publication and run",
+    "new_archive_execution": "not performed; exact passed2240 ZIPs remain historical snapshots"
   }
 }

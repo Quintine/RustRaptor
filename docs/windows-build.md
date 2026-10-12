@@ -59,17 +59,21 @@ mods, captures SDL gameplay and publishes the zip as a workflow artifact.
 
 ## Current runtime and validation
 
-The included GNU executable uses the reviewed **2,354-frame HD snapshot**;
-the shared manifest binds **7,536 data files** and the package contains
+The included GNU executable uses the reviewed **2,935-frame HD snapshot**;
+the shared manifest binds **7,816 data files** and the package contains
 **45 installed mods**. Its SHA-256 is
 `ad2ee7f5cc8e90ea371eccf2a509cd99263c6c880a6d42e2886cdc017c24561b`.
 This build includes the bounded opaque-background rounding and optional
 per-frame presentation policies documented in [hd-streaming.md](hd-streaming.md).
-The four newly admitted DSHP19 frames use the reviewed reserved-color coverage
-policy; all other frames retain their previous presentation policies. The
+The four DSHP19 frames admitted at 2,354 use reviewed reserved-color coverage;
+all 581 new frames use the default loader without new presentation policies. The
 current shared artwork passes catalog, all-HD and 45-mod CLI validation, with
-all 2,240 prior bindings and both executables unchanged. Native Windows CI for
-this artwork successor is tracked separately from the following passed runs. The
+all 2,354 prior bindings and both executables unchanged. Fresh 1080p software
+SDL menu and original-mission captures pass, with nonzero unclipped stereo audio;
+HD/original terrain transitions remain visible. The prior
+[2,354-frame native Windows run](https://github.com/Quintine/RustRaptor/actions/runs/38183746763)
+passed every workflow check. The 2,935-frame successor needs its own CI run
+after publication. The
 [updated-loader native Windows run](https://github.com/Quintine/RustRaptor/actions/runs/38177332195)
 passed portable tests, all eight Black Tide missions and saved finale replay,
 the exact included GNU executable, fresh MSVC build, original assets, all
