@@ -1,3 +1,61 @@
+# Current completion status — 14 October 2026
+
+**The full project is not complete.** The playable, self-contained Rust build,
+Linux and Windows executables, original data, mod packages and approved artwork
+are tracked in this `RustRaptor` Git repository. The latest game/art release is
+`3d14af205733c26a58084f4f27c3ef2bd4a7868d`, published on `codex/rust-rewrite`
+at [Quintine/RustRaptor](https://github.com/Quintine/RustRaptor).
+
+The bundled pack actually contains **5,131 approved HD pictures / 3,310 complete
+sequences**, including **4,045 terrain pictures**. Runtime metadata reports
+9,139 data files. **622 original pictures still lack an approved bundled HD
+remaster:** 490 terrain, 89 enemies/ground objects, 36 UI/other and seven boss
+pictures. Existing drafts and private candidates are not counted as completed.
+
+The exact published release's [native Windows workflow](https://github.com/Quintine/RustRaptor/actions/runs/38309402730)
+succeeded. Root independently confirmed the completed GitHub run and job, then
+checked the retained actual job log: 341 tests passed, zero failed, 26 ignored;
+5,131 HD frames validated with zero rejects; 45 mods and one override validated.
+The packaged Unicode relocation and SDL gameplay checks passed. Captured mixed
+audio and music-muted sound effects each contain nonzero PCM samples at 44.1kHz.
+These are automated checks, not complete human playthrough or hardware/listening
+approval. Root's saved confirmation is
+`.reference/hd-root-next-publication-after5131/root-3d14af20-native-windows-confirmation.json`.
+
+The latest workers stopped with account usage-limit errors. Their saved results
+survived; they are not continuing in the background. At the status check, Git
+was clean, the remote branch matched `3d14af20`, and the following work remained:
+
+- **Next 97 terrain pictures:** source and different visual context reviews are
+  closed, including the final 40 combined contexts and repaired 10531/10535.
+  Actual six-picture private metadata is audited. The 29-picture private writer
+  completed once with 149 preserved files, but its independent final audit is
+  unfinished. The separate 62-picture metadata successor, independent review,
+  canonical registration, immutable handoff, runtime assembly, desktop review
+  and Git publication remain unfinished. The proposed total of 5,228 is not
+  the current game bundle.
+- **Another 88 terrain candidates:** joint source plans and the zero-additional
+  prospective-97 impact are saved. Constructor preparation is unfinished;
+  independent code review, actual composition shards, visual reviews, metadata
+  and publication remain outstanding. Keep current and proposed foreign art
+  bindings distinct. Check free disk before producing the large review corpus.
+- **Original ground object 40087:** the existing nearest-sampling option has
+  qualified intrinsic artwork and reviewed three-scene constructor code.
+  Root's exact compile/construction activation is saved, but the new actual-run
+  directory does not exist. Compilation, actual scene output, different visual
+  review and admission remain outstanding; no scene success is claimed.
+- **Other original art:** held enemy, boss, interface and terrain repairs remain.
+  Latest 10536, 2054e, 2068f, 3007c and 30089 attempts retain explicit visual
+  holds. Distinct 1053e/3042e and another enemy repair preflights were interrupted.
+  Recover saved job/terminal histories before calling generation or writers.
+
+Root owns Git and runtime packaging; the coordinator owns external canonical
+metadata and the four HD coverage documents. Preserve original/generated raw
+assets and all existing review results. Resume existing workers from their
+actual checkpoints, verify partially written preparations, and do not treat a
+planned activation or draft as an executed or approved result. The older notes
+below are historical; the counts and Windows result above take precedence.
+
 # Restart checkpoint — 13 October 2026
 
 The latest power outage interrupted the HD review workers, but their completed
