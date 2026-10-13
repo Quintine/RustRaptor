@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5228 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5229 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -19295,6 +19295,20 @@
       "review": "/home/quintine/Projects/RaptorReplica/.reference/hd-terrain3-iron3-review-65-66/independent-review.json",
       "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-primary-new7-304fd-3050c-actual4995-independent-physical-context-review-20261013-strict-complete-new7-physical-context-closure.json",
       "frame_bindings_sha256": "ef7797e35845bb2d46d56b672c4899e1d784138e66a5f7a01d34a6240a9d71c5"
+    },
+    {
+      "job_id": "enemies-40087-nearest20-qualified-complete1",
+      "assets": [
+        "40087"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/enemies-40087-nearest20-qualified-complete1/candidate.json",
+      "coordinator_review": "jobs/enemies-40087-nearest20-qualified-complete1/coordinator-review.json",
+      "runtime_qa": "jobs/enemies-40087-nearest20-qualified-complete1/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-40087-existing-native-nearest20-current8ada-private-experiment-20261013/CLOSED-ACTUAL40087-EXISTING-NATIVE-NEAREST20-TECHNICAL-EXPERIMENT-AND-AUTHOR-PROPOSAL.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark40087-native-nearest20-whole-intrinsic-independent-physical-peer/independent-complete1-nearest20-physical-review.json",
+      "frame_bindings_sha256": "58eef815dba9e0c0a8d114711c5d228858222fb5d6cb24098aa3fbc0baa58dd0"
     }
   ],
   "jobs": [
@@ -19394,8 +19408,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5228,
-  "registration_updated_at_utc": "2026-10-13T21:54:46.307518+00:00",
+  "registered_frame_count": 5229,
+  "registration_updated_at_utc": "2026-10-13T22:55:15.576219+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,

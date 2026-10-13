@@ -1,4 +1,48 @@
-# 97-picture HD bundle and continued work — 14 October 2026
+# Approved ground sprite and ongoing terrain review — 14 October 2026
+
+The reviewed 97-picture terrain batch is published as
+`a45abc58a00b70a82b18d0b4ee333995c1257a22` on `codex/rust-rewrite`.
+Its [native Windows workflow](https://github.com/Quintine/RustRaptor/actions/runs/38477436041)
+passed: 341 tests, zero failures, 26 ignored; all 5,228 HD pictures and 45 mods
+validated. The relocated package and both mixed-audio and sound-effect captures
+passed their automated checks. Root independently authenticated the actual log,
+run and job. No hardware, listening or full-playthrough approval is implied.
+
+The local self-contained bundle now adds approved ground object `40087`, giving
+**5,229 HD pictures / 3,408 complete sequences**. The original catalog, previous
+artwork and both executables are unchanged. All **9,237 data files** match the
+shared runtime manifest. The complete metadata, source, independent material,
+saved-scene review and canonical registration gates passed. Its native1 warning
+strips use the existing nearest-sampling option; stronger relief, fine wear and
+visible backing texture remain disclosed. The earlier default-sampling HOLD is
+preserved. Root's new packaging evidence is in
+`.reference/hd-root-next-publication-after5228/`.
+
+**524 original pictures remain:** 393 terrain, 88 enemies/ground objects,
+36 UI/other and seven bosses. Private candidates remain excluded.
+
+Workers are active and continuing:
+
+- The next 88 terrain candidates have completed all 25 constructor jobs:
+  3,806 selected, 585 state-before and 275 Original-control compositions.
+  Different reviewers are inspecting disjoint complete page groups. Physical
+  review, native metadata, admission and publication are still pending.
+- Terrain `3042e` passed different material and all 25 context-page reviews.
+  Its native metadata helper and actual5229 source-binding rebase are being
+  prepared; it is not yet bundled.
+- Repairs `10544`, `20650` and `200b2` passed different intrinsic review.
+  Their minimum context plans are saved; construction and review remain.
+  `30432` and `30443` are artist-qualified proposals awaiting different review.
+- The four-frame turret family `3001a`–`3001d` is in different material review.
+  Further source-backed quality iterations continue. Failed contour repairs
+  and actual generation refusals remain held and are not counted as remasters.
+
+Root owns runtime packaging and Git publication; coordinator owns registration
+and the four HD coverage documents. Disk space is tight, so preserve all original
+artwork and frozen evidence and avoid duplicate full-data copies. The older
+chapters below describe earlier checkpoints.
+
+# Historical 97-picture HD bundle checkpoint — 14 October 2026
 
 The self-contained RustRaptor bundle now contains **5,228 approved HD pictures
 in 3,407 complete sequences**, including **4,142 terrain pictures**. This
