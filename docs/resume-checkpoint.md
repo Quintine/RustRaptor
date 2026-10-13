@@ -1,3 +1,63 @@
+# 97-picture HD bundle and continued work — 14 October 2026
+
+The self-contained RustRaptor bundle now contains **5,228 approved HD pictures
+in 3,407 complete sequences**, including **4,142 terrain pictures**. This
+release adds the reviewed 97 terrain pictures as six-, 29- and 62-picture
+portions. The independent metadata audits, source/material/context reviews,
+canonical registration and immutable handoff are complete. Original data,
+previously approved artwork and the Linux/Windows executables are unchanged.
+The shared runtime manifest checks **9,236 data files / 7,868,469,682 bytes**;
+the included Windows executable, SDL2 DLL and imports match their saved hashes.
+The actual bundled CLI validates **5,228 of5,228 HD pictures, zero rejects**
+and all45 installed mods with one explicit override, both with exit0.
+
+Root inspected whole 1920×1080 HD4 gameplay captures from Sector1 Wave6,
+Sector3 Wave2 and Sector3 Wave7. Ships, bullets, enemy effects and HUD remain
+legible with no apparent sprite clipping in those frames. Coarser original
+tiles still visibly differ from HD ground; these captures do not establish
+seamless all-HD terrain, a full campaign playthrough, hardware performance or
+listening approval. The exact 97 source/material/context reviews remain
+separate from these runtime screenshots. Publication receipts are retained in
+`.reference/hd-root-next-publication-after5131/`.
+
+**525 original pictures remain without an approved bundled HD remaster:**
+393 terrain, 89 enemies/ground objects, 36 UI/other and seven boss pictures.
+Existing drafts, held repairs and private review candidates are not counted.
+The full project therefore remains unfinished. The previous 5,131-picture
+release passed native Windows CI; the workflow for this new release must be
+observed separately after its push.
+
+Workers resumed successfully and are continuing these areas:
+
+- **Next88 terrain candidates:** the exact source plan is frozen. Independent
+  review found missing fresh-run and exclusive sequential-shard guards; a
+  separate constructor successor is being prepared. Actual 5,228-neighbor
+  reconciliation, construction, different visual review and admission remain.
+  Check disk space before the large review corpus; preserve frozen old evidence.
+- **Original ground object40087:** the corrected current-library constructor
+  compiled and produced the three saved scenes. A different reviewer inspected
+  all12 whole native pages and qualified them. The source-bound nearest20
+  option retains original logical geometry and uses the untouched HD master.
+  Its one-picture metadata helper needs independent code review and actual
+  5,228-neighbor equality reconciliation before admission. Earlier failed
+  compile/environment attempts and the default-sampling HOLD remain recorded.
+- **Terrain3042e:** one local repair restored separate formations and passed
+  different intrinsic material review. Its source-only minimum context plan
+  contains25 unique recipes. Actual 5,228 reconciliation and current-library
+  context construction/review remain outstanding.
+- **Other artwork:** recent1053e,200bf,200b2 and300a6 edits produced preserved
+  new masters and native QA, but remain held for lost source details or
+  off-focus changes. No held candidate entered this bundle. Continue concrete
+  source-backed quality iterations and different review; do not hide defects
+  with source-color copies, mask erasure or arbitrary crop fitting. Actual
+  image-policy refusals stay excluded from automatic retries.
+
+Root owns runtime packaging, Git review and publication. Coordinator owns
+external canonical registration and the four HD coverage documents. Keep
+original/generated raw assets and prior results; resume each worker's actual
+checkpoint. Never treat a proposed activation as an executed result. Older
+chapters below remain historical.
+
 # Current completion status — 14 October 2026
 
 **The full project is not complete.** The playable, self-contained Rust build,
