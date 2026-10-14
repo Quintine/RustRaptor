@@ -1,3 +1,50 @@
+# HD continuation checkpoint at 5,323 frames — 14 October 2026
+
+The next reviewed release adds **90 terrain pictures and one ground enemy**:
+**5,323 original HD pictures / 3,502 complete sequences**, including **4,235
+terrain pictures**. All **9,313 data files / 8,124,102,872 bytes**
+match the runtime manifest. All 5,323 supplied frames validated with zero
+rejections; 45 mods and one override validated. The original catalog, all prior
+artwork, source, executables and dependencies remain unchanged. Windows PE and
+DLL import checks passed; its manifest's HD count alone changed.
+
+The previous 97-picture batch is already published as `a45abc58`. The preceding
+5,232-frame revision, `b40c4eb3`, passed its own [native Windows workflow](https://github.com/Quintine/RustRaptor/actions/runs/38497768353):
+341 tests, zero failures, 26 ignored; complete HD/mod validation, Unicode-folder
+relocation, gameplay, music and nonzero sound-effect captures passed. The new
+5,323-frame revision requires its separate post-push Windows confirmation.
+
+**430 original pictures remain:** 300 terrain, 87 enemies/ground objects,
+36 UI/other and seven bosses. Drafts that omit original details remain held.
+Complete HD coverage and wider playtesting are still work in progress.
+
+The 88 terrain frames completed all 4,666 endpoint reviews, Source ordered-state
+checks, the affected `3042e` context rebase, independent native metadata and
+registration audits. Historical RGB-only context limits and recovered artwork
+provenance gaps remain explicit. Ground enemy `200b2` completed its 16 gameplay
+context views; terrain `30432`/`30443` completed 117 context compositions and an
+independent native metadata audit. These reviewed assets are now included.
+
+Further work continues on the four-frame turret and tank sequences, terrain
+`1054c`, `2018d`/`2018e`, `1052a`, `10525` and `206a0`, and interface artwork.
+The turret has twelve genuine phase captures; its scene render is reviewed
+separately. The tank's changed legal controller captured all twelve phase and
+shadow witnesses, including four during the normal player death transition;
+this is actor/shadow evidence, without a full-route survival claim. Earlier
+pre-spawn failures remain preserved. Context rendering and independent visual
+review are still pending.
+A source-detail fallback and explicit extraction proposals remain separate
+work, and do not count as generated remasters. Existing artwork holds and
+service refusals remain recorded.
+
+Root owns assembly, README, this checkpoint and Git publication. Coordinator
+owns canonical registration and the four HD coverage documents. Root receipts
+are in `.reference/hd-root-next-publication-after5232/`; the immutable approved
+intake is `handoff-5323-20261014`. Preserve originals, generated artwork and
+frozen review evidence. Avoid duplicate full-data copies.
+
+# Earlier checkpoint at 5,232 frames — retained historical observation
+
 # HD continuation checkpoint at 5,232 frames — 14 October 2026
 
 The self-contained bundle now includes independently reviewed terrain `10544`

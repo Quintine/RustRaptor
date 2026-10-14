@@ -1,6 +1,8 @@
 # Original artwork HD backlog
 
-The external and assembled shared runtime pack contains **5,232 reviewed original picture frames / 3,411 complete sequences**, including **4,145 Terrain pictures**. **521 of 5,753 original pictures remain**: 390 Terrain, 88 enemies/ground objects, 36 UI/other and seven bosses. New 10544 and 20650 are complete source-native singletons with unchanged generated PNGs and default sampling; crop and optional cue/coverage fields remain absent. Every earlier 5,230 binding and the full 3,409-header prefix remain exact. Separate source/material and context reviews preserve contour, native1 softness, finer grain, olive brightness and mixed Original/HD value-density qualifications. Their actual current8ada context outputs remain at 5,229 and are carried by distinct complete Source/input equality against 5,230; no new raster is claimed. The assembled data contains **9,240 files / 7,879,384,961 bytes**. CLI validation passed all 5,232 frames with zero rejects and 45 mods / one override. The previous 5,230 publication is remote-confirmed and its exact native Windows workflow passed. The 5,232 publication and its native Windows completion remain pending at this freeze. The separate 88-picture batch remains outside admission. All 4,666 endpoint cases now have independent context/control decisions; genuine Source order and deterministic state-pair validation are recorded separately from actual manual paired comparisons. Adding these two pictures changes none of its 4,932 ordered Source vectors, including fallback slots.
+The external and assembled shared runtime pack contains **5,323 reviewed original picture frames / 3,502 complete sequences**, including **4,235 Terrain pictures**. **430 of 5,753 original pictures remain**: 300 Terrain, 87 enemies/ground objects, 36 UI/other and seven bosses. The new 91 complete native singletons comprise the 88-picture terrain batch, 200b2 and Late tiles 30432/30443; all generated PNGs and literal native sampling fields remain unchanged. Every earlier 5,232 binding and full 3,411-header prefix remain exact. The assembled data contains **9,313 files / 8,124,102,872 bytes**. CLI validation passed all 5,323 frames with zero rejects and 45 mods / one override. Published 5,232 and its exact native Windows success are confirmed; 5,323 publication/native Windows remain pending at this freeze. All 4,666 endpoint context/control cases have actual independent decisions; all 1,481 Source witnesses and 1,374 ordered groups have deterministic data/approved-endpoint validation. Actual manual pair comparisons remain separately named, including both 116-pair ranges. The 29 historical retained aliases carry explicit old-epoch/RGB-only/native4-control limits, with no provenance or current8ada joined-equality upgrade. Fine grain, texture/value-density islands, native1 softness, joined Source-class remaps and the accepted contour/cue limits remain qualifications.
+
+Preserved earlier 14 October 2026 document-freeze observation: The external and assembled shared runtime pack contains **5,232 reviewed original picture frames / 3,411 complete sequences**, including **4,145 Terrain pictures**. **521 of 5,753 original pictures remain**: 390 Terrain, 88 enemies/ground objects, 36 UI/other and seven bosses. New 10544 and 20650 are complete source-native singletons with unchanged generated PNGs and default sampling; crop and optional cue/coverage fields remain absent. Every earlier 5,230 binding and the full 3,409-header prefix remain exact. Separate source/material and context reviews preserve contour, native1 softness, finer grain, olive brightness and mixed Original/HD value-density qualifications. Their actual current8ada context outputs remain at 5,229 and are carried by distinct complete Source/input equality against 5,230; no new raster is claimed. The assembled data contains **9,240 files / 7,879,384,961 bytes**. CLI validation passed all 5,232 frames with zero rejects and 45 mods / one override. The previous 5,230 publication is remote-confirmed and its exact native Windows workflow passed. The 5,232 publication and its native Windows completion remain pending at this freeze. The separate 88-picture batch remains outside admission. All 4,666 endpoint cases now have independent context/control decisions; genuine Source order and deterministic state-pair validation are recorded separately from actual manual paired comparisons. Adding these two pictures changes none of its 4,932 ordered Source vectors, including fallback slots.
 
 Preserved earlier 14 October 2026 document-freeze observation: The external and assembled shared runtime pack contains **5,230 reviewed original picture frames / 3,409 complete sequences**, including **4,143 Terrain pictures**. **523 of 5,753 original pictures remain**: 392 Terrain, 88 enemies/ground objects, 36 UI/other and seven bosses. The new 3042e singleton restores separate source-backed pockets and earth gaps with default native sampling; its crop and optional cue/coverage fields remain absent. Every earlier 5,229 binding and the full 3,408-header prefix remain exact. Different complete intrinsic and 25-context reviews qualify warmer fine grit, modeled lips, rounder compact cores, local contour interpretation and visible Original/HD grain and value-density islands. The actual current8ada context epoch is 5,228, carried by exact 13-Source / ten-foreign-input equality against 5,229. The assembled data contains **9,238 files / 7,874,014,729 bytes**. CLI validation passed all 5,230 frames with zero rejects and 45 mods / one override. The previous 5,229 publication is remote-confirmed and its exact native Windows workflow passed. The 5,230 publication and native Windows completion remain pending at this freeze. The separate 88-picture batch remains outside admission; this new tile changes four of its source signatures, requiring 16 separately reviewed selected outputs before that batch can advance.
 
@@ -28,11 +30,11 @@ The published 3,592-frame admission adds **427 source/material-qualified origina
 | --- | ---: | ---: | ---: | ---: |
 | Player banking | 21 | 21 | 0 | 3 |
 | Bosses | 249 | 242 | 7 | 79 |
-| Enemies and ground objects | 419 | 331 | 88 | 183 |
+| Enemies and ground objects | 419 | 332 | 87 | 183 |
 | Player and enemy projectiles | 51 | 51 | 0 | 18 |
 | Explosions and effects | 281 | 281 | 0 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 4,145 | 390 | 4 |
+| Terrain | 4,535 | 4,235 | 300 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 114 | 36 | mixed static / animated |
 
 The completion ledger retains `format_version: 1` with `ledger_schema: family_review_refs_v1`. Each approved asset uses a stable `coordinator_review_ref`; `family_reviews` stores the candidate/binding identities and exact full immutable external receipt once. The original 2,132 normalization reduced 53,594,880 bytes to 8,406,611 (84.31%) without changing approval or artwork. New registrations update only their own status/evidence; native preservation has a separate closed record.
@@ -1029,6 +1031,97 @@ Only registered frames passing canvas, source-hash, PNG and alpha checks count a
 | 3042e distinct source-pocket local repair; singleton only | `0x3042e` | 1 / 1 |
 | Terrain 10544 one localized edit | `0x10544` | 1 / 1 |
 | Original20650 local-green-quality-v1 | `0x20650` | 1 / 1 |
+| 10379 Root exact Original-only unadmitted singleton | `0x10379` | 1 / 1 |
+| 1037a Root exact Original-only unadmitted singleton | `0x1037a` | 1 / 1 |
+| Unregistered Terrain 1037b exact-one original-only full-natural-square v1 | `0x1037b` | 1 / 1 |
+| Unregistered Terrain 1037c exact-one original-only full-natural-square v1 | `0x1037c` | 1 / 1 |
+| Terrain1037d original-only v1 | `0x1037d` | 1 / 1 |
+| Authentic original1037e count-free source-specific singleton | `0x1037e` | 1 / 1 |
+| Terrain1037f original-only v1 | `0x1037f` | 1 / 1 |
+| Terrain1038d genuine original-only standalone initial v1 | `0x1038d` | 1 / 1 |
+| Terrain 105e1 standalone initial diagnostic | `0x105e1` | 1 / 1 |
+| 105e2 standalone original initial | `0x105e2` | 1 / 1 |
+| canonical-105ea | `0x105ea` | 1 / 1 |
+| canonical-105ee | `0x105ee` | 1 / 1 |
+| Standalone authentic-source Terrain201bd | `0x201bd` | 1 / 1 |
+| Terrain 201be | `0x201be` | 1 / 1 |
+| Terrain 201bf | `0x201bf` | 1 / 1 |
+| Terrain 201c0 | `0x201c0` | 1 / 1 |
+| Terrain 201c1 | `0x201c1` | 1 / 1 |
+| Terrain 201c2 | `0x201c2` | 1 / 1 |
+| Terrain 201c3 | `0x201c3` | 1 / 1 |
+| Terrain 201c4 | `0x201c4` | 1 / 1 |
+| Terrain 201c5 | `0x201c5` | 1 / 1 |
+| Terrain 201c6 | `0x201c6` | 1 / 1 |
+| Terrain 201c7 | `0x201c7` | 1 / 1 |
+| Terrain 201c8 | `0x201c8` | 1 / 1 |
+| Terrain 201c9 | `0x201c9` | 1 / 1 |
+| Terrain 201ca | `0x201ca` | 1 / 1 |
+| Terrain 201cb | `0x201cb` | 1 / 1 |
+| Terrain 201cc | `0x201cc` | 1 / 1 |
+| Private exact source-qualified singleton 3010d; context pending | `0x3010d` | 1 / 1 |
+| Private exact source-qualified singleton 3010e; context pending | `0x3010e` | 1 / 1 |
+| Private exact source-qualified singleton 3010f; context pending | `0x3010f` | 1 / 1 |
+| Private exact source-qualified singleton 30110; context pending | `0x30110` | 1 / 1 |
+| Private exact source-qualified singleton 30111; context pending | `0x30111` | 1 / 1 |
+| Private exact source-qualified singleton 30114; context pending | `0x30114` | 1 / 1 |
+| Private exact source-qualified singleton 30115; context pending | `0x30115` | 1 / 1 |
+| Private exact source-qualified singleton 30116; context pending | `0x30116` | 1 / 1 |
+| Private exact source-qualified singleton 30117; context pending | `0x30117` | 1 / 1 |
+| Private exact source-qualified singleton 30118; context pending | `0x30118` | 1 / 1 |
+| Private exact source-qualified singleton 3011b; context pending | `0x3011b` | 1 / 1 |
+| Private exact source-qualified singleton 3011c; context pending | `0x3011c` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301ad` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301af` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301b0` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301b1` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301b2` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301b3` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301b4` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301b5` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301b6` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301b7` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301b8` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301b9` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301ba` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301bb` | 1 / 1 |
+| Terrain set 3 shard 13 | `0x301bc` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x3037d` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x3037e` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x3037f` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x30381` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x30382` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x30383` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x30384` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x30385` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x30386` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x30387` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x30388` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x30389` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x3038a` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x3038b` | 1 / 1 |
+| Terrain set 3 shard 42 | `0x3038c` | 1 / 1 |
+| Private exact source-qualified singleton 30434; context pending | `0x30434` | 1 / 1 |
+| Private exact source-qualified singleton 3043d; context pending | `0x3043d` | 1 / 1 |
+| Private exact source-qualified singleton 3045e; context pending | `0x3045e` | 1 / 1 |
+| Private exact source-qualified singleton 30468; context pending | `0x30468` | 1 / 1 |
+| Private exact source-qualified singleton 30469; context pending | `0x30469` | 1 / 1 |
+| Private exact source-qualified singleton 3046a; context pending | `0x3046a` | 1 / 1 |
+| Private exact source-qualified singleton 3046b; context pending | `0x3046b` | 1 / 1 |
+| Private exact source-qualified singleton 3046c; context pending | `0x3046c` | 1 / 1 |
+| Private exact source-qualified singleton 30507; context pending | `0x30507` | 1 / 1 |
+| Private exact source-qualified singleton 3050e; context pending | `0x3050e` | 1 / 1 |
+| Private exact source-qualified singleton 30512; context pending | `0x30512` | 1 / 1 |
+| Private exact source-qualified singleton 30514; context pending | `0x30514` | 1 / 1 |
+| Private exact source-qualified singleton 30515; context pending | `0x30515` | 1 / 1 |
+| Private exact source-qualified singleton 30516; context pending | `0x30516` | 1 / 1 |
+| Private exact source-qualified singleton 30517; context pending | `0x30517` | 1 / 1 |
+| Private exact source-qualified singleton 30518; context pending | `0x30518` | 1 / 1 |
+| Private exact source-qualified singleton 3051a; context pending | `0x3051a` | 1 / 1 |
+| Private exact source-qualified singleton 3051b; context pending | `0x3051b` | 1 / 1 |
+| DSHP06G2_PIC original geometry first material refinement | `0x200b2` | 1 / 1 |
+| Unapproved30432 source-backed quality proposal | `0x30432` | 1 / 1 |
+| Unapproved30443 source-backed quality proposal | `0x30443` | 1 / 1 |
 
 The catalog also contains **303 AGX cinematic delta frames in 13 sequences** and **4 bitmap fonts**. These have explicit native-art preservation policies: keep the classic cinematics and sharp original glyphs, validate complete playback/alignment, and never count them as generated HD replacements. The AGX frames are separate from standalone pictures.
 
@@ -1362,3 +1455,15 @@ Canonical registration `8cbded7b76bad9680588804dfad58c1a473ac27736a336eeb4d2ec2c
 Immutable handoff `9e99865b95510819dc2d0d069bd00952f032e22a404b6c815e53c740d180d1c5` contains 2,790 pack files / 7,866,202,103 bytes and 606 proofs, using 2,786 old read-only raw links and two new private PNG copies. Root intake `c82c16884852f6f28f2356011071a74c0bb7a51e4c0255a1d06378d154ad5474` and assembly `f8104bbc44c24030a0530627be2278a889b8e8f11d26b6e8d524f4358ac0c0dd` verify every prior 9,238 data body hash, the full 3,409-header prefix, Original sources, Source18 and binaries. CLI `68cb02dedad6e0f03f5a9e377c19eddd0044710b0c385eb04aca8697f201edbb` passes all 5,232 frames with zero rejects and 45 mods / one override; existing Windows binaries/imports are authenticated and only count metadata changes. The coverage inventory is a bounded incremental carry from the closed 5,230 inventory, validating only the two new frames with the unchanged official validator (`38dcd9c70a7bd6a7c8a4d717d3e67d77f2dcb6c7aaacdf10a3800346e641b8a9`); no repeated full audit is claimed.
 
 Full 4,932-vector Source impact `c384cf10ee2afebcc1ea1329186430459d3d9b41f7cd2cb249689dcd1c136ede` finds zero 10544 or 20650 intersections, including Original fallback. The prior 3042e four-signature successor has its own 16 actual outputs and different physical review; it remains distinct from the fixed 5,228 large batch. The 88-picture batch is not admitted by endpoint aggregation or these two additions. State records, direct paired views and independent deterministic Source/endpoint validation retain their actual scopes; no unviewed group is called personally paired. The 5,232 publication and native Windows workflow remain pending. No all-mission, seamless terrain, new desktop capture or World/audio execution claim is added.
+
+## 14 October 2026: published 5,232 and exact native Windows success
+
+The exact publication is remote-confirmed at `b40c4eb36cfb936648c5d75646e0435cb0941934` (receipt `b7653f26dd1793554217eef7f554e7da112bf2c65e320465ecf49b9d08e4e670`). Native Windows run 38497768353 / job 115637371644 completed all 15 steps successfully: 341 tests passed, zero failed and 26 ignored. All 5,232 frames validated with zero rejects and 45 mods / one override. Unicode relocation, MSVC, SDL and logged 44,100 Hz stereo mixed 261,805 / SFX-only 200,002 nonzero samples passed. Observer `2f881d5c0d1727aae81f75bb6631cec0fbbab61619be4b5f3eea78e5eaa8d270`, strict `0d4ab1c2dd7ec56410ff0570409d44aae2c812bfab8af909a8bc2d81b2df3888` and Root confirmation `678c20cfdf85581626956159e9c5f0d7afc64adf47a921e10bca8ffda81c56cd` bind this exact commit. No hardware or listening-quality claim is made; old pending freezes remain historical.
+
+## 14 October 2026: 91 actual native additions and assembled 5,323 pack
+
+Canonical proof `f2a6195a14f91b888069c201a0c46f58eb1158e2c6696e9604508623b6be8cd5` binds the three real private writers, different code peers and Iron3 final audits. One unchanged registrar dry run and one main call add 91 complete1 definitions, preserving all optional crop absent/null/rectangle, cue/coverage and origin values; only reviewed raw filenames change. The 88 definitions use 70 unchanged shared raw routes. Recovered15 Source-at-invocation history limits and 28 old family-ordinal/native0 distinctions remain literal. All 4,666 endpoint keys / 18,664 native rows have different actual context/control decisions, including 66 neutral author-exclusion supplements. The 1,481 real Source witnesses reproduce 1,374 exact-key groups; deterministic array/class/topology/cue/fallback/padding checks are separate from personally compared groups. Both actual 116-pair ranges are closed, and the exact29 historical alias risks are qualified without invented new images. Six RGB-only groups retain palette preimage/index ambiguity and old native4-only Original controls. The separately reviewed four 3042e successor keys / 16 selected outputs carry actual5,230 Source/input changes. Adding10544/20650 changes none of the 4,932 vectors.
+
+200b2 retains the accepted thin contours, partial252/253 lamps and native1 bronze-foot limit. Its four genuine saved scenes /16 whole native views remain5,230 through distinct exact5,232 Source equality; alive/last-retained/removal roles and joined class differences remain explicit. Late30432/30443 retains warm fine gravel, compact rounded core and tapered-trace qualifications. Its real117-key/468-scale/1192-panel review covers 53 baseline,53 own2 and53 prospective88 role references through42 aliases, with11 future-distinct keys. Neither source equality nor data checks invent whole-mission, timing, fresh manual-view or seamless-material approval. All earlier family/artist HOLDs stay on their exact old candidates.
+
+Immutable handoff `36dbc96acc8f3ded21f5450995f286a9c0195cb67fd469133bfd91220404a05e` contains 2,863 pack files / 8,110,920,014 bytes and 1,107 proofs, using2,788 old readonly raw links and73 unchanged new raw copies. Root intake `810c9fd1e5ebbae608e7f65d8824c8af96e87a4eac982d5a4b56230395b122e8`, assembly `74181367f84e7bae0b9e692b456ca9ce4887a0f520f526a4875707ed2150f86e`, CLI `00dd72396711a7522396fb6453e255739177694b44ad02910ea9ef51aec88c1b` and Windows metadata `66c2b00c06ef968807e0063c44cb19c8c2b8ab42d5104047e52ecabb1102d10f` authenticate every previous data body, full3,411 native header prefix, Original sources, Source18 and binaries. The inventory is a bounded carry from closed5,232, using the unchanged official validator only for91 new frames (`ac284a9341fb87828750da7a394f55e2998ff50d92c68515415ae5726e0bd3c3`); no repeated full catalog audit is claimed. The5,323 publication and its own native Windows workflow remain pending. Later positive material/context queues are separate.
