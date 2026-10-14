@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5324 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5327 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -20639,6 +20639,48 @@
       "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-held1054c-10504-activated-two-local-edits-author-20261014/1054c/CLOSED1054c-ONE-ACTIVATED-LOCAL-EDIT-ACTUAL-AUTHOR-OUTCOME.json",
       "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-1054c-local-paint-connection-complete1-independent-material-peer-20261014/INDEPENDENT-COMPLETE1-1054C-LOCAL-PAINT-CONNECTION-SOURCE-MATERIAL-NATIVE-REVIEW.json",
       "frame_bindings_sha256": "e48a3814bf82009a08887595f70a8bdf1b8e841ef561ade300c6e0dcb792c23f"
+    },
+    {
+      "job_id": "interface-other-10125-storehlp-default-complete1-post5323-iron6-20261014",
+      "assets": [
+        "10125"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/interface-other-10125-storehlp-default-complete1-post5323-iron6-20261014/candidate.json",
+      "coordinator_review": "jobs/interface-other-10125-storehlp-default-complete1-post5323-iron6-20261014/coordinator-review.json",
+      "runtime_qa": "jobs/interface-other-10125-storehlp-default-complete1-post5323-iron6-20261014/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-ui1010f-10125-master-first-line-gap-edit-author-20261014-v1/AUTHOR-COMPLETE2-EXACT-ONE-EACH-MASTER-FIRST-LINE-GAP-EDIT-REVIEW.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-primary-storehlp10125-independent-material-functional-sufficiency-20261014-v1/INDEPENDENT-STOREHLP10125-MATERIAL-FUNCTIONAL-SUFFICIENCY-WITH-LITERAL-AUTHOR-HOLD.json",
+      "frame_bindings_sha256": "30c2e0046004d13665e6c0c9596fd8ba2ec86715e374249ad370a91cddbc7ae1"
+    },
+    {
+      "job_id": "terrain-2018d-source-qualified-default-complete-native1-post5323",
+      "assets": [
+        "2018d"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/terrain-2018d-source-qualified-default-complete-native1-post5323/candidate.json",
+      "coordinator_review": "jobs/terrain-2018d-source-qualified-default-complete-native1-post5323/coordinator-review.json",
+      "runtime_qa": "jobs/terrain-2018d-source-qualified-default-complete-native1-post5323/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture2018d-lower-rib-local-edit-complete1-independent-source-material-review-20261014/INDEPENDENT-COMPLETE1-2018D-SOURCE-FULLRAW-AND-CURRENT1TO4-MATERIAL-REVIEW.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture2018d-lower-rib-local-edit-complete1-independent-source-material-review-20261014/INDEPENDENT-COMPLETE1-2018D-SOURCE-FULLRAW-AND-CURRENT1TO4-MATERIAL-REVIEW.json",
+      "frame_bindings_sha256": "c7f95326057d69fd1ba2017a3f96f010d76d932a5ab45e818c77ecb8a2b9d804"
+    },
+    {
+      "job_id": "terrain-2018e-source-qualified-default-complete-native1-post5323",
+      "assets": [
+        "2018e"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/terrain-2018e-source-qualified-default-complete-native1-post5323/candidate.json",
+      "coordinator_review": "jobs/terrain-2018e-source-qualified-default-complete-native1-post5323/coordinator-review.json",
+      "runtime_qa": "jobs/terrain-2018e-source-qualified-default-complete-native1-post5323/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron2-retained2018e-v3-current8ada-standalone-independent-source-material-peer-20261014/closed-retained2018e-standalone-source-material-current8ada-independent-review.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron2-retained2018e-v3-current8ada-standalone-independent-source-material-peer-20261014/closed-retained2018e-standalone-source-material-current8ada-independent-review.json",
+      "frame_bindings_sha256": "51f944d78d8750160de2657601451f3cec50fd63668186f1f5849807d9125119"
     }
   ],
   "jobs": [
@@ -20738,8 +20780,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5324,
-  "registration_updated_at_utc": "2026-10-14T04:26:57.963717+00:00",
+  "registered_frame_count": 5327,
+  "registration_updated_at_utc": "2026-10-14T05:42:23.836378+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,

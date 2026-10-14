@@ -1,3 +1,52 @@
+# HD continuation checkpoint at 5,327 frames — 14 October 2026
+
+The self-contained RustRaptor folder includes **5,327 original HD pictures /
+3,506 complete sequences**, including **4,238 terrain pictures**. Its **9,317
+data files / 8,132,823,121 bytes** match the runtime manifest. This update adds
+the classic help image `10125` and terrain `2018d` / `2018e`, after independent
+source, material, complete scene and native metadata reviews. All earlier
+artwork, original data, engine source and executables remain unchanged.
+The bundled validators pass: 5,327 HD frames with zero rejects and 45 mods
+with one override. Windows executable and DLL import checks pass.
+
+The requested 97-picture batch is published as `a45abc58`; subsequent reviewed
+updates are published as `6d51727` and `a91f227`. The exact 5,324-frame revision
+passed [native Windows CI](https://github.com/Quintine/RustRaptor/actions/runs/38513341250):
+341 tests passed, zero failed, 26 ignored. HD/mod validation, Unicode-folder
+relocation, gameplay and mixed/SFX-only stereo audio captures passed. This
+5,327-frame revision needs its separate post-push Windows check.
+
+**426 original pictures remain:** 297 terrain, 87 enemies/ground objects,
+35 UI/other and seven bosses. Complete HD coverage remains unfinished.
+Artwork holds and actual service refusals are recorded and do not count as
+remasters. New coherent terrain, ship and worm animation revisions are active.
+Fourteen further terrain proposals passed independent material review and
+are awaiting their source-driven scene checks; two sibling proposals stay held.
+
+The four-frame turret and tank sequences, and terrain `1052a`, `10525`,
+`206a0` and `20402`, continue through their remaining admission checks.
+Joint terrain and enemy scenes are reviewed with both proposed assets present.
+The tank captures include four normal player death-transition scenes; the
+review does not claim full-route survival. The turret has twelve genuine
+phase captures. Successful technical construction precedes independent visual
+review and final native registration checks.
+
+The optional retained-Original-detail implementation passed independent source
+review, 70 unique private Rust tests and 31 Python checks. It has not changed
+the shipped engine or artwork. It preserves explicitly selected original
+painted palette samples, including tiny animated lights, and distinguishes
+those retained samples from generated HD detail. A deliberate engine cutover
+and independent hybrid asset reviews remain pending.
+
+Root owns assembly, README, this checkpoint and Git publication; coordinator
+owns registration and the four HD coverage documents. Current receipts are in
+`.reference/hd-root-next-publication-after5324/`; immutable intake is
+`handoff-5327-20261014`. Preserve original data, generated artwork and review
+evidence. Avoid duplicate full-data copies; only unused rebuildable debug
+caches have been removed to recover space.
+
+# Earlier checkpoint at 5,324 frames — retained historical observation
+
 # HD continuation checkpoint at 5,324 frames — 14 October 2026
 
 The self-contained RustRaptor folder now includes **5,324 original HD pictures /
