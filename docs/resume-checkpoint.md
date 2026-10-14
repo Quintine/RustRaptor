@@ -1,3 +1,50 @@
+# HD continuation checkpoint — 14 October 2026
+
+The reviewed 97-picture batch is published as `a45abc58`; the additional ground
+sprite is published as `c84b80cc` on `codex/rust-rewrite`. The latter revision's
+[native Windows workflow](https://github.com/Quintine/RustRaptor/actions/runs/38484480456)
+passed **341 tests, zero failures and 26 ignored tests**. Its 5,229 HD frames and
+45 mods validated, the relocated Windows package ran, and both music and
+sound-effect captures contained nonzero audio. These automated results do not
+claim a hardware playthrough or a listening review.
+
+The portable bundle now adds reviewed terrain `3042e`: **5,230 original HD
+pictures / 3,409 complete sequences**, including **4,143 terrain pictures**.
+All **9,238 data files / 7,874,014,729 bytes** match the shared runtime manifest.
+The original catalog, all previous artwork and both executables are unchanged.
+Source, independent material and 25 complete context reviews, native metadata,
+registration and Root packaging checks passed. Finer grain, stronger relief,
+quiet small-scale details and mixed Original/HD texture patches remain documented.
+All 5,230 HD frames validated with zero rejects; 45 mods and one override also
+validated. The Windows PE/import checks passed. Publication follows the final
+document review; this update’s own Windows workflow is observed separately.
+
+**523 original pictures remain:** 392 terrain, 88 enemies/ground objects,
+36 UI/other and seven bosses. Unapproved drafts are excluded from the bundle.
+
+Work continues in parallel:
+
+- The next 88 terrain pictures have completed technical construction. Independent
+  reviewers continue the remaining page groups and reviews excluded from their
+  own artwork. Four contexts affected by the newly added terrain are being
+  prepared for a small additional check; no whole-batch approval is claimed.
+- Terrain `10544` passed its complete 35-context review; native metadata is next.
+  `20650` passed Root’s different review of all eight complete context pages;
+  its native metadata is being prepared. Enemy `200b2` has a genuine capture of an alive
+  enemy and its normal death, ready for the minimum HD scene checks.
+- Terrain `30432`/`30443` and the four turret frames `3001a`–`3001d` passed
+  independent material review. Their missing context work remains separate.
+- The previously stalled enemy worker is running again. Its exclusive next jobs
+  cover original `1033c` and the complete two-frame `2009a`/`2009b` rotor sequence.
+  Further source-backed corrections continue; weak results and service refusals
+  remain held.
+
+Root evidence for this update is in `.reference/hd-root-next-publication-after5229/`.
+Only ignored, rebuildable incremental compiler caches were removed for space;
+all artwork, originals, review evidence, libraries and packaged binaries remain.
+
+# Earlier checkpoint at 5,229 frames — retained historical observation
+
 # Approved ground sprite and ongoing terrain review — 14 October 2026
 
 The reviewed 97-picture terrain batch is published as

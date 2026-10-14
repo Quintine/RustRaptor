@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5229 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5230 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -19309,6 +19309,20 @@
       "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-40087-existing-native-nearest20-current8ada-private-experiment-20261013/CLOSED-ACTUAL40087-EXISTING-NATIVE-NEAREST20-TECHNICAL-EXPERIMENT-AND-AUTHOR-PROPOSAL.json",
       "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark40087-native-nearest20-whole-intrinsic-independent-physical-peer/independent-complete1-nearest20-physical-review.json",
       "frame_bindings_sha256": "58eef815dba9e0c0a8d114711c5d228858222fb5d6cb24098aa3fbc0baa58dd0"
+    },
+    {
+      "job_id": "terrain-3042e-v3-default-qualified-complete1",
+      "assets": [
+        "3042e"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/terrain-3042e-v3-default-qualified-complete1/candidate.json",
+      "coordinator_review": "jobs/terrain-3042e-v3-default-qualified-complete1/coordinator-review.json",
+      "runtime_qa": "jobs/terrain-3042e-v3-default-qualified-complete1/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late-held3042e-v2-master-local-separated-pockets-author-20261014-v3/CLOSED-AUTHOR-COMPLETE1-3042E-EXACT-ONE-LOCAL-REPAIR-SOURCE-NATIVE-REVIEW.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full3042e-separated-pockets-v3-complete1-independent-material-peer-20261014/independent-complete1-3042e-separated-pocket-v3-source-material-native-review.json",
+      "frame_bindings_sha256": "bc58fd7b2697360f105b129e41225d5d072665d2c6ab8bf9399fd6232a001107"
     }
   ],
   "jobs": [
@@ -19408,8 +19422,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5229,
-  "registration_updated_at_utc": "2026-10-13T22:55:15.576219+00:00",
+  "registered_frame_count": 5230,
+  "registration_updated_at_utc": "2026-10-14T00:07:11.806442+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,

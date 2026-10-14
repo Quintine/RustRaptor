@@ -19,10 +19,10 @@
   ],
   "stage_contract": "Every generated candidate stays distinct from review, registration and render reachability. Original-only fallback is temporary for every required picture. Native cinematics/fonts have explicit preservation exceptions, not HD claims.",
   "picture_status_counts": {
-    "registered": 5209,
+    "registered": 5210,
     "inprogress": 165,
     "renderreachable": 20,
-    "candidate": 357,
+    "candidate": 356,
     "missing": 2
   },
   "assets": {
@@ -151066,7 +151066,7 @@
       "canonical_source_asset": "3042e",
       "family_id": "terrain-3042d-3043c",
       "job_id": "terrain-3042d-3043c",
-      "status": "candidate",
+      "status": "registered",
       "owner": "terrain_set3_late",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -225491,8 +225491,8 @@
       "owner": "terrain_set3_late",
       "target_count": 16,
       "status_counts": {
-        "registered": 13,
-        "candidate": 3
+        "registered": 14,
+        "candidate": 2
       },
       "job_file": "terrain-3042d-3043c/job.json"
     },
@@ -234885,6 +234885,580 @@
       "no_new_desktop_World_audio_or_allmission_claim": true,
       "remote5229_publication_claimed": false,
       "native_Windows5229_completion_claimed": false
+    },
+    "runtime5229_publication_observed": {
+      "status": "PUBLISHED5229_REMOTE_CONFIRMED",
+      "commit": "c84b80ccf35ecea6a287f64d0d15c35ca3b63be0",
+      "receipt": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5228/root-actual5229-publication-remote-confirmation.json",
+        "sha256": "2f73e0885cf9404e3ceec0edce4f129baa8824baf6fc92fbd2ed135296e79df5",
+        "size": 2036,
+        "mtime_ns": 1791934170659006969,
+        "mode": 420,
+        "device": 55,
+        "inode": 5233628
+      },
+      "previous_pending_observation_preserved": true
+    },
+    "runtime5229_native_windows_observed": {
+      "status": "EXACT5229_NATIVE_WINDOWS_SUCCESS_OBSERVED",
+      "commit": "c84b80ccf35ecea6a287f64d0d15c35ca3b63be0",
+      "run": 38484480456,
+      "job": 115594712459,
+      "total_passed": 341,
+      "failed": 0,
+      "ignored": 26,
+      "HD_frames": 5229,
+      "HD_rejected": 0,
+      "mods": 45,
+      "overrides": 1,
+      "mixed_PCM_nonzero_stereo_samples": 261922,
+      "SFX_only_PCM_nonzero_stereo_samples": 207986,
+      "observer": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5229-native-Windows-CI-observation-20261014/ACTUAL-EXACT5229-NATIVE-WINDOWS-CI-OBSERVATION-FINAL.json",
+        "sha256": "574e2f876dd034df15ddea46fdb59e90f544831607aa5c1e26d3f7c25545393b",
+        "size": 19273,
+        "mtime_ns": 1791935820326994778,
+        "mode": 420,
+        "device": 55,
+        "inode": 5236062
+      },
+      "strict": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5229-native-Windows-CI-observation-20261014-strict-actual-native-Windows-CI-observation-FINAL-closure.json",
+        "sha256": "1bcfed3a0664071e2ac01238eae6bb70012e7ac13a6fa21fa7962a244a7a32d3",
+        "size": 49022,
+        "mtime_ns": 1791935820342104183,
+        "mode": 420,
+        "device": 55,
+        "inode": 5236063
+      },
+      "Root_fresh_confirmation": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5229/root-c84-native-windows-confirmation.json",
+        "sha256": "90adec49be4277fd8c18ccbf62b17c61a54b486bdf0d0bd1b7339043a212bdaf",
+        "size": 5663,
+        "mtime_ns": 1791936279482224440,
+        "mode": 420,
+        "device": 55,
+        "inode": 5236357
+      },
+      "current5230_native_execution_claimed": false
+    },
+    "external5230": {
+      "status": "REGISTERED_ACTUAL3042E_DEFAULT_NATIVE_SINGLETON_ALL_REAL_GATES_CLOSED",
+      "frames": 5230,
+      "sequences": 3409,
+      "new_frames": 1,
+      "selected_assets": [
+        "3042e"
+      ],
+      "registration": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator3042e-default-canonical-registration-5230-20261014/closed-actual3042e-canonical-native5230-registration-proof.json",
+        "sha256": "e4b64098c157bf0f6226cef03ed7308e38f514a2d5f211d29710a00cf93f4aa7",
+        "size": 27054,
+        "mtime_ns": 1791936431976342750,
+        "mode": 420,
+        "device": 55,
+        "inode": 5236703
+      },
+      "real_gates": {
+        "writer": {
+          "report": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-3042e-default-actual-post5229-private5-native-writer-20261014/CLOSED-ACTUAL-ONCE-DEFAULT3042E-POST5229-GUARDED-PRIVATE5-NATIVE-WRITER-REPORT.json",
+            "sha256": "c4000e063a7f184fc888c19fb2fb35d7ddc2181f85a278f2c30b20637b513b25",
+            "size": 8167,
+            "mtime_ns": 1791935043566039810,
+            "mode": 33152
+          },
+          "strict": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-3042e-default-actual-post5229-private5-native-writer-20261014-strict-actual-once-default-private5-native-writer-closure.json",
+            "sha256": "9ba2dadb90ec7be0f7dc459cdbe6fd274bc615a3a80aa9482212c8646cf2408a",
+            "size": 42339,
+            "mtime_ns": 1791935043759008846,
+            "mode": 33152
+          },
+          "required_literal_fields": {
+            "/status": "CLOSED_ACTUAL_ONCE_DEFAULT3042E_PRIVATE5_NATIVE_WRITER_SUCCESS_AWAITING_DIFFERENT_FINAL5",
+            "/author": "/root/iron_coast_6",
+            "/role": "actual authorized private metadata writer and file-only custody seal",
+            "/asset": "3042e",
+            "/exit_code": 0,
+            "/source_native_default_raw_measured_QA_file_only_namespacing": true,
+            "/operations": {
+              "CLI": 1,
+              "actual_private_writer": 1,
+              "actual_unmodified_approved_job_inside_writer": 1,
+              "raw_byte_copy_members": 1,
+              "JSON_members": 4,
+              "automatic_retry": 0,
+              "postwrite_approved_job": 0,
+              "registrar_main": 0,
+              "canonical_writes": 0,
+              "renderer": 0,
+              "compiler": 0,
+              "image": 0,
+              "World": 0,
+              "new_intrinsic_QA": 0
+            },
+            "/no_pending_owned_writer_call_lease": true,
+            "/no_admission": true
+          },
+          "additional_metadata_pins": [
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-3042e-default-actual-post5229-private5-native-writer-20261014/FROZEN-ACTUAL3042E-DEFAULT-PRIVATE5-NATIVE-OUTPUT-AND-FINAL-AUDIT-INTERFACE.json",
+              "sha256": "9460054b7d76f8373457c6bf4bcdda7dc95030621740930a8dd01566980e1100",
+              "size": 17116,
+              "mtime_ns": 1791935043565027702,
+              "mode": 33152
+            },
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-3042e-default-actual-post5229-private5-native-writer-20261014/ACTUAL-ONE-DEFAULT3042E-GUARDED-PRIVATE5-CLI-AND-APPROVED_JOB-TERMINAL.json",
+              "sha256": "795cd52833e6f758faf677652d353aa53fa49ee83388af26dfafa08158f8b77d",
+              "size": 9604,
+              "mtime_ns": 1791934950039428563,
+              "mode": 33152
+            },
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-3042e-default-actual-post5229-private5-native-writer-20261014/POSTWRITE-EXACT5-DEFAULT-NATIVE-SOURCE-RAW-INDEXED-QA-ALIAS-AND-NARROW-GUARD-VERIFICATION.json",
+              "sha256": "e3adb51d8a4a77838eb0022d6b94154c14c7dd0569047962187ab4e877de747b",
+              "size": 40514,
+              "mtime_ns": 1791935043559317654,
+              "mode": 33152
+            },
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5228/root-3042e-default-current5229-guarded-private5-writer-release.json",
+              "sha256": "9a0a05b55ba10eb69f9d0d218fcb52a41b17c627b940e104e3a8ba53c5f53f0a",
+              "size": 1236,
+              "mtime_ns": 1791934868460519682,
+              "mode": 33188
+            },
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5228/root-3042e-private5-exact-argv-ready.json",
+              "sha256": "58d225d26849c1c340ee8d3543311862fe29205cb52b0fccd3a04be7de3c6941",
+              "size": 4093,
+              "mtime_ns": 1791934868766467988,
+              "mode": 33188
+            }
+          ]
+        },
+        "code": {
+          "report": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-3042e-default-post5229-native-metadata-helper-independent-code-review-20261014/PASS-DIFFERENT3042E-DEFAULT-NATIVE-METADATA-HELPER-CODE-REVIEW.json",
+            "sha256": "55d89d711a2ec2d378884c7693ec5e448d1fc69f80dfdc32eacef82ea7f0b5c5",
+            "size": 10992,
+            "mtime_ns": 1791934631485851803,
+            "mode": 33188
+          },
+          "strict": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-3042e-default-post5229-native-metadata-helper-independent-code-review-20261014-strict-independent-default-native-code-review-closure.json",
+            "sha256": "07e75a540e9d72e1292000742fcc6668b665904f825f2655ae0570af1cf8fe3d",
+            "size": 41840,
+            "mtime_ns": 1791934631492334413,
+            "mode": 33188
+          },
+          "required_literal_fields": {
+            "/status": "PASS_DIFFERENT3042E_DEFAULT_NATIVE_METADATA_HELPER_CODE_REVIEW",
+            "/role": "independent code and guard review only",
+            "/author": "/root/iron_coast_6",
+            "/reviewer": "/root/iron_coast_5",
+            "/asset": "3042e",
+            "/different_code_peer_pass": true,
+            "/actual_writer_main_registrar_calls": 0,
+            "/derived_native_default_contract": {
+              "actual_current8ada_scalars_unmodified": true,
+              "all_non_file_native_dictionary_fields_exact": true,
+              "base_asset": "3042e",
+              "crop": "ABSENT",
+              "file_only_private_namespace": true,
+              "frame0": true,
+              "frame_count": 1,
+              "logical_canvas": [
+                32,
+                32
+              ],
+              "native_nearest_cues": "ABSENT",
+              "native_sample_policy": "ABSENT",
+              "origin": [
+                0,
+                0
+              ],
+              "preserve_reserved_coverage": "ABSENT"
+            },
+            "/helper/sha256": "ca7ce09fd217f10435c7b5813aa42ec1fd9f420684e4a5f2b8ecf90d414cdbc5",
+            "/source_plan/sha256": "af903b1341e7bf13735073c33365ea90b9427e16787c329facf41b8a19395e94",
+            "/no_pending_owned_writer_call_lease": true
+          },
+          "additional_metadata_pins": []
+        },
+        "intrinsic": {
+          "report": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full3042e-separated-pockets-v3-complete1-independent-material-peer-20261014/independent-complete1-3042e-separated-pocket-v3-source-material-native-review.json",
+            "sha256": "37bfa99690e860667388e385d1ee7b51e7b963f64c70cb2ce890f96218405ddd",
+            "size": 5817,
+            "mtime_ns": 1791927900059913750,
+            "mode": 33188
+          },
+          "strict": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full3042e-separated-pockets-v3-complete1-independent-material-peer-20261014-strict-complete1-independent-material-review-closure.json",
+            "sha256": "07112d61f1027c3feb8696d166f81203c72c23a1aefe77a7f4af06393dde9508",
+            "size": 185513,
+            "mtime_ns": 1791927900180687115,
+            "mode": 33188
+          },
+          "required_literal_fields": {
+            "/status": "QUALIFIED_COMPLETE1_INTRINSIC_SOURCE_MATERIAL_ONLY",
+            "/asset": "3042e",
+            "/artist": "/root/iron_coast_6/terrain_set3_late",
+            "/reviewer": "/root/hd_full_review",
+            "/independent": true,
+            "/actual_scales": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "/canonical_status_or_admission": false,
+            "/no_pending_owned_writer_call_or_lease_after_seal": true
+          },
+          "additional_metadata_pins": [
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late-held3042e-v2-master-local-separated-pockets-author-20261014-v3/CLOSED-AUTHOR-COMPLETE1-3042E-EXACT-ONE-LOCAL-REPAIR-SOURCE-NATIVE-REVIEW.json",
+              "sha256": "4e3b86da2714b214c36579edc2eff8d892451f283029cc3a53003d4dbeded3ff",
+              "size": 9236,
+              "mtime_ns": 1791927470115833824,
+              "mode": 33188
+            },
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late-held3042e-v2-master-local-separated-pockets-author-20261014-v3-strict-complete1-author-source-raw-native-closure.json",
+              "sha256": "dec6b6d8377647d7d6307aad7b85be6ac3d2d51eaa293287fafebf748a16267d",
+              "size": 177387,
+              "mtime_ns": 1791927470240740761,
+              "mode": 33188
+            },
+            {
+              "mode": 33188,
+              "mtime_ns": 1791927900058387740,
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full3042e-separated-pockets-v3-complete1-independent-material-peer-20261014/independent-per-ID-complete1-intrinsic-source-material-decision.json",
+              "sha256": "1f61c1553c44459e50ca4d167b9e49708c829092acd5fa5a7db569c037078459",
+              "size": 3769
+            }
+          ]
+        },
+        "context": {
+          "report": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full3042e-v3-actual5228-exact25-independent-physical-context-peer-20261014/independent-complete25-3042e-v3-actual5228-current8ada-physical-context-review.json",
+            "sha256": "dbaa574c1dae2fbbf0576d5e779b270cca23892e1b0c1fccac7bb5e7c0b32e2a",
+            "size": 8579,
+            "mtime_ns": 1791931977647383842,
+            "mode": 33188
+          },
+          "strict": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full3042e-v3-actual5228-exact25-independent-physical-context-peer-20261014-strict-complete25-independent-physical-context-review-closure.json",
+            "sha256": "aabb6ffff2740c85406750819e32c6e0f120b7194a25f8c0a48098123143367b",
+            "size": 497682,
+            "mtime_ns": 1791931977785653088,
+            "mode": 33188
+          },
+          "required_literal_fields": {
+            "/status": "QUALIFIED_TECHNICAL_PHYSICAL_CONTEXT_ONLY",
+            "/asset": "3042e",
+            "/artist": "/root/iron_coast_6/terrain_set3_late",
+            "/reviewer": "/root/hd_full_review",
+            "/technical_producer": "/root/iron_coast_6/terrain_set3_middle",
+            "/independent": true,
+            "/actual_scales": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "/qualified_context": true,
+            "/counts": {
+              "SourceNx_class_samples": 6051840,
+              "actual_source_descriptions": 28,
+              "all_non_target_broad_interiors_including_Original_padding": 4045440,
+              "complete_original_baseline_selected_panes": 300,
+              "held_keys": 0,
+              "measured_target_interior_samples": 588000,
+              "neighbor_states": 0,
+              "ordered_pages": 0,
+              "own_states": 0,
+              "qualified_keys": 25,
+              "selected_native_views_personally_read": 100,
+              "u16_RGB_samples": 18155520,
+              "whole_pages_personally_read": 25
+            },
+            "/no_pending_owned_writer_call_or_lease_after_seal": true
+          },
+          "additional_metadata_pins": [
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-middle-qualified3042e-v3-actual5228-current8ada-exact25-technical-production-20261014/SEALED-ACTUAL3042E-V3-ACTUAL5228-CURRENT8ADA-EXACT25-TECHNICAL-CONTEXT-HANDOFF-NOT-PHYSICAL-APPROVAL.json",
+              "sha256": "76312fe5c7fab0b8d7a79a5a4938a8e9527861194f44b57674066c2783d854e4",
+              "size": 15955,
+              "mtime_ns": 1791931193414763853,
+              "mode": 33188
+            },
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-middle-qualified3042e-v3-actual5228-current8ada-exact25-technical-production-20261014-strict-actual-exact25-current8ada-technical-handoff-closure.json",
+              "sha256": "2dff56ccf87a9438b1c6d7b413413e05c401238946ebc8756be4dc4e3b5c48a8",
+              "size": 491229,
+              "mtime_ns": 1791931193847332509,
+              "mode": 33188
+            },
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full3042e-v3-actual5228-exact25-independent-physical-context-peer-20261014/CLOSED-QUALIFIED-CONTEXT-3042E-ACTUAL5228-EXACT25-ACYCLIC-IDENTITY.json",
+              "sha256": "f56723e98276e217b1e4e7c54a223edb4a344b2eae149f41b0d0509f960b0f76",
+              "size": 7685,
+              "mtime_ns": 1791931977642592037,
+              "mode": 33188
+            }
+          ]
+        },
+        "source5229": {
+          "report": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-3042e-default-actual5229-source-only-context-equality-rebase-20261014/CLOSED3042E-ACTUAL5229-SOURCE-ONLY-CONTEXT-EQUALITY-REBASE-REPORT-NOT-WRITER-RELEASE.json",
+            "sha256": "a4275405c14e9cd20275e08215ef97429b87e39d73fd01437b545bb067b273c6",
+            "size": 4178,
+            "mtime_ns": 1791933568270309301,
+            "mode": 33152
+          },
+          "strict": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-3042e-default-actual5229-source-only-context-equality-rebase-20261014-strict-source-only-actual5229-context-equality-closure.json",
+            "sha256": "8b18660344836d296a345a9cf45744929bc8614eba19fe12a02b5d695a94b09d",
+            "size": 25630,
+            "mtime_ns": 1791933568434664575,
+            "mode": 33152
+          },
+          "required_literal_fields": {
+            "/status": "CLOSED_SOURCE_ONLY_DEFAULT3042E_ACTUAL5229_EFFECTIVE_EQUALITY_NO_RERENDER",
+            "/author": "/root/iron_coast_6",
+            "/counts": {
+              "Source_payloads": 13,
+              "foreign_HD": 10,
+              "retained_context_keys": 25,
+              "changed_referred_inputs": 0,
+              "new_registered_assets": [
+                "40087"
+              ],
+              "intersection_with_referred_inputs": []
+            },
+            "/old_actual5228_proof_kept_literal": true,
+            "/operation_counts": {
+              "renderer": 0,
+              "compiler": 0,
+              "QA": 0,
+              "image": 0,
+              "World": 0,
+              "writer": 0
+            },
+            "/no_pending_owned_writer_call_lease": true
+          },
+          "additional_metadata_pins": [
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-3042e-default-actual5229-source-only-context-equality-rebase-20261014/CLOSED-SOURCE-ONLY-ACTUAL5229-13SOURCE-10FOREIGN-DEFAULT3042E-CONTEXT-EQUALITY.json",
+              "sha256": "42e5c8aa0e0383dda34e3f9a133e2406203c799ba3293fffda3bf51de6ea4f61",
+              "size": 18084,
+              "mtime_ns": 1791933568269347539,
+              "mode": 33152
+            }
+          ]
+        },
+        "final5": {
+          "report": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-3042e-default-post5229-actual5-independent-final-native-metadata-audit-20261014/PASS-DIFFERENT-FINAL5-DEFAULT3042E-NATIVE-METADATA-AUDIT.json",
+            "sha256": "99e1b0ba84c0c9a658680dd7282545b552a5ef5979cf20ab09e944c4c781710b",
+            "size": 7901,
+            "mtime_ns": 1791935509627741399,
+            "mode": 33188
+          },
+          "strict": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-3042e-default-post5229-actual5-independent-final-native-metadata-audit-20261014-strict-independent-default-final5-native-metadata-audit-closure.json",
+            "sha256": "57d1fcc44a63d209a2c131cab256797358b65b3c8bd4d8724a65078ec5831b99",
+            "size": 50074,
+            "mtime_ns": 1791935509630917016,
+            "mode": 33188
+          },
+          "required_literal_fields": {
+            "/status": "PASS_DIFFERENT_FINAL5_DEFAULT3042E_NATIVE_METADATA_AUDIT",
+            "/reviewer": "/root/iron_coast_3",
+            "/role": "independent final native metadata audit only",
+            "/metadata_preparer": "/root/iron_coast_6",
+            "/asset": "3042e",
+            "/helper/sha256": "ca7ce09fd217f10435c7b5813aa42ec1fd9f420684e4a5f2b8ecf90d414cdbc5",
+            "/source_plan/sha256": "af903b1341e7bf13735073c33365ea90b9427e16787c329facf41b8a19395e94",
+            "/counts": {
+              "private_members": 5,
+              "JSON_members": 4,
+              "untouched_raw": 1,
+              "source18": 18,
+              "actual_real_readonly_approved_job": 1,
+              "consumed_pins": 120,
+              "writer_members": 5,
+              "helper_members": 14
+            },
+            "/canonical_writes": 0,
+            "/no_admission": true,
+            "/no_pending_owned_writer_call_lease": true
+          },
+          "additional_metadata_pins": [
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-3042e-default-post5229-actual5-independent-final-native-metadata-audit-20261014/EXACT5-BY-FILE-DEFAULT-NATIVE-CURRENTQA-SOURCE-FULL5229-PREFIX-AND-GATE-AUDIT.json",
+              "sha256": "70d81ae83e2dcb14180b9f22f2ceeef45b81d99007cf84b1e6f952669e90df8c",
+              "size": 36949,
+              "mtime_ns": 1791935509625768185,
+              "mode": 33188
+            },
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-3042e-default-post5229-actual5-independent-final-native-metadata-audit-20261014/ACTUAL1-UNMODIFIED-APPROVED-JOB-READONLY-TRAPPED-FINAL-GUARD.json",
+              "sha256": "60203133e6266c81f3595525e8d31f309fbe1842dc565299fbc74de7860119c8",
+              "size": 8961,
+              "mtime_ns": 1791935508762316798,
+              "mode": 33188
+            },
+            {
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-3042e-default-post5229-actual5-independent-final-native-metadata-audit-20261014/NARROW-EXACT-BEFORE-AFTER-PINS-AND-FROZEN-MEMBERSHIPS.json",
+              "sha256": "3c1628048eb2b40d41cd72a12cea292bbb785aed27797517d17862b0513f2e9a",
+              "size": 43104,
+              "mtime_ns": 1791935509627357677,
+              "mode": 33188
+            }
+          ]
+        },
+        "impact88": {
+          "report": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-primary-joint88-prospective3042e-future5230-source-only-impact-20261014-v1/CLOSED-CONDITIONAL3042E-FUTURE5230-FULL4932-JOINT88-SOURCE-ONLY-IMPACT.json",
+            "sha256": "97ed85225d58366cd8a28223e31c9108341545a262f453e879136b3917f23b7f",
+            "size": 4051,
+            "mtime_ns": 1791936095130379566,
+            "mode": 33188
+          },
+          "strict": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-primary-joint88-prospective3042e-future5230-source-only-impact-20261014-v1-strict-source-only-impact-closure.json",
+            "sha256": "fc2f44ad90306952becb2665862f346cc57127fb55de722d1717b1edb6fcd868",
+            "size": 9697,
+            "mtime_ns": 1791936095262566722,
+            "mode": 33188
+          },
+          "required_literal_fields": {
+            "/status": "CLOSED_SOURCE_ONLY_CONDITIONAL_FUTURE5230_IMPACT_NOT_RENDERED",
+            "/actual_baseline": 5229,
+            "/prospective_asset": "3042e",
+            "/counts": {
+              "affected_genuine_state_witnesses": 0,
+              "changed": 4,
+              "changed_Original_only_controls": 0,
+              "changed_baseline_supports": 0,
+              "changed_selected_incremental": 4,
+              "existing_current8ada_baseline_aliases": 16,
+              "full_vectors": 4932,
+              "new_Original_outputs": 0,
+              "new_selected_native_outputs": 16,
+              "unchanged": 4928
+            },
+            "/future5230_conditional_registration_not_inferred": true,
+            "/old88_5228_technical_and_physical_qualifications_preserved": true,
+            "/optional_crop_cues_coverage_fields_absent": true,
+            "/pending_owned_writer_call_lease": false
+          },
+          "additional_metadata_pins": [
+            {
+              "mode": 33188,
+              "mtime_ns": 1791936095127570970,
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-primary-joint88-prospective3042e-future5230-source-only-impact-20261014-v1/UNEXECUTED-EXACT4-MISSING16-NATIVE-SELECTED-AND16-EXISTING-BASELINE-ALIAS-RECIPE.json",
+              "sha256": "dbe746453fb8013bdfd7d5750540c55df2cdcf9db8076b5774caefc3bbbffa27",
+              "size": 142994
+            },
+            {
+              "mode": 33188,
+              "mtime_ns": 1791936095121571159,
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-primary-joint88-prospective3042e-future5230-source-only-impact-20261014-v1/EXACT4-CHANGED-AND4928-UNCHANGED-PROSPECTIVE5230-JOINT88-SOURCE-KEY-DECISIONS.json",
+              "sha256": "6baff09d51d78650bbab7a33be16d2c07a8750e70b66303cbdd36fea7be0c45f",
+              "size": 1382812
+            }
+          ]
+        }
+      },
+      "old3408_full_prefix_and5229_bindings_exact": true,
+      "default_crop_cues_coverage_fields_absent": true,
+      "old_v2_HOLD_and_other15_preserved": true,
+      "unchanged_promoted_members": 5,
+      "bounded_incremental_inventory": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator3042e-default-canonical-registration-5230-20261014/incremental5230-bookkeeping/bounded-incremental5230-validation-and-carry-receipt.json",
+        "sha256": "f3b721dc96947f747f369fa70a2a7accb256832e6efad294974b578066a560cf",
+        "size": 2226,
+        "mtime_ns": 1791937837829389523,
+        "mode": 420,
+        "device": 55,
+        "inode": 5241940
+      }
+    },
+    "runtime5230": {
+      "status": "ACTUAL_BUNDLED5230_INTAKE_CLI_WINDOWS_METADATA_PASS_PUBLICATION_NATIVE_WINDOWS_PENDING",
+      "approved_frames": 5230,
+      "complete_sequences": 3409,
+      "Terrain": 4143,
+      "remaining_required_originals": 523,
+      "remaining_Terrain": 392,
+      "remaining_enemies_ground": 88,
+      "remaining_UI_other": 36,
+      "remaining_bosses": 7,
+      "data_files": 9238,
+      "data_bytes": 7874014729,
+      "immutable_handoff": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5230-20261014/handoff-manifest.json",
+        "sha256": "6b87d9015746abec6540d9ea94995bc22de483bab200e216b99c0b3e94b5f7ce",
+        "size": 2724913,
+        "mtime_ns": 1791936863534734769,
+        "mode": 292,
+        "device": 55,
+        "inode": 5239177
+      },
+      "intake": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5229/publication-intake.json",
+        "sha256": "b61467c0c8886149a7ed0dc16c69e1617bdead4d5922a072068bc014f30ef527",
+        "size": 1001,
+        "mtime_ns": 1791936952902518879,
+        "mode": 420,
+        "device": 55,
+        "inode": 5239219
+      },
+      "assembly": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5229/assembly-receipt.json",
+        "sha256": "7652bc98c4cfa0850e0f0af38decd45aa7ffa8400543e7ff5528e4709ba19265",
+        "size": 788,
+        "mtime_ns": 1791936971727720160,
+        "mode": 420,
+        "device": 55,
+        "inode": 5239233
+      },
+      "actual_CLI": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5229/cli-validation.json",
+        "sha256": "9a06eab6bbc2261f304e4c7e31d8c2952fbc2672fce6f090e56ce83a4aa79fa4",
+        "size": 1625,
+        "mtime_ns": 1791937165812153941,
+        "mode": 420,
+        "device": 55,
+        "inode": 5239366
+      },
+      "actual_windows_metadata": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5229/windows-metadata-refresh.json",
+        "sha256": "c2842a4f0baed5b89f06abdb3aae952b189e274fb6f6f2df5a7424c2c064d03a",
+        "size": 1556,
+        "mtime_ns": 1791937017630728003,
+        "mode": 420,
+        "device": 55,
+        "inode": 5239250
+      },
+      "CLI_registered": 5230,
+      "CLI_validated": 5230,
+      "CLI_rejected": 0,
+      "mods": 45,
+      "overrides": 1,
+      "old9237_data_body_hashes_originals_sources18_binaries_exact": true,
+      "no_new_desktop_World_audio_or_allmission_claim": true,
+      "remote5230_publication_claimed": false,
+      "native_Windows5230_completion_claimed": false,
+      "pending88_changed_selected_signatures": 4,
+      "pending88_required_native_outputs": 16
     }
   }
 }
