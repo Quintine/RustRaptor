@@ -1,4 +1,55 @@
-# HD continuation checkpoint — 14 October 2026
+# HD continuation checkpoint at 5,232 frames — 14 October 2026
+
+The self-contained bundle now includes independently reviewed terrain `10544`
+and `20650`: **5,232 original HD pictures / 3,411 complete sequences**, including
+**4,145 terrain pictures**. All **9,240 data files / 7,879,384,961 bytes** match
+the runtime manifest. All 5,232 HD frames validated with zero rejected frames;
+45 mods and one override validated. Both executables, their dependencies, the
+original catalog and all previous artwork remain unchanged. The Windows PE
+checks passed; only its approved-data count changed.
+
+The preceding 5,230-frame revision, `895e2f7c`, is published and its
+[native Windows workflow](https://github.com/Quintine/RustRaptor/actions/runs/38491174106)
+passed **341 tests, zero failures and 26 ignored**. Its HD pack and mods validated;
+relocated gameplay, music and sound-effect capture checks passed. This new
+5,232-frame update needs its own post-push Windows confirmation.
+
+**521 original pictures remain:** 390 terrain, 88 enemies/ground objects,
+36 UI/other and seven bosses. Held candidates remain excluded.
+
+Current work and recovery points:
+
+- The next 88 terrain pictures have all 4,666 endpoint cases reviewed at native
+  scales 1–4, including independent supplements for reviewers' own artwork.
+  Source validation covers every ordered-state witness. Direct paired reviews
+  are counted separately; 29 retained-alias provenance limits receive bounded
+  follow-up. The four contexts affected by `3042e` have passed their additional
+  review. These 88 pictures are not yet registered or bundled.
+- Enemy `200b2` passed all 16 saved gameplay-context views. Its successful
+  compositor output and the budget failure are preserved; a separate lossless
+  page encoder recovered the review pages without rerendering. Native metadata
+  preparation is next.
+- Terrain `30432`/`30443` passed the focused constructor code review after fixing
+  expected coverage diagnostics and source bindings. Construction remains
+  pending. Turret `3001a`–`3001d` has eight genuine Wave 2 phase captures; the
+  Wave 7 test pilot died before the required placement. A separately reviewed
+  legal firing controller is ready; survival is not yet demonstrated.
+- Tank `30078`–`3007b`, terrain `1054c` and retained `2018e` are advancing through
+  distinct material/context checks. Repairs `2018d` and `1052a` have improved
+  author proposals awaiting independent judgments. Boat, boss, rotor and
+  shoreline attempts that still lose original details remain held.
+- Further terrain and interface edits continue in small exclusive batches.
+  Successful image generation does not imply approval. A Source-preserved
+  detail rendering option has been proposed for fragile contours; it is not
+  implemented, and the current renderer remains unchanged.
+
+Root owns runtime assembly, README, this checkpoint and Git publication.
+Coordinator owns canonical registration and the four HD coverage documents.
+Current Root receipts are in `.reference/hd-root-next-publication-after5230/`;
+the immutable reviewed intake is `handoff-5232-20261014`. Preserve originals,
+untouched generated artwork and frozen evidence; avoid duplicate full-data copies.
+
+# Earlier checkpoint at 5,230 frames — retained historical observation
 
 The reviewed 97-picture batch is published as `a45abc58`; the additional ground
 sprite is published as `c84b80cc` on `codex/rust-rewrite`. The latter revision's
