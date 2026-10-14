@@ -1,4 +1,45 @@
-# HD continuation checkpoint at 5,323 frames — 14 October 2026
+# HD continuation checkpoint at 5,324 frames — 14 October 2026
+
+The self-contained RustRaptor folder now includes **5,324 original HD pictures /
+3,503 complete sequences**, including **4,236 terrain pictures**. Its **9,314
+data files / 8,127,592,749 bytes** match the runtime manifest. The new terrain
+picture `1054c` passed separate source/material, all-scale mission-context and
+native metadata reviews. All previous artwork, original data, engine source,
+executables and dependencies remain unchanged. Both bundled validators pass:
+5,324 HD frames with zero rejects, and 45 mods with one override.
+
+The requested 97-picture batch is published as `a45abc58`; the subsequent
+91-picture update is published as `6d51727`. That exact 5,323-frame build passed
+[native Windows CI](https://github.com/Quintine/RustRaptor/actions/runs/38508063975):
+341 tests passed, zero failed, 26 ignored. HD/mod validation, Unicode-folder
+relocation, gameplay and mixed/SFX-only stereo audio captures passed. The new
+5,324-frame revision needs its separate post-push Windows check.
+
+**429 original pictures remain:** 299 terrain, 87 enemies/ground objects,
+36 UI/other and seven bosses. Complete coverage remains unfinished. Many terrain
+drafts need further material or shape corrections; actual service refusals and
+artwork holds remain recorded and do not count as remasters.
+
+Work continues on the four-frame turret and tank sequences, terrain `2018d`,
+`2018e`, `1052a`, `10525`, `206a0`, `20402`, and interface image `10125`.
+Their stages remain separate: successful scene construction is followed by
+independent visual review and native registration checks. The tank evidence
+includes four scenes during the normal player death transition, without a
+full-route survival claim. The turret has twelve genuine phase captures.
+
+The optional retained-Original-detail implementation has passed private Rust
+and Python checks and independent source review. It has not changed the shipped
+engine or artwork. Retained Original samples are explicitly distinguished from
+generated HD detail, and each use still needs an independent hybrid review.
+New terrain and enemy revision batches are running alongside these admissions.
+
+Root owns assembly, README, this checkpoint and Git publication; coordinator
+owns registration and the four HD coverage documents. Current receipts are in
+`.reference/hd-root-next-publication-after5323/`; immutable intake is
+`handoff-5324-20261014`. Preserve original data, generated artwork and review
+evidence. Only unused rebuildable debug caches were removed to recover space.
+
+# Earlier checkpoint at 5,323 frames — retained historical observation
 
 The next reviewed release adds **90 terrain pictures and one ground enemy**:
 **5,323 original HD pictures / 3,502 complete sequences**, including **4,235
