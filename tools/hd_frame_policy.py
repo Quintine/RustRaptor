@@ -2,7 +2,7 @@
 import struct
 
 FRAME_KEYS = {"frame", "file", "logical_width", "logical_height", "origin",
-              "source_sha256", "crop", "preserve_reserved_coverage", "native_nearest_cues"}
+              "source_sha256", "crop", "preserve_reserved_coverage", "native_nearest_cues", "original_detail_cells"}
 
 def _indices(payload):
     if len(payload) < 20:
@@ -66,3 +66,23 @@ def validate_frame_policy(frame, source_payload=None):
             raise ValueError("native nearest cues require an opaque original canvas")
         if any(indices[y * width + x] >= 240 for x, y in cues):
             raise ValueError("native nearest cue must be an ordinary original source cell")
+
+    details = frame.get("original_detail_cells", [])
+    if type(details) is not list or len(details) > 64:
+        raise ValueError("original_detail_cells must contain at most64 Source cells")
+    previous = None
+    for cell in details:
+        if type(cell) is not list or len(cell) != 2 or any(type(n) is not int or not 0 <= n < 2**32 for n in cell):
+            raise ValueError("Original detail must be a pair of u32 coordinates")
+        key = tuple(cell)
+        if cell[0] >= width or cell[1] >= height or (previous is not None and key <= previous):
+            raise ValueError("Original details must be inbounds sorted unique cells")
+        if cell in cues:
+            raise ValueError("Original detail and PNG-nearest policies may not overlap")
+        previous = key
+    if source_payload is not None and details:
+        source_width, source_height, indices = _indices(source_payload)
+        if (source_width, source_height) != (width, height):
+            raise ValueError("Original detail canvas differs from Source")
+        if any(not 0 <= indices[y * width + x] < 256 for x, y in details):
+            raise ValueError("Original details select painted Source indices0–255 only")

@@ -10,12 +10,16 @@ A complete PNG for either an opaque or transparent original may use dimensions p
 
 ## Optional frame presentation policies
 
-Both policies below default to disabled. They require explicit frame metadata and source/art review; loader validation alone does not approve a remaster.
+All policies below default to disabled. They require explicit frame metadata and source/art review; loader validation alone does not approve a remaster.
 
 - `preserve_reserved_coverage: true` retains an original gameplay palette label 250–255 at a feathered edge only when its resident logical cell has mean alpha of at least 128 and at least half its area has alpha of 128 or greater. Missing or sparse artwork stays transparent. Ordinary colors, water/fire classes and static-card rendering keep their existing behavior.
 - `native_nearest_cues: [[x, y], ...]` samples the unchanged resident RGBA at the nearest pixel for up to 64 explicitly listed original cells, only at gameplay scale 1. Coordinates must be sorted lexicographically, unique, within an opaque original canvas, and refer to ordinary source indices below 240. This can preserve a small raw-supported warning color that averaging dulls. It does not recolor artwork or reconstruct absent details; other cells, higher scales and static-card rendering keep their existing sampler.
 
-Opt-in metadata participates in both derived and indexed cache identities. Frames without these policies retain their previous cache keys and pixels. The candidate and original-art audit tools validate the same metadata restrictions as the Rust loader.
+- `original_detail_cells: [[x, y], ...]` retains explicitly listed **Original** logical details at gameplay scales 1–4. Up to 64 cells must be sorted, unique, in bounds, painted with authentic Source indices 0–255 and disjoint from `native_nearest_cues`; transparent Source cells are rejected. The runtime copies the exact Original ScaleNx footprint into the generated replacement only in SourceClasses/gameplay mode. Terrain starts with pristine HD for its neighbor joins, then restores the listed Original footprints from the authentic joined Original control after every join. Neighboring HD and Original-fallback cells remain unchanged. Static cards continue to sample the PNG. Raw PNG bytes, alpha, framing and loader eligibility do not change.
+
+Retained pixels are Original details, not generated HD. Original palette cycling, water/fire and blinking labels remain live Source indices; ScaleNx may also contain transparent subpixels shaped by Original neighbors. Coarse detail or palette effects can form visible seams and require explicit independent all-scale and genuine-context hybrid review. The ordinary-only predecessor is not a current hybrid approval. Registration requires the exact `retained-original-details-v2-painted0255` provenance declaration and exact selected cells. Existing default artwork holds are preserved; this option does not rescue invalid framing, provider refusals or broad geometry/material failures.
+
+Opt-in metadata participates in both derived and indexed cache identities. Frames without these policies retain their previous cache keys and pixels. Retained-detail opt-ins have a distinct versioned frame, rejected-fallback and prepared-terrain key; absent/empty selections keep the previous identities. The candidate and original-art audit tools validate the same metadata restrictions as the Rust loader.
 
 `HdAssets::load` performs full eager validation using the same bounded caches. `validate_all()` can also validate a lazily registered pack; its report distinguishes registered, validated and rejected frames. Full validation can therefore be used in a CLI or audit without raising runtime memory limits. It validates supplied artwork and does not infer coverage for absent originals.
 
@@ -31,7 +35,7 @@ Three least-recently-used caches each have a 32 MiB ceiling:
 
 Resident cached pixels total at most 96 MiB, irrespective of catalog coverage. Decoder input, resampling work buffers and returned owned sprites are additional bounded working allocations; callers should retain only currently needed sprites. Eviction removes cached pixels, not frame registrations or validated coverage. Adjacent crops reuse the decoded atlas; an atlas is not cloned in full merely to extract a small crop. Repeated draws copy only the final indexed canvas. Palette changes cannot reuse stale indexed colors.
 
-Source palette labels have a separate hard 32 MiB metadata ceiling. Frames using only ordinary colors need no label map. Frames containing animated labels retain one byte per original logical pixel; transparent and ordinary source locations use the ordinary class. Quantization restricts ordinary HD pixels to indices 0–239, water to 240–244 and fire to 245–249. Original glow/flash labels 250–255 remain exact. Newly visible HD pixels outside the original silhouette use ordinary colors. This prevents a bright static highlight from acquiring fire, water or blinking behavior. Cache color keys include the source class; equal RGB values in different classes cannot share an incorrect palette result.
+Source palette labels and full Original references for opted-in retained details share one checked 32 MiB ceiling. Frames using only ordinary colors need no label map. A nonempty retained-detail selection keeps one bounded full Original indexed reference; absent/empty selections keep none. Frames containing animated labels retain one byte per original logical pixel; transparent and ordinary source locations use the ordinary class. Quantization restricts ordinary HD pixels to indices 0–239, water to 240–244 and fire to 245–249. Original glow/flash labels 250–255 remain exact. Newly visible HD pixels outside the original silhouette use ordinary colors. This prevents a bright static highlight from acquiring fire, water or blinking behavior. Cache color keys include the source class; equal RGB values in different classes cannot share an incorrect palette result.
 
 Standalone opening cards use `sprite_static_palette` with all 256 entries of their own unfaded palette. Its indexed cache policy is distinct from gameplay source classes; both share the same checked PNG and RGBA caches. Cinematic fades apply during presentation. See [hd-opening-cards.md](hd-opening-cards.md) for the route and fallback checks.
 
@@ -58,3 +62,13 @@ RAPTOR_TEST_DATA=/absolute/path/to/data \
 ```
 
 That check validates every supplied frame and renders it through `HdAssets::sprite` at scales 1–4 with the original palette. It checks dimensions, visible output and each cache ceiling. Visual review, animation alignment and terrain seams remain separate acceptance checks.
+
+## Retained detail validation — 17 October 2026
+
+The optional detail policy passed 70 unique Rust regressions in the private source
+validation and 31 Python checks against the applied shared files. Both included
+Linux and Windows executables were rebuilt. All 5,339 current HD frames load with
+zero rejects. Actual 1080p software-SDL menu, Sector 1 Wave 7 and Sector 3 Wave 9
+captures match their pre-change images byte for byte (6,220,800 pixels compared).
+These default-mode checks do not approve a new hybrid asset. Explicit retained
+Original selectors still require their own whole-frame and scene review.

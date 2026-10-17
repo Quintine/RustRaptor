@@ -58,6 +58,7 @@ pub enum OverlayResult {
     Applied,
     InvalidCanvas,
     NonOpaque,
+    InvalidOriginalDetails,
 }
 
 pub struct Replacement {
@@ -65,6 +66,10 @@ pub struct Replacement {
     /// Original logical position, including the scrolling gutter.
     pub position: [i32; 2],
     pub logical_size: [usize; 2],
+}
+pub struct RetainedOriginalPlacement {
+    pub replacement_index: usize,
+    pub details: crate::hd::OriginalDetailCells,
 }
 pub struct Composition {
     pub image: Sprite,
@@ -120,6 +125,13 @@ impl TerrainHd {
         scale: usize,
         palette: &[[u8; 3]; 256],
     ) -> Composition {
+        self.compose_retaining_original(context, replacements, &[], scale, palette)
+    }
+    /// Original detail is explicit metadata and is patched only into the FINAL
+    /// layer. Pristine HD edge inputs and all unprotected samples stay unchanged.
+    pub fn compose_retaining_original(&mut self, context: &Sprite,
+        replacements: &[Replacement], retained: &[RetainedOriginalPlacement],
+        scale: usize, palette: &[[u8; 3]; 256]) -> Composition {
         let mut image = context.clone();
         let mut results = Vec::with_capacity(replacements.len());
         let mut accepted = BTreeMap::new();
@@ -132,6 +144,30 @@ impl TerrainHd {
         }
         if accepted.is_empty() {
             return Composition { image, results };
+        }
+        // Validate/project all accepted protected footprints before composition.
+        // Conflicting ownership fails the entire opt-in context to Original;
+        // default/no-retention composition remains exactly the old route.
+        let mut protected = BTreeMap::new();
+        let valid_details = retained.iter().all(|retention| {
+            let Some(tile) = replacements.get(retention.replacement_index) else { return false };
+            if accepted.get(&(tile.position, tile.logical_size)) != Some(&retention.replacement_index) { return true; }
+            if retention.details.logical_size() != tile.logical_size { return false; }
+            for &[x, y] in retention.details.cells() {
+                if x as usize >= tile.logical_size[0] || y as usize >= tile.logical_size[1] { return false; }
+                for dy in 0..scale { for dx in 0..scale {
+                    let xx = (tile.position[0] as i64 + x as i64) * scale as i64 + dx as i64;
+                    let yy = (tile.position[1] as i64 + y as i64) * scale as i64 + dy as i64;
+                    if xx < 0 || yy < 0 || xx >= context.width as i64 || yy >= context.height as i64 { continue; }
+                    let pixel = yy as usize * context.width + xx as usize;
+                    if protected.insert(pixel, retention.replacement_index)
+                        .is_some_and(|owner| owner != retention.replacement_index) { return false; }
+                }}
+            }
+            true
+        });
+        if !valid_details {
+            return Composition { image: context.clone(), results: vec![OverlayResult::InvalidOriginalDetails; replacements.len()] };
         }
         self.prepare_palette(palette);
         // Keep a pristine joined HD context. Every edge reads this same layer,
@@ -257,6 +293,9 @@ impl TerrainHd {
                 }
             }
         }
+        // AFTER all tile edges/corners: copy authentic joined Original context.
+        // These samples were never read by shared_target/tile_edges.
+        for pixel in protected.keys() { image.pixels[*pixel] = context.pixels[*pixel]; }
         Composition { image, results }
     }
 
@@ -608,4 +647,68 @@ fn edge_weight(distance: usize, band: usize) -> usize {
     // Integer smoothstep t²(3-2t), rounded to sixteen indexed weights.
     let denominator = band * band * band;
     (distance * distance * (3 * band - 2 * distance) * (LEVELS - 1) + denominator / 2) / denominator
+}
+
+#[cfg(test)]
+mod retained_original_join_tests {
+    use super::*;
+    fn detail(index:usize,cells:Vec<[u32;2]>) -> RetainedOriginalPlacement {
+        RetainedOriginalPlacement {replacement_index:index,
+            details:crate::hd::OriginalDetailCells::for_test(cells,[32,32])}
+    }
+    fn palette()->[[u8;3];256] {std::array::from_fn(|i|[i as u8;3])}
+    #[test]
+    fn edge_protection_is_after_all_joins_no_neighbor_leak_at_any_scale() {
+        for scale in 1..=4 {
+            let context=Sprite {width:64*scale,height:32*scale,pixels:vec![17;64*32*scale*scale]};
+            let tiles=vec![Replacement{image:Sprite{width:32*scale,height:32*scale,pixels:vec![60;32*32*scale*scale]},position:[0,0],logical_size:[32,32]},
+                Replacement{image:Sprite{width:32*scale,height:32*scale,pixels:vec![80;32*32*scale*scale]},position:[32,0],logical_size:[32,32]}];
+            let mut t=TerrainHd::default();let base=t.compose(&context,&tiles,scale,&palette()).image;
+            let result=t.compose_retaining_original(&context,&tiles,&[detail(0,vec![[31,16]])],scale,&palette());
+            assert!(result.results.iter().all(|r|*r==OverlayResult::Applied));
+            for y in 0..context.height {for x in 0..context.width {
+                let i=y*context.width+x;let protected=x/scale==31&&y/scale==16;
+                assert_eq!(result.image.pixels[i],if protected{context.pixels[i]}else{base.pixels[i]});
+            }}
+            let empty=t.compose_retaining_original(&context,&tiles,&[],scale,&palette()).image;
+            assert_eq!(base,empty);
+        }
+    }
+    #[test]
+    fn duplicate_protected_owners_fail_to_original_not_last_write() {
+        let context=Sprite{width:64,height:32,pixels:vec![17;64*32]};
+        let tiles=vec![Replacement{image:Sprite{width:32,height:32,pixels:vec![60;1024]},position:[0,0],logical_size:[32,32]},
+            Replacement{image:Sprite{width:32,height:32,pixels:vec![80;1024]},position:[1,0],logical_size:[32,32]}];
+        let result=TerrainHd::default().compose_retaining_original(&context,&tiles,
+            &[detail(0,vec![[1,0]]),detail(1,vec![[0,0]])],1,&palette());
+        assert_eq!(result.image,context);assert!(result.results.iter().all(|r|*r==OverlayResult::InvalidOriginalDetails));
+    }
+
+    #[test]
+    fn reserved_detail_after_joins_preserves_functional_labels_and_never_leaks_to_neighbors() {
+        let mut logical=Sprite{width:64,height:32,pixels:vec![17;64*32]};
+        logical.pixels[15*64+31]=252;logical.pixels[16*64+31]=253;
+        logical.pixels[15*64+32]=243;logical.pixels[16*64+32]=240;
+        for scale in 1..=4 {
+            let context=crate::render::upscale(&logical,scale).unwrap();
+            let hd=vec![Replacement{image:Sprite{width:32*scale,height:32*scale,pixels:vec![60;32*32*scale*scale]},position:[0,0],logical_size:[32,32]},Replacement{image:Sprite{width:32*scale,height:32*scale,pixels:vec![80;32*32*scale*scale]},position:[32,0],logical_size:[32,32]}];
+            let mut compositor=TerrainHd::default();
+            let baseline=compositor.compose(&context,&hd,scale,&palette()).image;
+            let hybrid=compositor.compose_retaining_original(&context,&hd,&[detail(0,vec![[31,15],[31,16]])],scale,&palette()).image;
+            let mut phase=palette();phase[252]=[255,0,0];phase[253]=[0,255,0];
+            let mut phase2=phase;phase2[252]=[0,0,0];phase2[253]=[255,255,255];
+            let rgba1=crate::render::Canvas{image:hybrid.clone(),scale}.rgba(&phase,false);
+            let rgba2=crate::render::Canvas{image:hybrid.clone(),scale}.rgba(&phase2,false);
+            for y in 0..context.height {for x in 0..context.width {
+                let i=y*context.width+x;let protected=x/scale==31&&(y/scale==15||y/scale==16);
+                assert_eq!(hybrid.pixels[i],if protected{context.pixels[i]}else{baseline.pixels[i]});
+                if protected&&(hybrid.pixels[i]==252||hybrid.pixels[i]==253){assert_ne!(&rgba1[i*4..i*4+3],&rgba2[i*4..i*4+3]);}
+            }}
+            let mixed=&hd[..1];let base_mixed=compositor.compose(&context,mixed,scale,&palette()).image;
+            let retained_mixed=compositor.compose_retaining_original(&context,mixed,&[detail(0,vec![[31,15],[31,16]])],scale,&palette()).image;
+            for y in 0..context.height {for x in 32*scale..context.width {
+                let i=y*context.width+x;assert_eq!(retained_mixed.pixels[i],base_mixed.pixels[i],"foreign Original fallback unchanged");
+            }}
+        }
+    }
 }

@@ -5,8 +5,8 @@ The self-contained RustRaptor folder includes **5,339 original HD pictures /
 data files / 8,150,528,285 bytes** match the runtime manifest. This update adds
 the complete four-frame turret `3001a–3001d` and tank `30078–3007b`, plus terrain
 `10525`, `1052a`, `20402` and `206a0`. Separate source, material, scene and native
-metadata reviews passed. All previous data, artwork, engine source and executables
-remain unchanged. Actual bundled HD and mod validation is recorded with this release.
+metadata reviews passed. That artwork update preserves previous data and artwork.
+It is published as `1bc0a9ce`; the subsequent runtime rebuild is described below.
 
 The requested 97-picture batch is published as `a45abc58`. The previous 5,327-frame
 revision, `afbf119`, passed [native Windows CI](https://github.com/Quintine/RustRaptor/actions/runs/38518853865):
@@ -26,11 +26,21 @@ transitions, with no full-route survival claim. Fully clipped cases retain their
 explicit limits. Source shadows, animation order and original collision dimensions
 remain unchanged.
 
-The optional retained-Original-detail implementation passed independent source
-review, 70 unique private Rust tests and 31 Python checks. Shared engine cutover,
-Linux/Windows rebuilds, sampler continuity and genuine hybrid terrain scene reviews
-are next. Original painted samples retained by this policy will be distinguished
-from newly generated HD detail. Existing artwork holds remain in force.
+The optional retained-Original-detail implementation is now applied and rebuilt
+in the included Linux and Windows executables. Its exact source passed independent
+review and 70 unique private Rust tests; all 31 Python policy/rounding tests also
+pass against the shared files. The new Linux executable validates all 5,339 HD
+frames with zero rejects. Menu, S1 Wave 7 and S3 Wave 9 software-SDL captures at
+1080p are byte-identical to the pre-change references, with 6,220,800 pixels compared.
+Windows compilation, PE imports and complete shared-data hashes pass; native
+Windows execution remains a separate post-push CI check.
+
+No approved picture has enabled the new detail policy yet. Four sampler continuity
+cases and the genuine 10511 hybrid terrain scene checks are in progress. Original
+painted samples retained by this policy will be distinguished from generated HD
+detail. Existing artwork holds remain in force. Current rebuild receipts and the
+actual Source18/library epoch are in
+`.reference/hd-root-painted0255-shared-cutover-20261017/`.
 
 Root owns assembly, README, this checkpoint and Git publication; coordinator owns
 the four HD coverage documents. Current receipts are in

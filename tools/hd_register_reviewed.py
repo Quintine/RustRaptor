@@ -344,6 +344,18 @@ def approved_job(root, identity, project):
         raise ValueError(f"artistic approval belongs to another frame map: {identity}")
     if not review.get("source_and_all_scale_visual_review") or not review.get("independent_review"):
         raise ValueError(f"missing complete visual/independent review: {identity}")
+    retained_details = {asset: frame["original_detail_cells"] for asset, frame in rows.items()
+                        if frame.get("original_detail_cells")}
+    if retained_details:
+        declaration = review.get("retained_original_detail_review", {})
+        if (not same_json(declaration.get("cells_by_asset"), retained_details)
+                or declaration.get("retained_original_not_generated_HD") is not True
+                or declaration.get("policy_version") != "retained-original-details-v2-painted0255"
+                or not same_json(declaration.get("painted_Source_palette_domain"), [0, 255])
+                or declaration.get("functional_palette_effects_are_retained_Original") is not True
+                or declaration.get("hybrid_allscale_and_genuine_context_independent_review") is not True
+                or declaration.get("frame_bindings_sha256") != digest):
+            raise ValueError("retained Original detail provenance and exact hybrid review are required")
     qa_path = contained(root, review["runtime_qa"])
     qa = json.loads(qa_path.read_text())
     if qa.get("frame_bindings_sha256") != digest or qa.get("diagnostics"):

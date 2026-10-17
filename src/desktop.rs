@@ -3078,7 +3078,7 @@ impl Host {
                 visible_tiles.push((art.clone(), x, y));
             }
         }
-        let key = serde_json::to_vec(&(
+        let mut key = serde_json::to_vec(&(
             &world.mission,
             row_origin,
             canvas.scale,
@@ -3087,6 +3087,16 @@ impl Host {
             &self.active.pins,
             &visible_tiles,
         ))?;
+        if self.config.hd_mode {
+            let ids: std::collections::BTreeSet<_> = visible_tiles.iter()
+                .filter_map(|(art, _, _)| art.asset).collect();
+            let details: Vec<_> = ids.into_iter().filter_map(|id|
+                self.hd.original_detail_cache_identity(id).map(|identity| (id, identity))).collect();
+            if !details.is_empty() {
+                key.extend_from_slice(b"terrain-retained-original-details-v2-painted0255");
+                key.extend_from_slice(&serde_json::to_vec(&details)?);
+            }
+        }
         let shift = if world.tick > 0 { alpha - 1.0 } else { 0.0 };
         let translated_y = ((-34.0 + phase as f32 + shift) * canvas.scale as f32).round() as i32;
         if let Some(bg) = self.terrain_hd.cached_layer(&key) {
@@ -3146,6 +3156,7 @@ impl Host {
             let mut bg = upscale(&terrain.image, canvas.scale)?;
             if self.config.hd_mode {
                 let mut replacements = Vec::new();
+                let mut retained_original = Vec::new();
                 let mut labels = Vec::new();
                 for (art, x, y, detailed_original) in prepared_tiles {
                     let replacement =
@@ -3158,15 +3169,19 @@ impl Host {
                                 ),
                             };
                             self.art(&mut tile, &art, &owner, 0, 0.0, 0.0)?;
-                            Some(tile.image)
+                            Some((tile.image, None))
                         } else if let Some(id) = art.asset {
-                            self.hd.sprite(id, canvas.scale, &self.palette)?
+                            self.hd.terrain_sprite(id, canvas.scale, &self.palette)?
                         } else {
                             None
                         };
-                    let Some(replacement) = replacement else {
+                    let Some((replacement, details)) = replacement else {
                         continue;
                     };
+                    if let Some(details) = details {
+                        retained_original.push(crate::terrain_hd::RetainedOriginalPlacement {
+                            replacement_index: replacements.len(), details });
+                    }
                     labels.push(art.asset.map(|id| format!("{id:05x}")).unwrap_or_else(|| {
                         art.hd_png.clone().or(art.png.clone()).unwrap_or_default()
                     }));
@@ -3179,7 +3194,7 @@ impl Host {
                 if !replacements.is_empty() {
                     let composition =
                         self.terrain_hd
-                            .compose(&bg, &replacements, canvas.scale, &self.palette);
+                            .compose_retaining_original(&bg, &replacements, &retained_original, canvas.scale, &self.palette);
                     bg = composition.image;
                     for (label, result) in labels.into_iter().zip(composition.results) {
                         if result != OverlayResult::Applied {

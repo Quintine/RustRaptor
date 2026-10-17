@@ -42,8 +42,27 @@ class PythonRoundingMirror(unittest.TestCase):
                 raw=Image.new('RGBA',(161,101),(0,0,0,255));raw.putpixel((160,100),(0,0,0,alpha))
                 raw.save(self.root/'fixture.png')
                 with self.assertRaisesRegex(ValueError,'fully opaque'):self.check()
-    def test_transparent_original_cannot_use_rounding(self):
+    def test_transparent_original_rounding_keeps_the_alpha_background_guard(self):
         self.picture.putpixel((0,0),(0,0,0,0));self.artwork((17,11))
+        # Full-frame integer rounding is eligible for alpha Source; an opaque
+        # PNG still fails the unchanged authentic transparent-background guard.
+        with self.assertRaisesRegex(ValueError,'transparent HD background'):self.check()
+        raw=Image.open(self.root/'fixture.png').convert('RGBA')
+        raw.putpixel((0,0),(0,0,0,0));raw.save(self.root/'fixture.png')
+        self.assertEqual(self.check(),17*11*4)
+    def test_transparent_rounding_rejects_bad_aspect_partial_crop_and_half_tie(self):
+        self.picture.putpixel((0,0),(0,0,0,0))
+        def alpha_art(size):
+            raw=Image.new('RGBA',size,(80,100,120,255))
+            raw.putpixel((0,0),(0,0,0,0));raw.save(self.root/'fixture.png')
+        alpha_art((21,11))
+        with self.assertRaisesRegex(ValueError,'aspect differs'):self.check()
+        alpha_art((18,12));self.frame['crop']=[0,0,17,11]
+        with self.assertRaisesRegex(ValueError,'aspect differs'):self.check()
+        self.picture=Image.new('RGBA',(2,2),(80,100,120,255))
+        self.picture.putpixel((0,0),(0,0,0,0))
+        self.frame.update(logical_width=2,logical_height=2);self.frame.pop('crop')
+        alpha_art((5,6))
         with self.assertRaisesRegex(ValueError,'aspect differs'):self.check()
     def test_partial_crop_never_gets_exception(self):
         self.artwork((18,12))
