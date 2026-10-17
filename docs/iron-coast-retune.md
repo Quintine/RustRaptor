@@ -4,6 +4,57 @@ The 14 Iron Coast missions now use difficulty-scaled attack groups, clearer
 weapon feedback and distinct enemy/boss patterns. Original campaigns and their
 content definitions are unchanged.
 
+Mission II 2, Undertow Run, version 1.0.3 moves one existing armed classic
+curved pass from tick 1,650 to 1,530. The unarmed aircraft stays at 1,650, and
+all other spawns and their fields remain unchanged. This count-neutral timing
+correction leaves objectives, enemy statistics, equipment, prices, rewards and
+the boss warning/arrival unchanged.
+
+## Mission II 2: focused version 1.0.3 checks
+
+On 18 October 2026, the frozen SourceE library (`3b04e473`) ran the unchanged
+recorded paid-route controller. Four authentic post-Mission-1 states fed paired
+version 1.0.2 and 1.0.3 continuations through Missions 2–8 and the finale replay:
+68 ordinary mission executions in total. All completed with full pilot,
+script-state and RNG save/load roundtrips. The changed Mission 2 version/hash
+was reported and accepted through normal save compatibility; inventory and
+other gameplay state were not silently rewritten.
+
+Mission 2 completion times, shields and paid refill counts were unchanged at
+all four difficulties. Ending shields were 79 / 52 / 44 / 12, preserving the
+Elite route's narrow 12-shield margin. Veteran defeated one fewer optional
+interceptor (two → one); Elite earned 100 more credits through the changed
+encounter timing. Required skimmer and boss objectives were unchanged. These
+are actual outcomes for the recorded controller and carried supplies, not a
+guarantee for every loadout or play style.
+
+Separate shield-replenished observations recorded the earlier Training/Rookie
+quiet interval at ticks 1,448–1,650: 8.70 seconds with no visible enemies or
+hostile shots. The retimed armed pass split it into a longest piece of 3.73
+seconds and produced four observed hostile projectile births. The later quiet
+intervals at 1,664–1,762 and 1,804–1,948 were unchanged, so the correction did
+not merely move that lull later. Quiet time remains elsewhere, including the
+deliberate boss recovery window.
+
+Veteran/Elite arsenal observations absorbed six more replenished-shield points
+each; their ordinary paid routes kept the same shields and purchases. No-fire
+observers already had surviving required targets and do not establish ordinary
+survival. These focused SourceE results are separate from the earlier
+full-cohort measurements and do not claim a new SourceF playthrough or renderer
+check.
+
+The same seven maintained campaign, enemy and weapon suites were rerun against
+the installed SourceF source epoch and version 1.0.3 definitions: **65 passed,
+zero failed, four existing integration tests ignored**. The installed Linux
+validator also accepts all 45 packages with one explicit override.
+
+A separate SourceF presentation check rendered the same paid Veteran mission
+state at tick 1,540 in SD and HD4 at 1920×1080. The retimed classic aircraft was
+alive and entering from above the screen; partial top clipping and HUD overlap
+are part of that entry pose. Both views and the actual Mods diagnostics were
+reviewed at full size, with version 1.0.3 visible. This verifies that scene,
+not every encounter or a complete SourceF mission playthrough.
+
 ## Wave schedules
 
 Enabled scheduled enemies, including required targets and bosses:
@@ -24,6 +75,8 @@ Enabled scheduled enemies, including required targets and bosses:
 | II 6 — Emberwake Shipyards | 46 | 54 | 66 | 82 |
 | II 7 — Siege of the Iron Fleet | 57 | 65 | 77 | 93 |
 | II 8 — Black Tide | 61 | 69 | 81 | 97 |
+
+### Earlier version 1.0.2: a different middle window
 
 Mission II 2 version 1.0.2 adds a small number of classic aircraft in its observed middle lull. Paired current-C paid continuations from authentic post-Mission-1 saves complete Missions 2–8 and the finale replay at all four difficulties, with unchanged ending shields, completion timings and refill counts. The added kills and pickups earn normal credits. In the separate shield-replenished arsenal fixture, the longest threat-free stretch within that middle window decreases from 8.91 to 5.87 seconds; the lull is shortened rather than eliminated. The full-cohort pressure tables below remain the recorded version 1.0.1 measurements. These focused checks were recorded on 17 October 2026 and are separate from the shield-replenished observations.
 
@@ -74,9 +127,10 @@ save-pin roundtrips at every difficulty. Gameplay measurements use the frozen
 runtime definitions/scripts; the final version-number, README and blank-line
 whitespace corrections do not change gameplay tokens.
 
-Seven maintained campaign, enemy and weapon test suites pass against the same
-runtime: 65 tests passed, none failed and four existing integration tests remain
-ignored. Updated fixtures check the revised attack clocks, offscreen firing
+Seven maintained campaign, enemy and weapon test suites passed against the
+frozen final-B runtime on 17 October 2026: 65 tests passed, none failed and four
+existing integration tests remained ignored. This is the recorded result, not
+a new SourceF test run. Updated fixtures check the revised attack clocks, offscreen firing
 suppression, reward-free aircraft exits and short contact effects. Synthetic
 native-enemy placeholders in portable mission tests are explicitly labelled;
 the original-catalog playthrough checks above cover actual native enemies.
