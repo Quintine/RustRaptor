@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5417 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5425 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -21411,6 +21411,716 @@
       "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-3006f-exact48-currentC-independent-whole-material-peer-20261017/INDEPENDENT-COMPLETE1-3006f-EXACT48-CURRENTC-WHOLE-MATERIAL-REVIEW.json",
       "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-3006f-exact48-currentC-independent-whole-material-peer-20261017/INDEPENDENT-COMPLETE1-3006f-EXACT48-CURRENTC-WHOLE-MATERIAL-REVIEW.json",
       "frame_bindings_sha256": "7963c93a84bbdcead03e34ac1f5da20c550bafd40b8bf470fe3ec9d978ef90c1"
+    },
+    {
+      "job_id": "coordinator-next6-1033c-complete1-Original-H5417-currentC-FINAL-20261017-v1",
+      "assets": [
+        "1033c"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-next6-1033c-complete1-Original-H5417-currentC-FINAL-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-next6-1033c-complete1-Original-H5417-currentC-FINAL-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-next6-1033c-complete1-Original-H5417-currentC-FINAL-20261017-v1/runtime-qa.json",
+      "review": {
+        "authority": [
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/1033c/INDEPENDENT-COMPLETE1-1033C-EXACT69-CURRENTC-WHOLE-MATERIAL-REVIEW.json",
+            "sha256": "36c46bb0b23f92c7deb7032f79c46100ec1197224377e3a1a39b240e4e937273",
+            "size": 7078
+          },
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/1033c-strict-independent-whole-material-review-closure.json",
+            "sha256": "b8e64965025cef6b6a860c48a4ffc2764588bf0519b8c7f90e03c50eb961d315",
+            "size": 7035
+          }
+        ],
+        "status": "CLOSED_QUALIFIED_INTRINSIC_MATERIAL"
+      },
+      "independent_review": {
+        "context": {
+          "capture_closing_addendum": {
+            "device": 55,
+            "inode": 5477408,
+            "mode": 33188,
+            "mtime_ns": 1792235773387422961,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-1033c-currentC-H5417-one-genuine-AIR-twin-scene-independent-physical-peer-20261017-capture12-complete-owned-closing-addendum.json",
+            "sha256": "65eb679b8a84127f9739aa5d0a97307d1747f912dc45c269656df2ce7546e271",
+            "size": 6680
+          },
+          "capture_closing_addendum_strict": {
+            "device": 55,
+            "inode": 5477409,
+            "mode": 33188,
+            "mtime_ns": 1792235773387598758,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-1033c-currentC-H5417-one-genuine-AIR-twin-scene-independent-physical-peer-20261017-capture12-complete-owned-closing-addendum-strict.json",
+            "sha256": "213bcb4fa783f3e3471f05660ab550d7e32ef4cc82ecdcdfeac5d923d55ba927",
+            "size": 1378
+          },
+          "literal_limits": {
+            "actual_snapshot": {
+              "Original_air_shadow_flags": [
+                1,
+                1
+              ],
+              "actual_birth_tick": 57,
+              "actual_order": [
+                1,
+                2
+              ],
+              "alpha": 0.5,
+              "canvas_overlap": 0,
+              "current": [
+                [
+                  116,
+                  125
+                ],
+                [
+                  180,
+                  61
+                ]
+              ],
+              "difficulty": 0,
+              "entities": [
+                1,
+                2
+              ],
+              "frame": 0,
+              "ground": false,
+              "health_each": 7,
+              "logical": [
+                24,
+                32
+              ],
+              "logical_interpolated": [
+                [
+                  116,
+                  123
+                ],
+                [
+                  180,
+                  59
+                ]
+              ],
+              "main_effects": 0,
+              "mission": "base:sector_1_wave_6",
+              "occupied_or_selected_viewport_clips": 0,
+              "previous": [
+                [
+                  116,
+                  121
+                ],
+                [
+                  180,
+                  57
+                ]
+              ],
+              "terrain_instances": 90,
+              "tick": 120
+            },
+            "counter_clarification": {
+              "mode": 33188,
+              "mtime_ns": 1792235712864444628,
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-1033c-currentC-H5417-one-genuine-AIR-twin-scene-independent-physical-peer-20261017/DIRECT-PRODUCER-IMMUTABLE-CUSTODY-AND-COUNTER-CLARIFICATION-MESSAGE.json",
+              "sha256": "5fb71ff386dfa9f21a6bc68195babbab3ca1129316e3a7742f2d6864daf88ef6",
+              "size": 745
+            },
+            "qualifications": [
+              "Finer/brighter metal, coarse matte retained Original arms/feet, native1 softness and intrinsic partial0/41/56/65 plus inherited Source-empty extras0/4/11/13 remain literal. No exact whole silhouette, every-background, timing or material reapproval is claimed.",
+              "The two actual twins provide two positions/backgrounds within ONE snapshot, not two independently captured scenes or phase/death coverage.",
+              "Only terrain, both enemies, Original shadows and all saved main effects are included; mainfx count0. Player and its shadow, projectiles, pickups, secondary effects, UI/fullHost/timing are excluded.",
+              "No loadout/purchase/route/survival proof is claimed; captured input/controller configuration remains literal.",
+              "No future Source epoch/current-live freshness, palette-cycle timing, all missions/difficulties or arbitrary effects occlusion approval."
+            ],
+            "shadow_authentication_limit": "Original Catalog mask/positions/order authenticate from actual frozen constructor/source/capture plus equal carried shadows and target-write/outside-array checks. No independent rerender of foreign terrain/light-table shadow body is performed."
+          },
+          "literal_status": "CLOSED_DIFFERENT_PHYSICAL1033C_EXACT69_ONE_GENUINE_AIR_TWIN_SCENE_ALL1TO4_QUALIFIED_HOLD0",
+          "report": {
+            "device": 55,
+            "inode": 5477339,
+            "mode": 33188,
+            "mtime_ns": 1792235712866637006,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-1033c-currentC-H5417-one-genuine-AIR-twin-scene-independent-physical-peer-20261017/INDEPENDENT1033C-EXACT69-CURRENTC-H5417-ONE-GENUINE-AIR-TWIN-SCENE-CONTEXT-REVIEW.json",
+            "sha256": "c4d6e38681a8599ef7fc5691f91dda79c67f783c274411b03fa075f488476825",
+            "size": 26566
+          },
+          "reviewer": "/root/iron_coast_3",
+          "strict": {
+            "device": 55,
+            "inode": 5477340,
+            "mode": 33188,
+            "mtime_ns": 1792235713418635146,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-1033c-currentC-H5417-one-genuine-AIR-twin-scene-independent-physical-peer-20261017-strict-independent-one-genuine-AIR-twin-context-physical-closure.json",
+            "sha256": "de37f8e2c85dc4949e32570161329552f249fe1f13e7f7d4d2f56f6e73c5ddf0",
+            "size": 4869
+          }
+        },
+        "material": [
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/1033c/INDEPENDENT-COMPLETE1-1033C-EXACT69-CURRENTC-WHOLE-MATERIAL-REVIEW.json",
+            "sha256": "36c46bb0b23f92c7deb7032f79c46100ec1197224377e3a1a39b240e4e937273",
+            "size": 7078
+          },
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/1033c-strict-independent-whole-material-review-closure.json",
+            "sha256": "b8e64965025cef6b6a860c48a4ffc2764588bf0519b8c7f90e03c50eb961d315",
+            "size": 7035
+          }
+        ]
+      },
+      "frame_bindings_sha256": "eec1a3767ca4b776b9ffde01363de2f0ace34fca83f4ea3252cc6cab02946c9b"
+    },
+    {
+      "job_id": "coordinator-next6-200e6-complete1-Original-H5417-currentC-FINAL-20261017-v1",
+      "assets": [
+        "200e6"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-next6-200e6-complete1-Original-H5417-currentC-FINAL-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-next6-200e6-complete1-Original-H5417-currentC-FINAL-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-next6-200e6-complete1-Original-H5417-currentC-FINAL-20261017-v1/runtime-qa.json",
+      "review": {
+        "authority": [
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/200e6/INDEPENDENT-COMPLETE1-200E6-CURRENTC-WHOLE-MATERIAL-REVIEW.json",
+            "sha256": "9905b45be43cfae0365447540084b89a76fe2aea4390efe46d9518562dadc375",
+            "size": 7709
+          },
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/200e6-strict-independent-whole-material-review-closure.json",
+            "sha256": "00ce6e6a919511557e74a009261a37e2ac12e381b3b2b6443d8719896b8d30b3",
+            "size": 7223
+          }
+        ],
+        "status": "CLOSED_QUALIFIED_INTRINSIC_MATERIAL"
+      },
+      "independent_review": {
+        "context": {
+          "literal_limits": {
+            "capture_and_composition_limits": "One alive/intact nofire default-Pilot snapshot per singleton, no healing/equipment override. Captured terrain, enemy actors, original ground/air shadows and main effects in finite correct roles/order. Player/player shadow/projectiles/pickups/secondary effects/UI omitted. Main effects0 in both captures. No live timing, death transition, full Host, every-background or gameplay-completion claim.",
+            "order_and_shadow_scope": "Saved actor order and authenticOriginal ground/air shadow records are equal across all roles, and visible background outside exact target union is independently unchanged. This does not reexecute or universally validate the Host/shadow pipeline; under-target covered shadows are not falsely claimed independently visible."
+          },
+          "literal_status": "INDEPENDENT_QUALIFIED_TWO_COMPLETE_AIR_SINGLETON_CONTEXTS_CURRENTC_H5417_ALL4_WITH_LITERAL_LIMITS",
+          "report": {
+            "device": 55,
+            "inode": 5477426,
+            "mode": 33188,
+            "mtime_ns": 1792235795770545003,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-two-natural-AIR-contexts-independent-review-20261017/INDEPENDENT-COMPLETE2-200E6-30052-CURRENTC-H5417-TWO-NATURAL-AIR-CONTEXT-REVIEW.json",
+            "sha256": "00d79a2239f059212cbc5ce302ac5acc470d15e415eb05768f6ab9244a85d6e9",
+            "size": 8665
+          },
+          "reviewer": "/root/hd_boss200a2",
+          "strict": {
+            "device": 55,
+            "inode": 5477427,
+            "mode": 33188,
+            "mtime_ns": 1792235795772068809,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-two-natural-AIR-contexts-independent-review-20261017/strict-independent-two-AIR-context-review-closure.json",
+            "sha256": "e5f6f47f9fb64f23c5a380d159fa2c4254a39e3336b30c9418cfac3a238ac514",
+            "size": 4874
+          }
+        },
+        "material": [
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/200e6/INDEPENDENT-COMPLETE1-200E6-CURRENTC-WHOLE-MATERIAL-REVIEW.json",
+            "sha256": "9905b45be43cfae0365447540084b89a76fe2aea4390efe46d9518562dadc375",
+            "size": 7709
+          },
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/200e6-strict-independent-whole-material-review-closure.json",
+            "sha256": "00ce6e6a919511557e74a009261a37e2ac12e381b3b2b6443d8719896b8d30b3",
+            "size": 7223
+          }
+        ]
+      },
+      "frame_bindings_sha256": "a44f335429be51d7be36c13a77b02c8e7ef3d73b92c916d5c62fd18f2f1e23bc"
+    },
+    {
+      "job_id": "coordinator-next6-30052-complete1-Original-H5417-currentC-FINAL-20261017-v1",
+      "assets": [
+        "30052"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-next6-30052-complete1-Original-H5417-currentC-FINAL-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-next6-30052-complete1-Original-H5417-currentC-FINAL-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-next6-30052-complete1-Original-H5417-currentC-FINAL-20261017-v1/runtime-qa.json",
+      "review": {
+        "authority": [
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/30052/INDEPENDENT-COMPLETE1-30052-CURRENTC-WHOLE-MATERIAL-REVIEW.json",
+            "sha256": "46832144fdf5f736ee5dbfaf1a53f09d3b9202bc6a34c2a6b7a92793028bb26b",
+            "size": 7930
+          },
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/30052-strict-independent-whole-material-review-closure.json",
+            "sha256": "7ecdc3e7af435958b88cb1f4f925a67dc0581282da26a26ee6cab09fc5e6e3b2",
+            "size": 7111
+          }
+        ],
+        "status": "CLOSED_QUALIFIED_INTRINSIC_MATERIAL"
+      },
+      "independent_review": {
+        "context": {
+          "literal_limits": {
+            "capture_and_composition_limits": "One alive/intact nofire default-Pilot snapshot per singleton, no healing/equipment override. Captured terrain, enemy actors, original ground/air shadows and main effects in finite correct roles/order. Player/player shadow/projectiles/pickups/secondary effects/UI omitted. Main effects0 in both captures. No live timing, death transition, full Host, every-background or gameplay-completion claim.",
+            "order_and_shadow_scope": "Saved actor order and authenticOriginal ground/air shadow records are equal across all roles, and visible background outside exact target union is independently unchanged. This does not reexecute or universally validate the Host/shadow pipeline; under-target covered shadows are not falsely claimed independently visible."
+          },
+          "literal_status": "INDEPENDENT_QUALIFIED_TWO_COMPLETE_AIR_SINGLETON_CONTEXTS_CURRENTC_H5417_ALL4_WITH_LITERAL_LIMITS",
+          "report": {
+            "device": 55,
+            "inode": 5477426,
+            "mode": 33188,
+            "mtime_ns": 1792235795770545003,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-two-natural-AIR-contexts-independent-review-20261017/INDEPENDENT-COMPLETE2-200E6-30052-CURRENTC-H5417-TWO-NATURAL-AIR-CONTEXT-REVIEW.json",
+            "sha256": "00d79a2239f059212cbc5ce302ac5acc470d15e415eb05768f6ab9244a85d6e9",
+            "size": 8665
+          },
+          "reviewer": "/root/hd_boss200a2",
+          "strict": {
+            "device": 55,
+            "inode": 5477427,
+            "mode": 33188,
+            "mtime_ns": 1792235795772068809,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-two-natural-AIR-contexts-independent-review-20261017/strict-independent-two-AIR-context-review-closure.json",
+            "sha256": "e5f6f47f9fb64f23c5a380d159fa2c4254a39e3336b30c9418cfac3a238ac514",
+            "size": 4874
+          }
+        },
+        "material": [
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/30052/INDEPENDENT-COMPLETE1-30052-CURRENTC-WHOLE-MATERIAL-REVIEW.json",
+            "sha256": "46832144fdf5f736ee5dbfaf1a53f09d3b9202bc6a34c2a6b7a92793028bb26b",
+            "size": 7930
+          },
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/30052-strict-independent-whole-material-review-closure.json",
+            "sha256": "7ecdc3e7af435958b88cb1f4f925a67dc0581282da26a26ee6cab09fc5e6e3b2",
+            "size": 7111
+          }
+        ]
+      },
+      "frame_bindings_sha256": "cefaaa5bfa437c21d4891692af3c52a3c8689f0d1a42afcd8bef9c2658cb4c1d"
+    },
+    {
+      "job_id": "coordinator-next6-30070-complete2-Original-H5417-currentC-FINAL-20261017-v1",
+      "assets": [
+        "30070",
+        "30071"
+      ],
+      "frames": 2,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-next6-30070-complete2-Original-H5417-currentC-FINAL-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-next6-30070-complete2-Original-H5417-currentC-FINAL-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-next6-30070-complete2-Original-H5417-currentC-FINAL-20261017-v1/runtime-qa.json",
+      "review": {
+        "authority": [
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/30070/INDEPENDENT-COMPLETE2-30070-CURRENTC-WHOLE-MATERIAL-REVIEW.json",
+            "sha256": "c8d7ac0cc9ba6020bef182eac8199a8aa9998f3f8264cc2f2221eda2a0bd1e75",
+            "size": 10981
+          },
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/30070-strict-independent-whole-material-review-closure.json",
+            "sha256": "163e73b40c61e3d1475937567eedbd068c286336f26c0fe4d35ff04f81434a99",
+            "size": 10600
+          }
+        ],
+        "status": "CLOSED_QUALIFIED_INTRINSIC_MATERIAL"
+      },
+      "independent_review": {
+        "context": {
+          "literal_limits": {
+            "layer_scope_and_limits": [
+              "Finite terrain, enemy bodies, Original air shadow and main effects in recorded order. Main effects empty at both saved endpoints; one AIR actor/shadow.",
+              "Full World retains three naturally fired enemy projectiles and player metadata; pictures omit projectiles, player/player shadow, pickups, secondary effects, UI and Host. No full gameplay/unoccluded projectile readability claim.",
+              "One repeated test tile at one legal private spawn, observed at ticks1 and3; no other placements, genuine Original mission occurrence, death, combat, full cycle duration or public-mod coverage.",
+              "Sharper brighter faceted segmented metal/stronger outlines and fine wear/native1 grain remain the frozen intrinsic qualifications. Context shows attachment/placement/shadow readability; it does not erase those limits or reapprove old holds."
+            ],
+            "private_validation_route": {
+              "Original18_filtered_placements": "Inherited frozen source-recipe result; this private mission does not activate or prove any of those Original-map placements.",
+              "Original_map_occurrence": false,
+              "Pilot_default_difficulty_is2_not0": true,
+              "Source_animation_limit": "Actual steps0,0,1 agree with pre-update art_frame and frame_rate1/frames2 rules; two observed initial states only, not whole-life animation/death behavior.",
+              "Source_library": "SPRITE3_ITM record108",
+              "actual_input": "Default no movement/fire/bomb/special/cycle; shield100 and health200 unchanged for all3 actual steps.",
+              "actual_natural_projectiles": 3,
+              "actual_saved_states": [
+                {
+                  "asset": "30070",
+                  "current": [
+                    80,
+                    65
+                  ],
+                  "entity": 1,
+                  "health": 200,
+                  "natural_art_frame": 0,
+                  "previous": [
+                    80,
+                    64
+                  ],
+                  "tick": 1
+                },
+                {
+                  "asset": "30071",
+                  "current": [
+                    80,
+                    69
+                  ],
+                  "entity": 1,
+                  "health": 200,
+                  "natural_art_frame": 1,
+                  "previous": [
+                    80,
+                    67
+                  ],
+                  "tick": 3
+                }
+              ],
+              "default_loadout_inventory_health": true,
+              "enemy_definitions_overrides": 0,
+              "mission": "hd_private_ship39:initial_clock_1",
+              "normal_pre_World_difficulty_selection": 0,
+              "one_mission_only_private_overlay": true,
+              "public_or_installed_mod": false,
+              "spawn": {
+                "difficulty": 0,
+                "position": [
+                  80,
+                  64
+                ],
+                "tick": 0
+              },
+              "stable_authentic_enemy": "base:enemy_2_108"
+            }
+          },
+          "literal_status": "CLOSED_QUALIFIED_COMPLETE2_EIGHT_WHOLE_PRIVATE_VALIDATION_CONTEXTS_DIFFERENT_PHYSICAL_AND_ARRAY_REVIEW_NOT_ORIGINAL_OCCURRENCE",
+          "report": {
+            "device": 55,
+            "inode": 5477489,
+            "mode": 33188,
+            "mtime_ns": 1792236000795177907,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-30070-30071-private-validation-independent-context-peer-20261017/CLOSED-DIFFERENT-COMPLETE2-PRIVATE-VALIDATION-CURRENTC-EIGHT-WHOLE-CONTEXT-REVIEW-NOT-ORIGINAL-OCCURRENCE.json",
+            "sha256": "d862a52204508144787cf90a6bfb89f366fff303d21f60225a2f66ec522c7616",
+            "size": 12655
+          },
+          "reviewer": "/root/campaign_integration",
+          "strict": {
+            "device": 55,
+            "inode": 5477490,
+            "mode": 33188,
+            "mtime_ns": 1792236000935490313,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-30070-30071-private-validation-independent-context-peer-20261017-strict-complete-independent-private-context-closure.json",
+            "sha256": "46a31091d318d6a822d5a4aad455ded16399257b1d2a9176d460344835ebb4b6",
+            "size": 84627
+          }
+        },
+        "material": [
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/30070/INDEPENDENT-COMPLETE2-30070-CURRENTC-WHOLE-MATERIAL-REVIEW.json",
+            "sha256": "c8d7ac0cc9ba6020bef182eac8199a8aa9998f3f8264cc2f2221eda2a0bd1e75",
+            "size": 10981
+          },
+          {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-next6-currentC-independent-material-review-20261017/30070-strict-independent-whole-material-review-closure.json",
+            "sha256": "163e73b40c61e3d1475937567eedbd068c286336f26c0fe4d35ff04f81434a99",
+            "size": 10600
+          }
+        ]
+      },
+      "frame_bindings_sha256": "6eb9b49d4d271ce19ec92dd5b18f78273b0f16ef7accc85aa3d7da27f9d17293"
+    },
+    {
+      "job_id": "coordinator-next6-30089-complete2-Original-H5417-currentC-FINAL-20261017-v1",
+      "assets": [
+        "30089",
+        "3008a"
+      ],
+      "frames": 2,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-next6-30089-complete2-Original-H5417-currentC-FINAL-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-next6-30089-complete2-Original-H5417-currentC-FINAL-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-next6-30089-complete2-Original-H5417-currentC-FINAL-20261017-v1/runtime-qa.json",
+      "review": {
+        "authority": [
+          {
+            "mode": 33188,
+            "mtime_ns": 1792234921752689445,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-next6-30089-complete2-currentC-independent-material-peer-20261017/INDEPENDENT-COMPLETE2-30089-CURRENTC-EXACT-ORIGINAL-DETAIL-WHOLE-MATERIAL-REVIEW.json",
+            "sha256": "03e05500978fe5306ce31ffbe8bed51c0e33235111a1ae1da9da14d5eea5dc26",
+            "size": 22836
+          },
+          {
+            "mode": 33188,
+            "mtime_ns": 1792234921841149001,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-next6-30089-complete2-currentC-independent-material-peer-20261017-strict-independent-complete-family-currentC-material-closure.json",
+            "sha256": "4fbe0038e0b9a54e9eca3baf6730534176a93de98b43c8d3d9ee73cef7afe6e8",
+            "size": 6430
+          }
+        ],
+        "status": "CLOSED_QUALIFIED_INTRINSIC_MATERIAL"
+      },
+      "independent_review": {
+        "context": {
+          "literal_limits": {
+            "actual_scene_scope": {
+              "Original_air_shadows": [
+                2,
+                3
+              ],
+              "Original_ground_shadows_each": 2,
+              "Source_caller": "SPRITE3record30/base:enemy_2_30/MAP7G3spawn47",
+              "World_input_steps": 761,
+              "actual_actors": [
+                4,
+                5
+              ],
+              "actual_art_frames": [
+                1,
+                0
+              ],
+              "actual_default_Pilot_difficulty": 2,
+              "actual_default_inventory": {
+                "base:energy": 100,
+                "base:forward_guns": 1
+              },
+              "actual_ticks": [
+                760,
+                761
+              ],
+              "alpha": 0.5,
+              "born_tick": 633,
+              "entity": 298,
+              "health": [
+                35,
+                35
+              ],
+              "logical_current": [
+                [
+                  286,
+                  8
+                ],
+                [
+                  284,
+                  9
+                ]
+              ],
+              "logical_previous": [
+                [
+                  288,
+                  7
+                ],
+                [
+                  286,
+                  8
+                ]
+              ],
+              "main_effect_instances": [
+                0,
+                0
+              ],
+              "mission": "base:sector_3_wave_7",
+              "no_fire_heal_or_loadout_changes": true,
+              "same_intact_entity": true,
+              "scheduled_tick": 632,
+              "terrain_instances": [
+                90,
+                90
+              ]
+            },
+            "inherited_material_limits": [
+              "Flatter/matter/coarser retained lower track steps versus fine bright red bevels and gray panels.",
+              "Native1 wells remain softer/quiet; residual unselected partial samples and inherited Source-empty footprints remain.",
+              "No exact whole silhouette, texture or all-background equality claim.",
+              "Later phase0-only815a held edit remains excluded; completeV1 raw270bc85e/fixed2170x725/crops unchanged."
+            ],
+            "physical_scope_limits": [
+              "Only two actual intact adjacent observations of one normal-difficulty2 natural ground entity are reviewed. No death, all-placement, survival, all-difficulty or Host timing acceptance.",
+              "Target occupied body clipping is zero; other ground243 is genuinely partly past the right viewport and new air349 at761 is genuinely above it. No claim that every foreign actor is wholly visible.",
+              "No later-air body overlap occurs with the target selected samples here; these are not overlap-stress cases. Actual foreign bodies/order and Original ground/air shadows are retained.",
+              "Large whole native3/native4 pages were displayed downsampled by the viewer. All six native4 individual1280x800 bodies were viewed separately without resampling. Exact pixel/count claims come from saved-array authentication, not the resized overview.",
+              "Player/player-shadow, projectiles, pickups, secondary effects, UI and full Host are outside the bounded rendered scope; saved main effects were actually0."
+            ]
+          },
+          "literal_status": "QUALIFIED_DIFFERENT_COMPLETE2_CURRENTC_TWO_NATURAL_GROUND_PHASES_ALL8_CONTEXT_HOLD0",
+          "report": {
+            "device": 55,
+            "inode": 5477524,
+            "mode": 33188,
+            "mtime_ns": 1792236048568457977,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-30089-3008a-currentC-two-natural-ground-phases-independent-context-peer-20261017-v1/INDEPENDENT-COMPLETE2-30089-3008A-CURRENTC-TWO-NATURAL-GROUND-PHASES-ALL8-CONTEXT-REVIEW.json",
+            "sha256": "109f2486a0d5e31ecf68c839d38d29ac6b7ad898a00fd404f02ee754007337e0",
+            "size": 10031
+          },
+          "reviewer": "/root/iron_coast_5",
+          "strict": {
+            "device": 55,
+            "inode": 5477525,
+            "mode": 33188,
+            "mtime_ns": 1792236048969927272,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-30089-3008a-currentC-two-natural-ground-phases-independent-context-peer-20261017-v1-strict-complete2-independent-finite-ground-context-closure.json",
+            "sha256": "9f4b4a651ce78fcc01c32956613b7051f391e68056ee5de44fd180d79896e934",
+            "size": 4279
+          }
+        },
+        "material": [
+          {
+            "mode": 33188,
+            "mtime_ns": 1792234921752689445,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-next6-30089-complete2-currentC-independent-material-peer-20261017/INDEPENDENT-COMPLETE2-30089-CURRENTC-EXACT-ORIGINAL-DETAIL-WHOLE-MATERIAL-REVIEW.json",
+            "sha256": "03e05500978fe5306ce31ffbe8bed51c0e33235111a1ae1da9da14d5eea5dc26",
+            "size": 22836
+          },
+          {
+            "mode": 33188,
+            "mtime_ns": 1792234921841149001,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-next6-30089-complete2-currentC-independent-material-peer-20261017-strict-independent-complete-family-currentC-material-closure.json",
+            "sha256": "4fbe0038e0b9a54e9eca3baf6730534176a93de98b43c8d3d9ee73cef7afe6e8",
+            "size": 6430
+          }
+        ]
+      },
+      "frame_bindings_sha256": "bc23d5a6d2b02d826d2abfeb9e61220d6b7008699548e95280e93452cafb87b4"
+    },
+    {
+      "job_id": "coordinator-next6-3009c-complete1-Original-H5417-currentC-FINAL-20261017-v1",
+      "assets": [
+        "3009c"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-next6-3009c-complete1-Original-H5417-currentC-FINAL-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-next6-3009c-complete1-Original-H5417-currentC-FINAL-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-next6-3009c-complete1-Original-H5417-currentC-FINAL-20261017-v1/runtime-qa.json",
+      "review": {
+        "authority": [
+          {
+            "mode": 33188,
+            "mtime_ns": 1792234993117019457,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-next6-3009c-complete1-currentC-independent-material-peer-20261017/INDEPENDENT-COMPLETE1-3009C-CURRENTC-EXACT-ORIGINAL-DETAIL-WHOLE-MATERIAL-REVIEW.json",
+            "sha256": "f6d84bdc9c805ce36f75986a7c1ee1d33f6ea52d2ba6a78b3c531077603e579f",
+            "size": 21475
+          },
+          {
+            "mode": 33188,
+            "mtime_ns": 1792234993200571350,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-next6-3009c-complete1-currentC-independent-material-peer-20261017-strict-independent-complete-family-currentC-material-closure.json",
+            "sha256": "f671cce49d7cf2a7379a43239ac8de7dd159bf6493a9a247b7cc3a4602df2c33",
+            "size": 6061
+          }
+        ],
+        "status": "CLOSED_QUALIFIED_INTRINSIC_MATERIAL"
+      },
+      "independent_review": {
+        "context": {
+          "literal_limits": {
+            "Source_shadow_authentication_limit": "Independent shadow footprint projection/span bounds from frozen compiled render.rs and authentic Original mask, recorded layer/order and exact saved role1/2 shadow-footprint equality. No independent foreign terrain or light-table-body rerender.",
+            "actual_snapshot": {
+              "AIR": true,
+              "Original_air_shadows": 2,
+              "actual_actor_order": [
+                1,
+                4
+              ],
+              "alpha": 0.5,
+              "current": [
+                [
+                  141,
+                  42
+                ],
+                [
+                  240,
+                  -117
+                ]
+              ],
+              "difficulty": 0,
+              "frame": 0,
+              "fully_offviewport_instances": 1,
+              "ground_actors": 0,
+              "health_each": 15,
+              "logical_interpolated": [
+                [
+                  144,
+                  40.5
+                ],
+                [
+                  240,
+                  -120
+                ]
+              ],
+              "logical_size": [
+                32,
+                24
+              ],
+              "main_effects": 0,
+              "mission": "base:sector_3_wave_3",
+              "previous": [
+                [
+                  147,
+                  39
+                ],
+                [
+                  240,
+                  -123
+                ]
+              ],
+              "primary_occupied_clip": 0,
+              "primary_protected_later_coverage": 0,
+              "starting_seed": 2048,
+              "terrain_instances": 90,
+              "tick": 90,
+              "visible_instances": 1
+            },
+            "material_role_limit": "This reviewer made the prior separate intrinsic material finding f6d84bdc/f671cce4. This receipt adds independent context review of Full technical production; it is not a second material opinion or new intrinsic reapproval.",
+            "qualifications": [
+              "The hybrid has brighter gray faces/lower-lobe relief and finer grain than the dark Original, with coarse matte retained backing/joins and small markers quiet atnative1. Intrinsic residual partial footprints0/4/14/22 and inherited Source-empty footprints0/4/7/7 remain literal. No exact whole silhouette or every-background readability claim.",
+              "Exactly ONE genuine default-equipment no-fire difficulty0 snapshot is judged. Entity1 is visible; entity4 is genuinely aboveviewport. No second visible twin, multi-occurrence, state/death, animation, other-difficulty or broader mission claim.",
+              "The left role uses Original terrain; the middle and right share exact fixed H5417 foreign HD terrain. Terrain differences across left/middle are intentional.",
+              "Player/player shadow, projectiles, pickups, secondary effects, UI/fullHost/timing are excluded. The actual World contains two hostile projectiles which are not included in this bounded scene.",
+              "No future live Source/current-age equivalence, prototype palette/runtime approval, intrinsic reapproval, registration or admission."
+            ]
+          },
+          "literal_status": "CLOSED_DIFFERENT_PHYSICAL3009C_EXACT86_ONE_NATURAL_AIR_SCENE_ALL1TO4_QUALIFIED_HOLD0",
+          "report": {
+            "device": 55,
+            "inode": 5477579,
+            "mode": 33188,
+            "mtime_ns": 1792236191004313070,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-3009c-currentC-H5417-one-natural-AIR-context-independent-physical-peer-20261017/INDEPENDENT3009C-EXACT86-CURRENTC-H5417-ONE-NATURAL-AIR-CONTEXT-REVIEW.json",
+            "sha256": "1afe0e12a99da4b05c119df008b464b45491f27bbd30cffb18922aef17be9f4e",
+            "size": 26225
+          },
+          "reviewer": "/root/iron_coast_3",
+          "strict": {
+            "device": 55,
+            "inode": 5477580,
+            "mode": 33188,
+            "mtime_ns": 1792236191155690217,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-3009c-currentC-H5417-one-natural-AIR-context-independent-physical-peer-20261017-strict-independent-one-natural-AIR-context-physical-closure.json",
+            "sha256": "7565a5266920ed617e5c582aa5452f30dd6d62132c034c6ff0c74ea8237309e8",
+            "size": 5220
+          }
+        },
+        "material": [
+          {
+            "mode": 33188,
+            "mtime_ns": 1792234993117019457,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-next6-3009c-complete1-currentC-independent-material-peer-20261017/INDEPENDENT-COMPLETE1-3009C-CURRENTC-EXACT-ORIGINAL-DETAIL-WHOLE-MATERIAL-REVIEW.json",
+            "sha256": "f6d84bdc9c805ce36f75986a7c1ee1d33f6ea52d2ba6a78b3c531077603e579f",
+            "size": 21475
+          },
+          {
+            "mode": 33188,
+            "mtime_ns": 1792234993200571350,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-next6-3009c-complete1-currentC-independent-material-peer-20261017-strict-independent-complete-family-currentC-material-closure.json",
+            "sha256": "f671cce49d7cf2a7379a43239ac8de7dd159bf6493a9a247b7cc3a4602df2c33",
+            "size": 6061
+          }
+        ]
+      },
+      "frame_bindings_sha256": "d6409c75074cd81d640c541186627e90d20399d7f2babc85e478f8836f0f59c9"
     }
   ],
   "jobs": [
@@ -21510,8 +22220,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5417,
-  "registration_updated_at_utc": "2026-10-17T10:47:19.752533+00:00",
+  "registered_frame_count": 5425,
+  "registration_updated_at_utc": "2026-10-17T11:30:51.192674+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,
