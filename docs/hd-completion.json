@@ -19,10 +19,10 @@
   ],
   "stage_contract": "Every generated candidate stays distinct from review, registration and render reachability. Original-only fallback is temporary for every required picture. Native cinematics/fonts have explicit preservation exceptions, not HD claims.",
   "picture_status_counts": {
-    "registered": 5394,
+    "registered": 5397,
     "inprogress": 120,
     "renderreachable": 20,
-    "candidate": 217,
+    "candidate": 214,
     "missing": 2
   },
   "assets": {
@@ -114898,7 +114898,7 @@
       "canonical_source_asset": "30050",
       "family_id": "enemies-30050-30050",
       "job_id": "enemies-30050-30050",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -114910,7 +114910,8 @@
         "manifest": "jobs/enemies-30050-30050/candidate.json",
         "sha256": "cf3ddcf65b36230276a41a1c3d631c09e5c3d1c6c2ba9ca942eee1b13e53e8c2",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "qualifiedfinal3-native5417"
     },
     "30051": {
       "kind": "picture",
@@ -115950,7 +115951,7 @@
       "canonical_source_asset": "3006f",
       "family_id": "enemies-3006f-3006f",
       "job_id": "enemies-3006f-3006f",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -115962,7 +115963,8 @@
         "manifest": "jobs/enemies-3006f-3006f/candidate.json",
         "sha256": "e625a21365c4aab3dfafd5af8db68aaf83b3fa70fa02efe2e8ea9a4a81e89d75",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "qualifiedfinal3-native5417"
     },
     "30070": {
       "kind": "picture",
@@ -117097,7 +117099,7 @@
       "canonical_source_asset": "30091",
       "family_id": "enemies-30091-30091",
       "job_id": "enemies-30091-30091",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -117109,7 +117111,8 @@
         "manifest": "jobs/enemies-30091-30091/candidate.json",
         "sha256": "e6f7e24f428e09bd445391bcae46db2a7f0af0d12e46ad6853e162303f1ae846",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "qualifiedfinal3-native5417"
     },
     "30092": {
       "kind": "picture",
@@ -235976,6 +235979,156 @@
       },
       "Source_caller": "SPRITE3record74/base:enemy_2_74/MAP3G3spawn48",
       "limits": "One living occluded scene; no unoccluded whole-target context or route/death/all-placement claim. Separate I3 intrinsic whole material governs hidden hull; coarse matte patches/bright metal/partial footprints/extra3 native1 pixels remain qualified. Old77 HOLD and earlier artifacts unchanged."
+    },
+    "qualifiedfinal3-native5417": {
+      "status": "REGISTERED_ACTUAL_CURRENTC_FINAL3_EXACT101_85_48",
+      "selected_assets": [
+        "30050",
+        "3006f",
+        "30091"
+      ],
+      "registration": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-final3-canonical5417-and-seal-20261017/closed-actual-final3-canonical-native5417-registration-proof.json",
+        "sha256": "cad891eca2710de825df3898c167796cf0e4f894af8c73196675c314af1626e3",
+        "bytes": 51893
+      },
+      "full_native_header_authority": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-final3-canonical5417-and-seal-20261017/closed-actual-final3-canonical-native5417-registration-proof.json",
+        "sha256": "cad891eca2710de825df3898c167796cf0e4f894af8c73196675c314af1626e3",
+        "bytes": 51893
+      },
+      "native_header_summaries_coordinate_lists_in_authority": [
+        {
+          "base_asset": 196753,
+          "frame_count": 1,
+          "name": "TANK12G3_PIC",
+          "frames": [
+            {
+              "crop": [
+                0,
+                0,
+                1254,
+                1254
+              ],
+              "file": "jobs/enemies02-30091-exact101-Original-native-H5414-currentC-20261017-v1/generated/b30a60580b4cab38e3cccb346b48f2c7a32844ce4141db9f54442b9dbe9afca4.png",
+              "frame": 0,
+              "logical_height": 40,
+              "logical_width": 40,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "769630d4c0f4a3207d07e7880242e3fa8b2ffd70e1d9b415331086bac8378cee",
+              "retained_Original_cell_count": 101
+            }
+          ]
+        },
+        {
+          "base_asset": 196688,
+          "frame_count": 1,
+          "name": "SHIP14G3_PIC",
+          "frames": [
+            {
+              "crop": [
+                0,
+                0,
+                1448,
+                1086
+              ],
+              "file": "jobs/enemies02-30050-exact85-Original-native-H5414-currentC-20261017-v1/generated/18da12d4c7095783668c4d9484bde81a731dfeeae82879d0865d5abda87ccc14.png",
+              "frame": 0,
+              "logical_height": 24,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "56a446b287e3170e1f7c19ed75de42ef9b8df4f0d9fb0633c6a571c45d5c4f51",
+              "retained_Original_cell_count": 85
+            }
+          ]
+        },
+        {
+          "base_asset": 196719,
+          "frame_count": 1,
+          "name": "SHIP38G3_PIC",
+          "frames": [
+            {
+              "crop": [
+                0,
+                0,
+                1254,
+                1254
+              ],
+              "file": "jobs/enemies02-3006f-exact48-Original-native-H5414-currentC-20261017-v1/generated/9f1214ba048080aa7680b29b7156e93105c267df1b5e16bb9e1c2ff4742a3424.png",
+              "frame": 0,
+              "logical_height": 24,
+              "logical_width": 24,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "04ab5c472fe8dda7bfb07e4bff6f47a6abd53b3e7e9c3fb482583d1a6ef3e523",
+              "retained_Original_cell_count": 48
+            }
+          ]
+        }
+      ],
+      "retained_Original_not_generated_HD": {
+        "30091": 101,
+        "30050": 85,
+        "3006f": 48
+      },
+      "all_actual_material_context_native_authorities": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-final3-canonical5417-and-seal-20261017/IMMUTABLE-ACTUAL-FINAL3-THREE-JOB-INTAKE.json",
+        "sha256": "f065354e2a80009a011a33538135a915b5713af0ce5b47e3d7fb6a78d8402959",
+        "bytes": 150637
+      },
+      "finite_native_overlay_intake": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-final3-H5414-readonly-intake-20261017/READY-READONLY-FINAL3-101-85-48-NATIVE15-H5414-CURRENTC-CROSSGROUP-AND-RESOURCE-INTAKE.json",
+        "sha256": "ba14a9eeac4e82a85b168a4695a2f5669f5d78f64394c1aed3c6a5108d7542c3",
+        "bytes": 89161
+      },
+      "six_directed_other_target_intersections": {
+        "30050->3006f": [],
+        "30050->30091": [],
+        "3006f->30050": [],
+        "3006f->30091": [],
+        "30091->30050": [],
+        "30091->3006f": []
+      },
+      "saved_Source_set_sizes": [
+        30,
+        61,
+        11
+      ],
+      "whole_Source_sets_disjoint_claim": false,
+      "actual_finite_context_scopes": {
+        "AIR30050": {
+          "actual_target_instances": 2,
+          "health": 18,
+          "primary_protected_later_coverage": 0,
+          "tick": 867
+        },
+        "AIR3006f": {
+          "actual_target_instances": 1,
+          "health": 22,
+          "primary_protected_later_coverage": 0,
+          "tick": 1491
+        },
+        "all_occupied_target_clips": 0,
+        "ground30091": {
+          "covered": 1729,
+          "entity": 890,
+          "exposed": 1301,
+          "health": 80,
+          "protected": 3030,
+          "tick": 701,
+          "unoccluded_whole_target_claim": false
+        },
+        "only_finite_actual_captures": true
+      },
+      "limits": "One occluded ground scene and two AIR scenes only, including both30050Twins. Excludes player/projectiles/secondaryfx/UI/Host; no unoccluded ground hull/full-route/death/timing/universal-placement claim. OldHOLDs and all original provider/refusal/history records remain literal."
     }
   },
   "native_preservation_reviews": {
@@ -243567,28 +243720,28 @@
       }
     },
     "latest_artwork_runtime": {
-      "checkpoint_utc": "2026-10-17T10:03:44.023208+00:00",
-      "status": "ACTUAL5414_CANONICAL_ASSEMBLY_CLI_COMBINED_M2_SDL_PASS_PUBLICATION_NATIVE_WINDOWS_PENDING",
-      "registered_frames": 5414,
-      "complete_sequences": 3578,
+      "checkpoint_utc": "2026-10-17T10:49:04.505777+00:00",
+      "status": "ACTUAL5417_CANONICAL_ASSEMBLY_CLI_ART_ONLY_SDL_PASS_PUBLICATION_NATIVE_WINDOWS_PENDING",
+      "registered_frames": 5417,
+      "complete_sequences": 3581,
       "terrain_frames": 4300,
-      "remaining_original_pictures": 339,
+      "remaining_original_pictures": 336,
       "remaining_by_category": {
         "terrain": 235,
-        "enemies_ground_objects": 70,
+        "enemies_ground_objects": 67,
         "UI_other": 33,
         "bosses": 1
       },
-      "bundled_data_files": 9360,
-      "bundled_data_bytes": 8253893890,
-      "new_frames": 1,
-      "new_native_sequences": 1,
-      "jobs": 1,
-      "new_raw_routes": 1,
-      "new_payload_copies": 1,
+      "bundled_data_files": 9363,
+      "bundled_data_bytes": 8258639433,
+      "new_frames": 3,
+      "new_native_sequences": 3,
+      "jobs": 3,
+      "new_raw_routes": 3,
+      "new_payload_copies": 3,
       "borrowed_existing_payload_aliases": 0,
-      "hybrid_frames": 1,
-      "explicit_retained_Original_cells": 125,
+      "hybrid_frames": 3,
+      "explicit_retained_Original_cells": 234,
       "Original_cells_not_generated_HD": true,
       "source_runtime_commit": "a073f73f3afa0ec5217bb756b521dc75aea15a3b",
       "source_epoch": {
@@ -243608,62 +243761,62 @@
       "source_update_checkpoint5384_is_historical_coverage_not_latest_artwork": true,
       "evidence": {
         "registration": {
-          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-30094-canonical5414-and-seal-20261017/closed-actual30094-canonical-native5414-registration-proof.json",
-          "sha256": "8c5da568800554f96100e72133441e2fd6f784e0759bef80cf6c3e1428f6424d",
-          "bytes": 27909
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-final3-canonical5417-and-seal-20261017/closed-actual-final3-canonical-native5417-registration-proof.json",
+          "sha256": "cad891eca2710de825df3898c167796cf0e4f894af8c73196675c314af1626e3",
+          "bytes": 51893
         },
         "immutable_handoff": {
-          "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5414-20261017/handoff-manifest.json",
-          "sha256": "bd8f14a45e8446d8d9102036a3f95b6d72f3382b9de3b1442de5719af3f14451",
-          "bytes": 3936656
+          "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5417-20261017/handoff-manifest.json",
+          "sha256": "94db9f6d8528f550ba291131ca3178c400bcd83f5f3a4069f7d2e931784e7a1a",
+          "bytes": 4022514
         },
         "assembly": {
-          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5413-currentC-20261017/assembly-receipt.json",
-          "sha256": "90b90cf2e6c1976e505b205b13da0ae63d10c19886178b844890d94fe4b3ccc2",
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5414-currentC-20261017/assembly-receipt.json",
+          "sha256": "8a4556c8b8df43546ddc5f1e21fa567795a8dbad3f01df11844809f7894c04d5",
           "bytes": 858
         },
         "actual_CLI": {
-          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5413-currentC-20261017/cli-validation.json",
-          "sha256": "3b9fd8c243cb4c7150411769f0b23c41ef14a4433f56520d7ae131e2fbabd211",
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5414-currentC-20261017/cli-validation.json",
+          "sha256": "da1c69eeed02a71dd0a5acdaa1dbe52301f1964870d78a2c7185f167440e26b3",
           "bytes": 1625
         },
         "actual_SDL": {
-          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5414-currentC-M2v102-three-SDL-controls-20261017-v1/CLOSED-ACTUAL5414-COMBINED-M2V102-AND-ART-THREE-SDL-PHYSICAL-REGRESSION.json",
-          "sha256": "4afd7056b42668cde760af1329bb5d12052e415d27072761e547fce0e4514366",
-          "bytes": 10888
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5417-currentC-art-only-three-SDL-controls-20261017-v1/CLOSED-ACTUAL5417-ART-ONLY-THREE-SDL-PHYSICAL-REGRESSION-VERSUS-H5414.json",
+          "sha256": "c45b033d110ba71d1e0432e658ceaa41d565e10c4092810a6983789436a465b5",
+          "bytes": 10239
         },
         "actual_SDL_strict": {
-          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5414-currentC-M2v102-three-SDL-controls-20261017-v1-strict-complete-combined-regression-closure.json",
-          "sha256": "db8d2ea76d9af0ab6422bd93b682ec5d9fca10082b1a48cac88173b9c58a9244",
-          "bytes": 20378
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5417-currentC-art-only-three-SDL-controls-20261017-v1-strict-complete-art-only-regression-closure.json",
+          "sha256": "fb41a022a6fcc5501a460e3cb01d38c1630fb99f7fc5003a83110c1b4e2fe6e9",
+          "bytes": 96676
         },
         "Root_personal_SDL_review": {
-          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5413-currentC-20261017/root-physical-5414-three-SDL-review.json",
-          "sha256": "06ba98d6bc02fab04f89c83e1f51d07b383656de9b24b8cbd53b7c0a3e8d99d8",
-          "bytes": 2392
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5414-currentC-20261017/root-physical-5417-three-SDL-review.json",
+          "sha256": "723e3c30503b407a451c28627019e1dfd9b07d47a2b291701e58463e1199bbc3",
+          "bytes": 2030
         }
       },
       "validation": {
-        "HD_validated": 5414,
+        "HD_validated": 5417,
         "HD_rejected": 0,
         "mods": 45,
         "overrides": 1
       },
       "SDL_regression_controls": {
         "report": {
-          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5414-currentC-M2v102-three-SDL-controls-20261017-v1/CLOSED-ACTUAL5414-COMBINED-M2V102-AND-ART-THREE-SDL-PHYSICAL-REGRESSION.json",
-          "sha256": "4afd7056b42668cde760af1329bb5d12052e415d27072761e547fce0e4514366",
-          "bytes": 10888
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5417-currentC-art-only-three-SDL-controls-20261017-v1/CLOSED-ACTUAL5417-ART-ONLY-THREE-SDL-PHYSICAL-REGRESSION-VERSUS-H5414.json",
+          "sha256": "c45b033d110ba71d1e0432e658ceaa41d565e10c4092810a6983789436a465b5",
+          "bytes": 10239
         },
         "strict": {
-          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5414-currentC-M2v102-three-SDL-controls-20261017-v1-strict-complete-combined-regression-closure.json",
-          "sha256": "db8d2ea76d9af0ab6422bd93b682ec5d9fca10082b1a48cac88173b9c58a9244",
-          "bytes": 20378
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5417-currentC-art-only-three-SDL-controls-20261017-v1-strict-complete-art-only-regression-closure.json",
+          "sha256": "fb41a022a6fcc5501a460e3cb01d38c1630fb99f7fc5003a83110c1b4e2fe6e9",
+          "bytes": 96676
         },
         "Root_personal_whole_view": {
-          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5413-currentC-20261017/root-physical-5414-three-SDL-review.json",
-          "sha256": "06ba98d6bc02fab04f89c83e1f51d07b383656de9b24b8cbd53b7c0a3e8d99d8",
-          "bytes": 2392
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5414-currentC-20261017/root-physical-5417-three-SDL-review.json",
+          "sha256": "723e3c30503b407a451c28627019e1dfd9b07d47a2b291701e58463e1199bbc3",
+          "bytes": 2030
         },
         "controls": 3,
         "dimensions": [
@@ -243673,8 +243826,8 @@
         "HD_scale": 4,
         "pixels_compared": 6220800,
         "RGB_and_alpha_changed_pixels": 0,
-        "comparison_classification": "Combined Stage2M2v1.0.2 schedule/metadata plus30094 art update against datedpreM2H5413; NOT pureart with identicalmodtree.",
-        "scope": "Combined currentM2v1.0.2+30094 vsdatedpreM2H5413, exact current45-mod guard. Neither changedM2 nor30094 visible; no target-art or changed-gameplay acceptance."
+        "comparison_classification": "Art-only comparison against actual H5414 post-M2 controls. The exact current 341 runtime file bindings, all45 enabled mods, Stage2M2v1.0.2, Source18, installed ELF and Original INDEX are unchanged.",
+        "scope": "ART-ONLY vs actual post-M2 H5414 with identical341bindings/all45mods; no assumed new-target visibility or all-placement proof."
       },
       "native_Windows": {
         "current_Source_C_D_status_at_freeze": "actual native success379passed/26ignored/zero failed at a073 source-update commit",
@@ -243706,8 +243859,29 @@
           "failed": 0,
           "scope": "PriorAPI-B epoch only; not SourceC or5407 execution."
         },
-        "native_5414_execution_claimed": false,
         "latest_proven_asset_release": {
+          "frames": 5414,
+          "commit": "d9b1067828ae01a93918b5ec8a3d033bedb0ffae",
+          "run_id": 39024235773,
+          "job_id": 117371943995,
+          "attempt": 1,
+          "passed": 379,
+          "ignored": 26,
+          "failed": 0,
+          "report": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5414-assetd9b1-native-Windows-CI-observation-20261017/ACTUAL-EXACT5414-ASSETD9B1-NATIVE-WINDOWS-CI-OBSERVATION-FINAL.json",
+            "sha256": "070c52ecc2d6a6aa903da52463999acaf60de3b2bd93c143b8db1b6a9b8af8dd",
+            "bytes": 20072
+          },
+          "strict": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5414-assetd9b1-native-Windows-CI-observation-20261017-strict-actual-native-Windows-CI-observation-FINAL-closure.json",
+            "sha256": "514a2be39ce14ff9c0a875365603ec05ff12a6857ee8bf1880e151044ec782a5",
+            "bytes": 46185
+          },
+          "scope": "Actual5414/d9b10678 only, not5417. Native relocation/Stage2/isolated PCM assertions passed; no hardware audio listening claim."
+        },
+        "later5413_and_M2_followup_status_at_freeze": "actual native success379pass26ignored0fail forM2/9d4H5413; no5417 execution claim",
+        "prior_proven_asset_release_5407": {
           "frames": 5407,
           "commit": "6a3c465da710d2f152de731ff6927eed992ef439",
           "run_id": 39020360159,
@@ -243727,17 +243901,38 @@
           },
           "scope": "Actual native5407 execution only; not later5413/M2followup or5414."
         },
-        "later5413_and_M2_followup_status_at_freeze": "in progress; no5414 native execution claimed"
+        "native_5417_execution_claimed": false,
+        "prior_proven_M2_release_5413": {
+          "frames": 5413,
+          "commit": "9d408aa8ae660da3f56d14870dbba2bf2ffec1eb",
+          "run_id": 39022490912,
+          "job_id": 117366907674,
+          "passed": 379,
+          "ignored": 26,
+          "failed": 0,
+          "report": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5413-M2-9d408-native-Windows-CI-observation-20261017/ACTUAL-EXACT5413-M2_9D408-NATIVE-WINDOWS-CI-OBSERVATION-FINAL.json",
+            "sha256": "133b5905548a2b80e81b5349a493b5bbb84ea0404ff9f1399cf46bad302da05d",
+            "bytes": 20069
+          },
+          "strict": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5413-M2-9d408-native-Windows-CI-observation-20261017-strict-actual-native-Windows-CI-observation-FINAL-closure.json",
+            "sha256": "4d6d7be613a9e5e93472e73f74e936c543cefda61773e39c5baab7ee9ca2abb6",
+            "bytes": 43422
+          },
+          "scope": "ActualM2/9d4H5413 only, not5417."
+        }
       },
       "limits": [
-        "Only30094 added;125 retained Original cells are not newly generated HD. Old77 and all other HOLDs remain literal.",
-        "One ground1219/tick921/health55 scene, air1246 covers2263/3750 protected samples;1487exposed. No unoccluded hull, route/death/all-placement/seamless/fullHD claim.",
-        "Separate I3 whole intrinsic material and I5 occluded context; coarse matte patches/bright metal/partial footprints/extra3 native1 pixels remain qualifications.",
-        "Actual three SDL controls are combinedM2v102+30094 vsdatedpreM2H5413; no visible changedM2 or30094.",
-        "Latest proven nativeWindows5407/6a3c379pass26ignored0fail; no later5413/M2/5414 execution credit.",
-        "No new art/QA/renderer/World/compiler/Source/Git action for this private doc update."
+        "Only30091/30050/3006f added;234 retained Original logical cells are not newly generated HD. HistoricalHOLDs/reader failures/provider refusals unchanged.",
+        "One ground890/t701/80hp:1729covered+1301exposed of3030protected SourceNx; no unoccluded whole ground hull. TwoAIRscenes include both30050Twins and3006f, primary later coverage0/target viewport clips0.",
+        "SourceC excludes player/projectiles/secondaryfx/UI/Host; no route/death/all-placement/timing/seamless/fullHD extension.",
+        "Six finite directed other-target intersections empty in30/61/11-ID Source sets; not disjoint whole Source sets. Full native overlay equality is separately pinned.",
+        "Actual three ART-ONLY SDL controls vs post-M2H5414 match6220800pixels under identical341runtimebindings/45mods; no newtarget visibility claim.",
+        "Actual nativeWindows5414/d9b10678 passed379/26ignored/0fail. No5417 execution claim.",
+        "No new art/QA/renderer/World/compiler/Source/Rhai/M2/Git action for this private doc update."
       ],
-      "old5413_bindings_and3577_header_prefix_exact": true
+      "old5414_bindings_and3578_header_prefix_exact": true
     },
     "external5413": {
       "status": "ACTUAL5413_CANONICAL_AND_ROOT_ASSEMBLY_CLI_SDL_PASS_PUBLICATION_NATIVE_WINDOWS_PENDING",
@@ -243894,6 +244089,93 @@
         "Equipment and pickups": 47
       },
       "native_header_review_ref": "qualified30094-native5414"
+    },
+    "external5417": {
+      "status": "ACTUAL5417_CANONICAL_ASSEMBLY_CLI_ART_ONLY_SDL_PASS_PUBLICATION_NATIVE_WINDOWS_PENDING",
+      "frames": 5417,
+      "sequences": 3581,
+      "new_frames": 3,
+      "new_sequences": 3,
+      "selected_assets": [
+        "30050",
+        "3006f",
+        "30091"
+      ],
+      "registration": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-final3-canonical5417-and-seal-20261017/closed-actual-final3-canonical-native5417-registration-proof.json",
+        "sha256": "cad891eca2710de825df3898c167796cf0e4f894af8c73196675c314af1626e3",
+        "bytes": 51893
+      },
+      "immutable_handoff": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5417-20261017/handoff-manifest.json",
+        "sha256": "94db9f6d8528f550ba291131ca3178c400bcd83f5f3a4069f7d2e931784e7a1a",
+        "bytes": 4022514
+      },
+      "manifest": {
+        "device": 55,
+        "inode": 5472709,
+        "mode": 33152,
+        "mtime_ns": 1792234039857203597,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/hd.json",
+        "sha256": "193d552cfde5744f4e9adcee2fcb9474bed368c0a05a1c4384b14abee287de96",
+        "size": 2838396
+      },
+      "provenance": {
+        "device": 55,
+        "inode": 5472708,
+        "mode": 33152,
+        "mtime_ns": 1792234039768205572,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/provenance.json",
+        "sha256": "4f7091569f50aa7f71d19c4be16e9f785dd6e69d2e1ea78e2dca0c5579bd6154",
+        "size": 1762891
+      },
+      "assembly": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5414-currentC-20261017/assembly-receipt.json",
+        "sha256": "8a4556c8b8df43546ddc5f1e21fa567795a8dbad3f01df11844809f7894c04d5",
+        "bytes": 858
+      },
+      "actual_CLI": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5414-currentC-20261017/cli-validation.json",
+        "sha256": "da1c69eeed02a71dd0a5acdaa1dbe52301f1964870d78a2c7185f167440e26b3",
+        "bytes": 1625
+      },
+      "actual_SDL": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5417-currentC-art-only-three-SDL-controls-20261017-v1/CLOSED-ACTUAL5417-ART-ONLY-THREE-SDL-PHYSICAL-REGRESSION-VERSUS-H5414.json",
+        "sha256": "c45b033d110ba71d1e0432e658ceaa41d565e10c4092810a6983789436a465b5",
+        "bytes": 10239
+      },
+      "actual_SDL_strict": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5417-currentC-art-only-three-SDL-controls-20261017-v1-strict-complete-art-only-regression-closure.json",
+        "sha256": "fb41a022a6fcc5501a460e3cb01d38c1630fb99f7fc5003a83110c1b4e2fe6e9",
+        "bytes": 96676
+      },
+      "Root_personal_SDL_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5414-currentC-20261017/root-physical-5417-three-SDL-review.json",
+        "sha256": "723e3c30503b407a451c28627019e1dfd9b07d47a2b291701e58463e1199bbc3",
+        "bytes": 2030
+      },
+      "old5414_bindings_and3578_full_header_prefix_exact": true,
+      "category_registered": {
+        "Menus, portraits, HUD and other pictures": 117,
+        "Bosses": 248,
+        "Enemies and ground objects": 352,
+        "Player banking": 21,
+        "Terrain": 4300,
+        "Explosions and effects": 281,
+        "Player and enemy projectiles": 51,
+        "Equipment and pickups": 47
+      },
+      "native_header_review_ref": "qualifiedfinal3-native5417",
+      "native_Windows_dated_proof": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5413-M2-9d408-native-Windows-CI-observation-20261017/ACTUAL-EXACT5413-M2_9D408-NATIVE-WINDOWS-CI-OBSERVATION-FINAL.json",
+        "sha256": "133b5905548a2b80e81b5349a493b5bbb84ea0404ff9f1399cf46bad302da05d",
+        "bytes": 20069
+      },
+      "native_Windows_dated_strict": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5413-M2-9d408-native-Windows-CI-observation-20261017-strict-actual-native-Windows-CI-observation-FINAL-closure.json",
+        "sha256": "4d6d7be613a9e5e93472e73f74e936c543cefda61773e39c5baab7ee9ca2abb6",
+        "bytes": 43422
+      }
     }
   }
 }
