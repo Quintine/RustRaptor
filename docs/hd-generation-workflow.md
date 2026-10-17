@@ -92,3 +92,21 @@ Run the tool regression checks with
 registration of separately approved selections and rejection of incomplete
 animations, held material, inconsistent inventory, stale artifacts and incorrect
 context bindings.
+
+Existing Terrain siblings may be carried through a new selection with the opt-in
+`standalone-terrain-carried-identity-v2` contract. The selected, carried and
+Original-fallback sets must partition the full original job inventory. Carried
+definitions must already be complete one-frame Terrain entries in the current
+canonical manifest; their complete fields, optional policies, raw bytes and
+authenticated prior registration/runtime receipts must match exactly. Multiple
+prior registration records are supported. Carrying never approves, inserts or
+overwrites those definitions, and grants no approval to newly selected artwork.
+New selections still need their own current all-scale, material and context
+evidence. The older Master74 contract remains supported unchanged.
+
+A genuinely new single-picture generation job can instead declare its actual
+complete one-picture inventory. It must not claim that an earlier multi-picture
+generation had a smaller inventory or use this route to split an animation.
+
+The portable carried-identity and frame-policy checks also run with
+`python3 -m unittest discover -s tests -p 'test_hd_*.py'`.

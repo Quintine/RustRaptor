@@ -20,6 +20,9 @@ from hd_art_source import decode
 from hd_frame_policy import validate_frame_policy, retained_review_version_ok
 
 
+CARRIED_TERRAIN_V2 = "standalone-terrain-carried-identity-v2"
+
+
 def asset_list(value, label):
     if not isinstance(value, list) or any(not isinstance(asset, str) or
             re.fullmatch(r"[0-9a-f]{5}", asset) is None for asset in value):
@@ -51,12 +54,16 @@ def standalone_selection(candidate, job, rows):
             selected | fallback | carried != full):
         raise ValueError("standalone selected/fallback partition differs from complete job inventory")
     if carried:
-        # This is the reviewed additive contract for one original sixteen-tile
-        # inventory, not a general permission to slice other content families.
-        if (job.get("job_id") != "terrain-2059d-205ac" or
+        # The unversioned route remains the exact legacy Master74 contract.
+        # Other shards must opt into the separately checked v2 identity.
+        identity = candidate.get("carried_registered_identity")
+        if isinstance(identity, dict) and "contract_version" in identity:
+            if identity["contract_version"] != CARRIED_TERRAIN_V2:
+                raise ValueError("unknown carried Terrain identity contract")
+        elif (job.get("job_id") != "terrain-2059d-205ac" or
                 selected != {"205a3", "205a4"} or len(full) != 16 or
                 len(carried) != 14 or fallback or
-                not isinstance(candidate.get("carried_registered_identity"), dict)):
+                not isinstance(identity, dict)):
             raise ValueError("carried selection differs from the reviewed master74 two-new/fourteen-carried scope")
     elif candidate.get("carried_registered_identity"):
         raise ValueError("carried identity has no registered siblings")
@@ -104,6 +111,8 @@ def validate_carried_registered_identity(root, candidate, job, rows, review):
     if not carried:
         return
     identity = candidate["carried_registered_identity"]
+    if isinstance(identity, dict) and identity.get("contract_version") == CARRIED_TERRAIN_V2:
+        return validate_carried_registered_identity_v2(root, candidate, job, rows, review)
     evidence = review.get("standalone_selection", {})
     if not same_json(identity, evidence.get("carried_registered_identity")):
         raise ValueError("review carried identity differs from candidate")
@@ -171,6 +180,107 @@ def validate_carried_registered_identity(root, candidate, job, rows, review):
         bindings[asset] = frame
     if identity.get("frame_bindings_sha256") != binding_digest(bindings):
         raise ValueError("carried complete frame digest differs")
+
+
+def validate_carried_registered_identity_v2(root, candidate, job, rows, review):
+    """Opt-in multi-record identity, not a new approval of registered artwork.
+
+    Record hashes use canonical JSON (sorted keys, compact separators), as does
+    binding_digest. Each descriptor names a WHOLE prior registration, even when
+    only some of its assets are carried by this shard. Optional-field presence,
+    raw routes and policies are part of each exact current frame binding.
+    """
+    selection = standalone_selection(candidate, job, rows)
+    identity = candidate["carried_registered_identity"]
+    if (selection is None or identity.get("contract_version") != CARRIED_TERRAIN_V2 or
+            set(identity) != {"contract_version", "baseline", "provenance", "frames",
+                              "frame_bindings_sha256", "registration_records"} or
+            not same_json(identity, review.get("standalone_selection", {}).get("carried_registered_identity"))):
+        raise ValueError("versioned carried identity or independent review differs")
+    carried = set(selection["carried_registered_assets"])
+    if identity.get("baseline", {}).get("path") != "hd.json" or identity.get("provenance", {}).get("path") != "provenance.json":
+        raise ValueError("carried v2 requires the exact current canonical pair")
+    manifest = receipt_json(root, identity["baseline"])
+    active = proposal_frames(manifest)
+    require_standalone_membership(manifest, carried)
+    if (set(rows) & set(active) or set(selection["original_fallback_assets"]) & set(active)
+            or not carried <= set(active)):
+        raise ValueError("carried v2 selected/fallback/current registration partition differs")
+    records = identity["frames"]
+    if not isinstance(records, dict) or set(records) != carried:
+        raise ValueError("carried v2 frame membership differs")
+    # Authenticate the full original shard, including fallback. A current HD
+    # sequence declaration alone cannot turn a non-Terrain animation into one.
+    pictures, payloads = authentic_terrain_inventory(root, job)
+    targets = {target["asset"]: target for target in job["targets"]}
+    additions = receipt_json(root, identity["provenance"]).get("reviewed_sequence_additions", [])
+    descriptors = identity["registration_records"]
+    if not isinstance(additions, list) or not isinstance(descriptors, list) or not descriptors:
+        raise ValueError("carried v2 needs actual prior registration records")
+    accepted_by_index = {}
+    for descriptor in descriptors:
+        if (not isinstance(descriptor, dict) or set(descriptor) != {
+                "registration_record_index", "registration_record_sha256", "assets",
+                "frame_bindings_sha256", "accepted_runtime_qa"}):
+            raise ValueError("invalid carried v2 registration descriptor")
+        index = descriptor["registration_record_index"]
+        if type(index) is not int or not 0 <= index < len(additions) or index in accepted_by_index:
+            raise ValueError("unsafe or duplicate carried v2 registration index")
+        registered = additions[index]
+        if not isinstance(registered, dict) or descriptor["registration_record_sha256"] != binding_digest(registered):
+            raise ValueError("carried v2 prior registration record changed")
+        assets = asset_list(registered.get("assets"), "prior registered assets")
+        if (not assets or asset_list(descriptor["assets"], "carried v2 record assets") != assets or
+                type(registered.get("frames")) is not int or registered["frames"] != len(assets) or
+                not assets <= set(active) or not assets & carried):
+            raise ValueError("carried v2 prior registration asset set differs")
+        receipt = descriptor["accepted_runtime_qa"]
+        if not isinstance(receipt, dict) or receipt.get("path") != registered.get("runtime_qa"):
+            raise ValueError("carried v2 receipt is not the actual registered runtime QA")
+        accepted = receipt_json(root, receipt)
+        measurements = accepted.get("frames", [])
+        if not isinstance(measurements, list) or any(not isinstance(m, dict) for m in measurements):
+            raise ValueError("invalid prior carried v2 runtime frames")
+        measured = {m.get("asset"): m for m in measurements}
+        digest = binding_digest({asset: active[asset] for asset in assets})
+        if (accepted.get("diagnostics") != [] or len(measured) != len(measurements) or set(measured) != assets or
+                any(value != digest for value in [registered.get("frame_bindings_sha256"),
+                    descriptor["frame_bindings_sha256"], accepted.get("frame_bindings_sha256")])):
+            raise ValueError("carried v2 full registered frame map/runtime QA differs")
+        accepted_by_index[index] = (assets, accepted, measured)
+    used, bindings = set(), {}
+    for asset in sorted(carried):
+        record, frame, target = records[asset], active[asset], targets[asset]
+        if (not isinstance(record, dict) or set(record) != {"frame_binding", "source_sha256", "raw_sha256", "registration_record_index"}
+                or not same_json(record["frame_binding"], frame)):
+            raise ValueError(f"carried v2 exact native binding/policy differs: {asset}")
+        index = record["registration_record_index"]
+        if type(index) is not int or index not in accepted_by_index or asset not in accepted_by_index[index][0]:
+            raise ValueError(f"carried v2 frame names a foreign registration: {asset}")
+        used.add(index)
+        if (type(frame.get("frame")) is not int or frame["frame"] != 0 or
+                type(frame.get("logical_width")) is not int or type(frame.get("logical_height")) is not int or
+                not same_json([frame["logical_width"], frame["logical_height"]], target["logical_canvas"]) or
+                not same_json(list(pictures[asset].size), target["logical_canvas"]) or
+                not same_json(frame.get("origin"), [0, 0]) or not same_json(target.get("origin"), [0, 0]) or
+                frame.get("source_sha256") != target["source_sha256"] or record["source_sha256"] != target["source_sha256"]):
+            raise ValueError(f"carried v2 authentic native Source differs: {asset}")
+        validate_frame_policy(frame, payloads[asset])
+        accepted, measurement = accepted_by_index[index][1], accepted_by_index[index][2][asset]
+        masks = measurement.get("hd_masks", [])
+        if (measurement.get("source_sha256") != frame["source_sha256"] or
+                not same_json(measurement.get("logical_canvas"), target["logical_canvas"]) or
+                not isinstance(masks, list) or len(masks) != 4 or
+                any(not isinstance(m, dict) or type(m.get("scale")) is not int for m in masks) or
+                {m["scale"] for m in masks} != {1, 2, 3, 4}):
+            raise ValueError(f"carried v2 accepted Source/scales differ: {asset}")
+        accepted_raw = accepted.get("artwork_sha256", {}).get(frame["file"])
+        if (re.fullmatch(r"[0-9a-f]{64}", str(accepted_raw)) is None or record["raw_sha256"] != accepted_raw or
+                hashlib.sha256(contained(root, frame["file"]).read_bytes()).hexdigest() != accepted_raw):
+            raise ValueError(f"carried v2 raw artwork changed: {asset}")
+        bindings[asset] = frame
+    if used != set(accepted_by_index) or identity["frame_bindings_sha256"] != binding_digest(bindings):
+        raise ValueError("carried v2 unused record or complete carried digest differs")
 
 
 def receipt_json(root, receipt):
