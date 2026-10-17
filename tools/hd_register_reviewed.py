@@ -320,6 +320,140 @@ def contained(root, relative):
     return path
 
 
+def approved_catalog_only_retained_evidence(root, project, declaration, rows, qa):
+    """Unused catalog pictures need real intrinsic review, without an invented scene."""
+    if len(rows) != 1:
+        raise ValueError("catalog-only retained review needs one complete picture")
+    asset, frame = next(iter(rows.items()))
+    trace = receipt_json(root, declaration.get("catalog_only_source_trace"))
+    counts = trace.get("base_enemy_source_counts", {})
+    if (trace.get("status") != "CLOSED_BOUNDED_SOURCE_TRACE_NO_KNOWN_ORIGINAL_RUNTIME_CALLER_INTRINSIC_ONLY"
+            or trace.get("asset") != asset or type(counts.get("matching_names_or_art_frame_intervals")) is not int
+            or counts["matching_names_or_art_frame_intervals"] != 0):
+        raise ValueError("catalog-only review lacks the exact no-caller Source trace")
+    libraries = trace.get("original_library_scan", [])
+    if not isinstance(libraries, list) or len(libraries) != 4:
+        raise ValueError("catalog-only trace needs all four original sprite libraries")
+    source = trace.get("Source", {})
+    source_path = Path(source.get("path", ""))
+    data_roots = [data for data in [project / "data", project.parent / "data"]
+                  if source_path.is_absolute() and source_path.is_relative_to(data)
+                  and all(row.get("original_library", {}).get("path") == str(data / "misc" / f"SPRITE{game}_ITM")
+                          for game, row in enumerate(libraries, 1))]
+    if len(data_roots) != 1:
+        raise ValueError("catalog-only Source and four sprite libraries must bind one approved data root")
+    data = data_roots[0]
+    entries = [line.split() for line in (data / "INDEX").read_text().splitlines()]
+    names = {Path(parts[2]).name: int(parts[0], 16) for parts in entries if len(parts) == 3}
+    if any(f"{edge}G{game}TILES" not in names for edge in ["START", "END"] for game in range(1, 5)):
+        raise ValueError("catalog-only trace lacks original Terrain category boundaries")
+    if any(names[f"STARTG{game}TILES"] < int(asset, 16) < names[f"ENDG{game}TILES"] for game in range(1, 5)):
+        raise ValueError("catalog-only non-Terrain scope cannot approve original Terrain")
+    category_job = receipt_json(root, trace.get("category_authority"))
+    if (not isinstance(trace.get("category"), str) or trace["category"] == "Terrain"
+            or category_job.get("category") != trace["category"]
+            or declaration.get("catalog_only_source_category") != trace["category"]
+            or asset not in {target.get("asset") for target in category_job.get("targets", [])}):
+        raise ValueError("catalog-only original non-Terrain category proof differs")
+    source_path = next((data / parts[2] for parts in entries
+                        if len(parts) == 3 and int(parts[0], 16) == int(asset, 16)), None)
+    if (source_path is None or source.get("path") != str(source_path)
+            or hashlib.sha256(source_path.read_bytes()).hexdigest() != frame["source_sha256"]
+            or source.get("sha256") != frame["source_sha256"]
+            or names.get(trace.get("name")) != int(asset, 16)):
+        raise ValueError("catalog-only trace differs from the authentic Source picture")
+    traced = proposal_frames({"sequences": [trace["full_candidate_native_sequence"]]})
+    if set(traced) != {asset} or not same_json(dict(traced[asset], file=frame["file"]), frame):
+        raise ValueError("catalog-only Source trace belongs to another complete native frame")
+    total = 0
+    for game, row in enumerate(libraries, 1):
+        path = data / "misc" / f"SPRITE{game}_ITM"
+        payload = path.read_bytes()
+        recorded = row.get("original_library", {})
+        if (len(payload) % 528 or recorded.get("path") != str(path)
+                or hashlib.sha256(payload).hexdigest() != recorded.get("sha256")
+                or type(row.get("records")) is not int or row["records"] != len(payload) // 528
+                or row.get("target_intersections") != []):
+            raise ValueError("catalog-only original sprite Source trace changed")
+        total += len(payload) // 528
+        for offset in range(0, len(payload), 528):
+            record = payload[offset:offset + 528]
+            name = record[:16].split(b"\0", 1)[0].decode()
+            base = names.get(name)
+            frames = max(1, int.from_bytes(record[44:48], "little", signed=True))
+            if base is not None and base <= int(asset, 16) < base + frames:
+                raise ValueError("catalog-only picture has an original sprite caller")
+    if (type(counts.get("libraries")) is not int or counts["libraries"] != 4
+            or type(counts.get("records")) is not int or counts["records"] != total):
+        raise ValueError("catalog-only original Source counts differ")
+    named = trace.get("direct_named_native_Rust_search", {})
+    sources = named.get("source_files", [])
+    if (named.get("matches") != [] or {q.get("path") for q in sources}
+            != {str(p) for p in (project / "src").rglob("*.rs")}):
+        raise ValueError("catalog-only named native caller trace is incomplete")
+    pattern = re.compile(rf"{re.escape(trace['name'])}|\b(?:0x)?{asset}\b|\b{int(asset, 16)}\b", re.I)
+    for source in sources:
+        payload = Path(source["path"]).read_bytes()
+        if hashlib.sha256(payload).hexdigest() != source.get("sha256") or pattern.search(payload.decode()):
+            raise ValueError("catalog-only native caller Source changed")
+    peer = receipt_json(root, declaration.get("catalog_only_independent_material"))
+    contract = declaration.get("catalog_only_material_contract", {})
+    artist = peer.get("actual_artist", peer.get("original_generated_artist"))
+    preparer = peer.get("hybrid_trial_preparer", peer.get("hybrid_preparer"))
+    independent = peer.get("different_from_artist_and_preparer",
+                           peer.get("independent_from_original_generated_artist_and_hybrid_preparer"))
+    scale_records = peer.get("scales", [])
+    qualified = (peer.get("qualified_complete1") is True and peer.get("all4_scales_qualified") is True
+                 and type(peer.get("complete_native_frames")) is int and peer["complete_native_frames"] == 1
+                 and same_json(peer.get("native_scales"), [1, 2, 3, 4]))
+    # Older complete-picture peers state their whole-material verdict explicitly,
+    # followed by four independently authenticated native-scale decisions.
+    if isinstance(peer.get("whole_disposition"), str) and peer["whole_disposition"].partition(":")[0] == "QUALIFIED":
+        qualified = (len(scale_records) == 4 and [s.get("scale") for s in scale_records] == [1, 2, 3, 4]
+                     and all(type(s.get("scale")) is int and s.get("all_selected_exact_independent_SourceNx") is True
+                             and s.get("all_outside_index_RGB_exact_plain") is True
+                             and type(s.get("selected_samples")) is int
+                             and s["selected_samples"] == len(frame["original_detail_cells"]) * s["scale"] ** 2
+                             for s in scale_records))
+    status_words = set(re.split(r"[^A-Z0-9]+", str(peer.get("status", "")).upper()))
+    if (not status_words.intersection({"QUALIFIED", "PASS"})
+            or status_words.intersection({"NOT", "UNQUALIFIED", "HOLD", "PENDING", "FAIL", "FAILED"})
+            or any(re.fullmatch(r"HOLD[1-9][0-9]*", word) for word in status_words)
+            or type(peer.get("held_frames", 0)) is not int or peer.get("held_frames", 0) != 0):
+        qualified = False
+    if (not qualified or peer.get("asset") != asset or independent is not True
+            or not all(isinstance(value, str) and value for value in [peer.get("reviewer"), artist, preparer])
+            or peer["reviewer"] in [artist, preparer]
+            or contract.get("status") != "qualified"
+            or contract.get("scope") != "complete_native_picture_intrinsic_all_scales"
+            or contract.get("asset") != asset or contract.get("reviewer") != peer["reviewer"]
+            or contract.get("artist") != artist or contract.get("preparer") != preparer
+            or type(contract.get("qualified_frames")) is not int or contract["qualified_frames"] != 1
+            or type(contract.get("held_frames")) is not int or contract["held_frames"] != 0
+            or type(contract.get("retained_cell_count")) is not int
+            or contract["retained_cell_count"] != len(frame["original_detail_cells"])
+            or not same_json(contract.get("native_frame"), frame)
+            or not same_json(contract.get("retained_cells"), frame["original_detail_cells"])
+            or not same_json(contract.get("native_scales"), [1, 2, 3, 4])):
+        raise ValueError("catalog-only review lacks independent qualified whole material evidence")
+    reviewed = proposal_frames(receipt_json(root, peer.get("candidate")))
+    if set(reviewed) != {asset}:
+        raise ValueError("catalog-only material frame membership differs")
+    alias = dict(reviewed[asset], file=frame["file"])
+    raw = peer.get("raw", peer.get("untouched_v3_raw", {}))
+    cells = peer.get("exact_original_detail_cells", peer.get("exact_retained_Original_cells"))
+    if (not same_json(alias, frame) or raw.get("sha256") != qa["artwork_sha256"][frame["file"]]
+            or not same_json(cells, frame["original_detail_cells"])):
+        raise ValueError("catalog-only material source, raw or full native frame differs")
+    measured = receipt_json(root, declaration.get("catalog_only_actual_allscale_QA"))
+    frames = measured.get("frames", [])
+    if (measured.get("diagnostics") != [] or type(measured.get("validated_frames")) is not int
+            or measured["validated_frames"] != 1 or len(frames) != 1 or not same_json(frames, qa["frames"])
+            or [mask["scale"] for mask in frames[0]["hd_masks"]] != [1, 2, 3, 4]
+            or any(type(mask["scale"]) is not int for mask in frames[0]["hd_masks"])):
+        raise ValueError("catalog-only actual all-scale evidence differs")
+
+
 def approved_job(root, identity, project):
     directory = contained(root, Path("jobs") / identity)
     if directory.parent != (root / "jobs").resolve():
@@ -348,12 +482,20 @@ def approved_job(root, identity, project):
                         if frame.get("original_detail_cells")}
     if retained_details:
         declaration = review.get("retained_original_detail_review", {})
+        catalog_only = declaration.get("hybrid_review_scope") == "catalog_only_no_known_original_runtime_caller"
+        if catalog_only and selection is not None:
+            raise ValueError("catalog-only scope cannot replace contextual Terrain approval")
+        qualified_scope = declaration.get("hybrid_allscale_and_genuine_context_independent_review") is True
+        if catalog_only:
+            qualified_scope = (declaration.get("hybrid_allscale_and_genuine_context_independent_review") is False
+                               and declaration.get("catalog_only_no_original_runtime_caller") is True
+                               and declaration.get("catalog_only_independent_whole_material_and_allscale_review") is True)
         if (not same_json(declaration.get("cells_by_asset"), retained_details)
                 or declaration.get("retained_original_not_generated_HD") is not True
                 or declaration.get("policy_version") != "retained-original-details-v2-painted0255"
                 or not same_json(declaration.get("painted_Source_palette_domain"), [0, 255])
                 or declaration.get("functional_palette_effects_are_retained_Original") is not True
-                or declaration.get("hybrid_allscale_and_genuine_context_independent_review") is not True
+                or not qualified_scope
                 or declaration.get("frame_bindings_sha256") != digest):
             raise ValueError("retained Original detail provenance and exact hybrid review are required")
     qa_path = contained(root, review["runtime_qa"])
@@ -406,6 +548,8 @@ def approved_job(root, identity, project):
         for asset, frame in rows.items():
             validate_hd_frame(root, frame, payloads[asset], pictures[asset])
         approved_standalone_evidence(root, selection, review, rows, qa)
+    elif retained_details and catalog_only:
+        approved_catalog_only_retained_evidence(root, project, declaration, rows, qa)
     return candidate, review, rows
 
 
