@@ -1,6 +1,8 @@
-# HD coordinator checkpoint — 13 October 2026
+# HD coordinator checkpoint — 17 October 2026
 
-The external and assembled shared runtime pack contains **5,341 reviewed original picture frames / 3,514 complete sequences**, including **4,243 Terrain pictures**. **412 of 5,753 original pictures remain**: 292 Terrain, 79 enemies/ground objects, 35 UI/other and six bosses. The sole addition is Boss300a0, a reviewed hybrid with three retained Original cells `(22,39)`, `(55,15)`, `(55,16)`; those cells are not generated HD. Its untouched raw, 56×40 native canvas, zero origin and absent crop remain exact, as do all earlier 5,340 bindings and the full 3,513-header prefix. Actual assembled data contains **9,325 files / 8,155,307,901 bytes**. Root’s actual Q37 CLI validates all 5,341 frames with zero rejects and 45 mods/one override (`e7a36e2b`). Git publication and this pack’s own native Windows completion remain pending at this freeze. Historical386e artwork/context measurements remain distinct from the compiled API-B runtime; old plain300a0 and other pending art HOLDs are unchanged.
+The external and assembled shared runtime pack contains **5,378 reviewed original picture frames / 3,548 complete sequences**, including **4,274 Terrain pictures**. **375 of 5,753 original pictures remain**: 261 Terrain, 79 enemies/ground objects, 33 UI/other and two bosses. The 37 additions comprise 30 selected Terrain pictures, Terrain 20583, UI/other 3009f and 300a4, and the complete four-frame DSHP21G3 family 300a8–300ab. Seven hybrid frames explicitly retain 37 Original logical cells; those cells are not generated HD. All previous 5,341 bindings and the full 3,514-header prefix remain exact, as do native canvases, origins, crops and optional-field presence. The assembled data contains **9,332 files / 8,171,723,875 bytes**. Actual CLI validation passes all 5,378 frames with zero rejects and 45 mods/one override (`e1cb3b4a`). Source18 and both bundled binaries remain unchanged at API-B. Historical386e artwork/context measurements retain their own epoch. The 15 road tiles remain held; pending 200ba, further Tank work and the new 2039a context are outside this append. Git publication and native Windows execution for 5,378 remain pending; the 5,341 Windows workflow is still packaging at this freeze. No complete-HD claim is made.
+
+Preserved earlier 17 October 2026 document-freeze observation: The external and assembled shared runtime pack contains **5,341 reviewed original picture frames / 3,514 complete sequences**, including **4,243 Terrain pictures**. **412 of 5,753 original pictures remain**: 292 Terrain, 79 enemies/ground objects, 35 UI/other and six bosses. The sole addition is Boss300a0, a reviewed hybrid with three retained Original cells `(22,39)`, `(55,15)`, `(55,16)`; those cells are not generated HD. Its untouched raw, 56×40 native canvas, zero origin and absent crop remain exact, as do all earlier 5,340 bindings and the full 3,513-header prefix. Actual assembled data contains **9,325 files / 8,155,307,901 bytes**. Root’s actual Q37 CLI validates all 5,341 frames with zero rejects and 45 mods/one override (`e7a36e2b`). Git publication and this pack’s own native Windows completion remain pending at this freeze. Historical386e artwork/context measurements remain distinct from the compiled API-B runtime; old plain300a0 and other pending art HOLDs are unchanged.
 
 Preserved earlier 17 October 2026 document-freeze observation: The external and assembled shared runtime pack contains **5,340 reviewed original picture frames / 3,513 complete sequences**, including **4,243 Terrain pictures**. **413 of 5,753 original pictures remain**: 292 Terrain, 79 enemies/ground objects, 35 UI/other and seven bosses. The sole new binding is Terrain10511, a reviewed hybrid with four explicitly retained Original cells `(16,3)`, `(17,4)`, `(17,5)` and `(18,6)`; those cells are not generated HD. Its untouched generated raw, 32×32 canvas, zero origin and absent crop remain exact. Every earlier 5,339 binding and the full 3,512-header prefix remain exact. Actual assembled data contains **9,324 files / 8,153,633,623 bytes**. Root’s actual Q36 CLI validates all 5,340 frames with zero rejects and 45 mods/one override (`db4bfd1c`). Git publication and this pack’s own native Windows result remain pending at this freeze. Published 5,339 asset commit `1bc0a9ce` has an actual successful native Windows run; the separate `9015a6c9` source-change run is pending at this freeze. The old plain10511 HOLD and coarse retained-contact/fine-water/stronger-relief/mixed-neighbor qualifications remain literal.
 
@@ -39,16 +41,16 @@ Published runtime history: The assembled bundled Linux/Windows data contains **3
 | Category | Registered / original pictures |
 | --- | ---: |
 | Player banking | 21 / 21 |
-| Bosses | 243 / 249 |
+| Bosses | 247 / 249 |
 | Enemies and ground objects | 340 / 419 |
 | Player and enemy projectiles | 51 / 51 |
 | Explosions and effects | 281 / 281 |
 | Equipment and pickups | 47 / 47 |
-| Terrain | 4,243 / 4,535 |
-| Menus, portraits, HUD and other pictures | 115 / 150 |
-| Total | 5,341 / 5,753 |
+| Terrain | 4,274 / 4,535 |
+| Menus, portraits, HUD and other pictures | 117 / 150 |
+| Total | 5,378 / 5,753 |
 
-All 6,449 catalog entries and 5,753 pictures were audited with zero HD source/hash/canvas/ID errors. **412 pictures await registration**. Picture ledger counts are {'registered': 5321, 'inprogress': 142, 'renderreachable': 20, 'candidate': 268, 'missing': 2}; candidate status is not art approval or live occurrence. All 307 native AGX/font records remain separately `native_preserved`, with no generated HD coverage. Unused/destroyed pictures remain required.
+All 6,449 catalog entries and 5,753 pictures were audited with zero HD source/hash/canvas/ID errors. **375 pictures await registration**. Picture ledger counts are {'registered': 5358, 'inprogress': 125, 'renderreachable': 20, 'candidate': 248, 'missing': 2}; candidate status is not art approval or live occurrence. All 307 native AGX/font records remain separately `native_preserved`, with no generated HD coverage. Unused/destroyed pictures remain required.
 
 ## Historical Stage2 API 1,148 output proof
 

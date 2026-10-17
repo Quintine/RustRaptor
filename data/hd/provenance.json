@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5341 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5378 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -20799,6 +20799,108 @@
       "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-300a0-current386e-exact3-hybrid-independent-material-peer-20261017-v1/INDEPENDENT-COMPLETE1-300A0-CURRENT386E-EXACT3-ORIGINAL-DETAIL-HYBRID-WHOLE-MATERIAL-REVIEW.json",
       "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-300a0-current386e-exact3-hybrid-independent-material-peer-20261017-v1/INDEPENDENT-COMPLETE1-300A0-CURRENT386E-EXACT3-ORIGINAL-DETAIL-HYBRID-WHOLE-MATERIAL-REVIEW.json",
       "frame_bindings_sha256": "bd8fe816dcee156135dea86c4c3bdbab05bb9766a59e7de22fec31618a82a4be"
+    },
+    {
+      "job_id": "coordinator-terrain30-qualified-excluding-road15-post5341-currentB-20261017-v1",
+      "assets": [
+        "2035d",
+        "2035e",
+        "2035f",
+        "20360",
+        "20361",
+        "20362",
+        "20365",
+        "20366",
+        "20367",
+        "20368",
+        "20369",
+        "2036a",
+        "2036b",
+        "2036c",
+        "2036e",
+        "2036f",
+        "20370",
+        "20373",
+        "20375",
+        "20376",
+        "20377",
+        "20378",
+        "20379",
+        "2041f",
+        "20423",
+        "20425",
+        "20426",
+        "20427",
+        "20428",
+        "2042b"
+      ],
+      "frames": 30,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-terrain30-qualified-excluding-road15-post5341-currentB-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-terrain30-qualified-excluding-road15-post5341-currentB-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-terrain30-qualified-excluding-road15-post5341-currentB-20261017-v1/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-remaining-first14-2035d-2036c-independent-whole-source-material-peer-20261014/CLOSED-DIFFERENT-EXACT14-FIRST2035D-2036C-SOURCE-FULLRAW-NATIVE-MATERIAL-REVIEW.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-remaining-first14-2035d-2036c-independent-whole-source-material-peer-20261014/CLOSED-DIFFERENT-EXACT14-FIRST2035D-2036C-SOURCE-FULLRAW-NATIVE-MATERIAL-REVIEW.json",
+      "frame_bindings_sha256": "6519191333e4cf04497573c01f05da3f98e13519d442f1d0433ec49782140ebe"
+    },
+    {
+      "job_id": "coordinator-3009f-exact3-Original-catalog-native-post5341-currentB-20261017-v1",
+      "assets": [
+        "3009f"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-3009f-exact3-Original-catalog-native-post5341-currentB-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-3009f-exact3-Original-catalog-native-post5341-currentB-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-3009f-exact3-Original-catalog-native-post5341-currentB-20261017-v1/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-ui3009f-exact3-finalB-independent-whole-hybrid-material-peer-20261017-v1/INDEPENDENT-COMPLETE1-3009F-EXACT3-CURRENTB-WHOLE-HYBRID-MATERIAL-REVIEW.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-ui3009f-exact3-finalB-independent-whole-hybrid-material-peer-20261017-v1/INDEPENDENT-COMPLETE1-3009F-EXACT3-CURRENTB-WHOLE-HYBRID-MATERIAL-REVIEW.json",
+      "frame_bindings_sha256": "01b7b748cbc676e422a5594b7f5bb4c35d8f28a3b0c8b5d65ae78fc558169c94"
+    },
+    {
+      "job_id": "coordinator-300a4-exact2-Original-catalog-native-post5341-currentB-20261017-v1",
+      "assets": [
+        "300a4"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-300a4-exact2-Original-catalog-native-post5341-currentB-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-300a4-exact2-Original-catalog-native-post5341-currentB-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-300a4-exact2-Original-catalog-native-post5341-currentB-20261017-v1/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-300a4-v3-exact2-currentB-independent-whole-material-peer-20261017/INDEPENDENT-COMPLETE1-300A4-V3-EXACT2-CURRENTB-WHOLE-SOURCE-MATERIAL-REVIEW.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-300a4-v3-exact2-currentB-independent-whole-material-peer-20261017/INDEPENDENT-COMPLETE1-300A4-V3-EXACT2-CURRENTB-WHOLE-SOURCE-MATERIAL-REVIEW.json",
+      "frame_bindings_sha256": "b20f4dfd42d8d48bece92af34bb9423d33ff89755d85c2fb17ce81c44d4cd752"
+    },
+    {
+      "job_id": "coordinator-dshp21g3-complete4-exact30-Original-native-post5341-B-compatible-20261017-v1",
+      "assets": [
+        "300a8",
+        "300a9",
+        "300aa",
+        "300ab"
+      ],
+      "frames": 4,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-dshp21g3-complete4-exact30-Original-native-post5341-B-compatible-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-dshp21g3-complete4-exact30-Original-native-post5341-B-compatible-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-dshp21g3-complete4-exact30-Original-native-post5341-B-compatible-20261017-v1/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-dshp21g3-source30-current386e-independent-whole-hybrid-material-peer-20261017-v1/INDEPENDENT-COMPLETE4-DSHP21G3-CURRENT386E-SOURCE30-HYBRID-WHOLE-MATERIAL-REVIEW.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-dshp21g3-source30-current386e-independent-whole-hybrid-material-peer-20261017-v1/INDEPENDENT-COMPLETE4-DSHP21G3-CURRENT386E-SOURCE30-HYBRID-WHOLE-MATERIAL-REVIEW.json",
+      "frame_bindings_sha256": "af21a6d6bee9c33b82a299c6d0289d66df06c66e3029c55abc8359080be2b24c"
+    },
+    {
+      "job_id": "coordinator-20583-exact2-Original-native-post5341-B-compatible-20261017-v1",
+      "assets": [
+        "20583"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-20583-exact2-Original-native-post5341-B-compatible-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-20583-exact2-Original-native-post5341-B-compatible-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-20583-exact2-Original-native-post5341-B-compatible-20261017-v1/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies-seven-hardware-current386e-independent-hybrid-material-review-20261017/CLOSED-DIFFERENT-ACTUAL7-CURRENT386E-RETAINED-ORIGINAL-HYBRID-SOURCE-MATERIAL-QUALIFIED6-HOLD1.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies-seven-hardware-current386e-independent-hybrid-material-review-20261017/CLOSED-DIFFERENT-ACTUAL7-CURRENT386E-RETAINED-ORIGINAL-HYBRID-SOURCE-MATERIAL-QUALIFIED6-HOLD1.json",
+      "frame_bindings_sha256": "03671620fffda52806cb8a682a10ea2883ae4d1ad12e0ee45267d554396ed9e6"
     }
   ],
   "jobs": [
@@ -20898,8 +21000,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5341,
-  "registration_updated_at_utc": "2026-10-17T06:28:02.922370+00:00",
+  "registered_frame_count": 5378,
+  "registration_updated_at_utc": "2026-10-17T07:35:14.132773+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,

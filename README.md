@@ -84,8 +84,9 @@ See [repository layout](docs/repository.md).
 The engine supports original and 2×/3×/4× crisp scaling, plus an optional HD
 artwork setting. Bundled mods have SD/HD artwork; the reviewed base-game pack
 covers a complete light-player banking sequence and selected enemies, boss,
-equipment, projectiles, effects and terrain: 5,341 of 5,753 original pictures
-are now included. [The HD backlog](docs/hd-backlog.md) records
+equipment, projectiles, effects and terrain: 5,378 of 5,753 original pictures
+are now included, leaving 375. Seven newly included hybrid frames retain 37
+explicit Original-detail cells; these cells are not generated HD. [The HD backlog](docs/hd-backlog.md) records
 the remaining artwork and drafts awaiting review.
 
 First-mission wins at difficulties 1 and 2, a complete 1,889-step native demo

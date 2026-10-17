@@ -1,20 +1,20 @@
 # Current checkpoint — 17 October 2026
 
-The self-contained game now includes **5,341 HD pictures / 3,514 sequences**,
-including **4,243 terrain pictures**. Its **9,325 data files / 8,155,307,901 bytes**
-pass complete manifest verification. Boss `300a0` is the latest reviewed hybrid:
-three explicitly listed logical cells retain Original detail. All previous 5,340
-bindings remain exact. Actual CLI validation passes all 5,341 frames with zero
-rejects and all 45 mods with one explicit override.
+The self-contained game now includes **5,378 HD pictures / 3,548 sequences**,
+including **4,274 terrain pictures**. Its **9,332 data files / 8,171,723,875 bytes**
+pass complete manifest verification. The 37 new frames comprise 30 selected
+terrain pictures, Terrain 20583, UI/other 3009f and 300a4, and complete DSHP21G3
+300a8–300ab. Seven hybrid frames retain 37 explicit Original logical cells;
+these cells are not generated HD. All previous 5,341 bindings and 3,514 complete
+headers remain exact. Actual CLI validation passes all 5,378 frames with zero rejects and 45 mods/one override (`e1cb3b4a`).
 
-**412 original pictures remain:** 292 terrain, 79 enemies/ground objects,
-35 UI/other and six bosses. The requested 97-picture batch is already published
-as `a45abc58`. Asset commit `1bc0a9ce` passed native Windows CI with 341 tests;
-source commit `9015a6c9` passed its separate run with 353 tests. Both had zero
-failures and 26 ignored. These historical results do not cover the current API
-or artwork append. Current receipts are in
-`.reference/hd-root-next-publication-after5340/`; immutable intake is
-`handoff-5341-20261017`.
+**375 original pictures remain:** 261 terrain, 79 enemies/ground objects,
+33 UI/other and two bosses. The 15 road tiles remain held; pending 200ba, further Tank work
+and the new 2039a context are outside this append. Current receipts are in
+`.reference/hd-root-next-publication-after5341/`; immutable intake is
+`handoff-5378-20261017`. Publication and native Windows 5,378 execution remain
+pending. Windows 5,341 is still packaging at this freeze; earlier Windows results
+retain their original source and artwork scopes.
 
 The included Linux and Windows runtimes now expose active script difficulty and
 current enemy snapshots. A finite 16,384-property Rhai map limit fixes documented
@@ -23,12 +23,13 @@ limits remain unchanged. All 45 modding regression tests pass. Three actual 1080
 SDL captures (menu, S1 Wave 7, S3 Wave 9) match the previous binary byte for byte.
 Windows cross-build, PE imports and shared-data verification pass. This API
 revision passed its own native Windows CI at 5,340 frames: 360 tests passed,
-zero failed and 26 were ignored. The subsequent 5,341-frame artwork append
-has a separate CI observation; the 360-test result is not relabeled for it.
+zero failed and 26 were ignored. The subsequent 5,341 workflow is still packaging at this freeze; neither
+that workflow nor the 360-test result is a native Windows 5,378 execution claim.
 
-Iron Coast’s final retune is applied to the working packages: 14 scaled mission
+Iron Coast’s published retune (`c4a4d821`) covers 14 scaled mission
 schedules, five shared enemy AIs, 14 boss patterns and five weapons’ visual/audio
-feedback. The combined 45-package overlay passes resource validation and save
+feedback. Its 65 portable gameplay acceptance tests are published as
+`58723547`. The combined 45-package overlay passes resource validation and save
 pins; paid routes complete both stages at all four difficulties. Stage I Elite
 uses the documented loan and legitimately purchased repairs; earlier failing
 policies remain preserved. See `docs/iron-coast-retune.md` for counts and limits.
@@ -37,10 +38,9 @@ have been reviewed. The shop, mod diagnostics and mission selector remain
 readable, and the new versions appear correctly. These are presentation checks,
 not a claim of exhaustive human playtesting.
 
-HD continuation remains active. Four more boss frames have genuine World
-captures awaiting material review; unused-picture and retained-detail trials
-remain private. The terrain context sample found road-material seams, so those
-15 tiles remain held. No whole-remaster completion is claimed.
+HD continuation remains active. The four DSHP21G3 boss frames are now included;
+remaining unused-picture and retained-detail trials stay separate. Road-material
+seams keep 15 tiles held. No whole-remaster completion is claimed.
 
 # Earlier 5,339-frame checkpoint — retained historical observation
 
