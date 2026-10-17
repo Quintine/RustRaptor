@@ -15,6 +15,14 @@ Receipts for this one-picture append are in
 `.reference/hd-root-next-publication-after5339/`; immutable intake is
 `handoff-5340-20261017`.
 
+The included Linux and Windows runtimes now expose active script difficulty and
+current enemy snapshots. A finite 16,384-property Rhai map limit fixes documented
+queries failing on ordinary enemy groups; operation, command and 64 KiB saved-state
+limits remain unchanged. All 45 modding regression tests pass. Three actual 1080p
+SDL captures (menu, S1 Wave 7, S3 Wave 9) match the previous binary byte for byte.
+Windows cross-build, PE imports and shared-data verification pass; this source
+revision still needs its own native Windows CI result.
+
 Iron Coast retuning is active in `.reference/campaign-retune-20261017/`.
 The baseline covers all 27 original and 14 mod missions at all four difficulties.
 Mission waves, enemy movement, bosses and weapon presentation are being validated

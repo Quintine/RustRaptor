@@ -1056,6 +1056,259 @@ fn callback_arity_and_source_size_are_checked_before_activation() {
 }
 
 #[test]
+fn every_dispatched_hook_receives_the_active_world_difficulty() {
+    let hooks = [
+        ("base:sector_1_wave_1", "on_mission_start"),
+        ("base:sector_1_wave_1", "on_mission_end"),
+        ("base:sector_1_wave_1", "on_tick"),
+        ("base:probe", "on_spawn"),
+        ("base:probe", "on_tick"),
+        ("base:probe", "on_hit"),
+        ("base:probe", "on_death"),
+        ("base:projectile_forward_guns", "on_fire"),
+        ("base:energy", "on_pickup"),
+        ("base:energy", "on_use"),
+    ];
+    let callbacks = [
+        "on_mission_start", "on_mission_end", "on_tick", "on_spawn",
+        "on_hit", "on_death", "on_fire", "on_pickup", "on_use",
+    ];
+    let source = callbacks.iter().map(|hook| format!(
+        "fn {hook}(e,s,r) {{ s[\"{hook}\"] = e.difficulty; #{{commands:[],state:s}} }}"
+    )).collect::<Vec<_>>().join("\n");
+    for difficulty in 0..=3 {
+        let mut registry = base();
+        registry.apply(pack(json!({"enemies":[{
+            "id":"base:probe","name":"Probe","health":10,"speed":0,
+            "script":"difficulty.rhai"
+        }]})), "base").unwrap();
+        registry.missions.get_mut(&ContentId::from("base:sector_1_wave_1")).unwrap().script =
+            Some("difficulty.rhai".into());
+        registry.weapons.get_mut(&ContentId::from("base:projectile_forward_guns")).unwrap().script =
+            Some("difficulty.rhai".into());
+        registry.items.get_mut(&ContentId::from("base:energy")).unwrap().script =
+            Some("difficulty.rhai".into());
+        let mut runtime = ScriptRuntime::new();
+        runtime.add("base", "difficulty.rhai", &source).unwrap();
+        let pilot = Pilot { difficulty, ..Pilot::default() };
+        let mut world = World::new(&pilot.mission, &pilot, &registry).unwrap();
+        // Exercise the real dispatcher with explicit hook fixtures, including
+        // directly queued events. The common World snapshot must override an
+        // event-local value rather than relying on individual event producers.
+        world.events.extend(hooks.iter().map(|&(content, hook)| {
+            raptor_replica::simulation::HookEvent {
+                content: content.into(), hook, event: json!({"difficulty":99}),
+            }
+        }));
+        world.step(Input::default(), &registry, &mut runtime).unwrap();
+        for hook in callbacks {
+            assert_eq!(runtime.states["base/difficulty.rhai"][hook], difficulty,
+                "{hook} must observe active difficulty {difficulty}");
+        }
+    }
+}
+
+#[test]
+fn saved_pilot_difficulty_and_callback_state_rng_resume_together() {
+    let source = r#"fn on_tick(e,s,r) {
+        let n = if s.contains("n") { s.n + 1 } else { 1 };
+        #{commands:[],state:#{n:n,difficulty:e.difficulty,last:r[0]}}
+    }"#;
+    for difficulty in 0..=3 {
+        let mut registry = base();
+        registry.missions.get_mut(&ContentId::from("base:sector_1_wave_1")).unwrap().script =
+            Some("difficulty.rhai".into());
+        let mut pilot = Pilot { difficulty, ..Pilot::default() };
+        let mut runtime = ScriptRuntime::new();
+        runtime.add("base", "difficulty.rhai", source).unwrap();
+        let mut world = World::new(&pilot.mission, &pilot, &registry).unwrap();
+        for _ in 0..3 {
+            world.step(Input::default(), &registry, &mut runtime).unwrap();
+        }
+        pilot.merge_runtime_snapshot(&[], &runtime.states, &runtime.rng);
+        let dir = tempfile::tempdir().unwrap();
+        let path = dir.path().join("pilot.json");
+        pilot.save(&path).unwrap();
+        let saved = Pilot::load(&path, &registry, &[]).unwrap();
+        assert_eq!(saved.difficulty, difficulty);
+        let mut resumed_runtime = ScriptRuntime::new();
+        resumed_runtime.add("base", "difficulty.rhai", source).unwrap();
+        resumed_runtime.states = saved.script_state.clone();
+        resumed_runtime.rng = saved.script_rng.clone();
+        // Pilot saves recreate a mission; they do not store a live World.
+        // The next callback still continues script state/RNG and receives the
+        // difficulty restored into the new World by World::new.
+        let mut resumed_world = World::new(&saved.mission, &saved, &registry).unwrap();
+        resumed_world.step(Input::default(), &registry, &mut resumed_runtime).unwrap();
+        world.step(Input::default(), &registry, &mut runtime).unwrap();
+        assert_eq!(resumed_runtime.states, runtime.states);
+        assert_eq!(resumed_runtime.rng, runtime.rng);
+        assert_eq!(resumed_runtime.states["base/difficulty.rhai"]["n"], 4);
+        assert_eq!(resumed_runtime.states["base/difficulty.rhai"]["difficulty"], difficulty);
+    }
+}
+
+#[test]
+fn callback_actor_is_current_after_earlier_damage_move_and_despawn() {
+    let mut registry = base();
+    registry.apply(pack(json!({"enemies":[{
+        "id":"base:probe","name":"Probe","health":10,"speed":0,
+        "ground":true,"script":"actor.rhai"
+    }]})), "base").unwrap();
+    registry.missions.get_mut(&ContentId::from("base:sector_1_wave_1")).unwrap().script =
+        Some("actor.rhai".into());
+    registry.weapons.get_mut(&ContentId::from("base:projectile_forward_guns")).unwrap().script =
+        Some("actor.rhai".into());
+    let mut runtime = ScriptRuntime::new();
+    runtime.add("base", "actor.rhai", r#"
+        fn on_mission_start(e,s,r) {
+            s.mission_actor = e.actor;
+            #{commands:[],state:s}
+        }
+        fn on_fire(e,s,r) {
+            s.player_actor = e.actor;
+            #{commands:[],state:s}
+        }
+        fn on_spawn(e,s,r) {
+            s.live = e.actor;
+            s.live_entities = e.entities;
+            #{commands:[#{op:"damage",entity:e.entity,amount:7},
+                        #{op:"move",entity:e.entity,x:90,y:60}],state:s}
+        }
+        fn on_tick(e,s,r) {
+            if !e.contains("entity") { return #{commands:[],state:s}; }
+            s.queued_health = e.health;
+            s.queued_x = e.x;
+            s.current = e.actor;
+            #{commands:[#{op:"damage",entity:e.entity,amount:3}],state:s}
+        }
+        fn on_hit(e,s,r) {
+            if !s.contains("dead") {
+                s.queued_hit_health = e.health;
+                s.dead = e.actor;
+                return #{commands:[#{op:"despawn",entity:e.entity}],state:s};
+            }
+            s.removed = e.actor;
+            #{commands:[],state:s}
+        }
+    "#).unwrap();
+    let pilot = Pilot::default();
+    let mut world = World::new(&pilot.mission, &pilot, &registry).unwrap();
+    let entity = world.spawn(&ContentId::from("base:probe"), 20, 20, &registry).unwrap();
+    world.step(Input { fire: true, ..Input::default() }, &registry, &mut runtime).unwrap();
+    let state = &runtime.states["base/actor.rhai"];
+    assert_eq!(state["live"], state["live_entities"][0]);
+    assert_eq!(state["live"]["entity"], entity);
+    assert_eq!(state["live"]["ground"], true);
+    assert_eq!(state["live"]["health"], 10);
+    assert_eq!(state["queued_health"], 10);
+    assert_eq!(state["current"]["health"], 3);
+    assert_eq!(state["current"]["x"], 90);
+    assert_ne!(state["queued_x"], state["current"]["x"]);
+    // Both hits were queued before the first hit callback. The first callback
+    // sees the current zero health, then despawns; the second sees null.
+    assert_eq!(state["queued_hit_health"], 3);
+    assert_eq!(state["dead"]["health"], 0);
+    assert!(state.get("removed").is_some());
+    assert!(state.get("mission_actor").is_some());
+    assert!(state.get("player_actor").is_some());
+    assert_eq!(state["removed"], Value::Null);
+    assert_eq!(state["mission_actor"], Value::Null);
+    assert_eq!(state["player_actor"], Value::Null);
+    assert!(world.enemies.is_empty());
+}
+
+#[test]
+fn natural_death_callback_has_no_retired_actor() {
+    let mut registry = base();
+    registry.apply(pack(json!({"enemies":[{
+        "id":"base:probe","name":"Probe","health":10,"speed":0,
+        "script":"retired.rhai"
+    }]})), "base").unwrap();
+    let mut runtime = ScriptRuntime::new();
+    runtime.add("base", "retired.rhai", r#"fn on_death(e,s,r) {
+        #{commands:[],state:#{actor:e.actor,entity:e.entity}}
+    }"#).unwrap();
+    let pilot = Pilot::default();
+    let mut world = World::new(&pilot.mission, &pilot, &registry).unwrap();
+    let entity = world.spawn(&ContentId::from("base:probe"), 20, 20, &registry).unwrap();
+    world.apply_commands(&[Command::Damage { entity, amount:10 }], &registry).unwrap();
+    world.step(Input::default(), &registry, &mut runtime).unwrap();
+    assert_eq!(runtime.states["base/retired.rhai"]["entity"], entity);
+    assert_eq!(runtime.states["base/retired.rhai"]["actor"], Value::Null);
+    assert!(world.enemies.is_empty());
+}
+
+#[test]
+fn sixty_four_enemy_world_events_allow_documented_map_and_array_queries() {
+    for difficulty in 0..=3 {
+        let mut registry = base();
+        registry.apply(pack(json!({"enemies":[{
+            "id":"base:probe","name":"Probe","health":100,"speed":0,
+            "script":"dense-map.rhai"
+        }]})), "base").unwrap();
+        let mut runtime = ScriptRuntime::new();
+        runtime.add("base", "dense-map.rhai", r#"fn on_spawn(e,s,r) {
+            let n = if s.contains("n") { s.n + 1 } else { 1 };
+            #{commands:[],state:#{n:n,has_actor:e.contains("actor"),
+                enemies:e.entities.len,difficulty:e.difficulty,health:e.actor.health}}
+        }"#).unwrap();
+        let pilot = Pilot { difficulty, ..Pilot::default() };
+        let mut world = World::new(&pilot.mission, &pilot, &registry).unwrap();
+        for i in 0..64 {
+            world.spawn(&ContentId::from("base:probe"),
+                20 + i % 8 * 32, i / 8 * 10, &registry).unwrap();
+        }
+        world.step(Input::default(), &registry, &mut runtime).unwrap();
+        let state = &runtime.states["base/dense-map.rhai"];
+        assert_eq!(world.tick, 1);
+        assert_eq!(state["n"], 64);
+        assert_eq!(state["has_actor"], true);
+        assert_eq!(state["enemies"], 64);
+        assert_eq!(state["difficulty"], difficulty);
+        assert_eq!(state["health"], 100);
+    }
+}
+
+#[test]
+fn recursive_map_limit_allows_bounded_work_and_rejects_larger_trees() {
+    // 12 doublings produce12,286 aggregate properties;13 produce24,574.
+    // The final state is tiny, so rejection exercises the intermediate map
+    // bound rather than the separate serialized callback-state limit.
+    let source = |rounds| format!(r#"fn on_tick(e,s,r) {{
+        let m = #{{leaf:0}};
+        for i in 0..{rounds} {{ m = #{{left:m,right:m}}; }}
+        #{{commands:[],state:#{{done:true}}}}
+    }}"#);
+    let mut runtime = ScriptRuntime::new();
+    runtime.add("test", "nested.rhai", &source(12)).unwrap();
+    runtime.begin_tick();
+    runtime.invoke("test", "nested.rhai", "on_tick", &json!({}), 42).unwrap();
+    assert_eq!(runtime.states["test/nested.rhai"]["done"], true);
+    let before = runtime.checkpoints();
+    runtime.add("test", "nested.rhai", &source(13)).unwrap();
+    runtime.begin_tick();
+    let message = error(runtime.invoke("test", "nested.rhai", "on_tick", &json!({}), 42));
+    assert!(message.contains("object map too large"), "{message}");
+    assert_eq!(runtime.checkpoints(), before);
+}
+
+#[test]
+fn larger_event_maps_do_not_relax_the_64k_returned_state_limit() {
+    let mut runtime = ScriptRuntime::new();
+    runtime.add("test", "state-cap.rhai", r#"fn on_tick(e,s,r) {
+        let values = [];
+        for i in 0..4000 { values.push(999999999999999999); }
+        #{commands:[],state:values}
+    }"#).unwrap();
+    runtime.begin_tick();
+    let message = error(runtime.invoke("test", "state-cap.rhai", "on_tick", &json!({}), 42));
+    assert!(message.contains("state exceeds 64 KiB"), "{message}");
+    assert!(runtime.states.is_empty());
+    assert!(runtime.rng.is_empty());
+}
+
+#[test]
 fn callbacks_can_query_player_entities_projectiles_pickups_and_objectives() {
     let mut registry = base();
     registry

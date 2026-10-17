@@ -2887,6 +2887,15 @@ impl World {
                 if let Some(path) = script {
                     let owner = &registry.owners[&event.content];
                     let mut e = event.event;
+                    e["difficulty"] = self.difficulty.into();
+                    let actor_entity = if registry.missions.contains_key(&event.content) {
+                        None
+                    } else {
+                        e.get("entity")
+                            .and_then(serde_json::Value::as_u64)
+                            .filter(|entity| *entity != 0)
+                    };
+                    let mut actor = serde_json::Value::Null;
                     e["entities"] = serde_json::to_value(&self.enemies)?;
                     for (snapshot, enemy) in e["entities"]
                         .as_array_mut()
@@ -2895,7 +2904,11 @@ impl World {
                         .zip(&self.enemies)
                     {
                         snapshot["ground"] = registry.enemies[&enemy.definition].ground.into();
+                        if actor_entity == Some(enemy.entity) {
+                            actor = snapshot.clone();
+                        }
                     }
+                    e["actor"] = actor;
                     e["player"] = serde_json::to_value(&self.player)?;
                     e["objectives"] = serde_json::to_value(&self.objectives)?;
                     e["projectiles"] = serde_json::to_value(&self.projectiles)?;

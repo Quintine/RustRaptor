@@ -1,5 +1,19 @@
 # Rust engine and validation
 
+## 17 October 2026: live mod snapshots and dense-event queries
+
+World callbacks now receive `difficulty` and the addressed enemy's current `actor`
+snapshot, including damage, movement and removal committed by earlier callbacks.
+Dense enemy snapshots exposed Rhai's recursive map limit: even an ordinary query
+could reject a 24-enemy event. The bounded limit is now 16,384 properties; existing
+operation, command and serialized-state limits remain unchanged.
+
+All 45 modding tests pass, including all four difficulties, save/RNG continuation,
+stale callbacks, 64-enemy queries and oversized intermediate/output rejection.
+Linux and Windows executables are rebuilt. Menu and two original-mission 1080p
+SDL captures are byte-identical across the change (6,220,800 pixels compared).
+Windows execution is verified separately by the post-push native workflow.
+
 Rust is the default engine. The Rust binary never calls or embeds the C++ engine. SDL2 provides window/input/controller/audio services. Simulation and the validation CLI build without SDL2. The retained C++ checkout is optional reference material.
 
 | Module | Responsibility |

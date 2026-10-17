@@ -708,7 +708,10 @@ impl ScriptRuntime {
             .set_max_call_levels(32)
             .set_max_expr_depths(64, 32)
             .set_max_array_size(4096)
-            .set_max_map_size(1024)
+            // Rhai counts nested map properties, including host event snapshots.
+            // A 64-enemy event already has 2,886 properties. Keep inputs bounded
+            // without relaxing the separate 64 KiB state or operation limits.
+            .set_max_map_size(16_384)
             .set_max_string_size(16384)
             .set_max_modules(0);
         engine.disable_symbol("eval");
