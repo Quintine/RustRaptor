@@ -1,19 +1,20 @@
 # Current checkpoint — 17 October 2026
 
-The self-contained game now includes **5,340 HD pictures / 3,513 sequences**,
-including **4,243 terrain pictures**. Its **9,324 data files / 8,153,633,623 bytes**
-pass complete manifest verification. Actual CLI validation passes all 5,340 frames
-with zero rejects and 45 mods/one override. Terrain `10511` is the new reviewed
-hybrid: four explicitly listed logical cells retain Original detail rather than
-claim generated HD detail. Previous 5,339 bindings remain exact.
+The self-contained game now includes **5,341 HD pictures / 3,514 sequences**,
+including **4,243 terrain pictures**. Its **9,325 data files / 8,155,307,901 bytes**
+pass complete manifest verification. Boss `300a0` is the latest reviewed hybrid:
+three explicitly listed logical cells retain Original detail. All previous 5,340
+bindings remain exact. Actual CLI validation passes all 5,341 frames with zero
+rejects and all 45 mods with one explicit override.
 
-**413 original pictures remain:** 292 terrain, 79 enemies/ground objects,
-35 UI/other and seven bosses. The requested 97-picture batch is already published
-as `a45abc58`. Asset commit `1bc0a9ce` passed native Windows CI with 341 tests,
-zero failures and 26 ignored; the later `9015a6c9` runtime rebuild has its own CI.
-Receipts for this one-picture append are in
-`.reference/hd-root-next-publication-after5339/`; immutable intake is
-`handoff-5340-20261017`.
+**412 original pictures remain:** 292 terrain, 79 enemies/ground objects,
+35 UI/other and six bosses. The requested 97-picture batch is already published
+as `a45abc58`. Asset commit `1bc0a9ce` passed native Windows CI with 341 tests;
+source commit `9015a6c9` passed its separate run with 353 tests. Both had zero
+failures and 26 ignored. These historical results do not cover the current API
+or artwork append. Current receipts are in
+`.reference/hd-root-next-publication-after5340/`; immutable intake is
+`handoff-5341-20261017`.
 
 The included Linux and Windows runtimes now expose active script difficulty and
 current enemy snapshots. A finite 16,384-property Rhai map limit fixes documented
