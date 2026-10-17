@@ -71,6 +71,11 @@ pub struct RetainedOriginalPlacement {
     pub replacement_index: usize,
     pub details: crate::hd::OriginalDetailCells,
 }
+/// Trusted per-owner domain. Existing Replacement literals and APIs stay intact.
+pub struct PaletteConstraintPlacement {
+    pub replacement_index: usize,
+    pub palette: crate::hd::OriginalPalette,
+}
 pub struct Composition {
     pub image: Sprite,
     pub results: Vec<OverlayResult>,
@@ -132,6 +137,12 @@ impl TerrainHd {
     pub fn compose_retaining_original(&mut self, context: &Sprite,
         replacements: &[Replacement], retained: &[RetainedOriginalPlacement],
         scale: usize, palette: &[[u8; 3]; 256]) -> Composition {
+        self.compose_with_palette_constraints(context,replacements,retained,&[],scale,palette)
+    }
+    pub fn compose_with_palette_constraints(&mut self, context: &Sprite,
+        replacements: &[Replacement], retained: &[RetainedOriginalPlacement],
+        constraints: &[PaletteConstraintPlacement], scale: usize,
+        palette: &[[u8;3];256]) -> Composition {
         let mut image = context.clone();
         let mut results = Vec::with_capacity(replacements.len());
         let mut accepted = BTreeMap::new();
@@ -144,6 +155,22 @@ impl TerrainHd {
         }
         if accepted.is_empty() {
             return Composition { image, results };
+        }
+        let mut domains = BTreeMap::new();
+        for constraint in constraints {
+            let index=constraint.replacement_index;
+            let Some(tile)=replacements.get(index) else {
+                return Composition { image:context.clone(),results:vec![OverlayResult::InvalidOriginalDetails;replacements.len()] };
+            };
+            // Rejected or shadowed replacements cannot own a palette domain.
+            // Match retained-placement fallback: invalid accepted metadata still
+            // fails closed, but an ineligible tile must not suppress its neighbor.
+            if accepted.get(&(tile.position,tile.logical_size)) != Some(&index) { continue; }
+            if domains.insert(index,&constraint.palette).is_some()
+                || constraint.palette.logical_size()!=tile.logical_size
+                || tile.image.pixels.iter().any(|&p| !constraint.palette.contains(p)) {
+                return Composition { image:context.clone(),results:vec![OverlayResult::InvalidOriginalDetails;replacements.len()] };
+            }
         }
         // Validate/project all accepted protected footprints before composition.
         // Conflicting ownership fails the entire opt-in context to Original;
@@ -228,7 +255,7 @@ impl TerrainHd {
                 .min(tile.image.width / 2)
                 .min(tile.image.height / 2)
                 .max(1);
-            let edges = self.tile_edges(tile, &accepted, &detailed, context, scale, band, palette);
+            let edges = self.tile_edges(tile, &accepted, &detailed, context, scale, band, palette, domains.get(&index).copied());
             let weights: [usize; 8] = std::array::from_fn(|distance| edge_weight(distance, band));
             for sy in 0..tile.image.height {
                 let yy = top as i64 + sy as i64;
@@ -292,7 +319,7 @@ impl TerrainHd {
                             )
                         };
                     image.pixels[destination] =
-                        self.transition(target, raw, weights[distance], palette);
+                        self.transition_with_palette(target, raw, weights[distance], palette, domains.get(&index).copied());
                 }
             }
         }
@@ -371,6 +398,7 @@ impl TerrainHd {
         scale: usize,
         band: usize,
         palette: &[[u8; 3]; 256],
+        domain: Option<&crate::hd::OriginalPalette>,
     ) -> EdgeTargets {
         let [width, height] = tile.logical_size;
         let [left, top] = tile
@@ -427,7 +455,7 @@ impl TerrainHd {
                             [left + offset as i64, bottom + distance],
                         ],
                     };
-                    self.shared_target(detailed, context, &points, palette)
+                    self.shared_target(detailed, context, &points, palette, domain)
                 })
                 .collect()
         });
@@ -457,7 +485,7 @@ impl TerrainHd {
                                     [bx - 1 - dx, by + dy],
                                     [bx + dx, by + dy],
                                 ],
-                                palette,
+                                palette, domain,
                             )
                         })
                         .collect()
@@ -480,6 +508,7 @@ impl TerrainHd {
         context: &Sprite,
         points: &[[i64; 2]],
         palette: &[[u8; 3]; 256],
+        domain: Option<&crate::hd::OriginalPalette>,
     ) -> Option<(u16, u16)> {
         let mut values = [0_u16; 4];
         let mut first = None;
@@ -499,16 +528,29 @@ impl TerrainHd {
             }
             values[point] = detail;
         }
-        let top = self.transition(values[0], values[1], LEVELS / 2, palette);
+        let top = self.transition_with_palette(values[0], values[1], LEVELS / 2, palette, domain);
         let target = if points.len() == 2 {
             top
         } else {
-            let bottom = self.transition(values[2], values[3], LEVELS / 2, palette);
-            self.transition(top, bottom, LEVELS / 2, palette)
+            let bottom = self.transition_with_palette(values[2], values[3], LEVELS / 2, palette, domain);
+            self.transition_with_palette(top, bottom, LEVELS / 2, palette, domain)
         };
         Some((target, first.unwrap()))
     }
 
+    // Opt-in per-owner search never uses the global transition cache.
+    // Weight0 is the authentic Original boundary; reserved/control labels keep
+    // the exact existing class route. Those are not generated contributions.
+    fn transition_with_palette(&mut self, original:u16, hd:u16, weight:usize,
+        palette:&[[u8;3];256], domain:Option<&crate::hd::OriginalPalette>) -> u16 {
+        let Some(domain)=domain else {return self.transition(original,hd,weight,palette)};
+        if original>=240 || weight==0 { return self.transition(original,hd,weight,palette); }
+        if (original==hd || weight==LEVELS-1) && domain.contains(hd) { return hd; }
+        let rgb=std::array::from_fn(|channel|
+            ((palette[original as usize][channel] as usize*(LEVELS-1-weight)
+              +palette[hd as usize][channel] as usize*weight+(LEVELS-1)/2)/(LEVELS-1)) as i32);
+        domain.closest(palette,rgb)
+    }
     fn transition(
         &mut self,
         original: u16,
@@ -932,6 +974,106 @@ mod protected_join_input_regression_tests {
                 assert_eq!(result.image,context);
                 assert!(result.results.iter().all(|r|*r==OverlayResult::InvalidOriginalDetails));
             }
+        }
+    }
+}
+
+#[cfg(test)]
+mod palette_constraint_join_tests {
+    use super::*;
+    fn palette()->[[u8;3];256] { let mut p=[[0;3];256];p[10]=[40,40,40];p[20]=[120,120,120];p[30]=[80,80,80];p[40]=[60,60,60];p[50]=[100,100,100];p }
+    fn domain(a:u16,b:u16)->crate::hd::OriginalPalette {crate::hd::OriginalPalette::for_test(&Sprite {width:4,height:4,pixels:(0..16).map(|i|if i%2==0 {a}else{b}).collect()})}
+    fn tile(x:i32,a:u16,b:u16,s:usize)->Replacement {Replacement {image:Sprite {width:4*s,height:4*s,pixels:(0..16*s*s).map(|i|if (i/(4*s))%2==0 {a}else{b}).collect()},position:[x,0],logical_size:[4,4]}}
+    #[test] fn join_quantizes_direct_blended_rgb_to_owner_domain_not_global_range() {
+        let d=domain(10,20);let mut t=TerrainHd::default();let p=palette();
+        t.prepare_palette(&p);assert_eq!(t.transition(10,20,8,&p),30);
+        assert!(d.contains(t.transition_with_palette(10,20,8,&p,Some(&d))));
+        assert_eq!(t.transition_with_palette(10,20,0,&p,Some(&d)),10);
+        assert_eq!(t.transition_with_palette(252,20,8,&p,Some(&d)),252);
+    }
+    #[test] fn exact_domains_survive_all4_and_order_permutations_with_disjoint_sets() {
+        for scale in 1..=4 {
+            let context=Sprite {width:8*scale,height:4*scale,pixels:vec![10;32*scale*scale]};
+            let tiles=[tile(0,10,20,scale),tile(4,40,50,scale)];
+            let domains=[PaletteConstraintPlacement {replacement_index:0,palette:domain(10,20)},PaletteConstraintPlacement {replacement_index:1,palette:domain(40,50)}];
+            let mut t=TerrainHd::default();let a=t.compose_with_palette_constraints(&context,&tiles,&[],&domains,scale,&palette());assert!(a.results.iter().all(|r|*r==OverlayResult::Applied));
+            for y in 0..a.image.height { for x in 0..a.image.width {let i=a.image.pixels[y*a.image.width+x];if x<4*scale {assert!([10,20].contains(&i));}else{assert!([10,40,50].contains(&i));}}}
+            let perm=[tile(4,40,50,scale),tile(0,10,20,scale)];let domains=[PaletteConstraintPlacement {replacement_index:1,palette:domain(10,20)},PaletteConstraintPlacement {replacement_index:0,palette:domain(40,50)}];
+            let b=t.compose_with_palette_constraints(&context,&perm,&[],&domains,scale,&palette());assert_eq!(a.image,b.image);
+        }
+    }
+    #[test] fn no_domain_is_exact_old_wrapper_and_mixed_neighbor_changes_are_bounded() {
+        for scale in 1..=4 {let context=Sprite {width:8*scale,height:4*scale,pixels:vec![10;32*scale*scale]};let tiles=[tile(0,10,20,scale),tile(4,40,50,scale)];let mut t=TerrainHd::default();let a=t.compose(&context,&tiles,scale,&palette());let b=t.compose_with_palette_constraints(&context,&tiles,&[],&[],scale,&palette());assert_eq!(a.image,b.image);let c=t.compose_with_palette_constraints(&context,&tiles,&[],&[PaletteConstraintPlacement {replacement_index:0,palette:domain(10,20)}],scale,&palette());for y in 0..c.image.height {for x in 6*scale..8*scale {assert_eq!(a.image.pixels[y*a.image.width+x],c.image.pixels[y*c.image.width+x]);}}}
+    }
+    #[test] fn domain_validation_and_retained_original_priority_preserve_source_labels() {
+        let context=Sprite {width:4,height:4,pixels:vec![10;16]};let mut t=TerrainHd::default();let tiles=[tile(0,10,30,1)];let invalid=t.compose_with_palette_constraints(&context,&tiles,&[],&[PaletteConstraintPlacement {replacement_index:0,palette:domain(10,20)}],1,&palette());assert_eq!(invalid.image,context);assert!(invalid.results.iter().all(|r|*r==OverlayResult::InvalidOriginalDetails));
+        let mut context=context;context.pixels[5]=252;let tiles=[tile(0,10,20,1)];let details=RetainedOriginalPlacement {replacement_index:0,details:crate::hd::OriginalDetailCells::for_test(vec![[1,1]],[4,4])};let result=t.compose_with_palette_constraints(&context,&tiles,&[details],&[PaletteConstraintPlacement {replacement_index:0,palette:domain(10,20)}],1,&palette());assert_eq!(result.image.pixels[5],252);
+    }
+}
+
+#[cfg(test)]
+mod palette_rejected_owner_fallback_regression_tests {
+    use super::*;
+    fn palette()->[[u8;3];256] {std::array::from_fn(|i|[i as u8;3])}
+    fn tile(x:i32,index:u16,scale:usize)->Replacement {
+        Replacement {image:Sprite {width:4*scale,height:4*scale,pixels:vec![index;16*scale*scale]},position:[x,0],logical_size:[4,4]}
+    }
+    fn domain()->crate::hd::OriginalPalette {
+        crate::hd::OriginalPalette::for_test(&Sprite {width:4,height:4,pixels:vec![10;16]})
+    }
+    // Empty-domain per-owner counterfactual, not an external old-library claim.
+    fn default_owner_baseline(context:&Sprite,tiles:&[Replacement],scale:usize)->Composition {
+        TerrainHd::default().compose(context,tiles,scale,&palette())
+    }
+    #[test]
+    fn rejected_transparent_domain_is_local_fallback_at_all_scales_and_orders() {
+        for scale in 1..=4 { for reject_all in [false,true] {for rejected_first in [false,true] {
+            let context=Sprite {width:8*scale,height:4*scale,pixels:vec![10;32*scale*scale]};
+            let mut rejected=tile(0,10,scale);
+            if reject_all {rejected.image.pixels.fill(TRANSPARENT);} else {rejected.image.pixels[scale*rejected.image.width+scale]=TRANSPARENT;}
+            let valid=tile(4,100,scale);
+            let (tiles,rejected_index)=if rejected_first {(vec![rejected,valid],0)} else {(vec![valid,rejected],1)};
+            let expected=default_owner_baseline(&context,&tiles,scale);
+            let actual=TerrainHd::default().compose_with_palette_constraints(&context,&tiles,&[],
+                &[PaletteConstraintPlacement {replacement_index:rejected_index,palette:domain()}],scale,&palette());
+            let reason=if rejected_first {vec![OverlayResult::NonOpaque,OverlayResult::Applied]} else {vec![OverlayResult::Applied,OverlayResult::NonOpaque]};
+            assert_eq!(actual.results,reason);
+            assert_eq!(actual.image,expected.image,"scale{scale},all{reject_all},first{rejected_first}");
+            let mut changed_valid=0;
+            for y in 0..4*scale {for x in 0..8*scale {
+                let i=y*actual.image.width+x;
+                if x<4*scale {assert_eq!(actual.image.pixels[i],context.pixels[i]);}
+                else if actual.image.pixels[i]!=context.pixels[i] {changed_valid+=1;}
+            }}
+            assert!(changed_valid>0,"valid neighbor must actually render, not pass via all-Original");
+        }}}
+    }
+    #[test]
+    fn shadowed_duplicate_placement_domain_is_ignored_at_all_scales_and_orders() {
+        for scale in 1..=4 {for neighbor_first in [false,true] {
+            let context=Sprite {width:8*scale,height:4*scale,pixels:vec![10;32*scale*scale]};
+            // Shadowed image is opaque, but deliberately outside its domain.
+            // It does not own the accepted slot; current fallback must ignore it.
+            let (tiles,shadowed)=if neighbor_first {(vec![tile(4,70,scale),tile(0,200,scale),tile(0,100,scale)],1)}
+                else {(vec![tile(0,200,scale),tile(0,100,scale),tile(4,70,scale)],0)};
+            let expected=default_owner_baseline(&context,&tiles,scale);
+            let actual=TerrainHd::default().compose_with_palette_constraints(&context,&tiles,&[],
+                &[PaletteConstraintPlacement {replacement_index:shadowed,palette:domain()}],scale,&palette());
+            assert_eq!(actual.results,vec![OverlayResult::Applied;3]);assert_eq!(actual.image,expected.image);
+            assert_ne!(actual.image,context,"last valid owner and neighbor must actually apply");
+        }}
+    }
+    #[test]
+    fn invalid_accepted_domain_remains_whole_context_fail_closed_at_all_scales() {
+        for scale in 1..=4 {
+            let context=Sprite {width:8*scale,height:4*scale,pixels:vec![10;32*scale*scale]};
+            let tiles=[tile(0,200,scale),tile(4,100,scale)];
+            let actual=TerrainHd::default().compose_with_palette_constraints(&context,&tiles,&[],
+                &[PaletteConstraintPlacement {replacement_index:0,palette:domain()}],scale,&palette());
+            assert_eq!(actual.image,context);assert_eq!(actual.results,vec![OverlayResult::InvalidOriginalDetails;2]);
+            let out_of_range=TerrainHd::default().compose_with_palette_constraints(&context,&tiles,&[],
+                &[PaletteConstraintPlacement {replacement_index:999,palette:domain()}],scale,&palette());
+            assert_eq!(out_of_range.image,context);assert_eq!(out_of_range.results,vec![OverlayResult::InvalidOriginalDetails;2]);
         }
     }
 }

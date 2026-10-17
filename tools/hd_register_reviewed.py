@@ -17,7 +17,7 @@ from pathlib import Path
 from hd_candidate_review import binding_digest, proposal_frames
 from hd_art_audit import checked_palette, validate_hd_frame
 from hd_art_source import decode
-from hd_frame_policy import validate_frame_policy, retained_review_version_ok
+from hd_frame_policy import validate_frame_policy, retained_review_version_ok, original_palette_indices
 
 
 CARRIED_TERRAIN_V2 = "standalone-terrain-carried-identity-v2"
@@ -600,6 +600,72 @@ def validate_extended_retained_sources(project, rows):
             raise ValueError("extended Original details lack authentic catalog Source bytes")
 
 
+
+def validate_palette_constraint_approval(project, rows, review, qa):
+    """The new treatment cannot reuse an old raw-art or default-sampler approval.
+
+    Keep all existing artistic/current-QA gates. Source domains are derived here
+    from checked catalog bytes; supplied indices or RGBs never define eligibility.
+    """
+    constrained = {asset: frame for asset, frame in rows.items() if frame.get("palette_constraint") is not None}
+    if not constrained:
+        return
+    declaration = review.get("palette_constraint_review", {})
+    if (not isinstance(declaration, dict)
+            or declaration.get("policy_version") != "original-painted-ordinary-v1"
+            or declaration.get("frame_bindings_sha256") != binding_digest(rows)
+            or declaration.get("unchanged_generated_raw") is not True
+            or declaration.get("independent_allscale_and_genuine_context_review") is not True):
+        raise ValueError("explicit palette treatment and exact independent all-scale/context approval required")
+    reports = {row["asset"]: row for row in qa["frames"]}
+    for asset, frame in constrained.items():
+        authenticated = None
+        for data in (project / "data", project.parent / "data"):
+            index = data / "INDEX"
+            if not index.is_file():
+                continue
+            matches = [p for line in index.read_text().splitlines()
+                       if len(p := line.split()) == 3 and int(p[0], 16) == int(asset, 16)]
+            if len(matches) != 1:
+                continue
+            relative = Path(matches[0][2])
+            if relative.is_absolute() or ".." in relative.parts:
+                raise ValueError("palette Source path escapes catalog")
+            path = (data / relative).resolve()
+            palette_path = (data / "misc/PALETTE_DAT").resolve()
+            if not path.is_relative_to(data.resolve()) or not palette_path.is_relative_to(data.resolve()):
+                raise ValueError("palette Source path escapes catalog")
+            payload = path.read_bytes()
+            if len(payload) != int(matches[0][1]) or hashlib.sha256(payload).hexdigest() != frame["source_sha256"]:
+                continue
+            validate_frame_policy(frame, payload)
+            indices = original_palette_indices(frame, payload)
+            palette = checked_palette(palette_path.read_bytes())
+            authenticated = (indices, [{"index": i, "RGB": list(palette[i])} for i in indices])
+            break
+        if authenticated is None:
+            raise ValueError("palette treatment lacks authentic opaque ordinary catalog Source")
+        indices, colors = authenticated
+        report = reports[asset]
+        evidence = report.get("palette_constraint", {})
+        if (not isinstance(evidence, dict) or evidence.get("policy") != frame["palette_constraint"]
+                or evidence.get("applied") is not True or report.get("source_palette") != "PALETTE_DAT"
+                or not same_json(evidence.get("source_indices"), indices)
+                or not same_json(evidence.get("source_colors"), colors)):
+            raise ValueError("palette measurement is not the exact SourceClasses treatment/domain")
+        scales = evidence.get("scales", [])
+        if (not isinstance(scales, list) or any(not isinstance(x, dict) for x in scales)
+                or [x.get("scale") for x in scales] != [1, 2, 3, 4]
+                or any(type(x.get("scale")) is not int or type(x.get("visible_pixels")) is not int
+                       or type(x.get("outside_original_palette")) is not int for x in scales)):
+            raise ValueError("palette measurement needs four exact typed scale records")
+        masks = {x["scale"]: x["mask"] for x in report["hd_masks"]}
+        if any(type(masks[x["scale"]].get("visible_pixels")) is not int
+               or x["outside_original_palette"] != 0 or x["visible_pixels"] <= 0
+               or x["visible_pixels"] != masks[x["scale"]]["visible_pixels"] for x in scales):
+            raise ValueError("palette measurement violates its domain or visible sample binding")
+
+
 def approved_job(root, identity, project):
     directory = contained(root, Path("jobs") / identity)
     if directory.parent != (root / "jobs").resolve():
@@ -697,6 +763,7 @@ def approved_job(root, identity, project):
     elif retained_details and catalog_only:
         approved_catalog_only_retained_evidence(root, project, declaration, rows, qa)
     validate_extended_retained_sources(project, rows)
+    validate_palette_constraint_approval(project, rows, review, qa)
     return candidate, review, rows
 
 

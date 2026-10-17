@@ -3096,6 +3096,8 @@ impl Host {
                 key.extend_from_slice(b"terrain-retained-original-details-v2-painted0255");
                 key.extend_from_slice(&serde_json::to_vec(&details)?);
             }
+            append_terrain_palette_policy_key(&mut self.hd,
+                visible_tiles.iter().filter_map(|(art,_,_)|art.asset), &mut key)?;
         }
         let shift = if world.tick > 0 { alpha - 1.0 } else { 0.0 };
         let translated_y = ((-34.0 + phase as f32 + shift) * canvas.scale as f32).round() as i32;
@@ -3157,6 +3159,7 @@ impl Host {
             if self.config.hd_mode {
                 let mut replacements = Vec::new();
                 let mut retained_original = Vec::new();
+                let mut palette_constraints = Vec::new();
                 let mut labels = Vec::new();
                 for (art, x, y, detailed_original) in prepared_tiles {
                     let replacement =
@@ -3169,18 +3172,22 @@ impl Host {
                                 ),
                             };
                             self.art(&mut tile, &art, &owner, 0, 0.0, 0.0)?;
-                            Some((tile.image, None))
+                            Some((tile.image, None, None))
                         } else if let Some(id) = art.asset {
-                            self.hd.terrain_sprite(id, canvas.scale, &self.palette)?
+                            self.hd.terrain_sprite_with_palette(id, canvas.scale, &self.palette)?
                         } else {
                             None
                         };
-                    let Some((replacement, details)) = replacement else {
+                    let Some((replacement, details, domain)) = replacement else {
                         continue;
                     };
                     if let Some(details) = details {
                         retained_original.push(crate::terrain_hd::RetainedOriginalPlacement {
                             replacement_index: replacements.len(), details });
+                    }
+                    if let Some(palette) = domain {
+                        palette_constraints.push(crate::terrain_hd::PaletteConstraintPlacement {
+                            replacement_index: replacements.len(), palette });
                     }
                     labels.push(art.asset.map(|id| format!("{id:05x}")).unwrap_or_else(|| {
                         art.hd_png.clone().or(art.png.clone()).unwrap_or_default()
@@ -3194,7 +3201,7 @@ impl Host {
                 if !replacements.is_empty() {
                     let composition =
                         self.terrain_hd
-                            .compose_retaining_original(&bg, &replacements, &retained_original, canvas.scale, &self.palette);
+                            .compose_with_palette_constraints(&bg, &replacements, &retained_original, &palette_constraints, canvas.scale, &self.palette);
                     bg = composition.image;
                     for (label, result) in labels.into_iter().zip(composition.results) {
                         if result != OverlayResult::Applied {
@@ -4303,6 +4310,18 @@ fn pilot_for_mods(
         Ok(current.clone())
     }
 }
+// Default/no-policy strips keep their exact existing key bytes. A visible
+// opt-in binds raw/source/crop/mode identity, including rejected-frame fallback.
+fn append_terrain_palette_policy_key(hd: &mut HdAssets, ids: impl IntoIterator<Item=u32>, key: &mut Vec<u8>) -> Result<()> {
+    let domains: Vec<_> = ids.into_iter().collect::<std::collections::BTreeSet<_>>()
+        .into_iter().filter_map(|id|hd.palette_constraint_cache_identity(id).map(|identity|(id,identity))).collect();
+    if !domains.is_empty() {
+        key.extend_from_slice(b"terrain-original-painted-ordinary-v1");
+        key.extend_from_slice(&serde_json::to_vec(&domains)?);
+    }
+    Ok(())
+}
+
 fn restore_scripts(runtime: &mut modding::ScriptRuntime, pilot: &Pilot) {
     runtime.states = pilot.script_state.clone();
     runtime.rng = pilot.script_rng.clone();
@@ -5042,6 +5061,34 @@ mod tests {
         .unwrap();
         (dir, host)
     }
+    #[test]
+    fn terrain_palette_prepared_key_and_domain_reach_the_desktop_consumer() {
+        use sha2::{Digest,Sha256};
+        let (_dir, mut host)=ui_fixture();let root=host.catalog.root.clone();
+        let source=[1_i32,0,0,2,2].into_iter().flat_map(i32::to_le_bytes)
+            .chain([10_u8,20,10,20]).collect::<Vec<_>>();
+        std::fs::write(root.join("tile"),&source).unwrap();
+        let mut index=std::fs::read_to_string(root.join("INDEX")).unwrap();
+        index.push_str(&format!("3 {} tile\n",source.len()));std::fs::write(root.join("INDEX"),index).unwrap();
+        let catalog=Catalog::open(&root).unwrap();let pack=root.join("private-hd");std::fs::create_dir(&pack).unwrap();
+        image::RgbaImage::from_pixel(8,8,image::Rgba([200,170,120,255])).save(pack.join("raw.png")).unwrap();
+        let mut frame=serde_json::json!({"frame":0,"file":"raw.png","logical_width":2,"logical_height":2,
+            "origin":[0,0],"source_sha256":format!("{:x}",Sha256::digest(&source))});
+        let manifest=|frame:serde_json::Value|serde_json::json!({"format_version":1,"name":"synthetic terrain mode",
+            "sequences":[{"name":"tile","base_asset":3,"frame_count":1,"frames":[frame]}]});
+        std::fs::write(pack.join("hd.json"),serde_json::to_vec(&manifest(frame.clone())).unwrap()).unwrap();
+        let mut plain=HdAssets::load(&pack,&catalog);let mut plain_key=b"unchanged-prefix".to_vec();
+        append_terrain_palette_policy_key(&mut plain,[3],&mut plain_key).unwrap();assert_eq!(plain_key,b"unchanged-prefix");
+        frame["palette_constraint"]="original-painted-ordinary-v1".into();
+        std::fs::write(pack.join("hd.json"),serde_json::to_vec(&manifest(frame)).unwrap()).unwrap();
+        host.hd=HdAssets::load(&pack,&catalog);assert!(host.hd.diagnostics.is_empty());
+        let mut mode_key=b"unchanged-prefix".to_vec();append_terrain_palette_policy_key(&mut host.hd,[3],&mut mode_key).unwrap();
+        assert_ne!(plain_key,mode_key);
+        let mut duplicate_key=b"unchanged-prefix".to_vec();append_terrain_palette_policy_key(&mut host.hd,[3,3],&mut duplicate_key).unwrap();assert_eq!(mode_key,duplicate_key);
+        let (_,_,domain)=host.hd.terrain_sprite_with_palette(3,1,&host.palette).unwrap().unwrap();assert_eq!(domain.unwrap().indices(),[10,20]);
+        assert!(host.hd.terrain_sprite(3,1,&host.palette).is_err(),"old terrain consumer must not silently drop an opt-in domain");
+    }
+
     #[test]
     fn catalog_equipment_uses_hd_in_the_hud_and_loads_only_when_requested() {
         use sha2::{Digest, Sha256};

@@ -883,7 +883,116 @@
   },
   "record_roles": {
     "current_source_runtime": "Dated published SourceC+D update checkpoint at5384/3551. Retained unchanged as historical source-update evidence, not latest artwork coverage.",
-    "latest_artwork_runtime": "Current5425/3587 assembled artwork registry; actual current counts/data and measured SDL evidence.",
-    "older_top_level_release_fields": "Historical2935 release and predecessor authority, not current5425 runtime facts."
+    "latest_artwork_runtime": "Published H5425/3587 artwork-release evidence measured under SourceC. Retained unchanged; its executable/source hashes are historical after SourceE activation.",
+    "older_top_level_release_fields": "Historical2935 release and predecessor authority, not current SourceE runtime or H5425 artwork facts.",
+    "current_runtime": "Selects sourceE_runtime_activation for the actual installed SourceE runtime; H5425 artwork and data are unchanged.",
+    "sourceE_runtime_activation": "Current SourceE build/install/CLI/default-SDL evidence; zero asset palette opt-ins and no native Windows SourceE execution claim."
+  },
+  "sourceE_runtime_activation": {
+    "checkpoint_utc": "2026-10-17T12:01:07.035317+00:00",
+    "status": "ACTUAL_SOURCE_E_BUILT_INSTALLED_H5425_CLI_AND_DEFAULT_SDL_VALIDATED",
+    "artwork_baseline": {
+      "published_commit": "4ab5f79909dcdf918f7c92b49bc064937135a3a6",
+      "registered_frames": 5425,
+      "complete_sequences": 3587,
+      "remaining_original_pictures": 328,
+      "bundled_data_files": 9369,
+      "bundled_data_bytes": 8267536572,
+      "HD_manifest_sha256": "7f262c6e0d7ec1ae3eea5cf9c4d2c95c53e0daa1b56f4e099590c2880c613fd1",
+      "provenance_sha256": "26f37754de014b0642e9883e48b29324cf525a2745785fc1aa2b8198c753c33f",
+      "complete_shared_data_map_unchanged": true,
+      "asset_status_transitions": 0
+    },
+    "source_changes_from_C_D": {
+      "src/desktop.rs": "7aa876c1f74ea7b82ff0a5aa399bbbfaa18ea87ca81cab8a17c763654dca3812",
+      "src/hd.rs": "8cd7c59458be53a1504ba8b165892d2874b9e04b2571f04b7cdfd7fe48007d00",
+      "src/terrain_hd.rs": "6a042765b6c17715e3c2378e5acecd30fbd8fe43d09dbe448a0aeea0114e914b"
+    },
+    "other15_Source18_files_unchanged": true,
+    "compiled_epoch": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceE-original-palette-production-integration-20261017/compiled-epoch.json",
+      "sha256": "2990dec2b1466739446bb1598f15d73c3f7feb113c1fa15a1595189e7ed8df05"
+    },
+    "compiled_library_sha256": "3b04e4733c1218f8e16d80231b899023149f8be40004a9787359e827a76f6d80",
+    "palette_review_helper_sha256": "aaed9fe89123322ae967e66774c1b515e4bdf4cb1c2b7c040e182d52d8bfc8d2",
+    "binary_sha256": {
+      "Linux": "c083714aa52c0f42337d2c1364a80b3e218b895a3522e2e58d4eef5945934f8d",
+      "Windows": "cb3e041430b1090ff1c4692dff27d8367520f73a747751aacbe80b7ea4b63ae9"
+    },
+    "runtime_manifest_sha256": "5d49948778b79fe442c8f26347dda50b676e54bbb0f2efa4f094d5ad7fd6c9a0",
+    "Windows_manifest_sha256": "abdf1a403595f66d62aae3d75037263d641a1cb56a463a9de07bfc8d438cee7f",
+    "actual_receipts": {
+      "focused_build_and_checks": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceE-original-palette-production-integration-20261017/all-actual-build-and-focused-checks.json",
+        "sha256": "4e1d82381d8ba97a8e5f61dbf50082cc1959fbfe7345230dc18162fd21cd9e74"
+      },
+      "Linux_install": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceE-original-palette-production-integration-20261017/linux-installed.json",
+        "sha256": "227a75edf279611fd19523434474ec5e4fb978a64812d2fd081725c90fdc3f95"
+      },
+      "Windows_cross_build_and_assembly": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceE-original-palette-production-integration-20261017/windows-installed.json",
+        "sha256": "6fc6309c0c6bdd876d91e4dc2c0394998229dafd629c6391fc6e5c8d18012d5b"
+      },
+      "full_HD_and_mod_CLI": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceE-original-palette-production-integration-20261017/cli-validation.json",
+        "sha256": "6c535911592308c4ae480b76906eeadcf162b88a59f37fd7eabfd64959471f69"
+      },
+      "default_SDL_report": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actualH5425-sourceE-three-SDL-versus-sourceC-20261017-v1/CLOSED-ACTUAL-SOURCEE-H5425-THREE-SDL-MEASURED-AND-PHYSICAL-REGRESSION-VERSUS-ACTUAL-SOURCEC-H5425.json",
+        "sha256": "127760ca1f5dfb16f0c4cdc39a45fd4c05d767c799ba25e741ffea9c553d3060"
+      },
+      "default_SDL_outside_strict": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actualH5425-sourceE-three-SDL-versus-sourceC-20261017-v1-strict-complete-sourceE-versus-sourceC-regression-closure.json",
+        "sha256": "c8aa3e5cf677942b916ff8c938a9fbe99191a844f388f4f86d0f64b4d072dd1c"
+      },
+      "Root_personal_three_SDL_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceE-original-palette-production-integration-20261017/root-personal-three-SDL-review.json",
+        "sha256": "212e217797787967a828e42129c4f8190bf8001fc1f9ca4f595a5e130cbe9a44"
+      }
+    },
+    "validation": {
+      "Rust_passed": 106,
+      "Rust_failed": 0,
+      "Rust_preexisting_ignored": 5,
+      "Python_passed": 165,
+      "Python_failed": 0,
+      "HD_registered": 5425,
+      "HD_validated": 5425,
+      "HD_rejected": 0,
+      "mods_validated": 45,
+      "overrides": 1,
+      "verification": "6449 assets; 27 missions, 528 enemies, 16 weapons, 24 items"
+    },
+    "optional_original_palette_constraint": {
+      "support_installed": true,
+      "installed_asset_opt_ins": 0,
+      "canonical_palette_constraint_fields": 0,
+      "scope": "Optional runtime support only. No installed artwork uses the field; no palette-constrained artwork is approved or published by this activation."
+    },
+    "SDL_regression_controls": {
+      "baseline": "Actual SourceC H5425, same artwork/data and 341-file/45-mod/M2v1.0.2 guard",
+      "cases": 3,
+      "exit_zero": 3,
+      "width": 1920,
+      "height": 1080,
+      "HD_scale": 4,
+      "pixels_compared": 6220800,
+      "PNG_bytes_equal_cases": 3,
+      "changed_RGB_pixels": 0,
+      "changed_alpha_pixels": 0,
+      "Root_personally_viewed_complete_images": 3,
+      "scope": "Default absent-field path only. Pixel equality was measured, not a capture requirement. No opt-in-mode, target visibility, intrinsic material, all-placement, campaign-playthrough or hardware-listening approval."
+    },
+    "native_Windows": {
+      "latest_closed_execution": "H5417 / ebc52724: 379 passed, 26 ignored, 0 failed; exact receipts retained in latest_artwork_runtime.native_Windows",
+      "H5425_SourceC_4ab5_execution": "in progress at this activation checkpoint",
+      "SourceE_execution": "not claimed; Windows release cross-build and assembly passed, with no native Windows execution receipt"
+    },
+    "history_scope": "All SourceC and older successful image-call, intrinsic, material, context, held-art and refusal authorities retain their original epochs and limits. The existing current_source_runtime object is a dated SourceC+D5384 checkpoint; latest_artwork_runtime is the unchanged SourceC H5425 artwork-release evidence. This activation changes runtime evidence only, with no asset/header/default/raw/status or family-review changes. Private constrained studies are not installed artwork."
+  },
+  "current_runtime": {
+    "record": "sourceE_runtime_activation",
+    "scope": "Current installed runtime at unchanged published H5425 artwork; distinct from retained SourceC artwork/source-update receipts."
   }
 }

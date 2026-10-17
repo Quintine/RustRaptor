@@ -1140,3 +1140,40 @@ fn canonical_terrain_candidate_preserves_all_declared_contexts_and_neighbor_pair
         output.display()
     );
 }
+
+#[test]
+fn checked_original_palette_domain_reaches_public_terrain_joins_without_changing_the_png() {
+    use sha2::{Digest,Sha256};
+    use raptor_replica::terrain_hd::PaletteConstraintPlacement;
+    let temp=tempfile::tempdir().unwrap();let data=temp.path().join("catalog");let pack=temp.path().join("hd");
+    std::fs::create_dir_all(data.join("misc")).unwrap();std::fs::create_dir(&pack).unwrap();
+    let source=[1_i32,0,0,4,4].into_iter().flat_map(i32::to_le_bytes)
+        .chain((0..16).map(|i|if i%2==0 {10_u8}else{20_u8})).collect::<Vec<_>>();
+    std::fs::write(data.join("tile"),&source).unwrap();
+    let raw_palette:Vec<u8>=(0..256).flat_map(|i|[i as u8%64;3]).collect();
+    std::fs::write(data.join("misc/PALETTE_DAT"),&raw_palette).unwrap();
+    std::fs::write(data.join("INDEX"),format!("1 768 misc/PALETTE_DAT\n120 {} tile\n",source.len())).unwrap();
+    let raw=pack.join("raw.png");image::RgbaImage::from_pixel(16,16,image::Rgba([220,190,150,255])).save(&raw).unwrap();
+    let raw_sha=Sha256::digest(std::fs::read(&raw).unwrap());
+    let manifest=json!({"format_version":1,"name":"synthetic policy integration","sequences":[
+        {"name":"checked Original","base_asset":0x120,"frame_count":1,"frames":[
+            {"frame":0,"file":"raw.png","logical_width":4,"logical_height":4,"origin":[0,0],
+             "source_sha256":format!("{:x}",Sha256::digest(&source)),"palette_constraint":"original-painted-ordinary-v1"}]}]});
+    std::fs::write(pack.join("hd.json"),serde_json::to_vec(&manifest).unwrap()).unwrap();
+    let catalog=Catalog::open(&data).unwrap();let p=catalog.palette().unwrap();let mut hd=HdAssets::load(&pack,&catalog);
+    assert!(hd.diagnostics.is_empty());
+    for scale in 1..=4 {
+        assert!(hd.terrain_sprite(0x120,scale,&p).is_err(),"a legacy consumer must not silently discard the domain");
+        let (sprite,details,domain)=hd.terrain_sprite_with_palette(0x120,scale,&p).unwrap().unwrap();
+        assert!(details.is_none());let domain=domain.unwrap();assert_eq!(domain.indices(),[10,20]);
+        assert!(sprite.pixels.iter().all(|&i|domain.contains(i)));
+        let context=solid(8*scale,4*scale,10);let neighbor=solid(4*scale,4*scale,100);
+        let tiles=[Replacement {image:sprite,position:[0,0],logical_size:[4,4]},
+            Replacement {image:neighbor,position:[4,0],logical_size:[4,4]}];
+        let result=TerrainHd::default().compose_with_palette_constraints(&context,&tiles,&[],
+            &[PaletteConstraintPlacement {replacement_index:0,palette:domain}],scale,&p);
+        assert_eq!(result.results,vec![OverlayResult::Applied,OverlayResult::Applied]);
+        for y in 0..4*scale {for x in 0..4*scale {assert!([10,20].contains(&result.image.pixels[y*result.image.width+x]));}}
+    }
+    assert_eq!(Sha256::digest(std::fs::read(raw).unwrap()),raw_sha,"quantization must not rewrite the source PNG");
+}

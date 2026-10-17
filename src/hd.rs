@@ -55,6 +55,46 @@ pub struct AtlasGrid {
     pub column: u32,
     pub row: u32,
 }
+/// Explicit opt-in; no payload colors or user-authored allowed list.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
+pub enum PaletteConstraint {
+    #[serde(rename = "original-painted-ordinary-v1")]
+    OriginalPaintedOrdinaryV1,
+}
+/// Validated, bounded Original-only index set; construction requires decoded Source.
+#[derive(Debug, Clone)]
+pub struct OriginalPalette {
+    mask: [u64; 4],
+    logical_size: [usize; 2],
+}
+impl OriginalPalette {
+    fn from_source(source: &Sprite) -> Result<Self> {
+        ensure!(source.width > 0 && source.height > 0
+            && source.pixels.len() == source.width.saturating_mul(source.height)
+            && source.pixels.iter().all(|&p| p < 240),
+            "Original palette constraint needs an opaque ordinary Source canvas");
+        let mut mask = [0_u64; 4];
+        for &index in &source.pixels { mask[index as usize / 64] |= 1 << (index % 64); }
+        Ok(Self { mask, logical_size: [source.width, source.height] })
+    }
+    pub fn contains(&self, index: u16) -> bool {
+        index < 240 && self.mask[index as usize / 64] & (1 << (index % 64)) != 0
+    }
+    pub fn indices(&self) -> Vec<u16> { (0..240).filter(|&i| self.contains(i)).collect() }
+    pub fn logical_size(&self) -> [usize; 2] { self.logical_size }
+    pub fn identity(&self) -> [u8; 32] {
+        let mut digest=Sha256::new(); digest.update(b"original-painted-ordinary-v1");
+        for word in self.mask { digest.update(word.to_le_bytes()); }
+        digest.finalize().into()
+    }
+    pub(crate) fn closest(&self, palette: &[[u8;3];256], rgb: [i32;3]) -> u16 {
+        (0_u16..240).filter(|&i| self.contains(i)).min_by_key(|&i|
+            (0..3).map(|c| (palette[i as usize][c] as i32-rgb[c]).pow(2)).sum::<i32>())
+            .expect("validated Original palette is nonempty")
+    }
+    #[cfg(test)]
+    pub(crate) fn for_test(source: &Sprite) -> Self { Self::from_source(source).unwrap() }
+}
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Frame {
@@ -89,6 +129,9 @@ pub struct Frame {
     /// no more than one quarter of the authentic painted Source cells.
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub original_detail_cells: Vec<[u32; 2]>,
+    /// Indexed gameplay treatment of unchanged PNG samples; never enables Static.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub palette_constraint: Option<PaletteConstraint>,
 }
 /// Validated Source-only footprint metadata. Fields cannot be forged by callers.
 #[derive(Clone)]
@@ -115,6 +158,7 @@ struct Replacement {
     source_labels: Option<Vec<u8>>,
     /// Only opt-in frames retain full indexed Source for Original ScaleNx.
     original_detail_source: Option<Sprite>,
+    original_palette: Option<OriginalPalette>,
     validated: bool,
     rejected: bool,
 }
@@ -347,7 +391,10 @@ impl HdAssets {
                     } else {
                         None
                     };
-                    let label_bytes = source_labels.as_ref().map_or(0, Vec::len);
+                    let original_palette = frame.palette_constraint
+                        .map(|_| OriginalPalette::from_source(&original)).transpose()?;
+                    let palette_bytes = if original_palette.is_some() { std::mem::size_of::<OriginalPalette>() } else { 0 };
+                    let label_bytes = source_labels.as_ref().map_or(0, Vec::len) + palette_bytes;
                     let detail_bytes = if frame.original_detail_cells.is_empty() { 0 }
                         else { original.pixels.len() * std::mem::size_of::<u16>() };
                     ensure!(source_reference_budget(self.source_label_bytes,
@@ -359,6 +406,7 @@ impl HdAssets {
                         frame: frame.clone(),
                         requires_alpha: original.pixels.contains(&TRANSPARENT),
                         source_labels,
+                        original_palette,
                         original_detail_source: if frame.original_detail_cells.is_empty() { None }
                             else { Some(original.clone()) },
                         validated: false,
@@ -481,6 +529,9 @@ impl HdAssets {
             for cell in &frame.original_detail_cells {
                 for coordinate in cell { digest.update(coordinate.to_le_bytes()); }
             }
+        }
+        if frame.palette_constraint.is_some() {
+            digest.update(b"raptor-hd-original-painted-ordinary-palette-v1");
         }
         digest.finalize().into()
     }
@@ -811,8 +862,13 @@ impl HdAssets {
     /// Condition shared join inputs with joined Original samples, then restore
     /// exact retained footprints after all neighbor joins.
     pub fn terrain_sprite(&mut self, id: u32, scale: usize, palette: &[[u8; 3]; 256])
-        -> Result<Option<(Sprite, Option<OriginalDetailCells>)>>
-    {
+        -> Result<Option<(Sprite, Option<OriginalDetailCells>)>> {
+        ensure!(!self.replacements.get(&id).is_some_and(|r|r.frame.palette_constraint.is_some()),
+            "constrained terrain requires terrain_sprite_with_palette and domain-aware joins");
+        self.terrain_sprite_impl(id,scale,palette)
+    }
+    fn terrain_sprite_impl(&mut self, id:u32, scale:usize, palette:&[[u8;3];256])
+        -> Result<Option<(Sprite,Option<OriginalDetailCells>)>> {
         let has_details = self.replacements.get(&id)
             .is_some_and(|r| !r.frame.original_detail_cells.is_empty());
         let policy = if has_details { PalettePolicy::SourceClassesBaseline }
@@ -822,6 +878,21 @@ impl HdAssets {
             .map(|r| OriginalDetailCells { cells: r.frame.original_detail_cells.clone(),
                 logical_size: [r.frame.logical_width as usize, r.frame.logical_height as usize] });
         Ok(Some((image, details)))
+    }
+    /// Existing API remains valid; terrain callers enabling the policy must use this wrapper.
+    pub fn terrain_sprite_with_palette(&mut self, id: u32, scale: usize, palette: &[[u8;3];256])
+        -> Result<Option<(Sprite, Option<OriginalDetailCells>, Option<OriginalPalette>)>> {
+        Ok(self.terrain_sprite_impl(id, scale, palette)?.map(|(image,details)|
+            (image,details,self.replacements.get(&id).and_then(|r|r.original_palette.clone()))))
+    }
+    /// Append only for opt-ins to a caller's prepared-context key.
+    pub fn palette_constraint_cache_identity(&mut self, id: u32) -> Option<[u8;32]> {
+        let record=self.replacements.get(&id)?;
+        record.frame.palette_constraint?;
+        let frame=record.frame.clone();
+        if let Ok(Some((key,_)))=self.rgba_frame(id) { return Some(key); }
+        let mut digest=Sha256::new();digest.update(b"rejected-original-painted-ordinary-v1");
+        digest.update(serde_json::to_vec(&frame).ok()?);Some(digest.finalize().into())
     }
     pub fn original_detail_source_bytes(&self) -> usize { self.original_detail_source_bytes }
     /// None for all default frames, without opening/decoding their PNGs.
@@ -918,7 +989,10 @@ impl HdAssets {
             *destination = *colors
                 .entry((rgb, source_label))
                 .or_insert_with(|| match policy {
-                    PalettePolicy::SourceClasses | PalettePolicy::SourceClassesBaseline => closest(palette, rgb, source_label),
+                    PalettePolicy::SourceClasses | PalettePolicy::SourceClassesBaseline =>
+                        replacement.original_palette.as_ref().map_or_else(
+                            || closest(palette,rgb,source_label),
+                            |domain| domain.closest(palette,rgb.map(i32::from))),
                     PalettePolicy::Static => closest_in_range(palette, rgb, 0..256),
                 });
         }
@@ -1195,6 +1269,7 @@ fn validate_rgba(rgba: &RgbaImage, requires_alpha: bool) -> Result<()> {
 }
 fn validate_frame(frame: &Frame, original: &Sprite, source: &[u8]) -> Result<()> {
     validate_grid_metadata(frame)?;
+    if frame.palette_constraint.is_some() { OriginalPalette::from_source(original)?; }
     ensure!(
         frame.logical_width as usize == original.width
             && frame.logical_height as usize == original.height,
@@ -1318,7 +1393,7 @@ mod tests {
             crop: None, atlas_grid: None,
             preserve_reserved_coverage: false,
             native_nearest_cues: Vec::new(),
-            original_detail_cells: Vec::new(),
+            original_detail_cells: Vec::new(), palette_constraint: None,
         }
     }
     #[test]
@@ -1356,7 +1431,7 @@ mod tests {
                 frame: frame(source),
                 requires_alpha: true,
                 source_labels: None,
-                original_detail_source: None,
+                original_detail_source: None, original_palette: None,
                 validated: false,
                 rejected: false,
             },
@@ -2464,7 +2539,7 @@ mod policy_proposal_tests {
             crop: None, atlas_grid: None,
             preserve_reserved_coverage: false,
             native_nearest_cues: Vec::new(),
-            original_detail_cells: Vec::new(),
+            original_detail_cells: Vec::new(), palette_constraint: None,
         }
     }
     fn assets(label: u8, mode: bool, rgba: RgbaImage) -> (tempfile::TempDir, HdAssets) {
@@ -2482,7 +2557,7 @@ mod policy_proposal_tests {
                 frame: f,
                 requires_alpha: true,
                 source_labels: Some(vec![label, 0, 0, 0]),
-                original_detail_source: None,
+                original_detail_source: None, original_palette: None,
                 validated: false,
                 rejected: false,
             },
@@ -2737,7 +2812,7 @@ mod policy_proposal_tests {
                     frame: f,
                     requires_alpha: false,
                     source_labels: None,
-                    original_detail_source: None,
+                    original_detail_source: None, original_palette: None,
                     validated: false,
                     rejected: false,
                 },
@@ -2789,7 +2864,7 @@ mod retained_original_detail_tests {
     fn frame() -> Frame { Frame { frame: 0, file: "raw.png".into(), logical_width: 2,
         logical_height: 2, origin: [0,0], source_sha256: format!("{:x}",Sha256::digest(b"source")),
         crop: None, atlas_grid: None, preserve_reserved_coverage: false, native_nearest_cues: Vec::new(),
-        original_detail_cells: Vec::new() } }
+        original_detail_cells: Vec::new(), palette_constraint:None } }
     #[test]
     fn typed_serialization_defaults_and_source_constraints() {
         let f=frame();let j=serde_json::to_value(&f).unwrap();
@@ -2855,7 +2930,7 @@ mod retained_original_detail_tests {
         let mut h=HdAssets {root:dir.path().into(),..HdAssets::default()};
         let mut f=frame();f.original_detail_cells=vec![[0,0]];
         h.replacements.insert(1,Replacement {frame:f,requires_alpha:false,source_labels:None,
-            original_detail_source:Some(source()),validated:false,rejected:false});
+            original_detail_source:Some(source()), original_palette: None,validated:false,rejected:false});
         let mut palette=[[0;3];256];palette[80]=[255,0,0];
         for scale in 1..=4 {
             let hybrid=h.sprite(1,scale,&palette).unwrap().unwrap();
@@ -2877,7 +2952,7 @@ mod retained_original_detail_tests {
         let raw_before=std::fs::read(dir.path().join("raw.png")).unwrap();
         let original=Sprite{width:2,height:2,pixels:vec![252,253,80,TRANSPARENT]};
         let mut h=HdAssets{root:dir.path().into(),..HdAssets::default()};let mut f=frame();f.original_detail_cells=vec![[0,0],[1,0]];
-        h.replacements.insert(1,Replacement{frame:f,requires_alpha:true,source_labels:Some(vec![252,253,0,0]),original_detail_source:Some(original.clone()),validated:false,rejected:false});
+        h.replacements.insert(1,Replacement{frame:f,requires_alpha:true,source_labels:Some(vec![252,253,0,0]),original_detail_source:Some(original.clone()),original_palette:None,validated:false,rejected:false});
         let mut a=[[0;3];256];a[80]=[255,0,0];a[252]=[255,255,0];a[253]=[0,255,0];
         let mut b=a;b[252]=[0,0,0];b[253]=[255,255,255];
         for scale in 1..=4 {
@@ -2929,7 +3004,7 @@ mod retained_original_detail_tests {
             raw.save(dir.path().join("raw.png")).unwrap();
             let mut h=HdAssets{root:dir.path().into(),..HdAssets::default()};let mut f=frame();f.original_detail_cells=vec![[0,0]];
             let original=Sprite{width:2,height:2,pixels:vec![252,80,80,TRANSPARENT]};
-            h.replacements.insert(1,Replacement{frame:f,requires_alpha:true,source_labels:Some(vec![252,0,0,0]),original_detail_source:Some(original),validated:false,rejected:false});
+            h.replacements.insert(1,Replacement{frame:f,requires_alpha:true,source_labels:Some(vec![252,0,0,0]),original_detail_source:Some(original),original_palette:None,validated:false,rejected:false});
             assert!(h.sprite(1,1,&[[0;3];256]).unwrap().is_none());
             assert!(h.terrain_sprite(1,1,&[[0;3];256]).unwrap().is_none());
             assert!(!h.diagnostics.is_empty());
@@ -3002,7 +3077,7 @@ mod rational_atlas_grid_tests {
             logical_height: 1, origin: [0, 0], source_sha256: "00".repeat(32),
             crop: None, atlas_grid: Some(AtlasGrid { columns: 2, rows: 2, column: 0, row: 0 }),
             preserve_reserved_coverage: false, native_nearest_cues: Vec::new(),
-            original_detail_cells: Vec::new() }
+            original_detail_cells: Vec::new(), palette_constraint:None }
     }
     fn info() -> PngInfo {
         PngInfo { size: 1, modified: None, digest: [1; 32], width: 17, height: 17 }
@@ -3131,5 +3206,84 @@ mod extended_retained_original_bound_tests {
         assert_ne!(original_detail_policy_tag(65,false),original_detail_policy_tag(64,false));
         assert_ne!(original_detail_policy_tag(65,true),original_detail_policy_tag(64,true));
         assert_eq!(original_detail_policy_tag(65,false),original_detail_policy_tag(128,false));
+    }
+}
+
+#[cfg(test)]
+mod original_palette_constraint_tests {
+    use super::*;
+    fn source(pixels:Vec<u16>) -> Sprite { Sprite { width:2,height:2,pixels } }
+    fn frame() -> Frame { Frame { frame:0,file:"p.png".into(),logical_width:2,logical_height:2,
+        origin:[0,0],source_sha256:format!("{:x}",Sha256::digest(b"x")),crop:None,atlas_grid:None,
+        preserve_reserved_coverage:false,native_nearest_cues:vec![],original_detail_cells:vec![],palette_constraint:None } }
+    fn palette() -> [[u8;3];256] { let mut p=[[0;3];256];p[10]=[50,30,20];p[20]=[100,70,50];p[30]=[250,220,190];p }
+    fn assets(domain:bool,alpha:u8) -> (tempfile::TempDir,HdAssets) {
+        let dir=tempfile::tempdir().unwrap();
+        let mut raw=RgbaImage::from_pixel(8,8,image::Rgba([230,200,160,alpha]));
+        for y in 0..8 { for x in 0..4 {raw.put_pixel(x,y,image::Rgba([5,5,5,alpha]));}}
+        raw.save(dir.path().join("p.png")).unwrap();
+        let mut f=frame();if domain { f.palette_constraint=Some(PaletteConstraint::OriginalPaintedOrdinaryV1); }
+        let mut h=HdAssets {root:dir.path().into(),..HdAssets::default()};
+        h.replacements.insert(1,Replacement {frame:f,requires_alpha:false,source_labels:None,
+            original_detail_source:None,original_palette:domain.then(||OriginalPalette::from_source(&source(vec![10,20,10,20])).unwrap()),validated:false,rejected:false});
+        (dir,h)
+    }
+    #[test] fn exact_derived_domain_rejects_empty_transparent_reserved_and_bad_extent() {
+        for s in [source(vec![10,20,256,10]),source(vec![240,10,10,10]),source(vec![255,10,10,10]),source(vec![10])] {
+            assert!(OriginalPalette::from_source(&s).is_err());
+        }
+        assert!(OriginalPalette::from_source(&Sprite::blank(0,0)).is_err());
+        let d=OriginalPalette::from_source(&source(vec![20,10,10,20])).unwrap();assert_eq!(d.indices(),[10,20]);
+        assert!(!d.contains(240));assert!(!d.contains(256));assert!(!d.contains(u16::MAX));
+    }
+    #[test] fn exact_domain_tie_and_palette_identity_are_deterministic() {
+        let d=OriginalPalette::from_source(&source(vec![10,20,10,20])).unwrap();
+        let p=[[0;3];256];assert_eq!(d.closest(&p,[0;3]),10);
+        let mut p=palette();assert_eq!(d.closest(&p,[99,70,50]),20);p[10]=[99,70,50];p[20]=[0;3];assert_eq!(d.closest(&p,[99,70,50]),10);
+    }
+    #[test] fn absent_field_serialization_and_frame_keys_are_exact_legacy() {
+        let f=frame();let v=serde_json::to_value(&f).unwrap();assert!(v.get("palette_constraint").is_none());
+        let info=PngInfo {size:1,modified:None,digest:[2;32],width:8,height:8};
+        let key=HdAssets::frame_key(&f,&info,false);
+        let mut v=serde_json::to_value(&f).unwrap();v["palette_constraint"]=serde_json::Value::Null;
+        let f2:Frame=serde_json::from_value(v).unwrap();assert_eq!(serde_json::to_value(&f2).unwrap(),serde_json::to_value(&f).unwrap());assert_eq!(HdAssets::frame_key(&f2,&info,false),key);
+        let mut f3=f.clone();f3.palette_constraint=Some(PaletteConstraint::OriginalPaintedOrdinaryV1);assert_ne!(HdAssets::frame_key(&f3,&info,false),key);
+    }
+    #[test] fn unsupported_metadata_and_source_scope_reject() {
+        for value in [serde_json::json!(true),serde_json::json!(1),serde_json::json!("ordinary"),serde_json::json!([])] {
+            let mut v=serde_json::to_value(frame()).unwrap();v["palette_constraint"]=value;assert!(serde_json::from_value::<Frame>(v).is_err());
+        }
+        let mut f=frame();f.palette_constraint=Some(PaletteConstraint::OriginalPaintedOrdinaryV1);
+        assert!(validate_frame(&f,&source(vec![10,20,10,20]),b"x").is_ok());
+        assert!(validate_frame(&f,&source(vec![10,240,10,20]),b"x").is_err());
+        assert!(validate_frame(&f,&source(vec![10,256,10,20]),b"x").is_err());
+    }
+    #[test] fn actual_sampler_all4_domain_static_and_alpha_are_separate() {
+        let (_a,mut plain)=assets(false,255);let (_b,mut constrained)=assets(true,255);
+        for scale in 1..=4 {
+            let p=plain.sprite(1,scale,&palette()).unwrap().unwrap();let c=constrained.sprite(1,scale,&palette()).unwrap().unwrap();
+            assert!(p.pixels.contains(&30));assert!(c.pixels.iter().all(|i|[10,20].contains(i)));assert!(c.pixels.contains(&10)&&c.pixels.contains(&20));
+            assert_eq!(plain.sprite_static_palette(1,scale,&palette()).unwrap(),constrained.sprite_static_palette(1,scale,&palette()).unwrap());
+            assert!(constrained.terrain_sprite(1,scale,&palette()).is_err());
+            let (terrain,_,domain)=constrained.terrain_sprite_with_palette(1,scale,&palette()).unwrap().unwrap();assert_eq!(c,terrain);assert_eq!(domain.unwrap().indices(),[10,20]);
+        }
+        assert!(plain.palette_constraint_cache_identity(1).is_none());assert!(constrained.palette_constraint_cache_identity(1).is_some());
+        let (_a,mut plain)=assets(false,0);let (_b,mut constrained)=assets(true,0);
+        for scale in 1..=4 {assert_eq!(plain.sprite(1,scale,&palette()).is_err(),constrained.sprite(1,scale,&palette()).is_err());}
+    }
+    #[test] fn alpha_threshold_mask_does_not_gain_source_coverage() {
+        let (_a,mut p)=assets(false,255);let (_b,mut c)=assets(true,255);
+        for h in [&mut p,&mut c] {let path=h.root.join("p.png");let mut raw=image::open(&path).unwrap().to_rgba8();for y in 0..4 {for x in 0..4 {raw.put_pixel(x,y,image::Rgba([60,40,25,0]));}}raw.save(path).unwrap();}
+        for scale in 1..=4 {let a=p.sprite(1,scale,&palette()).unwrap().unwrap();let b=c.sprite(1,scale,&palette()).unwrap().unwrap();assert_eq!(a.pixels.iter().map(|&i|i==TRANSPARENT).collect::<Vec<_>>(),b.pixels.iter().map(|&i|i==TRANSPARENT).collect::<Vec<_>>());}
+    }
+}
+
+#[cfg(test)] mod palette_collapse_truthful_test {
+    use super::*;
+    #[test] fn a_uniform_overbright_sample_can_collapse_even_a_valid_source_palette() {
+        let source=Sprite{width:2,height:1,pixels:vec![10,20]};let domain=OriginalPalette::from_source(&source).unwrap();
+        let mut palette=[[0;3];256];palette[10]=[50,30,20];palette[20]=[100,70,50];
+        let mapped:std::collections::BTreeSet<_>=(200..=255).map(|x|domain.closest(&palette,[x,x,x])).collect();
+        assert_eq!(mapped,std::collections::BTreeSet::from([20]));
     }
 }

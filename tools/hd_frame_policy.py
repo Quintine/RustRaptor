@@ -3,7 +3,7 @@ import struct
 from fractions import Fraction
 
 FRAME_KEYS = {"frame", "file", "logical_width", "logical_height", "origin",
-              "source_sha256", "crop", "atlas_grid", "preserve_reserved_coverage", "native_nearest_cues", "original_detail_cells"}
+              "source_sha256", "crop", "atlas_grid", "preserve_reserved_coverage", "native_nearest_cues", "original_detail_cells", "palette_constraint"}
 
 def validate_atlas_grid(frame):
     grid = frame.get("atlas_grid")
@@ -90,6 +90,11 @@ def validate_frame_policy(frame, source_payload=None):
     if set(frame) - FRAME_KEYS:
         raise ValueError("unknown HD frame fields")
     validate_atlas_grid(frame)
+    constraint = frame.get("palette_constraint")
+    if constraint is not None and (type(constraint) is not str or constraint != "original-painted-ordinary-v1"):
+        raise ValueError("unknown palette constraint")
+    if constraint is not None and source_payload is not None:
+        original_palette_indices(frame, source_payload)
     if type(frame.get("preserve_reserved_coverage", False)) is not bool:
         raise ValueError("preserve_reserved_coverage must be a boolean")
     cues = frame.get("native_nearest_cues", [])
@@ -141,3 +146,22 @@ def validate_frame_policy(frame, source_payload=None):
         # Runtime, audit and extended registrar approval supply actual payloads.
         if len(details) > 64 and len(details) * 4 > sum(0 <= p <= 255 for p in indices):
             raise ValueError("65..128 Original details may retain at most one quarter of painted Source")
+
+
+def original_palette_indices(frame, source_payload):
+    """Derive the exact allowed set from authentic Source, never a supplied list.
+
+    Metadata-only preparation cannot claim this validation. Rust and actual
+    audit/registration provide the checked payload and keep PNG alpha separate.
+    """
+    constraint = frame.get("palette_constraint")
+    if constraint is None:
+        return None
+    if type(constraint) is not str or constraint != "original-painted-ordinary-v1":
+        raise ValueError("unknown palette constraint")
+    sw, sh, indices = _indices(source_payload)
+    if (type(frame.get("logical_width")) is not int or type(frame.get("logical_height")) is not int
+            or (sw, sh) != (frame["logical_width"], frame["logical_height"])
+            or not indices or any(not 0 <= i < 240 for i in indices)):
+        raise ValueError("Original palette constraint requires opaque ordinary Source")
+    return sorted(set(indices))

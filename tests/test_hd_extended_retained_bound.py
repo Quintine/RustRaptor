@@ -127,10 +127,31 @@ class RustSourceCompatibility(unittest.TestCase):
             start=s.index('fn '+name+'(');left=s.index('{',start);depth=1;end=left+1
             while depth:depth+=(s[end]=='{')-(s[end]=='}');end+=1
             return s[start:end]
-        for name in ['source_reference_budget','retain_original_detail_samples','sprite_with_policy','terrain_sprite']:
+        # Keep the old fingerprints. Strip only the explicit new opt-in branch;
+        # the None/default sampler and Original-retention kernel must remain exact.
+        for name in ['source_reference_budget','retain_original_detail_samples']:
             self.assertEqual(expected[name],hashlib.sha256(function(new,name).encode()).hexdigest(),name)
+        sampler = function(new,'sprite_with_policy')
+        opt_in = """PalettePolicy::SourceClasses | PalettePolicy::SourceClassesBaseline =>
+                        replacement.original_palette.as_ref().map_or_else(
+                            || closest(palette,rgb,source_label),
+                            |domain| domain.closest(palette,rgb.map(i32::from))),"""
+        self.assertEqual(sampler.count(opt_in),1)
+        sampler=sampler.replace(opt_in,'PalettePolicy::SourceClasses | PalettePolicy::SourceClassesBaseline => closest(palette, rgb, source_label),')
+        self.assertEqual(expected['sprite_with_policy'],hashlib.sha256(sampler.encode()).hexdigest())
+        implementation=function(new,'terrain_sprite_impl')
+        signature='fn terrain_sprite(&mut self, id: u32, scale: usize, palette: &[[u8; 3]; 256])\n        -> Result<Option<(Sprite, Option<OriginalDetailCells>)>>\n    {'
+        normalized=signature+implementation[implementation.index('{')+1:]
+        self.assertEqual(expected['terrain_sprite'],hashlib.sha256(normalized.encode()).hexdigest())
+        wrapper=function(new,'terrain_sprite')
+        self.assertIn('palette_constraint.is_some()',wrapper)
+        self.assertIn('self.terrain_sprite_impl(id,scale,palette)',wrapper)
         for name,old_bytes,call in [('frame_key','b"raptor-retained-original-details-v2-painted0255"','original_detail_policy_tag(frame.original_detail_cells.len(), false)'),('original_detail_cache_identity','b"retained-original-rejected-fallback-v2-painted0255"','original_detail_policy_tag(frame.original_detail_cells.len(), true)')]:
-            self.assertEqual(expected[name],hashlib.sha256(function(new,name).replace(call,old_bytes).encode()).hexdigest(),name)
+            body=function(new,name)
+            if name=='frame_key':
+                branch='        if frame.palette_constraint.is_some() {\n            digest.update(b"raptor-hd-original-painted-ordinary-palette-v1");\n        }\n'
+                self.assertEqual(body.count(branch),1);body=body.replace(branch,'')
+            self.assertEqual(expected[name],hashlib.sha256(body.replace(call,old_bytes).encode()).hexdigest(),name)
     def test_audit_still_calls_actual_payload_validator(self):
         tree=ast.parse((ROOT/'tools/hd_art_audit.py').read_text())
         node=next(n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name=='validate_hd_frame')

@@ -216,7 +216,9 @@ def main():
                 shutil.copyfile(source, destination)
         (isolated / "hd.json").write_text(json.dumps(manifest))
         binary = isolated / "review-bin"
-        compiler_args = ["rustc", "--edition=2021", str(project / "tools/hd_candidate_review.rs"), "--extern", f"raptor_replica={library}", "--extern", f"serde_json={serde}", "-L", f"dependency={dependency_directory}", "-L", "native=" + str(Path.home() / ".local/lib"), "-o", str(binary)]
+        review_source = project / ("tools/hd_palette_review.rs" if any(
+            frame.get("palette_constraint") is not None for frame in rows.values()) else "tools/hd_candidate_review.rs")
+        compiler_args = ["rustc", "--edition=2021", str(review_source), "--extern", f"raptor_replica={library}", "--extern", f"serde_json={serde}", "-L", f"dependency={dependency_directory}", "-L", "native=" + str(Path.home() / ".local/lib"), "-o", str(binary)]
         if static_cards:
             compiler_args.extend(["--cfg", "static_card_api"])
         subprocess.run(compiler_args, check=True)
@@ -246,6 +248,9 @@ def main():
     qa["frame_bindings_sha256"] = bindings_at_start
     qa["artwork_sha256"] = artwork_hashes
     qa["static_card_palette_mode"] = static_cards
+    if any(frame.get("palette_constraint") is not None for frame in rows.values()):
+        qa["review_helper_source"] = str(review_source.relative_to(project))
+        qa["review_helper_source_sha256"] = hashlib.sha256(review_source.read_bytes()).hexdigest()
     qa["source_newer_than_library"] = any((project / "src" / name).stat().st_mtime_ns > library_at_start.st_mtime_ns for name in ["assets.rs", "hd.rs"])
     qa["any_game_source_newer_than_library"] = any(path.stat().st_mtime_ns > library_at_start.st_mtime_ns for path in (project / "src").glob("*.rs"))
     qa_path.write_text(json.dumps(qa, indent=2) + "\n")
