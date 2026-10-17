@@ -1,3 +1,29 @@
+# Current checkpoint — 17 October 2026
+
+The self-contained game now includes **5,340 HD pictures / 3,513 sequences**,
+including **4,243 terrain pictures**. Its **9,324 data files / 8,153,633,623 bytes**
+pass complete manifest verification. Actual CLI validation passes all 5,340 frames
+with zero rejects and 45 mods/one override. Terrain `10511` is the new reviewed
+hybrid: four explicitly listed logical cells retain Original detail rather than
+claim generated HD detail. Previous 5,339 bindings remain exact.
+
+**413 original pictures remain:** 292 terrain, 79 enemies/ground objects,
+35 UI/other and seven bosses. The requested 97-picture batch is already published
+as `a45abc58`. Asset commit `1bc0a9ce` passed native Windows CI with 341 tests,
+zero failures and 26 ignored; the later `9015a6c9` runtime rebuild has its own CI.
+Receipts for this one-picture append are in
+`.reference/hd-root-next-publication-after5339/`; immutable intake is
+`handoff-5340-20261017`.
+
+Iron Coast retuning is active in `.reference/campaign-retune-20261017/`.
+The baseline covers all 27 original and 14 mod missions at all four difficulties.
+Mission waves, enemy movement, bosses and weapon presentation are being validated
+in a combined private mod overlay before application. The working mod packages
+have not yet been replaced. The 45-picture terrain context sample found visible
+road-material seams; affected artwork remains held for repair.
+
+# Earlier 5,339-frame checkpoint — retained historical observation
+
 # HD continuation checkpoint at 5,339 frames — 17 October 2026
 
 The self-contained RustRaptor folder includes **5,339 original HD pictures /
