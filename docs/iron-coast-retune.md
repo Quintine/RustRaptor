@@ -17,13 +17,15 @@ Enabled scheduled enemies, including required targets and bosses:
 | I 5 — Cinder Docks | 45 | 64 | 83 | 107 |
 | I 6 — Iron Crown | 64 | 92 | 120 | 145 |
 | II 1 — Nightbreak Inlet | 30 | 43 | 55 | 67 |
-| II 2 — Undertow Run | 31 | 44 | 60 | 76 |
+| II 2 — Undertow Run | 32 | 46 | 62 | 79 |
 | II 3 — Stormglass Refinery | 42 | 50 | 62 | 78 |
 | II 4 — Floodgate Zero | 42 | 50 | 62 | 78 |
 | II 5 — Skybreaker Arsenal | 45 | 53 | 65 | 81 |
 | II 6 — Emberwake Shipyards | 46 | 54 | 66 | 82 |
 | II 7 — Siege of the Iron Fleet | 57 | 65 | 77 | 93 |
 | II 8 — Black Tide | 61 | 69 | 81 | 97 |
+
+Mission II 2 version 1.0.2 adds a small number of classic aircraft in its observed middle lull. Paired current-C paid continuations from authentic post-Mission-1 saves complete Missions 2–8 and the finale replay at all four difficulties, with unchanged ending shields, completion timings and refill counts. The added kills and pickups earn normal credits. In the separate shield-replenished arsenal fixture, the longest threat-free stretch within that middle window decreases from 8.91 to 5.87 seconds; the lull is shortened rather than eliminated. The full-cohort pressure tables below remain the recorded version 1.0.1 measurements. These focused checks were recorded on 17 October 2026 and are separate from the shield-replenished observations.
 
 Counts are not simultaneous enemies or difficulty quotas. The 27 original
 missions have median scheduled totals of 139 / 139 / 228 / 313, but their
