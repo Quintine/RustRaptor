@@ -885,8 +885,9 @@
     "current_source_runtime": "Dated published SourceC+D update checkpoint at5384/3551. Retained unchanged as historical source-update evidence, not latest artwork coverage.",
     "latest_artwork_runtime": "Published H5425/3587 artwork-release evidence measured under SourceC. Retained unchanged; its executable/source hashes are historical after SourceE activation.",
     "older_top_level_release_fields": "Historical2935 release and predecessor authority, not current SourceE runtime or H5425 artwork facts.",
-    "current_runtime": "Selects sourceE_runtime_activation for the actual installed SourceE runtime; H5425 artwork and data are unchanged.",
-    "sourceE_runtime_activation": "Current SourceE build/install/CLI/default-SDL evidence; zero asset palette opt-ins and no native Windows SourceE execution claim."
+    "current_runtime": "Selects runtime5426: current actual SourceE runtime/artwork5426, one palette opt-in2039c.",
+    "sourceE_runtime_activation": "Dated SourceE installation atH5425: zero palette opt-ins then; immutable source/build/default-control evidence retained unchanged.",
+    "runtime5426": "Single historical2039c SourceE palette treatment, actual assembly/CLI/SDL; no new generation or whole-family approval."
   },
   "sourceE_runtime_activation": {
     "checkpoint_utc": "2026-10-17T12:01:07.035317+00:00",
@@ -992,7 +993,130 @@
     "history_scope": "All SourceC and older successful image-call, intrinsic, material, context, held-art and refusal authorities retain their original epochs and limits. The existing current_source_runtime object is a dated SourceC+D5384 checkpoint; latest_artwork_runtime is the unchanged SourceC H5425 artwork-release evidence. This activation changes runtime evidence only, with no asset/header/default/raw/status or family-review changes. Private constrained studies are not installed artwork."
   },
   "current_runtime": {
-    "record": "sourceE_runtime_activation",
-    "scope": "Current installed runtime at unchanged published H5425 artwork; distinct from retained SourceC artwork/source-update receipts."
+    "record": "runtime5426",
+    "scope": "Current installed SourceE runtime and actual H5426 artwork; one palette opt-in2039c. sourceE_runtime_activation retains the earlier H5425 zero-opt-in checkpoint."
+  },
+  "runtime5426": {
+    "checkpoint_utc": "2026-10-17T12:31:23.439368+00:00",
+    "status": "ACTUAL5426_SINGLE2039C_SOURCEE_CANONICAL_ASSEMBLY_CLI_SDL_PASS_PUBLICATION_PENDING",
+    "registered_frames": 5426,
+    "complete_sequences": 3588,
+    "terrain_frames": 4301,
+    "remaining_original_pictures": 327,
+    "remaining_by_category": {
+      "terrain": 234,
+      "enemies_ground_objects": 59,
+      "UI_other": 33,
+      "bosses": 1
+    },
+    "bundled_data_files": 9370,
+    "bundled_data_bytes": 8270452494,
+    "new_frames": 1,
+    "new_native_sequences": 1,
+    "selected_assets": [
+      "2039c"
+    ],
+    "new_raw_routes": 1,
+    "new_raw_bytes": 2904333,
+    "new_generation": false,
+    "historical_raw_sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+    "historical_generated_PNG_unmodified": true,
+    "palette_constraint": {
+      "asset": "2039c",
+      "policy": "original-painted-ordinary-v1",
+      "installed_opt_in_frames": 1,
+      "sourceE_activation_H5425_zero_opt_in_record_is_dated_and_unchanged": true
+    },
+    "runtime_manifest_sha256": "89a1c0c0dfe0297527b15249b8c502da379f7fe2d8aaedb0b6faf9a1cb2f2fa0",
+    "HD_manifest_sha256": "2475da9bb47bc5bfbf4eb7a26962a5632a171bffacdb84db51ff03083bfa9a09",
+    "provenance_sha256": "90e9e0f137082bb1370a3fe33a648ba86f6e5ecb7dd466999cac9b8bc2637229",
+    "SourceE18_both_binaries_and_current341_files_45mods_M2v102_unchanged": true,
+    "evidence": {
+      "immutable_handoff": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5426-20261017/handoff-manifest.json",
+        "sha256": "c6605a2862d58550a3a453ab4213ae0adb0eb391c6a8b9df1ba48a19bd8df49e"
+      },
+      "registration": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-2039c-canonical5426-SourceE-and-seal-20261017/closed-actual-final2039c-canonical-native5426-registration-proof.json",
+        "sha256": "6c4ccf9bfda66d146aeeccb8562e921e6e4519166c47a7820814eb968387d8a1"
+      },
+      "Root_final_native_approval": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5425-SourceE-20261017/root-final-native-single-review.json",
+        "sha256": "738701a930afeaade9e67295ad671d50f4c37ef99fa36cb8ce26852849dc6eee"
+      },
+      "Root_publication_intake": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5425-SourceE-20261017/publication-intake.json",
+        "sha256": "8174150d34143b801b1d4bdccdb3598576d195ebf40e0ac29e6a36363a12941b"
+      },
+      "assembly": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5425-SourceE-20261017/assembly-receipt.json",
+        "sha256": "87aab5e9fda7ee5bcccddabb6ac4507f93fc7396289ff12aab80237faf79f971"
+      },
+      "actual_CLI": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5425-SourceE-20261017/cli-validation.json",
+        "sha256": "872b875a46a79deed48ae286878f13fe84f6b4b13e71198e370f7171960545ca"
+      },
+      "different_material_and_one_genuine_context": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-historical2039c-actual-SourceE-H5425-material-context-bridge-peer-20261017/INDEPENDENT-ACTUAL-SOURCEE-H5425-HISTORICAL2039C-MATERIAL-AND-GENUINE-CONTEXT-BRIDGE-REVIEW.json",
+        "sha256": "05da73ddc8c44ce078b3c71fec0d3f3112e21c833c557a1c50af9620dac33113"
+      },
+      "different_material_context_strict": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-historical2039c-actual-SourceE-H5425-material-context-bridge-peer-20261017-strict-independent-actual-SourceE-material-and-one-genuine-context-bridge-closure.json",
+        "sha256": "1877c853a7b8c11d933e585f77cdd4b157dd858324797f53eb32753301b64cc4"
+      },
+      "Root_art_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceE-original-palette-production-integration-20261017/root-personal-2039c-actual-sourceE-trial-review.json",
+        "sha256": "bc07df18db6d59129d4a32b7efa837689f0c288eb9af86d73eb44d141b24f776"
+      },
+      "actual_SDL": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies-actualH5426-SourceE-three-SDL-versus-H5425-20261017-v1/CLOSED-ACTUAL-H5426-SOURCEE-THREE-SDL-MEASURED-PHYSICAL-ART-REGRESSION-VERSUS-H5425-SOURCEE.json",
+        "sha256": "ef2ec4321d7da6164ccb9d111f0425ad0e3254cc3bee72e18807b21e73593dac"
+      },
+      "actual_SDL_strict": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies-actualH5426-SourceE-three-SDL-versus-H5425-20261017-v1-strict-complete-three-SDL-actualH5426-SourceE-regression-closure.json",
+        "sha256": "9d422eadce93d5ac38679ac5b644e70cf6041e10ce9f3e6d9846987087fbb0fb"
+      },
+      "Root_SDL_physical": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5425-SourceE-20261017/root-personal-H5426-three-SDL-review.json",
+        "sha256": "33b9a24f8d8e9b6854ca9135481031ee199360a52d5a59ee5de7079ab5c99aee"
+      }
+    },
+    "validation": {
+      "HD_registered": 5426,
+      "HD_validated": 5426,
+      "HD_rejected": 0,
+      "mods_validated": 45,
+      "overrides": 1,
+      "registrar_main_calls": 1,
+      "registrar_dryrun_calls": 0,
+      "registrar_retries": 0
+    },
+    "SDL_regression_controls": {
+      "baseline": "actual SourceE H5425, same SourceE executables and current M2v1.0.2 resources",
+      "cases_exit0": 3,
+      "width": 1920,
+      "height": 1080,
+      "HD_scale": 4,
+      "presented_pixels": 6220800,
+      "PNG_byte_equal_cases": 3,
+      "changed_RGB_pixels": 0,
+      "changed_alpha_pixels": 0,
+      "Root_personally_viewed_complete_images": 3,
+      "scope": "Actual art-only controls measured PNG/RGB/alpha equality against actual SourceE H5425; equality was measured, not required by the runner. One installed palette opt-in is acknowledged, but these fixtures provide no specific2039c visibility, palette-mode-art, whole-pack, all-placement or hardware-listening approval."
+    },
+    "native_Windows": {
+      "latest_closed_execution": "SourceC H5425 / 4ab5f799: 379 passed, 26 ignored, 0 failed; 5425 validated with zero rejects and 45 mods/one override",
+      "receipt": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5425-asset4ab5-native-Windows-CI-observation-20261017/ACTUAL-EXACT5425-ASSET4AB5-NATIVE-WINDOWS-CI-OBSERVATION-FINAL.json",
+        "sha256": "49d017d4798ca228e4485e5f24414e447e5613f785dff5d7df3236888d3f59d2"
+      },
+      "outside_strict": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5425-asset4ab5-native-Windows-CI-observation-20261017-strict-actual-native-Windows-CI-observation-FINAL-closure.json",
+        "sha256": "96e65c3e0403efe84c24d7fb007def5fc2d8905f11cb96f0cf68f802d087ec6b"
+      },
+      "SourceE_68669fc6_execution": "in progress at this checkpoint",
+      "H5426_execution": "not claimed"
+    },
+    "limits": "Only earlier historical raw2039c under the exact SourceE runtime palette treatment and one genuine S2W4r8c7 neighborhood are approved. Fine/darker ground and visible3-4x texture/value island remain. Latest corrective4b6b and all other15 family HOLDs stay held. Prior20391-94 are actualC QA,2039a actualB QA, carried unchanged; none is a new SourceE selected measurement. No new image generation, whole16, seamlessness, all-placement or target visibility claim follows from this append or the three SDL regression controls."
   }
 }
