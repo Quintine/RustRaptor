@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5483 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5485 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -24325,6 +24325,88 @@
         }
       },
       "frame_bindings_sha256": "50f7d3c2d27a3b1e83ef239fe488c3aed9e7ca416286c94ee84b86b293b2f5a9"
+    },
+    {
+      "job_id": "coordinator-203fb-203fc-new-source-generation2-SourceF-H5483-FINAL-20261018-v1",
+      "assets": [
+        "203fb",
+        "203fc"
+      ],
+      "frames": 2,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-203fb-203fc-new-source-generation2-SourceF-H5483-FINAL-20261018-v1/provenance.json",
+      "coordinator_review": "jobs/coordinator-203fb-203fc-new-source-generation2-SourceF-H5483-FINAL-20261018-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-203fb-203fc-new-source-generation2-SourceF-H5483-FINAL-20261018-v1/runtime-qa.json",
+      "review": {
+        "actual_once2_QA": {
+          "device": 55,
+          "inode": 5523768,
+          "mode": 33188,
+          "mtime_ns": 1792251962214675068,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203fb-203fc-Source-only-coherent2-original-art-author-20261018/actual-once-SourceF-plain2-intrinsic5/runtime-qa.json",
+          "sha256": "4e7205674771cb46db2418b2435d833ef6a1cd005902e258111d2e660f2513e0",
+          "size": 7000
+        },
+        "author": {
+          "device": 55,
+          "inode": 5523813,
+          "mode": 33188,
+          "mtime_ns": 1792252071765951536,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203fb-203fc-Source-only-coherent2-original-art-author-20261018/CLOSED-ACTUAL-ONE-SOURCE-ONLY-COHERENT2-IMAGE-AND-SOURCEF-AUTHOR-QUALIFIED2-MATERIAL-PROPOSAL.json",
+          "sha256": "518bae02a4fedef16943c844654c60a4a72779e2528bd893fbc22ddeee681142",
+          "size": 38424
+        },
+        "strict": {
+          "device": 55,
+          "inode": 5523814,
+          "mode": 33188,
+          "mtime_ns": 1792252072093943399,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203fb-203fc-Source-only-coherent2-original-art-author-20261018-strict-complete-new-coherent2-author-source-input-output-closure.json",
+          "sha256": "ebc49bdf0eb01d0abd0a514b2badd3b1682dc6654bf76506937dcfd10c13ae94",
+          "size": 38267
+        }
+      },
+      "independent_review": {
+        "context": {
+          "device": 55,
+          "inode": 5525620,
+          "mode": 33188,
+          "mtime_ns": 1792253483558181219,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-203fb-203fc-SourceF-H5483-genuine19-independent-context-peer-20261018/INDEPENDENT203FB-203FC-SOURCEF-H5483-GENUINE19-ELEVEN-VIEWS-NINE-EVENTS-PHYSICAL-CONTEXT-REVIEW.json",
+          "sha256": "d51b1ec3ad1a3d9b41b68583c4403c95302cba368165cedc3bae4633fe627466",
+          "size": 101664
+        },
+        "context_pending": false,
+        "context_strict": {
+          "device": 55,
+          "inode": 5525621,
+          "mode": 33188,
+          "mtime_ns": 1792253484000239635,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-203fb-203fc-SourceF-H5483-genuine19-independent-context-peer-20261018-strict-independent203fbfc-genuine19-eleven-view-context-closure.json",
+          "sha256": "93f22198a68b6aefd9313a85ffbcf26ccc4f7c6d8e81dd255de3f0f4dee5fd1f",
+          "size": 554157
+        },
+        "material": {
+          "device": 55,
+          "inode": 5523908,
+          "mode": 33188,
+          "mtime_ns": 1792252249672092211,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark203fb-203fc-SourceF-coherent2-independent-intrinsic-material-peer-20261018/QUALIFIED-DIFFERENT-COMPLETE2-203FB-203FC-NEW-SOURCE-ONLY-SOURCEF-INTRINSIC-MATERIAL-REVIEW.json",
+          "sha256": "0201743988558998ca4edeea6e798fa2e12fcddf7e7249991e9a694e5b122364",
+          "size": 10375
+        },
+        "material_pending": false,
+        "material_strict": {
+          "device": 55,
+          "inode": 5523909,
+          "mode": 33188,
+          "mtime_ns": 1792252249672836606,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark203fb-203fc-SourceF-coherent2-independent-intrinsic-material-peer-20261018-strict-complete2-independent-SourceF-intrinsic-material-closure.json",
+          "sha256": "d028fcea4852ae5ff4ea1b8a67e6198cd7a9fb2549146f88b47df32623d794ea",
+          "size": 5113
+        }
+      },
+      "frame_bindings_sha256": "216d34f63a17830cb2e3d85af4f8b6875ed9341df91ff40655b9d3912be27058"
     }
   ],
   "jobs": [
@@ -24424,8 +24506,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5483,
-  "registration_updated_at_utc": "2026-10-17T15:31:29.962489+00:00",
+  "registered_frame_count": 5485,
+  "registration_updated_at_utc": "2026-10-17T16:13:02.971766+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,

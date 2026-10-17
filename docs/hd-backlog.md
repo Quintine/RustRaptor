@@ -1,14 +1,16 @@
 # Original artwork HD backlog
 
-Current artwork/runtime checkpoint — 18 October 2026: the optional HD pack contains **5,483 reviewed pictures in 3,630 complete sequences**, including **4,358 Terrain pictures**. **270 originals still await approval**: 177 Terrain, 59 enemies and ground objects, 33 UI/other pictures and one boss. Held drafts and actual provider refusals remain part of that backlog.
+Current artwork/runtime checkpoint — 18 October 2026: the optional HD pack contains **5,485 reviewed pictures in 3,632 complete sequences**, including **4,360 Terrain pictures**. **268 originals still await approval**: 175 Terrain, 59 enemies and ground objects, 33 UI/other pictures and one boss. Held drafts and actual provider refusals remain part of that backlog.
 
-One new authentic-Source-only image supplies `203f8`, `203f9` and `203fa`. Its PNG is untouched, with three complete native definitions, plain sampling and unchanged 32×32 canvases, zero origins and fixed atlas crops. No optional policy is added; the nine existing palette opt-ins stay unchanged. The older plain and palette proposals remain held.
+One new authentic-Source-only image supplies `203fb` and `203fc`. Its PNG is untouched, with two complete native definitions, plain sampling and unchanged 32×32 canvases, zero origins and fixed atlas crops. No optional policy is added; the nine existing palette opt-ins stay unchanged. Older plain and palette proposals retain their recorded holds.
 
-Separate reviews cover 22 genuine endpoints and seven neighbor pairs, including five freshly checked reverse contexts for registered `203ff`. A legal private validation-World scene covers `203f8` and `203f9`, which have no Original-map occurrences; `203fa` has ten Original placements. Finer grain, relief and density boundaries retain their qualifications. This is not seamless, all-placement or complete-route approval.
+Separate reviews cover 19 genuine endpoints and 11 ordered comparisons from nine neighbor events. They include six freshly checked reverse contexts for registered `203fa`, including two new northeast-corner endpoints. No private validation gallery is used. Recorded grain, relief and density limits remain qualified; this is not seamless, all-placement or complete-route approval.
 
-Validation accepts all 5,483 frames with zero rejects, plus 45 mods with one override. Three actual 1920×1080 SDL controls completed successfully at 120, 600 and 600 frames. Root viewed all three full images and independently confirmed identical PNG bytes against frozen SourceF H5480. RGB and alpha comparisons measured zero changes across 6,220,800 pixels. These are bounded presentation controls, without a claim that the three new pictures appeared or that every placement or route was reviewed.
+Validation accepts all 5,485 frames with zero rejects, plus 45 mods with one override. Three installed-game SDL controls exited successfully and were personally reviewed. Their PNG, RGB and alpha data measured identical to H5483 across 6,220,800 pixels.
 
-SourceF, both binaries and Mission 2 version 1.0.3 remain unchanged. Existing runtime and campaign tests retain their dated scopes. The latest closed native Windows result is SourceF H5463 at `1d0b2dda`, including Mission 2 version 1.0.3: 401 passed, 26 ignored and none failed. That is not a native Windows result for this artwork revision. The [completion ledger](hd-completion.json), [backlog](hd-backlog.md) and [runtime evidence](hd-runtime-release.json) record exact authorities and limits. Validated package checkpoint; Git history records publication.
+SourceF, both binaries and Mission 2 version 1.0.3 remain unchanged. Existing runtime and campaign tests retain their dated scopes. The latest closed native Windows result is SourceF H5483 at `fc36ea28`, including Mission 2 version 1.0.3: 401 passed, 26 ignored and none failed. That is not a native Windows result for this artwork revision. The [completion ledger](hd-completion.json), [backlog](hd-backlog.md) and [runtime evidence](hd-runtime-release.json) record exact authorities and limits. Validated package checkpoint; Git history records publication.
+
+Separate held proposal: the new Source-only study for `20400`, `20403` and `20406` remains a material HOLD because coarse rubble and weak olive coverage fail the Source reading. Its successful image call and technical QA add no approved coverage. Earlier holds remain unchanged (author receipt `654fd40d`, outside closure `5da4e3b8`).
 
 Preserved 17 October 2026 Source-update checkpoint at 5,384 (historical coverage): Current Source C+D runtime — 17 October 2026, published `a073f73f`: HD coverage remains **5,384 frames / 3,551 sequences**, with **369 originals remaining** (260 Terrain, 75 enemies/ground objects, 33 UI/other, one boss). Both executables are rebuilt; 90 Rust / 78 Python tests, HD validation and three exact 1080p regression controls pass. Five old Rust checks remain ignored. Source C+D native Windows CI is pending; the prior `58723547` result (361 passed / 26 ignored / zero failed) is a different epoch. Earlier material, context and QA records below remain historical; this source update adds no art approval.
 
@@ -60,7 +62,7 @@ The published 3,592-frame admission adds **427 source/material-qualified origina
 | Player and enemy projectiles | 51 | 51 | 0 | 18 |
 | Explosions and effects | 281 | 281 | 0 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 4,358 | 177 | 4 |
+| Terrain | 4,535 | 4,360 | 175 | 4 |
 | Menus, portraits, HUD and other pictures | 150 | 117 | 33 | mixed static / animated |
 
 The completion ledger retains `format_version: 1` with `ledger_schema: family_review_refs_v1`. Each approved asset uses a stable `coordinator_review_ref`; `family_reviews` stores the candidate/binding identities and exact full immutable external receipt once. The original 2,132 normalization reduced 53,594,880 bytes to 8,406,611 (84.31%) without changing approval or artwork. New registrations update only their own status/evidence; native preservation has a separate closed record.
