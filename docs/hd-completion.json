@@ -19,8 +19,8 @@
   ],
   "stage_contract": "Every generated candidate stays distinct from review, registration and render reachability. Original-only fallback is temporary for every required picture. Native cinematics/fonts have explicit preservation exceptions, not HD claims.",
   "picture_status_counts": {
-    "registered": 5460,
-    "inprogress": 117,
+    "registered": 5463,
+    "inprogress": 114,
     "renderreachable": 20,
     "candidate": 154,
     "missing": 2
@@ -86861,7 +86861,7 @@
       "canonical_source_asset": "203f8",
       "family_id": "terrain-203ed-203fc",
       "job_id": "terrain-203ed-203fc",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_2",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -86872,7 +86872,8 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "coordinator_review_ref": "SourceF-new-generation3-203f8-203fa-native5483"
     },
     "203f9": {
       "kind": "picture",
@@ -86893,7 +86894,7 @@
       "canonical_source_asset": "203f9",
       "family_id": "terrain-203ed-203fc",
       "job_id": "terrain-203ed-203fc",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_2",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -86904,7 +86905,8 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "coordinator_review_ref": "SourceF-new-generation3-203f8-203fa-native5483"
     },
     "203fa": {
       "kind": "picture",
@@ -86925,7 +86927,7 @@
       "canonical_source_asset": "203fa",
       "family_id": "terrain-203ed-203fc",
       "job_id": "terrain-203ed-203fc",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -86936,7 +86938,8 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "coordinator_review_ref": "SourceF-new-generation3-203f8-203fa-native5483"
     },
     "203fb": {
       "kind": "picture",
@@ -236848,6 +236851,66 @@
       "new_image_generation": false,
       "limits": "Dim olive contrast remains subtle, native1 denser/softer and high-scale grain finer/more uniform than Original. Original203fa remains coarse beneath the proposal and foreign relief/value rectangles remain visible. Two independent neighbor relations only; no own destroyed state, World/Host timing or survival claim. Old plain/raw and other-nine trial HOLDs unchanged.",
       "native_headers_and_raw_lineage": "Exact registered native dictionaries and bound final metadata proofs; not repeated here."
+    },
+    "SourceF-new-generation3-203f8-203fa-native5483": {
+      "status": "REGISTERED_REVIEWED_NEW_SOURCE_ONLY_GENERATION3",
+      "selected_assets": [
+        "203f8",
+        "203f9",
+        "203fa"
+      ],
+      "scope": "Genuinely new Source-only image3/plain complete1×3; f8/f9 private validation only, fa10 Original placements;22genuine/onegallery/sevenpairs/five freshff reverse endpoints.",
+      "authorities": {
+        "registration": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-new3-canonical5483-SourceF-and-seal-20261018/closed-actual-new-generation3-canonical-native5483-registration-proof.json",
+          "sha256": "a82841d2549a9ab741c3d7348b6e302a8f669245e23ee9bf35870a12569c34bf"
+        },
+        "different_material": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark203f8-203fa-SourceF-coherent3-independent-intrinsic-material-peer-20261018/QUALIFIED-DIFFERENT-COMPLETE3-203F8-203FA-NEW-SOURCE-ONLY-SOURCEF-INTRINSIC-MATERIAL-REVIEW.json",
+          "sha256": "d3113f70b636ee10319876f7ad24775c24cc611bb6760e27a383d3cfe317951c"
+        },
+        "different_context": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-fresh203f8-203fa-SourceF-H5480-genuine22-private-gallery-independent-context-peer-20261018/INDEPENDENT-FRESH203F8-203FA-SOURCEF-H5480-GENUINE22-PRIVATE-GALLERY-SEVEN-PAIRS-CONTEXT-REVIEW.json",
+          "sha256": "b09b6ac996c5c203de143d95522c52b923bd5a3818c411c8fc9c7383005b940f"
+        },
+        "native_final": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-new3-SourceF-H5480-FINAL-approved-metadata-20261018/private-data/hd/jobs/coordinator-203f8-203fa-new-source-generation3-SourceF-H5480-FINAL-20261018-v1/coordinator-review.json",
+          "sha256": "4a083f9f4b2c94aa8e332cf484d3ffb409966245a23fe072ca92cbc5b239a8dd"
+        }
+      },
+      "limits": "Finer grain/relief, dim olive density/native1 softness and mixed Original/HD boundaries remain qualified. No Original-map occurrence for f8/f9, no all-placement/World timing/survival or old palette3 approval.",
+      "image_generation": {
+        "actual_calls": 1,
+        "artist": "/root/hd_full_review",
+        "method": "Authentic Source-only complete3",
+        "new_image_call_by_metadata_preparer": false,
+        "raw_sha256": "8fe630e51c556af0f2c7f76b02ebf4abae6407f37cfc2941cea8a37c36943fea",
+        "untouched_raw_route": "jobs/coordinator-203f8-203fa-new-source-generation3-SourceF-H5480-FINAL-20261018-v1/generated/untouched-new-coherent3.png",
+        "provenance": {
+          "author": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203f8-203fa-Source-only-coherent3-original-art-author-20261018/CLOSED-ACTUAL-ONE-SOURCE-ONLY-COHERENT3-IMAGE-AND-SOURCEF-AUTHOR-QUALIFIED3-MATERIAL-PROPOSAL.json",
+            "sha256": "e55f53394e3451df8fab348c7ec21d698a7f831f652a5eb69d51d9a6a88565a1"
+          },
+          "exact_prompt": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203f8-203fa-Source-only-coherent3-original-art-author-20261018/EXACT-PREPARED-PROMPT.txt",
+            "sha256": "02884764aaf7169d31843eb8067653f9cf26dad9686cf0087699e2cb503ff6d5"
+          },
+          "exact_tool_arguments": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203f8-203fa-Source-only-coherent3-original-art-author-20261018/ACTUAL-SUBMITTED-LITERAL-TOOL-ARGUMENTS.json",
+            "sha256": "3c1d8836baf12ea548af77a653dec8bab80b99cbf7ba8abe0522be5518db004c"
+          },
+          "different_material": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark203f8-203fa-SourceF-coherent3-independent-intrinsic-material-peer-20261018/QUALIFIED-DIFFERENT-COMPLETE3-203F8-203FA-NEW-SOURCE-ONLY-SOURCEF-INTRINSIC-MATERIAL-REVIEW.json",
+            "sha256": "d3113f70b636ee10319876f7ad24775c24cc611bb6760e27a383d3cfe317951c"
+          },
+          "native_final": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-new3-SourceF-H5480-FINAL-approved-metadata-20261018/private-data/hd/jobs/coordinator-203f8-203fa-new-source-generation3-SourceF-H5480-FINAL-20261018-v1/coordinator-review.json",
+            "sha256": "4a083f9f4b2c94aa8e332cf484d3ffb409966245a23fe072ca92cbc5b239a8dd"
+          }
+        }
+      },
+      "old_plain_and_palette_HOLDs_preserved": true,
+      "native_headers_and_raw_lineage": "Three complete1/frame0/plain32 definitions; exact registered HD/provenance fields and final native authority are authoritative."
     }
   },
   "native_preservation_reviews": {
@@ -245122,8 +245185,8 @@
       "history_scope": "All SourceC and older successful image-call, intrinsic, material, context, held-art and refusal authorities retain their original epochs and limits. The existing current_source_runtime object is a dated SourceC+D5384 checkpoint; latest_artwork_runtime is the unchanged SourceC H5425 artwork-release evidence. This activation changes runtime evidence only, with no asset/header/default/raw/status or family-review changes. Private constrained studies are not installed artwork."
     },
     "current_runtime": {
-      "record": "SourceF_H5480_art_append_current",
-      "scope": "Current installed SourceF H5480 artwork append; earlier SourceF activation and all original artwork/QA epochs remain dated, unchanged records."
+      "record": "SourceF_H5483_new_generation3_art_append_current",
+      "scope": "Current installed SourceF H5483 artwork after one genuinely new Source-only three-target image; earlier activation/artwork/runtime/native epochs remain dated history."
     },
     "runtime5426": {
       "checkpoint_utc": "2026-10-17T12:31:23.439368+00:00",
@@ -245911,6 +245974,163 @@
       },
       "context_scope": "OriginalSource36 endpoints/9 independent static pairs are separate from legal private validation-World40359/40363. No Original gameplay occurrence is claimed for those two.203ff has5 genuine endpoints/two pairs. No all-placement or seamless claim.",
       "history_scope": "SourceF activation, SourceE artwork, original measurements, old full-family HOLDs and provider refusals remain dated and unchanged.493 retained cells are Original, not generated pixels. Carried12/fallback3 refer only to the203fd-2040c inventory. New203f8/f9/fa work is excluded."
+    },
+    "SourceF_H5483_new_generation3_art_append_current": {
+      "checkpoint_utc": "2026-10-17T15:40:46.805514+00:00",
+      "status": "ACTUAL5483_SOURCEF_NEW_GENERATION3_REGISTERED_ASSEMBLED_CLI_SDL_ROOT_PHYSICAL_VALIDATED_PREPUSH_CHECKPOINT",
+      "registered_frames": 5483,
+      "complete_sequences": 3630,
+      "terrain_frames": 4358,
+      "remaining_original_pictures": 270,
+      "remaining_by_category": {
+        "terrain": 177,
+        "enemies_ground_objects": 59,
+        "UI_other": 33,
+        "bosses": 1
+      },
+      "bundled_data_files": 9412,
+      "bundled_data_bytes": 8396899713,
+      "selected_assets": [
+        "203f8",
+        "203f9",
+        "203fa"
+      ],
+      "new_frames": 3,
+      "new_native_sequences": 3,
+      "new_image_generation": true,
+      "actual_image_calls": 1,
+      "new_image_calls_by_metadata_preparer": 0,
+      "raw_sha256": "8fe630e51c556af0f2c7f76b02ebf4abae6407f37cfc2941cea8a37c36943fea",
+      "new_raw_routes": 1,
+      "new_raw_route_bytes": 2586137,
+      "retained_Original_cells_in_new_frames": 0,
+      "new_optional_policy_fields": 0,
+      "installed_palette_opt_in_assets": [
+        "2038d",
+        "2038e",
+        "20396",
+        "20397",
+        "20398",
+        "2039c",
+        "203ff",
+        "2058b",
+        "2058c"
+      ],
+      "HD_manifest_sha256": "a98acccc77685e3a73187a6a094d0dcf4804119582a1189bef1514d6bd1f1f9e",
+      "provenance_sha256": "9bf511b934cbb549739aa351e91b0c5930e50dd87670058e1c68b32c9e9531a9",
+      "runtime_manifest_sha256": "7cffb3a237ecff07921b676f976aab2891e288f5152256e71398e0d41e81dce7",
+      "SourceF18_both_binaries_current45mods_M2v103_unchanged": true,
+      "generation_provenance": {
+        "author": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203f8-203fa-Source-only-coherent3-original-art-author-20261018/CLOSED-ACTUAL-ONE-SOURCE-ONLY-COHERENT3-IMAGE-AND-SOURCEF-AUTHOR-QUALIFIED3-MATERIAL-PROPOSAL.json",
+          "sha256": "e55f53394e3451df8fab348c7ec21d698a7f831f652a5eb69d51d9a6a88565a1"
+        },
+        "exact_prompt": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203f8-203fa-Source-only-coherent3-original-art-author-20261018/EXACT-PREPARED-PROMPT.txt",
+          "sha256": "02884764aaf7169d31843eb8067653f9cf26dad9686cf0087699e2cb503ff6d5"
+        },
+        "exact_tool_arguments": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203f8-203fa-Source-only-coherent3-original-art-author-20261018/ACTUAL-SUBMITTED-LITERAL-TOOL-ARGUMENTS.json",
+          "sha256": "3c1d8836baf12ea548af77a653dec8bab80b99cbf7ba8abe0522be5518db004c"
+        },
+        "different_material": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark203f8-203fa-SourceF-coherent3-independent-intrinsic-material-peer-20261018/QUALIFIED-DIFFERENT-COMPLETE3-203F8-203FA-NEW-SOURCE-ONLY-SOURCEF-INTRINSIC-MATERIAL-REVIEW.json",
+          "sha256": "d3113f70b636ee10319876f7ad24775c24cc611bb6760e27a383d3cfe317951c"
+        },
+        "native_final": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-new3-SourceF-H5480-FINAL-approved-metadata-20261018/private-data/hd/jobs/coordinator-203f8-203fa-new-source-generation3-SourceF-H5480-FINAL-20261018-v1/coordinator-review.json",
+          "sha256": "4a083f9f4b2c94aa8e332cf484d3ffb409966245a23fe072ca92cbc5b239a8dd"
+        }
+      },
+      "review_ref": "SourceF-new-generation3-203f8-203fa-native5483",
+      "finite_contexts": {
+        "genuine_endpoints": 22,
+        "private_gallery_cases": 1,
+        "independent_neighbor_pairs": 7,
+        "registered203ff_reverse_endpoints": 5,
+        "registered203ff_reverse_join_sample_deltas": 7910,
+        "registered203ff_interiors_exact": true,
+        "status": "Actual context peers closed per Root; exact final metadata receipt binding still pending"
+      },
+      "context_scope": "203fa has10 Original placements and17 primary endpoints. Five freshly reviewed registered203ff reverse endpoints include7910 join-sample changes with exact interiors. One legal private validation-World scene covers203f8/203f9, which have no Original-map occurrence. Seven pairs; no oldff context carry afterfa becomes HD.",
+      "evidence": {
+        "handoff": {
+          "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5483-20261018/handoff-manifest.json",
+          "sha256": "83817e8dece922f3fff67f9418b13ca23c889b3b012800a6c90e56e09522b172"
+        },
+        "registration": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-new3-canonical5483-SourceF-and-seal-20261018/closed-actual-new-generation3-canonical-native5483-registration-proof.json",
+          "sha256": "a82841d2549a9ab741c3d7348b6e302a8f669245e23ee9bf35870a12569c34bf"
+        },
+        "assembly": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5480-SourceF-20261018/assembly-receipt.json",
+          "sha256": "3fa8ae2987a16b2cb0ccc3eef1285c4398e8a608c947b4acbc7891688dd9816b"
+        },
+        "CLI": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5480-SourceF-20261018/cli-validation.json",
+          "sha256": "898426c680b9a7fe7d466c0036bf3c4582a6a5984785e493d457f4eb659d83e9"
+        },
+        "Windows_count_metadata": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5480-SourceF-20261018/windows-metadata-refresh.json",
+          "sha256": "b4a5210099aed5410f2d8b3e31754933fd54ec015b8b0b7cfebad7fa355be2eb"
+        },
+        "SDL_report": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies-actualH5483-SourceF-three-SDL-versus-H5480-execution-20261018-v1/CLOSED-ACTUAL-H5483-SOURCEF-THREE-SDL-MEASURED-AND-PHYSICAL-REGRESSION-VERSUS-H5480.json",
+          "sha256": "c7dbda70ca37033de6a4eea573e7c1ed300675709f2a7806086fb0201a2e1772"
+        },
+        "SDL_strict": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies-actualH5483-SourceF-three-SDL-versus-H5480-execution-20261018-v1-strict-complete-actualH5483-SourceF-three-SDL-regression-closure.json",
+          "sha256": "e44aa196a0d2a048344adac1316d88d1f2c27df8582ef97e49959a3a226599d4"
+        },
+        "Root_physical": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5480-SourceF-20261018/root-personal-H5483-three-SDL-review.json",
+          "sha256": "c3910c2584862b026954ff3d0225ebeaaa010cdfd35628ac203759cd1e2294b8"
+        }
+      },
+      "CLI": {
+        "HD_registered": 5483,
+        "HD_validated": 5483,
+        "HD_rejected": 0,
+        "mods_validated": 45,
+        "overrides": 1
+      },
+      "SDL_regression_controls": {
+        "cases_exit0": 3,
+        "frames": [
+          120,
+          600,
+          600
+        ],
+        "retry_count": 0,
+        "compiler_calls": 0,
+        "pixels_compared": 6220800,
+        "PNG_changed": 0,
+        "RGB_changed": 0,
+        "alpha_changed": 0,
+        "PNG_bytes_equal": true,
+        "RGB_equal": true,
+        "alpha_equal": true,
+        "comparison": "Measured equality against frozen actual SourceF H5480; equality was not imposed as a runner requirement."
+      },
+      "SDL_scope": "Actual installed SourceF H5483 versus frozen SourceF H5480, unchanged current45/M2v103; no new3 visibility, all-placement, survival, audio/performance or new native Windows claim. Separate genuine22/privategallery/seven-pair context authority remains distinct.",
+      "native_Windows": {
+        "report": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5463-M2v103-1d0b-native-Windows-CI-observation-20261018/ACTUAL-EXACT5463-M2V103_1D0B-NATIVE-WINDOWS-CI-OBSERVATION-FINAL.json",
+          "sha256": "c1a9775becc7b135bda89e1c8018c377b64a75eac454eee825803bf225b9bda0"
+        },
+        "outside_strict": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5463-M2v103-1d0b-native-Windows-CI-observation-20261018-strict-actual-native-Windows-CI-observation-FINAL-closure.json",
+          "sha256": "9ba5f62353299043908d08803b0a588b2b4bd2b5a53e65a81677a310d7d14ba9"
+        },
+        "exact_head": "1d0b2dda3660691f2724df98e6944a80e8b1058a",
+        "HD_frames": 5463,
+        "passed": 401,
+        "ignored": 26,
+        "failed": 0,
+        "scope": "Dated SourceF H5463/M2v1.0.3 execution, not H5483."
+      },
+      "existing_runtime_campaign_checks": "Existing SourceF113 Rust/186 Python and65 campaign tests retain dated scope; no fresh execution of those suites by this documentation/artwork append.",
+      "history_scope": "All earlier SourceF activation/H5480 artwork/native Windows records, old plain/palette HOLDs, provider refusals and5750 other picture rows retain their exact authority. New3 is a new image, not approval of the older held palette3."
     }
   }
 }

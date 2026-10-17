@@ -2,6 +2,8 @@
 
 Historical SourceF H5463 activation checkpoint — 18 October 2026: The included SourceF runtime supports the optional 129–256-cell retained-Original tier described below. Artwork coverage remains 5,463 pictures, with 290 awaiting approval; this runtime update admits no new artwork. Actual production validation is recorded separately in [runtime release evidence](hd-runtime-release.json).
 
+For current artwork coverage and reviewed opt-in assets, see the [HD backlog](hd-backlog.md) and [completion ledger](hd-completion.json).
+
 The runtime can register the complete original picture catalog without retaining every decoded replacement in RAM. Registration accepts up to 8 MiB of JSON metadata, 8,192 sequences and 16,384 distinct asset IDs. Each sequence still has at most 512 declared frames. These are validation ceilings, not coverage claims.
 
 `HdAssets::load_lazy(root, catalog, cache_dir)` checks all sequence IDs before committing the manifest. Duplicate IDs, arithmetic overflow, unsupported formats and invalid sequence lengths reject the pack atomically. Each supplied frame must match the checked original payload SHA-256, logical canvas and `[0,0]` anchor. Its PNG path must resolve inside the pack, including symlinks. Missing files and individual source mismatches produce diagnostics and native-art fallback.
