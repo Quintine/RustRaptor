@@ -1,30 +1,33 @@
 # Current checkpoint — 17 October 2026
 
-The self-contained game now includes **5,378 HD pictures / 3,548 sequences**,
-including **4,274 terrain pictures**. Its **9,332 data files / 8,171,723,875 bytes**
-pass complete manifest verification. The 37 new frames comprise 30 selected
-terrain pictures, Terrain 20583, UI/other 3009f and 300a4, and complete DSHP21G3
-300a8–300ab. Seven hybrid frames retain 37 explicit Original logical cells;
-these cells are not generated HD. All previous 5,341 bindings and 3,514 complete
-headers remain exact. Actual CLI validation passes all 5,378 frames with zero rejects and 45 mods/one override (`e1cb3b4a`).
+The self-contained game now includes **5,384 HD pictures / 3,551 sequences**,
+including **4,275 terrain pictures**. Its **9,335 data files / 8,179,315,857 bytes**
+pass complete manifest verification. The six new frames are Boss 200ba,
+Terrain 2039a and complete TANK03G3 3007c–3007f. Five hybrid frames retain 207
+explicit Original logical cells; those cells are not generated HD. All previous
+5,378 bindings and 3,548 complete headers remain exact. Actual CLI validates
+all 5,384 frames with zero rejects and 45 mods/one override (`2f3ab585`).
 
-**375 original pictures remain:** 261 terrain, 79 enemies/ground objects,
-33 UI/other and two bosses. The 15 road tiles remain held; pending 200ba, further Tank work
-and the new 2039a context are outside this append. Current receipts are in
-`.reference/hd-root-next-publication-after5341/`; immutable intake is
-`handoff-5378-20261017`. Publication and native Windows 5,378 execution remain
-pending. Windows 5,341 is still packaging at this freeze; earlier Windows results
-retain their original source and artwork scopes.
+**369 original pictures remain:** 260 terrain, 75 enemies/ground objects,
+33 UI/other and one boss. The other 14 road tiles remain held. Reviews cover
+one genuine 200ba pose, four naturally observed Tank phases and two 2039a
+contexts; visible road-edge and texture steps remain qualified, without a
+seamless or all-placement claim. Current receipts are in
+`.reference/hd-root-next-publication-after5378/`; immutable intake is
+`handoff-5384-20261017`. Previous 5,378 publication is remote-confirmed as
+`9ba0a5c7`; this 5,384 publication and its native Windows execution are pending.
 
 The included Linux and Windows runtimes now expose active script difficulty and
 current enemy snapshots. A finite 16,384-property Rhai map limit fixes documented
 queries failing on ordinary enemy groups; operation, command and 64 KiB saved-state
 limits remain unchanged. All 45 modding regression tests pass. Three actual 1080p
 SDL captures (menu, S1 Wave 7, S3 Wave 9) match the previous binary byte for byte.
-Windows cross-build, PE imports and shared-data verification pass. This API
-revision passed its own native Windows CI at 5,340 frames: 360 tests passed,
-zero failed and 26 were ignored. The subsequent 5,341 workflow is still packaging at this freeze; neither
-that workflow nor the 360-test result is a native Windows 5,378 execution claim.
+Windows cross-build, PE imports and shared-data verification pass. Actual native
+Windows 5,341 at `00cfcc20` passed 360 tests, zero failed and 26 ignored. The
+campaign c4a4 run's old-test failure remains preserved; its 58723547 test
+correction is still packaging. These are distinct observations, with no native
+Windows 5,378/5,384 execution claim. Future Source-C work is not installed.
+
 
 Iron Coast’s published retune (`c4a4d821`) covers 14 scaled mission
 schedules, five shared enemy AIs, 14 boss patterns and five weapons’ visual/audio
@@ -38,9 +41,10 @@ have been reviewed. The shop, mod diagnostics and mission selector remain
 readable, and the new versions appear correctly. These are presentation checks,
 not a claim of exhaustive human playtesting.
 
-HD continuation remains active. The four DSHP21G3 boss frames are now included;
-remaining unused-picture and retained-detail trials stay separate. Road-material
-seams keep 15 tiles held. No whole-remaster completion is claimed.
+HD continuation remains active. The previous DSHP21G3 four and this new complete
+Tank family are included; remaining unused-picture and retained-detail trials
+stay separate. Road-material seams keep 14 tiles held. No whole-remaster
+completion is claimed.
 
 # Earlier 5,339-frame checkpoint — retained historical observation
 

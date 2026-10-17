@@ -19,10 +19,10 @@
   ],
   "stage_contract": "Every generated candidate stays distinct from review, registration and render reachability. Original-only fallback is temporary for every required picture. Native cinematics/fonts have explicit preservation exceptions, not HD claims.",
   "picture_status_counts": {
-    "registered": 5358,
+    "registered": 5364,
     "inprogress": 125,
     "renderreachable": 20,
-    "candidate": 248,
+    "candidate": 242,
     "missing": 2
   },
   "assets": {
@@ -55953,7 +55953,7 @@
       "canonical_source_asset": "200ba",
       "family_id": "bosses-200ba-200ba",
       "job_id": "bosses-200ba-200ba",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_3",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -55965,7 +55965,8 @@
         "manifest": "jobs/bosses-200ba-200ba/candidate.json",
         "sha256": "b5f37ba9b141b2e567c178da92241cda2e615167239f2fc80353c7c7f29216e5",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "next6-native5384"
     },
     "200bb": {
       "kind": "picture",
@@ -83345,7 +83346,7 @@
       "canonical_source_asset": "2039a",
       "family_id": "terrain-2038d-2039c",
       "job_id": "terrain-2038d-2039c",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -83361,7 +83362,8 @@
         "manifest": "jobs/terrain-2038d-2039c/candidate.json",
         "sha256": "aaf2344557b1d146478f0dcd9c1ffd5392a08fad6e90bc3114e6ca4ca788ce24",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "next6-native5384"
     },
     "2039b": {
       "kind": "picture",
@@ -116370,7 +116372,7 @@
       "canonical_source_asset": "3007c",
       "family_id": "enemies-3007c-3007f",
       "job_id": "enemies-3007c-3007f",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -116382,7 +116384,8 @@
         "manifest": "jobs/enemies-3007c-3007f/candidate.json",
         "sha256": "feaadd6aa455213c33e93dd71ac8e19b05fb33c92960abc9dfe9a8dc008d1efb",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "next6-native5384"
     },
     "3007d": {
       "kind": "picture",
@@ -116403,7 +116406,7 @@
       "canonical_source_asset": "3007d",
       "family_id": "enemies-3007c-3007f",
       "job_id": "enemies-3007c-3007f",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -116415,7 +116418,8 @@
         "manifest": "jobs/enemies-3007c-3007f/candidate.json",
         "sha256": "feaadd6aa455213c33e93dd71ac8e19b05fb33c92960abc9dfe9a8dc008d1efb",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "next6-native5384"
     },
     "3007e": {
       "kind": "picture",
@@ -116436,7 +116440,7 @@
       "canonical_source_asset": "3007e",
       "family_id": "enemies-3007c-3007f",
       "job_id": "enemies-3007c-3007f",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -116448,7 +116452,8 @@
         "manifest": "jobs/enemies-3007c-3007f/candidate.json",
         "sha256": "feaadd6aa455213c33e93dd71ac8e19b05fb33c92960abc9dfe9a8dc008d1efb",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "next6-native5384"
     },
     "3007f": {
       "kind": "picture",
@@ -116469,7 +116474,7 @@
       "canonical_source_asset": "3007f",
       "family_id": "enemies-3007c-3007f",
       "job_id": "enemies-3007c-3007f",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -116481,7 +116486,8 @@
         "manifest": "jobs/enemies-3007c-3007f/candidate.json",
         "sha256": "feaadd6aa455213c33e93dd71ac8e19b05fb33c92960abc9dfe9a8dc008d1efb",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "next6-native5384"
     },
     "30080": {
       "kind": "picture",
@@ -233526,6 +233532,1106 @@
       "retained_Original_not_generated_HD": true,
       "old_family_and_plain_predecessor_HOLDs_preserved": true,
       "scope": "Registration and saved real material/context gates; no new artwork, intrinsic QA, renderer, World or universal Host-reachability claim."
+    },
+    "next6-native5384": {
+      "status": "REGISTERED_ACTUAL_NEXT6_NATIVE_WITH_EXPLICIT_ORIGINAL_DETAIL",
+      "selected_assets": [
+        "200ba",
+        "2039a",
+        "3007c",
+        "3007d",
+        "3007e",
+        "3007f"
+      ],
+      "registration": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-next6-canonical5384-and-seal-20261017/closed-actual-next6-canonical-native5384-registration-proof.json",
+        "sha256": "113bc65547f8f690e7e64914c021f2ba93dced39d8de8dc6291373b0d8f10a58",
+        "bytes": 42260
+      },
+      "actual_final_metadata_review": {
+        "report": {
+          "device": 55,
+          "inode": 5446812,
+          "mode": 33188,
+          "mtime_ns": 1792223489463448613,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-next6-post5378-actual-private-native-final-readback-20261017/PASS-DIFFERENT-ACTUAL-NEXT6-PRIVATE-NATIVE-FINAL-READBACK.json",
+          "sha256": "f9eba9a3538a08baddef1546efb6247d487e29324e5e13571302af3a2676e2d0",
+          "size": 35749
+        },
+        "strict": {
+          "device": 55,
+          "inode": 5446814,
+          "mode": 33188,
+          "mtime_ns": 1792223489464320915,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-next6-post5378-actual-private-native-final-readback-20261017-strict-complete-different-actual-next6-final-readback-closure.json",
+          "sha256": "cb84fce2badc8e6db2ffb8f789f6a3e47d15b7be3f521f5818225af684a9b96f",
+          "size": 27798
+        }
+      },
+      "full3_native_sequence_headers": [
+        {
+          "base_asset": 131258,
+          "frame_count": 1,
+          "frames": [
+            {
+              "crop": [
+                4,
+                0,
+                1490,
+                1043
+              ],
+              "file": "jobs/coordinator-200ba-exact11-Original-native-post5378-B-20261017-v1/generated/09be927af46e60a1c7651ba347550cce8c90f1d9233c466cbc0e11b082b7c81c.png",
+              "frame": 0,
+              "logical_height": 56,
+              "logical_width": 80,
+              "origin": [
+                0,
+                0
+              ],
+              "original_detail_cells": [
+                [
+                  1,
+                  52
+                ],
+                [
+                  28,
+                  54
+                ],
+                [
+                  29,
+                  54
+                ],
+                [
+                  30,
+                  54
+                ],
+                [
+                  31,
+                  54
+                ],
+                [
+                  48,
+                  54
+                ],
+                [
+                  49,
+                  54
+                ],
+                [
+                  50,
+                  54
+                ],
+                [
+                  51,
+                  54
+                ],
+                [
+                  74,
+                  55
+                ],
+                [
+                  79,
+                  52
+                ]
+              ],
+              "source_sha256": "515ce70b80317e1d8c37fb38f66c8efa3ede0701b820ce28d8606792b5292464"
+            }
+          ],
+          "name": "DSHP18G2_PIC localized two-corner existing-master edit"
+        },
+        {
+          "base_asset": 196732,
+          "frame_count": 4,
+          "frames": [
+            {
+              "crop": [
+                0,
+                0,
+                627,
+                627
+              ],
+              "file": "jobs/coordinator-tank03g3-complete4-Original-contours-native-post5378-B-20261017-v1/generated/c4b6b7f1a84d207026e43e055f70f75aa4ec8b83493dbeb9b982b7e36271a989.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "original_detail_cells": [
+                [
+                  1,
+                  6
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  1,
+                  9
+                ],
+                [
+                  1,
+                  23
+                ],
+                [
+                  1,
+                  24
+                ],
+                [
+                  1,
+                  25
+                ],
+                [
+                  1,
+                  26
+                ],
+                [
+                  2,
+                  9
+                ],
+                [
+                  2,
+                  10
+                ],
+                [
+                  2,
+                  26
+                ],
+                [
+                  2,
+                  27
+                ],
+                [
+                  3,
+                  10
+                ],
+                [
+                  3,
+                  27
+                ],
+                [
+                  4,
+                  11
+                ],
+                [
+                  4,
+                  28
+                ],
+                [
+                  5,
+                  11
+                ],
+                [
+                  5,
+                  28
+                ],
+                [
+                  6,
+                  11
+                ],
+                [
+                  6,
+                  12
+                ],
+                [
+                  6,
+                  13
+                ],
+                [
+                  6,
+                  14
+                ],
+                [
+                  6,
+                  15
+                ],
+                [
+                  6,
+                  16
+                ],
+                [
+                  6,
+                  17
+                ],
+                [
+                  6,
+                  18
+                ],
+                [
+                  6,
+                  28
+                ],
+                [
+                  7,
+                  28
+                ],
+                [
+                  8,
+                  28
+                ],
+                [
+                  9,
+                  28
+                ],
+                [
+                  10,
+                  28
+                ],
+                [
+                  11,
+                  28
+                ],
+                [
+                  12,
+                  28
+                ],
+                [
+                  13,
+                  28
+                ],
+                [
+                  14,
+                  28
+                ],
+                [
+                  15,
+                  28
+                ],
+                [
+                  15,
+                  29
+                ],
+                [
+                  15,
+                  30
+                ],
+                [
+                  15,
+                  31
+                ],
+                [
+                  16,
+                  31
+                ],
+                [
+                  17,
+                  31
+                ],
+                [
+                  19,
+                  28
+                ],
+                [
+                  20,
+                  28
+                ],
+                [
+                  21,
+                  28
+                ],
+                [
+                  22,
+                  28
+                ],
+                [
+                  23,
+                  28
+                ],
+                [
+                  24,
+                  28
+                ],
+                [
+                  25,
+                  28
+                ],
+                [
+                  26,
+                  28
+                ],
+                [
+                  27,
+                  28
+                ]
+              ],
+              "source_sha256": "06f854990f64b231b752bfaef9e5378f54f9745dbfe98578ef9a3d5b4b37a182"
+            },
+            {
+              "crop": [
+                627,
+                0,
+                627,
+                627
+              ],
+              "file": "jobs/coordinator-tank03g3-complete4-Original-contours-native-post5378-B-20261017-v1/generated/c4b6b7f1a84d207026e43e055f70f75aa4ec8b83493dbeb9b982b7e36271a989.png",
+              "frame": 1,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "original_detail_cells": [
+                [
+                  1,
+                  6
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  1,
+                  9
+                ],
+                [
+                  1,
+                  23
+                ],
+                [
+                  1,
+                  24
+                ],
+                [
+                  1,
+                  25
+                ],
+                [
+                  1,
+                  26
+                ],
+                [
+                  2,
+                  9
+                ],
+                [
+                  2,
+                  10
+                ],
+                [
+                  2,
+                  26
+                ],
+                [
+                  2,
+                  27
+                ],
+                [
+                  3,
+                  10
+                ],
+                [
+                  3,
+                  27
+                ],
+                [
+                  4,
+                  11
+                ],
+                [
+                  4,
+                  28
+                ],
+                [
+                  5,
+                  11
+                ],
+                [
+                  5,
+                  28
+                ],
+                [
+                  6,
+                  11
+                ],
+                [
+                  6,
+                  12
+                ],
+                [
+                  6,
+                  13
+                ],
+                [
+                  6,
+                  14
+                ],
+                [
+                  6,
+                  15
+                ],
+                [
+                  6,
+                  16
+                ],
+                [
+                  6,
+                  17
+                ],
+                [
+                  6,
+                  18
+                ],
+                [
+                  6,
+                  28
+                ],
+                [
+                  7,
+                  28
+                ],
+                [
+                  8,
+                  28
+                ],
+                [
+                  9,
+                  28
+                ],
+                [
+                  10,
+                  28
+                ],
+                [
+                  11,
+                  28
+                ],
+                [
+                  12,
+                  28
+                ],
+                [
+                  13,
+                  28
+                ],
+                [
+                  14,
+                  28
+                ],
+                [
+                  15,
+                  28
+                ],
+                [
+                  16,
+                  28
+                ],
+                [
+                  17,
+                  28
+                ],
+                [
+                  18,
+                  28
+                ],
+                [
+                  19,
+                  28
+                ],
+                [
+                  20,
+                  28
+                ],
+                [
+                  21,
+                  28
+                ],
+                [
+                  22,
+                  28
+                ],
+                [
+                  23,
+                  28
+                ],
+                [
+                  24,
+                  28
+                ],
+                [
+                  25,
+                  28
+                ],
+                [
+                  26,
+                  28
+                ],
+                [
+                  27,
+                  28
+                ]
+              ],
+              "source_sha256": "64e3fdb5f58970f304733b0e0604882fddf6540c9a967d78ec59b7f12d4c9367"
+            },
+            {
+              "crop": [
+                0,
+                627,
+                627,
+                627
+              ],
+              "file": "jobs/coordinator-tank03g3-complete4-Original-contours-native-post5378-B-20261017-v1/generated/c4b6b7f1a84d207026e43e055f70f75aa4ec8b83493dbeb9b982b7e36271a989.png",
+              "frame": 2,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "original_detail_cells": [
+                [
+                  1,
+                  6
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  1,
+                  9
+                ],
+                [
+                  1,
+                  23
+                ],
+                [
+                  1,
+                  24
+                ],
+                [
+                  1,
+                  25
+                ],
+                [
+                  1,
+                  26
+                ],
+                [
+                  2,
+                  9
+                ],
+                [
+                  2,
+                  10
+                ],
+                [
+                  2,
+                  26
+                ],
+                [
+                  2,
+                  27
+                ],
+                [
+                  3,
+                  10
+                ],
+                [
+                  3,
+                  27
+                ],
+                [
+                  4,
+                  10
+                ],
+                [
+                  4,
+                  11
+                ],
+                [
+                  4,
+                  28
+                ],
+                [
+                  5,
+                  11
+                ],
+                [
+                  5,
+                  28
+                ],
+                [
+                  6,
+                  11
+                ],
+                [
+                  6,
+                  12
+                ],
+                [
+                  6,
+                  13
+                ],
+                [
+                  6,
+                  14
+                ],
+                [
+                  6,
+                  15
+                ],
+                [
+                  6,
+                  16
+                ],
+                [
+                  6,
+                  17
+                ],
+                [
+                  6,
+                  18
+                ],
+                [
+                  6,
+                  28
+                ],
+                [
+                  7,
+                  28
+                ],
+                [
+                  8,
+                  28
+                ],
+                [
+                  9,
+                  28
+                ],
+                [
+                  10,
+                  28
+                ],
+                [
+                  11,
+                  28
+                ],
+                [
+                  12,
+                  28
+                ],
+                [
+                  13,
+                  28
+                ],
+                [
+                  14,
+                  28
+                ],
+                [
+                  15,
+                  28
+                ],
+                [
+                  15,
+                  29
+                ],
+                [
+                  16,
+                  29
+                ],
+                [
+                  17,
+                  29
+                ],
+                [
+                  19,
+                  28
+                ],
+                [
+                  20,
+                  28
+                ],
+                [
+                  21,
+                  28
+                ],
+                [
+                  22,
+                  28
+                ],
+                [
+                  23,
+                  28
+                ],
+                [
+                  24,
+                  28
+                ],
+                [
+                  25,
+                  28
+                ],
+                [
+                  26,
+                  28
+                ],
+                [
+                  27,
+                  28
+                ]
+              ],
+              "source_sha256": "44a5512016b1cf33966b97326abba7fa7e9bf55db346627a194a6def8c7f9f44"
+            },
+            {
+              "crop": [
+                627,
+                627,
+                627,
+                627
+              ],
+              "file": "jobs/coordinator-tank03g3-complete4-Original-contours-native-post5378-B-20261017-v1/generated/c4b6b7f1a84d207026e43e055f70f75aa4ec8b83493dbeb9b982b7e36271a989.png",
+              "frame": 3,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "original_detail_cells": [
+                [
+                  1,
+                  6
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  1,
+                  9
+                ],
+                [
+                  1,
+                  23
+                ],
+                [
+                  1,
+                  24
+                ],
+                [
+                  1,
+                  25
+                ],
+                [
+                  1,
+                  26
+                ],
+                [
+                  2,
+                  9
+                ],
+                [
+                  2,
+                  10
+                ],
+                [
+                  2,
+                  26
+                ],
+                [
+                  2,
+                  27
+                ],
+                [
+                  3,
+                  10
+                ],
+                [
+                  3,
+                  27
+                ],
+                [
+                  4,
+                  10
+                ],
+                [
+                  4,
+                  11
+                ],
+                [
+                  4,
+                  28
+                ],
+                [
+                  5,
+                  11
+                ],
+                [
+                  5,
+                  28
+                ],
+                [
+                  6,
+                  11
+                ],
+                [
+                  6,
+                  12
+                ],
+                [
+                  6,
+                  13
+                ],
+                [
+                  6,
+                  14
+                ],
+                [
+                  6,
+                  15
+                ],
+                [
+                  6,
+                  16
+                ],
+                [
+                  6,
+                  17
+                ],
+                [
+                  6,
+                  18
+                ],
+                [
+                  6,
+                  28
+                ],
+                [
+                  7,
+                  28
+                ],
+                [
+                  8,
+                  28
+                ],
+                [
+                  9,
+                  28
+                ],
+                [
+                  10,
+                  28
+                ],
+                [
+                  11,
+                  28
+                ],
+                [
+                  12,
+                  28
+                ],
+                [
+                  13,
+                  28
+                ],
+                [
+                  14,
+                  28
+                ],
+                [
+                  15,
+                  28
+                ],
+                [
+                  15,
+                  29
+                ],
+                [
+                  15,
+                  30
+                ],
+                [
+                  16,
+                  30
+                ],
+                [
+                  17,
+                  30
+                ],
+                [
+                  20,
+                  28
+                ],
+                [
+                  21,
+                  28
+                ],
+                [
+                  22,
+                  28
+                ],
+                [
+                  23,
+                  28
+                ],
+                [
+                  24,
+                  28
+                ],
+                [
+                  25,
+                  28
+                ],
+                [
+                  26,
+                  28
+                ],
+                [
+                  27,
+                  28
+                ]
+              ],
+              "source_sha256": "2220b516d7f72e97a15153728acb6d097deb21f6ba7743a1cb7ba01aa9f72c4d"
+            }
+          ],
+          "name": "TANK03G3_PIC"
+        },
+        {
+          "base_asset": 131994,
+          "frame_count": 1,
+          "frames": [
+            {
+              "file": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/generated/76b2622120a790f083343bd03bb3e0eb1f7e5a4666b8f78b034ddaa320b2bf2c.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "fd699aa63043e332f681b84a18d17dceae38935f8213dec412e93f8d73d53556"
+            }
+          ],
+          "name": "Source-first muted-brown standalone2039a"
+        }
+      ],
+      "retained_Original_counts_by_asset": {
+        "200ba": 11,
+        "3007c": 50,
+        "3007d": 48,
+        "3007e": 49,
+        "3007f": 49
+      },
+      "retained_Original_not_generated_HD": true,
+      "real_material_context_roles": [
+        {
+          "job_id": "coordinator-200ba-exact11-Original-native-post5378-B-20261017-v1",
+          "assets": [
+            "200ba"
+          ],
+          "material_and_context_authorities": [
+            {
+              "role": "all_real_material_authorities",
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-boss200ba-exact11-finalB-independent-whole-hybrid-material-peer-20261017-v1/INDEPENDENT-COMPLETE1-200BA-EXACT11-FINALB-WHOLE-HYBRID-SOURCE-MATERIAL-REVIEW.json",
+              "sha256": "38cf0a3b4887f28ee9ca2d8d9ac990b4a148ec9692757d57f5198f1fe5694683",
+              "status": "QUALIFIED_COMPLETE1_EXACT11_FINALB_HYBRID_INTRINSIC_SOURCE_MATERIAL_ONLY",
+              "reviewer": "/root/iron_coast_5"
+            },
+            {
+              "role": "all_real_context_authorities",
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-200ba-finalB-one-genuine-scene-independent-context-peer-20261017-v1/INDEPENDENT-COMPLETE1-200BA-EXACT11-FINALB-ONE-GENUINE-SCENE-ALL4-NATIVE-CONTEXT-REVIEW.json",
+              "sha256": "d75f8d7d95faaa578bb1df51e36786fe31e817da3aa518f16bf763c2a94b5297",
+              "status": "QUALIFIED_COMPLETE1_200BA_EXACT11_FINALB_GENUINE_CONTEXT_ALL4_NATIVE_HOLD0",
+              "reviewer": "/root/iron_coast_5"
+            },
+            {
+              "role": "all_real_context_authorities",
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark200ba-one-genuine-scene-finalB-three-role-context-production-20261017-v1/CLOSED_ACTUAL200BA_EXACT11_FINALB_ONE_GENUINE_SCENE_ALL4_NATIVE_CONTEXT_TECHNICAL_HANDOFF_NOT_PHYSICAL_APPROVAL.json",
+              "sha256": "669e53e2b9e9e3578d4d6d19726c0e190422877f84a862d0f4a1142e0b49e230",
+              "status": "CLOSED_COMPLETE1_ONE_GENUINE_STATIC_SCENE_4WHOLE_TRIPLE_PAGES_12ROLE_ARRAYS_TECHNICAL_NOT_PHYSICAL_APPROVAL",
+              "reviewer": null
+            }
+          ]
+        },
+        {
+          "job_id": "coordinator-tank03g3-complete4-Original-contours-native-post5378-B-20261017-v1",
+          "assets": [
+            "3007c",
+            "3007d",
+            "3007e",
+            "3007f"
+          ],
+          "material_and_context_authorities": [
+            {
+              "role": "all_real_material_authorities",
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-tank03g3-complete4-bounded-Original-contours-currentB-independent-material-peer-20261017/INDEPENDENT-COMPLETE4-TANK03G3-CURRENTB-BOUNDED-ORIGINAL-CONTOURS-WHOLE-MATERIAL-REVIEW.json",
+              "sha256": "706755e00d63cdd94886042345b62f5e8efae813971cc2b5ee34f4d9e50aa81d",
+              "status": "CLOSED_DIFFERENT_COMPLETE4_TANK03G3_CURRENTB_BOUNDED_ORIGINAL_CONTOURS_MATERIAL_QUALIFIED4_HOLD0",
+              "reviewer": "/root/iron_coast_3"
+            },
+            {
+              "role": "all_real_context_authorities",
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-tank03g3-finalB-four-natural-phases-independent-context-peer-20261017-v1/INDEPENDENT-COMPLETE4-TANK03G3-FINALB-FOUR-GENUINE-PHASES-ALL16-NATIVE-CONTEXT-REVIEW.json",
+              "sha256": "1488cae61f8542e1e5845392ba3e960756efa7c27a52ec011e31b6d9468a8db4",
+              "status": "QUALIFIED_COMPLETE4_TANK03G3_FINALB_FOUR_GENUINE_PHASES_ALL16_NATIVE_CONTEXT_HOLD0",
+              "reviewer": "/root/iron_coast_5"
+            },
+            {
+              "role": "all_real_context_authorities",
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-tank03g3-four-genuine-phases-finalB-compressed-three-role-context-production-20261017-v1/CLOSED_ACTUAL_TANK03G3_COMPLETE4_FINALB_FOUR_GENUINE_PHASES_ALL16_COMPRESSED_NATIVE_CONTEXT_TECHNICAL_HANDOFF_NOT_PHYSICAL_APPROVAL.json",
+              "sha256": "51380b4248494126444ab970004e9f89e8275f03e89160c8e914b5b2060159af",
+              "status": "CLOSED_COMPLETE4_4GENUINE_PHASES_16WHOLE_TRIPLE_PAGES_48LOSSLESS_NATIVE_ROLE_ARRAYS_TECHNICAL_NOT_PHYSICAL_APPROVAL",
+              "reviewer": null
+            }
+          ]
+        },
+        {
+          "job_id": "coordinator-2039a-source-first-default-native-post5378-B-20261017-v1",
+          "assets": [
+            "2039a"
+          ],
+          "material_and_context_authorities": [
+            {
+              "role": "all_real_material_authorities",
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-remaining-2039a-source-first-currentB-independent-whole-material-peer-20261017/INDEPENDENT-COMPLETE1-2039A-SOURCE-FIRST-CURRENTB-WHOLE-MATERIAL-REVIEW.json",
+              "sha256": "3937710176887526afc7d08acf8d78a74748ff98271398927adaf5865003c123",
+              "status": "DIFFERENT_QUALIFIED_COMPLETE1_CURRENTB_WHOLE_SOURCE_MATERIAL_CONTEXT_PENDING",
+              "reviewer": "/root/hd_remaining_exclusions"
+            },
+            {
+              "role": "all_real_context_authorities",
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-remaining-2039a-exact2-currentB-independent-whole-context-peer-20261017/INDEPENDENT-EXACT2-2039A-CURRENTB-GENUINE-SEAM-WHOLE-CONTEXT-REVIEW.json",
+              "sha256": "fb7094b63e3b5e3824c9425a3bbb6715bbb14be59ace991351f2a38006d33fbc",
+              "status": "DIFFERENT_QUALIFIED_EXACT2_CURRENTB_CONTEXTS_WITH_ALIGNMENT_TEXTURE_QUALIFICATIONS_NOT_ADMISSION",
+              "reviewer": "/root/hd_remaining_exclusions"
+            },
+            {
+              "role": "all_real_context_authorities",
+              "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-2039a-actualB-exact2-genuine-seam-technical-20261017/CLOSED-ACTUAL-B-EXACT2-2039A-GENUINE-SEAM-TECHNICAL-PRODUCTION-REPORT.json",
+              "sha256": "274f94980c80a151e0a797f1ed284ddc74d3068759358dd0661a84c8313fb3f0",
+              "status": "PASS_ACTUAL_B_EXACT2_GENUINE_SEAM_TECHNICAL_PRODUCTION_AWAIT_DIFFERENT_PHYSICAL_REVIEW_NOT_REGISTERED",
+              "reviewer": null
+            }
+          ]
+        }
+      ],
+      "qualifications": [
+        "200ba one genuine pose only; no all-placement or Host approval.",
+        "TANK03 one complete4 header and four genuine observed phases; exact50/48/49/49 retained Original cells, no generated-HD claim for those cells.",
+        "2039a exactly1137 and479 all1-4; visible edge and texturestep qualifications remain.479 is cardinal context, not an ordered state. No seamless or all-placement claim.",
+        "Earlier plain/road cohort holds preserved. All six metadata frames are distinct from previous37. No new artwork, pixels, kernel, QA, renderer, compiler, World, registrar main, canonical or Git operation."
+      ],
+      "earlier_plain_and_other14_road_HOLDs_preserved": true
     }
   },
   "native_preservation_reviews": {
@@ -240777,6 +241883,159 @@
       "CLI_rejected": 0,
       "mods": 45,
       "overrides": 1
+    },
+    "runtime5378_publication_observed": {
+      "status": "PUSHED_REMOTE_CONFIRMED",
+      "commit": "9ba0a5c75b14c163ecae917d05c21e312d933f40",
+      "receipt": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5341/root-5378-publication-remote-confirmation.json",
+        "sha256": "4e9c0abcbcde1dfcb51f8873ef65487d7aa6aedae1deea9590b159b795173296",
+        "bytes": 857
+      },
+      "native_Windows5378_execution_claimed": false
+    },
+    "runtime5341_native_windows_observed": {
+      "status": "SUCCESS_ACTUAL_EXACT5341_NATIVE_WINDOWS_CI_LOG_OBSERVATION",
+      "commit": "00cfcc2031d979a45f859b49bd19ffbc74cfded0",
+      "run_id": 39011202102,
+      "job_id": 117333921335,
+      "report": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5341-native-Windows-CI-observation-20261017/ACTUAL-EXACT5341-NATIVE-WINDOWS-CI-OBSERVATION-FINAL.json",
+        "sha256": "a4d1542ef43d063129ae35569ea4de899c407e7d3a7439320c4a7b7d1c538d14",
+        "bytes": 19332
+      },
+      "strict": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5341-native-Windows-CI-observation-20261017-strict-actual-native-Windows-CI-observation-FINAL-closure.json",
+        "sha256": "0f3a51aafd13543f702d4bce4775a846b7aecfbc342ea6126b215bfa26502753",
+        "bytes": 59092
+      },
+      "passed_tests": 360,
+      "failed_tests": 0,
+      "ignored_tests": 26,
+      "scope": "Exact5341 commit only; not5378/5384 execution."
+    },
+    "campaign_c4a4_native_windows_failed_observed": {
+      "status": "ACTUAL_EXACT_CAMPAIGN_C4A4_NATIVE_WINDOWS_CI_TERMINAL_FAILURE",
+      "commit": "c4a4d821d57be80b20c0ab7c2c4fa5b4cd50aad7",
+      "run_id": 39012829176,
+      "job_id": 117338790705,
+      "report": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-campaign-c4a4-native-Windows-CI-observation-20261017/ACTUAL-EXACT-CAMPAIGN-C4A4-NATIVE-WINDOWS-CI-OBSERVATION-FINAL.json",
+        "sha256": "e5efe74213f4b05750a4f2c5790ecd8789283e0d06de873b4a0facbe8e6c369c",
+        "bytes": 11663
+      },
+      "test_correction_commit": "587235471ef6512190d4d90e13e1798ee6b3fada",
+      "correction_native_Windows_status_at_freeze": "packaging; no success transferred from5341"
+    },
+    "external5384": {
+      "status": "REGISTERED_ACTUAL_NEXT6_NATIVE_APPEND",
+      "frames": 5384,
+      "sequences": 3551,
+      "new_frames": 6,
+      "selected_assets": [
+        "200ba",
+        "2039a",
+        "3007c",
+        "3007d",
+        "3007e",
+        "3007f"
+      ],
+      "registration": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-next6-canonical5384-and-seal-20261017/closed-actual-next6-canonical-native5384-registration-proof.json",
+        "sha256": "113bc65547f8f690e7e64914c021f2ba93dced39d8de8dc6291373b0d8f10a58",
+        "bytes": 42260
+      },
+      "immutable_handoff": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5384-20261017/handoff-manifest.json",
+        "sha256": "c7ed93bb2be564ae0608ff6945e8560a846bad85e001258b24e30f4330707fc4",
+        "bytes": 3750650
+      },
+      "old3548_full_sequence_prefix_exact": true,
+      "native_header_Original_detail_and_review_ref": "next6-native5384",
+      "manifest": {
+        "device": 55,
+        "inode": 5446976,
+        "mode": 33152,
+        "mtime_ns": 1792223783432469977,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/hd.json",
+        "sha256": "b434f54258c9c82a20766d3801a5ba7e01e412975a9d4c3aa78e8ebc6607630b",
+        "size": 2760091
+      },
+      "provenance": {
+        "device": 55,
+        "inode": 5446975,
+        "mode": 33152,
+        "mtime_ns": 1792223783338472130,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/provenance.json",
+        "sha256": "7dbaa5c1977bf0d28289bdf9a7807d1c3cb4d5ef74f18544512a928dfff564f0",
+        "size": 1738909
+      },
+      "all_new_intrinsic_and_context_roles_actualB": true,
+      "actualB_epoch": {
+        "device": 55,
+        "inode": 5428064,
+        "mode": 33188,
+        "mtime_ns": 1792218341784718393,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/campaign-retune-20261017/actual-api-map-build-v2/compiled-epoch.json",
+        "sha256": "662520282b0376eb9a93b6a66f301066f3de2a02c793ce1998bdaa9f1e423c60",
+        "size": 5749
+      },
+      "category_counts_from_complete_native_IDs_and_per_ID_ledger": {
+        "Menus, portraits, HUD and other pictures": 117,
+        "Bosses": 248,
+        "Enemies and ground objects": 344,
+        "Player banking": 21,
+        "Terrain": 4275,
+        "Explosions and effects": 281,
+        "Player and enemy projectiles": 51,
+        "Equipment and pickups": 47
+      }
+    },
+    "runtime5384": {
+      "status": "ACTUAL_ASSEMBLED5384_CLI_PASS_GIT_PUBLICATION_NATIVE_WINDOWS_PENDING",
+      "approved_frames": 5384,
+      "complete_sequences": 3551,
+      "Terrain": 4275,
+      "remaining_required_originals": 369,
+      "remaining_Terrain": 260,
+      "remaining_enemies_ground": 75,
+      "remaining_UI_other": 33,
+      "remaining_bosses": 1,
+      "other_road_HOLDs": 14,
+      "data_files": 9335,
+      "data_bytes": 8179315857,
+      "immutable_handoff": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5384-20261017/handoff-manifest.json",
+        "sha256": "c7ed93bb2be564ae0608ff6945e8560a846bad85e001258b24e30f4330707fc4",
+        "bytes": 3750650
+      },
+      "intake": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5378/publication-intake.json",
+        "sha256": "1a37273f1a317421715d2343c187843ad00439eb2674e1c411d540732c0db437",
+        "bytes": 17433
+      },
+      "assembly": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5378/assembly-receipt.json",
+        "sha256": "036c35e77bf3856ce630cca54571a63229468be32caa04a52f97b9cb6a1024fb",
+        "bytes": 858
+      },
+      "actual_CLI": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5378/cli-validation.json",
+        "sha256": "2f3ab585fbb02b72b2e338f7feb335bcf617aa2b069500ed4014da8fded11885",
+        "bytes": 1625
+      },
+      "CLI_rejected": 0,
+      "mods": 45,
+      "overrides": 1,
+      "windows_count_metadata": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5378/windows-metadata-refresh.json",
+        "sha256": "6d1f552603d36b5fca2c84bb375d718bdd963be6bfc0db21c74130187582445a",
+        "bytes": 1556
+      },
+      "old_data_originals_Source18_and_both_binaries_exact": true,
+      "remote5384_publication_claimed": false,
+      "native_Windows5384_execution_claimed": false,
+      "Source_C_future_not_current": true
     }
   }
 }

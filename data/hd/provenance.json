@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5378 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5384 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -20901,6 +20901,51 @@
       "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies-seven-hardware-current386e-independent-hybrid-material-review-20261017/CLOSED-DIFFERENT-ACTUAL7-CURRENT386E-RETAINED-ORIGINAL-HYBRID-SOURCE-MATERIAL-QUALIFIED6-HOLD1.json",
       "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies-seven-hardware-current386e-independent-hybrid-material-review-20261017/CLOSED-DIFFERENT-ACTUAL7-CURRENT386E-RETAINED-ORIGINAL-HYBRID-SOURCE-MATERIAL-QUALIFIED6-HOLD1.json",
       "frame_bindings_sha256": "03671620fffda52806cb8a682a10ea2883ae4d1ad12e0ee45267d554396ed9e6"
+    },
+    {
+      "job_id": "coordinator-200ba-exact11-Original-native-post5378-B-20261017-v1",
+      "assets": [
+        "200ba"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-200ba-exact11-Original-native-post5378-B-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-200ba-exact11-Original-native-post5378-B-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-200ba-exact11-Original-native-post5378-B-20261017-v1/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-boss200ba-exact11-finalB-independent-whole-hybrid-material-peer-20261017-v1/INDEPENDENT-COMPLETE1-200BA-EXACT11-FINALB-WHOLE-HYBRID-SOURCE-MATERIAL-REVIEW.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-boss200ba-exact11-finalB-independent-whole-hybrid-material-peer-20261017-v1/INDEPENDENT-COMPLETE1-200BA-EXACT11-FINALB-WHOLE-HYBRID-SOURCE-MATERIAL-REVIEW.json",
+      "frame_bindings_sha256": "161e50becb2b0e261de6cc37adf868c089f1509ae094cbf7ac84ab2c636ef83b"
+    },
+    {
+      "job_id": "coordinator-tank03g3-complete4-Original-contours-native-post5378-B-20261017-v1",
+      "assets": [
+        "3007c",
+        "3007d",
+        "3007e",
+        "3007f"
+      ],
+      "frames": 4,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-tank03g3-complete4-Original-contours-native-post5378-B-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-tank03g3-complete4-Original-contours-native-post5378-B-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-tank03g3-complete4-Original-contours-native-post5378-B-20261017-v1/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-tank03g3-complete4-bounded-Original-contours-currentB-independent-material-peer-20261017/INDEPENDENT-COMPLETE4-TANK03G3-CURRENTB-BOUNDED-ORIGINAL-CONTOURS-WHOLE-MATERIAL-REVIEW.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-tank03g3-complete4-bounded-Original-contours-currentB-independent-material-peer-20261017/INDEPENDENT-COMPLETE4-TANK03G3-CURRENTB-BOUNDED-ORIGINAL-CONTOURS-WHOLE-MATERIAL-REVIEW.json",
+      "frame_bindings_sha256": "e6fbf74a1454a26345ef3d686b156f55faeb94fc66be89557541433264308b63"
+    },
+    {
+      "job_id": "coordinator-2039a-source-first-default-native-post5378-B-20261017-v1",
+      "assets": [
+        "2039a"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-remaining-2039a-source-first-currentB-independent-whole-material-peer-20261017/INDEPENDENT-COMPLETE1-2039A-SOURCE-FIRST-CURRENTB-WHOLE-MATERIAL-REVIEW.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-remaining-2039a-source-first-currentB-independent-whole-material-peer-20261017/INDEPENDENT-COMPLETE1-2039A-SOURCE-FIRST-CURRENTB-WHOLE-MATERIAL-REVIEW.json",
+      "frame_bindings_sha256": "7b2760050a64936d9e7b9997892b5983e61fb0f525ecbb5f2af81287067ca09f"
     }
   ],
   "jobs": [
@@ -21000,8 +21045,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5378,
-  "registration_updated_at_utc": "2026-10-17T07:35:14.132773+00:00",
+  "registered_frame_count": 5384,
+  "registration_updated_at_utc": "2026-10-17T07:56:23.323195+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,
