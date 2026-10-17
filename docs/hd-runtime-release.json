@@ -637,28 +637,28 @@
     ]
   },
   "latest_artwork_runtime": {
-    "checkpoint_utc": "2026-10-17T09:05:19.806820+00:00",
-    "status": "ACTUAL_SOURCEC_ARTWORK5407_ASSEMBLY_AND_CLI_PASS_PUBLICATION_NATIVE_WINDOWS_PENDING",
-    "registered_frames": 5407,
-    "complete_sequences": 3574,
-    "terrain_frames": 4298,
-    "remaining_original_pictures": 346,
+    "checkpoint_utc": "2026-10-17T09:30:15.245607+00:00",
+    "status": "ACTUAL5413_CANONICAL_AND_ROOT_ASSEMBLY_CLI_SDL_PASS_PUBLICATION_NATIVE_WINDOWS_PENDING",
+    "registered_frames": 5413,
+    "complete_sequences": 3577,
+    "terrain_frames": 4300,
+    "remaining_original_pictures": 340,
     "remaining_by_category": {
-      "terrain": 237,
-      "enemies_ground_objects": 75,
+      "terrain": 235,
+      "enemies_ground_objects": 71,
       "UI_other": 33,
       "bosses": 1
     },
-    "bundled_data_files": 9356,
-    "bundled_data_bytes": 8245392052,
-    "new_frames": 23,
-    "new_native_sequences": 23,
-    "jobs": 6,
-    "new_raw_routes": 21,
-    "new_payload_copies": 20,
-    "borrowed_existing_payload_aliases": 1,
+    "bundled_data_files": 9359,
+    "bundled_data_bytes": 8252150324,
+    "new_frames": 6,
+    "new_native_sequences": 3,
+    "jobs": 3,
+    "new_raw_routes": 3,
+    "new_payload_copies": 3,
+    "borrowed_existing_payload_aliases": 0,
     "hybrid_frames": 4,
-    "explicit_retained_Original_cells": 118,
+    "explicit_retained_Original_cells": 420,
     "Original_cells_not_generated_HD": true,
     "source_runtime_commit": "a073f73f3afa0ec5217bb756b521dc75aea15a3b",
     "source_epoch": {
@@ -675,60 +675,63 @@
       "Linux": "499d450e94c1a3d62d94e4002afbc76fcc4fcfd33ec6b84ca99946f58de078d3",
       "Windows": "449ef2ac6d6a117092bdac276776798d238fa6eea8428668c31098e63a476bc7"
     },
-    "old5384_bindings_and3551_header_prefix_exact": true,
     "source_update_checkpoint5384_is_historical_coverage_not_latest_artwork": true,
     "evidence": {
       "registration": {
-        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-qualified23-canonical5407-and-seal-20261017/closed-actual23-canonical-native5407-registration-proof.json",
-        "sha256": "f49cbba6849ed7a75f4debabe985caa19804b327a0e4782f0a28fbcf30e304d5",
-        "bytes": 80130
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-qualified6-canonical5413-and-seal-20261017/closed-actual6-canonical-native5413-registration-proof.json",
+        "sha256": "b02b155e4459df599ac741d0da8992f6391bbd601da84f301255e23ee5c4a45b",
+        "bytes": 72857
       },
       "immutable_handoff": {
-        "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5407-20261017/handoff-manifest.json",
-        "sha256": "72fd3d2fb42d9af44d143a2ca68eb1c408f649e63133c5835f8f12130da4720d",
-        "bytes": 3903198
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5413-20261017/handoff-manifest.json",
+        "sha256": "8eacabb728a622e5cc15eafc5b9c8c0858598a22997d555bb4a24cb049fbaacc",
+        "bytes": 3911284
       },
       "assembly": {
-        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5384-currentC-20261017/assembly-receipt.json",
-        "sha256": "3dad6576687ef1dafd743974ea3176f771ee701d307b58cd4156ea81402e2bc1",
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5407-currentC-20261017/assembly-receipt.json",
+        "sha256": "a5b7020a0809003c2efc27a0d2a26008751173f4aa3f8e1762b6c1debd4763bc",
         "bytes": 858
       },
       "actual_CLI": {
-        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5384-currentC-20261017/cli-validation.json",
-        "sha256": "8c9f38935d026fe8cf3eb949ff54e38b6460ff52925728cecdb9d67341ee7843",
-        "bytes": 1625
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5407-currentC-20261017/cli-validation.json",
+        "sha256": "ff0d816459782ce865f3a7d8070d4c1f8be762376b28e25c44e8a997d9afa63d"
+      },
+      "actual_SDL": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5413-currentC-three-SDL-controls-20261017-v1/CLOSED-ACTUAL5413-THREE-1080-SDL-REGRESSION-VERSUS-FROZEN5407.json",
+        "sha256": "8ec4dea180bdd3f2b18254853cdfc51493ed3baaa074bbf84ba01819ac65f51e"
+      },
+      "actual_SDL_strict": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5413-currentC-three-SDL-controls-20261017-v1-strict-complete-three-SDL-controls-closure.json",
+        "sha256": "74d60ff063c8f78351ac79d5ea785a3f489b8f89506c5d058f24842aedbaff1f"
+      },
+      "Root_personal_SDL_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5407-currentC-20261017/root-physical-5413-three-SDL-review.json",
+        "sha256": "02b906de42920c54a21c85d8c51d79a4162f235c3c2322efa2b3cb28e6cebf72"
       },
       "finite_noninterference": {
-        "device": 55,
-        "inode": 5458478,
-        "mode": 33188,
-        "mtime_ns": 1792227438305595635,
-        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-qualified23-canonical5407-and-seal-20261017/CLOSED-ACTUAL-FINITE23-CROSSGROUP-SOURCE-NATIVE-NONINTERFERENCE-PROOF.json",
-        "sha256": "0b007ef6cce7d1f91745530edefb76b317cc14163e7532d9a08c019a22eabea0",
-        "size": 182713
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-building2-SHIP4-finite-crossgroup-readonly-20261017/PASS-FINITE-BUILDING2-SHIP4-CROSSGROUP-SOURCE-AND-EFFECTIVE-NATIVE-BINDINGS-NOT-REGISTERED.json",
+        "sha256": "3b2bb675e1c77728c0217198d928425ec04bd1ccf0d557389efd498ad86a571e",
+        "bytes": 48089
       }
     },
     "validation": {
-      "HD_validated": 5407,
+      "HD_validated": 5413,
       "HD_rejected": 0,
       "mods": 45,
       "overrides": 1
     },
     "SDL_regression_controls": {
       "report": {
-        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5407-currentC-three-SDL-controls-20261017-v1/CLOSED-ACTUAL5407-CURRENTC-THREE-SDL-REGRESSION-VERSUS-FROZEN-C5384.json",
-        "sha256": "15531ccfe2abfa2fcdf649eba27b5a6256c20904f5d46223d621b3edd5b84613",
-        "bytes": 10036
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5413-currentC-three-SDL-controls-20261017-v1/CLOSED-ACTUAL5413-THREE-1080-SDL-REGRESSION-VERSUS-FROZEN5407.json",
+        "sha256": "8ec4dea180bdd3f2b18254853cdfc51493ed3baaa074bbf84ba01819ac65f51e"
       },
       "strict": {
-        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5407-currentC-three-SDL-controls-20261017-v1-strict-three-actual-SDL-controls-closure.json",
-        "sha256": "db78c76a25a05f28779582f856da3b369dde7ea3b3743ab7f56622b7ee41f18c",
-        "bytes": 20159
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-actual5413-currentC-three-SDL-controls-20261017-v1-strict-complete-three-SDL-controls-closure.json",
+        "sha256": "74d60ff063c8f78351ac79d5ea785a3f489b8f89506c5d058f24842aedbaff1f"
       },
       "Root_personal_whole_view": {
-        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5384-currentC-20261017/root-physical-5407-three-SDL-review.json",
-        "sha256": "6d880836031ecf84eb749e4dd920a9bfcd713e2c12150ee9031ba45541255b74",
-        "bytes": 1510
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5407-currentC-20261017/root-physical-5413-three-SDL-review.json",
+        "sha256": "02b906de42920c54a21c85d8c51d79a4162f235c3c2322efa2b3cb28e6cebf72"
       },
       "controls": 3,
       "dimensions": [
@@ -738,7 +741,7 @@
       "HD_scale": 4,
       "pixels_compared": 6220800,
       "RGB_and_alpha_changed_pixels": 0,
-      "new23_present_in_these_controls": false
+      "scope": "Regression controls contain none of the new six pictures; no target-art acceptance. Extra S2W7 starter death-cinematic smoke is not a passing target-art control."
     },
     "native_Windows": {
       "current_Source_C_D_status_at_freeze": "actual native success379passed/26ignored/zero failed at a073 source-update commit",
@@ -770,18 +773,20 @@
         "failed": 0,
         "scope": "PriorAPI-B epoch only; not SourceC or5407 execution."
       },
-      "native_5407_execution_claimed": false
+      "native_5413_execution_claimed": false
     },
     "limits": [
-      "Saved currentC404128cases/17orderedpairs, road3contexts and hardware7contexts(3carried/4changed); six directed finite crossgroup intersections empty.",
-      "40440 unused/gallery-only. No all-placement/seamless/fullHD claim.",
-      "Historical Source/material/context reviews and all other HOLDs remain distinct.",
-      "No new QA/renderer/World/image/compiler/Source edits performed for this doc update."
-    ]
+      "Finite15 building contexts and four living SHIP poses only; both directed saved new-group Source intersections empty. No all-placement/visible-overlap/full-route/death/seamless/fullHD claim.",
+      "SHIP retained420 Original cells are not newly generated HD; gray steps/partial edges/value/grain and native1 contrast remain qualified.",
+      "Pre-main disk-floor and relative-path stops remain preserved in canonical proof; actual main1/dryrun0/retry0, revised floor3000000000bytes.",
+      "Published5407 is6a3c465d; its Windows run is still pending; SourceC379 Windows remains5384 source-update evidence. No5413 native Windows execution claimed.",
+      "No new art/QA/renderer/World/compiler/Source/Git action performed for this private doc update."
+    ],
+    "old5407_bindings_and3574_header_prefix_exact": true
   },
   "record_roles": {
     "current_source_runtime": "Dated published SourceC+D update checkpoint at5384/3551. Retained unchanged as historical source-update evidence, not latest artwork coverage.",
-    "latest_artwork_runtime": "Current5407/3574 assembled artwork registry; see this field for latest counts and data hashes.",
-    "older_top_level_release_fields": "Historical2935 release and predecessor evidence, not current5407 runtime facts."
+    "latest_artwork_runtime": "Current5413/3577 assembled artwork registry; see this field for latest counts and data hashes.",
+    "older_top_level_release_fields": "Historical2935 release and predecessor evidence, not current5413 runtime facts."
   }
 }

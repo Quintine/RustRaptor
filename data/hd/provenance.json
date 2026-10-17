@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5407 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5413 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -21310,6 +21310,51 @@
           }
         ]
       }
+    },
+    {
+      "job_id": "terrain-20273-authentic-source-complete1-currentC-FINAL-20261017",
+      "assets": [
+        "20273"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/terrain-20273-authentic-source-complete1-currentC-FINAL-20261017/candidate.json",
+      "coordinator_review": "jobs/terrain-20273-authentic-source-complete1-currentC-FINAL-20261017/coordinator-review.json",
+      "runtime_qa": "jobs/terrain-20273-authentic-source-complete1-currentC-FINAL-20261017/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-20273-20275-currentC-independent-source-material-review-20261017/QUALIFIED-DIFFERENT-COMPLETE2-20273-20275-WHOLE-SOURCE-RAW-CURRENTC-NATIVE-MATERIAL-REVIEW.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-20273-20275-currentC5384-exact15-independent-physical-context-review-20261017/QUALIFIED-DIFFERENT-20273-20275-CURRENTC5384-EXACT15-AND6-STATIC-STATE-PHYSICAL-CONTEXT-REVIEW.json",
+      "frame_bindings_sha256": "d041ed6bf5357c1da2919bde4fbd13cc73b46d5797265173689f7f356a35c495"
+    },
+    {
+      "job_id": "terrain-20275-authentic-source-complete1-currentC-FINAL-20261017",
+      "assets": [
+        "20275"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/terrain-20275-authentic-source-complete1-currentC-FINAL-20261017/candidate.json",
+      "coordinator_review": "jobs/terrain-20275-authentic-source-complete1-currentC-FINAL-20261017/coordinator-review.json",
+      "runtime_qa": "jobs/terrain-20275-authentic-source-complete1-currentC-FINAL-20261017/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-20273-20275-currentC-independent-source-material-review-20261017/QUALIFIED-DIFFERENT-COMPLETE2-20273-20275-WHOLE-SOURCE-RAW-CURRENTC-NATIVE-MATERIAL-REVIEW.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-20273-20275-currentC5384-exact15-independent-physical-context-review-20261017/QUALIFIED-DIFFERENT-20273-20275-CURRENTC5384-EXACT15-AND6-STATIC-STATE-PHYSICAL-CONTEXT-REVIEW.json",
+      "frame_bindings_sha256": "f703184300aeb05cae421605a3589b12280c5330b51acf9eca63aa59818bb195"
+    },
+    {
+      "job_id": "enemies02-SHIP23G2-complete4-causal-Original-native-H5407-C-20261017-v1",
+      "assets": [
+        "200dd",
+        "200de",
+        "200df",
+        "200e0"
+      ],
+      "frames": 4,
+      "metadata": "hd.json",
+      "detail": "jobs/enemies02-SHIP23G2-complete4-causal-Original-native-H5407-C-20261017-v1/candidate.json",
+      "coordinator_review": "jobs/enemies02-SHIP23G2-complete4-causal-Original-native-H5407-C-20261017-v1/coordinator-review.json",
+      "runtime_qa": "jobs/enemies02-SHIP23G2-complete4-causal-Original-native-H5407-C-20261017-v1/runtime-qa.json",
+      "review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-SHIP23G2-final-causal-gray-currentC-independent-whole-family-material-peer-20261017-v1/INDEPENDENT-COMPLETE4-SHIP23G2-FINAL-CAUSAL-SOURCE-GRAY-CURRENT-C-WHOLE-MATERIAL-REVIEW.json",
+      "independent_review": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-SHIP23G2-final-causal-gray-currentC-independent-whole-family-material-peer-20261017-v1/INDEPENDENT-COMPLETE4-SHIP23G2-FINAL-CAUSAL-SOURCE-GRAY-CURRENT-C-WHOLE-MATERIAL-REVIEW.json",
+      "frame_bindings_sha256": "23ff987e2eefe82921627f0d8bc1ac81c583753978531ec4b42dcf18cb2f8765"
     }
   ],
   "jobs": [
@@ -21409,8 +21454,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5407,
-  "registration_updated_at_utc": "2026-10-17T08:57:20.037753+00:00",
+  "registered_frame_count": 5413,
+  "registration_updated_at_utc": "2026-10-17T09:27:58.263402+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,
