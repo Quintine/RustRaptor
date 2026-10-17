@@ -17,8 +17,8 @@
       "art": {
         "png": "art/projectile-sd.png",
         "hd_png": "art/projectile-hd.png",
-        "logical_width": 4,
-        "logical_height": 20,
+        "logical_width": 3,
+        "logical_height": 15,
         "nearest": true
       },
       "script": "scripts/weapon.rhai"
@@ -49,19 +49,19 @@
       "id": "iron_coast_railburst:fire",
       "name": "Railburst Cannon Fire",
       "file": "audio/fire.wav",
-      "volume": 88,
+      "volume": 80,
       "pan": 127,
       "pitch": 128,
-      "priority": 1
+      "priority": 2
     },
     {
       "id": "iron_coast_railburst:impact",
       "name": "Railburst Cannon Impact",
       "file": "audio/impact.wav",
-      "volume": 82,
+      "volume": 66,
       "pan": 127,
       "pitch": 128,
-      "priority": 2
+      "priority": 3
     }
   ]
 }

@@ -20,7 +20,7 @@ fn on_hit(event, state, random) {
         }
     }
     let commands = [#{op: "play_sound", sound: "iron_coast_depth_charge:impact"},
-                    #{op: "effect", kind: "ground_blast", x: center_x, y: center_y}];
+                    #{op: "effect", kind: "small_air", x: center_x, y: center_y}];
     let struck = [event.entity];
     for neighbor in 0..3 {
         let chosen = #{};

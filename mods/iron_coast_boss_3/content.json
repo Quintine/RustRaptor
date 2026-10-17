@@ -1,18 +1,68 @@
 {
-  "weapons": [{
-    "id": "iron_coast_boss_3:projectile", "name": "Saltbreaker incendiary shell",
-    "damage": 3, "speed": 4, "cooldown": 54, "behavior": "straight", "target": "all",
-    "art": { "png": "art/projectile-sd.png", "hd_png": "art/projectile-hd.png", "logical_width": 8, "logical_height": 8 }
-  }],
-  "enemies": [{
-    "id": "iron_coast_boss_3:unit", "name": "Saltbreaker armored escort VTOL",
-    "health": 160, "speed": 0, "reward": 1800, "ground": false, "boss": true, "cooldown": 54,
-    "art": { "png": "art/unit-sd.png", "hd_png": "art/unit-hd.png", "logical_width": 96, "logical_height": 64, "frames": 1 },
-    "script": "scripts/ai.rhai"
-  }],
+  "weapons": [
+    {
+      "id": "iron_coast_boss_3:projectile",
+      "name": "Saltbreaker incendiary shell",
+      "damage": 3,
+      "speed": 4,
+      "cooldown": 54,
+      "behavior": "straight",
+      "target": "all",
+      "art": {
+        "png": "art/projectile-sd.png",
+        "hd_png": "art/projectile-hd.png",
+        "logical_width": 8,
+        "logical_height": 8
+      }
+    }
+  ],
+  "enemies": [
+    {
+      "id": "iron_coast_boss_3:unit",
+      "name": "Saltbreaker armored escort VTOL",
+      "health": 320,
+      "speed": 0,
+      "reward": 1800,
+      "ground": false,
+      "boss": true,
+      "cooldown": 90,
+      "art": {
+        "png": "art/unit-sd.png",
+        "hd_png": "art/unit-hd.png",
+        "logical_width": 84,
+        "logical_height": 56,
+        "frames": 1
+      },
+      "script": "scripts/ai.rhai"
+    }
+  ],
   "sounds": [
-    { "id": "iron_coast_boss_3:shot", "name": "Saltbreaker cannon report", "file": "audio/shot.wav", "volume": 95, "pan": 127, "pitch": 128, "priority": 2 },
-    { "id": "iron_coast_boss_3:warning", "name": "Saltbreaker cannon charging warning", "file": "audio/warning.wav", "volume": 83, "pan": 127, "pitch": 128, "priority": 2 },
-    { "id": "iron_coast_boss_3:death", "name": "Saltbreaker turbine destruction", "file": "audio/death.wav", "volume": 120, "pan": 127, "pitch": 128, "priority": 4 }
+    {
+      "id": "iron_coast_boss_3:shot",
+      "name": "Saltbreaker cannon report",
+      "file": "audio/shot.wav",
+      "volume": 95,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_boss_3:warning",
+      "name": "Saltbreaker cannon charging warning",
+      "file": "audio/warning.wav",
+      "volume": 83,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 2
+    },
+    {
+      "id": "iron_coast_boss_3:death",
+      "name": "Saltbreaker turbine destruction",
+      "file": "audio/death.wav",
+      "volume": 120,
+      "pan": 127,
+      "pitch": 128,
+      "priority": 4
+    }
   ]
 }

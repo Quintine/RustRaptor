@@ -12,16 +12,15 @@ fn on_hit(event, state, random) {
     let shots = if state.contains("shots") { state.shots } else { 0 };
     let hits = if state.contains("hits") { state.hits % 100000 + 1 } else { 1 };
     let origin_y = event.y;
-    let ground = false;
     for enemy in event.entities {
         if enemy.entity == event.entity {
             origin_y = enemy.y + enemy.height / 2;
-            ground = enemy.ground;
         }
     }
-    let kind = if ground { "small_ground" } else { "small_air" };
+    // A short rail contact streak leaves the struck body readable.
     let commands = [#{op: "play_sound", sound: "iron_coast_railburst:impact"},
-                    #{op: "effect", kind: kind, x: event.x, y: event.y}];
+                    #{op: "arc", x: event.x - 2, y: event.y + 4,
+                      to_x: event.x + 2, to_y: event.y - 4, ticks: 2}];
     let struck = [event.entity];
     let previous_y = origin_y;
     let damages = [32, 22];
@@ -42,8 +41,8 @@ fn on_hit(event, state, random) {
         }
         if !chosen.contains("entity") { break; }
         commands.push(#{op: "damage", entity: chosen.entity, amount: damages[hop]});
-        let impact = if chosen.ground { "small_ground" } else { "small_air" };
-        commands.push(#{op: "effect", kind: impact, x: chosen.x, y: chosen.y});
+        commands.push(#{op: "arc", x: chosen.x - 2, y: chosen.y + 4,
+                        to_x: chosen.x + 2, to_y: chosen.y - 4, ticks: 2});
         struck.push(chosen.entity);
         previous_y = chosen.y;
         hits = hits % 100000 + 1;

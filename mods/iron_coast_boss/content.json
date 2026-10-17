@@ -11,8 +11,8 @@
       "art": {
         "png": "art/projectile-sd.png",
         "hd_png": "art/projectile-hd.png",
-        "logical_width": 8,
-        "logical_height": 8
+        "logical_width": 5,
+        "logical_height": 5
       }
     }
   ],
@@ -20,17 +20,17 @@
     {
       "id": "iron_coast_boss:unit",
       "name": "Iron Coast Command Cruiser",
-      "health": 160,
+      "health": 240,
       "speed": 0,
       "reward": 1800,
       "ground": false,
       "boss": true,
-      "cooldown": 54,
+      "cooldown": 96,
       "art": {
         "png": "art/unit-sd.png",
         "hd_png": "art/unit-hd.png",
-        "logical_width": 96,
-        "logical_height": 64,
+        "logical_width": 84,
+        "logical_height": 56,
         "frames": 2
       },
       "script": "scripts/ai.rhai"
@@ -54,6 +54,15 @@
       "pan": 127,
       "pitch": 128,
       "priority": 4
+    },
+    {
+      "id": "iron_coast_boss:warning",
+      "name": "Quiet charge cue",
+      "file": "audio/shot.wav",
+      "volume": 35,
+      "pan": 127,
+      "pitch": 170,
+      "priority": 2
     }
   ]
 }

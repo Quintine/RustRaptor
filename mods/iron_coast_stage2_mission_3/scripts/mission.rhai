@@ -1,9 +1,10 @@
+// Pacing1.0.1: warning precedes the unchanged real boss spawn by180ticks.
 fn on_mission_start(event,state,random) {
  #{commands:[#{op:"objective",key:"iron_coast_stage2_mission_3:phase",value:1},#{op:"objective",key:"iron_coast_stage2_mission_3:targets_required",value:4},#{op:"objective",key:"iron_coast_stage2_mission_3:targets_destroyed",value:0},#{op:"objective",key:"iron_coast_stage2_mission_3:complete",value:0},#{op:"objective",key:"iron_coast_stage2_boss_3:defeated",value:0},#{op:"play_sound",sound:"iron_coast_stage2_mission_3:approach"}],state:#{boss_alarm:false,complete:false}}
 }
 fn on_tick(event,state,random) {
  let commands=[];
- if event.tick==2100 && !state.boss_alarm {
+ if event.tick==1920 && !state.boss_alarm {
   state.boss_alarm=true;commands.push(#{op:"objective",key:"iron_coast_stage2_mission_3:phase",value:3});commands.push(#{op:"play_sound",sound:"iron_coast_stage2_mission_3:boss_alarm"});
  }
  if event.tick==1100 {commands.push(#{op:"objective",key:"iron_coast_stage2_mission_3:phase",value:2});commands.push(#{op:"play_sound",sound:"iron_coast_stage2_mission_3:target_alarm"});}

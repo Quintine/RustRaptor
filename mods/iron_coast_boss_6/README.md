@@ -1,54 +1,15 @@
-# Iron Crown boss
+# Iron Coast: Iron Crown Boss
 
-A standalone API 1 mod for the Iron Coast finale. It adds a new command
-Dreadnought with broad armored wings and three forward cannon pods, matching
-the industrial overhead style of the original game. The package has no mod
-dependencies and does not replace any original or Iron Coast enemy definition.
+API 1 package, version 1.0.1. Enable it in Mods at the main menu and apply the selection. This package has no mod dependencies.
 
-- Enemy: `iron_coast_boss_6:unit`; health 160, reward 1800, air boss, logical 96×64.
-- Weapon: `iron_coast_boss_6:projectile`; damage 3, speed 4, logical 8×8.
-- Objective: every actual boss death increments `iron_coast_boss_6:defeated`.
-- Entry: fly downward to y 24, then patrol between x 80 and x 144.
-- Attack: every 54 simulation ticks, alternate a three-shell fan with two
-  straight cannon lanes. A rising charging sound begins nine ticks before
-  each volley. At 70/3 Hz this gives 0.386 seconds warning before a 2.314-second
-  volley cycle. Charging creates no explosion effects.
-- State: per-entity patrol direction, age and volley cursor; removed on death.
-  Supports the finale's two staged bosses and simultaneous spawns. It never
-  completes a mission directly or fires from retired entities.
+Enemy `iron_coast_boss_6:unit` is an airborne boss with **420** nominal health and a **108×72** logical canvas. Actual destruction awards 1,800 credits. The existing World rule halves boss health, rounded up, on Training and Rookie. SD and HD use the same logical body.
 
-Difficulty uses the engine's original boss health rule: definitions retain 160
-health, and the two lower difficulty levels spawn bosses with 80 health.
+Cannon fan / open-center twin gate / alternating-side follow-up. Each life has three health phases (above two-thirds, at/below two-thirds, at/below one-third of its actual spawn health). Every phase change restarts a full warning. Brief 8-pixel, 8-tick anchored charge arcs and existing quiet audio precede the salvo; the warning and short burst hold position, then the boss recovers into a bounded lateral patrol. Gun positions follow the existing artwork. No homing retarget occurs after aim is locked.
 
-`art/unit-sd.png` and `art/unit-hd.png` share one centered 96×64 logical canvas.
-The HD texture is 768×512 (8×) and the SD version is derived from the same
-transparent generated master. The cannon shell likewise has matching 8×8 and
-64×64 versions. `art-qa.json` records bounds and source hashes. The supplied
-alpha is preserved; runtime colors with alpha below 128 remain transparent.
+Warning leads are 18 / 16 / 14 / 12 ticks for Training / Rookie / Veteran / Elite. Recovery leaves a new approach opportunity; watch the charge cue and move into the opening before the volley.
 
-The built-in imagegen tool generated both masters. Exact prompts live in
-`prompts/`; `provenance.json` records their outputs. All authored images and
-sounds belong in Git. Original sprite references remain outside this package.
+Only actual death increments `iron_coast_boss_6:defeated`; escape or time passing grants no objective credit. This enemy package does not decide mission completion. Its existing art, audio, generation provenance and asset recipes are retained.
 
-Reproduce the deterministic sounds and SD/HD reductions with:
+## Validation and history
 
-```sh
-python3 RustRaptor/mods/iron_coast_boss_6/build_assets.py
-```
-
-`--audio-only` needs only Python's standard library. `audio-recipe.json`
-records seeds, PCM properties and hashes. The sounds are non-silent PCM16
-mono 22050 Hz charging, firing and destruction cues; no recordings are used.
-
-Validate activation and lifecycle behavior using the production simulation:
-
-```sh
-CARGO_TARGET_DIR=RustRaptor/target cargo run --offline \
-  --manifest-path RustRaptor/mods/iron_coast_boss_6/validation/Cargo.toml
-```
-
-The validation checks alternating patterns, warning timing, independent
-entity state, serialized state restoration, death counter/reward behavior,
-dead-enemy firing guards and two staged encounters on all four difficulties.
-`validation-results.json` records the controlled outcomes. The complete
-mission 6 mod runs separate campaign and balance checks with its other enemies.
+See the [current Iron Coast retune results and limits](../../docs/iron-coast-retune.md). Package-local acceptance reports, validation results and retained test sources describe pre-retune 1.0 behavior unless a result explicitly identifies the newer package and runner. They remain historical material, not current playthrough guarantees.

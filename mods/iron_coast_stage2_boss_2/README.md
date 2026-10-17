@@ -1,40 +1,13 @@
 # Iron Coast II: Undertow
 
-A standalone boss content package for Black Tide. Enable this package directly
-in **Mods**, or enable its mission to select it as a dependency. It adds
-`iron_coast_stage2_boss_2:unit` and no campaign, overrides or equipment.
+API 1 package, version 1.1.0. Enable it in Mods at the main menu and apply the selection. This package has no mod dependencies.
 
-The surfaced/ground target has 400 health, awards 16,000 credits and retains
-a 48×80 logical collision canvas in SD and HD. It remains reachable until killed.
-Its two phases change at half of that life’s actual spawn health on every
-difficulty, with a new attack timer and twelve ticks of audible warning before
-every volley. Difficulty 0/1 uses the engine’s half-health boss rule; 2/3 uses
-the nominal health above. Cadence is 76 / 62 simulation ticks
-(first/second phase), at the original 70/3 Hz. Every projectile is hostile and
-leaves deliberate escape lanes; no phase is invulnerable.
+Enemy `iron_coast_stage2_boss_2:unit` is a ground boss with **400** nominal health and a **48×80** logical canvas. Actual destruction awards 16,000 credits. The existing World rule halves boss health, rounded up, on Training and Rookie. SD and HD use the same logical body.
 
-Actual death increments `iron_coast_stage2_boss_2:defeated` once. It does not finish a mission.
-Per-life cursors are removed on death and pruned on spawn/replay; early kills
-before the queued spawn callback still register the real death.
+Undertow now uses narrow pursuit ship with locked parallel shots and baitable fan. Each charge locks its aim and stops movement until its burst finishes. Difficulty changes cadence and bounded shot count; health, reward, damage and all artwork/collision canvases remain unchanged. On an API without event.difficulty the documented fallback is difficulty1.
 
-Artwork is a genuine new builtin imagegen master, with full alpha and identical
-SD/HD canvas alignment. `build_assets.py` reproduces palette-aware SD art, 4× HD
-and deterministic PCM WAV effects from the tracked raw masters. Projectile art
-is the same newly authored micro-missile independently included with each boss.
-See [generation provenance](generation-provenance.json) and
-[asset recipe/report](asset-report.json). Original Raptor style references and
-local review captures are external.
+Only actual death increments `iron_coast_stage2_boss_2:defeated`; escape or time passing grants no objective credit. This enemy package does not decide mission completion. Its existing art, audio, generation provenance and asset recipes are retained.
 
-From `RustRaptor/`:
+## Validation and history
 
-```sh
-cargo run --locked --no-default-features -- --mods mods --validate-mods iron_coast_stage2_boss_2
-CARGO_TARGET_DIR="$PWD/target" cargo run --locked --release --manifest-path mods/iron_coast_stage2_boss_1/validation/Cargo.toml -- --boss-only
-python3 mods/iron_coast_stage2_boss_2/build_assets.py
-```
-
-The real-catalog standalone kill, every-difficulty phase boundaries, early and
-duplicate hook checks and native Mixer/mute observations passed. Exact results
-and scopes are recorded in `acceptance-report.json`.
-
-Asset recipes use Python 3 with Pillow. The game uses the shipped PNG and WAV files.
+See the [current Iron Coast retune results and limits](../../docs/iron-coast-retune.md). Package-local acceptance reports, validation results and retained test sources describe pre-retune 1.0 behavior unless a result explicitly identifies the newer package and runner. They remain historical material, not current playthrough guarantees.

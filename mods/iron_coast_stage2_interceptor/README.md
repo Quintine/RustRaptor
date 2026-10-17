@@ -1,34 +1,19 @@
 # Iron Coast II: Needlewing
 
-An independent enemy package for API version 1. Enable **Iron Coast II: Needlewing** in the game's Mods menu. Enabling a mission that requires it also enables this package through the dependency manager. Enabling this enemy alone registers its content; a mission or another mod must spawn it. There are no dependencies or overrides.
+API 1 package, version 1.0.1. Enable it in Mods at the main menu and apply the selection. This package has no mod dependencies.
 
-## Behavior
+Fast 4-pixel/tick entry, one 3-pixel lateral attack leg, one reversing break, then a committed exit. Its route is distinct from the scout.
 
-- Enemy ID: `iron_coast_stage2_interceptor:unit`; air target, logical canvas 24×24, health 18, reward 100 credits.
-- Fast flanker. Its integer route curves through eight lateral phases, with short straight pauses and a downward speed of one or two logical pixels per tick.
-- Three aimed 2-damage projectiles at speed 3, four ticks apart. The next burst starts after 70 engine ticks (about 3 seconds). There is no warning chirp for this quick, low-damage enemy.
-- `:gun` is a scripted firing controller; `:projectile` is the distinct hostile projectile definition. These weapons are enemy content, unavailable in the shop; no player equipment or credits are granted.
-- `:shot`, `:warning` and `:death` are synthesized local WAV cues. Needlewing's warning is supplied for authors but is not played by its ordinary AI.
+The body remains 24×24, health 18, reward 100. SD and HD use the existing aligned PNGs. All PNG/WAV/master/prompt/provenance bytes are unchanged. Nonlegacy hostile projectile collision remains the engine's fixed `abs(dx)<10 && abs(dy)<10` point-to-player-center test, independent of artwork size. The following canvas change only changes visible sampling; it does not shrink that threshold. Projectile logical canvas is 7×7 in both modes; the complete existing square PNG canvas is sampled by the normal renderer, without crop or asset repaint. Its narrow visible core is checked in both modes.
 
-The original forward guns can hit these enemies. Air-only weapons cannot hit ground enemies, and ground-only weapons cannot hit the Needlewing. Collision dimensions are identical in SD and HD; artwork has transparent padding and one aligned frame per sprite. Normal units leave the playfield if not killed. A mission may hold a required target inside the screen while retaining its lateral movement.
+All four difficulty profiles are authored in Rhai. Training/Rookie/Veteran/Elite (difficulty0/1/2/3) repeat periods are [66, 56, 48, 42] ticks, short-salvo counts [1, 2, 2, 3], windups [8, 7, 7, 6], projectile maximum-axis speeds [4, 4, 5, 5]; successive salvo shots are 4 ticks apart. These periods are script clocks, not the unused engine auto-fire cooldown. The enemy has no automatic weapon so it cannot fire a second implicit volley. Existing `:gun` definitions in Stage 2 remain compatibility content and do not drive this AI.
 
-## Mission integration
+Aim is frozen at the start of a short salvo. Units only fire when their complete body is visible and still safely above the player. Salvos cancel as soon as that condition fails. Shot audio plays once per actual projectile; siege/skimmer warning audio plays once per salvo. Existing large explosion/flare effects are not used as muzzle blooms. Native death feedback remains engine-owned.
 
-Spawn `iron_coast_stage2_interceptor:unit` through normal mission definitions or the documented `spawn` command. Actual deaths increment the objective `iron_coast_stage2_interceptor:defeated` once. Escapes and despawns do not increment it. The engine awards the configured reward and creates normal death feedback; this script adds its local death cue. Objective keys and content IDs are namespaced so all three shared enemy packages coexist.
+`event.difficulty` must be integer 0–3; absent or invalid data uses difficulty1 (Rookie). Optional `event.actor` uses the current central-dispatch enemy snapshot, or null for a retired actor. Older engines lacking both new fields use a compatibility lookup through `event.entities`. Current null actors have the integer difficulty field and skip immediately. No full-event native map methods or helper arguments are used in the current path. The dense-wave operation-budget acceptance requires the current actor API; a fallback trace does not prove that new API is installed.
 
-Firing is rejected for dead or invisible units and after they pass the player. Bursts are finite; scripts never spawn enemies, grant equipment, deal direct damage, or complete a mission. Per-entity movement clocks and burst state are serializable and use only supplied deterministic RNG. Up to 128 live units receive custom AI, with periodic pruning and a bounded 128-entry death guard. Excess units retain basic engine movement and do not gain extra attacks. The diagnostics counters saturate at one billion. Missions should use much smaller readable waves.
+Per-entity script state is bounded to 64 entries. Birth/death update the bounded lifecycle index; normal ticks never prune or scan the world when actor metadata is present. State, RNG and salvo timing are deterministic and save-continuable. Only actual engine death callbacks increment `iron_coast_stage2_interceptor:defeated` once. Air exits never award kill credit; required ground units never self-clear. The script never deals direct damage, grants equipment, spawns enemy reinforcements or completes a mission.
 
-No new controls are introduced. Fire and weapon selection remain the normal game controls. All prices are inapplicable because the package adds enemies, not purchasable items.
+## Validation and history
 
-## Assets and validation
-
-Both artwork modes, unchanged generated masters, prompts, derivation recipe and all sound recipes are included. See [artwork provenance](ART_PROVENANCE.md), [art checks](art-qa.json), [audio recipe](audio-recipe.json) and [validation record](validation/acceptance.json). Decoded original style references and local review screenshots are deliberately kept outside this package.
-
-From the RustRaptor folder:
-
-```sh
-cargo test --locked --no-default-features --test stage2_enemies
-cargo run --locked --no-default-features -- --data data --mods mods --validate-mods iron_coast_stage2_interceptor
-```
-
-Tests exercise actual World callbacks, finite volleys and telegraphs, ground/air filtering, damage behavior, escapes, real death rewards and counters, reused entity IDs, bounded state, full save/RNG continuation and independent/combined activation. Shipped PNG geometry and all nine effects are also checked through the real SoundBank/Mixer. Local catalog validation and indexed SD/HD scale 1–4 galleries are recorded separately. These controlled checks do not establish full campaign balance or a live SDL scene; the mission packages have their own route tests.
+See the [current Iron Coast retune results and limits](../../docs/iron-coast-retune.md). Package-local acceptance reports, validation results and retained test sources describe pre-retune 1.0 behavior unless a result explicitly identifies the newer package and runner. They remain historical material, not current playthrough guarantees.

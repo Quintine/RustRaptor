@@ -14,15 +14,15 @@
       "id": "iron_coast_stage2_interceptor:projectile",
       "name": "Needlewing shell",
       "damage": 2,
-      "speed": 3,
-      "cooldown": 69,
+      "speed": 4,
+      "cooldown": 56,
       "behavior": "straight",
       "target": "all",
       "art": {
         "png": "art/projectile-sd.png",
         "hd_png": "art/projectile-hd.png",
-        "logical_width": 8,
-        "logical_height": 8,
+        "logical_width": 7,
+        "logical_height": 7,
         "frames": 1
       }
     }
@@ -36,8 +36,7 @@
       "reward": 100,
       "ground": false,
       "boss": false,
-      "cooldown": 69,
-      "weapon": "iron_coast_stage2_interceptor:gun",
+      "cooldown": 56,
       "art": {
         "png": "art/unit-sd.png",
         "hd_png": "art/unit-hd.png",

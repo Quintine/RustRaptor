@@ -1,62 +1,21 @@
-# Depth Charge 1.0.0
+# Depth Charge
 
-Enable **Depth Charge** in Mods, apply at the main menu, then buy it in the shop
-for **525,000 credits**. It is an independent API 1 mod without dependencies or
-overrides. Maximum one; resale returns 262,500 credits. It occupies a normal
-inventory slot and preserves other equipment.
+API 1 package, version 1.1.0. Enable it in Mods at the main menu and apply the selection. This package has no mod dependencies.
 
-This is a **selectable, reusable ground/naval special weapon**. Choose it in
-Inventory or with Alt/Shift, then hold Ctrl to launch. Space remains the owned
-mega-bomb control. It does not consume charges or auto-attack merely because it
-is equipped. Always-equipped forward guns remain available alongside it.
+Ground/naval blast, 36px radius. Selectable reusable ground/naval special. Ctrl launches a slow charge; a real ground hit deals 72 damage and splashes at most three other ground enemies within 36 pixels (36 inner / 20 outer). Deliberate 2.06-second cadence; no air damage or ammunition consumed. Alt/Shift selects weapons; Space drops mega bombs.
 
-The native straight projectile travels six logical pixels per simulation tick.
-A real ground-enemy collision deals 72 primary damage and starts one local
-ground-blast effect. At most three other living ground enemies can receive
-collateral damage: 36 damage within 16 pixels of the primary enemy's center,
-or 20 damage between 16 and 36 pixels inclusive. The closest neighbors are
-selected first, with stable entity order breaking ties. Aircraft, offscreen
-enemies, repeated targets and centers outside that radius are excluded. If the
-primary target dies, its contact still triggers the local blast correctly.
+Buy **Depth Charge** for **525,000 credits**; carry at most 1. Select it through Inventory or the Cycle control when it is a special weapon.
 
-The deliberate 48-tick cooldown is about 2.06 seconds at 70/3 Hz. The charge does
-not home or detonate automatically in empty space. Slow travel makes moving
-ground targets an aiming challenge; there is no screen-wide damage command.
-Destructible terrain receives native primary damage, but cannot trigger scripted
-collateral because the public snapshot contains enemies rather than terrain
-cells. Enemy contacts emit impact audio; a miss produces only the launch sound
-and projectile. The normal native terrain destruction effects remain available.
+`iron_coast_depth_charge:projectile`: 72 damage, speed 6, 48-tick cooldown, `straight` behavior.
 
-SD equipment/projectile canvases are 16×16 and 8×12; detailed HD variants are
-64×64 and 32×48. Options selects SD or HD artwork without changing logical
-placement or damage. Both are single aligned frames with transparent margins.
-[Artwork provenance](art-provenance.json) records unchanged generated masters,
-prompts, final PNG hashes and the Rust preparation recipe. All new images, WAVs,
-source masters and recipes are included; decoded original style references are
-kept outside the mod.
+## Feedback
 
-`python3 generate_audio.py` reproduces the mechanical launch and low naval impact
-from deterministic synthesis without external recordings. `prepare_art.rs`
-rebuilds SD/HD fitting from the included source masters. The companion Railburst
-package's [review helper](../iron_coast_railburst/validation/review.py) is a developer
-tool for both packages and is not a gameplay dependency.
+The unchanged 8×12 SD / 32×48 HD projectile files now display on a proportional **6×9 logical canvas**. Point collision, 6px/tick speed, 48-tick cadence, 72 damage, ground-only targeting, three-neighbor limit and 16/36px falloff remain unchanged. A real enemy hit shows one compact **16px / 15-tick** impact (0.64s) instead of the former 40px / 43-tick ground blast (1.84s); the visual is a contact marker, not a drawn damage-radius boundary. Fire/impact volume is 80/72. Price stays 525,000.
 
-From the RustRaptor directory:
+Only declared display sizing, cosmetic hit commands and playback levels/priorities change. No PNG/WAV pixels or samples, equipment icon dimensions, projectile collision rules, damage, cooldown, offsets, targeting, ammunition, capacity, controls or prices are changed. No new muzzle explosion or persistent trail is emitted. Normal original enemy deaths and terrain-destruction effects remain engine-controlled.
 
-```sh
-cargo test --locked --no-default-features --test iron_coast_stage2_weapons
-cargo run --locked --no-default-features -- --data data --mods mods \
-  --validate-mods iron_coast_depth_charge
-IRON_COAST_STAGE2_BALANCE_REPORT=/tmp/stage2-balance.json \
-  cargo test --locked --no-default-features --test iron_coast_stage2_weapons \
-  real_catalog_700_tick_balance_and_coexistence_report -- --ignored --nocapture
-```
+The three rapid weapons retain their prior burst/hit counters and reset only their cosmetic tick/projectile gates when mission ticks restart, accepting older saved script state without new fields. This version changes the package save pin; existing pilot compatibility confirmation remains the normal mod mechanism.
 
-[validation/balance.json](validation/balance.json) records the actual controlled
-700-tick damage observations supporting this price and role. Portable checks
-cover ground filtering, inner/outer falloff, the finite neighbor cap, misses,
-kills, cooldown, independent activation, coexistence, half-price resale, full
-inventory preservation, deterministic state/RNG continuation and whole-tick
-rollback. [validation/review.json](validation/review.json) distinguishes public
-decoder/blitter/mixer captures from live desktop review. Read the [API](../../docs/modding-api.md)
-for save pins and script execution limits.
+## Validation and history
+
+See the [current Iron Coast retune results and limits](../../docs/iron-coast-retune.md). Package-local acceptance reports, validation results and retained test sources describe pre-retune 1.0 behavior unless a result explicitly identifies the newer package and runner. They remain historical material, not current playthrough guarantees.

@@ -1,19 +1,13 @@
 # Iron Coast II 7: Siege of the Iron Fleet
 
-Standalone API 1/version 1.0.0 mission mod; the optional eight-sortie campaign links progression. No `next` override or embedded copy of another package is used.
+API 1 package, version 1.0.1. Enable it in Mods at the main menu and apply the selection. The normal dependency selection also enables `iron_coast_stage2_interceptor`, `iron_coast_stage2_siege`, `iron_coast_stage2_skimmer`, `iron_coast_stage2_boss_7`, `iron_coast_stage2_music`.
 
-Mission ID: `iron_coast_stage2_mission_7:mission_07`. Dependencies: the interceptor, siege, skimmer, boss 7 and Stage2 soundtrack mods, each ^1.0. Enabling this mission in Mods selects its dependencies through the normal manager. Optional Railburst/Depth Charge shop upgrades require no loan or mission dependency.
+Mission `iron_coast_stage2_mission_7:mission_07`: **Iron Coast II 7 — Siege of the Iron Fleet**. Destroy four siege units, three skimmers and the boss. Required ground objectives remain reachable; escaping optional aircraft never counts as a kill. Elapsed time alone does not finish the mission.
 
-Destroy **4 Bastion Crawlers, 3 Wakeknife Skimmers and the Dreadnought**. All naval spawns are required and are held at y 48/80 once they enter, preserving lateral AI; the final carrier arrives at tick 2500 and remains reachable. Elapsed duration 3800 never completes the mission. Victory is gated by actual shared death counters plus the boss death counter and pays 32000 credits once, in addition to enemy rewards.
+Scheduled spawn totals for Training / Rookie / Veteran / Elite are **57 / 65 / 77 / 93**. These are enabled scheduled entries, not simultaneous live-enemy counts. Groups can overlap when earlier enemies survive.
 
-Three assault acts at start/900/1800 lead into the carrier encounter. Authored support repairs +15 shield at each act and +20 at boss arrival, capped by the standard shield system. No item is granted/removed, so full inventories, owned equipment and physical shield reserves retain their identities and capacity. Failed sorties grant no victory reward; the next sortie resets phase/debrief/death objectives.
+Align the forward guns with required targets while moving around incoming shots. If carried, select Field Repair or coolant with Cycle and use Special: they restore 25 or 30 energy respectively and consume a real item. Shop purchases and refills still cost credits.
 
-Starter strategy: hold Ctrl, use ordinary lateral movement to line up paired forward guns, clear the lowest required naval target first, then the carrier. Native classic loop/sweep entries are retained as `base:enemy_0_73/74/23/24/95/96`; this package never clones, changes or anchors their native paths. Sidestep approaching shots while continuing fire; the reference controller uses at most 4 pixels per tick and reacts only to nearby hostile rounds at y136–188. Boss warning sounds/charge arcs identify firing pods; open deck lanes offer counterplay. Alt/Shift changes selectable weapons, Space remains the normal bomb control.
+## Validation and history
 
-Genuine newly generated joined harbor/citadel art is the SD/HD source. Tiles are split only after whole-canvas resampling and palette reduction; reflected half-period rows have exact boundary pixels, with complete reassembly assertions. Briefing artwork is a proportional overview of this map. Tiles are 32×32 logical/128×128 HD, nine columns; sixteen complete mirrored periods cover 12,288 logical scroll pixels, including delayed finale objectives. SD uses ordinary palette 0..239; no original palette classes are invented. Original reference pixels are not shipped.
-
-The reproducible sibling helper `../iron_coast_stage2_mission_8/build_finale_assets.py` builds all four finale packages using self-contained `RustRaptor/data/misc/PALETTE_DAT` and preserves all raw art/prompts/provenance. Mission 8 v1's painted-aircraft terrain is retained as rejected history; v2 genuinely replaces it with static service decks. WAV cues are deterministic local 22.05 kHz mono 16-bit synthesis, not recordings. Music: `iron_coast_stage2_music:finale`.
-
-Validation lives in mission 8 `validation/`: real original Catalog/Rhai/World, all difficulties from 75 shield/10,000 credits, 100 shield/0 credits, full 20 slots, all visible boss phases, native movement, no-fire reachability after duration, every-step deterministic replay, preserved mid-boss state and restart/failure checks. Review captures stay outside all mod folders to keep save hashes stable.
-
-Measured starter runs: 2637 ticks at difficulties 0/1 and 2777 at 2/3, ending with 100/60 shield from 75. The full 20-slot hard-mode run ends with 60 shield. Enemy geometry, wave density and repairs were preserved during controller tuning.
+See the [current Iron Coast retune results and limits](../../docs/iron-coast-retune.md). Package-local acceptance reports, validation results and retained test sources describe pre-retune 1.0 behavior unless a result explicitly identifies the newer package and runner. They remain historical material, not current playthrough guarantees.

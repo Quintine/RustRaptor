@@ -1,6 +1,6 @@
 # Iron Coast content packages
 
-Iron Coast contains six independently toggleable mission mods, five shared
+Iron Coast Stage I contains six independently toggleable mission mods, five shared
 weapon and enemy mods, a shared soundtrack, six stage boss mods, and an optional
 campaign assembly mod. Enable **Iron
 Coast — Complete Campaign** (`iron_coast_campaign`) to select the full campaign
@@ -12,6 +12,13 @@ toggle with no dependency changes applies immediately. Dependencies still
 needed by another enabled mod remain selected. The Mods manager validates versions
 and dependency order and applies the change at the main menu. The new weapons can also be used in the original campaigns;
 the enemy packages can be referenced from other missions.
+
+Stage II — **Black Tide** adds eight more independent missions, eight bosses,
+three shared enemies, two weapons and a three-track soundtrack. Enable
+`iron_coast_stage2_campaign` to select that route and its dependencies. See
+[Black Tide’s package instructions](../mods/iron_coast_stage2_campaign/README.md).
+The [pacing and presentation update](iron-coast-retune.md) documents the current
+waves, enemy patterns, weapon feedback and all four difficulty comparisons.
 
 | Package | Content |
 | --- | --- |
@@ -35,7 +42,9 @@ the enemy packages can be referenced from other missions.
 | `seeker_swarm` | Selectable homing missile volleys |
 | `ion_lance` | Selectable penetrating beam |
 
-All packages are version 1.0.0 and use mod API 1. Every mission requires
+All packages use mod API 1. Retuned enemies, bosses and missions use patch
+versions 1.0.1 (Iron Crown 1.0.2); the five retuned weapons use 1.1.0.
+Unchanged packages retain 1.0.0. Every Stage I mission requires
 compatible 1.x versions of its five shared content mods, soundtrack and stage
 boss. The campaign assembly requires all six mission packages; shared dependencies are selected transitively.
 Save compatibility records each enabled package's exact version and content
@@ -54,7 +63,7 @@ retains that dependency; the confirmation lists the actual affected packages.
 
 ## Mission 1: Breakwater
 
-The player raids a coastal industrial harbor. Ten scouts cover the approach,
+The player raids a coastal industrial harbor. Difficulty-scaled scouts cover the approach,
 four ground turrets protect the docks, two destructible supply depots release
 repair kits, and the command ship arrives at step 720. Destroy at least two
 turrets and the command ship to finish. Surviving turrets stop at y=72 and the boss stays in the playfield until
@@ -153,8 +162,9 @@ MUS score played through the same FM synthesizer as the original game music;
 its source composition, generated score and provenance are included.
 
 The generated mod assets are included in Git, so a fresh checkout includes
-the complete content packages. The original base-game asset catalog is still
-required locally to play the game and remains excluded from version control.
+the complete content packages. The original base-game asset catalog is included in the standalone
+`RustRaptor/data/` folder and tracked in this repository. Local review captures
+and build caches remain excluded from version control.
 To rebuild the mission assets from their included generated masters, run:
 
 ```sh

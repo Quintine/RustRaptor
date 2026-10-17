@@ -14,15 +14,15 @@
       "id": "iron_coast_stage2_skimmer:projectile",
       "name": "Wakeknife shell",
       "damage": 2,
-      "speed": 3,
-      "cooldown": 81,
+      "speed": 4,
+      "cooldown": 96,
       "behavior": "straight",
       "target": "all",
       "art": {
         "png": "art/projectile-sd.png",
         "hd_png": "art/projectile-hd.png",
-        "logical_width": 8,
-        "logical_height": 8,
+        "logical_width": 6,
+        "logical_height": 6,
         "frames": 1
       }
     }
@@ -36,8 +36,7 @@
       "reward": 140,
       "ground": true,
       "boss": false,
-      "cooldown": 81,
-      "weapon": "iron_coast_stage2_skimmer:gun",
+      "cooldown": 96,
       "art": {
         "png": "art/unit-sd.png",
         "hd_png": "art/unit-hd.png",

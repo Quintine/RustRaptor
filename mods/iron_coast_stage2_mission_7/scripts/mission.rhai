@@ -1,3 +1,4 @@
+// Pacing1.0.1: warning precedes the unchanged real boss spawn by180ticks.
 // All state resets on a new sortie. No temporary gear is granted or consumed.
 fn on_mission_start(event,state,random) {
  #{commands:[#{op:"objective",key:"iron_coast_stage2_mission_7:phase",value:1},
@@ -32,7 +33,7 @@ fn on_tick(event,state,random) {
   commands.push(#{op:"objective",key:"iron_coast_stage2_mission_7:phase",value:3});commands.push(#{op:"play_sound",sound:"iron_coast_stage2_mission_7:escalation"});
   commands.push(#{op:"shield",amount:15});
  }
- if !state.boss && event.tick>=2500 {
+ if !state.boss && event.tick>=2320 {
   state.boss=true;
   commands.push(#{op:"objective",key:"iron_coast_stage2_mission_7:phase",value:4});commands.push(#{op:"play_sound",sound:"iron_coast_stage2_mission_7:boss_alarm"});
   commands.push(#{op:"shield",amount:20});

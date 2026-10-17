@@ -1,3 +1,4 @@
+// Pacing1.0.1: warning precedes the unchanged real boss spawn by180ticks.
 // Only actual shared-enemy and boss death callbacks advance kill goals.
 fn on_mission_start(event,state,random) {
     #{commands:[#{op:"objective",key:"iron_coast_stage2_mission_1:phase",value:1},#{op:"objective",key:"iron_coast_stage2_mission_1:complete",value:0},#{op:"objective",key:"iron_coast_stage2_mission_1:debrief",value:0},#{op:"objective",key:"iron_coast_stage2_siege:defeated",value:0},#{op:"objective",key:"iron_coast_stage2_boss_1:defeated",value:0},#{op:"play_sound",sound:"iron_coast_stage2_mission_1:approach"}],state:#{complete:false,boss_alarm:false,reported:0}}
@@ -15,7 +16,7 @@ fn on_tick(event,state,random) {
     }
     let kills=if event.objectives.contains("iron_coast_stage2_siege:defeated") {event.objectives["iron_coast_stage2_siege:defeated"]} else {0};
     if kills>state.reported {state.reported=kills;commands.push(#{op:"play_sound",sound:"iron_coast_stage2_mission_1:objective"});}
-    if event.tick>=1900 && !state.boss_alarm {state.boss_alarm=true;commands.push(#{op:"objective",key:"iron_coast_stage2_mission_1:phase",value:2});commands.push(#{op:"play_sound",sound:"iron_coast_stage2_mission_1:boss_alarm"});}
+    if event.tick>=1720 && !state.boss_alarm {state.boss_alarm=true;commands.push(#{op:"objective",key:"iron_coast_stage2_mission_1:phase",value:2});commands.push(#{op:"play_sound",sound:"iron_coast_stage2_mission_1:boss_alarm"});}
     let defeated=if event.objectives.contains("iron_coast_stage2_boss_1:defeated") {event.objectives["iron_coast_stage2_boss_1:defeated"]} else {0};
     if kills>=3 && defeated>=1 && !state.complete {
         state.complete=true;

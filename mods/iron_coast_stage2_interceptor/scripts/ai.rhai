@@ -1,125 +1,120 @@
-// Integer-only per-entity clocks. No spawns, equipment grants or direct damage.
-// The engine owns collision, one kill reward, projectile retirement and explosions.
-fn alive(event) {
-    for unit in event.entities {
-        if unit.entity == event.entity && unit.health > 0 { return true; }
-    }
-    false
+// Authored attack clocks, not a legacy selector. Art, sound and kill rewards are unchanged.
+// The central actor snapshot gives O(1) current-entity access. A legacy-only scan
+// remains for dispatchers lacking BOTH actor and difficulty; no full event helper.
+// Current dispatch supplies BOTH actor and difficulty. Read compact properties
+// directly: native map methods recursively validate the entire event payload.
+// Only an older dispatch with neither field enters the legacy array fallback.
+fn legacy_actor(entities, id) {
+    for unit in entities { if unit.entity == id { return unit; } }
+    ()
 }
-// Firing events use muzzle coordinates; visibility must use the real canvas.
-fn ready_to_fire(event) {
-    for unit in event.entities {
-        if unit.entity == event.entity {
-            return unit.health > 0 && unit.x >= 0 && unit.x + unit.width <= 320 && unit.y >= 0 && unit.y + unit.height <= 180 && unit.y + unit.height < event.player.y - 8;
-        }
-    }
-    false
+fn difficulty(value) {
+    if type_of(value) == "i64" && value >= 0 && value <= 3 { return value; }
+    1
 }
-fn fresh(random) { #{clock:0, sign: if random[0] % 2 == 0 {1} else {-1}, remaining:0, wait:0, aim_x:0, aim_y:3} }
 fn ready(state) {
     if !state.contains("units") { state.units = #{}; }
+    if !state.contains("order") { state.order = []; }
     if !state.contains("dead") { state.dead = #{}; }
     if !state.contains("dead_order") { state.dead_order = []; }
     state
 }
-fn tidy(event, state) {
-    state = ready(state);
-    let retained = #{};
-    for unit in event.entities {
-        let key = unit.entity.to_string();
-        if unit.definition == "iron_coast_stage2_interceptor:unit" && unit.health > 0 && state.units.contains(key) && retained.len() < 128 {
-            retained[key] = state.units[key];
-        }
-    }
-    state.units = retained;
-    state
+fn bump(state, name) {
+    if !state.contains(name) { return 1; }
+    if state[name] < 1000000000 { state[name] + 1 } else { state[name] }
 }
-fn counter(state, key) {
-    if !state.contains(key) {return 1;}
-    if state[key] >= 1000000000 {return 1000000000;}
-    state[key] + 1
+fn visible(a, player) {
+    a.x >= 0 && a.x + a.width <= 320 && a.y >= 4 && a.y + a.height <= 174 && a.y + a.height < player.y - 8
 }
-fn clamp_speed(value) { if value < -3 {-3} else if value > 3 {3} else {value} }
-fn aimed(event) {
-    let dx = event.player.x + 16 - event.x;
-    let dy = event.player.y + 16 - event.y;
+fn aimed(a, player, speed) {
+    let dx = player.x + 16 - (a.x + a.width / 2);
+    let dy = player.y + 16 - (a.y + a.height);
     let ax = if dx < 0 {-dx} else {dx};
-    let ay = if dy < 0 {-dy} else {dy};
-    let norm = if ax > ay {ax} else {ay};
-    if norm == 0 {return [0,3];}
-    let vy = dy * 3 / norm;
-    [clamp_speed(dx * 3 / norm), if vy < 1 {1} else {vy}]
+    let norm = if ax > dy {ax} else {dy};
+    if norm <= 0 { return [0,speed]; }
+    let vx = dx * speed / norm;
+    let vy = dy * speed / norm;
+    [vx, if vy < 1 {1} else {vy}]
 }
 fn on_spawn(event, state, random) {
-    state = tidy(event,state);
-    let key = event.entity.to_string();
-    // Entity IDs restart with each mission. Clear the old lifecycle guard even
-    // when a spawn was already killed before queued callbacks are dispatched.
-    state.dead.remove(key);
-    let keep = [];
-    for old in state.dead_order { if old != key {keep.push(old);} }
-    state.dead_order = keep;
-    if !alive(event) {return #{commands:[],state:state};}
-    if state.units.len() >= 128 {return #{commands:[],state:state};}
-    let unit = fresh(random);
-    state.units[key] = unit;
-    #{commands:[#{op:"velocity",entity:event.entity,vx:unit.sign,vy:1}],state:state}
-}
-fn on_fire(event, state, random) {
     state = ready(state);
-    if !ready_to_fire(event) || event.x < 0 || event.x >= 320 || event.y < 24 || event.y > 180 || event.y >= event.player.y - 8 {
-        return #{commands:[],state:state};
-    }
     let key = event.entity.to_string();
-    if !state.units.contains(key) {return #{commands:[],state:state};}
-    let unit = state.units[key];
-    let aim = aimed(event);
-    unit.remaining = 3; unit.wait = 0;
-    unit.aim_x = aim[0]; unit.aim_y = aim[1];
-    state.units[key] = unit;
-    #{commands:[],state:state}
+    // IDs restart with missions. Replace this lifecycle even if the callback is stale.
+    state.units.remove(key); state.dead.remove(key);
+    let order = []; for old in state.order { if old != key { order.push(old); } }
+    state.order = order;
+    let dead_order = []; for old in state.dead_order { if old != key { dead_order.push(old); } }
+    state.dead_order = dead_order;
+    let a = event.actor;
+    if a == () && event.difficulty == () { a = legacy_actor(event.entities,event.entity); }
+    if a == () || a.health <= 0 { return #{commands:[],state:state}; }
+    // Constant bound; pruning is at birth/death, never an all-entity tick sweep.
+    if state.order.len() >= 64 { let old = state.order.remove(0); state.units.remove(old); }
+    state.order.push(key);
+    state.units[key] = #{age:0, sign:if a.x < 148 {1} else {-1}, cooldown:18 + event.entity % 19, remaining:0, wait:0, aim_x:0, aim_y:3};
+    #{commands:[#{op:"velocity",entity:event.entity,vx:0,vy:4}],state:state}
 }
 fn on_tick(event, state, random) {
     state = ready(state);
-    // Stagger periodic pruning to keep dense waves within the shared script budget.
-    if (event.tick + event.entity) % 32 == 0 { state = tidy(event,state); }
-    if event.health <= 0 || !alive(event) {return #{commands:[],state:state};}
     let key = event.entity.to_string();
-    if !state.units.contains(key) {return #{commands:[],state:state};}
+    let a = event.actor;
+    if a == () && event.difficulty == () { a = legacy_actor(event.entities,event.entity); }
+    if a == () || a.health <= 0 { state.units.remove(key); return #{commands:[],state:state}; }
+    if !state.units.contains(key) { return #{commands:[],state:state}; }
     let unit = state.units[key];
-    unit.clock = (unit.clock + 1) % 96;
-    let phase = unit.clock / 12;
-    let route = [2,1,0,-1,-2,-1,0,1];
-    let sideways = route[phase] * unit.sign;
-    let down = if unit.clock % 48 < 12 {2} else {1};
-    if event.x <= 8 {sideways = 1;}
-    if event.x >= 320 - 24 - 8 {sideways = -1;}
-    let commands = [#{op:"velocity",entity:event.entity,vx:sideways,vy:down}];
-    // Never fire from an invisible/dead unit, or backwards at a player it passed.
-    if event.x < 0 || event.x + 24 > 320 || event.y < 0 || event.y + 24 > 180 || event.y + 24 >= event.player.y - 8 {
-        unit.remaining = 0;
+    unit.age = if unit.age < 1000000000 {unit.age + 1} else {unit.age};
+    let commands = [];
+    if a.y > 224 || a.x < -32 || a.x > 328 {
+        state.units.remove(key);
+        return #{commands:[#{op:"despawn",entity:event.entity}],state:state};
     }
-    if unit.wait > 0 {unit.wait -= 1;}
-    if unit.remaining > 0 && unit.wait == 0 {
-        commands.push(#{op:"projectile",weapon:"iron_coast_stage2_interceptor:projectile",x:event.x+8,y:event.y+22,vx:unit.aim_x,vy:unit.aim_y,hostile:true});
-        unit.remaining -= 1;unit.wait=4;
+    // Fast entry, one lateral attack leg, then a single reversing break and exit.
+    let vx = if unit.age < 12 {0} else if unit.age < 48 {unit.sign * 3} else if unit.age < 64 {-unit.sign * 2} else {-unit.sign * 3};
+    let vy = if unit.age < 12 {4} else if unit.age < 48 {1} else if unit.age < 64 {2} else {3};
+    if unit.age < 64 && a.x < 8 {vx = 2;}
+    if unit.age < 64 && a.x > 288 {vx = -2;}
+    commands.push(#{op:"velocity",entity:event.entity,vx:vx,vy:vy});
+    let d = difficulty(event.difficulty);
+    let period = [66, 56, 48, 42][d];
+    let burst = [1, 2, 2, 3][d];
+    let windup = [8, 7, 7, 6][d];
+    let speed = [4, 4, 5, 5][d];
+    if unit.cooldown > 0 { unit.cooldown -= 1; }
+    let can_fire = visible(a,event.player) && unit.age >= 12;
+    if !can_fire { unit.remaining = 0; unit.wait = 0; }
+    if can_fire && unit.remaining == 0 && unit.cooldown == 0 {
+        let aim = aimed(a,event.player,speed);
+        unit.aim_x = aim[0]; unit.aim_y = aim[1];
+        // This tick consumes one counter step; retain the full documented warning interval.
+        unit.remaining = burst; unit.wait = windup + 1; unit.cooldown = period;
+        // No oversized flare: the visible approach/hold is the light-unit telegraph.
+    }
+    if unit.wait > 0 { unit.wait -= 1; }
+    if can_fire && unit.remaining > 0 && unit.wait == 0 {
+        // Aim is frozen at the start of this short salvo: no homing correction.
+        commands.push(#{op:"projectile",weapon:"iron_coast_stage2_interceptor:projectile",x:a.x + a.width / 2 - 7 / 2,y:a.y + a.height - 7 / 2,vx:unit.aim_x,vy:unit.aim_y,hostile:true});
         commands.push(#{op:"play_sound",sound:"iron_coast_stage2_interceptor:shot"});
-        state.shots = counter(state,"shots");
+        unit.remaining -= 1; unit.wait = 4;
+        state.shots = bump(state,"shots");
     }
     state.units[key] = unit;
     #{commands:commands,state:state}
 }
 fn on_hit(event, state, random) {
-    state.hits = counter(state,"hits");
+    state.hits = bump(state,"hits");
     #{commands:[],state:state}
 }
 fn on_death(event, state, random) {
-    state = tidy(event,state);
+    state = ready(state);
     let key = event.entity.to_string();
-    if alive(event) || state.dead.contains(key) {return #{commands:[],state:state};}
-    if state.dead_order.len() >= 128 {let oldest=state.dead_order.remove(0);state.dead.remove(oldest);}
+    // Only the engine's actual death hook advances required-target counters.
+    // Natural air exits never enter this path and never grant rewards/objectives.
+    let a = event.actor;
+    if a == () && event.difficulty == () { a = legacy_actor(event.entities,event.entity); }
+    if (a != () && a.health > 0) || state.dead.contains(key) { return #{commands:[],state:state}; }
+    if state.dead_order.len() >= 64 { let old = state.dead_order.remove(0); state.dead.remove(old); }
     state.dead[key] = true; state.dead_order.push(key); state.units.remove(key);
-    state.destroyed = counter(state,"destroyed");
+    state.destroyed = bump(state,"destroyed");
     let defeated = if event.objectives.contains("iron_coast_stage2_interceptor:defeated") {event.objectives["iron_coast_stage2_interceptor:defeated"] + 1} else {1};
     #{commands:[#{op:"objective",key:"iron_coast_stage2_interceptor:defeated",value:defeated},#{op:"play_sound",sound:"iron_coast_stage2_interceptor:death"}],state:state}
 }

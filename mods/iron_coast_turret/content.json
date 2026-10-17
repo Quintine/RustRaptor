@@ -5,14 +5,14 @@
       "name": "Iron Coast Turret cannon shell",
       "damage": 3,
       "speed": 3,
-      "cooldown": 70,
+      "cooldown": 96,
       "behavior": "straight",
       "target": "all",
       "art": {
         "png": "art/projectile-sd.png",
         "hd_png": "art/projectile-hd.png",
-        "logical_width": 8,
-        "logical_height": 8
+        "logical_width": 6,
+        "logical_height": 6
       }
     }
   ],
@@ -25,7 +25,7 @@
       "reward": 120,
       "ground": true,
       "boss": false,
-      "cooldown": 70,
+      "cooldown": 96,
       "art": {
         "png": "art/unit-sd.png",
         "hd_png": "art/unit-hd.png",
@@ -33,8 +33,7 @@
         "logical_height": 32,
         "frames": 1
       },
-      "script": "scripts/ai.rhai",
-      "weapon": "iron_coast_turret:projectile"
+      "script": "scripts/ai.rhai"
     }
   ],
   "sounds": [

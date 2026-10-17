@@ -1,32 +1,15 @@
-# Cinder Hammer
+# Iron Coast Cinder Hammer
 
-An independent boss mod for Iron Coast mission 5, **Cinder Docks**. The furnace
-gunship patrols persistently at the top of the combat area. A pressure-warning
-sound precedes three molten projectiles fired six simulation ticks apart. The
-center mortar travels vertically; the two plasma rounds spread outward.
+API 1 package, version 1.0.1. Enable it in Mods at the main menu and apply the selection. This package has no mod dependencies.
 
-- Enemy: `iron_coast_boss_5:unit`; health 160, reward 1,800, logical size 96×64.
-- Mortar and plasma: damage 3, speed 4; a 54-tick attack cycle.
-- Death objective: `iron_coast_boss_5:defeated`, incremented only on actual death.
-- Manifest API 1, package version 1.0.0, no dependencies or overrides.
+Enemy `iron_coast_boss_5:unit` is an airborne boss with **400** nominal health and a **96×64** logical canvas. Actual destruction awards 1,800 credits. The existing World rule halves boss health, rounded up, on Training and Rookie. SD and HD use the same logical body.
 
-The package never completes a mission itself. A mission must spawn the enemy,
-declare this package as a dependency, and require its death objective. Each
-enemy instance stores its own attack clock and patrol direction in serializable
-Rhai state. Dead or removed enemies cannot issue attacks or movement commands.
+Three staggered furnaces / converging outer pair / locked mortar. Each life has three health phases (above two-thirds, at/below two-thirds, at/below one-third of its actual spawn health). Every phase change restarts a full warning. Brief 8-pixel, 8-tick anchored charge arcs and existing quiet audio precede the salvo; the warning and short burst hold position, then the boss recovers into a bounded lateral patrol. Gun positions follow the existing artwork. No homing retarget occurs after aim is locked.
 
-SD PNGs are derived from the same transparent generated masters as the 8× HD
-PNGs. Both modes retain the same logical canvas and collision dimensions.
-`art/preview.png` shows the HD hull and exact SD silhouette enlarged for review.
-The generation prompts are in `prompts/`; `provenance.json` records tool mode
-and source hashes. All artwork and audio belong in Git with this mod.
+Warning leads are 18 / 16 / 14 / 12 ticks for Training / Rookie / Veteran / Elite. Recovery leaves a new approach opportunity; watch the charge cue and move into the opening before the volley.
 
-Run `python3 build_assets.py` to reproduce the resized art and synthesized mono
-22,050 Hz, 16-bit PCM warning, shot and destruction sounds. Python and Pillow
-are required. `audio-recipe.json` and `art-qa.json` record file hashes and checks.
+Only actual death increments `iron_coast_boss_5:defeated`; escape or time passing grants no objective credit. This enemy package does not decide mission completion. Its existing art, audio, generation provenance and asset recipes are retained.
 
-Run `cargo test --locked --manifest-path validation/Cargo.toml` from this folder
-for five asset-independent checks of attack timing, multiple-instance state,
-save serialization, dead-entity guards, patrol turns, actual simulation
-persistence, rewards and the single death objective. The simulation test also
-validates the real package-local PNGs and WAVs.
+## Validation and history
+
+See the [current Iron Coast retune results and limits](../../docs/iron-coast-retune.md). Package-local acceptance reports, validation results and retained test sources describe pre-retune 1.0 behavior unless a result explicitly identifies the newer package and runner. They remain historical material, not current playthrough guarantees.

@@ -15,14 +15,14 @@
       "name": "Bastion Crawler shell",
       "damage": 3,
       "speed": 3,
-      "cooldown": 86,
+      "cooldown": 108,
       "behavior": "straight",
       "target": "all",
       "art": {
-        "png": "art/projectile-sd.png",
-        "hd_png": "art/projectile-hd.png",
-        "logical_width": 8,
-        "logical_height": 8,
+        "png": "art/retune-visible-cannon-sd.png",
+        "hd_png": "art/retune-visible-cannon-hd.png",
+        "logical_width": 6,
+        "logical_height": 6,
         "frames": 1
       }
     }
@@ -36,8 +36,7 @@
       "reward": 220,
       "ground": true,
       "boss": false,
-      "cooldown": 86,
-      "weapon": "iron_coast_stage2_siege:gun",
+      "cooldown": 108,
       "art": {
         "png": "art/unit-sd.png",
         "hd_png": "art/unit-hd.png",

@@ -97,6 +97,7 @@ cases; wider playtesting and complete base-game HD coverage remain work in progr
 - [Mod API](docs/modding-api.md)
 - [AI mod authoring checklist](docs/mod-authoring-checklist.md)
 - [Iron Coast packages](docs/iron-coast.md)
+- [Iron Coast pacing and difficulty comparisons](docs/iron-coast-retune.md)
 - [Iron Coast II: Black Tide](docs/iron-coast-stage2-design.md)
 - [Weapon prices and balance](docs/weapon-balance.md)
 - [Sprite and shadow validation](docs/visual-validation.md)

@@ -21,8 +21,8 @@
       "art": {
         "png": "art/projectile-sd.png",
         "hd_png": "art/projectile-hd.png",
-        "logical_width": 8,
-        "logical_height": 12,
+        "logical_width": 4,
+        "logical_height": 6,
         "nearest": true
       },
       "script": "scripts/weapon.rhai"
@@ -54,19 +54,19 @@
       "id": "pulse_cannon:fire",
       "name": "Pulse Cannon Fire",
       "file": "audio/fire.wav",
-      "volume": 92,
+      "volume": 72,
       "pan": 127,
       "pitch": 128,
-      "priority": 1
+      "priority": 2
     },
     {
       "id": "pulse_cannon:impact",
       "name": "Pulse Cannon Impact",
       "file": "audio/impact.wav",
-      "volume": 78,
+      "volume": 50,
       "pan": 127,
       "pitch": 128,
-      "priority": 2
+      "priority": 3
     }
   ]
 }

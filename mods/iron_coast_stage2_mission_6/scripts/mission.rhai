@@ -1,3 +1,4 @@
+// Pacing1.0.1: warning precedes the unchanged real boss spawn by180ticks.
 // All encounter flags reset on entry. No inventory grants, consumption or equipment loans.
 fn on_mission_start(event, state, random) {
     #{commands:[#{op:"objective",key:"iron_coast_stage2_mission_6:targets_destroyed",value:0},#{op:"objective",key:"iron_coast_stage2_mission_6:targets_required",value:3},#{op:"objective",key:"iron_coast_stage2_mission_6:complete",value:0},#{op:"objective",key:"iron_coast_stage2_mission_6:phase",value:1},#{op:"objective",key:"iron_coast_stage2_mission_6:hazard_lane",value:0},#{op:"objective",key:"iron_coast_stage2_boss_6:defeated",value:0},#{op:"objective",key:"iron_coast_stage2_mission_6:field_repair",value:0},#{op:"objective",key:"iron_coast_stage2_mission_6:debrief",value:0},#{op:"play_sound",sound:"iron_coast_stage2_mission_6:approach"}],state:#{complete:false,repair:false,boss_warning:false}}
@@ -26,7 +27,7 @@ fn on_tick(event, state, random) {
             commands.push(#{op:"objective",key:"iron_coast_stage2_mission_6:hazard_lane",value:0});
         }
     }
-    if event.tick >= 2380 && !state.boss_warning {
+    if event.tick >= 2200 && !state.boss_warning {
         state.boss_warning = true;
         commands.push(#{op:"objective",key:"iron_coast_stage2_mission_6:phase",value:3});
         commands.push(#{op:"shield",amount:15});

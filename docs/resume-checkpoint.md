@@ -21,15 +21,26 @@ current enemy snapshots. A finite 16,384-property Rhai map limit fixes documente
 queries failing on ordinary enemy groups; operation, command and 64 KiB saved-state
 limits remain unchanged. All 45 modding regression tests pass. Three actual 1080p
 SDL captures (menu, S1 Wave 7, S3 Wave 9) match the previous binary byte for byte.
-Windows cross-build, PE imports and shared-data verification pass; this source
-revision still needs its own native Windows CI result.
+Windows cross-build, PE imports and shared-data verification pass. This API
+revision passed its own native Windows CI at 5,340 frames: 360 tests passed,
+zero failed and 26 were ignored. The subsequent 5,341-frame artwork append
+has a separate CI observation; the 360-test result is not relabeled for it.
 
-Iron Coast retuning is active in `.reference/campaign-retune-20261017/`.
-The baseline covers all 27 original and 14 mod missions at all four difficulties.
-Mission waves, enemy movement, bosses and weapon presentation are being validated
-in a combined private mod overlay before application. The working mod packages
-have not yet been replaced. The 45-picture terrain context sample found visible
-road-material seams; affected artwork remains held for repair.
+Iron Coast’s final retune is applied to the working packages: 14 scaled mission
+schedules, five shared enemy AIs, 14 boss patterns and five weapons’ visual/audio
+feedback. The combined 45-package overlay passes resource validation and save
+pins; paid routes complete both stages at all four difficulties. Stage I Elite
+uses the documented loan and legitimately purchased repairs; earlier failing
+policies remain preserved. See `docs/iron-coast-retune.md` for counts and limits.
+All six bounded SD/HD flight screenshots and three actual menu screenshots
+have been reviewed. The shop, mod diagnostics and mission selector remain
+readable, and the new versions appear correctly. These are presentation checks,
+not a claim of exhaustive human playtesting.
+
+HD continuation remains active. Four more boss frames have genuine World
+captures awaiting material review; unused-picture and retained-detail trials
+remain private. The terrain context sample found road-material seams, so those
+15 tiles remain held. No whole-remaster completion is claimed.
 
 # Earlier 5,339-frame checkpoint — retained historical observation
 

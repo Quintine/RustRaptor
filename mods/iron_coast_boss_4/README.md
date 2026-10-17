@@ -1,24 +1,15 @@
-# Stormwall Arsenal
+# Iron Coast: Stormwall Arsenal
 
-An independent Iron Coast boss mod for mission 4. The wide aerial arsenal carries two massive downward-facing batteries, red storm-warning stripes and four rear engines. It has its own true transparent SD/HD boss and shell artwork, alarm, cannon and destruction sounds.
+API 1 package, version 1.0.1. Enable it in Mods at the main menu and apply the selection. This package has no mod dependencies.
 
-Enable `iron_coast_boss_4` to register the boss; the Stormwall mission selects it as a dependency. This package has no dependencies, overrides or mission definitions.
+Enemy `iron_coast_boss_4:unit` is an airborne boss with **360** nominal health and a **96×64** logical canvas. Actual destruction awards 1,800 credits. The existing World rule halves boss health, rounded up, on Training and Rookie. SD and HD use the same logical body.
 
-| Definition | ID |
-| --- | --- |
-| Enemy | `iron_coast_boss_4:unit` |
-| Projectile | `iron_coast_boss_4:projectile` |
-| Death objective | `iron_coast_boss_4:defeated` |
-| Sounds | `iron_coast_boss_4:warning`, `iron_coast_boss_4:shot`, `iron_coast_boss_4:death` |
+Paused battery brackets / alternate-side curtain / locked central follow-up. Each life has three health phases (above two-thirds, at/below two-thirds, at/below one-third of its actual spawn health). Every phase change restarts a full warning. Brief 8-pixel, 8-tick anchored charge arcs and existing quiet audio precede the salvo; the warning and short burst hold position, then the boss recovers into a bounded lateral patrol. Gun positions follow the existing artwork. No homing retarget occurs after aim is locked.
 
-The 96×64 boss enters at two logical pixels per simulation tick, holds y=24 and patrols x=80–144. Every 54 ticks it pauses for 12 ticks with a two-note arming alarm, then fires three 3-damage shells at speed 4. The third shell alternates between batteries. Each boss stores its own direction and attack age, so concurrent bosses remain independent. Ordinary difficulty scaling applies to its 160 health; destruction awards 1,800 credits.
+Warning leads are 18 / 16 / 14 / 12 ticks for Training / Rookie / Veteran / Elite. Recovery leaves a new approach opportunity; watch the charge cue and move into the opening before the volley.
 
-Actual death increments `iron_coast_boss_4:defeated` once and retires that entity's live state. A dead boss never keeps firing, and a fresh sortie safely resets reused entity IDs even when a lethal projectile hits before its queued spawn callback runs. The script does not declare mission success: the mission combines the death objective with its other targets.
+Only actual death increments `iron_coast_boss_4:defeated`; escape or time passing grants no objective credit. This enemy package does not decide mission completion. Its existing art, audio, generation provenance and asset recipes are retained.
 
-`art/unit-sd.png` and `art/unit-hd.png` share a 96×64 logical canvas (HD is 384×256). `art/projectile-sd.png` and `art/projectile-hd.png` share an 8×8 logical canvas (HD is 64×64). Both use one static frame, consistent registration and preserved alpha. `art/preview.png` shows both modes. The first shell master is retained for provenance but is not loaded; v2 gives a readable SD core.
+## Validation and history
 
-The built-in image generation tool supplied the artwork. Exact prompts are in `prompts/`, tool results and processing details in `provenance.json`, and image dimensions, bounds and hashes in `art-qa.json`. The package includes generated masters, runtime art and WAVs for Git tracking. Original catalog reference pixels are excluded.
-
-`python3 build_assets.py` reproduces the SD/HD packaging and deterministic 22,050 Hz mono PCM16 sounds from saved masters. `audio-recipe.json` records seeds, nonzero peaks/RMS and hashes; no recordings or external sound downloads are used.
-
-After building RustRaptor in release mode, run `python3 validate.py` for six tests through the real simulation and Rhai callbacks: warning timing and alternate batteries, independent multi-boss state, once-only destruction, saved state/RNG determinism, fresh sorties, lethal spawn-step hits with restored death state, duplicate death callbacks and persistent patrol bounds. Results are recorded in `acceptance-report.json`. The normal Rust mod validation CLI also validates this package independently.
+See the [current Iron Coast retune results and limits](../../docs/iron-coast-retune.md). Package-local acceptance reports, validation results and retained test sources describe pre-retune 1.0 behavior unless a result explicitly identifies the newer package and runner. They remain historical material, not current playthrough guarantees.

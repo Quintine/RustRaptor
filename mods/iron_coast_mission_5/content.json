@@ -144,7 +144,7 @@
   "missions": [
     {
       "id": "iron_coast_mission_5:mission_05",
-      "name": "Iron Coast 5 \u2014 Cinder Docks",
+      "name": "Iron Coast 5 — Cinder Docks",
       "duration": 2600,
       "auto_complete": false,
       "columns": 9,
@@ -2963,154 +2963,753 @@
       ],
       "spawns": [
         {
-          "tick": 50,
-          "enemy": "base:enemy_0_22",
-          "x": 40,
-          "y": -24
+          "tick": 40,
+          "enemy": "iron_coast_scout:unit",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
         },
         {
-          "tick": 88,
-          "enemy": "base:enemy_0_21",
-          "x": 208,
-          "y": -24
+          "tick": 40,
+          "enemy": "iron_coast_scout:unit",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
         },
         {
-          "tick": 126,
+          "tick": 40,
           "enemy": "iron_coast_scout:unit",
           "x": 136,
-          "y": -24
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 40,
+          "enemy": "iron_coast_scout:unit",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 40,
+          "enemy": "iron_coast_scout:unit",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
+        },
+        {
+          "tick": 128,
+          "enemy": "base:enemy_0_20",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 128,
+          "enemy": "base:enemy_0_20",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 128,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 128,
+          "enemy": "base:enemy_0_20",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 128,
+          "enemy": "base:enemy_0_20",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
         },
         {
           "tick": 180,
           "enemy": "iron_coast_turret:unit",
           "x": 40,
-          "y": -32
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 214,
+          "enemy": "base:enemy_0_21",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 214,
+          "enemy": "base:enemy_0_22",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 214,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 214,
+          "enemy": "base:enemy_0_21",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 214,
+          "enemy": "base:enemy_0_22",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
+        },
+        {
+          "tick": 234,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 3
         },
         {
           "tick": 240,
           "enemy": "iron_coast_mission_5:foundry",
           "x": 112,
-          "y": -48
+          "y": -48,
+          "difficulty": 0
         },
         {
-          "tick": 360,
-          "enemy": "base:enemy_1_26",
+          "tick": 302,
+          "enemy": "iron_coast_scout:unit",
           "x": 64,
-          "y": -24
+          "y": -32,
+          "difficulty": 0
         },
         {
-          "tick": 398,
-          "enemy": "base:enemy_1_25",
-          "x": 208,
-          "y": -24
+          "tick": 302,
+          "enemy": "iron_coast_scout:unit",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
         },
         {
-          "tick": 436,
+          "tick": 302,
           "enemy": "iron_coast_scout:unit",
           "x": 136,
-          "y": -24
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 302,
+          "enemy": "iron_coast_scout:unit",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 302,
+          "enemy": "iron_coast_scout:unit",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
+        },
+        {
+          "tick": 414,
+          "enemy": "base:enemy_0_23",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 414,
+          "enemy": "base:enemy_0_24",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 414,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 414,
+          "enemy": "base:enemy_0_23",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 414,
+          "enemy": "base:enemy_0_24",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
         },
         {
           "tick": 500,
           "enemy": "iron_coast_turret:unit",
           "x": 232,
-          "y": -32
+          "y": -32,
+          "difficulty": 0
         },
         {
-          "tick": 620,
-          "enemy": "base:enemy_0_13",
-          "x": 72,
-          "y": -24
+          "tick": 508,
+          "enemy": "base:enemy_1_25",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
         },
         {
-          "tick": 658,
-          "enemy": "iron_coast_scout:unit",
+          "tick": 508,
+          "enemy": "base:enemy_1_26",
           "x": 216,
-          "y": -24
+          "y": -32,
+          "difficulty": 0
         },
         {
-          "tick": 696,
+          "tick": 508,
           "enemy": "iron_coast_scout:unit",
           "x": 136,
-          "y": -24
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 508,
+          "enemy": "base:enemy_1_25",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 508,
+          "enemy": "base:enemy_1_26",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
+        },
+        {
+          "tick": 606,
+          "enemy": "iron_coast_scout:unit",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 606,
+          "enemy": "iron_coast_scout:unit",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 606,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 606,
+          "enemy": "iron_coast_scout:unit",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 606,
+          "enemy": "iron_coast_scout:unit",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
+        },
+        {
+          "tick": 626,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 3
+        },
+        {
+          "tick": 704,
+          "enemy": "base:enemy_0_21",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 704,
+          "enemy": "base:enemy_0_22",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 704,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 704,
+          "enemy": "base:enemy_0_21",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 704,
+          "enemy": "base:enemy_0_22",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
+        },
+        {
+          "tick": 800,
+          "enemy": "base:enemy_0_73",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 800,
+          "enemy": "base:enemy_0_74",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 800,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 800,
+          "enemy": "base:enemy_0_73",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 800,
+          "enemy": "base:enemy_0_74",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
         },
         {
           "tick": 810,
           "enemy": "iron_coast_turret:unit",
           "x": 40,
-          "y": -32
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 898,
+          "enemy": "iron_coast_scout:unit",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 898,
+          "enemy": "iron_coast_scout:unit",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 898,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 898,
+          "enemy": "iron_coast_scout:unit",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 898,
+          "enemy": "iron_coast_scout:unit",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
         },
         {
           "tick": 920,
           "enemy": "iron_coast_mission_5:foundry",
           "x": 176,
-          "y": -48
+          "y": -48,
+          "difficulty": 0
         },
         {
-          "tick": 1040,
-          "enemy": "base:enemy_0_8",
+          "tick": 1000,
+          "enemy": "base:enemy_1_25",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1000,
+          "enemy": "base:enemy_1_26",
           "x": 216,
-          "y": -24
+          "y": -32,
+          "difficulty": 0
         },
         {
-          "tick": 1078,
-          "enemy": "iron_coast_scout:unit",
-          "x": 200,
-          "y": -24
-        },
-        {
-          "tick": 1116,
+          "tick": 1000,
           "enemy": "iron_coast_scout:unit",
           "x": 136,
-          "y": -24
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 1000,
+          "enemy": "base:enemy_1_25",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 1000,
+          "enemy": "base:enemy_1_26",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
+        },
+        {
+          "tick": 1020,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 3
+        },
+        {
+          "tick": 1094,
+          "enemy": "base:enemy_0_20",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1094,
+          "enemy": "base:enemy_0_20",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1094,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 1094,
+          "enemy": "base:enemy_0_20",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 1094,
+          "enemy": "base:enemy_0_20",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
+        },
+        {
+          "tick": 1198,
+          "enemy": "iron_coast_scout:unit",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1198,
+          "enemy": "iron_coast_scout:unit",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1198,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 1198,
+          "enemy": "iron_coast_scout:unit",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 1198,
+          "enemy": "iron_coast_scout:unit",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
         },
         {
           "tick": 1210,
           "enemy": "iron_coast_turret:unit",
           "x": 232,
-          "y": -32
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1300,
+          "enemy": "base:enemy_0_73",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1300,
+          "enemy": "base:enemy_0_74",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
         },
         {
           "tick": 1300,
           "enemy": "iron_coast_scout:unit",
-          "x": 56,
-          "y": -24
+          "x": 136,
+          "y": -24,
+          "difficulty": 1
         },
         {
-          "tick": 1338,
-          "enemy": "iron_coast_scout:unit",
+          "tick": 1300,
+          "enemy": "base:enemy_0_73",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 1300,
+          "enemy": "base:enemy_0_74",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
+        },
+        {
+          "tick": 1396,
+          "enemy": "base:enemy_0_23",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1396,
+          "enemy": "base:enemy_0_24",
           "x": 216,
-          "y": -24
+          "y": -32,
+          "difficulty": 0
         },
         {
-          "tick": 1376,
+          "tick": 1396,
           "enemy": "iron_coast_scout:unit",
           "x": 136,
-          "y": -24
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 1396,
+          "enemy": "base:enemy_0_23",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 1396,
+          "enemy": "base:enemy_0_24",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
+        },
+        {
+          "tick": 1416,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 3
         },
         {
           "tick": 1500,
           "enemy": "iron_coast_scout:unit",
-          "x": 80,
-          "y": -24
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
         },
         {
-          "tick": 1538,
+          "tick": 1500,
           "enemy": "iron_coast_scout:unit",
-          "x": 200,
-          "y": -24
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
         },
         {
-          "tick": 1576,
+          "tick": 1500,
           "enemy": "iron_coast_scout:unit",
           "x": 136,
-          "y": -24
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 1500,
+          "enemy": "iron_coast_scout:unit",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 1500,
+          "enemy": "iron_coast_scout:unit",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
+        },
+        {
+          "tick": 1586,
+          "enemy": "base:enemy_0_20",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1586,
+          "enemy": "base:enemy_0_20",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1586,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 1586,
+          "enemy": "base:enemy_0_20",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 1586,
+          "enemy": "base:enemy_0_20",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
         },
         {
           "tick": 1660,
           "enemy": "iron_coast_boss_5:unit",
           "x": 112,
-          "y": 24
+          "y": 24,
+          "difficulty": 0
+        },
+        {
+          "tick": 1694,
+          "enemy": "base:enemy_0_21",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1694,
+          "enemy": "base:enemy_0_22",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1694,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 1694,
+          "enemy": "base:enemy_0_21",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 1694,
+          "enemy": "base:enemy_0_22",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
+        },
+        {
+          "tick": 1830,
+          "enemy": "iron_coast_scout:unit",
+          "x": 64,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1830,
+          "enemy": "iron_coast_scout:unit",
+          "x": 216,
+          "y": -32,
+          "difficulty": 0
+        },
+        {
+          "tick": 1830,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 1
+        },
+        {
+          "tick": 1830,
+          "enemy": "iron_coast_scout:unit",
+          "x": 24,
+          "y": -32,
+          "difficulty": 2
+        },
+        {
+          "tick": 1830,
+          "enemy": "iron_coast_scout:unit",
+          "x": 264,
+          "y": -32,
+          "difficulty": 3
+        },
+        {
+          "tick": 1850,
+          "enemy": "iron_coast_scout:unit",
+          "x": 136,
+          "y": -24,
+          "difficulty": 3
         }
       ],
       "art": {

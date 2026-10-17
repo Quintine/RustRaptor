@@ -4,15 +4,15 @@
       "id": "iron_coast_scout:projectile",
       "name": "Iron Coast Scout cannon shell",
       "damage": 2,
-      "speed": 3,
+      "speed": 4,
       "cooldown": 54,
       "behavior": "straight",
       "target": "all",
       "art": {
         "png": "art/projectile-sd.png",
         "hd_png": "art/projectile-hd.png",
-        "logical_width": 8,
-        "logical_height": 8
+        "logical_width": 6,
+        "logical_height": 6
       }
     }
   ],
@@ -33,8 +33,7 @@
         "logical_height": 24,
         "frames": 1
       },
-      "script": "scripts/ai.rhai",
-      "weapon": "iron_coast_scout:projectile"
+      "script": "scripts/ai.rhai"
     }
   ],
   "sounds": [
