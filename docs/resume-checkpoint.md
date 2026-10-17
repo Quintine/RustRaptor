@@ -1,50 +1,16 @@
-# Current checkpoint — 17 October 2026
+# Current checkpoint — 18 October 2026
 
-The self-contained game now includes **5,384 HD pictures / 3,551 sequences**,
-including **4,275 terrain pictures**. Its **9,335 data files / 8,179,315,857 bytes**
-pass complete manifest verification. The six new frames are Boss 200ba,
-Terrain 2039a and complete TANK03G3 3007c–3007f. Five hybrid frames retain 207
-explicit Original logical cells; those cells are not generated HD. All previous
-5,378 bindings and 3,548 complete headers remain exact. Actual CLI validates
-all 5,384 frames with zero rejects and 45 mods/one override (`2f3ab585`).
+The bundled game contains **5,463 reviewed HD pictures in 3,625 complete sequences**, including **4,338 Terrain pictures**. **290 originals still await approval**: 197 Terrain, 59 enemies and ground objects, 33 UI/other pictures and one boss. Held drafts and actual provider refusals are part of that remaining count.
 
-**369 original pictures remain:** 260 terrain, 75 enemies/ground objects,
-33 UI/other and one boss. The other 14 road tiles remain held. Reviews cover
-one genuine 200ba pose, four naturally observed Tank phases and two 2039a
-contexts; visible road-edge and texture steps remain qualified, without a
-seamless or all-placement claim. Current receipts are in
-`.reference/hd-root-next-publication-after5378/`; immutable intake is
-`handoff-5384-20261017`. Previous 5,378 publication is remote-confirmed as
-`9ba0a5c7`; this 5,384 publication and its native Windows execution are pending.
+This update adds 37 Terrain pictures across four separately reviewed scopes. The selected artwork uses untouched older PNGs, including the approved palette treatments; eight installed pictures now use the optional palette constraint. The `40365–40374` selection contains 14 explicitly static pictures and excludes `40372` and `40374`. No animation is split, and the earlier whole-group holds and the new `40374` provider refusal remain unchanged. Exact asset lists and qualifications are in the [HD completion ledger](hd-completion.json).
 
-The included Linux and Windows runtimes now expose active script difficulty and
-current enemy snapshots. A finite 16,384-property Rhai map limit fixes documented
-queries failing on ordinary enemy groups; operation, command and 64 KiB saved-state
-limits remain unchanged. All 45 modding regression tests pass. Three actual 1080p
-SDL captures (menu, S1 Wave 7, S3 Wave 9) match the previous binary byte for byte.
-Windows cross-build, PE imports and shared-data verification pass. Actual native
-Windows 5,341 at `00cfcc20` passed 360 tests, zero failed and 26 ignored. The
-campaign c4a4 run's old-test failure remains preserved; its 58723547 test
-correction is still packaging. These are distinct observations, with no native
-Windows 5,378/5,384 execution claim. Future Source-C work is not installed.
+The assembled data contains **9,399 files / 8,355,478,070 bytes**. Validation accepts all 5,463 HD frames with zero rejects and 45 mods with one override. Three 1920×1080 SDL controls completed successfully, and Root viewed each full image. Their PNG, RGB and alpha results matched the H5426 controls across 6,220,800 pixels, with zero measured changes. These controls do not establish visibility of all 37 additions or coverage of every optional policy. The finite scene and screenshot evidence does not establish every placement, seamless terrain or complete HD coverage.
 
+The included Linux and Windows binaries remain at the validated SourceE runtime. The latest closed native Windows result is exact H5426 at `3f3107d6`: **394 passed, 26 ignored, zero failed**. That run also passed its HD, mod, Unicode relocation, `run.cmd` and audio checks. This new artwork revision has no claimed native Windows execution result yet. SourceF experiments remain private and unapplied.
 
-Iron Coast’s published retune (`c4a4d821`) covers 14 scaled mission
-schedules, five shared enemy AIs, 14 boss patterns and five weapons’ visual/audio
-feedback. Its 65 portable gameplay acceptance tests are published as
-`58723547`. The combined 45-package overlay passes resource validation and save
-pins; paid routes complete both stages at all four difficulties. Stage I Elite
-uses the documented loan and legitimately purchased repairs; earlier failing
-policies remain preserved. See `docs/iron-coast-retune.md` for counts and limits.
-All six bounded SD/HD flight screenshots and three actual menu screenshots
-have been reviewed. The shop, mod diagnostics and mission selector remain
-readable, and the new versions appear correctly. These are presentation checks,
-not a claim of exhaustive human playtesting.
+Iron Coast retains the published 14-mission retune and the current 45-package resource set, including **Mission 2 version 1.0.2**. This artwork append changes no mission schedules, scripts, shop prices or gameplay. Earlier paid-route successes, failed policies and presentation checks retain their recorded scope; see [Iron Coast retune evidence](iron-coast-retune.md). The 307 original AGX cinematic/font records remain preserved separately.
 
-HD continuation remains active. The previous DSHP21G3 four and this new complete
-Tank family are included; remaining unused-picture and retained-detail trials
-stay separate. Road-material seams keep 14 tiles held. No whole-remaster
-completion is claimed.
+Current assembly, CLI, scene-review and SDL authorities are linked from [runtime release evidence](hd-runtime-release.json). Earlier SourceC, SourceE activation, artwork, HOLD and refusal records remain dated history. Validated package checkpoint; Git history records publication.
 
 # Earlier 5,339-frame checkpoint — retained historical observation
 

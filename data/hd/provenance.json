@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5426 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5463 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -22367,6 +22367,1401 @@
           }
         ]
       }
+    },
+    {
+      "job_id": "coordinator-40425-40434-complete16-retained26-SourceE-H5426-FINAL-20261018-v1",
+      "assets": [
+        "40425",
+        "40426",
+        "40427",
+        "40428",
+        "40429",
+        "4042a",
+        "4042b",
+        "4042c",
+        "4042d",
+        "4042e",
+        "4042f",
+        "40430",
+        "40431",
+        "40432",
+        "40433",
+        "40434"
+      ],
+      "frames": 16,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-40425-40434-complete16-retained26-SourceE-H5426-FINAL-20261018-v1/provenance.json",
+      "coordinator_review": "jobs/coordinator-40425-40434-complete16-retained26-SourceE-H5426-FINAL-20261018-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-40425-40434-complete16-retained26-SourceE-H5426-FINAL-20261018-v1/runtime-qa.json",
+      "review": {
+        "author": {
+          "device": 55,
+          "inode": 5483847,
+          "mode": 33188,
+          "mtime_ns": 1792238551434845246,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-40425-40434-sourceE-plain-and-retained-yellow-cue-complete16-intrinsic-20261017/CLOSED-ACTUAL-SOURCEE-COMPLETE16-PLAIN-AND-RETAINED-CUE-INTRINSIC-MATERIAL-PROPOSAL.json",
+          "sha256": "6b58652bc3685cfe61c26990fdbe8abfdaf1c2c68b95fe4bd91321d18cff6b0a",
+          "size": 11191
+        },
+        "different_intrinsic": {
+          "device": 55,
+          "inode": 5484335,
+          "mode": 33188,
+          "mtime_ns": 1792238966059220800,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-40425-40434-sourceE-complete16-independent-intrinsic-material-peer-20261017-v1/INDEPENDENT-COMPLETE16-40425-40434-SOURCEE-RETAINED-CUES-WHOLE-INTRINSIC-MATERIAL-REVIEW.json",
+          "sha256": "8985c48df79f0287d4b48fb6670f8ee1a7e32b0f24c88015aa8233a2621c3a72",
+          "size": 13668
+        },
+        "strict": {
+          "device": 55,
+          "inode": 5484337,
+          "mode": 33188,
+          "mtime_ns": 1792238966556680541,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-40425-40434-sourceE-complete16-independent-intrinsic-material-peer-20261017-v1-strict-complete16-independent-whole-intrinsic-material-closure.json",
+          "sha256": "a69df9ec0b3d5373b4a28819e2eeb9835b35bb0a87f81df779aa710f34e6ec2b",
+          "size": 5108
+        }
+      },
+      "independent_review": {
+        "Original_contexts": {
+          "device": 55,
+          "inode": 5492592,
+          "mode": 33188,
+          "mtime_ns": 1792242023619466041,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-40425-40434-SourceE-context13-independent-physical-review-20261017-v1/INDEPENDENT-COMPLETE13-AND7-SOURCEE-40425-40434-GENUINE-CONTEXT-PHYSICAL-REVIEW.json",
+          "sha256": "968c3843e4f6d168171f978b8d6ea1a0bf512590d7ffbb2df70c671d7da0bbac",
+          "size": 7858
+        },
+        "Original_contexts_strict": {
+          "device": 55,
+          "inode": 5492594,
+          "mode": 33188,
+          "mtime_ns": 1792242023784221868,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-40425-40434-SourceE-context13-independent-physical-review-20261017-v1-strict-complete13-and7-independent-physical-context-closure.json",
+          "sha256": "4a7770f45a928291f1e40b45a6a3f5c28abb1fd27e9e805a44133ab2d04dd03c",
+          "size": 7599
+        },
+        "intrinsic_material": {
+          "device": 55,
+          "inode": 5484335,
+          "mode": 33188,
+          "mtime_ns": 1792238966059220800,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-40425-40434-sourceE-complete16-independent-intrinsic-material-peer-20261017-v1/INDEPENDENT-COMPLETE16-40425-40434-SOURCEE-RETAINED-CUES-WHOLE-INTRINSIC-MATERIAL-REVIEW.json",
+          "sha256": "8985c48df79f0287d4b48fb6670f8ee1a7e32b0f24c88015aa8233a2621c3a72",
+          "size": 13668
+        },
+        "intrinsic_strict": {
+          "device": 55,
+          "inode": 5484337,
+          "mode": 33188,
+          "mtime_ns": 1792238966556680541,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-40425-40434-sourceE-complete16-independent-intrinsic-material-peer-20261017-v1-strict-complete16-independent-whole-intrinsic-material-closure.json",
+          "sha256": "a69df9ec0b3d5373b4a28819e2eeb9835b35bb0a87f81df779aa710f34e6ec2b",
+          "size": 5108
+        },
+        "private_validation_World": {
+          "device": 55,
+          "inode": 5492765,
+          "mode": 33188,
+          "mtime_ns": 1792242273176066000,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-gallery4042f-private-validation-SourceE-independent-context-peer-20261018-v1/INDEPENDENT-PRIVATE4042F-LEGAL-WORLD-ALL4-WHOLE-CONTEXT-PHYSICAL-REVIEW.json",
+          "sha256": "9386cc60041482bfb7a446e8407f3b310d81221ef1134cecf4ca14a12ba207b7",
+          "size": 8179
+        },
+        "private_validation_World_strict": {
+          "device": 55,
+          "inode": 5492767,
+          "mode": 33188,
+          "mtime_ns": 1792242273440781464,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-gallery4042f-private-validation-SourceE-independent-context-peer-20261018-v1-strict-complete-private4042f-independent-all4-context-closure.json",
+          "sha256": "c114287094fa2f5c4f555084dafebb765f11d44e199b30a76a2083ed2eb707ff",
+          "size": 5769
+        }
+      },
+      "frame_bindings_sha256": "ec24c2ea2759e670866cb9457ae79ffb510268818b873f0f7da9826e45677510"
+    },
+    {
+      "job_id": "coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1",
+      "assets": [
+        "2038d",
+        "2038e",
+        "20396",
+        "20397",
+        "20398"
+      ],
+      "frames": 5,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/provenance.json",
+      "coordinator_review": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/runtime-qa.json",
+      "review": {
+        "actual_intrinsic": {
+          "device": 55,
+          "inode": 5490987,
+          "mode": 33188,
+          "mtime_ns": 1792241089199776840,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-earlier1f-selected6-actual-SourceE-H5426-independent-intrinsic-material-peer-20261017/INDEPENDENT-EARLIER1F-SELECTED6-ACTUAL-SOURCEE-H5426-INTRINSIC-MATERIAL-REVIEW.json",
+          "sha256": "ee10c8dbe2265695814185efef5d5f16ac0d469c82ddabbb69eaa0da82b71ef9",
+          "size": 58732
+        },
+        "strict": {
+          "device": 55,
+          "inode": 5490988,
+          "mode": 33188,
+          "mtime_ns": 1792241089420557280,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-earlier1f-selected6-actual-SourceE-H5426-independent-intrinsic-material-peer-20261017-strict-independent-selected6-SourceE-intrinsic-material-closure.json",
+          "sha256": "4136e212f2ce8e45bfe0b8db04b7eb5daf9c686a9113721b87dd721953b5594d",
+          "size": 4472
+        }
+      },
+      "independent_review": {
+        "genuine7": {
+          "device": 55,
+          "inode": 5496232,
+          "mode": 33188,
+          "mtime_ns": 1792242828920452482,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-selected5-SourceE-H5426-genuine7-independent-physical-peer-20261018/INDEPENDENT-SELECTED5-ACTUAL-SOURCEE-H5426-GENUINE7-AND-ONE-PAIR-PHYSICAL-CONTEXT-REVIEW.json",
+          "sha256": "887d404ef52e5a2eb47a488a93c4d5e12c7bc8f03d9787a55bf87d0e4a394ce4",
+          "size": 7613
+        },
+        "genuine7_strict": {
+          "device": 55,
+          "inode": 5496235,
+          "mode": 33188,
+          "mtime_ns": 1792242829154727918,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-selected5-SourceE-H5426-genuine7-independent-physical-peer-20261018-strict-independent-selected5-genuine7-physical-context-closure.json",
+          "sha256": "bc548863aea8d4ef778d24c79ad9340441c17927aad9a3ea9eed9fc0d0a4d14b",
+          "size": 269184
+        },
+        "material": {
+          "device": 55,
+          "inode": 5490987,
+          "mode": 33188,
+          "mtime_ns": 1792241089199776840,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-earlier1f-selected6-actual-SourceE-H5426-independent-intrinsic-material-peer-20261017/INDEPENDENT-EARLIER1F-SELECTED6-ACTUAL-SOURCEE-H5426-INTRINSIC-MATERIAL-REVIEW.json",
+          "sha256": "ee10c8dbe2265695814185efef5d5f16ac0d469c82ddabbb69eaa0da82b71ef9",
+          "size": 58732
+        },
+        "material_strict": {
+          "device": 55,
+          "inode": 5490988,
+          "mode": 33188,
+          "mtime_ns": 1792241089420557280,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-earlier1f-selected6-actual-SourceE-H5426-independent-intrinsic-material-peer-20261017-strict-independent-selected6-SourceE-intrinsic-material-closure.json",
+          "sha256": "4136e212f2ce8e45bfe0b8db04b7eb5daf9c686a9113721b87dd721953b5594d",
+          "size": 4472
+        },
+        "private_gallery": {
+          "device": 55,
+          "inode": 5496397,
+          "mode": 33188,
+          "mtime_ns": 1792243024753369064,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-gallery20397-20398-private-SourceE-H5426-independent-context-peer-20261018/INDEPENDENT-PRIVATE-GALLERY20397-20398-ACTUAL-SOURCEE-H5426-ALL4-PHYSICAL-CONTEXT-REVIEW.json",
+          "sha256": "2921d296d68b7828add553392ef1b5967ff46194a655986b11d6933149e66d81",
+          "size": 9473
+        },
+        "private_gallery_strict": {
+          "device": 55,
+          "inode": 5496398,
+          "mode": 33188,
+          "mtime_ns": 1792243024896145980,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-gallery20397-20398-private-SourceE-H5426-independent-context-peer-20261018-strict-independent-private-gallery97-98-context-closure.json",
+          "sha256": "52983a1983d59af778c41f65805d08200e48dbb843411e7b68c8f049c8c101d7",
+          "size": 109204
+        }
+      },
+      "frame_bindings_sha256": "a3dff679d95cdf54cd1e21dc11d438454ac9a3beb43747df8b7607cdd8d388b7",
+      "approval_scope": "complete_standalone_terrain_selection_with_unchanged_registered_siblings",
+      "original_fallback_assets": [
+        "2038f",
+        "20390",
+        "20395",
+        "20399",
+        "2039b"
+      ],
+      "full_inventory": [
+        "2038d",
+        "2038e",
+        "2038f",
+        "20390",
+        "20391",
+        "20392",
+        "20393",
+        "20394",
+        "20395",
+        "20396",
+        "20397",
+        "20398",
+        "20399",
+        "2039a",
+        "2039b",
+        "2039c"
+      ],
+      "carried_registered_assets": [
+        "20391",
+        "20392",
+        "20393",
+        "20394",
+        "2039a",
+        "2039c"
+      ],
+      "carried_registered_identity": {
+        "baseline": {
+          "path": "hd.json",
+          "sha256": "68ef2d2aa35059017ee5ee0c6dcf6781d3ac6184fd6030717f7737e1218a2d16"
+        },
+        "contract_version": "standalone-terrain-carried-identity-v2",
+        "frame_bindings_sha256": "71960ce6133a2f0c1c61683e0419c5861b3ffeef2ea596db9fbd79965f92d047",
+        "frames": {
+          "20391": {
+            "frame_binding": {
+              "file": "jobs/terrain-20391-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "ca0c6444be4f0d60e8dc1dfd86d706423f980da860991b9f7b0123a355460ac6"
+            },
+            "raw_sha256": "3264e82a68b28b880c2c8604312158e4b8a8360166ce803b1d1018c06d06fb6e",
+            "registration_record_index": 958,
+            "source_sha256": "ca0c6444be4f0d60e8dc1dfd86d706423f980da860991b9f7b0123a355460ac6"
+          },
+          "20392": {
+            "frame_binding": {
+              "file": "jobs/terrain-20392-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "63aa24ff5317e5f79234c0815d7c5a02a30c16a445398947d03f8fe162f21563"
+            },
+            "raw_sha256": "6be0cdfb112a4c93d39cb91d7b46f6f648f34fb6b81e62b823f3154e6e1b30e8",
+            "registration_record_index": 959,
+            "source_sha256": "63aa24ff5317e5f79234c0815d7c5a02a30c16a445398947d03f8fe162f21563"
+          },
+          "20393": {
+            "frame_binding": {
+              "file": "jobs/terrain-20393-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "8974df709eeb792f3494e85d8180eeb7d5839366ac177f093e691a7f8b208cd2"
+            },
+            "raw_sha256": "ed0569646e32fc3a4ce22c9ac384be37dab55344dc75cd8480fc6bcc45987b8d",
+            "registration_record_index": 960,
+            "source_sha256": "8974df709eeb792f3494e85d8180eeb7d5839366ac177f093e691a7f8b208cd2"
+          },
+          "20394": {
+            "frame_binding": {
+              "file": "jobs/terrain-20394-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "23678e19a8a1ecb576df516e31a99813856a8510dae2acb3f456334c11d93b54"
+            },
+            "raw_sha256": "486da72bfa419195ed3fe397eeb0853fa608a7a3a7eae1730e897efbe0afe7ff",
+            "registration_record_index": 961,
+            "source_sha256": "23678e19a8a1ecb576df516e31a99813856a8510dae2acb3f456334c11d93b54"
+          },
+          "2039a": {
+            "frame_binding": {
+              "file": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/generated/76b2622120a790f083343bd03bb3e0eb1f7e5a4666b8f78b034ddaa320b2bf2c.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "fd699aa63043e332f681b84a18d17dceae38935f8213dec412e93f8d73d53556"
+            },
+            "raw_sha256": "76b2622120a790f083343bd03bb3e0eb1f7e5a4666b8f78b034ddaa320b2bf2c",
+            "registration_record_index": 956,
+            "source_sha256": "fd699aa63043e332f681b84a18d17dceae38935f8213dec412e93f8d73d53556"
+          },
+          "2039c": {
+            "frame_binding": {
+              "crop": [
+                941,
+                941,
+                313,
+                313
+              ],
+              "file": "jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/generated/1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "palette_constraint": "original-painted-ordinary-v1",
+              "source_sha256": "79549702efcd7f35caf0bbd2cb2119360800969f6f7ae0c6566f73dfece3f4e0"
+            },
+            "raw_sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+            "registration_record_index": 976,
+            "source_sha256": "79549702efcd7f35caf0bbd2cb2119360800969f6f7ae0c6566f73dfece3f4e0"
+          }
+        },
+        "provenance": {
+          "path": "provenance.json",
+          "sha256": "6d7bc9cc23625480193b3a6f55f0c18959ead6a0eea470533e0093d23cf7bd3f"
+        },
+        "registration_records": [
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/terrain-20391-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+              "sha256": "a7d44700c7aee6ee1f54bf42a8bcfe8bf0823690f51231d74a4ecb738a598340"
+            },
+            "assets": [
+              "20391"
+            ],
+            "frame_bindings_sha256": "216d08abcb27d2e3b8bd2a40bab5a38b3b0fc4d96c0a75b5ee25551799edc729",
+            "registration_record_index": 958,
+            "registration_record_sha256": "9e04d72bd6394ce44ae460e44c5893055e82f0e2f090cd835024b33fb1740f52"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/terrain-20392-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+              "sha256": "7639c76beafbc658e3928fc67688499721179de8ce463a77fd900e5e31f316c8"
+            },
+            "assets": [
+              "20392"
+            ],
+            "frame_bindings_sha256": "587b85ea896eda1fa79c73e152ce34c8dfb6ff25c3e89d8bf8966ca7020bfb7b",
+            "registration_record_index": 959,
+            "registration_record_sha256": "08f5c947e285b000b908e1bfa2a5a914a04492067d78534dab28de54074efa5e"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/terrain-20393-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+              "sha256": "cd0035cae3bab914cc9cbb8d878f3bb318ff20e359ac5b661a9d41399472bdbe"
+            },
+            "assets": [
+              "20393"
+            ],
+            "frame_bindings_sha256": "3ec4ceb12af1a152021265d90b50b786536b6aa551ef409c4079f04b8d25c367",
+            "registration_record_index": 960,
+            "registration_record_sha256": "e6b607d513b518ebd409cbdeb6154c33877681df65264006ac842bc53e542f85"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/terrain-20394-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+              "sha256": "fc96740de4a532f09d7a37fe7fc6d37f729f3c4fd8ae33a92a65c3c95306c7ec"
+            },
+            "assets": [
+              "20394"
+            ],
+            "frame_bindings_sha256": "9b70892aec1e11110461987f41ef996d83e99df6d63614e309b45840d8e2ea54",
+            "registration_record_index": 961,
+            "registration_record_sha256": "b540b20294101bcc13ae177090b294b8cd1617edbed9b10a8e3529d7f5bd5de3"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/runtime-qa.json",
+              "sha256": "3c22b674f2935c43e9d3bc9e031ea8be8b966360ddc4a8bd2cba5c55acda2403"
+            },
+            "assets": [
+              "2039a"
+            ],
+            "frame_bindings_sha256": "7b2760050a64936d9e7b9997892b5983e61fb0f525ecbb5f2af81287067ca09f",
+            "registration_record_index": 956,
+            "registration_record_sha256": "9124daa03e23b0d928282ad1ea613b51629a5ac4419a9c4203978bf87e78a6b1"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/runtime-qa.json",
+              "sha256": "2dfd0d785f40f3a2ea0059bbe11a71bf0bd290ee56dacf2fb8073eeb04f8b1fb"
+            },
+            "assets": [
+              "2039c"
+            ],
+            "frame_bindings_sha256": "07605c89a39468efb77ed8d772d2b591612fb79652243dbeda1d39623a55a66f",
+            "registration_record_index": 976,
+            "registration_record_sha256": "41dcbd6c62d1db4e4aa9bec2e132f8136b4a206bb73a000e495b7a432e6252b6"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": "coordinator-2058b-2058c-palette2-SourceE-H5447-FINAL-20261018-v1",
+      "assets": [
+        "2058b",
+        "2058c"
+      ],
+      "frames": 2,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-2058b-2058c-palette2-SourceE-H5447-FINAL-20261018-v1/provenance.json",
+      "coordinator_review": "jobs/coordinator-2058b-2058c-palette2-SourceE-H5447-FINAL-20261018-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-2058b-2058c-palette2-SourceE-H5447-FINAL-20261018-v1/runtime-qa.json",
+      "review": {
+        "actual_material": {
+          "device": 55,
+          "inode": 5492786,
+          "mode": 33188,
+          "mtime_ns": 1792242307164384091,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-2058b-2058c-actual-SourceE-H5426-independent-intrinsic-material-peer-20261018/INDEPENDENT2058B-2058C-ACTUAL-SOURCEE-H5426-ORIGINALPALETTE-INTRINSIC-MATERIAL-REVIEW.json",
+          "sha256": "ca85c24fa9d6ec7f83e5cc847ce79c9eef8d702cc43b318530a97c8b5e65160c",
+          "size": 26220
+        },
+        "author": {
+          "device": 55,
+          "inode": 5492580,
+          "mode": 33188,
+          "mtime_ns": 1792242005703753852,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full2058b-2058c-SourceE-H5426-originalpalette-author-trial-20261017/CLOSED-ACTUAL-SOURCEE2058B-2058C-ORIGINALPALETTE-PAIR-AUTHOR-QUALIFIED2-NOT-DIFFERENT-PEER.json",
+          "sha256": "c96bacedf0c52c0d72401484ebae207e5a86b8e156c2dadfa932a7207c1826d0",
+          "size": 33481
+        },
+        "strict": {
+          "device": 55,
+          "inode": 5492787,
+          "mode": 33188,
+          "mtime_ns": 1792242307289573695,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-2058b-2058c-actual-SourceE-H5426-independent-intrinsic-material-peer-20261018-strict-independent-SourceE-palette-pair-intrinsic-material-closure.json",
+          "sha256": "11b87e4945a6f1d1dcb71a6d8674603d26ca129eeda850c38ba6d165e90e2422",
+          "size": 4334
+        }
+      },
+      "independent_review": {
+        "material": {
+          "device": 55,
+          "inode": 5492786,
+          "mode": 33188,
+          "mtime_ns": 1792242307164384091,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-2058b-2058c-actual-SourceE-H5426-independent-intrinsic-material-peer-20261018/INDEPENDENT2058B-2058C-ACTUAL-SOURCEE-H5426-ORIGINALPALETTE-INTRINSIC-MATERIAL-REVIEW.json",
+          "sha256": "ca85c24fa9d6ec7f83e5cc847ce79c9eef8d702cc43b318530a97c8b5e65160c",
+          "size": 26220
+        },
+        "material_strict": {
+          "device": 55,
+          "inode": 5492787,
+          "mode": 33188,
+          "mtime_ns": 1792242307289573695,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-2058b-2058c-actual-SourceE-H5426-independent-intrinsic-material-peer-20261018-strict-independent-SourceE-palette-pair-intrinsic-material-closure.json",
+          "sha256": "11b87e4945a6f1d1dcb71a6d8674603d26ca129eeda850c38ba6d165e90e2422",
+          "size": 4334
+        },
+        "private_context": {
+          "device": 55,
+          "inode": 5497240,
+          "mode": 33188,
+          "mtime_ns": 1792243190866725685,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-gallery2058b-2058c-private-SourceE-H5426-independent-context-peer-20261018/INDEPENDENT-PRIVATE2058B-2058C-ACTUAL-SOURCEE-H5426-ALL4-PHYSICAL-CONTEXT-REVIEW.json",
+          "sha256": "3f121e7443c90a1eabb6d36bc174f867e717e2c266433fc0301ad5ba554cba55",
+          "size": 10411
+        },
+        "private_context_strict": {
+          "device": 55,
+          "inode": 5497242,
+          "mode": 33188,
+          "mtime_ns": 1792243191030273657,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-gallery2058b-2058c-private-SourceE-H5426-independent-context-peer-20261018-strict-independent-private2058b-c-context-closure.json",
+          "sha256": "675c6ee7a2caebc07a1be1b7beb10df9ea0e68bf7bca5efe47ec79b2c53c04ca",
+          "size": 111408
+        }
+      },
+      "frame_bindings_sha256": "8d2c068acd77848804247ceabfd161fd9709eea49ef8d991dc911970fc7bc4f6",
+      "approval_scope": "complete_standalone_terrain_selection_with_unchanged_registered_siblings",
+      "original_fallback_assets": [
+        "2057f",
+        "20581",
+        "20582",
+        "20588"
+      ],
+      "full_inventory": [
+        "2057d",
+        "2057e",
+        "2057f",
+        "20580",
+        "20581",
+        "20582",
+        "20583",
+        "20584",
+        "20585",
+        "20586",
+        "20587",
+        "20588",
+        "20589",
+        "2058a",
+        "2058b",
+        "2058c"
+      ],
+      "carried_registered_assets": [
+        "2057d",
+        "2057e",
+        "20580",
+        "20583",
+        "20584",
+        "20585",
+        "20586",
+        "20587",
+        "20589",
+        "2058a"
+      ],
+      "carried_registered_identity": {
+        "baseline": {
+          "path": "hd.json",
+          "sha256": "e4e14f7f9d05857a528affef78afa317124d09866bf0dcb590fe201cf03e83f1"
+        },
+        "contract_version": "standalone-terrain-carried-identity-v2",
+        "frame_bindings_sha256": "538864e0b96da918a7f44588bc9020e7da3f2c12faec723f80bb197d173cf628",
+        "frames": {
+          "2057d": {
+            "frame_binding": {
+              "crop": [
+                0,
+                0,
+                313,
+                313
+              ],
+              "file": "jobs/terrain-2057d-2058c-final3-retained-original-actualC-20261017/raw-unchanged-held-atlas.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "original_detail_cells": [
+                [
+                  5,
+                  30
+                ],
+                [
+                  5,
+                  31
+                ],
+                [
+                  6,
+                  30
+                ],
+                [
+                  6,
+                  31
+                ],
+                [
+                  7,
+                  30
+                ],
+                [
+                  7,
+                  31
+                ],
+                [
+                  8,
+                  30
+                ],
+                [
+                  8,
+                  31
+                ],
+                [
+                  9,
+                  30
+                ],
+                [
+                  9,
+                  31
+                ],
+                [
+                  10,
+                  30
+                ],
+                [
+                  10,
+                  31
+                ],
+                [
+                  11,
+                  30
+                ],
+                [
+                  11,
+                  31
+                ],
+                [
+                  12,
+                  30
+                ],
+                [
+                  12,
+                  31
+                ],
+                [
+                  13,
+                  30
+                ],
+                [
+                  13,
+                  31
+                ],
+                [
+                  14,
+                  30
+                ],
+                [
+                  14,
+                  31
+                ],
+                [
+                  15,
+                  30
+                ],
+                [
+                  15,
+                  31
+                ],
+                [
+                  16,
+                  30
+                ],
+                [
+                  16,
+                  31
+                ],
+                [
+                  17,
+                  30
+                ],
+                [
+                  17,
+                  31
+                ],
+                [
+                  18,
+                  30
+                ],
+                [
+                  18,
+                  31
+                ],
+                [
+                  19,
+                  30
+                ],
+                [
+                  19,
+                  31
+                ],
+                [
+                  20,
+                  30
+                ],
+                [
+                  20,
+                  31
+                ],
+                [
+                  21,
+                  30
+                ],
+                [
+                  21,
+                  31
+                ],
+                [
+                  22,
+                  30
+                ],
+                [
+                  22,
+                  31
+                ],
+                [
+                  23,
+                  30
+                ],
+                [
+                  23,
+                  31
+                ],
+                [
+                  24,
+                  30
+                ],
+                [
+                  24,
+                  31
+                ],
+                [
+                  25,
+                  30
+                ],
+                [
+                  25,
+                  31
+                ],
+                [
+                  26,
+                  30
+                ],
+                [
+                  26,
+                  31
+                ]
+              ],
+              "source_sha256": "bdf6237dbaab2339ba6952da5a860ea74fb0a5200b73ebbbe15d41cf1c312a94"
+            },
+            "raw_sha256": "9ce70352d1e2104b829b5a65355eb44b359ca1fa39cf017601b23a5cbb2d65ae",
+            "registration_record_index": 962,
+            "source_sha256": "bdf6237dbaab2339ba6952da5a860ea74fb0a5200b73ebbbe15d41cf1c312a94"
+          },
+          "2057e": {
+            "frame_binding": {
+              "crop": [
+                314,
+                0,
+                313,
+                313
+              ],
+              "file": "jobs/terrain-2057d-2058c/generated/atlas-v2.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "1c27014c2180767ae2e14cd5a334bcc526028f5ea0194185caf378b311d79e96"
+            },
+            "raw_sha256": "09eafd298c28176faa71b4856b174147b6b50f9e7be106d3ac6813ea58c5e87b",
+            "registration_record_index": 554,
+            "source_sha256": "1c27014c2180767ae2e14cd5a334bcc526028f5ea0194185caf378b311d79e96"
+          },
+          "20580": {
+            "frame_binding": {
+              "crop": [
+                941,
+                0,
+                313,
+                313
+              ],
+              "file": "jobs/terrain-2057d-2058c/generated/atlas-v2.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "5d3eb9ac333f80c61bdd68751529637ebe8fc7a81125e571464766bc80fe1903"
+            },
+            "raw_sha256": "09eafd298c28176faa71b4856b174147b6b50f9e7be106d3ac6813ea58c5e87b",
+            "registration_record_index": 554,
+            "source_sha256": "5d3eb9ac333f80c61bdd68751529637ebe8fc7a81125e571464766bc80fe1903"
+          },
+          "20583": {
+            "frame_binding": {
+              "crop": [
+                627,
+                314,
+                313,
+                313
+              ],
+              "file": "jobs/coordinator-20583-exact2-Original-native-post5341-B-compatible-20261017-v1/generated/9ce70352d1e2104b829b5a65355eb44b359ca1fa39cf017601b23a5cbb2d65ae.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "original_detail_cells": [
+                [
+                  15,
+                  31
+                ],
+                [
+                  16,
+                  31
+                ]
+              ],
+              "source_sha256": "52fa550065cef6c119236ed2ecacb38c8099424781e8c37334c82b93491ceda9"
+            },
+            "raw_sha256": "9ce70352d1e2104b829b5a65355eb44b359ca1fa39cf017601b23a5cbb2d65ae",
+            "registration_record_index": 953,
+            "source_sha256": "52fa550065cef6c119236ed2ecacb38c8099424781e8c37334c82b93491ceda9"
+          },
+          "20584": {
+            "frame_binding": {
+              "crop": [
+                941,
+                314,
+                313,
+                313
+              ],
+              "file": "jobs/terrain-2057d-2058c/generated/atlas-v2.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "6fbea005ac71bb4264fc920cc190fd82121edadda68b3c57017bd95ca1fce7a7"
+            },
+            "raw_sha256": "09eafd298c28176faa71b4856b174147b6b50f9e7be106d3ac6813ea58c5e87b",
+            "registration_record_index": 554,
+            "source_sha256": "6fbea005ac71bb4264fc920cc190fd82121edadda68b3c57017bd95ca1fce7a7"
+          },
+          "20585": {
+            "frame_binding": {
+              "crop": [
+                0,
+                627,
+                313,
+                313
+              ],
+              "file": "jobs/terrain-2057d-2058c-final3-retained-original-actualC-20261017/raw-unchanged-held-atlas.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "original_detail_cells": [
+                [
+                  0,
+                  31
+                ],
+                [
+                  1,
+                  31
+                ],
+                [
+                  2,
+                  31
+                ],
+                [
+                  3,
+                  31
+                ],
+                [
+                  4,
+                  31
+                ],
+                [
+                  5,
+                  31
+                ],
+                [
+                  6,
+                  31
+                ],
+                [
+                  7,
+                  31
+                ],
+                [
+                  8,
+                  31
+                ],
+                [
+                  9,
+                  31
+                ],
+                [
+                  10,
+                  31
+                ],
+                [
+                  11,
+                  31
+                ],
+                [
+                  12,
+                  31
+                ],
+                [
+                  13,
+                  31
+                ],
+                [
+                  14,
+                  31
+                ],
+                [
+                  15,
+                  31
+                ],
+                [
+                  16,
+                  31
+                ],
+                [
+                  17,
+                  31
+                ],
+                [
+                  18,
+                  31
+                ],
+                [
+                  19,
+                  31
+                ],
+                [
+                  20,
+                  31
+                ],
+                [
+                  21,
+                  31
+                ],
+                [
+                  22,
+                  31
+                ],
+                [
+                  23,
+                  31
+                ],
+                [
+                  24,
+                  31
+                ],
+                [
+                  25,
+                  31
+                ],
+                [
+                  26,
+                  31
+                ],
+                [
+                  27,
+                  31
+                ],
+                [
+                  28,
+                  31
+                ],
+                [
+                  29,
+                  31
+                ],
+                [
+                  30,
+                  31
+                ],
+                [
+                  31,
+                  31
+                ]
+              ],
+              "source_sha256": "36503b7fd4169666d6746c5a09a95724493d2f48d4cf91dfa9c416d1bc76d511"
+            },
+            "raw_sha256": "9ce70352d1e2104b829b5a65355eb44b359ca1fa39cf017601b23a5cbb2d65ae",
+            "registration_record_index": 962,
+            "source_sha256": "36503b7fd4169666d6746c5a09a95724493d2f48d4cf91dfa9c416d1bc76d511"
+          },
+          "20586": {
+            "frame_binding": {
+              "crop": [
+                314,
+                627,
+                313,
+                313
+              ],
+              "file": "jobs/terrain-2057d-2058c-final3-retained-original-actualC-20261017/raw-unchanged-held-atlas.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "original_detail_cells": [
+                [
+                  0,
+                  31
+                ],
+                [
+                  1,
+                  31
+                ],
+                [
+                  2,
+                  31
+                ],
+                [
+                  3,
+                  31
+                ],
+                [
+                  4,
+                  31
+                ],
+                [
+                  5,
+                  31
+                ],
+                [
+                  6,
+                  31
+                ],
+                [
+                  7,
+                  31
+                ],
+                [
+                  8,
+                  31
+                ],
+                [
+                  9,
+                  31
+                ],
+                [
+                  10,
+                  31
+                ],
+                [
+                  11,
+                  31
+                ],
+                [
+                  12,
+                  31
+                ],
+                [
+                  13,
+                  31
+                ],
+                [
+                  14,
+                  31
+                ],
+                [
+                  15,
+                  31
+                ],
+                [
+                  16,
+                  31
+                ],
+                [
+                  17,
+                  31
+                ],
+                [
+                  18,
+                  31
+                ],
+                [
+                  19,
+                  31
+                ],
+                [
+                  20,
+                  31
+                ],
+                [
+                  21,
+                  31
+                ],
+                [
+                  22,
+                  31
+                ],
+                [
+                  23,
+                  31
+                ],
+                [
+                  24,
+                  31
+                ],
+                [
+                  25,
+                  31
+                ],
+                [
+                  26,
+                  31
+                ],
+                [
+                  27,
+                  31
+                ],
+                [
+                  28,
+                  31
+                ],
+                [
+                  29,
+                  31
+                ],
+                [
+                  30,
+                  31
+                ],
+                [
+                  31,
+                  31
+                ]
+              ],
+              "source_sha256": "46ef4c08c6ec5e0eb162aead85dd1cfaf6f39c9792bb386d36d82da77a7852d7"
+            },
+            "raw_sha256": "9ce70352d1e2104b829b5a65355eb44b359ca1fa39cf017601b23a5cbb2d65ae",
+            "registration_record_index": 962,
+            "source_sha256": "46ef4c08c6ec5e0eb162aead85dd1cfaf6f39c9792bb386d36d82da77a7852d7"
+          },
+          "20587": {
+            "frame_binding": {
+              "crop": [
+                0,
+                0,
+                1254,
+                1254
+              ],
+              "file": "jobs/terrain-2057d-2058c/generated/20587-v3.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "61179d1618871356a9d6ebfc150138c6bb7982f83bb1837e29a6e355744ea993"
+            },
+            "raw_sha256": "5cc80f6f3f8076ec8206995904dd84c0f2c115de6dd15040f44b0e8d68f77908",
+            "registration_record_index": 554,
+            "source_sha256": "61179d1618871356a9d6ebfc150138c6bb7982f83bb1837e29a6e355744ea993"
+          },
+          "20589": {
+            "frame_binding": {
+              "crop": [
+                0,
+                941,
+                313,
+                313
+              ],
+              "file": "jobs/terrain-2057d-2058c/generated/atlas-v2.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "1e3e7e618e143d4d0c40b24c18449b07f03161a90cd74f0f679c8fc1655fec77"
+            },
+            "raw_sha256": "09eafd298c28176faa71b4856b174147b6b50f9e7be106d3ac6813ea58c5e87b",
+            "registration_record_index": 554,
+            "source_sha256": "1e3e7e618e143d4d0c40b24c18449b07f03161a90cd74f0f679c8fc1655fec77"
+          },
+          "2058a": {
+            "frame_binding": {
+              "crop": [
+                314,
+                941,
+                313,
+                313
+              ],
+              "file": "jobs/terrain-2057d-2058c/generated/atlas-v2.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "84ca76d7d521946f6a7ce750f79f073a2235f891a13f9ef5739be37f13359520"
+            },
+            "raw_sha256": "09eafd298c28176faa71b4856b174147b6b50f9e7be106d3ac6813ea58c5e87b",
+            "registration_record_index": 554,
+            "source_sha256": "84ca76d7d521946f6a7ce750f79f073a2235f891a13f9ef5739be37f13359520"
+          }
+        },
+        "provenance": {
+          "path": "provenance.json",
+          "sha256": "da9647394af408adf2f57ec67d295bb762e2c5ec536a1c839f41f3e7111a77b5"
+        },
+        "registration_records": [
+          {
+            "accepted_runtime_qa": {
+              "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/batch-4742-final-successor-metadata/terrain-2057d-2058c/runtime-qa-current7b-exact-component-alias.json",
+              "sha256": "1b4bc5cd27775b22dd8e78845a359c8ad234c5852b6515ef9a0d410996aeba31"
+            },
+            "assets": [
+              "2057e",
+              "20580",
+              "20584",
+              "20587",
+              "20589",
+              "2058a"
+            ],
+            "frame_bindings_sha256": "8bd827ab7a96f3cf76e9c0fb41328094554199a53b94800f7c53b0c649fd534c",
+            "registration_record_index": 554,
+            "registration_record_sha256": "fb6ecef752a571f9cb24749faaf3a3a30dc88db58516f4d755f73e3ab76797df"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/coordinator-20583-exact2-Original-native-post5341-B-compatible-20261017-v1/runtime-qa.json",
+              "sha256": "a4048d84d5f1325e8dc77ae04f14d577fdc1ce24a8869e54bfffcd80d3020362"
+            },
+            "assets": [
+              "20583"
+            ],
+            "frame_bindings_sha256": "03671620fffda52806cb8a682a10ea2883ae4d1ad12e0ee45267d554396ed9e6",
+            "registration_record_index": 953,
+            "registration_record_sha256": "fb7099fb85d62a61f7d93f6a0908dc9e92e1123f905c8ed41ba601c73ce5b989"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/terrain-2057d-2058c-final3-retained-original-actualC-20261017/runtime-qa.json",
+              "sha256": "32809781e741d0c212b599c4e34ff6acccb5ae73d8279b4d2f4dd397e0edd8a9"
+            },
+            "assets": [
+              "2057d",
+              "20585",
+              "20586"
+            ],
+            "frame_bindings_sha256": "e656385c0ed2bc4b52d69715b1df9b2491237b99d306b135e734060fff661ffd",
+            "registration_record_index": 962,
+            "registration_record_sha256": "36e8d719670be0ce8d3044cf9883789c26ef75c4fac7344ef3f7ebaa96b38f32"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": "coordinator-40365-40374-static14-SourceE-H5449-FINAL-20261018-v1",
+      "assets": [
+        "40365",
+        "40366",
+        "40367",
+        "40368",
+        "40369",
+        "4036a",
+        "4036b",
+        "4036c",
+        "4036d",
+        "4036e",
+        "4036f",
+        "40370",
+        "40371",
+        "40373"
+      ],
+      "frames": 14,
+      "metadata": "hd.json",
+      "detail": "jobs/coordinator-40365-40374-static14-SourceE-H5449-FINAL-20261018-v1/provenance.json",
+      "coordinator_review": "jobs/coordinator-40365-40374-static14-SourceE-H5449-FINAL-20261018-v1/coordinator-review.json",
+      "runtime_qa": "jobs/coordinator-40365-40374-static14-SourceE-H5449-FINAL-20261018-v1/runtime-qa.json",
+      "review": {
+        "actual_fresh14_QA": {
+          "device": 55,
+          "inode": 5496382,
+          "mode": 33188,
+          "mtime_ns": 1792243002612534688,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign40365-40374-static14-SourceE-fixedH5426-20261018-v1/actual-SourceE-static14-QA-once/runtime-qa.json",
+          "sha256": "650a481a4ebe9ac641f8eb16d34493991d9c6db72ad0f81edf63ffabd3a7d12c",
+          "size": 46697
+        },
+        "actual_new14": {
+          "device": 55,
+          "inode": 5500449,
+          "mode": 33188,
+          "mtime_ns": 1792243775944346373,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark40365-40374-new-static14-SourceE-fixedH5426-independent-review-20261018/QUALIFIED-DIFFERENT-NEW-STATIC14-SOURCEE-FIXEDH5426-INTRINSIC-BRIDGE-AND-MINIMUM9-CONTEXT-REVIEW.json",
+          "sha256": "c202366f157dca4eb8d5095a7d5aebaff8a4e772138f1f76384adfffeefc5566",
+          "size": 13042
+        },
+        "original_intrinsic": {
+          "fresh_actual14_QA": {
+            "mode": 33188,
+            "mtime_ns": 1792243002612534688,
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign40365-40374-static14-SourceE-fixedH5426-20261018-v1/actual-SourceE-static14-QA-once/runtime-qa.json",
+            "sha256": "650a481a4ebe9ac641f8eb16d34493991d9c6db72ad0f81edf63ffabd3a7d12c",
+            "size": 46697
+          },
+          "new56_body_bridge": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign40365-40374-static14-SourceE-fixedH5426-20261018-v1/ACTUAL14-QA-AND-ALL56-BODY-METRIC-IDENTITY-BRIDGE-NOT-OLD-QA-ALIAS.json",
+            "sha256": "403e29c5252b8f65169a02d33d500ecd0bd79d713c86db7687c04aa3659ba2d3",
+            "size": 4361
+          },
+          "no_new_view_or_QA_claim_by_preparer": true,
+          "prior_complete16_intrinsic": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark40365-40374-SourceE-complete16-independent-intrinsic-material-peer-20261017/INDEPENDENT-COMPLETE16-40365-40374-SOURCEE-RETAINED-EMBER-ROUTE-WHOLE-INTRINSIC-MATERIAL-REVIEW.json",
+            "sha256": "771df690b7e9d0f0d9359f45b481df42335d10a565027bf2d36efb1bfde61635",
+            "size": 17495
+          },
+          "prior_intrinsic_strict": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark40365-40374-SourceE-complete16-independent-intrinsic-material-peer-20261017-strict-complete16-independent-SourceE-intrinsic-material-closure.json",
+            "sha256": "f28cccafd46b442a5742e26521d318bccbd8a6af003b8d8eefa852ef255e7a0d",
+            "size": 7498
+          }
+        },
+        "strict": {
+          "device": 55,
+          "inode": 5500450,
+          "mode": 33188,
+          "mtime_ns": 1792243775950197205,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark40365-40374-new-static14-SourceE-fixedH5426-independent-review-20261018-strict-independent-new-static14-intrinsic-bridge-and-finite-context-closure.json",
+          "sha256": "78b27913f21a83ca22c80d7d94ed5b2814bf995c5e09a398cac0038d3961b49c",
+          "size": 7237
+        }
+      },
+      "independent_review": {
+        "actual_new14": {
+          "device": 55,
+          "inode": 5500449,
+          "mode": 33188,
+          "mtime_ns": 1792243775944346373,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark40365-40374-new-static14-SourceE-fixedH5426-independent-review-20261018/QUALIFIED-DIFFERENT-NEW-STATIC14-SOURCEE-FIXEDH5426-INTRINSIC-BRIDGE-AND-MINIMUM9-CONTEXT-REVIEW.json",
+          "sha256": "c202366f157dca4eb8d5095a7d5aebaff8a4e772138f1f76384adfffeefc5566",
+          "size": 13042
+        },
+        "strict": {
+          "device": 55,
+          "inode": 5500450,
+          "mode": 33188,
+          "mtime_ns": 1792243775950197205,
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark40365-40374-new-static14-SourceE-fixedH5426-independent-review-20261018-strict-independent-new-static14-intrinsic-bridge-and-finite-context-closure.json",
+          "sha256": "78b27913f21a83ca22c80d7d94ed5b2814bf995c5e09a398cac0038d3961b49c",
+          "size": 7237
+        }
+      },
+      "frame_bindings_sha256": "10da62af39dbcf7d0e22bcb6deb239ae28715de4780207a6a6bc17629c126695",
+      "approval_scope": "complete_standalone_terrain_selection",
+      "original_fallback_assets": [
+        "40372",
+        "40374"
+      ],
+      "full_inventory": [
+        "40365",
+        "40366",
+        "40367",
+        "40368",
+        "40369",
+        "4036a",
+        "4036b",
+        "4036c",
+        "4036d",
+        "4036e",
+        "4036f",
+        "40370",
+        "40371",
+        "40372",
+        "40373",
+        "40374"
+      ]
     }
   ],
   "jobs": [
@@ -22466,8 +23861,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5426,
-  "registration_updated_at_utc": "2026-10-17T12:16:27.962707+00:00",
+  "registered_frame_count": 5463,
+  "registration_updated_at_utc": "2026-10-17T13:46:03.451588+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,

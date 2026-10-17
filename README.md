@@ -81,13 +81,12 @@ The bundled executable, libraries, original game catalog and approved HD assets
 are tracked in Git, along with mod definitions, scripts, SD/HD PNGs, WAVs,
 generation prompts and recipes. Build caches and local review files are excluded.
 See [repository layout](docs/repository.md).
-The engine supports original and 2×/3×/4× crisp scaling, plus an optional HD
-artwork setting. Bundled mods have SD/HD artwork; the reviewed base-game pack
-covers a complete light-player banking sequence and selected enemies, boss,
-equipment, projectiles, effects and terrain: 5,384 of 5,753 original pictures
-are now included, leaving 369. This latest six-frame append includes five hybrid
-frames retaining 207 explicit Original-detail cells, which are not generated HD. [The HD backlog](docs/hd-backlog.md) records
-the remaining artwork and drafts awaiting review.
+The engine supports original rendering and crisp 2×/3×/4× scaling, plus an
+optional HD artwork setting. The reviewed base-game pack now covers **5,463 of
+5,753 original pictures**, with **290 still awaiting approval**. All 307 native
+AGX cinematic/font records remain preserved separately. Bundled mods include
+SD/HD artwork. [The HD backlog](docs/hd-backlog.md) records the remaining
+originals, held drafts and review limits.
 
 First-mission wins at difficulties 1 and 2, a complete 1,889-step native demo
 comparison, assisted coverage of all 27 missions at four difficulties, and
