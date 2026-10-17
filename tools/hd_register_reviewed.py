@@ -17,6 +17,7 @@ from pathlib import Path
 from hd_candidate_review import binding_digest, proposal_frames
 from hd_art_audit import checked_palette, validate_hd_frame
 from hd_art_source import decode
+from hd_frame_policy import validate_frame_policy, retained_review_version_ok
 
 
 def asset_list(value, label):
@@ -454,6 +455,41 @@ def approved_catalog_only_retained_evidence(root, project, declaration, rows, qa
         raise ValueError("catalog-only actual all-scale evidence differs")
 
 
+def validate_extended_retained_sources(project, rows):
+    """Longer lists require authentic catalog bytes, not claimed QA pixel counts.
+
+    Only the two product data layouts are eligible. ID+SHA select the authentic
+    payload; a catalog-only trace is still separately bound to its exact root.
+    No generated PNG or recorded density can supply the denominator.
+    """
+    for asset, frame in rows.items():
+        if len(frame.get("original_detail_cells", [])) <= 64:
+            continue
+        authenticated = False
+        for data in (project / "data", project.parent / "data"):
+            index = data / "INDEX"
+            if not index.is_file():
+                continue
+            matches = [parts for line in index.read_text().splitlines()
+                       if len(parts := line.split()) == 3 and int(parts[0], 16) == int(asset, 16)]
+            if len(matches) != 1:
+                continue
+            relative = Path(matches[0][2])
+            if relative.is_absolute() or ".." in relative.parts:
+                raise ValueError("extended Original Source path escapes catalog")
+            path = (data / relative).resolve()
+            if not path.is_relative_to(data.resolve()):
+                raise ValueError("extended Original Source path escapes catalog")
+            payload = path.read_bytes()
+            if hashlib.sha256(payload).hexdigest() != frame["source_sha256"]:
+                continue
+            validate_frame_policy(frame, payload)
+            authenticated = True
+            break
+        if not authenticated:
+            raise ValueError("extended Original details lack authentic catalog Source bytes")
+
+
 def approved_job(root, identity, project):
     directory = contained(root, Path("jobs") / identity)
     if directory.parent != (root / "jobs").resolve():
@@ -492,7 +528,7 @@ def approved_job(root, identity, project):
                                and declaration.get("catalog_only_independent_whole_material_and_allscale_review") is True)
         if (not same_json(declaration.get("cells_by_asset"), retained_details)
                 or declaration.get("retained_original_not_generated_HD") is not True
-                or declaration.get("policy_version") != "retained-original-details-v2-painted0255"
+                or not retained_review_version_ok(declaration.get("policy_version"), retained_details)
                 or not same_json(declaration.get("painted_Source_palette_domain"), [0, 255])
                 or declaration.get("functional_palette_effects_are_retained_Original") is not True
                 or not qualified_scope
@@ -550,6 +586,7 @@ def approved_job(root, identity, project):
         approved_standalone_evidence(root, selection, review, rows, qa)
     elif retained_details and catalog_only:
         approved_catalog_only_retained_evidence(root, project, declaration, rows, qa)
+    validate_extended_retained_sources(project, rows)
     return candidate, review, rows
 
 

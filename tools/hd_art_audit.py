@@ -12,7 +12,7 @@ import struct
 from pathlib import Path
 from PIL import Image
 from hd_art_source import decode
-from hd_frame_policy import FRAME_KEYS, validate_frame_policy
+from hd_frame_policy import FRAME_KEYS, validate_frame_policy, atlas_grid_geometry
 
 CATEGORIES = ["Player banking", "Bosses", "Enemies and ground objects", "Player and enemy projectiles", "Explosions and effects", "Equipment and pickups", "Terrain", "Menus, portraits, HUD and other pictures"]
 
@@ -32,7 +32,12 @@ def integer_rounded_aspect(width, height, logical_width, logical_height):
     )
 
 def validate_hd_frame(root, frame, payload, picture):
-    """Mirror loader checks; artistic approval is deliberately a separate step."""
+    """Mirror loader checks, including actual-Source extended retention density.
+
+    Schema-only preparation is not enough for65..128 cells; the shared policy
+    validator receives the decoded authentic payload here before any PNG read.
+    Artistic approval remains separate.
+    """
     validate_frame_policy(frame, payload)
     if frame["source_sha256"] != hashlib.sha256(payload).hexdigest():
         raise ValueError("original source hash changed")
@@ -56,6 +61,22 @@ def validate_hd_frame(root, frame, payload, picture):
         image = source.convert("RGBA")
     png_size = image.size
     source_alpha_min, source_alpha_max = picture.getchannel("A").getextrema()
+    geometry = atlas_grid_geometry(frame, image.width, image.height)
+    if geometry is not None:
+        # Every raw pixel with positive area inside the rational viewport is
+        # checked. This read-only view is not a fitted crop or replacement PNG.
+        left, top, right, bottom = geometry["pixels"]
+        alpha_min, alpha_max = image.getchannel("A").crop((left, top, right, bottom)).getextrema()
+        if source_alpha_min == 0 and alpha_min != 0:
+            raise ValueError("transparent original needs a transparent HD background")
+        if alpha_max < 128:
+            raise ValueError("artwork has no visible pixels")
+        width, height = geometry["resident"]
+        # Mirror the new fractional sampler's explicit working-buffer bound.
+        integral = all(value.denominator == 1 for value in geometry["bounds"])
+        if not integral and width * (bottom - top) > 4_194_304:
+            raise ValueError("rational atlas temporary canvas exceeds limit")
+        return width * height * 4
     if frame.get("crop") is not None:
         x, y, width, height = frame["crop"]
         if min(x, y) < 0 or min(width, height) <= 0 or x + width > image.width or y + height > image.height:

@@ -12,12 +12,13 @@ A complete PNG for either an opaque or transparent original may use dimensions p
 
 All policies below default to disabled. They require explicit frame metadata and source/art review; loader validation alone does not approve a remaster.
 
+- `atlas_grid: {"columns": 4, "rows": 2, "column": 0, "row": 0}` selects one equal cell of an unchanged atlas. It is mutually exclusive with `crop`. The complete atlas must have the exact aspect ratio implied by the grid and original logical canvas, with at least 2× detail per cell. Fractional boundaries use an isolated Lanczos3 filter without truncating edge strips. Pixels wholly outside the selected cell are excluded; boundary-straddling pixels contribute only their overlapping area. Grid selections have separate cache identities; frames without this option retain their existing sampling and cache keys.
 - `preserve_reserved_coverage: true` retains an original gameplay palette label 250–255 at a feathered edge only when its resident logical cell has mean alpha of at least 128 and at least half its area has alpha of 128 or greater. Missing or sparse artwork stays transparent. Ordinary colors, water/fire classes and static-card rendering keep their existing behavior.
 - `native_nearest_cues: [[x, y], ...]` samples the unchanged resident RGBA at the nearest pixel for up to 64 explicitly listed original cells, only at gameplay scale 1. Coordinates must be sorted lexicographically, unique, within an opaque original canvas, and refer to ordinary source indices below 240. This can preserve a small raw-supported warning color that averaging dulls. It does not recolor artwork or reconstruct absent details; other cells, higher scales and static-card rendering keep their existing sampler.
 
-- `original_detail_cells: [[x, y], ...]` retains explicitly listed **Original** logical details at gameplay scales 1–4. Up to 64 cells must be sorted, unique, in bounds, painted with authentic Source indices 0–255 and disjoint from `native_nearest_cues`; transparent Source cells are rejected. The runtime copies the exact Original ScaleNx footprint into the generated replacement only in SourceClasses/gameplay mode. Terrain starts with pristine HD for its neighbor joins, then restores the listed Original footprints from the authentic joined Original control after every join. Neighboring HD and Original-fallback cells remain unchanged. Static cards continue to sample the PNG. Raw PNG bytes, alpha, framing and loader eligibility do not change.
+- `original_detail_cells: [[x, y], ...]` retains explicitly listed **Original** logical details at gameplay scales 1–4. Legacy lists of up to 64 cells keep their existing behavior. Lists of 65–128 cells additionally require `4 * retained_cell_count <= painted_Source_cell_count`, counted from the decoded authentic Original payload (indices 0–255, excluding transparency), never canvas area or generated PNG alpha. All cells must remain sorted, unique, in bounds, painted and disjoint from `native_nearest_cues`; transparent Source cells are rejected. The runtime copies the exact Original ScaleNx footprint into the generated replacement only in SourceClasses/gameplay mode. Terrain conditions retained samples with the authentic joined Original control before blending neighbors, then restores their exact footprints after all joins. This can also change neighboring pixels within the existing join bands; unrelated pixels and fallback behavior remain unchanged. Static cards continue to sample the PNG. Raw PNG bytes, alpha, framing and loader eligibility do not change.
 
-Retained pixels are Original details, not generated HD. Original palette cycling, water/fire and blinking labels remain live Source indices; ScaleNx may also contain transparent subpixels shaped by Original neighbors. Coarse detail or palette effects can form visible seams and require explicit independent all-scale and genuine-context hybrid review. The ordinary-only predecessor is not a current hybrid approval. Registration requires the exact `retained-original-details-v2-painted0255` provenance declaration and exact selected cells. Existing default artwork holds are preserved; this option does not rescue invalid framing, provider refusals or broad geometry/material failures.
+Retained pixels are Original details, not generated HD. Original palette cycling, water/fire and blinking labels remain live Source indices; ScaleNx may also contain transparent subpixels shaped by Original neighbors. Coarse detail or palette effects can form visible seams and require explicit independent all-scale and genuine-context hybrid review. The ordinary-only predecessor is not a current hybrid approval. Registration accepts the existing `retained-original-details-v2-painted0255` declaration only for legacy lists of up to 64, or `retained-original-details-v3-max128-quarter-painted0255` with exact selected cells. Longer lists always require v3 and actual catalog Source validation by the registrar. Metadata-only candidate preparation cannot prove the density bound. Lists up to 64 preserve existing per-frame, indexed and rejected-fallback cache identities; longer lists use new indexed and rejected-fallback namespaces. Protected terrain joins follow the conditioning rule above for either list size. The combined 32 MiB Source-reference budget is unchanged. Retained cells never count as generated detail, and the area rule does not prove novelty in the unretained cells. A whole-Source fallback cannot gain artistic HD approval through this option; legacy acceptance is preserved without relabeling its pixels. Material, all-scale and genuine-context gates stay in force (the separately bounded unused-catalog scope still explicitly declares no genuine runtime context). Existing default artwork holds are preserved; this option does not rescue invalid framing, provider refusals or broad geometry/material failures.
 
 Opt-in metadata participates in both derived and indexed cache identities. Frames without these policies retain their previous cache keys and pixels. Retained-detail opt-ins have a distinct versioned frame, rejected-fallback and prepared-terrain key; absent/empty selections keep the previous identities. The candidate and original-art audit tools validate the same metadata restrictions as the Rust loader.
 
@@ -63,12 +64,24 @@ RAPTOR_TEST_DATA=/absolute/path/to/data \
 
 That check validates every supplied frame and renders it through `HdAssets::sprite` at scales 1–4 with the original palette. It checks dimensions, visible output and each cache ceiling. Visual review, animation alignment and terrain seams remain separate acceptance checks.
 
-## Retained detail validation — 17 October 2026
+## Earlier retained detail validation — 17 October 2026
 
 The optional detail policy passed 70 unique Rust regressions in the private source
 validation and 31 Python checks against the applied shared files. Both included
-Linux and Windows executables were rebuilt. All 5,339 current HD frames load with
+Linux and Windows executables were rebuilt. All 5,339 HD frames supplied at that checkpoint load with
 zero rejects. Actual 1080p software-SDL menu, Sector 1 Wave 7 and Sector 3 Wave 9
 captures match their pre-change images byte for byte (6,220,800 pixels compared).
 These default-mode checks do not approve a new hybrid asset. Explicit retained
 Original selectors still require their own whole-frame and scene review.
+
+## Atlas and terrain-join update — 17 October 2026
+
+The rational atlas sampler, protected join inputs and bounded 65–128-cell
+retention policy pass 90 Rust tests and 78 Python tests; five existing Rust
+integration checks remain ignored. Both bundled executables were rebuilt.
+The installed Linux build validates all 5,384 supplied frames with zero rejects,
+all 45 mods with one explicit override, and the 6,449-entry original catalog.
+Fresh 1080p menu, Sector 1 Wave 7 and Sector 3 Wave 9 software-SDL captures
+match the previous build exactly across 6,220,800 presented pixels. These are
+bounded regression controls, not evidence for unreviewed artwork or every
+possible terrain placement.

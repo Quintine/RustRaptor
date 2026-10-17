@@ -46,6 +46,15 @@ pub struct Sequence {
     pub frame_count: u32,
     pub frames: Vec<Frame>,
 }
+/// Equal rational viewports in an unchanged atlas, not fitted pixel crops.
+#[derive(Debug, Clone, Copy, Serialize, Deserialize)]
+#[serde(deny_unknown_fields)]
+pub struct AtlasGrid {
+    pub columns: u32,
+    pub rows: u32,
+    pub column: u32,
+    pub row: u32,
+}
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Frame {
@@ -60,6 +69,10 @@ pub struct Frame {
     /// Optional pixel rectangle [x, y, width, height] in an atlas PNG.
     #[serde(default)]
     pub crop: Option<[u32; 4]>,
+    /// Opt-in equal atlas cells; mutually exclusive with a pixel crop.
+    /// Absent values retain the original sampler, serialization and cache keys.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub atlas_grid: Option<AtlasGrid>,
     /// Explicit, independently reviewed gameplay-only source250..255 alpha
     /// coverage. Does not assign reserved labels to ordinary source cells.
     #[serde(default, skip_serializing_if = "is_false")]
@@ -72,6 +85,8 @@ pub struct Frame {
     /// Explicit retained Original detail, never generated HD. Gameplay
     /// SourceClasses only, at all1–4 scales; painted Source indices0–255,
     /// including Original cycling/fire/blink labels. TRANSPARENT is excluded.
+    /// Legacy lists<=64 retain their exact behavior. Lists65..128 must retain
+    /// no more than one quarter of the authentic painted Source cells.
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub original_detail_cells: Vec<[u32; 2]>,
 }
@@ -417,7 +432,8 @@ impl HdAssets {
             .crop
             .map(|[_, _, width, height]| (width, height))
             .unwrap_or((info.width, info.height));
-        if !exact_aspect(width, height, frame.logical_width, frame.logical_height) {
+        if frame.atlas_grid.is_none()
+            && !exact_aspect(width, height, frame.logical_width, frame.logical_height) {
             // Preserve exact and rounded-opaque identities. Newly eligible
             // transparent rounded frames have their own alpha-validation namespace.
             if requires_alpha {
@@ -439,6 +455,14 @@ impl HdAssets {
                 digest.update(value.to_le_bytes());
             }
         }
+        if let Some(grid) = frame.atlas_grid {
+            digest.update(b"raptor-hd-rational-atlas-grid-lanczos3-f32-v1");
+            for value in [grid.columns, grid.rows, grid.column, grid.row] {
+                digest.update(value.to_le_bytes());
+            }
+            digest.update(info.width.to_le_bytes());
+            digest.update(info.height.to_le_bytes());
+        }
         // Preserve exact legacy disk/indexed cache keys when both policies are
         // absent/default. Every opt-in has a distinct, versioned namespace.
         if frame.preserve_reserved_coverage || !frame.native_nearest_cues.is_empty() {
@@ -452,7 +476,7 @@ impl HdAssets {
             }
         }
         if !frame.original_detail_cells.is_empty() {
-            digest.update(b"raptor-retained-original-details-v2-painted0255");
+            digest.update(original_detail_policy_tag(frame.original_detail_cells.len(), false));
             digest.update((frame.original_detail_cells.len() as u32).to_le_bytes());
             for cell in &frame.original_detail_cells {
                 for coordinate in cell { digest.update(coordinate.to_le_bytes()); }
@@ -492,7 +516,7 @@ impl HdAssets {
                 return Ok((key, rgba));
             }
             let mut rgba = if let Some(atlas) = self.atlases.get(&info.digest) {
-                cropped_frame(atlas, frame.crop)
+                selected_frame(atlas, &frame, target_width, target_height, requires_alpha)?
             } else {
                 let bytes = bounded_read(&path, MAX_PNG_BYTES)?;
                 ensure!(
@@ -512,7 +536,7 @@ impl HdAssets {
                     "HD PNG changed while loading"
                 );
                 self.png_decodes += 1;
-                let rgba = cropped_frame(&atlas, frame.crop);
+                let rgba = selected_frame(&atlas, &frame, target_width, target_height, requires_alpha)?;
                 let bytes = atlas.as_raw().len();
                 self.atlases.insert(info.digest, atlas, bytes);
                 rgba
@@ -784,7 +808,8 @@ impl HdAssets {
         self.sprite_with_policy(id, scale, palette, PalettePolicy::Static)
     }
     /// Baseline source-class HD plus trusted retention metadata, for terrain.
-    /// Retained Original samples must be applied only AFTER all neighbor joins.
+    /// Condition shared join inputs with joined Original samples, then restore
+    /// exact retained footprints after all neighbor joins.
     pub fn terrain_sprite(&mut self, id: u32, scale: usize, palette: &[[u8; 3]; 256])
         -> Result<Option<(Sprite, Option<OriginalDetailCells>)>>
     {
@@ -807,7 +832,7 @@ impl HdAssets {
         if frame.original_detail_cells.is_empty() { return None; }
         if let Ok(Some((key, _))) = self.rgba_frame(id) { return Some(key); }
         let mut digest = Sha256::new();
-        digest.update(b"retained-original-rejected-fallback-v2-painted0255");
+        digest.update(original_detail_policy_tag(frame.original_detail_cells.len(), true));
         digest.update(serde_json::to_vec(&frame).ok()?);
         Some(digest.finalize().into())
     }
@@ -956,6 +981,137 @@ fn cropped_frame(atlas: &RgbaImage, crop: Option<[u32; 4]>) -> RgbaImage {
         atlas.clone()
     }
 }
+fn validate_grid_metadata(frame: &Frame) -> Result<()> {
+    if let Some(grid) = frame.atlas_grid {
+        ensure!(frame.crop.is_none(), "atlas_grid and crop are mutually exclusive");
+        ensure!(grid.columns > 0 && grid.rows > 0, "atlas grid axes must be nonzero");
+        ensure!(grid.columns as u64 * grid.rows as u64 <= MAX_FRAMES as u64,
+                "atlas grid exceeds cell limit");
+        ensure!(grid.column < grid.columns && grid.row < grid.rows,
+                "atlas grid cell is outside its declared axes");
+    }
+    Ok(())
+}
+#[derive(Clone, Copy)]
+struct GridViewport {
+    left: f64,
+    top: f64,
+    right: f64,
+    bottom: f64,
+    // Bounding raw pixels with positive area inside this viewport. Fractional
+    // boundary pixels remain shared; no strips are dropped or pixels rewritten.
+    pixels: [u32; 4],
+    resident: [u32; 2],
+}
+fn grid_viewport(frame: &Frame, width: u32, height: u32) -> Result<GridViewport> {
+    validate_grid_metadata(frame)?;
+    let grid = frame.atlas_grid.context("missing atlas grid")?;
+    ensure!(width > 0 && height > 0 && frame.logical_width > 0 && frame.logical_height > 0,
+            "invalid atlas or logical dimensions");
+    // All eligibility arithmetic is exact. Only the resampling kernel converts
+    // these rational bounds to floating point; there is no integer crop fitting.
+    ensure!(width as u128 * frame.logical_height as u128 * grid.rows as u128
+            == height as u128 * frame.logical_width as u128 * grid.columns as u128,
+            "rational atlas cell aspect differs from original canvas");
+    let x_den = grid.columns as u64 * frame.logical_width as u64;
+    let y_den = grid.rows as u64 * frame.logical_height as u64;
+    ensure!(width as u64 >= 2 * x_den && height as u64 >= 2 * y_den,
+            "rational atlas cell needs at least twice the logical resolution");
+    let factor = (width as u64 / x_den).min(height as u64 / y_den).min(4) as u32;
+    let x0 = width as u64 * grid.column as u64;
+    let x1 = width as u64 * (grid.column as u64 + 1);
+    let y0 = height as u64 * grid.row as u64;
+    let y1 = height as u64 * (grid.row as u64 + 1);
+    Ok(GridViewport {
+        left: x0 as f64 / grid.columns as f64,
+        right: x1 as f64 / grid.columns as f64,
+        top: y0 as f64 / grid.rows as f64,
+        bottom: y1 as f64 / grid.rows as f64,
+        pixels: [(x0 / grid.columns as u64) as u32,
+                 (y0 / grid.rows as u64) as u32,
+                 x1.div_ceil(grid.columns as u64) as u32,
+                 y1.div_ceil(grid.rows as u64) as u32],
+        resident: [frame.logical_width * factor, frame.logical_height * factor],
+    })
+}
+fn grid_lanczos(value: f64) -> f64 {
+    if value == 0.0 { return 1.0; }
+    if value.abs() >= 3.0 { return 0.0; }
+    let value = value * std::f64::consts::PI;
+    (value.sin() / value) * ((value / 3.0).sin() / (value / 3.0))
+}
+fn grid_axis_weights(start: f64, end: f64, output: u32) -> Result<Vec<Vec<(u32, f32)>>> {
+    let scale = ((end - start) / output as f64).max(1.0);
+    (0..output).map(|destination| {
+        let center = start + (destination as f64 + 0.5) * (end - start) / output as f64;
+        let lower = (center - 3.0 * scale).floor().max(start.floor()) as u32;
+        let upper = (center + 3.0 * scale).ceil().min(end.ceil()) as u32;
+        let mut weights: Vec<(u32, f64)> = (lower..upper).filter_map(|index| {
+            let overlap = ((index as f64 + 1.0).min(end) - (index as f64).max(start)).max(0.0);
+            let weight = grid_lanczos((index as f64 + 0.5 - center) / scale) * overlap;
+            (weight != 0.0).then_some((index, weight))
+        }).collect();
+        let total: f64 = weights.iter().map(|(_, value)| *value).sum();
+        // Positive-size validated viewports and center-supported Lanczos always
+        // have a nonzero sum; keep this deterministic precondition explicit.
+        ensure!(total.is_finite() && total.abs() > 1e-12, "invalid rational atlas filter weights");
+        Ok(weights.drain(..).map(|(index, weight)| (index, (weight / total) as f32)).collect())
+    }).collect()
+}
+fn selected_frame(atlas: &RgbaImage, frame: &Frame, width: u32, height: u32,
+                  requires_alpha: bool) -> Result<RgbaImage> {
+    if frame.atlas_grid.is_none() { return Ok(cropped_frame(atlas, frame.crop)); }
+    let viewport = grid_viewport(frame, atlas.width(), atlas.height())?;
+    ensure!(viewport.resident == [width, height], "rational viewport resident mismatch");
+    let [left, top, right, bottom] = viewport.pixels;
+    if viewport.left.fract() == 0.0 && viewport.top.fract() == 0.0
+        && viewport.right.fract() == 0.0 && viewport.bottom.fract() == 0.0 {
+        // Integral cells keep the existing crop/resize implementation. In
+        // particular a 1x1 opt-in never allocates a new floating-point canvas.
+        return Ok(cropped_frame(atlas, Some([left, top, right-left, bottom-top])));
+    }
+    let mut transparent = false;
+    let mut visible = false;
+    for y in top..bottom {
+        for x in left..right {
+            let alpha = atlas.get_pixel(x, y)[3];
+            transparent |= alpha == 0;
+            visible |= alpha >= 128;
+        }
+    }
+    ensure!(!requires_alpha || transparent, "HD frame needs a transparent background matching its original");
+    ensure!(visible, "HD frame has no visible pixels");
+    let x_weights = grid_axis_weights(viewport.left, viewport.right, width)?;
+    let y_weights = grid_axis_weights(viewport.top, viewport.bottom, height)?;
+    // A separable in-memory sampler; no export/padding/alpha repair. Only this
+    // cell's raw pixel areas participate, including fractional boundary areas.
+    let rows = (bottom - top) as usize;
+    ensure!(width as usize * rows <= MAX_PNG_PIXELS as usize,
+            "rational atlas temporary canvas exceeds limit");
+    let mut horizontal = vec![[0.0f32; 4]; width as usize * rows];
+    for y in top..bottom {
+        for (x, weights) in x_weights.iter().enumerate() {
+            let sample = &mut horizontal[(y - top) as usize * width as usize + x];
+            for &(source_x, weight) in weights {
+                let pixel = atlas.get_pixel(source_x, y);
+                for channel in 0..4 { sample[channel] += pixel[channel] as f32 * weight; }
+            }
+        }
+    }
+    let mut output = RgbaImage::new(width, height);
+    for (y, weights) in y_weights.iter().enumerate() {
+        for x in 0..width as usize {
+            let mut sample = [0.0f32; 4];
+            for &(source_y, weight) in weights {
+                let pixel = horizontal[(source_y - top) as usize * width as usize + x];
+                for channel in 0..4 { sample[channel] += pixel[channel] * weight; }
+            }
+            output.put_pixel(x as u32, y as u32,
+                image::Rgba(sample.map(|value| value.clamp(0.0, 255.0).round() as u8)));
+        }
+    }
+    Ok(output)
+}
 fn image_limits() -> image::Limits {
     let mut limits = image::Limits::default();
     limits.max_image_width = Some(4096);
@@ -984,6 +1140,10 @@ fn integer_rounded_aspect(
 }
 // Dimension eligibility is independent of alpha; rgba_frame checks source-aware alpha.
 fn frame_dimensions(frame: &Frame, png: &PngInfo, _requires_alpha: bool) -> Result<(u32, u32)> {
+    if frame.atlas_grid.is_some() {
+        let viewport = grid_viewport(frame, png.width, png.height)?;
+        return Ok((viewport.resident[0], viewport.resident[1]));
+    }
     let (width, height) = if let Some([x, y, width, height]) = frame.crop {
         ensure!(
             width > 0
@@ -1034,6 +1194,7 @@ fn validate_rgba(rgba: &RgbaImage, requires_alpha: bool) -> Result<()> {
     Ok(())
 }
 fn validate_frame(frame: &Frame, original: &Sprite, source: &[u8]) -> Result<()> {
+    validate_grid_metadata(frame)?;
     ensure!(
         frame.logical_width as usize == original.width
             && frame.logical_height as usize == original.height,
@@ -1063,7 +1224,8 @@ fn validate_frame(frame: &Frame, original: &Sprite, source: &[u8]) -> Result<()>
             "native nearest cue must be an ordinary original source cell"
         );
     }
-    ensure!(frame.original_detail_cells.len() <= 64, "Original detail list exceeds64 cells");
+    ensure!(original_detail_bound(&frame.original_detail_cells, original),
+        "Original details need<=64 legacy cells or65..128 cells within one quarter of painted Source");
     ensure!(frame.original_detail_cells.windows(2).all(|w| w[0] < w[1]), "Original details sorted and unique");
     for &[x, y] in &frame.original_detail_cells {
         ensure!(x < frame.logical_width && y < frame.logical_height, "Original detail outside logical canvas");
@@ -1081,6 +1243,22 @@ fn validate_frame(frame: &Frame, original: &Sprite, source: &[u8]) -> Result<()>
         "original source hash changed; regenerate or review this frame"
     );
     Ok(())
+}
+// Count decoded painted Source indices, not canvas area or generated PNG alpha.
+// Legacy lists keep all prior validation/sampling/cache behavior. The caller
+// still validates coordinates, order, uniqueness, painted membership and cues.
+fn original_detail_bound(cells: &[[u32; 2]], original: &Sprite) -> bool {
+    let count = cells.len();
+    count <= 64 || (count <= 128
+        && count * 4 <= original.pixels.iter().filter(|&&p| p <= 255).count())
+}
+fn original_detail_policy_tag(count: usize, fallback: bool) -> &'static [u8] {
+    match (count <= 64, fallback) {
+        (true, false) => b"raptor-retained-original-details-v2-painted0255",
+        (true, true) => b"retained-original-rejected-fallback-v2-painted0255",
+        (false, false) => b"raptor-retained-original-details-v3-max128-quarter-painted0255",
+        (false, true) => b"retained-original-rejected-fallback-v3-max128-quarter-painted0255",
+    }
 }
 fn source_reference_budget(labels: usize, details: usize, new_labels: usize, new_details: usize) -> bool {
     labels.checked_add(details).and_then(|n| n.checked_add(new_labels))
@@ -1137,7 +1315,7 @@ mod tests {
             logical_height: 2,
             origin: [0, 0],
             source_sha256: format!("{:x}", Sha256::digest(source)),
-            crop: None,
+            crop: None, atlas_grid: None,
             preserve_reserved_coverage: false,
             native_nearest_cues: Vec::new(),
             original_detail_cells: Vec::new(),
@@ -2283,7 +2461,7 @@ mod policy_proposal_tests {
             logical_height: 2,
             origin: [0, 0],
             source_sha256: "00".into(),
-            crop: None,
+            crop: None, atlas_grid: None,
             preserve_reserved_coverage: false,
             native_nearest_cues: Vec::new(),
             original_detail_cells: Vec::new(),
@@ -2610,7 +2788,7 @@ mod retained_original_detail_tests {
     fn source() -> Sprite { Sprite { width: 2, height: 2, pixels: vec![19,20,18,18] } }
     fn frame() -> Frame { Frame { frame: 0, file: "raw.png".into(), logical_width: 2,
         logical_height: 2, origin: [0,0], source_sha256: format!("{:x}",Sha256::digest(b"source")),
-        crop: None, preserve_reserved_coverage: false, native_nearest_cues: Vec::new(),
+        crop: None, atlas_grid: None, preserve_reserved_coverage: false, native_nearest_cues: Vec::new(),
         original_detail_cells: Vec::new() } }
     #[test]
     fn typed_serialization_defaults_and_source_constraints() {
@@ -2813,5 +2991,145 @@ mod retained_original_detail_tests {
         assert_eq!(HdAssets::frame_key(&f,&info,false),ordinary_only_v1_frame_key(&f,&info,false));
         let mut selected=f;selected.original_detail_cells=vec![[0,0]];
         assert_ne!(HdAssets::frame_key(&selected,&info,false),ordinary_only_v1_frame_key(&selected,&info,false));
+    }
+}
+
+#[cfg(test)]
+mod rational_atlas_grid_tests {
+    use super::*;
+    fn frame() -> Frame {
+        Frame { frame: 0, file: "synthetic.png".into(), logical_width: 1,
+            logical_height: 1, origin: [0, 0], source_sha256: "00".repeat(32),
+            crop: None, atlas_grid: Some(AtlasGrid { columns: 2, rows: 2, column: 0, row: 0 }),
+            preserve_reserved_coverage: false, native_nearest_cues: Vec::new(),
+            original_detail_cells: Vec::new() }
+    }
+    fn info() -> PngInfo {
+        PngInfo { size: 1, modified: None, digest: [1; 32], width: 17, height: 17 }
+    }
+    #[test]
+    fn rational_cells_retain_exact_fractional_bounds_and_last_pixel() {
+        let mut f = frame(); f.logical_width=32; f.logical_height=32;
+        f.atlas_grid=Some(AtlasGrid { columns:4,rows:2,column:3,row:1 });
+        let view=grid_viewport(&f,1774,887).unwrap();
+        assert_eq!((view.left,view.top,view.right,view.bottom),(1330.5,443.5,1774.0,887.0));
+        assert_eq!(view.pixels,[1330,443,1774,887]);
+        assert_eq!(view.resident,[128,128]);
+        let weights=grid_axis_weights(view.left,view.right,128).unwrap();
+        assert!(weights.iter().flatten().all(|(x,_)|*x>=1330&&*x<1774));
+    }
+    #[test]
+    fn invalid_axes_indices_products_aspects_and_crop_are_rejected() {
+        for grid in [
+            AtlasGrid{columns:0,rows:2,column:0,row:0},
+            AtlasGrid{columns:2,rows:0,column:0,row:0},
+            AtlasGrid{columns:129,rows:129,column:0,row:0},
+            AtlasGrid{columns:2,rows:2,column:2,row:0},
+            AtlasGrid{columns:2,rows:2,column:0,row:2},
+        ] { let mut f=frame(); f.atlas_grid=Some(grid);assert!(grid_viewport(&f,5,5).is_err()); }
+        let mut f=frame();f.crop=Some([0,0,2,2]);assert!(grid_viewport(&f,5,5).is_err());
+        assert!(grid_viewport(&frame(),5,6).is_err());
+        assert!(grid_viewport(&frame(),3,3).is_err());
+    }
+    #[test]
+    fn absent_grid_adds_no_serialized_field_and_null_stays_absent() {
+        let mut f=frame();f.atlas_grid=None;
+        let serialized=serde_json::to_value(&f).unwrap();
+        assert!(serialized.get("atlas_grid").is_none());
+        let mut explicit=serialized.clone();explicit["atlas_grid"]=serde_json::Value::Null;
+        let decoded:Frame=serde_json::from_value(explicit).unwrap();
+        assert_eq!(serde_json::to_value(decoded).unwrap(),serialized);
+    }
+    #[test]
+    fn grid_json_rejects_unknown_boolean_negative_and_float_fields() {
+        for value in [
+            r#"{"columns":2,"rows":2,"column":0,"row":0,"extra":1}"#,
+            r#"{"columns":true,"rows":2,"column":0,"row":0}"#,
+            r#"{"columns":2,"rows":2,"column":-1,"row":0}"#,
+            r#"{"columns":2,"rows":2,"column":0.0,"row":0}"#,
+        ] { assert!(serde_json::from_str::<AtlasGrid>(value).is_err()); }
+    }
+    #[test]
+    fn grid_cache_identity_binds_layout_cell_source_png_and_kernel_namespace() {
+        let mut f=frame();let mut metadata=info();
+        let mut keys=std::collections::BTreeSet::new();
+        for row in 0..2 {for column in 0..2 {
+            f.atlas_grid=Some(AtlasGrid{columns:2,rows:2,column,row});
+            assert!(keys.insert(HdAssets::frame_key(&f,&metadata,false)));
+        }}
+        f.atlas_grid=Some(AtlasGrid{columns:4,rows:4,column:0,row:0});
+        assert!(keys.insert(HdAssets::frame_key(&f,&metadata,false)));
+        f.atlas_grid=None;assert!(keys.insert(HdAssets::frame_key(&f,&metadata,false)));
+        f.atlas_grid=Some(AtlasGrid{columns:2,rows:2,column:0,row:0});
+        metadata.digest=[2;32];assert!(keys.insert(HdAssets::frame_key(&f,&metadata,false)));
+        f.source_sha256="11".repeat(32);assert!(keys.insert(HdAssets::frame_key(&f,&metadata,false)));
+    }
+    #[test]
+    fn constant_fractional_cell_is_constant_without_neighbor_invention() {
+        let f=frame();let raw=RgbaImage::from_pixel(5,5,image::Rgba([40,80,120,255]));
+        let old=raw.as_raw().clone();
+        let selected=selected_frame(&raw,&f,2,2,false).unwrap();
+        assert!(selected.pixels().all(|p|p.0==[40,80,120,255]));
+        assert_eq!(*raw.as_raw(),old);
+    }
+    #[test]
+    fn fractional_boundary_pixel_is_shared_but_wholly_neighboring_pixels_are_not() {
+        let raw=RgbaImage::from_fn(5,5,|x,_|image::Rgba(
+            if x<2 {[255,0,0,255]} else if x==2 {[0,255,0,255]} else {[0,0,255,255]}));
+        let left=selected_frame(&raw,&frame(),2,2,false).unwrap();
+        assert!(left.pixels().all(|p|p[2]==0));
+        let mut f=frame();f.atlas_grid.as_mut().unwrap().column=1;
+        let right=selected_frame(&raw,&f,2,2,false).unwrap();
+        assert!(right.pixels().all(|p|p[0]==0));
+        let a=grid_axis_weights(0.0,2.5,2).unwrap();let b=grid_axis_weights(2.5,5.0,2).unwrap();
+        assert!(a.iter().flatten().any(|(x,w)|*x==2&&*w!=0.0));
+        assert!(b.iter().flatten().any(|(x,w)|*x==2&&*w!=0.0));
+    }
+    #[test]
+    fn integral_selection_uses_original_crop_without_an_extra_sampler() {
+        let f=frame();let raw=RgbaImage::from_fn(8,8,|x,y|image::Rgba([x as u8,y as u8,0,255]));
+        assert_eq!(selected_frame(&raw,&f,4,4,false).unwrap(),
+                   imageops::crop_imm(&raw,0,0,4,4).to_image());
+    }
+    #[test]
+    fn raw_alpha_validation_is_before_fractional_filtering() {
+        let opaque=RgbaImage::from_pixel(5,5,image::Rgba([1,2,3,255]));
+        assert!(selected_frame(&opaque,&frame(),2,2,true).is_err());
+        let hidden=RgbaImage::new(5,5);
+        assert!(selected_frame(&hidden,&frame(),2,2,true).is_err());
+    }
+}
+
+
+#[cfg(test)]
+mod extended_retained_original_bound_tests {
+    use super::*;
+    fn source(painted: usize, canvas: usize) -> Sprite {
+        let mut pixels = vec![TRANSPARENT; canvas];
+        for (i, p) in pixels.iter_mut().take(painted).enumerate() { *p = (i % 256) as u16; }
+        Sprite { width: canvas, height: 1, pixels }
+    }
+    #[test]
+    fn exact_quarter_edges_and_hard_maximum() {
+        for (n, painted, expected) in [(64, 0, true), (65, 260, true),
+            (65, 259, false), (73, 625, true), (128, 512, true),
+            (128, 511, false), (129, 4096, false)] {
+            assert_eq!(original_detail_bound(&vec![[0,0]; n], &source(painted,4096)), expected);
+        }
+    }
+    #[test]
+    fn transparent_canvas_never_inflates_fraction() {
+        assert!(!original_detail_bound(&vec![[0,0];65], &source(259,4096)));
+        assert!(original_detail_bound(&vec![[0,0];65], &source(260,4096)));
+    }
+    #[test]
+    fn legacy_tags_remain_exact_and_extended_namespaces_are_new() {
+        for n in [0,1,64] {
+            assert_eq!(original_detail_policy_tag(n,false), b"raptor-retained-original-details-v2-painted0255");
+            assert_eq!(original_detail_policy_tag(n,true), b"retained-original-rejected-fallback-v2-painted0255");
+        }
+        assert_ne!(original_detail_policy_tag(65,false),original_detail_policy_tag(64,false));
+        assert_ne!(original_detail_policy_tag(65,true),original_detail_policy_tag(64,true));
+        assert_eq!(original_detail_policy_tag(65,false),original_detail_policy_tag(128,false));
     }
 }

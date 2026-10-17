@@ -89,7 +89,7 @@ class PaintedPolicy(unittest.TestCase):
     def test_official_audit_and_schema_share_actual_validator(self):
         tree = ast.parse((TOOLS / "hd_art_audit.py").read_text())
         self.assertTrue(any(isinstance(n, ast.ImportFrom) and n.module == "hd_frame_policy"
-                            and {a.name for a in n.names} == {"FRAME_KEYS", "validate_frame_policy"} for n in tree.body))
+                            and {"FRAME_KEYS", "validate_frame_policy"} <= {a.name for a in n.names} for n in tree.body))
         self.assertIn("original_detail_cells", policy.FRAME_KEYS)
         self.assertIn("carried master74 frame has an unreviewed optional policy", (TOOLS / "hd_register_reviewed.py").read_text())
 
