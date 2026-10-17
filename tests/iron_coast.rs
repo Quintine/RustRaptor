@@ -1,4 +1,5 @@
-//! Campaign acceptance uses synthetic PNG/WAV assets; original data is unnecessary.
+//! Scripted mission acceptance uses synthetic PNG/WAV and native-ID placeholders.
+//! This does not validate original-catalog enemy paths, guns, or native-wave balance.
 use raptor_replica::{
     content::{ContentPack, Registry},
     modding::{self, ActiveMods, Manifest},
@@ -33,6 +34,12 @@ fn base() -> Registry {
     for n in 0..18 {
         value["items"].as_array_mut().unwrap().push(json!({"id":format!("base:fixture_item_{n}"),"name":"Synthetic equipment","price":0,"max_count":1}));
     }
+    // Native wave references were added by the retune. Keep these portable
+    // fixtures explicitly synthetic; real native behavior belongs to catalog tests.
+    value["enemies"] = json!([21, 22, 73, 74].map(|id| json!({
+        "id":format!("base:enemy_0_{id}"), "name":"Synthetic native-ID placeholder",
+        "health":1, "speed":1
+    })));
     let pack: ContentPack = serde_json::from_value(value).unwrap();
     registry.apply(pack, "base").unwrap();
     registry.validate().unwrap();
@@ -336,7 +343,7 @@ fn restarted_mission_counts_new_turret_kills_independently_of_saved_statistics()
 }
 
 #[test]
-fn starter_guns_can_complete_real_waves_and_boss() {
+fn starter_guns_complete_scripted_waves_and_boss_with_synthetic_native_fillers() {
     let (world, seen) = play(false);
     assert_eq!(
         world.outcome,

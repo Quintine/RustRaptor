@@ -120,7 +120,10 @@ fn all_enemy_packages_validate_independently_and_together() {
                 .weapons
                 .contains_key(&ContentId::new(format!("{id}:projectile")).unwrap())
         );
-        assert_eq!(a.registry.sounds.len(), 2);
+        assert_eq!(
+            a.registry.sounds.len(),
+            if id == "iron_coast_boss" { 3 } else { 2 }
+        );
         assert_eq!(
             a.registry.enemies[&ContentId::new(format!("{id}:unit")).unwrap()]
                 .script
@@ -135,42 +138,70 @@ fn all_enemy_packages_validate_independently_and_together() {
 }
 
 #[test]
-fn scout_weaves_in_both_directions_and_aims_hostile_fire() {
-    let (_temp, mut a) = active(&["iron_coast_scout"]);
-    let mut w = world(&a);
-    w.player.x = 0;
-    w.spawn(
-        &ContentId::from("iron_coast_scout:unit"),
-        120,
-        0,
-        &a.registry,
-    )
-    .unwrap();
-    let mut right = false;
-    let mut left = false;
-    let mut sounds = 0;
-    for _ in 0..95 {
-        w.step(Input::default(), &a.registry, &mut a.scripts)
+fn scout_enters_attacks_once_and_exits_without_kill_rewards() {
+    // Each approach has one lateral leg, rather than the old endless weave.
+    for (x, direction) in [(120, 1), (200, -1)] {
+        let (_temp, mut a) = active(&["iron_coast_scout"]);
+        let mut w = world(&a);
+        w.player.x = 0;
+        w.spawn(&"iron_coast_scout:unit".into(), x, -24, &a.registry)
             .unwrap();
-        let e = &w.enemies[0];
-        right |= e.vx > 0;
-        left |= e.vx < 0;
-        assert!(e.x >= 24 && e.x <= 272);
-        assert_eq!(e.vy, 1);
-        sounds += w
-            .mod_sounds
-            .iter()
-            .filter(|id| id.0 == "iron_coast_scout:shot")
-            .count();
+        let mut speeds = std::collections::BTreeSet::new();
+        let mut lateral = false;
+        let mut aimed_left = false;
+        for _ in 0..200 {
+            w.step(Input::default(), &a.registry, &mut a.scripts)
+                .unwrap();
+            for p in w.projectiles.iter().filter(|p| p.age == 0 && p.hostile) {
+                aimed_left |= p.vx < 0;
+            }
+            w.projectiles.clear(); // Isolate the approach, not player survival.
+            let Some(e) = w.enemies.first() else { break };
+            speeds.insert(e.vy);
+            lateral |= e.vx.signum() == direction;
+        }
+        assert_eq!(speeds, [1, 2, 3].into_iter().collect());
+        assert!(lateral && aimed_left);
+        assert!(
+            w.enemies.is_empty(),
+            "the scout must finish its attack pass"
+        );
+        assert_eq!(w.player.credits, 0);
+        assert!(!w.objectives.contains_key("iron_coast_scout:defeated"));
     }
-    assert!(right && left);
-    assert_eq!(w.enemies[0].y, 94);
-    assert!(sounds >= 2);
-    assert!(
-        w.projectiles
-            .iter()
-            .any(|p| p.hostile && p.weapon.0 == "iron_coast_scout:projectile" && p.vx < 0)
-    );
+}
+
+#[test]
+fn light_enemies_do_not_fire_when_the_actor_is_not_fully_visible() {
+    for id in ["iron_coast_scout", "iron_coast_turret"] {
+        // Partially offscreen, above the viewport, and below the attack window.
+        // Keep x inside the natural-exit boundary so the same actor is observed.
+        for (x, y) in [(-1, 40), (40, -40), (40, 180)] {
+            let (_temp, mut a) = active(&[id]);
+            let mut w = world(&a);
+            w.spawn(&format!("{id}:unit").as_str().into(), x, y, &a.registry)
+                .unwrap();
+            for _ in 0..80 {
+                w.enemies[0].x = x;
+                w.enemies[0].y = y;
+                // Movement precedes the refreshed actor snapshot. Hold the
+                // fixture outside so its prior velocity cannot carry it into view.
+                w.enemies[0].vx = 0;
+                w.enemies[0].vy = 0;
+                w.step(Input::default(), &a.registry, &mut a.scripts)
+                    .unwrap();
+                assert!(
+                    w.projectiles.is_empty(),
+                    "{id} fired outside its attack window"
+                );
+                assert!(
+                    !w.mod_sounds
+                        .iter()
+                        .any(|sound| sound.0 == format!("{id}:shot"))
+                );
+            }
+        }
+    }
 }
 
 #[test]
@@ -197,7 +228,7 @@ fn turret_scrolls_with_terrain_and_aims_at_player() {
     }
     assert_eq!((w.enemies[0].x, w.enemies[0].y), (220, 80));
     assert!(a.registry.enemies[&w.enemies[0].definition].ground);
-    assert_eq!(sounds, 2);
+    assert_eq!(sounds, 1);
     assert!(
         w.projectiles
             .iter()
@@ -206,48 +237,73 @@ fn turret_scrolls_with_terrain_and_aims_at_player() {
 }
 
 #[test]
-fn boss_enters_patrols_fires_fans_and_remains_on_screen() {
-    let (_temp, mut a) = active(&["iron_coast_boss"]);
-    let mut w = world(&a);
-    w.player.x = 0;
-    w.spawn(
-        &ContentId::from("iron_coast_boss:unit"),
-        112,
-        -64,
-        &a.registry,
-    )
-    .unwrap();
-    let mut left = false;
-    let mut right = false;
-    let mut fans = 0;
-    for tick in 0..1500 {
-        w.step(Input::default(), &a.registry, &mut a.scripts)
+fn boss_telegraphs_three_patterns_and_recovers_on_screen_at_every_difficulty() {
+    for difficulty in 0..4 {
+        let (_temp, mut a) = active(&["iron_coast_boss"]);
+        let mut w = world(&a);
+        w.difficulty = difficulty;
+        w.player.x = 0;
+        w.spawn(&"iron_coast_boss:unit".into(), 112, -64, &a.registry)
             .unwrap();
-        assert_eq!(w.outcome, Outcome::Playing);
-        assert_eq!(w.enemies.len(), 1, "boss retired at{tick}");
-        let e = &w.enemies[0];
-        assert_eq!((e.width, e.height), (96, 64));
-        if tick > 46 {
-            assert_eq!(e.y, 24);
-            assert!((80..=144).contains(&e.x));
-            left |= e.vx < 0;
-            right |= e.vx > 0;
-        }
-        if w.mod_sounds
-            .contains(&ContentId::from("iron_coast_boss:shot"))
-        {
+        let mut directions = std::collections::BTreeSet::new();
+        let mut warnings = Vec::new();
+        let mut shots = Vec::new();
+        for tick in 0..500 {
+            w.step(Input::default(), &a.registry, &mut a.scripts)
+                .unwrap();
+            assert_eq!(w.outcome, Outcome::Playing);
+            assert_eq!(w.enemies.len(), 1, "boss retired at {tick}");
+            let e = &w.enemies[0];
+            assert_eq!((e.width, e.height), (84, 56));
+            if tick > 46 {
+                assert_eq!(e.y, 24);
+                assert!((32..=204).contains(&e.x));
+                directions.insert(e.vx.signum());
+            }
+            if w.mod_sounds.contains(&"iron_coast_boss:warning".into()) {
+                warnings.push(tick);
+                assert_eq!(e.vx, 0, "warning is a stationary hit window");
+                assert!(!w.lightning_arcs.is_empty());
+            }
             let bullets: Vec<_> = w
                 .projectiles
                 .iter()
                 .filter(|p| p.age == 0 && p.hostile)
                 .collect();
-            assert_eq!(bullets.len(), 3);
-            assert_eq!(bullets.iter().map(|p| p.vx).collect::<Vec<_>>(), [-2, 0, 2]);
-            fans += 1;
+            if w.mod_sounds.contains(&"iron_coast_boss:shot".into()) {
+                assert_eq!(tick - warnings.last().unwrap(), 18 - difficulty * 2);
+                assert_eq!(e.vx, 0);
+                let pattern = shots.len() % 3;
+                assert_eq!(bullets.len(), [3, 2, 1][pattern]);
+                if pattern == 0 {
+                    assert_eq!(bullets.iter().map(|p| p.vx).collect::<Vec<_>>(), [-1, 0, 1]);
+                } else if pattern == 1 {
+                    assert!(bullets.iter().all(|p| p.vx == 0));
+                } else {
+                    assert!(
+                        bullets[0].vx < 0,
+                        "aimed pattern follows the locked left lane"
+                    );
+                }
+                assert!(
+                    bullets
+                        .iter()
+                        .all(|p| p.vy == if difficulty >= 2 { 4 } else { 3 })
+                );
+                shots.push(tick);
+            } else {
+                assert!(bullets.is_empty(), "no untelegraphed salvo");
+            }
+            w.projectiles.clear(); // Separate clock/pattern coverage from the starter-gun survival test.
         }
+        assert_eq!(directions, [-1, 0, 1].into_iter().collect());
+        assert!(shots.len() >= 4);
+        assert!(
+            warnings
+                .windows(2)
+                .all(|pair| pair[1] - pair[0] == 96 - difficulty * 6)
+        );
     }
-    assert!(left && right);
-    assert!(fans >= 25);
 }
 
 #[test]
@@ -407,14 +463,12 @@ fn mission_defeat_counts_reset_while_persistent_script_statistics_continue() {
         assert_eq!(next.objectives.get(&format!("{id}:defeated")), Some(&1));
         let state = a.scripts.checkpoints().0;
         assert_eq!(state[&format!("{id}/scripts/ai.rhai")]["destroyed"], 3);
-        if id == "iron_coast_boss" {
-            assert!(
-                state[&format!("{id}/scripts/ai.rhai")]["directions"]
-                    .as_object()
-                    .unwrap()
-                    .is_empty()
-            );
-        }
+        // The next tick must not resurrect or fire on behalf of a dead actor.
+        next.step(Input::default(), &a.registry, &mut a.scripts)
+            .unwrap();
+        assert!(next.enemies.is_empty());
+        assert!(next.projectiles.is_empty());
+        assert_eq!(next.objectives[&format!("{id}:defeated")], 1);
     }
 }
 

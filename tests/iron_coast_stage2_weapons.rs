@@ -221,21 +221,26 @@ fn railburst_contact_penetrates_only_three_aligned_targets_with_falling_damage()
         world.effects.is_empty(),
         "no muzzle explosion before real contact"
     );
+    let mut saw_contact_arc = false;
     for _ in 0..3 {
         step(&mut world, &mut active, false);
+        saw_contact_arc |= !world.lightning_arcs.is_empty();
+        assert!(world.lightning_arcs.iter().all(|arc| arc.ticks == 2));
+        assert!(
+            world.effects.is_empty(),
+            "rail contacts use short arcs, not explosions"
+        );
     }
     assert_eq!(damage(&world, &ids), [42, 32, 22, 0, 0]);
     assert_eq!(
         active.scripts.states["iron_coast_railburst/scripts/weapon.rhai"]["hits"],
         3
     );
-    assert!(world.effects.iter().any(|e| e.kind == EffectKind::SmallAir));
-    assert!(
-        world
-            .effects
-            .iter()
-            .any(|e| e.kind == EffectKind::SmallGround)
-    );
+    assert!(saw_contact_arc);
+    for _ in 0..3 {
+        step(&mut world, &mut active, false);
+    }
+    assert!(world.lightning_arcs.is_empty());
     assert_eq!(
         world.player.inventory[&"iron_coast_railburst:equipment".into()],
         1
@@ -266,8 +271,11 @@ fn depth_charge_has_contact_only_ground_splash_falloff_radius_and_neighbor_cap()
     }
     assert_eq!(damage(&world, &ids), [72, 36, 20, 20, 0, 0, 0]);
     assert_eq!(world.effects.len(), 1);
-    assert_eq!(world.effects[0].kind, EffectKind::GroundBlast);
-    assert!(world.effects[0].ground);
+    assert_eq!(world.effects[0].kind, EffectKind::SmallAir);
+    assert!(
+        !world.effects[0].ground,
+        "compact presentation does not change ground-only damage"
+    );
     assert_eq!(
         active.scripts.states["iron_coast_depth_charge/scripts/weapon.rhai"]["hits"],
         4

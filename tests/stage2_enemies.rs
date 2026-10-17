@@ -140,65 +140,80 @@ fn stage2_packages_activate_independently_and_coexist_with_stage1() {
     assert!(a.registry.overrides.is_empty());
 }
 #[test]
-fn stage2_engine_cooldowns_produce_finite_bursts_and_warnings() {
+fn stage2_engine_difficulty_clocks_produce_finite_locked_bursts_and_warnings() {
+    let periods = [[66, 56, 48, 42], [126, 108, 94, 82], [112, 96, 82, 72]];
+    let bursts = [[1, 2, 2, 3], [1, 1, 2, 2], [1, 1, 2, 2]];
+    let windups = [[8, 7, 7, 6], [18, 17, 16, 14], [13, 12, 11, 10]];
+    let spacing = [4, 8, 6];
     for (idx, id) in IDS.iter().enumerate() {
-        let (_t, mut a) = active(&[*id]);
-        let mut w = world(&a);
-        w.player.x = 240;
-        spawn(&mut w, &a, id, 100, 0);
-        let mut shots = Vec::new();
-        let mut warnings = Vec::new();
-        for tick in 0..200 {
-            let e = &mut w.enemies[0];
-            e.x = 100;
-            e.y = 0;
-            w.step(Input::default(), &a.registry, &mut a.scripts)
-                .unwrap();
-            let new = w
-                .projectiles
-                .iter()
-                .filter(|p| p.age == 0)
-                .collect::<Vec<_>>();
-            if !new.is_empty() {
-                assert!(new.iter().all(|p| p.hostile
-                    && p.weapon.0 == format!("{id}:projectile")
-                    && p.vy >= 1
-                    && p.vx.abs() <= 3));
-                shots.push((tick, new.len()));
+        for difficulty in 0..4 {
+            let (_t, mut a) = active(&[*id]);
+            let mut w = world(&a);
+            w.difficulty = difficulty as u32;
+            w.player.x = 240;
+            spawn(&mut w, &a, id, 100, 40);
+            let mut groups: Vec<Vec<(usize, i32, i32)>> = Vec::new();
+            let mut warnings = Vec::new();
+            for tick in 0..320 {
+                // A visible range fixture; movement/escape and offscreen suppression are tested separately.
+                w.enemies[0].x = 100;
+                w.enemies[0].y = 40;
+                w.step(Input::default(), &a.registry, &mut a.scripts)
+                    .unwrap();
+                let new: Vec<_> = w.projectiles.iter().filter(|p| p.age == 0).collect();
+                assert!(
+                    new.len() <= 1,
+                    "{id} must space the burst, not stack shells"
+                );
+                for p in new {
+                    assert!(
+                        p.hostile
+                            && p.weapon.0 == format!("{id}:projectile")
+                            && p.vy >= 1
+                            && p.vx.abs() <= 5
+                    );
+                    if groups
+                        .last()
+                        .is_none_or(|g| tick - g.last().unwrap().0 != spacing[idx])
+                    {
+                        groups.push(Vec::new());
+                    }
+                    groups.last_mut().unwrap().push((tick, p.vx, p.vy));
+                    // Subsequent shots in this salvo must retain its original aim.
+                    w.player.x = if w.player.x == 240 { 0 } else { 240 };
+                }
+                if w.mod_sounds.iter().any(|s| s.0 == format!("{id}:warning")) {
+                    warnings.push(tick);
+                }
+                assert_eq!(w.enemies.len(), 1);
+                w.projectiles.clear();
             }
-            if w.mod_sounds.iter().any(|s| s.0 == format!("{id}:warning")) {
-                warnings.push(tick);
+            assert!(groups.len() >= 2, "{id} difficulty {difficulty}");
+            // The final group can straddle the observation boundary.
+            for g in &groups[..groups.len() - 1] {
+                assert_eq!(g.len(), bursts[idx][difficulty]);
+                assert!(
+                    g.iter().all(|s| (s.1, s.2) == (g[0].1, g[0].2)),
+                    "salvo aim must be locked"
+                );
             }
-            assert_eq!(w.enemies.len(), 1, "AI must never spawn extra enemies");
-            assert!(w.projectiles.len() < 32);
+            assert!(
+                groups
+                    .windows(2)
+                    .all(|g| g[1][0].0 - g[0][0].0 == periods[idx][difficulty])
+            );
+            if idx == 0 {
+                assert!(warnings.is_empty());
+            } else {
+                for (g, warning) in groups.iter().zip(&warnings) {
+                    assert_eq!(g[0].0 - warning, windups[idx][difficulty]);
+                }
+                assert!(warnings.len() >= groups.len());
+            }
         }
-        let expected = match idx {
-            0 => vec![
-                (1, 1),
-                (5, 1),
-                (9, 1),
-                (71, 1),
-                (75, 1),
-                (79, 1),
-                (141, 1),
-                (145, 1),
-                (149, 1),
-            ],
-            1 => vec![(10, 2), (97, 2), (184, 2)],
-            _ => vec![(6, 2), (88, 2), (170, 2)],
-        };
-        assert_eq!(shots, expected, "{id}");
-        assert_eq!(
-            warnings,
-            match idx {
-                0 => vec![],
-                1 => vec![0, 87, 174],
-                _ => vec![0, 82, 164],
-            },
-            "{id}"
-        );
     }
 }
+
 #[test]
 fn stage2_movement_has_distinct_bounded_patterns_and_units_escape_without_rewards() {
     for (idx, id) in IDS.iter().enumerate() {
@@ -209,6 +224,7 @@ fn stage2_movement_has_distinct_bounded_patterns_and_units_escape_without_reward
         let mut left = false;
         let mut right = false;
         let mut stopped = false;
+        let mut vertical_speeds = std::collections::BTreeSet::new();
         for _ in 0..400 {
             w.step(Input::default(), &a.registry, &mut a.scripts)
                 .unwrap();
@@ -220,20 +236,30 @@ fn stage2_movement_has_distinct_bounded_patterns_and_units_escape_without_reward
             right |= e.vx > 0;
             stopped |= e.vx == 0;
             assert!(e.x >= 6 && e.x + e.width <= 314);
-            assert!((1..=2).contains(&e.vy));
+            vertical_speeds.insert(e.vy);
         }
+        assert_eq!(
+            vertical_speeds,
+            if idx == 0 { vec![1, 2, 3, 4] } else { vec![1] }
+                .into_iter()
+                .collect(),
+            "{id} approach/pass/exit versus terrain scroll"
+        );
         assert!(w.enemies.is_empty(), "{id} should leave naturally");
         assert_eq!(w.player.credits, 0);
         assert!(!w.objectives.contains_key(&format!("{id}:defeated")));
         if idx != 1 {
             assert!(left && right, "{id} must weave in both directions");
         } else {
-            assert!(stopped && (left || right));
+            assert!(
+                stopped && !left && !right,
+                "siege stays fixed in terrain coordinates"
+            );
         }
     }
 }
 #[test]
-fn stage2_air_ground_filtering_and_siege_damage_disable_second_shell() {
+fn stage2_air_ground_filtering_and_damaged_siege_keeps_difficulty_burst() {
     for (idx, id) in IDS.iter().enumerate() {
         for ground in [false, true] {
             let (_t, mut a) = active(&[*id]);
@@ -266,18 +292,26 @@ fn stage2_air_ground_filtering_and_siege_damage_disable_second_shell() {
             );
         }
     }
+    // Low health no longer selects the old single-shell variant. The current
+    // actor remains live and difficulty 2 still emits two separated shells.
     let (_t, mut a) = active(&[IDS[1]]);
     let mut w = world(&a);
-    spawn(&mut w, &a, IDS[1], 120, 0);
+    w.difficulty = 2;
+    spawn(&mut w, &a, IDS[1], 120, 40);
     w.enemies[0].health = 24;
-    for tick in 0..=10 {
-        w.enemies[0].y = 0;
+    let mut shots = Vec::new();
+    for tick in 0..60 {
+        w.enemies[0].y = 40;
         w.step(Input::default(), &a.registry, &mut a.scripts)
             .unwrap();
-        if tick == 10 {
-            assert_eq!(w.projectiles.iter().filter(|p| p.age == 0).count(), 1);
+        for p in w.projectiles.iter().filter(|p| p.age == 0) {
+            assert!(p.hostile);
+            shots.push(tick);
         }
+        w.projectiles.clear();
     }
+    assert_eq!(shots.len(), 2);
+    assert_eq!(shots[1] - shots[0], 8);
 }
 #[test]
 fn stage2_deaths_reward_count_once_and_replayed_entity_ids_reset_guards() {

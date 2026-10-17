@@ -128,7 +128,15 @@ fn each_weapon_package_is_independent_and_all_five_can_coexist() {
     for id in PACKAGES {
         let (_root, active) = activate(&[id]);
         assert_eq!(active.pins.len(), 1);
-        assert_eq!(active.pins[0].version, "1.0.0");
+        assert_eq!(
+            active.pins[0].version,
+            if PROJECTILE_PACKAGES.contains(&id) {
+                "1.1.0"
+            } else {
+                "1.0.0"
+            },
+            "{id}"
+        );
         assert_eq!(active.registry.weapons.len(), 1);
         assert_eq!(active.registry.sounds.len(), 2);
         assert!(
@@ -249,17 +257,27 @@ fn pulse_hits_deal_damage_and_run_effect_audio_and_hit_state_callbacks() {
             &mut active.scripts,
         )
         .unwrap();
-    let mut hit_sound = false;
+    let mut hit_sound = world.mod_sounds.contains(&"pulse_cannon:impact".into());
+    let mut saw_contact_arc = false;
     for _ in 0..8 {
         world
             .step(Input::default(), &active.registry, &mut active.scripts)
             .unwrap();
         hit_sound |= world.mod_sounds.contains(&"pulse_cannon:impact".into());
+        saw_contact_arc |= !world.lightning_arcs.is_empty();
+        assert!(world.lightning_arcs.iter().all(|arc| arc.ticks == 2));
+        assert!(
+            world.effects.is_empty(),
+            "compact hits must not spawn explosions"
+        );
     }
     assert_eq!(world.enemies[0].health, 92);
     assert_eq!(state(&active, "pulse_cannon")["hits"], 2);
-    assert!(hit_sound);
-    assert!(!world.effects.is_empty());
+    assert!(hit_sound && saw_contact_arc);
+    assert!(
+        world.lightning_arcs.is_empty(),
+        "short contact feedback must expire"
+    );
 }
 
 #[test]
@@ -319,6 +337,8 @@ fn ion_lance_pierces_air_and_ground_targets_in_its_column_only() {
             &mut active.scripts,
         )
         .unwrap();
+    let heard_impact = world.mod_sounds.contains(&"ion_lance:impact".into());
+    let saw_arc = !world.lightning_arcs.is_empty();
     world
         .step(Input::default(), &active.registry, &mut active.scripts)
         .unwrap();
@@ -327,8 +347,13 @@ fn ion_lance_pierces_air_and_ground_targets_in_its_column_only() {
         [84, 84, 100]
     );
     assert_eq!(state(&active, "ion_lance")["hits"], 4);
-    assert!(world.mod_sounds.contains(&"ion_lance:impact".into()));
-    assert!(!world.effects.is_empty());
+    assert!(heard_impact && saw_arc);
+    assert!(
+        !world.mod_sounds.contains(&"ion_lance:impact".into()),
+        "the audio gate prevents repeated contact spam"
+    );
+    assert!(world.effects.is_empty());
+    assert!(world.lightning_arcs.iter().all(|arc| arc.ticks == 2));
 }
 
 #[test]

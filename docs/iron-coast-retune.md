@@ -72,6 +72,13 @@ save-pin roundtrips at every difficulty. Gameplay measurements use the frozen
 runtime definitions/scripts; the final version-number, README and blank-line
 whitespace corrections do not change gameplay tokens.
 
+Seven maintained campaign, enemy and weapon test suites pass against the same
+runtime: 65 tests passed, none failed and four existing integration tests remain
+ignored. Updated fixtures check the revised attack clocks, offscreen firing
+suppression, reward-free aircraft exits and short contact effects. Synthetic
+native-enemy placeholders in portable mission tests are explicitly labelled;
+the original-catalog playthrough checks above cover actual native enemies.
+
 ## Enemy silhouettes and attacks
 
 Scouts and interceptors retain 24×24 logical bodies; turrets and siege units
