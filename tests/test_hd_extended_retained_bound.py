@@ -1,4 +1,4 @@
-"""Private generic bounds; synthetic Source/PNG fixtures, no real art or engine."""
+"""Maintained Source-density, namespace and read-only registrar regressions."""
 import ast, copy, hashlib, importlib.util, json, pathlib, struct, sys, tempfile, unittest
 from unittest import mock
 ROOT=pathlib.Path(__file__).resolve().parents[1]
@@ -17,14 +17,14 @@ def raw_source(painted, width=32, height=32):
         if n: data+=struct.pack('<4i',0,y,y*width,n)+bytes((y*width+x)%256 for x in range(n))
     return data+struct.pack('<4i',0,0,-1,0)
 
-def frame(count, painted=625):
-    raw=raw_source(painted)
-    cells=sorted([[i%32,i//32] for i in range(painted)])[:count]
-    return dict(frame=0,file='synthetic.png',logical_width=32,logical_height=32,origin=[0,0],source_sha256=hashlib.sha256(raw).hexdigest(),original_detail_cells=cells)
+def frame(count, painted=625, width=32, height=32):
+    raw=raw_source(painted,width,height)
+    cells=sorted([[i%width,i//width] for i in range(painted)])[:count]
+    return dict(frame=0,file='synthetic.png',logical_width=width,logical_height=height,origin=[0,0],source_sha256=hashlib.sha256(raw).hexdigest(),original_detail_cells=cells)
 
 class ExtendedPolicy(unittest.TestCase):
     def test_exact_quarter_and_maximum_boundaries(self):
-        for n,painted,ok in [(64,64,True),(65,260,True),(65,259,False),(73,625,True),(128,512,True),(128,511,False),(129,600,False)]:
+        for n,painted,ok in [(64,64,True),(65,260,True),(65,259,False),(73,625,True),(128,512,True),(128,511,False),(129,516,True),(129,515,False),(150,600,True),(150,599,False),(150,1024,True),(256,1024,True),(256,1023,False)]:
             with self.subTest(n=n,painted=painted):
                 if ok: policy.validate_frame_policy(frame(n,painted),raw_source(painted))
                 else:
@@ -82,7 +82,7 @@ class ExtendedRegistrar(old.ActualRegistrarProvenance):
         self.f=frame(count,painted);self.f['file']='raw.png';raw=raw_source(painted)
         self.candidate['sequences'][0]['frames']=[self.f];self.rows=candidate.proposal_frames(self.candidate);digest=candidate.binding_digest(self.rows)
         self.review['frame_bindings_sha256']=digest
-        decl=self.review['retained_original_detail_review'];decl.update(cells_by_asset={'00001':self.f['original_detail_cells']},frame_bindings_sha256=digest,policy_version=policy.EXTENDED_RETAINED_POLICY)
+        decl=self.review['retained_original_detail_review'];decl.update(cells_by_asset={'00001':self.f['original_detail_cells']},frame_bindings_sha256=digest,policy_version=(policy.MAX256_RETAINED_POLICY if count>128 else policy.EXTENDED_RETAINED_POLICY))
         self.write_json(self.job_dir/'candidate.json',self.candidate)
         self.write_json(self.job_dir/'job.json',dict(job_id='synthetic-complete1',targets=[dict(asset='00001',source_sha256=self.f['source_sha256'],logical_canvas=[32,32])]))
         qa=json.loads((self.root/'qa.json').read_text());qa['frame_bindings_sha256']=digest;qa['frames'][0].update(source_sha256=self.f['source_sha256'],logical_canvas=[32,32]);self.write_json(self.root/'qa.json',qa)
@@ -115,6 +115,96 @@ class ExtendedRegistrar(old.ActualRegistrarProvenance):
     def test_density_helper_legacy_path_needs_no_catalog_io(self):
         with mock.patch.object(pathlib.Path,'read_text',side_effect=AssertionError('legacy catalog read')):
             registrar.validate_extended_retained_sources(pathlib.Path('/absent'),{'00001':old.selected()})
+
+
+class Max256Policy(unittest.TestCase):
+    def test_257_rejects_even_with4096_painted_cells(self):
+        f=frame(257,4096,64,64)
+        with self.assertRaisesRegex(ValueError,'at most256'):
+            policy.validate_frame_policy(f,raw_source(4096,64,64))
+    def test_all_rows_inspected_in_both_mixed_map_orders(self):
+        rows=[('00001',frame(1,1024)['original_detail_cells']),
+              ('00002',frame(128,1024)['original_detail_cells']),
+              ('00003',frame(150,1024)['original_detail_cells'])]
+        for ordered in (rows,list(reversed(rows))):
+            mapping=dict(ordered)
+            self.assertFalse(policy.retained_review_version_ok(policy.LEGACY_RETAINED_POLICY,mapping))
+            self.assertFalse(policy.retained_review_version_ok(policy.EXTENDED_RETAINED_POLICY,mapping))
+            self.assertTrue(policy.retained_review_version_ok(policy.MAX256_RETAINED_POLICY,mapping))
+        for n in [129,150,256]:
+            mapping={'00001':frame(n,1024)['original_detail_cells']}
+            self.assertFalse(policy.retained_review_version_ok(policy.EXTENDED_RETAINED_POLICY,mapping))
+            self.assertTrue(policy.retained_review_version_ok(policy.MAX256_RETAINED_POLICY,mapping))
+        self.assertFalse(policy.retained_review_version_ok(policy.MAX256_RETAINED_POLICY,{'00001':[[0,0]]*257}))
+        self.assertTrue(policy.retained_review_version_ok(policy.EXTENDED_RETAINED_POLICY,dict(rows[:2])))
+    def test_new_tier_density_audit_before_image_and_exact256_png(self):
+        with mock.patch.object(audit.Image,'open',side_effect=AssertionError('PNG read forbidden')):
+            with self.assertRaisesRegex(ValueError,'quarter'):
+                audit.validate_hd_frame(pathlib.Path('/absent'),frame(150,599),raw_source(599),Image.new('RGBA',(32,32)))
+        with tempfile.TemporaryDirectory() as temp:
+            q=pathlib.Path(temp);raw=raw_source(1024);(q/'Source').write_bytes(raw)
+            picture=audit.decode(q/'Source',[(i,i,i) for i in range(256)])
+            Image.new('RGBA',(64,64),(40,50,60,255)).save(q/'synthetic.png')
+            before=(q/'synthetic.png').read_bytes()
+            self.assertEqual(audit.validate_hd_frame(q,frame(256,1024),raw,picture),16384)
+            self.assertEqual(before,(q/'synthetic.png').read_bytes())
+    def test_default_serialization_digest_and_new_cell_list_binding(self):
+        f=old.frame();f['file']='raw.png'
+        c=dict(sequences=[dict(base_asset=1,frame_count=1,frames=[f])])
+        default=candidate.proposal_frames(c)
+        empty=copy.deepcopy(c);empty['sequences'][0]['frames'][0]['original_detail_cells']=[]
+        self.assertNotEqual(candidate.binding_digest(default),candidate.binding_digest(candidate.proposal_frames(empty)),
+                            'Python native binding keeps literal optional presence; Rust serde omits empty')
+        a=frame(128,1024);b=frame(150,1024)
+        self.assertNotEqual(candidate.binding_digest({'00001':a}),candidate.binding_digest({'00001':b}))
+
+class Max256Registrar(ExtendedRegistrar):
+    def test_actual150_and256_read_only_approved_job(self):
+        for n,painted in [(150,600),(256,1024)]:
+            with self.subTest(n=n):
+                self.extended(painted,n)
+                self.assertEqual(len(self.approve()[2]['00001']['original_detail_cells']),n)
+    def test_old_v3_cannot_approve150_or256(self):
+        for n in [150,256]:
+            self.extended(1024,n)
+            for version in [policy.LEGACY_RETAINED_POLICY,policy.EXTENDED_RETAINED_POLICY]:
+                d=copy.deepcopy(self.review['retained_original_detail_review']);d['policy_version']=version
+                with self.subTest(n=n,version=version),self.assertRaisesRegex(ValueError,'provenance'):self.approve(d)
+    def test_150_claimed_painted_count_does_not_override_authentic599(self):
+        self.extended(599,150);self.review['retained_original_detail_review']['claimed_painted_Source_cell_count']=1024
+        with self.assertRaisesRegex(ValueError,'quarter'):self.approve()
+    def test_exact_new_frame_cells_source_and_old_qa_binding_required(self):
+        self.extended(1024,150)
+        declaration=copy.deepcopy(self.review['retained_original_detail_review'])
+        declaration['cells_by_asset']['00001'][-1]=[31,31]
+        with self.assertRaisesRegex(ValueError,'provenance'):self.approve(declaration)
+        qa_path=self.root/'qa.json';qa=json.loads(qa_path.read_text());qa['frame_bindings_sha256']='0'*64
+        self.write_json(qa_path,qa)
+        with self.assertRaisesRegex(ValueError,'runtime evidence differs'):self.approve()
+    def mixed(self,reverse=False):
+        raw=raw_source(1024);counts=[1,128,150]
+        sequences=[dict(name='synthetic mixed tier',base_asset=i+1,frame_count=1,frames=[dict(frame(n,1024),file='raw.png')]) for i,n in enumerate(counts)]
+        if reverse:sequences.reverse()
+        self.candidate['sequences']=sequences
+        self.rows=candidate.proposal_frames(self.candidate);digest=candidate.binding_digest(self.rows)
+        self.review['frame_bindings_sha256']=digest
+        self.review['retained_original_detail_review'].update(policy_version=policy.MAX256_RETAINED_POLICY,
+            cells_by_asset={a:f['original_detail_cells'] for a,f in self.rows.items()},frame_bindings_sha256=digest)
+        self.write_json(self.job_dir/'candidate.json',self.candidate)
+        self.write_json(self.job_dir/'job.json',dict(job_id='synthetic-complete1',targets=[dict(asset=a,source_sha256=f['source_sha256'],logical_canvas=[32,32]) for a,f in self.rows.items()]))
+        qa=json.loads((self.root/'qa.json').read_text());base=qa['frames'][0]
+        qa['frames']=[dict(copy.deepcopy(base),asset=a,source_sha256=f['source_sha256'],logical_canvas=[32,32]) for a,f in self.rows.items()]
+        qa['frame_bindings_sha256']=digest;self.write_json(self.root/'qa.json',qa)
+        data=self.project/'data';(data/'sprites').mkdir(parents=True,exist_ok=True);(data/'sprites/fixture.pic').write_bytes(raw)
+        (data/'INDEX').write_text(''.join(f'{a} {len(raw)} sprites/fixture.pic\n' for a in self.rows))
+    def test_real_approved_job_mixed_1_128_150_both_map_orders(self):
+        for reverse in [False,True]:
+            self.mixed(reverse)
+            for version in [policy.LEGACY_RETAINED_POLICY,policy.EXTENDED_RETAINED_POLICY]:
+                d=copy.deepcopy(self.review['retained_original_detail_review']);d['policy_version']=version
+                with self.subTest(reverse=reverse,version=version),self.assertRaisesRegex(ValueError,'provenance'):self.approve(d)
+            self.assertEqual({a:len(f['original_detail_cells']) for a,f in self.approve()[2].items()},
+                             {'00001':1,'00002':128,'00003':150})
 
 class RustSourceCompatibility(unittest.TestCase):
     def test_legacy_hd_function_bodies_and_normalized_key_tags_remain_exact(self):

@@ -1077,3 +1077,68 @@ mod palette_rejected_owner_fallback_regression_tests {
         }
     }
 }
+
+#[cfg(test)]
+mod retained256_join_regression_tests {
+    use super::*;
+    fn cells(n:usize)->Vec<[u32;2]> {
+        (0..32).flat_map(|x|(0..32).map(move|y|[x,y])).skip(1024-n).collect()
+    }
+    fn detail(index:usize,n:usize)->RetainedOriginalPlacement {
+        RetainedOriginalPlacement{replacement_index:index,
+            details:crate::hd::OriginalDetailCells::for_test(cells(n),[32,32])}
+    }
+    fn palette()->[[u8;3];256] {
+        let mut p=std::array::from_fn(|i|[i as u8;3]);p[150]=[225,180,0];p[151]=[0,0,255];p
+    }
+    fn tiles(n:usize,scale:usize,value:u16,reverse:bool)->Vec<Replacement> {
+        let mut first=Sprite{width:32*scale,height:32*scale,pixels:vec![60;1024*scale*scale]};
+        for [x,y] in cells(n) {for dy in 0..scale {for dx in 0..scale {
+            first.pixels[(y as usize*scale+dy)*first.width+x as usize*scale+dx]=value;
+        }}}
+        let mut out=vec![Replacement{image:first,position:[0,0],logical_size:[32,32]},
+            Replacement{image:Sprite{width:32*scale,height:32*scale,pixels:vec![80;1024*scale*scale]},position:[32,0],logical_size:[32,32]}];
+        if reverse {out.reverse();}out
+    }
+    #[test]
+    fn tier256_protected_inputs_and_final_source_nx_hold_all_scales_both_orders() {
+        for n in [150,256] {for scale in 1..=4 {for reverse in [false,true] {
+            let mut logical=Sprite{width:64,height:32,pixels:vec![17;2048]};
+            logical.pixels[15*64+31]=252;logical.pixels[16*64+31]=253;
+            let source=crate::render::upscale(&logical,scale).unwrap();
+            let a=tiles(n,scale,150,reverse);let b=tiles(n,scale,151,reverse);let owner=usize::from(reverse);
+            let retained=vec![detail(owner,n)];
+            let unprotected_a=TerrainHd::default().compose(&source,&a,scale,&palette()).image;
+            let unprotected_b=TerrainHd::default().compose(&source,&b,scale,&palette()).image;
+            assert!((0..source.height).any(|y|(32*scale..source.width).any(|x|
+                unprotected_a.pixels[y*source.width+x]!=unprotected_b.pixels[y*source.width+x])),"fixture must reproduce neighbor contamination");
+            let expected=super::protected_join_input_regression_tests::reference(&source,&a,&retained,scale,&palette());
+            let actual=TerrainHd::default().compose_retaining_original(&source,&a,&retained,scale,&palette());
+            let alternate=TerrainHd::default().compose_retaining_original(&source,&b,&retained,scale,&palette());
+            assert_eq!(actual.results,vec![OverlayResult::Applied;2]);assert_eq!(actual.image,expected);assert_eq!(actual.image,alternate.image);
+            let selected:std::collections::BTreeSet<_>=cells(n).into_iter().collect();
+            for y in 0..source.height {for x in 0..32*scale {
+                if selected.contains(&[(x/scale) as u32,(y/scale) as u32]) {
+                    let i=y*source.width+x;assert_eq!(actual.image.pixels[i],source.pixels[i]);
+                }
+            }}
+        }}}
+    }
+    #[test]
+    fn tier256_rejected_alpha_and_shadowed_owner_do_not_suppress_valid_neighbor() {
+        for scale in 1..=4 {for reverse in [false,true] {
+            let context=Sprite{width:64*scale,height:32*scale,pixels:vec![17;2048*scale*scale]};
+            let owner=usize::from(reverse);let mut mixed=tiles(150,scale,150,reverse);
+            mixed[owner].image.pixels[0]=TRANSPARENT;
+            let neighbor=1-owner;
+            let baseline=TerrainHd::default().compose(&context,&mixed[neighbor..=neighbor],scale,&palette()).image;
+            let actual=TerrainHd::default().compose_retaining_original(&context,&mixed,&[detail(owner,150)],scale,&palette());
+            assert_eq!(actual.results[owner],OverlayResult::NonOpaque);assert_eq!(actual.results[neighbor],OverlayResult::Applied);assert_eq!(actual.image,baseline);
+            let mut shadowed=tiles(150,scale,150,reverse);
+            shadowed.push(Replacement{image:Sprite{width:32*scale,height:32*scale,pixels:vec![70;1024*scale*scale]},position:[0,0],logical_size:[32,32]});
+            let plain=TerrainHd::default().compose(&context,&shadowed,scale,&palette()).image;
+            let retained=TerrainHd::default().compose_retaining_original(&context,&shadowed,&[detail(owner,150)],scale,&palette());
+            assert_eq!(retained.image,plain,"nonowner descriptor is skipped");
+        }}
+    }
+}

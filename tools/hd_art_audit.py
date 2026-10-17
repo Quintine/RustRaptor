@@ -34,7 +34,7 @@ def integer_rounded_aspect(width, height, logical_width, logical_height):
 def validate_hd_frame(root, frame, payload, picture):
     """Mirror loader checks, including actual-Source extended retention density.
 
-    Schema-only preparation is not enough for65..128 cells; the shared policy
+    Schema-only preparation is not enough for65..256 cells; the shared policy
     validator receives the decoded authentic payload here before any PNG read.
     Artistic approval remains separate.
     """

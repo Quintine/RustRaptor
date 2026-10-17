@@ -47,11 +47,16 @@ def atlas_grid_geometry(frame, width, height):
 
 LEGACY_RETAINED_POLICY = "retained-original-details-v2-painted0255"
 EXTENDED_RETAINED_POLICY = "retained-original-details-v3-max128-quarter-painted0255"
+MAX256_RETAINED_POLICY = "retained-original-details-v4-max256-quarter-painted0255"
 
 def retained_review_version_ok(version, retained_details):
-    """The old declaration cannot authorize a new longer list; old bytes stay valid."""
-    return version == EXTENDED_RETAINED_POLICY or (version == LEGACY_RETAINED_POLICY
-            and all(len(cells) <= 64 for cells in retained_details.values()))
+    """Each old declaration keeps its ceiling, independent of map insertion order."""
+    if type(version) is not str:
+        return False
+    ceilings = {LEGACY_RETAINED_POLICY: 64, EXTENDED_RETAINED_POLICY: 128,
+                MAX256_RETAINED_POLICY: 256}
+    return version in ceilings and all(len(cells) <= ceilings[version]
+                                      for cells in retained_details.values())
 
 def _indices(payload):
     if len(payload) < 20:
@@ -123,8 +128,8 @@ def validate_frame_policy(frame, source_payload=None):
             raise ValueError("native nearest cue must be an ordinary original source cell")
 
     details = frame.get("original_detail_cells", [])
-    if type(details) is not list or len(details) > 128:
-        raise ValueError("original_detail_cells must contain at most128 Source cells")
+    if type(details) is not list or len(details) > 256:
+        raise ValueError("original_detail_cells must contain at most256 Source cells")
     previous = None
     for cell in details:
         if type(cell) is not list or len(cell) != 2 or any(type(n) is not int or not 0 <= n < 2**32 for n in cell):
@@ -145,7 +150,7 @@ def validate_frame_policy(frame, source_payload=None):
         # Metadata-only preparation can check structure, not claim Source density.
         # Runtime, audit and extended registrar approval supply actual payloads.
         if len(details) > 64 and len(details) * 4 > sum(0 <= p <= 255 for p in indices):
-            raise ValueError("65..128 Original details may retain at most one quarter of painted Source")
+            raise ValueError("65..256 Original details may retain at most one quarter of painted Source")
 
 
 def original_palette_indices(frame, source_payload):

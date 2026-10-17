@@ -125,7 +125,7 @@ pub struct Frame {
     /// Explicit retained Original detail, never generated HD. Gameplay
     /// SourceClasses only, at all1–4 scales; painted Source indices0–255,
     /// including Original cycling/fire/blink labels. TRANSPARENT is excluded.
-    /// Legacy lists<=64 retain their exact behavior. Lists65..128 must retain
+    /// Legacy lists<=64 retain their exact behavior. Lists65..256 must retain
     /// no more than one quarter of the authentic painted Source cells.
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub original_detail_cells: Vec<[u32; 2]>,
@@ -1300,7 +1300,7 @@ fn validate_frame(frame: &Frame, original: &Sprite, source: &[u8]) -> Result<()>
         );
     }
     ensure!(original_detail_bound(&frame.original_detail_cells, original),
-        "Original details need<=64 legacy cells or65..128 cells within one quarter of painted Source");
+        "Original details need<=64 legacy cells or65..256 cells within one quarter of painted Source");
     ensure!(frame.original_detail_cells.windows(2).all(|w| w[0] < w[1]), "Original details sorted and unique");
     for &[x, y] in &frame.original_detail_cells {
         ensure!(x < frame.logical_width && y < frame.logical_height, "Original detail outside logical canvas");
@@ -1324,15 +1324,17 @@ fn validate_frame(frame: &Frame, original: &Sprite, source: &[u8]) -> Result<()>
 // still validates coordinates, order, uniqueness, painted membership and cues.
 fn original_detail_bound(cells: &[[u32; 2]], original: &Sprite) -> bool {
     let count = cells.len();
-    count <= 64 || (count <= 128
+    count <= 64 || (count <= 256
         && count * 4 <= original.pixels.iter().filter(|&&p| p <= 255).count())
 }
 fn original_detail_policy_tag(count: usize, fallback: bool) -> &'static [u8] {
-    match (count <= 64, fallback) {
-        (true, false) => b"raptor-retained-original-details-v2-painted0255",
-        (true, true) => b"retained-original-rejected-fallback-v2-painted0255",
-        (false, false) => b"raptor-retained-original-details-v3-max128-quarter-painted0255",
-        (false, true) => b"retained-original-rejected-fallback-v3-max128-quarter-painted0255",
+    match (count <= 64, count <= 128, fallback) {
+        (true, _, false) => b"raptor-retained-original-details-v2-painted0255",
+        (true, _, true) => b"retained-original-rejected-fallback-v2-painted0255",
+        (false, true, false) => b"raptor-retained-original-details-v3-max128-quarter-painted0255",
+        (false, true, true) => b"retained-original-rejected-fallback-v3-max128-quarter-painted0255",
+        (false, false, false) => b"raptor-retained-original-details-v4-max256-quarter-painted0255",
+        (false, false, true) => b"retained-original-rejected-fallback-v4-max256-quarter-painted0255",
     }
 }
 fn source_reference_budget(labels: usize, details: usize, new_labels: usize, new_details: usize) -> bool {
@@ -3188,7 +3190,9 @@ mod extended_retained_original_bound_tests {
     fn exact_quarter_edges_and_hard_maximum() {
         for (n, painted, expected) in [(64, 0, true), (65, 260, true),
             (65, 259, false), (73, 625, true), (128, 512, true),
-            (128, 511, false), (129, 4096, false)] {
+            (128, 511, false), (129, 516, true), (129, 515, false),
+            (150, 600, true), (150, 599, false), (150, 1024, true),
+            (256, 1024, true), (256, 1023, false), (257, 4096, false)] {
             assert_eq!(original_detail_bound(&vec![[0,0]; n], &source(painted,4096)), expected);
         }
     }
@@ -3285,5 +3289,160 @@ mod original_palette_constraint_tests {
         let mut palette=[[0;3];256];palette[10]=[50,30,20];palette[20]=[100,70,50];
         let mapped:std::collections::BTreeSet<_>=(200..=255).map(|x|domain.closest(&palette,[x,x,x])).collect();
         assert_eq!(mapped,std::collections::BTreeSet::from([20]));
+    }
+}
+
+#[cfg(test)]
+mod retained256_regression_tests {
+    use super::*;
+    fn cells(n: usize) -> Vec<[u32; 2]> {
+        (0..32).flat_map(|x| (0..32).map(move |y| [x,y])).skip(1024-n).collect()
+    }
+    fn frame(n: usize, payload: &[u8]) -> Frame {
+        Frame { frame:0, file:"raw.png".into(), logical_width:32, logical_height:32,
+            origin:[0,0], source_sha256:format!("{:x}",Sha256::digest(payload)), crop:None,
+            atlas_grid:None, preserve_reserved_coverage:false, native_nearest_cues:vec![],
+            original_detail_cells:cells(n), palette_constraint:None }
+    }
+    // Captured by actual frozen SourceE compile+one dump, not a hash reimplementation.
+    // SourceE hd.rs SHA8cd7c59458be53a1504ba8b165892d2874b9e04b2571f04b7cdfd7fe48007d00.
+    // Golden output SHA f4d1adec358e7390679f3ef5e4e5581bec3be3132923a4a7eae774d3bb5abdfd.
+    // The exact old fixture uses b"source", cells(n), PngInfo digest[7;32]/128x128.
+    const SOURCE_E_CACHE_GOLDENS: [(usize, &str, Option<&str>); 5] = [
+        (0, "1af4c044fb08e2482149098bf7153a8f1e16e3edc8d0b6648c5275fbb92d495d", None),
+        (1, "bdde38578a85bc4a83141e5cf58c4f543034671ae6322b66558e3f02f0365b51", Some("95e348e5c0106ee46e85608c1302b0d281ee47eca37cd00ac4b51f9db7ec897f")),
+        (64, "08d93e002bf0de7b40b6a1ff00056d8a229a48b67036037334fb89e0c32ca627", Some("b999033721541b56df783292be7e4cba1aa8f34d41eef7178709693b484c91af")),
+        (65, "2af914ff4603aa80e626c54026f30a303facf3056f547fe814be477c7feacdd8", Some("fb1a306158d5956bba9b9f3d2a1d1be1801bac35050f530aed97dfe1336e68b5")),
+        (128, "b91741a1096e5a1016fee8bda9bc28b64e271d3b9658926a1b08337df3a9e29b", Some("2de95024eb663854ccf6467e36d454531f94bdc7812263b5d648014a1d35fe85")),
+    ];
+
+    fn rejected_identity(f: Frame) -> Option<[u8;32]> {
+        let dir=tempfile::tempdir().unwrap();
+        let mut h=HdAssets{root:dir.path().into(),..HdAssets::default()};
+        h.replacements.insert(1,Replacement{frame:f,requires_alpha:false,source_labels:None,
+            original_detail_source:None,original_palette:None,validated:false,rejected:false});
+        h.original_detail_cache_identity(1)
+    }
+    #[test]
+    fn literal_source_e_cache_goldens_and_new_v4_namespaces_are_distinct() {
+        let info=PngInfo{size:1,modified:None,digest:[7;32],width:128,height:128};
+        for (n,valid,rejected) in SOURCE_E_CACHE_GOLDENS {
+            let f=frame(n,b"source");
+            assert_eq!(hex_digest(&HdAssets::frame_key(&f,&info,false)),valid);
+            assert_eq!(rejected_identity(f).as_ref().map(hex_digest).as_deref(),rejected);
+        }
+        let f=frame(0,b"source");let value=serde_json::to_value(&f).unwrap();
+        assert!(value.get("original_detail_cells").is_none());
+        let mut explicit_empty=value.clone();explicit_empty["original_detail_cells"]=serde_json::json!([]);
+        let empty:Frame=serde_json::from_value(explicit_empty).unwrap();
+        assert_eq!(serde_json::to_value(&empty).unwrap(),value);
+        assert_eq!(hex_digest(&HdAssets::frame_key(&empty,&info,false)),SOURCE_E_CACHE_GOLDENS[0].1);
+        assert!(rejected_identity(empty).is_none());
+        let mut new_valid=std::collections::BTreeSet::new();
+        let mut new_rejected=std::collections::BTreeSet::new();
+        for n in [129,150,256] {
+            let f=frame(n,b"source");let valid=hex_digest(&HdAssets::frame_key(&f,&info,false));
+            let rejected=hex_digest(&rejected_identity(f).unwrap());
+            assert!(SOURCE_E_CACHE_GOLDENS.iter().all(|(_,old,_)|*old!=valid));
+            assert!(SOURCE_E_CACHE_GOLDENS.iter().all(|(_,_,old)|*old!=Some(rejected.as_str())));
+            assert!(new_valid.insert(valid));assert!(new_rejected.insert(rejected));
+            assert_eq!(original_detail_policy_tag(n,false),b"raptor-retained-original-details-v4-max256-quarter-painted0255");
+            assert_eq!(original_detail_policy_tag(n,true),b"retained-original-rejected-fallback-v4-max256-quarter-painted0255");
+        }
+    }
+    fn fixture(n: usize) -> (tempfile::TempDir,HdAssets,Sprite) {
+        let dir=tempfile::tempdir().unwrap();let mut payload=Vec::new();
+        for v in [1_i32,0,0,32,32] {payload.extend(v.to_le_bytes());}
+        payload.extend((0..1024).map(|i|(i%256) as u8));
+        fs::write(dir.path().join("Source"),&payload).unwrap();
+        fs::write(dir.path().join("INDEX"),format!("00001 {} Source\n",payload.len())).unwrap();
+        let root=dir.path().join("hd");fs::create_dir(&root).unwrap();
+        RgbaImage::from_pixel(128,128,image::Rgba([200,20,10,255])).save(root.join("raw.png")).unwrap();
+        let manifest=Manifest{format_version:1,name:"synthetic bounded retained Original".into(),description:String::new(),
+            sequences:vec![Sequence{name:"synthetic".into(),base_asset:1,frame_count:1,frames:vec![frame(n,&payload)]}]};
+        fs::write(root.join("hd.json"),serde_json::to_vec(&manifest).unwrap()).unwrap();
+        let catalog=Catalog::open(dir.path()).unwrap();let original=catalog.sprite(1).unwrap();
+        let hd=HdAssets::load(&root,&catalog);assert_eq!(hd.coverage(),1);assert!(hd.diagnostics.is_empty());
+        (dir,hd,original)
+    }
+    #[test]
+    fn actual_loader_sampler_rgba_static_alpha_and_source_budget_all_scales() {
+        let palette=std::array::from_fn(|i|[i as u8,i as u8,i as u8]);
+        for n in [0,64,128,150,256] {
+            let (dir,mut h,original)=fixture(n);let raw=fs::read(dir.path().join("hd/raw.png")).unwrap();
+            assert_eq!(h.original_detail_source_bytes(),if n==0{0}else{2048});
+            let selected:std::collections::BTreeSet<_>=cells(n).into_iter().collect();
+            for scale in 1..=4 {
+                let actual=h.sprite(1,scale,&palette).unwrap().unwrap();
+                let (plain,details)=h.terrain_sprite(1,scale,&palette).unwrap().unwrap();
+                let expected_cells=cells(n);
+                let control=crate::render::upscale(&original,scale).unwrap();
+                assert_eq!(details.as_ref().map(|d|d.cells()),if n==0{None}else{Some(expected_cells.as_slice())});
+                let rgba=crate::render::Canvas{image:actual.clone(),scale}.rgba(&palette,false);
+                for y in 0..actual.height {for x in 0..actual.width {
+                    let i=y*actual.width+x;let expected=if selected.contains(&[(x/scale) as u32,(y/scale) as u32]) {control.pixels[i]}else{plain.pixels[i]};
+                    assert_eq!(actual.pixels[i],expected);assert_eq!(&rgba[4*i..4*i+3],&palette[expected as usize]);
+                    assert_eq!(rgba[4*i+3],255);
+                }}
+                assert_eq!(h.sprite(1,scale,&palette).unwrap().unwrap(),actual,"warm indexed cache");
+                let static_selected=h.sprite_static_palette(1,scale,&palette).unwrap().unwrap();
+                let saved=h.replacements[&1].frame.clone();h.replacements.get_mut(&1).unwrap().frame.original_detail_cells.clear();
+                assert_eq!(h.sprite_static_palette(1,scale,&palette).unwrap().unwrap(),static_selected);
+                h.replacements.get_mut(&1).unwrap().frame=saved;
+            }
+            assert_eq!(raw,fs::read(dir.path().join("hd/raw.png")).unwrap());
+            assert!(h.cache_stats().rgba_bytes<=CACHE_BYTES && h.cache_stats().indexed_bytes<=CACHE_BYTES);
+        }
+    }
+    #[test]
+    fn changing128_to150_cannot_reuse_indexed_or_prepared_identity() {
+        let (_d,mut h,_)=fixture(128);let p=std::array::from_fn(|i|[i as u8;3]);
+        let before=h.original_detail_cache_identity(1).unwrap();let old=h.sprite(1,4,&p).unwrap().unwrap();
+        h.replacements.get_mut(&1).unwrap().frame.original_detail_cells=cells(150);
+        let after=h.original_detail_cache_identity(1).unwrap();let new=h.sprite(1,4,&p).unwrap().unwrap();
+        assert_ne!(old,new);assert_ne!(before,after);
+        let prepare=|identity|{let mut k=b"terrain-retained-original-details-v2-painted0255".to_vec();
+            k.extend_from_slice(&serde_json::to_vec(&vec![(1_u32,identity)]).unwrap());k};
+        assert_ne!(prepare(before),prepare(after));
+    }
+    #[test]
+    fn new_tier_still_rejects_unpainted_unsorted_overlap_and_png_shape() {
+        let original=Sprite{width:32,height:32,pixels:vec![19;1024]};let mut f=frame(150,b"source");
+        assert!(validate_frame(&f,&original,b"source").is_ok());
+        let mut sparse=original.clone();sparse.pixels[(f.original_detail_cells[0][1]*32+f.original_detail_cells[0][0]) as usize]=TRANSPARENT;
+        assert!(validate_frame(&f,&sparse,b"source").is_err());
+        f.native_nearest_cues=vec![f.original_detail_cells[0]];assert!(validate_frame(&f,&original,b"source").is_err());
+        f.native_nearest_cues.clear();f.original_detail_cells.reverse();assert!(validate_frame(&f,&original,b"source").is_err());
+        let mut bad=serde_json::to_value(frame(150,b"source")).unwrap();bad["original_detail_cells"][0][0]=serde_json::json!(true);
+        assert!(serde_json::from_value::<Frame>(bad).is_err());
+        let mut f=frame(150,b"source");f.original_detail_cells=cells(257);assert!(validate_frame(&f,&original,b"source").is_err());
+        // PNG shape is enforced by the real loading path, not selected_frame.
+        let (dir, prior, _)=fixture(150);drop(prior);
+        let root=dir.path().join("hd");
+        RgbaImage::from_pixel(128,64,image::Rgba([10,20,30,255])).save(root.join("raw.png")).unwrap();
+        let catalog=Catalog::open(dir.path()).unwrap();
+        let mut rejected=HdAssets::load(&root,&catalog);
+        // Eager PNG validation rejects the malformed aspect before sprite use.
+        assert_eq!(rejected.coverage(),0);
+        assert!(rejected.sprite(1,1,&[[0;3];256]).unwrap().is_none(),"malformed PNG must fall back");
+        assert!(rejected.diagnostics.iter().any(|message|message.contains("aspect")));
+    }
+    #[test]
+    fn sparse_new_tier_uses_true_original_nx_including_transparent_kernel_subpixels() {
+        let mut original=Sprite{width:32,height:32,pixels:vec![TRANSPARENT;1024]};
+        for i in 0..600 {original.pixels[i]=19;}
+        for (x,y,v) in [(30,30,252),(31,30,80),(30,31,80),(31,31,80)] {original.pixels[y*32+x]=v;}
+        let mut selected:Vec<_>=(0..32).flat_map(|x|(0..32).map(move|y|[x,y])).filter(|&[x,y]|original.pixels[(y*32+x) as usize]<TRANSPARENT).take(149).collect();
+        selected.push([30,30]);selected.sort();let mut f=frame(0,b"source");f.original_detail_cells=selected.clone();
+        assert!(validate_frame(&f,&original,b"source").is_ok());let mut mixed=false;
+        for scale in 1..=4 {
+            let control=crate::render::upscale(&original,scale).unwrap();let mut actual=Sprite{width:32*scale,height:32*scale,pixels:vec![80;1024*scale*scale]};
+            retain_original_detail_samples(&mut actual,&control,&selected,scale).unwrap();
+            for y in 0..actual.height {for x in 0..actual.width {let i=y*actual.width+x;
+                let yes=selected.binary_search(&[(x/scale) as u32,(y/scale) as u32]).is_ok();
+                assert_eq!(actual.pixels[i],if yes{control.pixels[i]}else{80});mixed|=yes&&control.pixels[i]==TRANSPARENT;
+            }}
+        }
+        assert!(mixed);
     }
 }
