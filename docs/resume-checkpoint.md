@@ -1,3 +1,46 @@
+# HD continuation checkpoint at 5,339 frames — 17 October 2026
+
+The self-contained RustRaptor folder includes **5,339 original HD pictures /
+3,512 complete sequences**, including **4,242 terrain pictures**. Its **9,323
+data files / 8,150,528,285 bytes** match the runtime manifest. This update adds
+the complete four-frame turret `3001a–3001d` and tank `30078–3007b`, plus terrain
+`10525`, `1052a`, `20402` and `206a0`. Separate source, material, scene and native
+metadata reviews passed. All previous data, artwork, engine source and executables
+remain unchanged. Actual bundled HD and mod validation is recorded with this release.
+
+The requested 97-picture batch is published as `a45abc58`. The previous 5,327-frame
+revision, `afbf119`, passed [native Windows CI](https://github.com/Quintine/RustRaptor/actions/runs/38518853865):
+341 tests passed, zero failed, 26 ignored. HD/mod validation, Unicode-folder
+relocation, gameplay and mixed/SFX-only stereo audio captures passed. This new
+5,339-frame revision requires its own post-push Windows check.
+
+**414 original pictures remain:** 293 terrain, 79 enemies/ground objects,
+35 UI/other and seven bosses. Complete HD coverage remains unfinished. Artwork
+holds and actual service refusals do not count as remasters. Forty-five further
+terrain proposals passed separate material review; their source-driven scene
+checks are being prepared. Additional terrain and missing boss artwork is active.
+
+The joint terrain scenes include both selected tiles. Tank/turret review covers
+all 15 visible scene/scales; four captured scenes are normal player death
+transitions, with no full-route survival claim. Fully clipped cases retain their
+explicit limits. Source shadows, animation order and original collision dimensions
+remain unchanged.
+
+The optional retained-Original-detail implementation passed independent source
+review, 70 unique private Rust tests and 31 Python checks. Shared engine cutover,
+Linux/Windows rebuilds, sampler continuity and genuine hybrid terrain scene reviews
+are next. Original painted samples retained by this policy will be distinguished
+from newly generated HD detail. Existing artwork holds remain in force.
+
+Root owns assembly, README, this checkpoint and Git publication; coordinator owns
+the four HD coverage documents. Current receipts are in
+`.reference/hd-root-next-publication-after5327/`; immutable intake is
+`handoff-5339-20261014`. Preserve original data, generated artwork and review
+evidence. Avoid duplicate full-data copies; builds and review production must
+respect the available disk space.
+
+# Earlier checkpoint at 5,327 frames — retained historical observation
+
 # HD continuation checkpoint at 5,327 frames — 14 October 2026
 
 The self-contained RustRaptor folder includes **5,327 original HD pictures /
