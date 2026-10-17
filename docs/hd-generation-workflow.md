@@ -69,6 +69,43 @@ After interruption, recover the original yielded cell or saved result before any
 
 Exact sanitized service errors and UTC report times stay in ignored `data/hd/jobs/.imagegen-gate/events.jsonl`. Connection failures impose a 60–600-second cooldown and at most three failures per job in a thirty-minute retry batch. During denial or cooldown, prepare or review another job. Do not replace a failed remaster with scaled original art.
 
+## Scripted cleanup of generated artwork
+
+Precise scripted cleanup is authorized alongside image generation. Keep the
+generator-return PNG, original prompt and generation receipt unchanged. Save
+cleaned pixels separately and label them **derived artwork**. Corrections may
+restore Source alignment, transparency, animation backing and material boundaries;
+they must retain meaningful generated detail. Enlarging Original artwork alone
+does not count as an HD remaster. Review the actual cleaned PNG at scales 1–4
+and in the relevant animation or terrain context before registration.
+
+New cleaned candidates declare `artwork_derivation: {"path": "...", "sha256": "..."}`.
+The coordinator review must bind that identical reference. The referenced JSON
+uses `format_version: 1`, `kind: "deterministic_cleanup"`, a named `method`, and:
+
+- `parents`: each contains `raw_png`, `imagegen_receipt` and `prompt` references.
+- `tools`: references to checked-in Python files under the project `tools/`.
+- `recipe` and `execution_receipt`: references to the actual cleanup inputs and report.
+- `sources`: the exact selected asset ID → original payload SHA-256 map.
+- `outputs`: the exact selected runtime PNG path → SHA-256 map.
+
+Every reference contains only `path` and `sha256`. Except tools, paths are relative
+to the HD root; tools are relative to the project. Absolute paths, traversal and
+symlink escapes are rejected. Original receipts are copied byte-for-byte; paths
+inside their historical text are not rewritten or executed. The execution report
+contains an `execution` object with `status: "success"`, the same `method`,
+`recipe_sha256`, `tool_sha256`, `source_sha256` map, sorted unique
+`parent_raw_sha256` list, and `output_sha256` map keyed by asset ID. Registration
+cross-checks these against the files, selected frame bindings and actual runtime
+QA artwork hashes. It never executes recipe contents.
+
+Independent standalone material records for derived artwork use
+`derived_artwork_sha256` and `artwork_derivation_sha256`, with no
+`full_untouched_raw_sha256` claim. Source, native canvas/origin, complete families,
+current library, all-scale palette and independent context requirements still
+apply. Jobs without the optional derivation stay on their existing untouched
+review path. Cleanup runs locally and consumes no image-generation slot.
+
 ## Registering reviewed standalone terrain
 
 `hd_register_reviewed.py` accepts an explicit `complete_standalone_selection`

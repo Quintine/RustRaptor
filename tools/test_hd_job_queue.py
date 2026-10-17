@@ -202,6 +202,22 @@ class FamilyReviewLedgerTest(unittest.TestCase):
         self.assertEqual(ledger["family_reviews"][self.job_id]["candidate_sha256"], self.review["candidate_sha256"])
         self.assertEqual(ledger["family_reviews"][self.job_id]["frame_bindings_sha256"], self.review["frame_bindings_sha256"])
 
+    def test_derivation_removed_from_candidate_or_review_cannot_bypass_registration_guard(self):
+        for location in ["candidate", "review", "both"]:
+            candidate, review = copy.deepcopy(self.candidate), copy.deepcopy(self.review)
+            if location in ["candidate", "both"]:
+                candidate["artwork_derivation"] = {"path": "lineage.json", "sha256": "d" * 64}
+            if location in ["review", "both"]:
+                review["artwork_derivation"] = {"path": "lineage.json", "sha256": "d" * 64}
+            self.write(self.candidate_path, candidate)
+            self.write(self.review_path, review)
+            with self.subTest(location=location), patch("hd_register_reviewed.approved_job", side_effect=ValueError("bad lineage")) as guard:
+                ledger = self.build()
+                guard.assert_called_once()
+                self.assertEqual(ledger["assets"]["11000"]["status"], "candidate")
+                self.assertEqual(ledger["assets"]["11002"]["status"], "renderreachable")
+                self.assertEqual(ledger["family_reviews"], {})
+
     def test_missing_changed_receipt_and_conflicting_identities_fail_safely(self):
         legacy = self.build(legacy=True)
         normalized = queue.normalize_ledger(legacy, self.hd)

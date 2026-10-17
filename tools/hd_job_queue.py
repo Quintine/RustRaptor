@@ -268,7 +268,7 @@ def contract(family):
         "submission_gate": "Prepare and inspect sources and save the prompt before acquiring. In one functions.exec orchestration, acquire one of four slots, start the reservation, submit built-in imagegen only when start.changed is true, then classify and report the actual result immediately after await before returning to the model or doing QA. See RustRaptor/docs/hd-generation-workflow.md. Started and legacy-unknown requests require explicit finish; only unstarted reservations expire. If denied or cooling down, prepare/review other jobs. Do not substitute scaling for a failed remaster.",
         "source_truth": "Keep every source orientation, silhouette, color identity, logical canvas, anchor and explicit source hash. Use each target's source_palette and source_palette_sha256; Apogee/Cygnus/Taiwan cards use their own palettes, not the gameplay palette. Inspect every frame before generating. Never invent poses or drop damaged/destroyed variants.",
         "ownership": "Only this job's target IDs may be proposed. Neighbor/context references and exact-source aliases are reference-only; never claim or overwrite another job's IDs.",
-        "raw_output": "Keep raw generated PNG bytes, prompts, source references and provenance. Do not retouch generated RGB/alpha. Atlas/square margin crops are allowed only if they preserve all meaningful visible pixels and original aspect.",
+        "raw_output": "Preserve original generated PNG bytes, prompts, source references and provenance unchanged. Separately saved deterministic pixel cleanup is allowed with an artwork_derivation lineage binding the untouched imagegen parent, checked-in tool, recipe, actual execution receipt and derived outputs. Never label cleaned pixels untouched generation. Atlas/square margin crops must preserve meaningful visible pixels and original aspect unless an explicit reviewed derivation documents the correction. See docs/hd-generation-workflow.md.",
         "full_family": "Review all frames together at logical resolution and indexed 4× with exact Rust Lanczos3 resident→presentation resampling. A good still does not complete an animation family. Record partial candidates and rejections truthfully.",
         "quality": "Check clipping, alpha halos, banking/animation centers, source bounds, pivots, tiny-projectile readability, palette fades/cycling, material continuity and intended timing. Near-black original body/backing pixels are occupied artwork, not empty background. For opaque pictures, mask overlap of 1 proves only coverage; compare source material, landmarks and internal geometry separately. Original ordinary pixels must not gain indices240..255; water/fire/individualblink source classes retain their semantics. Compare original and allscale dynamic-palette counts in runtime-qa.json. Numeric mask metrics support visual review, never replace it.",
         "terrain": "Generate each canonical tile from its own exact source; supplied 3×3 neighbors are separate continuity-review references, not scenery to copy into the target. Check all cardinal adjacency sets, repeated tile aliases and intact/destroyed state partners. Preserve coastline/topography crossings, native edge colors and exact reusable tile identity. Equal-grid atlas crops must preserve each tile's complete logical composition; reject displaced panel boundaries or foreign row strips. Review every required adjacent pair, including state changes; full opaque 32×32 terrain canvases are valid. Do not publish context-specific alternate art for one repeated ID. The validated renderer shares adjoining HD edge/corner colors only where original surface class/geometry agrees, and transitions HD/original boundaries towards the joined original layer over two logical pixels; see RustRaptor/docs/hd-terrain.md. Feathering cannot repair shifted coastlines or make a low-resolution grid acceptable; detailed interiors must remain newly authored HD art. Preserve source water indices 240..244, fire 245..249 and single-index glow/flash 250..255; ordinary terrain maps to 0..239." if terrain else None,
@@ -352,7 +352,9 @@ def build(args):
             # A corrected proposal needs fresh review; an old approval or hold must
             # never silently apply to newly submitted artwork.
             coordinator_review = None
-        if coordinator_review and coordinator_review.get("status") == "approved" and proposal.get("complete_standalone_selection"):
+        if coordinator_review and coordinator_review.get("status") == "approved" and (
+                proposal.get("complete_standalone_selection") or "artwork_derivation" in proposal
+                or "artwork_derivation" in coordinator_review):
             # Explicit Terrain selections must satisfy the same source, peer,
             # partition and runtime guard as registration. A fallback ID never
             # inherits the approval of the selected standalone definitions.
@@ -361,7 +363,7 @@ def build(args):
                 approved_job((args.data / "hd").resolve(), family["id"], Path(__file__).resolve().parents[1])
             except (ValueError, KeyError, TypeError, OSError) as error:
                 coordinator_review = None
-                candidate_error = f"standalone selection approval rejected: {error}"
+                candidate_error = f"standalone selection or derived artwork approval rejected: {error}"
         target_rows = []
         for asset in family["assets"]:
             source = pictures[asset]

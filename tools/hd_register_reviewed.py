@@ -17,6 +17,7 @@ from pathlib import Path
 from hd_candidate_review import binding_digest, proposal_frames
 from hd_art_audit import checked_palette, validate_hd_frame
 from hd_art_source import decode
+from hd_art_derivation import validate_derivation
 from hd_frame_policy import validate_frame_policy, retained_review_version_ok, original_palette_indices
 
 
@@ -374,10 +375,15 @@ def approved_material_evidence(root, selection, review, rows, qa):
         if type(index) is not int or not 0 <= index < len(records):
             raise ValueError(f"unsafe independent decision index: {asset}")
         record = records[index]
+        derivation = review.get("artwork_derivation")
+        artwork_matches = (record.get("derived_artwork_sha256") == raw_sha and
+                           record.get("artwork_derivation_sha256") == derivation["sha256"] and
+                           "full_untouched_raw_sha256" not in record) if derivation else (
+                               record.get("full_untouched_raw_sha256") == raw_sha)
         if (record.get("asset") != asset or record.get("standalone_verdict") not in ["APPROVE", "QUALIFIED_APPROVE"] or
                 record.get("selected_frame_binding") != frame or
                 record.get("source_payload_sha256") != frame["source_sha256"] or
-                record.get("full_untouched_raw_sha256") != raw_sha or record.get("actual_scales") != [1, 2, 3, 4]):
+                not artwork_matches or record.get("actual_scales") != [1, 2, 3, 4]):
             raise ValueError(f"independent per-ID decision does not approve exact artwork: {asset}")
 
 
@@ -754,6 +760,7 @@ def approved_job(root, identity, project):
         artwork = contained(root, frame["file"])
         if hashlib.sha256(artwork.read_bytes()).hexdigest() != qa["artwork_sha256"][frame["file"]]:
             raise ValueError(f"raw artwork changed since review: {asset}")
+    validate_derivation(root, project, candidate, review, rows, qa)
     if selection is not None:
         pictures, payloads = authentic_terrain_inventory(root, job)
         validate_carried_registered_identity(root, candidate, job, rows, review)
@@ -826,6 +833,8 @@ def main():
             "independent_review": review["independent_review"],
             "frame_bindings_sha256": review["frame_bindings_sha256"],
         })
+        if candidate.get("artwork_derivation"):
+            additions[-1]["artwork_derivation"] = candidate["artwork_derivation"]
         if candidate.get("complete_standalone_selection"):
             additions[-1]["approval_scope"] = "complete_standalone_terrain_selection"
             additions[-1]["original_fallback_assets"] = candidate["original_fallback_assets"]

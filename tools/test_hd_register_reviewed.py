@@ -162,6 +162,71 @@ class StandaloneTerrainRegistrationTest(unittest.TestCase):
     def approve(self, number=0):
         return registrar.approved_job(self.hd, self.jobs[number]["id"], self.project)
 
+    def install_synthetic_derivation(self):
+        row = self.jobs[0]
+        directory = row["directory"]
+        frames = proposal_frames(row["candidate"])
+        parent = directory / "synthetic-parent.png"
+        Image.new("RGBA", (8, 8), (50, 50, 50, 255)).save(parent)
+        self.write(directory / "synthetic-generation-receipt.json", {"scope": "synthetic contract only"})
+        (directory / "synthetic-prompt.txt").write_text("Synthetic prompt, no artwork acceptance")
+        self.write(directory / "synthetic-recipe.json", {"scope": "synthetic contract only"})
+        tool = self.project / "tools/synthetic-cleanup.py"
+        tool.parent.mkdir(exist_ok=True)
+        tool.write_text("# synthetic lineage fixture only\n")
+        tool_ref = {"path": "tools/synthetic-cleanup.py", "sha256": self.sha(tool.read_bytes())}
+        sources = {asset: frame["source_sha256"] for asset, frame in frames.items()}
+        outputs = {frame["file"]: row["qa"]["artwork_sha256"][frame["file"]] for frame in frames.values()}
+        execution = {"status": "success", "method": "synthetic-cleanup", "tool_sha256": tool_ref["sha256"],
+                     "recipe_sha256": self.ref(directory / "synthetic-recipe.json")["sha256"],
+                     "source_sha256": sources, "parent_raw_sha256": [self.sha(parent.read_bytes())],
+                     "output_sha256": {asset: outputs[frame["file"]] for asset, frame in frames.items()}}
+        self.write(directory / "synthetic-execution.json", {"execution": execution})
+        lineage = {"format_version": 1, "kind": "deterministic_cleanup", "method": "synthetic-cleanup",
+                   "parents": [{"raw_png": self.ref(parent),
+                       "imagegen_receipt": self.ref(directory / "synthetic-generation-receipt.json"),
+                       "prompt": self.ref(directory / "synthetic-prompt.txt")}],
+                   "tools": [tool_ref], "recipe": self.ref(directory / "synthetic-recipe.json"),
+                   "execution_receipt": self.ref(directory / "synthetic-execution.json"),
+                   "sources": sources, "outputs": outputs}
+        self.write(directory / "derivation.json", lineage)
+        reference = self.ref(directory / "derivation.json")
+        row["candidate"]["artwork_derivation"] = reference
+        row["review"]["artwork_derivation"] = reference
+        self.write(directory / "candidate.json", row["candidate"])
+        candidate_sha = self.sha((directory / "candidate.json").read_bytes())
+        row["review"]["candidate_sha256"] = row["qa"]["candidate_sha256"] = candidate_sha
+        peer_path = directory / "peer.json"
+        peer = json.loads(peer_path.read_text())
+        for record in peer["records"]:
+            if record["asset"] in frames:
+                record["derived_artwork_sha256"] = record.pop("full_untouched_raw_sha256")
+                record["artwork_derivation_sha256"] = reference["sha256"]
+        self.write(peer_path, peer)
+        for approval in row["review"]["standalone_selection"]["material_approvals"].values():
+            approval["independent_review"] = self.ref(peer_path)
+        self.write(directory / "coordinator-review.json", row["review"])
+        self.write(directory / "runtime-qa.json", row["qa"])
+
+    def test_derived_selection_passes_same_source_material_context_and_runtime_gates(self):
+        self.install_synthetic_derivation()
+        candidate, review, frames = self.approve()
+        self.assertEqual(candidate["artwork_derivation"], review["artwork_derivation"])
+        self.assertEqual(set(frames), set(self.SELECTED[0]))
+
+    def test_derived_art_cannot_be_relabelled_untouched_in_independent_review(self):
+        self.install_synthetic_derivation()
+        peer_path = self.jobs[0]["directory"] / "peer.json"
+        peer = json.loads(peer_path.read_text())
+        peer["records"][0]["full_untouched_raw_sha256"] = peer["records"][0]["derived_artwork_sha256"]
+        self.write(peer_path, peer)
+        review = self.jobs[0]["review"]
+        for approval in review["standalone_selection"]["material_approvals"].values():
+            approval["independent_review"] = self.ref(peer_path)
+        self.write(self.jobs[0]["directory"] / "coordinator-review.json", review)
+        with self.assertRaisesRegex(ValueError, "exact artwork"):
+            self.approve()
+
     def save(self, field, value, number=0):
         row = self.jobs[number]
         self.write(row["directory"] / {"candidate": "candidate.json", "job": "job.json", "review": "coordinator-review.json", "qa": "runtime-qa.json"}[field], value)
