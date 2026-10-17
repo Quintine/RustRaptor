@@ -1,6 +1,6 @@
 # Full-catalog HD loading and caches
 
-The included SourceF runtime supports the optional 129–256-cell retained-Original tier described below. Artwork coverage remains 5,463 pictures, with 290 awaiting approval; this runtime update admits no new artwork. Actual production validation is recorded separately in [runtime release evidence](hd-runtime-release.json).
+Historical SourceF H5463 activation checkpoint — 18 October 2026: The included SourceF runtime supports the optional 129–256-cell retained-Original tier described below. Artwork coverage remains 5,463 pictures, with 290 awaiting approval; this runtime update admits no new artwork. Actual production validation is recorded separately in [runtime release evidence](hd-runtime-release.json).
 
 The runtime can register the complete original picture catalog without retaining every decoded replacement in RAM. Registration accepts up to 8 MiB of JSON metadata, 8,192 sequences and 16,384 distinct asset IDs. Each sequence still has at most 512 declared frames. These are validation ceilings, not coverage claims.
 
