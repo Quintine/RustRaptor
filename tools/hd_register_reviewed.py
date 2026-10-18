@@ -11,8 +11,9 @@ import hashlib
 import json
 import os
 import re
+import stat
 import tempfile
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 from hd_candidate_review import binding_digest, proposal_frames
 from hd_art_audit import checked_palette, validate_hd_frame
@@ -22,6 +23,10 @@ from hd_frame_policy import validate_frame_policy, retained_review_version_ok, o
 
 
 CARRIED_TERRAIN_V2 = "standalone-terrain-carried-identity-v2"
+
+# Exact historical canonical HD root recorded in accepted carried-QA receipts.
+# Its metadata is bundled under the supplied HD root; private audit roots are not mapped.
+LEGACY_HD_RECEIPT_ROOTS = (PurePosixPath("/home/quintine/Projects/RaptorReplica/data/hd"),)
 
 
 def asset_list(value, label):
@@ -284,13 +289,45 @@ def validate_carried_registered_identity_v2(root, candidate, job, rows, review):
         raise ValueError("carried v2 unused record or complete carried digest differs")
 
 
+def legacy_local_receipt_bytes(root, relative):
+    """Read an exact legacy-root receipt from the bundle without touching W."""
+    if relative.is_absolute() or not relative.parts or ".." in relative.parts:
+        raise ValueError("legacy receipt path escapes HD root")
+    local = Path(root).resolve() / relative
+    path = contained(root, relative)
+    if local != path or local.is_symlink():
+        raise ValueError("legacy receipt must be a regular nonsymlink bundle file")
+    before = path.lstat()
+    if not stat.S_ISREG(before.st_mode):
+        raise ValueError("legacy receipt must be a regular nonsymlink bundle file")
+    def identity(value):
+        return (value.st_dev, value.st_ino, value.st_mode, value.st_size, value.st_mtime_ns)
+    flags = os.O_RDONLY | getattr(os, "O_BINARY", 0) | getattr(os, "O_NOFOLLOW", 0)
+    with os.fdopen(os.open(path, flags), "rb") as stream:
+        opened = os.fstat(stream.fileno())
+        payload = stream.read()
+        finished = os.fstat(stream.fileno())
+    after = path.lstat()
+    if (identity(before) != identity(opened) or identity(before) != identity(finished)
+            or identity(before) != identity(after) or local.resolve() != path
+            or len(payload) != after.st_size):
+        raise ValueError("independent receipt changed during read")
+    return payload
+
+
 def receipt_json(root, receipt):
     if (not isinstance(receipt, dict) or not isinstance(receipt.get("path"), str) or
             re.fullmatch(r"[0-9a-f]{64}", str(receipt.get("sha256", ""))) is None):
         raise ValueError("missing hash-bound independent receipt")
     relative = Path(receipt["path"])
-    path = relative if relative.is_absolute() else contained(root, relative)
-    payload = path.read_bytes()
+    historical = PurePosixPath(receipt["path"])
+    legacy_root = next((legacy for legacy in LEGACY_HD_RECEIPT_ROOTS
+                        if historical.is_absolute() and historical.is_relative_to(legacy)), None)
+    if legacy_root is not None:
+        payload = legacy_local_receipt_bytes(root, Path(*historical.relative_to(legacy_root).parts))
+    else:
+        path = relative if relative.is_absolute() else contained(root, relative)
+        payload = path.read_bytes()
     if hashlib.sha256(payload).hexdigest() != receipt["sha256"]:
         raise ValueError("independent receipt changed")
     return json.loads(payload)

@@ -1,0 +1,386 @@
+{
+  "diagnostics": [],
+  "validated_frames": 1,
+  "frames": [
+    {
+      "asset": "30507",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              32,
+              32
+            ],
+            "centroid": [
+              15.5,
+              15.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 1024
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              64,
+              64
+            ],
+            "centroid": [
+              31.5,
+              31.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 4096
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              96,
+              96
+            ],
+            "centroid": [
+              47.5,
+              47.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 9216
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              128,
+              128
+            ],
+            "centroid": [
+              63.5,
+              63.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 16384
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_mask": {
+        "bounds": [
+          0,
+          0,
+          32,
+          32
+        ],
+        "centroid": [
+          15.5,
+          15.5
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 1024
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "38d2e6b082c69af58f891f87b8e9364b980f2eaa249f07eaa58205d2d08d9f47"
+    }
+  ],
+  "frame_bindings_sha256": "2c2efc38072080207a810c5879c9a97552c5f47cab616a9e410594f466634fa5",
+  "candidate_sha256": "02b78ef7c5bddd76e88436c37618ceecd0adabc6d4fd1fc643b04990efde3674",
+  "library": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/8adae709e5fdbf56675bdc7f8766255a627e5cab720c5d26c2315462da509ce2/libraptor_replica-f076ad67c588e355.rlib",
+  "library_sha256": "8adae709e5fdbf56675bdc7f8766255a627e5cab720c5d26c2315462da509ce2",
+  "library_modified_ns": 1791810838461709737,
+  "source_newer_than_library": false,
+  "any_game_source_newer_than_library": false,
+  "artwork_sha256": {
+    "selected88/7fc66a3867b33855809eed3cbf2983dca544e7b429add57b78a169c0b892c8fb.png": "7fc66a3867b33855809eed3cbf2983dca544e7b429add57b78a169c0b892c8fb"
+  },
+  "actual_measured_QA": {
+    "mode": 33188,
+    "mtime_ns": 1791814222583055302,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-other210-exact136-current8ada-intrinsic-scalar-QA-bank/runtime-qa-current8ada-bank.json",
+    "sha256": "e43321900d1427e11d83fbf989d5d33671f2339d620c3224c0c368983bc87644",
+    "size": 469583
+  },
+  "actual_measured_frame_selector": "/frames/123",
+  "actual_measured_authority": {
+    "index": {
+      "mode": 33188,
+      "mtime_ns": 1791814222589055161,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-other210-exact136-current8ada-intrinsic-scalar-QA-bank/actual136-per-ID-frame-QA-source-default-and132-raw-route-index.json",
+      "sha256": "ec314468cb1bf027f3bb46bdeb989883c03582cc2fdb87a09fd6d6c5a5f593e3",
+      "size": 1357320
+    },
+    "report": {
+      "mode": 33188,
+      "mtime_ns": 1791814302149188888,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-other210-exact136-current8ada-intrinsic-scalar-QA-bank/intrinsic-scalar-QA-bank-report.json",
+      "sha256": "e822948d3baad207def44978f1440ae1b36d43922a4e68408649f41c89cafb44",
+      "size": 12132
+    },
+    "strict": {
+      "mode": 33188,
+      "mtime_ns": 1791814304860125230,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-other210-exact136-current8ada-intrinsic-scalar-QA-bank-strict-closure.json",
+      "sha256": "e25418c074bf3d58841f8b95838165f9f862fa494bcff0d880c3616d2c35e7ed",
+      "size": 1547643
+    }
+  },
+  "actual_source_epoch_receipts": [
+    {
+      "mode": 33188,
+      "mtime_ns": 1791814222589055161,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-other210-exact136-current8ada-intrinsic-scalar-QA-bank/actual136-per-ID-frame-QA-source-default-and132-raw-route-index.json",
+      "sha256": "ec314468cb1bf027f3bb46bdeb989883c03582cc2fdb87a09fd6d6c5a5f593e3",
+      "size": 1357320
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791814302149188888,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-other210-exact136-current8ada-intrinsic-scalar-QA-bank/intrinsic-scalar-QA-bank-report.json",
+      "sha256": "e822948d3baad207def44978f1440ae1b36d43922a4e68408649f41c89cafb44",
+      "size": 12132
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791814304860125230,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-other210-exact136-current8ada-intrinsic-scalar-QA-bank-strict-closure.json",
+      "sha256": "e25418c074bf3d58841f8b95838165f9f862fa494bcff0d880c3616d2c35e7ed",
+      "size": 1547643
+    }
+  ],
+  "live_source_epoch_guard": [
+    {
+      "mode": 33188,
+      "mtime_ns": 1791711112495415498,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/assets.rs",
+      "sha256": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+      "size": 16417
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791594274983451465,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio/opl3.rs",
+      "sha256": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+      "size": 55234
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791612018073210287,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio.rs",
+      "sha256": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+      "size": 42072
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791634621359594894,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/cinematics.rs",
+      "sha256": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+      "size": 29788
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791671687237069939,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/content.rs",
+      "sha256": "7f35df7100c450ba4bb30a0fdc90101c115b5ae42a7aac57829441c5b7761647",
+      "size": 36359
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791710653182062552,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/desktop.rs",
+      "sha256": "7a48e4e96ca3a926a4995dac7d31a1dca180b51aff7b682d17415c479ca1f04c",
+      "size": 351431
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791810577097954278,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/hd.rs",
+      "sha256": "bfb345af4414dfe2f870a341e5533700fa8a6322e41acdec1b1a406038f491e2",
+      "size": 101903
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791596592133246731,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/legacy_tables.rs",
+      "sha256": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+      "size": 26467
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791618787038761898,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/lib.rs",
+      "sha256": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+      "size": 318
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791680086709570028,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/main.rs",
+      "sha256": "d270d1787700975220fed75bbb8d6cd8e38288093492fb2608252849e1f804d7",
+      "size": 11193
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791673814189962237,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/menu_art.rs",
+      "sha256": "1c3b8e58828c13099cf00c612b383efa1e402e27eaa7c8f5f0afc7f1ba44a0d0",
+      "size": 4325
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791597772968721997,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/mod_selection.rs",
+      "sha256": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+      "size": 5447
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791711112496783607,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/modding.rs",
+      "sha256": "03626de55f4484aad19725c13301ddbb9c63d0d015716282db7177b7a1223fc4",
+      "size": 31495
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791700137529541149,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/persistence.rs",
+      "sha256": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+      "size": 52762
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791697273206972841,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/render.rs",
+      "sha256": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+      "size": 32172
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791706388595810371,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/simulation.rs",
+      "sha256": "0ec9f6da11ab82c1461868a7b147e4cdb14689fa7373bd0c24067d9014e9583a",
+      "size": 139766
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791614563252113040,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/sound.rs",
+      "sha256": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+      "size": 11905
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1791671333482646664,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/terrain_hd.rs",
+      "sha256": "b30b4a65a9e646e9fe106041ad718eebd2740c6c90354267a7b17b770e50ebb0",
+      "size": 23637
+    }
+  ],
+  "raw_QA_optional_library_fields_retained_separately": {
+    "any_game_source_newer_than_library": false,
+    "library": "target/hd-review-libraries/8adae709e5fdbf56675bdc7f8766255a627e5cab720c5d26c2315462da509ce2/libraptor_replica-f076ad67c588e355.rlib",
+    "library_modified_ns": 1791810838461709737,
+    "library_sha256": "8adae709e5fdbf56675bdc7f8766255a627e5cab720c5d26c2315462da509ce2",
+    "source_newer_than_library": false
+  },
+  "no_new_measurements": true,
+  "file_only_route": true
+}

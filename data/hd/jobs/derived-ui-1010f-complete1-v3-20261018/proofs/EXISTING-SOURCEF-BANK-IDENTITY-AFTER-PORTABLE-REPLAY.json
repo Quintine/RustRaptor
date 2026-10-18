@@ -1,0 +1,68 @@
+{
+  "SourceF_library": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+    "sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+    "size": 22744978
+  },
+  "accepted_PNG": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-Other2-UI-v3-actual-private-cleanup-and-SourceF-author-review-20261018/derived/1010f/1010f-derived.png",
+    "sha256": "9dfe4fe6159fc2f837098d9412948e1017e1e9043a31c26a0a11b5fbaf50b1c3",
+    "size": 211125
+  },
+  "accepted_and_replayed_PNGs_byte_exact": true,
+  "accepted_frame": {
+    "file": "frames/1010f.png",
+    "frame": 0,
+    "logical_height": 120,
+    "logical_width": 224,
+    "origin": [
+      0,
+      0
+    ],
+    "source_sha256": "532f1f14932cb1be784f71a65ff25307608db2921dbd6a41d17715bc54192313"
+  },
+  "accepted_joint_arrays": {
+    "path": "proofs/ui2-existing-SourceF-bank/actual-two-frame-source-and-all4-indexed-bank-UNMODIFIED.json",
+    "sha256": "7a0010b87b1a4d4e1ad90f198181254abc26081240131eaa04b57e16ba63a802"
+  },
+  "accepted_joint_bank": {
+    "path": "proofs/ui2-existing-SourceF-bank/actual-two-frame-runtime-QA-UNMODIFIED.json",
+    "sha256": "a9f17c2d148a44fa78dab35fc30d31d73293fb8c1e978cd2069aa591102c71ae"
+  },
+  "accepted_manifest": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-Other2-UI-v3-actual-private-cleanup-and-SourceF-author-review-20261018/private-native-pack/hd.json",
+    "sha256": "3a5df6924f4528b1e4255fb4e6065c48fcacb30b5044daaa86ad6241dee8967a",
+    "size": 1113
+  },
+  "actual_original_F2_helper_calls": 1,
+  "actual_portable_replay_PNG": {
+    "path": "jobs/derived-ui-1010f-complete1-v3-20261018/portable-replay-once/1010f-derived.png",
+    "sha256": "9dfe4fe6159fc2f837098d9412948e1017e1e9043a31c26a0a11b5fbaf50b1c3"
+  },
+  "actual_portable_replay_provenance": {
+    "path": "jobs/derived-ui-1010f-complete1-v3-20261018/portable-replay-once/derived-provenance.json",
+    "sha256": "38f693cd4841a98cadf1821793e99482e2abead15dba786007ec955f53af460c"
+  },
+  "all_nonfile_fields_identical": true,
+  "asset": "1010f",
+  "new_final_route_helper_calls": 0,
+  "portable_PNG": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010f-complete1-v3-20261018/derived/1010f-derived.png",
+    "sha256": "9dfe4fe6159fc2f837098d9412948e1017e1e9043a31c26a0a11b5fbaf50b1c3",
+    "size": 211125
+  },
+  "portable_cleanup_replays": 1,
+  "portable_frame": {
+    "file": "jobs/derived-ui-1010f-complete1-v3-20261018/derived/1010f-derived.png",
+    "frame": 0,
+    "logical_height": 120,
+    "logical_width": 224,
+    "origin": [
+      0,
+      0
+    ],
+    "source_sha256": "532f1f14932cb1be784f71a65ff25307608db2921dbd6a41d17715bc54192313"
+  },
+  "scope": "The actual one joint SourceF F2 bank and all its measurements are unchanged. Each per-ID QA remains an explicit subset projection with the same PNG and every nonfile renderer field. New cleanup execution/lineage/candidate hashes are metadata, not a new engine epoch or measurement.",
+  "status": "PASS_EXISTING_ACTUAL_F2_BANK_ROUTE_AND_RENDER_INPUT_IDENTITY_AFTER_SUCCESSFUL_PORTABLE_REPLAY"
+}

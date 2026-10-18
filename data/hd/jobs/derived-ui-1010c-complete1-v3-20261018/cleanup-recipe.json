@@ -1,0 +1,68 @@
+{
+  "format_version": 1,
+  "label": "UNEXECUTED derived FACESTAT geometry/material study; not art approval",
+  "asset": "1010c",
+  "source": {
+    "path": "../../../sprites/FACESTAT_PIC",
+    "sha256": "e411709ad0bb1dc24eddc2f7789709c1d2d530bd8f3e95825de510e708efdccb"
+  },
+  "palette": {
+    "path": "../../../misc/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "parent_raw": {
+    "path": "generated/parent-1010c.png",
+    "sha256": "80d2b2aeff9d2e8ba254f1b57eaf6a920dcefb2577ee5a47d7fe11057282ae81"
+  },
+  "logical_canvas": [
+    56,
+    8
+  ],
+  "origin": [
+    0,
+    0
+  ],
+  "output_scale": 8,
+  "regions": [
+    {
+      "name": "complete upper teal rail",
+      "source_bounds": [
+        0,
+        0,
+        56,
+        1
+      ],
+      "raw_bounds": [
+        104,
+        211,
+        2069,
+        256
+      ]
+    },
+    {
+      "name": "complete lower nearblack rail",
+      "source_bounds": [
+        3,
+        4,
+        54,
+        5
+      ],
+      "raw_bounds": [
+        212,
+        352,
+        1968,
+        392
+      ]
+    }
+  ],
+  "classes": [
+    {
+      "index": 31,
+      "max_channel_delta": 2
+    },
+    {
+      "index": 146,
+      "max_channel_delta": 16
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "frames": [
+    {
+      "asset": "30502",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              32,
+              32
+            ],
+            "centroid": [
+              15.5,
+              15.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 1024
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              64,
+              64
+            ],
+            "centroid": [
+              31.5,
+              31.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 4096
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              96,
+              96
+            ],
+            "centroid": [
+              47.5,
+              47.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 9216
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              128,
+              128
+            ],
+            "centroid": [
+              63.5,
+              63.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 16384
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_mask": {
+        "bounds": [
+          0,
+          0,
+          32,
+          32
+        ],
+        "centroid": [
+          15.5,
+          15.5
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 1024
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "0472ec50df94d37182f5abaeb8a1b6a6717aee54e322ac0c611b97722b0dee30"
+    }
+  ],
+  "diagnostics": [],
+  "frame_bindings_sha256": "ec9adbf4534c4a041e185190436abfcdd1ce22dc65498e257b07903af9eb6d8a",
+  "candidate_sha256": "5195b682fce81cdfb7c0588f11d41478a90629e49f21b2b78b0f4c0bc6ec6744",
+  "source_newer_than_library": false,
+  "any_game_source_newer_than_library": false,
+  "library": "target/hd-review-libraries/8adae709e5fdbf56675bdc7f8766255a627e5cab720c5d26c2315462da509ce2/libraptor_replica-f076ad67c588e355.rlib",
+  "library_modified_ns": 1791810838461709737,
+  "library_sha256": "8adae709e5fdbf56675bdc7f8766255a627e5cab720c5d26c2315462da509ce2",
+  "artwork_sha256": {
+    "selected29/30502/jobs/terrain-304fd-3050c/generated/raw-v2-tile-30502.png": "0b0bd49acdba044379db376ffea1861dee7a6a07538ca2c5843f86d12e1bb9c5"
+  },
+  "measured_scalar_authority": {
+    "bank": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-other210-exact136-current8ada-intrinsic-scalar-QA-bank/runtime-qa-current8ada-bank.json",
+      "sha256": "e43321900d1427e11d83fbf989d5d33671f2339d620c3224c0c368983bc87644",
+      "size": 469583,
+      "mtime_ns": 1791814222583055302,
+      "mode": 33188
+    },
+    "pointer": "/frames/121"
+  },
+  "derived_route_only": true
+}

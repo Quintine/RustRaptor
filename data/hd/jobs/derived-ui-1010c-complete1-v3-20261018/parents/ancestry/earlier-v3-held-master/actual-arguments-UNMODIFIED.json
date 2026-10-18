@@ -1,0 +1,11 @@
+{
+  "job": "interface-other-1010c-1010c",
+  "asset": "1010c",
+  "prompt": "Precise-object-edit of reference1, the newly authored FACESTAT interface rules. Keep the entire2172×724 transparent container and both rules' positions, left endpoints, heights, gray-teal/near-black colors and restrained brushed materials. Make ONE geometry correction: extend the RIGHT END of the LOWER near-black rule by35pixels, from its current right edge x1962 to x1997, continuing the same solid near-black graphite material. This is the51-cell lower rule from the original; its native width must match source x3 through53 inclusive, not50cells. It remains opaque even though almost black. Keep the lower LEFT endpoint x210 and y356..397 exactly. Reference2 is the original source with transparent padding; reference3 is its exact geometry guide, whiteoccupied, blackempty. The original functional 56×8 canvas is an exact7:1 strip around the two rules; no background is permitted. Preserve the upper cyan rule's extent x105..2066 and its current position and height. Within the upper existing shape, replace any small bright-blue/cyan edge flecks with the same muted gray-teal material so the line has a clean subtle edge, no saturated colored noise or glow. Keep every other existing pixel region in place and the large transparent margins. No additional lines, bevel outside the rules, frame, text or ornament. Return genuinely transparent RGBA. The only geometric alteration is extending the lower right endpoint by35pixels to restore the exact original endpoint.",
+  "references": [
+    "/home/quintine/Projects/RaptorReplica/data/hd/jobs/interface-other-1010c-1010c/generated/1010c-hd-v2.png",
+    "/home/quintine/Projects/RaptorReplica/data/hd/jobs/interface-other-1010c-1010c/sources/1010c-padded-source-reference.png",
+    "/home/quintine/Projects/RaptorReplica/data/hd/jobs/interface-other-1010c-1010c/sources/1010c-padded-exact-alpha-diagnostic.png"
+  ],
+  "transparent_background": true
+}

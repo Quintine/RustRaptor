@@ -1,0 +1,212 @@
+{
+  "actual_measured_QA": {
+    "mode": 33188,
+    "mtime_ns": 1792215739686277940,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-seven-hardware-current386e-paired-intrinsic-technical-handoff-20261017/ACTUAL-CURRENT386E-HYBRID7-SCALAR-QA-WITH-EXACT-NATIVE-RAW-SOURCE-EPOCH.json",
+    "sha256": "f48bcaec41ddf84d982ceb0ad6e47929f6ef14c7f248206b43a76322c6da05cd",
+    "size": 25399
+  },
+  "actual_measured_epoch": {
+    "mode": 33188,
+    "mtime_ns": 1792214460687714015,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-painted0255-shared-cutover-20261017/epoch.json",
+    "sha256": "96401140872ab31f50ba56980ecbf7005c76d5ddf652078316fc6892b147e1f4",
+    "size": 5484
+  },
+  "any_game_source_newer_than_library": false,
+  "artwork_sha256": {
+    "jobs/coordinator-20583-exact2-Original-native-post5341-B-compatible-20261017-v1/generated/9ce70352d1e2104b829b5a65355eb44b359ca1fa39cf017601b23a5cbb2d65ae.png": "9ce70352d1e2104b829b5a65355eb44b359ca1fa39cf017601b23a5cbb2d65ae"
+  },
+  "diagnostics": [],
+  "frame_bindings_sha256": "03671620fffda52806cb8a682a10ea2883ae4d1ad12e0ee45267d554396ed9e6",
+  "frames": [
+    {
+      "asset": "20583",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              32,
+              32
+            ],
+            "centroid": [
+              15.5,
+              15.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 1024
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              64,
+              64
+            ],
+            "centroid": [
+              31.5,
+              31.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 4096
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              96,
+              96
+            ],
+            "centroid": [
+              47.5,
+              47.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 9216
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              128,
+              128
+            ],
+            "centroid": [
+              63.5,
+              63.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 16384
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_mask": {
+        "bounds": [
+          0,
+          0,
+          32,
+          32
+        ],
+        "centroid": [
+          15.5,
+          15.5
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 1024
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "52fa550065cef6c119236ed2ecacb38c8099424781e8c37334c82b93491ceda9"
+    }
+  ],
+  "future_candidate_bound_namespace_only_no_new_asset_measurement": true,
+  "library": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/386e3e814e1dc712531f840770adb25f3c024ba3e1153c183e605fb7ac153448/libraptor_replica.rlib",
+  "library_modified_ns": 1792214378263080607,
+  "library_sha256": "386e3e814e1dc712531f840770adb25f3c024ba3e1153c183e605fb7ac153448",
+  "limitation": "Gallery validation does not prove live scene reachability, terrain seam correctness or artistic fidelity. Opaque sprites have trivial alpha-mask overlap; compare visible source geometry manually.",
+  "method": "actual Rust HdAssets::load and sprite at scales 1..4; Catalog palette; no artwork edits",
+  "source_age_flag_scope": "False flags describe the actual recorded measurement invocation only. Historical386e remains historical; actualB frozen core-code and saved component/body equality compatibility is carried separately.",
+  "source_newer_than_library": false,
+  "validated_frames": 1
+}

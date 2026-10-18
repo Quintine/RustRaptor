@@ -1,0 +1,58 @@
+{
+  "actual_portable_replay_terminal": {
+    "path": "jobs/derived-ui-1010f-complete1-v3-20261018/proofs/ACTUAL-PORTABLE-REPLAY-TERMINAL-UNMODIFIED.json",
+    "sha256": "dcb3c79677a299d6c2da0cbf57b4532d12cece3a7237bb49e6161ca90535b35d"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-ui-1010f-complete1-v3-20261018/portable-replay-once/derived-provenance.json",
+    "sha256": "38f693cd4841a98cadf1821793e99482e2abead15dba786007ec955f53af460c"
+  },
+  "execution_scope": "Actual authorized portable replay via the exact staged project tools and unchanged fixed recipe, once for this job. Receipt is copied verbatim and truthfully retains its actual P-root input paths. No new imagegen or renderer call.",
+  "format_version": 1,
+  "generation_ancestry": {
+    "path": "jobs/derived-ui-1010f-complete1-v3-20261018/parents/COMPLETE-CONSUMED-GENERATED-MASTER-ANCESTRY.json",
+    "sha256": "f3900c10deec6d36f70d5bf00ff4c42a49e0ba1f3e16c364312734d0135925db"
+  },
+  "historical_accepted_private_execution": {
+    "path": "jobs/derived-ui-1010f-complete1-v3-20261018/proofs/accepted-private-cleanup-provenance-UNMODIFIED.json",
+    "sha256": "0d5ba8fbaff84cbf237145ee469ebcf44aeebe01bdda9e83a62ce44b4e7fd026"
+  },
+  "kind": "deterministic_cleanup",
+  "method": "derived-generated-ui-original-stencil-class-tone-visible-parent-variance-v3",
+  "outputs": {
+    "jobs/derived-ui-1010f-complete1-v3-20261018/derived/1010f-derived.png": "9dfe4fe6159fc2f837098d9412948e1017e1e9043a31c26a0a11b5fbaf50b1c3"
+  },
+  "parents": [
+    {
+      "imagegen_receipt": {
+        "path": "jobs/derived-ui-1010f-complete1-v3-20261018/parents/provider-receipt-SAFE-PROJECTION.json",
+        "sha256": "6c1ee502ee2f7e41f32ab7be019366e1d82d388b24983d279b25363f647e230a"
+      },
+      "prompt": {
+        "path": "jobs/derived-ui-1010f-complete1-v3-20261018/parents/prompt.txt",
+        "sha256": "47eae67385a1bf23fd442d1e010eec49d06488a3194b3e979dd805775f4330c6"
+      },
+      "raw_png": {
+        "path": "jobs/derived-ui-1010f-complete1-v3-20261018/generated/parent-1010f.png",
+        "sha256": "42c4ffe8f0accecca2ebdbaf410052411378101df459216a70a3298f7ba26e5c"
+      }
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-ui-1010f-complete1-v3-20261018/cleanup-recipe.json",
+    "sha256": "ef7917dc85dda48c41c7f44809ac136ccb243e25b4c6ba6dbcef1d8891d9e2ee"
+  },
+  "sources": {
+    "1010f": "532f1f14932cb1be784f71a65ff25307608db2921dbd6a41d17715bc54192313"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_ui_cleanup.py",
+      "sha256": "40b1ce578aec608cc2be8f767bdd87cce52aa6fa5c9c6b63690d64410d85f263"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    }
+  ]
+}

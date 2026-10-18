@@ -1,0 +1,38 @@
+{
+  "asset": "1010c",
+  "provider": "/home/quintine/.codex/generated_images/01a12456-06c5-7e90-9790-66067673f849/exec-689db838-9fd0-42f0-bc00-53a4cb8d70fd.png",
+  "expected_reply_sha": "cda7ca3f48e5779aa80271df160007e9f3ffaef387e4c25f012f6fb3a17a42ae",
+  "output_hint": "Generated images are saved to /home/quintine/.codex/generated_images/01a12456-06c5-7e90-9790-66067673f849 as /home/quintine/.codex/generated_images/01a12456-06c5-7e90-9790-66067673f849/exec-689db838-9fd0-42f0-bc00-53a4cb8d70fd.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "gate_acquire": {
+    "action": "acquire",
+    "owner": "/root/hd_dark_player",
+    "capacity": 4,
+    "acquired": true,
+    "lease_id": "befbff2d-6347-4c7c-9ebf-c5b843e57add",
+    "expires_at": "2026-10-14T03:06:26+00:00",
+    "renewal_command": "renew --owner /root/hd_dark_player --lease befbff2d-6347-4c7c-9ebf-c5b843e57add",
+    "active_reservations": 1,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "gate_start": {
+    "action": "start",
+    "owner": "/root/hd_dark_player",
+    "capacity": 4,
+    "changed": true,
+    "started_at": "2026-10-14T02:36:26+00:00",
+    "active_reservations": 1,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "gate_report": {
+    "action": "report",
+    "owner": "/root/hd_dark_player",
+    "capacity": 4,
+    "changed": true,
+    "active_reservations": 0,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "actual_builtin_calls": 1,
+  "actual_tool_outcome": "success",
+  "reported_released_before_QA": true,
+  "retries": 0
+}

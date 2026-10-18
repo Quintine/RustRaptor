@@ -1,0 +1,326 @@
+{
+  "diagnostics": [],
+  "frames": [
+    {
+      "asset": "20402",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              32,
+              32
+            ],
+            "centroid": [
+              15.5,
+              15.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 1024
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              64,
+              64
+            ],
+            "centroid": [
+              31.5,
+              31.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 4096
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              96,
+              96
+            ],
+            "centroid": [
+              47.5,
+              47.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 9216
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              128,
+              128
+            ],
+            "centroid": [
+              63.5,
+              63.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 16384
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_mask": {
+        "bounds": [
+          0,
+          0,
+          32,
+          32
+        ],
+        "centroid": [
+          15.5,
+          15.5
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 1024
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "167ac5112ded090bce72b0ae14b64e515beadf41476399018eb67992322af0f1"
+    }
+  ],
+  "limitation": "Gallery validation does not prove live scene reachability, terrain seam correctness or artistic fidelity. Opaque sprites have trivial alpha-mask overlap; compare visible source geometry manually.",
+  "method": "actual Rust HdAssets::load and sprite at scales 1..4; Catalog palette; no artwork edits",
+  "validated_frames": 1,
+  "library": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/8adae709e5fdbf56675bdc7f8766255a627e5cab720c5d26c2315462da509ce2/libraptor_replica-f076ad67c588e355.rlib",
+  "library_sha256": "8adae709e5fdbf56675bdc7f8766255a627e5cab720c5d26c2315462da509ce2",
+  "library_modified_ns": 1791810838461709737,
+  "source_newer_than_library": false,
+  "any_game_source_newer_than_library": false,
+  "sources": {
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/assets.rs": {
+      "sha256": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+      "size": 16417,
+      "mtime_ns": 1791711112495415498
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio/opl3.rs": {
+      "sha256": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+      "size": 55234,
+      "mtime_ns": 1791594274983451465
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio.rs": {
+      "sha256": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+      "size": 42072,
+      "mtime_ns": 1791612018073210287
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/cinematics.rs": {
+      "sha256": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+      "size": 29788,
+      "mtime_ns": 1791634621359594894
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/content.rs": {
+      "sha256": "7f35df7100c450ba4bb30a0fdc90101c115b5ae42a7aac57829441c5b7761647",
+      "size": 36359,
+      "mtime_ns": 1791671687237069939
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/desktop.rs": {
+      "sha256": "7a48e4e96ca3a926a4995dac7d31a1dca180b51aff7b682d17415c479ca1f04c",
+      "size": 351431,
+      "mtime_ns": 1791710653182062552
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/hd.rs": {
+      "sha256": "bfb345af4414dfe2f870a341e5533700fa8a6322e41acdec1b1a406038f491e2",
+      "size": 101903,
+      "mtime_ns": 1791810577097954278
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/legacy_tables.rs": {
+      "sha256": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+      "size": 26467,
+      "mtime_ns": 1791596592133246731
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/lib.rs": {
+      "sha256": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+      "size": 318,
+      "mtime_ns": 1791618787038761898
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/main.rs": {
+      "sha256": "d270d1787700975220fed75bbb8d6cd8e38288093492fb2608252849e1f804d7",
+      "size": 11193,
+      "mtime_ns": 1791680086709570028
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/menu_art.rs": {
+      "sha256": "1c3b8e58828c13099cf00c612b383efa1e402e27eaa7c8f5f0afc7f1ba44a0d0",
+      "size": 4325,
+      "mtime_ns": 1791673814189962237
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/mod_selection.rs": {
+      "sha256": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+      "size": 5447,
+      "mtime_ns": 1791597772968721997
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/modding.rs": {
+      "sha256": "03626de55f4484aad19725c13301ddbb9c63d0d015716282db7177b7a1223fc4",
+      "size": 31495,
+      "mtime_ns": 1791711112496783607
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/persistence.rs": {
+      "sha256": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+      "size": 52762,
+      "mtime_ns": 1791700137529541149
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/render.rs": {
+      "sha256": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+      "size": 32172,
+      "mtime_ns": 1791697273206972841
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/simulation.rs": {
+      "sha256": "0ec9f6da11ab82c1461868a7b147e4cdb14689fa7373bd0c24067d9014e9583a",
+      "size": 139766,
+      "mtime_ns": 1791706388595810371
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/sound.rs": {
+      "sha256": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+      "size": 11905,
+      "mtime_ns": 1791614563252113040
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/terrain_hd.rs": {
+      "sha256": "b30b4a65a9e646e9fe106041ad718eebd2740c6c90354267a7b17b770e50ebb0",
+      "size": 23637,
+      "mtime_ns": 1791671333482646664
+    }
+  },
+  "measured_runtime_qa": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-held203fb-20402-two-subdued-olive-ground-quality-author-20261014-v1/20402/fresh-current8ada-one-actual-intrinsic/runtime-qa.json",
+    "sha256": "41ba8cdeef14abb756874969fc0fbbf3120e0c2190abe652bac82c7c89704a04",
+    "size": 3692,
+    "mtime_ns": 1791948693214784257,
+    "mode": 33188
+  },
+  "actual_invocation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-held203fb-20402-two-subdued-olive-ground-quality-author-20261014-v1/20402/ACTUAL-ONE-CURRENT8ADA-INTRINSIC-TERMINAL-AND-SOURCE18-GUARDS.json",
+    "sha256": "74243359e71d6a93e49dc8d100b828e607fab614b86dcc5f84f35fb360a0d83a",
+    "size": 9773,
+    "mtime_ns": 1791948693289968100,
+    "mode": 33188
+  },
+  "raw_frame_binding": {
+    "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20402-subdued-olive-ground-local-quality-terrain2-20261014-v1/candidate.json",
+    "sha256": "d7bceaab2c124cf18af058a3a13b6b3237a2bd88c999ad348cb164d1240f7b25",
+    "size": 3041,
+    "mtime_ns": 1791948693024464951,
+    "mode": 33188
+  },
+  "frame_bindings_sha256": "d5980bb7e9bc5ec9fa9f4f3bb304bc1f946c6dcd449d15772ce728c3884c7922",
+  "candidate_sha256": "a9eab878248f5585a9d2e0e53288390e98733f09a3fc027906c6824ba20d0f68",
+  "artwork_sha256": {
+    "jobs/native-20402-complete1-post5327-iron5-20261014-v1/generated/untouched-20402-full-atlas.png": "cf7deb23a42206cb08b7724d39d9fdbf6aa2e93a4e252becaeb5e8f434be5471"
+  },
+  "measured_scalar_alias": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-held203fb-20402-two-subdued-olive-ground-quality-author-20261014-v1/20402/ACTUAL-CURRENT8ADA-SCALAR-QA-WITH-REAL-EPOCH-AND-INVOCATION.json",
+    "sha256": "fa36311bcc7d1d3a8c867dfd62a61a94238b9af07a5a1e241091758c5d3f29b5",
+    "size": 9304,
+    "mtime_ns": 1791948693290522236,
+    "mode": 33188
+  },
+  "measured_native_header": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-held203fb-20402-two-subdued-olive-ground-quality-author-20261014-v1/20402/single-pack-literal-native-source-default/hd.json",
+    "sha256": "e3b22646cf11a605f9ea96136cd0132df0da11e2cf296ddba1f5a350c8a88a20",
+    "size": 709,
+    "mtime_ns": 1791948693025512682,
+    "mode": 33188
+  },
+  "namespace_only_route_change": true,
+  "no_new_measurements": true
+}

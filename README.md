@@ -82,11 +82,11 @@ are tracked in Git, along with mod definitions, scripts, SD/HD PNGs, WAVs,
 generation prompts and recipes. Build caches and local review files are excluded.
 See [repository layout](docs/repository.md).
 The engine supports original rendering and crisp 2×/3×/4× scaling, plus an
-optional HD artwork setting. The reviewed base-game pack covers **5,552 of
-5,753 original pictures**, with **201 still awaiting approval**. All 307 native
+optional HD artwork setting. The reviewed base-game pack covers **5,567 of
+5,753 original pictures**, with **186 still awaiting approval**. All 307 native
 AGX cinematic/font records remain preserved separately. Bundled mods include
 SD/HD artwork. [The HD backlog](docs/hd-backlog.md) records remaining originals,
-held drafts, reproducible derived artwork and finite review limits.
+held drafts, derived artwork and finite review limits.
 
 First-mission wins at difficulties 1 and 2, a complete 1,889-step native demo
 comparison, assisted coverage of all 27 missions at four difficulties, and

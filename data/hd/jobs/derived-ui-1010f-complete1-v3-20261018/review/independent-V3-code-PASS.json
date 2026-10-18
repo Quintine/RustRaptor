@@ -1,0 +1,123 @@
+{
+  "status": "PASS_DIFFERENT_VISIBLE_PARENT_V3_SOURCE_CODE_ONLY",
+  "reviewer": "/root/iron_coast_6",
+  "author": "/root/hd_boss200a2",
+  "different_code_peer_pass": true,
+  "role": "independent concrete visibility-rule/code/negative-guard review only",
+  "author_report": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-Other2-UI-deterministic-cleanup-private-code-proposal-v3-20261018/FROZEN-V3-OTHER2-UI-VISIBLE-PARENT-CRITERION-UNAPPLIED-CODE-AND-TESTS.json",
+    "sha256": "418c045e69f4c539246dae5089dcb4c3db306e3ce1cc30fb21755f7dbe578b07",
+    "size": 7127,
+    "mtime_ns": 1792290773565159295,
+    "mode": 33188
+  },
+  "author_strict": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-Other2-UI-deterministic-cleanup-private-code-proposal-v3-20261018/OUTSIDE-V3-PRIVATE-VISIBILITY-CRITERION-EXACT-MEMBERSHIP.json",
+    "sha256": "0c3b0b0a64b82ee45b85b0718d906426a0081459c299b6af56b9e75d72fecc53",
+    "size": 4697,
+    "mtime_ns": 1792290773569004775,
+    "mode": 33188
+  },
+  "rule": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-Other2-UI-deterministic-cleanup-private-code-proposal-v3-20261018/EXPLICIT-V3-VISIBLE-PARENT-MATERIAL-WITNESS-RULE-SOURCE-ONLY.json",
+    "sha256": "ab1af2c8b3e98710ffa442e336811ed9350e55977d6103d056bad46bb647435d",
+    "size": 3871
+  },
+  "helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-Other2-UI-deterministic-cleanup-private-code-proposal-v3-20261018/proposed-tools/hd_ui_cleanup.py",
+    "sha256": "40b1ce578aec608cc2be8f767bdd87cce52aa6fa5c9c6b63690d64410d85f263",
+    "size": 16707
+  },
+  "tests": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-Other2-UI-deterministic-cleanup-private-code-proposal-v3-20261018/proposed-tools/test_hd_ui_cleanup.py",
+    "sha256": "1bd9b8c70a09e40eac5969be1218e9c488bcfb1bcd8964c958be9ab4ebc39d22",
+    "size": 15506
+  },
+  "full_patch": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-Other2-UI-deterministic-cleanup-private-code-proposal-v3-20261018/UNAPPLIED-V3-ADD-UI-CLEANUP-TOOL-AND-SYNTHETIC-TESTS.patch",
+    "sha256": "e2814673adaa295a56291882fea344670dd96db31b845c86c51f4540603e790e",
+    "size": 33078
+  },
+  "literal_delta": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-Other2-UI-deterministic-cleanup-private-code-proposal-v3-20261018/LITERAL-V2-TO-V3-VISIBILITY-ONLY-CODE-AND-TEST-DELTA.patch",
+    "sha256": "9557f1386434754d9ed7a5f9631523fdc1a860a32c806280c9e126e3d2ea6e39",
+    "size": 9173
+  },
+  "recipes": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-Other2-UI-deterministic-cleanup-private-code-proposal-v3-20261018/proposed-job/1010c.recipe.json",
+      "sha256": "9af03ff94446f1241f5c87f0088f4e6681ba51257465e5677dda72fa463d9b26",
+      "size": 1254
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-Other2-UI-deterministic-cleanup-private-code-proposal-v3-20261018/proposed-job/1010f.recipe.json",
+      "sha256": "ef7917dc85dda48c41c7f44809ac136ccb243e25b4c6ba6dbcef1d8891d9e2ee",
+      "size": 1043
+    }
+  ],
+  "findings": [],
+  "independent_rule_review": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-Other2-UI-cleanup-visible-v3-independent-code-review-20261018/INDEPENDENT-V3-VISIBILITY-RULE-EXACT-DELTA-AND-TEST-BOUNDARY.json",
+    "sha256": "da87e720612cb7fd28680d2bc6ffd54276a4bee6315dbc6f6aaa142dd3e4ac19",
+    "size": 3190,
+    "mtime_ns": 1792290978490796275,
+    "mode": 33188
+  },
+  "actual_synthetic": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-Other2-UI-cleanup-visible-v3-independent-code-review-20261018/ACTUAL-VISIBLE-V3-27-SYNTHETIC-AND-FOUR-LITERAL-PROBE-TERMINALS.json",
+    "sha256": "362ba631a069752298e91e2c7b7d290cd62d55d1662868c19fd717eda871ed02",
+    "size": 3185,
+    "mtime_ns": 1792290978490666281,
+    "mode": 33188
+  },
+  "prior_V2_CODE": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-Other2-UI-cleanup-focused-v2-independent-code-review-20261018/PASS-DIFFERENT-OTHER2-UI-CLEANUP-FOCUSED-V2-PRIVATE-CODE-REVIEW.json",
+    "sha256": "bad535b0cf3a4e1fe11c545d5cd2903176d1993d657af621593af9fd55d17690",
+    "size": 5968
+  },
+  "prior_V2_actual_stops": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-Other2-UI-v2-actual-private-cleanup-and-SourceF-author-review-20261018/CLOSED-AUTHOR-OTHER2-FIXED-V2-ACTUAL-ATTEMPTS-TWO-HOLDS-NO-DERIVED-ART.json",
+    "sha256": "58a5840faa75516d6defea81b4491c877dd98600609adce7028796c1c18cddea",
+    "size": 3984
+  },
+  "prior_V2_actual_strict": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-Other2-UI-v2-actual-private-cleanup-and-SourceF-author-review-20261018/OUTSIDE-ACTUAL-OTHER2-TWO-HOLDS-EXACT-PRIVATE-CLOSURE.json",
+    "sha256": "7a53320ef71f328503399795a0851d0bc8a7f9d3d1ddcb6fb43a1d9bfde7aed8",
+    "size": 6347
+  },
+  "scope": "Only the explicit visible alpha criterion/method/metadata and focused tests differ from V2. Genuine Source controls remain functional flat fallback without generated-HD credit; geometry/canvas/origin/actual80d2+42c4 parent mappings unchanged.",
+  "limits": [
+    "Numeric raw RGB witnesses do not establish useful generated HD. Actual UI outputs, Source fidelity and material/function still need separate physical review.",
+    "Pre-resample alpha>=128 evidence is not an opaque-canvas policy exception or an engine/Source change. The output remains derived Source-stencil UI with postfiltered direct support and unchanged Source-fill rejection.",
+    "No real V3 recipe, target Source/raw pixel processing, new image, SourceF native QA, current caller/Host, public tool application or admission occurred in this review.",
+    "10016 intentional native bitmap typography remains excluded/no HD claim. V1/V2 failures and old art holds remain literal."
+  ],
+  "reader_history": "Initial preflight incorrectly required superseded live public completion metadata from priorV2, unrelated to tool inputs, to remain frozen through Root publication. Stopped before own intake files/tests. Corrected to disclose that publication metadata separately; no owner/source/raw/code change.",
+  "unconsumed_publication_metadata_drift": [
+    {
+      "old": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/docs/hd-completion.json",
+        "sha256": "49d15f6b832a86f2aadceced3b4969a906a64a0964f316ffd58861d41856a6ad",
+        "size": 9672853,
+        "mtime_ns": 1792287881107769180,
+        "mode": 33188
+      },
+      "current": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/docs/hd-completion.json",
+        "sha256": "8fb2dcd6e7b7325bc19008a19ac6d793a39e034a72b5edbef28a739e3299ec7b",
+        "size": 9693801,
+        "mtime_ns": 1792290631541971628,
+        "mode": 33188
+      },
+      "scope": "Root ongoing publication metadata; never consumed by cleanup algorithm; not a changed Source/code/raw input"
+    }
+  ],
+  "custody": "Root relayed immutable V3/no pending processing. All actual Source/code/raw/recipe/history inputs and14 private owner members remained exact; only superseded live public completion metadata is separately recorded as Root publication activity and never consumed by the cleanup algorithm. Own copies/tests/results frozen/no pending writer/call/lease.",
+  "actual_operations": {
+    "actual_target_art_processing": 0,
+    "engine_helper_QA_World": 0,
+    "compiler": 0,
+    "imagegen": 0,
+    "shared_Source_tools_data_docs_Git_writes": 0
+  }
+}

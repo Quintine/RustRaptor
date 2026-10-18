@@ -1,0 +1,210 @@
+{
+  "status": "ACTUAL_ONE_BUILTIN_SUCCESS_RAW_UNTOUCHED_LAYOUT_QUALIFIED_NOT_MATERIAL_PASS",
+  "provider_raw": {
+    "path": "/home/quintine/.codex/generated_images/01a131f8-43a3-7cd1-ad72-289d39468551/exec-88aa4fb7-e6b6-4d5d-b90c-06aa1cd6d7b6.png",
+    "sha256": "4e39c61e1a87224329b9fe58b9c09cfd31d84b5b4372a61e60f3aee4e62c1d96",
+    "size": 3445719
+  },
+  "untouched_workspace_raw": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-remaining-destroyed8-Original-only-continuous-material-atlas-plan-20261018-actual-Root-approved-one-builtin-v1/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+    "sha256": "4e39c61e1a87224329b9fe58b9c09cfd31d84b5b4372a61e60f3aee4e62c1d96",
+    "size": 3445719
+  },
+  "safe_primitive_summary": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-remaining-destroyed8-Original-only-continuous-material-atlas-plan-20261018-actual-Root-approved-one-builtin-v1/ACTUAL-SAFE-PRIMITIVE-BUILTIN-OUTCOME-AND-GATE-SUMMARY.json",
+    "sha256": "32d23f04541dcf5151fcbb59911ce0fbd1608c9128af99a48f2cbb965d4e6688",
+    "size": 758
+  },
+  "actual_gate": {
+    "lease": "401d487b-54a9-42f8-b474-e558a8f55c5c",
+    "durable_exact_events": [
+      {
+        "line_number": 11626,
+        "literal_line_SHA256": "4bcf694958e6bb9781bccb85bc761ef31afb50e241e3125e617cf3e0ef3b0aa6",
+        "event": {
+          "timestamp_utc": "2026-10-18T02:17:42+00:00",
+          "event": "acquired",
+          "lease_id": "401d487b-54a9-42f8-b474-e558a8f55c5c",
+          "owner": "/root/hd_remaining_exclusions",
+          "job_id": "destroyed3051d-30526-Original-only-continuous8-atlas-20261018-v1",
+          "expires_at": "2026-10-18T02:47:42+00:00"
+        }
+      },
+      {
+        "line_number": 11627,
+        "literal_line_SHA256": "d42459a14ad8ea9253111143aff5b050404f7f83143f2c244bf3e3e9a28a950c",
+        "event": {
+          "timestamp_utc": "2026-10-18T02:17:42+00:00",
+          "event": "started",
+          "lease_id": "401d487b-54a9-42f8-b474-e558a8f55c5c",
+          "owner": "/root/hd_remaining_exclusions",
+          "job_id": "destroyed3051d-30526-Original-only-continuous8-atlas-20261018-v1",
+          "note": "Owner is submitting the built-in imagegen request; this slot requires an explicit report or release."
+        }
+      },
+      {
+        "line_number": 11628,
+        "literal_line_SHA256": "b433543aa251694efe6686ff648b88f0f8035f2871d2e59d439344edcf825587",
+        "event": {
+          "timestamp_utc": "2026-10-18T02:18:03+00:00",
+          "event": "report",
+          "lease_id": "401d487b-54a9-42f8-b474-e558a8f55c5c",
+          "owner": "/root/hd_remaining_exclusions",
+          "job_id": "destroyed3051d-30526-Original-only-continuous8-atlas-20261018-v1",
+          "outcome": "success"
+        }
+      }
+    ],
+    "report_immediately_after_safe_outcome_inspection": true,
+    "report_freed_lease": true,
+    "observed_terminal_active_reservations": 0,
+    "no_full_base64_response_saved_or_fabricated": true
+  },
+  "natural_canvas": [
+    1774,
+    887
+  ],
+  "opacity": [
+    255,
+    255
+  ],
+  "required2to1_exact": true,
+  "rational_cell_canvas": [
+    "887/2",
+    "887/2"
+  ],
+  "predeclared_bounds": [
+    {
+      "asset": "3051d",
+      "atlas_grid": {
+        "columns": 4,
+        "rows": 2,
+        "column": 0,
+        "row": 0
+      },
+      "rational_bounds": [
+        "0",
+        "0",
+        "887/2",
+        "887/2"
+      ]
+    },
+    {
+      "asset": "3051e",
+      "atlas_grid": {
+        "columns": 4,
+        "rows": 2,
+        "column": 1,
+        "row": 0
+      },
+      "rational_bounds": [
+        "887/2",
+        "0",
+        "887",
+        "887/2"
+      ]
+    },
+    {
+      "asset": "3051f",
+      "atlas_grid": {
+        "columns": 4,
+        "rows": 2,
+        "column": 2,
+        "row": 0
+      },
+      "rational_bounds": [
+        "887",
+        "0",
+        "2661/2",
+        "887/2"
+      ]
+    },
+    {
+      "asset": "30520",
+      "atlas_grid": {
+        "columns": 4,
+        "rows": 2,
+        "column": 3,
+        "row": 0
+      },
+      "rational_bounds": [
+        "2661/2",
+        "0",
+        "1774",
+        "887/2"
+      ]
+    },
+    {
+      "asset": "30521",
+      "atlas_grid": {
+        "columns": 4,
+        "rows": 2,
+        "column": 0,
+        "row": 1
+      },
+      "rational_bounds": [
+        "0",
+        "887/2",
+        "887/2",
+        "887"
+      ]
+    },
+    {
+      "asset": "30523",
+      "atlas_grid": {
+        "columns": 4,
+        "rows": 2,
+        "column": 1,
+        "row": 1
+      },
+      "rational_bounds": [
+        "887/2",
+        "887/2",
+        "887",
+        "887"
+      ]
+    },
+    {
+      "asset": "30524",
+      "atlas_grid": {
+        "columns": 4,
+        "rows": 2,
+        "column": 2,
+        "row": 1
+      },
+      "rational_bounds": [
+        "887",
+        "887/2",
+        "2661/2",
+        "887"
+      ]
+    },
+    {
+      "asset": "30526",
+      "atlas_grid": {
+        "columns": 4,
+        "rows": 2,
+        "column": 3,
+        "row": 1
+      },
+      "rational_bounds": [
+        "2661/2",
+        "887/2",
+        "1774",
+        "887"
+      ]
+    }
+  ],
+  "no_search_cropfit_edit": true,
+  "raw_personal_whole_body_review": "Actualwhole1774x887 personallydisplayed; Original1536x768 source-onlyreference also wholeviewed. Richer genuinefine char/mineral/red/green/brown than24e3. Coarse steppedgrayrocks and strongblackgrain are explicitconcerns, notartPASS. Root independentlypersonallyviewedwholeRaw and authorizesonedirectSourceF8bank only.",
+  "Root_preview_prior24e3_scope": [
+    "3051d",
+    "30520",
+    "30526"
+  ],
+  "prior_different24e3_HOLD8": "af98af36988cbbede872bf7bef5162b8efc5dbac6af8254320c0c5870a3cf7d2/85162664d934adda08493844d8c3a90cc17cc293356c0369c62fa3e792e749d8",
+  "provider_calls": 1,
+  "provider_retries": 0,
+  "raw_cleanup": 0,
+  "no_pending_provider_request_or_lease": true
+}

@@ -1,0 +1,6631 @@
+{
+  "status": "PASS_EXACT_FINITE_SOURCE_NATIVE_DEFAULT_DOMAIN_RAW_BINDINGS_ONLY",
+  "actual_pixel_baseline": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/hd.json",
+    "sha256": "0fd0e42adba6fe1d8287cd88014b8a9bd1a37dd9a021da6403af1a10e05e2a22",
+    "size": 2975291,
+    "mtime_ns": 1792289644617549613,
+    "mode": 33152
+  },
+  "actual_pixel_provenance": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/provenance.json",
+    "sha256": "2739e39f949af07fade63d2397c4b8d237b3226cacbf262a9461892a36db218a",
+    "size": 1927954,
+    "mtime_ns": 1792289644525551802,
+    "mode": 33152
+  },
+  "actual_new_metadata_baseline": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/hd.json",
+    "sha256": "8a625eb880bb667894e90caaeb36fcd2400dc73ca14289646223ee4c829de1c5",
+    "size": 2980550,
+    "mtime_ns": 1792292171011098089,
+    "mode": 33152
+  },
+  "actual_new_metadata_provenance": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/provenance.json",
+    "sha256": "32d23bdc52946e99c1b8265e697268ad35832280c917a8bf31b40414bbf149b5",
+    "size": 1934052,
+    "mtime_ns": 1792292171008017839,
+    "mode": 33152
+  },
+  "finite_Source_IDs": [
+    "300f1",
+    "300f2",
+    "300f9",
+    "30101",
+    "30109",
+    "30141",
+    "30148",
+    "30159",
+    "30167",
+    "30168",
+    "3016e",
+    "30170",
+    "30171",
+    "30176",
+    "30177",
+    "30178",
+    "30205",
+    "30208",
+    "3027d",
+    "30413",
+    "30415",
+    "3050a"
+  ],
+  "exact_current21_components": [
+    {
+      "asset": "300f1",
+      "exact_full_native": {
+        "frame": 4,
+        "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "crop": [
+          0,
+          314,
+          313,
+          313
+        ],
+        "source_sha256": "55272916eb4f76e5fc2aa70d8774391edc536960b3b39bb203a0bb767f5a4a29"
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set3 intact industrial roof shard1",
+        "base_asset": 196845,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              0,
+              0,
+              313,
+              313
+            ],
+            "source_sha256": "63fd3cafeeaa014039d043dd8dd844d988f1fe34cdfb4cafef9b4eba4b15f6e8"
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              314,
+              0,
+              313,
+              313
+            ],
+            "source_sha256": "487cb9110dc81d44282e914afda53411f7cc20cb4a4d90eb3c5a5fe4588895c2"
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              627,
+              0,
+              313,
+              313
+            ],
+            "source_sha256": "be6d4b56a8f77c4037fcd02c06763551b9745c14cb6759feca94333399b20591"
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              940,
+              0,
+              313,
+              313
+            ],
+            "source_sha256": "649565bf5addf4b213780e57e59d68c136a1042d4a3cf807b0dee16262aa030d"
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              0,
+              314,
+              313,
+              313
+            ],
+            "source_sha256": "55272916eb4f76e5fc2aa70d8774391edc536960b3b39bb203a0bb767f5a4a29"
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              314,
+              314,
+              313,
+              313
+            ],
+            "source_sha256": "0a20ef07a4a2e4a5b3f0d3f0b816df0548486aa04c75fd2440d9be32261b1dd0"
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              627,
+              314,
+              313,
+              313
+            ],
+            "source_sha256": "7b4aae9aa49e301f5b9794fa5527a31831af79a5faca868cd4fb74ef35f6b5e1"
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              940,
+              314,
+              313,
+              313
+            ],
+            "source_sha256": "5b793b8c8e580416d401481f75bd5bd1ee78b8ac28c7a2327f1090e3f9c5298d"
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              0,
+              627,
+              313,
+              313
+            ],
+            "source_sha256": "1bf0e12fa551a220d5de9a83aac9f92c3527463e4f1db80cae435e23867734f9"
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              314,
+              627,
+              313,
+              313
+            ],
+            "source_sha256": "e1b4c0e47e8ff0ace342323bb8d84ba6edf2354232083f13ded64a98f3406f14"
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              627,
+              627,
+              313,
+              313
+            ],
+            "source_sha256": "b8e740c62941c00bca4ea69220f288d9f62dd0aba00795572e35b4a85f54d63e"
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              940,
+              627,
+              313,
+              313
+            ],
+            "source_sha256": "f7d4cca9819a8ac1897670249fbcc6697b95b548c8989e0d867c63df7039bf95"
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              0,
+              940,
+              313,
+              313
+            ],
+            "source_sha256": "beea6c2e2475ffd6e7902add51eda015c3b9fa2fbd61d4401866733b4589419b"
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              314,
+              940,
+              313,
+              313
+            ],
+            "source_sha256": "21cb89cafccbc3d2f687d4e0294d0091d527813956de040bf9041aabd78c88e0"
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              627,
+              940,
+              313,
+              313
+            ],
+            "source_sha256": "6a33e14e592045bd1af33f913de4b0f3cefc8d7fccfd1ddf24ed59b3f0a95b31"
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              940,
+              940,
+              313,
+              313
+            ],
+            "source_sha256": "2ce9aa7e2e9893aaeb88acd19c29ba40ecc24a25ffc1e6673ccd6c698afe4824"
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+        "sha256": "a9e37b3c9370828aaea615a3c4b78c2459e70c4c89a1ac262032c3148bd4e718",
+        "size": 3654007,
+        "mtime_ns": 1791772168499934451,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+        "sha256": "a9e37b3c9370828aaea615a3c4b78c2459e70c4c89a1ac262032c3148bd4e718",
+        "size": 3654007,
+        "mtime_ns": 1791772168499934451,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "300f2",
+      "exact_full_native": {
+        "frame": 5,
+        "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "crop": [
+          314,
+          314,
+          313,
+          313
+        ],
+        "source_sha256": "0a20ef07a4a2e4a5b3f0d3f0b816df0548486aa04c75fd2440d9be32261b1dd0"
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set3 intact industrial roof shard1",
+        "base_asset": 196845,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              0,
+              0,
+              313,
+              313
+            ],
+            "source_sha256": "63fd3cafeeaa014039d043dd8dd844d988f1fe34cdfb4cafef9b4eba4b15f6e8"
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              314,
+              0,
+              313,
+              313
+            ],
+            "source_sha256": "487cb9110dc81d44282e914afda53411f7cc20cb4a4d90eb3c5a5fe4588895c2"
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              627,
+              0,
+              313,
+              313
+            ],
+            "source_sha256": "be6d4b56a8f77c4037fcd02c06763551b9745c14cb6759feca94333399b20591"
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              940,
+              0,
+              313,
+              313
+            ],
+            "source_sha256": "649565bf5addf4b213780e57e59d68c136a1042d4a3cf807b0dee16262aa030d"
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              0,
+              314,
+              313,
+              313
+            ],
+            "source_sha256": "55272916eb4f76e5fc2aa70d8774391edc536960b3b39bb203a0bb767f5a4a29"
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              314,
+              314,
+              313,
+              313
+            ],
+            "source_sha256": "0a20ef07a4a2e4a5b3f0d3f0b816df0548486aa04c75fd2440d9be32261b1dd0"
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              627,
+              314,
+              313,
+              313
+            ],
+            "source_sha256": "7b4aae9aa49e301f5b9794fa5527a31831af79a5faca868cd4fb74ef35f6b5e1"
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              940,
+              314,
+              313,
+              313
+            ],
+            "source_sha256": "5b793b8c8e580416d401481f75bd5bd1ee78b8ac28c7a2327f1090e3f9c5298d"
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              0,
+              627,
+              313,
+              313
+            ],
+            "source_sha256": "1bf0e12fa551a220d5de9a83aac9f92c3527463e4f1db80cae435e23867734f9"
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              314,
+              627,
+              313,
+              313
+            ],
+            "source_sha256": "e1b4c0e47e8ff0ace342323bb8d84ba6edf2354232083f13ded64a98f3406f14"
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              627,
+              627,
+              313,
+              313
+            ],
+            "source_sha256": "b8e740c62941c00bca4ea69220f288d9f62dd0aba00795572e35b4a85f54d63e"
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              940,
+              627,
+              313,
+              313
+            ],
+            "source_sha256": "f7d4cca9819a8ac1897670249fbcc6697b95b548c8989e0d867c63df7039bf95"
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              0,
+              940,
+              313,
+              313
+            ],
+            "source_sha256": "beea6c2e2475ffd6e7902add51eda015c3b9fa2fbd61d4401866733b4589419b"
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              314,
+              940,
+              313,
+              313
+            ],
+            "source_sha256": "21cb89cafccbc3d2f687d4e0294d0091d527813956de040bf9041aabd78c88e0"
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              627,
+              940,
+              313,
+              313
+            ],
+            "source_sha256": "6a33e14e592045bd1af33f913de4b0f3cefc8d7fccfd1ddf24ed59b3f0a95b31"
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              940,
+              940,
+              313,
+              313
+            ],
+            "source_sha256": "2ce9aa7e2e9893aaeb88acd19c29ba40ecc24a25ffc1e6673ccd6c698afe4824"
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+        "sha256": "a9e37b3c9370828aaea615a3c4b78c2459e70c4c89a1ac262032c3148bd4e718",
+        "size": 3654007,
+        "mtime_ns": 1791772168499934451,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+        "sha256": "a9e37b3c9370828aaea615a3c4b78c2459e70c4c89a1ac262032c3148bd4e718",
+        "size": 3654007,
+        "mtime_ns": 1791772168499934451,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "300f9",
+      "exact_full_native": {
+        "frame": 12,
+        "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "crop": [
+          0,
+          940,
+          313,
+          313
+        ],
+        "source_sha256": "beea6c2e2475ffd6e7902add51eda015c3b9fa2fbd61d4401866733b4589419b"
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set3 intact industrial roof shard1",
+        "base_asset": 196845,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              0,
+              0,
+              313,
+              313
+            ],
+            "source_sha256": "63fd3cafeeaa014039d043dd8dd844d988f1fe34cdfb4cafef9b4eba4b15f6e8"
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              314,
+              0,
+              313,
+              313
+            ],
+            "source_sha256": "487cb9110dc81d44282e914afda53411f7cc20cb4a4d90eb3c5a5fe4588895c2"
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              627,
+              0,
+              313,
+              313
+            ],
+            "source_sha256": "be6d4b56a8f77c4037fcd02c06763551b9745c14cb6759feca94333399b20591"
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              940,
+              0,
+              313,
+              313
+            ],
+            "source_sha256": "649565bf5addf4b213780e57e59d68c136a1042d4a3cf807b0dee16262aa030d"
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              0,
+              314,
+              313,
+              313
+            ],
+            "source_sha256": "55272916eb4f76e5fc2aa70d8774391edc536960b3b39bb203a0bb767f5a4a29"
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              314,
+              314,
+              313,
+              313
+            ],
+            "source_sha256": "0a20ef07a4a2e4a5b3f0d3f0b816df0548486aa04c75fd2440d9be32261b1dd0"
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              627,
+              314,
+              313,
+              313
+            ],
+            "source_sha256": "7b4aae9aa49e301f5b9794fa5527a31831af79a5faca868cd4fb74ef35f6b5e1"
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              940,
+              314,
+              313,
+              313
+            ],
+            "source_sha256": "5b793b8c8e580416d401481f75bd5bd1ee78b8ac28c7a2327f1090e3f9c5298d"
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              0,
+              627,
+              313,
+              313
+            ],
+            "source_sha256": "1bf0e12fa551a220d5de9a83aac9f92c3527463e4f1db80cae435e23867734f9"
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              314,
+              627,
+              313,
+              313
+            ],
+            "source_sha256": "e1b4c0e47e8ff0ace342323bb8d84ba6edf2354232083f13ded64a98f3406f14"
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              627,
+              627,
+              313,
+              313
+            ],
+            "source_sha256": "b8e740c62941c00bca4ea69220f288d9f62dd0aba00795572e35b4a85f54d63e"
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              940,
+              627,
+              313,
+              313
+            ],
+            "source_sha256": "f7d4cca9819a8ac1897670249fbcc6697b95b548c8989e0d867c63df7039bf95"
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              0,
+              940,
+              313,
+              313
+            ],
+            "source_sha256": "beea6c2e2475ffd6e7902add51eda015c3b9fa2fbd61d4401866733b4589419b"
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              314,
+              940,
+              313,
+              313
+            ],
+            "source_sha256": "21cb89cafccbc3d2f687d4e0294d0091d527813956de040bf9041aabd78c88e0"
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              627,
+              940,
+              313,
+              313
+            ],
+            "source_sha256": "6a33e14e592045bd1af33f913de4b0f3cefc8d7fccfd1ddf24ed59b3f0a95b31"
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "crop": [
+              940,
+              940,
+              313,
+              313
+            ],
+            "source_sha256": "2ce9aa7e2e9893aaeb88acd19c29ba40ecc24a25ffc1e6673ccd6c698afe4824"
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+        "sha256": "a9e37b3c9370828aaea615a3c4b78c2459e70c4c89a1ac262032c3148bd4e718",
+        "size": 3654007,
+        "mtime_ns": 1791772168499934451,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-300ed-300fc/generated/raw-atlas-v1.png",
+        "sha256": "a9e37b3c9370828aaea615a3c4b78c2459e70c4c89a1ac262032c3148bd4e718",
+        "size": 3654007,
+        "mtime_ns": 1791772168499934451,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30101",
+      "exact_full_native": {
+        "frame": 4,
+        "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "2823b70443669def918643ebce5d99784902f9599fe25c765533e36bdd854910",
+        "crop": [
+          0,
+          314,
+          313,
+          313
+        ]
+      },
+      "exact_full_sequence": {
+        "base_asset": 196861,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "ebe3c6f7cccaa52e3b4b8b1e1283e7719bb2903f408f5720059a6e8762a3cc0a",
+            "crop": [
+              0,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "00349dccebd29f35677052bb12089bd2082ae39b110b4fe93a92256ea9016f3e",
+            "crop": [
+              314,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "6ca6694adda8376399ddad641da0d70abd509d051bdcfe88a6e6cad1ce1e3b14",
+            "crop": [
+              627,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "94652fce59adfc1f5b989e5c6aa49365202eb873f77835da79a92dbdbfe56bdb",
+            "crop": [
+              940,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "2823b70443669def918643ebce5d99784902f9599fe25c765533e36bdd854910",
+            "crop": [
+              0,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "67ef49915bd7fff7557e7171793012d5ce4ef8340a7ae5ede82552ca711c6a19",
+            "crop": [
+              314,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "5267d23938b4ada9f77aa9515c7af9d75ecf4e933fe15b63484d641a008069b5",
+            "crop": [
+              627,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "44ec40b610ef1ce2bad6dce1154f0a312f92821c3509ed69c35094af595763c1",
+            "crop": [
+              940,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "41f06e911dbacf27455a8ff3d424334b46c6b5373515c680e5257bd85bb94d2d",
+            "crop": [
+              0,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f147096a9ef01e1336980230e015e0ab0f77f5c4f462e534d3dc6f361c7c6288",
+            "crop": [
+              314,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a74ab38b5380bfe2d55336e5aa0776978323c5cf1e8b7e6126030a6a4466b1f6",
+            "crop": [
+              627,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "47f4f6ed4efa5672f5a41bb8354e11a07f68741de70116d313eeb08555958008",
+            "crop": [
+              940,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "950063704ca538336a28f33660980c34422bf0e32f6cb7644071e638f57b5e35",
+            "crop": [
+              0,
+              940,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "65e4c7c8f8446cde95eaa644b17b62b7805a31378c612182d173dd4ee041a541",
+            "crop": [
+              314,
+              940,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "2e95b7a9df61c390dfab8d4d595f56c75cef90acafe90174024615f7a842fe28",
+            "crop": [
+              627,
+              940,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "ffd81cd3cc919b2df48ebf4c7c230653895fb893f6792b069c887b62dd9f1aa8",
+            "crop": [
+              940,
+              940,
+              313,
+              313
+            ]
+          }
+        ],
+        "name": "Terrain set 3 shard 2"
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+        "sha256": "644cf8c99afc3bb153b007547d9a02dfa1f8df372a2f41ff0cd0e2803df7b2c5",
+        "size": 3305604,
+        "mtime_ns": 1791772168522189833,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+        "sha256": "644cf8c99afc3bb153b007547d9a02dfa1f8df372a2f41ff0cd0e2803df7b2c5",
+        "size": 3305604,
+        "mtime_ns": 1791772168522189833,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30109",
+      "exact_full_native": {
+        "frame": 12,
+        "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "950063704ca538336a28f33660980c34422bf0e32f6cb7644071e638f57b5e35",
+        "crop": [
+          0,
+          940,
+          313,
+          313
+        ]
+      },
+      "exact_full_sequence": {
+        "base_asset": 196861,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "ebe3c6f7cccaa52e3b4b8b1e1283e7719bb2903f408f5720059a6e8762a3cc0a",
+            "crop": [
+              0,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "00349dccebd29f35677052bb12089bd2082ae39b110b4fe93a92256ea9016f3e",
+            "crop": [
+              314,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "6ca6694adda8376399ddad641da0d70abd509d051bdcfe88a6e6cad1ce1e3b14",
+            "crop": [
+              627,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "94652fce59adfc1f5b989e5c6aa49365202eb873f77835da79a92dbdbfe56bdb",
+            "crop": [
+              940,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "2823b70443669def918643ebce5d99784902f9599fe25c765533e36bdd854910",
+            "crop": [
+              0,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "67ef49915bd7fff7557e7171793012d5ce4ef8340a7ae5ede82552ca711c6a19",
+            "crop": [
+              314,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "5267d23938b4ada9f77aa9515c7af9d75ecf4e933fe15b63484d641a008069b5",
+            "crop": [
+              627,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "44ec40b610ef1ce2bad6dce1154f0a312f92821c3509ed69c35094af595763c1",
+            "crop": [
+              940,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "41f06e911dbacf27455a8ff3d424334b46c6b5373515c680e5257bd85bb94d2d",
+            "crop": [
+              0,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f147096a9ef01e1336980230e015e0ab0f77f5c4f462e534d3dc6f361c7c6288",
+            "crop": [
+              314,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a74ab38b5380bfe2d55336e5aa0776978323c5cf1e8b7e6126030a6a4466b1f6",
+            "crop": [
+              627,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "47f4f6ed4efa5672f5a41bb8354e11a07f68741de70116d313eeb08555958008",
+            "crop": [
+              940,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "950063704ca538336a28f33660980c34422bf0e32f6cb7644071e638f57b5e35",
+            "crop": [
+              0,
+              940,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "65e4c7c8f8446cde95eaa644b17b62b7805a31378c612182d173dd4ee041a541",
+            "crop": [
+              314,
+              940,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "2e95b7a9df61c390dfab8d4d595f56c75cef90acafe90174024615f7a842fe28",
+            "crop": [
+              627,
+              940,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "ffd81cd3cc919b2df48ebf4c7c230653895fb893f6792b069c887b62dd9f1aa8",
+            "crop": [
+              940,
+              940,
+              313,
+              313
+            ]
+          }
+        ],
+        "name": "Terrain set 3 shard 2"
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+        "sha256": "644cf8c99afc3bb153b007547d9a02dfa1f8df372a2f41ff0cd0e2803df7b2c5",
+        "size": 3305604,
+        "mtime_ns": 1791772168522189833,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-300fd-3010c/generated/raw-atlas-v1.png",
+        "sha256": "644cf8c99afc3bb153b007547d9a02dfa1f8df372a2f41ff0cd0e2803df7b2c5",
+        "size": 3305604,
+        "mtime_ns": 1791772168522189833,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30141",
+      "exact_full_native": {
+        "frame": 4,
+        "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "e8b7ffbd1d59c5e6914784947c2c512b7042ac6cd44f88bd9d86b1a2ce5459cd",
+        "crop": [
+          0,
+          314,
+          313,
+          313
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 6",
+        "base_asset": 196925,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3da97141cca998500b38cb849ef795d43e2e72e22c64269f43aab22e17bcbda6",
+            "crop": [
+              0,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "29ba8243b7ee9d3657222e832808c6423c0e9dc704c075b2f7e8a51fc564cd8f",
+            "crop": [
+              314,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "fe351e59da6cb304b602a41aedf0fcff34b3113df71a3fb3f1e68dabd26d02ee",
+            "crop": [
+              627,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "e1570415c6c04d91cdfcd28d7aa6fb9dd823727302eada7fcba17c65c1074dc2",
+            "crop": [
+              940,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "e8b7ffbd1d59c5e6914784947c2c512b7042ac6cd44f88bd9d86b1a2ce5459cd",
+            "crop": [
+              0,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "c276d59ce7fc0d879bc4e0eb6334b06a361b14526e379e7af80d7e3dd4a90470",
+            "crop": [
+              314,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "336565a77ba508181d7d00ade576e6373bb3fab3b26f62785faec72cb46c0209",
+            "crop": [
+              627,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "060e82e801eb2112ca8f91e26e5f5b0395ccbd752e922f066949a853719d01df",
+            "crop": [
+              940,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3849bfb4b6b8e86edced690e4285c2fa36a7ae04022dc31b41b9bcf2401ec177",
+            "crop": [
+              0,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "343a236845b738ad30753be70574e538159ddc8fba0021cbd78f3980dbcbecc2",
+            "crop": [
+              314,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "b6e32848fa2b15a72a9f8bcc1b29db779833bed76653551e40b05938365cee2d",
+            "crop": [
+              627,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "9789945cc06efd1d973a07c38dc7899575c0d61af39cc36f2a5d6fd21f6d5f87",
+            "crop": [
+              940,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "db5904c0ed9f3382920efaaf0133d83df5e1524da354135b24df378f0246621c",
+            "crop": [
+              0,
+              940,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3756c6e8adb55481d95bdd59c6e5ed3dbab7c0f0a23395865ca20446888c1a6a",
+            "crop": [
+              314,
+              940,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "4a21f31d7705e5e01ce48e759424c9e03097f29be2d5e0ced2c65b4815d5f091",
+            "crop": [
+              627,
+              940,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3013d-3014c-correction-3014c-v1/generated/raw-standalone-3014c-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "d58b03d24df9544b71ddb7c2a2c891b21bf317b394a5e2971a96c0438c9c959b",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+        "sha256": "a4491c9c02d2dbb6592e291efae35c6bca06410fe52190fbfc95ec71249451b9",
+        "size": 3874927,
+        "mtime_ns": 1791772168613863478,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+        "sha256": "a4491c9c02d2dbb6592e291efae35c6bca06410fe52190fbfc95ec71249451b9",
+        "size": 3874927,
+        "mtime_ns": 1791772168613863478,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30148",
+      "exact_full_native": {
+        "frame": 11,
+        "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "9789945cc06efd1d973a07c38dc7899575c0d61af39cc36f2a5d6fd21f6d5f87",
+        "crop": [
+          940,
+          627,
+          313,
+          313
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 6",
+        "base_asset": 196925,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3da97141cca998500b38cb849ef795d43e2e72e22c64269f43aab22e17bcbda6",
+            "crop": [
+              0,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "29ba8243b7ee9d3657222e832808c6423c0e9dc704c075b2f7e8a51fc564cd8f",
+            "crop": [
+              314,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "fe351e59da6cb304b602a41aedf0fcff34b3113df71a3fb3f1e68dabd26d02ee",
+            "crop": [
+              627,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "e1570415c6c04d91cdfcd28d7aa6fb9dd823727302eada7fcba17c65c1074dc2",
+            "crop": [
+              940,
+              0,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "e8b7ffbd1d59c5e6914784947c2c512b7042ac6cd44f88bd9d86b1a2ce5459cd",
+            "crop": [
+              0,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "c276d59ce7fc0d879bc4e0eb6334b06a361b14526e379e7af80d7e3dd4a90470",
+            "crop": [
+              314,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "336565a77ba508181d7d00ade576e6373bb3fab3b26f62785faec72cb46c0209",
+            "crop": [
+              627,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "060e82e801eb2112ca8f91e26e5f5b0395ccbd752e922f066949a853719d01df",
+            "crop": [
+              940,
+              314,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3849bfb4b6b8e86edced690e4285c2fa36a7ae04022dc31b41b9bcf2401ec177",
+            "crop": [
+              0,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "343a236845b738ad30753be70574e538159ddc8fba0021cbd78f3980dbcbecc2",
+            "crop": [
+              314,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "b6e32848fa2b15a72a9f8bcc1b29db779833bed76653551e40b05938365cee2d",
+            "crop": [
+              627,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "9789945cc06efd1d973a07c38dc7899575c0d61af39cc36f2a5d6fd21f6d5f87",
+            "crop": [
+              940,
+              627,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "db5904c0ed9f3382920efaaf0133d83df5e1524da354135b24df378f0246621c",
+            "crop": [
+              0,
+              940,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3756c6e8adb55481d95bdd59c6e5ed3dbab7c0f0a23395865ca20446888c1a6a",
+            "crop": [
+              314,
+              940,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "4a21f31d7705e5e01ce48e759424c9e03097f29be2d5e0ced2c65b4815d5f091",
+            "crop": [
+              627,
+              940,
+              313,
+              313
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3013d-3014c-correction-3014c-v1/generated/raw-standalone-3014c-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "d58b03d24df9544b71ddb7c2a2c891b21bf317b394a5e2971a96c0438c9c959b",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+        "sha256": "a4491c9c02d2dbb6592e291efae35c6bca06410fe52190fbfc95ec71249451b9",
+        "size": 3874927,
+        "mtime_ns": 1791772168613863478,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3013d-3014c/generated/raw-atlas-v1.png",
+        "sha256": "a4491c9c02d2dbb6592e291efae35c6bca06410fe52190fbfc95ec71249451b9",
+        "size": 3874927,
+        "mtime_ns": 1791772168613863478,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30159",
+      "exact_full_native": {
+        "frame": 12,
+        "file": "jobs/terrain-3014d-3015c/generated/raw-standalone-30159-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "b480a2a938521bf4d64ae0332fa1a17612c92468ff049c9732a3bafc135371e5",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 7",
+        "base_asset": 196941,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-atlas-v2a.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "022f36f007e235dbfc291bf4b29a295f7463e114ef881a76d6f30dc8a700b837",
+            "crop": [
+              0,
+              0,
+              627,
+              627
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-atlas-v2a.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "46b08c2ff26aed095f4bdd04920854375c87c0253042fc969dff3dcc83454a65",
+            "crop": [
+              627,
+              0,
+              627,
+              627
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-atlas-v2a.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "681b7366749e952a9788d01854af7cb0b873066c635ec5fab38dcec26e0babf2",
+            "crop": [
+              0,
+              627,
+              627,
+              627
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-atlas-v2a.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "cfc88c54e16b069e85733dc298b6ff34bfe4bfd27b0f3a0cef42f019fa9ad397",
+            "crop": [
+              627,
+              627,
+              627,
+              627
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-atlas-v2b.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "fd35746ae90e99e4cb5e041b9b53608e4cc5bff43a25f852ef37b2da2daddbb6",
+            "crop": [
+              0,
+              0,
+              627,
+              627
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-atlas-v2b.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "871c227e232266f0ea93bd7e5cc8a0d75cda6a3346fc1cd93274e95051cbbfde",
+            "crop": [
+              627,
+              0,
+              627,
+              627
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-atlas-v2b.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3401516f53407024f796aad10763b9088b7a3d6e938b6754c04f919b8cc9c1f1",
+            "crop": [
+              0,
+              627,
+              627,
+              627
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-atlas-v2b.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "8b89e04d8138e2a54a5c1215d56d2c1b6e5a8048c5141a4a60c3a223a16dc1ac",
+            "crop": [
+              627,
+              627,
+              627,
+              627
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-standalone-30155-v2.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "e25a9f3fdc02183c1ae78d69e569b3f9968f79ae5dcb012dd4ef7611d5ff27d3",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-standalone-30156-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "8cedee29a8ba892a0bbcedf393e843781c02482d6f245f422450ec95fb51a829",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-standalone-30157-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "cf373d05c3a85c8cd3213a53353ed6d6060a8520be0c85884d1b7ab85f426935",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-standalone-30158-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a6530b808c435228bcfff66445fa3c6bdbac861886087b4acee371cb5bb11272",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-standalone-30159-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "b480a2a938521bf4d64ae0332fa1a17612c92468ff049c9732a3bafc135371e5",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-standalone-3015a-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "ec33b1ba74f9f128828a50655e18bf743ab5a8b6af65d99bd079e2d162230fd2",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-standalone-3015b-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "ec156de043c2cefabbc6e6546b715a318c6eae96076b7c9905b7c7ef947b84ab",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3014d-3015c/generated/raw-standalone-3015c-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "c1e51374fdfb9c390a4b0b2bb17dd9d03bc1df6d65fb25da4f6b2c1a263f3487",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3014d-3015c/generated/raw-standalone-30159-v1.png",
+        "sha256": "7c3ce0178d10e6d4d38e68dd521684657fb763356173fafc3373e870a1be1fb8",
+        "size": 3640253,
+        "mtime_ns": 1791772168794829894,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3014d-3015c/generated/raw-standalone-30159-v1.png",
+        "sha256": "7c3ce0178d10e6d4d38e68dd521684657fb763356173fafc3373e870a1be1fb8",
+        "size": 3640253,
+        "mtime_ns": 1791772168794829894,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30167",
+      "exact_full_native": {
+        "frame": 10,
+        "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30167-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "f81437be6818cfb084876ffd6e55009976d664402d07eeace7fa9a62b46ca6b6",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 8",
+        "base_asset": 196957,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-3015d-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "cf2846946ce28aac1a7a2494bf72ee8970df4682ce37c1c86a90eb38eff45370",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-3015e-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "0bb3931eb65f25c8c53f443e5f23ab5b128e4321edf8d596bea31a96d3274700",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-3015f-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "c1e51374fdfb9c390a4b0b2bb17dd9d03bc1df6d65fb25da4f6b2c1a263f3487",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30160-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f82e0f7dfd057275c45ae31877a957c3cdc66e94be7c89cd666cef98f1aede47",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30161-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "ee5ede03e0ee992c093f0ef6fda10c156192dbfbde2a8a797d573d4ff03be6ac",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30162-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "7a14aa1056470b26649ea3c8cf9287e81724173dd25546dab2e6353f95859451",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30163-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "4392812840eb687093fb9636bf005f451aba4d9c0c889e22a291d40126ed2f4c",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30164-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "03b40d50e60a7bdafea83d5cf24bf95df14dd51b717bd1fa93ddf2e6da30c9b9",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30165-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "eca34ec1b5a37a4b46ae0677c4d46654e5f0addd9fe3c7e1f30753300d1f7419",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30166-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "209fbfff1978815e91ad3387586bda54e69428d0e33b731fa51263b83f4235ba",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30167-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f81437be6818cfb084876ffd6e55009976d664402d07eeace7fa9a62b46ca6b6",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30168-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f145e5b59714d717c4e5f5d2463a0aa2aae964c9b9f33b68c664380be609ca7f",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30169-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "5e00296390d78d7d701b5f87619dbfe9d37680637c494b53ccd6e568aad5350b",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-3016a-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "ebfd9df0f0f0d47eb680ad78b0931dbc97d334ace3b2a8a0500498ff423c34ed",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-3016b-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "7dde669a602ea71143200eafa8ef4f4973a4c3f5796ed54a6403af7ce5fd0ce6",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-3016c-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "2dfffda45169dbdfd3a6b5da3819d71270a0b8509f77dd988785529133ef2b63",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3015d-3016c/generated/raw-standalone-30167-v1.png",
+        "sha256": "b33eb5007c773156e8c114288a55de346bb51ca47408600cd6d197f44c6a0a86",
+        "size": 3030714,
+        "mtime_ns": 1791772169148466558,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3015d-3016c/generated/raw-standalone-30167-v1.png",
+        "sha256": "b33eb5007c773156e8c114288a55de346bb51ca47408600cd6d197f44c6a0a86",
+        "size": 3030714,
+        "mtime_ns": 1791772169148466558,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30168",
+      "exact_full_native": {
+        "frame": 11,
+        "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30168-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "f145e5b59714d717c4e5f5d2463a0aa2aae964c9b9f33b68c664380be609ca7f",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 8",
+        "base_asset": 196957,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-3015d-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "cf2846946ce28aac1a7a2494bf72ee8970df4682ce37c1c86a90eb38eff45370",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-3015e-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "0bb3931eb65f25c8c53f443e5f23ab5b128e4321edf8d596bea31a96d3274700",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-3015f-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "c1e51374fdfb9c390a4b0b2bb17dd9d03bc1df6d65fb25da4f6b2c1a263f3487",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30160-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f82e0f7dfd057275c45ae31877a957c3cdc66e94be7c89cd666cef98f1aede47",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30161-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "ee5ede03e0ee992c093f0ef6fda10c156192dbfbde2a8a797d573d4ff03be6ac",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30162-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "7a14aa1056470b26649ea3c8cf9287e81724173dd25546dab2e6353f95859451",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30163-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "4392812840eb687093fb9636bf005f451aba4d9c0c889e22a291d40126ed2f4c",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30164-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "03b40d50e60a7bdafea83d5cf24bf95df14dd51b717bd1fa93ddf2e6da30c9b9",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30165-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "eca34ec1b5a37a4b46ae0677c4d46654e5f0addd9fe3c7e1f30753300d1f7419",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30166-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "209fbfff1978815e91ad3387586bda54e69428d0e33b731fa51263b83f4235ba",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30167-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f81437be6818cfb084876ffd6e55009976d664402d07eeace7fa9a62b46ca6b6",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30168-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f145e5b59714d717c4e5f5d2463a0aa2aae964c9b9f33b68c664380be609ca7f",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-30169-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "5e00296390d78d7d701b5f87619dbfe9d37680637c494b53ccd6e568aad5350b",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-3016a-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "ebfd9df0f0f0d47eb680ad78b0931dbc97d334ace3b2a8a0500498ff423c34ed",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-3016b-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "7dde669a602ea71143200eafa8ef4f4973a4c3f5796ed54a6403af7ce5fd0ce6",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3015d-3016c/generated/raw-standalone-3016c-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "2dfffda45169dbdfd3a6b5da3819d71270a0b8509f77dd988785529133ef2b63",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3015d-3016c/generated/raw-standalone-30168-v1.png",
+        "sha256": "b0d6214b436ccb27660e1fca00169033d7d250d1467198c6e3aa6be843abeb54",
+        "size": 3932780,
+        "mtime_ns": 1791772169175138241,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3015d-3016c/generated/raw-standalone-30168-v1.png",
+        "sha256": "b0d6214b436ccb27660e1fca00169033d7d250d1467198c6e3aa6be843abeb54",
+        "size": 3932780,
+        "mtime_ns": 1791772169175138241,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "3016e",
+      "exact_full_native": {
+        "frame": 1,
+        "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016e-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "17619ea7dddd7fd21d1232f05875d58f42640986a92e1c5158027e0aa3da0da8",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 9",
+        "base_asset": 196973,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016d-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "55950cb937fa6d11a18755b6775efe798f2eaac51ac0ebf3c36a2b37b23f296a",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016e-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "17619ea7dddd7fd21d1232f05875d58f42640986a92e1c5158027e0aa3da0da8",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016f-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "8813ed0a4a10abc411e6f6707b862b3d42b7ff90c5acddd3e37d46a895494ab0",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30170-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3cc1632b9ade5976ff2a2409d00b1baaede785efb6913fef16aef0a28b89b875",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30171-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "61a4430c3334adf8f3ce6ea6b85b15d0605fa1cbfc77d722b6b8800323342732",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30172-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "7a21d4c44f7d93127535f7490a642148b66897978c1001413fb724735d6cb799",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30173-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "e0d4b0578f3dc332e8d472ffb951ca3c0d29e2dcf532f8fd94213eb8937aae43",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30174-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "715665d8049281660c03e591961beb27449b6773e7908eee8f5a581e1b293329",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30175-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "903074c904c4308eb02d389b52067354a282bfd417abd596d9435d0524cb31dc",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30176-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "faf59556b89ef749375c9133f2c68617735cb22e94e06c8ca49a681b8a480164",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30177-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3bd4d35a87a21fb579d457d0b164ef5e282df0cd2bd7ebecf38f2e7536afe5c9",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30178-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "28c277023ef37b42ac6c6fe6504715385cb95aab56684240aa572ba3d8156e51",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30179-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "1d2c63f6c5f54a514286fc64098421c8a56dc78025a931414fe321b72a82db67",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017a-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a4a6a90a13422007c42491ac6e61340a84c6f0f7c0981342d6d16654af28cc84",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017b-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "bd093978a4edda74c5a105f4aa7e07d9acb31ed4276a6dc71de46afe49a8b425",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017c-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a0afa8fabbb359d20b8b31a2029a87bdc675ed479b1fd24487c0d1deb815720c",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3016d-3017c/generated/raw-standalone-3016e-v1.png",
+        "sha256": "294e497acf52c945b5cedbc822988d3f3cd175a939466e6dada6a3ac0eada35a",
+        "size": 3010639,
+        "mtime_ns": 1791772169314054652,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3016d-3017c/generated/raw-standalone-3016e-v1.png",
+        "sha256": "294e497acf52c945b5cedbc822988d3f3cd175a939466e6dada6a3ac0eada35a",
+        "size": 3010639,
+        "mtime_ns": 1791772169314054652,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30170",
+      "exact_full_native": {
+        "frame": 3,
+        "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30170-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "3cc1632b9ade5976ff2a2409d00b1baaede785efb6913fef16aef0a28b89b875",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 9",
+        "base_asset": 196973,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016d-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "55950cb937fa6d11a18755b6775efe798f2eaac51ac0ebf3c36a2b37b23f296a",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016e-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "17619ea7dddd7fd21d1232f05875d58f42640986a92e1c5158027e0aa3da0da8",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016f-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "8813ed0a4a10abc411e6f6707b862b3d42b7ff90c5acddd3e37d46a895494ab0",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30170-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3cc1632b9ade5976ff2a2409d00b1baaede785efb6913fef16aef0a28b89b875",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30171-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "61a4430c3334adf8f3ce6ea6b85b15d0605fa1cbfc77d722b6b8800323342732",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30172-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "7a21d4c44f7d93127535f7490a642148b66897978c1001413fb724735d6cb799",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30173-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "e0d4b0578f3dc332e8d472ffb951ca3c0d29e2dcf532f8fd94213eb8937aae43",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30174-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "715665d8049281660c03e591961beb27449b6773e7908eee8f5a581e1b293329",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30175-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "903074c904c4308eb02d389b52067354a282bfd417abd596d9435d0524cb31dc",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30176-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "faf59556b89ef749375c9133f2c68617735cb22e94e06c8ca49a681b8a480164",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30177-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3bd4d35a87a21fb579d457d0b164ef5e282df0cd2bd7ebecf38f2e7536afe5c9",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30178-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "28c277023ef37b42ac6c6fe6504715385cb95aab56684240aa572ba3d8156e51",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30179-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "1d2c63f6c5f54a514286fc64098421c8a56dc78025a931414fe321b72a82db67",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017a-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a4a6a90a13422007c42491ac6e61340a84c6f0f7c0981342d6d16654af28cc84",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017b-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "bd093978a4edda74c5a105f4aa7e07d9acb31ed4276a6dc71de46afe49a8b425",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017c-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a0afa8fabbb359d20b8b31a2029a87bdc675ed479b1fd24487c0d1deb815720c",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3016d-3017c/generated/raw-standalone-30170-v1.png",
+        "sha256": "e4245259d338065c8cac8aac723e9eafa530cae124b3c08258a820e2dd2769be",
+        "size": 2586962,
+        "mtime_ns": 1791772169352748375,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3016d-3017c/generated/raw-standalone-30170-v1.png",
+        "sha256": "e4245259d338065c8cac8aac723e9eafa530cae124b3c08258a820e2dd2769be",
+        "size": 2586962,
+        "mtime_ns": 1791772169352748375,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30171",
+      "exact_full_native": {
+        "frame": 4,
+        "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30171-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "61a4430c3334adf8f3ce6ea6b85b15d0605fa1cbfc77d722b6b8800323342732",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 9",
+        "base_asset": 196973,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016d-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "55950cb937fa6d11a18755b6775efe798f2eaac51ac0ebf3c36a2b37b23f296a",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016e-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "17619ea7dddd7fd21d1232f05875d58f42640986a92e1c5158027e0aa3da0da8",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016f-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "8813ed0a4a10abc411e6f6707b862b3d42b7ff90c5acddd3e37d46a895494ab0",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30170-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3cc1632b9ade5976ff2a2409d00b1baaede785efb6913fef16aef0a28b89b875",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30171-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "61a4430c3334adf8f3ce6ea6b85b15d0605fa1cbfc77d722b6b8800323342732",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30172-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "7a21d4c44f7d93127535f7490a642148b66897978c1001413fb724735d6cb799",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30173-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "e0d4b0578f3dc332e8d472ffb951ca3c0d29e2dcf532f8fd94213eb8937aae43",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30174-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "715665d8049281660c03e591961beb27449b6773e7908eee8f5a581e1b293329",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30175-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "903074c904c4308eb02d389b52067354a282bfd417abd596d9435d0524cb31dc",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30176-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "faf59556b89ef749375c9133f2c68617735cb22e94e06c8ca49a681b8a480164",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30177-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3bd4d35a87a21fb579d457d0b164ef5e282df0cd2bd7ebecf38f2e7536afe5c9",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30178-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "28c277023ef37b42ac6c6fe6504715385cb95aab56684240aa572ba3d8156e51",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30179-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "1d2c63f6c5f54a514286fc64098421c8a56dc78025a931414fe321b72a82db67",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017a-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a4a6a90a13422007c42491ac6e61340a84c6f0f7c0981342d6d16654af28cc84",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017b-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "bd093978a4edda74c5a105f4aa7e07d9acb31ed4276a6dc71de46afe49a8b425",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017c-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a0afa8fabbb359d20b8b31a2029a87bdc675ed479b1fd24487c0d1deb815720c",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3016d-3017c/generated/raw-standalone-30171-v1.png",
+        "sha256": "b70250a90139c4693f771d7a20a54cc88ffdaa79c592c9dc6fabf5ad6d5a5aa6",
+        "size": 3148958,
+        "mtime_ns": 1791772169370996659,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3016d-3017c/generated/raw-standalone-30171-v1.png",
+        "sha256": "b70250a90139c4693f771d7a20a54cc88ffdaa79c592c9dc6fabf5ad6d5a5aa6",
+        "size": 3148958,
+        "mtime_ns": 1791772169370996659,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30176",
+      "exact_full_native": {
+        "frame": 9,
+        "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30176-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "faf59556b89ef749375c9133f2c68617735cb22e94e06c8ca49a681b8a480164",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 9",
+        "base_asset": 196973,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016d-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "55950cb937fa6d11a18755b6775efe798f2eaac51ac0ebf3c36a2b37b23f296a",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016e-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "17619ea7dddd7fd21d1232f05875d58f42640986a92e1c5158027e0aa3da0da8",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016f-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "8813ed0a4a10abc411e6f6707b862b3d42b7ff90c5acddd3e37d46a895494ab0",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30170-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3cc1632b9ade5976ff2a2409d00b1baaede785efb6913fef16aef0a28b89b875",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30171-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "61a4430c3334adf8f3ce6ea6b85b15d0605fa1cbfc77d722b6b8800323342732",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30172-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "7a21d4c44f7d93127535f7490a642148b66897978c1001413fb724735d6cb799",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30173-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "e0d4b0578f3dc332e8d472ffb951ca3c0d29e2dcf532f8fd94213eb8937aae43",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30174-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "715665d8049281660c03e591961beb27449b6773e7908eee8f5a581e1b293329",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30175-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "903074c904c4308eb02d389b52067354a282bfd417abd596d9435d0524cb31dc",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30176-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "faf59556b89ef749375c9133f2c68617735cb22e94e06c8ca49a681b8a480164",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30177-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3bd4d35a87a21fb579d457d0b164ef5e282df0cd2bd7ebecf38f2e7536afe5c9",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30178-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "28c277023ef37b42ac6c6fe6504715385cb95aab56684240aa572ba3d8156e51",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30179-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "1d2c63f6c5f54a514286fc64098421c8a56dc78025a931414fe321b72a82db67",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017a-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a4a6a90a13422007c42491ac6e61340a84c6f0f7c0981342d6d16654af28cc84",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017b-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "bd093978a4edda74c5a105f4aa7e07d9acb31ed4276a6dc71de46afe49a8b425",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017c-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a0afa8fabbb359d20b8b31a2029a87bdc675ed479b1fd24487c0d1deb815720c",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3016d-3017c/generated/raw-standalone-30176-v1.png",
+        "sha256": "586f9573b35e2d04f43ab8cc4b9b5d70e75f9180566d5758623985fe847a9f80",
+        "size": 3672774,
+        "mtime_ns": 1791772169481721143,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3016d-3017c/generated/raw-standalone-30176-v1.png",
+        "sha256": "586f9573b35e2d04f43ab8cc4b9b5d70e75f9180566d5758623985fe847a9f80",
+        "size": 3672774,
+        "mtime_ns": 1791772169481721143,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30177",
+      "exact_full_native": {
+        "frame": 10,
+        "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30177-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "3bd4d35a87a21fb579d457d0b164ef5e282df0cd2bd7ebecf38f2e7536afe5c9",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 9",
+        "base_asset": 196973,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016d-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "55950cb937fa6d11a18755b6775efe798f2eaac51ac0ebf3c36a2b37b23f296a",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016e-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "17619ea7dddd7fd21d1232f05875d58f42640986a92e1c5158027e0aa3da0da8",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016f-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "8813ed0a4a10abc411e6f6707b862b3d42b7ff90c5acddd3e37d46a895494ab0",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30170-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3cc1632b9ade5976ff2a2409d00b1baaede785efb6913fef16aef0a28b89b875",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30171-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "61a4430c3334adf8f3ce6ea6b85b15d0605fa1cbfc77d722b6b8800323342732",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30172-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "7a21d4c44f7d93127535f7490a642148b66897978c1001413fb724735d6cb799",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30173-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "e0d4b0578f3dc332e8d472ffb951ca3c0d29e2dcf532f8fd94213eb8937aae43",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30174-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "715665d8049281660c03e591961beb27449b6773e7908eee8f5a581e1b293329",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30175-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "903074c904c4308eb02d389b52067354a282bfd417abd596d9435d0524cb31dc",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30176-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "faf59556b89ef749375c9133f2c68617735cb22e94e06c8ca49a681b8a480164",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30177-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3bd4d35a87a21fb579d457d0b164ef5e282df0cd2bd7ebecf38f2e7536afe5c9",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30178-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "28c277023ef37b42ac6c6fe6504715385cb95aab56684240aa572ba3d8156e51",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30179-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "1d2c63f6c5f54a514286fc64098421c8a56dc78025a931414fe321b72a82db67",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017a-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a4a6a90a13422007c42491ac6e61340a84c6f0f7c0981342d6d16654af28cc84",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017b-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "bd093978a4edda74c5a105f4aa7e07d9acb31ed4276a6dc71de46afe49a8b425",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017c-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a0afa8fabbb359d20b8b31a2029a87bdc675ed479b1fd24487c0d1deb815720c",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3016d-3017c/generated/raw-standalone-30177-v1.png",
+        "sha256": "6cb4d5719429183ef94dbf6cfb55ca6b1a3c22b290d15d9f51ba88e69b77c9d1",
+        "size": 3129472,
+        "mtime_ns": 1791772169504123108,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3016d-3017c/generated/raw-standalone-30177-v1.png",
+        "sha256": "6cb4d5719429183ef94dbf6cfb55ca6b1a3c22b290d15d9f51ba88e69b77c9d1",
+        "size": 3129472,
+        "mtime_ns": 1791772169504123108,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30178",
+      "exact_full_native": {
+        "frame": 11,
+        "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30178-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "28c277023ef37b42ac6c6fe6504715385cb95aab56684240aa572ba3d8156e51",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 9",
+        "base_asset": 196973,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016d-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "55950cb937fa6d11a18755b6775efe798f2eaac51ac0ebf3c36a2b37b23f296a",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016e-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "17619ea7dddd7fd21d1232f05875d58f42640986a92e1c5158027e0aa3da0da8",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3016f-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "8813ed0a4a10abc411e6f6707b862b3d42b7ff90c5acddd3e37d46a895494ab0",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30170-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3cc1632b9ade5976ff2a2409d00b1baaede785efb6913fef16aef0a28b89b875",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30171-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "61a4430c3334adf8f3ce6ea6b85b15d0605fa1cbfc77d722b6b8800323342732",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30172-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "7a21d4c44f7d93127535f7490a642148b66897978c1001413fb724735d6cb799",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30173-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "e0d4b0578f3dc332e8d472ffb951ca3c0d29e2dcf532f8fd94213eb8937aae43",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30174-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "715665d8049281660c03e591961beb27449b6773e7908eee8f5a581e1b293329",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30175-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "903074c904c4308eb02d389b52067354a282bfd417abd596d9435d0524cb31dc",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30176-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "faf59556b89ef749375c9133f2c68617735cb22e94e06c8ca49a681b8a480164",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30177-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3bd4d35a87a21fb579d457d0b164ef5e282df0cd2bd7ebecf38f2e7536afe5c9",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30178-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "28c277023ef37b42ac6c6fe6504715385cb95aab56684240aa572ba3d8156e51",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-30179-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "1d2c63f6c5f54a514286fc64098421c8a56dc78025a931414fe321b72a82db67",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017a-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a4a6a90a13422007c42491ac6e61340a84c6f0f7c0981342d6d16654af28cc84",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017b-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "bd093978a4edda74c5a105f4aa7e07d9acb31ed4276a6dc71de46afe49a8b425",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3016d-3017c/generated/raw-standalone-3017c-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a0afa8fabbb359d20b8b31a2029a87bdc675ed479b1fd24487c0d1deb815720c",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3016d-3017c/generated/raw-standalone-30178-v1.png",
+        "sha256": "c94226666a07941a334599e152ee16314fc2cebcb276078e4d7dd719bef1134e",
+        "size": 3890548,
+        "mtime_ns": 1791772169526312778,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3016d-3017c/generated/raw-standalone-30178-v1.png",
+        "sha256": "c94226666a07941a334599e152ee16314fc2cebcb276078e4d7dd719bef1134e",
+        "size": 3890548,
+        "mtime_ns": 1791772169526312778,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30205",
+      "exact_full_native": {
+        "frame": 0,
+        "file": "jobs/terrain-301fd-3020c/generated/raw-standalone-30205-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "0f5e4d3c73d2d9494a3f72224052a300b48f8b91b66fab088d997686aa9b8ff8",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Historical qualified standalone terrain 30205; no new family approval",
+        "base_asset": 197125,
+        "frame_count": 1,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-301fd-3020c/generated/raw-standalone-30205-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "0f5e4d3c73d2d9494a3f72224052a300b48f8b91b66fab088d997686aa9b8ff8",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-301fd-3020c/generated/raw-standalone-30205-v1.png",
+        "sha256": "de066029e7bead4f0dfd1dea0296b837eab6d42557a33b944ba30f5b8bcfaf43",
+        "size": 2694068,
+        "mtime_ns": 1791717247788177553,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-301fd-3020c/generated/raw-standalone-30205-v1.png",
+        "sha256": "de066029e7bead4f0dfd1dea0296b837eab6d42557a33b944ba30f5b8bcfaf43",
+        "size": 2694068,
+        "mtime_ns": 1791717247788177553,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30208",
+      "exact_full_native": {
+        "frame": 0,
+        "file": "jobs/terrain-301fd-3020c/generated/raw-standalone-30208-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "52c86eda7366b1eb16c70472c42c927212d48d1b924bdd26c55117dc8c83383c",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Historical qualified standalone terrain 30208; no new family approval",
+        "base_asset": 197128,
+        "frame_count": 1,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-301fd-3020c/generated/raw-standalone-30208-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "52c86eda7366b1eb16c70472c42c927212d48d1b924bdd26c55117dc8c83383c",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-301fd-3020c/generated/raw-standalone-30208-v1.png",
+        "sha256": "1be3cf62abb78f255b37a9eb449b177545296e4aea065a3f32d2436d0764b97d",
+        "size": 2953425,
+        "mtime_ns": 1791717493903680802,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-301fd-3020c/generated/raw-standalone-30208-v1.png",
+        "sha256": "1be3cf62abb78f255b37a9eb449b177545296e4aea065a3f32d2436d0764b97d",
+        "size": 2953425,
+        "mtime_ns": 1791717493903680802,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "3027d",
+      "exact_full_native": {
+        "frame": 0,
+        "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-3027d-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "48dafe88099c1356175f0173b83a0e4b40b16a0c5644580b77605bc6c054054a",
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 26",
+        "base_asset": 197245,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-3027d-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "48dafe88099c1356175f0173b83a0e4b40b16a0c5644580b77605bc6c054054a",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-3027e-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "204298d5ce75ecaa89b5cf63b546f5e0986b50c6e7da9500b5d4faca68ae7ebf",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-3027f-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "b275f20f092a995028dfe5f2b6b624e6610ab4227aa6beceaa5a2db0c49ab8de",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-30280-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "c485fb11b9b851b27929df62d433db5b72ab150b01d00dface2f2f63ceb4299c",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-30281-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "1df578af7809cb92f6ee0943dc3682010bf109ffb99b446c061d22c234a859da",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-30282-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "4825f5127302c2cab267f5538db75dd7e6c4edfe9bef40222a5dbf5734af5a89",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-30283-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "fc9fc1fec121870e69074a1cc3efd801e9835be083a003c64550bdfff0278fe5",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-30284-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "95bd4ddbc8beebed76412d91432d3141053e4d89df208384032e8ab75c11b1fc",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-30285-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "ce27e391a18787203312fd7d48ed03f40e6107e79eef3e2889d3d288da2e9a3c",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-30286-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "5580043e71ef015c94d0d09fd8af9d9e1d2c15455485a8783d6b45a1e76e7160",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-30287-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "01ac104625a85f8f1e8ab4f317931965a427f44d157ec7d008aca2fc498a84ee",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-30288-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "109a8baef7b2af991ef4b5f660e5f2f56f927d045b823afe9ad6ced65ddf65fd",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-30289-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "de10fe3869c6a00040d45d437f7745a0dcf12473774b18289a03a4ca161d0c67",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-3028a-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "81f9c6a9779d3004d6c98689aa967647039de3ab74e98d2bff4e84a1ae96cf12",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-3028b-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "9579158f35d28db151b239914a230f36cb396d33a093d1bcaf49ded12019b1c4",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3027d-3028c/generated/raw-standalone-3028c-v1.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "e931dc88e18f5010a1d314173423b1c1bda06cf1b4bf2c11e42d5f6a40af1f07",
+            "crop": [
+              0,
+              0,
+              1254,
+              1254
+            ]
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3027d-3028c/generated/raw-standalone-3027d-v1.png",
+        "sha256": "5e5e36e3b6241aa8597b5ee4ffa8c4e5595ebf76bca841dad4bae15d973caedd",
+        "size": 3466650,
+        "mtime_ns": 1791772173804992479,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3027d-3028c/generated/raw-standalone-3027d-v1.png",
+        "sha256": "5e5e36e3b6241aa8597b5ee4ffa8c4e5595ebf76bca841dad4bae15d973caedd",
+        "size": 3466650,
+        "mtime_ns": 1791772173804992479,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30413",
+      "exact_full_native": {
+        "frame": 6,
+        "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30413.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "b994f2dc474ccd70335c3eef2752adbc2b5f9b1a6f0e0f613838d880e57b5f2f"
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 51",
+        "base_asset": 197645,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-3040d.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f7f38008824da8b5b86cb2cc6a45ac3017fb285ef16feee337995033d79e72e4"
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-3040e.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "1c3688d911c3b422b263075c16a292639eb02f0ccd7a2466bc34e8b5d9e668f4"
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-3040f.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "550ddc28f5dd5fb8971d07176ef54b1e4576607cc09269d68deb808ad54c41a6"
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30410.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3222e0f0b46a05906279274b7ec325734e7842b23b723cb04081d806aa72bf33"
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30411.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "31b139acc01257e5f4e9652e2ab8fd425b89e644b846170acd03e35e486be09f"
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30412.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a71342ae126d5eeb9727735aa9ceed9a2c2ef2ef3d9372d04d8c1c02b595b8d1"
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30413.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "b994f2dc474ccd70335c3eef2752adbc2b5f9b1a6f0e0f613838d880e57b5f2f"
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30414.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "246b6256a9176da3c80053dec1e87c2cdd7377f4949b21116dd4e5f0214ab840"
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30415.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "6020c268c4be3c08ee21aee42cac94ef2d38c9fea5900569114508eaad0a05d8"
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30416.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f5d18037180b866d9bb627d2dbaf0e5424e5d8577242c4ed07f0ec167456a1ad"
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30417.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3d6b6f7591679716a82c02878fa4e55e0cc334effaf9558a33117c0561870056"
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30418.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "571622218195640b4b3e5e4e731efc8997b2d7e2f1ec64f2c3692c1c6f23f17f"
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30419.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f9911f076b574e0804deaedfc7f079bca175951b866a898e3f737da2c2775aa1"
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-3041a.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "c4ad9774aea8078693a0ca823b1241ddcfb5a1be3ce294c3482fbc588a0a7da8"
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-3041b.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "aba2f9da309b3a6cdb0da3e9725165101eff10a97ca4927bdea0ce4d1ecd8287"
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-3041c.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "0ba223154d22f5c94833e464d50899562aeeab497ff8b610f7f28c8123ddbe8a"
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30413.png",
+        "sha256": "62a6cecb2a9763762e470034c78ec997f580bc915c19dc85c0aaa95635df6403",
+        "size": 4172947,
+        "mtime_ns": 1791707634668010508,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30413.png",
+        "sha256": "62a6cecb2a9763762e470034c78ec997f580bc915c19dc85c0aaa95635df6403",
+        "size": 4172947,
+        "mtime_ns": 1791707634668010508,
+        "mode": 33060
+      }
+    },
+    {
+      "asset": "30415",
+      "exact_full_native": {
+        "frame": 8,
+        "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30415.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "6020c268c4be3c08ee21aee42cac94ef2d38c9fea5900569114508eaad0a05d8"
+      },
+      "exact_full_sequence": {
+        "name": "Terrain set 3 shard 51",
+        "base_asset": 197645,
+        "frame_count": 16,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-3040d.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f7f38008824da8b5b86cb2cc6a45ac3017fb285ef16feee337995033d79e72e4"
+          },
+          {
+            "frame": 1,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-3040e.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "1c3688d911c3b422b263075c16a292639eb02f0ccd7a2466bc34e8b5d9e668f4"
+          },
+          {
+            "frame": 2,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-3040f.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "550ddc28f5dd5fb8971d07176ef54b1e4576607cc09269d68deb808ad54c41a6"
+          },
+          {
+            "frame": 3,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30410.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3222e0f0b46a05906279274b7ec325734e7842b23b723cb04081d806aa72bf33"
+          },
+          {
+            "frame": 4,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30411.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "31b139acc01257e5f4e9652e2ab8fd425b89e644b846170acd03e35e486be09f"
+          },
+          {
+            "frame": 5,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30412.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a71342ae126d5eeb9727735aa9ceed9a2c2ef2ef3d9372d04d8c1c02b595b8d1"
+          },
+          {
+            "frame": 6,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30413.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "b994f2dc474ccd70335c3eef2752adbc2b5f9b1a6f0e0f613838d880e57b5f2f"
+          },
+          {
+            "frame": 7,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30414.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "246b6256a9176da3c80053dec1e87c2cdd7377f4949b21116dd4e5f0214ab840"
+          },
+          {
+            "frame": 8,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30415.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "6020c268c4be3c08ee21aee42cac94ef2d38c9fea5900569114508eaad0a05d8"
+          },
+          {
+            "frame": 9,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30416.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f5d18037180b866d9bb627d2dbaf0e5424e5d8577242c4ed07f0ec167456a1ad"
+          },
+          {
+            "frame": 10,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30417.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "3d6b6f7591679716a82c02878fa4e55e0cc334effaf9558a33117c0561870056"
+          },
+          {
+            "frame": 11,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30418.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "571622218195640b4b3e5e4e731efc8997b2d7e2f1ec64f2c3692c1c6f23f17f"
+          },
+          {
+            "frame": 12,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-30419.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "f9911f076b574e0804deaedfc7f079bca175951b866a898e3f737da2c2775aa1"
+          },
+          {
+            "frame": 13,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-3041a.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "c4ad9774aea8078693a0ca823b1241ddcfb5a1be3ce294c3482fbc588a0a7da8"
+          },
+          {
+            "frame": 14,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-3041b.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "aba2f9da309b3a6cdb0da3e9725165101eff10a97ca4927bdea0ce4d1ecd8287"
+          },
+          {
+            "frame": 15,
+            "file": "jobs/terrain-3040d-3041c/generated/raw-v2-tile-3041c.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "0ba223154d22f5c94833e464d50899562aeeab497ff8b610f7f28c8123ddbe8a"
+          }
+        ]
+      },
+      "actual_context_H5539_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed-terrain18-publication-after5521-20261018/data/hd/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30415.png",
+        "sha256": "ee5d647627d53e08c14c8bb45ce8073a839bbeb63d1c578c3fe454a9d73a6211",
+        "size": 4043733,
+        "mtime_ns": 1791707715566006368,
+        "mode": 33060
+      },
+      "canonical5552_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30415.png",
+        "sha256": "ee5d647627d53e08c14c8bb45ce8073a839bbeb63d1c578c3fe454a9d73a6211",
+        "size": 4043733,
+        "mtime_ns": 1791707715566006368,
+        "mode": 33060
+      }
+    }
+  ],
+  "selected3050a_remains_Original_in_both_baselines": true,
+  "Source_library_unchanged": {
+    "mtime_ns": 1792245694562144018,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/compiled-epoch.json",
+    "sha256": "38459e0067b17801b3c3c629c22e05dfee98928d451d8c8e0971b63c17288b52",
+    "size": 5917
+  },
+  "same_twelve_vectors": [
+    {
+      "endpoint_index": 0,
+      "Source_key": "a51bc4a23d610893adbd104905ab3e0a08e45eb77cd462e25ce04ddf0031c0a0",
+      "mission": "base:sector_3_wave_1",
+      "row": 124,
+      "column": 5,
+      "columns": 3,
+      "ordered_source_ids": [
+        "30170",
+        "30171",
+        "3027d",
+        "3016e",
+        "30178",
+        "30205",
+        "300f2",
+        "300f1",
+        "30168"
+      ],
+      "role": "authentic_intact",
+      "original_caller": {
+        "mission": "base:sector_3_wave_1",
+        "row": 124,
+        "column": 5,
+        "Source_role": "own_settled",
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        },
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 4496
+      },
+      "semantic_scope": "Unchanged authentic Original MAP window before its one real destructible center settles; proposal has zero own target here."
+    },
+    {
+      "endpoint_index": 1,
+      "Source_key": "04c9c548ff786bf5fc4e76d69564d4bc655418abe91c7ed1e210e64708cca753",
+      "mission": "base:sector_3_wave_1",
+      "row": 124,
+      "column": 5,
+      "columns": 3,
+      "ordered_source_ids": [
+        "30170",
+        "30171",
+        "3027d",
+        "3016e",
+        "3050a",
+        "30205",
+        "300f2",
+        "300f1",
+        "30168"
+      ],
+      "role": "genuine_one_cell_settled",
+      "changed_slot": 4,
+      "Original_actor": {
+        "row": 124,
+        "column": 5,
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        }
+      },
+      "original_caller": {
+        "mission": "base:sector_3_wave_1",
+        "row": 124,
+        "column": 5,
+        "Source_role": "own_settled",
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        },
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 4496
+      },
+      "semantic_scope": "Controlled legal one-cell Original30178 to3050a settled state, not a captured natural damage time. All eight neighbors remain their authentic intact Source definitions."
+    },
+    {
+      "endpoint_index": 2,
+      "Source_key": "f7b455eb55be168e9c376f4bb1fdcaf2231addbc15386b4c901ad742f089caa4",
+      "mission": "base:sector_3_wave_1",
+      "row": 127,
+      "column": 2,
+      "columns": 3,
+      "ordered_source_ids": [
+        "30170",
+        "30159",
+        "300f9",
+        "30177",
+        "30178",
+        "30109",
+        "30205",
+        "30205",
+        "30168"
+      ],
+      "role": "authentic_intact",
+      "original_caller": {
+        "mission": "base:sector_3_wave_1",
+        "row": 127,
+        "column": 2,
+        "Source_role": "own_settled",
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        },
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 4592
+      },
+      "semantic_scope": "Unchanged authentic Original MAP window before its one real destructible center settles; proposal has zero own target here."
+    },
+    {
+      "endpoint_index": 3,
+      "Source_key": "deb4f7fd6db8943fb07e70da4ae522bb00469827a9fbe27ff96b3bd2a64a1541",
+      "mission": "base:sector_3_wave_1",
+      "row": 127,
+      "column": 2,
+      "columns": 3,
+      "ordered_source_ids": [
+        "30170",
+        "30159",
+        "300f9",
+        "30177",
+        "3050a",
+        "30109",
+        "30205",
+        "30205",
+        "30168"
+      ],
+      "role": "genuine_one_cell_settled",
+      "changed_slot": 4,
+      "Original_actor": {
+        "row": 127,
+        "column": 2,
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        }
+      },
+      "original_caller": {
+        "mission": "base:sector_3_wave_1",
+        "row": 127,
+        "column": 2,
+        "Source_role": "own_settled",
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        },
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 4592
+      },
+      "semantic_scope": "Controlled legal one-cell Original30178 to3050a settled state, not a captured natural damage time. All eight neighbors remain their authentic intact Source definitions."
+    },
+    {
+      "endpoint_index": 4,
+      "Source_key": "d3f3b096c925e5de97ee955397639df991982fbbbf16fc6426d255ac23280a7a",
+      "mission": "base:sector_3_wave_1",
+      "row": 127,
+      "column": 8,
+      "columns": 3,
+      "ordered_source_ids": [
+        "30170",
+        "30171",
+        null,
+        "30177",
+        "30178",
+        null,
+        "30205",
+        "30205",
+        null
+      ],
+      "role": "authentic_intact",
+      "original_caller": {
+        "mission": "base:sector_3_wave_1",
+        "row": 127,
+        "column": 8,
+        "Source_role": "own_settled",
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        },
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 4616
+      },
+      "semantic_scope": "Unchanged authentic Original MAP window before its one real destructible center settles; proposal has zero own target here."
+    },
+    {
+      "endpoint_index": 5,
+      "Source_key": "d45408620d6eba9fb0254b469052c4f3ca8604ddb406c67a9b5bb58436101120",
+      "mission": "base:sector_3_wave_1",
+      "row": 127,
+      "column": 8,
+      "columns": 3,
+      "ordered_source_ids": [
+        "30170",
+        "30171",
+        null,
+        "30177",
+        "3050a",
+        null,
+        "30205",
+        "30205",
+        null
+      ],
+      "role": "genuine_one_cell_settled",
+      "changed_slot": 4,
+      "Original_actor": {
+        "row": 127,
+        "column": 8,
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        }
+      },
+      "original_caller": {
+        "mission": "base:sector_3_wave_1",
+        "row": 127,
+        "column": 8,
+        "Source_role": "own_settled",
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        },
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 4616
+      },
+      "semantic_scope": "Controlled legal one-cell Original30178 to3050a settled state, not a captured natural damage time. All eight neighbors remain their authentic intact Source definitions."
+    },
+    {
+      "endpoint_index": 6,
+      "Source_key": "b917a02fc08907836112588e81936c0068db719fe9d906b8ada9065a68a6a239",
+      "mission": "base:sector_3_wave_1",
+      "row": 130,
+      "column": 5,
+      "columns": 3,
+      "ordered_source_ids": [
+        "30170",
+        "30171",
+        "30208",
+        "30177",
+        "30178",
+        "30205",
+        "30205",
+        "30205",
+        "30205"
+      ],
+      "role": "authentic_intact",
+      "original_caller": {
+        "mission": "base:sector_3_wave_1",
+        "row": 130,
+        "column": 5,
+        "Source_role": "own_settled",
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        },
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 4712
+      },
+      "semantic_scope": "Unchanged authentic Original MAP window before its one real destructible center settles; proposal has zero own target here."
+    },
+    {
+      "endpoint_index": 7,
+      "Source_key": "2f53f1d655cb5fdf2a23cbafeb2998ffd7e6e5ee722291d12bac8639dbf9db47",
+      "mission": "base:sector_3_wave_1",
+      "row": 130,
+      "column": 5,
+      "columns": 3,
+      "ordered_source_ids": [
+        "30170",
+        "30171",
+        "30208",
+        "30177",
+        "3050a",
+        "30205",
+        "30205",
+        "30205",
+        "30205"
+      ],
+      "role": "genuine_one_cell_settled",
+      "changed_slot": 4,
+      "Original_actor": {
+        "row": 130,
+        "column": 5,
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        }
+      },
+      "original_caller": {
+        "mission": "base:sector_3_wave_1",
+        "row": 130,
+        "column": 5,
+        "Source_role": "own_settled",
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        },
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 4712
+      },
+      "semantic_scope": "Controlled legal one-cell Original30178 to3050a settled state, not a captured natural damage time. All eight neighbors remain their authentic intact Source definitions."
+    },
+    {
+      "endpoint_index": 8,
+      "Source_key": "189eb14070077d2499ca48fee61bba0d5d411354ba0fc56331a0b21312100b05",
+      "mission": "base:sector_3_wave_5",
+      "row": 15,
+      "column": 1,
+      "columns": 3,
+      "ordered_source_ids": [
+        "30170",
+        "30159",
+        "30167",
+        "30177",
+        "30178",
+        "30176",
+        "30205",
+        "30413",
+        "30205"
+      ],
+      "role": "authentic_intact",
+      "original_caller": {
+        "mission": "base:sector_3_wave_5",
+        "row": 15,
+        "column": 1,
+        "Source_role": "own_settled",
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        },
+        "MAP_asset": "30006",
+        "MAP_byte_offset": 556
+      },
+      "semantic_scope": "Unchanged authentic Original MAP window before its one real destructible center settles; proposal has zero own target here."
+    },
+    {
+      "endpoint_index": 9,
+      "Source_key": "7c6ad7f435e16ca8214e0a5888503a071f9b7b9f1a5b3039fc372fc4c6d2b676",
+      "mission": "base:sector_3_wave_5",
+      "row": 15,
+      "column": 1,
+      "columns": 3,
+      "ordered_source_ids": [
+        "30170",
+        "30159",
+        "30167",
+        "30177",
+        "3050a",
+        "30176",
+        "30205",
+        "30413",
+        "30205"
+      ],
+      "role": "genuine_one_cell_settled",
+      "changed_slot": 4,
+      "Original_actor": {
+        "row": 15,
+        "column": 1,
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        }
+      },
+      "original_caller": {
+        "mission": "base:sector_3_wave_5",
+        "row": 15,
+        "column": 1,
+        "Source_role": "own_settled",
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        },
+        "MAP_asset": "30006",
+        "MAP_byte_offset": 556
+      },
+      "semantic_scope": "Controlled legal one-cell Original30178 to3050a settled state, not a captured natural damage time. All eight neighbors remain their authentic intact Source definitions."
+    },
+    {
+      "endpoint_index": 10,
+      "Source_key": "6ab294fed7deb5045451ad44f942a1aa317369925d3028bd7d93fc4ddafc7eae",
+      "mission": "base:sector_3_wave_5",
+      "row": 15,
+      "column": 4,
+      "columns": 3,
+      "ordered_source_ids": [
+        "30170",
+        "30159",
+        "30148",
+        "3016e",
+        "30178",
+        "30141",
+        "30101",
+        "30415",
+        "30205"
+      ],
+      "role": "authentic_intact",
+      "original_caller": {
+        "mission": "base:sector_3_wave_5",
+        "row": 15,
+        "column": 4,
+        "Source_role": "own_settled",
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        },
+        "MAP_asset": "30006",
+        "MAP_byte_offset": 568
+      },
+      "semantic_scope": "Unchanged authentic Original MAP window before its one real destructible center settles; proposal has zero own target here."
+    },
+    {
+      "endpoint_index": 11,
+      "Source_key": "e45805bf35cff091b5bfccdd803fbff16773192beb1a12102b1b7a6a3eb39d36",
+      "mission": "base:sector_3_wave_5",
+      "row": 15,
+      "column": 4,
+      "columns": 3,
+      "ordered_source_ids": [
+        "30170",
+        "30159",
+        "30148",
+        "3016e",
+        "3050a",
+        "30141",
+        "30101",
+        "30415",
+        "30205"
+      ],
+      "role": "genuine_one_cell_settled",
+      "changed_slot": 4,
+      "Original_actor": {
+        "row": 15,
+        "column": 4,
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        }
+      },
+      "original_caller": {
+        "mission": "base:sector_3_wave_5",
+        "row": 15,
+        "column": 4,
+        "Source_role": "own_settled",
+        "Original_tile": {
+          "intact": "30178",
+          "settled": "3050a",
+          "health": 15,
+          "reward": 100,
+          "game": 2,
+          "FLATS_record": 139,
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 1112
+        },
+        "MAP_asset": "30006",
+        "MAP_byte_offset": 568
+      },
+      "semantic_scope": "Controlled legal one-cell Original30178 to3050a settled state, not a captured natural damage time. All eight neighbors remain their authentic intact Source definitions."
+    }
+  ],
+  "same_six_controlled_views": [
+    {
+      "pair_index": 0,
+      "before_endpoint": 0,
+      "settled_endpoint": 1,
+      "changed_slot": 4,
+      "Original_actor": {
+        "intact": "30178",
+        "settled": "3050a",
+        "health": 15,
+        "reward": 100,
+        "game": 2,
+        "FLATS_record": 139,
+        "FLATS_asset": "30001",
+        "FLATS_byte_offset": 1112
+      },
+      "event_id": "base:sector_3_wave_1:r124c5:30178-to-3050a",
+      "separate_one_cell_state": true,
+      "all_scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "pair_index": 1,
+      "before_endpoint": 2,
+      "settled_endpoint": 3,
+      "changed_slot": 4,
+      "Original_actor": {
+        "intact": "30178",
+        "settled": "3050a",
+        "health": 15,
+        "reward": 100,
+        "game": 2,
+        "FLATS_record": 139,
+        "FLATS_asset": "30001",
+        "FLATS_byte_offset": 1112
+      },
+      "event_id": "base:sector_3_wave_1:r127c2:30178-to-3050a",
+      "separate_one_cell_state": true,
+      "all_scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "pair_index": 2,
+      "before_endpoint": 4,
+      "settled_endpoint": 5,
+      "changed_slot": 4,
+      "Original_actor": {
+        "intact": "30178",
+        "settled": "3050a",
+        "health": 15,
+        "reward": 100,
+        "game": 2,
+        "FLATS_record": 139,
+        "FLATS_asset": "30001",
+        "FLATS_byte_offset": 1112
+      },
+      "event_id": "base:sector_3_wave_1:r127c8:30178-to-3050a",
+      "separate_one_cell_state": true,
+      "all_scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "pair_index": 3,
+      "before_endpoint": 6,
+      "settled_endpoint": 7,
+      "changed_slot": 4,
+      "Original_actor": {
+        "intact": "30178",
+        "settled": "3050a",
+        "health": 15,
+        "reward": 100,
+        "game": 2,
+        "FLATS_record": 139,
+        "FLATS_asset": "30001",
+        "FLATS_byte_offset": 1112
+      },
+      "event_id": "base:sector_3_wave_1:r130c5:30178-to-3050a",
+      "separate_one_cell_state": true,
+      "all_scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "pair_index": 4,
+      "before_endpoint": 8,
+      "settled_endpoint": 9,
+      "changed_slot": 4,
+      "Original_actor": {
+        "intact": "30178",
+        "settled": "3050a",
+        "health": 15,
+        "reward": 100,
+        "game": 2,
+        "FLATS_record": 139,
+        "FLATS_asset": "30001",
+        "FLATS_byte_offset": 1112
+      },
+      "event_id": "base:sector_3_wave_5:r15c1:30178-to-3050a",
+      "separate_one_cell_state": true,
+      "all_scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "pair_index": 5,
+      "before_endpoint": 10,
+      "settled_endpoint": 11,
+      "changed_slot": 4,
+      "Original_actor": {
+        "intact": "30178",
+        "settled": "3050a",
+        "health": 15,
+        "reward": 100,
+        "game": 2,
+        "FLATS_record": 139,
+        "FLATS_asset": "30001",
+        "FLATS_byte_offset": 1112
+      },
+      "event_id": "base:sector_3_wave_5:r15c4:30178-to-3050a",
+      "separate_one_cell_state": true,
+      "all_scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "new_context_render_count": 0,
+  "attribution": "All saved arrays/pages are actual SourceF/H5539. Finite21 foreign full native/sequence/raw and selected fallback bindings equal actual5552; Source/layout/library unchanged. No new5552 pixels, global fullmanifest equality or new physical view is claimed."
+}

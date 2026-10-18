@@ -1,0 +1,429 @@
+{
+  "author": "/root/hd_remaining_exclusions",
+  "reviewer": "/root/iron_coast_5",
+  "status": "QUALIFIED_EXACT_RAW_PATH_ALIAS_OF_ALREADY_REVIEWED_COMPONENTS",
+  "actual_independent_receipt": {
+    "path": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/review/actual-different-I5-material.json",
+    "sha256": "a0479c93bebcb24e75282a741a0405e1e3e19872c62b45a9fef0884e1dd1bde4",
+    "size": 10554
+  },
+  "normalization": "Pack-relative file alias only; same raw SHA, literal atlas_grid, logicalcanvas, frame0/origin0 and optional-field absence. No pixels, sampler, scale outputs, source or author claims changed.",
+  "records": [
+    {
+      "asset": "3051d",
+      "standalone_verdict": "QUALIFIED_APPROVE",
+      "selected_frame_binding": {
+        "frame": 0,
+        "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "8a95f78024f229b996fc148f0b3cddf718c963c6d8c1b12f8b2ce05bb632ed24",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 0,
+          "row": 0
+        }
+      },
+      "source_payload_sha256": "8a95f78024f229b996fc148f0b3cddf718c963c6d8c1b12f8b2ce05bb632ed24",
+      "full_untouched_raw_sha256": "4e39c61e1a87224329b9fe58b9c09cfd31d84b5b4372a61e60f3aee4e62c1d96",
+      "actual_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "literal_actual_peer_decision": {
+        "all_scales1to4": true,
+        "asset": "3051d",
+        "decision": "QUALIFIED",
+        "finding": "QUALIFIED. Red top/left, char diagonal and gray right/lower debris with green lower-right remain recognizable. Fine red grains/char mineral fragments visible3\u20134, unlike held filtered-source result. Gray rim is chunky and brighter, char more densely granular; native1 compresses this."
+      },
+      "actual_measured_frame_before_file_alias": {
+        "frame": 0,
+        "file": "ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "8a95f78024f229b996fc148f0b3cddf718c963c6d8c1b12f8b2ce05bb632ed24",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 0,
+          "row": 0
+        }
+      }
+    },
+    {
+      "asset": "3051e",
+      "standalone_verdict": "QUALIFIED_APPROVE",
+      "selected_frame_binding": {
+        "frame": 0,
+        "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "ab141aeec6563b39369dda7985b758128c7a7ad42bf4dd0648e056bf64586b15",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 1,
+          "row": 0
+        }
+      },
+      "source_payload_sha256": "ab141aeec6563b39369dda7985b758128c7a7ad42bf4dd0648e056bf64586b15",
+      "full_untouched_raw_sha256": "4e39c61e1a87224329b9fe58b9c09cfd31d84b5b4372a61e60f3aee4e62c1d96",
+      "actual_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "literal_actual_peer_decision": {
+        "all_scales1to4": true,
+        "asset": "3051e",
+        "decision": "QUALIFIED",
+        "finding": "QUALIFIED. Central brown branched remnant and green surround remain within the broad gray/char fork and red upper band. Fine soil/green/mineral texture is now visible, with darker finer green, heavier char and blocky/stepped bright gray fragments as limits."
+      },
+      "actual_measured_frame_before_file_alias": {
+        "frame": 0,
+        "file": "ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "ab141aeec6563b39369dda7985b758128c7a7ad42bf4dd0648e056bf64586b15",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 1,
+          "row": 0
+        }
+      }
+    },
+    {
+      "asset": "3051f",
+      "standalone_verdict": "QUALIFIED_APPROVE",
+      "selected_frame_binding": {
+        "frame": 0,
+        "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "42971f93cba770baf05126072801528338d36b4bb000e5e7632db2989113bce7",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 2,
+          "row": 0
+        }
+      },
+      "source_payload_sha256": "42971f93cba770baf05126072801528338d36b4bb000e5e7632db2989113bce7",
+      "full_untouched_raw_sha256": "4e39c61e1a87224329b9fe58b9c09cfd31d84b5b4372a61e60f3aee4e62c1d96",
+      "actual_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "literal_actual_peer_decision": {
+        "all_scales1to4": true,
+        "asset": "3051f",
+        "decision": "QUALIFIED",
+        "finding": "QUALIFIED. Red upper/right char rays oppose gray left and green lower-left. Material grain reads continuously rather than Source-sized flat islands. Green is finer/darker and the gray meeting edge still coarse; no exact local Source-RGB/topology assertion."
+      },
+      "actual_measured_frame_before_file_alias": {
+        "frame": 0,
+        "file": "ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "42971f93cba770baf05126072801528338d36b4bb000e5e7632db2989113bce7",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 2,
+          "row": 0
+        }
+      }
+    },
+    {
+      "asset": "30520",
+      "standalone_verdict": "QUALIFIED_APPROVE",
+      "selected_frame_binding": {
+        "frame": 0,
+        "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "a5e4c630d84daf50849723c86333673ff5e42f9336f366d86e7994d1f1585ea2",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 3,
+          "row": 0
+        }
+      },
+      "source_payload_sha256": "a5e4c630d84daf50849723c86333673ff5e42f9336f366d86e7994d1f1585ea2",
+      "full_untouched_raw_sha256": "4e39c61e1a87224329b9fe58b9c09cfd31d84b5b4372a61e60f3aee4e62c1d96",
+      "actual_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "literal_actual_peer_decision": {
+        "all_scales1to4": true,
+        "asset": "30520",
+        "decision": "QUALIFIED",
+        "finding": "QUALIFIED. Quiet black damage core and opposing gray fragments remain legible, now with actual granular charcoal/mineral material. Marker stays visibly pale but is not literal113-preserved: actual counts0/1/1/11. Bright rubble and deeper char/quiet native1 are retained limitations."
+      },
+      "actual_measured_frame_before_file_alias": {
+        "frame": 0,
+        "file": "ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "a5e4c630d84daf50849723c86333673ff5e42f9336f366d86e7994d1f1585ea2",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 3,
+          "row": 0
+        }
+      }
+    },
+    {
+      "asset": "30521",
+      "standalone_verdict": "QUALIFIED_APPROVE",
+      "selected_frame_binding": {
+        "frame": 0,
+        "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "9ffa83c4079d5e26583f6379e2b41641514c4ae1ef6fbde224499280681af114",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 0,
+          "row": 1
+        }
+      },
+      "source_payload_sha256": "9ffa83c4079d5e26583f6379e2b41641514c4ae1ef6fbde224499280681af114",
+      "full_untouched_raw_sha256": "4e39c61e1a87224329b9fe58b9c09cfd31d84b5b4372a61e60f3aee4e62c1d96",
+      "actual_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "literal_actual_peer_decision": {
+        "all_scales1to4": true,
+        "asset": "30521",
+        "decision": "QUALIFIED",
+        "finding": "QUALIFIED. Narrow red left edge, gray/char left and green/brown right fork retain Source macro distribution. New continuous detail is readable3\u20134; finer darker green and thicker gray mineral fragments/char broaden the apparent relief."
+      },
+      "actual_measured_frame_before_file_alias": {
+        "frame": 0,
+        "file": "ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "9ffa83c4079d5e26583f6379e2b41641514c4ae1ef6fbde224499280681af114",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 0,
+          "row": 1
+        }
+      }
+    },
+    {
+      "asset": "30523",
+      "standalone_verdict": "QUALIFIED_APPROVE",
+      "selected_frame_binding": {
+        "frame": 0,
+        "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "b445d1e0832551fd3e469099604fd7d5b9ad4bbe95b05d2a0f59a30c4a58388b",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 1,
+          "row": 1
+        }
+      },
+      "source_payload_sha256": "b445d1e0832551fd3e469099604fd7d5b9ad4bbe95b05d2a0f59a30c4a58388b",
+      "full_untouched_raw_sha256": "4e39c61e1a87224329b9fe58b9c09cfd31d84b5b4372a61e60f3aee4e62c1d96",
+      "actual_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "literal_actual_peer_decision": {
+        "all_scales1to4": true,
+        "asset": "30523",
+        "decision": "QUALIFIED",
+        "finding": "QUALIFIED. Red right band, gray margins, green left and brown fork remain readable. Fine brown/green/char material is visible beyond enlarged Source patches. Bright gray chipped/stepped junctions and dense dark surface are explicit qualifications."
+      },
+      "actual_measured_frame_before_file_alias": {
+        "frame": 0,
+        "file": "ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "b445d1e0832551fd3e469099604fd7d5b9ad4bbe95b05d2a0f59a30c4a58388b",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 1,
+          "row": 1
+        }
+      }
+    },
+    {
+      "asset": "30524",
+      "standalone_verdict": "QUALIFIED_APPROVE",
+      "selected_frame_binding": {
+        "frame": 0,
+        "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "7e336bf02824219611c31ac2ceef14996a553d5fb72c877395fa636ba0569a42",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 2,
+          "row": 1
+        }
+      },
+      "source_payload_sha256": "7e336bf02824219611c31ac2ceef14996a553d5fb72c877395fa636ba0569a42",
+      "full_untouched_raw_sha256": "4e39c61e1a87224329b9fe58b9c09cfd31d84b5b4372a61e60f3aee4e62c1d96",
+      "actual_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "literal_actual_peer_decision": {
+        "all_scales1to4": true,
+        "asset": "30524",
+        "decision": "QUALIFIED",
+        "finding": "QUALIFIED. Red left/bottom damage rays, gray upper/right, green upper-right and central char diagonal remain coherent. Fine red/char grains now support an authored surface; gray steps, stronger black rays and native1 compression retained."
+      },
+      "actual_measured_frame_before_file_alias": {
+        "frame": 0,
+        "file": "ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "7e336bf02824219611c31ac2ceef14996a553d5fb72c877395fa636ba0569a42",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 2,
+          "row": 1
+        }
+      }
+    },
+    {
+      "asset": "30526",
+      "standalone_verdict": "QUALIFIED_APPROVE",
+      "selected_frame_binding": {
+        "frame": 0,
+        "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "22eca7028dae77af2abf55765fbd2915cb02c52169feb2490f5a45e24014144a",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 3,
+          "row": 1
+        }
+      },
+      "source_payload_sha256": "22eca7028dae77af2abf55765fbd2915cb02c52169feb2490f5a45e24014144a",
+      "full_untouched_raw_sha256": "4e39c61e1a87224329b9fe58b9c09cfd31d84b5b4372a61e60f3aee4e62c1d96",
+      "actual_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "literal_actual_peer_decision": {
+        "all_scales1to4": true,
+        "asset": "30526",
+        "decision": "QUALIFIED",
+        "finding": "QUALIFIED. Gray upper/left and green upper-left oppose red right/bottom with readable dark damage rays. Continuous red/char/mineral texture shows at3\u20134; char heavier, green finer/darker and gray edge chunky rather than exact Source shading."
+      },
+      "actual_measured_frame_before_file_alias": {
+        "frame": 0,
+        "file": "ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "22eca7028dae77af2abf55765fbd2915cb02c52169feb2490f5a45e24014144a",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 3,
+          "row": 1
+        }
+      }
+    }
+  ]
+}

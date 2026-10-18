@@ -1,0 +1,449 @@
+{
+  "carried_registered_assets": [
+    "30522",
+    "30525"
+  ],
+  "carried_registered_identity": {
+    "baseline": {
+      "path": "hd.json",
+      "sha256": "8a625eb880bb667894e90caaeb36fcd2400dc73ca14289646223ee4c829de1c5"
+    },
+    "contract_version": "standalone-terrain-carried-identity-v2",
+    "frame_bindings_sha256": "78355e21c47f871e7871d71d8b767f2d8beebc0e85f5485f5e3cadde684a0ebd",
+    "frames": {
+      "30522": {
+        "frame_binding": {
+          "file": "selected62/30522/jobs/terrain-3051d-30526/generated/raw-v2-tile-30522.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "b6b8e6f59d450223b5ff3851ae402acb5e0a54880826ac1f5e1d589876473cfc"
+        },
+        "raw_sha256": "634898840254190e09a4f082d9cb145a85e2d92a24b8bbad2976b2a87b25fa8e",
+        "registration_record_index": 743,
+        "source_sha256": "b6b8e6f59d450223b5ff3851ae402acb5e0a54880826ac1f5e1d589876473cfc"
+      },
+      "30525": {
+        "frame_binding": {
+          "file": "selected62/30525/jobs/terrain-3051d-30526/generated/raw-v2-tile-30525.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "2a9be0b00d16148aabc39e518cc2d286b04f6310a918d52fb6107d2238752805"
+        },
+        "raw_sha256": "26fca669aab629cd723d3a23888936c16f6b5f6d2a51b5e1f0943a142fa9ca98",
+        "registration_record_index": 744,
+        "source_sha256": "2a9be0b00d16148aabc39e518cc2d286b04f6310a918d52fb6107d2238752805"
+      }
+    },
+    "provenance": {
+      "path": "provenance.json",
+      "sha256": "32d23bdc52946e99c1b8265e697268ad35832280c917a8bf31b40414bbf149b5"
+    },
+    "registration_records": [
+      {
+        "accepted_runtime_qa": {
+          "path": "jobs/closed62-native-complete1-30522/runtime-qa.json",
+          "sha256": "0d221f29e227f0ea1682a94f4a2668844d506d0d0825658735459d5419d77647"
+        },
+        "assets": [
+          "30522"
+        ],
+        "frame_bindings_sha256": "7df1905fd0299eeb67811d12c49a20d97f677a77fc3203fa0b5d9197b7984c2e",
+        "registration_record_index": 743,
+        "registration_record_sha256": "7c35838fb0c1248bb561c33eeb7aa0d497e28eb71891c7bd5908767dea578fa9"
+      },
+      {
+        "accepted_runtime_qa": {
+          "path": "jobs/closed62-native-complete1-30525/runtime-qa.json",
+          "sha256": "1a90c2c2d5efa1d7dbabc1c48579a14210e9b1826b3ff99de223ff70707aa917"
+        },
+        "assets": [
+          "30525"
+        ],
+        "frame_bindings_sha256": "47f6d26cddd868ba773f4668b129775391fc43bf6d71adf7b735f68a0e2dee0c",
+        "registration_record_index": 744,
+        "registration_record_sha256": "efd58fc757d6e5486ce5bda5a0a560c7b274e26ae1512c0c254daba71f0bc581"
+      }
+    ]
+  },
+  "category": "Terrain",
+  "complete_family": false,
+  "complete_standalone_selection": true,
+  "format_version": 1,
+  "full_inventory": [
+    "3051d",
+    "3051e",
+    "3051f",
+    "30520",
+    "30521",
+    "30522",
+    "30523",
+    "30524",
+    "30525",
+    "30526"
+  ],
+  "inventory_job_id": "terrain-3051d-30526",
+  "job_id": "terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018",
+  "kind": "contextual_terrain_shard",
+  "name": "Eight destroyed terrain pictures: Original-only continuous atlas, SourceF, finite H5539",
+  "original_fallback_assets": [],
+  "selected_assets": [
+    "3051d",
+    "3051e",
+    "3051f",
+    "30520",
+    "30521",
+    "30523",
+    "30524",
+    "30526"
+  ],
+  "sequences": [
+    {
+      "base_asset": 197917,
+      "frame_count": 1,
+      "frames": [
+        {
+          "atlas_grid": {
+            "column": 0,
+            "columns": 4,
+            "row": 0,
+            "rows": 2
+          },
+          "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "8a95f78024f229b996fc148f0b3cddf718c963c6d8c1b12f8b2ce05bb632ed24"
+        }
+      ],
+      "name": "New Original-only continuous destroyed terrain 3051d complete1"
+    },
+    {
+      "base_asset": 197918,
+      "frame_count": 1,
+      "frames": [
+        {
+          "atlas_grid": {
+            "column": 1,
+            "columns": 4,
+            "row": 0,
+            "rows": 2
+          },
+          "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "ab141aeec6563b39369dda7985b758128c7a7ad42bf4dd0648e056bf64586b15"
+        }
+      ],
+      "name": "New Original-only continuous destroyed terrain 3051e complete1"
+    },
+    {
+      "base_asset": 197919,
+      "frame_count": 1,
+      "frames": [
+        {
+          "atlas_grid": {
+            "column": 2,
+            "columns": 4,
+            "row": 0,
+            "rows": 2
+          },
+          "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "42971f93cba770baf05126072801528338d36b4bb000e5e7632db2989113bce7"
+        }
+      ],
+      "name": "New Original-only continuous destroyed terrain 3051f complete1"
+    },
+    {
+      "base_asset": 197920,
+      "frame_count": 1,
+      "frames": [
+        {
+          "atlas_grid": {
+            "column": 3,
+            "columns": 4,
+            "row": 0,
+            "rows": 2
+          },
+          "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "a5e4c630d84daf50849723c86333673ff5e42f9336f366d86e7994d1f1585ea2"
+        }
+      ],
+      "name": "New Original-only continuous destroyed terrain 30520 complete1"
+    },
+    {
+      "base_asset": 197921,
+      "frame_count": 1,
+      "frames": [
+        {
+          "atlas_grid": {
+            "column": 0,
+            "columns": 4,
+            "row": 1,
+            "rows": 2
+          },
+          "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "9ffa83c4079d5e26583f6379e2b41641514c4ae1ef6fbde224499280681af114"
+        }
+      ],
+      "name": "New Original-only continuous destroyed terrain 30521 complete1"
+    },
+    {
+      "base_asset": 197923,
+      "frame_count": 1,
+      "frames": [
+        {
+          "atlas_grid": {
+            "column": 1,
+            "columns": 4,
+            "row": 1,
+            "rows": 2
+          },
+          "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "b445d1e0832551fd3e469099604fd7d5b9ad4bbe95b05d2a0f59a30c4a58388b"
+        }
+      ],
+      "name": "New Original-only continuous destroyed terrain 30523 complete1"
+    },
+    {
+      "base_asset": 197924,
+      "frame_count": 1,
+      "frames": [
+        {
+          "atlas_grid": {
+            "column": 2,
+            "columns": 4,
+            "row": 1,
+            "rows": 2
+          },
+          "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "7e336bf02824219611c31ac2ceef14996a553d5fb72c877395fa636ba0569a42"
+        }
+      ],
+      "name": "New Original-only continuous destroyed terrain 30524 complete1"
+    },
+    {
+      "base_asset": 197926,
+      "frame_count": 1,
+      "frames": [
+        {
+          "atlas_grid": {
+            "column": 3,
+            "columns": 4,
+            "row": 1,
+            "rows": 2
+          },
+          "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "22eca7028dae77af2abf55765fbd2915cb02c52169feb2490f5a45e24014144a"
+        }
+      ],
+      "name": "New Original-only continuous destroyed terrain 30526 complete1"
+    }
+  ],
+  "targets": [
+    {
+      "asset": "3051d",
+      "atlas_grid": {
+        "column": 0,
+        "columns": 4,
+        "row": 0,
+        "rows": 2
+      },
+      "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+      "frame": 0,
+      "logical_height": 32,
+      "logical_width": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "8a95f78024f229b996fc148f0b3cddf718c963c6d8c1b12f8b2ce05bb632ed24"
+    },
+    {
+      "asset": "3051e",
+      "atlas_grid": {
+        "column": 1,
+        "columns": 4,
+        "row": 0,
+        "rows": 2
+      },
+      "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+      "frame": 0,
+      "logical_height": 32,
+      "logical_width": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "ab141aeec6563b39369dda7985b758128c7a7ad42bf4dd0648e056bf64586b15"
+    },
+    {
+      "asset": "3051f",
+      "atlas_grid": {
+        "column": 2,
+        "columns": 4,
+        "row": 0,
+        "rows": 2
+      },
+      "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+      "frame": 0,
+      "logical_height": 32,
+      "logical_width": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "42971f93cba770baf05126072801528338d36b4bb000e5e7632db2989113bce7"
+    },
+    {
+      "asset": "30520",
+      "atlas_grid": {
+        "column": 3,
+        "columns": 4,
+        "row": 0,
+        "rows": 2
+      },
+      "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+      "frame": 0,
+      "logical_height": 32,
+      "logical_width": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "a5e4c630d84daf50849723c86333673ff5e42f9336f366d86e7994d1f1585ea2"
+    },
+    {
+      "asset": "30521",
+      "atlas_grid": {
+        "column": 0,
+        "columns": 4,
+        "row": 1,
+        "rows": 2
+      },
+      "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+      "frame": 0,
+      "logical_height": 32,
+      "logical_width": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "9ffa83c4079d5e26583f6379e2b41641514c4ae1ef6fbde224499280681af114"
+    },
+    {
+      "asset": "30523",
+      "atlas_grid": {
+        "column": 1,
+        "columns": 4,
+        "row": 1,
+        "rows": 2
+      },
+      "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+      "frame": 0,
+      "logical_height": 32,
+      "logical_width": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "b445d1e0832551fd3e469099604fd7d5b9ad4bbe95b05d2a0f59a30c4a58388b"
+    },
+    {
+      "asset": "30524",
+      "atlas_grid": {
+        "column": 2,
+        "columns": 4,
+        "row": 1,
+        "rows": 2
+      },
+      "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+      "frame": 0,
+      "logical_height": 32,
+      "logical_width": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "7e336bf02824219611c31ac2ceef14996a553d5fb72c877395fa636ba0569a42"
+    },
+    {
+      "asset": "30526",
+      "atlas_grid": {
+        "column": 3,
+        "columns": 4,
+        "row": 1,
+        "rows": 2
+      },
+      "file": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/generated/ATLAS-ORIGINAL-ONLY-CONTINUOUS8-RETURNED-UNTOUCHED.png",
+      "frame": 0,
+      "logical_height": 32,
+      "logical_width": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "22eca7028dae77af2abf55765fbd2915cb02c52169feb2490f5a45e24014144a"
+    }
+  ]
+}

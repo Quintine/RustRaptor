@@ -1,0 +1,58 @@
+{
+  "actual_gate_lease": "232d81c2-c99d-4112-995a-b3a46a6b21a6",
+  "actual_mode": "RGB",
+  "actual_natural_canvas": [
+    1254,
+    1254
+  ],
+  "actual_return_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "all_PNG_bytes_equal": true,
+  "alpha": "No alpha channel; opaque RGB PNG preserved untouched",
+  "builtin": {
+    "mode": 33188,
+    "mtime_ns": 1792292439761921481,
+    "path": "/home/quintine/.codex/generated_images/01a124db-c9dc-72d2-97aa-040646ba12c1/exec-9e2d753d-3005-4d97-87ef-0fa5b76bfe4f.png",
+    "sha256": "bf2eba42eeb0e87a5da487bbe38b423f999c65d1a1f8a475252bb10797cf8828",
+    "size": 4102361
+  },
+  "full_provider_payload_serialized": false,
+  "gate_events": [
+    {
+      "event": "acquired",
+      "expires_at": "2026-10-18T03:30:16+00:00",
+      "job_id": "terrain-30112-30113-30119-3011a-Original-only-complete4-terrain2-20261018-v1",
+      "lease_id": "232d81c2-c99d-4112-995a-b3a46a6b21a6",
+      "owner": "/root/hd_terrain_set_2",
+      "timestamp_utc": "2026-10-18T03:00:16+00:00"
+    },
+    {
+      "event": "started",
+      "job_id": "terrain-30112-30113-30119-3011a-Original-only-complete4-terrain2-20261018-v1",
+      "lease_id": "232d81c2-c99d-4112-995a-b3a46a6b21a6",
+      "note": "Owner is submitting the built-in imagegen request; this slot requires an explicit report or release.",
+      "owner": "/root/hd_terrain_set_2",
+      "timestamp_utc": "2026-10-18T03:00:16+00:00"
+    },
+    {
+      "event": "report",
+      "job_id": "terrain-30112-30113-30119-3011a-Original-only-complete4-terrain2-20261018-v1",
+      "lease_id": "232d81c2-c99d-4112-995a-b3a46a6b21a6",
+      "outcome": "success",
+      "owner": "/root/hd_terrain_set_2",
+      "timestamp_utc": "2026-10-18T03:00:39+00:00"
+    }
+  ],
+  "inline_base64_saved": false,
+  "output_hint": "Generated images are saved to /home/quintine/.codex/generated_images/01a124db-c9dc-72d2-97aa-040646ba12c1 as /home/quintine/.codex/generated_images/01a124db-c9dc-72d2-97aa-040646ba12c1/exec-9e2d753d-3005-4d97-87ef-0fa5b76bfe4f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "receipt_limit": "Primitive response shape/output_hint plus retained builtin-file identity; dataURL body was displayed directly by tool and not serialized or separately hashed.",
+  "workspace_untouched": {
+    "mode": 33188,
+    "mtime_ns": 1792292439761921481,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-30112-30113-30119-3011a-Original-only-complete4-author-20261018-v1/generated/complete4-Original-only-untouched.png",
+    "sha256": "bf2eba42eeb0e87a5da487bbe38b423f999c65d1a1f8a475252bb10797cf8828",
+    "size": 4102361
+  }
+}

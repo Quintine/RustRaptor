@@ -1,0 +1,763 @@
+{
+  "artist_proposals_not_independent_approval": true,
+  "author": "/root/hd_terrain_set_2",
+  "decisions": [
+    {
+      "Source_callers": {
+        "existing_samples": [
+          {
+            "column": 3,
+            "intact_3x3": [
+              null,
+              null,
+              null,
+              "300ee",
+              "300ef",
+              "300f1",
+              "300f6",
+              "300f7",
+              "300ff"
+            ],
+            "mission": "base:sector_3_wave_1",
+            "row": 0,
+            "target_3x3": [
+              null,
+              null,
+              null,
+              "300ee",
+              "30112",
+              "300f1",
+              "300f6",
+              "300f7",
+              "300ff"
+            ]
+          },
+          {
+            "column": 2,
+            "intact_3x3": [
+              "30205",
+              "30241",
+              "30242",
+              "300ee",
+              "300ef",
+              "300f0",
+              "300f6",
+              "300f6",
+              "300f7"
+            ],
+            "mission": "base:sector_3_wave_1",
+            "row": 27,
+            "target_3x3": [
+              "30205",
+              "30241",
+              "30242",
+              "300ee",
+              "30112",
+              "300f0",
+              "300f6",
+              "300f6",
+              "300f7"
+            ]
+          },
+          {
+            "column": 4,
+            "intact_3x3": [
+              "30205",
+              "3038c",
+              "30141",
+              "300ee",
+              "300ef",
+              "300f0",
+              "300f6",
+              "300f6",
+              "300f6"
+            ],
+            "mission": "base:sector_3_wave_1",
+            "row": 32,
+            "target_3x3": [
+              "30205",
+              "3038c",
+              "30141",
+              "300ee",
+              "30112",
+              "300f0",
+              "300f6",
+              "300f6",
+              "300f6"
+            ]
+          }
+        ],
+        "roles": [
+          "destroyed"
+        ],
+        "scope": "Retained original job metadata assessed; no new World or full-placement/current context run.",
+        "state_partners": [
+          "300ef"
+        ]
+      },
+      "asset": "30112",
+      "author_verdict": "QUALIFIED_PROPOSAL_REQUIRES_DIFFERENT_MATERIAL_AND_CONTEXT_REVIEW",
+      "frame_count": 1,
+      "material_geometry": "Pale left upright and separated right-side gray remnants now remain visibly straight at2-4. Branching two-lobed char footprint, gray surrounding field and dark local warm regions remain recognizable; narrow gaps and lower boundary are somewhat simplified.",
+      "native_frame": {
+        "atlas_grid": {
+          "column": 0,
+          "columns": 2,
+          "row": 0,
+          "rows": 2
+        },
+        "file": "complete4-Original-only-untouched.png",
+        "frame": 0,
+        "logical_height": 32,
+        "logical_width": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "5405dd5ac2717b232d77b3b94727f8a5105250728755717182498cd73c9e4c87"
+      },
+      "old_hold": {
+        "approximate_source_regions": [
+          [
+            2,
+            15,
+            5,
+            30
+          ],
+          [
+            18,
+            13,
+            28,
+            26
+          ]
+        ],
+        "asset": "30112",
+        "candidate_binding": {
+          "asset": "30112",
+          "crop": [
+            0,
+            627,
+            627,
+            627
+          ],
+          "file": "jobs/terrain-3010d-3011c/generated/raw-damaged-30110-30113-v3.png",
+          "frame": 5,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "5405dd5ac2717b232d77b3b94727f8a5105250728755717182498cd73c9e4c87"
+        },
+        "fidelity_finding": "The original pale left edge fragment and several upright gray remnants inside/right of the char remain visibly linear metal in the source. Native HD2\u20134 reduces them to weak mottled gray patches amid coarse soil/soot; actual HD1 preserves a closer palette-average footprint. This loses the surviving structural material at the scales where the remaster is meant to add detail.",
+        "fix_guidance": "Separate source-driven raw proposal retaining the existing surviving gray linear remnants, char, ground and complete canvas; preserve this held candidate and raw unchanged.",
+        "logical_canvas": [
+          32,
+          32
+        ],
+        "native_sample_count": 3,
+        "origin": [
+          0,
+          0
+        ],
+        "raw_sha256": "a0fb63f54a2af5d2ad6859903fa7f5f395dc95a290899b5274021d36f10663b4",
+        "source_path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2250",
+        "source_sha256": "5405dd5ac2717b232d77b3b94727f8a5105250728755717182498cd73c9e4c87",
+        "unused_gallery_only": false,
+        "verdict": "held"
+      },
+      "qualifications": [
+        "Finer, denser and higher-contrast concrete/char grain than the soft Original; black branching edges become more finely broken.",
+        "Gray fragments are brighter, narrower and more crisply relieved; local ends and borders are simplified, not pixel-identical Source outlines.",
+        "Native1 remains soft; small red-brown grain may be more conspicuous than Source. No ordinary exactRGB/count threshold is used as artistic approval.",
+        "This is author intrinsic material only; no new mission/state/neighborhood, independent review or registration is implied."
+      ],
+      "raw": {
+        "mode": 33188,
+        "mtime_ns": 1792292439761921481,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-30112-30113-30119-3011a-Original-only-complete4-author-20261018-v1/generated/complete4-Original-only-untouched.png",
+        "sha256": "bf2eba42eeb0e87a5da487bbe38b423f999c65d1a1f8a475252bb10797cf8828",
+        "size": 4102361
+      },
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959642879622,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2250",
+        "sha256": "5405dd5ac2717b232d77b3b94727f8a5105250728755717182498cd73c9e4c87",
+        "size": 1044
+      }
+    },
+    {
+      "Source_callers": {
+        "existing_samples": [
+          {
+            "column": 6,
+            "intact_3x3": [
+              null,
+              null,
+              null,
+              "300ed",
+              "300f0",
+              "300f0",
+              "300fb",
+              "300f5",
+              "300f7"
+            ],
+            "mission": "base:sector_3_wave_1",
+            "row": 0,
+            "target_3x3": [
+              null,
+              null,
+              null,
+              "300ed",
+              "30113",
+              "300f0",
+              "300fb",
+              "300f5",
+              "300f7"
+            ]
+          },
+          {
+            "column": 7,
+            "intact_3x3": [
+              null,
+              null,
+              null,
+              "300f0",
+              "300f0",
+              "300f1",
+              "300f5",
+              "300f7",
+              "300ff"
+            ],
+            "mission": "base:sector_3_wave_1",
+            "row": 0,
+            "target_3x3": [
+              null,
+              null,
+              null,
+              "300f0",
+              "30113",
+              "300f1",
+              "300f5",
+              "300f7",
+              "300ff"
+            ]
+          },
+          {
+            "column": 3,
+            "intact_3x3": [
+              "30241",
+              "30242",
+              "30205",
+              "300ef",
+              "300f0",
+              "300f1",
+              "300f6",
+              "300f7",
+              "300f3"
+            ],
+            "mission": "base:sector_3_wave_1",
+            "row": 27,
+            "target_3x3": [
+              "30241",
+              "30242",
+              "30205",
+              "300ef",
+              "30113",
+              "300f1",
+              "300f6",
+              "300f7",
+              "300f3"
+            ]
+          }
+        ],
+        "roles": [
+          "destroyed"
+        ],
+        "scope": "Retained original job metadata assessed; no new World or full-placement/current context run.",
+        "state_partners": [
+          "300f0"
+        ]
+      },
+      "asset": "30113",
+      "author_verdict": "QUALIFIED_PROPOSAL_REQUIRES_DIFFERENT_MATERIAL_AND_CONTEXT_REVIEW",
+      "frame_count": 1,
+      "material_geometry": "Left vertical snippet and separated right upright fragments remain legible at2-4 within the asymmetric black branching scorch. Source is grayscale-only; faint warm generated grains are a material qualification, not a Source color or functional cue claim. Gray islands and distinct black gaps remain readable.",
+      "native_frame": {
+        "atlas_grid": {
+          "column": 1,
+          "columns": 2,
+          "row": 0,
+          "rows": 2
+        },
+        "file": "complete4-Original-only-untouched.png",
+        "frame": 0,
+        "logical_height": 32,
+        "logical_width": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "df83af10238c617cacea3a697a470c129d7f57b8d230530b7c5971037a51148e"
+      },
+      "old_hold": {
+        "approximate_source_regions": [
+          [
+            1,
+            15,
+            5,
+            30
+          ],
+          [
+            18,
+            18,
+            28,
+            28
+          ]
+        ],
+        "asset": "30113",
+        "candidate_binding": {
+          "asset": "30113",
+          "crop": [
+            627,
+            627,
+            627,
+            627
+          ],
+          "file": "jobs/terrain-3010d-3011c/generated/raw-damaged-30110-30113-v3.png",
+          "frame": 6,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "df83af10238c617cacea3a697a470c129d7f57b8d230530b7c5971037a51148e"
+        },
+        "fidelity_finding": "The original pale vertical left remnant and the separated upright gray fragments on the right of the blast read as surviving straight structural strips. In native HD2\u20134 the larger artwork mainly interprets these locations as grainy ground/scorch with indistinct gray flecks. The black blast silhouette remains, but its surviving metal landmarks do not.",
+        "fix_guidance": "Separate source-driven raw proposal retaining the existing surviving gray linear remnants, char, ground and complete canvas; preserve this held candidate and raw unchanged.",
+        "logical_canvas": [
+          32,
+          32
+        ],
+        "native_sample_count": 3,
+        "origin": [
+          0,
+          0
+        ],
+        "raw_sha256": "a0fb63f54a2af5d2ad6859903fa7f5f395dc95a290899b5274021d36f10663b4",
+        "source_path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2251",
+        "source_sha256": "df83af10238c617cacea3a697a470c129d7f57b8d230530b7c5971037a51148e",
+        "unused_gallery_only": false,
+        "verdict": "held"
+      },
+      "qualifications": [
+        "Finer, denser and higher-contrast concrete/char grain than the soft Original; black branching edges become more finely broken.",
+        "Gray fragments are brighter, narrower and more crisply relieved; local ends and borders are simplified, not pixel-identical Source outlines.",
+        "Native1 remains soft; small red-brown grain may be more conspicuous than Source. No ordinary exactRGB/count threshold is used as artistic approval.",
+        "This is author intrinsic material only; no new mission/state/neighborhood, independent review or registration is implied."
+      ],
+      "raw": {
+        "mode": 33188,
+        "mtime_ns": 1792292439761921481,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-30112-30113-30119-3011a-Original-only-complete4-author-20261018-v1/generated/complete4-Original-only-untouched.png",
+        "sha256": "bf2eba42eeb0e87a5da487bbe38b423f999c65d1a1f8a475252bb10797cf8828",
+        "size": 4102361
+      },
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959642964468,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2251",
+        "sha256": "df83af10238c617cacea3a697a470c129d7f57b8d230530b7c5971037a51148e",
+        "size": 1044
+      }
+    },
+    {
+      "Source_callers": {
+        "existing_samples": [
+          {
+            "column": 2,
+            "intact_3x3": [
+              "300ee",
+              "300ee",
+              "300ef",
+              "300f5",
+              "300f6",
+              "300f7",
+              "300fc",
+              "3016d",
+              "30105"
+            ],
+            "mission": "base:sector_3_wave_1",
+            "row": 1,
+            "target_3x3": [
+              "300ee",
+              "300ee",
+              "300ef",
+              "300f5",
+              "30119",
+              "300f7",
+              "300fc",
+              "3016d",
+              "30105"
+            ]
+          },
+          {
+            "column": 0,
+            "intact_3x3": [
+              null,
+              "300ee",
+              "300ee",
+              null,
+              "300f6",
+              "300f6",
+              null,
+              "3016d",
+              "30104"
+            ],
+            "mission": "base:sector_3_wave_1",
+            "row": 28,
+            "target_3x3": [
+              null,
+              "300ee",
+              "300ee",
+              null,
+              "30119",
+              "300f6",
+              null,
+              "3016d",
+              "30104"
+            ]
+          },
+          {
+            "column": 1,
+            "intact_3x3": [
+              "300ee",
+              "300ee",
+              "300ef",
+              "300f6",
+              "300f6",
+              "300f6",
+              "3016d",
+              "30104",
+              "30104"
+            ],
+            "mission": "base:sector_3_wave_1",
+            "row": 28,
+            "target_3x3": [
+              "300ee",
+              "300ee",
+              "300ef",
+              "300f6",
+              "30119",
+              "300f6",
+              "3016d",
+              "30104",
+              "30104"
+            ]
+          }
+        ],
+        "roles": [
+          "destroyed"
+        ],
+        "scope": "Retained original job metadata assessed; no new World or full-placement/current context run.",
+        "state_partners": [
+          "300f6"
+        ]
+      },
+      "asset": "30119",
+      "author_verdict": "QUALIFIED_PROPOSAL_REQUIRES_DIFFERENT_MATERIAL_AND_CONTEXT_REVIEW",
+      "frame_count": 1,
+      "material_geometry": "Interrupted top strip and broken pale perimeter pieces around the nearly square black field remain structured rather than diffuse gravel at2-4. Internal gray flecks are quieter and the bottom/right fragments narrower than Source; no complete repaired frame was invented.",
+      "native_frame": {
+        "atlas_grid": {
+          "column": 0,
+          "columns": 2,
+          "row": 1,
+          "rows": 2
+        },
+        "file": "complete4-Original-only-untouched.png",
+        "frame": 0,
+        "logical_height": 32,
+        "logical_width": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "a3c2bd2b384f468257df8e4996e782f81a104753b6f2de588020a0ff3e2291c9"
+      },
+      "old_hold": {
+        "approximate_source_regions": [
+          [
+            0,
+            0,
+            31,
+            5
+          ],
+          [
+            1,
+            5,
+            5,
+            30
+          ],
+          [
+            27,
+            5,
+            31,
+            29
+          ]
+        ],
+        "asset": "30119",
+        "candidate_binding": {
+          "asset": "30119",
+          "crop": [
+            627,
+            0,
+            627,
+            627
+          ],
+          "file": "jobs/terrain-3010d-3011c/generated/raw-damaged-30118-3011b-v1.png",
+          "frame": 12,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "a3c2bd2b384f468257df8e4996e782f81a104753b6f2de588020a0ff3e2291c9"
+        },
+        "fidelity_finding": "The source retains a rectangular pale/gray perimeter and distinct interrupted straight remnants around its near-square black char. HD2\u20134 retains approximately the light-versus-dark area but dissolves those structural remnants into diffuse gravel/soot texture. Good opaque coverage and a close HD1 average do not preserve the visible metal geometry.",
+        "fix_guidance": "Separate source-driven raw proposal retaining the existing surviving gray linear remnants, char, ground and complete canvas; preserve this held candidate and raw unchanged.",
+        "logical_canvas": [
+          32,
+          32
+        ],
+        "native_sample_count": 3,
+        "origin": [
+          0,
+          0
+        ],
+        "raw_sha256": "544430375671d395eb9e5d9afa02f9359b1c4b4ffa03b1dfa7886f556a39470f",
+        "source_path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2257",
+        "source_sha256": "a3c2bd2b384f468257df8e4996e782f81a104753b6f2de588020a0ff3e2291c9",
+        "unused_gallery_only": false,
+        "verdict": "held"
+      },
+      "qualifications": [
+        "Finer, denser and higher-contrast concrete/char grain than the soft Original; black branching edges become more finely broken.",
+        "Gray fragments are brighter, narrower and more crisply relieved; local ends and borders are simplified, not pixel-identical Source outlines.",
+        "Native1 remains soft; small red-brown grain may be more conspicuous than Source. No ordinary exactRGB/count threshold is used as artistic approval.",
+        "This is author intrinsic material only; no new mission/state/neighborhood, independent review or registration is implied."
+      ],
+      "raw": {
+        "mode": 33188,
+        "mtime_ns": 1792292439761921481,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-30112-30113-30119-3011a-Original-only-complete4-author-20261018-v1/generated/complete4-Original-only-untouched.png",
+        "sha256": "bf2eba42eeb0e87a5da487bbe38b423f999c65d1a1f8a475252bb10797cf8828",
+        "size": 4102361
+      },
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959643317309,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2257",
+        "sha256": "a3c2bd2b384f468257df8e4996e782f81a104753b6f2de588020a0ff3e2291c9",
+        "size": 1044
+      }
+    },
+    {
+      "Source_callers": {
+        "existing_samples": [
+          {
+            "column": 3,
+            "intact_3x3": [
+              "300ee",
+              "300ef",
+              "300f1",
+              "300f6",
+              "300f7",
+              "300ff",
+              "3016d",
+              "30105",
+              "300f3"
+            ],
+            "mission": "base:sector_3_wave_1",
+            "row": 1,
+            "target_3x3": [
+              "300ee",
+              "300ef",
+              "300f1",
+              "300f6",
+              "3011a",
+              "300ff",
+              "3016d",
+              "30105",
+              "300f3"
+            ]
+          },
+          {
+            "column": 7,
+            "intact_3x3": [
+              "300f0",
+              "300f0",
+              "300f1",
+              "300f5",
+              "300f7",
+              "300ff",
+              "30103",
+              "30105",
+              "300ff"
+            ],
+            "mission": "base:sector_3_wave_1",
+            "row": 1,
+            "target_3x3": [
+              "300f0",
+              "300f0",
+              "300f1",
+              "300f5",
+              "3011a",
+              "300ff",
+              "30103",
+              "30105",
+              "300ff"
+            ]
+          },
+          {
+            "column": 3,
+            "intact_3x3": [
+              "300ef",
+              "300f0",
+              "300f1",
+              "300f6",
+              "300f7",
+              "300f3",
+              "30104",
+              "30105",
+              "30106"
+            ],
+            "mission": "base:sector_3_wave_1",
+            "row": 28,
+            "target_3x3": [
+              "300ef",
+              "300f0",
+              "300f1",
+              "300f6",
+              "3011a",
+              "300f3",
+              "30104",
+              "30105",
+              "30106"
+            ]
+          }
+        ],
+        "roles": [
+          "destroyed"
+        ],
+        "scope": "Retained original job metadata assessed; no new World or full-placement/current context run.",
+        "state_partners": [
+          "300f7"
+        ]
+      },
+      "asset": "3011a",
+      "author_verdict": "QUALIFIED_PROPOSAL_REQUIRES_DIFFERENT_MATERIAL_AND_CONTEXT_REVIEW",
+      "frame_count": 1,
+      "material_geometry": "Broken left edge and short right upright pieces stay separate and readable at2-4, with broad black/brown field and gray margins retained. Small border endpoints and char curls are rounded/reinterpreted and concrete grain remains stronger.",
+      "native_frame": {
+        "atlas_grid": {
+          "column": 1,
+          "columns": 2,
+          "row": 1,
+          "rows": 2
+        },
+        "file": "complete4-Original-only-untouched.png",
+        "frame": 0,
+        "logical_height": 32,
+        "logical_width": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "8e514d0f0d493426474def0049fdcd01a613d7efde9982de2f9e33bfabd67119"
+      },
+      "old_hold": {
+        "approximate_source_regions": [
+          [
+            0,
+            0,
+            5,
+            30
+          ],
+          [
+            27,
+            7,
+            31,
+            29
+          ]
+        ],
+        "asset": "3011a",
+        "candidate_binding": {
+          "asset": "3011a",
+          "crop": [
+            0,
+            627,
+            627,
+            627
+          ],
+          "file": "jobs/terrain-3010d-3011c/generated/raw-damaged-30118-3011b-v1.png",
+          "frame": 13,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "8e514d0f0d493426474def0049fdcd01a613d7efde9982de2f9e33bfabd67119"
+        },
+        "fidelity_finding": "Surviving gray straight edge fragments surrounding the char, especially the left border and right upright pieces, are recognizable in the original. HD2\u20134 instead presents diffuse gray ground/rubble around the blast; the old structural fragments are too indistinct to establish faithful material and landmark retention. Actual HD1 remains closer but does not repair the native larger artwork.",
+        "fix_guidance": "Separate source-driven raw proposal retaining the existing surviving gray linear remnants, char, ground and complete canvas; preserve this held candidate and raw unchanged.",
+        "logical_canvas": [
+          32,
+          32
+        ],
+        "native_sample_count": 3,
+        "origin": [
+          0,
+          0
+        ],
+        "raw_sha256": "544430375671d395eb9e5d9afa02f9359b1c4b4ffa03b1dfa7886f556a39470f",
+        "source_path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2258",
+        "source_sha256": "8e514d0f0d493426474def0049fdcd01a613d7efde9982de2f9e33bfabd67119",
+        "unused_gallery_only": false,
+        "verdict": "held"
+      },
+      "qualifications": [
+        "Finer, denser and higher-contrast concrete/char grain than the soft Original; black branching edges become more finely broken.",
+        "Gray fragments are brighter, narrower and more crisply relieved; local ends and borders are simplified, not pixel-identical Source outlines.",
+        "Native1 remains soft; small red-brown grain may be more conspicuous than Source. No ordinary exactRGB/count threshold is used as artistic approval.",
+        "This is author intrinsic material only; no new mission/state/neighborhood, independent review or registration is implied."
+      ],
+      "raw": {
+        "mode": 33188,
+        "mtime_ns": 1792292439761921481,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-30112-30113-30119-3011a-Original-only-complete4-author-20261018-v1/generated/complete4-Original-only-untouched.png",
+        "sha256": "bf2eba42eeb0e87a5da487bbe38b423f999c65d1a1f8a475252bb10797cf8828",
+        "size": 4102361
+      },
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959643375521,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2258",
+        "sha256": "8e514d0f0d493426474def0049fdcd01a613d7efde9982de2f9e33bfabd67119",
+        "size": 1044
+      }
+    }
+  ],
+  "held_ids": [],
+  "qualified_ids": [
+    "30112",
+    "30113",
+    "30119",
+    "3011a"
+  ]
+}

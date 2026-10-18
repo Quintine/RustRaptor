@@ -1,0 +1,214 @@
+{
+  "actual_probe_receipt": {
+    "path": "proofs/ui2-existing-SourceF-bank/actual-one-bank-terminal-UNMODIFIED.json",
+    "sha256": "4b599ee19d9b4a51ea903d7ded286b2a3a15e7e8e68884e410eb8605f8256ac4"
+  },
+  "actual_render_library_epoch_unchanged": true,
+  "any_game_source_newer_than_library": false,
+  "artwork_sha256": {
+    "jobs/derived-ui-1010f-complete1-v3-20261018/derived/1010f-derived.png": "9dfe4fe6159fc2f837098d9412948e1017e1e9043a31c26a0a11b5fbaf50b1c3"
+  },
+  "candidate_sha256": "0d592169f14bb016e03b85a8e7a088e2f5079b3fabaabecc6dcce39af3e4f724",
+  "diagnostics": [],
+  "existing_bank_route_identity": {
+    "path": "jobs/derived-ui-1010f-complete1-v3-20261018/proofs/EXISTING-SOURCEF-BANK-IDENTITY-AFTER-PORTABLE-REPLAY.json",
+    "sha256": "0d928035041439b9abf504f27b2f78d8a970fa7f647d9f5fc911533c757e1f08"
+  },
+  "frame_bindings_sha256": "e6d51e074d29bfab3023c675daa6c41beff47c0d3dc0ad5e52190ca8f27e30bf",
+  "frames": [
+    {
+      "asset": "1010f",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              4,
+              4,
+              219,
+              114
+            ],
+            "centroid": [
+              91.33769852326553,
+              63.42713847868487
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 3589
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              8,
+              8,
+              438,
+              228
+            ],
+            "centroid": [
+              183.17539704653106,
+              127.35427695736973
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 14356
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              12,
+              12,
+              657,
+              342
+            ],
+            "centroid": [
+              275.0130955697966,
+              191.2814154360546
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 32301
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              16,
+              16,
+              876,
+              456
+            ],
+            "centroid": [
+              366.8507940930621,
+              255.20855391473947
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 57424
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        224,
+        120
+      ],
+      "source_mask": {
+        "bounds": [
+          4,
+          4,
+          219,
+          114
+        ],
+        "centroid": [
+          91.33769852326553,
+          63.42713847868487
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 3589
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "532f1f14932cb1be784f71a65ff25307608db2921dbd6a41d17715bc54192313"
+    }
+  ],
+  "library": "target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+  "library_modified_ns": 1792245641851329918,
+  "library_sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+  "limitation": "Gallery validation does not prove live scene reachability, terrain seam correctness or artistic fidelity. Opaque sprites have trivial alpha-mask overlap; compare visible source geometry manually.",
+  "method": "actual Rust HdAssets::load and sprite at scales 1..4; Catalog palette; no artwork edits",
+  "new_final_route_helper_calls": 0,
+  "portable_cleanup_replay_receipt": {
+    "path": "jobs/derived-ui-1010f-complete1-v3-20261018/portable-replay-once/derived-provenance.json",
+    "sha256": "38f693cd4841a98cadf1821793e99482e2abead15dba786007ec955f53af460c"
+  },
+  "portable_cleanup_replays": 1,
+  "source_joint_bank_validated_frames": 2,
+  "source_newer_than_library": false,
+  "subset_projection_not_new_measurement": true,
+  "validated_frames": 1
+}

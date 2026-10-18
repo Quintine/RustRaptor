@@ -1,0 +1,243 @@
+{
+  "diagnostics": [],
+  "frames": [
+    {
+      "asset": "3050a",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              32,
+              32
+            ],
+            "centroid": [
+              15.5,
+              15.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 1024
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              64,
+              64
+            ],
+            "centroid": [
+              31.5,
+              31.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 4096
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              96,
+              96
+            ],
+            "centroid": [
+              47.5,
+              47.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 9216
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              128,
+              128
+            ],
+            "centroid": [
+              63.5,
+              63.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 16384
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_mask": {
+        "bounds": [
+          0,
+          0,
+          32,
+          32
+        ],
+        "centroid": [
+          15.5,
+          15.5
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 1024
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "7b892a6598d56a3a7d3475f07d37dc7d948e2d1bfad22765e452822dd5210d39"
+    }
+  ],
+  "limitation": "Gallery validation does not prove live scene reachability, terrain seam correctness or artistic fidelity. Opaque sprites have trivial alpha-mask overlap; compare visible source geometry manually.",
+  "method": "actual Rust HdAssets::load and sprite at scales 1..4; Catalog palette; no artwork edits",
+  "validated_frames": 1,
+  "frame_bindings_sha256": "3ee27ba069edc79f96d88264cb763b8dd7c2f1d9f4e22bb839a79abc22499abd",
+  "candidate_sha256": "3b1d1f1b26069ebe1ba75d4c5123e748c8ed80f9b0ec7a37a542e1d6d60daf03",
+  "source_newer_than_library": false,
+  "any_game_source_newer_than_library": false,
+  "library": "target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+  "library_sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+  "library_modified_ns": 1792245641851329918,
+  "artwork_sha256": {
+    "jobs/terrain-304fd-3050c-selected3050a-newOriginalAtlas8-SourceF-current5552-20261018/generated/ATLAS-ORIGINAL8-RETURNED-UNTOUCHED.png": "afc05e2453c5c2e91e64607a82defdef8696f5af4113bdae306fd12b07fe454c"
+  },
+  "portable_metadata_projection": {
+    "new_measurement": false,
+    "actual_helper_calls": 1,
+    "actual_helper_validated_frames": 8,
+    "selected_projected_frame_count": 1,
+    "actual_runtime_qa_sha256": "3b575f0fcbf5335f51c997170ba4c36702cbe6fc74657d948de68377474455f9",
+    "actual_unmodified_runtime_qa": {
+      "path": "jobs/terrain-304fd-3050c-selected3050a-newOriginalAtlas8-SourceF-current5552-20261018/review/actual-unmodified-F8-runtime-qa.json",
+      "sha256": "3b575f0fcbf5335f51c997170ba4c36702cbe6fc74657d948de68377474455f9",
+      "size": 26848,
+      "mtime_ns": 1792291541623581046,
+      "mode": 33188
+    },
+    "actual_invocation": {
+      "path": "jobs/terrain-304fd-3050c-selected3050a-newOriginalAtlas8-SourceF-current5552-20261018/review/actual-F8-intrinsic-started.json",
+      "sha256": "ff101de0f3c2460e62367e3069ff41180e48bef432250354e1b56beab22fad10",
+      "size": 22160,
+      "mtime_ns": 1792291541376477863,
+      "mode": 33188
+    },
+    "actual_terminal": {
+      "path": "jobs/terrain-304fd-3050c-selected3050a-newOriginalAtlas8-SourceF-current5552-20261018/review/actual-F8-intrinsic-terminal.json",
+      "sha256": "48fc008aa2a40648b8da594d67cf9f1327cbb61a06652cedf42c7c232f8d9ae6",
+      "size": 1725,
+      "mtime_ns": 1792291541711174974,
+      "mode": 33188
+    },
+    "actual_scalar": {
+      "path": "jobs/terrain-304fd-3050c-selected3050a-newOriginalAtlas8-SourceF-current5552-20261018/review/actual-F8-scalar-epoch.json",
+      "sha256": "f633dc6c43d44524789760182103678d1f91e76a511645f35d13f79d8a9cd3f4",
+      "size": 2898,
+      "mtime_ns": 1792291910430158329,
+      "mode": 33188
+    },
+    "only_renderer_bound_field_alias": "file",
+    "measured_file": "ATLAS-ORIGINAL8-RETURNED-UNTOUCHED.png",
+    "portable_file": "jobs/terrain-304fd-3050c-selected3050a-newOriginalAtlas8-SourceF-current5552-20261018/generated/ATLAS-ORIGINAL8-RETURNED-UNTOUCHED.png",
+    "unchanged_full_raw_sha256": "afc05e2453c5c2e91e64607a82defdef8696f5af4113bdae306fd12b07fe454c",
+    "atlas_grid_unchanged": {
+      "columns": 4,
+      "rows": 2,
+      "column": 1,
+      "row": 1
+    },
+    "seven_other_actual_outputs_held": true
+  }
+}

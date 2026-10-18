@@ -1,0 +1,648 @@
+{
+  "Original_fallbacks": [],
+  "baseline_root": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed13-publication-after5539-20261018/data/hd",
+  "cases": [
+    {
+      "case_index": 0,
+      "columns": 3,
+      "is_initial_Original_MAP_scene": true,
+      "key": "aa50d4b1abbbccdb4c4bde6a8d1924e361962d045288186f857c0e99749a6cf7",
+      "ordered_source_ids": [
+        "30205",
+        "30241",
+        "30242",
+        "300ee",
+        "300ef",
+        "300f0",
+        "300f6",
+        "300f6",
+        "300f7"
+      ],
+      "owner": "30112",
+      "settled_changes": [],
+      "state": "authentic_Original_intact",
+      "witness": {
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 992,
+        "Original_definition": {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 16,
+          "flat": 2,
+          "game": 2,
+          "health": 35,
+          "intact": "300ef",
+          "reward": 300,
+          "settled": "30112"
+        },
+        "column": 2,
+        "mission": "base:sector_3_wave_1",
+        "row": 27
+      }
+    },
+    {
+      "case_index": 1,
+      "columns": 3,
+      "is_initial_Original_MAP_scene": false,
+      "key": "a7be888242c6c3fcae39c59282d3c07a5df18f1571c45ddd6743fc7df8a474bb",
+      "ordered_source_ids": [
+        "30205",
+        "30241",
+        "30242",
+        "300ee",
+        "30112",
+        "300f0",
+        "300f6",
+        "300f6",
+        "300f7"
+      ],
+      "owner": "30112",
+      "settled_changes": [
+        {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 16,
+          "column": 2,
+          "from_asset": "300ef",
+          "health": 35,
+          "reward": 300,
+          "row": 27,
+          "slot": 4,
+          "to_asset": "30112"
+        }
+      ],
+      "state": "single_true_own_settled_endpoint",
+      "witness": {
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 992,
+        "Original_definition": {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 16,
+          "flat": 2,
+          "game": 2,
+          "health": 35,
+          "intact": "300ef",
+          "reward": 300,
+          "settled": "30112"
+        },
+        "column": 2,
+        "mission": "base:sector_3_wave_1",
+        "row": 27
+      }
+    },
+    {
+      "case_index": 2,
+      "columns": 3,
+      "is_initial_Original_MAP_scene": true,
+      "key": "98f2f740d1d420e9aafd287c465874a4ef8fd7ad6f8909c837b148d58c6ccbbf",
+      "ordered_source_ids": [
+        "30241",
+        "30242",
+        "30205",
+        "300ef",
+        "300f0",
+        "300f1",
+        "300f6",
+        "300f7",
+        "300f3"
+      ],
+      "owner": "30113",
+      "settled_changes": [],
+      "state": "authentic_Original_intact",
+      "witness": {
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 996,
+        "Original_definition": {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 24,
+          "flat": 3,
+          "game": 2,
+          "health": 35,
+          "intact": "300f0",
+          "reward": 300,
+          "settled": "30113"
+        },
+        "column": 3,
+        "mission": "base:sector_3_wave_1",
+        "row": 27
+      }
+    },
+    {
+      "case_index": 3,
+      "columns": 3,
+      "is_initial_Original_MAP_scene": false,
+      "key": "8f49b02799b4bb94c5d16c0ee48ac0086a18da154fae0c1ff09dc09753cc3e14",
+      "ordered_source_ids": [
+        "30241",
+        "30242",
+        "30205",
+        "300ef",
+        "30113",
+        "300f1",
+        "300f6",
+        "300f7",
+        "300f3"
+      ],
+      "owner": "30113",
+      "settled_changes": [
+        {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 24,
+          "column": 3,
+          "from_asset": "300f0",
+          "health": 35,
+          "reward": 300,
+          "row": 27,
+          "slot": 4,
+          "to_asset": "30113"
+        }
+      ],
+      "state": "single_true_own_settled_endpoint",
+      "witness": {
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 996,
+        "Original_definition": {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 24,
+          "flat": 3,
+          "game": 2,
+          "health": 35,
+          "intact": "300f0",
+          "reward": 300,
+          "settled": "30113"
+        },
+        "column": 3,
+        "mission": "base:sector_3_wave_1",
+        "row": 27
+      }
+    },
+    {
+      "case_index": 4,
+      "columns": 3,
+      "is_initial_Original_MAP_scene": true,
+      "key": "8bbeeeb7c78c28f860f203b54a36435c494186273709ef848e2710608562b590",
+      "ordered_source_ids": [
+        "300ee",
+        "300ef",
+        "300f0",
+        "300f6",
+        "300f6",
+        "300f7",
+        "30104",
+        "30104",
+        "30105"
+      ],
+      "owner": "30119",
+      "settled_changes": [],
+      "state": "authentic_Original_intact",
+      "witness": {
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 1028,
+        "Original_definition": {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 72,
+          "flat": 9,
+          "game": 2,
+          "health": 25,
+          "intact": "300f6",
+          "reward": 300,
+          "settled": "30119"
+        },
+        "column": 2,
+        "mission": "base:sector_3_wave_1",
+        "row": 28
+      }
+    },
+    {
+      "case_index": 5,
+      "columns": 3,
+      "is_initial_Original_MAP_scene": false,
+      "key": "5504627ff5ab6972ac3c77b1389bfe5997bbd367083acf329778fd744d2cfb2b",
+      "ordered_source_ids": [
+        "300ee",
+        "300ef",
+        "300f0",
+        "300f6",
+        "30119",
+        "300f7",
+        "30104",
+        "30104",
+        "30105"
+      ],
+      "owner": "30119",
+      "settled_changes": [
+        {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 72,
+          "column": 2,
+          "from_asset": "300f6",
+          "health": 25,
+          "reward": 300,
+          "row": 28,
+          "slot": 4,
+          "to_asset": "30119"
+        }
+      ],
+      "state": "single_true_own_settled_endpoint",
+      "witness": {
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 1028,
+        "Original_definition": {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 72,
+          "flat": 9,
+          "game": 2,
+          "health": 25,
+          "intact": "300f6",
+          "reward": 300,
+          "settled": "30119"
+        },
+        "column": 2,
+        "mission": "base:sector_3_wave_1",
+        "row": 28
+      }
+    },
+    {
+      "case_index": 6,
+      "columns": 3,
+      "is_initial_Original_MAP_scene": true,
+      "key": "7769f2d48d2f95453900aa602c299d33b26ad836859bf70285c0105baa5b0a1c",
+      "ordered_source_ids": [
+        "300ef",
+        "300f0",
+        "300f1",
+        "300f6",
+        "300f7",
+        "300f3",
+        "30104",
+        "30105",
+        "30106"
+      ],
+      "owner": "3011a",
+      "settled_changes": [],
+      "state": "authentic_Original_intact",
+      "witness": {
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 1032,
+        "Original_definition": {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 80,
+          "flat": 10,
+          "game": 2,
+          "health": 25,
+          "intact": "300f7",
+          "reward": 300,
+          "settled": "3011a"
+        },
+        "column": 3,
+        "mission": "base:sector_3_wave_1",
+        "row": 28
+      }
+    },
+    {
+      "case_index": 7,
+      "columns": 3,
+      "is_initial_Original_MAP_scene": false,
+      "key": "51189e6410a28d38175505214e5128e9280f5e51f3893438a1b0077500e473af",
+      "ordered_source_ids": [
+        "300ef",
+        "300f0",
+        "300f1",
+        "300f6",
+        "3011a",
+        "300f3",
+        "30104",
+        "30105",
+        "30106"
+      ],
+      "owner": "3011a",
+      "settled_changes": [
+        {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 80,
+          "column": 3,
+          "from_asset": "300f7",
+          "health": 25,
+          "reward": 300,
+          "row": 28,
+          "slot": 4,
+          "to_asset": "3011a"
+        }
+      ],
+      "state": "single_true_own_settled_endpoint",
+      "witness": {
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 1032,
+        "Original_definition": {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 80,
+          "flat": 10,
+          "game": 2,
+          "health": 25,
+          "intact": "300f7",
+          "reward": 300,
+          "settled": "3011a"
+        },
+        "column": 3,
+        "mission": "base:sector_3_wave_1",
+        "row": 28
+      }
+    },
+    {
+      "case_index": 8,
+      "columns": 3,
+      "is_initial_Original_MAP_scene": false,
+      "key": "232d01bf561aea9f56b6a8d2cb8a16c9f65651c2712144ebd17ec344ba4dbc08",
+      "ordered_source_ids": [
+        "30205",
+        "30241",
+        "30242",
+        "300ee",
+        "30112",
+        "30113",
+        "300f6",
+        "30119",
+        "3011a"
+      ],
+      "owner": "30112",
+      "settled_changes": [
+        {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 16,
+          "column": 2,
+          "from_asset": "300ef",
+          "health": 35,
+          "reward": 300,
+          "row": 27,
+          "slot": 4,
+          "to_asset": "30112"
+        },
+        {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 24,
+          "column": 3,
+          "from_asset": "300f0",
+          "health": 35,
+          "reward": 300,
+          "row": 27,
+          "slot": 5,
+          "to_asset": "30113"
+        },
+        {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 72,
+          "column": 2,
+          "from_asset": "300f6",
+          "health": 25,
+          "reward": 300,
+          "row": 28,
+          "slot": 7,
+          "to_asset": "30119"
+        },
+        {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 80,
+          "column": 3,
+          "from_asset": "300f7",
+          "health": 25,
+          "reward": 300,
+          "row": 28,
+          "slot": 8,
+          "to_asset": "3011a"
+        }
+      ],
+      "state": "legal_all_four_settled_mutual_join_endpoint",
+      "witness": {
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 992,
+        "Original_definition": {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 16,
+          "flat": 2,
+          "game": 2,
+          "health": 35,
+          "intact": "300ef",
+          "reward": 300,
+          "settled": "30112"
+        },
+        "column": 2,
+        "mission": "base:sector_3_wave_1",
+        "row": 27
+      }
+    },
+    {
+      "case_index": 9,
+      "columns": 3,
+      "is_initial_Original_MAP_scene": false,
+      "key": "1d449ed79643bf92073684874f2d4a28750ce69d334736e2f92d62ebcd8b3d75",
+      "ordered_source_ids": [
+        "30112",
+        "30113",
+        "300f1",
+        "30119",
+        "3011a",
+        "300f3",
+        "30104",
+        "30105",
+        "30106"
+      ],
+      "owner": "3011a",
+      "settled_changes": [
+        {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 16,
+          "column": 2,
+          "from_asset": "300ef",
+          "health": 35,
+          "reward": 300,
+          "row": 27,
+          "slot": 0,
+          "to_asset": "30112"
+        },
+        {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 24,
+          "column": 3,
+          "from_asset": "300f0",
+          "health": 35,
+          "reward": 300,
+          "row": 27,
+          "slot": 1,
+          "to_asset": "30113"
+        },
+        {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 72,
+          "column": 2,
+          "from_asset": "300f6",
+          "health": 25,
+          "reward": 300,
+          "row": 28,
+          "slot": 3,
+          "to_asset": "30119"
+        },
+        {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 80,
+          "column": 3,
+          "from_asset": "300f7",
+          "health": 25,
+          "reward": 300,
+          "row": 28,
+          "slot": 4,
+          "to_asset": "3011a"
+        }
+      ],
+      "state": "legal_all_four_settled_mutual_join_endpoint",
+      "witness": {
+        "MAP_asset": "30002",
+        "MAP_byte_offset": 1032,
+        "Original_definition": {
+          "FLATS_asset": "30001",
+          "FLATS_byte_offset": 80,
+          "flat": 10,
+          "game": 2,
+          "health": 25,
+          "intact": "300f7",
+          "reward": 300,
+          "settled": "3011a"
+        },
+        "column": 3,
+        "mission": "base:sector_3_wave_1",
+        "row": 28
+      }
+    }
+  ],
+  "data_root": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed13-publication-after5539-20261018/data",
+  "finite_bindings": {
+    "mode": 33188,
+    "mtime_ns": 1792293298330801258,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-30112-30113-30119-3011a-SourceF-fixedH5552-genuine-context-production-20261018-v1/EXACT-FINITE-SOURCE-FULL-NATIVE-RAW-DEFAULT-BINDINGS.json",
+    "sha256": "356b46e660739dfc58819037780fcb04aa90ab6db63a666b79ad5b03d260a655",
+    "size": 28836
+  },
+  "foreign": [
+    "300ee",
+    "300ef",
+    "300f0",
+    "300f1",
+    "300f3",
+    "300f6",
+    "300f7",
+    "30104",
+    "30105",
+    "30106",
+    "30205",
+    "30241",
+    "30242"
+  ],
+  "genuine_ordered_pairs": [
+    {
+      "after_case": 1,
+      "asset": "30112",
+      "before_case": 0,
+      "changed_slots": [
+        4
+      ],
+      "from_asset": "300ef",
+      "health": 35,
+      "own_state": true,
+      "pair_index": 0,
+      "reward": 300,
+      "to_asset": "30112"
+    },
+    {
+      "after_case": 3,
+      "asset": "30113",
+      "before_case": 2,
+      "changed_slots": [
+        4
+      ],
+      "from_asset": "300f0",
+      "health": 35,
+      "own_state": true,
+      "pair_index": 1,
+      "reward": 300,
+      "to_asset": "30113"
+    },
+    {
+      "after_case": 5,
+      "asset": "30119",
+      "before_case": 4,
+      "changed_slots": [
+        4
+      ],
+      "from_asset": "300f6",
+      "health": 25,
+      "own_state": true,
+      "pair_index": 2,
+      "reward": 300,
+      "to_asset": "30119"
+    },
+    {
+      "after_case": 7,
+      "asset": "3011a",
+      "before_case": 6,
+      "changed_slots": [
+        4
+      ],
+      "from_asset": "300f7",
+      "health": 25,
+      "own_state": true,
+      "pair_index": 3,
+      "reward": 300,
+      "to_asset": "3011a"
+    }
+  ],
+  "historical_intrinsic_bank": {
+    "mode": 33188,
+    "mtime_ns": 1792292549878599417,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-30112-30113-30119-3011a-Original-only-complete4-author-20261018-v1/actual-SourceF-complete4/actual-indexed-source-and-scales.json",
+    "sha256": "fc565145551b79fbeaa7693af88431479ed879bcf57c3e5f72d619a56119230b",
+    "size": 1776284
+  },
+  "limits": [
+    "Four actual SourceMap intact pictures and four true center-only destroyed endpoints; two additional legal all-four-settled endpoints test mutual joins.",
+    "No selected destroyed picture is an initial OriginalMAP placement;82 true settled callers in S3W1/5, not all physically reviewed.",
+    "No World mutation/invocation or all-placement claim."
+  ],
+  "material_scope": "I5 c9c3be9f/67229e48 complete4 intrinsic; Root f7b39d13 outside note",
+  "native_scales": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "own_root": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-30112-30113-30119-3011a-Original-only-complete4-author-20261018-v1/private-complete4-pack",
+  "selected": [
+    "30112",
+    "30113",
+    "30119",
+    "3011a"
+  ],
+  "source_facts": {
+    "mode": 33188,
+    "mtime_ns": 1792293298332086898,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-30112-30113-30119-3011a-SourceF-fixedH5552-genuine-context-production-20261018-v1/ACTUAL-ORIGINAL-MAP-FLATS-CALLERS-HEALTH-REWARDS-AND-FOUR-OWN-STATE-WITNESSES.json",
+    "sha256": "7542ab3472799e35dffa24c864ee4fdd5c0c4fd3edd0aa6deda7b5e8ab1329ef",
+    "size": 50072
+  },
+  "source_ids": [
+    "300ee",
+    "300ef",
+    "300f0",
+    "300f1",
+    "300f3",
+    "300f6",
+    "300f7",
+    "30104",
+    "30105",
+    "30106",
+    "30112",
+    "30113",
+    "30119",
+    "3011a",
+    "30205",
+    "30241",
+    "30242"
+  ],
+  "status": "SEALED_SOURCE_PLAN_FOR_SELECTED4_FOUR_OWN_PAIRS_TEN_ENDPOINTS_SOURCEF_H5552"
+}

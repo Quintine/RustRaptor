@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5552 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5567 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -25455,6 +25455,484 @@
         "path": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/artwork-derivation.json",
         "sha256": "0b96828824787c5a0c35f4f20f9cfb00925e8b90e23591803d4d2716a1c1965f"
       }
+    },
+    {
+      "job_id": "terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018",
+      "assets": [
+        "3051d",
+        "3051e",
+        "3051f",
+        "30520",
+        "30521",
+        "30523",
+        "30524",
+        "30526"
+      ],
+      "frames": 8,
+      "metadata": "hd.json",
+      "detail": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/candidate.json",
+      "coordinator_review": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/runtime-qa.json",
+      "review": true,
+      "independent_review": "jobs/terrain-3051d-30526-newOriginalAtlas8-SourceF-H5539-20261018/review/independent-context-binding-projection.json",
+      "frame_bindings_sha256": "75f268098995c1340c47d3840af7afe56f6f9ffe3f3d991a48613f0d8f27891f",
+      "approval_scope": "complete_standalone_terrain_selection_with_unchanged_registered_siblings",
+      "original_fallback_assets": [],
+      "full_inventory": [
+        "3051d",
+        "3051e",
+        "3051f",
+        "30520",
+        "30521",
+        "30522",
+        "30523",
+        "30524",
+        "30525",
+        "30526"
+      ],
+      "carried_registered_assets": [
+        "30522",
+        "30525"
+      ],
+      "carried_registered_identity": {
+        "baseline": {
+          "path": "hd.json",
+          "sha256": "8a625eb880bb667894e90caaeb36fcd2400dc73ca14289646223ee4c829de1c5"
+        },
+        "contract_version": "standalone-terrain-carried-identity-v2",
+        "frame_bindings_sha256": "78355e21c47f871e7871d71d8b767f2d8beebc0e85f5485f5e3cadde684a0ebd",
+        "frames": {
+          "30522": {
+            "frame_binding": {
+              "file": "selected62/30522/jobs/terrain-3051d-30526/generated/raw-v2-tile-30522.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "b6b8e6f59d450223b5ff3851ae402acb5e0a54880826ac1f5e1d589876473cfc"
+            },
+            "raw_sha256": "634898840254190e09a4f082d9cb145a85e2d92a24b8bbad2976b2a87b25fa8e",
+            "registration_record_index": 743,
+            "source_sha256": "b6b8e6f59d450223b5ff3851ae402acb5e0a54880826ac1f5e1d589876473cfc"
+          },
+          "30525": {
+            "frame_binding": {
+              "file": "selected62/30525/jobs/terrain-3051d-30526/generated/raw-v2-tile-30525.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "2a9be0b00d16148aabc39e518cc2d286b04f6310a918d52fb6107d2238752805"
+            },
+            "raw_sha256": "26fca669aab629cd723d3a23888936c16f6b5f6d2a51b5e1f0943a142fa9ca98",
+            "registration_record_index": 744,
+            "source_sha256": "2a9be0b00d16148aabc39e518cc2d286b04f6310a918d52fb6107d2238752805"
+          }
+        },
+        "provenance": {
+          "path": "provenance.json",
+          "sha256": "32d23bdc52946e99c1b8265e697268ad35832280c917a8bf31b40414bbf149b5"
+        },
+        "registration_records": [
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/closed62-native-complete1-30522/runtime-qa.json",
+              "sha256": "0d221f29e227f0ea1682a94f4a2668844d506d0d0825658735459d5419d77647"
+            },
+            "assets": [
+              "30522"
+            ],
+            "frame_bindings_sha256": "7df1905fd0299eeb67811d12c49a20d97f677a77fc3203fa0b5d9197b7984c2e",
+            "registration_record_index": 743,
+            "registration_record_sha256": "7c35838fb0c1248bb561c33eeb7aa0d497e28eb71891c7bd5908767dea578fa9"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/closed62-native-complete1-30525/runtime-qa.json",
+              "sha256": "1a90c2c2d5efa1d7dbabc1c48579a14210e9b1826b3ff99de223ff70707aa917"
+            },
+            "assets": [
+              "30525"
+            ],
+            "frame_bindings_sha256": "47f6d26cddd868ba773f4668b129775391fc43bf6d71adf7b735f68a0e2dee0c",
+            "registration_record_index": 744,
+            "registration_record_sha256": "efd58fc757d6e5486ce5bda5a0a560c7b274e26ae1512c0c254daba71f0bc581"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": "derived-ui-1010c-complete1-v3-20261018",
+      "assets": [
+        "1010c"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-ui-1010c-complete1-v3-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-ui-1010c-complete1-v3-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-ui-1010c-complete1-v3-20261018/runtime-qa.json",
+      "review": "Root whole-parent/derived8 completion0a8ab4c plus whole all-native8 reviewa585; exact receipts retained. 1010c full parent display was downsampled2172\u21922048; actual native panes were full.",
+      "independent_review": "Different artist E01 whole2 material QUALIFIED9f291ff6, with quiet native1/Original bitmap/functional-fill limits; separate V3CODE8e03 and portable pathCODE5e281.",
+      "frame_bindings_sha256": "6debc683d606f38ed8b40ae88270155abb7194d408039efa731557fd338cc47c",
+      "artwork_derivation": {
+        "path": "jobs/derived-ui-1010c-complete1-v3-20261018/artwork-derivation.json",
+        "sha256": "992b0259492f03604bac89326602044986b0309bbf3ab527384bb1d089d947db"
+      }
+    },
+    {
+      "job_id": "derived-ui-1010f-complete1-v3-20261018",
+      "assets": [
+        "1010f"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-ui-1010f-complete1-v3-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-ui-1010f-complete1-v3-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-ui-1010f-complete1-v3-20261018/runtime-qa.json",
+      "review": "Root whole-parent/derived8 completion0a8ab4c plus whole all-native8 reviewa585; exact receipts retained. 1010c full parent display was downsampled2172\u21922048; actual native panes were full.",
+      "independent_review": "Different artist E01 whole2 material QUALIFIED9f291ff6, with quiet native1/Original bitmap/functional-fill limits; separate V3CODE8e03 and portable pathCODE5e281.",
+      "frame_bindings_sha256": "e6d51e074d29bfab3023c675daa6c41beff47c0d3dc0ad5e52190ca8f27e30bf",
+      "artwork_derivation": {
+        "path": "jobs/derived-ui-1010f-complete1-v3-20261018/artwork-derivation.json",
+        "sha256": "973d7b5b90a94c8fbf344c069a1b2ab75f5a2eee501f04b581e7f8f2bdfbbe30"
+      }
+    },
+    {
+      "job_id": "terrain-304fd-3050c-selected3050a-newOriginalAtlas8-SourceF-current5552-20261018",
+      "assets": [
+        "3050a"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/terrain-304fd-3050c-selected3050a-newOriginalAtlas8-SourceF-current5552-20261018/candidate.json",
+      "coordinator_review": "jobs/terrain-304fd-3050c-selected3050a-newOriginalAtlas8-SourceF-current5552-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/terrain-304fd-3050c-selected3050a-newOriginalAtlas8-SourceF-current5552-20261018/runtime-qa.json",
+      "review": true,
+      "independent_review": "jobs/terrain-304fd-3050c-selected3050a-newOriginalAtlas8-SourceF-current5552-20261018/review/independent-context-binding-projection.json",
+      "frame_bindings_sha256": "3ee27ba069edc79f96d88264cb763b8dd7c2f1d9f4e22bb839a79abc22499abd",
+      "approval_scope": "complete_standalone_terrain_selection_with_unchanged_registered_siblings",
+      "original_fallback_assets": [
+        "304fd",
+        "30503",
+        "30504",
+        "30506",
+        "30508",
+        "3050b",
+        "3050c"
+      ],
+      "full_inventory": [
+        "304fd",
+        "304fe",
+        "304ff",
+        "30500",
+        "30501",
+        "30502",
+        "30503",
+        "30504",
+        "30505",
+        "30506",
+        "30507",
+        "30508",
+        "30509",
+        "3050a",
+        "3050b",
+        "3050c"
+      ],
+      "carried_registered_assets": [
+        "304fe",
+        "304ff",
+        "30500",
+        "30501",
+        "30502",
+        "30505",
+        "30507",
+        "30509"
+      ],
+      "carried_registered_identity": {
+        "contract_version": "standalone-terrain-carried-identity-v2",
+        "baseline": {
+          "path": "hd.json",
+          "sha256": "8a625eb880bb667894e90caaeb36fcd2400dc73ca14289646223ee4c829de1c5"
+        },
+        "provenance": {
+          "path": "provenance.json",
+          "sha256": "32d23bdc52946e99c1b8265e697268ad35832280c917a8bf31b40414bbf149b5"
+        },
+        "frame_bindings_sha256": "6ef9788df356b6ed72389dafbbea23537d333ca912bb2f32d3c0a164e0a37aba",
+        "frames": {
+          "304fe": {
+            "frame_binding": {
+              "file": "selected29/304fe/jobs/terrain-304fd-3050c/generated/raw-v2-tile-304fe.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "6f103eacf8874d1625d3d26f7b60ee8b585d39b106b837f6c889c9b1ecc5f811"
+            },
+            "source_sha256": "6f103eacf8874d1625d3d26f7b60ee8b585d39b106b837f6c889c9b1ecc5f811",
+            "raw_sha256": "1123a3f76e238d1ea0d567b5d70a17af2d2afd4e21289305050a0fbf4d15ab09",
+            "registration_record_index": 835
+          },
+          "304ff": {
+            "frame_binding": {
+              "file": "selected29/304ff/jobs/terrain-304fd-3050c/generated/raw-v2-tile-304ff.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "a9ee64221533bd1c684296f0162ce7078bb46674c2a01d603c27dfb5ed340943"
+            },
+            "source_sha256": "a9ee64221533bd1c684296f0162ce7078bb46674c2a01d603c27dfb5ed340943",
+            "raw_sha256": "85d4ab0439bd27914667647ba543c6af9a629a69bf1c5a2583d8e982c13d8dda",
+            "registration_record_index": 836
+          },
+          "30500": {
+            "frame_binding": {
+              "file": "selected29/30500/jobs/terrain-304fd-3050c/generated/raw-v2-tile-30500.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "8bfa0740cec1c665987dc143b5f254ebb3bd9310f8b880bfeffce1764c4cb60f"
+            },
+            "source_sha256": "8bfa0740cec1c665987dc143b5f254ebb3bd9310f8b880bfeffce1764c4cb60f",
+            "raw_sha256": "b9b23679f682624ab263561907704b5d5ae6686cfd21b1a3f6c75cdd59c801b3",
+            "registration_record_index": 837
+          },
+          "30501": {
+            "frame_binding": {
+              "file": "selected29/30501/jobs/terrain-304fd-3050c/generated/raw-v2-tile-30501.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "64d0cb2d4ef34af19a007a1c3f86d2bafec118dfcbdd4868ccf8c4027e2b86b8"
+            },
+            "source_sha256": "64d0cb2d4ef34af19a007a1c3f86d2bafec118dfcbdd4868ccf8c4027e2b86b8",
+            "raw_sha256": "38e67b02a5438e13ea7d4f9a92b96053f272aecc91e7b7a21bf0e33a0ad0c4d7",
+            "registration_record_index": 838
+          },
+          "30502": {
+            "frame_binding": {
+              "file": "selected29/30502/jobs/terrain-304fd-3050c/generated/raw-v2-tile-30502.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "0472ec50df94d37182f5abaeb8a1b6a6717aee54e322ac0c611b97722b0dee30"
+            },
+            "source_sha256": "0472ec50df94d37182f5abaeb8a1b6a6717aee54e322ac0c611b97722b0dee30",
+            "raw_sha256": "0b0bd49acdba044379db376ffea1861dee7a6a07538ca2c5843f86d12e1bb9c5",
+            "registration_record_index": 839
+          },
+          "30505": {
+            "frame_binding": {
+              "file": "selected29/30505/jobs/terrain-304fd-3050c/generated/raw-v2-tile-30505.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "f0edd50fa3c0573144a102f8c331de279eae1d03e696f1b1a076dd7c17a2027e"
+            },
+            "source_sha256": "f0edd50fa3c0573144a102f8c331de279eae1d03e696f1b1a076dd7c17a2027e",
+            "raw_sha256": "9e1871a92612ffb27c43df82d01c1c7c1a5c37fc811d33b3006a19aaa63a62d3",
+            "registration_record_index": 840
+          },
+          "30507": {
+            "frame_binding": {
+              "file": "selected88/7fc66a3867b33855809eed3cbf2983dca544e7b429add57b78a169c0b892c8fb.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "38d2e6b082c69af58f891f87b8e9364b980f2eaa249f07eaa58205d2d08d9f47"
+            },
+            "source_sha256": "38d2e6b082c69af58f891f87b8e9364b980f2eaa249f07eaa58205d2d08d9f47",
+            "raw_sha256": "7fc66a3867b33855809eed3cbf2983dca544e7b429add57b78a169c0b892c8fb",
+            "registration_record_index": 924
+          },
+          "30509": {
+            "frame_binding": {
+              "file": "selected29/30509/jobs/terrain-304fd-3050c/generated/raw-v2-tile-30509.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "2b2053a97db3f419774b25a5d07e98ad6b31dd856adc643619c8e8d1cec9e9d3"
+            },
+            "source_sha256": "2b2053a97db3f419774b25a5d07e98ad6b31dd856adc643619c8e8d1cec9e9d3",
+            "raw_sha256": "6226d7284cd78da9132bc963409f8b25390858fbe5381b7cc1b013c3b640719f",
+            "registration_record_index": 841
+          }
+        },
+        "registration_records": [
+          {
+            "registration_record_index": 835,
+            "registration_record_sha256": "b18128c44191e13f8b6b9dbb461962f50aa1eb264215deefc00b7933b16db25d",
+            "assets": [
+              "304fe"
+            ],
+            "frame_bindings_sha256": "11769bf0b929a875e2c88699fed7d48866c0d4c14c81b9017ea386adce6321fa",
+            "accepted_runtime_qa": {
+              "path": "jobs/new29-native-complete1-304fe/runtime-qa.json",
+              "sha256": "f99a28fcd218816229791ec124057d4cf3b6cabdd5b3ee1b82ef81d45522a4c9"
+            }
+          },
+          {
+            "registration_record_index": 836,
+            "registration_record_sha256": "d60bf024eb2b18b0859b78378621b5230dfc2d158f5fe031ab7f4e7dd121699a",
+            "assets": [
+              "304ff"
+            ],
+            "frame_bindings_sha256": "f0b9097b491498f383e47ffc3a2abfbc416f5cc4a9f39b751f2fade4f8701850",
+            "accepted_runtime_qa": {
+              "path": "jobs/new29-native-complete1-304ff/runtime-qa.json",
+              "sha256": "c4c31405d6b5e6fd87b816f532185dcec0208f7058c72bb5e130e0a650bebae2"
+            }
+          },
+          {
+            "registration_record_index": 837,
+            "registration_record_sha256": "9816a688a5081d9c88d15d77c9700de104161a712dd81d7da6edbac7accfa288",
+            "assets": [
+              "30500"
+            ],
+            "frame_bindings_sha256": "5bed8c7f717325110f7038a1b8c7b5df2a9520890b5cef5d71f347ecefd53094",
+            "accepted_runtime_qa": {
+              "path": "jobs/new29-native-complete1-30500/runtime-qa.json",
+              "sha256": "09b91305fb60aeccbe7a72f21f6e4d998c0d417119fd7ee5957222a38f37b20e"
+            }
+          },
+          {
+            "registration_record_index": 838,
+            "registration_record_sha256": "0f7335d0c617a25f04216f5972d85c2b1ea1a32894a06dfead8514dc5b91cf8d",
+            "assets": [
+              "30501"
+            ],
+            "frame_bindings_sha256": "bf8ea10fa121254c628784425babbcc921c08625df13b0987feed6740ba88124",
+            "accepted_runtime_qa": {
+              "path": "jobs/new29-native-complete1-30501/runtime-qa.json",
+              "sha256": "9c4d9e45201f1e6b9ab56268df8fa7778dfc39dd9df4dcadaf7f736967dea9ae"
+            }
+          },
+          {
+            "registration_record_index": 839,
+            "registration_record_sha256": "2ba17b0bc4052b26b3cd4f348e9c7cba7f0ea33ad0cbb9fcc8a02d74c6699702",
+            "assets": [
+              "30502"
+            ],
+            "frame_bindings_sha256": "ec9adbf4534c4a041e185190436abfcdd1ce22dc65498e257b07903af9eb6d8a",
+            "accepted_runtime_qa": {
+              "path": "jobs/new29-native-complete1-30502/runtime-qa.json",
+              "sha256": "19b2d9761ca7bba057f1dbfdc3f2b6e00919625d789f8eb2ef62af93a4401487"
+            }
+          },
+          {
+            "registration_record_index": 840,
+            "registration_record_sha256": "8cca396f931e508afcb07da8242ed8faa6b5787584222f51e40f66c2157544bd",
+            "assets": [
+              "30505"
+            ],
+            "frame_bindings_sha256": "de13210dee4e4c75bc9e750cca34e8a78170d51326aed4683547dc5b0d8fd77d",
+            "accepted_runtime_qa": {
+              "path": "jobs/new29-native-complete1-30505/runtime-qa.json",
+              "sha256": "acb1d4a2f3bcc4f37ee2d3c5f60cab95d7dc2f11aebd3e77809fc3fba4c89acf"
+            }
+          },
+          {
+            "registration_record_index": 924,
+            "registration_record_sha256": "504a414c7a09e2fa666de08befd584f461ce463e61c5a0bd5efc8fbf43c6aba0",
+            "assets": [
+              "30507"
+            ],
+            "frame_bindings_sha256": "2c2efc38072080207a810c5879c9a97552c5f47cab616a9e410594f466634fa5",
+            "accepted_runtime_qa": {
+              "path": "jobs/joint88-30507-native-complete1/runtime-qa.json",
+              "sha256": "9c977464c7d0b13b2e29351b77b4f9ed91120e90ae4c26271dc040e2b07e1e5b"
+            }
+          },
+          {
+            "registration_record_index": 841,
+            "registration_record_sha256": "7fa04a306046c19d150ec73aa057c9b7b43737235060b24b79d4b52ceb3504a7",
+            "assets": [
+              "30509"
+            ],
+            "frame_bindings_sha256": "ef7797e35845bb2d46d56b672c4899e1d784138e66a5f7a01d34a6240a9d71c5",
+            "accepted_runtime_qa": {
+              "path": "jobs/new29-native-complete1-30509/runtime-qa.json",
+              "sha256": "201a0ca6887d0aef56ccd147602bb8dff3bde03cfa64cc8913ea1e8ce09a4949"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "job_id": "terrain-30112-30113-30119-3011a-Original-only-complete4-v1-20261018",
+      "assets": [
+        "30112",
+        "30113",
+        "30119",
+        "3011a"
+      ],
+      "frames": 4,
+      "metadata": "hd.json",
+      "detail": "jobs/terrain-30112-30113-30119-3011a-Original-only-complete4-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/terrain-30112-30113-30119-3011a-Original-only-complete4-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/terrain-30112-30113-30119-3011a-Original-only-complete4-v1-20261018/runtime-qa.json",
+      "review": {
+        "Root_complete_intrinsic": {
+          "path": "jobs/terrain-30112-30113-30119-3011a-Original-only-complete4-v1-20261018/review/Root-complete4-intrinsic-note.json",
+          "sha256": "f7b39d1350a1b4ac92a3d95f78ce617700e7d898b9fa578bfd77fc2ac6eaf38e"
+        },
+        "author": {
+          "path": "jobs/terrain-30112-30113-30119-3011a-Original-only-complete4-v1-20261018/review/actual-author-complete4.json",
+          "sha256": "683dc9680e22406dfafc0a3baad69abc00d569a20795900d97cf42bd888ba99a"
+        },
+        "independent_intrinsic": {
+          "path": "jobs/terrain-30112-30113-30119-3011a-Original-only-complete4-v1-20261018/review/independent-intrinsic.json",
+          "sha256": "c9c3be9f987af723da03bf053442e7cadf49059c653f0cbe3f60cc3b9612d91e"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/terrain-30112-30113-30119-3011a-Original-only-complete4-v1-20261018/review/independent-intrinsic.json",
+        "sha256": "c9c3be9f987af723da03bf053442e7cadf49059c653f0cbe3f60cc3b9612d91e"
+      },
+      "frame_bindings_sha256": "e0913a1b98aca6c7fb5bc0f5f44acece4635b325ebd4845ef370759298847b36"
     }
   ],
   "jobs": [
@@ -25554,8 +26032,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5552,
-  "registration_updated_at_utc": "2026-10-18T02:55:45.796197+00:00",
+  "registered_frame_count": 5567,
+  "registration_updated_at_utc": "2026-10-18T03:46:14.254014+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,

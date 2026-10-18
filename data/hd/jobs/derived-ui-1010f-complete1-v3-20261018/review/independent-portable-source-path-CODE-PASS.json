@@ -1,0 +1,192 @@
+{
+  "status": "PASS_DIFFERENT_EXACT_UI2_PORTABLE_SOURCE_PATH_AND_LINEAGE_GUARD_REVIEW",
+  "utc": "2026-10-18T03:08:15.520127+00:00",
+  "reviewer": "/root/hd_enemies_01",
+  "preparer": "/root/hd_boss200a2",
+  "source_only": true,
+  "proposal_report": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/FROZEN-PORTABLE-UI2-TWO-JOBS-SAFE-LINEAGE-PUBLIC-SOURCE-PROPOSAL-NO-REPLAY.json",
+    "sha256": "76c23542c005d09547e10b5aa015ac7bd13b3938764eaa3ebf5dd0a581133a3a",
+    "size": 13667
+  },
+  "proposal_closure": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/OUTSIDE-PORTABLE-UI2-SOURCE-PROPOSAL-EXACT-CLOSURE.json",
+    "sha256": "5b14023f6b2161b656908943cb6025f6d515f85ecc7886844d94a9fef31546a8",
+    "size": 41059
+  },
+  "exact_request": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/DIFFERENT-SOURCE-PATH-GUARD-REVIEW-REQUEST-AND-EXACT-SCOPE.json",
+    "sha256": "6207f307416ddfdc80b51d846425da0c583fb8b75824e1440bbd8287b19dded2",
+    "size": 2768
+  },
+  "reviewed_preparer_sources": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/prepare_portable_proposal_NO_REPLAY.py",
+      "sha256": "a591eed935a7fd820f62d51e8f340a57ca4ea902e0fbb032be9892af0e5f9f39",
+      "size": 19126
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/freeze_source_path_review_handoff_NO_REPLAY.py",
+      "sha256": "97e66d98db71c28f339707a85229ddcdd2c65ff345e4c029415f4147462e5aa4",
+      "size": 8880
+    }
+  ],
+  "audit": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies-UI2-portable-two-job-independent-source-path-review-20261018/EXACT-TWO-JOB-PATH-LINEAGE-AND-METADATA-GUARD-AUDIT.json",
+    "sha256": "4162dda3897da89c8de2970a4560292cdc50093edaedb8ba13ddd0f2c3731c06",
+    "size": 80353
+  },
+  "checks": 281,
+  "two_jobs": [
+    {
+      "asset": "1010c",
+      "job": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010c-complete1-v3-20261018",
+      "recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010c-complete1-v3-20261018/cleanup-recipe.json",
+        "sha256": "9af03ff94446f1241f5c87f0088f4e6681ba51257465e5677dda72fa463d9b26",
+        "size": 1254
+      },
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010c-complete1-v3-20261018/candidate.json",
+        "sha256": "addaf2d93d7522a8dd8ea395b3356088e50d85bb07b6b28546295f7251097ed3",
+        "size": 937
+      },
+      "lineage": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010c-complete1-v3-20261018/artwork-derivation.json",
+        "sha256": "2f6aaa952af66402c2fe8c8fe00e0f92e56dacf48361b0f6df4ef50c7f2aa01f",
+        "size": 2187
+      },
+      "derived": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010c-complete1-v3-20261018/derived/1010c-derived.png",
+        "sha256": "fa0d64aab3e60571c4675a73f14e500fdd9ab443202b40dc3c979ae1a29b61ee",
+        "size": 6765
+      },
+      "QA_projection": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010c-complete1-v3-20261018/runtime-qa.json",
+        "sha256": "8513e29fb4a4d03aa54aba9efc011dbd6ebe06b0bc79e838ff799806a7b39469",
+        "size": 5096
+      },
+      "binding_digest": "6debc683d606f38ed8b40ae88270155abb7194d408039efa731557fd338cc47c",
+      "resolved_recipe_inputs": {
+        "source": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/sprites/FACESTAT_PIC",
+        "palette": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/misc/PALETTE_DAT",
+        "parent_raw": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010c-complete1-v3-20261018/generated/parent-1010c.png"
+      },
+      "future_replay_argv": [
+        "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/tools/hd_ui_cleanup.py",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010c-complete1-v3-20261018/cleanup-recipe.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010c-complete1-v3-20261018/portable-replay-once"
+      ],
+      "historical_execution_retains_old_paths": true,
+      "replay_executed": false
+    },
+    {
+      "asset": "1010f",
+      "job": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010f-complete1-v3-20261018",
+      "recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010f-complete1-v3-20261018/cleanup-recipe.json",
+        "sha256": "ef7917dc85dda48c41c7f44809ac136ccb243e25b4c6ba6dbcef1d8891d9e2ee",
+        "size": 1043
+      },
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010f-complete1-v3-20261018/candidate.json",
+        "sha256": "7a5f1358c31697890adbf9e1e194efe98c8b792f8b8408bd6c1666a7a2e54051",
+        "size": 938
+      },
+      "lineage": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010f-complete1-v3-20261018/artwork-derivation.json",
+        "sha256": "f839a52e6d536232d17aeb1db0ae430a5d06792b3795ba60fa5e9df54e1bf642",
+        "size": 2187
+      },
+      "derived": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010f-complete1-v3-20261018/derived/1010f-derived.png",
+        "sha256": "9dfe4fe6159fc2f837098d9412948e1017e1e9043a31c26a0a11b5fbaf50b1c3",
+        "size": 211125
+      },
+      "QA_projection": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010f-complete1-v3-20261018/runtime-qa.json",
+        "sha256": "20eebf25bd8abd977541dc735ee5ab5c0db655fcd25cb735f6b4478d9fe0d209",
+        "size": 5117
+      },
+      "binding_digest": "e6d51e074d29bfab3023c675daa6c41beff47c0d3dc0ad5e52190ca8f27e30bf",
+      "resolved_recipe_inputs": {
+        "source": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/sprites/SCREEN_PIC",
+        "palette": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/misc/PALETTE_DAT",
+        "parent_raw": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010f-complete1-v3-20261018/generated/parent-1010f.png"
+      },
+      "future_replay_argv": [
+        "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/tools/hd_ui_cleanup.py",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010f-complete1-v3-20261018/cleanup-recipe.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010f-complete1-v3-20261018/portable-replay-once"
+      ],
+      "historical_execution_retains_old_paths": true,
+      "replay_executed": false
+    }
+  ],
+  "findings": [
+    "The staged cleanup40b1ce57/test1bd9b8c7 exactly equal I6-reviewed V3 source; decoder66184a47 is unchanged. Promotion patch contains exactly those two new tools and reconstructs their full bytes. No pixel math changed or executed by this review.",
+    "Both unchanged fixed recipes resolve Source, palette and raw relative to their job into the contained project-shaped data tree. Complete singleton canvas/origin/full headers and accepted PNG hashes match the prior actualF2 input, with file routes as the sole renderer-field delta.",
+    "Both safe provider projections bind actual historical reply hashes; decoded historical payloads hash to the genuine selected raw. No data URI or inline PNG payload is present in any staged JSON. Full historical argument/terminal/prompt/reference copies retain their true dated paths and roles.",
+    "Five selected/earlier-master ancestry nodes and14 consumed reference copies match literal historical inputs. Earlier held masters remain lineage rather than newly approved cleanup inputs.",
+    "One copied F2 joint bank and its QA remain byte-exact. Each per-ID runtime QA is explicitly a filtered subset preserving actual nonfile metrics and candidate/binding/artwork hashes. No current file-route rerender is fabricated.",
+    "Maintained metadata-only derivation checks pass for both jobs. Mismatched review, Source and output hashes reject. Absolute/traversal references, SHA mismatch and a resolved symlink escape reject in bounded private tests.",
+    "Existing accepted private execution receipts are unmodified historical authority. Fresh portable replay output directories and coordinator-review.json files are absent; pending approval/replay/promotion flags remain false. The later Root raw/derived completion record is separate from the earlier pending form and grants no replay/registration."
+  ],
+  "public_promotion_proposal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/PUBLIC-V3-HELPER-TEST-PROMOTION-AND-PORTABLE-REPLAY-PROPOSAL.json",
+    "sha256": "9c7d964aa9c1070636973c7f95a5361e6e99fc39e269013bbd74ba7c66fd800b",
+    "size": 3434
+  },
+  "previous_different_V3_CODE": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-Other2-UI-cleanup-visible-v3-independent-code-review-20261018/PASS-DIFFERENT-OTHER2-UI-VISIBLE-V3-PRIVATE-CODE-REVIEW.json",
+    "sha256": "8e03cdc175bf58df6149a0b4ebb45aa8456b2c6f1272645553deb3a152552a37",
+    "size": 7751
+  },
+  "actual_math_test_execution_here": false,
+  "future_phase_after_Root_GO": {
+    "portable_replays": 2,
+    "per_fixed_job": 1,
+    "argv": [
+      [
+        "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/tools/hd_ui_cleanup.py",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010c-complete1-v3-20261018/cleanup-recipe.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010c-complete1-v3-20261018/portable-replay-once"
+      ],
+      [
+        "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/tools/hd_ui_cleanup.py",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010f-complete1-v3-20261018/cleanup-recipe.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-UI2-portable-two-job-source-proposal-20261018/data/hd/jobs/derived-ui-1010f-complete1-v3-20261018/portable-replay-once"
+      ]
+    ],
+    "required_result": "Exact accepted PNG SHA perjob and unchanged normalized method/tool/recipe/parent/Source/output identities. Preserve truthful fresh replay receipt and old historical receipt; rebind lineage execution/candidate/QA hash metadata. Reuse existing actual F2 renderer bank without a new QA call.",
+    "no_overwrite": "Reviewed run_recipe rejects existing output, then mkdir exist_okFalse; exact fresh fixed output paths are absent and under the two contained jobs."
+  },
+  "scope_limits": [
+    "This PASS covers the immutable exact two-job path/receipt/lineage proposal. It is not an actual portable replay, tool promotion, coordinator approval or canonical registration.",
+    "V3 pixel math and synthetic image tests retain I6 prior CODE attribution. This review used only pure metadata readers plus hash/path/receipt tests; no cleanup image was generated.",
+    "Intrinsic material9f291ff6 and Root whole views remain separate prior authorities. No repeated artistic verdict, current Rust UI/Host route or context claim.",
+    "10016 remains intentionally native typography and outside both jobs."
+  ],
+  "producer_regular_members": 120,
+  "consumed_regular_pins": 146,
+  "operations": {
+    "cleanup": 0,
+    "QA": 0,
+    "World": 0,
+    "compiler": 0,
+    "image": 0,
+    "registrar": 0,
+    "approved_job": 0,
+    "shared_writes": 0
+  },
+  "all_inputs_and_proposal_members_before_after_exact": true,
+  "no_pending_owned_writer_call_lease": true
+}
