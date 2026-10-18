@@ -1,0 +1,50 @@
+{
+  "environment": {
+    "authoring_scope": "Private deterministic portable reproduction, not a new generator invocation; game runtime consumes PNGs only.",
+    "dependency": "Existing exact maintained0e4d tool.",
+    "parent_scope": "Original complete16 full service reply remains unchanged in private historical scope. This portable job carries an explicitly labeled primitive provider/gate projection with exact fullreply SHA and actual untouched raw PNG identity, not a verbatim fullreply or a new generation.",
+    "safe_receipt_projection": {
+      "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/parents/actual-generation-safe-provider-and-gate-projection.json",
+      "sha256": "79ff794524432fb052e4f4689f3ce4a949285552f92d38a77d49a34c652fe46a"
+    }
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/derived/actual-cleanup-execution.json",
+    "sha256": "84a5f97e9d8f31597c3e48864ac8127a0c1bd5b95d2dc05eea29bdcc8c94656e"
+  },
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+  "outputs": {
+    "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/derived/2038f-DERIVED-source-guided-material-v1.png": "5bbbe95f0a46a5dd60bb96d7c2eb9ee431cc7fa1f317b19e4901c923ac528808"
+  },
+  "parents": [
+    {
+      "imagegen_receipt": {
+        "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/parents/actual-generation-safe-provider-and-gate-projection.json",
+        "sha256": "79ff794524432fb052e4f4689f3ce4a949285552f92d38a77d49a34c652fe46a"
+      },
+      "prompt": {
+        "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/parents/prompt.txt",
+        "sha256": "0e75d82c8287968e63b29494f015d4afbf5271b133b4398526a9c5b774d84d2f"
+      },
+      "raw_png": {
+        "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/parents/generator-return.png",
+        "sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761"
+      }
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/cleanup-recipe.json",
+    "sha256": "71dd4ae73c06d8ed1f07d9ab97ff4234dd57c6ae7502e6477f15563b414896fc"
+  },
+  "sources": {
+    "2038f": "dfb77fdcde620acee54463da51ea8bad6c5378504c500f65466e4991908cb000"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_terrain_retexture.py",
+      "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98"
+    }
+  ]
+}

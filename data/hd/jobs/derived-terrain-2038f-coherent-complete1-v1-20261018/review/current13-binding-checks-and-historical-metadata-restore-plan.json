@@ -1,0 +1,853 @@
+{
+  "approved_job_calls": 0,
+  "canonical": {
+    "mode": 33152,
+    "mtime_ns": 1792287108387523122,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/provenance.json",
+    "sha256": "bc20bf8f4e6bebc79a361e23b928ae0ffb4f6ec2aa720602ef6564807ef1d2cd",
+    "size": 1921857
+  },
+  "canonical_Q_or_W_writes": 0,
+  "existing_QA_and_art_routes_exact_in_both": [
+    {
+      "canonical": {
+        "mode": 33188,
+        "mtime_ns": 1792287095813747936,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/runtime-qa.json",
+        "sha256": "3c22b674f2935c43e9d3bc9e031ea8be8b966360ddc4a8bd2cba5c55acda2403",
+        "size": 10989
+      },
+      "full5521": {
+        "mode": 33188,
+        "mtime_ns": 1792287080634592675,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/runtime-qa.json",
+        "sha256": "3c22b674f2935c43e9d3bc9e031ea8be8b966360ddc4a8bd2cba5c55acda2403",
+        "size": 10989
+      },
+      "path": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/runtime-qa.json",
+      "sha256": "3c22b674f2935c43e9d3bc9e031ea8be8b966360ddc4a8bd2cba5c55acda2403"
+    },
+    {
+      "canonical": {
+        "mode": 33060,
+        "mtime_ns": 1792223281567506200,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/generated/76b2622120a790f083343bd03bb3e0eb1f7e5a4666b8f78b034ddaa320b2bf2c.png",
+        "sha256": "76b2622120a790f083343bd03bb3e0eb1f7e5a4666b8f78b034ddaa320b2bf2c",
+        "size": 3719845
+      },
+      "full5521": {
+        "mode": 33060,
+        "mtime_ns": 1792223281567506200,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/generated/76b2622120a790f083343bd03bb3e0eb1f7e5a4666b8f78b034ddaa320b2bf2c.png",
+        "sha256": "76b2622120a790f083343bd03bb3e0eb1f7e5a4666b8f78b034ddaa320b2bf2c",
+        "size": 3719845
+      },
+      "path": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/generated/76b2622120a790f083343bd03bb3e0eb1f7e5a4666b8f78b034ddaa320b2bf2c.png",
+      "sha256": "76b2622120a790f083343bd03bb3e0eb1f7e5a4666b8f78b034ddaa320b2bf2c"
+    },
+    {
+      "canonical": {
+        "mode": 33188,
+        "mtime_ns": 1792287095814821578,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20391-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+        "sha256": "a7d44700c7aee6ee1f54bf42a8bcfe8bf0823690f51231d74a4ecb738a598340",
+        "size": 11750
+      },
+      "full5521": {
+        "mode": 33188,
+        "mtime_ns": 1792287080635551627,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20391-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+        "sha256": "a7d44700c7aee6ee1f54bf42a8bcfe8bf0823690f51231d74a4ecb738a598340",
+        "size": 11750
+      },
+      "path": "jobs/terrain-20391-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+      "sha256": "a7d44700c7aee6ee1f54bf42a8bcfe8bf0823690f51231d74a4ecb738a598340"
+    },
+    {
+      "canonical": {
+        "mode": 33060,
+        "mtime_ns": 1792223857605769678,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20391-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+        "sha256": "3264e82a68b28b880c2c8604312158e4b8a8360166ce803b1d1018c06d06fb6e",
+        "size": 3996243
+      },
+      "full5521": {
+        "mode": 33060,
+        "mtime_ns": 1792223857605769678,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20391-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+        "sha256": "3264e82a68b28b880c2c8604312158e4b8a8360166ce803b1d1018c06d06fb6e",
+        "size": 3996243
+      },
+      "path": "jobs/terrain-20391-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+      "sha256": "3264e82a68b28b880c2c8604312158e4b8a8360166ce803b1d1018c06d06fb6e"
+    },
+    {
+      "canonical": {
+        "mode": 33188,
+        "mtime_ns": 1792287095815841031,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20392-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+        "sha256": "7639c76beafbc658e3928fc67688499721179de8ce463a77fd900e5e31f316c8",
+        "size": 11750
+      },
+      "full5521": {
+        "mode": 33188,
+        "mtime_ns": 1792287080636454778,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20392-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+        "sha256": "7639c76beafbc658e3928fc67688499721179de8ce463a77fd900e5e31f316c8",
+        "size": 11750
+      },
+      "path": "jobs/terrain-20392-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+      "sha256": "7639c76beafbc658e3928fc67688499721179de8ce463a77fd900e5e31f316c8"
+    },
+    {
+      "canonical": {
+        "mode": 33060,
+        "mtime_ns": 1792223952713586426,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20392-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+        "sha256": "6be0cdfb112a4c93d39cb91d7b46f6f648f34fb6b81e62b823f3154e6e1b30e8",
+        "size": 3704783
+      },
+      "full5521": {
+        "mode": 33060,
+        "mtime_ns": 1792223952713586426,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20392-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+        "sha256": "6be0cdfb112a4c93d39cb91d7b46f6f648f34fb6b81e62b823f3154e6e1b30e8",
+        "size": 3704783
+      },
+      "path": "jobs/terrain-20392-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+      "sha256": "6be0cdfb112a4c93d39cb91d7b46f6f648f34fb6b81e62b823f3154e6e1b30e8"
+    },
+    {
+      "canonical": {
+        "mode": 33188,
+        "mtime_ns": 1792287095816760104,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20393-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+        "sha256": "cd0035cae3bab914cc9cbb8d878f3bb318ff20e359ac5b661a9d41399472bdbe",
+        "size": 11750
+      },
+      "full5521": {
+        "mode": 33188,
+        "mtime_ns": 1792287080637403860,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20393-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+        "sha256": "cd0035cae3bab914cc9cbb8d878f3bb318ff20e359ac5b661a9d41399472bdbe",
+        "size": 11750
+      },
+      "path": "jobs/terrain-20393-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+      "sha256": "cd0035cae3bab914cc9cbb8d878f3bb318ff20e359ac5b661a9d41399472bdbe"
+    },
+    {
+      "canonical": {
+        "mode": 33060,
+        "mtime_ns": 1792223997096566565,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20393-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+        "sha256": "ed0569646e32fc3a4ce22c9ac384be37dab55344dc75cd8480fc6bcc45987b8d",
+        "size": 3911475
+      },
+      "full5521": {
+        "mode": 33060,
+        "mtime_ns": 1792223997096566565,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20393-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+        "sha256": "ed0569646e32fc3a4ce22c9ac384be37dab55344dc75cd8480fc6bcc45987b8d",
+        "size": 3911475
+      },
+      "path": "jobs/terrain-20393-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+      "sha256": "ed0569646e32fc3a4ce22c9ac384be37dab55344dc75cd8480fc6bcc45987b8d"
+    },
+    {
+      "canonical": {
+        "mode": 33188,
+        "mtime_ns": 1792287095817721702,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20394-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+        "sha256": "fc96740de4a532f09d7a37fe7fc6d37f729f3c4fd8ae33a92a65c3c95306c7ec",
+        "size": 11750
+      },
+      "full5521": {
+        "mode": 33188,
+        "mtime_ns": 1792287080638281440,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20394-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+        "sha256": "fc96740de4a532f09d7a37fe7fc6d37f729f3c4fd8ae33a92a65c3c95306c7ec",
+        "size": 11750
+      },
+      "path": "jobs/terrain-20394-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+      "sha256": "fc96740de4a532f09d7a37fe7fc6d37f729f3c4fd8ae33a92a65c3c95306c7ec"
+    },
+    {
+      "canonical": {
+        "mode": 33060,
+        "mtime_ns": 1792224040929558775,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20394-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+        "sha256": "486da72bfa419195ed3fe397eeb0853fa608a7a3a7eae1730e897efbe0afe7ff",
+        "size": 2877534
+      },
+      "full5521": {
+        "mode": 33060,
+        "mtime_ns": 1792224040929558775,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20394-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+        "sha256": "486da72bfa419195ed3fe397eeb0853fa608a7a3a7eae1730e897efbe0afe7ff",
+        "size": 2877534
+      },
+      "path": "jobs/terrain-20394-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+      "sha256": "486da72bfa419195ed3fe397eeb0853fa608a7a3a7eae1730e897efbe0afe7ff"
+    },
+    {
+      "canonical": {
+        "mode": 33188,
+        "mtime_ns": 1792287095818626244,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/runtime-qa.json",
+        "sha256": "2dfd0d785f40f3a2ea0059bbe11a71bf0bd290ee56dacf2fb8073eeb04f8b1fb",
+        "size": 10039
+      },
+      "full5521": {
+        "mode": 33188,
+        "mtime_ns": 1792287080639120210,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/runtime-qa.json",
+        "sha256": "2dfd0d785f40f3a2ea0059bbe11a71bf0bd290ee56dacf2fb8073eeb04f8b1fb",
+        "size": 10039
+      },
+      "path": "jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/runtime-qa.json",
+      "sha256": "2dfd0d785f40f3a2ea0059bbe11a71bf0bd290ee56dacf2fb8073eeb04f8b1fb"
+    },
+    {
+      "canonical": {
+        "mode": 33060,
+        "mtime_ns": 1792238104755961016,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/generated/1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761.png",
+        "sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+        "size": 2904333
+      },
+      "full5521": {
+        "mode": 33060,
+        "mtime_ns": 1792238104755961016,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/generated/1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761.png",
+        "sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+        "size": 2904333
+      },
+      "path": "jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/generated/1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761.png",
+      "sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761"
+    },
+    {
+      "canonical": {
+        "mode": 33188,
+        "mtime_ns": 1792287095819543680,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/runtime-qa.json",
+        "sha256": "72d33881bb76eba08a705bc11a78bb518985e1768d8bb742a484cb49f61663a0",
+        "size": 18154
+      },
+      "full5521": {
+        "mode": 33188,
+        "mtime_ns": 1792287080639916060,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/runtime-qa.json",
+        "sha256": "72d33881bb76eba08a705bc11a78bb518985e1768d8bb742a484cb49f61663a0",
+        "size": 18154
+      },
+      "path": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/runtime-qa.json",
+      "sha256": "72d33881bb76eba08a705bc11a78bb518985e1768d8bb742a484cb49f61663a0"
+    },
+    {
+      "canonical": {
+        "mode": 33060,
+        "mtime_ns": 1792238104755961016,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/untouched-earlier1f-atlas.png",
+        "sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+        "size": 2904333
+      },
+      "full5521": {
+        "mode": 33060,
+        "mtime_ns": 1792238104755961016,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/untouched-earlier1f-atlas.png",
+        "sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+        "size": 2904333
+      },
+      "path": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/untouched-earlier1f-atlas.png",
+      "sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761"
+    },
+    {
+      "canonical": {
+        "mode": 33188,
+        "mtime_ns": 1792284459067098666,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/exact-alias-20395-20399-from-203a7-v1-20261018/runtime-qa.json",
+        "sha256": "04ba77371e7e5baf99e2f2a89478dc9d96ba0191e6fbb91356c9a8cf26dc638c",
+        "size": 8914
+      },
+      "full5521": {
+        "mode": 33188,
+        "mtime_ns": 1792284459067098666,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/exact-alias-20395-20399-from-203a7-v1-20261018/runtime-qa.json",
+        "sha256": "04ba77371e7e5baf99e2f2a89478dc9d96ba0191e6fbb91356c9a8cf26dc638c",
+        "size": 8914
+      },
+      "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/runtime-qa.json",
+      "sha256": "04ba77371e7e5baf99e2f2a89478dc9d96ba0191e6fbb91356c9a8cf26dc638c"
+    },
+    {
+      "canonical": {
+        "mode": 33060,
+        "mtime_ns": 1791705838243336750,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-2039d-203ac/generated/atlas-v2.png",
+        "sha256": "1c8f99fe2ec22d3b7756a5e4b969cf03abec9621153d6a1157f1bc8a85b433a0",
+        "size": 3964616
+      },
+      "full5521": {
+        "mode": 33060,
+        "mtime_ns": 1791705838243336750,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-2039d-203ac/generated/atlas-v2.png",
+        "sha256": "1c8f99fe2ec22d3b7756a5e4b969cf03abec9621153d6a1157f1bc8a85b433a0",
+        "size": 3964616
+      },
+      "path": "jobs/terrain-2039d-203ac/generated/atlas-v2.png",
+      "sha256": "1c8f99fe2ec22d3b7756a5e4b969cf03abec9621153d6a1157f1bc8a85b433a0"
+    }
+  ],
+  "full5521": {
+    "mode": 33152,
+    "mtime_ns": 1792287083432306949,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/provenance.json",
+    "sha256": "bc20bf8f4e6bebc79a361e23b928ae0ffb4f6ec2aa720602ef6564807ef1d2cd",
+    "size": 1921857
+  },
+  "historic_QA7_restoration_confirmed": [
+    {
+      "path": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/runtime-qa.json",
+      "sha256": "3c22b674f2935c43e9d3bc9e031ea8be8b966360ddc4a8bd2cba5c55acda2403"
+    },
+    {
+      "path": "jobs/terrain-20391-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+      "sha256": "a7d44700c7aee6ee1f54bf42a8bcfe8bf0823690f51231d74a4ecb738a598340"
+    },
+    {
+      "path": "jobs/terrain-20392-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+      "sha256": "7639c76beafbc658e3928fc67688499721179de8ce463a77fd900e5e31f316c8"
+    },
+    {
+      "path": "jobs/terrain-20393-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+      "sha256": "cd0035cae3bab914cc9cbb8d878f3bb318ff20e359ac5b661a9d41399472bdbe"
+    },
+    {
+      "path": "jobs/terrain-20394-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+      "sha256": "fc96740de4a532f09d7a37fe7fc6d37f729f3c4fd8ae33a92a65c3c95306c7ec"
+    },
+    {
+      "path": "jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/runtime-qa.json",
+      "sha256": "2dfd0d785f40f3a2ea0059bbe11a71bf0bd290ee56dacf2fb8073eeb04f8b1fb"
+    },
+    {
+      "path": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/runtime-qa.json",
+      "sha256": "72d33881bb76eba08a705bc11a78bb518985e1768d8bb742a484cb49f61663a0"
+    }
+  ],
+  "maintained_carried_v2_runtime_dependency_QA_all_present": true,
+  "nested_runtime_QA_dependencies": [
+    {
+      "accepted_runtime_qa": {
+        "path": "jobs/terrain-20391-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+        "sha256": "a7d44700c7aee6ee1f54bf42a8bcfe8bf0823690f51231d74a4ecb738a598340"
+      },
+      "index": 958,
+      "record_sha256": "9e04d72bd6394ce44ae460e44c5893055e82f0e2f090cd835024b33fb1740f52"
+    },
+    {
+      "accepted_runtime_qa": {
+        "path": "jobs/terrain-20392-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+        "sha256": "7639c76beafbc658e3928fc67688499721179de8ce463a77fd900e5e31f316c8"
+      },
+      "index": 959,
+      "record_sha256": "08f5c947e285b000b908e1bfa2a5a914a04492067d78534dab28de54074efa5e"
+    },
+    {
+      "accepted_runtime_qa": {
+        "path": "jobs/terrain-20393-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+        "sha256": "cd0035cae3bab914cc9cbb8d878f3bb318ff20e359ac5b661a9d41399472bdbe"
+      },
+      "index": 960,
+      "record_sha256": "e6b607d513b518ebd409cbdeb6154c33877681df65264006ac842bc53e542f85"
+    },
+    {
+      "accepted_runtime_qa": {
+        "path": "jobs/terrain-20394-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+        "sha256": "fc96740de4a532f09d7a37fe7fc6d37f729f3c4fd8ae33a92a65c3c95306c7ec"
+      },
+      "index": 961,
+      "record_sha256": "b540b20294101bcc13ae177090b294b8cd1617edbed9b10a8e3529d7f5bd5de3"
+    },
+    {
+      "accepted_runtime_qa": {
+        "path": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/runtime-qa.json",
+        "sha256": "3c22b674f2935c43e9d3bc9e031ea8be8b966360ddc4a8bd2cba5c55acda2403"
+      },
+      "index": 956,
+      "record_sha256": "9124daa03e23b0d928282ad1ea613b51629a5ac4419a9c4203978bf87e78a6b1"
+    },
+    {
+      "accepted_runtime_qa": {
+        "path": "jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/runtime-qa.json",
+        "sha256": "2dfd0d785f40f3a2ea0059bbe11a71bf0bd290ee56dacf2fb8073eeb04f8b1fb"
+      },
+      "index": 976,
+      "record_sha256": "41dcbd6c62d1db4e4aa9bec2e132f8136b4a206bb73a000e495b7a432e6252b6"
+    },
+    {
+      "accepted_runtime_qa": {
+        "path": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/runtime-qa.json",
+        "sha256": "72d33881bb76eba08a705bc11a78bb518985e1768d8bb742a484cb49f61663a0"
+      },
+      "index": 978,
+      "record_sha256": "28116af1ecc1236759fab0e85bee761549156eb2000365e12bad813eb662f192"
+    }
+  ],
+  "no_engine_QA_or_raw_copies": true,
+  "provenance_named_archival_metadata_closure_incomplete": true,
+  "record_and_native_binding_checks": [
+    {
+      "assets": [
+        "2039a"
+      ],
+      "candidate": {
+        "mode": 33188,
+        "mtime_ns": 1792223281585575609,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/candidate.json",
+        "sha256": "1f59d9f9939752c13283dcab8788cf88d458f384f5c49771e457443eafe164aa",
+        "size": 1268
+      },
+      "frame_bindings_sha256": "7b2760050a64936d9e7b9997892b5983e61fb0f525ecbb5f2af81287067ca09f",
+      "index": 956,
+      "job_id": "coordinator-2039a-source-first-default-native-post5378-B-20261017-v1",
+      "record_sha256": "9124daa03e23b0d928282ad1ea613b51629a5ac4419a9c4203978bf87e78a6b1",
+      "review": {
+        "mode": 33188,
+        "mtime_ns": 1792223281585660337,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/coordinator-review.json",
+        "sha256": "3d0276aa1aed6bee9df3c841c497038a16d2de046c94c304eecb66a693623a67",
+        "size": 2622
+      }
+    },
+    {
+      "assets": [
+        "20391"
+      ],
+      "candidate": {
+        "mode": 33188,
+        "mtime_ns": 1792226414384059272,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20391-source-first-complete1-currentC-final-20261017/candidate.json",
+        "sha256": "9ae3134474102421b8fd87e04a3a3a0c774f6f3d19959f500c9c426bd2f97627",
+        "size": 1599
+      },
+      "frame_bindings_sha256": "216d08abcb27d2e3b8bd2a40bab5a38b3b0fc4d96c0a75b5ee25551799edc729",
+      "index": 958,
+      "job_id": "terrain-20391-source-first-complete1-currentC-final-20261017",
+      "record_sha256": "9e04d72bd6394ce44ae460e44c5893055e82f0e2f090cd835024b33fb1740f52",
+      "review": {
+        "mode": 33188,
+        "mtime_ns": 1792226542007233553,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20391-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+        "sha256": "723a360aba4625c77a496a9bcbc4508a2b3f02278dd3eea26533211458076d5f",
+        "size": 9010
+      }
+    },
+    {
+      "assets": [
+        "20392"
+      ],
+      "candidate": {
+        "mode": 33188,
+        "mtime_ns": 1792226414401985273,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20392-source-first-complete1-currentC-final-20261017/candidate.json",
+        "sha256": "84c58d7f0cacb55e50b967dc662925b7ab41a7cfaef129341963bd5969fb0e99",
+        "size": 1599
+      },
+      "frame_bindings_sha256": "587b85ea896eda1fa79c73e152ce34c8dfb6ff25c3e89d8bf8966ca7020bfb7b",
+      "index": 959,
+      "job_id": "terrain-20392-source-first-complete1-currentC-final-20261017",
+      "record_sha256": "08f5c947e285b000b908e1bfa2a5a914a04492067d78534dab28de54074efa5e",
+      "review": {
+        "mode": 33188,
+        "mtime_ns": 1792226542008589769,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20392-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+        "sha256": "1e611051df3b8dc76745a2cefaeedf70fcd6733bfae8ed56e7ed70c2d6845999",
+        "size": 9010
+      }
+    },
+    {
+      "assets": [
+        "20393"
+      ],
+      "candidate": {
+        "mode": 33188,
+        "mtime_ns": 1792226414418267960,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20393-source-first-complete1-currentC-final-20261017/candidate.json",
+        "sha256": "e093d241e6da3301829ce739e141b0b12d0c0e424f7b130eb46a6a6cb78c690a",
+        "size": 1599
+      },
+      "frame_bindings_sha256": "3ec4ceb12af1a152021265d90b50b786536b6aa551ef409c4079f04b8d25c367",
+      "index": 960,
+      "job_id": "terrain-20393-source-first-complete1-currentC-final-20261017",
+      "record_sha256": "e6b607d513b518ebd409cbdeb6154c33877681df65264006ac842bc53e542f85",
+      "review": {
+        "mode": 33188,
+        "mtime_ns": 1792226542009663010,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20393-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+        "sha256": "c2fdd96d9c74f2d84105f36090b4a001d3de66cf672d6ba42dd72ab39daad04a",
+        "size": 9010
+      }
+    },
+    {
+      "assets": [
+        "20394"
+      ],
+      "candidate": {
+        "mode": 33188,
+        "mtime_ns": 1792226414436070608,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20394-source-first-complete1-currentC-final-20261017/candidate.json",
+        "sha256": "b5c85c6836d72834dd15c179845d39ee0227e85afa3a6cfdbf77c5156ab33d86",
+        "size": 1599
+      },
+      "frame_bindings_sha256": "9b70892aec1e11110461987f41ef996d83e99df6d63614e309b45840d8e2ea54",
+      "index": 961,
+      "job_id": "terrain-20394-source-first-complete1-currentC-final-20261017",
+      "record_sha256": "b540b20294101bcc13ae177090b294b8cd1617edbed9b10a8e3529d7f5bd5de3",
+      "review": {
+        "mode": 33188,
+        "mtime_ns": 1792226542011315135,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20394-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+        "sha256": "a81171a346b62aeb1bed0921fb4c6c4968073c696cee72817df57c0fb1abd96d",
+        "size": 9010
+      }
+    },
+    {
+      "assets": [
+        "2039c"
+      ],
+      "candidate": {
+        "mode": 33188,
+        "mtime_ns": 1792238898835412823,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/candidate.json",
+        "sha256": "2a7825662510679ca31272a641e2049e11a5bc1eb74e1b700359e9f2df55267b",
+        "size": 6704
+      },
+      "frame_bindings_sha256": "07605c89a39468efb77ed8d772d2b591612fb79652243dbeda1d39623a55a66f",
+      "index": 976,
+      "job_id": "coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1",
+      "record_sha256": "41dcbd6c62d1db4e4aa9bec2e132f8136b4a206bb73a000e495b7a432e6252b6",
+      "review": {
+        "mode": 33188,
+        "mtime_ns": 1792238898938026173,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/coordinator-review.json",
+        "sha256": "e26ebd28593bf435c5b392d0265989abdd98caadbdfbee5de4bb960641b16400",
+        "size": 18949
+      }
+    },
+    {
+      "assets": [
+        "2038d",
+        "2038e",
+        "20396",
+        "20397",
+        "20398"
+      ],
+      "candidate": {
+        "mode": 33188,
+        "mtime_ns": 1792243359098424107,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/candidate.json",
+        "sha256": "a74132f807f1a5d10ecb694fd1b49d5d5f9be8847dfb4b466681b1fcf7557aa4",
+        "size": 10703
+      },
+      "frame_bindings_sha256": "a3dff679d95cdf54cd1e21dc11d438454ac9a3beb43747df8b7607cdd8d388b7",
+      "index": 978,
+      "job_id": "coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1",
+      "record_sha256": "28116af1ecc1236759fab0e85bee761549156eb2000365e12bad813eb662f192",
+      "review": {
+        "mode": 33188,
+        "mtime_ns": 1792243359147629431,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/coordinator-review.json",
+        "sha256": "83cb64cf579411a7e304dd1c72c3e685ee30c6ff67fcca35691c6c30a24a0de0",
+        "size": 28847
+      }
+    },
+    {
+      "assets": [
+        "20395",
+        "20399"
+      ],
+      "candidate": {
+        "mode": 33188,
+        "mtime_ns": 1792284459000930625,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/exact-alias-20395-20399-from-203a7-v1-20261018/candidate.json",
+        "sha256": "62ddd1186856a15fb87407c051c4a98cb59321b90b0021430f29153008c05996",
+        "size": 14776
+      },
+      "frame_bindings_sha256": "efd0d74d1412f4e9ae9e36ac25f751f6c2d18402bbfc084e8632ff9856a07470",
+      "index": 991,
+      "job_id": "exact-alias-20395-20399-from-203a7-v1-20261018",
+      "record_sha256": "9c9bbdaae29ed829f7a3512f15a1b23f11c0723628c838056ef81ff9aeebd1b6",
+      "review": {
+        "mode": 33188,
+        "mtime_ns": 1792284459216949797,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/exact-alias-20395-20399-from-203a7-v1-20261018/coordinator-review.json",
+        "sha256": "f3d9b35004e5751d128bb7c858162bfba1260350409cfbd0db77f730008854b9",
+        "size": 18040
+      }
+    }
+  ],
+  "registrar_main_calls": 0,
+  "restore_bytes_per_root": 125486,
+  "restore_file_count": 15,
+  "restore_rows": [
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/candidate.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/candidate.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/candidate.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792223281585575609,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/candidate.json",
+        "sha256": "1f59d9f9939752c13283dcab8788cf88d458f384f5c49771e457443eafe164aa",
+        "size": 1268
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/coordinator-review.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/coordinator-review.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/coordinator-review.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792223281585660337,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/coordinator-review.json",
+        "sha256": "3d0276aa1aed6bee9df3c841c497038a16d2de046c94c304eecb66a693623a67",
+        "size": 2622
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/candidate.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/candidate.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/candidate.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792238898835412823,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/candidate.json",
+        "sha256": "2a7825662510679ca31272a641e2049e11a5bc1eb74e1b700359e9f2df55267b",
+        "size": 6704
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/coordinator-review.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/coordinator-review.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/coordinator-review.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792238898938026173,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/coordinator-review.json",
+        "sha256": "e26ebd28593bf435c5b392d0265989abdd98caadbdfbee5de4bb960641b16400",
+        "size": 18949
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/candidate.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/candidate.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/candidate.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792243359098424107,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/candidate.json",
+        "sha256": "a74132f807f1a5d10ecb694fd1b49d5d5f9be8847dfb4b466681b1fcf7557aa4",
+        "size": 10703
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/coordinator-review.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/coordinator-review.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/coordinator-review.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792243359147629431,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/coordinator-review.json",
+        "sha256": "83cb64cf579411a7e304dd1c72c3e685ee30c6ff67fcca35691c6c30a24a0de0",
+        "size": 28847
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/provenance.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/provenance.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/provenance.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792243359147820601,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/provenance.json",
+        "sha256": "917a099e65e9c8e7bfc86ec94b9d6b0617c826d0bf71a54da549a733c3aa80ff",
+        "size": 13957
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20391-source-first-complete1-currentC-final-20261017/candidate.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20391-source-first-complete1-currentC-final-20261017/candidate.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/terrain-20391-source-first-complete1-currentC-final-20261017/candidate.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792226414384059272,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20391-source-first-complete1-currentC-final-20261017/candidate.json",
+        "sha256": "9ae3134474102421b8fd87e04a3a3a0c774f6f3d19959f500c9c426bd2f97627",
+        "size": 1599
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20391-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20391-source-first-complete1-currentC-final-20261017/coordinator-review.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/terrain-20391-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792226542007233553,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20391-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+        "sha256": "723a360aba4625c77a496a9bcbc4508a2b3f02278dd3eea26533211458076d5f",
+        "size": 9010
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20392-source-first-complete1-currentC-final-20261017/candidate.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20392-source-first-complete1-currentC-final-20261017/candidate.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/terrain-20392-source-first-complete1-currentC-final-20261017/candidate.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792226414401985273,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20392-source-first-complete1-currentC-final-20261017/candidate.json",
+        "sha256": "84c58d7f0cacb55e50b967dc662925b7ab41a7cfaef129341963bd5969fb0e99",
+        "size": 1599
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20392-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20392-source-first-complete1-currentC-final-20261017/coordinator-review.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/terrain-20392-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792226542008589769,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20392-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+        "sha256": "1e611051df3b8dc76745a2cefaeedf70fcd6733bfae8ed56e7ed70c2d6845999",
+        "size": 9010
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20393-source-first-complete1-currentC-final-20261017/candidate.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20393-source-first-complete1-currentC-final-20261017/candidate.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/terrain-20393-source-first-complete1-currentC-final-20261017/candidate.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792226414418267960,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20393-source-first-complete1-currentC-final-20261017/candidate.json",
+        "sha256": "e093d241e6da3301829ce739e141b0b12d0c0e424f7b130eb46a6a6cb78c690a",
+        "size": 1599
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20393-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20393-source-first-complete1-currentC-final-20261017/coordinator-review.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/terrain-20393-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792226542009663010,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20393-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+        "sha256": "c2fdd96d9c74f2d84105f36090b4a001d3de66cf672d6ba42dd72ab39daad04a",
+        "size": 9010
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20394-source-first-complete1-currentC-final-20261017/candidate.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20394-source-first-complete1-currentC-final-20261017/candidate.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/terrain-20394-source-first-complete1-currentC-final-20261017/candidate.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792226414436070608,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20394-source-first-complete1-currentC-final-20261017/candidate.json",
+        "sha256": "b5c85c6836d72834dd15c179845d39ee0227e85afa3a6cfdbf77c5156ab33d86",
+        "size": 1599
+      }
+    },
+    {
+      "destinations": [
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20394-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-20394-source-first-complete1-currentC-final-20261017/coordinator-review.json"
+      ],
+      "new_art": false,
+      "operation": "Root may restore exact bytes from the W historical archive; no execution by Terrain1",
+      "precondition": "MISSING_ONLY; never overwrite any pre-existing different file",
+      "relative_to_HD": "jobs/terrain-20394-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1792226542011315135,
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-20394-source-first-complete1-currentC-final-20261017/coordinator-review.json",
+        "sha256": "a81171a346b62aeb1bed0921fb4c6c4968073c696cee72817df57c0fb1abd96d",
+        "size": 9010
+      }
+    }
+  ],
+  "same_W_source_QA_and_current13_full_frame_fields_exact": true,
+  "scope": "All8 prior registrations for current13 siblings plus every nested carried-v2 scalar-QA dependency; 15 provenance-named candidate/detail/coordinator-review metadata files absent from both actual canonical and immutable stage.",
+  "status": "ROOT_RESTORE_PLAN_PREPARED_HISTORICAL_METADATA15_ABSENT_QA_CLOSURE8_PRESENT"
+}

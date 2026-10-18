@@ -1,0 +1,3196 @@
+{
+  "SourceF_epoch": {
+    "mode": "0o644",
+    "mtime_ns": 1792245694562144018,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/compiled-epoch.json",
+    "sha256": "38459e0067b17801b3c3c629c22e05dfee98928d451d8c8e0971b63c17288b52",
+    "size": 5917
+  },
+  "actual5500_context_report": {
+    "mode": "0o444",
+    "mtime_ns": 1792287368543470262,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-forest16-SourceF-fixedH5500-context16-actual-production-20261018/CLOSED-ACTUAL-FOREST16-SOURCEF-FIXEDH5500-GENUINE16-TECHNICAL-AND-PRODUCER-PHYSICAL-HANDOFF.json",
+    "sha256": "b73933fdb056788f3a0cbb95578563ffc346fac601eee5f64a130ad9c90ee0b5",
+    "size": 5668
+  },
+  "actual5500_context_strict": {
+    "mode": "0o444",
+    "mtime_ns": 1792287368703366298,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-forest16-SourceF-fixedH5500-context16-actual-production-20261018-strict-complete-actual16-context-producer-closure.json",
+    "sha256": "9f3cd1b836a5de471492149b9e4c1fb25c1ef7e7f2951e2a250a50c4965092d1",
+    "size": 438957
+  },
+  "actual5521_assembly": {
+    "mode": "0o644",
+    "mtime_ns": 1792287120676090608,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/batch21-attempt2-assembly-with-proof7-receipt.json",
+    "sha256": "9b1a25bcb16759eb8321f43a2120e4a7fe065c1eb60e25c425ea28ccdbf29640",
+    "size": 39014
+  },
+  "actual_added21": [
+    "10126",
+    "102f7",
+    "10315",
+    "10316",
+    "1033e",
+    "1033f",
+    "200bf",
+    "20395",
+    "20399",
+    "203b5",
+    "203b6",
+    "203b9",
+    "203bb",
+    "4002e",
+    "4002f",
+    "40030",
+    "40031",
+    "40032",
+    "40033",
+    "40034",
+    "40035"
+  ],
+  "actual_calls": {
+    "QA": 0,
+    "World": 0,
+    "compile": 0,
+    "constructor": 0,
+    "image": 0,
+    "registrar": 0
+  },
+  "actual_library": {
+    "mode": "0o444",
+    "mtime_ns": 1792245641851329918,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+    "sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+    "size": 22744978
+  },
+  "actual_new5521": {
+    "mode": "0o600",
+    "mtime_ns": 1792287083515305013,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/hd.json",
+    "sha256": "8865c15ef888887c3edba1ade351bceadfb6c4638dcc8a6e1f8fde80a94310ff",
+    "size": 2965845
+  },
+  "actual_old5500": {
+    "mode": "0o600",
+    "mtime_ns": 1792283129303448361,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/hd.json",
+    "sha256": "06489afc172cfdea6e19bad5ba648159a3ac82d0d7a04eddaf94198aa851bab7",
+    "size": 2956210
+  },
+  "all5500_full_typed_native_prefix_equal": true,
+  "all_named_inputs_exact_before_after": true,
+  "all_old_provenance_reviewed_additions_prefix_and_jobs_exact": true,
+  "finite39_new21_intersection": [],
+  "finite_bindings": [
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587556592,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1981",
+        "sha256": "9604d526bc98fa31cb63a8c73a1b3e1dd51027ab43ed23aa34cd72667105e3de",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587556592,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1981",
+        "sha256": "9604d526bc98fa31cb63a8c73a1b3e1dd51027ab43ed23aa34cd72667105e3de",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            314,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "9604d526bc98fa31cb63a8c73a1b3e1dd51027ab43ed23aa34cd72667105e3de"
+        },
+        "sequence_header": {
+          "base_asset": 132546,
+          "frame_count": 1,
+          "name": "Terrain 205c2"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "asset": "205c2",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            314,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "9604d526bc98fa31cb63a8c73a1b3e1dd51027ab43ed23aa34cd72667105e3de"
+        },
+        "sequence_header": {
+          "base_asset": 132546,
+          "frame_count": 1,
+          "name": "Terrain 205c2"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205bd-205cc/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587616592,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1982",
+        "sha256": "305616b7ebd0f3d9d145c59e872aa26c8f8014548e974502a4d7ac2ef35b781f",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587616592,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1982",
+        "sha256": "305616b7ebd0f3d9d145c59e872aa26c8f8014548e974502a4d7ac2ef35b781f",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            627,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "305616b7ebd0f3d9d145c59e872aa26c8f8014548e974502a4d7ac2ef35b781f"
+        },
+        "sequence_header": {
+          "base_asset": 132547,
+          "frame_count": 1,
+          "name": "Terrain 205c3"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "asset": "205c3",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            627,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "305616b7ebd0f3d9d145c59e872aa26c8f8014548e974502a4d7ac2ef35b781f"
+        },
+        "sequence_header": {
+          "base_asset": 132547,
+          "frame_count": 1,
+          "name": "Terrain 205c3"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205bd-205cc/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587690841,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1983",
+        "sha256": "f151b6098da5bb15ac29c099118c967d00a40a71ed9beae6b1ff26ef99f75211",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587690841,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1983",
+        "sha256": "f151b6098da5bb15ac29c099118c967d00a40a71ed9beae6b1ff26ef99f75211",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            941,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "f151b6098da5bb15ac29c099118c967d00a40a71ed9beae6b1ff26ef99f75211"
+        },
+        "sequence_header": {
+          "base_asset": 132548,
+          "frame_count": 1,
+          "name": "Terrain 205c4"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "asset": "205c4",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            941,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "f151b6098da5bb15ac29c099118c967d00a40a71ed9beae6b1ff26ef99f75211"
+        },
+        "sequence_header": {
+          "base_asset": 132548,
+          "frame_count": 1,
+          "name": "Terrain 205c4"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205bd-205cc/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587753243,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1984",
+        "sha256": "dd20e2a8618c3717f59af1ce215f104f6bbecc56dbedecc3600ef4078b127bf2",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587753243,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1984",
+        "sha256": "dd20e2a8618c3717f59af1ce215f104f6bbecc56dbedecc3600ef4078b127bf2",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            0,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "dd20e2a8618c3717f59af1ce215f104f6bbecc56dbedecc3600ef4078b127bf2"
+        },
+        "sequence_header": {
+          "base_asset": 132549,
+          "frame_count": 1,
+          "name": "Terrain 205c5"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "asset": "205c5",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            0,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "dd20e2a8618c3717f59af1ce215f104f6bbecc56dbedecc3600ef4078b127bf2"
+        },
+        "sequence_header": {
+          "base_asset": 132549,
+          "frame_count": 1,
+          "name": "Terrain 205c5"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205bd-205cc/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587811210,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1985",
+        "sha256": "bf2069b2086b780398a7b381f920082bff469672ac8af089aecc6ec2f423d414",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587811210,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1985",
+        "sha256": "bf2069b2086b780398a7b381f920082bff469672ac8af089aecc6ec2f423d414",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            314,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "bf2069b2086b780398a7b381f920082bff469672ac8af089aecc6ec2f423d414"
+        },
+        "sequence_header": {
+          "base_asset": 132550,
+          "frame_count": 1,
+          "name": "Terrain 205c6"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "asset": "205c6",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            314,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "bf2069b2086b780398a7b381f920082bff469672ac8af089aecc6ec2f423d414"
+        },
+        "sequence_header": {
+          "base_asset": 132550,
+          "frame_count": 1,
+          "name": "Terrain 205c6"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205bd-205cc/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587870559,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1986",
+        "sha256": "33f9a5157ff662c41fa6aa832826ecad05994db3f30f24e77a2fe71f01ae235f",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587870559,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1986",
+        "sha256": "33f9a5157ff662c41fa6aa832826ecad05994db3f30f24e77a2fe71f01ae235f",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            627,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "33f9a5157ff662c41fa6aa832826ecad05994db3f30f24e77a2fe71f01ae235f"
+        },
+        "sequence_header": {
+          "base_asset": 132551,
+          "frame_count": 1,
+          "name": "Terrain 205c7"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "asset": "205c7",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            627,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "33f9a5157ff662c41fa6aa832826ecad05994db3f30f24e77a2fe71f01ae235f"
+        },
+        "sequence_header": {
+          "base_asset": 132551,
+          "frame_count": 1,
+          "name": "Terrain 205c7"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205bd-205cc/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587950100,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1987",
+        "sha256": "bfa0cf8ba1a2683c629cabec4f8117484dcbc69ddb811d68a3811277f0754b27",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959587950100,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1987",
+        "sha256": "bfa0cf8ba1a2683c629cabec4f8117484dcbc69ddb811d68a3811277f0754b27",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            941,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "bfa0cf8ba1a2683c629cabec4f8117484dcbc69ddb811d68a3811277f0754b27"
+        },
+        "sequence_header": {
+          "base_asset": 132552,
+          "frame_count": 1,
+          "name": "Terrain 205c8"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "asset": "205c8",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            941,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "bfa0cf8ba1a2683c629cabec4f8117484dcbc69ddb811d68a3811277f0754b27"
+        },
+        "sequence_header": {
+          "base_asset": 132552,
+          "frame_count": 1,
+          "name": "Terrain 205c8"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205bd-205cc/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959588034708,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1988",
+        "sha256": "171f788da9bdda90098a3898aef67b2240c63f9b048e9323ace018b210f35180",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959588034708,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1988",
+        "sha256": "171f788da9bdda90098a3898aef67b2240c63f9b048e9323ace018b210f35180",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            0,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "171f788da9bdda90098a3898aef67b2240c63f9b048e9323ace018b210f35180"
+        },
+        "sequence_header": {
+          "base_asset": 132553,
+          "frame_count": 1,
+          "name": "Terrain 205c9"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "asset": "205c9",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            0,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "171f788da9bdda90098a3898aef67b2240c63f9b048e9323ace018b210f35180"
+        },
+        "sequence_header": {
+          "base_asset": 132553,
+          "frame_count": 1,
+          "name": "Terrain 205c9"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205bd-205cc/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959588117302,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1989",
+        "sha256": "d114e35d523e4e775111898f3ff5062896a90a63b6b049693723bfee0ff5f8cc",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959588117302,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1989",
+        "sha256": "d114e35d523e4e775111898f3ff5062896a90a63b6b049693723bfee0ff5f8cc",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            314,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "d114e35d523e4e775111898f3ff5062896a90a63b6b049693723bfee0ff5f8cc"
+        },
+        "sequence_header": {
+          "base_asset": 132554,
+          "frame_count": 1,
+          "name": "Terrain 205ca"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "asset": "205ca",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            314,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "d114e35d523e4e775111898f3ff5062896a90a63b6b049693723bfee0ff5f8cc"
+        },
+        "sequence_header": {
+          "base_asset": 132554,
+          "frame_count": 1,
+          "name": "Terrain 205ca"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205bd-205cc/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959588190050,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1990",
+        "sha256": "3d018e7e647d58f3796e4696f1f21a3daf7184999cf7b51832d76684921addfe",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959588190050,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1990",
+        "sha256": "3d018e7e647d58f3796e4696f1f21a3daf7184999cf7b51832d76684921addfe",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            627,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "3d018e7e647d58f3796e4696f1f21a3daf7184999cf7b51832d76684921addfe"
+        },
+        "sequence_header": {
+          "base_asset": 132555,
+          "frame_count": 1,
+          "name": "Terrain 205cb"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "asset": "205cb",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            627,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "3d018e7e647d58f3796e4696f1f21a3daf7184999cf7b51832d76684921addfe"
+        },
+        "sequence_header": {
+          "base_asset": 132555,
+          "frame_count": 1,
+          "name": "Terrain 205cb"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772167983372190,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+        "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+        "size": 2835360
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205bd-205cc/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959588352894,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1992",
+        "sha256": "9c5fac674217b27e14fb01f9383c9fc1ae9c432077d99288270cc9ae2cc30a15",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959588352894,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1992",
+        "sha256": "9c5fac674217b27e14fb01f9383c9fc1ae9c432077d99288270cc9ae2cc30a15",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            0,
+            0,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "9c5fac674217b27e14fb01f9383c9fc1ae9c432077d99288270cc9ae2cc30a15"
+        },
+        "sequence_header": {
+          "base_asset": 132557,
+          "frame_count": 1,
+          "name": "Terrain 205cd"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168002214894,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+        "sha256": "b2d1e7c0ad0ead2dfc50a367a4e11e0f255038163fabc20dce42d735060746a6",
+        "size": 2940805
+      },
+      "asset": "205cd",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            0,
+            0,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "9c5fac674217b27e14fb01f9383c9fc1ae9c432077d99288270cc9ae2cc30a15"
+        },
+        "sequence_header": {
+          "base_asset": 132557,
+          "frame_count": 1,
+          "name": "Terrain 205cd"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168002214894,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+        "sha256": "b2d1e7c0ad0ead2dfc50a367a4e11e0f255038163fabc20dce42d735060746a6",
+        "size": 2940805
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205cd-205dc/generated/atlas-v2.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959588416287,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1993",
+        "sha256": "2de0acb60c055eaabcd4b1f62d9ab8f7afc90ed853499992d4281fe8c1906eb7",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959588416287,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1993",
+        "sha256": "2de0acb60c055eaabcd4b1f62d9ab8f7afc90ed853499992d4281fe8c1906eb7",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            314,
+            0,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "2de0acb60c055eaabcd4b1f62d9ab8f7afc90ed853499992d4281fe8c1906eb7"
+        },
+        "sequence_header": {
+          "base_asset": 132558,
+          "frame_count": 1,
+          "name": "Terrain 205ce"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168002214894,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+        "sha256": "b2d1e7c0ad0ead2dfc50a367a4e11e0f255038163fabc20dce42d735060746a6",
+        "size": 2940805
+      },
+      "asset": "205ce",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            314,
+            0,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "2de0acb60c055eaabcd4b1f62d9ab8f7afc90ed853499992d4281fe8c1906eb7"
+        },
+        "sequence_header": {
+          "base_asset": 132558,
+          "frame_count": 1,
+          "name": "Terrain 205ce"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168002214894,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+        "sha256": "b2d1e7c0ad0ead2dfc50a367a4e11e0f255038163fabc20dce42d735060746a6",
+        "size": 2940805
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205cd-205dc/generated/atlas-v2.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959588777304,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1999",
+        "sha256": "1c18c4c005a951c07641d84bade073ff3a2ceb812cb7dbd3ca6e8e570fa95605",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959588777304,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1999",
+        "sha256": "1c18c4c005a951c07641d84bade073ff3a2ceb812cb7dbd3ca6e8e570fa95605",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            941,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "1c18c4c005a951c07641d84bade073ff3a2ceb812cb7dbd3ca6e8e570fa95605"
+        },
+        "sequence_header": {
+          "base_asset": 132564,
+          "frame_count": 1,
+          "name": "Terrain 205d4"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168002214894,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+        "sha256": "b2d1e7c0ad0ead2dfc50a367a4e11e0f255038163fabc20dce42d735060746a6",
+        "size": 2940805
+      },
+      "asset": "205d4",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            941,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "1c18c4c005a951c07641d84bade073ff3a2ceb812cb7dbd3ca6e8e570fa95605"
+        },
+        "sequence_header": {
+          "base_asset": 132564,
+          "frame_count": 1,
+          "name": "Terrain 205d4"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168002214894,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+        "sha256": "b2d1e7c0ad0ead2dfc50a367a4e11e0f255038163fabc20dce42d735060746a6",
+        "size": 2940805
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205cd-205dc/generated/atlas-v2.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959590475970,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2028",
+        "sha256": "865ebe7b98407c7e257e2a6693f545ec489645490c71e8d6ec5c090bdecd31cc",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959590475970,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2028",
+        "sha256": "865ebe7b98407c7e257e2a6693f545ec489645490c71e8d6ec5c090bdecd31cc",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            0,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205ed-205fc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "865ebe7b98407c7e257e2a6693f545ec489645490c71e8d6ec5c090bdecd31cc"
+        },
+        "sequence_header": {
+          "base_asset": 132593,
+          "frame_count": 1,
+          "name": "Terrain 205f1"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168043381948,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205ed-205fc/generated/atlas-v1.png",
+        "sha256": "e23504d2de7fd04c4a29e7d1794db0aa4a61c706e1b67cbc1fbfd68a9272856e",
+        "size": 3302661
+      },
+      "asset": "205f1",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            0,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205ed-205fc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "865ebe7b98407c7e257e2a6693f545ec489645490c71e8d6ec5c090bdecd31cc"
+        },
+        "sequence_header": {
+          "base_asset": 132593,
+          "frame_count": 1,
+          "name": "Terrain 205f1"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168043381948,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205ed-205fc/generated/atlas-v1.png",
+        "sha256": "e23504d2de7fd04c4a29e7d1794db0aa4a61c706e1b67cbc1fbfd68a9272856e",
+        "size": 3302661
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205ed-205fc/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959590871776,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2034",
+        "sha256": "f26409712421d8b1703c0225abaaf1ee3c91a6181ef0db25d31100d812aa9aa0",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959590871776,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2034",
+        "sha256": "f26409712421d8b1703c0225abaaf1ee3c91a6181ef0db25d31100d812aa9aa0",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            627,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205ed-205fc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "f26409712421d8b1703c0225abaaf1ee3c91a6181ef0db25d31100d812aa9aa0"
+        },
+        "sequence_header": {
+          "base_asset": 132599,
+          "frame_count": 1,
+          "name": "Terrain 205f7"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168043381948,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205ed-205fc/generated/atlas-v1.png",
+        "sha256": "e23504d2de7fd04c4a29e7d1794db0aa4a61c706e1b67cbc1fbfd68a9272856e",
+        "size": 3302661
+      },
+      "asset": "205f7",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            627,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205ed-205fc/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "f26409712421d8b1703c0225abaaf1ee3c91a6181ef0db25d31100d812aa9aa0"
+        },
+        "sequence_header": {
+          "base_asset": 132599,
+          "frame_count": 1,
+          "name": "Terrain 205f7"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168043381948,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205ed-205fc/generated/atlas-v1.png",
+        "sha256": "e23504d2de7fd04c4a29e7d1794db0aa4a61c706e1b67cbc1fbfd68a9272856e",
+        "size": 3302661
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-205ed-205fc/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593058568,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2068",
+        "sha256": "6438009b4c24e2ff5ad32b2f3aa8dd782e9fb23ed74f357d67b2f93e5adef71f",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593058568,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2068",
+        "sha256": "6438009b4c24e2ff5ad32b2f3aa8dd782e9fb23ed74f357d67b2f93e5adef71f",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            0,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "6438009b4c24e2ff5ad32b2f3aa8dd782e9fb23ed74f357d67b2f93e5adef71f"
+        },
+        "sequence_header": {
+          "base_asset": 132633,
+          "frame_count": 1,
+          "name": "Terrain 20619"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168084990586,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+        "sha256": "ec495d359805831c170f1a03a95396726341eed38337994fffcc587260a1664c",
+        "size": 2897467
+      },
+      "asset": "20619",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            0,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "6438009b4c24e2ff5ad32b2f3aa8dd782e9fb23ed74f357d67b2f93e5adef71f"
+        },
+        "sequence_header": {
+          "base_asset": 132633,
+          "frame_count": 1,
+          "name": "Terrain 20619"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168084990586,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+        "sha256": "ec495d359805831c170f1a03a95396726341eed38337994fffcc587260a1664c",
+        "size": 2897467
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-2060d-2061c/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593112247,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2069",
+        "sha256": "3878a2d9d91088cf39fb009da3698945a63475dc62fb29cad8cad4d4b7fc41e9",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593112247,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2069",
+        "sha256": "3878a2d9d91088cf39fb009da3698945a63475dc62fb29cad8cad4d4b7fc41e9",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            314,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "3878a2d9d91088cf39fb009da3698945a63475dc62fb29cad8cad4d4b7fc41e9"
+        },
+        "sequence_header": {
+          "base_asset": 132634,
+          "frame_count": 1,
+          "name": "Terrain 2061a"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168084990586,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+        "sha256": "ec495d359805831c170f1a03a95396726341eed38337994fffcc587260a1664c",
+        "size": 2897467
+      },
+      "asset": "2061a",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            314,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "3878a2d9d91088cf39fb009da3698945a63475dc62fb29cad8cad4d4b7fc41e9"
+        },
+        "sequence_header": {
+          "base_asset": 132634,
+          "frame_count": 1,
+          "name": "Terrain 2061a"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168084990586,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+        "sha256": "ec495d359805831c170f1a03a95396726341eed38337994fffcc587260a1664c",
+        "size": 2897467
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-2060d-2061c/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593221991,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2071",
+        "sha256": "cc40a10c5ceb1e4ac7052f517fb35d5f492d63ce0cca4aecaa0442f5d645a833",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593221991,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2071",
+        "sha256": "cc40a10c5ceb1e4ac7052f517fb35d5f492d63ce0cca4aecaa0442f5d645a833",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            941,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "cc40a10c5ceb1e4ac7052f517fb35d5f492d63ce0cca4aecaa0442f5d645a833"
+        },
+        "sequence_header": {
+          "base_asset": 132636,
+          "frame_count": 1,
+          "name": "Terrain 2061c"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168084990586,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+        "sha256": "ec495d359805831c170f1a03a95396726341eed38337994fffcc587260a1664c",
+        "size": 2897467
+      },
+      "asset": "2061c",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            941,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "cc40a10c5ceb1e4ac7052f517fb35d5f492d63ce0cca4aecaa0442f5d645a833"
+        },
+        "sequence_header": {
+          "base_asset": 132636,
+          "frame_count": 1,
+          "name": "Terrain 2061c"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168084990586,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+        "sha256": "ec495d359805831c170f1a03a95396726341eed38337994fffcc587260a1664c",
+        "size": 2897467
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-2060d-2061c/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593276935,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2072",
+        "sha256": "01b12e4970e383d5d9c0d591000d1e00f5d26db781d8703730bb50e7b2d67eb1",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593276935,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2072",
+        "sha256": "01b12e4970e383d5d9c0d591000d1e00f5d26db781d8703730bb50e7b2d67eb1",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "2061d",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593333002,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2073",
+        "sha256": "e29421384fb41fb654d49c21c48d32d91a64bdd8f36c83bf5acd4c7e9fe90c4c",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593333002,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2073",
+        "sha256": "e29421384fb41fb654d49c21c48d32d91a64bdd8f36c83bf5acd4c7e9fe90c4c",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "2061e",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593389292,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2074",
+        "sha256": "fbe3e1de0a2bfcaa76efd82467b1a2651cb47920c185314c1dde6e2b569bc719",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593389292,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2074",
+        "sha256": "fbe3e1de0a2bfcaa76efd82467b1a2651cb47920c185314c1dde6e2b569bc719",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "2061f",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593447943,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2075",
+        "sha256": "4206245c4b0925136aade47eac8f99829c0ed81d5f5b83f168b76858619ab1d1",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593447943,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2075",
+        "sha256": "4206245c4b0925136aade47eac8f99829c0ed81d5f5b83f168b76858619ab1d1",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "20620",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593503731,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2076",
+        "sha256": "c594c92a745563d3d5e57da0dbfa4ce82af662383998aac79bf0a067a3f43723",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593503731,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2076",
+        "sha256": "c594c92a745563d3d5e57da0dbfa4ce82af662383998aac79bf0a067a3f43723",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "20621",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593558884,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2077",
+        "sha256": "0a3341314c009eb37318233e478b186948c499e9f56996886223e19775783fb5",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593558884,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2077",
+        "sha256": "0a3341314c009eb37318233e478b186948c499e9f56996886223e19775783fb5",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "20622",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593615311,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2078",
+        "sha256": "6f8ec7d3228160aaae9947dfb94d9843f3f4f6c584dc8bc4aade146477111682",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593615311,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2078",
+        "sha256": "6f8ec7d3228160aaae9947dfb94d9843f3f4f6c584dc8bc4aade146477111682",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "20623",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593670307,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2079",
+        "sha256": "9dd73c2b5bcd490381306b8c1f28bd76ed82effc53c2c1bdd8db0ea9d903a1cd",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593670307,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2079",
+        "sha256": "9dd73c2b5bcd490381306b8c1f28bd76ed82effc53c2c1bdd8db0ea9d903a1cd",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "20624",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593733504,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2080",
+        "sha256": "fa2f27ec4e36276cb0c056eaa8626ed91bc95dd7f219adecfda133cb7e63edf0",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593733504,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2080",
+        "sha256": "fa2f27ec4e36276cb0c056eaa8626ed91bc95dd7f219adecfda133cb7e63edf0",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "20625",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593787785,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2081",
+        "sha256": "cdaf3d48243112d0b91520738c5682d6fd720e94e39d2fe6678b800d361b4e39",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593787785,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2081",
+        "sha256": "cdaf3d48243112d0b91520738c5682d6fd720e94e39d2fe6678b800d361b4e39",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "20626",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593843208,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2082",
+        "sha256": "7100604461ece58e9fd737cc0aebe82d85b54e3fcb0efa266edaae688c774b6a",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593843208,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2082",
+        "sha256": "7100604461ece58e9fd737cc0aebe82d85b54e3fcb0efa266edaae688c774b6a",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "20627",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593899232,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2083",
+        "sha256": "f5474abfa42f086e4102059d54384533599503ec9c39fc88b804e32a2031a743",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593899232,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2083",
+        "sha256": "f5474abfa42f086e4102059d54384533599503ec9c39fc88b804e32a2031a743",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "20628",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593969362,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2084",
+        "sha256": "2f731e915a7a48b7d09bb80c9036930c27b3aab1286f5c6a5d1d34a6c355482f",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959593969362,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2084",
+        "sha256": "2f731e915a7a48b7d09bb80c9036930c27b3aab1286f5c6a5d1d34a6c355482f",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "20629",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594039199,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2085",
+        "sha256": "96c967d6c16cb6ea139572424f6d16746d0dd7bee5f2de227614f4fd1f2dc934",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594039199,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2085",
+        "sha256": "96c967d6c16cb6ea139572424f6d16746d0dd7bee5f2de227614f4fd1f2dc934",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "2062a",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594107141,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2086",
+        "sha256": "99eb9af5cdc9c28b6f84e07dcfdfa237f9c255e93d009aa2622a72c4450db23a",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594107141,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2086",
+        "sha256": "99eb9af5cdc9c28b6f84e07dcfdfa237f9c255e93d009aa2622a72c4450db23a",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "2062b",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594163030,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2087",
+        "sha256": "e0b8b2420b50e1e75232424f1f85105d088172ed5004acca341f713f946f06b7",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594163030,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2087",
+        "sha256": "e0b8b2420b50e1e75232424f1f85105d088172ed5004acca341f713f946f06b7",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": null,
+      "asset": "2062c",
+      "both_epochs_Original_fallback": true,
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": null
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594272010,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2089",
+        "sha256": "57479265613c70da0807b4a70c4dd36334e463ca8d9746ee50e41612130da3c5",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594272010,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2089",
+        "sha256": "57479265613c70da0807b4a70c4dd36334e463ca8d9746ee50e41612130da3c5",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            314,
+            0,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "57479265613c70da0807b4a70c4dd36334e463ca8d9746ee50e41612130da3c5"
+        },
+        "sequence_header": {
+          "base_asset": 132654,
+          "frame_count": 1,
+          "name": "Terrain 2062e"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168102484497,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+        "sha256": "642b8ead3f7e39f622a5cc5df714d10853912040b49b6103747a3a61324e523d",
+        "size": 2413754
+      },
+      "asset": "2062e",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            314,
+            0,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "57479265613c70da0807b4a70c4dd36334e463ca8d9746ee50e41612130da3c5"
+        },
+        "sequence_header": {
+          "base_asset": 132654,
+          "frame_count": 1,
+          "name": "Terrain 2062e"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168102484497,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+        "sha256": "642b8ead3f7e39f622a5cc5df714d10853912040b49b6103747a3a61324e523d",
+        "size": 2413754
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-2062d-2063c/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594325861,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2090",
+        "sha256": "9b038cb3f0606c3904cf4499cc9238197626d7161fa6ec566a8fdbba59fe2485",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594325861,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2090",
+        "sha256": "9b038cb3f0606c3904cf4499cc9238197626d7161fa6ec566a8fdbba59fe2485",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            627,
+            0,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "9b038cb3f0606c3904cf4499cc9238197626d7161fa6ec566a8fdbba59fe2485"
+        },
+        "sequence_header": {
+          "base_asset": 132655,
+          "frame_count": 1,
+          "name": "Terrain 2062f"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168102484497,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+        "sha256": "642b8ead3f7e39f622a5cc5df714d10853912040b49b6103747a3a61324e523d",
+        "size": 2413754
+      },
+      "asset": "2062f",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            627,
+            0,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "9b038cb3f0606c3904cf4499cc9238197626d7161fa6ec566a8fdbba59fe2485"
+        },
+        "sequence_header": {
+          "base_asset": 132655,
+          "frame_count": 1,
+          "name": "Terrain 2062f"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168102484497,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+        "sha256": "642b8ead3f7e39f622a5cc5df714d10853912040b49b6103747a3a61324e523d",
+        "size": 2413754
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-2062d-2063c/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594435739,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2092",
+        "sha256": "99a7c7581e8b3014b758cb1379b07a5b9bcd34bce5636aa3b13fac2da7959c56",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594435739,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2092",
+        "sha256": "99a7c7581e8b3014b758cb1379b07a5b9bcd34bce5636aa3b13fac2da7959c56",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            0,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "99a7c7581e8b3014b758cb1379b07a5b9bcd34bce5636aa3b13fac2da7959c56"
+        },
+        "sequence_header": {
+          "base_asset": 132657,
+          "frame_count": 1,
+          "name": "Terrain 20631"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168102484497,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+        "sha256": "642b8ead3f7e39f622a5cc5df714d10853912040b49b6103747a3a61324e523d",
+        "size": 2413754
+      },
+      "asset": "20631",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            0,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "99a7c7581e8b3014b758cb1379b07a5b9bcd34bce5636aa3b13fac2da7959c56"
+        },
+        "sequence_header": {
+          "base_asset": 132657,
+          "frame_count": 1,
+          "name": "Terrain 20631"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168102484497,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+        "sha256": "642b8ead3f7e39f622a5cc5df714d10853912040b49b6103747a3a61324e523d",
+        "size": 2413754
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-2062d-2063c/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594762338,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2097",
+        "sha256": "b3eb9701b23a4912ec0e3a1da0d299c0c7e915275633827261127136d702fe58",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959594762338,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2097",
+        "sha256": "b3eb9701b23a4912ec0e3a1da0d299c0c7e915275633827261127136d702fe58",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            314,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "b3eb9701b23a4912ec0e3a1da0d299c0c7e915275633827261127136d702fe58"
+        },
+        "sequence_header": {
+          "base_asset": 132662,
+          "frame_count": 1,
+          "name": "Terrain 20636"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168102484497,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+        "sha256": "642b8ead3f7e39f622a5cc5df714d10853912040b49b6103747a3a61324e523d",
+        "size": 2413754
+      },
+      "asset": "20636",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            314,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "b3eb9701b23a4912ec0e3a1da0d299c0c7e915275633827261127136d702fe58"
+        },
+        "sequence_header": {
+          "base_asset": 132662,
+          "frame_count": 1,
+          "name": "Terrain 20636"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168102484497,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+        "sha256": "642b8ead3f7e39f622a5cc5df714d10853912040b49b6103747a3a61324e523d",
+        "size": 2413754
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-2062d-2063c/generated/atlas-v1.png"
+    },
+    {
+      "Source_R": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959595280068,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2104",
+        "sha256": "9084791081ff0c07b4f1dc878f4da02e9d7f2c79153be0c3536ca148b039f3c9",
+        "size": 1044
+      },
+      "Source_W": {
+        "mode": "0o644",
+        "mtime_ns": 1787663959595280068,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2104",
+        "sha256": "9084791081ff0c07b4f1dc878f4da02e9d7f2c79153be0c3536ca148b039f3c9",
+        "size": 1044
+      },
+      "Source_payload_equal": true,
+      "actual5521_native": {
+        "frame": {
+          "crop": [
+            0,
+            0,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2063d-2064c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "9084791081ff0c07b4f1dc878f4da02e9d7f2c79153be0c3536ca148b039f3c9"
+        },
+        "sequence_header": {
+          "base_asset": 132669,
+          "frame_count": 1,
+          "name": "Terrain 2063d"
+        }
+      },
+      "actual5521_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168118363036,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-2063d-2064c/generated/atlas-v1.png",
+        "sha256": "4ba488b84197267b65eac47235a3961347c0f8e4bf756ce188c1a2f1433b325b",
+        "size": 2426353
+      },
+      "asset": "2063d",
+      "full_typed_native_and_policy_equal": true,
+      "old5500_native": {
+        "frame": {
+          "crop": [
+            0,
+            0,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-2063d-2064c/generated/atlas-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "9084791081ff0c07b4f1dc878f4da02e9d7f2c79153be0c3536ca148b039f3c9"
+        },
+        "sequence_header": {
+          "base_asset": 132669,
+          "frame_count": 1,
+          "name": "Terrain 2063d"
+        }
+      },
+      "old5500_raw": {
+        "mode": "0o444",
+        "mtime_ns": 1791772168118363036,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-2063d-2064c/generated/atlas-v1.png",
+        "sha256": "4ba488b84197267b65eac47235a3961347c0f8e4bf756ce188c1a2f1433b325b",
+        "size": 2426353
+      },
+      "raw_bytes_equal": true,
+      "same_unchanged_raw_route": "jobs/terrain-2063d-2064c/generated/atlas-v1.png"
+    }
+  ],
+  "inference_scope": "These16 finite saved scenes consume exactly the same Source/native/policy/raw input identities under5521; reuse is input-identity carry, not a new execution or wider context qualification.",
+  "inputs": [
+    {
+      "mode": "0o600",
+      "mtime_ns": 1792283129303448361,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/hd.json",
+      "sha256": "06489afc172cfdea6e19bad5ba648159a3ac82d0d7a04eddaf94198aa851bab7",
+      "size": 2956210
+    },
+    {
+      "mode": "0o600",
+      "mtime_ns": 1792287083515305013,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/hd.json",
+      "sha256": "8865c15ef888887c3edba1ade351bceadfb6c4638dcc8a6e1f8fde80a94310ff",
+      "size": 2965845
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1792286916997923547,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-forest2061d-2062c-SourceF-H5500-finite-context-plan-20261018/FINITE-REPRESENTATIVE16-SOURCE-NATIVE-RAW-H5500-BINDINGS-AND-PLANNED21-EMPTY.json",
+      "sha256": "2a5c85b91403ac7c8c8a6e59a94eee4cb2e86931de20f0d8df403e5dbfbdc466",
+      "size": 77355
+    },
+    {
+      "mode": "0o600",
+      "mtime_ns": 1792283129226450020,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/provenance.json",
+      "sha256": "2ca4d5e8f893295fa8ba12aa7c4df7061074dde6d6fbdac825b076be2e1f8e6d",
+      "size": 1896327
+    },
+    {
+      "mode": "0o600",
+      "mtime_ns": 1792287083432306949,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/provenance.json",
+      "sha256": "bc20bf8f4e6bebc79a361e23b928ae0ffb4f6ec2aa720602ef6564807ef1d2cd",
+      "size": 1921857
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1792287120676090608,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/batch21-attempt2-assembly-with-proof7-receipt.json",
+      "sha256": "9b1a25bcb16759eb8321f43a2120e4a7fe065c1eb60e25c425ea28ccdbf29640",
+      "size": 39014
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1792287368543470262,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-forest16-SourceF-fixedH5500-context16-actual-production-20261018/CLOSED-ACTUAL-FOREST16-SOURCEF-FIXEDH5500-GENUINE16-TECHNICAL-AND-PRODUCER-PHYSICAL-HANDOFF.json",
+      "sha256": "b73933fdb056788f3a0cbb95578563ffc346fac601eee5f64a130ad9c90ee0b5",
+      "size": 5668
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1792287368703366298,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-forest16-SourceF-fixedH5500-context16-actual-production-20261018-strict-complete-actual16-context-producer-closure.json",
+      "sha256": "9f3cd1b836a5de471492149b9e4c1fb25c1ef7e7f2951e2a250a50c4965092d1",
+      "size": 438957
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1792245694562144018,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/compiled-epoch.json",
+      "sha256": "38459e0067b17801b3c3c629c22e05dfee98928d451d8c8e0971b63c17288b52",
+      "size": 5917
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1791711112495415498,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/assets.rs",
+      "sha256": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+      "size": 16417
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1791594274983451465,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio/opl3.rs",
+      "sha256": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+      "size": 55234
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1791612018073210287,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio.rs",
+      "sha256": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+      "size": 42072
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1791634621359594894,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/cinematics.rs",
+      "sha256": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+      "size": 29788
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1791671687237069939,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/content.rs",
+      "sha256": "7f35df7100c450ba4bb30a0fdc90101c115b5ae42a7aac57829441c5b7761647",
+      "size": 36359
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1792237712026820459,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/desktop.rs",
+      "sha256": "7aa876c1f74ea7b82ff0a5aa399bbbfaa18ea87ca81cab8a17c763654dca3812",
+      "size": 355988
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1792245624444265090,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/hd.rs",
+      "sha256": "b17f4ee0757ee87d34e01ec76f3a6239c6e9044b42b4b10bd5f05b485f137a64",
+      "size": 159636
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1791596592133246731,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/legacy_tables.rs",
+      "sha256": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+      "size": 26467
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1791618787038761898,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/lib.rs",
+      "sha256": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+      "size": 318
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1791680086709570028,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/main.rs",
+      "sha256": "d270d1787700975220fed75bbb8d6cd8e38288093492fb2608252849e1f804d7",
+      "size": 11193
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1791673814189962237,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/menu_art.rs",
+      "sha256": "1c3b8e58828c13099cf00c612b383efa1e402e27eaa7c8f5f0afc7f1ba44a0d0",
+      "size": 4325
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1791597772968721997,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/mod_selection.rs",
+      "sha256": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+      "size": 5447
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1792218285065753129,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/modding.rs",
+      "sha256": "5ba4f50b39f577d792a55845c3bc281e94f8bc937eab6cc5e6201cff0cd6d6fc",
+      "size": 31740
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1791700137529541149,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/persistence.rs",
+      "sha256": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+      "size": 52762
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1791697273206972841,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/render.rs",
+      "sha256": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+      "size": 32172
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1792217299196752425,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/simulation.rs",
+      "sha256": "2537120f280a1cfcfcc73a42a4103a4435ba8aeb98e69c87fde3b885b97a9925",
+      "size": 140409
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1791614563252113040,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/sound.rs",
+      "sha256": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+      "size": 11905
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1792245624444740664,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/terrain_hd.rs",
+      "sha256": "e61f96f541c19863ce8d741363a1739b9276e25aee84795952c65565c775e392",
+      "size": 59391
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1792245641851329918,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+      "sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+      "size": 22744978
+    },
+    {
+      "mode": "0o755",
+      "mtime_ns": 1792245832633695924,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/bin/raptor-rust",
+      "sha256": "5621787ba887ae77d396d848b833a66bd836cc50526d18e9b83fd09354affdfa",
+      "size": 11452456
+    },
+    {
+      "mode": "0o755",
+      "mtime_ns": 1792245973309049689,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/bin/raptor-rust.exe",
+      "sha256": "0a1c444c1a7bf82dda2999ab3968514817950afe44e73b6c0a8bde6847a0389d",
+      "size": 12093780
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587556592,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1981",
+      "sha256": "9604d526bc98fa31cb63a8c73a1b3e1dd51027ab43ed23aa34cd72667105e3de",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587556592,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1981",
+      "sha256": "9604d526bc98fa31cb63a8c73a1b3e1dd51027ab43ed23aa34cd72667105e3de",
+      "size": 1044
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1791772167983372190,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+      "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+      "size": 2835360
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1791772167983372190,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+      "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05",
+      "size": 2835360
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587616592,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1982",
+      "sha256": "305616b7ebd0f3d9d145c59e872aa26c8f8014548e974502a4d7ac2ef35b781f",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587616592,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1982",
+      "sha256": "305616b7ebd0f3d9d145c59e872aa26c8f8014548e974502a4d7ac2ef35b781f",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587690841,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1983",
+      "sha256": "f151b6098da5bb15ac29c099118c967d00a40a71ed9beae6b1ff26ef99f75211",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587690841,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1983",
+      "sha256": "f151b6098da5bb15ac29c099118c967d00a40a71ed9beae6b1ff26ef99f75211",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587753243,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1984",
+      "sha256": "dd20e2a8618c3717f59af1ce215f104f6bbecc56dbedecc3600ef4078b127bf2",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587753243,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1984",
+      "sha256": "dd20e2a8618c3717f59af1ce215f104f6bbecc56dbedecc3600ef4078b127bf2",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587811210,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1985",
+      "sha256": "bf2069b2086b780398a7b381f920082bff469672ac8af089aecc6ec2f423d414",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587811210,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1985",
+      "sha256": "bf2069b2086b780398a7b381f920082bff469672ac8af089aecc6ec2f423d414",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587870559,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1986",
+      "sha256": "33f9a5157ff662c41fa6aa832826ecad05994db3f30f24e77a2fe71f01ae235f",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587870559,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1986",
+      "sha256": "33f9a5157ff662c41fa6aa832826ecad05994db3f30f24e77a2fe71f01ae235f",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587950100,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1987",
+      "sha256": "bfa0cf8ba1a2683c629cabec4f8117484dcbc69ddb811d68a3811277f0754b27",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959587950100,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1987",
+      "sha256": "bfa0cf8ba1a2683c629cabec4f8117484dcbc69ddb811d68a3811277f0754b27",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959588034708,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1988",
+      "sha256": "171f788da9bdda90098a3898aef67b2240c63f9b048e9323ace018b210f35180",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959588034708,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1988",
+      "sha256": "171f788da9bdda90098a3898aef67b2240c63f9b048e9323ace018b210f35180",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959588117302,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1989",
+      "sha256": "d114e35d523e4e775111898f3ff5062896a90a63b6b049693723bfee0ff5f8cc",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959588117302,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1989",
+      "sha256": "d114e35d523e4e775111898f3ff5062896a90a63b6b049693723bfee0ff5f8cc",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959588190050,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1990",
+      "sha256": "3d018e7e647d58f3796e4696f1f21a3daf7184999cf7b51832d76684921addfe",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959588190050,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1990",
+      "sha256": "3d018e7e647d58f3796e4696f1f21a3daf7184999cf7b51832d76684921addfe",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959588352894,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1992",
+      "sha256": "9c5fac674217b27e14fb01f9383c9fc1ae9c432077d99288270cc9ae2cc30a15",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959588352894,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1992",
+      "sha256": "9c5fac674217b27e14fb01f9383c9fc1ae9c432077d99288270cc9ae2cc30a15",
+      "size": 1044
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1791772168002214894,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+      "sha256": "b2d1e7c0ad0ead2dfc50a367a4e11e0f255038163fabc20dce42d735060746a6",
+      "size": 2940805
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1791772168002214894,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+      "sha256": "b2d1e7c0ad0ead2dfc50a367a4e11e0f255038163fabc20dce42d735060746a6",
+      "size": 2940805
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959588416287,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1993",
+      "sha256": "2de0acb60c055eaabcd4b1f62d9ab8f7afc90ed853499992d4281fe8c1906eb7",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959588416287,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1993",
+      "sha256": "2de0acb60c055eaabcd4b1f62d9ab8f7afc90ed853499992d4281fe8c1906eb7",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959588777304,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1999",
+      "sha256": "1c18c4c005a951c07641d84bade073ff3a2ceb812cb7dbd3ca6e8e570fa95605",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959588777304,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1999",
+      "sha256": "1c18c4c005a951c07641d84bade073ff3a2ceb812cb7dbd3ca6e8e570fa95605",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959590475970,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2028",
+      "sha256": "865ebe7b98407c7e257e2a6693f545ec489645490c71e8d6ec5c090bdecd31cc",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959590475970,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2028",
+      "sha256": "865ebe7b98407c7e257e2a6693f545ec489645490c71e8d6ec5c090bdecd31cc",
+      "size": 1044
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1791772168043381948,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-205ed-205fc/generated/atlas-v1.png",
+      "sha256": "e23504d2de7fd04c4a29e7d1794db0aa4a61c706e1b67cbc1fbfd68a9272856e",
+      "size": 3302661
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1791772168043381948,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-205ed-205fc/generated/atlas-v1.png",
+      "sha256": "e23504d2de7fd04c4a29e7d1794db0aa4a61c706e1b67cbc1fbfd68a9272856e",
+      "size": 3302661
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959590871776,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2034",
+      "sha256": "f26409712421d8b1703c0225abaaf1ee3c91a6181ef0db25d31100d812aa9aa0",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959590871776,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2034",
+      "sha256": "f26409712421d8b1703c0225abaaf1ee3c91a6181ef0db25d31100d812aa9aa0",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593058568,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2068",
+      "sha256": "6438009b4c24e2ff5ad32b2f3aa8dd782e9fb23ed74f357d67b2f93e5adef71f",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593058568,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2068",
+      "sha256": "6438009b4c24e2ff5ad32b2f3aa8dd782e9fb23ed74f357d67b2f93e5adef71f",
+      "size": 1044
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1791772168084990586,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+      "sha256": "ec495d359805831c170f1a03a95396726341eed38337994fffcc587260a1664c",
+      "size": 2897467
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1791772168084990586,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-2060d-2061c/generated/atlas-v1.png",
+      "sha256": "ec495d359805831c170f1a03a95396726341eed38337994fffcc587260a1664c",
+      "size": 2897467
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593112247,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2069",
+      "sha256": "3878a2d9d91088cf39fb009da3698945a63475dc62fb29cad8cad4d4b7fc41e9",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593112247,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2069",
+      "sha256": "3878a2d9d91088cf39fb009da3698945a63475dc62fb29cad8cad4d4b7fc41e9",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593221991,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2071",
+      "sha256": "cc40a10c5ceb1e4ac7052f517fb35d5f492d63ce0cca4aecaa0442f5d645a833",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593221991,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2071",
+      "sha256": "cc40a10c5ceb1e4ac7052f517fb35d5f492d63ce0cca4aecaa0442f5d645a833",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593276935,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2072",
+      "sha256": "01b12e4970e383d5d9c0d591000d1e00f5d26db781d8703730bb50e7b2d67eb1",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593276935,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2072",
+      "sha256": "01b12e4970e383d5d9c0d591000d1e00f5d26db781d8703730bb50e7b2d67eb1",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593333002,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2073",
+      "sha256": "e29421384fb41fb654d49c21c48d32d91a64bdd8f36c83bf5acd4c7e9fe90c4c",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593333002,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2073",
+      "sha256": "e29421384fb41fb654d49c21c48d32d91a64bdd8f36c83bf5acd4c7e9fe90c4c",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593389292,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2074",
+      "sha256": "fbe3e1de0a2bfcaa76efd82467b1a2651cb47920c185314c1dde6e2b569bc719",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593389292,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2074",
+      "sha256": "fbe3e1de0a2bfcaa76efd82467b1a2651cb47920c185314c1dde6e2b569bc719",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593447943,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2075",
+      "sha256": "4206245c4b0925136aade47eac8f99829c0ed81d5f5b83f168b76858619ab1d1",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593447943,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2075",
+      "sha256": "4206245c4b0925136aade47eac8f99829c0ed81d5f5b83f168b76858619ab1d1",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593503731,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2076",
+      "sha256": "c594c92a745563d3d5e57da0dbfa4ce82af662383998aac79bf0a067a3f43723",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593503731,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2076",
+      "sha256": "c594c92a745563d3d5e57da0dbfa4ce82af662383998aac79bf0a067a3f43723",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593558884,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2077",
+      "sha256": "0a3341314c009eb37318233e478b186948c499e9f56996886223e19775783fb5",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593558884,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2077",
+      "sha256": "0a3341314c009eb37318233e478b186948c499e9f56996886223e19775783fb5",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593615311,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2078",
+      "sha256": "6f8ec7d3228160aaae9947dfb94d9843f3f4f6c584dc8bc4aade146477111682",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593615311,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2078",
+      "sha256": "6f8ec7d3228160aaae9947dfb94d9843f3f4f6c584dc8bc4aade146477111682",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593670307,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2079",
+      "sha256": "9dd73c2b5bcd490381306b8c1f28bd76ed82effc53c2c1bdd8db0ea9d903a1cd",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593670307,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2079",
+      "sha256": "9dd73c2b5bcd490381306b8c1f28bd76ed82effc53c2c1bdd8db0ea9d903a1cd",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593733504,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2080",
+      "sha256": "fa2f27ec4e36276cb0c056eaa8626ed91bc95dd7f219adecfda133cb7e63edf0",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593733504,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2080",
+      "sha256": "fa2f27ec4e36276cb0c056eaa8626ed91bc95dd7f219adecfda133cb7e63edf0",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593787785,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2081",
+      "sha256": "cdaf3d48243112d0b91520738c5682d6fd720e94e39d2fe6678b800d361b4e39",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593787785,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2081",
+      "sha256": "cdaf3d48243112d0b91520738c5682d6fd720e94e39d2fe6678b800d361b4e39",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593843208,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2082",
+      "sha256": "7100604461ece58e9fd737cc0aebe82d85b54e3fcb0efa266edaae688c774b6a",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593843208,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2082",
+      "sha256": "7100604461ece58e9fd737cc0aebe82d85b54e3fcb0efa266edaae688c774b6a",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593899232,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2083",
+      "sha256": "f5474abfa42f086e4102059d54384533599503ec9c39fc88b804e32a2031a743",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593899232,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2083",
+      "sha256": "f5474abfa42f086e4102059d54384533599503ec9c39fc88b804e32a2031a743",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593969362,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2084",
+      "sha256": "2f731e915a7a48b7d09bb80c9036930c27b3aab1286f5c6a5d1d34a6c355482f",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959593969362,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2084",
+      "sha256": "2f731e915a7a48b7d09bb80c9036930c27b3aab1286f5c6a5d1d34a6c355482f",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594039199,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2085",
+      "sha256": "96c967d6c16cb6ea139572424f6d16746d0dd7bee5f2de227614f4fd1f2dc934",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594039199,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2085",
+      "sha256": "96c967d6c16cb6ea139572424f6d16746d0dd7bee5f2de227614f4fd1f2dc934",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594107141,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2086",
+      "sha256": "99eb9af5cdc9c28b6f84e07dcfdfa237f9c255e93d009aa2622a72c4450db23a",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594107141,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2086",
+      "sha256": "99eb9af5cdc9c28b6f84e07dcfdfa237f9c255e93d009aa2622a72c4450db23a",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594163030,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2087",
+      "sha256": "e0b8b2420b50e1e75232424f1f85105d088172ed5004acca341f713f946f06b7",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594163030,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2087",
+      "sha256": "e0b8b2420b50e1e75232424f1f85105d088172ed5004acca341f713f946f06b7",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594272010,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2089",
+      "sha256": "57479265613c70da0807b4a70c4dd36334e463ca8d9746ee50e41612130da3c5",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594272010,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2089",
+      "sha256": "57479265613c70da0807b4a70c4dd36334e463ca8d9746ee50e41612130da3c5",
+      "size": 1044
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1791772168102484497,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+      "sha256": "642b8ead3f7e39f622a5cc5df714d10853912040b49b6103747a3a61324e523d",
+      "size": 2413754
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1791772168102484497,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+      "sha256": "642b8ead3f7e39f622a5cc5df714d10853912040b49b6103747a3a61324e523d",
+      "size": 2413754
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594325861,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2090",
+      "sha256": "9b038cb3f0606c3904cf4499cc9238197626d7161fa6ec566a8fdbba59fe2485",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594325861,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2090",
+      "sha256": "9b038cb3f0606c3904cf4499cc9238197626d7161fa6ec566a8fdbba59fe2485",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594435739,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2092",
+      "sha256": "99a7c7581e8b3014b758cb1379b07a5b9bcd34bce5636aa3b13fac2da7959c56",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594435739,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2092",
+      "sha256": "99a7c7581e8b3014b758cb1379b07a5b9bcd34bce5636aa3b13fac2da7959c56",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594762338,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2097",
+      "sha256": "b3eb9701b23a4912ec0e3a1da0d299c0c7e915275633827261127136d702fe58",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959594762338,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2097",
+      "sha256": "b3eb9701b23a4912ec0e3a1da0d299c0c7e915275633827261127136d702fe58",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959595280068,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2104",
+      "sha256": "9084791081ff0c07b4f1dc878f4da02e9d7f2c79153be0c3536ca148b039f3c9",
+      "size": 1044
+    },
+    {
+      "mode": "0o644",
+      "mtime_ns": 1787663959595280068,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2104",
+      "sha256": "9084791081ff0c07b4f1dc878f4da02e9d7f2c79153be0c3536ca148b039f3c9",
+      "size": 1044
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1791772168118363036,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/jobs/terrain-2063d-2064c/generated/atlas-v1.png",
+      "sha256": "4ba488b84197267b65eac47235a3961347c0f8e4bf756ce188c1a2f1433b325b",
+      "size": 2426353
+    },
+    {
+      "mode": "0o444",
+      "mtime_ns": 1791772168118363036,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/data/hd/jobs/terrain-2063d-2064c/generated/atlas-v1.png",
+      "sha256": "4ba488b84197267b65eac47235a3961347c0f8e4bf756ce188c1a2f1433b325b",
+      "size": 2426353
+    }
+  ],
+  "no_pending_owned_writer_call_or_lease": true,
+  "original_render_epoch_remains": "ActualSourceF/H5500. No H5521 constructor, QA, raster or physical measurement was performed.",
+  "selected_forest16_still_Original_fallback_in_both_epochs": true,
+  "status": "PASS_EXACT_INPUT_ONLY_H5500_TO_ACTUAL_H5521_CARRY_NO_NEW_PIXELS"
+}

@@ -1,0 +1,54 @@
+{
+  "environment": {
+    "authoring_scope": "Private deterministic portable reproduction, not a new generator invocation; game runtime consumes PNGs only.",
+    "dependency": "20390 recipe binds a byte-exact regular0e4d copy inside job for location-independent execution; lineage also declares project tool0e4d identity. New24e3 project tool promotion is pending Root, no approval validation yet.",
+    "parent_scope": "Original complete16 full service reply remains unchanged in private historical scope. This portable job carries an explicitly labeled primitive provider/gate projection with exact fullreply SHA and actual untouched raw PNG identity, not a verbatim fullreply or a new generation.",
+    "safe_receipt_projection": {
+      "path": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/parents/actual-generation-safe-provider-and-gate-projection.json",
+      "sha256": "294c1921dca74cbdc1dde0ddfd511368ea33a8baab905896ba73bebc3a1d7da7"
+    }
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/derived/actual-cleanup-execution.json",
+    "sha256": "e46c26a145e32dc1714262dc3ce6f5f7f3886f5d08baef12225ede9d7ad2d9c6"
+  },
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+  "outputs": {
+    "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/derived/20390-DERIVED-declared-material-v1.png": "401d70a21e9784451417aa5a4d587fc7cd964bd67aa85b7ec459910e7b631305"
+  },
+  "parents": [
+    {
+      "imagegen_receipt": {
+        "path": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/parents/actual-generation-safe-provider-and-gate-projection.json",
+        "sha256": "294c1921dca74cbdc1dde0ddfd511368ea33a8baab905896ba73bebc3a1d7da7"
+      },
+      "prompt": {
+        "path": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/parents/prompt.txt",
+        "sha256": "0e75d82c8287968e63b29494f015d4afbf5271b133b4398526a9c5b774d84d2f"
+      },
+      "raw_png": {
+        "path": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/parents/generator-return.png",
+        "sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761"
+      }
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/cleanup-recipe.json",
+    "sha256": "a7ad639241b108805ceac7130b6d686cca37c10bce177f119520944a227de696"
+  },
+  "sources": {
+    "20390": "5ce336a3ce59c4df7f63f6475f4bf6860f6ad85843c81ea82ee0ac65510db6f6"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_terrain_group_retexture.py",
+      "sha256": "24e3751d26090699f2d8d317ed98f73e05f51f3caa6dc2bf21fc40a109068a27"
+    },
+    {
+      "path": "tools/hd_terrain_retexture.py",
+      "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98"
+    }
+  ]
+}

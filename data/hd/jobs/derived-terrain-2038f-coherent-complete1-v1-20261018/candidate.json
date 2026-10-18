@@ -1,0 +1,31 @@
+{
+  "artwork_derivation": {
+    "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/artwork-derivation.json",
+    "sha256": "7a2286687a6c3d2825519cadf86e640d9de09b43d5240de21a5a5f434a15a875"
+  },
+  "category": "Terrain",
+  "complete_family": true,
+  "format_version": 1,
+  "job_id": "derived-terrain-2038f-coherent-complete1-v1-20261018",
+  "kind": "contextual_terrain_shard",
+  "sequences": [
+    {
+      "base_asset": 131983,
+      "frame_count": 1,
+      "frames": [
+        {
+          "file": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/derived/2038f-DERIVED-source-guided-material-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "dfb77fdcde620acee54463da51ea8bad6c5378504c500f65466e4991908cb000"
+        }
+      ],
+      "name": "Coherent Source-guided terrain2038f"
+    }
+  ]
+}

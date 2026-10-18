@@ -1,0 +1,63 @@
+{
+  "actual_arguments": {
+    "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/parents/actual-generation-arguments.json",
+    "sha256": "2eb9a137d5b48d9e43bd6662900d0d3c607df9cc6ecc42769d31b2b5d73df1b3"
+  },
+  "actual_prompt": {
+    "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/parents/prompt.txt",
+    "sha256": "0e75d82c8287968e63b29494f015d4afbf5271b133b4398526a9c5b774d84d2f"
+  },
+  "asset_family": "2038d-2039c",
+  "decoded_original_reply_PNG_SHA256_equals_untouched_raw": true,
+  "format_version": 1,
+  "gate": {
+    "acquired": {
+      "acquired": true,
+      "action": "acquire",
+      "capacity": 4,
+      "expires_at": "2026-10-14T06:45:27+00:00",
+      "lease_id": "8b9a460c-29f3-4250-ab04-bef15c6cd7a0",
+      "owner": "/root/hd_terrain_set_2"
+    },
+    "reported": {
+      "action": "report",
+      "capacity": 4,
+      "changed": true,
+      "owner": "/root/hd_terrain_set_2"
+    },
+    "started": {
+      "action": "start",
+      "capacity": 4,
+      "changed": true,
+      "owner": "/root/hd_terrain_set_2",
+      "started_at": "2026-10-14T06:15:28+00:00"
+    }
+  },
+  "generation_tool": "builtin image_gen.imagegen",
+  "inline_payload_not_packaged": true,
+  "literal_references": [
+    "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-2038d-2039c/generated/atlas-v1.png",
+    "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-2038d-2039c/source-atlas.png",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-2038d-2039c-coherent16-flat-source-grid-removal-preparation-20261014/lossless-inspection-only/AUTHENTIC-COMPLETE16-NATIVE-SOURCE-ATLAS-128.png"
+  ],
+  "new_generation_calls": 0,
+  "original_full_reply_contains_binary_payload": true,
+  "original_full_reply_private": {
+    "mode": 33188,
+    "mtime_ns": 1791958620118590376,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain2038f-20390V2-READY2-batch18-20261018/data/hd/jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/parents/actual-generation-full-response-and-gate-terminal.json",
+    "sha256": "0ce815acdf1c5c2794895e91b24eddb3eff961ebda733b838ee0cbf0e5023d8c",
+    "size": 3877150
+  },
+  "original_private_full_reply_unchanged": true,
+  "outcome": "success",
+  "provider_output_hint": "Generated images are saved to /home/quintine/.codex/generated_images/01a124db-c9dc-72d2-97aa-040646ba12c1 as /home/quintine/.codex/generated_images/01a124db-c9dc-72d2-97aa-040646ba12c1/exec-ab1fa44d-ce89-45b7-a586-a8780413c69a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "status": "SAFE_METADATA_PROJECTION_OF_ACTUAL_SUCCESS_NOT_VERBATIM_FULL_REPLY",
+  "thrown_error": null,
+  "transparent_background": false,
+  "untouched_raw_PNG": {
+    "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/parents/generator-return.png",
+    "sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+    "size": 2904333
+  }
+}

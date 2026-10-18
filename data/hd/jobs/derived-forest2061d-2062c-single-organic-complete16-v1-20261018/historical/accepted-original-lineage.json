@@ -1,0 +1,1225 @@
+{
+  "decoder": {
+    "module_sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98",
+    "name": "decode_source"
+  },
+  "dependency": {
+    "mode": 33188,
+    "mtime_ns": 1792281032564211121,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_retexture.py",
+    "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98",
+    "size": 16025
+  },
+  "execution": {
+    "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+    "output_sha256": {
+      "2061d": "2742696a73975f789b02c887505fe706545f005d959e3c4d3e9ab27f14df3272",
+      "2061e": "943204f755a68f1efdca2849b1ee178e8cf69fa300afc39365648a2c4c3a2fdd",
+      "2061f": "e4d72709b8b0395f6c822c9fcbf74c4dee1a835e6ded13687d600a77868b1ac8",
+      "20620": "2107a1145e84d6ae438c28f4113f4d676558bc2c3c34484cb88ef6e20550ccb5",
+      "20621": "09b7be009621fb6e9c102b0c5692111997f529b3221678e0636b410a58620be6",
+      "20622": "e565177315c3c4b6da39abd733f00e0c49257cf9ca4afd0dcf9ac91f09c0a4ae",
+      "20623": "950439efa2f8e1cc37761022163b146f1e3b651abb007e9e5082037b5559ebce",
+      "20624": "c02ecf5a74388df588c9b1925457953aa058aebcde121401a1c40576844a38a8",
+      "20625": "70b75f5a9089fe34679227d7c3c2ff8f972ee73b8608dccedf95780f68c5c17c",
+      "20626": "607ede2ae9ea239cfed425eb928ad328c53585ef63e4d73e8cd10afbc44dd398",
+      "20627": "950958175c46e38aedded38f082062fa55a841dd05b4879429b68b854c452c13",
+      "20628": "f268960cb3adaf2bc588f98c52fdaf6ed6c0d312e2d4f0107a4eaebb1fa0ecfa",
+      "20629": "13b3e9b5851345eb7b740ef4eea88c253a88c3e03e51cebe242f1f6c7adc78b2",
+      "2062a": "1f617c01241251e437f6650b2dbb5d2a3b16b8a1578a251b9782fc3ff853884a",
+      "2062b": "021d9cdf6e5ba830a29313e434d57a6373e158e580a6414147bf0ec9d1884d2a",
+      "2062c": "4fa1911d51201be309340019eefc8d5c8a1188bddecb8805584b719abefec3a5"
+    },
+    "parent_raw_sha256": [
+      "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9"
+    ],
+    "recipe_sha256": "872691af76651c9167c53ef38256bdbb322ffd3d79c95fab2635fa023a3103b2",
+    "source_sha256": {
+      "2061d": "01b12e4970e383d5d9c0d591000d1e00f5d26db781d8703730bb50e7b2d67eb1",
+      "2061e": "e29421384fb41fb654d49c21c48d32d91a64bdd8f36c83bf5acd4c7e9fe90c4c",
+      "2061f": "fbe3e1de0a2bfcaa76efd82467b1a2651cb47920c185314c1dde6e2b569bc719",
+      "20620": "4206245c4b0925136aade47eac8f99829c0ed81d5f5b83f168b76858619ab1d1",
+      "20621": "c594c92a745563d3d5e57da0dbfa4ce82af662383998aac79bf0a067a3f43723",
+      "20622": "0a3341314c009eb37318233e478b186948c499e9f56996886223e19775783fb5",
+      "20623": "6f8ec7d3228160aaae9947dfb94d9843f3f4f6c584dc8bc4aade146477111682",
+      "20624": "9dd73c2b5bcd490381306b8c1f28bd76ed82effc53c2c1bdd8db0ea9d903a1cd",
+      "20625": "fa2f27ec4e36276cb0c056eaa8626ed91bc95dd7f219adecfda133cb7e63edf0",
+      "20626": "cdaf3d48243112d0b91520738c5682d6fd720e94e39d2fe6678b800d361b4e39",
+      "20627": "7100604461ece58e9fd737cc0aebe82d85b54e3fcb0efa266edaae688c774b6a",
+      "20628": "f5474abfa42f086e4102059d54384533599503ec9c39fc88b804e32a2031a743",
+      "20629": "2f731e915a7a48b7d09bb80c9036930c27b3aab1286f5c6a5d1d34a6c355482f",
+      "2062a": "96c967d6c16cb6ea139572424f6d16746d0dd7bee5f2de227614f4fd1f2dc934",
+      "2062b": "99eb9af5cdc9c28b6f84e07dcfdfa237f9c255e93d009aa2622a72c4450db23a",
+      "2062c": "e0b8b2420b50e1e75232424f1f85105d088172ed5004acca341f713f946f06b7"
+    },
+    "status": "success",
+    "tool_sha256": "24e3751d26090699f2d8d317ed98f73e05f51f3caa6dc2bf21fc40a109068a27"
+  },
+  "frames": [
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959593276935,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2072",
+        "sha256": "01b12e4970e383d5d9c0d591000d1e00f5d26db781d8703730bb50e7b2d67eb1",
+        "size": 1044
+      },
+      "asset": "2061d",
+      "crop": [
+        0,
+        0,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.4918052462578775,
+        "actual_tone_gain_min": 0.6704530154876667,
+        "coherent_parent_band_std": 19.581317207259133,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 3.941908518473307,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "9ea45cdabc28ad4125ff2e6e76e90935b60e618e3ebf3ed9ef5c7141daa22f56",
+        "per_group_normalizers": {
+          "organic_canopy": 23.383615038989927
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 19.581317207259133
+        },
+        "pixels_changed_from_Source_guided_base": 215723,
+        "sourceNx4_indices_sha256": "e32638bc96a8d8743547fa37749104f737a24732b67a6092cda690ff46ad3e0c",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            30,
+            31,
+            97,
+            98,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959593333002,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2073",
+        "sha256": "e29421384fb41fb654d49c21c48d32d91a64bdd8f36c83bf5acd4c7e9fe90c4c",
+        "size": 1044
+      },
+      "asset": "2061e",
+      "crop": [
+        314,
+        0,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.4918246924199117,
+        "actual_tone_gain_min": 0.6703215932396197,
+        "coherent_parent_band_std": 12.694820457018041,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 1.2880872090657551,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "8eb0eb2019c184977c9ae78829713e0f394c63c1ab9951590295cc7625253ccf",
+        "per_group_normalizers": {
+          "organic_canopy": 12.228974911046596
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 12.694820457018041
+        },
+        "pixels_changed_from_Source_guided_base": 161482,
+        "sourceNx4_indices_sha256": "b2f7bb8bf40e5d4b6a67267f9633b06200936439286de77a8796459f2e91fb8c",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            30,
+            31,
+            101,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959593389292,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2074",
+        "sha256": "fbe3e1de0a2bfcaa76efd82467b1a2651cb47920c185314c1dde6e2b569bc719",
+        "size": 1044
+      },
+      "asset": "2061f",
+      "crop": [
+        627,
+        0,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.4918246862174165,
+        "actual_tone_gain_min": 0.6703266746843525,
+        "coherent_parent_band_std": 13.826060146421892,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 1.6569480895996094,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "06e444d366a7df961fcc98ff6f227a4a37b15cc3a843782257ccf527b1cbbf7c",
+        "per_group_normalizers": {
+          "organic_canopy": 13.038274894121352
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 13.826060146421892
+        },
+        "pixels_changed_from_Source_guided_base": 162804,
+        "sourceNx4_indices_sha256": "a5bbc7459385b532ef1bea843fab90a2bbd20c7a7ca7e286975e5203ce0f2e3f",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            30,
+            31,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959593447943,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2075",
+        "sha256": "4206245c4b0925136aade47eac8f99829c0ed81d5f5b83f168b76858619ab1d1",
+        "size": 1044
+      },
+      "asset": "20620",
+      "crop": [
+        941,
+        0,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.4918026195284178,
+        "actual_tone_gain_min": 0.670475110947007,
+        "coherent_parent_band_std": 18.742117244157647,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 3.586950937906901,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "8e57a715c749047c43da9d3546cdd1895bf295e8bbf44f0adc27ee20994ab483",
+        "per_group_normalizers": {
+          "organic_canopy": 21.98291349758834
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 18.742117244157647
+        },
+        "pixels_changed_from_Source_guided_base": 220167,
+        "sourceNx4_indices_sha256": "8753eac68e5aa97e58c8b7e1f414c0f4026421e48cff19fc69179b3b313094d6",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            30,
+            31,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959593503731,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2076",
+        "sha256": "c594c92a745563d3d5e57da0dbfa4ce82af662383998aac79bf0a067a3f43723",
+        "size": 1044
+      },
+      "asset": "20621",
+      "crop": [
+        0,
+        314,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.4918246556446666,
+        "actual_tone_gain_min": 0.6703381894863891,
+        "coherent_parent_band_std": 13.273314091440298,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 1.4399401346842449,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "83fad2ce8819ecf026740837c7ac203227e8af091e0a544d186966a55730e29b",
+        "per_group_normalizers": {
+          "organic_canopy": 12.758278722698561
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 13.273314091440298
+        },
+        "pixels_changed_from_Source_guided_base": 170131,
+        "sourceNx4_indices_sha256": "359796dd97d277b5765a9a2708f320b3c7608b19e6c4ff48e28fad9c804198af",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            30,
+            31,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959593558884,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2077",
+        "sha256": "0a3341314c009eb37318233e478b186948c499e9f56996886223e19775783fb5",
+        "size": 1044
+      },
+      "asset": "20622",
+      "crop": [
+        314,
+        314,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.491809638805757,
+        "actual_tone_gain_min": 0.6704973423293684,
+        "coherent_parent_band_std": 17.78195470037133,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 2.7627639770507812,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "0ec86ab7ffbe60f5f1c70710c6aae8112ad02a7c1eaa341d246068ac8bbd8188",
+        "per_group_normalizers": {
+          "organic_canopy": 20.428118564528088
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 17.78195470037133
+        },
+        "pixels_changed_from_Source_guided_base": 206538,
+        "sourceNx4_indices_sha256": "e8027d814a65d25c7691045a5b0999ff0a0ca2fffc1b44207c77a14875ced5a5",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            30,
+            31,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959593615311,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2078",
+        "sha256": "6f8ec7d3228160aaae9947dfb94d9843f3f4f6c584dc8bc4aade146477111682",
+        "size": 1044
+      },
+      "asset": "20623",
+      "crop": [
+        627,
+        314,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.4917800412528026,
+        "actual_tone_gain_min": 0.6705023733958763,
+        "coherent_parent_band_std": 18.54722144183191,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 3.2896881103515625,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "f671c48ff0b7a3e8034ba51a2e04189e96ee5492d73ccc6ad32be013c44423ea",
+        "per_group_normalizers": {
+          "organic_canopy": 21.831798791754977
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 18.54722144183191
+        },
+        "pixels_changed_from_Source_guided_base": 205229,
+        "sourceNx4_indices_sha256": "9ffbad70e01db17b1fa68544d149dd544d3b97f637feb8de907a3113063329b1",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            30,
+            31,
+            98,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959593670307,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2079",
+        "sha256": "9dd73c2b5bcd490381306b8c1f28bd76ed82effc53c2c1bdd8db0ea9d903a1cd",
+        "size": 1044
+      },
+      "asset": "20624",
+      "crop": [
+        941,
+        314,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.4917640112520332,
+        "actual_tone_gain_min": 0.6706188352561178,
+        "coherent_parent_band_std": 18.977667088373014,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 3.509599049886068,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "89e375d466865be2bbe6df45f3949d3d30866d4cf66a5768425655897b97eb73",
+        "per_group_normalizers": {
+          "organic_canopy": 22.379479849323914
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 18.977667088373014
+        },
+        "pixels_changed_from_Source_guided_base": 211583,
+        "sourceNx4_indices_sha256": "94d213623da38da37993b92dc6d5640ccd43704a8147b22d7557960c620abc49",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            30,
+            31,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959593733504,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2080",
+        "sha256": "fa2f27ec4e36276cb0c056eaa8626ed91bc95dd7f219adecfda133cb7e63edf0",
+        "size": 1044
+      },
+      "asset": "20625",
+      "crop": [
+        0,
+        627,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.4918246880449644,
+        "actual_tone_gain_min": 0.6703212149969947,
+        "coherent_parent_band_std": 13.738782571588787,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 1.7390225728352864,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "70991980eeb3b2b69940a1e435183d8ebc01837af181c6c9f1f5c8016680f9be",
+        "per_group_normalizers": {
+          "organic_canopy": 13.87650637082244
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 13.738782571588787
+        },
+        "pixels_changed_from_Source_guided_base": 196039,
+        "sourceNx4_indices_sha256": "9132ee06f0acec4511e198fc73cd2b2c18ee5277bc6a259ecd1de8894bd311b2",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            30,
+            31,
+            62,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            237,
+            238,
+            239
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959593787785,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2081",
+        "sha256": "cdaf3d48243112d0b91520738c5682d6fd720e94e39d2fe6678b800d361b4e39",
+        "size": 1044
+      },
+      "asset": "20626",
+      "crop": [
+        314,
+        627,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.491824675208924,
+        "actual_tone_gain_min": 0.6703264887250912,
+        "coherent_parent_band_std": 13.633227249622927,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 1.8530693054199219,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "b664a0263fc2188fd275204e304c1baac85911ec70aa06f5ce081b75e30e99f4",
+        "per_group_normalizers": {
+          "organic_canopy": 13.924840780442583
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 13.633227249622927
+        },
+        "pixels_changed_from_Source_guided_base": 193325,
+        "sourceNx4_indices_sha256": "5762d77eb94d383e76d9e8f83dd2014214029299113268826f285c59af52a33f",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            30,
+            31,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            237,
+            238,
+            239
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959593843208,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2082",
+        "sha256": "7100604461ece58e9fd737cc0aebe82d85b54e3fcb0efa266edaae688c774b6a",
+        "size": 1044
+      },
+      "asset": "20627",
+      "crop": [
+        627,
+        627,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.4918207010686282,
+        "actual_tone_gain_min": 0.6703366604913651,
+        "coherent_parent_band_std": 16.433743616122978,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 2.595116933186849,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "ce23ced6bfb8935887a8d87eabeef2c279dc4111aba842c75a3ba1764d122e26",
+        "per_group_normalizers": {
+          "organic_canopy": 18.17904717015596
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 16.433743616122978
+        },
+        "pixels_changed_from_Source_guided_base": 184765,
+        "sourceNx4_indices_sha256": "a107191ab27c83ba1b854fa6c00e46bccb3963cd49c38bb889e0b1f2ff86f7b7",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            30,
+            31,
+            97,
+            98,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            238
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959593899232,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2083",
+        "sha256": "f5474abfa42f086e4102059d54384533599503ec9c39fc88b804e32a2031a743",
+        "size": 1044
+      },
+      "asset": "20628",
+      "crop": [
+        941,
+        627,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.4917631658254074,
+        "actual_tone_gain_min": 0.6708468916157161,
+        "coherent_parent_band_std": 20.108475215615314,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 3.7564544677734375,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "67fff68d540cd2177ffc0ab92a3d08e29ca070dedfaf3507c47266c3fa935f3d",
+        "per_group_normalizers": {
+          "organic_canopy": 24.341773473691738
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 20.108475215615314
+        },
+        "pixels_changed_from_Source_guided_base": 218161,
+        "sourceNx4_indices_sha256": "d1f942237d1d047d7408d78456107df2b0e98bc4d596459ff3b463d45763d6f2",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            30,
+            31,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959593969362,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2084",
+        "sha256": "2f731e915a7a48b7d09bb80c9036930c27b3aab1286f5c6a5d1d34a6c355482f",
+        "size": 1044
+      },
+      "asset": "20629",
+      "crop": [
+        0,
+        941,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.491824580982693,
+        "actual_tone_gain_min": 0.6703488696074922,
+        "coherent_parent_band_std": 15.085543612235357,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 2.262201944986979,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "cc3206ad31debb59256a14408eb17e2a42440bf214dd6b65cbc4032d6019c716",
+        "per_group_normalizers": {
+          "organic_canopy": 15.905293128666408
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 15.085543612235357
+        },
+        "pixels_changed_from_Source_guided_base": 172156,
+        "sourceNx4_indices_sha256": "56bd14c3749d6a2098cdf8a09bc629e37c7a29de78b26c26944bd5507e2b7217",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            30,
+            31,
+            98,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959594039199,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2085",
+        "sha256": "96c967d6c16cb6ea139572424f6d16746d0dd7bee5f2de227614f4fd1f2dc934",
+        "size": 1044
+      },
+      "asset": "2062a",
+      "crop": [
+        314,
+        941,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.4917429460480411,
+        "actual_tone_gain_min": 0.6709095079045029,
+        "coherent_parent_band_std": 21.296907023334185,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 4.355843861897786,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "4dff40ab2a7cd47e914f8117dc8195437b76d7ee38a0a3171374a8859dd37a41",
+        "per_group_normalizers": {
+          "organic_canopy": 26.276959473996357
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 21.296907023334185
+        },
+        "pixels_changed_from_Source_guided_base": 234849,
+        "sourceNx4_indices_sha256": "d7d7c62c57adf71acd286eeb7a05c1d5b1d07e94881d523eb0b8264b4a495743",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959594107141,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2086",
+        "sha256": "99eb9af5cdc9c28b6f84e07dcfdfa237f9c255e93d009aa2622a72c4450db23a",
+        "size": 1044
+      },
+      "asset": "2062b",
+      "crop": [
+        627,
+        941,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.4915978943078074,
+        "actual_tone_gain_min": 0.6709631789937732,
+        "coherent_parent_band_std": 22.55758962337635,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 5.014984130859375,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "01ce528b7ee8ca653b82dad74544863fa7673730f4084efae37ee9087629ff96",
+        "per_group_normalizers": {
+          "organic_canopy": 28.06521983230545
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 22.55758962337635
+        },
+        "pixels_changed_from_Source_guided_base": 238827,
+        "sourceNx4_indices_sha256": "47144626de85383c15e68c96258404de624d4c9caea9f29ca8701e7f41049ab1",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959594163030,
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.2087",
+        "sha256": "e0b8b2420b50e1e75232424f1f85105d088172ed5004acca341f713f946f06b7",
+        "size": 1044
+      },
+      "asset": "2062c",
+      "crop": [
+        941,
+        941,
+        313,
+        313
+      ],
+      "metrics": {
+        "actual_tone_gain_max": 1.4917533825383307,
+        "actual_tone_gain_min": 0.6707720283549199,
+        "coherent_parent_band_std": 21.188034605870815,
+        "group_output_pixels": {
+          "organic_canopy": 262144
+        },
+        "limits": "Explicit Source palette groups/SourceNx geometry and broad masked RGB; coherent actual generated fine+mid luminance retained multiplicatively. No random noise/SourceNN fallback, material/context approval or reserved semantics.",
+        "material_labels_sha256": "07854d2fef297a06ba81685e660c332de36d5d18d546927d30daad6d7fda1541",
+        "material_parent_field_names": [],
+        "material_parent_region_proofs": {},
+        "mean_absolute_parent_tone_modulation": 5.055884043375651,
+        "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+        "output_RGB_sha256": "e8253ee10aac99e3e97f1fd9b4b3a2bb01c2cb03ef8ad2cfc51360eeca871fa4",
+        "per_group_normalizers": {
+          "organic_canopy": 25.54723741325083
+        },
+        "per_group_parent_band_std": {
+          "organic_canopy": 21.188034605870815
+        },
+        "pixels_changed_from_Source_guided_base": 228651,
+        "sourceNx4_indices_sha256": "6d8aab87e01592fc6f8128371f97dcfa7bcec267a6bcb9bb2c1a7a43e21c7fc3",
+        "source_shape": [
+          32,
+          32
+        ],
+        "used_Source_indices_by_group": {
+          "organic_canopy": [
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111
+          ]
+        }
+      },
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792285611486100410,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest2061d-2062c-Original-only-irregular-canopy-actual-one-call-20261018-v1/ACTUAL-ONE-ORIGINAL-ONLY-FOREST16-RETURN-UNTOUCHED.png",
+        "sha256": "424fb715579cb3c29916671a2808bfa34ce64b68f99a834d472ba0e8d27c2ca9",
+        "size": 2637323
+      }
+    }
+  ],
+  "material_groups": [
+    {
+      "indices": [
+        30,
+        31,
+        62,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        237,
+        238,
+        239
+      ],
+      "name": "organic_canopy",
+      "quiet_from_source_variance": true,
+      "texture_log_gain": 0.4
+    }
+  ],
+  "material_groups_sha256": "beb1274de08874326cec6f1bbee10b81f47bd6a4a4ef1bc8070b5aef50ef0820",
+  "recipe": {
+    "mode": 33188,
+    "mtime_ns": 1792286018247650697,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-forest16-single-organic-group-source-guide-recipe-assessment-20261018-v1/EXACT16-SINGLE-ORGANIC-CANOPY-GROUP-040-QUIET-TRUE-RECIPE-NOT-EXECUTED.json",
+    "sha256": "872691af76651c9167c53ef38256bdbb322ffd3d79c95fab2635fa023a3103b2",
+    "size": 12167
+  },
+  "runtime": {
+    "Pillow": "12.3.0",
+    "executable": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "numpy": "2.3.5",
+    "platform": "linux",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "status": "DERIVED_OUTPUTS_NOT_MATERIAL_APPROVAL",
+  "tool": {
+    "mode": 33188,
+    "mtime_ns": 1792284595550921034,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-declared-material-terrain-retexture-private-helper-20261018-v2/hd_terrain_group_retexture.py",
+    "sha256": "24e3751d26090699f2d8d317ed98f73e05f51f3caa6dc2bf21fc40a109068a27",
+    "size": 19852
+  }
+}

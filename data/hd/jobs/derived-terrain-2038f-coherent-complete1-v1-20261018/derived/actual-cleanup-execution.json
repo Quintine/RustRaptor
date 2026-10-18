@@ -1,0 +1,144 @@
+{
+  "execution": {
+    "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+    "output_sha256": {
+      "2038f": "5bbbe95f0a46a5dd60bb96d7c2eb9ee431cc7fa1f317b19e4901c923ac528808"
+    },
+    "parent_raw_sha256": [
+      "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761"
+    ],
+    "recipe_sha256": "71dd4ae73c06d8ed1f07d9ab97ff4234dd57c6ae7502e6477f15563b414896fc",
+    "runtime": {
+      "Pillow": "12.3.0",
+      "executable": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "numpy": "2.3.5",
+      "platform": "linux",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+    },
+    "source_sha256": {
+      "2038f": "dfb77fdcde620acee54463da51ea8bad6c5378504c500f65466e4991908cb000"
+    },
+    "status": "success",
+    "tool_sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98"
+  },
+  "frames": [
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959553168418,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain2038f-20390V2-integration-20261018/data/hd/jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/../../../misc/unnamed.1418",
+        "sha256": "dfb77fdcde620acee54463da51ea8bad6c5378504c500f65466e4991908cb000",
+        "size": 1044
+      },
+      "asset": "2038f",
+      "lineage": "DERIVED scripted cleanup; generator-return parent remains untouched",
+      "metrics": {
+        "Source_derived_soil_quiet_strength_max": null,
+        "Source_derived_soil_quiet_strength_min": null,
+        "actual_tone_gain_max": 1.46228430167579,
+        "actual_tone_gain_min": 0.6839489160468267,
+        "coherent_parent_band_std": 10.438203767840072,
+        "geometry_material_labels_sha256": "8a39d2abd3999ab73c34db2476849cddf303ce389b35826850f9a700589b4a90",
+        "limits": "Source masks/broad tones/rims; actual coherent generated fine+midscale luminance is hue-preserving multiplicative texture. No random noise; large generated hue/illumination drift discarded. Not material/context approval.",
+        "material_output_pixels": {
+          "gray": 262144
+        },
+        "mean_absolute_parent_tone_modulation": 8.573682149251303,
+        "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+        "output_RGB_sha256": "e4feba0008e08adccd0b9a772fb81c97b2cb6779a377788e9eaa0bc7ab014c53",
+        "output_is_derived_not_untouched": true,
+        "output_shape": [
+          512,
+          512,
+          3
+        ],
+        "per_family_normalizers": {
+          "gray": 11.761885801152477
+        },
+        "pixels_changed_from_Source_guided_base": 251098,
+        "sourceNx4_indices_sha256": "d11e8e5ca1bcc21c9ea2edfa844cf96fd91c35e128d4394e99953e41d5b83e5e",
+        "source_shape": [
+          32,
+          32
+        ]
+      },
+      "output": {
+        "mode": 33188,
+        "mtime_ns": 1792287646779146165,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain2038f-20390V2-integration-20261018/portable-byte-reproduction-2038f/2038f-DERIVED-source-guided-material-v1.png",
+        "sha256": "5bbbe95f0a46a5dd60bb96d7c2eb9ee431cc7fa1f317b19e4901c923ac528808",
+        "size": 177528
+      },
+      "parameters": {
+        "output_side": 512,
+        "residual_percentile": 80.0,
+        "residual_sigma_coarse": 10.0,
+        "residual_sigma_fine": 0.65,
+        "source_sigma": 3.0,
+        "texture_log_gain": {
+          "gray": 0.38,
+          "olive": 0.55,
+          "rim": 0.06,
+          "soil": 0.34
+        }
+      },
+      "parent_crop": [
+        627,
+        0,
+        313,
+        313
+      ],
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1791958555093988958,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain2038f-20390V2-integration-20261018/data/hd/jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/parents/generator-return.png",
+        "sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+        "size": 2904333
+      },
+      "recipe": {
+        "mode": 33188,
+        "mtime_ns": 1792287646443992013,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain2038f-20390V2-integration-20261018/data/hd/jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/cleanup-recipe.json",
+        "sha256": "71dd4ae73c06d8ed1f07d9ab97ff4234dd57c6ae7502e6477f15563b414896fc",
+        "size": 964
+      },
+      "tool": {
+        "mode": 33188,
+        "mtime_ns": 1792287646387399815,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain2038f-20390V2-integration-20261018/tools/hd_terrain_retexture.py",
+        "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98",
+        "size": 16025
+      }
+    }
+  ],
+  "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+  "palette": {
+    "mode": 33188,
+    "mtime_ns": 1787663959337906368,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain2038f-20390V2-integration-20261018/data/hd/jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/../../../misc/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "size": 768
+  },
+  "recipe": {
+    "mode": 33188,
+    "mtime_ns": 1792287646443992013,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain2038f-20390V2-integration-20261018/data/hd/jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/cleanup-recipe.json",
+    "sha256": "71dd4ae73c06d8ed1f07d9ab97ff4234dd57c6ae7502e6477f15563b414896fc",
+    "size": 964
+  },
+  "runtime": {
+    "Pillow": "12.3.0",
+    "executable": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "numpy": "2.3.5",
+    "platform": "linux",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "status": "DERIVED_OUTPUTS_NOT_MATERIAL_APPROVAL",
+  "tool": {
+    "mode": 33188,
+    "mtime_ns": 1792287646387399815,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain2038f-20390V2-integration-20261018/tools/hd_terrain_retexture.py",
+    "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98",
+    "size": 16025
+  }
+}

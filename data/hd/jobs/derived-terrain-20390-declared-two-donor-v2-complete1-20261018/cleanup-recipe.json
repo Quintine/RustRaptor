@@ -1,0 +1,104 @@
+{
+  "dependency": {
+    "path": "parents/exact0e4d-dependency.py",
+    "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98"
+  },
+  "format_version": 2,
+  "frames": [
+    {
+      "Source": {
+        "path": "../../../misc/unnamed.1419",
+        "sha256": "5ce336a3ce59c4df7f63f6475f4bf6860f6ad85843c81ea82ee0ac65510db6f6"
+      },
+      "asset": "20390",
+      "crop": [
+        941,
+        0,
+        313,
+        313
+      ],
+      "material_parent_regions": {
+        "dark_gray": [
+          949,
+          8,
+          128,
+          128
+        ],
+        "lighter_gray": [
+          1118,
+          177,
+          128,
+          128
+        ]
+      },
+      "origin": [
+        0,
+        0
+      ],
+      "parent_raw": {
+        "path": "parents/generator-return.png",
+        "sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761"
+      }
+    }
+  ],
+  "material_groups": [
+    {
+      "indices": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "name": "dark_gray",
+      "quiet_from_source_variance": false,
+      "texture_log_gain": 0.38
+    },
+    {
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "name": "lighter_gray",
+      "quiet_from_source_variance": false,
+      "texture_log_gain": 0.38
+    }
+  ],
+  "method": "source-declared-material-regions-coherent-parent-fine-mid-logtexture-v2",
+  "palette": {
+    "path": "../../../misc/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "parameters": {
+    "output_side": 512,
+    "residual_percentile": 80.0,
+    "residual_sigma_coarse": 10.0,
+    "residual_sigma_fine": 0.65,
+    "source_sigma": 3.0
+  }
+}

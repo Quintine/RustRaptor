@@ -1,5 +1,21 @@
 # HD coordinator checkpoint — 18 October 2026
 
+Current artwork/runtime checkpoint — 18 October 2026: the optional HD pack contains **5,539 reviewed pictures in 3,668 complete sequences**, including **4,387 Terrain pictures**. **214 originals still await approval**: 148 Terrain, 54 enemies and ground objects, and 12 UI/other pictures. All 249 boss pictures are reviewed; complete Original-art coverage remains unfinished.
+
+This append adds only Terrain: the two selected singletons `2038f` and `20390` version 2, plus the complete 16-picture organic forest family `2061d–2062c`. All 18 are reproducible Source-guided derived artwork using retained generated-parent material, not untouched generator returns. The `20390` version 2 recipe explicitly declares its two donors; its older held artifact is unchanged.
+
+Different intrinsic/context review covers all 16 forest boards and 16 representative neighborhoods, covering 137 of 377 exact joins among 230 placements; Root sampled four actual-scale intrinsic boards and four context endpoints after viewing all 16 high-resolution preview panes. The two small tiles have 46 genuine contexts and 26 ordered comparison views of five neighbor events; Root sampled four contexts. Those physical pixels retain their fixed H5500 epoch, with separate actual H5521 finite39/finite18 input-equality carries. No all-placement, seamless-join, current Host or performance approval follows. Dark soft forest versus sharper/brighter foreign foliage, brown litter, reflected donor clusters, denser fine grain, native1 quietness and coarse/fine value rectangles remain explicit qualifications. All old HOLDs, failed attempts and provider refusals remain attached to their original artifacts.
+
+Actual assembly contains **9,846 data files / 8,448,665,167 bytes**. Exactly 106 new job files (forest53, SAFE2038f26 and SAFE20390V2 27) plus 15 genuine archival JSON receipts (125,486 bytes) form the 121-path increment. All old native headers, artwork and declared runtime payloads remain exact. The 13 historical sibling bindings and eight prior QA receipts were already declared and authenticated at H5521. The 15 additional archive bodies are Root-elected self-contained evidence, not required by registration and not new artwork or QA. Existing W archive bytes/inodes/modes/mtimes and the immutable prior H5521 pack remain unchanged. Small2 uses the SAFE metadata successor and authenticated hash projection of its original inline-image receipt; no artwork or QA was rerun.
+
+Actual installed validation accepts all 5,539 frames with zero rejects and validates 45 mods with one override. Three fresh 1920×1080 software-SDL controls—menu, Original Sector1Wave7 and Sector3Wave9—each exited successfully with empty stderr. The operator and Root personally reviewed all three whole screens. All PNG bytes and decoded RGB/alpha planes match actual H5521 exactly (zero changed pixels across6,220,800 pixels). These finite presentation controls do not prove that any of the18new Terrain pictures appeared; known mixed texture resolution and Source-stepped shadows remain visible.
+
+The reviewed terrain-group helper and portable fixture/test files are included; the maintained cleanup/registration tool suite passed 157 tests using synthetic assets. SourceF18, both binaries, Mission 2 version 1.0.3, the 45 mod packages and existing palette opt-ins are unchanged. Earlier engine and campaign tests retain their dated scopes.
+
+Native Windows history is explicit: `00304e25` failed H5500 packaging after 401 passing tests/26 ignored. The exact `6b1a2629` H5500 archive-fix run subsequently passed 401 tests/26 ignored, four archive tests, 5,500 HD frames with zero rejects and 45 mods/one override. Its mixed/SFX captures contained 261,807/189,554 nonzero samples; those are dated capture measurements, not whole-campaign audio/performance guarantees. The exact e0d114e6 H5521 native Windows run also succeeded: 401 tests passed/26 ignored/zero failed plus four archive tests, HD5521/zero rejects and45mods/one override. Unicode portable launcher, paid repair/phase/shop/StageII checks and44100Hz132300-frame stereo/SFX captures passed; mixed/SFX nonzero samples were261900/206386. This remains dated H5521 evidence. No native Windows H5539 execution is inferred. The [backlog](hd-backlog.md), [completion ledger](hd-completion.json) and [runtime evidence](hd-runtime-release.json) keep exact authorities and limitations. Actual pre-push checkpoint; Git history records later publication.
+
+Preserved H5521 checkpoint — prior artwork, validation and holds retain their dated scopes:
+
 Current artwork/runtime checkpoint — 18 October 2026: the optional HD pack contains **5,521 reviewed pictures in 3,650 complete sequences**, including **4,369 Terrain pictures**. **232 originals still await approval**: 166 Terrain, 54 enemies and ground objects, and 12 UI/other pictures. All 249 boss pictures are reviewed; complete Original-art coverage remains unfinished.
 
 This append adds five Enemy pictures (`200bf`, `10315–10316`, `1033e–1033f`), six Terrain pictures (`203b5`, `203b6`, `203b9`, `203bb`, `20395`, `20399`), and ten UI/other pictures (`102f7`, `10126`, complete WORMLEFT `4002e–40035`). Nineteen are reproducible derived cleanups of retained generated parents; `20395` and `20399` reuse the exact reviewed Source-equivalent `203a7` artwork. Derived outputs are not untouched generator returns.
@@ -78,11 +94,11 @@ Published runtime history: The assembled bundled Linux/Windows data contains **3
 | Player and enemy projectiles | 51 / 51 |
 | Explosions and effects | 281 / 281 |
 | Equipment and pickups | 47 / 47 |
-| Terrain | 4,369 / 4,535 |
+| Terrain | 4,387 / 4,535 |
 | Menus, portraits, HUD and other pictures | 138 / 150 |
-| Total | 5,521 / 5,753 |
+| Total | 5,539 / 5,753 |
 
-All 6,449 catalog entries and 5,753 pictures were audited with zero HD source/hash/canvas/ID errors. **232 pictures still await HD approval**. Picture ledger counts are {'registered': 5501, 'inprogress': 103, 'renderreachable': 20, 'candidate': 127, 'missing': 2}; candidate status is not art approval or live occurrence. All 307 native AGX/font records remain separately `native_preserved`, with no generated HD coverage. Unused/destroyed pictures remain required.
+All 6,449 catalog entries and 5,753 pictures were audited with zero HD source/hash/canvas/ID errors. **214 pictures still await HD approval**. Picture ledger counts are {'registered': 5519, 'inprogress': 103, 'renderreachable': 20, 'candidate': 109, 'missing': 2}; candidate status is not art approval or live occurrence. All 307 native AGX/font records remain separately `native_preserved`, with no generated HD coverage. Unused/destroyed pictures remain required.
 
 ## Historical Stage2 API 1,148 output proof
 

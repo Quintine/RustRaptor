@@ -1,0 +1,71 @@
+{
+  "status": "PASS_DIFFERENT_V2_NATIVE_DONOR_REFLECTION_TERRAIN_HELPER_CODE_DELTA_REVIEW",
+  "reviewer": "/root/iron_coast_2",
+  "author": "/root/iron_coast_3",
+  "utc": "2026-10-18T00:56:10.160423+00:00",
+  "helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-declared-material-terrain-retexture-private-helper-20261018-v2/hd_terrain_group_retexture.py",
+    "sha256": "24e3751d26090699f2d8d317ed98f73e05f51f3caa6dc2bf21fc40a109068a27",
+    "bytes": 19852
+  },
+  "tests": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-declared-material-terrain-retexture-private-helper-20261018-v2/test_hd_terrain_group_retexture.py",
+    "sha256": "29870d583d853ef9981c2ee22128a5ddc5aa7ffa10a6726d40ec79992ca78209",
+    "bytes": 18988
+  },
+  "API": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-declared-material-terrain-retexture-private-helper-20261018-v2/FROZEN-PRIVATE-V2-NATIVE-DONOR-REGION-API-AND-SYNTHETIC-TEST-HANDOFF.json",
+    "sha256": "6d6d5ae7888f13c897e5b2768ab4cdc9871695af465c861e79ff73ce18d2025d",
+    "bytes": 6702
+  },
+  "author_report": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-declared-material-terrain-retexture-private-helper-20261018-v2/CLOSED-PRIVATE-V2-NATIVE-DONOR-REFLECTION-DELTA-AUTHOR-REVIEW-NO-REAL-ART.json",
+    "sha256": "b0819a2fba65022511c22e43404cb26376ecdd114197e0cc413a671c18c7a416",
+    "size": 8028,
+    "mtime_ns": 1792284866405034289,
+    "mode": 33188
+  },
+  "author_outside_strict": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron3-declared-material-terrain-retexture-private-helper-20261018-v2-strict-private-v2-native-donor-delta-closure.json",
+    "sha256": "b6f618243d2b49ecd50941f085a1e6266cdb06e54d4dda32e8556fcb58bc0a90",
+    "bytes": 14119
+  },
+  "focused_synthetic_tests": 27,
+  "synthetic_log": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron2-declared-group-terrain-V2-donor-delta-independent-code-review-20261018-v1/actual-focused-synthetic27.log",
+    "sha256": "ea7c359fb42208bfa09831d50d01e8aad31712527792a5899de7642d5fe4ee37",
+    "bytes": 4680
+  },
+  "independent_checks": 18,
+  "independent_probe_receipt": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron2-declared-group-terrain-V2-donor-delta-independent-code-review-20261018-v1/independent-reflect101-and-no-region-full-PNG-compatibility.json",
+    "sha256": "f9c625915ba6880e2f6dbb85fa936578f5a5746015a300d8d244a8875d9d77c1",
+    "bytes": 781
+  },
+  "AST_and_membership": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron2-declared-group-terrain-V2-donor-delta-independent-code-review-20261018-v1/independent-AST-and-frozen-membership.json",
+    "sha256": "5f4dacdf7f0588ea0fde16efaa0913c804e10e43244b8d8245b073e8d7c63b5d",
+    "bytes": 5000
+  },
+  "concrete_open_findings": [],
+  "checks": [
+    "Exact V1-to-V2 delta changes only validate_recipe/reconstruct/run plus four donor-region/reflection functions and the new method/version; dependency loading, group/parameter guards, readers and atomic publisher AST unchanged.",
+    "Declared regions map only existing group names to strict typed donor rectangles inside the same hash-bound frame crop. Native raw donor position/density and all three RGB channels remain exact before final resizing.",
+    "Independent iterative mirror reference matches reflect101 over negative/positive coordinates, lengths1..9, and six cropped RGB fields including one-pixel donor axes. No repeated-edge convention or pre-enlargement.",
+    "Each group filters its own complete reflected native-density field before final resize; texture modulation is assigned only inside that SourceNx owner mask. Donor-excluded wrong-edge raw changes cannot enter complete regional fields.",
+    "Omitted/empty regions preserve V1 output/base/owner arrays; complete synthetic two-frame PNG payloads are byte-identical to V1. Method/version/diagnostic receipts identify the new tool.",
+    "Both declared .38 gains remain recipe values, not hidden gain boosts. Raw RGB donor equality is an intermediate texture-lineage property, not a promise that final Source-guided output RGB equals raw.",
+    "Existing input hashes, strict asset/path/type guards, Source opaque ordinary validation, all-input recheck and atomic no-replace behavior pass inherited and new tests.",
+    "Normalized execution retains exactly seven fields; detailed lineage records donor RGB SHA, reflected native field SHA, original offset/dimensions and actual position-sample assertion.",
+    "All16 V2 owned files/20 bound input pins match original SHA/size/mtime; V1 whole membership and prior independent PASS remain unchanged."
+  ],
+  "limits": [
+    "Code/synthetic delta scope only; no actual20390 recipe reconstruction, parent PNG decode, derived asset output, QA, renderer/compiler, World, imagegen, artistic/context judgment or shared edit.",
+    "Reflected repetition/density/phase artifacts can still cause artistic HOLD; this review does not approve donor choices or new art.",
+    "Existing Linux O_NOFOLLOW authoring requirement and no fsync-crash durability guarantee remain unchanged."
+  ],
+  "actual_asset_recipe_calls": 0,
+  "engine_QA_renderer_compiler_World_calls": 0,
+  "shared_writes": false,
+  "pending_own_writer_call_or_lease": false
+}

@@ -1,0 +1,230 @@
+{
+  "actual_combined_probe": {
+    "mode": 33188,
+    "mtime_ns": 1792287713133369535,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain2038f-20390V2-integration-20261018/ACTUAL-FINAL-COMBINED2-PORTABLE-ROUTE-SOURCEF-QA-TERMINAL.json",
+    "sha256": "e73cb0047b2cf09e00af2f9d0f3a58db134526eb99bf3159b6a7c9b2ec71cb34",
+    "size": 2108
+  },
+  "actual_measured_candidate_sha256": "fa31bafd02ffe08594f989b5a4ceffb7db3b70434b5afce856ee30b5a3e45ba9",
+  "actual_measured_probe_frame_count": 2,
+  "any_game_source_newer_than_library": false,
+  "artwork_sha256": {
+    "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/derived/20390-DERIVED-declared-material-v1.png": "401d70a21e9784451417aa5a4d587fc7cd964bd67aa85b7ec459910e7b631305"
+  },
+  "candidate_sha256": "3cfbf7333808f4004ff9a467857355c53165e9346f49f75f45efa5f1efb1a3a1",
+  "diagnostics": [],
+  "frame_bindings_sha256": "66ce60bccc8d26faf0e496ea3eb7e9663c8b5853080f123e3280df01f9d93228",
+  "frames": [
+    {
+      "asset": "20390",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              32,
+              32
+            ],
+            "centroid": [
+              15.5,
+              15.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 1024
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              64,
+              64
+            ],
+            "centroid": [
+              31.5,
+              31.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 4096
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              96,
+              96
+            ],
+            "centroid": [
+              47.5,
+              47.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 9216
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              128,
+              128
+            ],
+            "centroid": [
+              63.5,
+              63.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 16384
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_mask": {
+        "bounds": [
+          0,
+          0,
+          32,
+          32
+        ],
+        "centroid": [
+          15.5,
+          15.5
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 1024
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "5ce336a3ce59c4df7f63f6475f4bf6860f6ad85843c81ea82ee0ac65510db6f6"
+    }
+  ],
+  "library": "target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+  "library_modified_ns": 1792245641851329918,
+  "library_sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+  "limitation": "Gallery validation does not prove live scene reachability, terrain seam correctness or artistic fidelity. Opaque sprites have trivial alpha-mask overlap; compare visible source geometry manually.",
+  "metadata_only_candidate_namespace_bridge": {
+    "actual_measured_candidate": {
+      "mode": 33188,
+      "mtime_ns": 1792287647306840586,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain2038f-20390V2-READY2-batch18-20261018/data/hd/jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/candidate.json",
+      "sha256": "fa31bafd02ffe08594f989b5a4ceffb7db3b70434b5afce856ee30b5a3e45ba9",
+      "size": 990
+    },
+    "actual_measured_runtime_QA": {
+      "mode": 33188,
+      "mtime_ns": 1792287713151593499,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain2038f-20390V2-READY2-batch18-20261018/data/hd/jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/runtime-qa.json",
+      "sha256": "079ab9bf48c1d41f587cfdccc13565af77d1f56739abf14ca70c569347a20e08",
+      "size": 4934
+    },
+    "all_native_frame_fields_and_file_routes_identical": true,
+    "artwork_bytes_and_measurement_frames_masks_metrics_library_freshness_unchanged": true,
+    "frame_bindings_sha256": "66ce60bccc8d26faf0e496ea3eb7e9663c8b5853080f123e3280df01f9d93228",
+    "kind": "METADATA_ONLY_RECEIPT_AND_LINEAGE_NAMESPACE_REBINDING_OF_EXISTING_ACTUAL_SOURCEF_MEASUREMENTS",
+    "new_helper_QA_calls": 0,
+    "projected_candidate_sha256": "3cfbf7333808f4004ff9a467857355c53165e9346f49f75f45efa5f1efb1a3a1",
+    "receipt_change_only_not_new_pixels": true
+  },
+  "method": "actual Rust HdAssets::load and sprite at scales 1..4; Catalog palette; no artwork edits",
+  "per_job_projection_of_single_actual_combined2_probe": true,
+  "source_newer_than_library": false,
+  "validated_frames": 1
+}

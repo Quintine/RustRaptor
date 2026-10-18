@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5521 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5539 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -25177,6 +25177,141 @@
         "path": "jobs/derived-wormleft-complete8-v1-20261018/artwork-derivation.json",
         "sha256": "d720a2ed8bffe6652824bf7fd00d44e0becb73e00213cb511a652aad2af04d77"
       }
+    },
+    {
+      "job_id": "derived-forest2061d-2062c-single-organic-complete16-v1-20261018",
+      "assets": [
+        "2061d",
+        "2061e",
+        "2061f",
+        "20620",
+        "20621",
+        "20622",
+        "20623",
+        "20624",
+        "20625",
+        "20626",
+        "20627",
+        "20628",
+        "20629",
+        "2062a",
+        "2062b",
+        "2062c"
+      ],
+      "frames": 16,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-forest2061d-2062c-single-organic-complete16-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-forest2061d-2062c-single-organic-complete16-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-forest2061d-2062c-single-organic-complete16-v1-20261018/runtime-qa.json",
+      "review": {
+        "Root_provided": {
+          "path": "jobs/derived-forest2061d-2062c-single-organic-complete16-v1-20261018/review/Root-forest16-personal-qualified-review.json",
+          "sha256": "12a0d50dae420a3bb84d9a0b4e29950556a700cbc0bcbe37bafcc223f479d2a9"
+        },
+        "author": {
+          "path": "jobs/derived-forest2061d-2062c-single-organic-complete16-v1-20261018/review/author-original-bank-qualified16.json",
+          "sha256": "8bd955fcf2b28b9e4c86a375d8414d34f68b8dc4e451d8cc3d4a439b98327aa9"
+        },
+        "independent_intrinsic": {
+          "path": "jobs/derived-forest2061d-2062c-single-organic-complete16-v1-20261018/review/independent-intrinsic-material.json",
+          "sha256": "b2f7f6f85f44cb6599b7fc0a76ef442945f3006bd7b80d88c2bedcae56a18c19"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-forest2061d-2062c-single-organic-complete16-v1-20261018/review/independent-intrinsic-material.json",
+        "sha256": "b2f7f6f85f44cb6599b7fc0a76ef442945f3006bd7b80d88c2bedcae56a18c19"
+      },
+      "frame_bindings_sha256": "4f5970ea9fc647f748b3d56441e1fb973fe82b0af4d4fb4154436e9c0c426a6a",
+      "artwork_derivation": {
+        "path": "jobs/derived-forest2061d-2062c-single-organic-complete16-v1-20261018/artwork-derivation.json",
+        "sha256": "7dde8320d8cfe9c4918136f9ab8355be55a7371514304326592b3ef0421c03c2"
+      }
+    },
+    {
+      "job_id": "derived-terrain-2038f-coherent-complete1-v1-20261018",
+      "assets": [
+        "2038f"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/review/actual-author.json",
+          "sha256": "7850f049a25a65134ef34fcd46ffbb4b3dbc018409003d551d1b7930bb82ca0d"
+        },
+        "independent_intrinsic": {
+          "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/review/different-intrinsic-material.json",
+          "sha256": "e6890d635d9c43291ec4fddce47e833bc658c766a27d457969aa1ed8e7b2bb40"
+        },
+        "root_provided": {
+          "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/review/Root-personal-review-verbatim.json",
+          "sha256": "59f343e427a7d1943e28dbebfc361f9bbc0fe44dd041bd96b53005ac194fa215"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/review/different-intrinsic-material.json",
+        "sha256": "e6890d635d9c43291ec4fddce47e833bc658c766a27d457969aa1ed8e7b2bb40"
+      },
+      "frame_bindings_sha256": "6b69268e761c764a447ac7d6e3820bd20bc4f63badac5d2cda53848a9a8f2dea",
+      "artwork_derivation": {
+        "path": "jobs/derived-terrain-2038f-coherent-complete1-v1-20261018/artwork-derivation.json",
+        "sha256": "7a2286687a6c3d2825519cadf86e640d9de09b43d5240de21a5a5f434a15a875"
+      }
+    },
+    {
+      "job_id": "derived-terrain-20390-declared-two-donor-v2-complete1-20261018",
+      "assets": [
+        "20390"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/review/actual-author.json",
+          "sha256": "fdea5fd121cf6dc2030ff5ab45a62773d9f9058573255c8cb35013564fb4b2c9"
+        },
+        "independent_intrinsic": {
+          "path": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/review/different-intrinsic-material.json",
+          "sha256": "39577f1e5ab01d22f8ab076389bc03b13bdcb2abdefbe2eeb81f5d9aba2cbcf4"
+        },
+        "root_provided": {
+          "path": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/review/Root-personal-review-verbatim.json",
+          "sha256": "59f343e427a7d1943e28dbebfc361f9bbc0fe44dd041bd96b53005ac194fa215"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/review/different-intrinsic-material.json",
+        "sha256": "39577f1e5ab01d22f8ab076389bc03b13bdcb2abdefbe2eeb81f5d9aba2cbcf4"
+      },
+      "frame_bindings_sha256": "66ce60bccc8d26faf0e496ea3eb7e9663c8b5853080f123e3280df01f9d93228",
+      "artwork_derivation": {
+        "path": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/artwork-derivation.json",
+        "sha256": "87ccf0e9173b86c6cdd650a7cdcc1a968089444d56cd5d307f24e43ae569a11d"
+      }
     }
   ],
   "jobs": [
@@ -25276,8 +25411,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5521,
-  "registration_updated_at_utc": "2026-10-18T01:31:23.413414+00:00",
+  "registered_frame_count": 5539,
+  "registration_updated_at_utc": "2026-10-18T02:14:04.507284+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,
