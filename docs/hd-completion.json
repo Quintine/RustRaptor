@@ -20,10 +20,10 @@
   "stage_contract": "Every generated candidate stays distinct from review, registration and render reachability. Original-only fallback is temporary for every required picture. Native cinematics/fonts have explicit preservation exceptions, not HD claims.",
   "picture_status_counts": {
     "native_preserved": 307,
-    "registered": 5576,
-    "inprogress": 97,
+    "registered": 5593,
+    "inprogress": 96,
     "renderreachable": 20,
-    "candidate": 58,
+    "candidate": 42,
     "missing": 2
   },
   "assets": {
@@ -23018,7 +23018,7 @@
       "canonical_source_asset": "102fc",
       "family_id": "enemies-102fc-102fc",
       "job_id": "enemies-102fc-102fc",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_enemies_02",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -23031,7 +23031,7 @@
         "sha256": "c0ade19499265f54f03f6efbdcbb6edb66f74f3057b962da1156b6e6f1206256",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
       },
-      "coordinator_review_ref": "enemies-102fc-102fc"
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-darkship3"
     },
     "102fd": {
       "kind": "picture",
@@ -54894,7 +54894,7 @@
       "canonical_source_asset": "2009a",
       "family_id": "enemies-2009a-2009b",
       "job_id": "enemies-2009a-2009b",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_enemies_01",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -54906,7 +54906,8 @@
         "manifest": "jobs/enemies-2009a-2009b/candidate.json",
         "sha256": "a2887e6b1d718a0dd3714c2de9ef30cf3b0d0e98414d175f612a91db5179f9cd",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-darkship3"
     },
     "2009b": {
       "kind": "picture",
@@ -54927,7 +54928,7 @@
       "canonical_source_asset": "2009b",
       "family_id": "enemies-2009a-2009b",
       "job_id": "enemies-2009a-2009b",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_enemies_01",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -54939,7 +54940,8 @@
         "manifest": "jobs/enemies-2009a-2009b/candidate.json",
         "sha256": "a2887e6b1d718a0dd3714c2de9ef30cf3b0d0e98414d175f612a91db5179f9cd",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-darkship3"
     },
     "2009c": {
       "kind": "picture",
@@ -81363,7 +81365,7 @@
       "canonical_source_asset": "20363",
       "family_id": "terrain-2035d-2036c",
       "job_id": "terrain-2035d-2036c",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -81379,7 +81381,8 @@
         "manifest": "jobs/terrain-2035d-2036c/candidate.json",
         "sha256": "c414e2366dd648865d7c60ab3ebd45399bfd3103b4359793d9207ea79f3e15e3",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-ridge2"
     },
     "20364": {
       "kind": "picture",
@@ -81400,7 +81403,7 @@
       "canonical_source_asset": "20364",
       "family_id": "terrain-2035d-2036c",
       "job_id": "terrain-2035d-2036c",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -81416,7 +81419,8 @@
         "manifest": "jobs/terrain-2035d-2036c/candidate.json",
         "sha256": "c414e2366dd648865d7c60ab3ebd45399bfd3103b4359793d9207ea79f3e15e3",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-ridge2"
     },
     "20365": {
       "kind": "picture",
@@ -101655,7 +101659,7 @@
       "canonical_source_asset": "20582",
       "family_id": "terrain-2057d-2058c",
       "job_id": "terrain-2057d-2058c",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_2",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -101666,7 +101670,8 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-unused20582"
     },
     "20583": {
       "kind": "picture",
@@ -156159,7 +156164,7 @@
       "canonical_source_asset": "304b1",
       "family_id": "terrain-304ad-304bc",
       "job_id": "terrain-304ad-304bc",
-      "status": "candidate",
+      "status": "registered",
       "owner": "terrain_set3_late",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -156175,7 +156180,8 @@
         "manifest": "jobs/terrain-304ad-304bc/candidate.json",
         "sha256": "c87096746e10f714a66913992af8a5ab0342dd433a3a8242dba5e4685f550a40",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-Terrain4"
     },
     "304b2": {
       "kind": "picture",
@@ -156196,7 +156202,7 @@
       "canonical_source_asset": "304b2",
       "family_id": "terrain-304ad-304bc",
       "job_id": "terrain-304ad-304bc",
-      "status": "candidate",
+      "status": "registered",
       "owner": "terrain_set3_late",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -156212,7 +156218,8 @@
         "manifest": "jobs/terrain-304ad-304bc/candidate.json",
         "sha256": "c87096746e10f714a66913992af8a5ab0342dd433a3a8242dba5e4685f550a40",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-Terrain4"
     },
     "304b3": {
       "kind": "picture",
@@ -156233,7 +156240,7 @@
       "canonical_source_asset": "304b3",
       "family_id": "terrain-304ad-304bc",
       "job_id": "terrain-304ad-304bc",
-      "status": "candidate",
+      "status": "registered",
       "owner": "terrain_set3_late",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -156249,7 +156256,8 @@
         "manifest": "jobs/terrain-304ad-304bc/candidate.json",
         "sha256": "c87096746e10f714a66913992af8a5ab0342dd433a3a8242dba5e4685f550a40",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-Terrain4"
     },
     "304b4": {
       "kind": "picture",
@@ -156307,7 +156315,7 @@
       "canonical_source_asset": "304b5",
       "family_id": "terrain-304ad-304bc",
       "job_id": "terrain-304ad-304bc",
-      "status": "candidate",
+      "status": "registered",
       "owner": "terrain_set3_late",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -156323,7 +156331,8 @@
         "manifest": "jobs/terrain-304ad-304bc/candidate.json",
         "sha256": "c87096746e10f714a66913992af8a5ab0342dd433a3a8242dba5e4685f550a40",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-Terrain4"
     },
     "304b6": {
       "kind": "picture",
@@ -159507,7 +159516,7 @@
       "canonical_source_asset": "3050d",
       "family_id": "terrain-3050d-3051c",
       "job_id": "terrain-3050d-3051c",
-      "status": "candidate",
+      "status": "registered",
       "owner": "terrain_set3_late",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -159523,7 +159532,8 @@
         "manifest": "jobs/terrain-3050d-3051c/candidate.json",
         "sha256": "ab9dc2ef29ee0009b312b718da44e0f3f3b32cd0b995c37af9e801ddb61c8c79",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-lateTerrain7"
     },
     "3050e": {
       "kind": "picture",
@@ -159581,7 +159591,7 @@
       "canonical_source_asset": "3050f",
       "family_id": "terrain-3050d-3051c",
       "job_id": "terrain-3050d-3051c",
-      "status": "candidate",
+      "status": "registered",
       "owner": "terrain_set3_late",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -159597,7 +159607,8 @@
         "manifest": "jobs/terrain-3050d-3051c/candidate.json",
         "sha256": "ab9dc2ef29ee0009b312b718da44e0f3f3b32cd0b995c37af9e801ddb61c8c79",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-lateTerrain7"
     },
     "30510": {
       "kind": "picture",
@@ -159618,7 +159629,7 @@
       "canonical_source_asset": "30510",
       "family_id": "terrain-3050d-3051c",
       "job_id": "terrain-3050d-3051c",
-      "status": "candidate",
+      "status": "registered",
       "owner": "terrain_set3_late",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -159634,7 +159645,8 @@
         "manifest": "jobs/terrain-3050d-3051c/candidate.json",
         "sha256": "ab9dc2ef29ee0009b312b718da44e0f3f3b32cd0b995c37af9e801ddb61c8c79",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-lateTerrain7"
     },
     "30511": {
       "kind": "picture",
@@ -159655,7 +159667,7 @@
       "canonical_source_asset": "30511",
       "family_id": "terrain-3050d-3051c",
       "job_id": "terrain-3050d-3051c",
-      "status": "candidate",
+      "status": "registered",
       "owner": "terrain_set3_late",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -159671,7 +159683,8 @@
         "manifest": "jobs/terrain-3050d-3051c/candidate.json",
         "sha256": "ab9dc2ef29ee0009b312b718da44e0f3f3b32cd0b995c37af9e801ddb61c8c79",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-lateTerrain7"
     },
     "30512": {
       "kind": "picture",
@@ -159729,7 +159742,7 @@
       "canonical_source_asset": "30513",
       "family_id": "terrain-3050d-3051c",
       "job_id": "terrain-3050d-3051c",
-      "status": "candidate",
+      "status": "registered",
       "owner": "terrain_set3_late",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -159745,7 +159758,8 @@
         "manifest": "jobs/terrain-3050d-3051c/candidate.json",
         "sha256": "ab9dc2ef29ee0009b312b718da44e0f3f3b32cd0b995c37af9e801ddb61c8c79",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-lateTerrain7"
     },
     "30514": {
       "kind": "picture",
@@ -159951,7 +159965,7 @@
       "canonical_source_asset": "30519",
       "family_id": "terrain-3050d-3051c",
       "job_id": "terrain-3050d-3051c",
-      "status": "candidate",
+      "status": "registered",
       "owner": "terrain_set3_late",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -159967,7 +159981,8 @@
         "manifest": "jobs/terrain-3050d-3051c/candidate.json",
         "sha256": "ab9dc2ef29ee0009b312b718da44e0f3f3b32cd0b995c37af9e801ddb61c8c79",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-lateTerrain7"
     },
     "3051a": {
       "kind": "picture",
@@ -160062,7 +160077,7 @@
       "canonical_source_asset": "3051c",
       "family_id": "terrain-3050d-3051c",
       "job_id": "terrain-3050d-3051c",
-      "status": "candidate",
+      "status": "registered",
       "owner": "terrain_set3_late",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -160078,7 +160093,8 @@
         "manifest": "jobs/terrain-3050d-3051c/candidate.json",
         "sha256": "ab9dc2ef29ee0009b312b718da44e0f3f3b32cd0b995c37af9e801ddb61c8c79",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceG2-H5613-reviewed17-lateTerrain7"
     },
     "3051d": {
       "kind": "picture",
@@ -240931,6 +240947,701 @@
         "1015e": "DERIVED_FIXED_V4_PNG",
         "1015f": "DERIVED_FIXED_V4_PNG"
       }
+    },
+    "SourceG2-H5613-reviewed17-unused20582": {
+      "status": "REGISTERED_REVIEWED_COMPLETE_NATIVE_FAMILY",
+      "selected_assets": [
+        "20582"
+      ],
+      "scope": "Catalogue-only complete1, zero direct/settled Original callers after all27MAP/fourFLATS trace. Genuine existing generated PNG with32 retained bottom-row Original cells/960samples, not new generated detail. New currentG2 intrinsic equality remains separate from literal SourceF artwork proof; no invented gameplay context.",
+      "published_PNG_class": "UNTOUCHED_GENERATOR_RETURN_PNG",
+      "native_candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/candidate.json",
+        "sha256": "390ca5697383e83804cb3f92bbac5af3b925675641f32241bcc650342701c820",
+        "bytes": 5282
+      },
+      "coordinator_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/coordinator-review.json",
+        "sha256": "75a2a5cd569d49155574b63e7973cd954ff1f7135f8ce574af50307b97f6f217",
+        "bytes": 11024
+      },
+      "Root_current_batch17_approval": {
+        "approved": true,
+        "authority": "project_root",
+        "utc": "2026-10-18T22:36:50.256142+00:00",
+        "notes": [
+          "Root earlierwholeunused20582Original/native1–4approval plusdifferentintrinsic;32 retainedOriginalcells/960samplesnotHDcredit; all27MAP/fourFLATS zero-callertrace, no inventedcontext. NewG2allarray/PPMexactF."
+        ]
+      },
+      "limits": [
+        "Native1 body, small panel gaps and highlights are softer than the sharply blocked Original; the target is visibly a remastered interpretation rather than pixel-identical reconstruction.",
+        "Olive panels are brighter, more rectangular/squared and more consistently filled than the uneven Original shapes; central gray rails have stronger bevel relief and visible metal grain.",
+        "The32 bottom-row Original cells remain deliberately coarse compared with generated body. They contribute960 exact retained SourceNx samples across1–4 and are not credited as generated HD material.",
+        "No Original occurrence exists among all27 MAPs/36450 layout cells through either direct or settled-flat resolution; no gameplay neighborhood/World context has been invented. Mods could reference this catalogue asset later.",
+        "This approves only20582 complete1; sibling20581/20588 and old default full10 HOLD histories remain unchanged.",
+        "Actual30720 native RGB pixels equal the prior qualified386e hybrid. This SourceF singleton is a genuine new measured invocation of unchanged art, not a new image or changed pixel recipe."
+      ],
+      "qualifications_by_source_field_verbatim": {
+        "material_limits": [
+          "Native1 body, small panel gaps and highlights are softer than the sharply blocked Original; the target is visibly a remastered interpretation rather than pixel-identical reconstruction.",
+          "Olive panels are brighter, more rectangular/squared and more consistently filled than the uneven Original shapes; central gray rails have stronger bevel relief and visible metal grain.",
+          "The32 bottom-row Original cells remain deliberately coarse compared with generated body. They contribute960 exact retained SourceNx samples across1–4 and are not credited as generated HD material.",
+          "No Original occurrence exists among all27 MAPs/36450 layout cells through either direct or settled-flat resolution; no gameplay neighborhood/World context has been invented. Mods could reference this catalogue asset later.",
+          "This approves only20582 complete1; sibling20581/20588 and old default full10 HOLD histories remain unchanged.",
+          "Actual30720 native RGB pixels equal the prior qualified386e hybrid. This SourceF singleton is a genuine new measured invocation of unchanged art, not a new image or changed pixel recipe."
+        ]
+      },
+      "retained_Original_cells_by_asset": {
+        "20582": [
+          [
+            0,
+            31
+          ],
+          [
+            1,
+            31
+          ],
+          [
+            2,
+            31
+          ],
+          [
+            3,
+            31
+          ],
+          [
+            4,
+            31
+          ],
+          [
+            5,
+            31
+          ],
+          [
+            6,
+            31
+          ],
+          [
+            7,
+            31
+          ],
+          [
+            8,
+            31
+          ],
+          [
+            9,
+            31
+          ],
+          [
+            10,
+            31
+          ],
+          [
+            11,
+            31
+          ],
+          [
+            12,
+            31
+          ],
+          [
+            13,
+            31
+          ],
+          [
+            14,
+            31
+          ],
+          [
+            15,
+            31
+          ],
+          [
+            16,
+            31
+          ],
+          [
+            17,
+            31
+          ],
+          [
+            18,
+            31
+          ],
+          [
+            19,
+            31
+          ],
+          [
+            20,
+            31
+          ],
+          [
+            21,
+            31
+          ],
+          [
+            22,
+            31
+          ],
+          [
+            23,
+            31
+          ],
+          [
+            24,
+            31
+          ],
+          [
+            25,
+            31
+          ],
+          [
+            26,
+            31
+          ],
+          [
+            27,
+            31
+          ],
+          [
+            28,
+            31
+          ],
+          [
+            29,
+            31
+          ],
+          [
+            30,
+            31
+          ],
+          [
+            31,
+            31
+          ]
+        ]
+      },
+      "retained_Original_not_generated_HD": true,
+      "source_and_all_scale_visual_review": true,
+      "historical_context_epoch_preserved": true,
+      "current_intrinsic_epoch": "SourceG2",
+      "Root_admission": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed17-publication-after5596-20261019/admissions/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018.json",
+        "sha256": "75a2a5cd569d49155574b63e7973cd954ff1f7135f8ce574af50307b97f6f217",
+        "bytes": 11024
+      }
+    },
+    "SourceG2-H5613-reviewed17-ridge2": {
+      "status": "REGISTERED_REVIEWED_COMPLETE_NATIVE_FAMILY",
+      "selected_assets": [
+        "20363",
+        "20364"
+      ],
+      "scope": "Two untouched generated native singletons20363/20364. Literal SourceF/H5567 contexts cover14 actual placements and six legal settled endpoints; finite16 current-input carry and new G2 intrinsic equality are separate. Root sampled complete context00/19; different peer covers all20 endpoints. Repeated horizontal contact bands, softer native1 and inherited crater boundaries remain qualified.",
+      "published_PNG_class": "UNTOUCHED_GENERATOR_RETURN_PNG",
+      "native_candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20363-20364-Original-primary-complete2-SourceG2-20261019/candidate.json",
+        "sha256": "67f7804255671d124f47aced45094fa3bd2be0afc6926cbd3547a99a62b562d7",
+        "bytes": 2740
+      },
+      "coordinator_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-20363-20364-Original-primary-complete2-SourceG2-20261019/coordinator-review.json",
+        "sha256": "cca873aebb85d72aad0fd4f1d882b48090fd0b63a9903ddb216a4e3b294d4a67",
+        "bytes": 3564
+      },
+      "Root_current_batch17_approval": {
+        "approved": true,
+        "authority": "project_root",
+        "utc": "2026-10-18T22:36:50.256448+00:00",
+        "notes": [
+          "Root earlierbothwholeintrinsics plusNOWcompletecontext00and19allnative1–4. Gray/darkribs/material/coupledcraters qualify; strongerhorizontalcontactbands/inheritedpalecraterborders accepted. Differentpeerall20contextsqualified; G2arrayexactF andcurrentfinite16inputcarry."
+        ]
+      },
+      "limits": [
+        "Actual SourceF terrain-compositor contexts at immutableH5567, not World simulation, damage timing, gameplay or SDL screenshots.",
+        "All14 actual target MAP placements are rendered; six finite legal state endpoints represent five single-cell changes and one two-cell adjacent change. Full31cardinal-neighbor events are cataloged, but all states/combinations and diagonals are not rendered.",
+        "Generated horizontal ribs have stronger metallic relief/highlights and repetitive fine weathering than Original. Thin left/bottom tile boundaries and repeated horizontal contact bands remain visible, especially at native3/4; no seamless or exact ridge-phase claim.",
+        "Both targets remain dark/light distinct and all Source contacts, offmap black padding and ordinary palette class stay correct. Native1 is softer and reduces the Original irregular shallow scuffing.",
+        "Registered20673/20674 craters are unchanged foreign art. Their comparatively pale borders/gravel relief and rectangular state-tile boundary remain visible against new intact ridges; no remaster of these existing crater assets is claimed here.",
+        "No fresh image generation, cleanup, intrinsic QA, engine rebuild, World, canonical registration, binaries or Git changes."
+      ],
+      "qualifications_by_source_field_verbatim": {
+        "qualification_limits": [
+          "Actual SourceF terrain-compositor contexts at immutableH5567, not World simulation, damage timing, gameplay or SDL screenshots.",
+          "All14 actual target MAP placements are rendered; six finite legal state endpoints represent five single-cell changes and one two-cell adjacent change. Full31cardinal-neighbor events are cataloged, but all states/combinations and diagonals are not rendered.",
+          "Generated horizontal ribs have stronger metallic relief/highlights and repetitive fine weathering than Original. Thin left/bottom tile boundaries and repeated horizontal contact bands remain visible, especially at native3/4; no seamless or exact ridge-phase claim.",
+          "Both targets remain dark/light distinct and all Source contacts, offmap black padding and ordinary palette class stay correct. Native1 is softer and reduces the Original irregular shallow scuffing.",
+          "Registered20673/20674 craters are unchanged foreign art. Their comparatively pale borders/gravel relief and rectangular state-tile boundary remain visible against new intact ridges; no remaster of these existing crater assets is claimed here.",
+          "No fresh image generation, cleanup, intrinsic QA, engine rebuild, World, canonical registration, binaries or Git changes."
+        ]
+      },
+      "retained_Original_cells_by_asset": {},
+      "retained_Original_not_generated_HD": true,
+      "source_and_all_scale_visual_review": true,
+      "historical_context_epoch_preserved": true,
+      "current_intrinsic_epoch": "SourceG2",
+      "Root_admission": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed17-publication-after5596-20261019/admissions/terrain-20363-20364-Original-primary-complete2-SourceG2-20261019.json",
+        "sha256": "cca873aebb85d72aad0fd4f1d882b48090fd0b63a9903ddb216a4e3b294d4a67",
+        "bytes": 3564
+      }
+    },
+    "SourceG2-H5613-reviewed17-Terrain4": {
+      "status": "REGISTERED_REVIEWED_COMPLETE_NATIVE_FAMILY",
+      "selected_assets": [
+        "304b1",
+        "304b2",
+        "304b3",
+        "304b5"
+      ],
+      "scope": "Four untouched Original-primary shallow-terrain PNG selections304b1/2/3/5;304b1 retains27 Original lower-slot cells, not generated HD. Four real placements plus a9×4static strip were reviewed at literal SourceF/H5567 with separate finite31 current-input carry and new G2 intrinsic equality. Stronger rims/cavity/warm detail and inherited Original304b7/8 fallbacks remain qualified.",
+      "published_PNG_class": "UNTOUCHED_GENERATOR_RETURN_PNG",
+      "native_candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-304b1-304b2-304b3-304b5-Source-primary-shallow-complete4-20261018-v2/candidate.json",
+        "sha256": "b9362faf5097a36a79a6c13e8101397f3a595444b181bd4b5de5f45c844a0ee8",
+        "bytes": 4927
+      },
+      "coordinator_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/terrain-304b1-304b2-304b3-304b5-Source-primary-shallow-complete4-20261018-v2/coordinator-review.json",
+        "sha256": "5aefc3408944a8865d5cc658bb80dca0f46b40926e845f245412bb8028921b58",
+        "bytes": 5690
+      },
+      "Root_current_batch17_approval": {
+        "approved": true,
+        "authority": "project_root",
+        "utc": "2026-10-18T22:36:50.256648+00:00",
+        "notes": [
+          "Root earlierall4wholeintrinsics/all4genuinecallercontexts/fullstripnative4 personallyQUALf6d821f2 plusdifferentpeer. ExactOriginallower27slotcellsnoHDcredit. NewG2all4banksFexact; literalolderSourceF/H5567contextspluscurrentfinite31inputcarry."
+        ]
+      },
+      "limits": [
+        "Genuine488e RGB shows stronger rim/rail edges and gray/charcoal material contrast than the Original. New paint is continuous but stone-like wear, not an assertion of exact Original pixels.",
+        "304b1 darker cavity mottling and a somewhat larger ordinary warm patch near Source22,7 remain. The 27-cell lower-slot OriginalNx insert is visibly simpler/stepped at native3–4; retained Original is not HD-generated detail.",
+        "Native1 softens texture and narrow details. No natural mission, terrain-neighbor seam, caller transition or runtime admission has been reviewed.",
+        "All four native outcomes refer to actual immutableH5567 SourceF inputs. Actual full4bank unchanged for304b2/3/5;304b1 is from separate successful singleton metadata variant. No false claim of a fresh combined4call.",
+        "Current5567foreign304b7and304b8remain genuine OriginalSourceNx fallback. Their visiblycoarse gray panels/vents belowright are inherited; this packet claims noHDcredit or fullHD/seamlesscoherence for them.",
+        "304b1contains27Originalretainedcells foronecompleteoutlinedlower-slot. ThecoarseSourceNxslotandordinarywarmdetail/cavitymottle remainvisible;OriginalretentionisnotgeneratedHDdetail.",
+        "Own gray/rim/railcontrast isstrongerthanOriginal andnative1softensfinewear; theseintrinsiclimitsremainacceptedwithqualification.",
+        "All4realOriginalplacements andonefull9×4staticstrip were reviewed, noteverypossible scrollposition/screen/lighting/damagecomposition. Noownorforeignstatepairs exist intheseindestructibleSourcewindows.",
+        "RawFLATShealth−1 becomesRegistryhealth0/destroyedNone. Rewardmetadata500(or0for304b2)is preserved anddoesnotassert anearnedreward fromtheseindestructiblepieces."
+      ],
+      "qualifications_by_source_field_verbatim": {
+        "material_limits": [
+          "Genuine488e RGB shows stronger rim/rail edges and gray/charcoal material contrast than the Original. New paint is continuous but stone-like wear, not an assertion of exact Original pixels.",
+          "304b1 darker cavity mottling and a somewhat larger ordinary warm patch near Source22,7 remain. The 27-cell lower-slot OriginalNx insert is visibly simpler/stepped at native3–4; retained Original is not HD-generated detail.",
+          "Native1 softens texture and narrow details. No natural mission, terrain-neighbor seam, caller transition or runtime admission has been reviewed.",
+          "All four native outcomes refer to actual immutableH5567 SourceF inputs. Actual full4bank unchanged for304b2/3/5;304b1 is from separate successful singleton metadata variant. No false claim of a fresh combined4call.",
+          "Current5567foreign304b7and304b8remain genuine OriginalSourceNx fallback. Their visiblycoarse gray panels/vents belowright are inherited; this packet claims noHDcredit or fullHD/seamlesscoherence for them.",
+          "304b1contains27Originalretainedcells foronecompleteoutlinedlower-slot. ThecoarseSourceNxslotandordinarywarmdetail/cavitymottle remainvisible;OriginalretentionisnotgeneratedHDdetail.",
+          "Own gray/rim/railcontrast isstrongerthanOriginal andnative1softensfinewear; theseintrinsiclimitsremainacceptedwithqualification.",
+          "All4realOriginalplacements andonefull9×4staticstrip were reviewed, noteverypossible scrollposition/screen/lighting/damagecomposition. Noownorforeignstatepairs exist intheseindestructibleSourcewindows.",
+          "RawFLATShealth−1 becomesRegistryhealth0/destroyedNone. Rewardmetadata500(or0for304b2)is preserved anddoesnotassert anearnedreward fromtheseindestructiblepieces."
+        ]
+      },
+      "retained_Original_cells_by_asset": {
+        "304b1": [
+          [
+            8,
+            28
+          ],
+          [
+            8,
+            29
+          ],
+          [
+            8,
+            30
+          ],
+          [
+            9,
+            28
+          ],
+          [
+            9,
+            29
+          ],
+          [
+            9,
+            30
+          ],
+          [
+            10,
+            28
+          ],
+          [
+            10,
+            29
+          ],
+          [
+            10,
+            30
+          ],
+          [
+            11,
+            28
+          ],
+          [
+            11,
+            29
+          ],
+          [
+            11,
+            30
+          ],
+          [
+            12,
+            28
+          ],
+          [
+            12,
+            29
+          ],
+          [
+            12,
+            30
+          ],
+          [
+            13,
+            28
+          ],
+          [
+            13,
+            29
+          ],
+          [
+            13,
+            30
+          ],
+          [
+            14,
+            28
+          ],
+          [
+            14,
+            29
+          ],
+          [
+            14,
+            30
+          ],
+          [
+            15,
+            28
+          ],
+          [
+            15,
+            29
+          ],
+          [
+            15,
+            30
+          ],
+          [
+            16,
+            28
+          ],
+          [
+            16,
+            29
+          ],
+          [
+            16,
+            30
+          ]
+        ]
+      },
+      "retained_Original_not_generated_HD": true,
+      "source_and_all_scale_visual_review": true,
+      "historical_context_epoch_preserved": true,
+      "current_intrinsic_epoch": "SourceG2",
+      "Root_admission": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed17-publication-after5596-20261019/admissions/terrain-304b1-304b2-304b3-304b5-Source-primary-shallow-complete4-20261018-v2.json",
+        "sha256": "5aefc3408944a8865d5cc658bb80dca0f46b40926e845f245412bb8028921b58",
+        "bytes": 5690
+      }
+    },
+    "SourceG2-H5613-reviewed17-lateTerrain7": {
+      "status": "REGISTERED_REVIEWED_COMPLETE_NATIVE_FAMILY",
+      "selected_assets": [
+        "3050d",
+        "3050f",
+        "30510",
+        "30511",
+        "30513",
+        "30519",
+        "3051c"
+      ],
+      "scope": "Seven untouched new Original-primary Terrain selections3050d/0f/10/11/13/19/1c. Literal SourceF/H5567 contexts cover29 endpoints/18ordered views from11 representative windows of23 callers; Root sampled seven endpoints. Separate57-Source/current5596 input carry and new G2 equality do not relabel old context pixels. Six lavender Original cells and cyan ownership are functional Source material; seams/native1 softness remain qualified.",
+      "published_PNG_class": "UNTOUCHED_GENERATOR_RETURN_PNG",
+      "native_candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/lateterrain-3050d-3051c-neworiginal7-sourceg2-h5596-v1-20261019/candidate.json",
+        "sha256": "1b259d08c4dd6d6d00ebb5601d9539cff0c6f7d6373bf8f0a73b816892135927",
+        "bytes": 9895
+      },
+      "coordinator_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/lateterrain-3050d-3051c-neworiginal7-sourceg2-h5596-v1-20261019/coordinator-review.json",
+        "sha256": "cf031469630bd9e87ea4097abd3cbc7da97a09b8ec862fc74475ee96e9e28f76",
+        "bytes": 3586
+      },
+      "Root_current_batch17_approval": {
+        "approved": true,
+        "authority": "project_root",
+        "utc": "2026-10-18T22:36:50.256822+00:00",
+        "notes": [
+          "Root NOWwholeendpoint01,05,07,11,13,15,19allnative1–4coverallseven; differentpeer7d327e95all29endpoints+18orderedviews. Brightgranulardebris/native1softness/inheritedgreenpanel/groundgrainseams accepted. Lavender6Sourcecells/cyanOriginalnocredit. CurrentG2all222208samples/35PPMFexact plus57Source/current5596inputcarry, nofalsecurrentWorldcapture."
+        ],
+        "different_context_review_sha256": "7d327e95f3a0315073935595ec4c1761e2be3334a9dfb79e4a629f97df957889"
+      },
+      "limits": [
+        "Finite SourceF actual5567 pixel epoch; future metadata/input equivalence is separate and cannot relabel these pixels.",
+        "23 genuine callers across all27 original maps fully catalogued;11 representative center windows rendered, not all23 or all neighboring state combinations.",
+        "All seven are actually used; no invented gallery or unused placement. 11 own transitions plus4 directed mutual views and3 genuine foreign-neighbor states,14 distinct legitimate actor events.",
+        "Static legitimate intact/settled state comparisons only; no World, damage timing, live mission, explosion/cinematic or audio run.",
+        "Brighter granular gray chips, greener body, stronger brown fine relief and native1 softness remain from intrinsic qualification. Inherited foreign green panel segmentation, contrast and some rectangular grain/tonal seams remain visible; no seamless universal-map claim.",
+        "Six complete authentic lavender-feature cells retained as exact joined OriginalNx after all terrain joins; Original not generated HD credit. Prejoin uses actual unretained bank.",
+        "Cyan254 prejoin ownership is authentic logical SourceNN class/index, while final joined public composition follows OriginalNx control class shape. These are distinct checks, no claim that SourceNN and SourceNx masks are identical.",
+        "Four finite Source assets are Original fallbacks in immutable5567. Their unchanged data are not claimed remastered by this seven-frame batch."
+      ],
+      "qualifications_by_source_field_verbatim": {
+        "qualification_limits": [
+          "Finite SourceF actual5567 pixel epoch; future metadata/input equivalence is separate and cannot relabel these pixels.",
+          "23 genuine callers across all27 original maps fully catalogued;11 representative center windows rendered, not all23 or all neighboring state combinations.",
+          "All seven are actually used; no invented gallery or unused placement. 11 own transitions plus4 directed mutual views and3 genuine foreign-neighbor states,14 distinct legitimate actor events.",
+          "Static legitimate intact/settled state comparisons only; no World, damage timing, live mission, explosion/cinematic or audio run.",
+          "Brighter granular gray chips, greener body, stronger brown fine relief and native1 softness remain from intrinsic qualification. Inherited foreign green panel segmentation, contrast and some rectangular grain/tonal seams remain visible; no seamless universal-map claim.",
+          "Six complete authentic lavender-feature cells retained as exact joined OriginalNx after all terrain joins; Original not generated HD credit. Prejoin uses actual unretained bank.",
+          "Cyan254 prejoin ownership is authentic logical SourceNN class/index, while final joined public composition follows OriginalNx control class shape. These are distinct checks, no claim that SourceNN and SourceNx masks are identical.",
+          "Four finite Source assets are Original fallbacks in immutable5567. Their unchanged data are not claimed remastered by this seven-frame batch."
+        ]
+      },
+      "retained_Original_cells_by_asset": {
+        "3050f": [
+          [
+            28,
+            12
+          ],
+          [
+            29,
+            12
+          ]
+        ],
+        "3051c": [
+          [
+            19,
+            3
+          ],
+          [
+            19,
+            4
+          ],
+          [
+            19,
+            27
+          ],
+          [
+            19,
+            28
+          ]
+        ]
+      },
+      "retained_Original_not_generated_HD": true,
+      "source_and_all_scale_visual_review": true,
+      "historical_context_epoch_preserved": true,
+      "current_intrinsic_epoch": "SourceG2",
+      "Root_admission": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed17-publication-after5596-20261019/admissions/lateterrain-3050d-3051c-neworiginal7-sourceg2-h5596-v1-20261019.json",
+        "sha256": "cf031469630bd9e87ea4097abd3cbc7da97a09b8ec862fc74475ee96e9e28f76",
+        "bytes": 3586
+      }
+    },
+    "SourceG2-H5613-reviewed17-darkship3": {
+      "status": "REGISTERED_REVIEWED_COMPLETE_NATIVE_FAMILY",
+      "selected_assets": [
+        "102fc",
+        "2009a",
+        "2009b"
+      ],
+      "scope": "Three derived dark-ship pictures102fc/2009a/2009b across two complete native sequences. CurrentG2 intrinsic and one portable replay reproduce accepted SourceF pixels; literal SourceF/H5567 World contexts retain their epoch with separate finite84 input carry. Root viewed complete three-frame material and three native4 scenes; different peers cover all-scale material/context. Retained2/15/15 Original cells, donor distance and native3 edge differences remain qualified.",
+      "published_PNG_class": "DERIVED_SOURCE_GUIDED_PNG",
+      "native_candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/derived-darkship3-complete3-v1-20261019/candidate.json",
+        "sha256": "21e07e7a5f33cbc8643c52b4f50f57fa31ea2153f5d8d052fa636a1be19b9977",
+        "bytes": 3990
+      },
+      "coordinator_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/hd/jobs/derived-darkship3-complete3-v1-20261019/coordinator-review.json",
+        "sha256": "61bb8b8c8f3f51669e8c8d02cc553377359b3a21b9dff641b8df3ef316ab7e1a",
+        "bytes": 7443
+      },
+      "Root_current_batch17_approval": {
+        "approved": true,
+        "authority": "project_root",
+        "utc": "2026-10-18T22:36:50.256991+00:00",
+        "notes": [
+          "Root NOWwhole3Original/derivedmontage andall3fullnative4sceneproposals; differentallscaleintrinsicb36d94/context91e387. Connectedbodies/rotorphases/Originalshadowsqualify, native1softness/native3edge6/8/4 andSource2/15functionalretentionaccepted. ActualG2all134912samples/15RGBFexact,current5596finite84inputcarry; nofalsecurrentWorldcapture."
+        ]
+      },
+      "limits": [
+        "CurrentactualG2intrinsic evidence; all old material/context preserve SourceF/H5567 epochs.",
+        "Current5596carry proves unchanged84contributors/method, not new currentG2World/context.",
+        "Original2/15cells and donor12/4/4outpixel qualifications; native1softness/native3borderdifferences6/8/4 remain.",
+        "No Root finalapproval, registrarpreflight/stage/main or canonical writes yet."
+      ],
+      "qualifications_by_source_field_verbatim": {
+        "limits": [
+          "CurrentactualG2intrinsic evidence; all old material/context preserve SourceF/H5567 epochs.",
+          "Current5596carry proves unchanged84contributors/method, not new currentG2World/context.",
+          "Original2/15cells and donor12/4/4outpixel qualifications; native1softness/native3borderdifferences6/8/4 remain.",
+          "No Root finalapproval, registrarpreflight/stage/main or canonical writes yet."
+        ]
+      },
+      "retained_Original_cells_by_asset": {
+        "102fc": [
+          [
+            27,
+            12
+          ],
+          [
+            28,
+            12
+          ]
+        ],
+        "2009a": [
+          [
+            22,
+            13
+          ],
+          [
+            22,
+            14
+          ],
+          [
+            22,
+            15
+          ],
+          [
+            23,
+            13
+          ],
+          [
+            23,
+            14
+          ],
+          [
+            23,
+            15
+          ],
+          [
+            24,
+            13
+          ],
+          [
+            24,
+            14
+          ],
+          [
+            24,
+            15
+          ],
+          [
+            25,
+            13
+          ],
+          [
+            25,
+            14
+          ],
+          [
+            25,
+            15
+          ],
+          [
+            26,
+            13
+          ],
+          [
+            26,
+            14
+          ],
+          [
+            26,
+            15
+          ]
+        ],
+        "2009b": [
+          [
+            22,
+            13
+          ],
+          [
+            22,
+            14
+          ],
+          [
+            22,
+            15
+          ],
+          [
+            23,
+            13
+          ],
+          [
+            23,
+            14
+          ],
+          [
+            23,
+            15
+          ],
+          [
+            24,
+            13
+          ],
+          [
+            24,
+            14
+          ],
+          [
+            24,
+            15
+          ],
+          [
+            25,
+            13
+          ],
+          [
+            25,
+            14
+          ],
+          [
+            25,
+            15
+          ],
+          [
+            26,
+            13
+          ],
+          [
+            26,
+            14
+          ],
+          [
+            26,
+            15
+          ]
+        ]
+      },
+      "retained_Original_not_generated_HD": true,
+      "source_and_all_scale_visual_review": true,
+      "historical_context_epoch_preserved": true,
+      "current_intrinsic_epoch": "SourceG2",
+      "Root_admission": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed17-publication-after5596-20261019/admissions/derived-darkship3-complete3-v1-20261019.json",
+        "sha256": "61bb8b8c8f3f51669e8c8d02cc553377359b3a21b9dff641b8df3ef316ab7e1a",
+        "bytes": 7443
+      }
     }
   },
   "native_preservation_reviews": {
@@ -249205,8 +249916,8 @@
       "history_scope": "All SourceC and older successful image-call, intrinsic, material, context, held-art and refusal authorities retain their original epochs and limits. The existing current_source_runtime object is a dated SourceC+D5384 checkpoint; latest_artwork_runtime is the unchanged SourceC H5425 artwork-release evidence. This activation changes runtime evidence only, with no asset/header/default/raw/status or family-review changes. Private constrained studies are not installed artwork."
     },
     "current_runtime": {
-      "record": "SourceF_H5596_reviewed29_art_append_current",
-      "scope": "Actual scoped next29 append; prior native and pixel/input epochs remain dated."
+      "record": "SourceG2_H5613_reviewed17_art_append_current",
+      "scope": "Current approved SourceG2 artwork17 append; prior source, pixel, feature and native Windows observations remain dated."
     },
     "runtime5426": {
       "checkpoint_utc": "2026-10-17T12:31:23.439368+00:00",
@@ -251371,6 +252082,167 @@
       "native_H5596_execution_claim": false,
       "history_scope": "Only29 picture status/review references change; all prior picture/native/history authorities remain exact. Original functional restoration, carried artwork and restored metadata earn no new artwork credit. No full-mission, all-placement, seamlessness or performance claim.",
       "SDL_scope": "Exactly three actual installed run.sh SDL captures at1920×1080, HD4/difficulty2/current45mods/M2v1.0.3, fresh profiles, menu120 and Original S1W7/S3W9 each600 presentation frames. All3 EXIT0 and empty stderr; operator and Root whole-viewed. All PNG bytes/RGB/alpha equal actual H5567 controls,0 changed pixels across6,220,800. These finite controls establish no visibility of the29 new pictures, all-mission survival, sound, performance, hardware or native Windows H5596 result. Saved-audit syntax correction did not repeat any game process."
+    },
+    "SourceG2_H5613_reviewed17_art_append_current": {
+      "status": "ACTUAL_SOURCEG2_H5613_REVIEWED17_APPENDED_INSTALLED_CLI_VALIDATED",
+      "checkpoint_date_local": "19 October 2026",
+      "registered_frames": 5613,
+      "complete_sequences": 3716,
+      "terrain_frames": 4426,
+      "remaining_original_pictures": 140,
+      "remaining_by_category": {
+        "Terrain": 109,
+        "Enemies and ground objects": 29,
+        "Menus, portraits, HUD and other pictures": 2,
+        "Bosses": 0
+      },
+      "selected_assets": [
+        "102fc",
+        "2009a",
+        "2009b",
+        "20363",
+        "20364",
+        "20582",
+        "304b1",
+        "304b2",
+        "304b3",
+        "304b5",
+        "3050d",
+        "3050f",
+        "30510",
+        "30511",
+        "30513",
+        "30519",
+        "3051c"
+      ],
+      "new_frames": 17,
+      "new_complete_sequences": 16,
+      "registered_categories": {
+        "Player banking": 21,
+        "Bosses": 249,
+        "Player and enemy projectiles": 51,
+        "Enemies and ground objects": 390,
+        "Explosions and effects": 281,
+        "Equipment and pickups": 47,
+        "Terrain": 4426,
+        "Menus, portraits, HUD and other pictures": 148
+      },
+      "assembly": {
+        "data_files": 10885,
+        "data_bytes": 8728062352,
+        "new_job_files": 191,
+        "new_Root_admission_files": 5,
+        "new_total_data_files": 196
+      },
+      "family_review_refs": {
+        "unused20582": "SourceG2-H5613-reviewed17-unused20582",
+        "ridge2": "SourceG2-H5613-reviewed17-ridge2",
+        "Terrain4": "SourceG2-H5613-reviewed17-Terrain4",
+        "lateTerrain7": "SourceG2-H5613-reviewed17-lateTerrain7",
+        "darkship3": "SourceG2-H5613-reviewed17-darkship3"
+      },
+      "evidence": {
+        "assembly": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed17-publication-after5596-20261019/ACTUAL-17-ASSEMBLY-RECEIPT.json",
+          "sha256": "ba3bbc066dd3e1a0bedd92e89ae8868dc3d4fc42c9ea7fb5a3185b7264da1748",
+          "bytes": 39351
+        },
+        "five_staged_approvals": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed17-publication-after5596-20261019/ACTUAL-STAGED-APPROVALS.json",
+          "sha256": "7608ea7d78c3f50be722dfab90d503619e86bd765941743a01fc434da8ccca3b",
+          "bytes": 650
+        },
+        "private_registrar_terminal": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed17-publication-after5596-20261019/ACTUAL-ONE-PRIVATE-REGISTRAR-TERMINAL.json",
+          "sha256": "1278efce1aae18166d288753e874074721bfc43a71ee23694cb782a0f744d8f5",
+          "bytes": 1319
+        },
+        "installed_CLI": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed17-publication-after5596-20261019/ACTUAL-INSTALLED-5613-CLI-VALIDATION.json",
+          "sha256": "842598dedb89c6d2fc5af7a29e658cbcb490cf1f17c788271ecba87716c1bb0f",
+          "bytes": 367
+        },
+        "Root_authority": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed17-publication-after5596-20261019/ROOT-EXECUTION-AUTHORITY.json",
+          "sha256": "b172913ec87d7f01a84bd1be58d8abaaec3ea20f8a4e1f02d133f22d6d1d60be",
+          "bytes": 1363
+        },
+        "maintained_293_tests_stderr": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-current-157-publication-tool-tests-20261019.stderr",
+          "sha256": "f73cf32a36f46dc6afe8da096173cf16c11a57748e868caa3dc18a33e7a9c36f",
+          "bytes": 393
+        },
+        "maintained_tests_stdout": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-current-157-publication-tool-tests-20261019.stdout",
+          "sha256": "f30e79ea4ead341eaee16669acbf364757af277bfb1a71a5b4138b852f740eb5",
+          "bytes": 436
+        },
+        "two_actual_current_SDL_spotchecks": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-current5613-SourceG2-two-SDL-spotchecks-20261019-v1/PASS-TWO-ACTUAL-CURRENT5613-SOURCEG2-SDL-WHOLE-FRAME-SPOTCHECKS.json",
+          "sha256": "b15e4be44f6c10408e8d6caea75082ee58523320a578d0b90f16a2fc425077ea",
+          "bytes": 4123
+        }
+      },
+      "maintained_synthetic_tests_passed": 293,
+      "actual_staged_readonly_passes_before_main": 5,
+      "actual_private_registrar_main_calls": 1,
+      "current_SourceG2_binaries_mods_42briefings_unchanged": true,
+      "new_World_QA_imagegen_build_calls_during_assembly": 0,
+      "prior_outer_stop": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed17-publication-after5596-20261019-PRESERVED-ROOT-LABEL-AUTHORING-STOP",
+        "scope": "Preserved pre-start authoring/metadata stop; not erased or described as a successful execution. The reviewed successor completed five staged read-only checks and one private registrar main.",
+        "stop_receipt": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed17-publication-after5596-20261019-PRESERVED-ROOT-LABEL-AUTHORING-STOP/FAILED-STOP.json",
+          "sha256": "c67811e32bfd523b7c631a5f50edc5622859cf180d02903a377ad3eaf5fbb5b1",
+          "bytes": 185
+        }
+      },
+      "dated_native_Windows_feature_epoch": {
+        "head": "2d95e145a5dd3ed7d6849400c62f6b9202a6cd80",
+        "run": 39130656646,
+        "run_url": "https://github.com/Quintine/RustRaptor/actions/runs/39130656646",
+        "conclusion": "success",
+        "artwork_count": 5596,
+        "observation": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-current17-actual-doc-ledger-update-20261019-v1/ACTUAL-DATED-2D95-NATIVE-RUN-METADATA.json",
+          "sha256": "b6b8d464c24559600f6ba6ba23ef88716b400f33eea46d4e3183c7625fcf79e1",
+          "bytes": 319
+        },
+        "native_5613_execution_claim": false
+      },
+      "scope": "Only exact17 approved IDs. Fresh SourceG2 intrinsic QA/equality and literal older SourceF contexts remain separate. Two actual installed SourceG2 SDL gameplay controls add finite presentation checks. No other five/private infantry approval, all17-new-picture visibility, complete-mission, audible-sound, performance, all-placement or native5613 claim.",
+      "current_installed_SDL_spotchecks": {
+        "registered_frames": 5613,
+        "source_epoch": "SourceG2",
+        "cases": [
+          {
+            "case": "original-s1w2-hd",
+            "presentation_frames": 180,
+            "exit_code": 0,
+            "stderr_empty": true
+          },
+          {
+            "case": "original-s3w5-hd",
+            "presentation_frames": 600,
+            "exit_code": 0,
+            "stderr_empty": true
+          }
+        ],
+        "screen_dimensions": [
+          1920,
+          1080
+        ],
+        "game_frame_dimensions": [
+          1440,
+          1080
+        ],
+        "sidebar_width_each": 240,
+        "operator_and_Root_whole_frame_reviewed": true,
+        "SourceG2_binaries_and_45mods_unchanged": true,
+        "all17_new_asset_visibility_claim": false,
+        "native_Windows_execution_claim": false,
+        "scope": "Two actual installed SourceG2 SDL gameplay controls—Original Sector 1 Wave 2 at 180 frames and Sector 3 Wave 5 at 600 frames—exited successfully with empty stderr. Both complete 1920×1080 screenshots were reviewed; the centered 4:3 game frame and sidebars remain intact. These finite controls establish neither visibility of all 17 new pictures nor complete-mission, audible-sound, performance or native Windows results."
+      }
     }
   }
 }

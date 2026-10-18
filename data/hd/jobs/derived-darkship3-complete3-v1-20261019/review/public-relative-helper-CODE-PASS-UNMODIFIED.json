@@ -1,0 +1,23 @@
+{
+  "status": "PASS_DIFFERENT_CODE_FOCUSED_V2_FIFO_FINDING_CLOSED",
+  "utc": "2026-10-18T20:47:23.792548+00:00",
+  "reviewer": "/root/mission_preview_design",
+  "author": "/root/dark_ship_remaining",
+  "tool_path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-darkship3-portable-public-helper-source-proposal-20261019-v2-nonblocking-regular-input-successor/tools/hd_darkship_cleanup.py",
+  "tool_sha256": "715a967af23d20b936eb99104c46f852a446c7e277c215d7550b1c8d1bb0f787",
+  "tests_path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-darkship3-portable-public-helper-source-proposal-20261019-v2-nonblocking-regular-input-successor/tools/test_hd_darkship_cleanup.py",
+  "tests_sha256": "cd451c1b1265f98787765939fb6d8b67beb223292ceb5eb595cda1277972adb6",
+  "actual_synthetic_tests_pass": 15,
+  "actual_tests_exit": 0,
+  "test_terminal_stderr_sha256": "5f7d89c1642aa9627aafaf6a2692b701931cfefaf000635334ab304f627043e8",
+  "verified_exact_production_delta": "Only os.O_NONBLOCK added to finalinputfdopen; regular fstat gate unchanged. All sampling/SourceScale4/donorbound/anchor/cells/buffering/lineage paths unchanged.",
+  "initial_finding": "FIFO beforefstat blocking reproduced in initialV1; now boundedsubprocess regression rejectsFIFO immediately.",
+  "findings_remaining": [],
+  "recipe_sha256": "417cbd6d9d6e2eb7df177ef5f5f55e6d6430bfcf6926fa18380ca9eff79fae83",
+  "real_cleanups_by_reviewer": 0,
+  "engine_QA_by_reviewer": 0,
+  "canonical_changes_by_reviewer": false,
+  "historical_invocations_relabelled": false,
+  "historical_previous_two_family_calls": "Remain literal historical invocations; portable replay would be a separate new explicit authorized invocation.",
+  "scope": "CODEand15synthetics only; Root authorizes real portable byteequivalence replay. Existing separatelyauthorized currentG2 bank need not rerun for IO-only successor."
+}

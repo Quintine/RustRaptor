@@ -1,0 +1,686 @@
+{
+  "status": "PASS_ACTUAL_ONE_CURRENT_SOURCEG2_INTRINSIC7_ALL_SOURCEF_PIXELS_EXACT",
+  "utc": "2026-10-18T20:19:15.406690+00:00",
+  "candidate": {
+    "path": "jobs/lateterrain-3050d-3051c-neworiginal7-sourceg2-h5596-v1-20261019/candidate.json",
+    "sha256": "1b259d08c4dd6d6d00ebb5601d9539cff0c6f7d6373bf8f0a73b816892135927"
+  },
+  "frame_bindings_sha256": "6e2c43ec98e175accf77bae2369d4ff9eff77c738cd0d0617202dd5e822672bb",
+  "current_G2_runtime_QA": {
+    "path": "jobs/lateterrain-3050d-3051c-neworiginal7-sourceg2-h5596-v1-20261019/runtime-qa.json",
+    "sha256": "3f209f0493ecffa035b932616b92fcc7dbee8cb9259742236a2ee39bc0502af8"
+  },
+  "current_G2_actual_bank": {
+    "path": "jobs/lateterrain-3050d-3051c-neworiginal7-sourceg2-h5596-v1-20261019/measurement/actual-current-SourceG2-intrinsic7-indexed-bank.json",
+    "sha256": "54395a1218f8e2dcf78caecfe266e7ba86d4bfeac92bb99580bd6071dac3f762"
+  },
+  "current_G2_invocation": {
+    "path": "jobs/lateterrain-3050d-3051c-neworiginal7-sourceg2-h5596-v1-20261019/measurement/ACTUAL-ONE-CURRENT-SOURCEG2-INTRINSIC7-INVOCATION.json",
+    "sha256": "85e5318b0aa278bddb6cd19c11baacf6e5d575ec112ac6d7120c18d3f009b9c6"
+  },
+  "assets": [
+    "3050d",
+    "3050f",
+    "30510",
+    "30511",
+    "30513",
+    "30519",
+    "3051c"
+  ],
+  "exact_Original_plus_native1to4_indexed_samples": 222208,
+  "native_only_samples": 215040,
+  "all35_complete_PPM_bytes_exact": true,
+  "checks": [
+    {
+      "asset": "3050d",
+      "Original_and_all4_native_dimensions_indices_exact": true,
+      "source_palette": "PALETTE_DAT",
+      "source_palette_SHA": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "historical_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/actual-indexed-source-and-scales.json",
+        "sha256": "4046821472ad414684f3366f0ab5acdb2344d4db8e0c3f7a55044ae95ee48df7",
+        "size": 3137247
+      },
+      "current_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/actual-indexed-source-and-scales.json",
+        "sha256": "54395a1218f8e2dcf78caecfe266e7ba86d4bfeac92bb99580bd6071dac3f762",
+        "size": 3137275
+      },
+      "full_Original_and_native_PPM_byte_equality": [
+        {
+          "name": "3050d-original.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3050d-original.ppm",
+            "sha256": "7d0446127080f571232942a8d654b48bcbf50bac82ef4ac3a45a8351afc77896",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/3050d-original.ppm",
+            "sha256": "7d0446127080f571232942a8d654b48bcbf50bac82ef4ac3a45a8351afc77896",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "3050d-hd-1.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3050d-hd-1.ppm",
+            "sha256": "7bd5303b5cb28def5bd2cfea4ced081659ccb3ffcd009b35f0e3692f3b672e98",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/3050d-hd-1.ppm",
+            "sha256": "7bd5303b5cb28def5bd2cfea4ced081659ccb3ffcd009b35f0e3692f3b672e98",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "3050d-hd-2.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3050d-hd-2.ppm",
+            "sha256": "4b74e626e3cdfee34df546574c11ab576f0eedc1ce818875d5c2fb82b37edb4a",
+            "size": 12301
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/3050d-hd-2.ppm",
+            "sha256": "4b74e626e3cdfee34df546574c11ab576f0eedc1ce818875d5c2fb82b37edb4a",
+            "size": 12301
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "3050d-hd-3.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3050d-hd-3.ppm",
+            "sha256": "89c2cc4b6ee74b41287d8f10746fcbc7420969ca8a5b91bfaf134d9693fdbbad",
+            "size": 27661
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/3050d-hd-3.ppm",
+            "sha256": "89c2cc4b6ee74b41287d8f10746fcbc7420969ca8a5b91bfaf134d9693fdbbad",
+            "size": 27661
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "3050d-hd-4.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3050d-hd-4.ppm",
+            "sha256": "056aacb741bb22c09d174c3c8bac840a8d852eedf2abc5ce137759c312524515",
+            "size": 49167
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/3050d-hd-4.ppm",
+            "sha256": "056aacb741bb22c09d174c3c8bac840a8d852eedf2abc5ce137759c312524515",
+            "size": 49167
+          },
+          "bytes_exact": true
+        }
+      ],
+      "optional_runtime_original_details": []
+    },
+    {
+      "asset": "3050f",
+      "Original_and_all4_native_dimensions_indices_exact": true,
+      "source_palette": "PALETTE_DAT",
+      "source_palette_SHA": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "historical_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/actual-once-SourceF-variant2/actual-indexed-source-and-scales.json",
+        "sha256": "e8fdfdb0c7ba8a80eab43fdb1518682b348ca9e06bc2181c74a9926776152a93",
+        "size": 895431
+      },
+      "current_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/actual-indexed-source-and-scales.json",
+        "sha256": "54395a1218f8e2dcf78caecfe266e7ba86d4bfeac92bb99580bd6071dac3f762",
+        "size": 3137275
+      },
+      "full_Original_and_native_PPM_byte_equality": [
+        {
+          "name": "3050f-original.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3050f-original.ppm",
+            "sha256": "be8a51cc79ba05417ce84273ee4ec5503141c247b2abf59bdaa62ecb22c58875",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/actual-once-SourceF-variant2/3050f-original.ppm",
+            "sha256": "be8a51cc79ba05417ce84273ee4ec5503141c247b2abf59bdaa62ecb22c58875",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "3050f-hd-1.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3050f-hd-1.ppm",
+            "sha256": "fdf9fba41e8f0186c8d596727f35bf1769d09a0dba7649295fbfb4e066350ee7",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/actual-once-SourceF-variant2/3050f-hd-1.ppm",
+            "sha256": "fdf9fba41e8f0186c8d596727f35bf1769d09a0dba7649295fbfb4e066350ee7",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "3050f-hd-2.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3050f-hd-2.ppm",
+            "sha256": "4dcd82b93c9a3b663177d9cbbec6fc89ba4cc6dbd2438846979f613194d15093",
+            "size": 12301
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/actual-once-SourceF-variant2/3050f-hd-2.ppm",
+            "sha256": "4dcd82b93c9a3b663177d9cbbec6fc89ba4cc6dbd2438846979f613194d15093",
+            "size": 12301
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "3050f-hd-3.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3050f-hd-3.ppm",
+            "sha256": "6242f87bb753a15940e5bf8a70563e3a78645c907e8cc45392b049ca53533340",
+            "size": 27661
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/actual-once-SourceF-variant2/3050f-hd-3.ppm",
+            "sha256": "6242f87bb753a15940e5bf8a70563e3a78645c907e8cc45392b049ca53533340",
+            "size": 27661
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "3050f-hd-4.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3050f-hd-4.ppm",
+            "sha256": "28f4cf82b5cc81ead6f418043af077236e525d1b7d12ce8a502f88865c2656ee",
+            "size": 49167
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/actual-once-SourceF-variant2/3050f-hd-4.ppm",
+            "sha256": "28f4cf82b5cc81ead6f418043af077236e525d1b7d12ce8a502f88865c2656ee",
+            "size": 49167
+          },
+          "bytes_exact": true
+        }
+      ],
+      "optional_runtime_original_details": [
+        [
+          28,
+          12
+        ],
+        [
+          29,
+          12
+        ]
+      ]
+    },
+    {
+      "asset": "30510",
+      "Original_and_all4_native_dimensions_indices_exact": true,
+      "source_palette": "PALETTE_DAT",
+      "source_palette_SHA": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "historical_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/actual-indexed-source-and-scales.json",
+        "sha256": "4046821472ad414684f3366f0ab5acdb2344d4db8e0c3f7a55044ae95ee48df7",
+        "size": 3137247
+      },
+      "current_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/actual-indexed-source-and-scales.json",
+        "sha256": "54395a1218f8e2dcf78caecfe266e7ba86d4bfeac92bb99580bd6071dac3f762",
+        "size": 3137275
+      },
+      "full_Original_and_native_PPM_byte_equality": [
+        {
+          "name": "30510-original.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30510-original.ppm",
+            "sha256": "5c430a6657ac8ac6ce55f795ce33447f456b27b0059008ae94ff08d437f4550e",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30510-original.ppm",
+            "sha256": "5c430a6657ac8ac6ce55f795ce33447f456b27b0059008ae94ff08d437f4550e",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30510-hd-1.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30510-hd-1.ppm",
+            "sha256": "2f461d059f6915044372e39a7a99c22aea70fd82b59bd8db0cb1402eba49d454",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30510-hd-1.ppm",
+            "sha256": "2f461d059f6915044372e39a7a99c22aea70fd82b59bd8db0cb1402eba49d454",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30510-hd-2.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30510-hd-2.ppm",
+            "sha256": "0cfb39c4015f7f4f80142fc2fc83808f580d5e8748445d7a003898ae2a76bed5",
+            "size": 12301
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30510-hd-2.ppm",
+            "sha256": "0cfb39c4015f7f4f80142fc2fc83808f580d5e8748445d7a003898ae2a76bed5",
+            "size": 12301
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30510-hd-3.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30510-hd-3.ppm",
+            "sha256": "d37d367a3b9befe0b1db93c0752ed34b7cf3343adaabab20ddb423c70bd56c5b",
+            "size": 27661
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30510-hd-3.ppm",
+            "sha256": "d37d367a3b9befe0b1db93c0752ed34b7cf3343adaabab20ddb423c70bd56c5b",
+            "size": 27661
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30510-hd-4.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30510-hd-4.ppm",
+            "sha256": "e5ee8a6d56bb57744fad3a04d34e633aef15976b8b1b78c280e918814aca6981",
+            "size": 49167
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30510-hd-4.ppm",
+            "sha256": "e5ee8a6d56bb57744fad3a04d34e633aef15976b8b1b78c280e918814aca6981",
+            "size": 49167
+          },
+          "bytes_exact": true
+        }
+      ],
+      "optional_runtime_original_details": []
+    },
+    {
+      "asset": "30511",
+      "Original_and_all4_native_dimensions_indices_exact": true,
+      "source_palette": "PALETTE_DAT",
+      "source_palette_SHA": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "historical_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/actual-indexed-source-and-scales.json",
+        "sha256": "4046821472ad414684f3366f0ab5acdb2344d4db8e0c3f7a55044ae95ee48df7",
+        "size": 3137247
+      },
+      "current_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/actual-indexed-source-and-scales.json",
+        "sha256": "54395a1218f8e2dcf78caecfe266e7ba86d4bfeac92bb99580bd6071dac3f762",
+        "size": 3137275
+      },
+      "full_Original_and_native_PPM_byte_equality": [
+        {
+          "name": "30511-original.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30511-original.ppm",
+            "sha256": "d2c883b2d832e4e1d654173a89599c042cf91f3159fda3b0d37500f3eefe0f12",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30511-original.ppm",
+            "sha256": "d2c883b2d832e4e1d654173a89599c042cf91f3159fda3b0d37500f3eefe0f12",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30511-hd-1.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30511-hd-1.ppm",
+            "sha256": "16021f64fde0fb6fa62d6e1780bd1b7499ff9271313cf1c8f42137fad2801d76",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30511-hd-1.ppm",
+            "sha256": "16021f64fde0fb6fa62d6e1780bd1b7499ff9271313cf1c8f42137fad2801d76",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30511-hd-2.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30511-hd-2.ppm",
+            "sha256": "65d8cdde8ec424163b158f500b20f2d6f5f5d0e1fc69c2fc3e2761c4216dbd3e",
+            "size": 12301
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30511-hd-2.ppm",
+            "sha256": "65d8cdde8ec424163b158f500b20f2d6f5f5d0e1fc69c2fc3e2761c4216dbd3e",
+            "size": 12301
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30511-hd-3.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30511-hd-3.ppm",
+            "sha256": "4ba08a984a6bb0e37b0c62f4d18d6e481cdb7b79f6e8a9735cbd2b44cdc11f11",
+            "size": 27661
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30511-hd-3.ppm",
+            "sha256": "4ba08a984a6bb0e37b0c62f4d18d6e481cdb7b79f6e8a9735cbd2b44cdc11f11",
+            "size": 27661
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30511-hd-4.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30511-hd-4.ppm",
+            "sha256": "2fcdc4ca9ef60aa250de30e2e4e8eaeb604c29fd549c9d40536d7013afe9b209",
+            "size": 49167
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30511-hd-4.ppm",
+            "sha256": "2fcdc4ca9ef60aa250de30e2e4e8eaeb604c29fd549c9d40536d7013afe9b209",
+            "size": 49167
+          },
+          "bytes_exact": true
+        }
+      ],
+      "optional_runtime_original_details": []
+    },
+    {
+      "asset": "30513",
+      "Original_and_all4_native_dimensions_indices_exact": true,
+      "source_palette": "PALETTE_DAT",
+      "source_palette_SHA": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "historical_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/actual-indexed-source-and-scales.json",
+        "sha256": "4046821472ad414684f3366f0ab5acdb2344d4db8e0c3f7a55044ae95ee48df7",
+        "size": 3137247
+      },
+      "current_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/actual-indexed-source-and-scales.json",
+        "sha256": "54395a1218f8e2dcf78caecfe266e7ba86d4bfeac92bb99580bd6071dac3f762",
+        "size": 3137275
+      },
+      "full_Original_and_native_PPM_byte_equality": [
+        {
+          "name": "30513-original.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30513-original.ppm",
+            "sha256": "2f0aa47793e4b56478f55a8ea2fabf42e2fe8a54bd8e259b880c9e04b33b2285",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30513-original.ppm",
+            "sha256": "2f0aa47793e4b56478f55a8ea2fabf42e2fe8a54bd8e259b880c9e04b33b2285",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30513-hd-1.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30513-hd-1.ppm",
+            "sha256": "eea02c32f528000b5d3261019bcd39e8a84e1610c4458d396266556a7a7634b4",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30513-hd-1.ppm",
+            "sha256": "eea02c32f528000b5d3261019bcd39e8a84e1610c4458d396266556a7a7634b4",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30513-hd-2.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30513-hd-2.ppm",
+            "sha256": "345aeba7be9e3eddbb9562d9dd96c1d56b5b7b21f697c73d3c7dec9414d20704",
+            "size": 12301
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30513-hd-2.ppm",
+            "sha256": "345aeba7be9e3eddbb9562d9dd96c1d56b5b7b21f697c73d3c7dec9414d20704",
+            "size": 12301
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30513-hd-3.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30513-hd-3.ppm",
+            "sha256": "46567fa63f89433300ca072c2c8e91d5c7891df0db2fe986b6741ebd2afb613e",
+            "size": 27661
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30513-hd-3.ppm",
+            "sha256": "46567fa63f89433300ca072c2c8e91d5c7891df0db2fe986b6741ebd2afb613e",
+            "size": 27661
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30513-hd-4.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30513-hd-4.ppm",
+            "sha256": "d0b116ab1b31aa0a30385c7ac193b5204e8af5707df6427b2ad3dea94df65285",
+            "size": 49167
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30513-hd-4.ppm",
+            "sha256": "d0b116ab1b31aa0a30385c7ac193b5204e8af5707df6427b2ad3dea94df65285",
+            "size": 49167
+          },
+          "bytes_exact": true
+        }
+      ],
+      "optional_runtime_original_details": []
+    },
+    {
+      "asset": "30519",
+      "Original_and_all4_native_dimensions_indices_exact": true,
+      "source_palette": "PALETTE_DAT",
+      "source_palette_SHA": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "historical_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/actual-indexed-source-and-scales.json",
+        "sha256": "4046821472ad414684f3366f0ab5acdb2344d4db8e0c3f7a55044ae95ee48df7",
+        "size": 3137247
+      },
+      "current_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/actual-indexed-source-and-scales.json",
+        "sha256": "54395a1218f8e2dcf78caecfe266e7ba86d4bfeac92bb99580bd6071dac3f762",
+        "size": 3137275
+      },
+      "full_Original_and_native_PPM_byte_equality": [
+        {
+          "name": "30519-original.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30519-original.ppm",
+            "sha256": "c46b42c57edff795aa8555058a52aa6478a6eaa9bdd6836c4d564d7185d576ae",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30519-original.ppm",
+            "sha256": "c46b42c57edff795aa8555058a52aa6478a6eaa9bdd6836c4d564d7185d576ae",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30519-hd-1.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30519-hd-1.ppm",
+            "sha256": "21ba9e13e8390f9045365ce89ff50f2eeafc039a28a44bf086d2a9e71398017e",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30519-hd-1.ppm",
+            "sha256": "21ba9e13e8390f9045365ce89ff50f2eeafc039a28a44bf086d2a9e71398017e",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30519-hd-2.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30519-hd-2.ppm",
+            "sha256": "229d691ecddcba6d3676d0c9df0fef218b5014f254795f64be455fdf51616777",
+            "size": 12301
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30519-hd-2.ppm",
+            "sha256": "229d691ecddcba6d3676d0c9df0fef218b5014f254795f64be455fdf51616777",
+            "size": 12301
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30519-hd-3.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30519-hd-3.ppm",
+            "sha256": "e7b0e374d66ea4b50d684acd7f9fad5e1612c13b2ae941be8464dbabf8d0a731",
+            "size": 27661
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30519-hd-3.ppm",
+            "sha256": "e7b0e374d66ea4b50d684acd7f9fad5e1612c13b2ae941be8464dbabf8d0a731",
+            "size": 27661
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "30519-hd-4.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/30519-hd-4.ppm",
+            "sha256": "8c2bde83bc84adfdd9015f4f0a73f391b486da32b049eecf23226dc4cb16df6c",
+            "size": 49167
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/30519-hd-4.ppm",
+            "sha256": "8c2bde83bc84adfdd9015f4f0a73f391b486da32b049eecf23226dc4cb16df6c",
+            "size": 49167
+          },
+          "bytes_exact": true
+        }
+      ],
+      "optional_runtime_original_details": []
+    },
+    {
+      "asset": "3051c",
+      "Original_and_all4_native_dimensions_indices_exact": true,
+      "source_palette": "PALETTE_DAT",
+      "source_palette_SHA": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "historical_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/actual-once-SourceF-variant2/actual-indexed-source-and-scales.json",
+        "sha256": "e8fdfdb0c7ba8a80eab43fdb1518682b348ca9e06bc2181c74a9926776152a93",
+        "size": 895431
+      },
+      "current_actual_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/actual-indexed-source-and-scales.json",
+        "sha256": "54395a1218f8e2dcf78caecfe266e7ba86d4bfeac92bb99580bd6071dac3f762",
+        "size": 3137275
+      },
+      "full_Original_and_native_PPM_byte_equality": [
+        {
+          "name": "3051c-original.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3051c-original.ppm",
+            "sha256": "ceb530688352375f9ae1cab9d4b80fb1a1921ae1a34d7cc2bccd742ea75de7ee",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/actual-once-SourceF-variant2/3051c-original.ppm",
+            "sha256": "ceb530688352375f9ae1cab9d4b80fb1a1921ae1a34d7cc2bccd742ea75de7ee",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "3051c-hd-1.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3051c-hd-1.ppm",
+            "sha256": "d9fba458012ebcd5cf00a903f3a263311ab45883e01a42eac1d3358ccb05df18",
+            "size": 3085
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/actual-once-SourceF-variant2/3051c-hd-1.ppm",
+            "sha256": "d9fba458012ebcd5cf00a903f3a263311ab45883e01a42eac1d3358ccb05df18",
+            "size": 3085
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "3051c-hd-2.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3051c-hd-2.ppm",
+            "sha256": "026cb7ed3bf20e1652c59a542f98a57f13ce0b5c16dbda8201539e88262a6732",
+            "size": 12301
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/actual-once-SourceF-variant2/3051c-hd-2.ppm",
+            "sha256": "026cb7ed3bf20e1652c59a542f98a57f13ce0b5c16dbda8201539e88262a6732",
+            "size": 12301
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "3051c-hd-3.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3051c-hd-3.ppm",
+            "sha256": "80b5b0cc18a8038e45c65981a6c3e9b88e077260db208252739b0b8ed6cbfb68",
+            "size": 27661
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/actual-once-SourceF-variant2/3051c-hd-3.ppm",
+            "sha256": "80b5b0cc18a8038e45c65981a6c3e9b88e077260db208252739b0b8ed6cbfb68",
+            "size": 27661
+          },
+          "bytes_exact": true
+        },
+        {
+          "name": "3051c-hd-4.ppm",
+          "current": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain7-portable-sourceg2-currentqa-h5596-preparation-20261019-v1/actual-once-current-SourceG2-intrinsic7/3051c-hd-4.ppm",
+            "sha256": "bb5763c117f7ec3d90e9ec6eeaec09b16d3a67dcc9da1f2ff71f7d82e6332bcb",
+            "size": 49167
+          },
+          "historical_SourceF": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/actual-once-SourceF-variant2/3051c-hd-4.ppm",
+            "sha256": "bb5763c117f7ec3d90e9ec6eeaec09b16d3a67dcc9da1f2ff71f7d82e6332bcb",
+            "size": 49167
+          },
+          "bytes_exact": true
+        }
+      ],
+      "optional_runtime_original_details": [
+        [
+          19,
+          3
+        ],
+        [
+          19,
+          4
+        ],
+        [
+          19,
+          27
+        ],
+        [
+          19,
+          28
+        ]
+      ]
+    }
+  ],
+  "scope": "One current G2 helper actual invocation for this exact portable candidate. Historical SourceF plain7/two-variant banks remain literal SourceF. Array equality carries reviewed pixels; no old execution relabelled current and no new context rasterization.",
+  "no_new_G2_compile": true
+}

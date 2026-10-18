@@ -1,0 +1,187 @@
+{
+  "diagnostics": [],
+  "frames": [
+    {
+      "asset": "20582",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              32,
+              32
+            ],
+            "centroid": [
+              15.5,
+              15.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 1024
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              64,
+              64
+            ],
+            "centroid": [
+              31.5,
+              31.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 4096
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              96,
+              96
+            ],
+            "centroid": [
+              47.5,
+              47.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 9216
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              128,
+              128
+            ],
+            "centroid": [
+              63.5,
+              63.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 16384
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_mask": {
+        "bounds": [
+          0,
+          0,
+          32,
+          32
+        ],
+        "centroid": [
+          15.5,
+          15.5
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 1024
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "4e36111f3f91b9129a60103156ec22498ff3f8003e76d01334f31f137b329d8c"
+    }
+  ],
+  "limitation": "Gallery validation does not prove live scene reachability, terrain seam correctness or artistic fidelity. Opaque sprites have trivial alpha-mask overlap; compare visible source geometry manually.",
+  "method": "actual Rust HdAssets::load and sprite at scales 1..4; Catalog palette; no artwork edits",
+  "validated_frames": 1
+}

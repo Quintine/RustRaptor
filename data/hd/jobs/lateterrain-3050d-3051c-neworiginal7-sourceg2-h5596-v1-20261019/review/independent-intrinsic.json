@@ -1,0 +1,344 @@
+{
+  "status": "QUALIFIED_DIFFERENT_COMPLETE7_INTRINSIC_WHOLE_MATERIAL_WITH_LIMITS",
+  "artist": "/root/grating_pair",
+  "reviewer": "/root/terrain_context_review",
+  "different_from_artist": true,
+  "QUALIFIED": 7,
+  "HOLD": 0,
+  "selected_assets": [
+    "3050d",
+    "3050f",
+    "30510",
+    "30511",
+    "30513",
+    "30519",
+    "3051c"
+  ],
+  "actual_author_report": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/CLOSED-COMPLETE7-AUTHOR-QUALIFIED-WITH-EXACT-SIX-ORIGINAL-LAVENDER-CELLS-NOT-ADMISSION.json",
+    "sha256": "bffde4c984ef7943bed562ba6af3b1a687d6f60efe21ee1cbf1a6d7080f897f8",
+    "size": 4171,
+    "mtime_ns": 1792315875616002542,
+    "mode": 33188
+  },
+  "candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/final-combined7-native-proposal/hd.json",
+    "sha256": "09cf433882388e174fb865e503f60c1dc3fd32ea234aaaaa845470032bd3bce3",
+    "size": 5071,
+    "mtime_ns": 1792315875570728802,
+    "mode": 33188
+  },
+  "raw": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/final-combined7-native-proposal/ACTUAL-ONE-SOURCE-PRIMARY-LATE7-RETURN-UNTOUCHED.png",
+    "sha256": "f4bffa43f093c33ad9dbf002e65c32df1d89da142f3e0c818007903d5bd30c3e",
+    "bytes": 2732679,
+    "mtime_ns": 1792315580096238704
+  },
+  "actual_routing": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/COMPLETE7-EXACT-ACTUAL-BANK-ROUTING-INTERFACE.json",
+    "sha256": "0662534019158a560b6ee427ec85979055660698bde05fa3913591488df0ff1b",
+    "size": 20128,
+    "mtime_ns": 1792315875615371557,
+    "mode": 33188
+  },
+  "saved_authentication": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-independent-lateTerrain7-whole-lavender-SourceF-material-review-20261018-v1/INDEPENDENT-COMPLETE7-BANK-ROUTING-SOURCE-ORIGINAL6-CYAN254-AND74-SAVED-PANES-AUDIT.json",
+    "sha256": "28010e0e4fc33fa399026e2ad754c6e7a48101c687b4704ca247c61bf09a5929",
+    "size": 22611,
+    "mtime_ns": 1792317210301829956,
+    "mode": 33188
+  },
+  "records": [
+    {
+      "asset": "3050d",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "whole_material_observation": "The small bright triangular gray tip remains a single feature in the lower/right rubble field, separate from the upper-left green patch and broad black wedge. Gray chips are more individual and much brighter at3\u20134; the Source composition is still recognizable.",
+      "all_native_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected_frame": {
+        "frame": 0,
+        "file": "ACTUAL-ONE-SOURCE-PRIMARY-LATE7-RETURN-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "cce0caf5f3abbe669cf80f4b2b2bc0435f5c5a5f95580a9533e19d3a5c3e9136",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 0,
+          "row": 0
+        }
+      },
+      "retained_cells": [],
+      "held": false
+    },
+    {
+      "asset": "3050f",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "whole_material_observation": "The broad green left field and jagged gray right/top continuation stay spatially distinct. The full horizontal lavender pair is visible at all native scales after retention, separate from the two exact cyan254 markers; no deepening or extra bridge was introduced around the mark. Fine green grain is brighter than Original.",
+      "all_native_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected_frame": {
+        "frame": 0,
+        "file": "ACTUAL-ONE-SOURCE-PRIMARY-LATE7-RETURN-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "f10ec2a6d20eace48feceede4d41ce01f82aee7c52c35c33caf5cfe47c487442",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 1,
+          "row": 0
+        },
+        "original_detail_cells": [
+          [
+            28,
+            12
+          ],
+          [
+            29,
+            12
+          ]
+        ]
+      },
+      "retained_cells": [
+        [
+          28,
+          12
+        ],
+        [
+          29,
+          12
+        ]
+      ],
+      "held": false
+    },
+    {
+      "asset": "30510",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "whole_material_observation": "The forked brown central remnant keeps its broad top/left/right branches, surrounding dark gaps and narrow lower gray continuation. Generated rubble adds strong brown relief and local highlights, with clearer granular material at3\u20134 and softer fine branches at1.",
+      "all_native_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected_frame": {
+        "frame": 0,
+        "file": "ACTUAL-ONE-SOURCE-PRIMARY-LATE7-RETURN-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "a3ff97a55f0bd0abafb42dabfaa233d46cf140bcdda1e12504b28b9a2286f7f3",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 2,
+          "row": 0
+        }
+      },
+      "retained_cells": [],
+      "held": false
+    },
+    {
+      "asset": "30511",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "whole_material_observation": "The green wedge toward the right remains continuous and separate from the left gray blade and dark left/bottom space. Brighter chips and much denser fine green grain alter texture but preserve the distinctive diagonal division.",
+      "all_native_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected_frame": {
+        "frame": 0,
+        "file": "ACTUAL-ONE-SOURCE-PRIMARY-LATE7-RETURN-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "59ec9e9093e7460edae409fb94f10e807fd556652a9d56a335b2e2830718637c",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 3,
+          "row": 0
+        }
+      },
+      "retained_cells": [],
+      "held": false
+    },
+    {
+      "asset": "30513",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "whole_material_observation": "The central brown remnant retains its asymmetric fork and dark holes, ringed by green and broken gray pieces. The lower gray/red corner structure stays recognizable. Brighter gray rubble and greener surrounding patches make a stronger material interpretation than Original.",
+      "all_native_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected_frame": {
+        "frame": 0,
+        "file": "ACTUAL-ONE-SOURCE-PRIMARY-LATE7-RETURN-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "a2ad880f87330985403fe826c44a1eb7a0e3046da1a095043fb4eb9275a0a278",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 0,
+          "row": 1
+        }
+      },
+      "retained_cells": [],
+      "held": false
+    },
+    {
+      "asset": "30519",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "whole_material_observation": "The cross-like gray structural remains around the wide central black break retain their four-direction composition; red/orange corner fields remain distinct. Small central green flecks are stronger and finer, while black openings stay legible.",
+      "all_native_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected_frame": {
+        "frame": 0,
+        "file": "ACTUAL-ONE-SOURCE-PRIMARY-LATE7-RETURN-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "a4c2726ba5e05a2a4338a3df3d5856572dd5459fbc7b1d2d11995a4750f68597",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 1,
+          "row": 1
+        }
+      },
+      "retained_cells": [],
+      "held": false
+    },
+    {
+      "asset": "3051c",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "whole_material_observation": "The dark center between broken upper/lower gray stalks remains dominant. Both full vertical lavender pairs read at1\u20134 and stay separate from the original cyan254 pair. Retained marks are visibly simple Source shapes surrounded by detailed gray rubble, accurately disclosed as Original rather than generated surface.",
+      "all_native_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected_frame": {
+        "frame": 0,
+        "file": "ACTUAL-ONE-SOURCE-PRIMARY-LATE7-RETURN-UNTOUCHED.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "ee5f826ecee3d84e5cd76902cde8b04984db2a6a91cabbaf02e20349190daa96",
+        "atlas_grid": {
+          "columns": 4,
+          "rows": 2,
+          "column": 2,
+          "row": 1
+        },
+        "original_detail_cells": [
+          [
+            19,
+            3
+          ],
+          [
+            19,
+            4
+          ],
+          [
+            19,
+            27
+          ],
+          [
+            19,
+            28
+          ]
+        ]
+      },
+      "retained_cells": [
+        [
+          19,
+          3
+        ],
+        [
+          19,
+          4
+        ],
+        [
+          19,
+          27
+        ],
+        [
+          19,
+          28
+        ]
+      ],
+      "held": false
+    }
+  ],
+  "physical_scope": {
+    "full_untouched1774x887_atlas": true,
+    "plain5_full_native_boards": 5,
+    "plain5_lossless_integerNN_boards": 5,
+    "variant2_allnative_three_role_boards": 8,
+    "total_images": 19,
+    "all7Original_and_all4_native_bodies": true,
+    "tool_image_downsampling": false,
+    "scope_note": "Five selected plain assets were read whole at actual unresampled native sizes and separately in integerNN presentation. Two variant assets were read allfour complete OriginalScaleNx/plain/retained boards with integer replication. No cropped-only physical pass."
+  },
+  "material_limits": [
+    "Brighter gray granular debris and stronger green hue/body relative to the Original are visible; fine native1 details are softer while3\u20134 have more individually articulated chips.",
+    "Brown forked remnants30510/30513 have stronger relief/highlights; this is a material interpretation, not Source RGB equivalence.",
+    "Six whole semantic lavender Source cells are retained:3050f horizontal2(index114,113),3051c two vertical pairs4(index113). Their180 SourceNx samples receive no generated-HD credit.",
+    "Cyan254 class and geometry are inherited exact logical Original class footprints (SourceNN class ownership, distinct from the retained lavender SourceNx sampling), not generated functional artwork. The six retained lavender cells are ordinary Source indices113/114.",
+    "All seven are intrinsic-qualified here. Genuine map placement, neighbor joins, settled transitions, natural World timing and all mission/difficulty results remain unreviewed in this scope.",
+    "One genuine untouched seven-target atlas plus actual plainF7 and separate semanticF2 banks are used. No combined-bank rerender, new generation, new RGB cleanup or altered Source canvas/origin is claimed."
+  ],
+  "retained_Original_cells": 6,
+  "retained_Original_samples": 180,
+  "retained_Original_generated_HD_credit": 0,
+  "cyan254_exact_samples": 120,
+  "intrinsic_only": true,
+  "genuine_context_review": false,
+  "canonical_registration": false,
+  "new_engine_cleanup_image_QA_World": 0,
+  "utc": "2026-10-18T09:53:30.302335+00:00"
+}

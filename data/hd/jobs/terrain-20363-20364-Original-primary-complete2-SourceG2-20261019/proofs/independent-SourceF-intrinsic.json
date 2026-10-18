@@ -1,0 +1,186 @@
+{
+  "assets": [
+    "20363",
+    "20364"
+  ],
+  "author": "/root/ridge_pair",
+  "author_report_sha256": "14b2bf258d7a4a1ecb8e42987e455925f290d84943d5e169acc74cd132ff4343",
+  "canonical_writes": 0,
+  "different_from_author": true,
+  "existing_actual_QA_sha256": "b0f10078571753672cc0a45ed79aa14ea860c3bc06c8f0f80076808dc56a96ed",
+  "existing_actual_bank_sha256": "91b1cbccf64a6e3a53498ad9d1e2ea66674fb055e03ee62f15c59a36370e27f3",
+  "findings": {
+    "20363": "The dark charcoal continuous horizontal strips retain the full Source square, distinct darker left/bottom contacts and irregular shallow wear. No new internal brick segmentation, box, window, weapon or other structural element is visible. Sharper raised edges are qualified.",
+    "20364": "The pale neutral-gray counterpart preserves the lighter Source identity and continuous horizontal rib orientation. Fine wear is coherent; no internal short vertical panel joints or discrete new structural object. The narrow outer bevels and stronger relief require real neighbor review."
+  },
+  "held_frames": 0,
+  "limits": [
+    "Intrinsic Source/raw/native material review only; no genuine terrain-neighborhood or state-transition context reviewed. Context review and Root physical approval remain required before admission.",
+    "Continuous generated ridges have sharper overhead highlights and greater apparent relief than the irregular low-resolution Source strips. Both outer vertical edge bevels remain visible and may affect neighboring tile continuity.",
+    "The dark tile mean luma is about4.3 below Source while the light tile stays about0.8 below Source; the dark/light identities remain clearly separated at every actual native scale. This is not exact per-pixel or tonal equality.",
+    "Native1 softens fine irregular Source scuffs; native3/4 expose much finer manufactured ribbing and weathering. The new raw lacks the prior held internal short vertical brick joints, but seamless tiling or exact ridge phase alignment is not established here.",
+    "Nearest-neighbor128 top-row presentation of Original is only a display enlargement, not an actual SourceNx render. The bottom-row saved native1/2/3/4 bodies and all pixels were reviewed and independently authenticated.",
+    "Earlier first-atlas brick/plate-joint HOLD and executed whole16-grid-shift HOLD remain separate and unused. No cleanup, gain changes, additional palette QA, World, new generation, compiler, canonical data, Git or gameplay actions."
+  ],
+  "new_QA_World_cleanup_imagegen_compiler_calls": 0,
+  "physical_reviewed_pages": [
+    {
+      "dimensions": [
+        1024,
+        512
+      ],
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/ONLY-AUTHENTIC-20363-20364-ORIGINALS-NN16-2X1.png",
+      "sha256": "7ef302e402fdd27404e66c617e3d79e478fb34978691567a54f3f4ea99d69a98"
+    },
+    {
+      "dimensions": [
+        1774,
+        887
+      ],
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/ATLAS-ORIGINAL-PRIMARY-PAIR-RETURNED-UNTOUCHED.png",
+      "sha256": "8c261e3e317bb4e2a268175aa6cc1ddd79e33c35ec3d90e8b1aff0de7293ce5f"
+    },
+    {
+      "dimensions": [
+        740,
+        330
+      ],
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/file-only-whole-native-review-pages/20363-whole-Original-and-actual-all1to4.png",
+      "sha256": "313a30233f3c88a29967ea0e253e436c14adb0153dc5c9d6e924268142e59530"
+    },
+    {
+      "dimensions": [
+        740,
+        330
+      ],
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/file-only-whole-native-review-pages/20364-whole-Original-and-actual-all1to4.png",
+      "sha256": "a10d071da60e55335e36967f38b2253364336e044ffe5945f9a812863046bb93"
+    }
+  ],
+  "physical_scope": "Whole Original-only1024x512 source-reference sheet, whole untouched1774x887 raw, both whole allnative comparison pages. Ten complete Source/native bodies (2Original+8native), all native scales1..4.",
+  "qualified_frames": 2,
+  "reviewed_utc": "2026-10-18T09:25:35.079140+00:00",
+  "reviewer": "/root/ship_portability",
+  "source_and_bank_checks": [
+    {
+      "all_saved_native_PPM_RGB_equals_actual_indexed_bank": true,
+      "asset": "20363",
+      "authentic_source_indices_and_saved_Original_RGB_exact": true,
+      "scales": [
+        {
+          "dimensions": [
+            32,
+            32
+          ],
+          "mean_luma": 76.07178203125,
+          "pixels_verified": 1024,
+          "saved_PPM_sha256": "1690625faaeee2fb3683bd2df5a0b178b92e993a9ecb966941ad33b6944faab1",
+          "scale": 0
+        },
+        {
+          "dimensions": [
+            32,
+            32
+          ],
+          "mean_luma": 71.80368828125,
+          "pixels_verified": 1024,
+          "saved_PPM_sha256": "0cff5f38ddae77f3cb325bb6e4ecdf27aeea7df02d374aebb6e4a90a84fdab71",
+          "scale": 1
+        },
+        {
+          "dimensions": [
+            64,
+            64
+          ],
+          "mean_luma": 71.714240625,
+          "pixels_verified": 4096,
+          "saved_PPM_sha256": "fa492504e887bc322fb245ec31fae47247fd14112de9e7ee730bc4fc4b943386",
+          "scale": 2
+        },
+        {
+          "dimensions": [
+            96,
+            96
+          ],
+          "mean_luma": 71.74786877170139,
+          "pixels_verified": 9216,
+          "saved_PPM_sha256": "307d311cff3028156c68933c0fead09de9a619fd62707917a7b2b11c5b3f630a",
+          "scale": 3
+        },
+        {
+          "dimensions": [
+            128,
+            128
+          ],
+          "mean_luma": 71.76506939697265,
+          "pixels_verified": 16384,
+          "saved_PPM_sha256": "dba45bc524285fd6c92af0022ceab978203bd924bcb093b7a74300adba307e92",
+          "scale": 4
+        }
+      ],
+      "source_path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1374",
+      "source_sha256": "1562a0cd7c634e475b969676e47b6e01635d0a98fe9902bbc92dd061eca8c562"
+    },
+    {
+      "all_saved_native_PPM_RGB_equals_actual_indexed_bank": true,
+      "asset": "20364",
+      "authentic_source_indices_and_saved_Original_RGB_exact": true,
+      "scales": [
+        {
+          "dimensions": [
+            32,
+            32
+          ],
+          "mean_luma": 133.4815794921875,
+          "pixels_verified": 1024,
+          "saved_PPM_sha256": "163ac33ee5be7435db1687e1a6f5277597de0a714e9f07d95ecc299aef691da4",
+          "scale": 0
+        },
+        {
+          "dimensions": [
+            32,
+            32
+          ],
+          "mean_luma": 132.764365625,
+          "pixels_verified": 1024,
+          "saved_PPM_sha256": "3d92eea2d6318dc53ac77ec252b819107658a933c73935c1ad7dd09b94f69e10",
+          "scale": 1
+        },
+        {
+          "dimensions": [
+            64,
+            64
+          ],
+          "mean_luma": 132.65341069335938,
+          "pixels_verified": 4096,
+          "saved_PPM_sha256": "fd524cffd072b00d96615db4174d0588d5e2a57aecd51c0cd76675c521c36ba3",
+          "scale": 2
+        },
+        {
+          "dimensions": [
+            96,
+            96
+          ],
+          "mean_luma": 132.58831009114584,
+          "pixels_verified": 9216,
+          "saved_PPM_sha256": "a52c8dc58fa1ccd2478e67ded45fcb62dc159a904fe0237ca12bfe8963cbbde7",
+          "scale": 3
+        },
+        {
+          "dimensions": [
+            128,
+            128
+          ],
+          "mean_luma": 132.54589178466796,
+          "pixels_verified": 16384,
+          "saved_PPM_sha256": "235eeb08c1c96d7ac454cc14ae454f90c030474b5a68483548f707196cf17f15",
+          "scale": 4
+        }
+      ],
+      "source_path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1375",
+      "source_sha256": "a27ba631b4579c8f58fd2e9ccc501126042c03dc904820fac47e1cde6d364d91"
+    }
+  ],
+  "status": "QUALIFIED_COMPLETE2_INTRINSIC_WITH_LIMITS_NOT_ADMITTED",
+  "untouched_raw_sha256": "8c261e3e317bb4e2a268175aa6cc1ddd79e33c35ec3d90e8b1aff0de7293ce5f"
+}

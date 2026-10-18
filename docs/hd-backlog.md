@@ -1,5 +1,17 @@
 # Original artwork HD backlog
 
+Current artwork checkpoint — 19 October 2026: **5,613 reviewed pictures in 3,716 complete sequences**, including **4,426 Terrain pictures**. **140 originals await approval**: 109 Terrain, 29 enemies/ground objects and two UI/other pictures.
+
+This append approves exactly 17 pictures: unused catalogue Terrain20582, two ridge tiles, four shallow structural tiles, seven destroyed-terrain pictures and three dark-ship pictures. Functional Original details retain separate credit; the unused asset has no invented gameplay context. New SourceG2 intrinsic measurements match the reviewed historical pixels. Older SourceF context captures keep their true epoch, with finite input carries and visible material qualifications recorded separately.
+
+Installed checks pass for all **6,449 catalog assets** and **5,613 HD frames with zero rejects**. The runtime has **10,885 data files / 8,728,062,352 bytes**; 196 additions comprise 191 job files and five Root admission records. All five staged read-only checks passed before one private registrar main. A prior pre-start authoring/metadata stop remains preserved. The maintained HD-tool suite passed **293 synthetic tests**. Current SourceG2 binaries, all 45 mods and all 42 SD/HD mission briefings are unchanged by this artwork append. Two actual installed SourceG2 SDL gameplay controls—Original Sector 1 Wave 2 at 180 frames and Sector 3 Wave 5 at 600 frames—exited successfully with empty stderr. Both complete 1920×1080 screenshots were reviewed; the centered 4:3 game frame and sidebars remain intact. These finite controls establish neither visibility of all 17 new pictures nor complete-mission, audible-sound, performance or native Windows results.
+
+The native Windows feature run for commit `2d95e145` succeeded; it remains dated 5,596-picture evidence, not native execution of this 5,613-picture pack. Earlier scene, menu, intro and gameplay results retain their recorded scope. New briefing illustrations add no Original remaster credit; the other five terrain proposals and private infantry work remain unapproved by this append.
+
+# Earlier H5596 checkpoint — retained verbatim
+
+# Original artwork HD backlog
+
 Current artwork/runtime checkpoint — 18 October 2026: **5,596 reviewed pictures in 3,700 complete sequences**. **157 originals await approval**: 123 Terrain, 32 enemies/ground objects and two UI/other pictures. This adds corrugated terrain (4), SHIP15G1 (3), STAG03G3 (1), green destroyed terrain (7) and the complete TARGT animation (14).
 
 Terrain uses untouched generated atlases; ship, vehicle and hatch artwork includes declared derived material and retained Original details. Functional Original samples and carried artwork earn no new generated-detail credit. Family records retain finite scene scopes, visible qualifications and the distinction between original pixel captures and later input checks.

@@ -1,0 +1,502 @@
+{
+  "status": "approved",
+  "reviewer": "Root",
+  "candidate_sha256": "390ca5697383e83804cb3f92bbac5af3b925675641f32241bcc650342701c820",
+  "frame_bindings_sha256": "a4d627725f4211caeeda1cc6ff1cf576f01fb0179503422d1fed56ee15d1187b",
+  "source_and_all_scale_visual_review": true,
+  "independent_review": true,
+  "retained_original_detail_review": {
+    "hybrid_review_scope": "catalog_only_unused_original_terrain",
+    "cells_by_asset": {
+      "20582": [
+        [
+          0,
+          31
+        ],
+        [
+          1,
+          31
+        ],
+        [
+          2,
+          31
+        ],
+        [
+          3,
+          31
+        ],
+        [
+          4,
+          31
+        ],
+        [
+          5,
+          31
+        ],
+        [
+          6,
+          31
+        ],
+        [
+          7,
+          31
+        ],
+        [
+          8,
+          31
+        ],
+        [
+          9,
+          31
+        ],
+        [
+          10,
+          31
+        ],
+        [
+          11,
+          31
+        ],
+        [
+          12,
+          31
+        ],
+        [
+          13,
+          31
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          15,
+          31
+        ],
+        [
+          16,
+          31
+        ],
+        [
+          17,
+          31
+        ],
+        [
+          18,
+          31
+        ],
+        [
+          19,
+          31
+        ],
+        [
+          20,
+          31
+        ],
+        [
+          21,
+          31
+        ],
+        [
+          22,
+          31
+        ],
+        [
+          23,
+          31
+        ],
+        [
+          24,
+          31
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          26,
+          31
+        ],
+        [
+          27,
+          31
+        ],
+        [
+          28,
+          31
+        ],
+        [
+          29,
+          31
+        ],
+        [
+          30,
+          31
+        ],
+        [
+          31,
+          31
+        ]
+      ]
+    },
+    "retained_original_not_generated_HD": true,
+    "policy_version": "retained-original-details-v2-painted0255",
+    "painted_Source_palette_domain": [
+      0,
+      255
+    ],
+    "functional_palette_effects_are_retained_Original": true,
+    "hybrid_allscale_and_genuine_context_independent_review": false,
+    "catalog_only_no_original_runtime_caller": true,
+    "catalog_only_independent_whole_material_and_allscale_review": true,
+    "frame_bindings_sha256": "a4d627725f4211caeeda1cc6ff1cf576f01fb0179503422d1fed56ee15d1187b",
+    "catalog_only_source_trace": {
+      "path": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/catalogue-unused-source-trace.json",
+      "sha256": "759445c9cd4cdabde8875cb4165c2cf35c75173e2b407d56892e4cf357fadae3"
+    },
+    "catalog_only_independent_material": {
+      "path": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/review/independent-intrinsic-portable-machine.json",
+      "sha256": "eda3d575b6bb625f8642b0e9184b03b3c754bc458e7e23cd86223cd0760f4469"
+    },
+    "catalog_only_material_contract": {
+      "status": "qualified",
+      "scope": "complete_native_picture_intrinsic_all_scales",
+      "asset": "20582",
+      "reviewer": "/root/terrain_context_review",
+      "artist": "/root/hd_terrain_set_2",
+      "preparer": "/root/remaining_catalog",
+      "qualified_frames": 1,
+      "held_frames": 0,
+      "retained_cell_count": 32,
+      "native_frame": {
+        "frame": 0,
+        "file": "jobs/coordinator-20583-exact2-Original-native-post5341-B-compatible-20261017-v1/generated/9ce70352d1e2104b829b5a65355eb44b359ca1fa39cf017601b23a5cbb2d65ae.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "4e36111f3f91b9129a60103156ec22498ff3f8003e76d01334f31f137b329d8c",
+        "crop": [
+          314,
+          314,
+          313,
+          313
+        ],
+        "original_detail_cells": [
+          [
+            0,
+            31
+          ],
+          [
+            1,
+            31
+          ],
+          [
+            2,
+            31
+          ],
+          [
+            3,
+            31
+          ],
+          [
+            4,
+            31
+          ],
+          [
+            5,
+            31
+          ],
+          [
+            6,
+            31
+          ],
+          [
+            7,
+            31
+          ],
+          [
+            8,
+            31
+          ],
+          [
+            9,
+            31
+          ],
+          [
+            10,
+            31
+          ],
+          [
+            11,
+            31
+          ],
+          [
+            12,
+            31
+          ],
+          [
+            13,
+            31
+          ],
+          [
+            14,
+            31
+          ],
+          [
+            15,
+            31
+          ],
+          [
+            16,
+            31
+          ],
+          [
+            17,
+            31
+          ],
+          [
+            18,
+            31
+          ],
+          [
+            19,
+            31
+          ],
+          [
+            20,
+            31
+          ],
+          [
+            21,
+            31
+          ],
+          [
+            22,
+            31
+          ],
+          [
+            23,
+            31
+          ],
+          [
+            24,
+            31
+          ],
+          [
+            25,
+            31
+          ],
+          [
+            26,
+            31
+          ],
+          [
+            27,
+            31
+          ],
+          [
+            28,
+            31
+          ],
+          [
+            29,
+            31
+          ],
+          [
+            30,
+            31
+          ],
+          [
+            31,
+            31
+          ]
+        ]
+      },
+      "retained_cells": [
+        [
+          0,
+          31
+        ],
+        [
+          1,
+          31
+        ],
+        [
+          2,
+          31
+        ],
+        [
+          3,
+          31
+        ],
+        [
+          4,
+          31
+        ],
+        [
+          5,
+          31
+        ],
+        [
+          6,
+          31
+        ],
+        [
+          7,
+          31
+        ],
+        [
+          8,
+          31
+        ],
+        [
+          9,
+          31
+        ],
+        [
+          10,
+          31
+        ],
+        [
+          11,
+          31
+        ],
+        [
+          12,
+          31
+        ],
+        [
+          13,
+          31
+        ],
+        [
+          14,
+          31
+        ],
+        [
+          15,
+          31
+        ],
+        [
+          16,
+          31
+        ],
+        [
+          17,
+          31
+        ],
+        [
+          18,
+          31
+        ],
+        [
+          19,
+          31
+        ],
+        [
+          20,
+          31
+        ],
+        [
+          21,
+          31
+        ],
+        [
+          22,
+          31
+        ],
+        [
+          23,
+          31
+        ],
+        [
+          24,
+          31
+        ],
+        [
+          25,
+          31
+        ],
+        [
+          26,
+          31
+        ],
+        [
+          27,
+          31
+        ],
+        [
+          28,
+          31
+        ],
+        [
+          29,
+          31
+        ],
+        [
+          30,
+          31
+        ],
+        [
+          31,
+          31
+        ]
+      ],
+      "native_scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "catalog_only_actual_allscale_QA": {
+      "path": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/measurement/actual-SourceF-runtime-qa.json",
+      "sha256": "b8f85438c57c1b10814b473d6c24b6270afaa76932ddcbd532e5cec4ed5f0f1a"
+    },
+    "catalog_only_root_approval": {
+      "path": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/review/Root-allnative-approval-verbatim.json",
+      "sha256": "255f6f68d267008c13729b8b6af1d04727ff3c5145226e8fe0d672766385cade"
+    }
+  },
+  "runtime_qa": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/runtime-qa.json",
+  "material_limits": [
+    "Native1 body, small panel gaps and highlights are softer than the sharply blocked Original; the target is visibly a remastered interpretation rather than pixel-identical reconstruction.",
+    "Olive panels are brighter, more rectangular/squared and more consistently filled than the uneven Original shapes; central gray rails have stronger bevel relief and visible metal grain.",
+    "The32 bottom-row Original cells remain deliberately coarse compared with generated body. They contribute960 exact retained SourceNx samples across1\u20134 and are not credited as generated HD material.",
+    "No Original occurrence exists among all27 MAPs/36450 layout cells through either direct or settled-flat resolution; no gameplay neighborhood/World context has been invented. Mods could reference this catalogue asset later.",
+    "This approves only20582 complete1; sibling20581/20588 and old default full10 HOLD histories remain unchanged.",
+    "Actual30720 native RGB pixels equal the prior qualified386e hybrid. This SourceF singleton is a genuine new measured invocation of unchanged art, not a new image or changed pixel recipe."
+  ],
+  "scope": "One catalogue-unusedOriginalTerrain picture; no genuineOriginalgameplaycontext invented",
+  "new_generation_or_cleanup_calls": 0,
+  "actual_intrinsic_bank_calls": 1,
+  "pixel_epoch": "New actual SourceG2 intrinsic singleton; historical SourceF whole-art reviews remain dated and are carried by exact4array/RGB equality",
+  "no_canonical_validator_promotion_or_registration": true,
+  "historical_SourceF_pixel_epoch": "Actuala907SourceF againstimmutableH5567",
+  "current_actual_sourceG2_QA": {
+    "path": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/runtime-qa.json",
+    "sha256": "4bdc529c5282d68f8bcb081d05de836cb6b1d9e0f87fad9a5bc4553e362d7e21"
+  },
+  "current_intrinsic_equality": {
+    "path": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/measurement/actual-20582-SourceF-to-SourceG2-native-equality.json",
+    "sha256": "90cdda5a009cb86e6d5daa673c708c622c7f08f24c8af77edc1f77f48a9d4bd4"
+  },
+  "current_unused_Source_input_carry": {
+    "path": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/catalogue-unused-source-input-carry-SourceG2.json",
+    "sha256": "3ad57a96a791274e7320821854e6e92886c5b684c91547191a26a1d066c3aab4"
+  },
+  "actual_new_intrinsic_SourceG2_calls": 1,
+  "actual_historical_intrinsic_SourceF_calls": 1,
+  "no_new_gameplay_context_claim": true,
+  "Root_current_batch17_approval": {
+    "approved": true,
+    "authority": "project_root",
+    "utc": "2026-10-18T22:36:50.256142+00:00",
+    "notes": [
+      "Root earlierwholeunused20582Original/native1\u20134approval plusdifferentintrinsic;32 retainedOriginalcells/960samplesnotHDcredit; all27MAP/fourFLATS zero-callertrace, no inventedcontext. NewG2allarray/PPMexactF."
+    ]
+  }
+}

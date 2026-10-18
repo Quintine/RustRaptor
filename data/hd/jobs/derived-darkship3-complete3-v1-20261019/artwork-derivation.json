@@ -1,0 +1,76 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "derived-existing-generated-RGB-SHIP05-singleton-SHIP03-rotor2-SourceScale4-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-darkship3-complete3-v1-20261019/generated/parent-SHIP05.png",
+        "sha256": "d65014c2023a3004067b3fdb8708d219de92355bd4663358b5b9984aca754791"
+      },
+      "prompt": {
+        "path": "jobs/derived-darkship3-complete3-v1-20261019/parents/prompt-SHIP05.txt",
+        "sha256": "f65a302e402e94dd1fe4cf1480466111675aa5ce0a7332cf2134948467e93ee1"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-darkship3-complete3-v1-20261019/parents/provider-SHIP05-SAFE-PROJECTION.json",
+        "sha256": "c47215bff9f37ad030c886f362ee61025a9fe8431bb9dd89ad7abeaa037446ec"
+      }
+    },
+    {
+      "raw_png": {
+        "path": "jobs/derived-darkship3-complete3-v1-20261019/generated/parent-SHIP03.png",
+        "sha256": "50190a5588a581300232fd0bb11b98955fce30c50e35ea7e59be95d66904ad60"
+      },
+      "prompt": {
+        "path": "jobs/derived-darkship3-complete3-v1-20261019/parents/prompt-SHIP03.txt",
+        "sha256": "2196c711fbf5a1260002ef560eea299221bfe0e04f4f43c25af0b7365be24697"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-darkship3-complete3-v1-20261019/parents/provider-SHIP03-SAFE-PROJECTION.json",
+        "sha256": "59a34573f99fff2535c8bc1bf0c55320a14b35c3d377d2479953f62bb0d22780"
+      }
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-darkship3-complete3-v1-20261019/cleanup-recipe.json",
+    "sha256": "417cbd6d9d6e2eb7df177ef5f5f55e6d6430bfcf6926fa18380ca9eff79fae83"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_darkship_cleanup.py",
+      "sha256": "715a967af23d20b936eb99104c46f852a446c7e277c215d7550b1c8d1bb0f787"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    },
+    {
+      "path": "tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    },
+    {
+      "path": "tools/hd_other_functional_cleanup.py",
+      "sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84"
+    }
+  ],
+  "execution_receipt": {
+    "path": "jobs/derived-darkship3-complete3-v1-20261019/portable-replay-once/derived-provenance.json",
+    "sha256": "dddedce2ec5d97db442d1de8748525f2ebb83aa7bd33775dec957a288e9d75ad"
+  },
+  "sources": {
+    "102fc": "f0357eded395029e0740c49d408a3475a9831cadcfd9dd626633bdff03e574fb",
+    "2009a": "8408802c346c81ecb2062d8f4b0ef580a646a7547cb963f1b8e76d8d934305c2",
+    "2009b": "6888dd1bd06dd176b5450b431ff422220bf32541f2a2fed097ee3604c36fe725"
+  },
+  "outputs": {
+    "jobs/derived-darkship3-complete3-v1-20261019/derived/102fc-derived.png": "a018553f7511c184d71c2a0148d268d66f28d62bd29309e51d54a188d02a96de",
+    "jobs/derived-darkship3-complete3-v1-20261019/derived/2009a-derived.png": "cd25e41c314d4ec17f806a90ea5dd16e89904fd9b2a355430c3986231bf27355",
+    "jobs/derived-darkship3-complete3-v1-20261019/derived/2009b-derived.png": "113a76c81df3df98425482171c047c438b97b40a403c496d53de4fae5ab3ae32"
+  },
+  "actual_portable_replay_terminal": {
+    "path": "jobs/derived-darkship3-complete3-v1-20261019/review/actual-portable-replay-terminal-UNMODIFIED.json",
+    "sha256": "f104a8277a017d903a9dd2a153d83079e8a773e2ff24d75bb96c4fc8c27f3e8b"
+  },
+  "scope": "One actual portable bundled invocation with two unchanged whole-family pixel computations. Complete outputs bit-exact historical SourceF and actual SourceG2 accepted images; generated2parents are untouched, derivatives labelled DERIVED. Original2/15cells zero HDcredit."
+}

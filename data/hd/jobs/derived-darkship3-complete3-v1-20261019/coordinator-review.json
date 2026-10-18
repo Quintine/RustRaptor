@@ -1,0 +1,241 @@
+{
+  "status": "approved",
+  "approval": false,
+  "frame_bindings_sha256": "23b9dcc65b3fb1ef44f4507cc477323934da1059f6c0ae5b0a33867943a6b562",
+  "candidate_sha256": "21e07e7a5f33cbc8643c52b4f50f57fa31ea2153f5d8d052fa636a1be19b9977",
+  "source_and_all_scale_visual_review": true,
+  "independent_review": true,
+  "runtime_qa": "jobs/derived-darkship3-complete3-v1-20261019/runtime-qa.json",
+  "artwork_derivation": {
+    "path": "jobs/derived-darkship3-complete3-v1-20261019/artwork-derivation.json",
+    "sha256": "5868addaae53d90c1877cad6e4fb71f45261207193e29469311ae03d6d83842f"
+  },
+  "retained_original_detail_review": {
+    "policy_version": "retained-original-details-v3-max128-quarter-painted0255",
+    "cells_by_asset": {
+      "102fc": [
+        [
+          27,
+          12
+        ],
+        [
+          28,
+          12
+        ]
+      ],
+      "2009a": [
+        [
+          22,
+          13
+        ],
+        [
+          22,
+          14
+        ],
+        [
+          22,
+          15
+        ],
+        [
+          23,
+          13
+        ],
+        [
+          23,
+          14
+        ],
+        [
+          23,
+          15
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          24,
+          14
+        ],
+        [
+          24,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          25,
+          14
+        ],
+        [
+          25,
+          15
+        ],
+        [
+          26,
+          13
+        ],
+        [
+          26,
+          14
+        ],
+        [
+          26,
+          15
+        ]
+      ],
+      "2009b": [
+        [
+          22,
+          13
+        ],
+        [
+          22,
+          14
+        ],
+        [
+          22,
+          15
+        ],
+        [
+          23,
+          13
+        ],
+        [
+          23,
+          14
+        ],
+        [
+          23,
+          15
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          24,
+          14
+        ],
+        [
+          24,
+          15
+        ],
+        [
+          25,
+          13
+        ],
+        [
+          25,
+          14
+        ],
+        [
+          25,
+          15
+        ],
+        [
+          26,
+          13
+        ],
+        [
+          26,
+          14
+        ],
+        [
+          26,
+          15
+        ]
+      ]
+    },
+    "retained_original_not_generated_HD": true,
+    "painted_Source_palette_domain": [
+      0,
+      255
+    ],
+    "functional_palette_effects_are_retained_Original": true,
+    "hybrid_allscale_and_genuine_context_independent_review": true,
+    "frame_bindings_sha256": "23b9dcc65b3fb1ef44f4507cc477323934da1059f6c0ae5b0a33867943a6b562"
+  },
+  "authorities": {
+    "historical_SourceF_author": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/SourceF-author-UNMODIFIED.json",
+      "sha256": "94f3bb41611c4cea650400e0b125900d1b53fdc3b4fa3d7ee625b18d0976b000"
+    },
+    "actual_donor_distance_clarification": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/actual-donor12-clarification-UNMODIFIED.json",
+      "sha256": "d908adafc3224e7aec3fa01b47eb99b3931afce42753bee96091aa24be00c47d"
+    },
+    "historical_material_peer": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/SourceF-material-peer-UNMODIFIED.json",
+      "sha256": "b36d94e50dce9139e2e06ddd5b77267ebeca3744f8de2337b2051161eac7d0af"
+    },
+    "historical_context_author": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/SourceF-H5567-context-author-UNMODIFIED.json",
+      "sha256": "1645cdb8610deb0bf9b87e36ec7991fda83121762fa2fc6cc99c93366bcb5561"
+    },
+    "historical_context_peer": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/SourceF-H5567-context-peer-UNMODIFIED.json",
+      "sha256": "91e3870d5c8244874ddcb978d007dc48ebd6ffd60a2ca501fd7b538d88da7b5a"
+    },
+    "public_CODE_peer": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/public-relative-helper-CODE-PASS-UNMODIFIED.json",
+      "sha256": "679f809270a5e54d77ae463310349326a30f5c0cbdc2576b4d6f890d2747de12"
+    },
+    "actual_G2_equality": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/actual-F-to-G2-array-and15RGB-equality-UNMODIFIED.json",
+      "sha256": "39670623c9f50d1ca7c5b2398a3b2276c56e802f413c6c8c99a884a4749609cd"
+    },
+    "finite_84_input_method_carry": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/finite84-H5567-to5596-input-method-carry-UNMODIFIED.json",
+      "sha256": "db547396a8469099d2003772532f624081440465992dedf93e3cce4bcc3ec40a"
+    },
+    "actual_allbank_input_witness": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/actual-allbank5567-to5596-input-witness-UNMODIFIED.json",
+      "sha256": "a8218f32d5378c4f97a2ee8272b43f483702e9a8dee37e8a22b868a7d3521704"
+    },
+    "SourceF_bank": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/SourceF-bank-UNMODIFIED.json",
+      "sha256": "ffb4a430036a5f371f969e97c951e1968918248d7e462de09719b618f3b135da"
+    },
+    "actual_G2_bank": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/actual-G2-bank-UNMODIFIED.json",
+      "sha256": "ffb4a430036a5f371f969e97c951e1968918248d7e462de09719b618f3b135da"
+    },
+    "SourceF_QA": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/SourceF-QA-UNMODIFIED.json",
+      "sha256": "702a40c47adf768f7dc4b3e58dc27f52dbfc2854c455457955c1c7c8fd9dff8f"
+    },
+    "actual_G2_invocation": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/actual-G2-invocation-UNMODIFIED.json",
+      "sha256": "7652d0a5d2c88bd37cc9e91dc5185da6bd91786765c46f25fd310415b7e8f344"
+    },
+    "actual_portable_replay_terminal": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/actual-portable-replay-terminal-UNMODIFIED.json",
+      "sha256": "f104a8277a017d903a9dd2a153d83079e8a773e2ff24d75bb96c4fc8c27f3e8b"
+    },
+    "portable_PNG_equivalence": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/portable-PNG-byte-equality-UNMODIFIED.json",
+      "sha256": "7a8b2f9bdb277948683e2ae6f6c9a5a0bd330d1b32917fc50649db1dc877f310"
+    },
+    "final_candidate_measurement_header_carry": {
+      "path": "jobs/derived-darkship3-complete3-v1-20261019/review/actual-G2-measurement-to-final-candidate-metadata-only-carry.json",
+      "sha256": "4112e17b3d74a2c1c14365401d9f872ab968e769d70336da87789c85a7d93222"
+    }
+  },
+  "limits": [
+    "CurrentactualG2intrinsic evidence; all old material/context preserve SourceF/H5567 epochs.",
+    "Current5596carry proves unchanged84contributors/method, not new currentG2World/context.",
+    "Original2/15cells and donor12/4/4outpixel qualifications; native1softness/native3borderdifferences6/8/4 remain.",
+    "No Root finalapproval, registrarpreflight/stage/main or canonical writes yet."
+  ],
+  "Root_current_batch17_approval": {
+    "approved": true,
+    "authority": "project_root",
+    "utc": "2026-10-18T22:36:50.256991+00:00",
+    "notes": [
+      "Root NOWwhole3Original/derivedmontage andall3fullnative4sceneproposals; differentallscaleintrinsicb36d94/context91e387. Connectedbodies/rotorphases/Originalshadowsqualify, native1softness/native3edge6/8/4 andSource2/15functionalretentionaccepted. ActualG2all134912samples/15RGBFexact,current5596finite84inputcarry; nofalsecurrentWorldcapture."
+    ]
+  },
+  "reviewer": "Root"
+}

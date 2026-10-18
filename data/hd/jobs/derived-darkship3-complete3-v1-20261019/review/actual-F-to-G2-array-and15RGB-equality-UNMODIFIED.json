@@ -1,0 +1,127 @@
+{
+  "status": "PASS_ACTUAL_SOURCEF_TO_SOURCEG2_ALL3_ORIGINAL_AND12_NATIVE_INDEXED_ARRAYS_AND15_RGB_IMAGES_EXACT",
+  "utc": "2026-10-18T20:41:21.318451+00:00",
+  "old_SourceF_bank": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-darkship-102fc-rotor2-existing-RGB-actual-derived-SourceF-author-20261018-v1/actual-once-SourceF-three-intrinsic/actual-indexed-source-and-scales.json",
+    "sha256": "ffb4a430036a5f371f969e97c951e1968918248d7e462de09719b618f3b135da"
+  },
+  "actual_current_SourceG2_bank": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-darkship3-currentG2-intrinsic-operation-20261019-v1/actual-once-SourceG2-three/actual-indexed-source-and-scales.json",
+    "sha256": "ffb4a430036a5f371f969e97c951e1968918248d7e462de09719b618f3b135da"
+  },
+  "actual_current_runtime": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-darkship3-currentG2-intrinsic-operation-20261019-v1/actual-once-SourceG2-three/runtime-qa.json",
+    "sha256": "b619d3cfb4d9374184f39cf9a89286cf411aac453e99b3d4d4083d8ae39d1733"
+  },
+  "actual_current_invocation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-darkship3-currentG2-intrinsic-operation-20261019-v1/actual-once-SourceG2-three/ACTUAL-CURRENT-SOURCEG2-INVOCATION.json",
+    "sha256": "7652d0a5d2c88bd37cc9e91dc5185da6bd91786765c46f25fd310415b7e8f344"
+  },
+  "actual_measurement_candidate_sha256": "0230acd065431f1d2b3c820397a812cd132c1f18e116962dc76b760f6880f2f0",
+  "frames": [
+    "102fc",
+    "2009a",
+    "2009b"
+  ],
+  "indexed_samples_compared": 134912,
+  "all_Original_and_scale1to4_rows_and_dimensions_exact": true,
+  "all_frame_QA_masks_palettes_IoUs_exact": true,
+  "all15PPM_RGB_files_exact": true,
+  "images": [
+    {
+      "file": "102fc-original.ppm",
+      "SourceF_sha256": "dbc76df331bcbdef877eeb0d243354e771b2411a43ee12a95835ebf6a99cb234",
+      "SourceG2_sha256": "dbc76df331bcbdef877eeb0d243354e771b2411a43ee12a95835ebf6a99cb234",
+      "exact": true
+    },
+    {
+      "file": "102fc-hd-1.ppm",
+      "SourceF_sha256": "54ce91aa7b1cf5f1bf508577f2ce64789229ff8a41e7dfc32adb29c7b5129285",
+      "SourceG2_sha256": "54ce91aa7b1cf5f1bf508577f2ce64789229ff8a41e7dfc32adb29c7b5129285",
+      "exact": true
+    },
+    {
+      "file": "102fc-hd-2.ppm",
+      "SourceF_sha256": "4aaa95a9dce5389983d0f98eb7935ef4e6d391ebd549f81709ea1cdc4bcdf6ea",
+      "SourceG2_sha256": "4aaa95a9dce5389983d0f98eb7935ef4e6d391ebd549f81709ea1cdc4bcdf6ea",
+      "exact": true
+    },
+    {
+      "file": "102fc-hd-3.ppm",
+      "SourceF_sha256": "0cfb82766850a481cf0ad9e6493e2abc7fcce1429a7863e3a6d9b1e8e0238840",
+      "SourceG2_sha256": "0cfb82766850a481cf0ad9e6493e2abc7fcce1429a7863e3a6d9b1e8e0238840",
+      "exact": true
+    },
+    {
+      "file": "102fc-hd-4.ppm",
+      "SourceF_sha256": "9703d791bf95514cc93cfd73f79bb9a2145e0cde9ba9340a755e9c6b71120bd3",
+      "SourceG2_sha256": "9703d791bf95514cc93cfd73f79bb9a2145e0cde9ba9340a755e9c6b71120bd3",
+      "exact": true
+    },
+    {
+      "file": "2009a-original.ppm",
+      "SourceF_sha256": "166b2ce7e9aabaea3cd32bf2b7b2b5a2b4b96c877fffc892db241a4dbcceb845",
+      "SourceG2_sha256": "166b2ce7e9aabaea3cd32bf2b7b2b5a2b4b96c877fffc892db241a4dbcceb845",
+      "exact": true
+    },
+    {
+      "file": "2009a-hd-1.ppm",
+      "SourceF_sha256": "8c1b9e12d665d65128efbb20c6ee342b7e7e36863b6a8c04d22fa6b83b69dade",
+      "SourceG2_sha256": "8c1b9e12d665d65128efbb20c6ee342b7e7e36863b6a8c04d22fa6b83b69dade",
+      "exact": true
+    },
+    {
+      "file": "2009a-hd-2.ppm",
+      "SourceF_sha256": "2069362b5ec114eab8d225801326f863ecb6ccb96a79853ec07044723454176d",
+      "SourceG2_sha256": "2069362b5ec114eab8d225801326f863ecb6ccb96a79853ec07044723454176d",
+      "exact": true
+    },
+    {
+      "file": "2009a-hd-3.ppm",
+      "SourceF_sha256": "85dca7dc16c4242910733f763e1471fb42a2dab6e3839ada098701e8e7b41b89",
+      "SourceG2_sha256": "85dca7dc16c4242910733f763e1471fb42a2dab6e3839ada098701e8e7b41b89",
+      "exact": true
+    },
+    {
+      "file": "2009a-hd-4.ppm",
+      "SourceF_sha256": "8ac90e465ff0063b9be345e3d0335926391b5f71254de89caea6fa2461758af6",
+      "SourceG2_sha256": "8ac90e465ff0063b9be345e3d0335926391b5f71254de89caea6fa2461758af6",
+      "exact": true
+    },
+    {
+      "file": "2009b-original.ppm",
+      "SourceF_sha256": "97080529c45927baa55ecb801b59ff5512583eb668e45fab6abfd63a51d3744b",
+      "SourceG2_sha256": "97080529c45927baa55ecb801b59ff5512583eb668e45fab6abfd63a51d3744b",
+      "exact": true
+    },
+    {
+      "file": "2009b-hd-1.ppm",
+      "SourceF_sha256": "7f500ee8d4519f135593bd03fc786d4113a6f3e521d51e9b65087373e12258b2",
+      "SourceG2_sha256": "7f500ee8d4519f135593bd03fc786d4113a6f3e521d51e9b65087373e12258b2",
+      "exact": true
+    },
+    {
+      "file": "2009b-hd-2.ppm",
+      "SourceF_sha256": "00ff7c27b900d372cf797a95b61f701d8ef76af44e4b5f4224e15ebf94ee104b",
+      "SourceG2_sha256": "00ff7c27b900d372cf797a95b61f701d8ef76af44e4b5f4224e15ebf94ee104b",
+      "exact": true
+    },
+    {
+      "file": "2009b-hd-3.ppm",
+      "SourceF_sha256": "065603e90fd38480699131d26e7d954e526f9f6dc2e41327c0d947eda85419ee",
+      "SourceG2_sha256": "065603e90fd38480699131d26e7d954e526f9f6dc2e41327c0d947eda85419ee",
+      "exact": true
+    },
+    {
+      "file": "2009b-hd-4.ppm",
+      "SourceF_sha256": "53552ca95383a3ed28e0b3c5694f96e08fd6235400f89f0be24a9e9d16706186",
+      "SourceG2_sha256": "53552ca95383a3ed28e0b3c5694f96e08fd6235400f89f0be24a9e9d16706186",
+      "exact": true
+    }
+  ],
+  "scope": "One actual currentG2 loader/helper call under actual library5b6bbd03/current18. Carries historical materialb36d94e5 and genuinecontext91e387 with db547396 unchanged84inputs/math. Historical material/context remain SourceF/H5567; no new World/context raster or artwork approval created.",
+  "limits": [
+    "Actual current invocation binds immutable measurement candidate0230acd0 header. Future derivation/admission candidate header is different metadata and needs explicit exactframe/artwork carry; actual QA receipt will never be rewritten.",
+    "No extra cleanup/generation/registrar or main call. Public helper relativeIO CODE/replay and Root full art approval remain pending."
+  ]
+}

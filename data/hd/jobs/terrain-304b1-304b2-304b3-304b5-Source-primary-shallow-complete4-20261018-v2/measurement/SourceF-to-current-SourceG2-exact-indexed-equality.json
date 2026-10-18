@@ -1,0 +1,54 @@
+{
+  "current_QA": {
+    "path": "jobs/terrain-304b1-304b2-304b3-304b5-Source-primary-shallow-complete4-20261018-v2/runtime-qa.json",
+    "sha256": "7313d64a99970fc8d5733a4675b7456c0d2b5f555dc181658e37885a2c3914f2"
+  },
+  "current_bank": {
+    "path": "jobs/terrain-304b1-304b2-304b3-304b5-Source-primary-shallow-complete4-20261018-v2/measurement/current-SourceG2-indexed-bank.json",
+    "sha256": "8436354e954e6d113bd4a0182db43992ef67195adc893604c06ffd8f732007dd"
+  },
+  "current_candidate_sha256": "b9362faf5097a36a79a6c13e8101397f3a595444b181bd4b5de5f45c844a0ee8",
+  "current_frame_bindings_sha256": "6dbb1d9aad16a78fb9be0988bb69c1c52f40ed8712d787b4f15447104118ea0f",
+  "fresh_current_G2_intrinsic_calls": 1,
+  "historical_SourceF_complete4_bank": {
+    "path": "jobs/terrain-304b1-304b2-304b3-304b5-Source-primary-shallow-complete4-20261018-v2/measurement/historical-SourceF-complete4-indexed-bank.json",
+    "sha256": "94560897c1ceb4af9346d0301074f2e95115d390d5798a3cd1c87a8f8372cbc5"
+  },
+  "historical_SourceF_slot27_singleton_bank": {
+    "path": "jobs/terrain-304b1-304b2-304b3-304b5-Source-primary-shallow-complete4-20261018-v2/measurement/historical-SourceF-slot27-indexed-bank.json",
+    "sha256": "14e106681c0ae856e067ca44beedc38e0c70a8c2673af6fb68cc147d3b10aa39"
+  },
+  "historical_context_rerenders": 0,
+  "records": [
+    {
+      "all_source_and_four_native_dimensions_indices_exact": true,
+      "asset": "304b1",
+      "historical_bank": "slot27-singleton",
+      "native_samples": 30720,
+      "source_samples": 1024
+    },
+    {
+      "all_source_and_four_native_dimensions_indices_exact": true,
+      "asset": "304b2",
+      "historical_bank": "complete4-original",
+      "native_samples": 30720,
+      "source_samples": 1024
+    },
+    {
+      "all_source_and_four_native_dimensions_indices_exact": true,
+      "asset": "304b3",
+      "historical_bank": "complete4-original",
+      "native_samples": 30720,
+      "source_samples": 1024
+    },
+    {
+      "all_source_and_four_native_dimensions_indices_exact": true,
+      "asset": "304b5",
+      "historical_bank": "complete4-original",
+      "native_samples": 30720,
+      "source_samples": 1024
+    }
+  ],
+  "retained_original_27_no_HD_credit": true,
+  "status": "PASS_ALL4_SOURCE_AND16_NATIVE_ARRAYS_EXACT_SOURCEF_TO_SOURCEG2"
+}

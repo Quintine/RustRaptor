@@ -1,0 +1,237 @@
+{
+  "reviewed_ns": 1792315424864365883,
+  "reviewer": "/root/ridge_pair",
+  "Source_inputs": [
+    "Both complete authentic NN512 Original tiles",
+    "Complete first1254x1254 held atlas, especially row2cells3and4",
+    "Complete exact Original-only1024x512 reference sheet"
+  ],
+  "new_raw": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/ATLAS-ORIGINAL-PRIMARY-PAIR-RETURNED-UNTOUCHED.png",
+    "sha256": "8c261e3e317bb4e2a268175aa6cc1ddd79e33c35ec3d90e8b1aff0de7293ce5f",
+    "size": 2955687,
+    "mtime_ns": 1792315322547254474
+  },
+  "physical_pages": [
+    {
+      "file": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/file-only-whole-native-review-pages/20363-whole-Original-and-actual-all1to4.png",
+        "sha256": "313a30233f3c88a29967ea0e253e436c14adb0153dc5c9d6e924268142e59530",
+        "size": 48711,
+        "mtime_ns": 1792315379151251008
+      },
+      "whole_bodies": 5,
+      "native1to4_all_actual_saved": true,
+      "toprow_NN128_display_only": true,
+      "bottomrow_unresampled_saved": true
+    },
+    {
+      "file": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/file-only-whole-native-review-pages/20364-whole-Original-and-actual-all1to4.png",
+        "sha256": "a10d071da60e55335e36967f38b2253364336e044ffe5945f9a812863046bb93",
+        "size": 51209,
+        "mtime_ns": 1792315379171251007
+      },
+      "whole_bodies": 5,
+      "native1to4_all_actual_saved": true,
+      "toprow_NN128_display_only": true,
+      "bottomrow_unresampled_saved": true
+    }
+  ],
+  "assets": [
+    {
+      "asset": "20363",
+      "decision": "QUALIFIED_INTRINSIC_WITH_LIMITS",
+      "finding": "Dark charcoal horizontal corrugations extend continuously across the tile, with fine genuine wear and irregular smudges; held short black vertical brick joints are absent. Complete Source square and dark left/bottom contacts remain recognizable; stronger bevel/highlight qualification retained."
+    },
+    {
+      "asset": "20364",
+      "decision": "QUALIFIED_INTRINSIC_WITH_LIMITS",
+      "finding": "Paler neutral gray counterpart remains distinctly brighter through all four actual native scales. Continuous fine horizontal ribs and coherent shallow wear replace held segmented plates; no new discrete structural element. Stronger metallic relief and native1 smoothing qualified."
+    }
+  ],
+  "metrics": [
+    {
+      "asset": "20363",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1374",
+        "sha256": "1562a0cd7c634e475b969676e47b6e01635d0a98fe9902bbc92dd061eca8c562",
+        "size": 1044,
+        "mtime_ns": 1787663959550573359
+      },
+      "source_png": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-2035d-2036c/sources/20363.png",
+        "sha256": "c87dd93a0b932839c1adeae619afc62079b1147ab30d1a74839d9b3424fc7cec",
+        "size": 985,
+        "mtime_ns": 1791704276773441963
+      },
+      "native": [
+        {
+          "role": "original",
+          "file": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/actual-once-SourceF-complete2-intrinsic5/20363-original.ppm",
+            "sha256": "1690625faaeee2fb3683bd2df5a0b178b92e993a9ecb966941ad33b6944faab1",
+            "size": 3085,
+            "mtime_ns": 1792315362717252014
+          },
+          "dimensions": [
+            32,
+            32
+          ],
+          "mean_luma": 76.07178203125
+        },
+        {
+          "role": "hd-1",
+          "file": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/actual-once-SourceF-complete2-intrinsic5/20363-hd-1.ppm",
+            "sha256": "0cff5f38ddae77f3cb325bb6e4ecdf27aeea7df02d374aebb6e4a90a84fdab71",
+            "size": 3085,
+            "mtime_ns": 1792315362718252014
+          },
+          "dimensions": [
+            32,
+            32
+          ],
+          "mean_luma": 71.80368828125
+        },
+        {
+          "role": "hd-2",
+          "file": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/actual-once-SourceF-complete2-intrinsic5/20363-hd-2.ppm",
+            "sha256": "fa492504e887bc322fb245ec31fae47247fd14112de9e7ee730bc4fc4b943386",
+            "size": 12301,
+            "mtime_ns": 1792315362719252014
+          },
+          "dimensions": [
+            64,
+            64
+          ],
+          "mean_luma": 71.714240625
+        },
+        {
+          "role": "hd-3",
+          "file": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/actual-once-SourceF-complete2-intrinsic5/20363-hd-3.ppm",
+            "sha256": "307d311cff3028156c68933c0fead09de9a619fd62707917a7b2b11c5b3f630a",
+            "size": 27661,
+            "mtime_ns": 1792315362721252014
+          },
+          "dimensions": [
+            96,
+            96
+          ],
+          "mean_luma": 71.74786877170139
+        },
+        {
+          "role": "hd-4",
+          "file": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/actual-once-SourceF-complete2-intrinsic5/20363-hd-4.ppm",
+            "sha256": "dba45bc524285fd6c92af0022ceab978203bd924bcb093b7a74300adba307e92",
+            "size": 49167,
+            "mtime_ns": 1792315362724252014
+          },
+          "dimensions": [
+            128,
+            128
+          ],
+          "mean_luma": 71.76506939697265
+        }
+      ]
+    },
+    {
+      "asset": "20364",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1375",
+        "sha256": "a27ba631b4579c8f58fd2e9ccc501126042c03dc904820fac47e1cde6d364d91",
+        "size": 1044,
+        "mtime_ns": 1787663959550626979
+      },
+      "source_png": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-2035d-2036c/sources/20364.png",
+        "sha256": "befd51c11856811ed50cf32d8e31325b253cd12f2e4565e72c5739016583cada",
+        "size": 1037,
+        "mtime_ns": 1791704276774459300
+      },
+      "native": [
+        {
+          "role": "original",
+          "file": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/actual-once-SourceF-complete2-intrinsic5/20364-original.ppm",
+            "sha256": "163ac33ee5be7435db1687e1a6f5277597de0a714e9f07d95ecc299aef691da4",
+            "size": 3085,
+            "mtime_ns": 1792315362725252014
+          },
+          "dimensions": [
+            32,
+            32
+          ],
+          "mean_luma": 133.4815794921875
+        },
+        {
+          "role": "hd-1",
+          "file": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/actual-once-SourceF-complete2-intrinsic5/20364-hd-1.ppm",
+            "sha256": "3d92eea2d6318dc53ac77ec252b819107658a933c73935c1ad7dd09b94f69e10",
+            "size": 3085,
+            "mtime_ns": 1792315362726252013
+          },
+          "dimensions": [
+            32,
+            32
+          ],
+          "mean_luma": 132.764365625
+        },
+        {
+          "role": "hd-2",
+          "file": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/actual-once-SourceF-complete2-intrinsic5/20364-hd-2.ppm",
+            "sha256": "fd524cffd072b00d96615db4174d0588d5e2a57aecd51c0cd76675c521c36ba3",
+            "size": 12301,
+            "mtime_ns": 1792315362727252013
+          },
+          "dimensions": [
+            64,
+            64
+          ],
+          "mean_luma": 132.65341069335938
+        },
+        {
+          "role": "hd-3",
+          "file": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/actual-once-SourceF-complete2-intrinsic5/20364-hd-3.ppm",
+            "sha256": "a52c8dc58fa1ccd2478e67ded45fcb62dc159a904fe0237ca12bfe8963cbbde7",
+            "size": 27661,
+            "mtime_ns": 1792315362730252013
+          },
+          "dimensions": [
+            96,
+            96
+          ],
+          "mean_luma": 132.58831009114584
+        },
+        {
+          "role": "hd-4",
+          "file": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ridgepair-20363-20364-Original-primary-author-20261018-v1/actual-once-SourceF-complete2-intrinsic5/20364-hd-4.ppm",
+            "sha256": "235eeb08c1c96d7ac454cc14ae454f90c030474b5a68483548f707196cf17f15",
+            "size": 49167,
+            "mtime_ns": 1792315362734252013
+          },
+          "dimensions": [
+            128,
+            128
+          ],
+          "mean_luma": 132.54589178466796
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Gallery/native material qualification only; actual terrain neighborhood/state-transition context review remains required before admission.",
+    "Generated ridges have stronger overhead highlight and apparent relief than Source; the small vertical edge bevels and very fine weathering remain visible at native4.",
+    "Native1 is softer and has less irregular Source tonal scuffing; the distinct dark20363 and light20364 horizontal-material identities remain readable.",
+    "No claim of exact per-pixel Original grayscale, exact ridge phase continuity across neighbors, seamless tiling or animation.",
+    "Old first-atlas brick/plate-joint HOLD and actually executed whole16-grid-shift successor HOLD remain literal, separate and unused.",
+    "No cleanup, gain profile, new World, Rust compiler, canonical registry, Git, SDL, gameplay or timing actions were performed."
+  ]
+}

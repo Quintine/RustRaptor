@@ -1,0 +1,391 @@
+{
+  "method": "derived-existing-generated-RGB-SHIP05-singleton-SHIP03-rotor2-SourceScale4-v1",
+  "family_reports": [
+    {
+      "method": "derived-existing-generated-RGB-SHIP05-singleton-SHIP03-rotor2-SourceScale4-v1",
+      "geometry": {
+        "method": "derived-generated-RGB-SourceScale4-geometry-coherent-dynamic-regions-v2",
+        "output_class": "DERIVED_SCRIPTED_RGBA_NOT_UNTOUCHED_GENERATION",
+        "input_hashes": {
+          "data/misc/PALETTE_DAT": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+          "data/sprites/SHIP05G1_PIC": "f0357eded395029e0740c49d408a3475a9831cadcfd9dd626633bdff03e574fb",
+          "data/hd/jobs/derived-darkship3-complete3-v1-20261019/generated/parent-SHIP05.png": "d65014c2023a3004067b3fdb8708d219de92355bd4663358b5b9984aca754791"
+        },
+        "output_scale": 4,
+        "shared_SourceScale4_labels": 9020,
+        "stationary_anchor_asset": "102fc",
+        "Source_derived_dynamic_component_halo_native": 1,
+        "dynamic_regions_native": [],
+        "RGB_policy": "Preserve full generated RGB, except declared nearest generated-RGB fills, Source-identical full-RGB backing share, and literal functional Source palette cells; no noise/highpass reconstruction.",
+        "source_mask": "Actual Original Scale4x = Scale2x twice; complete native canvas and origin retained.",
+        "frames": [
+          {
+            "asset": "102fc",
+            "logical_width": 40,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "Source_painted_cells": 569,
+            "SourceScale4_opaque_samples": 9020,
+            "derived_alpha_exact_SourceScale4": true,
+            "actual_sampling_bounds": [
+              "57",
+              "28",
+              "1377",
+              "1084"
+            ],
+            "removed_generated_outside_SourceScale4": 307,
+            "original_sampled_RGB_preserved_before_stationary_share": 7650,
+            "stationary_full_RGB_replacements": 0,
+            "functional_Original_RGB_samples": 0,
+            "generated_RGB_different_from_SourceNN_samples": 8942,
+            "filled_generated_RGB_samples": 1370,
+            "maximum_donor_squared_distance": 144,
+            "no_Source_RGB_or_noise_fallback": true
+          }
+        ],
+        "decoder_module": {
+          "path": "tools/hd_frame_policy.py",
+          "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+        },
+        "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "numpy_version": "2.3.5",
+        "pillow_version": "12.3.0"
+      },
+      "functional": [
+        {
+          "asset": "102fc",
+          "functional_original": {
+            "cells": [
+              [
+                27,
+                12
+              ],
+              [
+                28,
+                12
+              ]
+            ],
+            "Source_indices": [
+              140,
+              136
+            ],
+            "actual_Original_Scale4_RGBA_samples": 32,
+            "actual_Original_transparent_samples": 0,
+            "RGBA_changes": 32,
+            "outside_explicit_footprints_RGBA_exact": true,
+            "retained_Original_not_generated_HD": true
+          }
+        }
+      ],
+      "limits": [
+        "Derived material, never untouched generation.",
+        "Functional Original2/15 cells are not generated HD.",
+        "Whole native material and context acceptance remain separate."
+      ]
+    },
+    {
+      "method": "derived-existing-generated-RGB-SHIP05-singleton-SHIP03-rotor2-SourceScale4-v1",
+      "geometry": {
+        "method": "derived-generated-RGB-SourceScale4-geometry-coherent-dynamic-regions-v2",
+        "output_class": "DERIVED_SCRIPTED_RGBA_NOT_UNTOUCHED_GENERATION",
+        "input_hashes": {
+          "data/misc/PALETTE_DAT": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+          "data/sprites/SHIP03G2_PIC": "8408802c346c81ecb2062d8f4b0ef580a646a7547cb963f1b8e76d8d934305c2",
+          "data/hd/jobs/derived-darkship3-complete3-v1-20261019/generated/parent-SHIP03.png": "50190a5588a581300232fd0bb11b98955fce30c50e35ea7e59be95d66904ad60",
+          "data/sprites/SHIP03G2_PIC.1": "6888dd1bd06dd176b5450b431ff422220bf32541f2a2fed097ee3604c36fe725"
+        },
+        "output_scale": 4,
+        "shared_SourceScale4_labels": 7465,
+        "stationary_anchor_asset": "2009a",
+        "Source_derived_dynamic_component_halo_native": 1,
+        "dynamic_regions_native": [
+          [
+            5,
+            2,
+            18,
+            19
+          ],
+          [
+            30,
+            2,
+            43,
+            19
+          ]
+        ],
+        "RGB_policy": "Preserve full generated RGB, except declared nearest generated-RGB fills, Source-identical full-RGB backing share, and literal functional Source palette cells; no noise/highpass reconstruction.",
+        "source_mask": "Actual Original Scale4x = Scale2x twice; complete native canvas and origin retained.",
+        "frames": [
+          {
+            "asset": "2009a",
+            "logical_width": 48,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "Source_painted_cells": 790,
+            "SourceScale4_opaque_samples": 12382,
+            "derived_alpha_exact_SourceScale4": true,
+            "actual_sampling_bounds": [
+              "132",
+              "124",
+              "894",
+              "632"
+            ],
+            "removed_generated_outside_SourceScale4": 1170,
+            "original_sampled_RGB_preserved_before_stationary_share": 11828,
+            "stationary_full_RGB_replacements": 0,
+            "functional_Original_RGB_samples": 0,
+            "generated_RGB_different_from_SourceNN_samples": 12307,
+            "filled_generated_RGB_samples": 554,
+            "maximum_donor_squared_distance": 16,
+            "no_Source_RGB_or_noise_fallback": true
+          },
+          {
+            "asset": "2009b",
+            "logical_width": 48,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "Source_painted_cells": 760,
+            "SourceScale4_opaque_samples": 11876,
+            "derived_alpha_exact_SourceScale4": true,
+            "actual_sampling_bounds": [
+              "132",
+              "891",
+              "894",
+              "1399"
+            ],
+            "removed_generated_outside_SourceScale4": 786,
+            "original_sampled_RGB_preserved_before_stationary_share": 11231,
+            "stationary_full_RGB_replacements": 7256,
+            "functional_Original_RGB_samples": 0,
+            "generated_RGB_different_from_SourceNN_samples": 11748,
+            "filled_generated_RGB_samples": 645,
+            "maximum_donor_squared_distance": 16,
+            "no_Source_RGB_or_noise_fallback": true
+          }
+        ],
+        "decoder_module": {
+          "path": "tools/hd_frame_policy.py",
+          "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+        },
+        "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+        "numpy_version": "2.3.5",
+        "pillow_version": "12.3.0"
+      },
+      "functional": [
+        {
+          "asset": "2009a",
+          "functional_original": {
+            "cells": [
+              [
+                22,
+                13
+              ],
+              [
+                22,
+                14
+              ],
+              [
+                22,
+                15
+              ],
+              [
+                23,
+                13
+              ],
+              [
+                23,
+                14
+              ],
+              [
+                23,
+                15
+              ],
+              [
+                24,
+                13
+              ],
+              [
+                24,
+                14
+              ],
+              [
+                24,
+                15
+              ],
+              [
+                25,
+                13
+              ],
+              [
+                25,
+                14
+              ],
+              [
+                25,
+                15
+              ],
+              [
+                26,
+                13
+              ],
+              [
+                26,
+                14
+              ],
+              [
+                26,
+                15
+              ]
+            ],
+            "Source_indices": [
+              17,
+              22,
+              26,
+              23,
+              85,
+              31,
+              31,
+              31,
+              23,
+              28,
+              85,
+              31,
+              30,
+              31,
+              29
+            ],
+            "actual_Original_Scale4_RGBA_samples": 240,
+            "actual_Original_transparent_samples": 0,
+            "RGBA_changes": 240,
+            "outside_explicit_footprints_RGBA_exact": true,
+            "retained_Original_not_generated_HD": true
+          }
+        },
+        {
+          "asset": "2009b",
+          "functional_original": {
+            "cells": [
+              [
+                22,
+                13
+              ],
+              [
+                22,
+                14
+              ],
+              [
+                22,
+                15
+              ],
+              [
+                23,
+                13
+              ],
+              [
+                23,
+                14
+              ],
+              [
+                23,
+                15
+              ],
+              [
+                24,
+                13
+              ],
+              [
+                24,
+                14
+              ],
+              [
+                24,
+                15
+              ],
+              [
+                25,
+                13
+              ],
+              [
+                25,
+                14
+              ],
+              [
+                25,
+                15
+              ],
+              [
+                26,
+                13
+              ],
+              [
+                26,
+                14
+              ],
+              [
+                26,
+                15
+              ]
+            ],
+            "Source_indices": [
+              17,
+              22,
+              26,
+              23,
+              85,
+              31,
+              31,
+              31,
+              23,
+              28,
+              85,
+              31,
+              30,
+              31,
+              29
+            ],
+            "actual_Original_Scale4_RGBA_samples": 240,
+            "actual_Original_transparent_samples": 0,
+            "RGBA_changes": 240,
+            "outside_explicit_footprints_RGBA_exact": true,
+            "retained_Original_not_generated_HD": true
+          }
+        }
+      ],
+      "limits": [
+        "Derived material, never untouched generation.",
+        "Functional Original2/15 cells are not generated HD.",
+        "Whole native material and context acceptance remain separate."
+      ]
+    }
+  ],
+  "unique_buffered_inputs": 9,
+  "scope": "One portable bundled execution of unchanged two complete-family pixel computations; no engine or artistic authority.",
+  "execution": {
+    "status": "success",
+    "method": "derived-existing-generated-RGB-SHIP05-singleton-SHIP03-rotor2-SourceScale4-v1",
+    "tool_sha256": "715a967af23d20b936eb99104c46f852a446c7e277c215d7550b1c8d1bb0f787",
+    "recipe_sha256": "417cbd6d9d6e2eb7df177ef5f5f55e6d6430bfcf6926fa18380ca9eff79fae83",
+    "source_sha256": {
+      "102fc": "f0357eded395029e0740c49d408a3475a9831cadcfd9dd626633bdff03e574fb",
+      "2009a": "8408802c346c81ecb2062d8f4b0ef580a646a7547cb963f1b8e76d8d934305c2",
+      "2009b": "6888dd1bd06dd176b5450b431ff422220bf32541f2a2fed097ee3604c36fe725"
+    },
+    "parent_raw_sha256": [
+      "50190a5588a581300232fd0bb11b98955fce30c50e35ea7e59be95d66904ad60",
+      "d65014c2023a3004067b3fdb8708d219de92355bd4663358b5b9984aca754791"
+    ],
+    "output_sha256": {
+      "102fc": "a018553f7511c184d71c2a0148d268d66f28d62bd29309e51d54a188d02a96de",
+      "2009a": "cd25e41c314d4ec17f806a90ea5dd16e89904fd9b2a355430c3986231bf27355",
+      "2009b": "113a76c81df3df98425482171c047c438b97b40a403c496d53de4fae5ab3ae32"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS_SAME_COMPLETE3_FRAME_BINDINGS_AND_PNGS_FINAL_LINEAGE_HEADER_ADDED_AFTER_ACTUAL_QA",
+  "actual_measurement_candidate": {
+    "path": "jobs/derived-darkship3-complete3-v1-20261019/candidate-SOURCE-ONLY-AWAITING-EXECUTION-LINEAGE.json",
+    "sha256": "0230acd065431f1d2b3c820397a812cd132c1f18e116962dc76b760f6880f2f0"
+  },
+  "final_admission_candidate": {
+    "path": "jobs/derived-darkship3-complete3-v1-20261019/candidate.json",
+    "sha256": "21e07e7a5f33cbc8643c52b4f50f57fa31ea2153f5d8d052fa636a1be19b9977"
+  },
+  "actual_G2_runtime": {
+    "path": "jobs/derived-darkship3-complete3-v1-20261019/runtime-qa.json",
+    "sha256": "b619d3cfb4d9374184f39cf9a89286cf411aac453e99b3d4d4083d8ae39d1733"
+  },
+  "frame_bindings_sha256": "23b9dcc65b3fb1ef44f4507cc477323934da1059f6c0ae5b0a33867943a6b562",
+  "exact3PNG_outputs": {
+    "jobs/derived-darkship3-complete3-v1-20261019/derived/102fc-derived.png": "a018553f7511c184d71c2a0148d268d66f28d62bd29309e51d54a188d02a96de",
+    "jobs/derived-darkship3-complete3-v1-20261019/derived/2009a-derived.png": "cd25e41c314d4ec17f806a90ea5dd16e89904fd9b2a355430c3986231bf27355",
+    "jobs/derived-darkship3-complete3-v1-20261019/derived/2009b-derived.png": "113a76c81df3df98425482171c047c438b97b40a403c496d53de4fae5ab3ae32"
+  },
+  "only_added_top_level_candidate_field": "artwork_derivation",
+  "actual_QA_receipt_never_rewritten": true,
+  "scope": "ActualG2 invoked once against preserved immutable measurementcandidate0230acd0. Finalcandidate onlyadds derivation metadata after exactportable replay; frames/Source/PNG bindings identical. No claim actualinvocation usedfinalheader or freshreview. Complete-native-family route, not standalone-selection exemption."
+}

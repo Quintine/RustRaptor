@@ -1,0 +1,277 @@
+{
+  "status": "QUALIFIED_DIFFERENT_COMPLETE1_AND_COMPLETE2_INTRINSIC_WHOLE_MATERIAL_WITH_LIMITS",
+  "artist": "/root/dark_ship_remaining",
+  "reviewer": "/root/terrain_context_review",
+  "different_from_artist": true,
+  "qualified_frames": 3,
+  "held_frames": 0,
+  "assets": [
+    "102fc",
+    "2009a",
+    "2009b"
+  ],
+  "author_report": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-darkship-102fc-rotor2-existing-RGB-actual-derived-SourceF-author-20261018-v1/CLOSED-ACTUAL-EXISTING3-DERIVED-SOURCEF-AUTHOR-QUALIFIED-NOT-CONTEXT-OR-ADMISSION.json",
+    "sha256": "94f3bb41611c4cea650400e0b125900d1b53fdc3b4fa3d7ee625b18d0976b000",
+    "size": 4220,
+    "mtime_ns": 1792316966530402047,
+    "mode": 33188
+  },
+  "additive_actual_donor_distance_clarification": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-darkship-102fc-rotor2-existing-RGB-actual-derived-SourceF-author-20261018-v1-ADDITIVE-ACTUAL-DONOR12-VERSUS-NEAREST9-CLARIFICATION.json",
+    "sha256": "d908adafc3224e7aec3fa01b47eb99b3931afce42753bee96091aa24be00c47d",
+    "size": 1331,
+    "mtime_ns": 1792316980282581651,
+    "mode": 33188
+  },
+  "actual_native_manifest": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-darkship-102fc-rotor2-existing-RGB-actual-derived-SourceF-author-20261018-v1/private-native-only-pack/hd.json",
+    "sha256": "0a064d716fc3cff39a43948379ca6b6e31aa8ab9e0ae97ea9b679deeb918c027",
+    "size": 3721,
+    "mtime_ns": 1792316816113445823,
+    "mode": 33188
+  },
+  "independent_saved_audit": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-independent-darkship3-derived-SourceF-whole-material-review-20261018-v1/INDEPENDENT-DARKSHIP3-SOURCE-960-ORIGINAL-SAMPLES-ALPHA-AND24-PANE-READBACK.json",
+    "sha256": "109b007d92de54b8200d5dbe90c4461bbe466105f626115fa5c3404f74ac60c6",
+    "size": 4510,
+    "mtime_ns": 1792317925896661527,
+    "mode": 33188
+  },
+  "physical_scope": {
+    "whole_genuine_raw_parents": 2,
+    "whole_derived_RGBA_images": 3,
+    "whole_original_and_actual_native_boards": 3,
+    "complete_actual_native_canvases": 12,
+    "ordered_rotor_frames": [
+      0,
+      1
+    ],
+    "total_images": 8,
+    "tool_downsampling": false,
+    "Originals": "Complete Original images at every labelledNNscale in the whole boards; no cropped-only Source review."
+  },
+  "records": [
+    {
+      "asset": "102fc",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "actual_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "material_observation": "Paired cylindrical side pods remain connected through dark mechanical shoulders to the center; the lower stalk/backing and pointed chassis stay continuous. Layered silver panels, vents and the warm lower band add visible metal detail while preserving broad Original divisions. The two Source-blue squares are conspicuous but remain a small functional cue rather than a generated glow.",
+      "native_frame_binding": {
+        "frame": 0,
+        "file": "assets/102fc-derived.png",
+        "logical_width": 40,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "f0357eded395029e0740c49d408a3475a9831cadcfd9dd626633bdff03e574fb",
+        "original_detail_cells": [
+          [
+            27,
+            12
+          ],
+          [
+            28,
+            12
+          ]
+        ]
+      }
+    },
+    {
+      "asset": "2009a",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "actual_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "material_observation": "Cross rotor spokes remain long and connected to the hub within the open teal/bronze rim quadrants. The center chamber, amber marks, silver flanks and lower spine are clearly separated; quiet metal grain and fasteners remain visible at3\u20134. Native1 compresses the thin cross structure but preserves its phase.",
+      "native_frame_binding": {
+        "frame": 0,
+        "file": "assets/2009a-derived.png",
+        "logical_width": 48,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "8408802c346c81ecb2062d8f4b0ef580a646a7547cb963f1b8e76d8d934305c2",
+        "original_detail_cells": [
+          [
+            22,
+            13
+          ],
+          [
+            22,
+            14
+          ],
+          [
+            22,
+            15
+          ],
+          [
+            23,
+            13
+          ],
+          [
+            23,
+            14
+          ],
+          [
+            23,
+            15
+          ],
+          [
+            24,
+            13
+          ],
+          [
+            24,
+            14
+          ],
+          [
+            24,
+            15
+          ],
+          [
+            25,
+            13
+          ],
+          [
+            25,
+            14
+          ],
+          [
+            25,
+            15
+          ],
+          [
+            26,
+            13
+          ],
+          [
+            26,
+            14
+          ],
+          [
+            26,
+            15
+          ]
+        ]
+      }
+    },
+    {
+      "asset": "2009b",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "actual_scales": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "material_observation": "The diagonal rotor spokes remain distinct from the cross frame in the declared second phase, with open negative wedges and the same central backing/spine. Stationary body and center cue do not visibly jump between ordered frames; bright outer bevels and teal arcs are stronger than Source but remain coherent.",
+      "native_frame_binding": {
+        "frame": 1,
+        "file": "assets/2009b-derived.png",
+        "logical_width": 48,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "6888dd1bd06dd176b5450b431ff422220bf32541f2a2fed097ee3604c36fe725",
+        "original_detail_cells": [
+          [
+            22,
+            13
+          ],
+          [
+            22,
+            14
+          ],
+          [
+            22,
+            15
+          ],
+          [
+            23,
+            13
+          ],
+          [
+            23,
+            14
+          ],
+          [
+            23,
+            15
+          ],
+          [
+            24,
+            13
+          ],
+          [
+            24,
+            14
+          ],
+          [
+            24,
+            15
+          ],
+          [
+            25,
+            13
+          ],
+          [
+            25,
+            14
+          ],
+          [
+            25,
+            15
+          ],
+          [
+            26,
+            13
+          ],
+          [
+            26,
+            14
+          ],
+          [
+            26,
+            15
+          ]
+        ]
+      }
+    }
+  ],
+  "material_limits": [
+    "DERIVED Source-guided generated-RGB material, not untouched provider output. Singleton uses actual preferred donors up to12 output pixels; old source-only unrestricted nearest9.055 is a different measurement. Narrow dark-edge grain may stretch within that cap. Rotor actual maximum donor distance is4 output pixels.",
+    "Original functional2 blue cells102fc and15 amber/backing cells per rotor are preserved,960 native SourceNx samples across all12 canvases; these32 Original logical cells receive no generated HD credit.",
+    "Native1 fine panels and rotor blades are softly compressed. Silver/brass rims and blue/amber cues have stronger contrast than Original; Source-supported near-black/gray edges may remain stepped.",
+    "Actual native3 alpha differs from separate SourceScale3 by6/8/4 border samples due to resizing derived4; native1/2/4 alpha and derived4 SourceScale4 match. No all-scale kernel identity or no-border-difference claim.",
+    "Common-label backing is exact fullRGBA outside declared dynamic rotor regions in the derived masters. This does not claim every native resampled pixel or all glints are constant during animation.",
+    "Original comparison images use nearest-neighbor presentation and actual native images are displayed by integerNN4; they are not extra rendered Source controls.",
+    "Intrinsic qualification only: no genuine World/context/mission occurrence, in-motion gameplay, collision, audio, performance, portability or registration approval is established here."
+  ],
+  "retained_Original_samples": 960,
+  "retained_Original_HD_credit": 0,
+  "actual_max_donor_output_pixels": {
+    "102fc": 12,
+    "2009a": 4,
+    "2009b": 4
+  },
+  "intrinsic_only": true,
+  "genuine_context_approval": false,
+  "canonical_registration": false,
+  "new_engine_image_cleanup_QA_World": 0,
+  "utc": "2026-10-18T10:05:25.896944+00:00"
+}

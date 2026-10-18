@@ -1,0 +1,250 @@
+{
+  "format_version": 1,
+  "families": [
+    {
+      "format_version": 1,
+      "family": "SHIP05-singleton",
+      "palette": {
+        "path": "data/misc/PALETTE_DAT",
+        "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+      },
+      "frames": [
+        {
+          "asset": "102fc",
+          "source": {
+            "path": "data/sprites/SHIP05G1_PIC",
+            "sha256": "f0357eded395029e0740c49d408a3475a9831cadcfd9dd626633bdff03e574fb"
+          },
+          "viewport": [
+            57,
+            28,
+            1377,
+            1084
+          ],
+          "origin": [
+            0,
+            0
+          ],
+          "raw_png": {
+            "path": "data/hd/jobs/derived-darkship3-complete3-v1-20261019/generated/parent-SHIP05.png",
+            "sha256": "d65014c2023a3004067b3fdb8708d219de92355bd4663358b5b9984aca754791"
+          },
+          "functional_original_cells": [
+            [
+              27,
+              12
+            ],
+            [
+              28,
+              12
+            ]
+          ]
+        }
+      ],
+      "dependencies": {
+        "hd_frame_policy": {
+          "path": "tools/hd_frame_policy.py",
+          "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+        },
+        "hd_dshp20_cleanup": {
+          "path": "tools/hd_dshp20_cleanup.py",
+          "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+        },
+        "hd_other_functional_cleanup": {
+          "path": "tools/hd_other_functional_cleanup.py",
+          "sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84"
+        }
+      }
+    },
+    {
+      "format_version": 1,
+      "family": "SHIP03-rotor2",
+      "palette": {
+        "path": "data/misc/PALETTE_DAT",
+        "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+      },
+      "frames": [
+        {
+          "asset": "2009a",
+          "source": {
+            "path": "data/sprites/SHIP03G2_PIC",
+            "sha256": "8408802c346c81ecb2062d8f4b0ef580a646a7547cb963f1b8e76d8d934305c2"
+          },
+          "viewport": [
+            132,
+            124,
+            894,
+            632
+          ],
+          "origin": [
+            0,
+            0
+          ],
+          "raw_png": {
+            "path": "data/hd/jobs/derived-darkship3-complete3-v1-20261019/generated/parent-SHIP03.png",
+            "sha256": "50190a5588a581300232fd0bb11b98955fce30c50e35ea7e59be95d66904ad60"
+          },
+          "functional_original_cells": [
+            [
+              22,
+              13
+            ],
+            [
+              22,
+              14
+            ],
+            [
+              22,
+              15
+            ],
+            [
+              23,
+              13
+            ],
+            [
+              23,
+              14
+            ],
+            [
+              23,
+              15
+            ],
+            [
+              24,
+              13
+            ],
+            [
+              24,
+              14
+            ],
+            [
+              24,
+              15
+            ],
+            [
+              25,
+              13
+            ],
+            [
+              25,
+              14
+            ],
+            [
+              25,
+              15
+            ],
+            [
+              26,
+              13
+            ],
+            [
+              26,
+              14
+            ],
+            [
+              26,
+              15
+            ]
+          ]
+        },
+        {
+          "asset": "2009b",
+          "source": {
+            "path": "data/sprites/SHIP03G2_PIC.1",
+            "sha256": "6888dd1bd06dd176b5450b431ff422220bf32541f2a2fed097ee3604c36fe725"
+          },
+          "viewport": [
+            132,
+            891,
+            894,
+            1399
+          ],
+          "origin": [
+            0,
+            0
+          ],
+          "raw_png": {
+            "path": "data/hd/jobs/derived-darkship3-complete3-v1-20261019/generated/parent-SHIP03.png",
+            "sha256": "50190a5588a581300232fd0bb11b98955fce30c50e35ea7e59be95d66904ad60"
+          },
+          "functional_original_cells": [
+            [
+              22,
+              13
+            ],
+            [
+              22,
+              14
+            ],
+            [
+              22,
+              15
+            ],
+            [
+              23,
+              13
+            ],
+            [
+              23,
+              14
+            ],
+            [
+              23,
+              15
+            ],
+            [
+              24,
+              13
+            ],
+            [
+              24,
+              14
+            ],
+            [
+              24,
+              15
+            ],
+            [
+              25,
+              13
+            ],
+            [
+              25,
+              14
+            ],
+            [
+              25,
+              15
+            ],
+            [
+              26,
+              13
+            ],
+            [
+              26,
+              14
+            ],
+            [
+              26,
+              15
+            ]
+          ]
+        }
+      ],
+      "dependencies": {
+        "hd_frame_policy": {
+          "path": "tools/hd_frame_policy.py",
+          "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+        },
+        "hd_dshp20_cleanup": {
+          "path": "tools/hd_dshp20_cleanup.py",
+          "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+        },
+        "hd_other_functional_cleanup": {
+          "path": "tools/hd_other_functional_cleanup.py",
+          "sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "status": "PASS_ACTUAL_WHOLE_INDEXED_ARRAY_EQUALITY2",
+  "old_SourceF_bank": {
+    "path": "jobs/terrain-20363-20364-Original-primary-complete2-SourceG2-20261019/proofs/historical-actual-SourceF-indexed-bank.json",
+    "sha256": "91b1cbccf64a6e3a53498ad9d1e2ea66674fb055e03ee62f15c59a36370e27f3"
+  },
+  "new_actual_SourceG2_bank": {
+    "path": "jobs/terrain-20363-20364-Original-primary-complete2-SourceG2-20261019/actual-currentG2-intrinsic2/actual-indexed-source-and-scales.json",
+    "sha256": "91b1cbccf64a6e3a53498ad9d1e2ea66674fb055e03ee62f15c59a36370e27f3"
+  },
+  "old_SourceF_QA": {
+    "path": "jobs/terrain-20363-20364-Original-primary-complete2-SourceG2-20261019/proofs/historical-actual-SourceF-runtime-qa.json",
+    "sha256": "b0f10078571753672cc0a45ed79aa14ea860c3bc06c8f0f80076808dc56a96ed"
+  },
+  "new_actual_SourceG2_QA": {
+    "path": "jobs/terrain-20363-20364-Original-primary-complete2-SourceG2-20261019/actual-currentG2-intrinsic2/runtime-qa.json",
+    "sha256": "3885523efa7612c6afbb91599fc90c2483313f34254e05ee15acf8bfc8127025"
+  },
+  "candidate_sha256": "67f7804255671d124f47aced45094fa3bd2be0afc6926cbd3547a99a62b562d7",
+  "frame_bindings_sha256": "911c131ed50e7e08448e5362ab9e225c290016dc46d9ec329a80824e8085163c",
+  "artwork_sha256": {
+    "jobs/terrain-20363-20364-Original-primary-complete2-SourceG2-20261019/generated/ATLAS-ORIGINAL-PRIMARY-PAIR-RETURNED-UNTOUCHED.png": "8c261e3e317bb4e2a268175aa6cc1ddd79e33c35ec3d90e8b1aff0de7293ce5f"
+  },
+  "checks": [
+    {
+      "asset": "20363",
+      "whole_Original_source_indexed_exact": true,
+      "scales_1to4_dimensions_and_all_indices_exact": true,
+      "source_samples": 1024,
+      "native_samples": 30720
+    },
+    {
+      "asset": "20364",
+      "whole_Original_source_indexed_exact": true,
+      "scales_1to4_dimensions_and_all_indices_exact": true,
+      "source_samples": 1024,
+      "native_samples": 30720
+    }
+  ],
+  "Source_samples2048": true,
+  "native_samples": 61440,
+  "actual_G2_invocations": 1,
+  "old_F_proofs_unmodified": true,
+  "namespace_bridge": "Only literal file locator changes from oldwhole-atlas basename to new jobs-relative route. All other nativeframe fields identical.",
+  "scope": "Exact intrinsic Source/scales and QAmasks equality; oldphysicalreviewcarried, not a new scene execution."
+}

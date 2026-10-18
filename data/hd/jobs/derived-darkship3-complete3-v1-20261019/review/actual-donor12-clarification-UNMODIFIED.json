@@ -1,0 +1,23 @@
+{
+  "status": "ADDITIVE_AUTHOR_DONOR_DISTANCE_WORDING_CORRECTION_NO_PIXEL_OR_SEAL_CHANGE",
+  "frozen_report_sha256": "94f3bb41611c4cea650400e0b125900d1b53fdc3b4fa3d7ee625b18d0976b000",
+  "frozen_seal_sha256": "5215c605ddde35dfc64c98870d7ffb228738e694f9191618e9972d563841044f",
+  "correction": "The singleton actual algorithm prefers eligible same-Source-label donors and therefore actual maximum donor squared distance144 /12 output pixels, NOT nearest unrestricted9.055/sqrt82. The prior source-only feasibility nearest-distance bound9.055 was distinct and remains true. Both rotor actual max4.0. Source-only nearest and actual preferred donor must not be relabeled.",
+  "actual_geometry": {
+    "102fc": {
+      "missing_generated_samples": 1370,
+      "actual_preferred_max_donor_squared_distance": 144,
+      "actual_max_output_pixels": 12,
+      "source_only_nearest_max_output_pixels": 9.055385138137417
+    },
+    "2009a": {
+      "missing_generated_samples": 554,
+      "actual_max_output_pixels": 4
+    },
+    "2009b": {
+      "missing_generated_samples": 645,
+      "actual_max_output_pixels": 4
+    }
+  },
+  "qualification": "Author QUAL3 unchanged; actual12outputpx singleton rim can visibly stretch local dark edge grain. No kernel/cap/pixel change, cleanup/QA repetition, frozen packet edits or current admission."
+}

@@ -12,6 +12,7 @@ import json
 import os
 import re
 import stat
+import struct
 import tempfile
 from pathlib import Path, PurePosixPath
 
@@ -550,6 +551,11 @@ def approved_catalog_only_retained_evidence(root, project, declaration, rows, qa
         payload = Path(source["path"]).read_bytes()
         if hashlib.sha256(payload).hexdigest() != source.get("sha256") or pattern.search(payload.decode()):
             raise ValueError("catalog-only native caller Source changed")
+    _approved_catalog_intrinsic_material(root, declaration, rows, qa)
+
+
+def _approved_catalog_intrinsic_material(root, declaration, rows, qa):
+    asset, frame = next(iter(rows.items()))
     peer = receipt_json(root, declaration.get("catalog_only_independent_material"))
     contract = declaration.get("catalog_only_material_contract", {})
     artist = peer.get("actual_artist", peer.get("original_generated_artist"))
@@ -606,6 +612,150 @@ def approved_catalog_only_retained_evidence(root, project, declaration, rows, qa
             or [mask["scale"] for mask in frames[0]["hd_masks"]] != [1, 2, 3, 4]
             or any(type(mask["scale"]) is not int for mask in frames[0]["hd_masks"])):
         raise ValueError("catalog-only actual all-scale evidence differs")
+
+
+UNUSED_TERRAIN_TRACE_V1 = "original-unused-terrain-source-trace-v1"
+
+
+def approved_unused_terrain_retained_evidence(root, project, declaration, rows, qa, job):
+    """Unused catalog Terrain has no scene to invent: prove absence in all base maps."""
+    if len(rows) != 1 or job.get("category") != "Terrain":
+        raise ValueError("unused Terrain review needs one complete original Terrain picture")
+    asset, frame = next(iter(rows.items()))
+    if (type(frame.get("frame")) is not int or frame["frame"] != 0 or
+            frame.get("logical_width") != 32 or frame.get("logical_height") != 32):
+        raise ValueError("unused Terrain needs the complete native 32 by 32 frame")
+    pictures, payloads = authentic_terrain_inventory(root, job)
+    if set(pictures) != {asset}:
+        raise ValueError("unused Terrain inventory membership differs")
+    validate_hd_frame(root, frame, payloads[asset], pictures[asset])
+    data = root.parent.resolve()
+    trace = receipt_json(root, declaration.get("catalog_only_source_trace"))
+    if (trace.get("contract_version") != UNUSED_TERRAIN_TRACE_V1 or
+            trace.get("status") != "CLOSED_UNUSED_ORIGINAL_TERRAIN_ALL27_MAPS" or
+            trace.get("asset") != asset or
+            trace.get("direct_callers") != [] or trace.get("destroyed_callers") != [] or
+            trace.get("no_genuine_original_gameplay_context_claimed") is not True):
+        raise ValueError("unused Terrain needs its explicit complete no-caller trace")
+
+    def source_bytes(record, route):
+        if (not isinstance(record, dict) or record.get("path") != route or
+                type(record.get("bytes")) is not int or record["bytes"] < 0 or
+                re.fullmatch(r"[0-9a-f]{64}", str(record.get("sha256", ""))) is None):
+            raise ValueError("unused Terrain Source pin path or fields differ")
+        relative = PurePosixPath(route)
+        if relative.is_absolute() or ".." in relative.parts or relative.as_posix() != route:
+            raise ValueError("unused Terrain Source pin escapes catalog")
+        local = data / Path(*relative.parts)
+        path = contained(data, Path(*relative.parts))
+        if local != path or local.is_symlink() or not stat.S_ISREG(path.lstat().st_mode):
+            raise ValueError("unused Terrain Source must be a regular nonsymlink file")
+        payload = path.read_bytes()
+        if len(payload) != record["bytes"] or hashlib.sha256(payload).hexdigest() != record["sha256"]:
+            raise ValueError("unused Terrain Source bytes changed")
+        return payload
+
+    index = source_bytes(trace.get("catalogue"), "INDEX")
+    names, ids = {}, set()
+    for line in index.decode().splitlines():
+        if not line.strip():
+            continue
+        parts = line.split()
+        if (len(parts) != 3 or re.fullmatch(r"[0-9a-fA-F]{1,8}", parts[0]) is None or
+                not parts[1].isdigit() or int(parts[0], 16) in ids):
+            raise ValueError("unused Terrain invalid original INDEX")
+        identity = int(parts[0], 16)
+        ids.add(identity)
+        route = PurePosixPath(parts[2])
+        if route.is_absolute() or ".." in route.parts or route.as_posix() != parts[2]:
+            raise ValueError("unused Terrain invalid original INDEX route")
+        names.setdefault(route.name.upper(), []).append((identity, int(parts[1]), parts[2]))
+
+    def named(name):
+        entries = names.get(name, [])
+        if len(entries) != 1:
+            raise ValueError("unused Terrain named Source is missing or ambiguous")
+        return entries[0]
+
+    target = next(target for target in job["targets"] if target["asset"] == asset)
+    payload = source_bytes(trace.get("Source"), target["source_path"])
+    if payload != payloads[asset] or len(payload) < 20:
+        raise ValueError("unused Terrain target Source differs")
+    header = list(struct.unpack_from("<5i", payload))
+    claimed_header = trace.get("source_header_le_i32")
+    if (not isinstance(claimed_header, list) or len(claimed_header) != 5 or
+            any(type(value) is not int for value in claimed_header) or claimed_header != header or
+            header[0] != 1 or header[3:] != [32, 32]):
+        raise ValueError("unused Terrain target header differs")
+
+    maps = trace.get("maps", [])
+    libraries = trace.get("flat_libraries", [])
+    expected_names = {f"MAP{wave}G{sector}_MAP" for sector in range(1, 4) for wave in range(1, 10)}
+    expected_routes = {named(name)[2] for name in expected_names}
+    library_routes = [named(f"FLATSG{game}_ITM")[2] for game in range(1, 5)]
+    if (not isinstance(maps, list) or len(maps) != 27 or
+            any(not isinstance(row, dict) for row in maps) or
+            {row.get("path") for row in maps} != expected_routes or
+            not isinstance(libraries, list) or len(libraries) != 4 or
+            any(not isinstance(row, dict) for row in libraries) or
+            [row.get("path") for row in libraries] != library_routes):
+        raise ValueError("unused Terrain trace omits or duplicates Original maps or libraries")
+    flat_data, starts = [], []
+    for game, record in enumerate(libraries, 1):
+        identity, size, route = named(f"FLATSG{game}_ITM")
+        lib = source_bytes(record, route)
+        if not lib or len(lib) != size or len(lib) % 8:
+            raise ValueError("unused Terrain truncated original FLATS library")
+        start = named(f"STARTG{game}TILES")[0] + 1
+        end = named(f"ENDG{game}TILES")[0]
+        if start + len(lib) // 8 != end:
+            raise ValueError("unused Terrain library span differs from original tile catalog")
+        starts.append(start)
+        flat_data.append(lib)
+    direct, destroyed, total_spawns = [], [], 0
+    for record in maps:
+        route = record["path"]
+        name = PurePosixPath(route).name.upper()
+        identity, size, expected_route = named(name)
+        payload = source_bytes(record, expected_route)
+        if len(payload) < 5412:
+            raise ValueError("unused Terrain truncated original MAP")
+        declared, offset, count = struct.unpack_from("<iii", payload)
+        if (declared != size or declared != len(payload) or offset != 5412 or
+                not 0 <= count < 65536 or 5412 + count * 24 > len(payload)):
+            raise ValueError("unused Terrain invalid original MAP header")
+        total_spawns += count
+        for position in range(1350):
+            flat, game = struct.unpack_from("<hh", payload, 12 + position * 4)
+            if flat < 0 or not 0 <= game < 4 or flat * 8 + 8 > len(flat_data[game]):
+                raise ValueError("unused Terrain invalid original MAP tile reference")
+            replacement, health, reward = struct.unpack_from("<ihh", flat_data[game], flat * 8)
+            if not 0 <= replacement < len(flat_data[game]) // 8:
+                raise ValueError("unused Terrain invalid original FLATS destruction reference")
+            if starts[game] + flat == int(asset, 16):
+                direct.append((route, position))
+            if replacement != flat and starts[game] + replacement == int(asset, 16):
+                destroyed.append((route, position))
+    counts = trace.get("counts", {})
+    expected_counts = dict(maps=27, layout_cells=36450, flat_libraries=4,
+                           spawn_records=total_spawns, direct_callers=0, destroyed_callers=0)
+    if (any(type(counts.get(key)) is not int for key in expected_counts) or
+            counts != expected_counts or direct or destroyed):
+        raise ValueError("unused Terrain has an original caller or false Source census")
+    _approved_catalog_intrinsic_material(root, declaration, rows, qa)
+    approval = receipt_json(root, declaration.get("catalog_only_root_approval"))
+    if (approval.get("status") != "approved" or approval.get("authority_role") != "project_root" or
+            not isinstance(approval.get("reviewer"), str) or not approval["reviewer"] or
+            approval.get("scope") != "unused_original_terrain_intrinsic_all_scales" or
+            approval.get("asset") != asset or
+            approval.get("frame_bindings_sha256") != binding_digest(rows) or
+            approval.get("source_sha256") != frame["source_sha256"] or
+            approval.get("raw_sha256") != qa["artwork_sha256"][frame["file"]] or
+            not same_json(approval.get("retained_cells"), frame["original_detail_cells"]) or
+            not same_json(approval.get("native_scales"), [1, 2, 3, 4]) or
+            approval.get("whole_picture_personally_viewed") is not True or
+            approval.get("no_genuine_original_gameplay_context_claimed") is not True):
+        raise ValueError("unused Terrain needs explicit Root whole-intrinsic approval")
 
 
 def validate_extended_retained_sources(project, rows):
@@ -738,10 +888,11 @@ def approved_job(root, identity, project):
     if retained_details:
         declaration = review.get("retained_original_detail_review", {})
         catalog_only = declaration.get("hybrid_review_scope") == "catalog_only_no_known_original_runtime_caller"
-        if catalog_only and selection is not None:
+        unused_terrain = declaration.get("hybrid_review_scope") == "catalog_only_unused_original_terrain"
+        if (catalog_only or unused_terrain) and selection is not None:
             raise ValueError("catalog-only scope cannot replace contextual Terrain approval")
         qualified_scope = declaration.get("hybrid_allscale_and_genuine_context_independent_review") is True
-        if catalog_only:
+        if catalog_only or unused_terrain:
             qualified_scope = (declaration.get("hybrid_allscale_and_genuine_context_independent_review") is False
                                and declaration.get("catalog_only_no_original_runtime_caller") is True
                                and declaration.get("catalog_only_independent_whole_material_and_allscale_review") is True)
@@ -806,6 +957,8 @@ def approved_job(root, identity, project):
         approved_standalone_evidence(root, selection, review, rows, qa)
     elif retained_details and catalog_only:
         approved_catalog_only_retained_evidence(root, project, declaration, rows, qa)
+    elif retained_details and unused_terrain:
+        approved_unused_terrain_retained_evidence(root, project, declaration, rows, qa, job)
     validate_extended_retained_sources(project, rows)
     validate_palette_constraint_approval(project, rows, review, qa)
     return candidate, review, rows

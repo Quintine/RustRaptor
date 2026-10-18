@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5596 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5613 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -26402,6 +26402,92 @@
         "path": "jobs/derived-targt8g1-SourceF-warning345-closed14-v1-20261018/artwork-derivation.json",
         "sha256": "8da263689d12fea0c4126d2207bdeb215da4c2ee7405c2c975c82709bde0567b"
       }
+    },
+    {
+      "job_id": "remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018",
+      "assets": [
+        "20582"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/provenance.json",
+      "coordinator_review": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/runtime-qa.json",
+      "review": true,
+      "independent_review": true,
+      "frame_bindings_sha256": "a4d627725f4211caeeda1cc6ff1cf576f01fb0179503422d1fed56ee15d1187b"
+    },
+    {
+      "job_id": "terrain-20363-20364-Original-primary-complete2-SourceG2-20261019",
+      "assets": [
+        "20363",
+        "20364"
+      ],
+      "frames": 2,
+      "metadata": "hd.json",
+      "detail": "jobs/terrain-20363-20364-Original-primary-complete2-SourceG2-20261019/provenance.json",
+      "coordinator_review": "jobs/terrain-20363-20364-Original-primary-complete2-SourceG2-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/terrain-20363-20364-Original-primary-complete2-SourceG2-20261019/actual-currentG2-intrinsic2/runtime-qa.json",
+      "review": true,
+      "independent_review": true,
+      "frame_bindings_sha256": "911c131ed50e7e08448e5362ab9e225c290016dc46d9ec329a80824e8085163c"
+    },
+    {
+      "job_id": "terrain-304b1-304b2-304b3-304b5-Source-primary-shallow-complete4-20261018-v2",
+      "assets": [
+        "304b1",
+        "304b2",
+        "304b3",
+        "304b5"
+      ],
+      "frames": 4,
+      "metadata": "hd.json",
+      "detail": "jobs/terrain-304b1-304b2-304b3-304b5-Source-primary-shallow-complete4-20261018-v2/candidate.json",
+      "coordinator_review": "jobs/terrain-304b1-304b2-304b3-304b5-Source-primary-shallow-complete4-20261018-v2/coordinator-review.json",
+      "runtime_qa": "jobs/terrain-304b1-304b2-304b3-304b5-Source-primary-shallow-complete4-20261018-v2/runtime-qa.json",
+      "review": true,
+      "independent_review": true,
+      "frame_bindings_sha256": "6dbb1d9aad16a78fb9be0988bb69c1c52f40ed8712d787b4f15447104118ea0f"
+    },
+    {
+      "job_id": "lateterrain-3050d-3051c-neworiginal7-sourceg2-h5596-v1-20261019",
+      "assets": [
+        "3050d",
+        "3050f",
+        "30510",
+        "30511",
+        "30513",
+        "30519",
+        "3051c"
+      ],
+      "frames": 7,
+      "metadata": "hd.json",
+      "detail": "jobs/lateterrain-3050d-3051c-neworiginal7-sourceg2-h5596-v1-20261019/provenance.json",
+      "coordinator_review": "jobs/lateterrain-3050d-3051c-neworiginal7-sourceg2-h5596-v1-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/lateterrain-3050d-3051c-neworiginal7-sourceg2-h5596-v1-20261019/runtime-qa.json",
+      "review": true,
+      "independent_review": true,
+      "frame_bindings_sha256": "6e2c43ec98e175accf77bae2369d4ff9eff77c738cd0d0617202dd5e822672bb"
+    },
+    {
+      "job_id": "derived-darkship3-complete3-v1-20261019",
+      "assets": [
+        "102fc",
+        "2009a",
+        "2009b"
+      ],
+      "frames": 3,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-darkship3-complete3-v1-20261019/candidate.json",
+      "coordinator_review": "jobs/derived-darkship3-complete3-v1-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/derived-darkship3-complete3-v1-20261019/runtime-qa.json",
+      "review": true,
+      "independent_review": true,
+      "frame_bindings_sha256": "23b9dcc65b3fb1ef44f4507cc477323934da1059f6c0ae5b0a33867943a6b562",
+      "artwork_derivation": {
+        "path": "jobs/derived-darkship3-complete3-v1-20261019/artwork-derivation.json",
+        "sha256": "5868addaae53d90c1877cad6e4fb71f45261207193e29469311ae03d6d83842f"
+      }
     }
   ],
   "jobs": [
@@ -26501,8 +26587,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5596,
-  "registration_updated_at_utc": "2026-10-18T10:07:23.024599+00:00",
+  "registered_frame_count": 5613,
+  "registration_updated_at_utc": "2026-10-18T22:37:05.022087+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,

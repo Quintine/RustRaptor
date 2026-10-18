@@ -1,0 +1,108 @@
+{
+  "status": "PASS_ACTUAL_SOURCEF_TO_CURRENT_SOURCEG2_20582_COMPLETE1_FOUR_NATIVE_ARRAYS_AND_RGB_EXACT",
+  "historical_SourceF_bank": {
+    "path": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/measurement/actual-SourceF-and-SourceG2-byte-identical-indexed-bank.json",
+    "sha256": "75e05b4f8daaa26b52e9173d53e3a17f4558b236f8a68ff0dc058f9e7197c82a"
+  },
+  "actual_new_SourceG2_bank": {
+    "path": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/measurement/actual-SourceF-and-SourceG2-byte-identical-indexed-bank.json",
+    "sha256": "75e05b4f8daaa26b52e9173d53e3a17f4558b236f8a68ff0dc058f9e7197c82a"
+  },
+  "actual_current_SourceG2_invocation": {
+    "path": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/measurement/actual-SourceG2-invocation-verbatim.json",
+    "sha256": "0fe2db9f7627245bc572989a9db608c6a0f9b84f928736b3343c6d1966ec7e4a"
+  },
+  "current_QA": {
+    "path": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/runtime-qa.json",
+    "sha256": "4bdc529c5282d68f8bcb081d05de836cb6b1d9e0f87fad9a5bc4553e362d7e21"
+  },
+  "Source1x_exact": true,
+  "SourceF_masks_and_current_masks_exact": true,
+  "indexed_samples_compared": 30720,
+  "changed_samples": 0,
+  "rows": [
+    {
+      "scale": 1,
+      "width": 32,
+      "height": 32,
+      "indexed_samples": 1024,
+      "changed_indices": 0,
+      "actual_old_PPM": {
+        "sha256": "21f384d9ec02972f7f4e192bfb8a04c2a20b9e05f1f9ab153929afb68043aa2e",
+        "bytes": 3085,
+        "role": "actual-historical-SourceF-PPM"
+      },
+      "actual_new_PPM": {
+        "sha256": "21f384d9ec02972f7f4e192bfb8a04c2a20b9e05f1f9ab153929afb68043aa2e",
+        "bytes": 3085,
+        "role": "actual-current-SourceG2-PPM"
+      },
+      "RGB_PPM_byte_exact": true
+    },
+    {
+      "scale": 2,
+      "width": 64,
+      "height": 64,
+      "indexed_samples": 4096,
+      "changed_indices": 0,
+      "actual_old_PPM": {
+        "sha256": "9a2494577a9788da6935314211e26b3fa05ef56498ac91af7f6a788af72f8980",
+        "bytes": 12301,
+        "role": "actual-historical-SourceF-PPM"
+      },
+      "actual_new_PPM": {
+        "sha256": "9a2494577a9788da6935314211e26b3fa05ef56498ac91af7f6a788af72f8980",
+        "bytes": 12301,
+        "role": "actual-current-SourceG2-PPM"
+      },
+      "RGB_PPM_byte_exact": true
+    },
+    {
+      "scale": 3,
+      "width": 96,
+      "height": 96,
+      "indexed_samples": 9216,
+      "changed_indices": 0,
+      "actual_old_PPM": {
+        "sha256": "d79be67e796645a9b8159b379036d1300591934f7a14b9f18fd0469f7d34f930",
+        "bytes": 27661,
+        "role": "actual-historical-SourceF-PPM"
+      },
+      "actual_new_PPM": {
+        "sha256": "d79be67e796645a9b8159b379036d1300591934f7a14b9f18fd0469f7d34f930",
+        "bytes": 27661,
+        "role": "actual-current-SourceG2-PPM"
+      },
+      "RGB_PPM_byte_exact": true
+    },
+    {
+      "scale": 4,
+      "width": 128,
+      "height": 128,
+      "indexed_samples": 16384,
+      "changed_indices": 0,
+      "actual_old_PPM": {
+        "sha256": "6643941e6550fb47a840019c13157cd1ff7bdb0a562f90a6a642c27a4cea7869",
+        "bytes": 49167,
+        "role": "actual-historical-SourceF-PPM"
+      },
+      "actual_new_PPM": {
+        "sha256": "6643941e6550fb47a840019c13157cd1ff7bdb0a562f90a6a642c27a4cea7869",
+        "bytes": 49167,
+        "role": "actual-current-SourceG2-PPM"
+      },
+      "RGB_PPM_byte_exact": true
+    }
+  ],
+  "all_pre_call_guards_exact": true,
+  "old_material_and_Root_review_carried_by_exact_native_equality_not_relabelled": true,
+  "actual_SourceG2_intrinsic_calls": 1,
+  "new_context_World_image_cleanup_compiles": 0,
+  "Original_bottom_row_cells": 32,
+  "Original_not_generated_HD_credit": true,
+  "one_common_bank_payload_covers_two_genuine_hash_identical_invocations": true,
+  "old_SourceF_terminal": {
+    "path": "jobs/remaining-20582-exact32-Original-detail-SourceF-H5567-complete1-20261018/measurement/actual-SourceF-terminal.json",
+    "sha256": "d166b289b5d7e163fbd6f38c9fe7923211d923d6ab753fa6fa828e5ff1ff0978"
+  }
+}

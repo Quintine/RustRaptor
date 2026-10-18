@@ -1,0 +1,116 @@
+{
+  "status": "FROZEN_ROOT_AUTHORIZED_BEFORE_ONE_TWO_FRAME_SOURCEF_VARIANT",
+  "utc": "2026-10-18T09:29:40.257653+00:00",
+  "features": [
+    {
+      "asset": "3050f",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.3271",
+        "sha256": "f10ec2a6d20eace48feceede4d41ce01f82aee7c52c35c33caf5cfe47c487442",
+        "size": 1044,
+        "mtime_ns": 1787663959706586963
+      },
+      "painted": 1024,
+      "selected_count": 2,
+      "selected_cells": [
+        [
+          28,
+          12
+        ],
+        [
+          29,
+          12
+        ]
+      ],
+      "feature": "All Source pale-lavender indices112..119, complete horizontal pair",
+      "Source_indices": [
+        114,
+        113
+      ],
+      "no_error_pixel_selection": true,
+      "cyan254_not_selected": true,
+      "Original_not_HD_credit": true,
+      "logical_original_area_fraction": 0.001953125
+    },
+    {
+      "asset": "3051c",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.3284",
+        "sha256": "ee5f826ecee3d84e5cd76902cde8b04984db2a6a91cabbaf02e20349190daa96",
+        "size": 1044,
+        "mtime_ns": 1787663959707540689
+      },
+      "painted": 1024,
+      "selected_count": 4,
+      "selected_cells": [
+        [
+          19,
+          3
+        ],
+        [
+          19,
+          4
+        ],
+        [
+          19,
+          27
+        ],
+        [
+          19,
+          28
+        ]
+      ],
+      "feature": "All Source pale-lavender indices112..119, both complete vertical pairs",
+      "Source_indices": [
+        113,
+        113,
+        113,
+        113
+      ],
+      "no_error_pixel_selection": true,
+      "cyan254_not_selected": true,
+      "Original_not_HD_credit": true,
+      "logical_original_area_fraction": 0.00390625
+    }
+  ],
+  "raw": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/ACTUAL-ONE-SOURCE-PRIMARY-LATE7-RETURN-UNTOUCHED.png",
+    "sha256": "f4bffa43f093c33ad9dbf002e65c32df1d89da142f3e0c818007903d5bd30c3e",
+    "size": 2732679,
+    "mtime_ns": 1792315580096238704
+  },
+  "raw_unchanged_hardlink": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/private-fixed-variant2-pack/ACTUAL-ONE-SOURCE-PRIMARY-LATE7-RETURN-UNTOUCHED.png",
+    "sha256": "f4bffa43f093c33ad9dbf002e65c32df1d89da142f3e0c818007903d5bd30c3e",
+    "size": 2732679,
+    "mtime_ns": 1792315580096238704
+  },
+  "prior_full7_bank": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1/actual-once-SourceF-complete7-allnative/actual-indexed-source-and-scales.json",
+    "sha256": "4046821472ad414684f3366f0ab5acdb2344d4db8e0c3f7a55044ae95ee48df7",
+    "size": 3137247,
+    "mtime_ns": 1792315614246236613
+  },
+  "prior_strict_closure": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating-owner-lateTerrain7-Original-primary-complete7-author-20261018-v1-strict-complete-author-closure.json",
+    "sha256": "3eec7b68aa39d427fe7cc717ad7a4d2d187f1ae1a763df4cd75f7bed98793ffe",
+    "size": 29736,
+    "mtime_ns": 1792315730848557894
+  },
+  "new_native": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-lateTerrain-3050f-3051c-whole-lavender-features-Original-retention-actual-author-20261018-v1/private-fixed-variant2-pack/hd.json",
+    "sha256": "d7c2e10ea3e103a34b95c6ab50b90914ad363f1068ca003eb8567ad2f66cd044",
+    "size": 1897,
+    "mtime_ns": 1792315780257633792
+  },
+  "changes": "Only original_detail_cells for six complete genuine lavender-feature cells. Same PNG/crop/atlas/source/logical/origin/header and SourceF; cyan254 unchanged. Original cells receive no generated-HD credit.",
+  "operations": {
+    "SourceF_variant_calls": 1,
+    "World": 0,
+    "compile": 0,
+    "cleanup": 0,
+    "imagegen": 0,
+    "retries": 0
+  },
+  "stop": "Review allnative once; if failsHOLD, no selector iteration"
+}

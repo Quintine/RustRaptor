@@ -1,0 +1,65 @@
+{
+  "status": "PASS_FINITE_HELPER_PIXEL_DEPENDENCIES_UNCHANGED_F_TO_G2",
+  "current_source18": {
+    "src/assets.rs": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+    "src/audio.rs": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+    "src/audio/opl3.rs": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+    "src/cinematics.rs": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+    "src/content.rs": "80021611102f22b3152164e88a3ee7ecc8c16e9b3a4563551a047c089f2ba7d2",
+    "src/desktop.rs": "82dfa448623cd05e12110d838b80a4f726fb037a73eec587accbadb4aef33178",
+    "src/hd.rs": "b17f4ee0757ee87d34e01ec76f3a6239c6e9044b42b4b10bd5f05b485f137a64",
+    "src/legacy_tables.rs": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+    "src/lib.rs": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+    "src/main.rs": "510d461e6d971749efbbed6570f08aca2605ecc61c16977ab9acb9170c7aba4a",
+    "src/menu_art.rs": "0506bbf30cc14794625b72ab1e6f5e2573e99a833105ce808913485d3452db06",
+    "src/mod_selection.rs": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+    "src/modding.rs": "d2b811416e06a5c743c11c77e5599ddcf5d3263de4f74363bc0731eaccc2c2ac",
+    "src/persistence.rs": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+    "src/render.rs": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+    "src/simulation.rs": "2537120f280a1cfcfcc73a42a4103a4435ba8aeb98e69c87fde3b885b97a9925",
+    "src/sound.rs": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+    "src/terrain_hd.rs": "e61f96f541c19863ce8d741363a1739b9276e25aee84795952c65565c775e392"
+  },
+  "changed_source_files": [
+    {
+      "path": "src/content.rs",
+      "SourceF_sha256": "7f35df7100c450ba4bb30a0fdc90101c115b5ae42a7aac57829441c5b7761647",
+      "SourceG2_sha256": "80021611102f22b3152164e88a3ee7ecc8c16e9b3a4563551a047c089f2ba7d2"
+    },
+    {
+      "path": "src/desktop.rs",
+      "SourceF_sha256": "7aa876c1f74ea7b82ff0a5aa399bbbfaa18ea87ca81cab8a17c763654dca3812",
+      "SourceG2_sha256": "82dfa448623cd05e12110d838b80a4f726fb037a73eec587accbadb4aef33178"
+    },
+    {
+      "path": "src/main.rs",
+      "SourceF_sha256": "d270d1787700975220fed75bbb8d6cd8e38288093492fb2608252849e1f804d7",
+      "SourceG2_sha256": "510d461e6d971749efbbed6570f08aca2605ecc61c16977ab9acb9170c7aba4a"
+    },
+    {
+      "path": "src/menu_art.rs",
+      "SourceF_sha256": "1c3b8e58828c13099cf00c612b383efa1e402e27eaa7c8f5f0afc7f1ba44a0d0",
+      "SourceG2_sha256": "0506bbf30cc14794625b72ab1e6f5e2573e99a833105ce808913485d3452db06"
+    },
+    {
+      "path": "src/modding.rs",
+      "SourceF_sha256": "5ba4f50b39f577d792a55845c3bc281e94f8bc937eab6cc5e6201cff0cd6d6fc",
+      "SourceG2_sha256": "d2b811416e06a5c743c11c77e5599ddcf5d3263de4f74363bc0731eaccc2c2ac"
+    }
+  ],
+  "exact_unchanged_intrinsic_pixel_dependencies": {
+    "src/assets.rs": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+    "src/hd.rs": "b17f4ee0757ee87d34e01ec76f3a6239c6e9044b42b4b10bd5f05b485f137a64",
+    "src/render.rs": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+    "src/terrain_hd.rs": "e61f96f541c19863ce8d741363a1739b9276e25aee84795952c65565c775e392"
+  },
+  "old_helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-sourceF-palette-review",
+    "sha256": "a90704f5cba83f7556a8066522097607fcbee816b4e870b2d2284af774c7b790"
+  },
+  "current_helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SourceG2-current-intrinsic-helper-and-epoch-carry-private-20261019-v1/actual-sourceG2-palette-review",
+    "sha256": "0338a925ccf26f856c9d5cc2230a3878ecafe6cd3a3d25903742d9e819ac8d12"
+  },
+  "scope": "Unchanged intrinsic loader/sampler/converter source dependencies, not equality of wholeengine epochs or a new contextreview. Actual candidate G2 bank equality must be measured after Rootrelease."
+}
