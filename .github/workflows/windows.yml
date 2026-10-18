@@ -18,6 +18,7 @@ on:
       - "runtime-windows-manifest.json"
       - "tools/assemble_windows.py"
       - "tools/assemble_runtime.py"
+      - "tools/test_runtime_archives.py"
       - ".github/workflows/windows.yml"
 
 permissions:
@@ -71,6 +72,8 @@ jobs:
           $env:SDL_AUDIODRIVER = "dummy"
           & "$package\run.cmd" --profile-root "$env:RUNNER_TEMP\bundled-profile" --smoke-frames 32 --preview-mission base:sector_1_wave_1
           if ($LASTEXITCODE -ne 0) { throw "Included Windows SDL gameplay failed" }
+      - name: Test runtime archive payload selection
+        run: python -m unittest discover -s tools -p test_runtime_archives.py
       - name: Build and package Windows desktop
         run: python tools/assemble_windows.py --target x86_64-pc-windows-msvc --sdl2-dir "$env:RUNNER_TEMP\sdl2\SDL2-2.32.10" --zip dist/RustRaptor-windows-x86_64.zip
       - name: Check displayed boss phases and SD HD shop artwork

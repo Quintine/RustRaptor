@@ -14,6 +14,8 @@ SourceF, both binaries, Mission 2 version 1.0.3 and the nine palette opt-ins rem
 
 The assembled data contains **9,504 files / 8,407,923,443 bytes**. The 307 native AGX cinematic/font records remain preserved separately. Iron Coast retains its published retune, Mission 2 version 1.0.3 and 65-test campaign evidence; see [Iron Coast retune evidence](iron-coast-retune.md). This artwork append changes no mission, weapon or shop behavior.
 
+Windows package follow-up: the exact H5500 run at `00304e25` passed 401 tests (26 ignored, zero failed), then rejected the 15 new picture routes because the ZIP filter skipped directories named `derived`. Mod, PCM and Stage II checks after that HD guard did not run. Both ZIP builders now require every runtime-manifest data file to survive archive selection and fail if any required route is missing. A new synthetic ZIP/relocation check covers the failure; a fresh native Windows result remains pending. [Failed native run](https://github.com/Quintine/RustRaptor/actions/runs/39083332442).
+
 # Earlier 5,339-frame checkpoint — retained historical observation
 
 # HD continuation checkpoint at 5,339 frames — 17 October 2026

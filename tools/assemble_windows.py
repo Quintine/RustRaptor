@@ -174,7 +174,8 @@ def main():
         skipped = {"target", "dist", ".reference", ".local", "derived", "__pycache__", ".git", "lib"}
         with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as output:
             for path in iter_archive_files(package, archive, skipped,
-                                           excluded_files=(Path("bin/raptor-rust"),)):
+                                           excluded_files=(Path("bin/raptor-rust"),),
+                                           required_files=data_manifest["files"]):
                 relative = path.relative_to(package)
                 output.write(path, str(Path("RustRaptor") / relative))
     print(json.dumps(report, indent=2))

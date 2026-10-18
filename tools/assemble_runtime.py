@@ -28,9 +28,16 @@ def checked_file(root, relative):
     return resolved
 
 
-def iter_archive_files(package, archive, skipped, excluded_files=()):
-    """Yield the same sorted archive files without walking excluded subtrees."""
+def iter_archive_files(package, archive, skipped, excluded_files=(), required_files=()):
+    """Keep manifest payloads even when a parent has a build-cache name."""
+    required = {Path(name) for name in required_files}
+    required_directories = {parent for path in required for parent in path.parents}
+    for relative in required:
+        checked_file(package, relative)
+
     def excluded(relative):
+        if relative in required or relative in required_directories:
+            return False
         return (skipped.intersection(relative.parts)
                 or any(part.startswith(".runtime-data-") for part in relative.parts)
                 or (len(relative.parts) >= 4 and relative.parts[0] == "mods"
@@ -47,6 +54,9 @@ def iter_archive_files(package, archive, skipped, excluded_files=()):
             if (not excluded(relative) and relative not in excluded_files and path.is_file()
                     and path.resolve() != archive):
                 files.append(path)
+    missing = required - {path.relative_to(package) for path in files}
+    if missing:
+        raise ValueError(f"runtime archive is missing required files: {sorted(map(str, missing))}")
     yield from sorted(files)
 
 
@@ -165,7 +175,8 @@ def main():
         archive.parent.mkdir(parents=True, exist_ok=True)
         skipped = {"target", "dist", ".reference", ".local", "derived", "__pycache__", ".git"}
         with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as output:
-            for path in iter_archive_files(package, archive, skipped):
+            for path in iter_archive_files(package, archive, skipped,
+                                           required_files=report["files"]):
                 relative = path.relative_to(package)
                 output.write(path, str(Path("RustRaptor") / relative))
     print(json.dumps({key: value for key, value in report.items() if key not in {"files", "system_dependencies"}}, indent=2))
