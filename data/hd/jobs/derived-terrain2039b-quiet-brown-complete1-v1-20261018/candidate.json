@@ -1,0 +1,31 @@
+{
+  "artwork_derivation": {
+    "path": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/artwork-derivation.json",
+    "sha256": "0b96828824787c5a0c35f4f20f9cfb00925e8b90e23591803d4d2716a1c1965f"
+  },
+  "category": "Terrain",
+  "complete_family": true,
+  "format_version": 1,
+  "job_id": "derived-terrain2039b-quiet-brown-complete1-v1-20261018",
+  "kind": "contextual_terrain_shard",
+  "sequences": [
+    {
+      "base_asset": 131995,
+      "frame_count": 1,
+      "frames": [
+        {
+          "file": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/derived/2039b-DERIVED-source-guided-material-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "dc379b8069033daea651a5b7657737fd5f702ce83a88a0cc869e3957d708b47d"
+        }
+      ],
+      "name": "Source-guided quiet diffuse brown terrain2039b"
+    }
+  ]
+}

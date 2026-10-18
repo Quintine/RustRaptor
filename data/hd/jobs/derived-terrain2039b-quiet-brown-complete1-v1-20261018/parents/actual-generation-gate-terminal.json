@@ -1,0 +1,44 @@
+{
+  "owner": "/root/iron_coast_3",
+  "job": "terrain-2039b-original-source-diffuse-single-iron3-20261017-v1",
+  "maximum_calls": 1,
+  "actual_calls": 1,
+  "retries": 0,
+  "lease": {
+    "action": "acquire",
+    "owner": "/root/iron_coast_3",
+    "capacity": 4,
+    "acquired": true,
+    "lease_id": "6b74c5da-f4b4-46e3-866d-bcc1267216a4",
+    "expires_at": "2026-10-17T13:18:08+00:00",
+    "renewal_command": "renew --owner /root/iron_coast_3 --lease 6b74c5da-f4b4-46e3-866d-bcc1267216a4",
+    "active_reservations": 1,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "start": {
+    "action": "start",
+    "owner": "/root/iron_coast_3",
+    "capacity": 4,
+    "changed": true,
+    "started_at": "2026-10-17T12:48:08+00:00",
+    "active_reservations": 1,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "terminal": {
+    "action": "report",
+    "owner": "/root/iron_coast_3",
+    "capacity": 4,
+    "changed": true,
+    "active_reservations": 0,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "outcome": "success",
+  "error": null,
+  "return_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "output_hint": "Generated images are saved to /home/quintine/.codex/generated_images/01a1245d-8d97-74e2-9a2c-02e88a570589 as /home/quintine/.codex/generated_images/01a1245d-8d97-74e2-9a2c-02e88a570589/exec-d06680ae-375b-421e-ab32-e84c1a9ef2f5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "image_url_logged_or_serialized": false,
+  "report_release_before_QA": true
+}

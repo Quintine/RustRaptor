@@ -1,5 +1,19 @@
 # HD coordinator checkpoint — 18 October 2026
 
+Current artwork/runtime checkpoint — 18 October 2026: the optional HD pack contains **5,552 reviewed pictures in 3,671 complete sequences**, including **4,388 Terrain pictures**. **201 originals still await approval**: 147 Terrain, 50 enemies and ground objects, and four UI/other pictures. All 249 boss pictures are reviewed; complete Original-art coverage remains unfinished.
+
+This append adds the complete WORMDN8 family `3001e–30025`, the complete SHIP20G2 family `200c4–200c7` and quiet brown Terrain `2039b`. Their derived outputs and declared parent lineage remain distinct from untouched generator returns. SHIP20 restores 27 Original logical yellow-tip cells (0/7/13/7 across phases); those Source samples are not generated HD detail.
+
+WORMDN has complete intrinsic and fresh catalogue/caller-absence review, with no invented phase clock, World, Host or shadow. Its continuous folds/opening progression, wetter brighter lip relief, native1 softness and Source-stepped contours remain qualified; stationary derived RGBA equality is not an exact native backing claim. SHIP20 has four consecutive genuine phase endpoints in one actual World, retaining fixed H5521 physical pixels and a separate finite58 actual H5539 input carry. Terrain2039b has two genuine intact positions, one legal settled-neighbor endpoint and one ordered comparison; its fixed H5521 pixels have a separate finite10 H5539 input carry. Twelve reverse contexts remain metadata-only. Quiet dark brown versus brighter sharper neighbors, value/grain rectangles, native1 softness, stronger metal relief and Source tip-step limits remain literal. No all-placement, seamless, full-route survival, current Host or performance claim follows. Old HOLDs/refusals/failures stay unchanged.
+
+Actual assembly contains **9,980 data files / 8,462,418,176 bytes**. The 134-file increment is the exact shipped three-job membership, not enclosing private history. Old native headers, Source bindings, artwork and declared runtime payloads remain exact. The first preflight rejected the valid mixed-case SHIP job ID before any stage or registrar main. Root preserved that failure and explicitly authorized a second preflight with the independently reviewed case-safe guard; one private registrar main then succeeded. This was a manual continuation, not an automatic retry or rollback.
+
+Actual installed validation accepts all 5,552 frames with zero rejects and validates 45 mods with one override. Three fresh 1920×1080 software-SDL controls—menu, Original Sector 1 Wave 7 and Sector 3 Wave 9—each exited successfully with empty stderr. The operator and Root personally reviewed all three complete screens. All PNG bytes and decoded RGB/alpha planes match actual H5539 exactly, with zero changed pixels across 6,220,800 pixels. These fixed controls do not establish that any of the 13 new pictures appeared; known mixed terrain textures and Source-stepped shadows remain visible.
+
+The reviewed SHIP cleanup dispatcher is included; all 162 maintained cleanup/registration tests passed with synthetic assets. SourceF18, both binaries, Mission 2 version1.0.3, all45 mods and existing palette opt-ins are unchanged. Historical engine/campaign tests and native Windows results keep their exact dated scope. The exact f3b30df0 H5539 native Windows run 39090342653 was still in progress at the saved 02:56:50 UTC observation, with native build/package active and no observed failed step. This is pending metadata, not completed test, HD, mod or PCM totals. Earlier e0d114e6 H5521 success remains dated separately. No native Windows H5552 result is inferred. The [backlog](hd-backlog.md), [completion ledger](hd-completion.json) and [runtime evidence](hd-runtime-release.json) preserve exact authorities and limitations. Actual pre-push checkpoint; Git history records later publication.
+
+Preserved H5539 checkpoint — earlier artwork, validation and holds retain dated scopes:
+
 Current artwork/runtime checkpoint — 18 October 2026: the optional HD pack contains **5,539 reviewed pictures in 3,668 complete sequences**, including **4,387 Terrain pictures**. **214 originals still await approval**: 148 Terrain, 54 enemies and ground objects, and 12 UI/other pictures. All 249 boss pictures are reviewed; complete Original-art coverage remains unfinished.
 
 This append adds only Terrain: the two selected singletons `2038f` and `20390` version 2, plus the complete 16-picture organic forest family `2061d–2062c`. All 18 are reproducible Source-guided derived artwork using retained generated-parent material, not untouched generator returns. The `20390` version 2 recipe explicitly declares its two donors; its older held artifact is unchanged.
@@ -90,15 +104,15 @@ Published runtime history: The assembled bundled Linux/Windows data contains **3
 | --- | ---: |
 | Player banking | 21 / 21 |
 | Bosses | 249 / 249 |
-| Enemies and ground objects | 365 / 419 |
+| Enemies and ground objects | 369 / 419 |
 | Player and enemy projectiles | 51 / 51 |
 | Explosions and effects | 281 / 281 |
 | Equipment and pickups | 47 / 47 |
-| Terrain | 4,387 / 4,535 |
-| Menus, portraits, HUD and other pictures | 138 / 150 |
-| Total | 5,539 / 5,753 |
+| Terrain | 4,388 / 4,535 |
+| Menus, portraits, HUD and other pictures | 146 / 150 |
+| Total | 5,552 / 5,753 |
 
-All 6,449 catalog entries and 5,753 pictures were audited with zero HD source/hash/canvas/ID errors. **214 pictures still await HD approval**. Picture ledger counts are {'registered': 5519, 'inprogress': 103, 'renderreachable': 20, 'candidate': 109, 'missing': 2}; candidate status is not art approval or live occurrence. All 307 native AGX/font records remain separately `native_preserved`, with no generated HD coverage. Unused/destroyed pictures remain required.
+All 6,449 catalog entries and 5,753 pictures were audited with zero HD source/hash/canvas/ID errors. **201 pictures still await HD approval**. Picture ledger counts are {'registered': 5532, 'inprogress': 103, 'renderreachable': 20, 'candidate': 96, 'missing': 2}; candidate status is not art approval or live occurrence. All 307 native AGX/font records remain separately `native_preserved`, with no generated HD coverage. Unused/destroyed pictures remain required.
 
 ## Historical Stage2 API 1,148 output proof
 

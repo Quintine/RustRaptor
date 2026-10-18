@@ -1,0 +1,746 @@
+{
+  "actual_original_QA": {
+    "mode": 33188,
+    "mtime_ns": 1792287535838740716,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-complete4-minimal27-Original-yellow-tips-author-20261018/actual-once-SourceF-minimal27-complete4-intrinsic5/runtime-qa.json",
+    "sha256": "d8a8bf861d2064096a3a66b0b98ebd31f33f025b9eea591f52d98125cfd37b34",
+    "size": 14112
+  },
+  "any_game_source_newer_than_library": false,
+  "artwork_sha256": {
+    "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/derived/200c4-derived.png": "2427db9b33ed9a75951c23a45dd0c06efce29896763a7a57a019e7b435e70368",
+    "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/derived/200c5-derived.png": "599b716e8aaa997c19c7e2afd152476da02328ee04d0567e71a669d234f258cb",
+    "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/derived/200c6-derived.png": "2708a91d208ce401df5e8b461188d0f3941a2ddea42667ad06d61b9bbec9188e",
+    "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/derived/200c7-derived.png": "8f06931f70af4892f05dc8de3435b7adbf98bc59515fbdc49206b1ba016cf589"
+  },
+  "candidate_sha256": "9f60d21652fc6537d536c6e586b8b6104165f066cbc3070afa62ff62a6445ae7",
+  "diagnostics": [],
+  "frame_bindings_sha256": "1cb6b6da97fd5b6ec0fb6f36b8d0b04da7d64fb41b898aed62421b0cbc993c65",
+  "frames": [
+    {
+      "asset": "200c4",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              6,
+              0,
+              44,
+              51
+            ],
+            "centroid": [
+              22.87544483985765,
+              30.750889679715304
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 562
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              12,
+              0,
+              88,
+              102
+            ],
+            "centroid": [
+              46.298548094373864,
+              62.05852994555354
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 2204
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              18,
+              0,
+              132,
+              153
+            ],
+            "centroid": [
+              69.72228989037758,
+              93.36662606577345
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 4926
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              24,
+              0,
+              176,
+              204
+            ],
+            "centroid": [
+              93.1219790241678,
+              124.64580483356133
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 8772
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        48,
+        56
+      ],
+      "source_mask": {
+        "bounds": [
+          6,
+          0,
+          44,
+          51
+        ],
+        "centroid": [
+          22.87544483985765,
+          30.750889679715304
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 562
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "3ad171d2a75eb5d355f02d2f09f9d4ddf7f55d2fd7fa782de0ee3eb8a10d0a99"
+    },
+    {
+      "asset": "200c5",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              10,
+              0,
+              40,
+              53
+            ],
+            "centroid": [
+              22.897163120567377,
+              31.01595744680851
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 564
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              20,
+              0,
+              80,
+              106
+            ],
+            "centroid": [
+              46.18916478555305,
+              62.52009029345373
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 2215
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              30,
+              0,
+              120,
+              159
+            ],
+            "centroid": [
+              69.47991116495054,
+              94.02362204724409
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 4953
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              40,
+              0,
+              160,
+              212
+            ],
+            "centroid": [
+              92.82503685225082,
+              125.53384737498583
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 8819
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        48,
+        56
+      ],
+      "source_mask": {
+        "bounds": [
+          10,
+          0,
+          40,
+          53
+        ],
+        "centroid": [
+          22.897163120567377,
+          31.01595744680851
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 564
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "e62f438391672c35202a49def0aaff63bce673d27ead6b211be43ca2baf60b2d"
+    },
+    {
+      "asset": "200c6",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              6,
+              0,
+              35,
+              53
+            ],
+            "centroid": [
+              22.29787234042553,
+              31.25531914893617
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 564
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              12,
+              0,
+              70,
+              106
+            ],
+            "centroid": [
+              45.11171171171171,
+              63.02882882882883
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 2220
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              18,
+              0,
+              105,
+              159
+            ],
+            "centroid": [
+              67.92572463768116,
+              94.80213365539453
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 4968
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              24,
+              0,
+              140,
+              212
+            ],
+            "centroid": [
+              90.73224785165084,
+              126.56648575305292
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 8844
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        48,
+        56
+      ],
+      "source_mask": {
+        "bounds": [
+          6,
+          0,
+          35,
+          53
+        ],
+        "centroid": [
+          22.29787234042553,
+          31.25531914893617
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 564
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "4656f009f9910507ddc8f22461554a40a9ad9cf10912aedd24643015d393c2ce"
+    },
+    {
+      "asset": "200c7",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              2,
+              0,
+              39,
+              51
+            ],
+            "centroid": [
+              22.375,
+              30.725
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 560
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              4,
+              0,
+              78,
+              102
+            ],
+            "centroid": [
+              45.135886912904695,
+              61.96625626994984
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 2193
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              6,
+              0,
+              117,
+              153
+            ],
+            "centroid": [
+              67.89548887528066,
+              93.20718513982446
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 4899
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              8,
+              0,
+              156,
+              204
+            ],
+            "centroid": [
+              90.71392550143267,
+              124.44011461318051
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 8725
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        48,
+        56
+      ],
+      "source_mask": {
+        "bounds": [
+          2,
+          0,
+          39,
+          51
+        ],
+        "centroid": [
+          22.375,
+          30.725
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 560
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "751e734e49b12af78ec59476de0bbb15a2590579a85a279510d398f5ab854ace"
+    }
+  ],
+  "library": "target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+  "library_modified_ns": 1792245641851329918,
+  "library_sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+  "limitation": "Gallery validation does not prove live scene reachability, terrain seam correctness or artistic fidelity. Opaque sprites have trivial alpha-mask overlap; compare visible source geometry manually.",
+  "method": "actual Rust HdAssets::load and sprite at scales 1..4; Catalog palette; no artwork edits",
+  "namespace_bridge": "Original actualSourceF4helper QA scalar frames carried byte-for-byte perframe; only pack-relative artwork paths/binding digest/candidate/lineage and explicit actual frozen library identity are added. This is NOT another QA invocation.",
+  "new_QA_calls": 0,
+  "source_newer_than_library": false,
+  "validated_frames": 4
+}

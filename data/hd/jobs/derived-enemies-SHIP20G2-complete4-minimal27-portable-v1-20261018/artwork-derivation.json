@@ -1,0 +1,61 @@
+{
+  "Original27_disclosure": "0/7/13/7 authentic yellow82..84 cells;432SourceScale4RGBA=383painted+49transparent, not generated HD detail.",
+  "execution_receipt": {
+    "path": "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/derived/derived-provenance.json",
+    "sha256": "71dd3d2a6145aac20e13f3e5567134bfa286ab259bc6e278342a12b468a6b510"
+  },
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "derived-SHIP20-complete4-reviewed-generated-RGB-and-Original-tips-v1",
+  "no_new_image_generation": true,
+  "outputs": {
+    "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/derived/200c4-derived.png": "2427db9b33ed9a75951c23a45dd0c06efce29896763a7a57a019e7b435e70368",
+    "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/derived/200c5-derived.png": "599b716e8aaa997c19c7e2afd152476da02328ee04d0567e71a669d234f258cb",
+    "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/derived/200c6-derived.png": "2708a91d208ce401df5e8b461188d0f3941a2ddea42667ad06d61b9bbec9188e",
+    "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/derived/200c7-derived.png": "8f06931f70af4892f05dc8de3435b7adbf98bc59515fbdc49206b1ba016cf589"
+  },
+  "parents": [
+    {
+      "imagegen_receipt": {
+        "path": "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/parents/actual-imagegen-receipt.json",
+        "sha256": "894a5b0754ecff52aa224287c3486989f75671f51955b8081a9fe6c48d8e4060"
+      },
+      "prompt": {
+        "path": "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/parents/prompt.txt",
+        "sha256": "7b9d0b656368d4a2b53a602b6f35fc7c5dea32d19b0449961375af02981f5f36"
+      },
+      "raw_png": {
+        "path": "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/parents/generator-return.png",
+        "sha256": "d6fe85ad268a8db9b8fdd74720d338d845e60ea86b46beddece87250af4afc93"
+      }
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/cleanup-recipe.json",
+    "sha256": "c5eee44c3527d8529a3f298895df93ce4438420acb45c3e17c210015f1534fcf"
+  },
+  "sources": {
+    "200c4": "3ad171d2a75eb5d355f02d2f09f9d4ddf7f55d2fd7fa782de0ee3eb8a10d0a99",
+    "200c5": "e62f438391672c35202a49def0aaff63bce673d27ead6b211be43ca2baf60b2d",
+    "200c6": "4656f009f9910507ddc8f22461554a40a9ad9cf10912aedd24643015d393c2ce",
+    "200c7": "751e734e49b12af78ec59476de0bbb15a2590579a85a279510d398f5ab854ace"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_ship20_cleanup.py",
+      "sha256": "9ea1972cdd3c55dc74b9c5eadb8bd81f98c82046d399ea326d8dc05a126e3575"
+    },
+    {
+      "path": "tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    },
+    {
+      "path": "tools/hd_other_functional_cleanup.py",
+      "sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    }
+  ]
+}

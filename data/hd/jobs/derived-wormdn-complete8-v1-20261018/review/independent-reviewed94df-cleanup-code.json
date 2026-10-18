@@ -1,0 +1,106 @@
+{
+  "status": "PASS_SCOPED_INDEPENDENT_WORM_CLEANUP_CODE_AND_PROVENANCE_REVIEW_NO_CONCRETE_FINDINGS",
+  "utc": "2026-10-18T00:09:51.636764+00:00",
+  "reviewer": "/root/iron_coast_2",
+  "reviewed_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_worm_cleanup.py",
+      "sha256": "94df9f8cbfb1c13750918f751917de3379c787c8cd28a04238328d1f3eef333f",
+      "bytes": 15194
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/test_hd_worm_cleanup.py",
+      "sha256": "90c426f0e0b0a0990b3f9badcd2b29923ed86ea41b601c934434f06dc5f601e4",
+      "bytes": 7895
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+      "bytes": 9385
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-WORMRITE-generated-RGB-continuous-form-cleanup-SourceF-20261018-v2/complete8-generated-RGB-cleanup-recipe.json",
+      "sha256": "bd22fddea5aa00123a572348d4219f14684fef1e5e2b4e6003954b320fcfc97d",
+      "bytes": 7854
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-WORMRITE-generated-RGB-continuous-form-cleanup-SourceF-20261018-v2/generated/derived-provenance.json",
+      "sha256": "fe4afe62e4547d274b8ffb2f8c6701dae4230ff7816bd4c929836bda923aa9f3",
+      "bytes": 15033
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-WORMRITE-generated-RGB-continuous-form-cleanup-SourceF-20261018-v2/AUTHOR_COMPLETE8_NEW_GENERATED_RGB_DERIVED_SOURCEF_WHOLE_MATERIAL_QUALIFIED_WITH_LIMITS.json",
+      "sha256": "b7beabf7d76c97242bf84cf8c7ccdb40be88c884650b1a9263e23272a1c6df6f",
+      "bytes": 6699
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-WORMRITE-generated-RGB-continuous-form-cleanup-SourceF-20261018-v2-strict-complete8-new-generated-RGB-author-actual-SourceF-closure.json",
+      "sha256": "4bc19efeab593b2c58b941886de5ebeedbe1ce5d1ead6c8997a81c9fd9508c0c",
+      "bytes": 44306
+    }
+  ],
+  "tests": {
+    "python": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "Pillow": "12.3.0",
+    "flags": [
+      "-B"
+    ],
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "existing_focused_tests_passed": 7,
+    "independent_synthetic_checks": [
+      "Explicit recipe frame order preserved; per-asset pixels stable under recipe reordering",
+      "Bad parent SHA fails before output directory",
+      "Boolean and zero feather fail before output directory",
+      "Duplicate asset and single-frame family fail before output directory"
+    ]
+  },
+  "actual_metadata_checks": {
+    "unique_recipe_inputs_hash_verified": 10,
+    "actual_asset_order": [
+      "3003b",
+      "3003c",
+      "3003d",
+      "3003e",
+      "3003f",
+      "30040",
+      "30041",
+      "30042"
+    ],
+    "decoder_sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+    "normalized_execution_exact_seven_fields": true,
+    "source_parent_recipe_tool_hashes_exact": true,
+    "decoder_Python_NumPy_Pillow_recorded_from_first_actual_run": true
+  },
+  "code_checks": [
+    "Source native canvas and zero origin validated",
+    "Exact whole-cell alpha-threshold bounds verified inside declared atlas grid",
+    "Source-supported alpha output, generated RGB donor fill and broad gains are explicit derived operations",
+    "Stationary backing exact across phases; phase-specific envelope remains active",
+    "Generated RGB variation/coverage guards and empty/opaque parents fail closed",
+    "Deterministic PNG and decoded RGBA hashes, input-byte preservation and existing-output refusal tested"
+  ],
+  "bounds": {
+    "output_scale": "integer4..16",
+    "family_frames": "2..64",
+    "per_frame_output_pixel_ceiling": 4194304,
+    "parent_PNG_pixel_ceiling": 4194304,
+    "parent_PNG_byte_ceiling": 33554432,
+    "actual_recipe_frames": 8,
+    "actual_total_output_pixels": 524288,
+    "scope": "Per-frame bounds reviewed; no maximal-size family memory benchmark or all-environment performance claim."
+  },
+  "findings": [],
+  "scope_limits": [
+    "Implementation and reproducibility review only; no material/context/animation/admission approval.",
+    "No actual cleanup rerun, actual image decoding or new SourceF QA; only temporary synthetic fixtures were rendered.",
+    "Generated RGB is aligned, broadly gain-adjusted, donor-filled and shared; functional blue Source RGB cells are explicit replacements. This is derived artwork, not an untouched generation claim.",
+    "Old hd_sprite_cleanup tool is not imported or edited.",
+    "No shared Source/tool/data/docs/Git modifications, engine/compiler/World/renderer/canonical operations."
+  ],
+  "actual_shared_edits": 0,
+  "pending_own_writer_call_or_lease": false
+}

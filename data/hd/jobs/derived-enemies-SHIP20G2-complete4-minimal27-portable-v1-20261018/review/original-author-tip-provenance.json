@@ -1,0 +1,273 @@
+{
+  "NumPy": "2.3.5",
+  "Original_cells_are_not_generated_HD": true,
+  "Pillow": "12.3.0",
+  "Python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "dependencies": {
+    "RGB_geometry_tool": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    },
+    "Source_decoder": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    }
+  },
+  "execution": {
+    "method": "derived-existing-generated-RGB-exact-declared-Original-rotor-tip-features-v1",
+    "output_sha256": {
+      "200c4": "2427db9b33ed9a75951c23a45dd0c06efce29896763a7a57a019e7b435e70368",
+      "200c5": "599b716e8aaa997c19c7e2afd152476da02328ee04d0567e71a669d234f258cb",
+      "200c6": "2708a91d208ce401df5e8b461188d0f3941a2ddea42667ad06d61b9bbec9188e",
+      "200c7": "8f06931f70af4892f05dc8de3435b7adbf98bc59515fbdc49206b1ba016cf589"
+    },
+    "parent_raw_sha256": [
+      "d6fe85ad268a8db9b8fdd74720d338d845e60ea86b46beddece87250af4afc93"
+    ],
+    "recipe_sha256": "cdb6219b88cf4af84c91f3571bebb4b80608143eb62b659508e1b939750a46b2",
+    "source_sha256": {
+      "200c4": "3ad171d2a75eb5d355f02d2f09f9d4ddf7f55d2fd7fa782de0ee3eb8a10d0a99",
+      "200c5": "e62f438391672c35202a49def0aaff63bce673d27ead6b211be43ca2baf60b2d",
+      "200c6": "4656f009f9910507ddc8f22461554a40a9ad9cf10912aedd24643015d393c2ce",
+      "200c7": "751e734e49b12af78ec59476de0bbb15a2590579a85a279510d398f5ab854ace"
+    },
+    "status": "success",
+    "tool_sha256": "819f07ae9cf4e24365cf39966a07f5b2f1250ed32f5a4daaebb8bd0d73cb7395"
+  },
+  "frames": [
+    {
+      "asset": "200c4",
+      "input_derived": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-complete4-generated-RGB-cleanup-author-20261018/actual-once-DERIVED-complete4-RGBA/200c4-derived.png",
+        "sha256": "2427db9b33ed9a75951c23a45dd0c06efce29896763a7a57a019e7b435e70368"
+      },
+      "output_sha256": "2427db9b33ed9a75951c23a45dd0c06efce29896763a7a57a019e7b435e70368",
+      "retention": {
+        "RGBA_changes": 0,
+        "actual_Original_Scale4_RGBA_samples": 0,
+        "actual_Original_transparent_samples": 0,
+        "cells": [],
+        "outside_explicit_footprints_RGBA_exact": true,
+        "unchanged_file_bytes_exact": true
+      },
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP20G2_PIC",
+        "sha256": "3ad171d2a75eb5d355f02d2f09f9d4ddf7f55d2fd7fa782de0ee3eb8a10d0a99"
+      }
+    },
+    {
+      "asset": "200c5",
+      "input_derived": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-complete4-generated-RGB-cleanup-author-20261018/actual-once-DERIVED-complete4-RGBA/200c5-derived.png",
+        "sha256": "891535bd54c4237e80a0d5a963abdbe5178a3fb23e6bbc5c37c5f305c60e6304"
+      },
+      "output_sha256": "599b716e8aaa997c19c7e2afd152476da02328ee04d0567e71a669d234f258cb",
+      "retention": {
+        "RGBA_changes": 99,
+        "Source_indices": [
+          84,
+          84,
+          84,
+          83,
+          83,
+          83,
+          82
+        ],
+        "actual_Original_Scale4_RGBA_samples": 112,
+        "actual_Original_transparent_samples": 13,
+        "cells": [
+          [
+            14,
+            25
+          ],
+          [
+            14,
+            26
+          ],
+          [
+            15,
+            24
+          ],
+          [
+            15,
+            25
+          ],
+          [
+            15,
+            26
+          ],
+          [
+            16,
+            24
+          ],
+          [
+            16,
+            25
+          ]
+        ],
+        "outside_explicit_footprints_RGBA_exact": true,
+        "retained_Original_not_generated_HD": true
+      },
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP20G2_PIC.1",
+        "sha256": "e62f438391672c35202a49def0aaff63bce673d27ead6b211be43ca2baf60b2d"
+      }
+    },
+    {
+      "asset": "200c6",
+      "input_derived": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-complete4-generated-RGB-cleanup-author-20261018/actual-once-DERIVED-complete4-RGBA/200c6-derived.png",
+        "sha256": "7757d386357b40bce839d1693945f6086909e9ec969507ed47e5e83439a2319e"
+      },
+      "output_sha256": "2708a91d208ce401df5e8b461188d0f3941a2ddea42667ad06d61b9bbec9188e",
+      "retention": {
+        "RGBA_changes": 190,
+        "Source_indices": [
+          84,
+          82,
+          84,
+          82,
+          84,
+          82,
+          84,
+          84,
+          84,
+          83,
+          82,
+          84,
+          83
+        ],
+        "actual_Original_Scale4_RGBA_samples": 208,
+        "actual_Original_transparent_samples": 18,
+        "cells": [
+          [
+            25,
+            19
+          ],
+          [
+            25,
+            20
+          ],
+          [
+            26,
+            19
+          ],
+          [
+            26,
+            20
+          ],
+          [
+            27,
+            19
+          ],
+          [
+            27,
+            20
+          ],
+          [
+            28,
+            23
+          ],
+          [
+            28,
+            24
+          ],
+          [
+            29,
+            23
+          ],
+          [
+            29,
+            24
+          ],
+          [
+            29,
+            25
+          ],
+          [
+            30,
+            24
+          ],
+          [
+            30,
+            25
+          ]
+        ],
+        "outside_explicit_footprints_RGBA_exact": true,
+        "retained_Original_not_generated_HD": true
+      },
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP20G2_PIC.2",
+        "sha256": "4656f009f9910507ddc8f22461554a40a9ad9cf10912aedd24643015d393c2ce"
+      }
+    },
+    {
+      "asset": "200c7",
+      "input_derived": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-complete4-generated-RGB-cleanup-author-20261018/actual-once-DERIVED-complete4-RGBA/200c7-derived.png",
+        "sha256": "f09d121919fabc48ec48f070a0b6cf67876e7646870c9675b3bae8d7c691cb73"
+      },
+      "output_sha256": "8f06931f70af4892f05dc8de3435b7adbf98bc59515fbdc49206b1ba016cf589",
+      "retention": {
+        "RGBA_changes": 94,
+        "Source_indices": [
+          84,
+          84,
+          84,
+          83,
+          82,
+          84,
+          83
+        ],
+        "actual_Original_Scale4_RGBA_samples": 112,
+        "actual_Original_transparent_samples": 18,
+        "cells": [
+          [
+            36,
+            23
+          ],
+          [
+            36,
+            24
+          ],
+          [
+            37,
+            23
+          ],
+          [
+            37,
+            24
+          ],
+          [
+            37,
+            25
+          ],
+          [
+            38,
+            24
+          ],
+          [
+            38,
+            25
+          ]
+        ],
+        "outside_explicit_footprints_RGBA_exact": true,
+        "retained_Original_not_generated_HD": true
+      },
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP20G2_PIC.3",
+        "sha256": "751e734e49b12af78ec59476de0bbb15a2590579a85a279510d398f5ab854ace"
+      }
+    }
+  ],
+  "functional_module": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_other_functional_cleanup.py",
+    "sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84"
+  },
+  "input_derived_sha256": {
+    "200c4": "2427db9b33ed9a75951c23a45dd0c06efce29896763a7a57a019e7b435e70368",
+    "200c5": "891535bd54c4237e80a0d5a963abdbe5178a3fb23e6bbc5c37c5f305c60e6304",
+    "200c6": "7757d386357b40bce839d1693945f6086909e9ec969507ed47e5e83439a2319e",
+    "200c7": "f09d121919fabc48ec48f070a0b6cf67876e7646870c9675b3bae8d7c691cb73"
+  }
+}

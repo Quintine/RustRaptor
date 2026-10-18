@@ -1,0 +1,240 @@
+{
+  "expected_output_sha256": {
+    "200c4": "2427db9b33ed9a75951c23a45dd0c06efce29896763a7a57a019e7b435e70368",
+    "200c5": "599b716e8aaa997c19c7e2afd152476da02328ee04d0567e71a669d234f258cb",
+    "200c6": "2708a91d208ce401df5e8b461188d0f3941a2ddea42667ad06d61b9bbec9188e",
+    "200c7": "8f06931f70af4892f05dc8de3435b7adbf98bc59515fbdc49206b1ba016cf589"
+  },
+  "format_version": 1,
+  "functional_original_cells": {
+    "200c4": [],
+    "200c5": [
+      [
+        14,
+        25
+      ],
+      [
+        14,
+        26
+      ],
+      [
+        15,
+        24
+      ],
+      [
+        15,
+        25
+      ],
+      [
+        15,
+        26
+      ],
+      [
+        16,
+        24
+      ],
+      [
+        16,
+        25
+      ]
+    ],
+    "200c6": [
+      [
+        25,
+        19
+      ],
+      [
+        25,
+        20
+      ],
+      [
+        26,
+        19
+      ],
+      [
+        26,
+        20
+      ],
+      [
+        27,
+        19
+      ],
+      [
+        27,
+        20
+      ],
+      [
+        28,
+        23
+      ],
+      [
+        28,
+        24
+      ],
+      [
+        29,
+        23
+      ],
+      [
+        29,
+        24
+      ],
+      [
+        29,
+        25
+      ],
+      [
+        30,
+        24
+      ],
+      [
+        30,
+        25
+      ]
+    ],
+    "200c7": [
+      [
+        36,
+        23
+      ],
+      [
+        36,
+        24
+      ],
+      [
+        37,
+        23
+      ],
+      [
+        37,
+        24
+      ],
+      [
+        37,
+        25
+      ],
+      [
+        38,
+        24
+      ],
+      [
+        38,
+        25
+      ]
+    ]
+  },
+  "geometry_recipe": {
+    "format_version": 1,
+    "frames": [
+      {
+        "asset": "200c4",
+        "origin": [
+          0,
+          0
+        ],
+        "raw_png": {
+          "path": "parents/generator-return.png",
+          "sha256": "d6fe85ad268a8db9b8fdd74720d338d845e60ea86b46beddece87250af4afc93"
+        },
+        "sampling_offset_native": [
+          0,
+          0
+        ],
+        "source": {
+          "path": "sources/SHIP20G2_PIC",
+          "sha256": "3ad171d2a75eb5d355f02d2f09f9d4ddf7f55d2fd7fa782de0ee3eb8a10d0a99"
+        },
+        "viewport": [
+          2,
+          3,
+          578,
+          675
+        ]
+      },
+      {
+        "asset": "200c5",
+        "origin": [
+          0,
+          0
+        ],
+        "raw_png": {
+          "path": "parents/generator-return.png",
+          "sha256": "d6fe85ad268a8db9b8fdd74720d338d845e60ea86b46beddece87250af4afc93"
+        },
+        "sampling_offset_native": [
+          0,
+          0
+        ],
+        "source": {
+          "path": "sources/SHIP20G2_PIC.1",
+          "sha256": "e62f438391672c35202a49def0aaff63bce673d27ead6b211be43ca2baf60b2d"
+        },
+        "viewport": [
+          582,
+          3,
+          1158,
+          675
+        ]
+      },
+      {
+        "asset": "200c6",
+        "origin": [
+          0,
+          0
+        ],
+        "raw_png": {
+          "path": "parents/generator-return.png",
+          "sha256": "d6fe85ad268a8db9b8fdd74720d338d845e60ea86b46beddece87250af4afc93"
+        },
+        "sampling_offset_native": [
+          0,
+          0
+        ],
+        "source": {
+          "path": "sources/SHIP20G2_PIC.2",
+          "sha256": "4656f009f9910507ddc8f22461554a40a9ad9cf10912aedd24643015d393c2ce"
+        },
+        "viewport": [
+          2,
+          680,
+          578,
+          1352
+        ]
+      },
+      {
+        "asset": "200c7",
+        "origin": [
+          0,
+          0
+        ],
+        "raw_png": {
+          "path": "parents/generator-return.png",
+          "sha256": "d6fe85ad268a8db9b8fdd74720d338d845e60ea86b46beddece87250af4afc93"
+        },
+        "sampling_offset_native": [
+          0,
+          0
+        ],
+        "source": {
+          "path": "sources/SHIP20G2_PIC.3",
+          "sha256": "751e734e49b12af78ec59476de0bbb15a2590579a85a279510d398f5ab854ace"
+        },
+        "viewport": [
+          582,
+          680,
+          1158,
+          1352
+        ]
+      }
+    ],
+    "label": "PROPOSED ONLY complete4 SHIP20G2 SourceScale4 geometry and genuine whole generated RGB",
+    "max_fill_distance_pixels": 12,
+    "output_scale": 4,
+    "palette": {
+      "path": "sources/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+    },
+    "shared_backing_anchor": 1
+  },
+  "method": "derived-SHIP20-complete4-reviewed-generated-RGB-and-Original-tips-v1"
+}

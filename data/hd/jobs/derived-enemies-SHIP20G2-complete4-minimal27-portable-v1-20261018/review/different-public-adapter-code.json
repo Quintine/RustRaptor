@@ -1,0 +1,189 @@
+{
+  "actual_code_peer": "/root/hd_enemies_02",
+  "actual_operations": {
+    "QA": 0,
+    "World": 0,
+    "approved_job": 0,
+    "compiler": 0,
+    "imagegen": 0,
+    "real_PNG_image_decodes": 0,
+    "real_asset_replays": 0,
+    "real_source_decodes": 0,
+    "registrar_main": 0,
+    "renderer_or_engine": 0,
+    "shared_source_data_docs_git_writes": 0,
+    "synthetic_test_processes": 2
+  },
+  "actual_tests": {
+    "additional_independent_tests": 9,
+    "all_pass": true,
+    "copied_tests": 5,
+    "terminals": [
+      {
+        "inode": 5564149,
+        "mode": 33188,
+        "mtime_ns": 1792290599431538989,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/COPIED-FIVE-TESTS-TERMINAL.json",
+        "sha256": "d4a608c9fd2e11b6e2d4d6abea9142813532d5ff1404bed06e49d90a63011a09",
+        "size": 389
+      },
+      {
+        "inode": 5564152,
+        "mode": 33188,
+        "mtime_ns": 1792290601084401936,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/INDEPENDENT-NINE-PROBES-TERMINAL.json",
+        "sha256": "bc31c7f2f724c1b118467952cd94a31889a615641cc8514d0abbbb18fbc67402",
+        "size": 315
+      }
+    ]
+  },
+  "author": "/root/hd_full_review",
+  "concrete_code_correction_required": false,
+  "custody": {
+    "bytes_metadata_membership_exact_before_after": true,
+    "frozen_input_count": 38,
+    "owner_direct_ACK_received": true,
+    "owner_no_pending_writer_call_lease": true,
+    "reviewer_no_pending_operation": true
+  },
+  "dependency_pins": [
+    {
+      "mode": 33188,
+      "mtime_ns": 1792282731428329810,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b",
+      "size": 14749
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1792285670584677693,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_other_functional_cleanup.py",
+      "sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84",
+      "size": 5893
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1792245624445469263,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+      "size": 9385
+    }
+  ],
+  "exact_future_argv": [
+    "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_ship20_cleanup.py",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/cleanup-recipe.json",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/derived"
+  ],
+  "findings": [],
+  "metadata_and_lineage": {
+    "Original_cells_per_frame": [
+      0,
+      7,
+      13,
+      7
+    ],
+    "actual_asset_replays": 0,
+    "complete_assets": [
+      "200c4",
+      "200c5",
+      "200c6",
+      "200c7"
+    ],
+    "expected_png_hashes_match_actual_prior_provenance": true,
+    "fixed_recipe_relative_paths_contained": true,
+    "historical_reply_base64_bytes_equal_untouched_raw": true,
+    "native": [
+      48,
+      56
+    ],
+    "no_real_source_or_PNG_decoding": true,
+    "old_reply_inline_payload_characters": 1053804,
+    "origins": [
+      0,
+      0
+    ],
+    "safe_recipe_byte_exact": true,
+    "safe_reply_contains_no_inline_image": true,
+    "safe_reply_gate_fields_equal_actual_terminal": true,
+    "safe_reply_sha256": "894a5b0754ecff52aa224287c3486989f75671f51955b8081a9fe6c48d8e4060",
+    "total_cells": 27
+  },
+  "original_packet": {
+    "inode": 5563188,
+    "mode": 33188,
+    "mtime_ns": 1792290172793995418,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation/FROZEN-SHIP20G2-PORTABLE-COMPLETE4-PUBLIC-ADAPTER-CODE-PACKET-NOT-EXECUTION.json",
+    "sha256": "e2ef21d7dc94dfba000a068df5d00034964300a5b9f536817f902529a5d6653f",
+    "size": 9555
+  },
+  "original_strict": {
+    "inode": 5563189,
+    "mode": 33188,
+    "mtime_ns": 1792290172798614046,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation-strict-complete-portable-public-adapter-code-preparation.json",
+    "sha256": "fd18a789e6b5a55430b7c733b55fd02426a6f4048a00ec93c4b79712818735a4",
+    "size": 9674
+  },
+  "portable_recipe": {
+    "mode": 33188,
+    "mtime_ns": 1792290171944818166,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/cleanup-recipe.json",
+    "sha256": "c5eee44c3527d8529a3f298895df93ce4438420acb45c3e17c210015f1534fcf",
+    "size": 4443
+  },
+  "qualifications": [
+    "Review applies to exact frozen tool/dependencies/recipe and nonoptimized Python -B argv; base dependency assertions are not promised under python -O.",
+    "Underlying checked() allows absolute/parent-declared paths generally. The reviewed c5ee recipe is contained; this is not a generic sandbox/path isolation guarantee.",
+    "Writes are exclusive per file, not an atomic family transaction and not fsync-durable. A write failure can leave a partial fresh directory; preserve failure and reconcile separately, never treat partial provenance as completion.",
+    "Actual four-PNG replay has not run in this code review. Expected SHA guards must pass in the separately authorized real replay before publishing any outputs.",
+    "No new intrinsic material/context/admission approval. Prior author/material/context authorities remain separate and unchanged.",
+    "Old receipt2673 contains inline image payload and remains private. Only safe-v2 receipt894a is the proposed portable packaging; old packet remains literal history."
+  ],
+  "reviewed_code": {
+    "mode": 33188,
+    "mtime_ns": 1792290040048172849,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_ship20_cleanup.py",
+    "sha256": "9ea1972cdd3c55dc74b9c5eadb8bd81f98c82046d399ea326d8dc05a126e3575",
+    "size": 7429
+  },
+  "reviewed_tests": {
+    "mode": 33188,
+    "mtime_ns": 1792290094073893925,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/test_hd_ship20_cleanup.py",
+    "sha256": "4c6a096d113c528ef201e8a758f1b7713e4b9e384575335efc48535dfdbcc850",
+    "size": 7280
+  },
+  "safe_receipt": {
+    "mode": 33188,
+    "mtime_ns": 1792290399452558107,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/parents/actual-imagegen-receipt.json",
+    "sha256": "894a5b0754ecff52aa224287c3486989f75671f51955b8081a9fe6c48d8e4060",
+    "size": 1962
+  },
+  "safe_successor_interface": {
+    "inode": 5564006,
+    "mode": 33188,
+    "mtime_ns": 1792290399457212665,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/FROZEN-SAFE-RECEIPT-V2-PORTABLE-INPUTS-AND-ONCE-REPLAY-ARGV.json",
+    "sha256": "8f27ae849137dd3ec19c81de62aa2c7f8acd6718c2dfa75d627d1ee168ca0cd6",
+    "size": 6548
+  },
+  "scope": "Independent Source/code, synthetic failure semantics and portable input-lineage review only; real execution and registration remain Root-owned.",
+  "status": "PASS_DIFFERENT_SOURCE_CODE_COMPLETE4_FROZEN_SHIP20_DISPATCHER_NO_ASSET_REPLAY",
+  "verified_source_contract": [
+    "Exact complete4 order200c4..200c7, native48x56/origin0, output4x; no split singleton execution.",
+    "Only declared sorted unique integer inbounds yellow82..84 Source cells; actual list counts0/7/13/7.",
+    "One unchanged c612 full-family renderer, then unchanged f807 retention on three frames; SourceScale4 alpha unchanged.",
+    "All four expected PNG hashes match prior actual minimal27 provenance; mismatch rejects before output mkdir.",
+    "Functional/RGB/decoder implementation hashes, recipe and all Source/raw/palette inputs rechecked before output.",
+    "Normalized execution binds actual tool, recipe, Source, unique parent hashes and four output hashes; runtime versions/dependency identities retained.",
+    "Fixed portable c5ee inputs are relative and physically contained, no symlink in their actual paths; other cwd synthetic replay passes.",
+    "Exclusive fresh output creation and xb/x file modes reject existing or raced paths; no input writes.",
+    "Changed recipe/Source/dependency after in-memory rendering stops before output.",
+    "Injected second-file disk failure preserves inputs and first fresh output only, with no provenance/success return; existing output then blocks rerun.",
+    "Safe-v2 changes receipt packaging only. Its recipe/raw/Source/palette/terminal/request/prompt bytes match old reviewed input scope.",
+    "Safe primitive receipt equals actual gate fields and hash-binds full historical reply. Base64 transport bytes independently equal untouched raw; no image decode."
+  ]
+}

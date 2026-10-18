@@ -1,0 +1,144 @@
+{
+  "execution": {
+    "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+    "output_sha256": {
+      "2039b": "3c306b59ae065b3e974515924d54be10a31e3fceb04c1895147e1d0c043ae67e"
+    },
+    "parent_raw_sha256": [
+      "c9795704dff75e9b076dbf9412a09614734febbc41de024e3143d7c7b8ce6393"
+    ],
+    "recipe_sha256": "8c52c75df09541e5c8a546aa03ba8da43210bb986a942a8bcd41ed32dd0e0e3c",
+    "runtime": {
+      "Pillow": "12.3.0",
+      "executable": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "numpy": "2.3.5",
+      "platform": "linux",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+    },
+    "source_sha256": {
+      "2039b": "dc379b8069033daea651a5b7657737fd5f702ce83a88a0cc869e3957d708b47d"
+    },
+    "status": "success",
+    "tool_sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98"
+  },
+  "frames": [
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959553895379,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-2039b-portable-complete1-SourceF-H5539-private-admission-preparation-20261018-v1/data/hd/jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/../../../misc/unnamed.1430",
+        "sha256": "dc379b8069033daea651a5b7657737fd5f702ce83a88a0cc869e3957d708b47d",
+        "size": 1044
+      },
+      "asset": "2039b",
+      "lineage": "DERIVED scripted cleanup; generator-return parent remains untouched",
+      "metrics": {
+        "Source_derived_soil_quiet_strength_max": null,
+        "Source_derived_soil_quiet_strength_min": null,
+        "actual_tone_gain_max": 1.0618362924423927,
+        "actual_tone_gain_min": 0.9418430970896314,
+        "coherent_parent_band_std": 8.296016003790971,
+        "geometry_material_labels_sha256": "1efc0e4c060daa46145a63a8c676f2ba3b5cfc8f7e740a3d1823b631339ede0d",
+        "limits": "Source masks/broad tones/rims; actual coherent generated fine+midscale luminance is hue-preserving multiplicative texture. No random noise; large generated hue/illumination drift discarded. Not material/context approval.",
+        "material_output_pixels": {
+          "rim": 262144
+        },
+        "mean_absolute_parent_tone_modulation": 1.1693916320800781,
+        "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+        "output_RGB_sha256": "3aa57827a5a29747f1792d03ff4d70494ea874dc8ed479d52e489c90520b7a18",
+        "output_is_derived_not_untouched": true,
+        "output_shape": [
+          512,
+          512,
+          3
+        ],
+        "per_family_normalizers": {
+          "rim": 10.004964028533761
+        },
+        "pixels_changed_from_Source_guided_base": 225074,
+        "sourceNx4_indices_sha256": "e83ea5932d6c838dd1c82456dc5a169c4a184abdc97529c6b3961778f698150e",
+        "source_shape": [
+          32,
+          32
+        ]
+      },
+      "output": {
+        "mode": 33188,
+        "mtime_ns": 1792291050534226899,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-2039b-portable-complete1-SourceF-H5539-private-admission-preparation-20261018-v1/actual-portable-reproduction-one/2039b-DERIVED-source-guided-material-v1.png",
+        "sha256": "3c306b59ae065b3e974515924d54be10a31e3fceb04c1895147e1d0c043ae67e",
+        "size": 206802
+      },
+      "parameters": {
+        "output_side": 512,
+        "residual_percentile": 80.0,
+        "residual_sigma_coarse": 10.0,
+        "residual_sigma_fine": 0.65,
+        "source_sigma": 3.0,
+        "texture_log_gain": {
+          "gray": 0.38,
+          "olive": 0.55,
+          "rim": 0.06,
+          "soil": 0.34
+        }
+      },
+      "parent_crop": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792241353427437690,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-2039b-portable-complete1-SourceF-H5539-private-admission-preparation-20261018-v1/data/hd/jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/parents/generator-return.png",
+        "sha256": "c9795704dff75e9b076dbf9412a09614734febbc41de024e3143d7c7b8ce6393",
+        "size": 3392788
+      },
+      "recipe": {
+        "mode": 33188,
+        "mtime_ns": 1792291050121522912,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-2039b-portable-complete1-SourceF-H5539-private-admission-preparation-20261018-v1/data/hd/jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/cleanup-recipe-portable.json",
+        "sha256": "8c52c75df09541e5c8a546aa03ba8da43210bb986a942a8bcd41ed32dd0e0e3c",
+        "size": 1035
+      },
+      "tool": {
+        "mode": 33188,
+        "mtime_ns": 1792281032564211121,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_retexture.py",
+        "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98",
+        "size": 16025
+      }
+    }
+  ],
+  "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+  "palette": {
+    "mode": 33188,
+    "mtime_ns": 1787663959337906368,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-2039b-portable-complete1-SourceF-H5539-private-admission-preparation-20261018-v1/data/hd/jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/../../../misc/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "size": 768
+  },
+  "recipe": {
+    "mode": 33188,
+    "mtime_ns": 1792291050121522912,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-2039b-portable-complete1-SourceF-H5539-private-admission-preparation-20261018-v1/data/hd/jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/cleanup-recipe-portable.json",
+    "sha256": "8c52c75df09541e5c8a546aa03ba8da43210bb986a942a8bcd41ed32dd0e0e3c",
+    "size": 1035
+  },
+  "runtime": {
+    "Pillow": "12.3.0",
+    "executable": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "numpy": "2.3.5",
+    "platform": "linux",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "status": "DERIVED_OUTPUTS_NOT_MATERIAL_APPROVAL",
+  "tool": {
+    "mode": 33188,
+    "mtime_ns": 1792281032564211121,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_retexture.py",
+    "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98",
+    "size": 16025
+  }
+}

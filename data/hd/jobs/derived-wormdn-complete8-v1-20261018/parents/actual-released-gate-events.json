@@ -1,0 +1,29 @@
+{
+  "events": [
+    {
+      "event": "acquired",
+      "expires_at": "2026-10-18T02:10:04+00:00",
+      "job_id": "WORMDN-Original8-continuous-form-dark-20261018-v1",
+      "lease_id": "788aad00-2de8-4eb0-931a-3865e2b389d8",
+      "owner": "/root/hd_dark_player",
+      "timestamp_utc": "2026-10-18T01:40:04+00:00"
+    },
+    {
+      "event": "started",
+      "job_id": "WORMDN-Original8-continuous-form-dark-20261018-v1",
+      "lease_id": "788aad00-2de8-4eb0-931a-3865e2b389d8",
+      "note": "Owner is submitting the built-in imagegen request; this slot requires an explicit report or release.",
+      "owner": "/root/hd_dark_player",
+      "timestamp_utc": "2026-10-18T01:40:04+00:00"
+    },
+    {
+      "event": "report",
+      "job_id": "WORMDN-Original8-continuous-form-dark-20261018-v1",
+      "lease_id": "788aad00-2de8-4eb0-931a-3865e2b389d8",
+      "outcome": "success",
+      "owner": "/root/hd_dark_player",
+      "timestamp_utc": "2026-10-18T01:40:45+00:00"
+    }
+  ],
+  "gate_released_before_copy_or_cleanup": true
+}

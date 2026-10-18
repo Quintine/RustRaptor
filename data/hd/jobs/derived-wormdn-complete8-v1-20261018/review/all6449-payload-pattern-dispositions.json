@@ -1,0 +1,364 @@
+{
+  "bytes": 12994710,
+  "classifications": {
+    "Demo signed16 y/playerpic pair; not an image handle": 13,
+    "RIFF MIDS music-stream bytes; not an image resource field": 10,
+    "Stale cached enemy item handle overwritten by authoritative iname resolution": 1,
+    "Typed MAP signed16 flat/game tile fields; resolved terrain asset is unrelated": 8
+  },
+  "count": 6449,
+  "name_matches": [],
+  "raw_LE32_matches": [
+    {
+      "classification": "Demo signed16 y/playerpic pair; not an image handle",
+      "container": "10107",
+      "frame_record": 519,
+      "offset": 6246,
+      "path": "demos/DEMO1G1_REC",
+      "signed16_y_playerpic": [
+        31,
+        3
+      ],
+      "target": "3001f",
+      "within_record": 6
+    },
+    {
+      "classification": "Demo signed16 y/playerpic pair; not an image handle",
+      "container": "10107",
+      "frame_record": 508,
+      "offset": 6114,
+      "path": "demos/DEMO1G1_REC",
+      "signed16_y_playerpic": [
+        34,
+        3
+      ],
+      "target": "30022",
+      "within_record": 6
+    },
+    {
+      "classification": "Demo signed16 y/playerpic pair; not an image handle",
+      "container": "10107",
+      "frame_record": 520,
+      "offset": 6258,
+      "path": "demos/DEMO1G1_REC",
+      "signed16_y_playerpic": [
+        34,
+        3
+      ],
+      "target": "30022",
+      "within_record": 6
+    },
+    {
+      "classification": "Demo signed16 y/playerpic pair; not an image handle",
+      "container": "10107",
+      "frame_record": 616,
+      "offset": 7410,
+      "path": "demos/DEMO1G1_REC",
+      "signed16_y_playerpic": [
+        36,
+        3
+      ],
+      "target": "30024",
+      "within_record": 6
+    },
+    {
+      "classification": "Demo signed16 y/playerpic pair; not an image handle",
+      "container": "10109",
+      "frame_record": 821,
+      "offset": 9870,
+      "path": "demos/DEMO3G1_REC",
+      "signed16_y_playerpic": [
+        32,
+        3
+      ],
+      "target": "30020",
+      "within_record": 6
+    },
+    {
+      "classification": "Demo signed16 y/playerpic pair; not an image handle",
+      "container": "10109",
+      "frame_record": 1347,
+      "offset": 16182,
+      "path": "demos/DEMO3G1_REC",
+      "signed16_y_playerpic": [
+        33,
+        3
+      ],
+      "target": "30021",
+      "within_record": 6
+    },
+    {
+      "classification": "Demo signed16 y/playerpic pair; not an image handle",
+      "container": "10109",
+      "frame_record": 814,
+      "offset": 9786,
+      "path": "demos/DEMO3G1_REC",
+      "signed16_y_playerpic": [
+        34,
+        3
+      ],
+      "target": "30022",
+      "within_record": 6
+    },
+    {
+      "classification": "Demo signed16 y/playerpic pair; not an image handle",
+      "container": "10109",
+      "frame_record": 1204,
+      "offset": 14466,
+      "path": "demos/DEMO3G1_REC",
+      "signed16_y_playerpic": [
+        37,
+        3
+      ],
+      "target": "30025",
+      "within_record": 6
+    },
+    {
+      "classification": "Demo signed16 y/playerpic pair; not an image handle",
+      "container": "10109",
+      "frame_record": 1348,
+      "offset": 16194,
+      "path": "demos/DEMO3G1_REC",
+      "signed16_y_playerpic": [
+        37,
+        3
+      ],
+      "target": "30025",
+      "within_record": 6
+    },
+    {
+      "classification": "Demo signed16 y/playerpic pair; not an image handle",
+      "container": "2000c",
+      "frame_record": 1210,
+      "offset": 14538,
+      "path": "demos/DEMO2G2_REC",
+      "signed16_y_playerpic": [
+        30,
+        3
+      ],
+      "target": "3001e",
+      "within_record": 6
+    },
+    {
+      "classification": "Demo signed16 y/playerpic pair; not an image handle",
+      "container": "2000c",
+      "frame_record": 1215,
+      "offset": 14598,
+      "path": "demos/DEMO2G2_REC",
+      "signed16_y_playerpic": [
+        30,
+        3
+      ],
+      "target": "3001e",
+      "within_record": 6
+    },
+    {
+      "classification": "Demo signed16 y/playerpic pair; not an image handle",
+      "container": "2000c",
+      "frame_record": 1209,
+      "offset": 14526,
+      "path": "demos/DEMO2G2_REC",
+      "signed16_y_playerpic": [
+        35,
+        3
+      ],
+      "target": "30023",
+      "within_record": 6
+    },
+    {
+      "classification": "Demo signed16 y/playerpic pair; not an image handle",
+      "container": "2000c",
+      "frame_record": 1216,
+      "offset": 14610,
+      "path": "demos/DEMO2G2_REC",
+      "signed16_y_playerpic": [
+        35,
+        3
+      ],
+      "target": "30023",
+      "within_record": 6
+    },
+    {
+      "actual_name_resolved_asset": "30026",
+      "cached_item": "30023",
+      "classification": "Stale cached enemy item handle overwritten by authoritative iname resolution",
+      "container": "30000",
+      "iname": "MOON1T1_PIC",
+      "library_record": 5,
+      "offset": 2656,
+      "path": "misc/SPRITE3_ITM",
+      "record_byte_offset": 16,
+      "resolver": "raptor/src/enemy.cpp:168; Rust content.rs resolves legacy.name, not fields[0]",
+      "target": "30023"
+    },
+    {
+      "classification": "Typed MAP signed16 flat/game tile fields; resolved terrain asset is unrelated",
+      "container": "30005",
+      "flat": 34,
+      "game": 3,
+      "offset": 744,
+      "path": "maps/MAP4G3_MAP",
+      "resolved_asset": "400f7",
+      "target": "30022",
+      "tile_ordinal": 183
+    },
+    {
+      "classification": "Typed MAP signed16 flat/game tile fields; resolved terrain asset is unrelated",
+      "container": "30005",
+      "flat": 34,
+      "game": 3,
+      "offset": 876,
+      "path": "maps/MAP4G3_MAP",
+      "resolved_asset": "400f7",
+      "target": "30022",
+      "tile_ordinal": 216
+    },
+    {
+      "classification": "Typed MAP signed16 flat/game tile fields; resolved terrain asset is unrelated",
+      "container": "30005",
+      "flat": 34,
+      "game": 3,
+      "offset": 1360,
+      "path": "maps/MAP4G3_MAP",
+      "resolved_asset": "400f7",
+      "target": "30022",
+      "tile_ordinal": 337
+    },
+    {
+      "classification": "Typed MAP signed16 flat/game tile fields; resolved terrain asset is unrelated",
+      "container": "30005",
+      "flat": 34,
+      "game": 3,
+      "offset": 2564,
+      "path": "maps/MAP4G3_MAP",
+      "resolved_asset": "400f7",
+      "target": "30022",
+      "tile_ordinal": 638
+    },
+    {
+      "classification": "Typed MAP signed16 flat/game tile fields; resolved terrain asset is unrelated",
+      "container": "30005",
+      "flat": 34,
+      "game": 3,
+      "offset": 3100,
+      "path": "maps/MAP4G3_MAP",
+      "resolved_asset": "400f7",
+      "target": "30022",
+      "tile_ordinal": 772
+    },
+    {
+      "classification": "Typed MAP signed16 flat/game tile fields; resolved terrain asset is unrelated",
+      "container": "30005",
+      "flat": 34,
+      "game": 3,
+      "offset": 3296,
+      "path": "maps/MAP4G3_MAP",
+      "resolved_asset": "400f7",
+      "target": "30022",
+      "tile_ordinal": 821
+    },
+    {
+      "classification": "Typed MAP signed16 flat/game tile fields; resolved terrain asset is unrelated",
+      "container": "30005",
+      "flat": 34,
+      "game": 3,
+      "offset": 4476,
+      "path": "maps/MAP4G3_MAP",
+      "resolved_asset": "400f7",
+      "target": "30022",
+      "tile_ordinal": 1116
+    },
+    {
+      "classification": "Typed MAP signed16 flat/game tile fields; resolved terrain asset is unrelated",
+      "container": "30005",
+      "flat": 34,
+      "game": 3,
+      "offset": 4700,
+      "path": "maps/MAP4G3_MAP",
+      "resolved_asset": "400f7",
+      "target": "30022",
+      "tile_ordinal": 1172
+    },
+    {
+      "classification": "RIFF MIDS music-stream bytes; not an image resource field",
+      "container": "5000d",
+      "offset": 7342,
+      "path": "movies/HANGAR_MDS",
+      "riff_type": "MIDS",
+      "target": "3001e"
+    },
+    {
+      "classification": "RIFF MIDS music-stream bytes; not an image resource field",
+      "container": "5000d",
+      "offset": 17950,
+      "path": "movies/HANGAR_MDS",
+      "riff_type": "MIDS",
+      "target": "3001e"
+    },
+    {
+      "classification": "RIFF MIDS music-stream bytes; not an image resource field",
+      "container": "5000d",
+      "offset": 28550,
+      "path": "movies/HANGAR_MDS",
+      "riff_type": "MIDS",
+      "target": "3001e"
+    },
+    {
+      "classification": "RIFF MIDS music-stream bytes; not an image resource field",
+      "container": "5000d",
+      "offset": 39158,
+      "path": "movies/HANGAR_MDS",
+      "riff_type": "MIDS",
+      "target": "3001e"
+    },
+    {
+      "classification": "RIFF MIDS music-stream bytes; not an image resource field",
+      "container": "5000d",
+      "offset": 49766,
+      "path": "movies/HANGAR_MDS",
+      "riff_type": "MIDS",
+      "target": "3001e"
+    },
+    {
+      "classification": "RIFF MIDS music-stream bytes; not an image resource field",
+      "container": "5000d",
+      "offset": 4870,
+      "path": "movies/HANGAR_MDS",
+      "riff_type": "MIDS",
+      "target": "30023"
+    },
+    {
+      "classification": "RIFF MIDS music-stream bytes; not an image resource field",
+      "container": "5000d",
+      "offset": 15470,
+      "path": "movies/HANGAR_MDS",
+      "riff_type": "MIDS",
+      "target": "30023"
+    },
+    {
+      "classification": "RIFF MIDS music-stream bytes; not an image resource field",
+      "container": "5000d",
+      "offset": 26078,
+      "path": "movies/HANGAR_MDS",
+      "riff_type": "MIDS",
+      "target": "30023"
+    },
+    {
+      "classification": "RIFF MIDS music-stream bytes; not an image resource field",
+      "container": "5000d",
+      "offset": 36678,
+      "path": "movies/HANGAR_MDS",
+      "riff_type": "MIDS",
+      "target": "30023"
+    },
+    {
+      "classification": "RIFF MIDS music-stream bytes; not an image resource field",
+      "container": "5000d",
+      "offset": 47286,
+      "path": "movies/HANGAR_MDS",
+      "riff_type": "MIDS",
+      "target": "30023"
+    }
+  ],
+  "raw_numeric_matches_are_not_runtime_callers": true
+}

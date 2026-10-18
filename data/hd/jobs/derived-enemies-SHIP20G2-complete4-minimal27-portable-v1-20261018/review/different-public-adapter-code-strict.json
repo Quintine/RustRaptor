@@ -1,0 +1,501 @@
+{
+  "all_inputs_exact_twice": true,
+  "input_memberships": {
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation": [
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation/ACTUAL-FIVE-SYNTHETIC-TESTS-TERMINAL.json",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation/FROZEN-SHIP20G2-PORTABLE-COMPLETE4-PUBLIC-ADAPTER-CODE-PACKET-NOT-EXECUTION.json",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation/PRESERVED-FIRST-TEST-IMPORT-PATH-STOP.json",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation/synthetic-test-stderr.txt",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation/synthetic-test-stdout.txt"
+    ],
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job": [
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/cleanup-recipe.json",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/parents/actual-imagegen-receipt.json",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/parents/actual-one-call-terminal.json",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/parents/actual-request.json",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/parents/generator-return.png",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/parents/prompt.txt",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/sources/PALETTE_DAT",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/sources/SHIP20G2_PIC",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/sources/SHIP20G2_PIC.1",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/sources/SHIP20G2_PIC.2",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/sources/SHIP20G2_PIC.3"
+    ],
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2": [
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/cleanup-recipe.json",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/parents/actual-imagegen-receipt.json",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/parents/actual-one-call-terminal.json",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/parents/actual-request.json",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/parents/generator-return.png",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/parents/prompt.txt",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/PALETTE_DAT",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/SHIP20G2_PIC",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/SHIP20G2_PIC.1",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/SHIP20G2_PIC.2",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/SHIP20G2_PIC.3"
+    ]
+  },
+  "named_inputs": [
+    {
+      "inode": 5550163,
+      "mode": 33188,
+      "mtime_ns": 1792286260698571320,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-complete4-existing-RGB-cleanup-plan-only-20261018/PROPOSED-SHIP20G2-COMPLETE4-SOURCEGEOMETRY-GENERATED-RGB-CLEANUP-RECIPE-NOT-EXECUTED.json",
+      "sha256": "eeec5897eb3c415c8e65262c51658614d8fabc5712ef19bff0b1ef6a8317a202",
+      "size": 3368
+    },
+    {
+      "inode": 5557926,
+      "mode": 33188,
+      "mtime_ns": 1792287728215442698,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-complete4-minimal27-Original-yellow-tips-author-20261018/CLOSED-ACTUAL-SHIP20G2-COMPLETE4-MINIMAL27-ORIGINAL-TIP-SOURCEF-AUTHOR-QUALIFIED-PROPOSAL.json",
+      "sha256": "7ed8130896f546544e368d9479a7dc892dc3592521d39cef47fe023f3bfefb0e",
+      "size": 46663
+    },
+    {
+      "inode": 5557390,
+      "mode": 33188,
+      "mtime_ns": 1792287494300711899,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-complete4-minimal27-Original-yellow-tips-author-20261018/actual-once-DERIVED-complete4-minimal27-tips/derived-provenance.json",
+      "sha256": "09b4a734c6a2d9d2456d2a8b74c935bc299cf2780e4f62c8bc1ea8d1f437edfe",
+      "size": 8062
+    },
+    {
+      "inode": 5557012,
+      "mode": 33188,
+      "mtime_ns": 1792287231065295116,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-minimal-yellow-tip-functional-Original-plan-only-20261018/PROPOSED-EXACT-COMPLETE4-MINIMAL27-YELLOW-TIP-ORIGINAL-CELLS-NOT-EXECUTED.json",
+      "sha256": "cdb6219b88cf4af84c91f3571bebb4b80608143eb62b659508e1b939750a46b2",
+      "size": 4281
+    },
+    {
+      "inode": 5564006,
+      "mode": 33188,
+      "mtime_ns": 1792290399457212665,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/FROZEN-SAFE-RECEIPT-V2-PORTABLE-INPUTS-AND-ONCE-REPLAY-ARGV.json",
+      "sha256": "8f27ae849137dd3ec19c81de62aa2c7f8acd6718c2dfa75d627d1ee168ca0cd6",
+      "size": 6548
+    },
+    {
+      "inode": 5563189,
+      "mode": 33188,
+      "mtime_ns": 1792290172798614046,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation-strict-complete-portable-public-adapter-code-preparation.json",
+      "sha256": "fd18a789e6b5a55430b7c733b55fd02426a6f4048a00ec93c4b79712818735a4",
+      "size": 9674
+    },
+    {
+      "inode": 5563186,
+      "mode": 33188,
+      "mtime_ns": 1792290172788553908,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation/ACTUAL-FIVE-SYNTHETIC-TESTS-TERMINAL.json",
+      "sha256": "997a5ba8d02d47db3e984a28bcbde737b81b02d79dbeceeed96c58f1303138bb",
+      "size": 1152
+    },
+    {
+      "inode": 5563188,
+      "mode": 33188,
+      "mtime_ns": 1792290172793995418,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation/FROZEN-SHIP20G2-PORTABLE-COMPLETE4-PUBLIC-ADAPTER-CODE-PACKET-NOT-EXECUTION.json",
+      "sha256": "e2ef21d7dc94dfba000a068df5d00034964300a5b9f536817f902529a5d6653f",
+      "size": 9555
+    },
+    {
+      "inode": 5563187,
+      "mode": 33188,
+      "mtime_ns": 1792290172788631730,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation/PRESERVED-FIRST-TEST-IMPORT-PATH-STOP.json",
+      "sha256": "7246fe7bea141848f46181171e902ea7fd3f8648e83ebe9c350534ab597df385",
+      "size": 514
+    },
+    {
+      "inode": 5563185,
+      "mode": 33188,
+      "mtime_ns": 1792290172788384573,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation/synthetic-test-stderr.txt",
+      "sha256": "30a664e808398d543d6c2b24dc95927ff2a547d0b28917080723accfa8f911eb",
+      "size": 1020
+    },
+    {
+      "inode": 5563184,
+      "mode": 33188,
+      "mtime_ns": 1792290172787030147,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/frozen-public-adapter-code-preparation/synthetic-test-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "inode": 5564004,
+      "mode": 33188,
+      "mtime_ns": 1792290171944818166,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/cleanup-recipe.json",
+      "sha256": "c5eee44c3527d8529a3f298895df93ce4438420acb45c3e17c210015f1534fcf",
+      "size": 4443
+    },
+    {
+      "inode": 5564005,
+      "mode": 33188,
+      "mtime_ns": 1792290399452558107,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/parents/actual-imagegen-receipt.json",
+      "sha256": "894a5b0754ecff52aa224287c3486989f75671f51955b8081a9fe6c48d8e4060",
+      "size": 1962
+    },
+    {
+      "inode": 5563997,
+      "mode": 33188,
+      "mtime_ns": 1792290171943765492,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/parents/actual-one-call-terminal.json",
+      "sha256": "7950ffe6dcbe90a94f96749acd0c4b47e5a0b9163c5c07a00807c02af3e2daa2",
+      "size": 2115
+    },
+    {
+      "inode": 5563996,
+      "mode": 33188,
+      "mtime_ns": 1792290171943571193,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/parents/actual-request.json",
+      "sha256": "d305c3654eb9e85bcc6ee4479d119db026341321477daee34609207b357098b7",
+      "size": 2598
+    },
+    {
+      "inode": 5563994,
+      "mode": 33188,
+      "mtime_ns": 1792290171934050347,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/parents/generator-return.png",
+      "sha256": "d6fe85ad268a8db9b8fdd74720d338d845e60ea86b46beddece87250af4afc93",
+      "size": 790353
+    },
+    {
+      "inode": 5563995,
+      "mode": 33188,
+      "mtime_ns": 1792290171942050157,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/parents/prompt.txt",
+      "sha256": "7b9d0b656368d4a2b53a602b6f35fc7c5dea32d19b0449961375af02981f5f36",
+      "size": 2298
+    },
+    {
+      "inode": 5563999,
+      "mode": 33188,
+      "mtime_ns": 1792290171943873759,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "size": 768
+    },
+    {
+      "inode": 5564000,
+      "mode": 33188,
+      "mtime_ns": 1792290171943985708,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/SHIP20G2_PIC",
+      "sha256": "3ad171d2a75eb5d355f02d2f09f9d4ddf7f55d2fd7fa782de0ee3eb8a10d0a99",
+      "size": 1622
+    },
+    {
+      "inode": 5564001,
+      "mode": 33188,
+      "mtime_ns": 1792290171944096276,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/SHIP20G2_PIC.1",
+      "sha256": "e62f438391672c35202a49def0aaff63bce673d27ead6b211be43ca2baf60b2d",
+      "size": 1608
+    },
+    {
+      "inode": 5564002,
+      "mode": 33188,
+      "mtime_ns": 1792290171944199623,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/SHIP20G2_PIC.2",
+      "sha256": "4656f009f9910507ddc8f22461554a40a9ad9cf10912aedd24643015d393c2ce",
+      "size": 1608
+    },
+    {
+      "inode": 5564003,
+      "mode": 33188,
+      "mtime_ns": 1792290171944300527,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/SHIP20G2_PIC.3",
+      "sha256": "751e734e49b12af78ec59476de0bbb15a2590579a85a279510d398f5ab854ace",
+      "size": 1620
+    },
+    {
+      "inode": 5563182,
+      "mode": 33188,
+      "mtime_ns": 1792290171944818166,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/cleanup-recipe.json",
+      "sha256": "c5eee44c3527d8529a3f298895df93ce4438420acb45c3e17c210015f1534fcf",
+      "size": 4443
+    },
+    {
+      "inode": 5563173,
+      "mode": 33188,
+      "mtime_ns": 1792290171938560696,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/parents/actual-imagegen-receipt.json",
+      "sha256": "2673d48982c9051badae5c4e2754340e2bbbb80507b69334835d1c1c8d4a2c1f",
+      "size": 1054397
+    },
+    {
+      "inode": 5563176,
+      "mode": 33188,
+      "mtime_ns": 1792290171943765492,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/parents/actual-one-call-terminal.json",
+      "sha256": "7950ffe6dcbe90a94f96749acd0c4b47e5a0b9163c5c07a00807c02af3e2daa2",
+      "size": 2115
+    },
+    {
+      "inode": 5563175,
+      "mode": 33188,
+      "mtime_ns": 1792290171943571193,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/parents/actual-request.json",
+      "sha256": "d305c3654eb9e85bcc6ee4479d119db026341321477daee34609207b357098b7",
+      "size": 2598
+    },
+    {
+      "inode": 5563172,
+      "mode": 33188,
+      "mtime_ns": 1792290171934050347,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/parents/generator-return.png",
+      "sha256": "d6fe85ad268a8db9b8fdd74720d338d845e60ea86b46beddece87250af4afc93",
+      "size": 790353
+    },
+    {
+      "inode": 5563174,
+      "mode": 33188,
+      "mtime_ns": 1792290171942050157,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/parents/prompt.txt",
+      "sha256": "7b9d0b656368d4a2b53a602b6f35fc7c5dea32d19b0449961375af02981f5f36",
+      "size": 2298
+    },
+    {
+      "inode": 5563177,
+      "mode": 33188,
+      "mtime_ns": 1792290171943873759,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/sources/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "size": 768
+    },
+    {
+      "inode": 5563178,
+      "mode": 33188,
+      "mtime_ns": 1792290171943985708,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/sources/SHIP20G2_PIC",
+      "sha256": "3ad171d2a75eb5d355f02d2f09f9d4ddf7f55d2fd7fa782de0ee3eb8a10d0a99",
+      "size": 1622
+    },
+    {
+      "inode": 5563179,
+      "mode": 33188,
+      "mtime_ns": 1792290171944096276,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/sources/SHIP20G2_PIC.1",
+      "sha256": "e62f438391672c35202a49def0aaff63bce673d27ead6b211be43ca2baf60b2d",
+      "size": 1608
+    },
+    {
+      "inode": 5563180,
+      "mode": 33188,
+      "mtime_ns": 1792290171944199623,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/sources/SHIP20G2_PIC.2",
+      "sha256": "4656f009f9910507ddc8f22461554a40a9ad9cf10912aedd24643015d393c2ce",
+      "size": 1608
+    },
+    {
+      "inode": 5563181,
+      "mode": 33188,
+      "mtime_ns": 1792290171944300527,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job/sources/SHIP20G2_PIC.3",
+      "sha256": "751e734e49b12af78ec59476de0bbb15a2590579a85a279510d398f5ab854ace",
+      "size": 1620
+    },
+    {
+      "inode": 5536601,
+      "mode": 33188,
+      "mtime_ns": 1792282731428329810,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b",
+      "size": 14749
+    },
+    {
+      "inode": 5507808,
+      "mode": 33188,
+      "mtime_ns": 1792245624445469263,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+      "size": 9385
+    },
+    {
+      "inode": 5549606,
+      "mode": 33188,
+      "mtime_ns": 1792285670584677693,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_other_functional_cleanup.py",
+      "sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84",
+      "size": 5893
+    },
+    {
+      "inode": 5563078,
+      "mode": 33188,
+      "mtime_ns": 1792290040048172849,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_ship20_cleanup.py",
+      "sha256": "9ea1972cdd3c55dc74b9c5eadb8bd81f98c82046d399ea326d8dc05a126e3575",
+      "size": 7429
+    },
+    {
+      "inode": 5563099,
+      "mode": 33188,
+      "mtime_ns": 1792290094073893925,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/test_hd_ship20_cleanup.py",
+      "sha256": "4c6a096d113c528ef201e8a758f1b7713e4b9e384575335efc48535dfdbcc850",
+      "size": 7280
+    }
+  ],
+  "own_files": [
+    {
+      "inode": 5564149,
+      "mode": 33188,
+      "mtime_ns": 1792290599431538989,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/COPIED-FIVE-TESTS-TERMINAL.json",
+      "sha256": "d4a608c9fd2e11b6e2d4d6abea9142813532d5ff1404bed06e49d90a63011a09",
+      "size": 389
+    },
+    {
+      "inode": 5564152,
+      "mode": 33188,
+      "mtime_ns": 1792290601084401936,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/INDEPENDENT-NINE-PROBES-TERMINAL.json",
+      "sha256": "bc31c7f2f724c1b118467952cd94a31889a615641cc8514d0abbbb18fbc67402",
+      "size": 315
+    },
+    {
+      "inode": 5564216,
+      "mode": 33188,
+      "mtime_ns": 1792290644907355503,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/INPUTS-AFTER.json",
+      "sha256": "f9c4da4ab863e344dcbbd31ce3f3e062c4a44bf66861a1c34e0edb7fdd78b07d",
+      "size": 20619
+    },
+    {
+      "inode": 5564131,
+      "mode": 33188,
+      "mtime_ns": 1792290586359755300,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/INPUTS-BEFORE.json",
+      "sha256": "f9c4da4ab863e344dcbbd31ce3f3e062c4a44bf66861a1c34e0edb7fdd78b07d",
+      "size": 20619
+    },
+    {
+      "inode": 5564132,
+      "mode": 33188,
+      "mtime_ns": 1792290644837338521,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/METADATA-AND-LINEAGE-AUDIT.json",
+      "sha256": "6bf55fdaf95917c9837d89149b6ecfe2c394bd43911b58be7f81bf1940ea1bcf",
+      "size": 755
+    },
+    {
+      "inode": 5564238,
+      "mode": 33188,
+      "mtime_ns": 1792290684090009019,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/PASS-DIFFERENT-SHIP20-COMPLETE4-PORTABLE-DISPATCHER-SOURCE-CODE-REVIEW.json",
+      "sha256": "1d26d11956fed2ab9792b36eae9d1d94f8e618ad04ef3cba0a4d1cd996840099",
+      "size": 9466
+    },
+    {
+      "inode": 5564148,
+      "mode": 33188,
+      "mtime_ns": 1792290599431432598,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/copied-five-tests-stderr.txt",
+      "sha256": "3d58a543db6a9e8d0f623bba6eef5849d05019432580d76d702f0bcd7edd2f4b",
+      "size": 990
+    },
+    {
+      "inode": 5564147,
+      "mode": 33188,
+      "mtime_ns": 1792290599430921582,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/copied-five-tests-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "inode": 5564138,
+      "mode": 33188,
+      "mtime_ns": 1792290586380743014,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/copy/tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b",
+      "size": 14749
+    },
+    {
+      "inode": 5564139,
+      "mode": 33188,
+      "mtime_ns": 1792290586380803867,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/copy/tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+      "size": 9385
+    },
+    {
+      "inode": 5564137,
+      "mode": 33188,
+      "mtime_ns": 1792290586380690286,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/copy/tools/hd_other_functional_cleanup.py",
+      "sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84",
+      "size": 5893
+    },
+    {
+      "inode": 5564135,
+      "mode": 33188,
+      "mtime_ns": 1792290586380574856,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/copy/tools/hd_ship20_cleanup.py",
+      "sha256": "9ea1972cdd3c55dc74b9c5eadb8bd81f98c82046d399ea326d8dc05a126e3575",
+      "size": 7429
+    },
+    {
+      "inode": 5564136,
+      "mode": 33188,
+      "mtime_ns": 1792290586380636474,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/copy/tools/test_hd_ship20_cleanup.py",
+      "sha256": "4c6a096d113c528ef201e8a758f1b7713e4b9e384575335efc48535dfdbcc850",
+      "size": 7280
+    },
+    {
+      "inode": 5564151,
+      "mode": 33188,
+      "mtime_ns": 1792290601084304513,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/independent-nine-probes-stderr.txt",
+      "sha256": "907e8f648d50f3e18bc1a71d15aa8694ae4a243d743bc26df4777a12926bf440",
+      "size": 1526
+    },
+    {
+      "inode": 5564150,
+      "mode": 33188,
+      "mtime_ns": 1792290601082882426,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/independent-nine-probes-stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "inode": 5564122,
+      "mode": 33188,
+      "mtime_ns": 1792290644770846887,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/review_audit.py",
+      "sha256": "600a929c7192812bce7d5f25eb74350a8abf32886c4131109186df76713f1944",
+      "size": 7654
+    },
+    {
+      "inode": 5564236,
+      "mode": 33188,
+      "mtime_ns": 1792290684038916064,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/seal_review.py",
+      "sha256": "6b70f605bc8dd6d5687288a26bcd77e0b6b9edfe9471e9724233ca4db0a2ce27",
+      "size": 6270
+    },
+    {
+      "inode": 5564123,
+      "mode": 33188,
+      "mtime_ns": 1792290579928383832,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/test_independent_dispatcher_guards.py",
+      "sha256": "ef3ad71be850bcf005e1581bbbaef7da5420cb3301d0dcf3e882abaeff8f2bfb",
+      "size": 6614
+    }
+  ],
+  "owner_and_reviewer_no_pending_writer_call_lease": true,
+  "real_asset_replays": 0,
+  "report": {
+    "inode": 5564238,
+    "mode": 33188,
+    "mtime_ns": 1792290684090009019,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-SHIP20G2-public-dispatcher-independent-code-review-20261018-v1/PASS-DIFFERENT-SHIP20-COMPLETE4-PORTABLE-DISPATCHER-SOURCE-CODE-REVIEW.json",
+    "sha256": "1d26d11956fed2ab9792b36eae9d1d94f8e618ad04ef3cba0a4d1cd996840099",
+    "size": 9466
+  },
+  "status": "STRICT_CLOSED_DIFFERENT_SHIP20_PORTABLE_CODE_REVIEW"
+}

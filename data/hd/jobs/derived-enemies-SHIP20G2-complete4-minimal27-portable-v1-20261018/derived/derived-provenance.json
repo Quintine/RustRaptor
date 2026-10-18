@@ -1,0 +1,379 @@
+{
+  "Original_tip_cells_are_not_generated_HD": true,
+  "actual_dispatcher_calls": 1,
+  "actual_geometry_renderer_calls": 1,
+  "actual_pure_retention_calls": 3,
+  "dependencies": {
+    "RGB_geometry_tool": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    },
+    "Source_decoder": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    },
+    "functional_Original_tool": {
+      "path": "tools/hd_other_functional_cleanup.py",
+      "sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84"
+    }
+  },
+  "execution": {
+    "method": "derived-SHIP20-complete4-reviewed-generated-RGB-and-Original-tips-v1",
+    "output_sha256": {
+      "200c4": "2427db9b33ed9a75951c23a45dd0c06efce29896763a7a57a019e7b435e70368",
+      "200c5": "599b716e8aaa997c19c7e2afd152476da02328ee04d0567e71a669d234f258cb",
+      "200c6": "2708a91d208ce401df5e8b461188d0f3941a2ddea42667ad06d61b9bbec9188e",
+      "200c7": "8f06931f70af4892f05dc8de3435b7adbf98bc59515fbdc49206b1ba016cf589"
+    },
+    "parent_raw_sha256": [
+      "d6fe85ad268a8db9b8fdd74720d338d845e60ea86b46beddece87250af4afc93"
+    ],
+    "recipe_sha256": "c5eee44c3527d8529a3f298895df93ce4438420acb45c3e17c210015f1534fcf",
+    "source_sha256": {
+      "200c4": "3ad171d2a75eb5d355f02d2f09f9d4ddf7f55d2fd7fa782de0ee3eb8a10d0a99",
+      "200c5": "e62f438391672c35202a49def0aaff63bce673d27ead6b211be43ca2baf60b2d",
+      "200c6": "4656f009f9910507ddc8f22461554a40a9ad9cf10912aedd24643015d393c2ce",
+      "200c7": "751e734e49b12af78ec59476de0bbb15a2590579a85a279510d398f5ab854ace"
+    },
+    "status": "success",
+    "tool_sha256": "9ea1972cdd3c55dc74b9c5eadb8bd81f98c82046d399ea326d8dc05a126e3575"
+  },
+  "frames": [
+    {
+      "RGBA_sha256": "95d6f12988614b73695a3a3ea643d5eb6ef95f0d417d437b5ae9b7f90e565c13",
+      "asset": "200c4",
+      "functional_Original": {
+        "actual_Original_Scale4_RGBA_samples": 0,
+        "cells": [],
+        "outside_explicit_footprints_RGBA_exact": true
+      },
+      "sha256": "2427db9b33ed9a75951c23a45dd0c06efce29896763a7a57a019e7b435e70368"
+    },
+    {
+      "RGBA_sha256": "719d60b1ed9479ec798d66c688cb072d7d31bb1663455e28f1de34bfe4208311",
+      "asset": "200c5",
+      "functional_Original": {
+        "RGBA_changes": 99,
+        "Source_indices": [
+          84,
+          84,
+          84,
+          83,
+          83,
+          83,
+          82
+        ],
+        "actual_Original_Scale4_RGBA_samples": 112,
+        "actual_Original_transparent_samples": 13,
+        "cells": [
+          [
+            14,
+            25
+          ],
+          [
+            14,
+            26
+          ],
+          [
+            15,
+            24
+          ],
+          [
+            15,
+            25
+          ],
+          [
+            15,
+            26
+          ],
+          [
+            16,
+            24
+          ],
+          [
+            16,
+            25
+          ]
+        ],
+        "outside_explicit_footprints_RGBA_exact": true,
+        "retained_Original_not_generated_HD": true
+      },
+      "sha256": "599b716e8aaa997c19c7e2afd152476da02328ee04d0567e71a669d234f258cb"
+    },
+    {
+      "RGBA_sha256": "0e6c3fbc4e0952dc4d9b3c3b7a36de34d053e7b994765c9a52a0230833d083d7",
+      "asset": "200c6",
+      "functional_Original": {
+        "RGBA_changes": 190,
+        "Source_indices": [
+          84,
+          82,
+          84,
+          82,
+          84,
+          82,
+          84,
+          84,
+          84,
+          83,
+          82,
+          84,
+          83
+        ],
+        "actual_Original_Scale4_RGBA_samples": 208,
+        "actual_Original_transparent_samples": 18,
+        "cells": [
+          [
+            25,
+            19
+          ],
+          [
+            25,
+            20
+          ],
+          [
+            26,
+            19
+          ],
+          [
+            26,
+            20
+          ],
+          [
+            27,
+            19
+          ],
+          [
+            27,
+            20
+          ],
+          [
+            28,
+            23
+          ],
+          [
+            28,
+            24
+          ],
+          [
+            29,
+            23
+          ],
+          [
+            29,
+            24
+          ],
+          [
+            29,
+            25
+          ],
+          [
+            30,
+            24
+          ],
+          [
+            30,
+            25
+          ]
+        ],
+        "outside_explicit_footprints_RGBA_exact": true,
+        "retained_Original_not_generated_HD": true
+      },
+      "sha256": "2708a91d208ce401df5e8b461188d0f3941a2ddea42667ad06d61b9bbec9188e"
+    },
+    {
+      "RGBA_sha256": "9e65223aae4770908ee2ac3dcc6595ca1222671f8046bf1a859b2cf2da2c10b7",
+      "asset": "200c7",
+      "functional_Original": {
+        "RGBA_changes": 94,
+        "Source_indices": [
+          84,
+          84,
+          84,
+          83,
+          82,
+          84,
+          83
+        ],
+        "actual_Original_Scale4_RGBA_samples": 112,
+        "actual_Original_transparent_samples": 18,
+        "cells": [
+          [
+            36,
+            23
+          ],
+          [
+            36,
+            24
+          ],
+          [
+            37,
+            23
+          ],
+          [
+            37,
+            24
+          ],
+          [
+            37,
+            25
+          ],
+          [
+            38,
+            24
+          ],
+          [
+            38,
+            25
+          ]
+        ],
+        "outside_explicit_footprints_RGBA_exact": true,
+        "retained_Original_not_generated_HD": true
+      },
+      "sha256": "8f06931f70af4892f05dc8de3435b7adbf98bc59515fbdc49206b1ba016cf589"
+    }
+  ],
+  "geometry": {
+    "RGB_policy": "Preserve full generated RGB, except declared nearest generated-RGB fills, Source-identical full-RGB backing share, and literal functional Source palette cells; no noise/highpass reconstruction.",
+    "Source_derived_dynamic_component_halo_native": 1,
+    "decoder_module": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    },
+    "dynamic_regions_native": [
+      [
+        1,
+        18,
+        45,
+        54
+      ]
+    ],
+    "frames": [
+      {
+        "SourceScale4_opaque_samples": 8772,
+        "Source_painted_cells": 562,
+        "actual_sampling_bounds": [
+          "2",
+          "3",
+          "578",
+          "675"
+        ],
+        "asset": "200c4",
+        "derived_alpha_exact_SourceScale4": true,
+        "filled_generated_RGB_samples": 719,
+        "functional_Original_RGB_samples": 0,
+        "generated_RGB_different_from_SourceNN_samples": 8715,
+        "logical_height": 56,
+        "logical_width": 48,
+        "maximum_donor_squared_distance": 144,
+        "no_Source_RGB_or_noise_fallback": true,
+        "origin": [
+          0,
+          0
+        ],
+        "original_sampled_RGB_preserved_before_stationary_share": 8053,
+        "removed_generated_outside_SourceScale4": 855,
+        "stationary_full_RGB_replacements": 1507
+      },
+      {
+        "SourceScale4_opaque_samples": 8819,
+        "Source_painted_cells": 564,
+        "actual_sampling_bounds": [
+          "582",
+          "3",
+          "1158",
+          "675"
+        ],
+        "asset": "200c5",
+        "derived_alpha_exact_SourceScale4": true,
+        "filled_generated_RGB_samples": 571,
+        "functional_Original_RGB_samples": 0,
+        "generated_RGB_different_from_SourceNN_samples": 8776,
+        "logical_height": 56,
+        "logical_width": 48,
+        "maximum_donor_squared_distance": 121,
+        "no_Source_RGB_or_noise_fallback": true,
+        "origin": [
+          0,
+          0
+        ],
+        "original_sampled_RGB_preserved_before_stationary_share": 8248,
+        "removed_generated_outside_SourceScale4": 635,
+        "stationary_full_RGB_replacements": 0
+      },
+      {
+        "SourceScale4_opaque_samples": 8844,
+        "Source_painted_cells": 564,
+        "actual_sampling_bounds": [
+          "2",
+          "680",
+          "578",
+          "1352"
+        ],
+        "asset": "200c6",
+        "derived_alpha_exact_SourceScale4": true,
+        "filled_generated_RGB_samples": 735,
+        "functional_Original_RGB_samples": 0,
+        "generated_RGB_different_from_SourceNN_samples": 8780,
+        "logical_height": 56,
+        "logical_width": 48,
+        "maximum_donor_squared_distance": 130,
+        "no_Source_RGB_or_noise_fallback": true,
+        "origin": [
+          0,
+          0
+        ],
+        "original_sampled_RGB_preserved_before_stationary_share": 8109,
+        "removed_generated_outside_SourceScale4": 977,
+        "stationary_full_RGB_replacements": 1504
+      },
+      {
+        "SourceScale4_opaque_samples": 8725,
+        "Source_painted_cells": 560,
+        "actual_sampling_bounds": [
+          "582",
+          "680",
+          "1158",
+          "1352"
+        ],
+        "asset": "200c7",
+        "derived_alpha_exact_SourceScale4": true,
+        "filled_generated_RGB_samples": 655,
+        "functional_Original_RGB_samples": 0,
+        "generated_RGB_different_from_SourceNN_samples": 8679,
+        "logical_height": 56,
+        "logical_width": 48,
+        "maximum_donor_squared_distance": 97,
+        "no_Source_RGB_or_noise_fallback": true,
+        "origin": [
+          0,
+          0
+        ],
+        "original_sampled_RGB_preserved_before_stationary_share": 8070,
+        "removed_generated_outside_SourceScale4": 828,
+        "stationary_full_RGB_replacements": 1500
+      }
+    ],
+    "input_hashes": {
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/parents/generator-return.png": "d6fe85ad268a8db9b8fdd74720d338d845e60ea86b46beddece87250af4afc93",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/PALETTE_DAT": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/SHIP20G2_PIC": "3ad171d2a75eb5d355f02d2f09f9d4ddf7f55d2fd7fa782de0ee3eb8a10d0a99",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/SHIP20G2_PIC.1": "e62f438391672c35202a49def0aaff63bce673d27ead6b211be43ca2baf60b2d",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/SHIP20G2_PIC.2": "4656f009f9910507ddc8f22461554a40a9ad9cf10912aedd24643015d393c2ce",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full-SHIP20G2-portable-job-and-H5539-input-carry-preparation-20261018/portable-job-safe-v2/sources/SHIP20G2_PIC.3": "751e734e49b12af78ec59476de0bbb15a2590579a85a279510d398f5ab854ace"
+    },
+    "method": "derived-generated-RGB-SourceScale4-geometry-coherent-dynamic-regions-v2",
+    "numpy_version": "2.3.5",
+    "output_class": "DERIVED_SCRIPTED_RGBA_NOT_UNTOUCHED_GENERATION",
+    "output_scale": 4,
+    "pillow_version": "12.3.0",
+    "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "shared_SourceScale4_labels": 1507,
+    "source_mask": "Actual Original Scale4x = Scale2x twice; complete native canvas and origin retained.",
+    "stationary_anchor_asset": "200c5"
+  },
+  "numpy_version": "2.3.5",
+  "pillow_version": "12.3.0",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "scope": "Portable byte-exact replay only; no new art/engine/QA/context approval."
+}

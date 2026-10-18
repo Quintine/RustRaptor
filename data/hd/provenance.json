@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5539 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5552 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -25312,6 +25312,149 @@
         "path": "jobs/derived-terrain-20390-declared-two-donor-v2-complete1-20261018/artwork-derivation.json",
         "sha256": "87ccf0e9173b86c6cdd650a7cdcc1a968089444d56cd5d307f24e43ae569a11d"
       }
+    },
+    {
+      "job_id": "derived-wormdn-complete8-v1-20261018",
+      "assets": [
+        "3001e",
+        "3001f",
+        "30020",
+        "30021",
+        "30022",
+        "30023",
+        "30024",
+        "30025"
+      ],
+      "frames": 8,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-wormdn-complete8-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-wormdn-complete8-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-wormdn-complete8-v1-20261018/runtime-qa.json",
+      "review": {
+        "Root_all8_native_view": false,
+        "Root_native_sample_assets": [
+          "3001e",
+          "30021",
+          "30025"
+        ],
+        "Root_native_sample_scales": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "Root_portable_binding": {
+          "path": "jobs/derived-wormdn-complete8-v1-20261018/review/Root-note-portable-binding.json",
+          "sha256": "5007a5a6baf0b2bc6819b8fada600b4e5be30166b2b0574ea566e76a48da0bbb"
+        },
+        "Root_verbatim_note": {
+          "path": "jobs/derived-wormdn-complete8-v1-20261018/review/Root-personal-three-native-phase-review-verbatim.json",
+          "sha256": "48632773e7b42e6b7f979185743051d2f2401c8b4e58aec9192b2fdf8497f3c2"
+        },
+        "author": {
+          "path": "jobs/derived-wormdn-complete8-v1-20261018/review/author-complete8-allscale.json",
+          "sha256": "c056029821dfa2ea2e8b4a0a24791ec68dbb4af43f6ecd6f6045880d7c5544fe"
+        },
+        "author_and_independent_peer_viewed_all_scales": true,
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-wormdn-complete8-v1-20261018/review/independent-complete8-material.json",
+        "sha256": "62a1a30881180e9e020999ff869563ab1c6726c48959d9d75bb2ee50e88df888"
+      },
+      "frame_bindings_sha256": "69ae53ee4d8648c30d66260f4aab450beeec650eca9e8d33e2fe7f63b2740fce",
+      "artwork_derivation": {
+        "path": "jobs/derived-wormdn-complete8-v1-20261018/artwork-derivation.json",
+        "sha256": "3bc148b6d82792a2255cf71070cfe02b64ad0b6a7afe87aac13202148cfeb34b"
+      }
+    },
+    {
+      "job_id": "derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018",
+      "assets": [
+        "200c4",
+        "200c5",
+        "200c6",
+        "200c7"
+      ],
+      "frames": 4,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/runtime-qa.json",
+      "review": {
+        "Root_sample": {
+          "path": "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/review/Root-sampled-intrinsic.json",
+          "sha256": "bd89f4cde525c15f3e467d8fdccca929f0698b0b4535492533d11ffb953f8677"
+        },
+        "author": {
+          "path": "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/review/author.json",
+          "sha256": "7ed8130896f546544e368d9479a7dc892dc3592521d39cef47fe023f3bfefb0e"
+        },
+        "independent_intrinsic": {
+          "path": "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/review/different-intrinsic.json",
+          "sha256": "acdb90d43fc56e152dc45185b428e09b22e841562ddfa9da89a656a209d0899a"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/review/different-intrinsic.json",
+        "sha256": "acdb90d43fc56e152dc45185b428e09b22e841562ddfa9da89a656a209d0899a"
+      },
+      "frame_bindings_sha256": "1cb6b6da97fd5b6ec0fb6f36b8d0b04da7d64fb41b898aed62421b0cbc993c65",
+      "artwork_derivation": {
+        "path": "jobs/derived-enemies-SHIP20G2-complete4-minimal27-portable-v1-20261018/artwork-derivation.json",
+        "sha256": "d6e0c70f432ab5664446192081c7fc04739a5aa76a5b47320a3cfa9fb389aa3f"
+      }
+    },
+    {
+      "job_id": "derived-terrain2039b-quiet-brown-complete1-v1-20261018",
+      "assets": [
+        "2039b"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/runtime-qa.json",
+      "review": {
+        "Root_personal": {
+          "path": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/review/Root-complete-intrinsic-and-finite3-pair-physical-review.json",
+          "sha256": "9e4a3a3a834bc957a341c03a29f4e495f05836ad674cf87a9bf98c52a23917ac"
+        },
+        "author": {
+          "path": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/review/author.json",
+          "sha256": "a973d001e1080932e3f86e76b575de8597981c4d92325bffb263e9a0dabf4747"
+        },
+        "independent_intrinsic": {
+          "path": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/review/independent-intrinsic.json",
+          "sha256": "61087951426187ef5dd443be35dd1a1e744a39a457d20caa554fe968d8df5647"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/review/independent-intrinsic.json",
+        "sha256": "61087951426187ef5dd443be35dd1a1e744a39a457d20caa554fe968d8df5647"
+      },
+      "frame_bindings_sha256": "7cdfa79ac6c57f3cab320019a3329c447ffb3d6755c2d0a1eda1f2369ae9fdca",
+      "artwork_derivation": {
+        "path": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/artwork-derivation.json",
+        "sha256": "0b96828824787c5a0c35f4f20f9cfb00925e8b90e23591803d4d2716a1c1965f"
+      }
     }
   ],
   "jobs": [
@@ -25411,8 +25554,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5539,
-  "registration_updated_at_utc": "2026-10-18T02:14:04.507284+00:00",
+  "registered_frame_count": 5552,
+  "registration_updated_at_utc": "2026-10-18T02:55:45.796197+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,

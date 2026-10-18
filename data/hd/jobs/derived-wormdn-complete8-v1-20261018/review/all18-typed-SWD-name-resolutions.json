@@ -1,0 +1,4629 @@
+{
+  "SWDs": [
+    {
+      "asset": "10031",
+      "field_count": 21,
+      "path": "ui/STORE_SWD",
+      "references": [
+        {
+          "cached_item": 65792,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "STORE_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 2,
+          "resolved_item": "1010e",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65797,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "WMALE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 3,
+          "resolved_item": "10111",
+          "size": [
+            53,
+            66
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            21,
+            71
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 270,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 4,
+          "resolved_item": null,
+          "size": [
+            51,
+            8
+          ],
+          "target_name_route": false,
+          "type": 6,
+          "xy": [
+            23,
+            127
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65831,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 4,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "PREV_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 2,
+          "resolved_item": "10136",
+          "size": [
+            25,
+            9
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            245,
+            161
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65832,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 5,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "NEXT_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 2,
+          "resolved_item": "10137",
+          "size": [
+            25,
+            8
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            273,
+            161
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65825,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "BUYLGT_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 2,
+          "resolved_item": "10130",
+          "size": [
+            16,
+            8
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            117,
+            161
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65829,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 3,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "BUYITEM_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 2,
+          "resolved_item": "10134",
+          "size": [
+            48,
+            24
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            176,
+            155
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65828,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 2,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "SELLDRK_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1056,
+          "ordinal": 6,
+          "picflag": 2,
+          "resolved_item": "10133",
+          "size": [
+            16,
+            8
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            140,
+            161
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 180,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1204,
+          "ordinal": 7,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            163,
+            86
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            128,
+            37
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 210,
+          "font_name": "FONT1_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1352,
+          "ordinal": 8,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            175,
+            14
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            75,
+            187
+          ]
+        },
+        {
+          "cached_font": 65541,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 240,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1500,
+          "ordinal": 9,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            65,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            225,
+            136
+          ]
+        },
+        {
+          "cached_font": 65541,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 240,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1648,
+          "ordinal": 10,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            59,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            19,
+            142
+          ]
+        },
+        {
+          "cached_font": 65541,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 240,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1796,
+          "ordinal": 11,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            80,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            128,
+            126
+          ]
+        },
+        {
+          "cached_font": 65541,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 250,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1944,
+          "ordinal": 12,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            64,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            226,
+            126
+          ]
+        },
+        {
+          "cached_font": 65541,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 260,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2092,
+          "ordinal": 13,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            24,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            146,
+            136
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2240,
+          "ordinal": 14,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            18,
+            10
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            116,
+            160
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2388,
+          "ordinal": 15,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            27,
+            10
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            243,
+            160
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2536,
+          "ordinal": 16,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            26,
+            10
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            272,
+            160
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2684,
+          "ordinal": 17,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            178,
+            115
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            117,
+            35
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2832,
+          "ordinal": 18,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            50,
+            26
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            175,
+            154
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2980,
+          "ordinal": 19,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            18,
+            10
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            139,
+            160
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 3128,
+          "ordinal": 20,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            77,
+            160
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            2,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "10032",
+      "field_count": 10,
+      "path": "ui/MAIN_SWD",
+      "references": [
+        {
+          "cached_item": 65569,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "BACKGRND_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 2,
+          "resolved_item": "10022",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65555,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "RAPLOG_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 2,
+          "resolved_item": "10013",
+          "size": [
+            286,
+            75
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            21,
+            1
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65570,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU1_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 2,
+          "resolved_item": "10023",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            95,
+            89
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65571,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 2,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU2_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 2,
+          "resolved_item": "10024",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            95,
+            103
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65573,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 4,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU4_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 2,
+          "resolved_item": "10026",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            95,
+            117
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65574,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 5,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU5_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 2,
+          "resolved_item": "10027",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            95,
+            131
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65575,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 6,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU6_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 2,
+          "resolved_item": "10028",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            95,
+            145
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65577,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 7,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU8_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1056,
+          "ordinal": 6,
+          "picflag": 2,
+          "resolved_item": "1002a",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            95,
+            159
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65576,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 8,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU7_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1204,
+          "ordinal": 7,
+          "picflag": 2,
+          "resolved_item": "10029",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            95,
+            173
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 230,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1352,
+          "ordinal": 8,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            79,
+            9
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            281,
+            183
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 230,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1500,
+          "ordinal": 9,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            43,
+            6
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            277,
+            176
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "10033",
+      "field_count": 12,
+      "path": "ui/SHIPCOMP_SWD",
+      "references": [
+        {
+          "cached_item": 65807,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "SHIPCOMP_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 2,
+          "resolved_item": "1010d",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65837,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "LIGHTOFF_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 2,
+          "resolved_item": "1012b",
+          "size": [
+            8,
+            8
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            183,
+            160
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65837,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "LIGHTOFF_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 2,
+          "resolved_item": "1012b",
+          "size": [
+            8,
+            8
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            201,
+            160
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65837,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "LIGHTOFF_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 2,
+          "resolved_item": "1012b",
+          "size": [
+            8,
+            8
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            219,
+            160
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65830,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 170,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "BUTTON4_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 2,
+          "resolved_item": "10124",
+          "size": [
+            24,
+            16
+          ],
+          "target_name_route": false,
+          "type": 5,
+          "xy": [
+            43,
+            166
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "FONT1_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 4,
+          "resolved_item": null,
+          "size": [
+            134,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            95,
+            39
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 2,
+          "font_name": "FONT1_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 4,
+          "resolved_item": null,
+          "size": [
+            134,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            95,
+            68
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 200,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1056,
+          "ordinal": 6,
+          "picflag": 4,
+          "resolved_item": null,
+          "size": [
+            8,
+            16
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            149,
+            170
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65827,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 120,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "BUTTON1_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1204,
+          "ordinal": 7,
+          "picflag": 2,
+          "resolved_item": "10121",
+          "size": [
+            16,
+            16
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            179,
+            171
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65828,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 130,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "BUTTON2_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1352,
+          "ordinal": 8,
+          "picflag": 2,
+          "resolved_item": "10122",
+          "size": [
+            16,
+            16
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            197,
+            171
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65829,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 140,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "BUTTON3_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1500,
+          "ordinal": 9,
+          "picflag": 2,
+          "resolved_item": "10123",
+          "size": [
+            16,
+            16
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            215,
+            171
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 3,
+          "font_name": "FONT1_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1648,
+          "ordinal": 10,
+          "picflag": 4,
+          "resolved_item": null,
+          "size": [
+            134,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            95,
+            97
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 4,
+          "font_name": "FONT1_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1796,
+          "ordinal": 11,
+          "picflag": 4,
+          "resolved_item": null,
+          "size": [
+            134,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            95,
+            126
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "10034",
+      "field_count": 6,
+      "path": "ui/HANGAR_SWD",
+      "references": [
+        {
+          "cached_item": 65804,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "HANGER_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 2,
+          "resolved_item": "1010a",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "HANG_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            40,
+            24
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            84,
+            117
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 130,
+          "font_name": "FONT1_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            141,
+            14
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            93,
+            184
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            112,
+            73
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            41,
+            88
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            128,
+            68
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            174,
+            93
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            319,
+            31
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            0,
+            169
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            142,
+            39
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            160,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "10035",
+      "field_count": 8,
+      "path": "ui/ASK_SWD",
+      "references": [
+        {
+          "cached_item": 65559,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "TEXTURE_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 1,
+          "resolved_item": "10018",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            256,
+            46
+          ],
+          "target_name_route": false,
+          "type": 7,
+          "xy": [
+            9,
+            7
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            259,
+            5
+          ],
+          "target_name_route": false,
+          "type": 8,
+          "xy": [
+            7,
+            53
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            259,
+            5
+          ],
+          "target_name_route": false,
+          "type": 8,
+          "xy": [
+            7,
+            2
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            5,
+            56
+          ],
+          "target_name_route": false,
+          "type": 8,
+          "xy": [
+            265,
+            2
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            5,
+            56
+          ],
+          "target_name_route": false,
+          "type": 8,
+          "xy": [
+            3,
+            2
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 110,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 4,
+          "resolved_item": null,
+          "size": [
+            223,
+            11
+          ],
+          "target_name_route": false,
+          "type": 6,
+          "xy": [
+            26,
+            11
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65560,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 2,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1056,
+          "ordinal": 6,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            40,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            26,
+            31
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65560,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 3,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1204,
+          "ordinal": 7,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            40,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            207,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "10036",
+      "field_count": 5,
+      "path": "ui/LOCKER_SWD",
+      "references": [
+        {
+          "cached_item": 65774,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "LOCKER_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 2,
+          "resolved_item": null,
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 4,
+          "resolved_item": null,
+          "size": [
+            10,
+            10
+          ],
+          "target_name_route": false,
+          "type": 5,
+          "xy": [
+            46,
+            6
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 130,
+          "font_name": "FONT1_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            141,
+            14
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            82,
+            181
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            131,
+            198
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            188,
+            1
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            32,
+            181
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            36,
+            0
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            45,
+            56
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            109,
+            57
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "10037",
+      "field_count": 7,
+      "path": "ui/REGISTER_SWD",
+      "references": [
+        {
+          "cached_item": 65728,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "REGISTER_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 2,
+          "resolved_item": "10110",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65734,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "WMALEID_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 2,
+          "resolved_item": "10116",
+          "size": [
+            41,
+            38
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            4,
+            108
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            84,
+            6
+          ],
+          "target_name_route": false,
+          "type": 3,
+          "xy": [
+            187,
+            132
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 2,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            72,
+            6
+          ],
+          "target_name_route": false,
+          "type": 3,
+          "xy": [
+            203,
+            145
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 130,
+          "font_name": "FONT1_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            181,
+            14
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            61,
+            181
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            319,
+            29
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            0,
+            171
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            87,
+            48
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            1,
+            102
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1056,
+          "ordinal": 6,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            137,
+            84
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            148,
+            75
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "10038",
+      "field_count": 11,
+      "path": "ui/HELP_SWD",
+      "references": [
+        {
+          "cached_item": 65559,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "TEXTURE_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 1,
+          "resolved_item": "10018",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            304,
+            155
+          ],
+          "target_name_route": false,
+          "type": 7,
+          "xy": [
+            7,
+            27
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            282,
+            11
+          ],
+          "target_name_route": false,
+          "type": 7,
+          "xy": [
+            29,
+            8
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            283,
+            5
+          ],
+          "target_name_route": false,
+          "type": 8,
+          "xy": [
+            28,
+            2
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            283,
+            5
+          ],
+          "target_name_route": false,
+          "type": 8,
+          "xy": [
+            28,
+            20
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65838,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "QUESTION_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 2,
+          "resolved_item": "1012c",
+          "size": [
+            24,
+            24
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            4,
+            1
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            49,
+            10
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            8,
+            185
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 2,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1056,
+          "ordinal": 6,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            49,
+            10
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            65,
+            185
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 3,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1204,
+          "ordinal": 7,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            49,
+            10
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            262,
+            185
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1180,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1352,
+          "ordinal": 8,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            298,
+            149
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            11,
+            31
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1190,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1500,
+          "ordinal": 9,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            63,
+            7
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            247,
+            10
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1190,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1648,
+          "ordinal": 10,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            185,
+            7
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            34,
+            10
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "10039",
+      "field_count": 13,
+      "path": "ui/LOAD_SWD",
+      "references": [
+        {
+          "cached_item": 65559,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "TEXTURE_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 1,
+          "resolved_item": "10018",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            193,
+            72
+          ],
+          "target_name_route": false,
+          "type": 7,
+          "xy": [
+            5,
+            6
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65736,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "WMALE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 2,
+          "resolved_item": "10111",
+          "size": [
+            56,
+            64
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            6,
+            9
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65772,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 4,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "NEXT_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 2,
+          "resolved_item": "10137",
+          "size": [
+            25,
+            8
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            174,
+            84
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65771,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 3,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "PREV_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 2,
+          "resolved_item": "10136",
+          "size": [
+            25,
+            8
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            146,
+            84
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65829,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            38,
+            8
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            5,
+            84
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65829,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 2,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            38,
+            8
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            104,
+            84
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65829,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 150,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1056,
+          "ordinal": 6,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            38,
+            8
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            55,
+            84
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 110,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1204,
+          "ordinal": 7,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            65,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            79,
+            10
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 120,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1352,
+          "ordinal": 8,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            65,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            79,
+            31
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 130,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1500,
+          "ordinal": 9,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            113,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            79,
+            19
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 140,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1648,
+          "ordinal": 10,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            115,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            79,
+            40
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 140,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1796,
+          "ordinal": 11,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            65,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            79,
+            54
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 150,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1944,
+          "ordinal": 12,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            104,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            79,
+            63
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "1003a",
+      "field_count": 6,
+      "path": "ui/MSG_SWD",
+      "references": [
+        {
+          "cached_item": 65557,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "TEXTURE_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 1,
+          "resolved_item": "10018",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            239,
+            29
+          ],
+          "target_name_route": false,
+          "type": 7,
+          "xy": [
+            11,
+            9
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            253,
+            5
+          ],
+          "target_name_route": false,
+          "type": 8,
+          "xy": [
+            4,
+            39
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            253,
+            5
+          ],
+          "target_name_route": false,
+          "type": 8,
+          "xy": [
+            4,
+            3
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            5,
+            31
+          ],
+          "target_name_route": false,
+          "type": 8,
+          "xy": [
+            252,
+            8
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            5,
+            31
+          ],
+          "target_name_route": false,
+          "type": 8,
+          "xy": [
+            4,
+            8
+          ]
+        },
+        {
+          "cached_font": 65541,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 100,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 4,
+          "resolved_item": null,
+          "size": [
+            234,
+            11
+          ],
+          "target_name_route": false,
+          "type": 6,
+          "xy": [
+            14,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "1003b",
+      "field_count": 8,
+      "path": "ui/ORDER_SWD",
+      "references": [
+        {
+          "cached_item": 65566,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "BACKGRND_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 2,
+          "resolved_item": "10022",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65769,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "SMLAP_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 2,
+          "resolved_item": "10126",
+          "size": [
+            90,
+            51
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            231,
+            151
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65560,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "ADPIC1_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 2,
+          "resolved_item": "1001e",
+          "size": [
+            72,
+            72
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            10,
+            100
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65556,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "SMRAPLOG_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 2,
+          "resolved_item": "10015",
+          "size": [
+            78,
+            26
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            8,
+            174
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65561,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "ADPIC2_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 2,
+          "resolved_item": "1001f",
+          "size": [
+            72,
+            72
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            106,
+            1
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65562,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "ADPIC3_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 2,
+          "resolved_item": "10020",
+          "size": [
+            72,
+            72
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            69,
+            53
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65563,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "ADPIC4_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 2,
+          "resolved_item": "10021",
+          "size": [
+            72,
+            72
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            10,
+            1
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65558,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "SMCYGLOG_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1056,
+          "ordinal": 6,
+          "picflag": 2,
+          "resolved_item": "10017",
+          "size": [
+            104,
+            36
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            108,
+            159
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 131074,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 200,
+          "font_name": "FONT2_FNT",
+          "item_name": "ORDER_TXT",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1204,
+          "ordinal": 7,
+          "picflag": 2,
+          "resolved_item": "00008",
+          "size": [
+            134,
+            135
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            184,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "1003c",
+      "field_count": 1,
+      "path": "ui/CREDIT_SWD",
+      "references": [
+        {
+          "cached_item": 65566,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "BACKGRND_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 2,
+          "resolved_item": "10022",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 131073,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 100,
+          "font_name": "FONT2_FNT",
+          "item_name": "CREDITS_TXT",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 2,
+          "resolved_item": "00007",
+          "size": [
+            318,
+            197
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "1003d",
+      "field_count": 12,
+      "path": "ui/ASKDIFF_SWD",
+      "references": [
+        {
+          "cached_item": 65559,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "TEXTURE_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 1,
+          "resolved_item": "10018",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            138,
+            105
+          ],
+          "target_name_route": false,
+          "type": 7,
+          "xy": [
+            6,
+            19
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            138,
+            22
+          ],
+          "target_name_route": false,
+          "type": 7,
+          "xy": [
+            6,
+            128
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65561,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "CDIF1_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 2,
+          "resolved_item": "1001a",
+          "size": [
+            24,
+            24
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            10,
+            23
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65563,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "CDIF3_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 2,
+          "resolved_item": "1001c",
+          "size": [
+            24,
+            24
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            10,
+            71
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65564,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "CDIF4_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 2,
+          "resolved_item": "1001d",
+          "size": [
+            24,
+            24
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            10,
+            95
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65562,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "CDIF2_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 2,
+          "resolved_item": "1001b",
+          "size": [
+            24,
+            24
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            10,
+            47
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65560,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1056,
+          "ordinal": 6,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            98,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            40,
+            29
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65560,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 2,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1204,
+          "ordinal": 7,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            98,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            40,
+            53
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65560,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 3,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1352,
+          "ordinal": 8,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            98,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            40,
+            77
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65560,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 4,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1500,
+          "ordinal": 9,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            98,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            40,
+            101
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65560,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 5,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1648,
+          "ordinal": 10,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            98,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            25,
+            132
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 180,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1796,
+          "ordinal": 11,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            124,
+            6
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            17,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "1003e",
+      "field_count": 3,
+      "path": "ui/WINGAME_SWD",
+      "references": [
+        {
+          "cached_item": 65560,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            301,
+            181
+          ],
+          "target_name_route": false,
+          "type": 7,
+          "xy": [
+            10,
+            9
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 4,
+          "resolved_item": null,
+          "size": [
+            8,
+            7
+          ],
+          "target_name_route": false,
+          "type": 5,
+          "xy": [
+            3,
+            2
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1190,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            299,
+            178
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            12,
+            11
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "1003f",
+      "field_count": 23,
+      "path": "ui/OPTS_SWD",
+      "references": [
+        {
+          "cached_item": 65559,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "TEXTURE_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 1,
+          "resolved_item": "10018",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            127,
+            3
+          ],
+          "target_name_route": false,
+          "type": 7,
+          "xy": [
+            30,
+            136
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            127,
+            3
+          ],
+          "target_name_route": false,
+          "type": 7,
+          "xy": [
+            30,
+            165
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            190,
+            100
+          ],
+          "target_name_route": false,
+          "type": 7,
+          "xy": [
+            5,
+            20
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            16,
+            11
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            12,
+            24
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            16,
+            11
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            12,
+            122
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            16,
+            11
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            12,
+            146
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65572,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1056,
+          "ordinal": 6,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            140,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            30,
+            24
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65572,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 4,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1204,
+          "ordinal": 7,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            57,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            118,
+            174
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 200,
+          "font_name": "FONT1_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1352,
+          "ordinal": 8,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            71,
+            14
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            68,
+            8
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 150,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1500,
+          "ordinal": 9,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            104,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            30,
+            122
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 160,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1648,
+          "ordinal": 10,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            112,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            30,
+            146
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1796,
+          "ordinal": 11,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            127,
+            13
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            30,
+            131
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1944,
+          "ordinal": 12,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            127,
+            13
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            30,
+            160
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65572,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2092,
+          "ordinal": 13,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            140,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            30,
+            40
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65572,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2240,
+          "ordinal": 14,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            140,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            30,
+            56
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65572,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2388,
+          "ordinal": 15,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            140,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            30,
+            72
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65572,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2536,
+          "ordinal": 16,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            140,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            30,
+            88
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65572,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2684,
+          "ordinal": 17,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            140,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            30,
+            104
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2832,
+          "ordinal": 18,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            16,
+            11
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            12,
+            40
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 2980,
+          "ordinal": 19,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            16,
+            11
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            12,
+            56
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 3128,
+          "ordinal": 20,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            16,
+            11
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            12,
+            72
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 3276,
+          "ordinal": 21,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            16,
+            11
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            12,
+            88
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 3424,
+          "ordinal": 22,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            16,
+            11
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            12,
+            104
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "10040",
+      "field_count": 12,
+      "path": "ui/LOADCOMP_SWD",
+      "references": [
+        {
+          "cached_item": 65807,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "SHIPCOMP_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 2,
+          "resolved_item": "1010d",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65837,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "LIGHTOFF_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 2,
+          "resolved_item": "1012b",
+          "size": [
+            8,
+            8
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            183,
+            160
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65837,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "LIGHTOFF_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 2,
+          "resolved_item": "1012b",
+          "size": [
+            8,
+            8
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            201,
+            160
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65837,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "LIGHTOFF_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 2,
+          "resolved_item": "1012b",
+          "size": [
+            8,
+            8
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            219,
+            160
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65809,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "SCREEN_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 2,
+          "resolved_item": "1010f",
+          "size": [
+            224,
+            124
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            50,
+            30
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65830,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 170,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "BUTTON4_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 2,
+          "resolved_item": "10124",
+          "size": [
+            24,
+            16
+          ],
+          "target_name_route": false,
+          "type": 5,
+          "xy": [
+            43,
+            166
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 200,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 4,
+          "resolved_item": null,
+          "size": [
+            8,
+            16
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            149,
+            170
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65827,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 120,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "BUTTON1_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1056,
+          "ordinal": 6,
+          "picflag": 2,
+          "resolved_item": "10121",
+          "size": [
+            16,
+            16
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            179,
+            171
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65828,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 130,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "BUTTON2_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1204,
+          "ordinal": 7,
+          "picflag": 2,
+          "resolved_item": "10122",
+          "size": [
+            16,
+            16
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            197,
+            171
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 65829,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 140,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "BUTTON3_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1352,
+          "ordinal": 8,
+          "picflag": 2,
+          "resolved_item": "10123",
+          "size": [
+            16,
+            16
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            215,
+            171
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 200,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1500,
+          "ordinal": 9,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            95,
+            9
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            125,
+            91
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 210,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1648,
+          "ordinal": 10,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            60,
+            9
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            125,
+            106
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1796,
+          "ordinal": 11,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            120,
+            18
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            102,
+            52
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "50016",
+      "field_count": 9,
+      "path": "ui/NMAIN_SWD",
+      "references": [
+        {
+          "cached_item": 327682,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "NEWMAIN_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 2,
+          "resolved_item": "50002",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65571,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU1_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 2,
+          "resolved_item": "10023",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            94,
+            91
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65572,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 2,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU2_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 2,
+          "resolved_item": "10024",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            94,
+            105
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65574,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 4,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU4_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 2,
+          "resolved_item": "10026",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            94,
+            119
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65575,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 5,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU5_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 2,
+          "resolved_item": "10027",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            94,
+            133
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65576,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 6,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU6_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 2,
+          "resolved_item": "10028",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            94,
+            147
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65578,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 7,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU8_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 2,
+          "resolved_item": "1002a",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            94,
+            161
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 65577,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 8,
+          "font_name": "FONT1_FNT",
+          "item_name": "MENU7_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1056,
+          "ordinal": 6,
+          "picflag": 2,
+          "resolved_item": "10029",
+          "size": [
+            128,
+            11
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            94,
+            175
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 230,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1204,
+          "ordinal": 7,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            79,
+            9
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            281,
+            183
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 230,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1352,
+          "ordinal": 8,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            43,
+            6
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            277,
+            176
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "50017",
+      "field_count": 9,
+      "path": "ui/NOPTS_SWD",
+      "references": [
+        {
+          "cached_item": 65560,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "item_name": "TEXTURE_PIC",
+          "kind": "SWIN",
+          "name_byte_offset": 48,
+          "picflag": 1,
+          "resolved_item": "10018",
+          "target_name_route": false
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 168,
+          "ordinal": 0,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            127,
+            3
+          ],
+          "target_name_route": false,
+          "type": 7,
+          "xy": [
+            33,
+            92
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 316,
+          "ordinal": 1,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            165,
+            103
+          ],
+          "target_name_route": false,
+          "type": 7,
+          "xy": [
+            5,
+            29
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 464,
+          "ordinal": 2,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            16,
+            11
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            11,
+            35
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": -1,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 612,
+          "ordinal": 3,
+          "picflag": 2,
+          "resolved_item": null,
+          "size": [
+            16,
+            11
+          ],
+          "target_name_route": false,
+          "type": 9,
+          "xy": [
+            9,
+            75
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65561,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 1,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 760,
+          "ordinal": 4,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            118,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            35,
+            35
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 65561,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 4,
+          "font_name": "FONT2_FNT",
+          "item_name": "STEXTURE_PIC",
+          "kind": "SFIELD32",
+          "name_byte_offset": 908,
+          "ordinal": 5,
+          "picflag": 1,
+          "resolved_item": "10019",
+          "size": [
+            57,
+            12
+          ],
+          "target_name_route": false,
+          "type": 2,
+          "xy": [
+            110,
+            115
+          ]
+        },
+        {
+          "cached_font": 65539,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 200,
+          "font_name": "FONT1_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1056,
+          "ordinal": 6,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            71,
+            14
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            52,
+            7
+          ]
+        },
+        {
+          "cached_font": 65540,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 160,
+          "font_name": "FONT2_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1204,
+          "ordinal": 7,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            112,
+            8
+          ],
+          "target_name_route": false,
+          "type": 1,
+          "xy": [
+            33,
+            75
+          ]
+        },
+        {
+          "cached_font": 5,
+          "cached_item": 0,
+          "cached_item_is_target": false,
+          "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+          "field_id": 0,
+          "font_name": "SYSTEM_FNT",
+          "item_name": "",
+          "kind": "SFIELD32",
+          "name_byte_offset": 1352,
+          "ordinal": 8,
+          "picflag": 0,
+          "resolved_item": null,
+          "size": [
+            127,
+            13
+          ],
+          "target_name_route": false,
+          "type": 11,
+          "xy": [
+            33,
+            87
+          ]
+        }
+      ]
+    }
+  ],
+  "positive_controls": [
+    {
+      "cached_font": 5,
+      "cached_item": 65769,
+      "cached_item_is_target": false,
+      "container": "ui/ORDER_SWD",
+      "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+      "field_id": 0,
+      "font_name": "SYSTEM_FNT",
+      "item_name": "SMLAP_PIC",
+      "kind": "SFIELD32",
+      "name_byte_offset": 168,
+      "ordinal": 0,
+      "picflag": 2,
+      "resolved_item": "10126",
+      "size": [
+        90,
+        51
+      ],
+      "target_name_route": false,
+      "type": 9,
+      "xy": [
+        231,
+        151
+      ]
+    },
+    {
+      "cached_font": 5,
+      "cached_item": 65809,
+      "cached_item_is_target": false,
+      "container": "ui/LOADCOMP_SWD",
+      "effective_item_route": "name resolved by GLB_GetItemID when picflag is nonzero; no cached-handle authority",
+      "field_id": 0,
+      "font_name": "SYSTEM_FNT",
+      "item_name": "SCREEN_PIC",
+      "kind": "SFIELD32",
+      "name_byte_offset": 612,
+      "ordinal": 3,
+      "picflag": 2,
+      "resolved_item": "1010f",
+      "size": [
+        224,
+        124
+      ],
+      "target_name_route": false,
+      "type": 9,
+      "xy": [
+        50,
+        30
+      ]
+    }
+  ],
+  "resolver_authorities": [
+    {
+      "mode": 420,
+      "mtime_ns": 1787665886416416356,
+      "path": "/home/quintine/Projects/RaptorReplica/raptor/src/swdapi.h",
+      "sha256": "a9b51cc8f09d459a2701ad723121fc4a9852d90e2171bf0cf03cac813ab7a6a4",
+      "size": 7345
+    },
+    {
+      "mode": 420,
+      "mtime_ns": 1787665886417416336,
+      "path": "/home/quintine/Projects/RaptorReplica/raptor/src/swdapi.cpp",
+      "sha256": "a7d065818b4c32e28b675f66a4f3bcd547fc0bd72f2bb15170fe5146f41c6990",
+      "size": 86185
+    },
+    {
+      "mode": 420,
+      "mtime_ns": 1787662739624033570,
+      "path": "/home/quintine/Projects/RaptorReplica/raptor/src/glbapi.cpp",
+      "sha256": "851a7f9f14b60043ec29fc46e2aac88e5ce7974197458ea0df28838e7835c20b",
+      "size": 18802
+    }
+  ],
+  "target_cached_item_fields": 0,
+  "target_name_routes": 0
+}

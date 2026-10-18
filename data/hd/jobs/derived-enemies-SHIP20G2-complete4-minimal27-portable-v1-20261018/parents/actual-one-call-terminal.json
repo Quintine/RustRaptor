@@ -1,0 +1,42 @@
+{
+  "provider": "/home/quintine/.codex/generated_images/01a12456-06c5-7e90-9790-66067673f849/exec-e3ecd5e1-d9a8-4650-83fd-be422798b8c5.png",
+  "output_hint": "Generated images are saved to /home/quintine/.codex/generated_images/01a12456-06c5-7e90-9790-66067673f849 as /home/quintine/.codex/generated_images/01a12456-06c5-7e90-9790-66067673f849/exec-e3ecd5e1-d9a8-4650-83fd-be422798b8c5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "expected_reply_sha256": "2673d48982c9051badae5c4e2754340e2bbbb80507b69334835d1c1c8d4a2c1f",
+  "actual_return_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "actual_call_count": 1,
+  "acquire": {
+    "action": "acquire",
+    "owner": "/root/hd_dark_player",
+    "capacity": 4,
+    "acquired": true,
+    "lease_id": "609db0da-1bcb-4ab3-b498-c149be7aef3a",
+    "expires_at": "2026-10-14T06:22:17+00:00",
+    "renewal_command": "renew --owner /root/hd_dark_player --lease 609db0da-1bcb-4ab3-b498-c149be7aef3a",
+    "active_reservations": 1,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "start": {
+    "action": "start",
+    "owner": "/root/hd_dark_player",
+    "capacity": 4,
+    "changed": true,
+    "started_at": "2026-10-14T05:52:17+00:00",
+    "active_reservations": 1,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "terminal_report_before_QA": {
+    "action": "report",
+    "owner": "/root/hd_dark_player",
+    "capacity": 4,
+    "changed": true,
+    "active_reservations": 0,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "actual_provider_png_sha256": "d6fe85ad268a8db9b8fdd74720d338d845e60ea86b46beddece87250af4afc93",
+  "untouched_copy_sha256": "d6fe85ad268a8db9b8fdd74720d338d845e60ea86b46beddece87250af4afc93",
+  "reply_size": 1054397,
+  "reply_persistence": "Node reads actual provider PNG and reconstructs verified exact two-key actual buffered reply; hash equality established before write"
+}

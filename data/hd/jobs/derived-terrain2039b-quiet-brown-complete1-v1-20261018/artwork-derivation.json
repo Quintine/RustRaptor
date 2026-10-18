@@ -1,0 +1,69 @@
+{
+  "environment": {
+    "accepted_recipe": {
+      "mode": 33188,
+      "mtime_ns": 1792289010901818789,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-2039b-ordinary-brownfield-fixed-source-guide-proposal-20261018-v1/UNEXECUTED-ONE2039B-EXACT0E4D-FULL-PARENT-QUIET-BROWN-SOURCE-GUIDED-RECIPE.json",
+      "sha256": "3d376083c08e1d68d0e00a45484e6217db94758193961ab337e38113a0765304",
+      "size": 1276
+    },
+    "actual_parent_artist": "/root/iron_coast_3",
+    "actual_replay_terminal": {
+      "mode": 33188,
+      "mtime_ns": 1792291050582631785,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-2039b-portable-complete1-SourceF-H5539-private-admission-preparation-20261018-v1/ACTUAL-ONE-PATH-ONLY-REPLAY-TERMINAL.json",
+      "sha256": "dfcd2251a0f4b19b0e0d70c5cb38d0319b80b81098e21f152fbd902043889576",
+      "size": 1554
+    },
+    "derived_artist": "/root/hd_terrain_set_2",
+    "derived_not_untouched": true,
+    "parent_receipt_limit": "Actual two primitive return fields/decoded PNG identity+gate preserved; no inline base64 or serialized full dataURL reply. Original PNG reference bundled.",
+    "parent_scope": "Genuine one-Source one-target generation. Prior4104 raw material HOLD remains unchanged; derived output is separate.",
+    "runtime": {
+      "Pillow": "12.3.0",
+      "executable": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "numpy": "2.3.5",
+      "platform": "linux",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+    }
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/derived/actual-portable-execution.json",
+    "sha256": "503c7451d771f1c37b5427a5a3dc9113e2b0eafce1933eef23e45ac76090b3e5"
+  },
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+  "outputs": {
+    "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/derived/2039b-DERIVED-source-guided-material-v1.png": "3c306b59ae065b3e974515924d54be10a31e3fceb04c1895147e1d0c043ae67e"
+  },
+  "parents": [
+    {
+      "imagegen_receipt": {
+        "path": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/parents/safe-actual-generation-receipt.json",
+        "sha256": "e81ecfd3a901024f884c4e895d2c9ab4b4a2dc9ffa6a6a8ad8caf7bbd9fc379e"
+      },
+      "prompt": {
+        "path": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/parents/prompt.txt",
+        "sha256": "2907c63f83ea286df2e1e174d45f02506788491589920e08449ff6b3354dfe1d"
+      },
+      "raw_png": {
+        "path": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/parents/generator-return.png",
+        "sha256": "c9795704dff75e9b076dbf9412a09614734febbc41de024e3143d7c7b8ce6393"
+      }
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-terrain2039b-quiet-brown-complete1-v1-20261018/cleanup-recipe-portable.json",
+    "sha256": "8c52c75df09541e5c8a546aa03ba8da43210bb986a942a8bcd41ed32dd0e0e3c"
+  },
+  "sources": {
+    "2039b": "dc379b8069033daea651a5b7657737fd5f702ce83a88a0cc869e3957d708b47d"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_terrain_retexture.py",
+      "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98"
+    }
+  ]
+}

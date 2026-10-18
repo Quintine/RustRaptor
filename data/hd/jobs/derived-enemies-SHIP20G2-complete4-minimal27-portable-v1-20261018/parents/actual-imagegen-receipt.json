@@ -1,0 +1,47 @@
+{
+  "acquire": {
+    "acquired": true,
+    "action": "acquire",
+    "active_reservations": 1,
+    "capacity": 4,
+    "expires_at": "2026-10-14T06:22:17+00:00",
+    "lease_id": "609db0da-1bcb-4ab3-b498-c149be7aef3a",
+    "owner": "/root/hd_dark_player",
+    "prepare_other_jobs_when_waiting": true,
+    "renewal_command": "renew --owner /root/hd_dark_player --lease 609db0da-1bcb-4ab3-b498-c149be7aef3a"
+  },
+  "actual_call_count": 1,
+  "actual_provider_success": true,
+  "binary_payload_not_packaged": true,
+  "disclosure": "This is explicitly a safe primitive provider/gate projection; it is not a verbatim full generator reply. The complete reply remains privately preserved and hash-bound. Actual untouched PNG is a separate included file.",
+  "format_version": 1,
+  "kind": "safe_actual_imagegen_metadata_projection_not_full_reply",
+  "private_complete_reply": {
+    "bytes": 1054397,
+    "preserved_private_original_path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-200c4-200c7-connected-source-geometry-existing-master-edit-dark-20261014-v1/complete-actual-tool-reply.json",
+    "sha256": "2673d48982c9051badae5c4e2754340e2bbbb80507b69334835d1c1c8d4a2c1f"
+  },
+  "provider_original_path": "/home/quintine/.codex/generated_images/01a12456-06c5-7e90-9790-66067673f849/exec-e3ecd5e1-d9a8-4650-83fd-be422798b8c5.png",
+  "start": {
+    "action": "start",
+    "active_reservations": 1,
+    "capacity": 4,
+    "changed": true,
+    "owner": "/root/hd_dark_player",
+    "prepare_other_jobs_when_waiting": true,
+    "started_at": "2026-10-14T05:52:17+00:00"
+  },
+  "terminal_report_before_QA": {
+    "action": "report",
+    "active_reservations": 0,
+    "capacity": 4,
+    "changed": true,
+    "owner": "/root/hd_dark_player",
+    "prepare_other_jobs_when_waiting": true
+  },
+  "untouched_raw": {
+    "bytes": 790353,
+    "path": "parents/generator-return.png",
+    "sha256": "d6fe85ad268a8db9b8fdd74720d338d845e60ea86b46beddece87250af4afc93"
+  }
+}
