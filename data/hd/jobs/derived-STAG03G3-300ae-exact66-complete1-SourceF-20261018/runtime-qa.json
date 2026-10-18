@@ -1,0 +1,215 @@
+{
+  "actual_portable_replay_byte_exact": {
+    "accepted_PNG_sha256": "6eb90dd86e10ce9179a8c7a6d0953ba2c230012aeec6c287164ebc06d5285722",
+    "actual_replay_terminal": {
+      "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/review/actual-one-portable-replay-terminal-UNMODIFIED.json",
+      "sha256": "50c847f28e2c249269d9df5e0967f5305fa171b821656ce1ffa8956ab2d42da7"
+    },
+    "new_SourceF_QA_calls": 0,
+    "replay_PNG_sha256": "6eb90dd86e10ce9179a8c7a6d0953ba2c230012aeec6c287164ebc06d5285722"
+  },
+  "any_game_source_newer_than_library": false,
+  "artwork_sha256": {
+    "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/derived/300ae-derived.png": "6eb90dd86e10ce9179a8c7a6d0953ba2c230012aeec6c287164ebc06d5285722"
+  },
+  "candidate_sha256": "cd98f9370ba85304fbb0a5ca8989b800ee90628ab1fff9f15a1dbaf501557d98",
+  "diagnostics": [],
+  "frame_bindings_sha256": "78b21fa6160590481b898754e8879505e05cb950bd827852d413bab6c22fc6ce",
+  "frames": [
+    {
+      "asset": "300ae",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              1,
+              5,
+              30,
+              30
+            ],
+            "centroid": [
+              15.0,
+              16.891583452211126
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 701
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              2,
+              10,
+              60,
+              60
+            ],
+            "centroid": [
+              30.5,
+              34.28540772532189
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 2796
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              3,
+              15,
+              90,
+              90
+            ],
+            "centroid": [
+              46.0,
+              51.67923627684964
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 6285
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              4,
+              20,
+              120,
+              120
+            ],
+            "centroid": [
+              61.5,
+              69.07193987115247
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 11176
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_mask": {
+        "bounds": [
+          1,
+          5,
+          30,
+          30
+        ],
+        "centroid": [
+          15.0,
+          16.891583452211126
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 701
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "12b0e405a969465d225f38ad0bbf45417dc71aeb4da8d10a7c35b83f0a3735bc"
+    }
+  ],
+  "library": "target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+  "library_modified_ns": 1792245641851329918,
+  "library_sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+  "limitation": "Gallery validation does not prove live scene reachability, terrain seam correctness or artistic fidelity. Opaque sprites have trivial alpha-mask overlap; compare visible source geometry manually.",
+  "method": "actual Rust HdAssets::load and sprite at scales 1..4; Catalog palette; no artwork edits",
+  "proof_namespace_bridge": {
+    "actual_SourceF_bank_epoch": "H5552 immutable N13 data; later controlled context separately actual H5567",
+    "actual_original_qa": {
+      "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/proofs/actual-SourceF-intrinsic-runtime-qa-UNMODIFIED.json",
+      "sha256": "3431109c7d376ef1a9459327724691c558cf77ac6fc083d8b09d6320faca1d7b"
+    },
+    "kind": "metadata-only relocation of unchanged accepted PNG/native frame header; no helper execution",
+    "new_helper_calls": 0
+  },
+  "source_newer_than_library": false,
+  "validated_frames": 1
+}

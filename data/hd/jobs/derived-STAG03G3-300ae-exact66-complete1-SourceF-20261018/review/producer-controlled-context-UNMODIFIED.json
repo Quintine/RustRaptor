@@ -1,0 +1,270 @@
+{
+  "Source_and_foreign_bindings": {
+    "Source_ID_count": 56,
+    "Source_IDs": [
+      "300ae",
+      "40519",
+      "4051a",
+      "4051b",
+      "4051c",
+      "4051f",
+      "40520",
+      "40521",
+      "40522",
+      "40526",
+      "40527",
+      "4052a",
+      "4052e",
+      "40530",
+      "40531",
+      "40532",
+      "40538",
+      "4053b",
+      "4053e",
+      "40542",
+      "40543",
+      "40545",
+      "4054a",
+      "40559",
+      "4055f",
+      "40560",
+      "40567",
+      "40571",
+      "40573",
+      "40586",
+      "40588",
+      "4058d",
+      "4059b",
+      "405a4",
+      "405a5",
+      "405a7",
+      "405af",
+      "405b0",
+      "405b2",
+      "405cf",
+      "405d0",
+      "405d1",
+      "405d2",
+      "405d4",
+      "405d5",
+      "405d6",
+      "405d7",
+      "405d8",
+      "405d9",
+      "405db",
+      "405dc",
+      "405de",
+      "405e5",
+      "405e6",
+      "405e7",
+      "405ed"
+    ],
+    "Source_Original_fallback_count": 1,
+    "actual_SourceF_library": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+    "baseline_header": {
+      "mode": 33152,
+      "mtime_ns": 1792295174368385734,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed15-publication-after5552-20261018/data/hd/hd.json",
+      "sha256": "40c5cbd8617bf3711f1cf2ecb2b4d043a3ff43664ce396471c614a375ad94914",
+      "size": 2990879
+    },
+    "baseline_provenance": {
+      "mode": 33152,
+      "mtime_ns": 1792295174273388256,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-reviewed15-publication-after5552-20261018/data/hd/provenance.json",
+      "sha256": "3cc74224e4009d9936ee11c5ffd8db84e8d62b7648b8b5addd64001ca2594abd",
+      "size": 1954851
+    },
+    "compiled_Source18_snapshot": "Immutable actual SourceF snapshot; no live Source/Rdata pins or current binary freshness claim.",
+    "current_target_fallback": "Original; target not present in fixedH5567.",
+    "exact_H5567_registered_foreign_frame_count": 55,
+    "finite_Source_native_raw_inputs": {
+      "mode": 33188,
+      "mtime_ns": 1792295716471296818,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-controlled-Original-S3W9-SourceF-H5567-one-ground-context-20261018-v1/CLOSED-ACTUAL-CONTROLLED-POSE-FINITE-SOURCE-H5567-NATIVE-AND-RAW-INPUTS-BEFORE-COMPOSITION.json",
+      "sha256": "90aafe420e89e719f374803bcd8a25a145a0c41aeedc1c9d08655108a5c45ec6",
+      "size": 90625
+    },
+    "new15_intersection": [],
+    "unique_H5567_foreign_raw_payloads": 54
+  },
+  "actual_capture": {
+    "mode": 33188,
+    "mtime_ns": 1792295618216816691,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-controlled-Original-S3W9-SourceF-H5567-one-ground-context-20261018-v1/actual-controlled-STAG03-ground-pose.json",
+    "sha256": "923ac550dddccdf7ecd75cdcb1bf239d8fe01bee934efb0176fa0be9f439145c",
+    "size": 685774
+  },
+  "actual_composition": {
+    "Original_and_current_roles_equal": true,
+    "actual_frozen_preblit_selected_bank_equal": true,
+    "actual_preblit_components": 8,
+    "actual_preblit_plain_outside66_equal": true,
+    "actual_retained_SourceNx_projected_samples": 1980,
+    "actual_whole_role_arrays": 12,
+    "actual_whole_role_samples": 5760000,
+    "all_Original_vs_proposal_changes_confined_target_canvas": true,
+    "all_reserved_Sourceclass_planes_match_indices": true,
+    "changed_indices_Original_vs_proposal_by_scale": [
+      570,
+      2260,
+      5055,
+      9172
+    ],
+    "exclusions": "Player and player shadow, projectiles, pickups, secondaryeffects/UI/Host omitted. Full actual World metadata retains them; main effects included(actual0).",
+    "layers": "Whole joined terrain strip before actor composition; SourceF palette-aware TerrainHd API; Original ground shadow before target ground actor; normal ground/air effects ordering (effects actual0).",
+    "occlusion_scope": "Other Source spawns deliberately suppressed; zero occlusion is a fixture condition, not original-mission actor absence.",
+    "other_actor_occlusion": 0,
+    "outside_target_canvas_differences": 0,
+    "roles": [
+      "Original target with fixedH5567 foreign",
+      "currentH5567 Original fallback target",
+      "proposed derived runtime66 target"
+    ],
+    "selected_mismatches": 0,
+    "shadow": "Real shadow flag1, original 701painted/323transparent Source mask, shade_ground_shadow/lighttable path; same actor/shadow order in allroles.",
+    "target_occupied_viewport_clipping_each_scale_allroles": 0
+  },
+  "actual_constructor_proof": {
+    "mode": 33188,
+    "mtime_ns": 1792295720564192071,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-controlled-Original-S3W9-SourceF-H5567-one-ground-context-20261018-v1/actual-ground-scene-all4-three-roles/actual-controlled-one-ground-pose-composition-proof.json",
+    "sha256": "a4b6c43fdf9ad5d3d9c6ec02e49c1a84bc5051cafd44de2089e3efb81e59c77b",
+    "size": 10176
+  },
+  "actual_controls": {
+    "Pilot": "Legal unchanged Pilot::default difficulty2 and equipment, mission selected. Fixed Input absolute[280,160], firefalse throughout; no healing or active World/pose/frame/RNG/health adjustment.",
+    "actual_Source_shadow_flag": 1,
+    "actual_actor_count": 1,
+    "actual_current": [
+      84,
+      49
+    ],
+    "actual_entity": 1,
+    "actual_frame": 0,
+    "actual_ground": true,
+    "actual_health": 70,
+    "actual_main_effect_count": 0,
+    "actual_player_shield_at_capture": 100,
+    "actual_previous": [
+      82,
+      48
+    ],
+    "actual_steps": 841,
+    "actual_terrain_placements": 90,
+    "actual_tick": 841,
+    "definition": "base:enemy_3_6",
+    "initial_seed": 8192,
+    "interpolated_alpha": 0.5,
+    "mission": "base:sector_3_wave_9",
+    "original_spawn_and_actual_ground_initialization_distinct": "Registry16,-112, actual before-first-update[-16,-128]; the real World initialization and movement produce the captured pose.",
+    "original_spawn_count": 360,
+    "pose_predicate": "First intact70HP frame0 with previous_y>=48/current_y>=49 and both full32canvases inside viewport; not a scheduled or forced pose.",
+    "private_mission_clone": "Only the spawn list is reduced before World creation; all terrain/layout/LegacyMAP attributes and target Source declaration remain exact.",
+    "retained_exact_Original_spawn": {
+      "difficulty_code": 3,
+      "meaning": "ALWAYS",
+      "registry_x": 16,
+      "registry_y": -112,
+      "tick": 664
+    },
+    "retained_spawn_count": 1,
+    "suppressed_other_Source_spawns": 359
+  },
+  "actual_operations": {
+    "cleanup": 0,
+    "controlled_World": 1,
+    "imagegen": 0,
+    "intrinsic_QA": 0,
+    "private_adapter_compile": 1,
+    "registrar": 0,
+    "retries": 0,
+    "saved_composition": 1,
+    "shared_Source_Rtools_Rdata_docs_Git_writes": 0,
+    "successful_World_steps": 841
+  },
+  "actual_saved_array_audit": {
+    "mode": 33188,
+    "mtime_ns": 1792295804595377731,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-controlled-Original-S3W9-SourceF-H5567-one-ground-context-20261018-v1/SAVED12-WHOLE-ROLE-ARRAYS-SOURCECLASS-SOURCENX-CLIPPING-AND-PAGE-AUDIT.json",
+    "sha256": "7d7f7acba850bac820d51d2021d49b5ef705b96017742e336413c57cbdb5b6f2",
+    "size": 23937
+  },
+  "artframes": 1,
+  "asset": "300ae",
+  "different_intrinsic_material": {
+    "mode": 33060,
+    "mtime_ns": 1792295301344536961,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-STAG03G3-300ae-exact66-SourceF-independent-whole-material-peer-20261018-v1/QUALIFIED-DIFFERENT-STAG03G3-300AE-EXACT66-RUNTIME-SOURCEF-WHOLE-MATERIAL-REVIEW.json",
+    "sha256": "0ee257106be4f283746e4821ea9051700b0388cddc227ffb68a943befcdf0bf3",
+    "size": 8241
+  },
+  "disposition": "Frozen actual controlled technical corpus for Root to route DIFFERENT physical context review. No canonical/admission claim or registrar call.",
+  "family": "STAG03G3_PIC",
+  "intrinsic_author": {
+    "mode": 33188,
+    "mtime_ns": 1792295042281919861,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-exact66-runtime-Original-detail-actual-SourceF-author-20261018-v1/CLOSED-ACTUAL-STAG03-COMPLETE1-EXACT66-RUNTIME-ORIGINAL-DETAIL-SOURCEF-AUTHOR-QUALIFIED-NOT-CONTEXT-OR-ADMISSION.json",
+    "sha256": "c0070709523b747c91a50d59a1d816d98d8ce99b224cbab0e2b62024daabc325",
+    "size": 12164
+  },
+  "live_Source_and_Rdata_boundary_released": true,
+  "logical_canvas": [
+    32,
+    32
+  ],
+  "no_pending_owned_writer_call_lease": true,
+  "old_baked66_HOLD_preserved": true,
+  "origin": [
+    0,
+    0
+  ],
+  "preserved_final_count_reader_stop": {
+    "mode": 33188,
+    "mtime_ns": 1792295925248340074,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-controlled-Original-S3W9-SourceF-H5567-one-ground-context-20261018-v1/PRESERVED-FINAL-FINITE-COUNT-READER-STOP-NO-ENGINE-REPEAT.json",
+    "sha256": "16cf4669a74ad0d14267a5c724e32105b2b680e814bd79855112531ac0846463",
+    "size": 533
+  },
+  "preserved_material_limits": [
+    "Coarse Original warning/gray boundary steps and701cell Source outer mask remain explicit.",
+    "Generated metal is brighter and more mechanically articulated; native1 body softness remains.",
+    "The same66 Original cells receive zero additional HD credit; no PNG/recipe/gain/cleanup change in context."
+  ],
+  "preserved_preoutput_reader_stop": {
+    "mode": 33188,
+    "mtime_ns": 1792295715930568461,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-controlled-Original-S3W9-SourceF-H5567-one-ground-context-20261018-v1/PRESERVED-OPTIONAL-PINNED-FRAME-READER-STOP-BEFORE-COMPOSITION.json",
+    "sha256": "63dad6a89e647b666d616562203e050254db49a2329bff7aaf3ef6fa0bb0cbc1",
+    "size": 480
+  },
+  "producer": "/root/hd_enemies_02",
+  "producer_personal_view": {
+    "full_native3_individuals_viewed": 3,
+    "full_native4_individuals_viewed": 3,
+    "native1_native2_tripleboards_exact_size": true,
+    "observation": "Target is attached to the road/ground and shares the original shadow placement; warning colors remain legible, generated panel detail reads at3/4, and no new local clipping or detached contact was found. This is producer observation; independent context decision remains separate.",
+    "resize_disclosure": "Tool resized native3/4 whole tripleboards to2048wide; their full960x600 and1280x800 individual role PNGs were additionally personally viewed at original resolution. No integer/fullreadback claim for the resized boards.",
+    "total_complete_panes": 18,
+    "total_saved_pages": 10,
+    "whole_tripleboards_viewed": 4
+  },
+  "reader_fix_scope": "Optional serde None field reader before composition0; final count reader distinguished55 frames from54 shared raw payloads before report write. Existing actual Rust already asserted no frame pin. No compile/World/compose retry.",
+  "status": "CLOSED_ACTUAL_ONE_CONTROLLED_ORIGINAL_STAG03_GROUND_POSE_SOURCEF_H5567_ALL4_TECHNICAL_CONTEXT_NOT_DIFFERENT_PHYSICAL",
+  "truthful_scope": "Controlled Original declaration/one exact scheduled spawn. This is not a natural full mission, survival, shop-purchase, all-placement, death, animation-sequence or timing proof. Static artframe0 is natural and unpinned.",
+  "unresized_native3_native4_readback_addendum": {
+    "mode": 33188,
+    "mtime_ns": 1792295841785474316,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-controlled-Original-S3W9-SourceF-H5567-one-ground-context-20261018-v1/ADDITIVE-NATIVE3-NATIVE4-UNRESIZED-WHOLE-ROLE-READBACK-INTERFACE.json",
+    "sha256": "797b56de9d5c1f57e55a182a7ceb3704171b946faa390599e8e10c810e9c1ef9",
+    "size": 2947
+  },
+  "utc": "2026-10-18T03:58:45.781781+00:00",
+  "whole_native_interface": {
+    "mode": 33188,
+    "mtime_ns": 1792295804597690696,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-controlled-Original-S3W9-SourceF-H5567-one-ground-context-20261018-v1/COMPLETE4-WHOLE-NATIVE-THREE-ROLE-PAGES-PLUS3-INDIVIDUAL-NATIVE4-CONTROLLED-CONTEXT-INTERFACE.json",
+    "sha256": "88587d96bc7ea21d8c2a135d6e642c2e95d898eb3c6aa7c4b58bbb332cc39e9f",
+    "size": 30435
+  }
+}

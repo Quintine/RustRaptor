@@ -1,0 +1,129 @@
+{
+  "status": "PASS_DIFFERENT_STAG03_EXACT66_RATIONAL_AFFINE_SOURCE_CODE_ONLY_NOT_ART_EXECUTION",
+  "reviewer": "/root/campaign_integration",
+  "role": "DIFFERENT_CODE_REVIEWER_NO_REAL_ARTIFACT_OR_ART_ACCEPTANCE",
+  "author": "/root/hd_enemies_02",
+  "asset": "300ae",
+  "producer_report": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-rational-affine-dispatcher-code-preparation-20261018-v1/FROZEN-STAG03-RATIONAL-AFFINE-EXACT66-VERIFIED-BYTES-SOURCE-CODE-HANDOFF-NO-ARTIFACT.json",
+    "sha256": "5b6688b696419ccb4b704c04c94ba3f0bc17a0df1138610eb399fc7bfe0fac0f",
+    "size": 7343,
+    "inode": 5574360,
+    "mode": 33188,
+    "mtime_ns": 1792293744210119178
+  },
+  "producer_outside_strict": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-rational-affine-dispatcher-code-preparation-20261018-v1-strict-complete-private-affine-dispatcher-source-code-closure.json",
+    "sha256": "bf611b9b937d2c22c01dbd24a7bd544992685055b3e9d063057a3dfc2458ae70",
+    "size": 10173,
+    "inode": 5574361,
+    "mode": 33188,
+    "mtime_ns": 1792293744220507945
+  },
+  "helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-rational-affine-dispatcher-code-preparation-20261018-v1/stag03_affine_cleanup.py",
+    "sha256": "939253ecf47c85e624722737dbee9dc621189452cbbd7b5eac78031c64ab8881",
+    "size": 14521,
+    "inode": 5573988,
+    "mode": 33188,
+    "mtime_ns": 1792293668523699385
+  },
+  "exact_recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-rational-affine-dispatcher-code-preparation-20261018-v1/PROPOSED-EXACT66-RATIONAL-AFFINE-CLEANUP-RECIPE-NOT-EXECUTED.json",
+    "sha256": "ca3bb76ec9a788ea73e88f65e998fbca9b92fcc024d77270737a7ee475e42788",
+    "size": 4234,
+    "inode": 5574359,
+    "mode": 33188,
+    "mtime_ns": 1792293744209014009
+  },
+  "code_read": "Full dispatcher, synthetic tests and executed dependency definitions/imports read; unused dependency CLI render routes not invoked.",
+  "findings": [],
+  "checked_contracts": [
+    "Six bounded exact Fraction values must equal complete occupied-bounds alignment; actual metadata independently gives [1187/116,0,-201/29,0,507/50,-154/5]. No arbitrary shear, offset search or crop is accepted.",
+    "Logical32x32/origin0/full128x128 export; decoder canvas, parent PNG size and declared Source/raw occupied bounds checked. Rational values cannot admit float, bool, NaN, infinity or zero/negative denominators.",
+    "Pillow bicubic inverse transform uses transparent exterior, not edge clamping; returned coverage is actual Scale2x twice of Source. Independent scalar Scale2x reference reproduces gap/corner support.",
+    "c612 fill seeds are immutable trusted-and-supported parent samples; radius12 is Euclidean, includes squared144 and rejects outside-circle candidates. Fills never become new donors.",
+    "Fill prefers a donor with the same Source label within radius, otherwise it may use another Source label. Deterministic tie order is distance/y/x. This is not a guarantee of material suitability.",
+    "Exactly two disjoint sorted33-cell groups receive f807 full actual Original Scale4 RGBA, including local transparent samples. All66 cells must be painted Source and total66 must remain at most a quarter of painted cells.",
+    "Independent palette perturbation proves Source RGB changes cannot affect unselected generated-body pixels; alpha and all undeclared RGBA remain exact. Original66 cells are explicitly no generated-HD credit.",
+    "Outside the retained groups, at least half the complete supported body must be direct resampled generated RGB, unchanged by fill/retention. At least one fully supported interior block must contain detail; this weak sanity check is not artistic acceptance.",
+    "All three dependency payload hashes are checked before compile/exec in fresh namespaces; already-verified dependency imports are routed to those modules and sys.path mutations stay in a private proxy. Buffered Source/palette/parent bytes are processed without path reopening.",
+    "Canonical relative descriptor reads reject traversal, symlink files/directories and wrong hashes; bounded regular-file size, descriptor identity/mtime and post-read hash are checked. Changed-during-read synthetic input stops.",
+    "The disk floor precedes dependency/art reads. All checks/render/encode precede staging; payloads are fsynced then Linux renameat2 RENAME_NOREPLACE publishes one direct-child directory. Existing output, symlink/race and write/rename failures do not overwrite inputs or unrelated paths."
+  ],
+  "actual_tests": {
+    "author_synthetic": 16,
+    "independent_synthetic": 8,
+    "total": 24,
+    "result": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-STAG03-rational-affine-independent-code-review-20261018-v1/synthetic-review-result.json",
+      "sha256": "d86dc1d06254fa9c7ef282aff39ea26d8bcf349f25d8bdedd4b583f32ee219f9",
+      "size": 1660,
+      "inode": 5576197,
+      "mode": 33188,
+      "mtime_ns": 1792294030210752714
+    },
+    "author_terminal": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-STAG03-rational-affine-independent-code-review-20261018-v1/author16-terminal.json",
+      "sha256": "5e76900bc22d79fc35401896feec40fd68c79c836b3b3d9fb36c41f7fb2c04c3",
+      "size": 619,
+      "inode": 5575968,
+      "mode": 33188,
+      "mtime_ns": 1792294029784746834
+    },
+    "independent_terminal": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-STAG03-rational-affine-independent-code-review-20261018-v1/independent8-terminal.json",
+      "sha256": "43de4a5195ffb2a1ce50b8b8429548116938fcb51ed03ed7046f59c1fa486d4f",
+      "size": 608,
+      "inode": 5576195,
+      "mode": 33188,
+      "mtime_ns": 1792294030200732889
+    },
+    "independent_source": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-STAG03-rational-affine-independent-code-review-20261018-v1/test_independent_stag03.py",
+      "sha256": "935c4f8270bfc8f0f9eaa5bce308a17c09e07db7c8b787f805c9094481f3afbc",
+      "size": 7833,
+      "inode": 5575765,
+      "mode": 33188,
+      "mtime_ns": 1792294010486116003
+    }
+  },
+  "immutable_inputs": {
+    "count": 25,
+    "exact_before_after_and_at_seal": true,
+    "before": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-STAG03-rational-affine-independent-code-review-20261018-v1/verified-before-guards.json",
+      "sha256": "9c979374a5bc4ed8274b12e9f9e8ad75684a9e30f411fe5161fd44f7a520bced",
+      "size": 9541,
+      "inode": 5575801,
+      "mode": 33188,
+      "mtime_ns": 1792294029155206503
+    },
+    "after": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign-STAG03-rational-affine-independent-code-review-20261018-v1/verified-after-guards.json",
+      "sha256": "9c979374a5bc4ed8274b12e9f9e8ad75684a9e30f411fe5161fd44f7a520bced",
+      "size": 9541,
+      "inode": 5576196,
+      "mode": 33188,
+      "mtime_ns": 1792294030210636723
+    },
+    "current_real_artifact_output_absent": true
+  },
+  "limitations": [
+    "Actual parent/Source/palette payloads were byte-hashed for custody only, never decoded or rendered by this reviewer. Numerical generation/detail guards do not decide warning rhythm, body layout, material quality or native readability.",
+    "Affine resampling, Source-derived alpha, bounded generated-donor fills and retained Original RGB produce DERIVED artwork. They must not be relabeled as untouched generation or prove old HOLDs resolved.",
+    "The helper is the exact frozen Linux private utility; no generic decoder sandbox, concurrent-writer or crash-durability claim is made beyond the frozen regular-file custody and stated no-replace install."
+  ],
+  "authority": "Return to Root. Actual cleanup remains unexecuted and requires Root activation plus the named ownership/custody confirmation. A CODE pass supplies no art/QA/context/admission approval.",
+  "actual_operations": {
+    "real_Source_decode": 0,
+    "real_parent_decode": 0,
+    "real_recipe_cleanup": 0,
+    "QA": 0,
+    "World": 0,
+    "compiler": 0,
+    "imagegen": 0,
+    "shared_Source_tools_data_docs_Git_writes": 0
+  },
+  "custody": "Producer handoff declares all owned/named inputs frozen with no pending writer/call/lease; 25 exact pins independently checked before/after tests and again at seal. Reviewer owns only this private evidence; no pending reviewer operation after sealing."
+}

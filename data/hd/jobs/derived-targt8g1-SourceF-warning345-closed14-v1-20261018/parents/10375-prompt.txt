@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: faithful HD top-down terrain tile for Raptor, original asset 10375.
+Input images: Image 1 is the complete authentic original32x32 tile enlarged by nearest-neighbor to1024x1024 for inspection. Image 2 is the same literal native32x32 original. Both are original-only content, color and framing references, not existing HD artwork.
+
+Subject and material: One quiet, flat, open field of muted warm red-brown bare soil. Preserve the original's subdued value distribution and small irregular low-contrast mottling. Add only restrained, continuous fine soil grain subordinate to that flat field. Keep the dull red-brown earth tones; do not introduce distinct objects or conspicuous bright marks. The enlarged source pixels are geometry/color guides, not physical square blocks to reproduce as texture.
+
+Composition and output: Show the whole original terrain canvas directly from overhead, keeping the original32x32 logical extent, origin0 and all four edge boundaries. Return one complete1254x1254 square image, fully opaque from edge to edge. The entire returned raw canvas is the fixed extraction: no margin, border, inset, crop-fitting or adjacent scenery.
+
+Constraints: No added structures, rocks, plants, wrecks, craters, paving, ruts, raised relief, tile grid, mosaic, checkerboard, lights, water, fire, glow, text or labels. Preserve the existing quiet local soil shading without dramatic lighting or added high contrast. Render new subtle continuous detail instead of merely enlarging the native pixel blocks.

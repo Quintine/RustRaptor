@@ -1,0 +1,35 @@
+{
+  "accepted_job_PNGs_already_copied_byte_exact": true,
+  "actual_execution_receipt": {
+    "path": "jobs/derived-ship15g1-complete3-v1-20261018/normalized-execution.json",
+    "sha256": "f4119ba4486054876588701109e6ecc679460f9aec87ef54c51080ea9a6c0837"
+  },
+  "all_Source_paths_project_relative": true,
+  "argv": [
+    "python3",
+    "-B",
+    "tools/ship15_component_registration/ship15_component_cleanup.py",
+    "data/hd/jobs/derived-ship15g1-complete3-v1-20261018/cleanup-recipe.json",
+    "FRESH_OUTPUT_DIRECTORY"
+  ],
+  "cwd": "PROJECT_ROOT",
+  "decoder_sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+  "existing_author_execution_recipe_sha256": "1c521a7b31b5dec0db417812642906a36bfb3360421e21cb22486abc7ba30fa1",
+  "expected_PNG_sha256": {
+    "1030b": "393b0266231352c920736eec531f36aed3ac09d6cab21a983ab1affedbbbdf92",
+    "1030c": "5dcee3c2fae168c44bc753034123eb460e9d1bed83268299b07a9280e9208522",
+    "1030d": "9cac85cd8239d1bd3ff87e9c1b81c0fb6fa317e1fa9d491c8266df0ec3f676c5"
+  },
+  "new_portable_execution_receipt_absent_until_real_success": true,
+  "no_full_private_Source_library_or_host_required_for_pixel_reproduction": true,
+  "only_direct_cleanup_parent_sha256": "d69d4869d9e89495fed7773d30d4372637e0faebc456b9cd6c77fee892f4eebf",
+  "post_success": "Compare3returned PNG bytes to acceptedjobderived PNGs, create actual normalized execution outerobject from real report, then bind recipe/tool/source/raw/output identities and rehash lineage/candidate/review/QA. Stop on mismatch; no silent rerun.",
+  "recipe_sha256": "31e218a73442f57f63c417cc6ba1cfe6d497cab5584c1cc8599271bfbf8539a7",
+  "required_runtime": {
+    "numpy": "2.3.5",
+    "pillow": "12.3.0",
+    "python": "3.12.14"
+  },
+  "status": "PRESERVED_PREPARATION_PLAN_ACTUAL_SUCCESS_RECORDED_SEPARATELY",
+  "tool_sha256": "e552979acd0e440546f27f45c1c8dc74f5f3b432196d2a569e6c3d7bde2988b0"
+}

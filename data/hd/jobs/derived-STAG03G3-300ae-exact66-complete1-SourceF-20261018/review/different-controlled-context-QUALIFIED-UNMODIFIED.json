@@ -1,0 +1,257 @@
+{
+  "status": "QUALIFIED_DIFFERENT_STAG03_SOURCEF_H5567_ONE_CONTROLLED_GROUND_CONTEXT_ALL4",
+  "reviewer": "/root/iron_coast_5",
+  "producer": "/root/hd_enemies_02",
+  "qualified_contexts": 1,
+  "qualified_scale_comparisons": 4,
+  "holds": 0,
+  "context": {
+    "asset": "300ae",
+    "Source_definition": "base:enemy_3_6",
+    "mission": "base:sector_3_wave_9",
+    "tick": 841,
+    "entity": 1,
+    "health": 70,
+    "frame": 0,
+    "ground": true,
+    "Original_shadow": true,
+    "alpha": 0.5,
+    "previous": [
+      82,
+      48
+    ],
+    "current": [
+      84,
+      49
+    ],
+    "logical": [
+      32,
+      32
+    ],
+    "origin": [
+      0,
+      0
+    ],
+    "retained_Original_cells": 66,
+    "Original_spawn": {
+      "difficulty_code": 3,
+      "meaning": "ALWAYS",
+      "registry_x": 16,
+      "registry_y": -112,
+      "tick": 664
+    },
+    "suppressed_other_spawns": 359,
+    "terrain": 90,
+    "actors": 1,
+    "main_effects": 0,
+    "actual_source_ids": 56,
+    "registered_foreign_frames": 55,
+    "unique_foreign_raws": 54,
+    "current_target": "Original fallback"
+  },
+  "physical_decisions": [
+    {
+      "scale": 1,
+      "canvas_top_left": [
+        83,
+        49
+      ],
+      "canvas": [
+        32,
+        32
+      ],
+      "occupied": 701,
+      "actual_SourceNx_retained": 66,
+      "current_to_proposed_changes": 570,
+      "outside_target_changes": 0,
+      "occupied_clip": 0,
+      "actor_order": [
+        1
+      ],
+      "Original_shadow_entities": [
+        1
+      ],
+      "current_equals_Original": true,
+      "decision": "QUALIFIED_CONTROLLED_GROUND_CONTEXT_WITH_RETAINED_MATERIAL_LIMITS",
+      "physical_observation": "Whole native1 scene remains legible: the compact gray ground installation sits across the road with the shared dark ground shadow. Paired recess groups and restored warm warning band remain identifiable; body panels are soft at this scale. No new detached contact, clipping or terrain displacement was seen."
+    },
+    {
+      "scale": 2,
+      "canvas_top_left": [
+        166,
+        97
+      ],
+      "canvas": [
+        64,
+        64
+      ],
+      "occupied": 2796,
+      "actual_SourceNx_retained": 264,
+      "current_to_proposed_changes": 2260,
+      "outside_target_changes": 0,
+      "occupied_clip": 0,
+      "actor_order": [
+        1
+      ],
+      "Original_shadow_entities": [
+        1
+      ],
+      "current_equals_Original": true,
+      "decision": "QUALIFIED_CONTROLLED_GROUND_CONTEXT_WITH_RETAINED_MATERIAL_LIMITS",
+      "physical_observation": "Whole native2 role comparison retains the same road placement and contact/shadow. Proposed paired recess banks, upper ribbed shoulders and central gray spine are readable. Brighter harder panel relief contrasts with the Original rounded shading; the retained gray steps and warning ribbon remain explicit, without a new context blocker."
+    },
+    {
+      "scale": 3,
+      "canvas_top_left": [
+        249,
+        146
+      ],
+      "canvas": [
+        96,
+        96
+      ],
+      "occupied": 6285,
+      "actual_SourceNx_retained": 594,
+      "current_to_proposed_changes": 5055,
+      "outside_target_changes": 0,
+      "occupied_clip": 0,
+      "actor_order": [
+        1
+      ],
+      "Original_shadow_entities": [
+        1
+      ],
+      "current_equals_Original": true,
+      "decision": "QUALIFIED_CONTROLLED_GROUND_CONTEXT_WITH_RETAINED_MATERIAL_LIMITS",
+      "physical_observation": "Whole native3 Original/current/proposed individuals at960x600 confirm the same target position and complete perimeter. The warm warning marks separate the upper ribbed blocks from dark lower recess groups. The retained coarse gray center/boundary steps contrast with finer generated panel grain; no new float, clipped limb or ground-shadow break was found."
+    },
+    {
+      "scale": 4,
+      "canvas_top_left": [
+        332,
+        194
+      ],
+      "canvas": [
+        128,
+        128
+      ],
+      "occupied": 11176,
+      "actual_SourceNx_retained": 1056,
+      "current_to_proposed_changes": 9172,
+      "outside_target_changes": 0,
+      "occupied_clip": 0,
+      "actor_order": [
+        1
+      ],
+      "Original_shadow_entities": [
+        1
+      ],
+      "current_equals_Original": true,
+      "decision": "QUALIFIED_CONTROLLED_GROUND_CONTEXT_WITH_RETAINED_MATERIAL_LIMITS",
+      "physical_observation": "Whole native4 Original/current/proposed individuals at1280x800 show the paired black recess banks and central gray spine readable on the road. Generated metal remains brighter and more mechanically articulated than Original, with a coarse Source gray patch and warning steps. Road and shared dark shadow contact remain stable; no new missing body section, clipping or local retained-patch readability blocker was found."
+    }
+  ],
+  "personal_journal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-STAG03G3-SourceF-H5567-one-controlled-ground-context-independent-peer-20261018-v1/PERSONAL-ALL4-WHOLE-CONTROLLED-STAG03-GROUND-CONTEXT-VIEW-JOURNAL.json",
+    "sha256": "a922ec497d1b42e56b5f060af2d350295d9bb59ef732ce608fa184b501a37285",
+    "size": 11036
+  },
+  "saved_output_interface": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-STAG03G3-SourceF-H5567-one-controlled-ground-context-independent-peer-20261018-v1/FROZEN-DIFFERENT-CONTROLLED-STAG03-H5567-CONTEXT-DECISIONS-AND-SAVED-OUTPUT-INTERFACE.json",
+    "sha256": "1c2d8e7928dc49c24e5e01dc2f8a5b3f1847b2189fc1464a50699ff277da2081",
+    "size": 13763
+  },
+  "independent_audit": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-STAG03G3-SourceF-H5567-one-controlled-ground-context-independent-peer-20261018-v1/INDEPENDENT-SAVED-SOURCE-PLANES-AND-10-WHOLE-PAGE-AUDIT.json",
+    "sha256": "8150a0d41fb360bd66b9280874cc61162ef5a1562363e5523b43153c5bee1a33",
+    "size": 3627
+  },
+  "producer_report": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-controlled-Original-S3W9-SourceF-H5567-one-ground-context-20261018-v1/CLOSED-ACTUAL-STAG03-SOURCEF-H5567-ONE-CONTROLLED-ORIGINAL-GROUND-POSE-ALL4-TECHNICAL-CONTEXT-NOT-INDEPENDENT-PHYSICAL.json",
+    "sha256": "3ede0feb1c893bd623fd15f549dca1a4ccde5ab58a6f715b8413244cbf5466a2",
+    "size": 12360
+  },
+  "producer_strict": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-controlled-Original-S3W9-SourceF-H5567-one-ground-context-20261018-v1-strict-complete-one-controlled-World-one-composition-technical-context-closure.json",
+    "sha256": "161ca89b5dc92365568cf456a583264022d7c9a3a5aff6b0e1e23499595ed8f2",
+    "size": 119770
+  },
+  "different_intrinsic_material": {
+    "mode": 33060,
+    "mtime_ns": 1792295301344536961,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-STAG03G3-300ae-exact66-SourceF-independent-whole-material-peer-20261018-v1/QUALIFIED-DIFFERENT-STAG03G3-300AE-EXACT66-RUNTIME-SOURCEF-WHOLE-MATERIAL-REVIEW.json",
+    "sha256": "0ee257106be4f283746e4821ea9051700b0388cddc227ffb68a943befcdf0bf3",
+    "size": 8241
+  },
+  "actual_numeric_evidence": {
+    "role_arrays": 12,
+    "component_arrays": 8,
+    "role_samples": 5760000,
+    "retained_SourceNx_projected_samples": 1980,
+    "whole_saved_pages": 10,
+    "displayed_panes": 18,
+    "unique_scene_role_bodies": 12,
+    "repeat_individual_roles": 6,
+    "outside_target_changes": 0,
+    "clipped_occupied_samples": 0,
+    "controlled_other_actor_occlusion": 0,
+    "Original_current_equal": true,
+    "reserved_class_planes_exact": true,
+    "per_scale_actual_changes": [
+      570,
+      2260,
+      5055,
+      9172
+    ]
+  },
+  "producer_actual_operations": {
+    "cleanup": 0,
+    "controlled_World": 1,
+    "imagegen": 0,
+    "intrinsic_QA": 0,
+    "private_adapter_compile": 1,
+    "registrar": 0,
+    "retries": 0,
+    "saved_composition": 1,
+    "shared_Source_Rtools_Rdata_docs_Git_writes": 0,
+    "successful_World_steps": 841
+  },
+  "reviewer_operations": {
+    "engine": 0,
+    "World": 0,
+    "compiler": 0,
+    "intrinsic_QA": 0,
+    "imagegen": 0,
+    "art_or_Source_edits": 0,
+    "registrar": 0,
+    "shared_data_docs_Git_writes": 0
+  },
+  "historical_reader_stops": [
+    {
+      "mode": 33188,
+      "mtime_ns": 1792295715930568461,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-controlled-Original-S3W9-SourceF-H5567-one-ground-context-20261018-v1/PRESERVED-OPTIONAL-PINNED-FRAME-READER-STOP-BEFORE-COMPOSITION.json",
+      "sha256": "63dad6a89e647b666d616562203e050254db49a2329bff7aaf3ef6fa0bb0cbc1",
+      "size": 480
+    },
+    {
+      "mode": 33188,
+      "mtime_ns": 1792295925248340074,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-STAG03G3-controlled-Original-S3W9-SourceF-H5567-one-ground-context-20261018-v1/PRESERVED-FINAL-FINITE-COUNT-READER-STOP-NO-ENGINE-REPEAT.json",
+      "sha256": "16cf4669a74ad0d14267a5c724e32105b2b680e814bd79855112531ac0846463",
+      "size": 533
+    }
+  ],
+  "limits": [
+    "One controlled Original S3W9 declaration and one intact70HP staticframe0 pose at tick841/entity1. Pre-World mission clone retains exact spawn664 and suppresses359 others. Zero occlusion is a controlled fixture condition, not evidence of natural mission actor absence.",
+    "841 default-difficulty2/seed8192 legal no-fire inputs, player shield100. No healing or active entity/frame/path/RNG manipulation is claimed; the pre-World spawn reduction is explicit. No natural full-mission, survival, purchase, timing, death, all-placement or animation-sequence approval.",
+    "Actual alpha0.5 interpolation between previous[82,48] and current[84,49] with real ground flag/shadow1. Review uses saved terrain/enemy/main-effect layers; player/player shadow, projectiles, pickups, secondaryeffects, UI and Host presentation are excluded. Actual main effects0.",
+    "Exact66 cells remain retained Original SourceNx, not newly generated HD detail. Coarse gray/warning steps versus brighter interpreted panel relief, native1 softness, value/grain differences and existing intrinsic qualifications remain literal.",
+    "SourceF immutable compiled snapshot/cfab library/38459 epoch and fixed H5567 only. Live Source/data operation boundary is released; no present/future live equality, registrar/admission or broader palette-domain transport approval. Finite domain and retained-terrain placements are0.",
+    "CurrentH5567 target300ae is Original fallback. Original/current roles are exact;55 registered foreign frames use54 unique raws among56 Source IDs. No new15 intersection or coverage inference.",
+    "Old baked66/plain3b60 HOLDs and different intrinsic0ee25710/d5123c1e remain separate. This context result adds no art rewrite, selectors, material waiver or prior-HOLD upgrade."
+  ],
+  "custody": "Root explicit immutable handoff plus producer report/strict no-pending declaration; direct narrow ACK requested. Original75 members and241 named inputs authenticated full hash/stat twice by independent saved-file audit; no ongoing live Source/data lease inferred.",
+  "no_pending_owned_writer_call_lease": true,
+  "utc": "2026-10-18T04:07:28.047099+00:00"
+}

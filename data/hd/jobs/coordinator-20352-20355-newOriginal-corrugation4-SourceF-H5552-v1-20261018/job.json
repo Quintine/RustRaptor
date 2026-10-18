@@ -1,0 +1,114 @@
+{
+  "candidate_manifest": "candidate.json",
+  "category": "Terrain",
+  "format_version": 1,
+  "generation_inventory": {
+    "actual_assets": [
+      "20352",
+      "20353",
+      "20354",
+      "20355"
+    ],
+    "actual_new_image_calls": 1,
+    "four_complete_static1_native_sequences": true,
+    "lineage": {
+      "path": "jobs/coordinator-20352-20355-newOriginal-corrugation4-SourceF-H5552-v1-20261018/generation-lineage.json",
+      "sha256": "8034d885980981045ace65ddd727a3160fd7edbbd756af93dcb321d530cf5435"
+    },
+    "not_old16_generation": true
+  },
+  "historical_shard_relationship": {
+    "path": "jobs/coordinator-20352-20355-newOriginal-corrugation4-SourceF-H5552-v1-20261018/review/HISTORICAL16-SHARD-12-UNCHANGED-SIBLINGS-NOT-CARRIED-OR-REMEASURED.json",
+    "sha256": "59ad724513fc69a729534995963c8237eab2a68a489f2ae4fbf4dd22008a07dd"
+  },
+  "job_id": "coordinator-20352-20355-newOriginal-corrugation4-SourceF-H5552-v1-20261018",
+  "kind": "contextual_terrain_shard",
+  "name": "New Original-only corrugation generation4",
+  "owner": "/root/hd_coordinator",
+  "targets": [
+    {
+      "asset": "20352",
+      "canonical_source_asset": "20352",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "source_path": "misc/unnamed.1357",
+      "source_sha256": "e0e696dab8a32c3914845cc5c812c10e3b053d9497716e0965e33a79f26f7f01",
+      "terrain_context": {
+        "Original_gameplay_occurrence_claimed": true,
+        "actual_H5552_genuine_placements": 4,
+        "selected_target_health": 0
+      }
+    },
+    {
+      "asset": "20353",
+      "canonical_source_asset": "20353",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "source_path": "misc/unnamed.1358",
+      "source_sha256": "b3c512d3db25ccff5832440b1d4fca316b257bfa548860c43d25771a5b2bbbfd",
+      "terrain_context": {
+        "Original_gameplay_occurrence_claimed": true,
+        "actual_H5552_genuine_placements": 4,
+        "selected_target_health": 0
+      }
+    },
+    {
+      "asset": "20354",
+      "canonical_source_asset": "20354",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "source_path": "misc/unnamed.1359",
+      "source_sha256": "5a05bfa68d4b937ac3e051ff6abbb37e344d5557f8cd552738b845361ea633e6",
+      "terrain_context": {
+        "Original_gameplay_occurrence_claimed": true,
+        "actual_H5552_genuine_placements": 4,
+        "selected_target_health": 0
+      }
+    },
+    {
+      "asset": "20355",
+      "canonical_source_asset": "20355",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "source_path": "misc/unnamed.1360",
+      "source_sha256": "8f62107d67d7b2f77585430a7fc09589d4c94f947d47facc0e0626d9cf8b634d",
+      "terrain_context": {
+        "Original_gameplay_occurrence_claimed": true,
+        "actual_H5552_genuine_placements": 4,
+        "selected_target_health": 0
+      }
+    }
+  ]
+}

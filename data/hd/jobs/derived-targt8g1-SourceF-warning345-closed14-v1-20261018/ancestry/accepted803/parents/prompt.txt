@@ -1,0 +1,25 @@
+Use case: stylized-concept. Asset: one production HD animation sprite atlas for a top-down classic Raptor mechanical ground hatch.
+
+The attached image is the ONLY visual reference: all fourteen authentic Original frames, already arranged in the required order. Repaint them as continuous, newly rendered HD surfaces while preserving their individual pose, occlusion, placement, value and material truth. The source pixels describe the shapes; do not draw enlarged pixel bricks, tiled cubes, outlined pixel blocks or a pixel-art mosaic. Do not redesign the mechanism into a different turret.
+
+OUTPUT LAYOUT: one wide PNG with overall aspect ratio exactly 7:2, SEVEN equal square cells across and TWO equal rows, exactly fourteen occupied animation slots. No margins, gutters, grid lines, numbers, captions or extra slots. Read left to right across row one for frames 0–6, then left to right across row two for frames 7–13. Each square cell represents the same 32×32 logical canvas with unchanged upper-left anchor. Frame 0 is the full opaque soil tile. For frames 1–13, the fixed painted rectangle has left=3/32, top=4/32, right=28/32, bottom=29/32 in that cell; outside it is genuine alpha-zero transparency. Black inside the recess is opaque dark material, not transparent. Keep the same framing and static brown rim/gray mechanism alignment throughout.
+
+MATERIALS: quiet diffuse reddish-brown soil, close to the Original's muted red-brown values, with restrained small irregular natural mottling. No pebbly cobblestones, boulders, exaggerated cracks or raised brown masonry. The thin brown border is a low-relief edge, not a chunky bright beveled frame. The exposed mechanism is subdued gray worn steel over a very dark cavity with small restrained orange/yellow center; fine scuffs are welcome but not new pipes, rivet rows, weapons, bolts or props. Preserve the Original's dark exposure and gradual visibility: a barely seen gray part must remain barely seen rather than becoming an illuminated bright silver object.
+
+POSES, in this exact order (the attached Original in each slot is the authority):
+0: uninterrupted full brown soil tile; no hatch, stripe or mechanism.
+1: closed brown square cover and thin rim; no opening, stripe or mechanism.
+2: still closed brown cover, with the Original's small darker top inset/shadow; do not expose a pit yet.
+3: cover mostly closed; first tiny lower black opening and little gray underside contacts. Its narrow yellow/black warning edge is at logical y=25.
+4: same cover retracts upward; warning edge at y=22, shallow dark cavity below with subdued gray contacts.
+5: warning edge at y=19; deeper opaque-black recess, still no fully exposed bright gray circular body.
+6: warning edge at y=16; dark inner mechanism is only beginning to emerge, including the tiny dim red-brown hint beneath the edge.
+7: warning edge at y=13; partly exposed but VERY DIM gray central body and dark amber center. Preserve this shadow rather than prematurely showing the bright fully open body.
+8: warning edge at y=10; more of the fixed rounded gray body is visible, with the small amber center in the Original position.
+9: warning edge at y=7; the cover nearly withdrawn; gray body and rails become clearer while the recess remains black.
+10: edge at y=5, and its warning marks are subdued burnt ORANGE/brown rather than bright yellow. Keep the distinct Source hue and the same attached gray contacts.
+11: fully withdrawn cover; no warning edge remains. Fixed gray body/rails in the dark recess, small orange center, matching this Original's exact exposure.
+12: fully open later phase; the center brightens yellow/orange and the Original's gray supports become more visible.
+13: final fully open phase; preserve its genuinely stronger gray rails/body exposure and yellow/orange center without inventing an extra pose.
+
+The moving soil cover occludes the same underlying mechanism; do not replace the fourteen poses with fourteen separately redesigned hatches, move the center, grow the rim, repeat a pose, add intermediate poses, or turn the first shallow openings into fully lit mechanical rooms. Preserve every Original frame's connected contours and major boundary tones while expressing the forms with coherent HD shading and fine texture. Orthographic top-down view, no camera perspective or cast shadow outside the sprite. Output only the fourteen-frame transparent atlas.

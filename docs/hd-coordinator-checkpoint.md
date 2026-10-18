@@ -1,5 +1,13 @@
 # HD coordinator checkpoint — 18 October 2026
 
+Current artwork/runtime checkpoint — 18 October 2026: **5,596 reviewed pictures in 3,700 complete sequences**. **157 originals await approval**: 123 Terrain, 32 enemies/ground objects and two UI/other pictures. This adds corrugated terrain (4), SHIP15G1 (3), STAG03G3 (1), green destroyed terrain (7) and the complete TARGT animation (14).
+
+Terrain uses untouched generated atlases; ship, vehicle and hatch artwork includes declared derived material and retained Original details. Functional Original samples and carried artwork earn no new generated-detail credit. Family records retain finite scene scopes, visible qualifications and the distinction between original pixel captures and later input checks.
+
+Installed validation accepts all **5,596 frames with zero rejects** and **45 mods with one override**. The assembled folder has **10,449 data files / 8,536,899,084 bytes**. The actual maintained-tool suite passed 242 synthetic tests. Three fresh installed SDL controls passed and were personally reviewed; their exact visible scope is recorded with the receipts. SourceF and both game binaries remain unchanged. Earlier checks, held drafts and provider refusals remain archived below; complete Original-art coverage is unfinished. Native Windows evidence remains tied to its recorded commit and artwork count.
+
+Earlier H5567 checkpoint — retained historical evidence and tables:
+
 Current artwork/runtime checkpoint — 18 October 2026: **5,567 reviewed pictures in 3,686 complete sequences**, including **4,401 Terrain pictures**. **186 originals still await approval**: 134 Terrain, 50 enemies/ground objects and two UI/other pictures. All 249 boss pictures are reviewed; complete Original-art coverage remains unfinished.
 
 This append adds eight selected destroyed Terrain pictures, UI1010c/1010f, only Terrain3050a, and Terrain30112/30113/30119/3011a. Generated parents, derived cleanup and explicitly retained functional Original samples retain separate lineage. Carried registered siblings and Original fallback/held atlas cells do not count as new approved artwork. The finite intrinsic/context/caller scopes and old pixel-versus-input epochs are recorded individually in the ledger; no all-placement, full-mission, seamlessness or performance claim follows.

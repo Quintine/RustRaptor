@@ -1,0 +1,30 @@
+{
+  "actual_primitive_receipt_sha256": "1007077134c1ec81858bd10acedd7e18215934b0c73a1bbcc14c3d44dad51bf8",
+  "actual_prompt": {
+    "path": "jobs/derived-ship15g1-complete3-v1-20261018/parents/prompt.txt",
+    "sha256": "d059ac61afd3ac9ef74655c5bff409c14250a2f835f9462a8421a644a188b6ca"
+  },
+  "actual_raw_output": {
+    "path": "jobs/derived-ship15g1-complete3-v1-20261018/parents/generator-return.png",
+    "sha256": "d69d4869d9e89495fed7773d30d4372637e0faebc456b9cd6c77fee892f4eebf"
+  },
+  "isError": null,
+  "kind": "EXPLICIT_SAFE_PRIMITIVE_PROJECTION_OF_ACTUAL_ONE_CALL_TERMINAL",
+  "lease": "d087e005-edd6-4cc5-a4bb-5e89665bb83e",
+  "outcome": "success",
+  "projection": true,
+  "provider_hint_path_omitted_as_nonportable_history": true,
+  "provider_return_natural_canvas": [
+    1254,
+    1254
+  ],
+  "reference_ancestry": {
+    "path": "jobs/derived-ship15g1-complete3-v1-20261018/parents/generation-reference-and-original-source-ancestry.json",
+    "sha256": "f40c34d173d9927c95dc0ef78fc540d56d6f9d3b0dc29377cc02c0b6d101fc00"
+  },
+  "returned_keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "submitted": true
+}

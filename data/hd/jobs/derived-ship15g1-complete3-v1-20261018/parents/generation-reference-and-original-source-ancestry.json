@@ -1,0 +1,112 @@
+{
+  "Original_geometry_reference": {
+    "NN_factor": 16,
+    "Source_by_asset": {
+      "1030b": {
+        "path": "../../../sprites/SHIP15G1_PIC",
+        "sha256": "18c95e99631003603c138acea40bbe377215fe7378a061b5bdc45f3afe7b984a"
+      },
+      "1030c": {
+        "path": "../../../sprites/SHIP15G1_PIC.1",
+        "sha256": "2841018c615751e500120805b197e2c1425585f72be393c22d42f2b3857f2720"
+      },
+      "1030d": {
+        "path": "../../../sprites/SHIP15G1_PIC.2",
+        "sha256": "4aa8fb69d92734d52efa02f0cf6f7be9cd8758f3a2e2915e624feb6ecc5978d0"
+      }
+    },
+    "Source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "complete3": true,
+    "native72x24": true,
+    "reference_png_sha256": "cf23647c5e76d7f87cc1c09271c7480f3d9fbcb7a2e8c17e72dae47bca843cef"
+  },
+  "Source_files_are_originals_not_HD_credit": true,
+  "actual_reference_order": [
+    {
+      "path": "parents/references/Original-complete3-geometry-NN16.png",
+      "role": "PRIMARY_AUTHENTIC_SOURCE_GEOMETRY",
+      "sha256": "cf23647c5e76d7f87cc1c09271c7480f3d9fbcb7a2e8c17e72dae47bca843cef"
+    },
+    {
+      "path": "parents/references/older-aaea-material-only.png",
+      "role": "SECONDARY_OLDER_HELD_GENERATED_MATERIAL_ONLY",
+      "sha256": "aaea2d69c4c878776ed3076c42e4642071aa3ee1df181821f5df1b0c05cc95b8"
+    }
+  ],
+  "actual_submitted_arguments_sha256": "f3b69d71605504a3b953484138371b23fc53be850a2301fbd17506023718a04c",
+  "direct_cleanup_parent_sha256": [
+    "d69d4869d9e89495fed7773d30d4372637e0faebc456b9cd6c77fee892f4eebf"
+  ],
+  "format_version": 1,
+  "kind": "GENUINE_CONSUMED_REFERENCE_GRAPH_NOT_ADDITIONAL_CLEANUP_PARENTS",
+  "older_material_reference": {
+    "actual_success_gate_events": [
+      {
+        "event": "acquired",
+        "expires_at": "2026-10-10T14:12:46+00:00",
+        "job_id": "enemies-1030b-1030d",
+        "lease_id": "404d02c6-b8bb-4d9d-8f68-95520fc02174",
+        "owner": "/root/hd_enemies_02",
+        "timestamp_utc": "2026-10-10T13:42:46+00:00"
+      },
+      {
+        "event": "started",
+        "job_id": "enemies-1030b-1030d",
+        "lease_id": "404d02c6-b8bb-4d9d-8f68-95520fc02174",
+        "note": "Owner is submitting the built-in imagegen request; this slot requires an explicit report or release.",
+        "owner": "/root/hd_enemies_02",
+        "timestamp_utc": "2026-10-10T13:42:46+00:00"
+      },
+      {
+        "event": "report",
+        "job_id": "enemies-1030b-1030d",
+        "lease_id": "404d02c6-b8bb-4d9d-8f68-95520fc02174",
+        "outcome": "success",
+        "owner": "/root/hd_enemies_02",
+        "timestamp_utc": "2026-10-10T13:45:03+00:00"
+      }
+    ],
+    "consumed_Source_references": [
+      {
+        "path": "jobs/derived-ship15g1-complete3-v1-20261018/parents/references/older-aaea-source-sheet.png",
+        "sha256": "33b2260486dc0c4a251ea692228cd320a4e1cafdfafa361c93c5bf87ff86db3e"
+      },
+      {
+        "path": "jobs/derived-ship15g1-complete3-v1-20261018/parents/references/older-aaea-generation-reference-1x3.png",
+        "sha256": "18820fe9cfdd1c55a6a949f676851e493c2915ad5556a132677d0fad1488d339"
+      }
+    ],
+    "original_candidate_sha256": "c3715e16a1920642d41410f120e4475ae585836c8e42f64f0e52e30b80342671",
+    "original_prompt": {
+      "path": "jobs/derived-ship15g1-complete3-v1-20261018/parents/references/older-aaea-original-prompt.txt",
+      "sha256": "0cbe4443b534faf0385a25cf064bb388a6cfc06bf54d8f70dc987d87d08b3fe2"
+    },
+    "original_provenance": {
+      "mode": "built-in image_gen",
+      "original_sources": [
+        "sprites/SHIP15G1_PIC",
+        "sprites/SHIP15G1_PIC.1",
+        "sprites/SHIP15G1_PIC.2"
+      ],
+      "prompt": "generated/ship15g1-v1.prompt.txt",
+      "raw_dimensions": [
+        1254,
+        1254
+      ],
+      "raw_output": "generated/ship15g1-v2.png",
+      "raw_sha256": "aaea2d69c4c878776ed3076c42e4642071aa3ee1df181821f5df1b0c05cc95b8",
+      "source_references": [
+        "source-sheet.png",
+        "generation-reference-canvas-1x3.png"
+      ]
+    },
+    "preserved_ART_HOLD": true,
+    "provider_reply_retention_limit": "Named canonical parent directory retains raw/prompt/provenance and genuine success gate events, not a literal provider reply file. No substitute reply invented.",
+    "raw_sha256": "aaea2d69c4c878776ed3076c42e4642071aa3ee1df181821f5df1b0c05cc95b8"
+  },
+  "submitted_prompt": {
+    "path": "jobs/derived-ship15g1-complete3-v1-20261018/parents/prompt.txt",
+    "sha256": "d059ac61afd3ac9ef74655c5bff409c14250a2f835f9462a8421a644a188b6ca"
+  },
+  "transparent_background": true
+}

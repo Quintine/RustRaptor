@@ -1,0 +1,51 @@
+{
+  "actual_builtin_outcome": "success",
+  "actual_image_artist": "/root/hd_coordinator",
+  "actual_imagegen_calls": 1,
+  "actual_lease": "835f7f4a-b390-4632-9295-9e21b343d283",
+  "actual_primitive_receipt": {
+    "path": "jobs/coordinator-20352-20355-newOriginal-corrugation4-SourceF-H5552-v1-20261018/generation/ACTUAL-SAFE-PRIMITIVE-IMAGEGEN-RECEIPT.json",
+    "sha256": "f950281e5df71184153f827677e2ea1a45d10201785fea65df9fe6b3b5ce8ce7"
+  },
+  "actual_target_inventory": [
+    "20352",
+    "20353",
+    "20354",
+    "20355"
+  ],
+  "exact_Original_only_references": [
+    {
+      "path": "jobs/coordinator-20352-20355-newOriginal-corrugation4-SourceF-H5552-v1-20261018/generation/EXACT-ORIGINAL-CORRUGATION4-NATIVE64-2X2.png",
+      "sha256": "c52bfae04a13ebb32a394495582ca472aebfd40d69b0ab84373ce66831eec54e"
+    },
+    {
+      "path": "jobs/coordinator-20352-20355-newOriginal-corrugation4-SourceF-H5552-v1-20261018/generation/EXACT-ORIGINAL-CORRUGATION4-INTEGERNN1024-2X2.png",
+      "sha256": "46b074a58d684994f8ceed2c8249a7f5c88784fa4547b675128f40720ded3034"
+    }
+  ],
+  "exact_submitted_prompt": {
+    "path": "jobs/coordinator-20352-20355-newOriginal-corrugation4-SourceF-H5552-v1-20261018/generation/EXACT-SUBMITTED-PROMPT.txt",
+    "sha256": "d404b8e0d968a223ef83996c7f1cbd29e8cf3954318999867943ca3db8bd1122"
+  },
+  "format_version": 1,
+  "kind": "untouched_actual_imagegen_generation",
+  "no_artwork_derivation_field": true,
+  "no_cleanup_or_derived_artwork": true,
+  "old_held_raw_used_as_geometry": false,
+  "original_default_provider_file_unchanged": {
+    "mode": "0o644",
+    "mtime_ns": 1792293192631942629,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20352-20355-Original-only-corrugation4-author-20261018-v1/generated/ACTUAL-ONE-ORIGINAL-ONLY-CORRUGATION4-RETURN-UNTOUCHED.png",
+    "sha256": "22d65ead883cdc4d80dff9d20faf834494c9bb3b197412e89b6edb8bd43c0465",
+    "size": 3380286
+  },
+  "portable_assembly_new_image_calls": 0,
+  "returned_dimensions": [
+    1254,
+    1254
+  ],
+  "returned_raw": {
+    "path": "jobs/coordinator-20352-20355-newOriginal-corrugation4-SourceF-H5552-v1-20261018/generated/ORIGINAL-ONLY-CORRUGATION4-RETURN-UNTOUCHED.png",
+    "sha256": "22d65ead883cdc4d80dff9d20faf834494c9bb3b197412e89b6edb8bd43c0465"
+  }
+}

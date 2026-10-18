@@ -1,0 +1,67 @@
+{
+  "actual_portable_replay_terminal": {
+    "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/review/actual-one-portable-replay-terminal-UNMODIFIED.json",
+    "sha256": "50c847f28e2c249269d9df5e0967f5305fa171b821656ce1ffa8956ab2d42da7"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/portable-replay-once/derived-provenance.json",
+    "sha256": "62b8223dfa449c0483b9ff3c5bce060edcbcdb7f49e004637e0e8c97349229ae"
+  },
+  "execution_scope": "Actual authorized single portable replay through exact promoted project helper939253ec, unchanged recipeca3bb76e and pinned Python. Complete PNG is byte-exact to accepted private derived PNG6eb90dd8. No new imagegen or SourceF renderer/helper/World calls. Dispatcher requires Linux renameat2 for producer output publication; standalone game Windows behavior is unaffected.",
+  "format_version": 1,
+  "generation_ancestry": {
+    "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/COMPLETE-CONSUMED-GENUINE-MASTER-ANCESTRY.json",
+    "sha256": "34be32854ba802eafbb853fcecf9c1525664473a46268303e79066efe25e3dcb"
+  },
+  "historical_accepted_private_execution": {
+    "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/proofs/accepted-private-cleanup-provenance-UNMODIFIED.json",
+    "sha256": "62b8223dfa449c0483b9ff3c5bce060edcbcdb7f49e004637e0e8c97349229ae"
+  },
+  "kind": "deterministic_cleanup",
+  "method": "derived-STAG03-fullcanvas-rational-generated-RGB-SourceScale4-warning66-v1",
+  "outputs": {
+    "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/derived/300ae-derived.png": "6eb90dd86e10ce9179a8c7a6d0953ba2c230012aeec6c287164ebc06d5285722"
+  },
+  "parents": [
+    {
+      "imagegen_receipt": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-2/provider-receipt-UNMODIFIED.json",
+        "sha256": "0b6517b516ffbc96a6ae6094888b4b6f542f82ea375706e43674ebd6974f8315"
+      },
+      "prompt": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-2/prompt-UNMODIFIED.txt",
+        "sha256": "27797aaccc00d5195331bee76d1084bf2840114177d9a5554ba01bc70fcd9980"
+      },
+      "raw_png": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/inputs/parent.png",
+        "sha256": "1a087b32d248a5a44c6dc4dce43620b160e5ce5a1aace3e27041521781374b9c"
+      }
+    }
+  ],
+  "portable_replay_performed": true,
+  "recipe": {
+    "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/cleanup-recipe.json",
+    "sha256": "ca3bb76ec9a788ea73e88f65e998fbca9b92fcc024d77270737a7ee475e42788"
+  },
+  "sources": {
+    "300ae": "12b0e405a969465d225f38ad0bbf45417dc71aeb4da8d10a7c35b83f0a3735bc"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_stag03_cleanup.py",
+      "sha256": "939253ecf47c85e624722737dbee9dc621189452cbbd7b5eac78031c64ab8881"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    },
+    {
+      "path": "tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    },
+    {
+      "path": "tools/hd_other_functional_cleanup.py",
+      "sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84"
+    }
+  ]
+}

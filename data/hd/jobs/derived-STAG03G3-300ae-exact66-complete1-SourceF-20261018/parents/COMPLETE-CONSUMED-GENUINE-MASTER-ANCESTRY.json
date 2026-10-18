@@ -1,0 +1,90 @@
+{
+  "all_prior_HOLDs_remain": true,
+  "format_version": 1,
+  "generations": [
+    {
+      "Original_reference_atlas": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-0/Original-transparent-source-atlas-UNMODIFIED.png",
+        "sha256": "de306263285f7a3a75cc94cbea8f6cc4f1785629dcbe55dab3c26d7d01a0ca93"
+      },
+      "edit_target_generation": null,
+      "ordinal": 0,
+      "prompt": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-0/prompt-UNMODIFIED.txt",
+        "sha256": "4e91c8ddf209e75daad9b6343a45ff1ac46705e195bde436d7d89376314844c8"
+      },
+      "provider_receipt": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-0/provider-receipt-UNMODIFIED.json",
+        "sha256": "7301b4bd7d10f6ae4277e873833d5ef980e1aaa879981ed48b8373a1c0c43ee3"
+      },
+      "raw": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-0/raw-UNTOUCHED.png",
+        "sha256": "7e86960a6899380c2f9fcf8727554b149ee50ff7c2517e7e679fcb8fc3f81b69"
+      }
+    },
+    {
+      "Original_reference_images": [
+        {
+          "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-1/300ae-authentic-wholeNN512.png",
+          "sha256": "c7142e34e9a85dd4e62b72ef9e6406b430d88ffab9d0b41adcb58c82699fbcf4"
+        },
+        {
+          "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-1/300ae-authentic-native32.png",
+          "sha256": "298e2121994035172c7bca699025e9425f53d926806d53b9e1997f3ffe0cdef4"
+        }
+      ],
+      "edit_target_generation": 0,
+      "historical_submitted_arguments": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-1/submitted-arguments-HISTORICAL-UNMODIFIED.json",
+        "sha256": "532f3af8d88afb82ebe66741e6fe7f43e345399f6dd5c0da4ab6f82b3a031aa7"
+      },
+      "ordinal": 1,
+      "prompt": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-1/prompt-UNMODIFIED.txt",
+        "sha256": "fd9fadc93cf4a91e3e0d2e505816e57aea2915c1138c1870774bcdc1c464f38b"
+      },
+      "provider_receipt": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-1/provider-receipt-SAFE-PROJECTION.json",
+        "sha256": "57a0d1604d285eb1a46ef71dbf292098733d83e4c6a64c908179e13ca5d68d45"
+      },
+      "raw": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-1/raw-UNTOUCHED.png",
+        "sha256": "c3d49562f6ab80c637466d2fb583e9198f2b6dd36a2d42fd4200ad31ff99042a"
+      }
+    },
+    {
+      "Original_reference_images": [
+        {
+          "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-2/300ae-authentic-wholeNN512.png",
+          "sha256": "c7142e34e9a85dd4e62b72ef9e6406b430d88ffab9d0b41adcb58c82699fbcf4"
+        },
+        {
+          "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-2/300ae-authentic-native32.png",
+          "sha256": "298e2121994035172c7bca699025e9425f53d926806d53b9e1997f3ffe0cdef4"
+        }
+      ],
+      "edit_target_generation": 1,
+      "historical_submitted_arguments": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-2/submitted-arguments-HISTORICAL-UNMODIFIED.json",
+        "sha256": "fa657133c9f58028c5c21b74dbf2b7530641966fbb037d670cdd208e25d9e38a"
+      },
+      "ordinal": 2,
+      "prompt": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-2/prompt-UNMODIFIED.txt",
+        "sha256": "27797aaccc00d5195331bee76d1084bf2840114177d9a5554ba01bc70fcd9980"
+      },
+      "provider_receipt": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-2/provider-receipt-UNMODIFIED.json",
+        "sha256": "0b6517b516ffbc96a6ae6094888b4b6f542f82ea375706e43674ebd6974f8315"
+      },
+      "raw": {
+        "path": "jobs/derived-STAG03G3-300ae-exact66-complete1-SourceF-20261018/parents/generation-2/raw-UNTOUCHED.png",
+        "sha256": "1a087b32d248a5a44c6dc4dce43620b160e5ce5a1aace3e27041521781374b9c"
+      }
+    }
+  ],
+  "latest_generation_held_before_explicit_affine_cleanup": true,
+  "no_new_generation": true,
+  "qualification_is_for_derived_pixels_only": true,
+  "raw_outputs_unedited": true
+}

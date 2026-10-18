@@ -1,0 +1,93 @@
+{
+  "status": "PASS_EXACT_STAG_PORTABLE_CODE_AND_PATH_PREPARATION_ONLY",
+  "helper_sha256": "939253ecf47c85e624722737dbee9dc621189452cbbd7b5eac78031c64ab8881",
+  "test_sha256": "b00f8a69b16871334c5821025d5980e61cc5088a3bf56af272e6cd19953138b6",
+  "recipe_sha256": "ca3bb76ec9a788ea73e88f65e998fbca9b92fcc024d77270737a7ee475e42788",
+  "proposal_sha256": "49100166072ca0644aa423b1d229a447ff5bbe95a4830cf71a1156fe58233f68",
+  "helper_and_recipe_identical_to_prior_reviewed_bytes": true,
+  "test_only_basename_and_dependency_locator_changes": true,
+  "actual_synthetic_tests_passed": 16,
+  "actual_synthetic_cli_invocations": 1,
+  "actual_synthetic_cli_execution": {
+    "method": "derived-STAG03-fullcanvas-rational-generated-RGB-SourceScale4-warning66-v1",
+    "output_sha256": {
+      "300ae": "a42b10f10352f5975084eb972a71f83e72cde94a2f4b7902a4103e138748f9db"
+    },
+    "parent_raw_sha256": [
+      "c97a44d0ac50b561a06a5d42ff0481efbdbbb07d45d1880efbfb7ce8b504a0a8"
+    ],
+    "recipe_sha256": "bdb103c6496171d2da737822406278a9014467727a2740f4143766a2f3b82234",
+    "source_sha256": {
+      "300ae": "e184da136fbdb7603427744978e73e49c983ec0da06ae2f5b33fcdf16d9dbbcd"
+    },
+    "status": "success",
+    "tool_sha256": "939253ecf47c85e624722737dbee9dc621189452cbbd7b5eac78031c64ab8881"
+  },
+  "relocated_unicode_and_space_layout": true,
+  "input_bindings_checked": [
+    {
+      "path": "inputs/Source.pic",
+      "sha256": "12b0e405a969465d225f38ad0bbf45417dc71aeb4da8d10a7c35b83f0a3735bc"
+    },
+    {
+      "path": "inputs/palette.dat",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+    },
+    {
+      "path": "inputs/parent.png",
+      "sha256": "1a087b32d248a5a44c6dc4dce43620b160e5ce5a1aace3e27041521781374b9c"
+    },
+    {
+      "path": "dependencies/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    },
+    {
+      "path": "dependencies/hd_other_functional_cleanup.py",
+      "sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84"
+    },
+    {
+      "path": "dependencies/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    }
+  ],
+  "ancestry_reference_checks": 16,
+  "independent_path_rejections": {
+    "final_symlink": {
+      "rejected": true,
+      "type": "OSError"
+    },
+    "intermediate_symlink": {
+      "rejected": true,
+      "type": "NotADirectoryError"
+    },
+    "absolute": {
+      "rejected": true,
+      "type": "ValueError"
+    },
+    "parent_traversal": {
+      "rejected": true,
+      "type": "ValueError"
+    }
+  },
+  "verified_dependencies_compile_authenticated_buffered_bytes": true,
+  "processing_does_not_reopen_verified_dependency_or_input_paths": true,
+  "actual_production_art_cleanup_replays": 0,
+  "actual_QA_World_imagegen": 0,
+  "canonical_writes": 0,
+  "preserved_initial_metadata_count_stop": {
+    "path": "PRESERVED-INITIAL-REVIEW-COUNT-ASSERTION.json",
+    "sha256": "05ee1fcf687f55a6c29c98c3912b0789d58b3dc3c5db5cdaccd2cd7ae8bc79b3"
+  },
+  "actual_test_and_cli_logs": {
+    "synthetic16.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "synthetic16.stderr": "c53da6c035ab67fccca2ee4954ef8f8ed53f6cc009c3918cbfdd77f27b201fde",
+    "synthetic-cli.stdout": "900f7159e2002ab0c89c51709ba5baf35182e91192904c1cd5b7d449e9855403",
+    "synthetic-cli.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "limits": [
+    "safe_read rejects final/intermediate input symlinks and absolute/traversal paths. Recipe parent resolves to physical base; no fixed external project policy is claimed.",
+    "Recipe itself uses Path.read_bytes; concurrent recipe replacement protection is not claimed. Actual processing input/dependency reads use contained no-follow file descriptors and verified buffered bytes.",
+    "Output publication requires Linux renameat2. This is Linux producer CODE evidence, not Windows producer execution; Windows runtime unchanged.",
+    "Actual portable production cleanup replay with accepted PNG equality remains pending. No art/QA/context/admission approval granted by CODE review."
+  ]
+}

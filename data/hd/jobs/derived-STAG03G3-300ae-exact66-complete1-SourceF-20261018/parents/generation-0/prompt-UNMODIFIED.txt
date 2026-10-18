@@ -1,0 +1,30 @@
+Create a faithful newly authored HD remaster for a classic top-down Raptor shooter sprite family. The attached original transparent sprite atlas is the ONLY geometry and animation source of truth. This must be new painted/mechanical HD material detail rather than nearest-neighbor enlargement or deliberate chunky pixel blocks. Use crisp subtle metal panel seams, restrained highlights, weathering and clean readable surfaces that preserve the original palette/color identity and silhouette when downsampled. Keep orthographic view, exact orientation, occupied footprint, canvas and anchor; no perspective, redesign, extra weapons, new glow or shadow outside source bounds.
+
+Broad gray industrial launch rack on transparent 32-square canvas: three upper pale caps, orange horizontal safety strip, black lower chamber array and long narrow central down gun. Keep all original cuts and negative space.
+
+Deliver ONE sprite on a canvas whose aspect ratio exactly matches the original logical canvas. Preserve original framing, including blank transparent margins. No labels, captions, background scenery, cast shadow, checkerboard or extra views.
+
+Preserve each source alpha mask and each frame's occupied rectangle. Fully opaque source tiles stay full opaque rectangles. Any originally transparent location outside the sprite remains true alpha zero; no atmospheric wisps or soft colored halos. Dark actual object details remain visible dark metal rather than transparent holes. Keep all source frame phase changes and visible emitted trails; do not normalize or recenter frames.
+
+Original per-frame logical contract (bounds are x0,y0,x1,y1, upper-left origin0,0):
+[
+  {
+    "frame": 0,
+    "asset": "300ae",
+    "logical_canvas": [
+      32,
+      32
+    ],
+    "visible_bounds": [
+      1,
+      5,
+      30,
+      30
+    ],
+    "transparent_pixels": 323,
+    "source_sha256": "12b0e405a969465d225f38ad0bbf45417dc71aeb4da8d10a7c35b83f0a3735bc"
+  }
+]
+
+
+The reference is a nearest-neighbor enlargement of ORIGINAL SD pixels solely to make the exact geometry legible; it is not an HD candidate. Treat its original alpha as an exact stencil and all frame cell boundaries as fixed normalized coordinates. Keep the same complete atlas canvas and silhouette framing. Author new fine surface detail INSIDE that stencil. No atmosphere, drop shadows, diffuse bloom, padding, automatic crop or outline beyond it. Maintain true alpha ZERO wherever the original atlas is transparent.

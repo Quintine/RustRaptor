@@ -1,0 +1,117 @@
+{
+  "status": "PASS_CONCRETE_PORTABLE_LAYOUT_AND_VERIFIED_BYTE_EXECUTION_WITH_EXPLICIT_CONTAINMENT_LIMIT",
+  "synthetic11_exit": 0,
+  "synthetic_tests": 11,
+  "relocated_unicode_space_layout": true,
+  "real_cleanup_replays": 0,
+  "new_QA_World_imagegen": 0,
+  "helper_sha256": "e552979acd0e440546f27f45c1c8dc74f5f3b432196d2a569e6c3d7bde2988b0",
+  "test_sha256": "64a13e076c4395771faab5d682d8fa9d9fe3afbeb4d9cd8c660561b464de2539",
+  "decoder_sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+  "recipe_sha256": "31e218a73442f57f63c417cc6ba1cfe6d497cab5584c1cc8599271bfbf8539a7",
+  "old_recipe_sha256": "1c521a7b31b5dec0db417812642906a36bfb3360421e21cb22486abc7ba30fa1",
+  "recipe_changes": [
+    {
+      "json_path": [
+        "decoder_module",
+        "path"
+      ],
+      "before": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_frame_policy.py",
+      "after": "../../../../tools/hd_frame_policy.py"
+    },
+    {
+      "json_path": [
+        "frames",
+        0,
+        "source",
+        "path"
+      ],
+      "before": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP15G1_PIC",
+      "after": "../../../sprites/SHIP15G1_PIC"
+    },
+    {
+      "json_path": [
+        "frames",
+        1,
+        "source",
+        "path"
+      ],
+      "before": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP15G1_PIC.1",
+      "after": "../../../sprites/SHIP15G1_PIC.1"
+    },
+    {
+      "json_path": [
+        "frames",
+        2,
+        "source",
+        "path"
+      ],
+      "before": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP15G1_PIC.2",
+      "after": "../../../sprites/SHIP15G1_PIC.2"
+    },
+    {
+      "json_path": [
+        "palette",
+        "path"
+      ],
+      "before": "/home/quintine/Projects/RaptorReplica/data/misc/PALETTE_DAT",
+      "after": "../../../misc/PALETTE_DAT"
+    },
+    {
+      "json_path": [
+        "parent_raw",
+        "path"
+      ],
+      "before": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-SHIP15G1-Source-primary-fullbody-wake-one-builtin-author-20261018-v1/UNTOUCHED-SOURCE-PRIMARY-FULLBODY-WAKE-RETURN.png",
+      "after": "parents/generator-return.png"
+    }
+  ],
+  "resolved_six_bindings": [
+    {
+      "path": "../../../../tools/hd_frame_policy.py",
+      "resolved": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    },
+    {
+      "path": "../../../misc/PALETTE_DAT",
+      "resolved": "data/misc/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+    },
+    {
+      "path": "parents/generator-return.png",
+      "resolved": "data/hd/jobs/derived-ship15g1-complete3-v1-20261018/parents/generator-return.png",
+      "sha256": "d69d4869d9e89495fed7773d30d4372637e0faebc456b9cd6c77fee892f4eebf"
+    },
+    {
+      "path": "../../../sprites/SHIP15G1_PIC",
+      "resolved": "data/sprites/SHIP15G1_PIC",
+      "sha256": "18c95e99631003603c138acea40bbe377215fe7378a061b5bdc45f3afe7b984a"
+    },
+    {
+      "path": "../../../sprites/SHIP15G1_PIC.1",
+      "resolved": "data/sprites/SHIP15G1_PIC.1",
+      "sha256": "2841018c615751e500120805b197e2c1425585f72be393c22d42f2b3857f2720"
+    },
+    {
+      "path": "../../../sprites/SHIP15G1_PIC.2",
+      "resolved": "data/sprites/SHIP15G1_PIC.2",
+      "sha256": "4aa8fb69d92734d52efa02f0cf6f7be9cd8758f3a2e2915e624feb6ecc5978d0"
+    }
+  ],
+  "unmodified_helpers_match_prior_reviewed_v2": true,
+  "concrete_six_bindings_regular_and_contained": true,
+  "verified_decoder_executes_verified_inmemory_bytes": true,
+  "independent_synthetic_observations": {
+    "checked_accepts_matching_hash_symlink_outside_base": true,
+    "checked_accepts_matching_hash_absolute_outside_base": true,
+    "checked_rejects_wrong_hash": true,
+    "maintained_checked_file_rejects_outside_symlink": true,
+    "cli_help_exit": 0
+  },
+  "limits": [
+    "The helper checked() is hash-safe, not a generic project-root containment or symlink-rejection API. Its concrete portable recipe has six contained regular inputs, independently checked. Do not label the CLI itself symlink safe.",
+    "Maintained hd_art_derivation.checked_file guards lineage references but does not recursively validate cleanup recipe input bindings.",
+    "Public nested tests need explicit collection; this review invoked the actual nested file in a relocated Unicode/space layout.",
+    "No actual portable artwork replay, PNG equality test, native QA or admission performed by this review."
+  ]
+}
