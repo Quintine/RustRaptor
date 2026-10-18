@@ -1,4 +1,4 @@
-# Iron Coast — Mission 6: Iron Crown
+# Iron Coast S1 M06: Iron Crown
 
 API 1 package, version 1.0.2. Enable it in Mods at the main menu and apply the selection. The normal dependency selection also enables `iron_coast_scout`, `iron_coast_turret`, `iron_coast_boss_6`, `iron_coast_music`, `pulse_cannon`, `seeker_swarm`, `ion_lance`.
 

@@ -87,6 +87,7 @@ fn run() -> Result<()> {
     }
     let base = Registry::base(&catalog)?;
     if args.iter().any(|a| a == "--verify-assets") {
+        modding::validate_artwork(&base, Some(&catalog))?;
         println!(
             "Verified {} assets; {} missions, {} enemies, {} weapons, {} items",
             catalog.verify()?,

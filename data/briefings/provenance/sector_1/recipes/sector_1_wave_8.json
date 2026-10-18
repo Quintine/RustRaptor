@@ -1,0 +1,62 @@
+{
+  "format_version": 1,
+  "mission_id": "base:sector_1_wave_8",
+  "asset_type": "new_cinematic_mission_briefing_not_original_sprite_HD_credit",
+  "provider": "built_in_imagegen",
+  "actual_calls": 1,
+  "actual_provider_primitive_receipt": "generation/sector_1_wave_8.safe-provider-and-gate.json",
+  "source_builtin_file": "/home/quintine/.codex/generated_images/01a14e4c-8faa-73b3-a56b-a7f5174864cb/exec-be94b272-eb23-4e65-88bb-8e21b1c8a898.png",
+  "untouched_master": "masters/sector_1_wave_8.raw.png",
+  "untouched_master_sha256": "38142567e53bbaf9530c216bd76470d5ad76bf72bac7686a021c43d402860eed",
+  "master_dimensions": [
+    1586,
+    992
+  ],
+  "integer_exact16to10_center_crop": [
+    1,
+    1,
+    1585,
+    991
+  ],
+  "cropped_dimensions": [
+    1584,
+    990
+  ],
+  "HD": {
+    "path": "data/briefings/sector_1_wave_8_hd.png",
+    "dimensions": [
+      1280,
+      800
+    ],
+    "sha256": "f796ec9da5a82fcc1fe14c1b33a5165732467c5c26841373a9a0668e24f73bbd",
+    "mode": "RGB",
+    "operation": "center_crop_then_LANCZOS_resize_no_painted_changes"
+  },
+  "SD": {
+    "path": "data/briefings/sector_1_wave_8_sd.png",
+    "dimensions": [
+      320,
+      200
+    ],
+    "sha256": "28bd54246c7c08e735a7d9828f50b505926a2b26515629116f7a79ef8d38b6d2",
+    "mode": "RGB",
+    "operation": "LANCZOS_downsample_of_final_HD_same_composition"
+  },
+  "menu_preview": {
+    "path": "review/sector_1_wave_8_menu132x70.png",
+    "dimensions": [
+      132,
+      70
+    ],
+    "centered_crop_HD_float_box": [
+      0,
+      60.60606060606062,
+      1280,
+      739.3939393939394
+    ],
+    "runtime_asset": false
+  },
+  "prompt": "prompts/sector_1_wave_8.txt",
+  "image_edits_or_generated_variants": 0,
+  "utc": "2026-10-18T10:23:40.125029+00:00"
+}

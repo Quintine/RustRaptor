@@ -180,7 +180,7 @@ checks do not establish every loadout’s balance or hardware audio quality.
 
 ## Using the update
 
-Enable **Iron Coast — Complete Campaign** or **Iron Coast II — Black Tide** in
+Enable **Iron Coast S1: Complete Campaign** or **Iron Coast S2: Black Tide** in
 Mods and apply at the main menu. Dependencies select automatically. Existing
 pilots may receive the normal changed-mod warning; accepting it preserves saved
 equipment and progression. Use Ctrl to fire, Alt/Shift to cycle equipment, Z for

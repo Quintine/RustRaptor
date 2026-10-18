@@ -8,6 +8,7 @@ import random
 import struct
 import wave
 from pathlib import Path
+import runpy
 from PIL import Image, ImageOps
 ROOT=Path(__file__).resolve().parent
 
@@ -60,7 +61,7 @@ def main():
         assert source.crop((0,h-1,w,h)).tobytes()==flip.crop((0,0,w,1)).tobytes()
         assert flip.crop((0,h-1,w,h)).tobytes()==source.crop((0,0,w,1)).tobytes()
     hd.save(art/'terrain-preview-hd.png');small.save(art/'terrain-preview-sd.png')
-    for name,size in [('briefing',(320,200)),('relay',(32,32))]:
+    for name,size in [('relay',(32,32))]:
         source=Image.open(art/f'{name}-source-hd.png').convert('RGBA')
         if name=='relay':
             # Normalize excessive generator padding, preserving the complete
@@ -73,6 +74,8 @@ def main():
             source=source.crop((left,top,left+extent,top+extent))
         sd(source,size,palette).save(art/f'{name}_sd.png')
         source.resize((size[0]*4,size[1]*4),Image.Resampling.LANCZOS).save(art/f'{name}_hd.png')
+    # Rebuild the cinematic briefing without changing the other artwork.
+    runpy.run_path(str(art / "build_cinematic_briefing.py"), run_name="__main__")
     audio={
         'approach':synth('approach',0.75,[147,196,294]),
         'network_alarm':synth('network_alarm',0.8,[392,294,392,294],True),

@@ -1,0 +1,54 @@
+{
+  "asset": "Iron Coast S2 M07: Siege of the Iron Fleet cinematic briefing",
+  "mission_id": "iron_coast_stage2_mission_7:mission_07",
+  "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "actual_calls": 1,
+    "gate_owner": "/root/iron_coast_names",
+    "gate_lease": "f75eee14-afc9-4fa8-a627-037bc7a66074",
+    "outcome": "success",
+    "terminal_reported_immediately": true,
+    "prompt": "briefing-cinematic-prompt.txt",
+    "prompt_sha256": "d77a59501b2f4591683b4c3b0723b04531d5cc8514aff6fc64d66de35b16e045",
+    "master": "briefing-cinematic-generated-master.png",
+    "master_sha256": "9a1c31a2ce88cc998d49e2a594edbc6ff13d0e5630dce7411c846392fa0fcacd",
+    "master_dimensions": [
+      1586,
+      992
+    ],
+    "untouched_master_preserved": true,
+    "references": [
+      {
+        "role": "Stormwall style and foreground aircraft",
+        "path": "mods/iron_coast_mission_4/art/briefing_hd.png",
+        "sha256": "cd987c13bc55bba2620379ca435c0cccf08d7564364d730c65d0be285bb82221"
+      },
+      {
+        "role": "own prior top-down environment reference only",
+        "path": "mods/iron_coast_stage2_mission_7/art/briefing-hd.png",
+        "sha256": "05d1df5872dd439c15da85e483ebabc1b84c06eabfe0b7a9a6fed7042b6833dd"
+      }
+    ]
+  },
+  "derivation": {
+    "recipe": "build_cinematic_briefing.py",
+    "hd": "RGB1280x800, centered ImageOps.fit LANCZOS preserving16:10; no repaint",
+    "sd": "RGB320x200 LANCZOS downsample of complete sameHD",
+    "menu_review_crop": "centered132x70 LANCZOS file-onlypreview; actual SDLthumbnail review required separately"
+  },
+  "outputs": {
+    "hd": {
+      "path": "art/briefing-hd.png",
+      "sha256": "b244a26f72a1c9f142f124973fdfacc50713d91f5c5c6501dac4eb4f027563f3"
+    },
+    "sd": {
+      "path": "art/briefing-sd.png",
+      "sha256": "9069183ae7b4d55a17a2c12d1f341b04d7b224ff72ac7115989dc146a78d7d44"
+    }
+  },
+  "limits": [
+    "Illustrative mission briefing only; no mission objectives, names, IDs, scripts, wave counts, collisions, equipment, music or gameplay change.",
+    "New authored artwork does not count toward Originalsprite/terrainHD coverage.",
+    "Original top-down briefing remains in Git history and originalgenerationfiles; currentreplacementis a newindependentillustration."
+  ]
+}

@@ -5,6 +5,7 @@ Art operations only extract complete alpha sprites, fit without distortion,
 reduce SD, and split joined terrain. Original reference pixels are not shipped.
 """
 from pathlib import Path
+import runpy
 from PIL import Image, ImageOps
 import hashlib,json,math,random,struct,wave
 ROOT=Path(__file__).resolve().parent.parent
@@ -89,9 +90,8 @@ def mission(n):
    assert joined.tobytes()==img.tobytes()
   assert master.crop((0,master.height-1,master.width,master.height)).tobytes()==ImageOps.flip(master).crop((0,0,master.width,1)).tobytes()
   master.save(pkg/f'art/terrain-preview-{mode}.png')
- # Briefing is a genuinely authored map overview, proportional fit/crop; no
- # duplicated static live entities or replacement text in artwork.
- brief=ImageOps.fit(source,(1280,800),Image.Resampling.LANCZOS,centering=(.5,.5));brief.save(pkg/'art/briefing-hd.png');brief.resize((320,200),Image.Resampling.LANCZOS).quantize(palette=pal,dither=Image.Dither.NONE).convert('RGB').save(pkg/'art/briefing-sd.png')
+ # Each finale mission owns a separate cinematic briefing master and recipe.
+ runpy.run_path(str(pkg/'art/build_cinematic_briefing.py'),run_name='__main__')
  audio={name:pcm(pkg,name,seconds,n*10000+i) for i,(name,seconds) in enumerate([('approach',1.1),('escalation',.9),('boss_alarm',1.2),('victory',1.6)])}
  put(pkg/'audio-recipe.json',{'generator':'build_finale_assets.py deterministic note-envelope PCM synthesis; no recordings','files':audio})
  # Varied real native enemy entries keep original Catalog behavior and paths.
@@ -112,7 +112,7 @@ def mission(n):
  put(pkg/'content.json',content)
  deps=['iron_coast_stage2_interceptor','iron_coast_stage2_siege','iron_coast_stage2_skimmer',f'iron_coast_stage2_boss_{n}','iron_coast_stage2_music']
  (pkg/'mod.toml').write_text(f'id = "{id}"\nname = "Iron Coast II {n}: {title}"\nversion = "1.0.0"\napi_version = 1\ndescription = "{title}: native classic waves, persistent naval defense objectives and a phased final carrier. Starter-gun viable, inventory safe, joined SD/HD terrain and original PCM cues."\ncontent = "content.json"\nscripts = ["scripts/mission.rhai"]\n\n[dependencies]\n'+''.join(f'{d} = "^1.0"\n' for d in deps))
- put(pkg/'art-qa.json',{'selected_raw':f'art/generated-v{selected}.png','selected_raw_sha256':sha(pkg/f'art/generated-v{selected}.png'),'logical_tile':[32,32],'hd_tile':[128,128],'columns':9,'rows':24,'layout_period_repetitions':16,'layout_total_rows':384,'logical_scroll_coverage':12288,'joined_palette_then_split':True,'mirrored_loop_boundary_exact':True,'reassembly_pixel_exact':True,'logical_collision_unchanged_by_hd':True,'palette_sha256':sha(PALETTE),'palette_classes':'ordinary0..239 only, alpha opaque; runtime mods never claim reserved original palette classes','briefing':'centered proportional overview crop of the genuine joined map; no extra entity artwork','files':{str(p.relative_to(pkg)):sha(p) for p in sorted((pkg/'art').glob('*-*.png'))}})
+ put(pkg/'art-qa.json',{'selected_raw':f'art/generated-v{selected}.png','selected_raw_sha256':sha(pkg/f'art/generated-v{selected}.png'),'logical_tile':[32,32],'hd_tile':[128,128],'columns':9,'rows':24,'layout_period_repetitions':16,'layout_total_rows':384,'logical_scroll_coverage':12288,'joined_palette_then_split':True,'mirrored_loop_boundary_exact':True,'reassembly_pixel_exact':True,'logical_collision_unchanged_by_hd':True,'palette_sha256':sha(PALETTE),'palette_classes':'ordinary0..239 only, alpha opaque; runtime mods never claim reserved original palette classes','briefing':'independent cinematic master, art/build_cinematic_briefing.py; see art/briefing-cinematic-provenance.json','files':{str(p.relative_to(pkg)):sha(p) for p in sorted((pkg/'art').glob('*-*.png'))}})
  provenance(pkg,'mission',n)
 for n in [7,8]:boss(n);mission(n)
 print('Four finale packages: matching art, seam-safe terrain, PCM and content generated')

@@ -1,0 +1,48 @@
+{
+  "wave": 2,
+  "method": "untouched builtin generated master -> explicit centered aspect crop/resize LANCZOS1280x800 -> same-composition LANCZOS320x200",
+  "master": {
+    "path": "masters/sector_3_wave_2-untouched-master.png",
+    "sha256": "4fc928e953c7d6fc44e1895c7781e70f8899f8428c1fac10fe853ed667cc266c",
+    "size": [
+      1586,
+      992
+    ],
+    "mode": "RGB"
+  },
+  "provider_source_path": "/home/quintine/.codex/generated_images/01a14e4a-ac4f-7492-8e24-fe6e57121855/exec-0fc0c183-1012-4106-a27f-9b766f53559d.png",
+  "source_master_bytes_exact": true,
+  "HD_float_source_crop_box": [
+    0,
+    0.375,
+    1586,
+    991.625
+  ],
+  "HD": {
+    "path": "data/briefings/sector_3_wave_2_hd.png",
+    "sha256": "790afbc3a39e6ffea681349a1e469412516b30ef3cb3c2d5dc6f7d8c9ca13a14",
+    "size": [
+      1280,
+      800
+    ]
+  },
+  "SD": {
+    "path": "data/briefings/sector_3_wave_2_sd.png",
+    "sha256": "625da78543f3e84115f12c32de60733bd4760728fcbbc41a599719db87d4d7d5",
+    "size": [
+      320,
+      200
+    ]
+  },
+  "small_center_crop_preview": {
+    "path": "provenance/sector_3_wave_2-132x70-centered-preview.png",
+    "sha256": "3ea6846776ad080efc79cc1494d6bea1e79963aa40b5d1c00adb7270c41eeb67",
+    "size": [
+      132,
+      70
+    ]
+  },
+  "prompt_sha256": "d1e693e96b16361cdfc79ea084dd77bcad26b2dd2d1b7e7dc28b1861272c85d1",
+  "provider_receipt_sha256": "ec6821cebca421508465ec4b8a690fffe5de268eeeb0249659ad98955d70674f",
+  "original_sprite_coverage_credit": false
+}

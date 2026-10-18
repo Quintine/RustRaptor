@@ -1,8 +1,8 @@
-# Iron Coast II — Mission 2: Undertow Run
+# Iron Coast S2 M02: Undertow Run
 
 API 1 package, version 1.0.3. Enable it in Mods at the main menu and apply the selection. The normal dependency selection also enables `iron_coast_stage2_boss_2`, `iron_coast_stage2_music`, `iron_coast_stage2_interceptor`, `iron_coast_stage2_skimmer`.
 
-Mission `iron_coast_stage2_mission_2:mission_02`: **Undertow Run**. Destroy four required skimmers and the boss. Required ground objectives remain reachable; escaping optional aircraft never counts as a kill. Elapsed time alone does not finish the mission.
+Mission `iron_coast_stage2_mission_2:mission_02`: **Iron Coast S2 M02: Undertow Run**. Destroy four required skimmers and the boss. Required ground objectives remain reachable; escaping optional aircraft never counts as a kill. Elapsed time alone does not finish the mission.
 
 Scheduled spawn totals for Training / Rookie / Veteran / Elite are **32 / 46 / 62 / 79**. These are enabled scheduled entries, not simultaneous live-enemy counts. Groups can overlap when earlier enemies survive.
 
@@ -23,3 +23,15 @@ In the separate shield-replenished arsenal fixture, the longest threat-free stre
 Focused version 1.0.3 checks on 18 October 2026 used the frozen SourceE library and the same recorded legal controller. Four authentic post-Mission-1 saves fed paired version 1.0.2 and 1.0.3 paid continuations through Missions 2–8 and the finale replay. Every route completed with exact save/load, script-state and RNG roundtrips. Mission 2 again ended at 79 / 52 / 44 / 12 shield, with unchanged completion times and refill counts. Veteran defeated one fewer optional interceptor; Elite earned 100 more credits through the altered encounter. Required skimmer and boss objectives were unchanged.
 
 The separate shield-replenished arsenal observations recorded the earlier Training/Rookie quiet interval from ticks 1,448–1,650 (8.70 seconds). Moving the armed pass split it into a longest piece of 3.73 seconds and produced four observed hostile shots. The later quiet intervals at 1,664–1,762 and 1,804–1,948 were unchanged. Some quiet time remains elsewhere: this is a local pacing correction, not a claim of continuous combat. Veteran/Elite replenished-fixture shield loss rose by six points each, while their ordinary paid routes retained the same shields and purchases. Replenished observations do not establish survival for other controllers or loadouts.
+
+## Rebuilding the briefing
+
+Run `python3 art/build_cinematic_briefing.py` from this package directory
+(Pillow required). It verifies the unchanged cinematic master and rebuilds the
+exact SD/HD filenames referenced by `content.json`; the prompt and provenance
+are beside the master in `art/`. This artwork update changes package hashes;
+existing pilots use the normal changed-mod confirmation, with stable IDs and
+saved equipment/progression retained.
+
+`build_assets.py` also includes the cinematic briefing recipe when rebuilding
+this package's assets; its tile, sprite and sound processing is unchanged.

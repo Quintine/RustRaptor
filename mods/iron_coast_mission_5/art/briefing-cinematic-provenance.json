@@ -1,0 +1,54 @@
+{
+  "asset": "Iron Coast S1 M05: Cinder Docks cinematic briefing",
+  "mission_id": "iron_coast_mission_5:mission_05",
+  "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "actual_calls": 1,
+    "gate_owner": "/root/iron_coast_names",
+    "gate_lease": "5e8550a9-6378-40c4-b546-9190366ef387",
+    "outcome": "success",
+    "terminal_reported_immediately": true,
+    "prompt": "briefing-cinematic-prompt.txt",
+    "prompt_sha256": "f9f13b28ce0814acdecb87e0117f72115629414c6ff54fc9f3c1d12db481051a",
+    "master": "briefing-cinematic-generated-master.png",
+    "master_sha256": "c4e4bf175970efa74cb1a0355c82ef8f1052e2b043523f24c62b432cae885dae",
+    "master_dimensions": [
+      1586,
+      992
+    ],
+    "untouched_master_preserved": true,
+    "references": [
+      {
+        "role": "Stormwall style and foreground aircraft",
+        "path": "mods/iron_coast_mission_4/art/briefing_hd.png",
+        "sha256": "cd987c13bc55bba2620379ca435c0cccf08d7564364d730c65d0be285bb82221"
+      },
+      {
+        "role": "own prior top-down environment reference only",
+        "path": "mods/iron_coast_mission_5/art/briefing_hd.png",
+        "sha256": "7f459d0ba9ac01faee41e49f80e87c42a06eb6a6752fff93ed42e21d86939958"
+      }
+    ]
+  },
+  "derivation": {
+    "recipe": "build_cinematic_briefing.py",
+    "hd": "RGB1280x800, centered ImageOps.fit LANCZOS preserving16:10; no repaint",
+    "sd": "RGB320x200 LANCZOS downsample of complete sameHD",
+    "menu_review_crop": "centered132x70 LANCZOS file-onlypreview; actual SDLthumbnail review required separately"
+  },
+  "outputs": {
+    "hd": {
+      "path": "art/briefing_hd.png",
+      "sha256": "28289316584da228a27f73c0271476ad43022c7cc876510d1865d95fb6e26af6"
+    },
+    "sd": {
+      "path": "art/briefing_sd.png",
+      "sha256": "ea99825ffa1f75f9b9c2d6b3570131bf0ba4bcc9ea534122c234ec6c923a58e5"
+    }
+  },
+  "limits": [
+    "Illustrative mission briefing only; no mission objectives, names, IDs, scripts, wave counts, collisions, equipment, music or gameplay change.",
+    "New authored artwork does not count toward Originalsprite/terrainHD coverage.",
+    "Original top-down briefing remains in Git history and originalgenerationfiles; currentreplacementis a newindependentillustration."
+  ]
+}

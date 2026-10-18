@@ -1,3 +1,13 @@
+# Current standalone packaging checkpoint — 19 October 2026
+
+The runtime includes SD/HD mission briefings for all 42 missions: 27 Original, 14 Iron Coast and Aurora. Menu previews use a shared 132×70 logical-pixel full-RGB viewport with aspect-preserving centered cropping; original intro and gameplay retain 4:3 presentation within the 16:9 display. Iron Coast display names include stage/mission numbers; stable IDs and saved equipment/progression references remain unchanged. Cosmetic mod updates can trigger the usual changed-package save confirmation.
+
+The current checked snapshot contains **6,449 catalog entries, 5,596 approved Original HD pictures and 10,689 data files / 8,691,739,470 bytes**, plus the 45 bundled mod packages. The briefing pass adds 240 data files; mod SD refreshes do not change that data count. The 157 remaining Original sprite/terrain remasters are unchanged. Linux and Windows SourceG2 executables were rebuilt; new native Windows CI evidence remains pending.
+
+The assembler prefers `RustRaptor/data` when its `INDEX` is present and selects the complete contained data tree, including `data/briefings/` and its provenance. An explicit `--hd-source PATH` replaces the selected `hd/` subtree with that complete checked pack. With an external catalog, missing required Original briefing pairs are supplied from the bundled briefing tree while existing external files keep priority. Selection checks preserve package containment and required briefing files. This checkpoint records the refreshed runtime and selector checks; earlier full archive/export and relocation receipts below retain their dated scope.
+
+# Earlier standalone package notes — retained historical snapshot
+
 # Standalone game packages
 
 `RustRaptor/` contains the Rust executable, its original data catalog, approved

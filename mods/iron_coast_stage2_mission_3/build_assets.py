@@ -6,6 +6,7 @@ empty/runtime-subthreshold transparent padding, fits/resamples canvases, splits 
 quantizes SD to ordinary game palette colors; it never paints generated pixels.
 """
 from pathlib import Path
+import runpy
 import argparse,hashlib,json,math,random,struct,wave
 from PIL import Image,ImageOps
 ROOT=Path(__file__).resolve().parent
@@ -62,8 +63,8 @@ def main():
     for col in range(9):
      hi.crop((col*128,row*128,(col+1)*128,(row+1)*128)).save(ROOT/'art'/f'tile-{tiles:03}-hd.png');lo.crop((col*32,row*32,(col+1)*32,(row+1)*32)).save(ROOT/'art'/f'tile-{tiles:03}-sd.png');tiles+=1
   for im in [hd,low]:assert im.crop((0,im.height-1,im.width,im.height)).tobytes()==ImageOps.flip(im).crop((0,0,im.width,1)).tobytes()
-  # Briefing is a truthful wide crop of the generated terrain, not new artwork.
-  briefing=ImageOps.fit(source,(1280,800),Image.Resampling.LANCZOS);briefing.save(ROOT/'art/briefing-hd.png');sd(briefing,(320,200),pal).save(ROOT/'art/briefing-sd.png');low.save(ROOT/'art/terrain-preview-sd.png');hd.save(ROOT/'art/terrain-preview-hd.png')
-  report['terrain']={'master_sha256':hashfile(p),'master_size':list(source.size),'logical_joined_size':[288,512],'hd_joined_size':[1152,2048],'tiles':tiles,'period_rows':32,'repeat':'forward16 rows then reflected16 rows, both periodboundaries identical','joined_before_quantizing_and_splitting':True,'seam_checks':True,'briefing':'320x200 /1280x800 central wide crop from same genuine terrain master'}
+  # The briefing is rebuilt from its independent cinematic master.
+  runpy.run_path(str(ROOT/'art/build_cinematic_briefing.py'),run_name='__main__');low.save(ROOT/'art/terrain-preview-sd.png');hd.save(ROOT/'art/terrain-preview-hd.png')
+  report['terrain']={'master_sha256':hashfile(p),'master_size':list(source.size),'logical_joined_size':[288,512],'hd_joined_size':[1152,2048],'tiles':tiles,'period_rows':32,'repeat':'forward16 rows then reflected16 rows, both periodboundaries identical','joined_before_quantizing_and_splitting':True,'seam_checks':True,'briefing':'independent cinematic master, art/build_cinematic_briefing.py; see art/briefing-cinematic-provenance.json'}
  (ROOT/'asset-report.json').write_text(json.dumps(report,indent=2)+'\n');print(ROOT.name,'assets/sounds ready')
 if __name__=='__main__':main()

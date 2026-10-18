@@ -1,0 +1,54 @@
+{
+  "asset": "Iron Coast S2 M03: Stormglass Refinery cinematic briefing",
+  "mission_id": "iron_coast_stage2_mission_3:mission_03",
+  "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "actual_calls": 1,
+    "gate_owner": "/root/iron_coast_names",
+    "gate_lease": "a7bb212a-6f61-4f05-b112-d5c13df9b6dd",
+    "outcome": "success",
+    "terminal_reported_immediately": true,
+    "prompt": "briefing-cinematic-prompt.txt",
+    "prompt_sha256": "2d4bfc4e69325777a7da24852d66b3161236b3ff22b52f61355c885b80457a67",
+    "master": "briefing-cinematic-generated-master.png",
+    "master_sha256": "086727c497dfc7f3924ae70bc7b4e9c4f97d42ab092843de7d4b8a6ea4234745",
+    "master_dimensions": [
+      1586,
+      992
+    ],
+    "untouched_master_preserved": true,
+    "references": [
+      {
+        "role": "Stormwall style and foreground aircraft",
+        "path": "mods/iron_coast_mission_4/art/briefing_hd.png",
+        "sha256": "cd987c13bc55bba2620379ca435c0cccf08d7564364d730c65d0be285bb82221"
+      },
+      {
+        "role": "own prior top-down environment reference only",
+        "path": "mods/iron_coast_stage2_mission_3/art/briefing-hd.png",
+        "sha256": "78a8a162a24dac4f55be3a6ac2395f1efade2eb5a76a9888d7579799291f9da2"
+      }
+    ]
+  },
+  "derivation": {
+    "recipe": "build_cinematic_briefing.py",
+    "hd": "RGB1280x800, centered ImageOps.fit LANCZOS preserving16:10; no repaint",
+    "sd": "RGB320x200 LANCZOS downsample of complete sameHD",
+    "menu_review_crop": "centered132x70 LANCZOS file-onlypreview; actual SDLthumbnail review required separately"
+  },
+  "outputs": {
+    "hd": {
+      "path": "art/briefing-hd.png",
+      "sha256": "6ef95276d1d895f4c390bf8582fff2122dbf65e7073c37f1271efbeb1c09a5fa"
+    },
+    "sd": {
+      "path": "art/briefing-sd.png",
+      "sha256": "cc197dff54191f708bace27a2eceeafdf865270420c92bba4b5df4d526e13879"
+    }
+  },
+  "limits": [
+    "Illustrative mission briefing only; no mission objectives, names, IDs, scripts, wave counts, collisions, equipment, music or gameplay change.",
+    "New authored artwork does not count toward Originalsprite/terrainHD coverage.",
+    "Original top-down briefing remains in Git history and originalgenerationfiles; currentreplacementis a newindependentillustration."
+  ]
+}

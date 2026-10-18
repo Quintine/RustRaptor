@@ -1,0 +1,31 @@
+{
+  "mission": "base:sector_2_wave_8",
+  "status": "HISTORICAL_ART_HOLD_NOT_RUNTIME",
+  "source_master": "master.png",
+  "source_sha256": "1baa0bb29db2b467d83fb3ec104ddd8483669b1603f1c751d3bdaf259ca5a974",
+  "recipe": {
+    "version": 1,
+    "source_master": "master.png",
+    "convert_mode": "RGB",
+    "crop": [
+      1,
+      1,
+      1585,
+      991
+    ],
+    "crop_rule": "largest centered integer8:5 rectangle",
+    "crop_removed": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "HD_resample": "Pillow LANCZOS1280x800",
+    "SD_from": "Historical held candidateHD, not approved runtime art",
+    "SD_resample": "Pillow LANCZOS320x200",
+    "Pillow_version": "12.3.0"
+  },
+  "candidate_HD": "candidate_hd.png",
+  "candidate_SD": "candidate_sd.png",
+  "selected_successor": "../master.png"
+}

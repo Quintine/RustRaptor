@@ -1,0 +1,10 @@
+{
+  "purpose": "Full RGB SD briefing for the menu; replaces inherited palette posterization",
+  "source": "briefing_hd.png",
+  "source_sha256": "cb87cd81b6d8e87c0ceb5469d1832879906c9cee48728e2c56459b51d8a07b2a",
+  "old_sd_sha256": "7e6304191345cc1f9cffcd30c075887077cd5f2351eaa75fc8c41b792780cd53",
+  "sd_sha256": "e1e8ca85d0ee8039b97b420e082f278967402038e681c46f1b064da58cd4c8ab",
+  "recipe": "rebuild_briefing_sd.py",
+  "method": "RGB 320x200 Lanczos downsample of unchanged approved HD; no image generation",
+  "scope": "Menu illustration only; gameplay terrain, sprites, missions and audio unchanged"
+}

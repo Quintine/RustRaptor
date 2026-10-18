@@ -1,9 +1,8 @@
-# Iron Coast — Complete Campaign
+# Iron Coast S1: Complete Campaign
 
 Enable this optional assembly package in **Mods** to select all six Iron Coast
 mission packages and their shared weapon and enemy dependencies. Review the
-selected packages and apply changes from the main menu, then choose **Iron
-Coast 1 — Breakwater** in mission selection to start the route.
+selected packages and apply changes from the main menu, then choose **Iron Coast S1 M01: Breakwater** in mission selection to start the route.
 
 Each mission is a separate mod. A mission can be enabled and played without
 this campaign package. The assembly package changes campaign progression;

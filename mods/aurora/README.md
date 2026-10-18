@@ -1,6 +1,6 @@
 # Aurora Field Trials
 
-This API v1 example adds a scripted pulse cannon, a repair pickup, weaving drones, a guardian, a mission and a campaign. It references the player's installed original sprite catalog; no game artwork is included.
+This API v1 example adds a scripted pulse cannon, a repair pickup, weaving drones, a guardian, a mission and a campaign. It references the player's installed original sprite catalog for gameplay. The package includes a new cinematic SD/HD mission briefing, with its generated master, prompt and provenance in `art/`. Rebuild both briefing sizes with `python3 build_briefing.py` (Pillow). This cosmetic update retains stable content IDs and gameplay, but changes the package hash; existing pilots use the normal changed-mod load confirmation.
 
 From the repository root:
 

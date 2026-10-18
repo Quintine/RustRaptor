@@ -1,9 +1,8 @@
 # Iron Coast content packages
 
-Iron Coast Stage I contains six independently toggleable mission mods, five shared
+Iron Coast Stage 1 contains six independently toggleable mission mods, five shared
 weapon and enemy mods, a shared soundtrack, six stage boss mods, and an optional
-campaign assembly mod. Enable **Iron
-Coast — Complete Campaign** (`iron_coast_campaign`) to select the full campaign
+campaign assembly mod. Enable **Iron Coast S1: Complete Campaign** (`iron_coast_campaign`) to select the full campaign
 and its eighteen dependencies automatically. Each individual mission can also be
 enabled separately; it selects the five shared content mods, soundtrack and its
 own boss. Disabling a package also deselects unused dependencies. When this
@@ -13,12 +12,48 @@ needed by another enabled mod remain selected. The Mods manager validates versio
 and dependency order and applies the change at the main menu. The new weapons can also be used in the original campaigns;
 the enemy packages can be referenced from other missions.
 
-Stage II — **Black Tide** adds eight more independent missions, eight bosses,
+Stage 2 — **Black Tide** adds eight more independent missions, eight bosses,
 three shared enemies, two weapons and a three-track soundtrack. Enable
 `iron_coast_stage2_campaign` to select that route and its dependencies. See
 [Black Tide’s package instructions](../mods/iron_coast_stage2_campaign/README.md).
 The [pacing and presentation update](iron-coast-retune.md) documents the current
 waves, enemy patterns, weapon feedback and all four difficulty comparisons.
+
+## Mission names
+
+Mission packages and the mission menu share `Iron Coast S<stage> M<mission>: <title>`.
+Stages use S1 and S2; mission numbers are zero-padded within each stage. The
+campaign packages are **Iron Coast S1: Complete Campaign** and
+**Iron Coast S2: Black Tide**. Stable package IDs, mission IDs and dependency
+IDs retain their original spelling.
+
+| Stage | Mission | Display name |
+| --- | --- | --- |
+| 1 | 01 | Iron Coast S1 M01: Breakwater |
+| 1 | 02 | Iron Coast S1 M02: Tidal Relay |
+| 1 | 03 | Iron Coast S1 M03: Saltworks Convoy |
+| 1 | 04 | Iron Coast S1 M04: Stormwall |
+| 1 | 05 | Iron Coast S1 M05: Cinder Docks |
+| 1 | 06 | Iron Coast S1 M06: Iron Crown |
+| 2 | 01 | Iron Coast S2 M01: Nightbreak Inlet |
+| 2 | 02 | Iron Coast S2 M02: Undertow Run |
+| 2 | 03 | Iron Coast S2 M03: Stormglass Refinery |
+| 2 | 04 | Iron Coast S2 M04: Floodgate Zero |
+| 2 | 05 | Iron Coast S2 M05: Skybreaker Arsenal |
+| 2 | 06 | Iron Coast S2 M06: Emberwake Shipyards |
+| 2 | 07 | Iron Coast S2 M07: Siege of the Iron Fleet |
+| 2 | 08 | Iron Coast S2 M08: Black Tide |
+
+These labels also identify the standalone Stage 2 campaign entries. The Stage 1
+campaign is **Iron Coast S1**, whether Breakwater is enabled alone or the full
+six-mission assembly is selected. Artwork, scripts, objectives, waves, rewards
+and equipment are unchanged by this naming update.
+
+Changing these display labels changes package content hashes, including when
+package versions are unchanged. Existing pilots therefore show the normal changed-mod
+confirmation. Accept it only when ready to use the updated packages; stable IDs
+preserve equipment and progression, and the game keeps its normal original-save
+backup before the next write. This update does not modify pilot files.
 
 | Package | Content |
 | --- | --- |

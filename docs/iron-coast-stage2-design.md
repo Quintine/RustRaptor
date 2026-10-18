@@ -1,11 +1,11 @@
-# Iron Coast II: Black Tide
+# Iron Coast S2: Black Tide
 
 Stage 2 is an eight-sortie expansion built from independent local mods. It
 preserves the original 70/3 Hz simulation, native classic enemy movement and
 the normal shop, firing controls, shield economy and pilot saves.
 
-Enable **Iron Coast II: Black Tide** in **Mods**, apply at the main menu, then
-select **Nightbreak Inlet** in the Hangar's mission menu. Its dependency selection
+Enable **Iron Coast S2: Black Tide** in **Mods**, apply at the main menu, then
+select **Iron Coast S2 M01: Nightbreak Inlet** in the Hangar's mission menu. Its dependency selection
 includes the eight mission packages, their bosses and shared enemies, music
 and the two weapon packages. Enabling a single mission selects only its actual
 dependencies and leaves the other missions and optional weapons disabled.
@@ -43,7 +43,8 @@ confirmation popup.
   target/range/cadence constraints. Their weapons and projectiles have
   separate IDs from their inventory items.
 
-Every package uses API 1 and version 1.0.0. Stage 2 introduces no overrides
+Every package uses API 1. The manifests record exact current versions;
+mission and boss updates retain compatible 1.x dependency requirements. Stage 2 introduces no overrides
 of original or Stage 1 content. Mission scripts use `auto_complete=false`:
 elapsed duration does not grant victory. Required targets stay reachable;
 destroying them and the final boss earns the ending. Every sortie resets its

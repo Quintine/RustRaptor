@@ -100,7 +100,7 @@ def main():
     standard.save(art / "terrain-preview-sd.png")
     briefing = Image.open(art / "briefing-source-hd.png")
     briefing.convert("RGBA").resize((1280,800), Image.Resampling.LANCZOS).save(art / "briefing_hd.png")
-    sd(briefing, (320,200), palette).save(art / "briefing_sd.png")
+    briefing.convert("RGBA").resize((1280,800), Image.Resampling.LANCZOS).convert("RGB").resize((320,200), Image.Resampling.LANCZOS).save(art / "briefing_sd.png")
     palette_colors = {tuple(colors[i:i+3]) for i in range(0,768,3)}
     rgb_pixels = standard.convert("RGB").tobytes()
     sd_colors = {tuple(rgb_pixels[i:i+3]) for i in range(0,len(rgb_pixels),3)}

@@ -1,0 +1,59 @@
+{
+  "mission": "base:sector_2_wave_2",
+  "selected_version": "new-illustration-v1",
+  "source_master": "master.png",
+  "source_sha256": "4b161c5d1d3fde60c5dfbd03bdd75fa4b70bedbb9fecc3aaef7056eb579b1b0a",
+  "source_dimensions": [
+    1586,
+    992
+  ],
+  "recipe": {
+    "version": 1,
+    "source_master": "master.png",
+    "convert_mode": "RGB",
+    "crop": [
+      1,
+      1,
+      1585,
+      991
+    ],
+    "crop_rule": "largest centered integer8:5 rectangle",
+    "crop_removed": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "HD_resample": "Pillow LANCZOS1280x800",
+    "SD_from": "approved-same-composition-HD",
+    "SD_resample": "Pillow LANCZOS320x200",
+    "Pillow_version": "12.3.0"
+  },
+  "HD": {
+    "file": "../../../sector_2_wave_2_hd.png",
+    "sha256": "585be4638f56b3e805f45a714c47a9827166a9fba94dd81ad7c555ffa75d3bc8",
+    "dimensions": [
+      1280,
+      800
+    ]
+  },
+  "SD": {
+    "file": "../../../sector_2_wave_2_sd.png",
+    "sha256": "50303dea9161f60cb017e1c2ddb11247f1de90bf609c65d06833fafeed50d8b6",
+    "dimensions": [
+      320,
+      200
+    ]
+  },
+  "reproduced_HD_and_SD_exact_RGB": true,
+  "physical_whole_HD_SD_review": "author-review.json",
+  "prompt": "prompt.txt",
+  "style_reference": "../../../../../mods/iron_coast_mission_4/art/briefing_hd.png",
+  "terrain_semantic_reference": "original-terrain-reference.png",
+  "reference_roles": "Stormwall style/aircraft only; terrain theme semantic only. Wave8v2 edits prior held master to fully connected night city, preserves painting style and fighter geometry.",
+  "Original_sprite_remaster_coverage": 0,
+  "limitations": [
+    "Illustrative semantic geography and atmosphere, not a literal MAP screenshot or added objective."
+  ],
+  "style_reference_role": "Direct builtin reference for v1; inherited painting/aircraft ancestry for Wave8v2."
+}

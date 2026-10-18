@@ -27,7 +27,7 @@ documentation, excluding build caches and review drafts. See
 [standalone packaging](docs/standalone-package.md).
 
 The **Mods** screen discovers the bundled `mods/` packages when no user mods
-folder exists. Enable **Iron Coast Campaign** to select all six mission mods,
+folder exists. Enable **Iron Coast S1: Complete Campaign** to select all six mission mods,
 their enemies, distinct bosses, weapons and original soundtrack automatically,
 then apply at the main menu. Missions, bosses and the three weapons can also
 be enabled individually; each mission selects its own dependencies.
@@ -36,14 +36,22 @@ weapon mods. Enable them in Mods and buy them in the supply room. The cannon
 is a selected special that chains through nearby targets; the shield fires
 with your primary guns while Fire is held. Both ship SD/HD icons and sounds.
 
-**Iron Coast II: Black Tide** adds eight more missions, eight separate bosses,
+**Iron Coast S2: Black Tide** adds eight more missions, eight separate bosses,
 three shared enemy types and three original FM music tracks. Enable its campaign
-in **Mods**, apply at the main menu, then choose **Nightbreak Inlet** in the
+in **Mods**, apply at the main menu, then choose **Iron Coast S2 M01: Nightbreak Inlet** in the
 Hangar's mission menu to begin the linked campaign.
 The campaign selects its dependencies automatically. **Railburst Cannon**
 (685,000 credits) and **Depth Charge** (525,000 credits) are optional shop
 purchases; completing missions does not grant either weapon. Each mission,
 boss and weapon is also an individual mod. See [Stage 2](docs/iron-coast-stage2-design.md).
+All **42 missions**—27 Original missions, 14 Iron Coast missions and Aurora—have
+SD/HD cinematic briefing illustrations in the mission menu. Iron Coast titles
+include a stage and mission prefix, such as **Iron Coast S1 M01: Breakwater**
+or **Iron Coast S2 M01: Nightbreak Inlet**, while their stable content IDs remain
+unchanged. Mod display-name and artwork updates change package hashes, so an
+existing pilot may need the usual changed-mod confirmation; saved equipment
+and progression keep their existing ID references.
+
 For a user mods folder, pass `--mods DIR` or create
 `$XDG_DATA_HOME/RaptorReplica/mods/` on Linux or
 `%APPDATA%\RaptorReplica\mods\` on Windows. Saves and configuration use separate
@@ -98,7 +106,7 @@ cases; wider playtesting and complete base-game HD coverage remain work in progr
 - [AI mod authoring checklist](docs/mod-authoring-checklist.md)
 - [Iron Coast packages](docs/iron-coast.md)
 - [Iron Coast pacing and difficulty comparisons](docs/iron-coast-retune.md)
-- [Iron Coast II: Black Tide](docs/iron-coast-stage2-design.md)
+- [Iron Coast S2: Black Tide](docs/iron-coast-stage2-design.md)
 - [Weapon prices and balance](docs/weapon-balance.md)
 - [Sprite and shadow validation](docs/visual-validation.md)
 - [Sound playback validation](docs/sound-validation.md)

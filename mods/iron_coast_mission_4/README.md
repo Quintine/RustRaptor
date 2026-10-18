@@ -1,4 +1,4 @@
-# Iron Coast — Mission 4: Stormwall
+# Iron Coast S1 M04: Stormwall
 
 API 1 package, version 1.0.1. Enable it in Mods at the main menu and apply the selection. The normal dependency selection also enables `iron_coast_scout`, `iron_coast_turret`, `iron_coast_boss_4`, `pulse_cannon`, `seeker_swarm`, `ion_lance`, `iron_coast_music`.
 

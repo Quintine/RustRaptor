@@ -1,0 +1,67 @@
+{
+  "asset": "Iron Coast S2 M05: Skybreaker Arsenal cinematic briefing",
+  "mission_id": "iron_coast_stage2_mission_5:mission_05",
+  "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "actual_calls": 1,
+    "gate_owner": "/root/iron_coast_names",
+    "gate_lease": "20a287e1-df5a-4a4e-8506-2b2e93fd7c63",
+    "outcome": "success",
+    "terminal_reported_immediately": true,
+    "prompt": "briefing-cinematic-prompt.txt",
+    "prompt_sha256": "88bc571ff839f5bcdf7adf277c1515774f45ea094bc4d0844bb63c7d659b4fe7",
+    "master": "briefing-cinematic-generated-master.png",
+    "master_sha256": "f800320ff740cbdfe1f16fbfd3d680f8941a6ce632364543f1f85b1827c07977",
+    "master_dimensions": [
+      1586,
+      992
+    ],
+    "untouched_master_preserved": true,
+    "references": [
+      {
+        "role": "Stormwall style and foreground aircraft",
+        "path": "mods/iron_coast_mission_4/art/briefing_hd.png",
+        "sha256": "cd987c13bc55bba2620379ca435c0cccf08d7564364d730c65d0be285bb82221"
+      },
+      {
+        "role": "own prior top-down environment reference only",
+        "path": "mods/iron_coast_stage2_mission_5/art/briefing-hd.png",
+        "sha256": "10cceecd7160eed8fc15d58c815fe688b64386c62b7d679f500ef2449b65c3df"
+      }
+    ]
+  },
+  "derivation": {
+    "recipe": "build_cinematic_briefing.py",
+    "hd": "RGB1280x800, centered ImageOps.fit LANCZOS; then bounded deterministic deck-paint cleanup (user-authorized scripted pixel cleanup)",
+    "sd": "RGB320x200 LANCZOS downsample of complete sameHD",
+    "menu_review_crop": "centered132x70 LANCZOS file-onlypreview; actual SDLthumbnail review required separately"
+  },
+  "outputs": {
+    "hd": {
+      "path": "art/briefing-hd.png",
+      "sha256": "7e1ae3e72e52307bf02562f891e72f9d8e89701e1d913d4845746e326a24a854"
+    },
+    "sd": {
+      "path": "art/briefing-sd.png",
+      "sha256": "db8fabf3102fe41aacf5fa5dd829a9d11fdb3876664b80053ea7c1b997e07f30"
+    }
+  },
+  "limits": [
+    "Illustrative mission briefing only; no mission objectives, names, IDs, scripts, wave counts, collisions, equipment, music or gameplay change.",
+    "New authored artwork does not count toward Originalsprite/terrainHD coverage.",
+    "Original top-down briefing remains in Git history and originalgenerationfiles; currentreplacementis a newindependentillustration."
+  ],
+  "cleanup": {
+    "author": "Root",
+    "source_master_preserved": true,
+    "tool": "Pillow and Python; no additional image generation",
+    "method": "992 white H/ring paint-mask pixels reconstructed by 300 deterministic four-neighbor color diffusion passes",
+    "logical_hd_roi": [
+      1038,
+      353,
+      1138,
+      397
+    ],
+    "limits": "A small deck patch is smoother; the aircraft, coastline and all pixels outside the paint mask retain the original generated illustration."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "asset": "Iron Coast S1 M03: Saltworks Convoy cinematic briefing",
+  "mission_id": "iron_coast_mission_3:mission_03",
+  "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "actual_calls": 1,
+    "gate_owner": "/root/iron_coast_names",
+    "gate_lease": "2b49401c-b975-482c-b859-292b8a6bf177",
+    "outcome": "success",
+    "terminal_reported_immediately": true,
+    "prompt": "briefing-cinematic-prompt.txt",
+    "prompt_sha256": "ebc9c9a18cb1775edfc5523719ff649e2f1b74635202a8d638ba82b88fb0df4d",
+    "master": "briefing-cinematic-generated-master.png",
+    "master_sha256": "f7aaea7fcd6cf38907dba796ccb33efe3a9307638e0443ac668ef43fff3ae02f",
+    "master_dimensions": [
+      1586,
+      992
+    ],
+    "untouched_master_preserved": true,
+    "references": [
+      {
+        "role": "Stormwall style and foreground aircraft",
+        "path": "mods/iron_coast_mission_4/art/briefing_hd.png",
+        "sha256": "cd987c13bc55bba2620379ca435c0cccf08d7564364d730c65d0be285bb82221"
+      },
+      {
+        "role": "own prior top-down environment reference only",
+        "path": "mods/iron_coast_mission_3/art/briefing_hd.png",
+        "sha256": "171793b667a6750fc47d79816e4f16a35a9a2e12166d229baf28442028d381c1"
+      }
+    ]
+  },
+  "derivation": {
+    "recipe": "build_cinematic_briefing.py",
+    "hd": "RGB1280x800, centered ImageOps.fit LANCZOS preserving16:10; no repaint",
+    "sd": "RGB320x200 LANCZOS downsample of complete sameHD",
+    "menu_review_crop": "centered132x70 LANCZOS file-onlypreview; actual SDLthumbnail review required separately"
+  },
+  "outputs": {
+    "hd": {
+      "path": "art/briefing_hd.png",
+      "sha256": "04bb44e7dcabcf0d12c49d07691e278b538104c81799181ec468ec227fc51ee6"
+    },
+    "sd": {
+      "path": "art/briefing_sd.png",
+      "sha256": "ea69b6378ea9382a8e38f14460d2c055ad5d8e982461456db076aeaca716b0f9"
+    }
+  },
+  "limits": [
+    "Illustrative mission briefing only; no mission objectives, names, IDs, scripts, wave counts, collisions, equipment, music or gameplay change.",
+    "New authored artwork does not count toward Originalsprite/terrainHD coverage.",
+    "Original top-down briefing remains in Git history and originalgenerationfiles; currentreplacementis a newindependentillustration."
+  ]
+}

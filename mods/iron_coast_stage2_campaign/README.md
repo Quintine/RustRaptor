@@ -1,9 +1,9 @@
-# Iron Coast II: Black Tide
+# Iron Coast S2: Black Tide
 
-Enable **Iron Coast II — Black Tide** in the game's Mods screen. Dependency
+Enable **Iron Coast S2: Black Tide** in the game's Mods screen. Dependency
 selection brings in all eight missions, their individual bosses, the shared
 coastal enemies, the three-track soundtrack and two optional shop weapons.
-Apply the selection at the main menu, then select Nightbreak Inlet in the
+Apply the selection at the main menu, then select **Iron Coast S2 M01: Nightbreak Inlet** in the
 Hangar's mission menu. Normal pilot saves retain the campaign and package pins.
 
 The individual mission, boss, enemy and weapon mods can also be enabled

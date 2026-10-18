@@ -1,0 +1,75 @@
+{
+  "asset": "Aurora Field Trials cinematic mission briefing",
+  "mission_id": "aurora:field_trials",
+  "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "actual_calls": 1,
+    "outcome": "success",
+    "gate_owner": "/root/iron_coast_names",
+    "gate_lease": "fdb85ad3-99c1-40fb-ab2c-93fbf1fb98d3",
+    "terminal_reported_immediately": true,
+    "prompt": "briefing-prompt.txt",
+    "prompt_sha256": "c1f57afd4ed5249851ac45dcd94d3ca2e69688159054c7ae726283b1cb5c3a35",
+    "master": "briefing-generated-master.png",
+    "master_sha256": "ddb0b50b344611d49038ac2d5b8e4f609b66daa8c7e3799d4530804780cb1a3f",
+    "master_dimensions": [
+      1586,
+      992
+    ],
+    "master_preserved_unmodified": true,
+    "style_reference": {
+      "path": "mods/iron_coast_mission_4/art/briefing_hd.png",
+      "sha256": "cd987c13bc55bba2620379ca435c0cccf08d7564364d730c65d0be285bb82221"
+    },
+    "semantic_references": [
+      {
+        "original_asset": 66400,
+        "catalog_path": "misc/unnamed.104",
+        "sha256": "1d7db99148ebc5db3de1d8c6c45c85fef4cf415936117815f7008483fc1f3357"
+      },
+      {
+        "original_asset": 66296,
+        "catalog_path": "sprites/SHIP01G1_PIC",
+        "sha256": "ada9598e7844d77c0fb8d782b74128772d94d901dc873b4fa23b2c1c009a951b"
+      },
+      {
+        "original_asset": 66310,
+        "catalog_path": "sprites/SHIP10G1_PIC",
+        "sha256": "ae5761847cae4ce296bfa436a8c14cdcfeea42f07e9ca1dfada60cb958466e27"
+      }
+    ]
+  },
+  "derivation": {
+    "tool": "../build_briefing.py",
+    "hd": "RGB1280x800; Pillow ImageOps.fit LANCZOS, centered aspect crop",
+    "floating_source_crop_rectangle": [
+      0.0,
+      0.375,
+      1586.0,
+      991.625
+    ],
+    "sd": "RGB320x200; downsample complete approved HD with LANCZOS",
+    "sprite_edits_or_paintover": 0
+  },
+  "limits": [
+    "Illustrative mission art only; gameplay sprites, enemies, terrain, objectives, IDs and version remain unchanged.",
+    "Does not increase original sprite or terrain remaster coverage.",
+    "Image author physically reviews full HD and SD; actual in-game full-color thumbnail is reviewed by the integrating owner."
+  ],
+  "outputs": {
+    "briefing_hd.png": {
+      "sha256": "8517b565a1dabe0d04e453d9ae6ce66f2e71a8c30f6d07827393607324977ee7",
+      "dimensions": [
+        1280,
+        800
+      ]
+    },
+    "briefing_sd.png": {
+      "sha256": "694547106db78f8e6a232cb680f1c0eb039f919ab9f63748c6960d708283a1fc",
+      "dimensions": [
+        320,
+        200
+      ]
+    }
+  }
+}

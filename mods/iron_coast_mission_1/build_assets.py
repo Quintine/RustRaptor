@@ -12,6 +12,7 @@ import random
 import struct
 import wave
 from pathlib import Path
+import runpy
 from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parent
@@ -96,9 +97,8 @@ def main():
     assert terrain_hd.crop((0, 1535, 1152, 1536)).tobytes() == ImageOps.flip(terrain_hd).crop((0, 0, 1152, 1)).tobytes()
     terrain_sd.save(art / "terrain-preview-sd.png")
     terrain_hd.save(art / "terrain-preview-hd.png")
-    briefing = Image.open(art / "briefing-source-hd.png").convert("RGBA")
-    sd(briefing, (320, 200), palette).save(art / "briefing_sd.png")
-    briefing.resize((1280, 800), Image.Resampling.LANCZOS).save(art / "briefing_hd.png")
+    # The cinematic briefing has its own unchanged generated master.
+    runpy.run_path(str(art / "build_cinematic_briefing.py"), run_name="__main__")
     depot = Image.open(art / "depot-source-hd.png").convert("RGBA")
     sd(depot, (32, 32), palette).save(art / "depot_sd.png")
     depot.resize((128, 128), Image.Resampling.LANCZOS).save(art / "depot_hd.png")

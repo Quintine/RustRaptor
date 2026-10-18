@@ -3,6 +3,7 @@
 No decoded original images are packaged. No painted/masked master edits occur.
 """
 from pathlib import Path
+import runpy
 import argparse,datetime,hashlib,json,math,random,struct,wave
 from PIL import Image,ImageOps
 ROOT=Path(__file__).resolve().parent
@@ -58,8 +59,8 @@ def main():
   # Reflected cycle joins equal boundary rows at full and logical resolution.
   for im in [hd,sd]:assert im.crop((0,im.height-1,im.width,im.height)).tobytes()==ImageOps.flip(im).crop((0,0,im.width,1)).tobytes()
   hd.save(ROOT/'art/terrain-preview-hd.png');sd.save(ROOT/'art/terrain-preview-sd.png')
-  bg=ImageOps.fit(src,(1280,800),Image.Resampling.LANCZOS,centering=(.5,.35));bg.save(ROOT/'art/briefing-hd.png');small(bg,(320,200),pal).save(ROOT/'art/briefing-sd.png')
-  report['assets'].append({'source':'art/terrain-generated-v1.png','sha256':h(raw),'logical_map':[320,512],'hd_map':[1280,2048],'reflected_cycle':True,'tiles':320,'briefing':'same generated map cropped with 8:5 viewport, no separate generation','source_not_modified':True})
+  runpy.run_path(str(ROOT/'art/build_cinematic_briefing.py'),run_name='__main__')
+  report['assets'].append({'source':'art/terrain-generated-v1.png','sha256':h(raw),'logical_map':[320,512],'hd_map':[1280,2048],'reflected_cycle':True,'tiles':320,'briefing':'independent cinematic master, art/build_cinematic_briefing.py; see art/briefing-cinematic-provenance.json','source_not_modified':True})
   cues=[('approach',.6,164+n*30),('objective',.36,392),('boss_alarm',.75,275),('victory',.95,262)]
  (ROOT/'audio').mkdir(exist_ok=True);report['audio']=[synth(*c) for c in cues]
  report['final_art']=[{'file':str(p.relative_to(ROOT)),'sha256':h(p),'size':Image.open(p).size} for p in sorted((ROOT/'art').glob('*.png')) if 'generated' not in p.name]

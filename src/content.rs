@@ -629,6 +629,7 @@ impl Registry {
     }
     pub fn base(catalog: &Catalog) -> Result<Self> {
         let mut reg = Self::default();
+        reg.asset_roots.insert("base".into(), catalog.root.clone());
         let mut pack = ContentPack::default();
         for o in crate::legacy_tables::objects() {
             let id = ContentId::from(o.id);
@@ -903,7 +904,15 @@ impl Registry {
                 pack.missions.push(MissionDef {
                     id: mid,
                     name: format!("Sector {sector} / Wave {wave}"),
-                    art: None,
+                    art: Some(Art {
+                        asset: None,
+                        png: Some(format!("briefings/sector_{sector}_wave_{wave}_sd.png")),
+                        hd_png: Some(format!("briefings/sector_{sector}_wave_{wave}_hd.png")),
+                        logical_width: 320,
+                        logical_height: 200,
+                        frames: 1,
+                        nearest: false,
+                    }),
                     duration: 4700,
                     auto_complete: true,
                     spawns,

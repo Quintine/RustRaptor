@@ -104,7 +104,7 @@ def main():
     terrain_sd.save(art / "terrain-preview-sd.png")
     terrain_hd.save(art / "terrain-preview-hd.png")
     briefing = Image.open(art / "briefing-source-hd.png").convert("RGBA")
-    palette_sd(briefing, (320, 200), palette).save(art / "briefing_sd.png")
+    briefing.resize((1280, 800), Image.Resampling.LANCZOS).convert("RGB").resize((320, 200), Image.Resampling.LANCZOS).save(art / "briefing_sd.png")
     briefing.resize((1280, 800), Image.Resampling.LANCZOS).save(art / "briefing_hd.png")
     audio = {
         "approach": wav("approach", 1.1, [110, 147, 165, 220]),

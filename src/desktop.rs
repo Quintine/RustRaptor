@@ -1425,6 +1425,7 @@ impl Host {
             self.music("MAINMENU_MUS");
         }
         self.mod_art.clear();
+        self.menu_art.clear_briefing();
         if self.pending_load.is_some() {
             self.message = "Mods applied; review pilot differences before loading".into();
             self.go(Screen::ConfirmLoadMods);
@@ -2533,29 +2534,113 @@ impl Host {
         {
             self.font.text(canvas, 160, 48 + index as i32 * 9, line, 48);
         }
-        if let Some(mut art) = mission.art.clone() {
-            let height = (132 * art.logical_height / art.logical_width).min(61);
-            art.logical_width = 132;
-            art.logical_height = height;
-            self.art(canvas, &art, &owner, 0, 160.0, 70.0)?;
+        use crate::menu_art::{BRIEFING_HEIGHT, BRIEFING_WIDTH, MENU_BRIEFING, MENU_RULE};
+        canvas.rect(
+            159,
+            65,
+            BRIEFING_WIDTH as i32 + 2,
+            BRIEFING_HEIGHT as i32 + 2,
+            MENU_RULE,
+        );
+        if let Some(art) = mission.art.clone() {
+            let png = if self.config.hd_mode {
+                art.hd_png.as_ref().or(art.png.as_ref())
+            } else {
+                art.png.as_ref()
+            };
+            if let Some(png) =
+                png.filter(|_| art.asset.is_none() || self.config.hd_mode && art.hd_png.is_some())
+            {
+                let key = format!(
+                    "{owner}:{}:{}:{}",
+                    serde_json::to_string(&art)?,
+                    self.config.hd_mode,
+                    canvas.scale
+                );
+                if !self.menu_art.has_briefing(&key) {
+                    let root = self
+                        .active
+                        .registry
+                        .asset_roots
+                        .get(&owner)
+                        .context("unknown briefing artwork owner")?;
+                    let path = crate::assets::contained(root, std::path::Path::new(png))?;
+                    let image = crate::assets::checked_png(&path)?;
+                    self.menu_art
+                        .set_briefing(key, image, art.frames, canvas.scale)?;
+                }
+                canvas.rect(
+                    160,
+                    66,
+                    BRIEFING_WIDTH as i32,
+                    BRIEFING_HEIGHT as i32,
+                    MENU_BRIEFING,
+                );
+            } else {
+                // Keep indexed asset briefings compatible without allocating a
+                // canvas from authored logical dimensions merely to shrink it.
+                let key = format!(
+                    "indexed:{owner}:{}:{}:{}",
+                    serde_json::to_string(&art)?,
+                    self.config.hd_mode,
+                    canvas.scale
+                );
+                if !self.menu_art.has_briefing(&key) {
+                    let asset = art.asset.context("missing indexed briefing asset")?;
+                    let hd = if self.config.hd_mode {
+                        self.hd.sprite(asset, canvas.scale, &self.palette)?
+                    } else {
+                        None
+                    };
+                    let sprite = match hd {
+                        Some(sprite) => sprite,
+                        None => self.raw(asset)?,
+                    };
+                    let image = image::RgbaImage::from_fn(
+                        sprite.width as u32,
+                        sprite.height as u32,
+                        |x, y| {
+                            let index = sprite.pixels[y as usize * sprite.width + x as usize];
+                            if index == crate::assets::TRANSPARENT {
+                                image::Rgba([0, 0, 0, 0])
+                            } else {
+                                let color = self.palette[index.min(255) as usize];
+                                image::Rgba([color[0], color[1], color[2], 255])
+                            }
+                        },
+                    );
+                    self.menu_art.set_briefing(key, image, 1, canvas.scale)?;
+                }
+                canvas.rect(
+                    160,
+                    66,
+                    BRIEFING_WIDTH as i32,
+                    BRIEFING_HEIGHT as i32,
+                    MENU_BRIEFING,
+                );
+            }
         } else if mission.columns > 0 {
+            // Third-party missions may omit briefing art. Their map overview is
+            // still deterministic and does not start or advance a simulation.
             let columns = mission.columns as usize;
-            let tile_width = (132 / columns.min(12)).max(1);
-            for position in 0..(columns * 4).min(mission.layout.len()) {
+            let tile_width = (BRIEFING_WIDTH as usize / columns.min(12)).clamp(1, 32);
+            let left = 160 + (BRIEFING_WIDTH as usize - columns.min(12) * tile_width) / 2;
+            let rows = BRIEFING_HEIGHT as usize / tile_width;
+            for position in 0..(columns * rows).min(mission.layout.len()) {
                 if position % columns >= 12 {
                     continue;
                 }
                 if let Some(tile) = mission.tiles.get(mission.layout[position]) {
                     let mut art = tile.art.clone();
                     art.logical_width = tile_width as u32;
-                    art.logical_height = 15;
+                    art.logical_height = tile_width as u32;
                     self.art(
                         canvas,
                         &art,
                         &owner,
                         0,
-                        (160 + position % columns * tile_width) as f32,
-                        (70 + position / columns * 15) as f32,
+                        (left + position % columns * tile_width) as f32,
+                        (66 + position / columns * tile_width) as f32,
                     )?;
                 }
             }
@@ -2563,7 +2648,7 @@ impl Host {
         self.font.text(
             canvas,
             160,
-            138,
+            140,
             if self.pilot.completed.contains(&id) {
                 "STATUS  COMPLETE"
             } else if self.pilot.mission == id {
@@ -2576,7 +2661,7 @@ impl Host {
         self.font.text(
             canvas,
             160,
-            149,
+            150,
             &format!(
                 "{} DIFFICULTY",
                 ["TRAINING", "ROOKIE", "VETERAN", "ELITE"][self.config.difficulty as usize]
@@ -5061,6 +5146,214 @@ mod tests {
         .unwrap();
         (dir, host)
     }
+    #[test]
+    fn mission_briefing_preserves_full_color_sd_hd_and_does_not_advance_pilot_or_scripts() {
+        let (_dir, mut host) = ui_fixture();
+        let root = host.catalog.root.clone();
+        image::RgbaImage::from_pixel(320, 200, image::Rgba([201, 23, 51, 255]))
+            .save(root.join("briefing-sd.png"))
+            .unwrap();
+        image::RgbaImage::from_pixel(1280, 800, image::Rgba([31, 207, 83, 255]))
+            .save(root.join("briefing-hd.png"))
+            .unwrap();
+        let id: ContentId = "base:sector_1_wave_1".into();
+        host.active.registry.asset_roots.insert("base".into(), root);
+        host.active.registry.missions.get_mut(&id).unwrap().art = Some(Art {
+            asset: None,
+            png: Some("briefing-sd.png".into()),
+            hd_png: Some("briefing-hd.png".into()),
+            logical_width: 320,
+            logical_height: 200,
+            frames: 1,
+            nearest: false,
+        });
+        host.go(Screen::Missions);
+        let before = serde_json::json!({"pilot":host.pilot,"world":host.world,"states":host.active.scripts.states,"rng":host.active.scripts.rng});
+        for scale in 1..=4 {
+            host.config.scale = scale;
+            for (hd, expected) in [(false, [201, 23, 51, 255]), (true, [31, 207, 83, 255])] {
+                host.config.hd_mode = hd;
+                let image = host.draw().unwrap();
+                assert_eq!(
+                    (image.image.width, image.image.height),
+                    (400 * scale, 225 * scale)
+                );
+                assert_eq!(
+                    image
+                        .image
+                        .pixels
+                        .iter()
+                        .filter(|p| **p == crate::menu_art::MENU_BRIEFING)
+                        .count(),
+                    132 * 70 * scale * scale
+                );
+                let rgba = host.present_rgba(&image);
+                let index = (((MENU_OFFSET[1] as usize + 70) * scale) * image.image.width
+                    + (MENU_OFFSET[0] as usize + 164) * scale)
+                    * 4;
+                assert_eq!(
+                    &rgba[index..index + 4],
+                    &expected,
+                    "full color and variant at scale {scale}"
+                );
+            }
+        }
+        assert_eq!(
+            serde_json::json!({"pilot":host.pilot,"world":host.world,"states":host.active.scripts.states,"rng":host.active.scripts.rng}),
+            before
+        );
+        host.active
+            .registry
+            .missions
+            .get_mut(&id)
+            .unwrap()
+            .art
+            .as_mut()
+            .unwrap()
+            .png = Some("../outside.png".into());
+        host.config.hd_mode = false;
+        assert!(
+            host.draw().is_err(),
+            "briefing path must remain contained in the artwork owner's root"
+        );
+    }
+
+    #[test]
+    fn indexed_mission_briefing_uses_actual_catalog_frame_and_bounds_thumbnail_allocation() {
+        let (_dir, mut host) = ui_fixture();
+        let root = host.catalog.root.clone();
+        let bytes = [1_i32, 0, 0, 4, 2]
+            .into_iter()
+            .flat_map(i32::to_le_bytes)
+            .chain([7_u8; 8])
+            .collect::<Vec<_>>();
+        std::fs::write(root.join("briefing-asset"), &bytes).unwrap();
+        let mut index = std::fs::read_to_string(root.join("INDEX")).unwrap();
+        index.push_str(&format!("3 {} briefing-asset\n", bytes.len()));
+        std::fs::write(root.join("INDEX"), index).unwrap();
+        host.catalog = Catalog::open(root).unwrap();
+        host.palette[7] = [17, 99, 211];
+        let id: ContentId = "base:sector_1_wave_1".into();
+        host.active.registry.missions.get_mut(&id).unwrap().art = Some(Art {
+            asset: Some(3),
+            png: None,
+            hd_png: None,
+            logical_width: 4096,
+            logical_height: 4096,
+            frames: 1,
+            nearest: false,
+        });
+        host.config.hd_mode = false;
+        host.config.scale = 4;
+        host.go(Screen::Missions);
+        let canvas = host.draw().unwrap();
+        let rgba = host.present_rgba(&canvas);
+        let index = (((MENU_OFFSET[1] as usize + 70) * 4) * canvas.image.width
+            + (MENU_OFFSET[0] as usize + 164) * 4)
+            * 4;
+        assert_eq!(&rgba[index..index + 4], &[17, 99, 211, 255]);
+        assert!(host.world.is_none());
+        let mission = host.active.registry.missions.get_mut(&id).unwrap();
+        mission.art = None;
+        mission.columns = 1;
+        mission.layout = vec![0, 0];
+        mission.tiles = vec![crate::content::TileDef {
+            art: Art {
+                asset: Some(3),
+                png: None,
+                hd_png: None,
+                logical_width: 32,
+                logical_height: 32,
+                frames: 1,
+                nearest: false,
+            },
+            health: 0,
+            reward: 0,
+            destroyed: None,
+        }];
+        let fallback = host.draw().unwrap();
+        let index = (82 * 4) * fallback.image.width + 254 * 4;
+        assert_eq!(
+            fallback.image.pixels[index], 7,
+            "one-column missions without art need a visible centered map fallback"
+        );
+    }
+
+    #[test]
+    #[ignore = "requires bundled original data and mission illustrations; writes isolated full menu captures"]
+    fn all_mission_briefing_previews_capture_without_changing_simulation() {
+        let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
+        let catalog_root = std::env::var_os("RAPTOR_TEST_DATA")
+            .map(PathBuf::from)
+            .unwrap_or_else(|| root.join("data"));
+        let output = PathBuf::from(
+            std::env::var_os("RAPTOR_MISSION_PREVIEW_OUTPUT")
+                .expect("choose an isolated screenshot output directory"),
+        );
+        std::fs::create_dir_all(&output).unwrap();
+        let catalog = Catalog::open(catalog_root).unwrap();
+        let base = Registry::base(&catalog).unwrap();
+        let temp = tempfile::tempdir().unwrap();
+        let paths = Paths {
+            data: temp.path().join("saves"),
+            config: temp.path().join("config"),
+            cache: temp.path().join("cache"),
+            legacy: temp.path().join("legacy"),
+        };
+        let mut host = Host::new(catalog, base, paths, root.join("mods"), true).unwrap();
+        let enabled = host.discovery.mods.keys().cloned().collect::<Vec<_>>();
+        host.active =
+            ActiveMods::build(&host.base, &host.discovery, &enabled, Some(&host.catalog)).unwrap();
+        host.config.scale = 4;
+        host.config.scanlines = false;
+        host.go(Screen::Missions);
+        let filter = std::env::var("RAPTOR_MISSION_PREVIEW_FILTER").ok();
+        let ids = host.missions();
+        let mut captures = Vec::new();
+        for (selected, id) in ids.iter().enumerate() {
+            if filter
+                .as_ref()
+                .is_some_and(|filter| !filter.split(',').any(|wanted| wanted == id.0))
+            {
+                continue;
+            }
+            host.selected = selected;
+            for hd in [false, true] {
+                host.config.hd_mode = hd;
+                let before = serde_json::json!({"pilot":host.pilot,"world":host.world,"states":host.active.scripts.states,"rng":host.active.scripts.rng});
+                let canvas = host.draw().unwrap();
+                let rgba = host.present_rgba(&canvas);
+                let name = format!(
+                    "{}-{}.png",
+                    id.0.replace(':', "_"),
+                    if hd { "hd" } else { "sd" }
+                );
+                image::save_buffer(
+                    output.join(&name),
+                    &rgba,
+                    canvas.image.width as u32,
+                    canvas.image.height as u32,
+                    image::ColorType::Rgba8,
+                )
+                .unwrap();
+                assert_eq!(
+                    serde_json::json!({"pilot":host.pilot,"world":host.world,"states":host.active.scripts.states,"rng":host.active.scripts.rng}),
+                    before
+                );
+                captures.push(serde_json::json!({"id":id,"name":host.active.registry.missions[id].name,"hd":hd,"file":name,"width":canvas.image.width,"height":canvas.image.height,"has_briefing":host.active.registry.missions[id].art.is_some()}));
+            }
+        }
+        assert!(
+            !captures.is_empty(),
+            "filter must select an installed mission"
+        );
+        assert!(
+            !host.paths.data.exists(),
+            "preview mode must not create user saves"
+        );
+        std::fs::write(output.join("mission-preview-captures.json"),serde_json::to_vec_pretty(&serde_json::json!({"available_missions":ids.len(),"enabled_mods":enabled,"captures":captures,"scope":"Menu renderer only; no SDL window or gameplay simulation started"})).unwrap()).unwrap();
+    }
+
     #[test]
     fn terrain_palette_prepared_key_and_domain_reach_the_desktop_consumer() {
         use sha2::{Digest,Sha256};

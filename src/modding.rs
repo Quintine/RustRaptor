@@ -378,6 +378,72 @@ pub struct ActiveMods {
     pub pins: Vec<ModPin>,
     pub scripts: ScriptRuntime,
 }
+/// Validate referenced artwork files for every content owner, including bundled
+/// mission briefings. Native base sprites are already checked by the catalog;
+/// mod-referenced native frames retain their existing explicit checks here.
+/// PNG decoding is shared by CLI verification and transactional mod activation.
+pub fn validate_artwork(registry: &Registry, catalog: Option<&Catalog>) -> Result<()> {
+    registry.validate()?;
+    let validate_art = |owner: &str, art: &crate::content::Art| -> Result<()> {
+        for png in art.png.iter().chain(art.hd_png.iter()) {
+            let root = registry
+                .asset_roots
+                .get(owner)
+                .with_context(|| format!("{owner}/{png}: missing artwork root"))?;
+            let path = contained(root, Path::new(png))
+                .with_context(|| format!("{owner}/{png}: missing or unsafe artwork path; restore this file inside its artwork root"))?;
+            // Retain catalog palette validation even though no indexed output
+            // is needed here. Rendering still uses Sprite::png unchanged.
+            if let Some(catalog) = catalog {
+                catalog.palette()?;
+            }
+            let image = crate::assets::checked_png(&path)
+                .with_context(|| format!("{owner}/{png}: invalid PNG artwork"))?;
+            let width = image.width() as usize;
+            let height = image.height() as usize;
+            ensure!(
+                width % art.frames as usize == 0,
+                "{owner}/{png}: PNG strip width must divide evenly into frames"
+            );
+            ensure!(
+                width / art.frames as usize * art.logical_height as usize
+                    == height * art.logical_width as usize,
+                "{owner}/{png}: artwork canvas aspect differs from logical canvas"
+            );
+            if art.hd_png.as_ref() == Some(png) {
+                ensure!(
+                    width / art.frames as usize >= 2 * art.logical_width as usize
+                        && height >= 2 * art.logical_height as usize,
+                    "{owner}/{png}: HD artwork needs at least twice the logical resolution"
+                );
+            }
+        }
+        if let (Some(id), Some(cat)) = (art.asset.filter(|_| owner != "base"), catalog) {
+            for frame in 0..art.frames {
+                cat.sprite(id.checked_add(frame).context("asset ID overflow")?)?;
+            }
+        }
+        Ok(())
+    };
+    for (id, owner) in &registry.owners {
+        let mut artwork = Vec::new();
+        artwork.extend(registry.art(id));
+        if let Some(mission) = registry.missions.get(id) {
+            for tile in &mission.tiles {
+                artwork.push(&tile.art);
+                artwork.extend(tile.destroyed.as_ref());
+            }
+        }
+        for art in artwork {
+            validate_art(owner, art).map_err(|error| {
+                let context = format!("invalid artwork for {id} (owner {owner}): {error:#}");
+                error.context(context)
+            })?;
+        }
+    }
+    Ok(())
+}
+
 impl ActiveMods {
     pub fn build(
         base: &Registry,
@@ -428,52 +494,10 @@ impl ActiveMods {
                 hash: m.hash.clone(),
             });
         }
-        registry.validate()?;
-        let validate_art = |owner: &str, art: &crate::content::Art| -> Result<()> {
-            for png in art.png.iter().chain(art.hd_png.iter()) {
-                let root = registry
-                    .asset_roots
-                    .get(owner)
-                    .context("missing PNG root")?;
-                let path = contained(root, Path::new(png))?;
-                // Retain catalog palette validation even though no indexed output
-                // is needed here. Rendering still uses Sprite::png unchanged.
-                if let Some(catalog) = catalog {
-                    catalog.palette()?;
-                }
-                let image = crate::assets::checked_png(&path)?;
-                let width = image.width() as usize;
-                let height = image.height() as usize;
-                ensure!(
-                    width % art.frames as usize == 0,
-                    "{owner}/{png}: PNG strip width must divide evenly into frames"
-                );
-                ensure!(
-                    width / art.frames as usize * art.logical_height as usize
-                        == height * art.logical_width as usize,
-                    "{owner}/{png}: artwork canvas aspect differs from logical canvas"
-                );
-                if art.hd_png.as_ref() == Some(png) {
-                    ensure!(
-                        width / art.frames as usize >= 2 * art.logical_width as usize
-                            && height >= 2 * art.logical_height as usize,
-                        "{owner}/{png}: HD artwork needs at least twice the logical resolution"
-                    );
-                }
-            }
-            if let (Some(id), Some(cat)) = (art.asset, catalog) {
-                for frame in 0..art.frames {
-                    cat.sprite(id.checked_add(frame).context("asset ID overflow")?)?;
-                }
-            }
-            Ok(())
-        };
+        validate_artwork(&registry, catalog)?;
         for (id, owner) in &registry.owners {
             if owner == "base" {
                 continue;
-            }
-            if let Some(art) = registry.art(id) {
-                validate_art(owner, art)?;
             }
             if let Some(sound) = registry.sounds.get(id) {
                 let root = registry
@@ -492,14 +516,6 @@ impl ActiveMods {
                 crate::sound::load_music(root, &music.file).with_context(|| {
                     format!("{owner}/{}: invalid music {}", music.file, music.id)
                 })?;
-            }
-            if let Some(m) = registry.missions.get(id) {
-                for tile in &m.tiles {
-                    validate_art(owner, &tile.art)?;
-                    if let Some(a) = &tile.destroyed {
-                        validate_art(owner, a)?;
-                    }
-                }
             }
         }
         let validate_script = |owner: &str, path: &Option<String>| -> Result<()> {
@@ -873,6 +889,233 @@ pub fn write_schemas(root: &Path) -> Result<()> {
 #[cfg(test)]
 mod tests {
     use super::*;
+    fn artwork_fixture() -> (tempfile::TempDir, Registry) {
+        let temp = tempfile::tempdir().unwrap();
+        let root = temp.path().join("artwork");
+        fs::create_dir(&root).unwrap();
+        for (name, width, height) in [("sd.png", 4, 2), ("hd.png", 8, 4)] {
+            image::RgbaImage::from_pixel(width, height, image::Rgba([31, 92, 173, 255]))
+                .save(root.join(name))
+                .unwrap();
+        }
+        let pack = serde_json::from_value(serde_json::json!({"missions":[{
+            "id":"base:art_mission", "name":"Artwork fixture", "duration":10,
+            "art":{"png":"sd.png","hd_png":"hd.png","logical_width":4,"logical_height":2}
+        }]}))
+        .unwrap();
+        let mut registry = Registry::default();
+        registry.asset_roots.insert("base".into(), root);
+        registry.apply(pack, "base").unwrap();
+        (temp, registry)
+    }
+    fn artwork_error(registry: &Registry) -> String {
+        match validate_artwork(registry, None) {
+            Ok(()) => panic!("expected artwork validation failure"),
+            Err(error) => format!("{error:#}"),
+        }
+    }
+    #[test]
+    fn referenced_artwork_valid_base_sd_hd_passes_direct_and_activation_checks() {
+        let (_temp, registry) = artwork_fixture();
+        validate_artwork(&registry, None).unwrap();
+        let active = ActiveMods::build(&registry, &Discovery::default(), &[], None).unwrap();
+        assert!(active.pins.is_empty());
+        assert!(active.scripts.states.is_empty());
+        assert_eq!(active.registry.missions.len(), 1);
+    }
+    #[test]
+    fn referenced_artwork_missing_base_sd_or_hd_reports_content_owner_and_filename() {
+        for name in ["sd.png", "hd.png"] {
+            let (_temp, registry) = artwork_fixture();
+            fs::remove_file(registry.asset_roots["base"].join(name)).unwrap();
+            let error = artwork_error(&registry);
+            assert!(error.contains("base:art_mission"), "{error}");
+            assert!(error.contains(&format!("base/{name}")), "{error}");
+            assert!(error.contains("restore this file"), "{error}");
+            assert!(ActiveMods::build(&registry, &Discovery::default(), &[], None).is_err());
+        }
+    }
+    #[test]
+    fn referenced_artwork_corrupt_base_png_is_rejected_with_filename() {
+        let (_temp, registry) = artwork_fixture();
+        fs::write(registry.asset_roots["base"].join("sd.png"), b"not a PNG").unwrap();
+        let error = artwork_error(&registry);
+        assert!(
+            error.contains("base:art_mission")
+                && error.contains("base/sd.png")
+                && error.contains("invalid PNG"),
+            "{error}"
+        );
+    }
+    #[test]
+    fn referenced_artwork_base_aspect_and_hd_minimum_resolution_are_checked() {
+        for (name, width, height, expected) in [
+            ("sd.png", 4, 3, "aspect"),
+            ("hd.png", 4, 2, "at least twice"),
+        ] {
+            let (_temp, registry) = artwork_fixture();
+            image::RgbaImage::new(width, height)
+                .save(registry.asset_roots["base"].join(name))
+                .unwrap();
+            let error = artwork_error(&registry);
+            assert!(
+                error.contains("base:art_mission")
+                    && error.contains(name)
+                    && error.contains(expected),
+                "{error}"
+            );
+        }
+    }
+    #[test]
+    fn referenced_artwork_base_animation_strip_divisibility_is_checked() {
+        let (_temp, mut registry) = artwork_fixture();
+        registry
+            .missions
+            .get_mut(&crate::content::ContentId::from("base:art_mission"))
+            .unwrap()
+            .art
+            .as_mut()
+            .unwrap()
+            .frames = 2;
+        let root = &registry.asset_roots["base"];
+        image::RgbaImage::new(7, 2)
+            .save(root.join("sd.png"))
+            .unwrap();
+        image::RgbaImage::new(16, 4)
+            .save(root.join("hd.png"))
+            .unwrap();
+        assert!(artwork_error(&registry).contains("strip width"));
+        image::RgbaImage::new(8, 2)
+            .save(root.join("sd.png"))
+            .unwrap();
+        validate_artwork(&registry, None).unwrap();
+    }
+    #[test]
+    fn referenced_artwork_base_parent_and_absolute_paths_are_rejected() {
+        for absolute in [false, true] {
+            let (temp, mut registry) = artwork_fixture();
+            let outside = temp.path().join("outside.png");
+            image::RgbaImage::new(4, 2).save(&outside).unwrap();
+            let art = registry
+                .missions
+                .get_mut(&crate::content::ContentId::from("base:art_mission"))
+                .unwrap()
+                .art
+                .as_mut()
+                .unwrap();
+            art.png = Some(if absolute {
+                outside.to_str().unwrap().into()
+            } else {
+                "../outside.png".into()
+            });
+            let error = artwork_error(&registry);
+            assert!(
+                error.contains("base:art_mission")
+                    && error.contains("unsafe artwork path")
+                    && error.contains("inside its root"),
+                "{error}"
+            );
+        }
+    }
+    #[cfg(unix)]
+    #[test]
+    fn referenced_artwork_base_symlink_escape_is_rejected() {
+        let (temp, mut registry) = artwork_fixture();
+        let outside = temp.path().join("outside.png");
+        image::RgbaImage::new(4, 2).save(&outside).unwrap();
+        std::os::unix::fs::symlink(&outside, registry.asset_roots["base"].join("escape.png"))
+            .unwrap();
+        registry
+            .missions
+            .get_mut(&crate::content::ContentId::from("base:art_mission"))
+            .unwrap()
+            .art
+            .as_mut()
+            .unwrap()
+            .png = Some("escape.png".into());
+        let error = artwork_error(&registry);
+        assert!(
+            error.contains("base:art_mission") && error.contains("symlink escapes"),
+            "{error}"
+        );
+    }
+    #[test]
+    fn referenced_artwork_base_weapons_campaigns_and_tile_variants_are_not_skipped() {
+        for kind in ["weapon", "campaign", "terrain", "destroyed terrain"] {
+            let (_temp, mut registry) = artwork_fixture();
+            let good = registry.missions[&crate::content::ContentId::from("base:art_mission")]
+                .art
+                .clone()
+                .unwrap();
+            let mut bad = good.clone();
+            bad.png = Some("missing.png".into());
+            if kind == "weapon" || kind == "campaign" {
+                let value = if kind == "weapon" {
+                    serde_json::json!({"weapons":[{"id":"base:extra","name":"Extra","damage":1,"speed":1,"cooldown":1,"behavior":"straight","target":"all","art":bad}]})
+                } else {
+                    serde_json::json!({"campaigns":[{"id":"base:extra","name":"Extra","missions":["base:art_mission"],"art":bad}]})
+                };
+                registry
+                    .apply(serde_json::from_value(value).unwrap(), "base")
+                    .unwrap();
+            } else {
+                let mission = registry
+                    .missions
+                    .get_mut(&crate::content::ContentId::from("base:art_mission"))
+                    .unwrap();
+                mission.columns = 1;
+                mission.layout = vec![0];
+                mission.tiles = vec![crate::content::TileDef {
+                    art: if kind == "terrain" { bad.clone() } else { good },
+                    destroyed: (kind == "destroyed terrain").then_some(bad),
+                    health: 1,
+                    reward: 0,
+                }];
+            }
+            let error = artwork_error(&registry);
+            assert!(error.contains("missing.png"), "{kind}: {error}");
+        }
+    }
+    #[test]
+    fn referenced_artwork_explicit_mod_override_uses_winning_owner_root() {
+        let (temp, registry) = artwork_fixture();
+        let mods = temp.path().join("mods");
+        let alpha = mods.join("alpha");
+        fs::create_dir_all(&alpha).unwrap();
+        fs::write(
+            alpha.join("mod.toml"),
+            "id = \"alpha\"\nname = \"Alpha\"\nversion = \"1.0.0\"\napi_version = 1\n",
+        )
+        .unwrap();
+        let content = serde_json::json!({"overrides":["base:art_mission"],"missions":[{"id":"base:art_mission","name":"Override","duration":10,"art":{"png":"sd.png","hd_png":"hd.png","logical_width":4,"logical_height":2}}]});
+        fs::write(
+            alpha.join("content.json"),
+            serde_json::to_vec(&content).unwrap(),
+        )
+        .unwrap();
+        for name in ["sd.png", "hd.png"] {
+            fs::copy(registry.asset_roots["base"].join(name), alpha.join(name)).unwrap();
+            fs::remove_file(registry.asset_roots["base"].join(name)).unwrap();
+        }
+        let active =
+            ActiveMods::build(&registry, &discover(&mods), &["alpha".into()], None).unwrap();
+        assert_eq!(
+            active.registry.owners[&crate::content::ContentId::from("base:art_mission")],
+            "alpha"
+        );
+        // The mod-owned briefing itself is also required, rather than merely
+        // accepting its winning owner and ignoring mission artwork again.
+        fs::write(alpha.join("hd.png"), b"broken PNG").unwrap();
+        let error = match ActiveMods::build(&registry, &discover(&mods), &["alpha".into()], None) {
+            Ok(_) => panic!("corrupt mod briefing accepted"),
+            Err(error) => format!("{error:#}"),
+        };
+        assert!(
+            error.contains("base:art_mission") && error.contains("alpha/hd.png"),
+            "{error}"
+        );
+    }
+
     #[test]
     fn bounded_script_and_state_rollback() {
         let mut rt = ScriptRuntime::new();

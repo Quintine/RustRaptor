@@ -1,0 +1,54 @@
+{
+  "asset": "Iron Coast S2 M04: Floodgate Zero cinematic briefing",
+  "mission_id": "iron_coast_stage2_mission_4:mission_04",
+  "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "actual_calls": 1,
+    "gate_owner": "/root/iron_coast_names",
+    "gate_lease": "c805cfea-c955-4572-8b1f-5ede67d9880f",
+    "outcome": "success",
+    "terminal_reported_immediately": true,
+    "prompt": "briefing-cinematic-prompt.txt",
+    "prompt_sha256": "3e616f955fbc9e7d9c63824a25264d059049485d56c3a9c51ef07d19c8172633",
+    "master": "briefing-cinematic-generated-master.png",
+    "master_sha256": "e8a36f64a40141cfa34216c1419d9214eec5f5691b598396906fe0e3d88d3d8a",
+    "master_dimensions": [
+      1586,
+      992
+    ],
+    "untouched_master_preserved": true,
+    "references": [
+      {
+        "role": "Stormwall style and foreground aircraft",
+        "path": "mods/iron_coast_mission_4/art/briefing_hd.png",
+        "sha256": "cd987c13bc55bba2620379ca435c0cccf08d7564364d730c65d0be285bb82221"
+      },
+      {
+        "role": "own prior top-down environment reference only",
+        "path": "mods/iron_coast_stage2_mission_4/art/briefing-hd.png",
+        "sha256": "6206a98db4526be38714ac1a4dd66f18c6f6c6d6188e6f9455b8693ae770cd56"
+      }
+    ]
+  },
+  "derivation": {
+    "recipe": "build_cinematic_briefing.py",
+    "hd": "RGB1280x800, centered ImageOps.fit LANCZOS preserving16:10; no repaint",
+    "sd": "RGB320x200 LANCZOS downsample of complete sameHD",
+    "menu_review_crop": "centered132x70 LANCZOS file-onlypreview; actual SDLthumbnail review required separately"
+  },
+  "outputs": {
+    "hd": {
+      "path": "art/briefing-hd.png",
+      "sha256": "88d0b99da709570e18cc5b1c827340aa45c71e288d8c2293dffcf6d61da5aed3"
+    },
+    "sd": {
+      "path": "art/briefing-sd.png",
+      "sha256": "b48505f399a7eb2da4c1db9b0513b015f501efce9cdf101c9b8154458a753e33"
+    }
+  },
+  "limits": [
+    "Illustrative mission briefing only; no mission objectives, names, IDs, scripts, wave counts, collisions, equipment, music or gameplay change.",
+    "New authored artwork does not count toward Originalsprite/terrainHD coverage.",
+    "Original top-down briefing remains in Git history and originalgenerationfiles; currentreplacementis a newindependentillustration."
+  ]
+}

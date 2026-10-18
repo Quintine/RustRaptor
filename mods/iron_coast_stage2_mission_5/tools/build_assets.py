@@ -7,6 +7,7 @@ No generated RGB is retouched: whole-canvas proportional fit, resampling,
 cropping into tiles and reflected terrain repetition are explicit derivatives.
 """
 from pathlib import Path
+import runpy
 import json,hashlib,math,random,struct,wave
 from PIL import Image,ImageOps,ImageDraw
 ROOT=Path(__file__).resolve().parent.parent
@@ -56,7 +57,11 @@ def artwork():
             for row in range(18):
                 for col in range(9):
                     i=row*9+col;save(f'tile-{i:03}-{mode}.png',joined.crop((col*step,row*step,(col+1)*step,(row+1)*step)))
-        briefing=ImageOps.fit(source,(1280,800),Image.Resampling.LANCZOS,centering=(0.5,0.5));save('briefing-hd.png',briefing);save('briefing-sd.png',sd_quantize(briefing.resize((320,200),Image.Resampling.LANCZOS),pal))
+        runpy.run_path(str(ROOT/'art/build_cinematic_briefing.py'),run_name='__main__')
+        # Report the actual RGB briefing files without rewriting their bytes.
+        for name in ['briefing-hd.png','briefing-sd.png']:
+            p=ROOT/'art'/name;image=Image.open(p)
+            files[name]={'size':list(image.size),'sha256':sha(p),'opaque_bounds':[0,0,image.width,image.height],'transparent_pixels':0}
         preview=Image.new('RGBA',(1184,744),(24,32,42,255));preview.alpha_composite(hd.resize((576,576),Image.Resampling.LANCZOS),(8,32));preview.alpha_composite(sd.resize((576,576),Image.Resampling.NEAREST),(600,32));ImageDraw.Draw(preview).text((8,8),'HD terrain and SD nearest2 — joined atlas plus reflected repeat',fill='white');preview.convert('RGB').save(ROOT/'art-preview.png')
         assert ImageOps.flip(hd).crop((0,0,hd.width,1)).tobytes()==hd.crop((0,hd.height-1,hd.width,hd.height)).tobytes()
         recipe={'logical_tile':[32,32],'hd_scale':4,'columns':9,'unique_tiles':162,'master_tiles':81,'method':'Whole square master resized into one joined288px SD/1152px HD canvas; SD ordinary-palette quantization once; whole master vertical reflection creates exact adjacent edge rows, then32/128px tiles are cropped. Repeats have identical joining pixel rows, not an inferred zero luma seam.'}

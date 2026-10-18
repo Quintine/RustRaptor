@@ -1,0 +1,54 @@
+{
+  "asset": "Iron Coast S2 M01: Nightbreak Inlet cinematic briefing",
+  "mission_id": "iron_coast_stage2_mission_1:mission_01",
+  "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "actual_calls": 1,
+    "gate_owner": "/root/iron_coast_names",
+    "gate_lease": "86625bc7-43e2-489b-974a-4d8450c130f3",
+    "outcome": "success",
+    "terminal_reported_immediately": true,
+    "prompt": "briefing-cinematic-prompt.txt",
+    "prompt_sha256": "4f1ba49af23701a767d1ea8189242354ea19a2987b4cf3b000768adf0931e050",
+    "master": "briefing-cinematic-generated-master.png",
+    "master_sha256": "ad1b3d91055e957e6f66257b1fd0684ed1211cd277fd1c50d76857281933e539",
+    "master_dimensions": [
+      1586,
+      992
+    ],
+    "untouched_master_preserved": true,
+    "references": [
+      {
+        "role": "Stormwall style and foreground aircraft",
+        "path": "mods/iron_coast_mission_4/art/briefing_hd.png",
+        "sha256": "cd987c13bc55bba2620379ca435c0cccf08d7564364d730c65d0be285bb82221"
+      },
+      {
+        "role": "own prior top-down environment reference only",
+        "path": "mods/iron_coast_stage2_mission_1/art/briefing-hd.png",
+        "sha256": "d020f7f5cc7f4bd983b32726cd0d028dd60ba6997db115d0b9a3145da4e78cb5"
+      }
+    ]
+  },
+  "derivation": {
+    "recipe": "build_cinematic_briefing.py",
+    "hd": "RGB1280x800, centered ImageOps.fit LANCZOS preserving16:10; no repaint",
+    "sd": "RGB320x200 LANCZOS downsample of complete sameHD",
+    "menu_review_crop": "centered132x70 LANCZOS file-onlypreview; actual SDLthumbnail review required separately"
+  },
+  "outputs": {
+    "hd": {
+      "path": "art/briefing-hd.png",
+      "sha256": "eba3d058464287e933428396259b4f305a071f2e0fd28449c3db0b8c65d15912"
+    },
+    "sd": {
+      "path": "art/briefing-sd.png",
+      "sha256": "53f069624437c4af7b5b8f94fa218063976ef7d4b3d76d8be74d5923671c4fcb"
+    }
+  },
+  "limits": [
+    "Illustrative mission briefing only; no mission objectives, names, IDs, scripts, wave counts, collisions, equipment, music or gameplay change.",
+    "New authored artwork does not count toward Originalsprite/terrainHD coverage.",
+    "Original top-down briefing remains in Git history and originalgenerationfiles; currentreplacementis a newindependentillustration."
+  ]
+}

@@ -1,3 +1,15 @@
+# Current presentation checkpoint — 19 October 2026
+
+All 42 missions have SD/HD cinematic briefing previews: 27 Original missions, 14 Iron Coast missions and Aurora. Iron Coast names include stage/mission prefixes without changing stable content IDs. Forty illustrations are new; two HD illustrations are retained, with their SD counterparts refreshed separately. The refreshed Stormwall and Iron Crown SD cards passed replacement menu capture and review. Cosmetic mod naming/artwork changes use the normal changed-package save confirmation and retain equipment and progression references.
+
+Briefings preserve full RGB in a shared 132×70 logical-pixel viewport with an aspect-preserving centered crop. Four actual SourceG SDL controls confirmed 16:9 menus and 4:3 intro/gameplay presentation. SourceG2 changes only diagnostic error context; both its Linux ELF and Windows executable were rebuilt. Native Windows CI for this new source is not yet claimed.
+
+The initial integrated 29-target test run recorded 481 passes, one known display-diagnostic failure and 37 ignored tests. SourceG2's 14 targeted reruns passed, resolving that failure. Together these results cover 482 distinct passing tests and 37 ignored tests; this is combined evidence, not a fresh single 482-test run. Fourteen Python synthetic/archive tests also passed.
+
+The checked runtime snapshot contains **10,689 data files / 8,691,739,470 bytes**, including 240 new data files for the briefing pass. Mod SD refreshes live outside that data count. Original sprite/terrain HD coverage remains **5,596 reviewed pictures / 157 awaiting approval**; new briefing illustrations add no remaster credit. Earlier SourceF artwork proofs and captured pixel epochs remain literal and retain their original scope.
+
+# Earlier SourceF H5596 checkpoint — retained verbatim
+
 # Current checkpoint — 18 October 2026
 
 Current artwork/runtime checkpoint — 18 October 2026: **5,596 reviewed pictures in 3,700 complete sequences**. **157 originals await approval**: 123 Terrain, 32 enemies/ground objects and two UI/other pictures. This adds corrugated terrain (4), SHIP15G1 (3), STAG03G3 (1), green destroyed terrain (7) and the complete TARGT animation (14).

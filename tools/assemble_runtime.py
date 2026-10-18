@@ -28,6 +28,90 @@ def checked_file(root, relative):
     return resolved
 
 
+def default_data_source(package):
+    """The portable package is authoritative when it has its own catalog."""
+    bundled = package / "data"
+    return bundled if (bundled / "INDEX").is_file() else package.parent / "data"
+
+
+def checked_tree(root):
+    """Select a complete contained file tree; never silently follow/skip symlink directories."""
+    root = root.resolve(strict=True)
+    if not root.is_dir():
+        raise ValueError(f"not a runtime data directory: {root}")
+    def raise_walk_error(error):
+        raise error
+
+    files = {}
+    for directory, directories, names in os.walk(root, followlinks=False, onerror=raise_walk_error):
+        parent = Path(directory)
+        for name in directories:
+            if (parent / name).is_symlink():
+                raise ValueError(f"symlink directory in runtime data: {parent / name}")
+        for name in names:
+            relative = (parent / name).relative_to(root).as_posix()
+            files[relative] = checked_file(root, relative)
+    return files
+
+
+def select_data_files(package, source=None, hd_source=None):
+    """Validate and select the complete runtime data without copying or mutating it."""
+    source = (source or default_data_source(package)).resolve(strict=True)
+    files = checked_tree(source)
+    entries = checked_file(source, "INDEX").read_text().splitlines()
+    catalog = {"INDEX"}
+    for row in entries:
+        if not row.strip():
+            continue
+        _, length, name = row.split()
+        original = checked_file(source, name)
+        if original.stat().st_size != int(length):
+            raise ValueError(f"catalog size mismatch: {name}")
+        catalog.add(Path(name).as_posix())
+
+    if hd_source is not None:
+        hd_source = hd_source.resolve(strict=True)
+        replacement = checked_tree(hd_source)
+        checked_file(hd_source, "hd.json")
+        if any(Path(name).parts[0] == "hd" for name in catalog):
+            raise ValueError("HD pack paths conflict with the original catalog")
+        files = {name: path for name, path in files.items() if Path(name).parts[0] != "hd"}
+        files.update({"hd/" + name: path for name, path in replacement.items()})
+
+    hd_frames = 0
+    if "hd/hd.json" in files:
+        hd = json.loads(files["hd/hd.json"].read_bytes())
+        hd_root = hd_source if hd_source is not None else source / "hd"
+        for sequence in hd["sequences"]:
+            for frame in sequence["frames"]:
+                payload = checked_file(hd_root, frame["file"])
+                name = "hd/" + Path(frame["file"]).as_posix()
+                if name not in files or files[name] != payload:
+                    raise ValueError(f"HD frame is missing from runtime selection: {name}")
+                if name in catalog:
+                    raise ValueError("HD pack paths conflict with the original catalog")
+                hd_frames += 1
+
+    # Original missions register these 27 SD/HD pairs in src/content.rs.
+    # An external legacy catalog need not carry new menu art; the bundled art
+    # is the only fallback, and existing external briefing files keep priority.
+    bundled = (package / "data").resolve()
+    required_briefings = [
+        f"briefings/sector_{sector}_wave_{wave}_{mode}.png"
+        for sector in range(1, 4) for wave in range(1, 10) for mode in ("sd", "hd")
+    ]
+    if source != bundled and any(name not in files for name in required_briefings):
+        briefings = bundled / "briefings"
+        if briefings.is_symlink():
+            raise ValueError(f"symlink directory in bundled mission briefings: {briefings}")
+        for name, path in checked_tree(briefings).items():
+            files.setdefault("briefings/" + name, path)
+    for name in required_briefings:
+        if name not in files:
+            raise ValueError(f"required mission briefing is missing: {name}")
+    return files, entries, hd_frames
+
+
 def iter_archive_files(package, archive, skipped, excluded_files=(), required_files=()):
     """Keep manifest payloads even when a parent has a build-cache name."""
     required = {Path(name) for name in required_files}
@@ -69,9 +153,6 @@ def main():
     parser.add_argument("--zip", type=Path, help="export runtime, source, docs and mods; exclude build caches")
     args = parser.parse_args()
     package = Path(__file__).resolve().parents[1]
-    working_data = package.parent / "data"
-    default_data = working_data if (working_data / "INDEX").is_file() else package / "data"
-    source = (args.source_data or default_data).resolve()
     environment = os.environ.copy()
     local_lib = Path.home() / ".local/lib"
     environment["LD_LIBRARY_PATH"] = str(local_lib) + ":" + environment.get("LD_LIBRARY_PATH", "")
@@ -86,49 +167,14 @@ def main():
     if not executable.is_file():
         raise ValueError("release executable is missing; run without --skip-build")
 
-    files = {"INDEX"}
-    entries = (source / "INDEX").read_text().splitlines()
-    for row in entries:
-        if not row.strip():
-            continue
-        _, length, name = row.split()
-        original = checked_file(source, name)
-        if original.stat().st_size != int(length):
-            raise ValueError(f"catalog size mismatch: {name}")
-        files.add(name)
-    hd_source = (args.hd_source or source / "hd").resolve()
-    hd_path = hd_source / "hd.json"
-    if args.hd_source and not hd_path.is_file():
-        raise ValueError(f"approved HD manifest is missing: {hd_path}")
-    hd_bytes = hd_path.read_bytes() if hd_path.is_file() else None
-    hd_frames = 0
-    hd_files = set()
-    if hd_bytes:
-        hd = json.loads(hd_bytes)
-        hd_files.add("hd/hd.json")
-        if (hd_source / "provenance.json").is_file():
-            checked_file(hd_source, "provenance.json")
-            hd_files.add("hd/provenance.json")
-        for sequence in hd["sequences"]:
-            for frame in sequence["frames"]:
-                checked_file(hd_source, frame["file"])
-                hd_files.add("hd/" + frame["file"])
-                hd_frames += 1
-        if files.intersection(hd_files):
-            raise ValueError("HD pack paths conflict with the original catalog")
-        files.update(hd_files)
+    files, entries, hd_frames = select_data_files(package, args.source_data, args.hd_source)
 
     staging = Path(tempfile.mkdtemp(prefix=".runtime-data-", dir=package))
     try:
         for name in sorted(files):
             destination = staging / name
             destination.parent.mkdir(parents=True, exist_ok=True)
-            if name == "hd/hd.json":
-                destination.write_bytes(hd_bytes)
-            elif name in hd_files:
-                shutil.copy2(checked_file(hd_source, name.removeprefix("hd/")), destination)
-            else:
-                shutil.copy2(checked_file(source, name), destination)
+            shutil.copy2(files[name], destination)
         previous = package / ".runtime-data-previous"
         if previous.exists():
             raise ValueError("previous interrupted package exists; preserve/recover .runtime-data-previous before retrying")

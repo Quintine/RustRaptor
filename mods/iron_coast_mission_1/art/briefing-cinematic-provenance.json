@@ -1,0 +1,54 @@
+{
+  "asset": "Iron Coast S1 M01: Breakwater cinematic briefing",
+  "mission_id": "iron_coast_mission_1:mission_01",
+  "generation": {
+    "tool": "built-in image_gen.imagegen",
+    "actual_calls": 1,
+    "gate_owner": "/root/iron_coast_names",
+    "gate_lease": "c45d4b00-db77-4f5c-9f08-83a6f387ef52",
+    "outcome": "success",
+    "terminal_reported_immediately": true,
+    "prompt": "briefing-cinematic-prompt.txt",
+    "prompt_sha256": "8d4aec0f93ec9f18980c326c928ef9269681e5ccdebf86f009f0b1c33c79bbb7",
+    "master": "briefing-cinematic-generated-master.png",
+    "master_sha256": "9cb3a40a4bc07894bd01da6b4c2911ba69df1926e4e23dfcaa3ccf7eced742bc",
+    "master_dimensions": [
+      1586,
+      992
+    ],
+    "untouched_master_preserved": true,
+    "references": [
+      {
+        "role": "Stormwall style and foreground aircraft",
+        "path": "mods/iron_coast_mission_4/art/briefing_hd.png",
+        "sha256": "cd987c13bc55bba2620379ca435c0cccf08d7564364d730c65d0be285bb82221"
+      },
+      {
+        "role": "own prior top-down environment reference only",
+        "path": "mods/iron_coast_mission_1/art/briefing_hd.png",
+        "sha256": "4312ecd2264e588c291084b3e5fc951ff1ac72caa5df26e68c222e7c72139478"
+      }
+    ]
+  },
+  "derivation": {
+    "recipe": "build_cinematic_briefing.py",
+    "hd": "RGB1280x800, centered ImageOps.fit LANCZOS preserving16:10; no repaint",
+    "sd": "RGB320x200 LANCZOS downsample of complete sameHD",
+    "menu_review_crop": "centered132x70 LANCZOS file-onlypreview; actual SDLthumbnail review required separately"
+  },
+  "outputs": {
+    "hd": {
+      "path": "art/briefing_hd.png",
+      "sha256": "72cabe3360aac3c8d7ef2dd35940b68706fe06c39c9a8d51ab90d1fdfb5231e4"
+    },
+    "sd": {
+      "path": "art/briefing_sd.png",
+      "sha256": "7c370090d1596443e5043faab975b0d205b752d5a8a78e6260dfb5232021cc00"
+    }
+  },
+  "limits": [
+    "Illustrative mission briefing only; no mission objectives, names, IDs, scripts, wave counts, collisions, equipment, music or gameplay change.",
+    "New authored artwork does not count toward Originalsprite/terrainHD coverage.",
+    "Original top-down briefing remains in Git history and originalgenerationfiles; currentreplacementis a newindependentillustration."
+  ]
+}
