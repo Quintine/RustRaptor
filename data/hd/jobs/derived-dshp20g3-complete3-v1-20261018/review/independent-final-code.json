@@ -1,0 +1,78 @@
+{
+  "status": "PASS_INDEPENDENT_DSHP20_METADATA_ONLY_DECODER_RUNTIME_SUCCESSOR_CODE_DELTA_REVIEW",
+  "utc": "2026-10-18T00:02:47.150095+00:00",
+  "reviewer": "/root/iron_coast_2",
+  "initial_findings": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron2-dshp20-cleanup-independent-code-review-20261018-v1/SCOPED-DSHP20-CLEANUP-CODE-INPUT-AND-PROVENANCE-REVIEW.json",
+    "sha256": "a57d348d4328287660dac87d7e8d8f45a5252a1f124b6d8b2d972f1b5fd2463e",
+    "bytes": 5211
+  },
+  "reviewed_final_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-cleanup-final-decoder-runtime-metadata-successor-20261018-v3/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b",
+      "bytes": 14749
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-cleanup-final-decoder-runtime-metadata-successor-20261018-v3/test_hd_dshp20_cleanup.py",
+      "sha256": "50e0d2cddc3a03bb169521213186023a39d8d8f58aa84a73e37f1b8ae2aa7ba3",
+      "bytes": 6434
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-cleanup-final-decoder-runtime-metadata-successor-20261018-v3/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+      "bytes": 9385
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-cleanup-final-decoder-runtime-metadata-successor-20261018-v3/CLOSED-DSHP20G3-FINAL-DECODER-RUNTIME-PROVENANCE-METADATA-ONLY-TOOL-SUCCESSOR-NOT-REAL-ART-RERUN.json",
+      "sha256": "2f55b3e14888c0c6f7189b212726256d0ba7955a527d6c29e17dd282b98e0310",
+      "bytes": 6099
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-cleanup-final-decoder-runtime-metadata-successor-20261018-v3-strict-metadata-only-final-tool-source-successor-closure.json",
+      "sha256": "d866364a2b63f3c53c3228d5c33c8bcbf6fb41657fadf9e9dc44efe07144a6ee",
+      "bytes": 5195
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-cleanup-final-decoder-runtime-metadata-successor-20261018-v3/EXACT-FINAL-METADATA-SUCCESSOR-CLI-DEPENDENCIES-AND-ROOT-BYTE-EQUALITY-REQUIREMENT.json",
+      "sha256": "174a15fafd25a67c2ecb06a1e5ea8a4457b81f451c4671fd5fe71356481614c1",
+      "bytes": 5409
+    }
+  ],
+  "AST_comparison": {
+    "only_new_imports": [
+      "sys",
+      "hd_frame_policy"
+    ],
+    "only_new_detailed_provenance_fields": [
+      "decoder_module",
+      "python_version"
+    ],
+    "all_remaining_module_AST_identical": true,
+    "run_recipe_and_main_AST_exact": true,
+    "normalized_seven_fields_unchanged": true,
+    "render_family_change": "Return-report metadata only; pixel calculation and PNG encoding unchanged."
+  },
+  "tests": {
+    "python": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "flags": [
+      "-B"
+    ],
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "focused_synthetic_tests_passed": 8,
+    "metadata_assertions": "Actual imported module path/SHA, sys.version, NumPy/Pillow versions and exact seven normalized fields PASS"
+  },
+  "prior_decoder_receipt_gap": "RESOLVED_IN_REVIEWED_PRIVATE_SUCCESSOR",
+  "actual_original_recipe_runs": 0,
+  "actual_QA_engine_World_compiler_media_calls": 0,
+  "actual_shared_edits": 0,
+  "limits": [
+    "Code/receipt delta review only; no art/material/context/animation approval.",
+    "No real PNG byte-equality claim from this review. Root must perform its separately authorized actual once recipe execution and compare all three output PNG hashes before using successor execution lineage.",
+    "Frozen old1e tool/recipe/normalized execution/PNGs/QA and shared tool have not been changed by reviewer.",
+    "Use API direct Python -B invocation with adjacent frozen decoder; no -I import assumption."
+  ],
+  "pending_own_writer_call_or_lease": false
+}

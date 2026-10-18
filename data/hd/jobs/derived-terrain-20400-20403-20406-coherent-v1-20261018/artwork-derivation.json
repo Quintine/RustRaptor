@@ -1,0 +1,52 @@
+{
+  "environment": {
+    "Pillow": "12.3.0",
+    "authoring_scope": "Linux authoring tool; game runtime uses PNGs on Linux/Windows and does not invoke Python.",
+    "numpy": "2.3.5",
+    "platform": "Linux-7.2.9-arch1-1-x86_64-with-glibc2.44",
+    "python": "3.12.14"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/derived/actual-cleanup-execution.json",
+    "sha256": "d4454da015f91651988a7b4565375459e2ac5a28d9ffc89df89909af2ab44563"
+  },
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+  "outputs": {
+    "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/derived/20400-DERIVED-source-guided-material-v1.png": "ca5479ef35d84d71ad737dcb55c14443f1796cd7cf8a87b8386e29598913022b",
+    "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/derived/20403-DERIVED-source-guided-material-v1.png": "33305c62843344adb740610057dd7423bb8f8eeec33460e6eb065fe2614fe835",
+    "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/derived/20406-DERIVED-source-guided-material-v1.png": "56be74b24d34663feaafb3add8f3fd61b9a7083659fdc109badae7eafb9e0e97"
+  },
+  "parents": [
+    {
+      "imagegen_receipt": {
+        "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/parents/generation-receipt.json",
+        "sha256": "49b9f3b8cafade7c13aaf3fd6192366ee1afd549f7fb69cfdf3924f967f3ca16"
+      },
+      "prompt": {
+        "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/parents/prompt.txt",
+        "sha256": "8f682cac9260c2345a69f267c895d4da989445f54534322950b296f66a84570b"
+      },
+      "raw_png": {
+        "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/parents/generator-return.png",
+        "sha256": "70a360ff5c148be181ed9d27ed46e29322a7b54a0f48709d290d1666e3ad70d0"
+      }
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/cleanup-recipe.json",
+    "sha256": "0743cbc73f049ee6fcfefd5c1b650b76f08eefa4463b647d5436c2d84920e31d"
+  },
+  "sources": {
+    "20400": "02ee58837e0189c997e6777cb0cd2e9d66babe48a3252209e20ffb57761e2bba",
+    "20403": "d5779389a3fc84f260b27f85fa74b13778f528d5978c8a40e577e6570be5f0ea",
+    "20406": "17b3acb33c17ddf7394984a63a60123a1d16ea98e77d68a350886f2f49cd0e78"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_terrain_retexture.py",
+      "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp_utc": "2026-10-17T13:06:01+00:00",
+    "event": "acquired",
+    "lease_id": "81f5c24b-6b30-4d5e-ae2a-3e029149c01b",
+    "owner": "/root/hd_enemies_02",
+    "job_id": "enemies02-DSHP20G3-complete3-apriori-rational4x7-20261018-v2",
+    "expires_at": "2026-10-17T13:36:01+00:00"
+  },
+  {
+    "timestamp_utc": "2026-10-17T13:06:01+00:00",
+    "event": "started",
+    "lease_id": "81f5c24b-6b30-4d5e-ae2a-3e029149c01b",
+    "owner": "/root/hd_enemies_02",
+    "job_id": "enemies02-DSHP20G3-complete3-apriori-rational4x7-20261018-v2",
+    "note": "Owner is submitting the built-in imagegen request; this slot requires an explicit report or release."
+  },
+  {
+    "timestamp_utc": "2026-10-17T13:07:00+00:00",
+    "event": "report",
+    "lease_id": "81f5c24b-6b30-4d5e-ae2a-3e029149c01b",
+    "owner": "/root/hd_enemies_02",
+    "job_id": "enemies02-DSHP20G3-complete3-apriori-rational4x7-20261018-v2",
+    "outcome": "success"
+  }
+]

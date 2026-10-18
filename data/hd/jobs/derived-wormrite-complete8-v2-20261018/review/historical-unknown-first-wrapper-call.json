@@ -1,0 +1,42 @@
+{
+  "status": "TECHNICAL_HOLD_ONE_BUILTIN_ATTEMPT_RETURN_CAPTURE_FAILED_NO_USABLE_ARTIFACT_NO_RETRY",
+  "owner": "/root/hd_enemies_02",
+  "utc": "2026-10-17T23:49:54.120537+00:00",
+  "source_only_method_and_layout": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-WORMRITE-continuous-HD-form-Original-joint8-preflight-20261018-v2/LOCKED_NEW_JOINT8_SOURCE_ONLY_CONTINUOUS_FORM_CALL_SPEC_BEFORE_ANY_CALL.json",
+    "sha256": "134947d3a1286f2ecacc91033e310d106e3fd8498f66e42c0874952dd5a09fde",
+    "size": 2335,
+    "mtime_ns": 1792280869073021237
+  },
+  "actual_technical_closure": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-WORMRITE-continuous-HD-form-Original-joint8-preflight-20261018-v2/ACTUAL_ONE_CALL_INCOMPLETE_RETURN_CAPTURE_TECHNICAL_CLOSURE.json",
+    "sha256": "b5c3b515e8ce2e6be485d822cd8b34791203803d4371bdf62ec423043f36bc2e",
+    "size": 6304,
+    "mtime_ns": 1792280994120522292
+  },
+  "exact_wrapper_error": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-WORMRITE-continuous-HD-form-Original-joint8-preflight-20261018-v2/EXEC_WRAPPER_ERROR.txt",
+    "sha256": "fbd584a867a94dc06d3d9a8028f2c76e6e39d3f9918a3a82f98ca6bde8a4a006",
+    "size": 347,
+    "mtime_ns": 1792280951805265662
+  },
+  "actual_gate_terminal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-WORMRITE-continuous-HD-form-Original-joint8-preflight-20261018-v2/ACTUAL_ONE_CALL_RELEASED_GATE_EVENTS.json",
+    "sha256": "010059684b9bb557de8ecaecc7941ce2eb389e2a17740836a3c3fcc59ff7aac2",
+    "size": 1294,
+    "mtime_ns": 1792280994118470522
+  },
+  "counts": {
+    "builtin_calls": 1,
+    "retries": 0,
+    "usable_new_PNGs": 0,
+    "actual_new_QA": 0,
+    "actual_new_contexts": 0
+  },
+  "prior_parent91b0_and_derived_complete8_remain_HOLD": true,
+  "no_automatic_new_call": true,
+  "next_step": "Root decides any future call. On a separately authorized future call, plain-serialize the tool result inside guarded try/finally and release gate before model QA; never assume proxy objects are directly store-serializable.",
+  "no_shared_Source_data_canonical_Git_or_tool_edits": true,
+  "private_size_bytes": 51646,
+  "disk_free_bytes_observed": 6358487040
+}

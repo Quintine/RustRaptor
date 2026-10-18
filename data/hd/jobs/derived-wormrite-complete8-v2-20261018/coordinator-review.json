@@ -1,0 +1,50 @@
+{
+  "artwork_derivation": {
+    "path": "jobs/derived-wormrite-complete8-v2-20261018/artwork-derivation.json",
+    "sha256": "6bb3600c81855af2870d6cd765207c1d020711498bf4770309144c4b4357380f"
+  },
+  "candidate_sha256": "d63d7fd6a4a5ff8d4b9dad9fef986d687ad80654bf30ddd74e7e471d1dba4408",
+  "context_scope": "catalog_only_no_known_original_runtime_caller",
+  "frame_bindings_sha256": "afc9ae069261f11becaf3135351ad61e5784b33622d26dec65321807f33ad8c7",
+  "genuine_gameplay_context": false,
+  "independent_cleanup_code": {
+    "path": "jobs/derived-wormrite-complete8-v2-20261018/review/independent-cleanup-code.json",
+    "sha256": "6445d7aacb211e98f25b0ee7fc061de4d54d422b0db6a63e7f58ff1d76a71798"
+  },
+  "independent_review": {
+    "path": "jobs/derived-wormrite-complete8-v2-20261018/review/independent-material.json",
+    "sha256": "c233c33cbf663f69f5994d8bd46d89f181ff2cf360c65e808af861f8ee693c90"
+  },
+  "originals_and_parent_raw_unchanged": true,
+  "qualifications": [
+    "Source-stepped outer mask at high scales",
+    "Continuous sculpted material interprets Original low-resolution features",
+    "Native1/2 softness and stronger local relief",
+    "Small runtime sampling changes near animated/static boundary",
+    "No known Original consumer, World timing or Host-context certification"
+  ],
+  "reviewer": "/root",
+  "runtime_qa": "jobs/derived-wormrite-complete8-v2-20261018/runtime-qa.json",
+  "scope": "Root-authorized PRIVATE reviewed job only. No global registration or publication authority.",
+  "source_and_all_scale_visual_review": {
+    "author": {
+      "path": "jobs/derived-wormrite-complete8-v2-20261018/review/author.json",
+      "sha256": "b7beabf7d76c97242bf84cf8c7ccdb40be88c884650b1a9263e23272a1c6df6f"
+    },
+    "root": {
+      "path": "jobs/derived-wormrite-complete8-v2-20261018/review/root-personal-review.json",
+      "sha256": "5e680be146678b897ab89cc2989231af365263727c5c4d8538dc8cc68db603f2"
+    },
+    "scales": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "source_caller_absence": {
+    "path": "jobs/derived-wormrite-complete8-v2-20261018/review/original-caller-absence.json",
+    "sha256": "f745842a4039e0b98eb398874800189a572d9f645a35e056af657c46e9178181"
+  },
+  "status": "approved"
+}

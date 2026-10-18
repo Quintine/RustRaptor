@@ -1,0 +1,53 @@
+{
+  "detailed_provenance": {
+    "path": "jobs/derived-dshp20g3-complete3-v1-20261018/derived/derived-provenance.json",
+    "sha256": "4e5f565646a5d7d70c5218e422ddfa3e16216bbc30cb3df8fd510dbec187f82e"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-dshp20g3-complete3-v1-20261018/normalized-execution-object.json",
+    "sha256": "e02156b246f14856cf2d793d09da3bf9cb604b81577779f81b7b33fc5eb0f13a"
+  },
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "derived-generated-RGB-SourceScale4-geometry-coherent-dynamic-regions-v2",
+  "outputs": {
+    "jobs/derived-dshp20g3-complete3-v1-20261018/derived/300a5-derived.png": "cd45b35317e4cad891c1afa55ef30e6de157b6175cfe6e6e2547d3f07da74476",
+    "jobs/derived-dshp20g3-complete3-v1-20261018/derived/300a6-derived.png": "eddb376ddbf66e10df1feae2cf5c4daa93b2ffd6196f284dabed8f88f6754339",
+    "jobs/derived-dshp20g3-complete3-v1-20261018/derived/300a7-derived.png": "86036f9c0cc891481990a212a7ccc5718a59c43d9a0f4bff70c7a1e30d8a66e7"
+  },
+  "parents": [
+    {
+      "imagegen_receipt": {
+        "path": "jobs/derived-dshp20g3-complete3-v1-20261018/parents/generation-receipt.json",
+        "sha256": "d95e3da96adcc5738a3292f3a872a90d32828494cf44729395a69007fc5242a6"
+      },
+      "prompt": {
+        "path": "jobs/derived-dshp20g3-complete3-v1-20261018/parents/prompt.txt",
+        "sha256": "c8238415fe7c75f76c2f81459c6bf09e6fd94c1f8eaad8b80bb157692fd10e17"
+      },
+      "raw_png": {
+        "path": "jobs/derived-dshp20g3-complete3-v1-20261018/parents/generator-return.png",
+        "sha256": "3ab3f1950699cea5865752176d42c2e6fe09e65a3039e00536ce2e8a8917a758"
+      }
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-dshp20g3-complete3-v1-20261018/cleanup-recipe.json",
+    "sha256": "a1617f9a759fb7041702d8cdfdd3b63b0bdebba7d58dc5f61c6ccc784d6d4344"
+  },
+  "sources": {
+    "300a5": "2e351f4826f158ecea7328b3b80d65f318fdcabdb22d9398f61b9447d894a7ad",
+    "300a6": "e8f929a9926d631a5af7a87c9d32a6b74208712b671a08bfd01d4c67a2752b94",
+    "300a7": "b4e2ca09b5fb08dd17b1b5a2a020dc67da6ec8adc9b86c0f5e65adbb788152fe"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "status": "COMPLETE3_DIMENSION_ELIGIBLE_AUTHOR_ART_REGISTRATION_HOLD_NO_QA_NO_ADMISSION",
+  "owner": "/root/hd_enemies_02",
+  "family": "DSHP20G3",
+  "assets": [
+    "300a5",
+    "300a6",
+    "300a7"
+  ],
+  "qualified_frames": 0,
+  "held_frames": 3,
+  "author_role": "New image prompt and raw author review; not an independent material peer.",
+  "call": {
+    "builtin": 1,
+    "retries": 0,
+    "outcome": "success",
+    "full_provider_reply": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-DSHP20G3-complete3-apriori-rational4x7-Original-author-20261018-v2/ACTUAL_COMPLETE_PROVIDER_REPLY.json",
+      "sha256": "fb4106b6882bb67debdcab44d655ce8ddc665e495330a5100eebc0337b251bc9",
+      "size": 420591,
+      "mtime_ns": 1792242448893325688,
+      "mode": 33188
+    },
+    "exact_args": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-DSHP20G3-complete3-apriori-rational4x7-Original-author-20261018-v2/EXACT_ONE_BUILTIN_RATIONAL4X7_ARGUMENTS.json",
+      "sha256": "7efce0cd44e1ea99fc50f9dc3fb54fa52b5e3c81be5d337b77eeb2874554641b",
+      "size": 4103,
+      "mtime_ns": 1792242331951579923,
+      "mode": 33188
+    },
+    "exact_prompt": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-DSHP20G3-complete3-apriori-rational4x7-Original-author-20261018-v2/EXACT_BUILTIN_RATIONAL4X7_COMPLETE3_PROMPT.txt",
+      "sha256": "c8238415fe7c75f76c2f81459c6bf09e6fd94c1f8eaad8b80bb157692fd10e17",
+      "size": 3543,
+      "mtime_ns": 1792242331951496443,
+      "mode": 33188
+    },
+    "lease": "81f5c24b-6b30-4d5e-ae2a-3e029149c01b",
+    "started_utc": "2026-10-17T13:06:01+00:00",
+    "immediate_release_utc": "2026-10-17T13:07:00+00:00",
+    "gate_events": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-DSHP20G3-complete3-apriori-rational4x7-Original-author-20261018-v2/ACTUAL_NARROW_LEASE_START_SUCCESS_IMMEDIATE_RELEASE_EVENTS.json",
+      "sha256": "1c7ccae03810677129f03b897d617644285161afb74a7b5f390ff4df5868f9fd",
+      "size": 948,
+      "mtime_ns": 1792242602859197483,
+      "mode": 33188
+    }
+  },
+  "raw": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-DSHP20G3-complete3-apriori-rational4x7-Original-author-20261018-v2/generated/untouched-complete3-rational4x7-atlas.png",
+    "sha256": "3ab3f1950699cea5865752176d42c2e6fe09e65a3039e00536ce2e8a8917a758",
+    "size": 315006,
+    "mtime_ns": 1792242530220010451,
+    "mode": 33188
+  },
+  "builtin_saved_raw": {
+    "path": "/home/quintine/.codex/generated_images/01a124d9-241d-7a71-82d0-58d6a4de48b4/exec-f8ecc681-ef04-4b0c-b01a-c729ce1593a8.png",
+    "sha256": "3ab3f1950699cea5865752176d42c2e6fe09e65a3039e00536ce2e8a8917a758",
+    "size": 315006,
+    "mtime_ns": 1792242420128930150,
+    "mode": 33188
+  },
+  "unchanged_raw_equal_provider_and_builtin": true,
+  "locked_prior_preflight": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-DSHP20G3-complete3-apriori-rational4x7-Original-author-20261018-v2/LOCKED_BEFORE_CALL_COMPLETE3_RATIONAL4X7_SOURCE_LAYOUT_SOURCEE_API_AND_HISTORY_PREFLIGHT.json",
+    "sha256": "302573e073b734f33b9ef12bf2f293efcd3167c6b915ede406e96a5778f24048",
+    "size": 19347,
+    "mtime_ns": 1792242295192225711,
+    "mode": 33188
+  },
+  "literal_native_candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-DSHP20G3-complete3-apriori-rational4x7-Original-author-20261018-v2/COMPLETE3_FIXED_RATIONAL4X7_NATIVE_CANDIDATE_NO_RUNTIME_QA.json",
+    "sha256": "8e4976f15ed98e55253b9371f98d8261882592847d2f2ab3212544b010b23749",
+    "size": 3090,
+    "mtime_ns": 1792242530276379154,
+    "mode": 33188
+  },
+  "candidate_policy": "Exact authored atlas_grid4x7 col1 rows0/3/6, cropABSENT,112x64,origin0, Source hashes and phase order unchanged. Optional policy keys absent. Candidate retained as held metadata only.",
+  "dimension_diagnostic": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-DSHP20G3-complete3-apriori-rational4x7-Original-author-20261018-v2/ACTUAL_UNTOUCHED_RAW_EXACT_PRIOR_GRID_DIMENSION_AND_WHOLE_ALPHA_DIAGNOSTIC_NOT_RUNTIME_QA.json",
+    "sha256": "0e5d0bc65a5c5feb296456f39dffc836d5a460a5b72418870fd7b2d0356fb4cf",
+    "size": 3254,
+    "mtime_ns": 1792242530292071731,
+    "mode": 33188
+  },
+  "whole_author": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-DSHP20G3-complete3-apriori-rational4x7-Original-author-20261018-v2/ACTUAL_COMPLETE3_SOURCE_VS_UNCHANGED_RAW_STATIC_REGISTRATION_AND_WHOLE_MATERIAL_AUTHOR_DECISIONS.json",
+    "sha256": "62d3d6ec52512e87c9246e1f4a2723b0def763b53304e5fb8d4fad6cdfdbeb99",
+    "size": 4588,
+    "mtime_ns": 1792242602853063190,
+    "mode": 33188
+  },
+  "actual_raw_density": "627/224\u22482.799107142857143x",
+  "resident_only": [
+    224,
+    128
+  ],
+  "concrete_blocker": "Generated alpha128-visible body pixels extend above later declared cells: fixed viewports clip them. 560 alpha>=128 samples lie outside the conservative union of the three literal viewport bounding pixels; genuine occupied geometry cannot be rescued by fitting.",
+  "no_relaxed_geometry_rule": true,
+  "prior_V1_integer_layout_HOLD_unchanged": true,
+  "old_Dark_family_and_T2_singleton_notch_HOLD_unchanged": true,
+  "helper_QA_World_constructor_compiler_registrar": 0,
+  "raw_transformation_cropfit_alpha_reconstruction": 0,
+  "Source_Rdata_canonical_Git_changes": 0,
+  "next_route": "No retry or native run is authorized by this report. Whole family remains held; Root controls any future bounded operation."
+}

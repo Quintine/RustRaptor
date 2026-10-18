@@ -1,0 +1,232 @@
+{
+  "RGB_policy": "Preserve full generated RGB, except declared nearest generated-RGB fills, Source-identical full-RGB backing share, and literal functional Source palette cells; no noise/highpass reconstruction.",
+  "Source_derived_dynamic_component_halo_native": 1,
+  "decoder_module": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_frame_policy.py",
+    "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+  },
+  "dynamic_regions_native": [
+    [
+      3,
+      55,
+      17,
+      62
+    ],
+    [
+      15,
+      46,
+      25,
+      56
+    ],
+    [
+      18,
+      55,
+      21,
+      58
+    ],
+    [
+      24,
+      55,
+      39,
+      63
+    ],
+    [
+      52,
+      22,
+      63,
+      39
+    ],
+    [
+      52,
+      26,
+      55,
+      29
+    ],
+    [
+      52,
+      33,
+      55,
+      36
+    ],
+    [
+      53,
+      1,
+      63,
+      10
+    ],
+    [
+      54,
+      26,
+      57,
+      29
+    ],
+    [
+      54,
+      33,
+      57,
+      36
+    ],
+    [
+      56,
+      33,
+      59,
+      36
+    ],
+    [
+      76,
+      55,
+      90,
+      63
+    ],
+    [
+      89,
+      45,
+      100,
+      58
+    ],
+    [
+      97,
+      55,
+      110,
+      62
+    ]
+  ],
+  "execution": {
+    "method": "derived-generated-RGB-SourceScale4-geometry-coherent-dynamic-regions-v2",
+    "output_sha256": {
+      "300a5": "cd45b35317e4cad891c1afa55ef30e6de157b6175cfe6e6e2547d3f07da74476",
+      "300a6": "eddb376ddbf66e10df1feae2cf5c4daa93b2ffd6196f284dabed8f88f6754339",
+      "300a7": "86036f9c0cc891481990a212a7ccc5718a59c43d9a0f4bff70c7a1e30d8a66e7"
+    },
+    "parent_raw_sha256": [
+      "3ab3f1950699cea5865752176d42c2e6fe09e65a3039e00536ce2e8a8917a758"
+    ],
+    "recipe_sha256": "a1617f9a759fb7041702d8cdfdd3b63b0bdebba7d58dc5f61c6ccc784d6d4344",
+    "source_sha256": {
+      "300a5": "2e351f4826f158ecea7328b3b80d65f318fdcabdb22d9398f61b9447d894a7ad",
+      "300a6": "e8f929a9926d631a5af7a87c9d32a6b74208712b671a08bfd01d4c67a2752b94",
+      "300a7": "b4e2ca09b5fb08dd17b1b5a2a020dc67da6ec8adc9b86c0f5e65adbb788152fe"
+    },
+    "status": "success",
+    "tool_sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+  },
+  "frames": [
+    {
+      "SourceScale4_opaque_samples": 74638,
+      "Source_painted_cells": 4672,
+      "actual_sampling_bounds": [
+        "627/2",
+        "627/896",
+        "627",
+        "161139/896"
+      ],
+      "asset": "300a5",
+      "derived_alpha_exact_SourceScale4": true,
+      "filled_generated_RGB_samples": 93,
+      "functional_Original_RGB_samples": 32,
+      "generated_RGB_different_from_SourceNN_samples": 73837,
+      "logical_height": 64,
+      "logical_width": 112,
+      "maximum_donor_squared_distance": 9,
+      "no_Source_RGB_or_noise_fallback": true,
+      "origin": [
+        0,
+        0
+      ],
+      "original_sampled_RGB_preserved_before_stationary_share": 74545,
+      "removed_generated_outside_SourceScale4": 4023,
+      "stationary_full_RGB_replacements": 0
+    },
+    {
+      "SourceScale4_opaque_samples": 76181,
+      "Source_painted_cells": 4769,
+      "actual_sampling_bounds": [
+        "627/2",
+        "480909/896",
+        "627",
+        "641421/896"
+      ],
+      "asset": "300a6",
+      "derived_alpha_exact_SourceScale4": true,
+      "filled_generated_RGB_samples": 311,
+      "functional_Original_RGB_samples": 32,
+      "generated_RGB_different_from_SourceNN_samples": 75291,
+      "logical_height": 64,
+      "logical_width": 112,
+      "maximum_donor_squared_distance": 49,
+      "no_Source_RGB_or_noise_fallback": true,
+      "origin": [
+        0,
+        0
+      ],
+      "original_sampled_RGB_preserved_before_stationary_share": 75870,
+      "removed_generated_outside_SourceScale4": 4316,
+      "stationary_full_RGB_replacements": 63029
+    },
+    {
+      "SourceScale4_opaque_samples": 76935,
+      "Source_painted_cells": 4818,
+      "actual_sampling_bounds": [
+        "627/2",
+        "480909/448",
+        "627",
+        "561165/448"
+      ],
+      "asset": "300a7",
+      "derived_alpha_exact_SourceScale4": true,
+      "filled_generated_RGB_samples": 154,
+      "functional_Original_RGB_samples": 32,
+      "generated_RGB_different_from_SourceNN_samples": 76074,
+      "logical_height": 64,
+      "logical_width": 112,
+      "maximum_donor_squared_distance": 16,
+      "no_Source_RGB_or_noise_fallback": true,
+      "origin": [
+        0,
+        0
+      ],
+      "original_sampled_RGB_preserved_before_stationary_share": 76781,
+      "removed_generated_outside_SourceScale4": 4253,
+      "stationary_full_RGB_replacements": 63069
+    }
+  ],
+  "input_hashes": {
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-dshp3-integration-20261018/data/hd/jobs/derived-dshp20g3-complete3-v1-20261018/parents/generator-return.png": "3ab3f1950699cea5865752176d42c2e6fe09e65a3039e00536ce2e8a8917a758",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/PALETTE_DAT": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/DSHP20G3_PIC": "2e351f4826f158ecea7328b3b80d65f318fdcabdb22d9398f61b9447d894a7ad",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/DSHP20G3_PIC.1": "e8f929a9926d631a5af7a87c9d32a6b74208712b671a08bfd01d4c67a2752b94",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/DSHP20G3_PIC.2": "b4e2ca09b5fb08dd17b1b5a2a020dc67da6ec8adc9b86c0f5e65adbb788152fe"
+  },
+  "method": "derived-generated-RGB-SourceScale4-geometry-coherent-dynamic-regions-v2",
+  "numpy_version": "2.3.5",
+  "output_class": "DERIVED_SCRIPTED_RGBA_NOT_UNTOUCHED_GENERATION",
+  "output_scale": 4,
+  "outputs": [
+    {
+      "RGBA_sha256": "799d0318d940bb755bacd7b4ff7d551c53ade6c3ec21180daa6e9ab94e3bee94",
+      "asset": "300a5",
+      "bytes": 115668,
+      "file": "300a5-derived.png",
+      "sha256": "cd45b35317e4cad891c1afa55ef30e6de157b6175cfe6e6e2547d3f07da74476"
+    },
+    {
+      "RGBA_sha256": "7e537e62ac8c5ecdb78f2401f2d0e7201567465d256dfe41bc1ff9ecf713ca48",
+      "asset": "300a6",
+      "bytes": 119715,
+      "file": "300a6-derived.png",
+      "sha256": "eddb376ddbf66e10df1feae2cf5c4daa93b2ffd6196f284dabed8f88f6754339"
+    },
+    {
+      "RGBA_sha256": "ce70c26355fdbabdf9b49c747798d1568912320c22b3bf221e1f5d0c5d3d4bcf",
+      "asset": "300a7",
+      "bytes": 122072,
+      "file": "300a7-derived.png",
+      "sha256": "86036f9c0cc891481990a212a7ccc5718a59c43d9a0f4bff70c7a1e30d8a66e7"
+    }
+  ],
+  "pillow_version": "12.3.0",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "shared_SourceScale4_labels": 64722,
+  "source_mask": "Actual Original Scale4x = Scale2x twice; complete native canvas and origin retained.",
+  "stationary_anchor_asset": "300a5"
+}

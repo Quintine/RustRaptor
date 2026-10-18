@@ -1,0 +1,3116 @@
+{
+  "status": "CATALOGUE_ONLY_COMPLETE3_NO_ORIGINAL_OR_CURRENT_DECLARED_GAMEPLAY_CALLER_CONTEXT_NOT_REQUIRED_BY_ROOT",
+  "exact_assets": [
+    "300a5",
+    "300a6",
+    "300a7"
+  ],
+  "family_trace": [
+    {
+      "index": {
+        "asset": "300a5",
+        "size": 7284,
+        "path": "sprites/DSHP20G3_PIC",
+        "INDEX_line": 3642
+      },
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/sprites/DSHP20G3_PIC",
+        "sha256": "2e351f4826f158ecea7328b3b80d65f318fdcabdb22d9398f61b9447d894a7ad",
+        "size": 7284,
+        "mtime_ns": 1787663959635877115
+      },
+      "literal_header": [
+        0,
+        0,
+        63,
+        112,
+        64
+      ],
+      "header_interpretation": "kind0 sparse image; full112x64 canvas. The middle header fields are NOT used here as a gameplay frame clock or EnemyDef declaration."
+    },
+    {
+      "index": {
+        "asset": "300a6",
+        "size": 7557,
+        "path": "sprites/DSHP20G3_PIC.1",
+        "INDEX_line": 3643
+      },
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/sprites/DSHP20G3_PIC.1",
+        "sha256": "e8f929a9926d631a5af7a87c9d32a6b74208712b671a08bfd01d4c67a2752b94",
+        "size": 7557,
+        "mtime_ns": 1787663959635942555
+      },
+      "literal_header": [
+        0,
+        0,
+        63,
+        112,
+        64
+      ],
+      "header_interpretation": "kind0 sparse image; full112x64 canvas. The middle header fields are NOT used here as a gameplay frame clock or EnemyDef declaration."
+    },
+    {
+      "index": {
+        "asset": "300a7",
+        "size": 7686,
+        "path": "sprites/DSHP20G3_PIC.2",
+        "INDEX_line": 3644
+      },
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/sprites/DSHP20G3_PIC.2",
+        "sha256": "b4e2ca09b5fb08dd17b1b5a2a020dc67da6ec8adc9b86c0f5e65adbb788152fe",
+        "size": 7686,
+        "mtime_ns": 1787663959636002085
+      },
+      "literal_header": [
+        0,
+        0,
+        63,
+        112,
+        64
+      ],
+      "header_interpretation": "kind0 sparse image; full112x64 canvas. The middle header fields are NOT used here as a gameplay frame clock or EnemyDef declaration."
+    }
+  ],
+  "family_declaration": "Three contiguous Original INDEX entries DSHP20G3_PIC/.1/.2 and three fileids macros. The complete3 HD sequence matches those catalogue ordinals; this is NOT an observed gameplay animation or clock.",
+  "original_library_scan": [
+    {
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/SPRITE1_ITM",
+        "sha256": "b4978c09f1929738f65508683d5c3ca07ea05b1afcbf11c85456224898d36694",
+        "size": 69168,
+        "mtime_ns": 1787663959366418864
+      },
+      "record_count": 131,
+      "matching_names_or_art_intervals": []
+    },
+    {
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/SPRITE2_ITM",
+        "sha256": "d4c69a59bad7e0c7001dcc549fbb6e78028c8710d86ee12fc8e056ec2ae42379",
+        "size": 86592,
+        "mtime_ns": 1787663959479780383
+      },
+      "record_count": 164,
+      "matching_names_or_art_intervals": []
+    },
+    {
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/SPRITE3_ITM",
+        "sha256": "57874c28c4cc86eb4d173d225f2d79dbb595300f9ac6e091fa8aac9740d87433",
+        "size": 63888,
+        "mtime_ns": 1787663959616177671
+      },
+      "record_count": 121,
+      "matching_names_or_art_intervals": []
+    },
+    {
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/misc/SPRITE4_ITM",
+        "sha256": "4924e83cdeaf12b2fc998533502e2282326b333cd29b1367f84b8a2a4e0c6a97",
+        "size": 59136,
+        "mtime_ns": 1787663959722849291
+      },
+      "record_count": 112,
+      "matching_names_or_art_intervals": []
+    }
+  ],
+  "total_library_records": 528,
+  "matching_named_or_frame_interval_records": [],
+  "serialized_item_only_hits": [
+    {
+      "registry": "base:enemy_2_92",
+      "name": "DSHP21G3_PIC",
+      "base_asset": "300a8",
+      "frames": 4,
+      "matching_target_assets": [],
+      "serialized_item": 196773,
+      "note": "Current named importer and legacy ENEMY_LoadSprites overwrite serializeditem using iname; not an art authority."
+    }
+  ],
+  "original_MAP_scan": [
+    {
+      "name": "MAP1G1_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP1G1_MAP",
+        "sha256": "bfa4386e554ee029a9ac7f2f5d0c4cb5c3000e5d7512c7c8246d75deecb48939",
+        "size": 12588,
+        "mtime_ns": 1787663959367339133
+      },
+      "spawn_records": 299,
+      "target_records": []
+    },
+    {
+      "name": "MAP2G1_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP2G1_MAP",
+        "sha256": "f6a2f140f86a6bd91b6d137f149c69a7509e37ef93f54513d16ac826a02d5d69",
+        "size": 12396,
+        "mtime_ns": 1787663959369061870
+      },
+      "spawn_records": 291,
+      "target_records": []
+    },
+    {
+      "name": "MAP3G1_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP3G1_MAP",
+        "sha256": "d119b94ecf744c4b4a14ea1f2de99898050efeddfb6438a8393d0a91f7ca5dc9",
+        "size": 14676,
+        "mtime_ns": 1787663959371047658
+      },
+      "spawn_records": 386,
+      "target_records": []
+    },
+    {
+      "name": "MAP4G1_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP4G1_MAP",
+        "sha256": "908e65d46cceaa17f4243f54e5f40773051950423e4a5f840fa92742c94f7cff",
+        "size": 12948,
+        "mtime_ns": 1787663959372763215
+      },
+      "spawn_records": 314,
+      "target_records": []
+    },
+    {
+      "name": "MAP5G1_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP5G1_MAP",
+        "sha256": "4eb985c26cbe5862d73282e8c0af06589e667ddd3c9ee19f5f436cf4150b9f36",
+        "size": 15012,
+        "mtime_ns": 1787663959374590811
+      },
+      "spawn_records": 400,
+      "target_records": []
+    },
+    {
+      "name": "MAP6G1_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP6G1_MAP",
+        "sha256": "605f63c38a82689a2d776a641576be1a61ad97da52cbaa8f76dea74798d024e2",
+        "size": 12228,
+        "mtime_ns": 1787663959376218494
+      },
+      "spawn_records": 284,
+      "target_records": []
+    },
+    {
+      "name": "MAP7G1_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP7G1_MAP",
+        "sha256": "03b016972af559632627c37d5cfb321f24d6f09c18b6465039cc3d5b2051ffbc",
+        "size": 12996,
+        "mtime_ns": 1787663959378070518
+      },
+      "spawn_records": 316,
+      "target_records": []
+    },
+    {
+      "name": "MAP8G1_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP8G1_MAP",
+        "sha256": "bdc13404abe376689fc78fac4b585a641d68bfc8939cc6b51cc5811d734555bf",
+        "size": 13476,
+        "mtime_ns": 1787663959379822051
+      },
+      "spawn_records": 336,
+      "target_records": []
+    },
+    {
+      "name": "MAP9G1_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP9G1_MAP",
+        "sha256": "f09110d48c0a86989333aa5087e48b02ea06aff7488777e5365f1f3b5c8e835f",
+        "size": 12852,
+        "mtime_ns": 1787663959381451098
+      },
+      "spawn_records": 310,
+      "target_records": []
+    },
+    {
+      "name": "MAP1G2_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP1G2_MAP",
+        "sha256": "b2bf31aacf9e686c0583ecaf78d5af870f3b326d57e78382aa3d279f778cfbd5",
+        "size": 13332,
+        "mtime_ns": 1787663959483305910
+      },
+      "spawn_records": 330,
+      "target_records": []
+    },
+    {
+      "name": "MAP2G2_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP2G2_MAP",
+        "sha256": "0776eabbb0e18b76a2121fa0ec505099b77564af8abe721bb2a05aca43d12ebd",
+        "size": 14460,
+        "mtime_ns": 1787663959485220061
+      },
+      "spawn_records": 377,
+      "target_records": []
+    },
+    {
+      "name": "MAP3G2_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP3G2_MAP",
+        "sha256": "e071f964e54556946595b3fbda178ece3995efe3a1978589586d60f59ad82719",
+        "size": 15012,
+        "mtime_ns": 1787663959487295216
+      },
+      "spawn_records": 400,
+      "target_records": []
+    },
+    {
+      "name": "MAP4G2_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP4G2_MAP",
+        "sha256": "8f15fe7ef807a5d75f4c345213bfe4e4694b53cdb38204f5aa3dc0c45dcfce09",
+        "size": 12564,
+        "mtime_ns": 1787663959488993607
+      },
+      "spawn_records": 298,
+      "target_records": []
+    },
+    {
+      "name": "MAP5G2_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP5G2_MAP",
+        "sha256": "c5f907c0c743554998128fcb0047c262815c77c2ac2aa6c4941a91f4820a0aac",
+        "size": 13548,
+        "mtime_ns": 1787663959490770868
+      },
+      "spawn_records": 339,
+      "target_records": []
+    },
+    {
+      "name": "MAP6G2_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP6G2_MAP",
+        "sha256": "3573cbc922e985145220c5acc30cffcea0bbb26834142fc9e5a496790f5b8483",
+        "size": 12156,
+        "mtime_ns": 1787663959492575979
+      },
+      "spawn_records": 281,
+      "target_records": []
+    },
+    {
+      "name": "MAP7G2_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP7G2_MAP",
+        "sha256": "555e6d42a4c4edc50f100b54d4d7850339c902ca32cc408b420fa5c4d50254fe",
+        "size": 12708,
+        "mtime_ns": 1787663959494375997
+      },
+      "spawn_records": 304,
+      "target_records": []
+    },
+    {
+      "name": "MAP8G2_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP8G2_MAP",
+        "sha256": "7556d96680a0bb382e629ce2ffb2d4a5e1e15b5b87ba450350d8d0e4ac387d51",
+        "size": 12036,
+        "mtime_ns": 1787663959495994510
+      },
+      "spawn_records": 276,
+      "target_records": []
+    },
+    {
+      "name": "MAP9G2_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP9G2_MAP",
+        "sha256": "a1c7a1d1ca473bff76259bb40b3d51fe728b00997efdbcb4b4400ceef9db99c2",
+        "size": 13668,
+        "mtime_ns": 1787663959497876875
+      },
+      "spawn_records": 344,
+      "target_records": []
+    },
+    {
+      "name": "MAP1G3_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP1G3_MAP",
+        "sha256": "2687a6d2e601e67f16f3ec69ff8b007dcfa6610f3dd812af4a1a20e9c1db036e",
+        "size": 13020,
+        "mtime_ns": 1787663959619145363
+      },
+      "spawn_records": 317,
+      "target_records": []
+    },
+    {
+      "name": "MAP2G3_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP2G3_MAP",
+        "sha256": "1d87c8760de45b12c0f43d9354cbd81cfd6993a34933aae6940b87712c4b29e3",
+        "size": 13140,
+        "mtime_ns": 1787663959620927197
+      },
+      "spawn_records": 322,
+      "target_records": []
+    },
+    {
+      "name": "MAP3G3_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP3G3_MAP",
+        "sha256": "76b8443d883c56d4de1a9874cbeeef3b009036bf53982ef8d5b49a233e8098be",
+        "size": 12012,
+        "mtime_ns": 1787663959622712895
+      },
+      "spawn_records": 275,
+      "target_records": []
+    },
+    {
+      "name": "MAP4G3_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP4G3_MAP",
+        "sha256": "7b1ec34500093951f8202d26780360f8ab83fb1cb9fcc18ebdd14e6db20eb026",
+        "size": 13284,
+        "mtime_ns": 1787663959624560087
+      },
+      "spawn_records": 328,
+      "target_records": []
+    },
+    {
+      "name": "MAP5G3_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP5G3_MAP",
+        "sha256": "af69d2ca9295b5763c1b5fe84464d58661ef534faa912a914db9458b9115190c",
+        "size": 11940,
+        "mtime_ns": 1787663959626244968
+      },
+      "spawn_records": 272,
+      "target_records": []
+    },
+    {
+      "name": "MAP6G3_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP6G3_MAP",
+        "sha256": "78429a723d8e73a0b46134cbb99abf0904a4c39ddb9ff25b26ac9c2703159d36",
+        "size": 13668,
+        "mtime_ns": 1787663959726273481
+      },
+      "spawn_records": 344,
+      "target_records": []
+    },
+    {
+      "name": "MAP7G3_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP7G3_MAP",
+        "sha256": "9f5d2ef60050c1b41e57146d8df871507ceda20757158b4a84bd0f9f8c8b9bf3",
+        "size": 12876,
+        "mtime_ns": 1787663959727973254
+      },
+      "spawn_records": 311,
+      "target_records": []
+    },
+    {
+      "name": "MAP8G3_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP8G3_MAP",
+        "sha256": "8e8dc013dad4628d3737337e4125f4155d70ed94ebb5c5edf0b8cdc8d5eb5525",
+        "size": 14148,
+        "mtime_ns": 1787663959729748120
+      },
+      "spawn_records": 364,
+      "target_records": []
+    },
+    {
+      "name": "MAP9G3_MAP",
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP9G3_MAP",
+        "sha256": "e1bd018fc5286e864d94e56e691a4e6ab23f5c87c3069be4f94779422fcdd1f0",
+        "size": 14052,
+        "mtime_ns": 1787663959731526772
+      },
+      "spawn_records": 360,
+      "target_records": []
+    }
+  ],
+  "original_MAP_counts": {
+    "maps": 27,
+    "spawn_records": 8778,
+    "target_records": 0
+  },
+  "other_stock_item_weapon_interval_count": 39,
+  "other_stock_item_weapon_target_hits": [],
+  "literal_current_Rust_and_legacy_matches": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/raptor/src/fileids.h",
+      "line": 1442,
+      "text": "#define FILE3a5_DSHP20G3_PIC 0x300a5"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/raptor/src/fileids.h",
+      "line": 1443,
+      "text": "#define FILE3a6_DSHP20G3_PIC 0x300a6"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/raptor/src/fileids.h",
+      "line": 1444,
+      "text": "#define FILE3a7_DSHP20G3_PIC 0x300a7"
+    }
+  ],
+  "installed_mod_scope": {
+    "files": 341,
+    "literal_matches": [],
+    "typed_art_intersections": [],
+    "limit": "Finite currently installed JSON/TOML/Rhai files and literal/typed declarations only; arbitrary future dynamic scripts are not claimed impossible."
+  },
+  "actual_SourceF": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/compiled-epoch.json",
+    "sha256": "38459e0067b17801b3c3c629c22e05dfee98928d451d8c8e0971b63c17288b52",
+    "size": 5917,
+    "mtime_ns": 1792245694562144018
+  },
+  "SourceF_snapshot18": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/assets.rs",
+      "sha256": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+      "size": 16417,
+      "mtime_ns": 1791711112495415498
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/audio/opl3.rs",
+      "sha256": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+      "size": 55234,
+      "mtime_ns": 1791594274983451465
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/audio.rs",
+      "sha256": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+      "size": 42072,
+      "mtime_ns": 1791612018073210287
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/cinematics.rs",
+      "sha256": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+      "size": 29788,
+      "mtime_ns": 1791634621359594894
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/content.rs",
+      "sha256": "7f35df7100c450ba4bb30a0fdc90101c115b5ae42a7aac57829441c5b7761647",
+      "size": 36359,
+      "mtime_ns": 1791671687237069939
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/desktop.rs",
+      "sha256": "7aa876c1f74ea7b82ff0a5aa399bbbfaa18ea87ca81cab8a17c763654dca3812",
+      "size": 355988,
+      "mtime_ns": 1792237712026820459
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/hd.rs",
+      "sha256": "b17f4ee0757ee87d34e01ec76f3a6239c6e9044b42b4b10bd5f05b485f137a64",
+      "size": 159636,
+      "mtime_ns": 1792245624444265090
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/legacy_tables.rs",
+      "sha256": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+      "size": 26467,
+      "mtime_ns": 1791596592133246731
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/lib.rs",
+      "sha256": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+      "size": 318,
+      "mtime_ns": 1791618787038761898
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/main.rs",
+      "sha256": "d270d1787700975220fed75bbb8d6cd8e38288093492fb2608252849e1f804d7",
+      "size": 11193,
+      "mtime_ns": 1791680086709570028
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/menu_art.rs",
+      "sha256": "1c3b8e58828c13099cf00c612b383efa1e402e27eaa7c8f5f0afc7f1ba44a0d0",
+      "size": 4325,
+      "mtime_ns": 1791673814189962237
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/mod_selection.rs",
+      "sha256": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+      "size": 5447,
+      "mtime_ns": 1791597772968721997
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/modding.rs",
+      "sha256": "5ba4f50b39f577d792a55845c3bc281e94f8bc937eab6cc5e6201cff0cd6d6fc",
+      "size": 31740,
+      "mtime_ns": 1792218285065753129
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/persistence.rs",
+      "sha256": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+      "size": 52762,
+      "mtime_ns": 1791700137529541149
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/render.rs",
+      "sha256": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+      "size": 32172,
+      "mtime_ns": 1791697273206972841
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/simulation.rs",
+      "sha256": "2537120f280a1cfcfcc73a42a4103a4435ba8aeb98e69c87fde3b885b97a9925",
+      "size": 140409,
+      "mtime_ns": 1792217299196752425
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/sound.rs",
+      "sha256": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+      "size": 11905,
+      "mtime_ns": 1791614563252113040
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/terrain_hd.rs",
+      "sha256": "e61f96f541c19863ce8d741363a1739b9276e25aee84795952c65565c775e392",
+      "size": 59391,
+      "mtime_ns": 1792245624444740664
+    }
+  ],
+  "H5485": {
+    "manifest": {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5485-20261018/handoff-manifest.json",
+      "sha256": "af517c38feebfb8baadc9552dbfbb191d1798bd33dd0bf191464d3e57d586e4f",
+      "size": 4538178,
+      "mtime_ns": 1792253584983469494
+    },
+    "hd": {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5485-20261018/pack/hd.json",
+      "sha256": "1237ac04026ebed5c5b8be2293b5d1cea1f7307979b32bb03e2c6637c8f89a1d",
+      "size": 2949828,
+      "mtime_ns": 1792253583082550841
+    },
+    "provenance": {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5485-20261018/pack/provenance.json",
+      "sha256": "9afbad296ec1eb07db2422d54553ac51e3c82e27bb0571a997d8d06fb9efdf61",
+      "size": 1889736,
+      "mtime_ns": 1792253582990552689
+    },
+    "registered_count": 5485,
+    "target_residency": false
+  },
+  "actual_loadability": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/ACTUAL-MEASURED-SOURCEF-DERIVED-COMPLETE3-QA-EPOCH-AND-FRAME-BINDING.json",
+    "sha256": "cc89e8475adda94ae4b65d92b39d53677443497c43e02e0ca1efba064d085e61",
+    "size": 4463,
+    "mtime_ns": 1792280685591008762
+  },
+  "different_intrinsic_material": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-DSHP20G3-derived-RGB-complete3-independent-material-review-20261018/INDEPENDENT-COMPLETE3-DSHP20G3-DERIVED-RGB-ALLSCALE-MATERIAL-QUALIFIED-NOT-CONTEXT-OR-ADMISSION.json",
+    "sha256": "f6f2fd39b70eb63851d4502255b58c0256decbb0b3cef295c7fbbbdd2f0ea4f3",
+    "size": 8333,
+    "mtime_ns": 1792281328679294050
+  },
+  "derived_author": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/CLOSED-AUTHOR-QUALIFIED-COMPLETE3-DSHP20G3-DERIVED-RGB-GEOMETRY-CLEANUP-ACTUAL-SOURCEF-NOT-ADMISSION.json",
+    "sha256": "dea900bbb4db8aaa238f4636ec15cf8668f12ccdc7508b819f5b978d72245c26",
+    "size": 12161,
+    "mtime_ns": 1792281062386549998
+  },
+  "derived_candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/DERIVED-COMPLETE3-NATIVE-CANDIDATE-NOT-APPROVED.json",
+    "sha256": "3c0c5452d95ece5f904d3f1675615cce8d60a2055e9bfdfd074d916d5bad6dd5",
+    "size": 3086,
+    "mtime_ns": 1792280685159872482
+  },
+  "existing_evidence_reuse": {
+    "old_reports": [
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-DSHP20G3-complete3-apriori-rational4x7-Original-author-20261018-v2/CLOSED_ONE_NEW_COMPLETE3_RATIONAL4X7_DSHP20G3_BUILTIN_DIMENSION_PASS_ART_REGISTRATION_HOLD_NO_QA.json",
+        "sha256": "d95e3da96adcc5738a3292f3a872a90d32828494cf44729395a69007fc5242a6",
+        "size": 5707,
+        "mtime_ns": 1792242602860487241
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-DSHP20G3-rational-v2-actual-SourceE-complete3-diagnostic-20261018/CLOSED-ACTUAL-SOURCEE-DSHP20G3-RATIONAL-COMPLETE3-RUNTIME-DIAGNOSTIC-HOLD.json",
+        "sha256": "58f80f65e77212c49874eb5761307b1604cda485f36469ba61c9873b34a1a26c",
+        "size": 10201,
+        "mtime_ns": 1792243561408356034
+      }
+    ],
+    "statement": "OldE02 owned14/I6 owned40 and new34 actualinputs are author/intrinsic/diagnostic scopes, not34 or40 savedWorld contexts. Their interfaces contain Source/native panes and no genuine target World pose, actor order or terrain scene."
+  },
+  "runtime_semantics": {
+    "named_importer": "content.rs:775\u2013824 maps each original528-byte iname to Catalog.id; Art.frames=f[7].max(1). No target name/overlap => no stock EnemyDef.",
+    "MAP_importer": "content.rs:831\u2013860 consumes game/library references; no matching EnemyDef art => no target original MAP spawn.",
+    "legacy": "enemy.cpp:168 resolves curlib->iname with GLB_GetItemID; serialized item is not an alternate art selector. No DSHP20 token use beyond fileids declarations.",
+    "phase_clock": "simulation.rs:update_legacy_animation requires a concrete EnemyDef/LegacyEnemy. No target record exists, so no target f[6]/f[7]/f[9]/f[10] clock, path, health, ground flag or shadow flag can be assigned.",
+    "render_and_layer": "desktop.rs Art selection uses baseasset+frame%Art.frames. Enemy shadows require actual definition ground/legacyshadow metadata and real actor position. Those are absent for this catalogue family; direct intrinsic HdAssets loads are not encounters."
+  },
+  "concrete_next_operation": {
+    "World_calls": 0,
+    "compile_calls": 0,
+    "scene_constructor_calls": 0,
+    "natural_capture": "NOT_FEASIBLE_FROM_FINITE_CURRENT_DECLARED_CALLERS: none found",
+    "natural_phase_clock": null,
+    "shadow_or_air_ground_placement": null,
+    "Root_direction": "Root explicitly says existing actualintrinsic all12/gallery with SourceClasses/render sampler proves loadability; no extra World/context is needed for neverused catalogueart.",
+    "scope": "Catalogue-only complete3 art/loadability. Existing all12 intrinsic controls and different whole-family material gate are sufficient for this scope; no invented encounter, enemy phase clock, shadow, actor order or Source terrain vector."
+  },
+  "source_plan_limits": [
+    "No World/capture/compiler/renderer/QA/image operation was executed.",
+    "No inference of a destroyed-ship swap from DSHP naming.",
+    "No generated art or prior HOLD file changed; no current baseline/registered residency claim for these3.",
+    "This source-only inventory cannot qualify a future mod caller, actual natural combat, Host/timing, shadows or draw order that does not exist in the observed declarations."
+  ],
+  "input_guards": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/INDEX",
+      "sha256": "4ce78e5e638b6603114dd233ceaa41f386c0963ba4aa02ecf88ce0215b096681",
+      "size": 188148,
+      "mtime_ns": 1787743156562281494
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/compiled-epoch.json",
+      "sha256": "38459e0067b17801b3c3c629c22e05dfee98928d451d8c8e0971b63c17288b52",
+      "size": 5917,
+      "mtime_ns": 1792245694562144018
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/CLOSED-AUTHOR-QUALIFIED-COMPLETE3-DSHP20G3-DERIVED-RGB-GEOMETRY-CLEANUP-ACTUAL-SOURCEF-NOT-ADMISSION.json",
+      "sha256": "dea900bbb4db8aaa238f4636ec15cf8668f12ccdc7508b819f5b978d72245c26",
+      "size": 12161,
+      "mtime_ns": 1792281062386549998
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/ACTUAL-MEASURED-SOURCEF-DERIVED-COMPLETE3-QA-EPOCH-AND-FRAME-BINDING.json",
+      "sha256": "cc89e8475adda94ae4b65d92b39d53677443497c43e02e0ca1efba064d085e61",
+      "size": 4463,
+      "mtime_ns": 1792280685591008762
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/DERIVED-COMPLETE3-NATIVE-CANDIDATE-NOT-APPROVED.json",
+      "sha256": "3c0c5452d95ece5f904d3f1675615cce8d60a2055e9bfdfd074d916d5bad6dd5",
+      "size": 3086,
+      "mtime_ns": 1792280685159872482
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-DSHP20G3-derived-RGB-complete3-independent-material-review-20261018/INDEPENDENT-COMPLETE3-DSHP20G3-DERIVED-RGB-ALLSCALE-MATERIAL-QUALIFIED-NOT-CONTEXT-OR-ADMISSION.json",
+      "sha256": "f6f2fd39b70eb63851d4502255b58c0256decbb0b3cef295c7fbbbdd2f0ea4f3",
+      "size": 8333,
+      "mtime_ns": 1792281328679294050
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5485-20261018/handoff-manifest.json",
+      "sha256": "af517c38feebfb8baadc9552dbfbb191d1798bd33dd0bf191464d3e57d586e4f",
+      "size": 4538178,
+      "mtime_ns": 1792253584983469494
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5485-20261018/pack/hd.json",
+      "sha256": "1237ac04026ebed5c5b8be2293b5d1cea1f7307979b32bb03e2c6637c8f89a1d",
+      "size": 2949828,
+      "mtime_ns": 1792253583082550841
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5485-20261018/pack/provenance.json",
+      "sha256": "9afbad296ec1eb07db2422d54553ac51e3c82e27bb0571a997d8d06fb9efdf61",
+      "size": 1889736,
+      "mtime_ns": 1792253582990552689
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/sprites/DSHP20G3_PIC",
+      "sha256": "2e351f4826f158ecea7328b3b80d65f318fdcabdb22d9398f61b9447d894a7ad",
+      "size": 7284,
+      "mtime_ns": 1787663959635877115
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/sprites/DSHP20G3_PIC.1",
+      "sha256": "e8f929a9926d631a5af7a87c9d32a6b74208712b671a08bfd01d4c67a2752b94",
+      "size": 7557,
+      "mtime_ns": 1787663959635942555
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/sprites/DSHP20G3_PIC.2",
+      "sha256": "b4e2ca09b5fb08dd17b1b5a2a020dc67da6ec8adc9b86c0f5e65adbb788152fe",
+      "size": 7686,
+      "mtime_ns": 1787663959636002085
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/SPRITE1_ITM",
+      "sha256": "b4978c09f1929738f65508683d5c3ca07ea05b1afcbf11c85456224898d36694",
+      "size": 69168,
+      "mtime_ns": 1787663959366418864
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/SPRITE2_ITM",
+      "sha256": "d4c69a59bad7e0c7001dcc549fbb6e78028c8710d86ee12fc8e056ec2ae42379",
+      "size": 86592,
+      "mtime_ns": 1787663959479780383
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/SPRITE3_ITM",
+      "sha256": "57874c28c4cc86eb4d173d225f2d79dbb595300f9ac6e091fa8aac9740d87433",
+      "size": 63888,
+      "mtime_ns": 1787663959616177671
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/SPRITE4_ITM",
+      "sha256": "4924e83cdeaf12b2fc998533502e2282326b333cd29b1367f84b8a2a4e0c6a97",
+      "size": 59136,
+      "mtime_ns": 1787663959722849291
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP1G1_MAP",
+      "sha256": "bfa4386e554ee029a9ac7f2f5d0c4cb5c3000e5d7512c7c8246d75deecb48939",
+      "size": 12588,
+      "mtime_ns": 1787663959367339133
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP2G1_MAP",
+      "sha256": "f6a2f140f86a6bd91b6d137f149c69a7509e37ef93f54513d16ac826a02d5d69",
+      "size": 12396,
+      "mtime_ns": 1787663959369061870
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP3G1_MAP",
+      "sha256": "d119b94ecf744c4b4a14ea1f2de99898050efeddfb6438a8393d0a91f7ca5dc9",
+      "size": 14676,
+      "mtime_ns": 1787663959371047658
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP4G1_MAP",
+      "sha256": "908e65d46cceaa17f4243f54e5f40773051950423e4a5f840fa92742c94f7cff",
+      "size": 12948,
+      "mtime_ns": 1787663959372763215
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP5G1_MAP",
+      "sha256": "4eb985c26cbe5862d73282e8c0af06589e667ddd3c9ee19f5f436cf4150b9f36",
+      "size": 15012,
+      "mtime_ns": 1787663959374590811
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP6G1_MAP",
+      "sha256": "605f63c38a82689a2d776a641576be1a61ad97da52cbaa8f76dea74798d024e2",
+      "size": 12228,
+      "mtime_ns": 1787663959376218494
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP7G1_MAP",
+      "sha256": "03b016972af559632627c37d5cfb321f24d6f09c18b6465039cc3d5b2051ffbc",
+      "size": 12996,
+      "mtime_ns": 1787663959378070518
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP8G1_MAP",
+      "sha256": "bdc13404abe376689fc78fac4b585a641d68bfc8939cc6b51cc5811d734555bf",
+      "size": 13476,
+      "mtime_ns": 1787663959379822051
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP9G1_MAP",
+      "sha256": "f09110d48c0a86989333aa5087e48b02ea06aff7488777e5365f1f3b5c8e835f",
+      "size": 12852,
+      "mtime_ns": 1787663959381451098
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP1G2_MAP",
+      "sha256": "b2bf31aacf9e686c0583ecaf78d5af870f3b326d57e78382aa3d279f778cfbd5",
+      "size": 13332,
+      "mtime_ns": 1787663959483305910
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP2G2_MAP",
+      "sha256": "0776eabbb0e18b76a2121fa0ec505099b77564af8abe721bb2a05aca43d12ebd",
+      "size": 14460,
+      "mtime_ns": 1787663959485220061
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP3G2_MAP",
+      "sha256": "e071f964e54556946595b3fbda178ece3995efe3a1978589586d60f59ad82719",
+      "size": 15012,
+      "mtime_ns": 1787663959487295216
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP4G2_MAP",
+      "sha256": "8f15fe7ef807a5d75f4c345213bfe4e4694b53cdb38204f5aa3dc0c45dcfce09",
+      "size": 12564,
+      "mtime_ns": 1787663959488993607
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP5G2_MAP",
+      "sha256": "c5f907c0c743554998128fcb0047c262815c77c2ac2aa6c4941a91f4820a0aac",
+      "size": 13548,
+      "mtime_ns": 1787663959490770868
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP6G2_MAP",
+      "sha256": "3573cbc922e985145220c5acc30cffcea0bbb26834142fc9e5a496790f5b8483",
+      "size": 12156,
+      "mtime_ns": 1787663959492575979
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP7G2_MAP",
+      "sha256": "555e6d42a4c4edc50f100b54d4d7850339c902ca32cc408b420fa5c4d50254fe",
+      "size": 12708,
+      "mtime_ns": 1787663959494375997
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP8G2_MAP",
+      "sha256": "7556d96680a0bb382e629ce2ffb2d4a5e1e15b5b87ba450350d8d0e4ac387d51",
+      "size": 12036,
+      "mtime_ns": 1787663959495994510
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP9G2_MAP",
+      "sha256": "a1c7a1d1ca473bff76259bb40b3d51fe728b00997efdbcb4b4400ceef9db99c2",
+      "size": 13668,
+      "mtime_ns": 1787663959497876875
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP1G3_MAP",
+      "sha256": "2687a6d2e601e67f16f3ec69ff8b007dcfa6610f3dd812af4a1a20e9c1db036e",
+      "size": 13020,
+      "mtime_ns": 1787663959619145363
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP2G3_MAP",
+      "sha256": "1d87c8760de45b12c0f43d9354cbd81cfd6993a34933aae6940b87712c4b29e3",
+      "size": 13140,
+      "mtime_ns": 1787663959620927197
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP3G3_MAP",
+      "sha256": "76b8443d883c56d4de1a9874cbeeef3b009036bf53982ef8d5b49a233e8098be",
+      "size": 12012,
+      "mtime_ns": 1787663959622712895
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP4G3_MAP",
+      "sha256": "7b1ec34500093951f8202d26780360f8ab83fb1cb9fcc18ebdd14e6db20eb026",
+      "size": 13284,
+      "mtime_ns": 1787663959624560087
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP5G3_MAP",
+      "sha256": "af69d2ca9295b5763c1b5fe84464d58661ef534faa912a914db9458b9115190c",
+      "size": 11940,
+      "mtime_ns": 1787663959626244968
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP6G3_MAP",
+      "sha256": "78429a723d8e73a0b46134cbb99abf0904a4c39ddb9ff25b26ac9c2703159d36",
+      "size": 13668,
+      "mtime_ns": 1787663959726273481
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP7G3_MAP",
+      "sha256": "9f5d2ef60050c1b41e57146d8df871507ceda20757158b4a84bd0f9f8c8b9bf3",
+      "size": 12876,
+      "mtime_ns": 1787663959727973254
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP8G3_MAP",
+      "sha256": "8e8dc013dad4628d3737337e4125f4155d70ed94ebb5c5edf0b8cdc8d5eb5525",
+      "size": 14148,
+      "mtime_ns": 1787663959729748120
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/maps/MAP9G3_MAP",
+      "sha256": "e1bd018fc5286e864d94e56e691a4e6ab23f5c87c3069be4f94779422fcdd1f0",
+      "size": 14052,
+      "mtime_ns": 1787663959731526772
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/assets.rs",
+      "sha256": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+      "size": 16417,
+      "mtime_ns": 1791711112495415498
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/audio/opl3.rs",
+      "sha256": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+      "size": 55234,
+      "mtime_ns": 1791594274983451465
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/audio.rs",
+      "sha256": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+      "size": 42072,
+      "mtime_ns": 1791612018073210287
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/cinematics.rs",
+      "sha256": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+      "size": 29788,
+      "mtime_ns": 1791634621359594894
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/content.rs",
+      "sha256": "7f35df7100c450ba4bb30a0fdc90101c115b5ae42a7aac57829441c5b7761647",
+      "size": 36359,
+      "mtime_ns": 1791671687237069939
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/desktop.rs",
+      "sha256": "7aa876c1f74ea7b82ff0a5aa399bbbfaa18ea87ca81cab8a17c763654dca3812",
+      "size": 355988,
+      "mtime_ns": 1792237712026820459
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/hd.rs",
+      "sha256": "b17f4ee0757ee87d34e01ec76f3a6239c6e9044b42b4b10bd5f05b485f137a64",
+      "size": 159636,
+      "mtime_ns": 1792245624444265090
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/legacy_tables.rs",
+      "sha256": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+      "size": 26467,
+      "mtime_ns": 1791596592133246731
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/lib.rs",
+      "sha256": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+      "size": 318,
+      "mtime_ns": 1791618787038761898
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/main.rs",
+      "sha256": "d270d1787700975220fed75bbb8d6cd8e38288093492fb2608252849e1f804d7",
+      "size": 11193,
+      "mtime_ns": 1791680086709570028
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/menu_art.rs",
+      "sha256": "1c3b8e58828c13099cf00c612b383efa1e402e27eaa7c8f5f0afc7f1ba44a0d0",
+      "size": 4325,
+      "mtime_ns": 1791673814189962237
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/mod_selection.rs",
+      "sha256": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+      "size": 5447,
+      "mtime_ns": 1791597772968721997
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/modding.rs",
+      "sha256": "5ba4f50b39f577d792a55845c3bc281e94f8bc937eab6cc5e6201cff0cd6d6fc",
+      "size": 31740,
+      "mtime_ns": 1792218285065753129
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/persistence.rs",
+      "sha256": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+      "size": 52762,
+      "mtime_ns": 1791700137529541149
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/render.rs",
+      "sha256": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+      "size": 32172,
+      "mtime_ns": 1791697273206972841
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/simulation.rs",
+      "sha256": "2537120f280a1cfcfcc73a42a4103a4435ba8aeb98e69c87fde3b885b97a9925",
+      "size": 140409,
+      "mtime_ns": 1792217299196752425
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/sound.rs",
+      "sha256": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+      "size": 11905,
+      "mtime_ns": 1791614563252113040
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-compiled-source18/src/terrain_hd.rs",
+      "sha256": "e61f96f541c19863ce8d741363a1739b9276e25aee84795952c65565c775e392",
+      "size": 59391,
+      "mtime_ns": 1792245624444740664
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/aurora/content.json",
+      "sha256": "48fdeeb68cc33735658b5d9917a5747bf09aa1cf1b8a4fe80f8818370cfeb0e5",
+      "size": 4373,
+      "mtime_ns": 1791593268008294702
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/aurora/mod.toml",
+      "sha256": "194a922f688b304a998ebee130aa225ff7c35cd4b5be932bac49c68b380f70b3",
+      "size": 336,
+      "mtime_ns": 1791592964780587208
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/aurora/scripts/cell.rhai",
+      "sha256": "8e946d0ff2506eb48046dfad77243826c61e4c387661e2a5ffdc8fe05706c5fe",
+      "size": 520,
+      "mtime_ns": 1791593268008442394
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/aurora/scripts/drone.rhai",
+      "sha256": "e6cf68b1c722edc24357c05da63354c74e8dac763ae1e411c9c81c32e01d36c0",
+      "size": 691,
+      "mtime_ns": 1791592964782469812
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/aurora/scripts/mission.rhai",
+      "sha256": "0f7420151269fd367114ef2b54ab2d68ff70ce3eb13efbe043d7339e83f026c0",
+      "size": 361,
+      "mtime_ns": 1791592964783659587
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/aurora/scripts/weapon.rhai",
+      "sha256": "5155673c3ebaed112c0ffafb513ef817724e43927c75dabf28a2ec0ff3969a51",
+      "size": 624,
+      "mtime_ns": 1791592964781675153
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/ion_lance/art-provenance.json",
+      "sha256": "32231827d4d8d5709c6f4e21e92fdfb9f16d36641dbf8a5b458544dff2c8a756",
+      "size": 4228,
+      "mtime_ns": 1791594626876577040
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/ion_lance/content.json",
+      "sha256": "05ff4310b7cfdcc8a292dd2b9abd42ded04fb360b533c9b1fb8e9c5ba252127a",
+      "size": 1610,
+      "mtime_ns": 1792220272451021889
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/ion_lance/mod.toml",
+      "sha256": "012ba45af2d21d611d92e7fdc02a8c500422f561a64a1050274db89f28ac3822",
+      "size": 280,
+      "mtime_ns": 1792220272451777413
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/ion_lance/scripts/equipment.rhai",
+      "sha256": "c379b6063b999fb5cdb7f0e153277250e1d63a7e1cd2071bc45b91f82c88fe17",
+      "size": 329,
+      "mtime_ns": 1791594356382852996
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/ion_lance/scripts/weapon.rhai",
+      "sha256": "e1ce73610cf51574e2bee5b74e2b95245ff678f229f191c5c242ca821ebe63cc",
+      "size": 2900,
+      "mtime_ns": 1792220272592308886
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss/art-qa.json",
+      "sha256": "6315619c5e667e90c7f90c8dea8b07f8c3b3d9ebc51d943804f40ca991450d3a",
+      "size": 855,
+      "mtime_ns": 1791594706998591903
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss/audio-recipe.json",
+      "sha256": "fa466f37d4763d7c41a583c68f308a9a209dc5910b7ef55df4f7648cb0d07a5f",
+      "size": 589,
+      "mtime_ns": 1791594706594303358
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss/content.json",
+      "sha256": "9ee02264c2a64cedb8296f766e9077596fac73ae113949d47080569db20c5ac8",
+      "size": 1496,
+      "mtime_ns": 1792220272453287198
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss/mod.toml",
+      "sha256": "1561c9a8dabbed5f6ad6f49fd354df360f0c22b45b7e759d0e165d85b307b26f",
+      "size": 303,
+      "mtime_ns": 1792220272454052051
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss/provenance.json",
+      "sha256": "7ca3cc7952409059d18436be980f82faee992807c8867d158df3a483c51e6f81",
+      "size": 1727,
+      "mtime_ns": 1791594896557860505
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss/scripts/ai.rhai",
+      "sha256": "3cd80fda007a143486faaf81256cce115ae00b39408187f3de846a33834a3f62",
+      "size": 7456,
+      "mtime_ns": 1792220272591333575
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_2/art-qa.json",
+      "sha256": "c59a1cb808931b52d978db7537d288290bca6476af738878a17f75a25740c73a",
+      "size": 1756,
+      "mtime_ns": 1791613092010365615
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_2/audio-recipe.json",
+      "sha256": "ea6cdea8a911601307750f343dd2190442009f7428cc328cbebaca2112d62025",
+      "size": 1020,
+      "mtime_ns": 1791613092052256569
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_2/content.json",
+      "sha256": "5c437b663aa5671a0a5843f4c93ed90f59a8dbd0638e98759ff4a84064b43e62",
+      "size": 1467,
+      "mtime_ns": 1792220272455559153
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_2/mod.toml",
+      "sha256": "22d04480b8d166434c00bde072ed0c59c2b6125a980cce5fb2bc8e36d9973434",
+      "size": 300,
+      "mtime_ns": 1792220272456309667
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_2/provenance.json",
+      "sha256": "71e51ea2ab1347b70fd9437923439f065f0060f864e2e988365151618fb2b813",
+      "size": 1306,
+      "mtime_ns": 1791613226941009467
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_2/scripts/ai.rhai",
+      "sha256": "cf117a8d59dbaf2ff194c7282d7cb1ba16175ad4d8e3b02e626bdb8ba1f5e9ae",
+      "size": 7579,
+      "mtime_ns": 1792220348851322431
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_2/validation/Cargo.toml",
+      "sha256": "6552adb6d5520f55c411745041e9adf3100a0af9279c8284c808480936a142ab",
+      "size": 247,
+      "mtime_ns": 1791613153261719989
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_2/validation/report.json",
+      "sha256": "fa9a21d4c6638e96886a4425cd28bbba96192486d1cc941b6c68d7416221b0c0",
+      "size": 1009,
+      "mtime_ns": 1791614623005694891
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_3/art-qa.json",
+      "sha256": "696648641df3e54c25381b766c3ef7b5e6f264fb319fab7addaeee4bea1b338d",
+      "size": 1173,
+      "mtime_ns": 1791613117617665936
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_3/audio-recipe.json",
+      "sha256": "03ffe33e0bf4ced57753ebadb23ce097c88e777995a98b0e3d69e79a6972b3e2",
+      "size": 960,
+      "mtime_ns": 1791613117396712475
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_3/content.json",
+      "sha256": "a7b5b9976859a136e7d02bcf78e6e99bd2e7afed9a9e4162211a946c2b2ae0bb",
+      "size": 1507,
+      "mtime_ns": 1792220272457950021
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_3/mod.toml",
+      "sha256": "85420735d4c5f7614b1c82b857687cc6acecca1e4baacf75c46e00de5cd1314f",
+      "size": 297,
+      "mtime_ns": 1792220272458797210
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_3/provenance.json",
+      "sha256": "172f93234702648dfed876207ed7dd8c87698b4183e853f739b913dbd987561e",
+      "size": 1083,
+      "mtime_ns": 1791613196193718809
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_3/scripts/ai.rhai",
+      "sha256": "5b709fe8db4fcf3506115fd7649e5ced3a9333e876bca9bd3ec871e3f8d35e14",
+      "size": 7544,
+      "mtime_ns": 1792220348851730436
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_4/acceptance-report.json",
+      "sha256": "e277ac3af842dd834d329a68c64da5ddb1ee642bb98328e5db0ad79c7374967e",
+      "size": 1562,
+      "mtime_ns": 1791616007268979407
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_4/art-qa.json",
+      "sha256": "d61a338cb88fc5c0981e4aab20b6fe127517f604a7b6c51f257a64ffae7cfef0",
+      "size": 1303,
+      "mtime_ns": 1791613328806805386
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_4/audio-recipe.json",
+      "sha256": "f58e3e01a6d2f682f1ca4f2318dcea5db20173bc166bb1f53309b6830548e194",
+      "size": 973,
+      "mtime_ns": 1791613328849956825
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_4/content.json",
+      "sha256": "b81ac674f1828e1cca526da3cda3e57dccb46cb8302143cfc15eb449e1090657",
+      "size": 1472,
+      "mtime_ns": 1792220272461416796
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_4/mod.toml",
+      "sha256": "a3fcbd75a98ae4d20fec59aaac270dca4e741f84e761f13c43788a238504a446",
+      "size": 310,
+      "mtime_ns": 1792220272462632026
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_4/provenance.json",
+      "sha256": "c784597656d51cb4f98976450180e185431d6d302fd397e62a77a514a2f55bec",
+      "size": 2293,
+      "mtime_ns": 1791613479650660569
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_4/scripts/ai.rhai",
+      "sha256": "c97bd5c79b798f6f03a8f5eab9b506a587d3a8497eee5f744e5a7fe4c7d3c4fa",
+      "size": 7634,
+      "mtime_ns": 1792220348852151862
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_5/art-qa.json",
+      "sha256": "2c9e91834a66e74a26eb381986e2ccb3f32595d5d28e83742e37126d0a93ca0f",
+      "size": 2268,
+      "mtime_ns": 1791613346106950463
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_5/audio-recipe.json",
+      "sha256": "e36836dc27322d388598127ae4e57280161a8cb7cda331163498dfaf0956a06f",
+      "size": 1041,
+      "mtime_ns": 1791613346146566631
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_5/content.json",
+      "sha256": "5336cd8cfe17ec35bb540e570b1a1294c5e4426a103e2f6fa7ff35299826e136",
+      "size": 1835,
+      "mtime_ns": 1792220272464307273
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_5/mod.toml",
+      "sha256": "4d4ddcdab2c979e1162b60cad3176333f8ced3e8cf19f5daa1a608033108cf93",
+      "size": 301,
+      "mtime_ns": 1792220272465129845
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_5/provenance.json",
+      "sha256": "2ae8f7ebb1ee8c8c367285b10eda29b32f376d561044d2b7c7102afebf76f1cd",
+      "size": 2723,
+      "mtime_ns": 1791613346232883207
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_5/scripts/ai.rhai",
+      "sha256": "33ff0e4e514c7cf4f5cf75ab56678ab92361e2ddb46c2e9926bd5477257be984",
+      "size": 7451,
+      "mtime_ns": 1792220348852764938
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_5/validation/Cargo.toml",
+      "sha256": "3f46046bc70a37db7859e3c2361e9e6d61c70c6d8344c6cdb9eb37baabe7bb66",
+      "size": 204,
+      "mtime_ns": 1791613210245391126
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_5/validation-results.json",
+      "sha256": "cd85594adb7b84d2bfb448afa1d52f5e470173d48f4a31b5be7247b5d2c33ff1",
+      "size": 838,
+      "mtime_ns": 1791613346221604810
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_6/art-qa.json",
+      "sha256": "798c6ca688885ff312b9f66293c7ca427963f5f667f767e1a442f21665429826",
+      "size": 1841,
+      "mtime_ns": 1791613360618634122
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_6/audio-recipe.json",
+      "sha256": "db86dfc890014afde43f10b02ff36b8ec7e9796ce2b36c38b6834b202d3c15be",
+      "size": 1068,
+      "mtime_ns": 1791613360447238294
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_6/content.json",
+      "sha256": "87aa51f1e81df57446e0f68f2fc5c9edc7bd7bb7caada4fcebe40ff3ffa43851",
+      "size": 1463,
+      "mtime_ns": 1792220272466922802
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_6/mod.toml",
+      "sha256": "7558a783ba407dd264fa47a9f3f4934376184fb0d0d55e79bd4abd183ccbe454",
+      "size": 301,
+      "mtime_ns": 1792220272467765765
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_6/provenance.json",
+      "sha256": "136fac8e3d2f568dd1e35212a5fffba2421172771fe0773391c1eb1f5535c50d",
+      "size": 1411,
+      "mtime_ns": 1791613317375505736
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_6/scripts/ai.rhai",
+      "sha256": "d3a58c1ab2237fc8f9c1cd94117413d384e575ba9c7a50b44e02ab7ed4136714",
+      "size": 7779,
+      "mtime_ns": 1792220348852457410
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_6/validation/Cargo.toml",
+      "sha256": "f488efc1f90785296b7ab25aecb0c3f2cbb018724df6144f6e1abc3e40fe11d3",
+      "size": 195,
+      "mtime_ns": 1791613289661630403
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_boss_6/validation-results.json",
+      "sha256": "2e70d55a6bdcd10f078aa61d6e2c68b9d9611873a09f4c60b979fae900e84bdc",
+      "size": 1026,
+      "mtime_ns": 1791613411429699730
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_campaign/art/provenance.json",
+      "sha256": "2c8d6a2456176a7067ad56941303425d6017403e66c46f88b08316c1da3ab191",
+      "size": 711,
+      "mtime_ns": 1791611973540978377
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_campaign/content.json",
+      "sha256": "49fe55c92fe43068c3223b2bf6d50f3370d931528f58218a9971710d357217f2",
+      "size": 629,
+      "mtime_ns": 1791611766237098689
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_campaign/mod.toml",
+      "sha256": "7816ebae6501833335990e63bd9b744d727cd664fa93c96525820f6b1ed25eb3",
+      "size": 570,
+      "mtime_ns": 1791613251763422943
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_depth_charge/art/generation-equipment-v1.json",
+      "sha256": "785ff74d12d0cd61477d9513098bbeda2635e6f185d7cd463aae82105ffebd6a",
+      "size": 723,
+      "mtime_ns": 1791706789376586995
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_depth_charge/art/generation-projectile-v1.json",
+      "sha256": "2c27a855a5aba9af9ab3a70ecb4465ab7983d2207a9b9c76772365a5a3bee05d",
+      "size": 725,
+      "mtime_ns": 1791706828206551513
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_depth_charge/art-provenance.json",
+      "sha256": "3ce317a863331283c0a056fe0a16ecfab464156d745f07f2cdd7627b34e5db60",
+      "size": 2338,
+      "mtime_ns": 1791707229356576127
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_depth_charge/audio/provenance.json",
+      "sha256": "5e65a758e0095735716715cc3a79bfbece252d07e6076e7923ab9d5f6bb62c06",
+      "size": 908,
+      "mtime_ns": 1791706713733625086
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_depth_charge/content.json",
+      "sha256": "0018754c435bf14a3567e2c0fee54845ac7954a625fc42b7e35c0ee637e8be05",
+      "size": 1812,
+      "mtime_ns": 1792220272469556401
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_depth_charge/mod.toml",
+      "sha256": "380302a5ee9602a357d64bcd04672593d415d2685cdc20ee0afadd20909fd17a",
+      "size": 260,
+      "mtime_ns": 1792220272470359727
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_depth_charge/prompts.json",
+      "sha256": "988e176fbd52de41ab4e3739ba894b0ddd6117fdc969b4bb31479caa54f1d6cb",
+      "size": 2481,
+      "mtime_ns": 1791706369900728467
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_depth_charge/scripts/weapon.rhai",
+      "sha256": "7f92223a4e8981d067361dea691a6f65ae89e7fb4cbc84afbdcbb367420e257c",
+      "size": 2160,
+      "mtime_ns": 1792220272585219171
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_depth_charge/validation/balance.json",
+      "sha256": "de572084829e6f56bdf6fcd2cf479343b341b17b1a94de14a21e88c3c5a82862",
+      "size": 18926,
+      "mtime_ns": 1791707166186161128
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_depth_charge/validation/review.json",
+      "sha256": "f74ef555bd4ee17b147964ae41958b1fa9c372d6750102439c2ec6d382850d95",
+      "size": 8096,
+      "mtime_ns": 1791707257524832756
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_1/asset-report.json",
+      "sha256": "1b34514633b3d9089ce109514845d05a1fb2ae2c413a3f9c33d737184ce0785b",
+      "size": 2163,
+      "mtime_ns": 1791594701842027469
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_1/content.json",
+      "sha256": "aae8bd2d9b331cfe95d92d34d74ea5606cea21f41d772a06bfbe9590b00fc441",
+      "size": 68832,
+      "mtime_ns": 1792220272472113664
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_1/mod.toml",
+      "sha256": "25c23f8ca31483b1beef66a527ff08c7baafc482cbd09c6b830cc23a71414f6e",
+      "size": 606,
+      "mtime_ns": 1792220272473478502
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_1/prompts.json",
+      "sha256": "c4117180c2b8537daf423f37c0bed3b133b357d2fafab83c185ec67d5271bff1",
+      "size": 3635,
+      "mtime_ns": 1791594519827023442
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_1/scripts/depot.rhai",
+      "sha256": "ff9077741e01ee9ba49ca5fef4b2952ae46ee355cdc566955194831341530a27",
+      "size": 390,
+      "mtime_ns": 1791594425291118864
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_1/scripts/mission.rhai",
+      "sha256": "58124d7a699ecf65d36cb5a5a12c7911dd701f5f8fecce6cd3214e90f908a686",
+      "size": 3785,
+      "mtime_ns": 1791614829943125170
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_1/scripts/repair.rhai",
+      "sha256": "1abc4dc3dd5817a5f8ceb21615cc8cadb0894243a9b0db41d981db2264850bfa",
+      "size": 171,
+      "mtime_ns": 1791594425291118864
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_2/acceptance-report.json",
+      "sha256": "faa24b08566f525e178ba0dbe96f0938349cfedc805f4760aaeabddde5e163b7",
+      "size": 6864,
+      "mtime_ns": 1791619112822968963
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_2/asset-report.json",
+      "sha256": "52549e9313525794fb84624c20e67b24af96a47ae22d789cf71c7cd4dbdee468",
+      "size": 2524,
+      "mtime_ns": 1791619112811085710
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_2/content.json",
+      "sha256": "883aedd5f7a3db34a65064ec300aeb1eb66566d14c8ec64ca3f025ced4647878",
+      "size": 69454,
+      "mtime_ns": 1792220272475335004
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_2/mod.toml",
+      "sha256": "ff42de9e3562a27e73a515f1bb21ac6140ee89ee871b884735891e2a5e6daa7a",
+      "size": 579,
+      "mtime_ns": 1792220272476615980
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_2/prompts.json",
+      "sha256": "8989e07fa8812fd2f1bb4da7690f4a564934bdf4fab51969b2a7abdf5ab22a57",
+      "size": 3540,
+      "mtime_ns": 1791612093865439551
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_2/scripts/mission.rhai",
+      "sha256": "52b013e0519f44fb9edebcffebdb765820a24bbeacf13728bc7290ad08d05aaf",
+      "size": 2951,
+      "mtime_ns": 1791615363580775580
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_2/scripts/relay.rhai",
+      "sha256": "ce2e0085ff2b68af2a30e6a482acd82cce86654e50f367745476b95c7bbf87ce",
+      "size": 1785,
+      "mtime_ns": 1791616535658271864
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_2/validation/Cargo.toml",
+      "sha256": "aa90fa760778b68e7da5a2b0177defe03f4c4ba4f3a69095b9a5e5de93c76945",
+      "size": 253,
+      "mtime_ns": 1791612158783316331
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_3/asset-report.json",
+      "sha256": "ba0c9adad39ec5892677a44fd531149ae2e6144e0cfac31f29923971de502738",
+      "size": 1982,
+      "mtime_ns": 1791612024794630553
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_3/content.json",
+      "sha256": "b47f6281edb8abdd960fae00788be2e1bf44eaa616a22a2964c6a47773eb9a12",
+      "size": 73315,
+      "mtime_ns": 1792220272478417948
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_3/mod.toml",
+      "sha256": "631adb89466d25311abc03a479923c08fb79d0eb2f5653274a5dbba4b950c0f2",
+      "size": 600,
+      "mtime_ns": 1792220272479720061
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_3/prompts.json",
+      "sha256": "955d0780efc3c139db5b08be7e1fa6951f762b809398117793ac298bfd307672",
+      "size": 1143,
+      "mtime_ns": 1791612027268541927
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_3/scripts/convoy.rhai",
+      "sha256": "9780f8a62eef66f971b6c6906f29ab7430c1faf5aa703b84ab8a9d5b9c296f5d",
+      "size": 894,
+      "mtime_ns": 1791611986015959413
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_3/scripts/mission.rhai",
+      "sha256": "132937a30647c3ae5825e2a04dafbe9f3553944d22a3a029d02373adb57c76b6",
+      "size": 2588,
+      "mtime_ns": 1791615487904922445
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_4/acceptance-report.json",
+      "sha256": "24f8ad0daf241b980b4de78ea392846994ed03446840c960b2de5252891f3f19",
+      "size": 2908,
+      "mtime_ns": 1791620752904759562
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_4/asset-report.json",
+      "sha256": "c75c5a180ab944c3cafbd67b23000d5cf861e4aab2adbf8e446d8eac966c6b94",
+      "size": 1745,
+      "mtime_ns": 1791612163358746142
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_4/content.json",
+      "sha256": "ae9f5771e9deeaf7fb53617c3238c9653107e2edb2a7e1261e1c73befb1bf2fe",
+      "size": 74560,
+      "mtime_ns": 1792220272481402023
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_4/mod.toml",
+      "sha256": "a34592bf2759e64883ccbc19f31678db71d971e78682cc66615756a7664a5c34",
+      "size": 647,
+      "mtime_ns": 1792220272482705291
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_4/prompts.json",
+      "sha256": "fdee4bb3fec4335231d9cde6798fdead5e5e881b3a31666f95daa5992fd8f7dc",
+      "size": 3036,
+      "mtime_ns": 1791612016134420423
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_4/scripts/mission.rhai",
+      "sha256": "29df77d74558b730e0af245513bb75901527eae588ca30ab20afac7de7991d7e",
+      "size": 3722,
+      "mtime_ns": 1791614672407526832
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_5/asset-report.json",
+      "sha256": "1b93969c1bbe237626da0c8c5161d01767828401117db75c31a7304d98a63d0a",
+      "size": 3278,
+      "mtime_ns": 1791615816059065363
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_5/content.json",
+      "sha256": "816bb99aba8ec4a646d3d2f734baa98570ac95bdfaf9dfca9813e50726087295",
+      "size": 80780,
+      "mtime_ns": 1792220272484488663
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_5/mod.toml",
+      "sha256": "2e66cb7f0d46fe990441ba316c28eb76267c37bf0002f094baf9d96afa648f24",
+      "size": 623,
+      "mtime_ns": 1792220272485841077
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_5/prompts.json",
+      "sha256": "d42b627c2313c136c4a9fb56cfffac77f0ca994af93c6e01ae8c4b89f2513f5c",
+      "size": 3486,
+      "mtime_ns": 1791612143663276402
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_5/provenance.json",
+      "sha256": "f86959079e0bdafa13106887d75d4bacd46e0f2505e6908ba852de0e59dfca82",
+      "size": 1731,
+      "mtime_ns": 1791612264445527949
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_5/scripts/coolant.rhai",
+      "sha256": "8bc97be0a048eba400fd4c2df558f5964e43883c8ce001bdfe1024486c6fc5e4",
+      "size": 251,
+      "mtime_ns": 1791611845116253427
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_5/scripts/foundry.rhai",
+      "sha256": "cafdf0f3440cc8dcd3c6db21910f71c5f9abef7e9666ac83b1742b02601e8b30",
+      "size": 1435,
+      "mtime_ns": 1791611774804898211
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_5/scripts/mission.rhai",
+      "sha256": "4a971e6bbf6bed8757f53ac966a128ae7c783f5818088686e26f9c7bbd1194f8",
+      "size": 3878,
+      "mtime_ns": 1791615576683507679
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_5/validation-report.json",
+      "sha256": "f2d8e88ab2fc57c338e15540db22312ccdd9b86b250417dd5386da064e1f36c8",
+      "size": 4374,
+      "mtime_ns": 1791620103767042150
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_6/asset-report.json",
+      "sha256": "627ed9348e40dc221cd9eb487bfbbc4857139665adce5657054ebd4d872ac49e",
+      "size": 1770,
+      "mtime_ns": 1791617744912899277
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_6/content.json",
+      "sha256": "ddf1ea221c85f303d3872111059dc370a08918e3b72e3b91ef92bb005ccadc8a",
+      "size": 83786,
+      "mtime_ns": 1792220272487634441
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_6/mod.toml",
+      "sha256": "ddb1f6e2960bf39ecba30437a236790e8dc3677820e939c079e9906a3de161af",
+      "size": 586,
+      "mtime_ns": 1792220272488995037
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_6/prompts.json",
+      "sha256": "dc408b5fd7bfd696b864e52af9ef1983dacddcf40bdd25bf6c9a59ec21531d3f",
+      "size": 3139,
+      "mtime_ns": 1791612200501949037
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_6/scripts/mission.rhai",
+      "sha256": "0b79244ea0cc92876dbf2adeb86a6efebba8cd8a5538f0004638efec556a6157",
+      "size": 3624,
+      "mtime_ns": 1791615356874818212
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_6/validation/Cargo.toml",
+      "sha256": "332cf067a13b7d827c99d5a11fd4f57a32943cd18ec2e64a320a01b9e110c690",
+      "size": 190,
+      "mtime_ns": 1791612148458164416
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_mission_6/validation-results.json",
+      "sha256": "aaa4f60dbee063a3be15a82d48326bcb686a95d1f9954f7bff3ce2b200c34206",
+      "size": 4281,
+      "mtime_ns": 1791620194499230755
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_music/content.json",
+      "sha256": "5b9576d96cff7d28c263923ba363dcd02b64cdf8698db9b04e32e311b7d74e88",
+      "size": 167,
+      "mtime_ns": 1791615584725898390
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_music/mod.toml",
+      "sha256": "9a6c83b75abb7a13c1952f1bfae78da3b7784ba85c097451d6c729ebbc3c64b2",
+      "size": 322,
+      "mtime_ns": 1791615584724898341
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_music/provenance.json",
+      "sha256": "b458a863473cf5f7fc781dc53aeb775b2e6a66f44c8998c7f2db3bb1f7e653c5",
+      "size": 1723,
+      "mtime_ns": 1791626069109118565
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_music/validation.json",
+      "sha256": "c9c3534029179414420d1b10b36383ae543cd57c8e0cb378b7e4e37cf6c583f6",
+      "size": 1022,
+      "mtime_ns": 1791626839618891807
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_railburst/art/generation-equipment-v1.json",
+      "sha256": "36a6269a6f5fab897a50b30cca04790d408d3de788c8a006ab12358b6cc5689e",
+      "size": 723,
+      "mtime_ns": 1791706637160720139
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_railburst/art/generation-projectile-v1.json",
+      "sha256": "a796c9572556e404abf5c9baab84976c90c1c9972b50ee32484f27e1c1899f0d",
+      "size": 725,
+      "mtime_ns": 1791706726812553418
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_railburst/art-provenance.json",
+      "sha256": "f6733c216d452adc03331d05d26ab853ba2c20282a3d85e5acc66e4c3b5a00db",
+      "size": 2338,
+      "mtime_ns": 1791707225530714760
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_railburst/audio/provenance.json",
+      "sha256": "946e1e015df53e620c046c11bfbdef91e70db1affe20e73b56fb11dadeb0d5a8",
+      "size": 906,
+      "mtime_ns": 1791706713492990899
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_railburst/content.json",
+      "sha256": "c20e79efbe83a6fd831a3a255786fe273242697526f99550f100c8aeb9c1851a",
+      "size": 1798,
+      "mtime_ns": 1792220272491641973
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_railburst/mod.toml",
+      "sha256": "9cfe8abe321b2fc9d5f9f374671f1edbe4e23b1082d3dd05a9092d10682f0fb4",
+      "size": 261,
+      "mtime_ns": 1792220272492768083
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_railburst/prompts.json",
+      "sha256": "a07d02ac46bc3e294b2749366cc2ef1d71e53afdf1d4e8cf0576bc38b05615d7",
+      "size": 2669,
+      "mtime_ns": 1791706369900405690
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_railburst/scripts/weapon.rhai",
+      "sha256": "a30e4b2401cd96cce7d087106b2a819f1771a12e63db9b17dfd417c43cbb7b3d",
+      "size": 2380,
+      "mtime_ns": 1792220272584317474
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_railburst/validation/balance.json",
+      "sha256": "67bd6af0ab6e0ecfa35ab504a7128a8da2cad1e1491da223e21d766413d62242",
+      "size": 19028,
+      "mtime_ns": 1791707166184770457
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_railburst/validation/review.json",
+      "sha256": "45aa8ec4570b76931bd9b774c8f9f08d2c92f9800be3389182946ec6a9453607",
+      "size": 8060,
+      "mtime_ns": 1791707257524303801
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_scout/art-qa.json",
+      "sha256": "ef201346d9a7616b8d7bfb3974eca9c034086cc9b3806b9859508532f155928b",
+      "size": 547,
+      "mtime_ns": 1791594706270769481
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_scout/audio-recipe.json",
+      "sha256": "c74653d0cefa1d85cc8b288a4649790737b2e55ef119726004d25b3bbce80cd1",
+      "size": 589,
+      "mtime_ns": 1791594706141943327
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_scout/content.json",
+      "sha256": "4c391c6afca745dd2a225830490196fdc1d2fe2e175ca29179969162e54d5d02",
+      "size": 1262,
+      "mtime_ns": 1792220272494536253
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_scout/mod.toml",
+      "sha256": "236d2180ba63c73ec529e7f8d9caf8ae032405318882a4872e9ca5ea5da2cd64",
+      "size": 287,
+      "mtime_ns": 1792220272495305791
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_scout/provenance.json",
+      "sha256": "aa9978431c7774ebd530e9b0661b95f65fe63d9b69c619430c1ec6111b98ece9",
+      "size": 1465,
+      "mtime_ns": 1791594896498293345
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_scout/scripts/ai.rhai",
+      "sha256": "c7e15fd1a79525ab1a2ff93651bce19d776215e7a78a3986ebee1fd9ed183125",
+      "size": 6272,
+      "mtime_ns": 1792220272583075201
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_1/acceptance-report.json",
+      "sha256": "4ba6abc3d28a3131d2b7a7e968cd0694751ea1e5db4190d1dbb545383b1f1f27",
+      "size": 4926,
+      "mtime_ns": 1791708662218054797
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_1/artwork-reference.json",
+      "sha256": "a3b7b280a0552b8e183986162b25cd34f0cfc66c8e3a1f259c3aec48010071d2",
+      "size": 478,
+      "mtime_ns": 1791706195370333252
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_1/asset-report.json",
+      "sha256": "47cd7665858657dc316f5a29ddf210f45eb8ed723e31237710ada55381feebdd",
+      "size": 4747,
+      "mtime_ns": 1791707614569289553
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_1/content.json",
+      "sha256": "06d945df4b52b2147bc6e084f4d2c0c5a684f9b8ccfdd8f2b14cbf6c111c65bb",
+      "size": 1347,
+      "mtime_ns": 1791706429339937732
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_1/generation-provenance.json",
+      "sha256": "42bfad8a9147539635ae18057c50e3411e70e8ffa5bb5a5e47e450fd347d4219",
+      "size": 4317,
+      "mtime_ns": 1791708724840341148
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_1/mod.toml",
+      "sha256": "4d8a7e1101beab68fb354e000a0bec00f0de3fae9220346073804661c6b69b69",
+      "size": 301,
+      "mtime_ns": 1792220272497282646
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_1/scripts/ai.rhai",
+      "sha256": "831a52f71b9aabb5d9cc57f30496089b3d9be2b684fce7ca69911a52638f3c9f",
+      "size": 6765,
+      "mtime_ns": 1792220348855144910
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_1/validation/Cargo.toml",
+      "sha256": "e6b1f7c5e6c9ccdc4bc2da18a7c8f62e110eab8ba5861eff6317f1fb561aedb1",
+      "size": 259,
+      "mtime_ns": 1791706650811344085
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_2/acceptance-report.json",
+      "sha256": "ef332148c250672d869b0a7eb76712c798b2c2747dcf514ae58fc2b717f3d503",
+      "size": 4926,
+      "mtime_ns": 1791708662218474816
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_2/artwork-reference.json",
+      "sha256": "a3b7b280a0552b8e183986162b25cd34f0cfc66c8e3a1f259c3aec48010071d2",
+      "size": 478,
+      "mtime_ns": 1791706195370466545
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_2/asset-report.json",
+      "sha256": "aae01dfc03415a0995e6512fce62af1a740093691f3272a8b3f101eb3f983084",
+      "size": 4744,
+      "mtime_ns": 1791707614570267225
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_2/content.json",
+      "sha256": "e664d46f2cd4a20b7dff8030e6f8932fc5abeb321590e02b53d8a782687d3bda",
+      "size": 1331,
+      "mtime_ns": 1791706429340367010
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_2/generation-provenance.json",
+      "sha256": "f20ee12b9194272a668e0e21b007b3ad075a58fb0f84be11258aa1728af11285",
+      "size": 4264,
+      "mtime_ns": 1791708724840652049
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_2/mod.toml",
+      "sha256": "63f2f1ae615d39edf35ab4cb51f30ce4b73998cdd558cf3acf06f99f8161b72e",
+      "size": 295,
+      "mtime_ns": 1792220272498979405
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_2/scripts/ai.rhai",
+      "sha256": "2aa30681493e6212362510b5b9cd0ef688acb76c712e0c9c83017a9ead7fdfd0",
+      "size": 6715,
+      "mtime_ns": 1792220348855672575
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_3/asset-report.json",
+      "sha256": "d3158e5adf2756038e637b53d30c54c0cc44b23264c6b7aa61c809c0659db365",
+      "size": 2649,
+      "mtime_ns": 1791707357583091157
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_3/audio-recipe.json",
+      "sha256": "2a607cc75a8b56983b108a67eb253e37b3f9f166d9fce3abec12e1f24c895e32",
+      "size": 1084,
+      "mtime_ns": 1791707357297356421
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_3/content.json",
+      "sha256": "52f0c30c3a042788f99d6e0bc5a4d4c0be86d150316864dc469b07673784a5d6",
+      "size": 1448,
+      "mtime_ns": 1791706105966990634
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_3/mod.toml",
+      "sha256": "deafb7500336e7e42c19d1f1ac3561aec23b2cc279faefc301eb3743bd6725fb",
+      "size": 311,
+      "mtime_ns": 1792220272500878172
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_3/provenance-shell-v2.json",
+      "sha256": "a52e8901cec4a2a4b19c970e52067cfb6c05a6566ccb01059ef3884b553a04b0",
+      "size": 2114,
+      "mtime_ns": 1791707316809126681
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_3/provenance-shell.json",
+      "sha256": "4bc3c5814a18504ce9e5ec57d4785ed14c8a3f8772b7d62a769c23b359f33f3d",
+      "size": 2099,
+      "mtime_ns": 1791706404507864049
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_3/provenance-unit.json",
+      "sha256": "6e7141ef5777e4cf4fbed901d2ae767fa4208197633cd6769b4f69781b7e540f",
+      "size": 2097,
+      "mtime_ns": 1791706208764210354
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_3/scripts/ai.rhai",
+      "sha256": "b8a27f83703c700f65361f2be895dab8b4a547f54460543bcd9be825a9c02aef",
+      "size": 6776,
+      "mtime_ns": 1792220348854053710
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_3/validation/Cargo.toml",
+      "sha256": "3827314cad6f6e8540f8eb5f914210a2c57e426b24b736b86746fb988c1edd1e",
+      "size": 325,
+      "mtime_ns": 1791708316499989795
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_3/validation/compiler-binding.json",
+      "sha256": "035ac8bcda2b1d6060118d0c85f93a4fc11057390cb6f398e98eee300aceea2a",
+      "size": 1011,
+      "mtime_ns": 1791708347395959026
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_3/validation/retained-state-compiler-binding.json",
+      "sha256": "8432cd40af8800b73cfab2e502dd73b03d01d48b01c20444ec511bff02b68865",
+      "size": 1016,
+      "mtime_ns": 1791708677878696496
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_3/validation/retained-state.json",
+      "sha256": "3da8f6e02bdfbfbe796fa204da9435f52cc9a647998af15306500f4f9bf51c5f",
+      "size": 2178,
+      "mtime_ns": 1791708685962516520
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_4/asset-report.json",
+      "sha256": "3c95ef71ba1e59f90abd230c340a2ba4691f3008b87f4e33a6fc93bd651db017",
+      "size": 2649,
+      "mtime_ns": 1791707358026411677
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_4/audio-recipe.json",
+      "sha256": "eb3a945e7a2710f052115ce69ee0ddcecbbbf46dd2c34001036f526db2a7e321",
+      "size": 1084,
+      "mtime_ns": 1791707357749082568
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_4/content.json",
+      "sha256": "4f95b6c594d51e79011dcf221ee2242de3e8d6e83e4211115f132bc8bf8109c5",
+      "size": 1446,
+      "mtime_ns": 1791706105967525033
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_4/mod.toml",
+      "sha256": "cfcb1119c7f6c0d9c1737d6f8cf0ef3b78231ebf7af828af92b0e4c018aeb443",
+      "size": 309,
+      "mtime_ns": 1792220272502526970
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_4/provenance-shell-v2.json",
+      "sha256": "7d88f6574700a302b7f0883df763e16bf435a02bb510b0cda2fd1085946d0fa2",
+      "size": 2227,
+      "mtime_ns": 1791707357170940552
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_4/provenance-shell.json",
+      "sha256": "83566cd5cb9b3321e97820886263fa8a98af67cfe5d060b3ad228110da9d0526",
+      "size": 2260,
+      "mtime_ns": 1791706417525311996
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_4/provenance-unit.json",
+      "sha256": "1b4f8fd1f95b9d164dd578d62ebe8c59c76789270b44f996fb88b74af08b8128",
+      "size": 2097,
+      "mtime_ns": 1791706359508051711
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_4/scripts/ai.rhai",
+      "sha256": "288e637b5b09fa28425740f05dcb0603ad452e5427b585f5b30625769b61fa4d",
+      "size": 6779,
+      "mtime_ns": 1792220348854327152
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_4/validation/Cargo.toml",
+      "sha256": "89dfafd6841043fb1444002df07c752408ee408348cc0be011e2128533a55ec0",
+      "size": 325,
+      "mtime_ns": 1791708316500142949
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_4/validation/compiler-binding.json",
+      "sha256": "8fd3e012e960e66271cf1e7d025f45ccd44cce60b246d8d97a7956a22b48c80a",
+      "size": 1011,
+      "mtime_ns": 1791708347902406117
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_4/validation/retained-state-compiler-binding.json",
+      "sha256": "f597fc7256fd3b403d849b8f7fed7409c5f24984a7b5ea9824d5ddc457e60ae1",
+      "size": 1016,
+      "mtime_ns": 1791708677930327030
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_4/validation/retained-state.json",
+      "sha256": "48291d1bd66e389ad0e07d3510ffb8fc1a11e14d945412de5eaad1e31ea61d52",
+      "size": 2178,
+      "mtime_ns": 1791708684454174648
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_5/art-qa.json",
+      "sha256": "3624a04ffaa4cda6fb3561ed939754f7f869565aa7d63bf8b359b302b341b4a2",
+      "size": 1455,
+      "mtime_ns": 1791707436890457510
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_5/audio-recipe.json",
+      "sha256": "222915b0b17181524771762b7777579b9990f42941fb794b2524a30914a19d19",
+      "size": 1279,
+      "mtime_ns": 1791706714750597488
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_5/content.json",
+      "sha256": "ff488a3ae19cddfbe15970000b4c7ee0cf8ee6308a924e4036aadb4a22d349b7",
+      "size": 1633,
+      "mtime_ns": 1791706655221350715
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_5/mod.toml",
+      "sha256": "aa7b62a518393befe96110c92b37bdaa7ec47808f91f8e3a4b81f9dd6ec6258a",
+      "size": 287,
+      "mtime_ns": 1792220272504334594
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_5/prompts/request-v1.json",
+      "sha256": "83ee51ecfaa7de9829b50bc59b7e08f8345bd4cf14cf9322cc6ac3821aaa9340",
+      "size": 1672,
+      "mtime_ns": 1791706120770187668
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_5/provenance.json",
+      "sha256": "f13995902ef16f5597c8d9414f18c2349c276d10222482cd5598c3ad3428d8e2",
+      "size": 1137,
+      "mtime_ns": 1791706200797389706
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_5/scripts/ai.rhai",
+      "sha256": "3ef9d8435f3c5669fcb9ca89042b02f145ddcb381ac4cd83c2ecf456e8931ea1",
+      "size": 6895,
+      "mtime_ns": 1792220348853304958
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_5/validation/Cargo.toml",
+      "sha256": "0f5fbfa4b4e31fe59e438c3d60794ba33905fe6dd9f78b7c3d9abce6ef1f4e8c",
+      "size": 293,
+      "mtime_ns": 1791706952393539318
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_5/validation.json",
+      "sha256": "05d095c77b2e4290ecadc6134fafe301498084c59439de755d4651afac3c46de",
+      "size": 1820,
+      "mtime_ns": 1791707659177024407
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_6/art-qa.json",
+      "sha256": "4702701f786668132b81b04cbc83a4df45d7b724b15bcd94994731a291aeedc8",
+      "size": 1456,
+      "mtime_ns": 1791707436892116827
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_6/audio-recipe.json",
+      "sha256": "200ae6771ae8b645350575de36c0d4d1fb09f72f105c1cd2ca9af1dd84b2a4c4",
+      "size": 1280,
+      "mtime_ns": 1791706722414048235
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_6/content.json",
+      "sha256": "d7b6406e88d2b94f03ab1a16203bcd6340353aa85313353feae4659c5bfb8ae4",
+      "size": 1626,
+      "mtime_ns": 1791706655224222764
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_6/mod.toml",
+      "sha256": "ad21231533195d8e33aca29631a42d228b51cfa814c2677be4b8133316f70c6e",
+      "size": 287,
+      "mtime_ns": 1792220272506017329
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_6/prompts/request-v1.json",
+      "sha256": "170f2a784898b83965c7514caaed894b89b242d27cf25bb4ee9cd3a25866490d",
+      "size": 1561,
+      "mtime_ns": 1791706200859577608
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_6/provenance.json",
+      "sha256": "993cca6b1758af97fb6344176d5445255c4a94d3d9124b90814abedb1317d979",
+      "size": 1101,
+      "mtime_ns": 1791706269672129939
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_6/scripts/ai.rhai",
+      "sha256": "065a85183f96956136d90cb786a21c9cdd959a416bea50af4002e6732f00d73e",
+      "size": 6862,
+      "mtime_ns": 1792220348853739430
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_6/validation.json",
+      "sha256": "0c79232e2a38a9f985f54230569995c3f37c81a8ad33ee93711ef908018a89c0",
+      "size": 1762,
+      "mtime_ns": 1791707659177389445
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_7/art/provenance.json",
+      "sha256": "6a2bc898711f2efa2d90a10ac993503fcbcf04d8d54276153022342ffbf18710",
+      "size": 1299,
+      "mtime_ns": 1791707823751830159
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_7/art-qa.json",
+      "sha256": "c36a6572cae8041ae58639c95d1003b3833df236e0961dae307845acd2ce0a57",
+      "size": 1795,
+      "mtime_ns": 1791707823751981749
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_7/audio-recipe.json",
+      "sha256": "320705d7ba3485e28cec929dacbab37a64f9da8b2b64e665caa2e82e0705a997",
+      "size": 1366,
+      "mtime_ns": 1791706576947811967
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_7/content.json",
+      "sha256": "dd02b328787d186f8368da13d7f8064c7d6cfac279ed67de234ccaa7767cba22",
+      "size": 1686,
+      "mtime_ns": 1791706577012407905
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_7/mod.toml",
+      "sha256": "aecd955aa918d1795c9953dd08e0a835cab9e25735cc945e8e28a0fe58c7634f",
+      "size": 301,
+      "mtime_ns": 1792220272507724325
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_7/scripts/ai.rhai",
+      "sha256": "d0c5b75f03a05375166a3dab006100de8a006afe36385469252bc474485f6f81",
+      "size": 7062,
+      "mtime_ns": 1792220272575191437
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_7/validation-summary.json",
+      "sha256": "c9491f6b8e8529e6a5ee1b9a26247ae73ee633a2bdcf480ebb2671d004f775bf",
+      "size": 6085,
+      "mtime_ns": 1791707874893231467
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_8/art/provenance.json",
+      "sha256": "811911cc045300ab7bd1f5b615b4a85412f753f2e4ed0fdadc09b363076cebcf",
+      "size": 1297,
+      "mtime_ns": 1791707823752700706
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_8/art-qa.json",
+      "sha256": "9b664b6bafa8c93185d25c98dfc4f5af3f27236d034bf0767e86373b34f1785e",
+      "size": 2122,
+      "mtime_ns": 1791707823752890779
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_8/audio-recipe.json",
+      "sha256": "f93e60434179c7091127450a2407c18eb98b94cf2f262cd6f3cbb551c868bae3",
+      "size": 1368,
+      "mtime_ns": 1791706589482861856
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_8/content.json",
+      "sha256": "767066ce8f5952781896fbd68fdf7661e381b1dbb8551e4f1bfaca68eb28d395",
+      "size": 1675,
+      "mtime_ns": 1791706589552625522
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_8/mod.toml",
+      "sha256": "972c67bebce3d5826dc47a53bede17f1e3c00dc4f11b7e2ad5377adccba0dbf3",
+      "size": 297,
+      "mtime_ns": 1792220272509350877
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_8/scripts/ai.rhai",
+      "sha256": "007d6ea2fa765b381fdcbd1134804c908815daa77461ebf81b726a003c2526b5",
+      "size": 7514,
+      "mtime_ns": 1792220272574246338
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_boss_8/validation-summary.json",
+      "sha256": "f730ebaa4da7448d30d1802458cbcfb6adfccc102842558ff20acdff433aeef8",
+      "size": 6048,
+      "mtime_ns": 1791707874920984546
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_campaign/art/provenance.json",
+      "sha256": "fd41658429d2dd876b61fc81dd1a82997e63ee641f1e45df200135482e6e662a",
+      "size": 769,
+      "mtime_ns": 1791706280000938617
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_campaign/content.json",
+      "sha256": "c4d1d78f316f207468dc2a53de31f251024eadf14d0496619c89be461d270e86",
+      "size": 742,
+      "mtime_ns": 1791706279267115143
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_campaign/mod.toml",
+      "sha256": "79b3d52dc4d73432988da25b0013a91fd8407fc91f3cffb84a56059d291d605c",
+      "size": 732,
+      "mtime_ns": 1791705993302750483
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_interceptor/art-qa.json",
+      "sha256": "946a0e2a330461bddfff99e63a555740494d32d0435b6fb839d7fca5bdd0a51f",
+      "size": 2177,
+      "mtime_ns": 1791707718577931854
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_interceptor/audio-recipe.json",
+      "sha256": "01473f818c62f75d2d3623c6594d742e7cc6492dbe5b81a6862f28ecac0c8d88",
+      "size": 1134,
+      "mtime_ns": 1791706965672752406
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_interceptor/content.json",
+      "sha256": "9dce23724ad1f3e0ae24ac77dba3593be67e7b0348398836fcc4ce8941cfb855",
+      "size": 1652,
+      "mtime_ns": 1792220272511145618
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_interceptor/contract.json",
+      "sha256": "054a77a223bb2f7fefb4904af4fff59ef7251a741657136c5c8614d58bb9aee6",
+      "size": 439,
+      "mtime_ns": 1791706310045117293
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_interceptor/mod.toml",
+      "sha256": "b6ad55f9719027cf4e919aa378a75b2ba0b2a8c07ae9f05a50891030ee981d86",
+      "size": 317,
+      "mtime_ns": 1792220272512049511
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_interceptor/provenance-projectile-v1.json",
+      "sha256": "419df697edd805fe15c42c8201e73894edfecf07ee9a4f8582b368bd24ec8e3a",
+      "size": 1389,
+      "mtime_ns": 1791707602909565971
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_interceptor/provenance-unit-v1.json",
+      "sha256": "09ffd3e06ca5ea1ff81c7e2d0c10a06edd310c6bf71cae66f382166b82c6ce3f",
+      "size": 1407,
+      "mtime_ns": 1791707602909372714
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_interceptor/scripts/ai.rhai",
+      "sha256": "7b15d3530056fd7324101b561025114be40e7cbac04013c7c02885f5604c9ca1",
+      "size": 6364,
+      "mtime_ns": 1792220272573258973
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_interceptor/scripts/gun.rhai",
+      "sha256": "795b2efb8661ffbca5920e579f4abbb0fb552b2104d8cef0c9e52089453278b4",
+      "size": 215,
+      "mtime_ns": 1791706310044962680
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_interceptor/validation/acceptance.json",
+      "sha256": "c199af85f681a3f6e481302eec64444cdc43c43685a905949d163fdce29db3d9",
+      "size": 2409,
+      "mtime_ns": 1791707811952407492
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_1/acceptance-report.json",
+      "sha256": "bd074b168cc6ab71666be35748257584a0a713d6149892634d604674e5303a79",
+      "size": 15460,
+      "mtime_ns": 1791708662220369737
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_1/asset-report.json",
+      "sha256": "750d0bacfbe02ead4c723233e343b5078a4412ed26df1f9458b25ebaaf3b9d13",
+      "size": 121113,
+      "mtime_ns": 1791707614563603688
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_1/content.json",
+      "sha256": "f2cce63a18bc547c88de7222959d53b6e3b46b3473c60c528728b92ede7223fd",
+      "size": 595818,
+      "mtime_ns": 1792220272513842990
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_1/generation-provenance.json",
+      "sha256": "72ce35c06dce296c6d213b67cc80ecac824941f79b0fbcdea0b89cc967db8e0b",
+      "size": 2780,
+      "mtime_ns": 1791708724840866167
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_1/mod.toml",
+      "sha256": "cb2ae4da32639ad0eb15dc12c68cfc82b5b09668cebe7bf4b90d71a0eb30b83c",
+      "size": 516,
+      "mtime_ns": 1792220272517527345
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_1/scripts/mission.rhai",
+      "sha256": "db7bb0446f03adc0f460579b36c55f1a4d5bbadb6fc156f42448a9fea914d6d3",
+      "size": 2499,
+      "mtime_ns": 1792220272572105136
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_2/acceptance-report.json",
+      "sha256": "94e96c7ef94df67bbca8a72e2bb64dfdc138fc9479d9cad6c6ef2918d1ddeb62",
+      "size": 15190,
+      "mtime_ns": 1791708662222132278
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_2/asset-report.json",
+      "sha256": "f66b1c529efd7af95d5c9d1d526d61e28006b37946c1eef58434bf66ecc2a6d9",
+      "size": 121112,
+      "mtime_ns": 1791707614567509352
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_2/content.json",
+      "sha256": "1a690c542387580fa30eb9383b924252310e839a5c2d912d9cee115d45ac9c6e",
+      "size": 597590,
+      "mtime_ns": 1792246729718792075
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_2/generation-provenance.json",
+      "sha256": "9f8a060addcf2b2a3b7b84df692395eb47583251900c10536770d521ed94df80",
+      "size": 2772,
+      "mtime_ns": 1791708724841046299
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_2/mod.toml",
+      "sha256": "4a41d316fb80058eba79add419e62759314f99c6562e1d8dd21889cc246b7d15",
+      "size": 510,
+      "mtime_ns": 1792246729718862156
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_2/scripts/mission.rhai",
+      "sha256": "75c8ddaaa35a95592dfecff65b50b95eb8738459a26999c56611cf529cc2c81f",
+      "size": 2507,
+      "mtime_ns": 1792220272571176553
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/asset-report.json",
+      "sha256": "264479a65a8702448b4712e82d210d192eb6a6699214da5b8089dfa9ca6aa607",
+      "size": 3340,
+      "mtime_ns": 1791706825007636563
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/audio-recipe.json",
+      "sha256": "215759b41c5e3749e8e4867f361f4b15ee296ab2e92fb6323948c870d77046b2",
+      "size": 1832,
+      "mtime_ns": 1791706816729856855
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/content.json",
+      "sha256": "1950e5173b22f0d38bc174bb11d73d01932786f2cd2355be5156372cc7107904",
+      "size": 109584,
+      "mtime_ns": 1792220272525816498
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/design.json",
+      "sha256": "48cbc1498c5cbde3aef4497ff767165233f3ae31a00512aa7d869e26492adcad",
+      "size": 735,
+      "mtime_ns": 1791707054667575316
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/mod.toml",
+      "sha256": "4532b00f6c95c12856a135ce40394615cb690ae6f714115b9af2511fcdb40093",
+      "size": 543,
+      "mtime_ns": 1792220272527680309
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/provenance-target.json",
+      "sha256": "1ee06113bd109058809f76cfd879773ec229ba001619bd48ae54e3908a1ae61e",
+      "size": 2103,
+      "mtime_ns": 1791706562546493233
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/provenance-terrain.json",
+      "sha256": "dbff1d686d9ec3edaa769bf3c823285728f14959b87b98d211d51ec0956f326a",
+      "size": 2107,
+      "mtime_ns": 1791706492189186176
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/scripts/mission.rhai",
+      "sha256": "1b277d3d11bf7364af58395e95d7ceb8a8ae4f358944f0ca772feb54449bebff",
+      "size": 2135,
+      "mtime_ns": 1792220272570261161
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/scripts/target.rhai",
+      "sha256": "df9e4efe71f732bf0b534bae3047d9adad3ace8ac3a2d4b78a48a1f7024e4d34",
+      "size": 1952,
+      "mtime_ns": 1791708235860207109
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/validation/Cargo.toml",
+      "sha256": "dd3f98e91cd44d7132f343d70b32a9e8bd1537ff1a053b07cc5b3292e3461ec5",
+      "size": 328,
+      "mtime_ns": 1791708316500324307
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/validation/acceptance.json",
+      "sha256": "e9f3c081b3184836e2c5dbadd02435d01e2722b00966bccc6b88e7bf3afa7d42",
+      "size": 9695,
+      "mtime_ns": 1791708818277038266
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/validation/compiler-binding.json",
+      "sha256": "f2cd61126ef208296b567a8efdb23ace998814a3acf5263bf2079f08ae511175",
+      "size": 1017,
+      "mtime_ns": 1791707496667450113
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/validation/retained-state-compiler-binding.json",
+      "sha256": "6412b0ac9995e971d8861f6b6da07003423e19bd777342958d40b347d307dfe9",
+      "size": 1019,
+      "mtime_ns": 1791708677980325862
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/validation/retained-state.json",
+      "sha256": "6b2696520155f61dbd0cf9ed18a80aeaef429a63fa4c781a8605b8b2476dd39e",
+      "size": 1908,
+      "mtime_ns": 1791708759756412160
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_3/validation/visual-review.json",
+      "sha256": "8ab95b9ed7b393632fee6aed3fc337dbc92d28304cfd6779b31708d3a1f5858e",
+      "size": 5245,
+      "mtime_ns": 1791708899167152670
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/asset-report.json",
+      "sha256": "a8d0de4b02809f60c62decbc14961dd38b3981082bce01b1002e075de6e25d46",
+      "size": 3340,
+      "mtime_ns": 1791706823576532462
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/audio-recipe.json",
+      "sha256": "6e1f79c3931a52172623c2a2f2b18051c004515a25e1e1c400fd015e2ca2e1db",
+      "size": 1832,
+      "mtime_ns": 1791706816586234107
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/content.json",
+      "sha256": "d47878fe916af150d18af7f25b356092d2dfc9b33f319954ab25ecdc2fd63ce2",
+      "size": 109578,
+      "mtime_ns": 1792220272529615884
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/design.json",
+      "sha256": "7f32da0111a25663f8f2afde209029585ae946c3f33b9ea90c84ee42972a89fa",
+      "size": 732,
+      "mtime_ns": 1791707054672283186
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/mod.toml",
+      "sha256": "3e93ec5ee82498d27f1f0a98d5a8dfff8f2b722cedef60580e3614cbce7769b9",
+      "size": 534,
+      "mtime_ns": 1792220272531182687
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/provenance-target.json",
+      "sha256": "cfb13b739d2e00cc4b2d180f3e278ff97ece50f7c2401c763b219e6f60654aad",
+      "size": 2103,
+      "mtime_ns": 1791706810262029192
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/provenance-terrain.json",
+      "sha256": "add8ba7a4cdea9a1a980ffa7814216e8ce75765bfc60881ee6da3833b2a9014b",
+      "size": 2107,
+      "mtime_ns": 1791706526617262597
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/scripts/mission.rhai",
+      "sha256": "94002a1e4e23c03a8b789308f87945d8d79c5a9313b2a1b67bcce13dda089d92",
+      "size": 1986,
+      "mtime_ns": 1792220272569472518
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/scripts/target.rhai",
+      "sha256": "d1a93a334f1229a961efa437b18003e2bd59b0a7de68e19569bcc53b4a935df9",
+      "size": 1952,
+      "mtime_ns": 1791708235860310363
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/validation/Cargo.toml",
+      "sha256": "f4be385ad835c36d12b9ee1ffcda499dafc3e98bc3c4bca487917f98cd6e9b6e",
+      "size": 328,
+      "mtime_ns": 1791708316500453084
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/validation/acceptance.json",
+      "sha256": "4869223337dcac6bfde976304d3b4b109c81a0d36ad91865d87eb246466919c1",
+      "size": 9735,
+      "mtime_ns": 1791708818133041651
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/validation/compiler-binding.json",
+      "sha256": "b4f93353c8a49e6d62e1bbe155f099cd43fe0fa8ab3193351f333d15f08fd9db",
+      "size": 1017,
+      "mtime_ns": 1791707500668585434
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/validation/retained-state-compiler-binding.json",
+      "sha256": "2c608ff389d82f8ef646ae435103b5d78c70cf30302cbb761206493495e55ce2",
+      "size": 1019,
+      "mtime_ns": 1791708678050276547
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/validation/retained-state.json",
+      "sha256": "8626710e8d6b28fe516760b865a5a2fa373d6e8ffadd83779920d4a3b13bf92a",
+      "size": 1912,
+      "mtime_ns": 1791708759511417904
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_4/validation/visual-review.json",
+      "sha256": "02e9bf33701c581874ac215fddcc8da4da457e51a30090b5814ae0531606fd49",
+      "size": 5244,
+      "mtime_ns": 1791708899239309514
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_5/art-qa.json",
+      "sha256": "ffbdf2c67d0a5b55f065c814f32dd234de59bfa3093cc06034f423b8396e7e2b",
+      "size": 90719,
+      "mtime_ns": 1791707436890124897
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_5/audio-recipe.json",
+      "sha256": "2d13381a1cc69bd811651aaf78cd5988b4d9a03b6bae1b2d7b8587a988ad39d9",
+      "size": 2042,
+      "mtime_ns": 1791706721941402507
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_5/content.json",
+      "sha256": "06c29e23904d1d4f7af6fb7d5ebf1bc1d40f2e6cadb83b05799074622e4971ff",
+      "size": 80546,
+      "mtime_ns": 1792220272532952952
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_5/mod.toml",
+      "sha256": "1632160ab81887162d5324d9871eab9b91dc9ef9554a8e749f84757e8329bb22",
+      "size": 591,
+      "mtime_ns": 1792220272534461221
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_5/prompts/request-v1.json",
+      "sha256": "c3c15e693128e9eed49a404639c384b3c693dd9b81f61b070c6bd6735c4817be",
+      "size": 1757,
+      "mtime_ns": 1791706269760409279
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_5/provenance.json",
+      "sha256": "15cc4694fcd6c6f515e16c7e74f4dc146ad9224b591e6b11f16a93a887969a9d",
+      "size": 975,
+      "mtime_ns": 1791706329760054590
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_5/scripts/mission.rhai",
+      "sha256": "81acb7c28d790077988021a76f2a1206a880e1514a53ccc6e2c0f11c9c1fef29",
+      "size": 3571,
+      "mtime_ns": 1792220272568571244
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_5/scripts/target.rhai",
+      "sha256": "f0a41eb77bf41f666036e0724f108cf5b84ab1423b2a5b22d568f7cd452fd1fa",
+      "size": 1243,
+      "mtime_ns": 1791706655226651976
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_5/validation.json",
+      "sha256": "85b205266dff89295041ba9a48d6361b69e3954628bec8280f91f07f3a3b4458",
+      "size": 8879,
+      "mtime_ns": 1791707659176809121
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_6/art-qa.json",
+      "sha256": "a0746a72f6621dd76b6eb952b078b13d3682de41f6730b1b963a3b2db7b29a53",
+      "size": 90719,
+      "mtime_ns": 1791707436891724412
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_6/audio-recipe.json",
+      "sha256": "60fd7f731e839b56c29d170b86d7a9d0d21fd7a213debace3e5f4ba8c099babb",
+      "size": 2042,
+      "mtime_ns": 1791706724904338966
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_6/content.json",
+      "sha256": "b322f0f52829db43d0de1d5b94bce8576cf2197feccc862ceaecfd6b9b0b2d3f",
+      "size": 80601,
+      "mtime_ns": 1792220272536267441
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_6/mod.toml",
+      "sha256": "bc2b1045638d9abc34330c06b2ff74374a087aa5f0a6c99f41314ace219af58c",
+      "size": 572,
+      "mtime_ns": 1792220272537737342
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_6/prompts/request-v1.json",
+      "sha256": "e3e73850a3e5c29eeae98811446c1809e4856bb9979bb911e605d1a4e6326afe",
+      "size": 1705,
+      "mtime_ns": 1791706329821569879
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_6/provenance.json",
+      "sha256": "24fa19b0b5f48ec5659dae914f12a9fc829def98b226ed7063b4b6baa3eeda77",
+      "size": 971,
+      "mtime_ns": 1791706411363709467
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_6/scripts/mission.rhai",
+      "sha256": "0300ac006e86967c11f3d1bd378c4162c3615a2a12e7d5e96d2f5a1bcb4fee39",
+      "size": 3571,
+      "mtime_ns": 1792220272567650544
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_6/scripts/target.rhai",
+      "sha256": "7362170df962ba65f953ddbd7b5ee427811c14d20cbd8cd04cd4fe9eed7b5972",
+      "size": 1243,
+      "mtime_ns": 1791706655231348955
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_6/validation.json",
+      "sha256": "ab1d5f26f2b8dcfbe81d4498ef28bc64dd61eb34eaa0c63c10958601172ec3aa",
+      "size": 8588,
+      "mtime_ns": 1791707659177230095
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_7/art/provenance.json",
+      "sha256": "75a24d53b9687a2fc41a4227fc3f7302d48400ba2f4454c763663c28663a60c0",
+      "size": 1302,
+      "mtime_ns": 1791707823752254009
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_7/art-qa.json",
+      "sha256": "ccc20324e0dcd29f150bb5dfa7c6d36d5f5b630fb102a77f568024a9a0f03a5e",
+      "size": 1317,
+      "mtime_ns": 1791707823752357703
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_7/audio-recipe.json",
+      "sha256": "07184c074f3157d674f566d5691d8f66cf30e0b7f2da0f25e6a60a9dabb44a7e",
+      "size": 1355,
+      "mtime_ns": 1791706587496697045
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_7/content.json",
+      "sha256": "934391d9af7beac1b4e107a7589df5fa970d93d1ee67e8b04131e30470f6ce78",
+      "size": 102081,
+      "mtime_ns": 1792220272539684071
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_7/mod.toml",
+      "sha256": "a08edbd26070258e601af32a9ed403ea849159c3ee1a4c2107c351549fe19a52",
+      "size": 576,
+      "mtime_ns": 1792220272541197775
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_7/scripts/mission.rhai",
+      "sha256": "76a166aad796410fc91d10636b52b26d66f75e90dc8127a070be68e8c1359e93",
+      "size": 3485,
+      "mtime_ns": 1792220272566640868
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_7/validation-summary.json",
+      "sha256": "b137c3ecafc11df0e2ce01d097e14368a1b788e58a75eb041c552cbcf024bc90",
+      "size": 16161,
+      "mtime_ns": 1791707874907556918
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_8/art/provenance.json",
+      "sha256": "e62bb456f1a4f369c844f3a3dc249e79996d5a63e973a76c24dc52f3b848abb3",
+      "size": 2446,
+      "mtime_ns": 1791707823753198146
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_8/art-qa.json",
+      "sha256": "c47fff0129ff1f54d6fa9a3c4e50df751de929c70c12269257ad9ff08dfb97b2",
+      "size": 1413,
+      "mtime_ns": 1791707823753328125
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_8/audio-recipe.json",
+      "sha256": "90814d63e1195e7dfa57948fae1b190aca238f4470f704779f947a6f23808685",
+      "size": 1355,
+      "mtime_ns": 1791706598451770800
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_8/content.json",
+      "sha256": "f90cf4886968cf3346d9cd3dea553f35275d130ecc3275985448f100e1808b0d",
+      "size": 102522,
+      "mtime_ns": 1792220272543042300
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_8/mod.toml",
+      "sha256": "5e884e3ff91945bd9a716c78169708d8fa93b4739e6658db22439d418f28ac3d",
+      "size": 550,
+      "mtime_ns": 1792220272544506520
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_8/scripts/mission.rhai",
+      "sha256": "e03f5a2f439bdfb1bbb4cd5ce37664ac0b52c2a7bf2093127bcd03a965ed2763",
+      "size": 3485,
+      "mtime_ns": 1792220272565582301
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_8/validation/Cargo.toml",
+      "sha256": "ed669472d516063a8c87661931399875fffcde28507f0e1f9563c1d819cd6c3d",
+      "size": 204,
+      "mtime_ns": 1791706777775596127
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_mission_8/validation-summary.json",
+      "sha256": "150ede6bac1c7221a7a84ad32bb75b78cd0561006bf6e0981a4837c53558f51f",
+      "size": 16144,
+      "mtime_ns": 1791707874934953971
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_music/content.json",
+      "sha256": "fccfc091f8e1a5c9134e8cc8025b7c4b74ae5836a5857c89b02f8b98f0397dad",
+      "size": 362,
+      "mtime_ns": 1791706326894658508
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_music/mod.toml",
+      "sha256": "0d1db39ef046a4d0b5348ad53bbbdb7237e978b4c338725649262e460c7c414a",
+      "size": 342,
+      "mtime_ns": 1791706326894658508
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_music/provenance.json",
+      "sha256": "d7c828aa5a37a36475153e2e6ebc94b5e4415c5902581772f7432dcc6b3d8c65",
+      "size": 6061,
+      "mtime_ns": 1791706808248082893
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_music/validation.json",
+      "sha256": "4827b0e0aeec6e58090eb7dd218716964168446afe1702661569b42b1448f63c",
+      "size": 10744,
+      "mtime_ns": 1791707619157395410
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_siege/RETUNE-ASSET-REUSE.json",
+      "sha256": "e51e3adec1f8d8cfae707fe2cff8f1cb366d97a7a29fd2d3205b699d63c5d746",
+      "size": 676,
+      "mtime_ns": 1792220272546152388
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_siege/art-qa.json",
+      "sha256": "190dda0d53ea1b6dcced46fa0465be97fdf5bc4c3348856ed29dac56473c6507",
+      "size": 2175,
+      "mtime_ns": 1791707720900874390
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_siege/audio-recipe.json",
+      "sha256": "b3e9a0fb4305d82a0680a577faff5eeaa9b0d271e6e708d6d9817e224729127a",
+      "size": 1134,
+      "mtime_ns": 1791706965810030805
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_siege/content.json",
+      "sha256": "bc6cd1d863f0a2ae1e8effb421db85aedb16a861124ed7c4573e0790a0edf851",
+      "size": 1669,
+      "mtime_ns": 1792220272547008803
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_siege/contract.json",
+      "sha256": "68a2849a6bd16ed011e1224f3018bafe7e0b87cdc2b2645fdcd80044a7a754bd",
+      "size": 432,
+      "mtime_ns": 1791706310045551296
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_siege/mod.toml",
+      "sha256": "bf30dbc8d845c5b68a2a552d0865a9e51a27bc38b32cb964db0bf5026445e19e",
+      "size": 315,
+      "mtime_ns": 1792220272547760229
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_siege/provenance-projectile-v1.json",
+      "sha256": "1790f05f7ee5892deafa4ebb92abe45b56c9c3215782bd05ad2f495899e15c9c",
+      "size": 1386,
+      "mtime_ns": 1791707602909798840
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_siege/provenance-unit-v1.json",
+      "sha256": "2776bdd353c35b382e809436dffe29fbf0bfa3aff5e9876e71f20ef4473e913a",
+      "size": 1374,
+      "mtime_ns": 1791707602909719100
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_siege/scripts/ai.rhai",
+      "sha256": "a2f31ea57bfbea10f8bf6ad3daa044fbcf453c38fc785b36230478abc29f2e5a",
+      "size": 5852,
+      "mtime_ns": 1792220272564632976
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_siege/scripts/gun.rhai",
+      "sha256": "795b2efb8661ffbca5920e579f4abbb0fb552b2104d8cef0c9e52089453278b4",
+      "size": 215,
+      "mtime_ns": 1791706310045390032
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_siege/validation/acceptance.json",
+      "sha256": "9b980950f0a515a348551e56a58a94f88a4c280dd8f852d84e21d2c522c71ec8",
+      "size": 2403,
+      "mtime_ns": 1791707811952769258
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_skimmer/art-qa.json",
+      "sha256": "6ad9e013ac43536fec67b10d8bb662e46043dca561e8ad9ddd6d48ea4c94e7d7",
+      "size": 2177,
+      "mtime_ns": 1791707722659449481
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_skimmer/audio-recipe.json",
+      "sha256": "1da25fe4c68c4dc37acc692452ec59262a7e55c5ae3644e2533c346ce0000c5d",
+      "size": 1134,
+      "mtime_ns": 1791706965931200214
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_skimmer/content.json",
+      "sha256": "b273d308ae96755f9931ca0996730af527db01c96d7f36da004422da53083ca3",
+      "size": 1621,
+      "mtime_ns": 1792220272549818518
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_skimmer/contract.json",
+      "sha256": "ebde0cbfe5d64a94b37d74bb371389550b2fde9ecb9f469f1e6c1ae568d7c38c",
+      "size": 429,
+      "mtime_ns": 1791706310045957185
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_skimmer/mod.toml",
+      "sha256": "ca92d84d6dd79530960d680962a3dbb46228d94f71d767497876d3eb348a01cc",
+      "size": 307,
+      "mtime_ns": 1792220272551026240
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_skimmer/provenance-projectile-v1.json",
+      "sha256": "5a93715449af13ad17ea35aefeb33dba983a18623e9b3f9adcc6a50e28de0563",
+      "size": 1388,
+      "mtime_ns": 1791707602910246622
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_skimmer/provenance-unit-v1.json",
+      "sha256": "5265409f065e51a0ca4e20a6b34dd4d8ab78bd9051c9472d38dedcf603c49fce",
+      "size": 1376,
+      "mtime_ns": 1791707602910079112
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_skimmer/scripts/ai.rhai",
+      "sha256": "73c474c0bbb063c9a55ea34aedeae618de94dfd24105cb06393a70df8f29515d",
+      "size": 6083,
+      "mtime_ns": 1792220272563665306
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_skimmer/scripts/gun.rhai",
+      "sha256": "795b2efb8661ffbca5920e579f4abbb0fb552b2104d8cef0c9e52089453278b4",
+      "size": 215,
+      "mtime_ns": 1791706310045813731
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_stage2_skimmer/validation/acceptance.json",
+      "sha256": "fddfe1feb2dfb3d7581257274e8379536a6114085d8c28d06010a7dc9749b8ec",
+      "size": 2405,
+      "mtime_ns": 1791707811953077988
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_turret/art-qa.json",
+      "sha256": "866a64701236061c0cca8129cf55f170fe28d77f211e2ebaf7d74ee87e030dfe",
+      "size": 547,
+      "mtime_ns": 1791594706499419919
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_turret/audio-recipe.json",
+      "sha256": "809991aa2e25e5f27aa46cfc72dd96787f40ce00a1b2737130593bc890716dc5",
+      "size": 591,
+      "mtime_ns": 1791594706352718061
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_turret/content.json",
+      "sha256": "42a80893240b477aac201951f58118b9cc3c2ec5b41ece658ff30b2a4f916967",
+      "size": 1270,
+      "mtime_ns": 1792220272553549016
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_turret/mod.toml",
+      "sha256": "44a25273a9fb6bb652473828bfe59cd447800a434f9bc981ce8f43aa37f1e948",
+      "size": 284,
+      "mtime_ns": 1792220272554359442
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_turret/provenance.json",
+      "sha256": "fcadb0b24ce5a815ea34a9135dc7750d37acaac3fcbb05b70f5490ed1d749164",
+      "size": 1465,
+      "mtime_ns": 1791594896524726379
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/iron_coast_turret/scripts/ai.rhai",
+      "sha256": "2df5e8b3ecf93b10e850b05f6cf8a3c18f8b550c5725bd901dac872e05fbb5a0",
+      "size": 5809,
+      "mtime_ns": 1792220272562622272
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/lightning_cannon/art-provenance.json",
+      "sha256": "b104d778a515a4517b9dc48fc098e861b4d55c28b0e05f3414095ac466c3ff2a",
+      "size": 845,
+      "mtime_ns": 1791671528684582450
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/lightning_cannon/balance-report.json",
+      "sha256": "aa08b40fa9d7618aef15c8b1ef29dc15fa2817b1d062ad4996a7a6b547186e4c",
+      "size": 4060,
+      "mtime_ns": 1791672144021960443
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/lightning_cannon/content.json",
+      "sha256": "54cb9cd94b63df11d283e70b402a6c880e0a298850fd17f903fbddb5149994a4",
+      "size": 1517,
+      "mtime_ns": 1791671679680117591
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/lightning_cannon/mod.toml",
+      "sha256": "81bbc932c5ed774f988c463b611bed14ae1378e5b164730d5415af165b580dbc",
+      "size": 474,
+      "mtime_ns": 1791671247860390241
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/lightning_cannon/scripts/equipment.rhai",
+      "sha256": "e45195f482f588215a9d9e375339fd177365f2e5f7a76de8d6947b812bb43248",
+      "size": 327,
+      "mtime_ns": 1791671247860601925
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/lightning_cannon/scripts/weapon.rhai",
+      "sha256": "172e6677b33b8a9cca5fc235767f6c3e64b26c1210499af941cc9e2104e24089",
+      "size": 2367,
+      "mtime_ns": 1791671247901668519
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/lightning_shield/art-provenance.json",
+      "sha256": "be4b59f659335c36ed2fa6729352f6d852f41bae259ea4f8bd83cfc8bc1b8678",
+      "size": 845,
+      "mtime_ns": 1791671528689863645
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/lightning_shield/balance-report.json",
+      "sha256": "576c3be1cda934abd494a627d35cd4f21355da15e572938da0bb5363af89908e",
+      "size": 4117,
+      "mtime_ns": 1791672144022193002
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/lightning_shield/content.json",
+      "sha256": "e3577d0bf257fd1ec521ac9330e70976e009137d94a40b4731119f2c8adb4cd9",
+      "size": 1574,
+      "mtime_ns": 1791682206358965797
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/lightning_shield/mod.toml",
+      "sha256": "f7b02ee8a2628ff3b17deca8aececac60a37ff7d5353a5325ba462ce39a39941",
+      "size": 495,
+      "mtime_ns": 1791682206323602641
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/lightning_shield/scripts/equipment.rhai",
+      "sha256": "c2b8b3288e17203438474068b4e59dd5fa9af9044f377427fe365f51a6f4903e",
+      "size": 327,
+      "mtime_ns": 1791671247861029055
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/lightning_shield/scripts/weapon.rhai",
+      "sha256": "c0a23e6fa000b205abfe20b2762e1aec2326b04fea4d0798b441e79970d493ec",
+      "size": 3282,
+      "mtime_ns": 1791681992844795378
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/pulse_cannon/art-provenance.json",
+      "sha256": "606e13405891699a4031db4cc09650a3439a45e5625d703f08474c6d60b7c822",
+      "size": 4356,
+      "mtime_ns": 1791594626868338548
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/pulse_cannon/content.json",
+      "sha256": "ec2a76d97805aa7fba66e35ed72a7fd6688ee3b11fee13d69bb10f5fbad20e61",
+      "size": 1689,
+      "mtime_ns": 1792220272556153614
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/pulse_cannon/mod.toml",
+      "sha256": "3d047fc776d5e0b12cb648f3cf6c73b90c741b5d21516f04eef53415633f4acf",
+      "size": 289,
+      "mtime_ns": 1792220272557010552
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/pulse_cannon/scripts/equipment.rhai",
+      "sha256": "8094c862f6c71d45ded6e9449fab97ca5996e97462a7955123a365b096d3689c",
+      "size": 332,
+      "mtime_ns": 1791594356382164011
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/pulse_cannon/scripts/weapon.rhai",
+      "sha256": "8919fed2787cd0e7a61480192cdd1897b402764930683a163139595de7925537",
+      "size": 3326,
+      "mtime_ns": 1792220272561372653
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/seeker_swarm/art-provenance.json",
+      "sha256": "c31f4090c47670d0806653de6b0a59a5bf955810878a33442467746db43629e3",
+      "size": 4284,
+      "mtime_ns": 1791594626873147672
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/seeker_swarm/content.json",
+      "sha256": "0c0e6d16858f1a7c53a06c16d2b19db48cd925a9f7ec04f8ffa85f47592c7912",
+      "size": 1747,
+      "mtime_ns": 1792220272558765817
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/seeker_swarm/mod.toml",
+      "sha256": "4c5a6801623411a11e7b27c82cbcdf4ec71aed7fc0fc7daea651cd584ba4d200",
+      "size": 289,
+      "mtime_ns": 1792220272559628336
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/seeker_swarm/scripts/equipment.rhai",
+      "sha256": "a34f5f05024fb0bbd5fa25711f8eef266c499911eed180bfdfe986235c51bb4a",
+      "size": 332,
+      "mtime_ns": 1791594356382481635
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/mods/seeker_swarm/scripts/weapon.rhai",
+      "sha256": "41f99085c1b28845295560a695f81912505440700e04e28d559df36193d4edfe",
+      "size": 3375,
+      "mtime_ns": 1792220272560450914
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/raptor/src/enemy.cpp",
+      "sha256": "59a2f943379e8374c97917d0d548c23436e4fce458e8da0440801f7281b1243e",
+      "size": 36426,
+      "mtime_ns": 1787667403127717716
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/raptor/src/enemy.h",
+      "sha256": "2e9d12eb247d47320c5b5b978438058cd62f2c761d1a23cfd7dd4aef066edb23",
+      "size": 4979,
+      "mtime_ns": 1787667151444645909
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/raptor/src/fileids.h",
+      "sha256": "287513d4300cfa81859af1142e8542b64be285f12aa1b478157916458386daba",
+      "size": 62790,
+      "mtime_ns": 1787657438170841117
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-DSHP20G3-complete3-apriori-rational4x7-Original-author-20261018-v2/CLOSED_ONE_NEW_COMPLETE3_RATIONAL4X7_DSHP20G3_BUILTIN_DIMENSION_PASS_ART_REGISTRATION_HOLD_NO_QA.json",
+      "sha256": "d95e3da96adcc5738a3292f3a872a90d32828494cf44729395a69007fc5242a6",
+      "size": 5707,
+      "mtime_ns": 1792242602860487241
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-DSHP20G3-rational-v2-actual-SourceE-complete3-diagnostic-20261018/CLOSED-ACTUAL-SOURCEE-DSHP20G3-RATIONAL-COMPLETE3-RUNTIME-DIAGNOSTIC-HOLD.json",
+      "sha256": "58f80f65e77212c49874eb5761307b1604cda485f36469ba61c9873b34a1a26c",
+      "size": 10201,
+      "mtime_ns": 1792243561408356034
+    }
+  ],
+  "operations": {
+    "World": 0,
+    "compile": 0,
+    "renderer": 0,
+    "QA": 0,
+    "image": 0,
+    "shared_Source_canonical_docs_Git": 0
+  },
+  "no_pending_owned_writer_call_lease": true
+}

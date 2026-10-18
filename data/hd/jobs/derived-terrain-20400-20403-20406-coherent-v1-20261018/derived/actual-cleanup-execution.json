@@ -1,0 +1,338 @@
+{
+  "execution": {
+    "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+    "output_sha256": {
+      "20400": "ca5479ef35d84d71ad737dcb55c14443f1796cd7cf8a87b8386e29598913022b",
+      "20403": "33305c62843344adb740610057dd7423bb8f8eeec33460e6eb065fe2614fe835",
+      "20406": "56be74b24d34663feaafb3add8f3fd61b9a7083659fdc109badae7eafb9e0e97"
+    },
+    "parent_raw_sha256": [
+      "70a360ff5c148be181ed9d27ed46e29322a7b54a0f48709d290d1666e3ad70d0"
+    ],
+    "recipe_sha256": "0743cbc73f049ee6fcfefd5c1b650b76f08eefa4463b647d5436c2d84920e31d",
+    "runtime": {
+      "Pillow": "12.3.0",
+      "executable": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "numpy": "2.3.5",
+      "platform": "linux",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+    },
+    "source_sha256": {
+      "20400": "02ee58837e0189c997e6777cb0cd2e9d66babe48a3252209e20ffb57761e2bba",
+      "20403": "d5779389a3fc84f260b27f85fa74b13778f528d5978c8a40e577e6570be5f0ea",
+      "20406": "17b3acb33c17ddf7394984a63a60123a1d16ea98e77d68a350886f2f49cd0e78"
+    },
+    "status": "success",
+    "tool_sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98"
+  },
+  "frames": [
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959559952080,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/data/hd/jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/../../../misc/unnamed.1531",
+        "sha256": "02ee58837e0189c997e6777cb0cd2e9d66babe48a3252209e20ffb57761e2bba",
+        "size": 1044
+      },
+      "asset": "20400",
+      "lineage": "DERIVED scripted cleanup; generator-return parent remains untouched",
+      "metrics": {
+        "Source_derived_soil_quiet_strength_max": 1.0,
+        "Source_derived_soil_quiet_strength_min": 0.35,
+        "actual_tone_gain_max": 1.733252584596283,
+        "actual_tone_gain_min": 0.5852413519623538,
+        "coherent_parent_band_std": 13.589276580841245,
+        "geometry_material_labels_sha256": "9b721e2fc0f5e91a187202e7b39eeffe3dd4cd4a99f6cbb3b54d5b8e1670ea61",
+        "limits": "Source masks/broad tones/rims; actual coherent generated fine+midscale luminance is hue-preserving multiplicative texture. No random noise; large generated hue/illumination drift discarded. Not material/context approval.",
+        "material_output_pixels": {
+          "olive": 95568,
+          "soil": 166576
+        },
+        "mean_absolute_parent_tone_modulation": 3.86004638671875,
+        "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+        "output_RGB_sha256": "2777064fdcea302284b1c423776a6e04bb9758bb0550f014403721020ed78c6f",
+        "output_is_derived_not_untouched": true,
+        "output_shape": [
+          512,
+          512,
+          3
+        ],
+        "per_family_normalizers": {
+          "olive": 13.13311571591981,
+          "soil": 16.993077735057156
+        },
+        "pixels_changed_from_Source_guided_base": 250961,
+        "sourceNx4_indices_sha256": "0eee6d758ff4d0e2c241a66dedf31c0030111a443689be4e2d1d456bc3942346",
+        "source_shape": [
+          32,
+          32
+        ]
+      },
+      "output": {
+        "mode": 33188,
+        "mtime_ns": 1792281090608804880,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/portable-verification-final-tool-v2/20400-DERIVED-source-guided-material-v1.png",
+        "sha256": "ca5479ef35d84d71ad737dcb55c14443f1796cd7cf8a87b8386e29598913022b",
+        "size": 292432
+      },
+      "parameters": {
+        "output_side": 512,
+        "residual_percentile": 80.0,
+        "residual_sigma_coarse": 10.0,
+        "residual_sigma_fine": 0.65,
+        "source_sigma": 3.0,
+        "texture_log_gain": {
+          "gray": 0.38,
+          "olive": 0.55,
+          "rim": 0.06,
+          "soil": 0.34
+        }
+      },
+      "parent_crop": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792281043870222723,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/data/hd/jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/parents/generator-return.png",
+        "sha256": "70a360ff5c148be181ed9d27ed46e29322a7b54a0f48709d290d1666e3ad70d0",
+        "size": 3137976
+      },
+      "recipe": {
+        "mode": 33188,
+        "mtime_ns": 1792281043892012015,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/data/hd/jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/cleanup-recipe.json",
+        "sha256": "0743cbc73f049ee6fcfefd5c1b650b76f08eefa4463b647d5436c2d84920e31d",
+        "size": 6078
+      },
+      "tool": {
+        "mode": 33188,
+        "mtime_ns": 1792281032564211121,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_retexture.py",
+        "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98",
+        "size": 16025
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959560153773,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/data/hd/jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/../../../misc/unnamed.1534",
+        "sha256": "d5779389a3fc84f260b27f85fa74b13778f528d5978c8a40e577e6570be5f0ea",
+        "size": 1044
+      },
+      "asset": "20403",
+      "lineage": "DERIVED scripted cleanup; generator-return parent remains untouched",
+      "metrics": {
+        "Source_derived_soil_quiet_strength_max": 1.0,
+        "Source_derived_soil_quiet_strength_min": 0.35,
+        "actual_tone_gain_max": 1.7332476962268284,
+        "actual_tone_gain_min": 0.5864411400693279,
+        "coherent_parent_band_std": 17.70077044886482,
+        "geometry_material_labels_sha256": "bc9d6f40c8753258bcb51caa51bd2cb08484151fc65704466b9abecac98f2c43",
+        "limits": "Source masks/broad tones/rims; actual coherent generated fine+midscale luminance is hue-preserving multiplicative texture. No random noise; large generated hue/illumination drift discarded. Not material/context approval.",
+        "material_output_pixels": {
+          "gray": 114688,
+          "olive": 42128,
+          "rim": 16384,
+          "soil": 88944
+        },
+        "mean_absolute_parent_tone_modulation": 4.141119639078776,
+        "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+        "output_RGB_sha256": "e0b26e9ea46e58526b0bfd841c0789468a132ab0f38504c5440bb0e338c83fed",
+        "output_is_derived_not_untouched": true,
+        "output_shape": [
+          512,
+          512,
+          3
+        ],
+        "per_family_normalizers": {
+          "gray": 19.490920127324568,
+          "olive": 13.672725824071598,
+          "rim": 38.7791466932386,
+          "soil": 18.71902347782561
+        },
+        "pixels_changed_from_Source_guided_base": 247528,
+        "sourceNx4_indices_sha256": "525ccdc3fceda4fd885d2a551c8a9993964e88e946211d28e5a8cd2038679737",
+        "source_shape": [
+          32,
+          32
+        ]
+      },
+      "output": {
+        "mode": 33188,
+        "mtime_ns": 1792281090701802626,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/portable-verification-final-tool-v2/20403-DERIVED-source-guided-material-v1.png",
+        "sha256": "33305c62843344adb740610057dd7423bb8f8eeec33460e6eb065fe2614fe835",
+        "size": 255126
+      },
+      "parameters": {
+        "output_side": 512,
+        "residual_percentile": 80.0,
+        "residual_sigma_coarse": 10.0,
+        "residual_sigma_fine": 0.65,
+        "source_sigma": 3.0,
+        "texture_log_gain": {
+          "gray": 0.38,
+          "olive": 0.55,
+          "rim": 0.06,
+          "soil": 0.34
+        }
+      },
+      "parent_crop": [
+        627,
+        0,
+        627,
+        627
+      ],
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792281043870222723,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/data/hd/jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/parents/generator-return.png",
+        "sha256": "70a360ff5c148be181ed9d27ed46e29322a7b54a0f48709d290d1666e3ad70d0",
+        "size": 3137976
+      },
+      "recipe": {
+        "mode": 33188,
+        "mtime_ns": 1792281043892012015,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/data/hd/jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/cleanup-recipe.json",
+        "sha256": "0743cbc73f049ee6fcfefd5c1b650b76f08eefa4463b647d5436c2d84920e31d",
+        "size": 6078
+      },
+      "tool": {
+        "mode": 33188,
+        "mtime_ns": 1792281032564211121,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_retexture.py",
+        "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98",
+        "size": 16025
+      }
+    },
+    {
+      "Source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959560340339,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/data/hd/jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/../../../misc/unnamed.1537",
+        "sha256": "17b3acb33c17ddf7394984a63a60123a1d16ea98e77d68a350886f2f49cd0e78",
+        "size": 1044
+      },
+      "asset": "20406",
+      "lineage": "DERIVED scripted cleanup; generator-return parent remains untouched",
+      "metrics": {
+        "Source_derived_soil_quiet_strength_max": 1.0,
+        "Source_derived_soil_quiet_strength_min": 0.35,
+        "actual_tone_gain_max": 1.7331246647074994,
+        "actual_tone_gain_min": 0.5866611186815514,
+        "coherent_parent_band_std": 18.98491797409762,
+        "geometry_material_labels_sha256": "5fc198d71621b736f2cd860ddeb0dae5453c54998cd73cba6376a055bade5dac",
+        "limits": "Source masks/broad tones/rims; actual coherent generated fine+midscale luminance is hue-preserving multiplicative texture. No random noise; large generated hue/illumination drift discarded. Not material/context approval.",
+        "material_output_pixels": {
+          "gray": 181760,
+          "olive": 13648,
+          "rim": 18064,
+          "soil": 48672
+        },
+        "mean_absolute_parent_tone_modulation": 4.702500661214192,
+        "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+        "output_RGB_sha256": "ba60a23e774394ff46585f29eb6153f7e1d7e3a6c7fc31fbf137f52c9ab7eac2",
+        "output_is_derived_not_untouched": true,
+        "output_shape": [
+          512,
+          512,
+          3
+        ],
+        "per_family_normalizers": {
+          "gray": 20.398508004853323,
+          "olive": 14.617018754524304,
+          "rim": 37.658734072489445,
+          "soil": 18.267316325885535
+        },
+        "pixels_changed_from_Source_guided_base": 246933,
+        "sourceNx4_indices_sha256": "240a692ee79d4a00eff753cab5071ed772e22020152cdbc3dd8962a1b269764d",
+        "source_shape": [
+          32,
+          32
+        ]
+      },
+      "output": {
+        "mode": 33188,
+        "mtime_ns": 1792281090790800468,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/portable-verification-final-tool-v2/20406-DERIVED-source-guided-material-v1.png",
+        "sha256": "56be74b24d34663feaafb3add8f3fd61b9a7083659fdc109badae7eafb9e0e97",
+        "size": 226907
+      },
+      "parameters": {
+        "output_side": 512,
+        "residual_percentile": 80.0,
+        "residual_sigma_coarse": 10.0,
+        "residual_sigma_fine": 0.65,
+        "source_sigma": 3.0,
+        "texture_log_gain": {
+          "gray": 0.38,
+          "olive": 0.55,
+          "rim": 0.06,
+          "soil": 0.34
+        }
+      },
+      "parent_crop": [
+        0,
+        627,
+        627,
+        627
+      ],
+      "parent_raw": {
+        "mode": 33188,
+        "mtime_ns": 1792281043870222723,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/data/hd/jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/parents/generator-return.png",
+        "sha256": "70a360ff5c148be181ed9d27ed46e29322a7b54a0f48709d290d1666e3ad70d0",
+        "size": 3137976
+      },
+      "recipe": {
+        "mode": 33188,
+        "mtime_ns": 1792281043892012015,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/data/hd/jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/cleanup-recipe.json",
+        "sha256": "0743cbc73f049ee6fcfefd5c1b650b76f08eefa4463b647d5436c2d84920e31d",
+        "size": 6078
+      },
+      "tool": {
+        "mode": 33188,
+        "mtime_ns": 1792281032564211121,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_retexture.py",
+        "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98",
+        "size": 16025
+      }
+    }
+  ],
+  "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+  "palette": {
+    "mode": 33188,
+    "mtime_ns": 1787663959337906368,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/data/hd/jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/../../../misc/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "size": 768
+  },
+  "recipe": {
+    "mode": 33188,
+    "mtime_ns": 1792281043892012015,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain3-integration-20261018/data/hd/jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/cleanup-recipe.json",
+    "sha256": "0743cbc73f049ee6fcfefd5c1b650b76f08eefa4463b647d5436c2d84920e31d",
+    "size": 6078
+  },
+  "runtime": {
+    "Pillow": "12.3.0",
+    "executable": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "numpy": "2.3.5",
+    "platform": "linux",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+  },
+  "status": "DERIVED_OUTPUTS_NOT_MATERIAL_APPROVAL",
+  "tool": {
+    "mode": 33188,
+    "mtime_ns": 1792281032564211121,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_retexture.py",
+    "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98",
+    "size": 16025
+  }
+}

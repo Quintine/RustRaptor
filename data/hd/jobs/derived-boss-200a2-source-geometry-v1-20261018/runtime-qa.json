@@ -1,0 +1,201 @@
+{
+  "diagnostics": [],
+  "frames": [
+    {
+      "asset": "200a2",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              1,
+              2,
+              71,
+              40
+            ],
+            "centroid": [
+              35.47219604147031,
+              19.980207351555137
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 2122
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              2,
+              4,
+              142,
+              80
+            ],
+            "centroid": [
+              71.44439208294062,
+              40.460414703110274
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 8488
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              3,
+              6,
+              213,
+              120
+            ],
+            "centroid": [
+              107.41658812441094,
+              60.94062205466541
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 19098
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              4,
+              8,
+              284,
+              160
+            ],
+            "centroid": [
+              143.38878416588125,
+              81.42082940622055
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 33952
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        72,
+        40
+      ],
+      "source_mask": {
+        "bounds": [
+          1,
+          2,
+          71,
+          40
+        ],
+        "centroid": [
+          35.47219604147031,
+          19.980207351555137
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 2122
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "7b887dc7f08f154529df7b1960799e66c4e6df7b7e732ed5df53d6738460c557"
+    }
+  ],
+  "limitation": "Gallery validation does not prove live scene reachability, terrain seam correctness or artistic fidelity. Opaque sprites have trivial alpha-mask overlap; compare visible source geometry manually.",
+  "method": "actual Rust HdAssets::load and sprite at scales 1..4; Catalog palette; no artwork edits",
+  "validated_frames": 1,
+  "frame_bindings_sha256": "6208faf79778b7a4b958db12e8e57b6e54085dfb758aed7788e3b097c46eae42",
+  "candidate_sha256": "c6d000bf44d08b1e260116a7bd2c42bab845c9863a27aa4fec0431da69ea3918",
+  "library": "target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+  "library_modified_ns": 1792245641851329918,
+  "library_sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+  "source_newer_than_library": false,
+  "any_game_source_newer_than_library": false,
+  "artwork_sha256": {
+    "jobs/derived-boss-200a2-source-geometry-v1-20261018/derived/200a2-derived.png": "74793a37ed6983fa99a9349b093b8b6ac2e03f52a6546d09dc245cf3d8479cdf"
+  },
+  "actual_probe_receipt": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-first-boss-integration-20261018/actual-final-job-SourceF-intrinsic-v2-terminal.json",
+    "sha256": "a2867bcc73acecd1d5f1a3d8558df30b7980817171e4f36e65d8f74aaab5df4e"
+  }
+}

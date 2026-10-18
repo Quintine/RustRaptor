@@ -1,0 +1,73 @@
+{
+  "Source_and_parent_raw_unchanged": true,
+  "actual_context_producer": {
+    "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/review/actual-context-producer.json",
+    "sha256": "9d85b499f060c142b6e234c5ab9a13e19c745690e6d4d4720ff865720162ca3e"
+  },
+  "artwork_derivation": {
+    "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/artwork-derivation.json",
+    "sha256": "ca736f6470c4e68612a63f1a3f6402b3f1ec3cd8152288fa1e2a7ad483d1c8d9"
+  },
+  "candidate_sha256": "7c28911af4c9b02b7c50305555e0ba53369d9e8139ca61242798eed5570a327d",
+  "context_scope": {
+    "distinct_neighbor_events": 9,
+    "epoch": "Actual SourceF/H5485 saved context outputs; no later epoch relabeling.",
+    "genuine_Original_endpoints": 39,
+    "ordered_comparison_views": 25,
+    "original_gameplay_occurrence_claimed_for20400": false,
+    "original_placement_counts": {
+      "20400": 0,
+      "20403": 8,
+      "20406": 2
+    },
+    "private400_World_calls": 0,
+    "private_asset": "20400",
+    "private_scope": "Synthetic explicit placement, not an Original-map occurrence or legal-World capture.",
+    "private_synthetic_endpoints": 1
+  },
+  "derived_PNGs_are_not_untouched_generator_returns": true,
+  "frame_bindings_sha256": "f6250ad1dcf97337514fcb3c54bb159733377dda2c2638cdb318b9466f7cfbad",
+  "independent_cleanup_code": {
+    "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/review/independent-cleanup-code.json",
+    "sha256": "716b0fbb19984977d55db25c5e706b78b57dac0fff8b3d0a124fa32047b25f1d"
+  },
+  "independent_context_review": {
+    "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/review/independent-context.json",
+    "sha256": "de0ac505f82e445eecc2129e400e38cb84019531c8469c3e0d241f0156b2826e"
+  },
+  "independent_review": {
+    "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/review/independent-intrinsic-material.json",
+    "sha256": "82f7ee9f9a2165bf8b20c4b0a436f4ee86337f57911597baab0ad88a2aaa4151"
+  },
+  "metadata_preparer": "/root/hd_coordinator",
+  "older_art_HOLDs_preserved": true,
+  "qualifications": [
+    "Finer grain and local value islands",
+    "Visible coarse/fine and carried foreign material boundaries",
+    "Private20400 synthetic occurrence only",
+    "No seamlessness, all-placement, fullHost or playability claim"
+  ],
+  "reviewer": "/root",
+  "runtime_qa": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/runtime-qa.json",
+  "source_and_all_scale_visual_review": {
+    "author": {
+      "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/review/author.json",
+      "sha256": "1efe011b997ae3e9cfbc01b4f22f5b3fae416867970ad8276510f46da07d5b8f"
+    },
+    "independent_intrinsic": {
+      "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/review/independent-intrinsic-material.json",
+      "sha256": "82f7ee9f9a2165bf8b20c4b0a436f4ee86337f57911597baab0ad88a2aaa4151"
+    },
+    "root_provided": {
+      "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/review/root-provided-personal-review.json",
+      "sha256": "72407b47298347e81d099ac689a117a2518b4e2337d712cbc6e31f1cb6fad15d"
+    },
+    "scales": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "status": "approved"
+}

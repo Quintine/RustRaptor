@@ -1,0 +1,491 @@
+{
+  "Source_changing_union_cells": 113,
+  "Source_stationary_cells": 298,
+  "backing_Source_sample_mean": [
+    13.972972972972974,
+    13.972972972972974,
+    13.972972972972974
+  ],
+  "backing_generated_sample_mean": [
+    20.046241554054053,
+    19.04270481418919,
+    18.97798775337838
+  ],
+  "decoder_module": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_frame_policy.py",
+    "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+  },
+  "execution": {
+    "method": "derived-generated-worm-rgb-broad-material-source-alpha-shared-backing-v1",
+    "output_sha256": {
+      "3003b": "bbb2e9a40a07f338cd5415bf9965ec3c44171e48d260369fcc0198d4d014d466",
+      "3003c": "dcd7540bb5e9a5109de9664164977aac344772cb703ed92be29e828dd99c7068",
+      "3003d": "8777336d1687aaa417aafb0f0520aeb40ec2ca53fd938c58462b23b5a9b4ca59",
+      "3003e": "9fc04f3742a5b866da08c679acdea92540141a20bb039608874d84e37eb4381d",
+      "3003f": "613772ad1e13acdc0ad8a1a17c59c7ec2bb7d0d1660e6fbc6e8901b8aa8f6dc5",
+      "30040": "6a17e0a8db05f1356a9603e442a42640f71ee34a10c7d9f4f0c6e5a576bd283b",
+      "30041": "fd4841ee35abd6fb2e9b5fcc4d05d271930fca587f2b0926d84c6ea46212536c",
+      "30042": "7906428227e16f087884e522447ce4846a2211b5de1a84b9ee76176033eb9dd7"
+    },
+    "parent_raw_sha256": [
+      "a5bcbc96045e63820d89b843864978e0f08cbbc5978e69e7d940e8de0d6aef20"
+    ],
+    "recipe_sha256": "b5757e6e99a63c2d95b74eb2e1d4728c638d8616a9f2e96bf9df8f65e8394b10",
+    "source_sha256": {
+      "3003b": "1ee6fe89dcab965ea355d1d7ad85f9663f7adaa6e30c12e1c13c484b80c89b45",
+      "3003c": "5ed479f74d45055846dbe79cc6413fefb04f31f4c50129eb81ba4c6e9893f380",
+      "3003d": "d55feebc08737773f39cd810ced4eafe64556b6319e5d6470d3ab08b312a84b5",
+      "3003e": "188b03592de19d275a8919aad461e460fa90c3f38fc37e31c71f2322f4a7bcca",
+      "3003f": "ae2e65c51f61bcf65e9dda133d25b53b86093fa9b9d2f5b629483a6e22667362",
+      "30040": "594fbb50deb4b20eae1582c1bbbcd9c86a5ef871ebcd7438a85882d7668caf64",
+      "30041": "e616a36d0fc3de8095df1c66a233cb8f20ae31175393190301cbe41942b4b112",
+      "30042": "6e49e44a10764d9113df34cef980e1636afff547dc6a3d0a64de8313910b6a10"
+    },
+    "status": "success",
+    "tool_sha256": "94df9f8cbfb1c13750918f751917de3379c787c8cd28a04238328d1f3eef333f"
+  },
+  "frames": [
+    {
+      "Source_painted_bounds": [
+        5,
+        4,
+        28,
+        28
+      ],
+      "Source_painted_cells": 411,
+      "asset": "3003b",
+      "fullcanvas_output_to_raw_affine": [
+        1.798913043478261,
+        0,
+        -7.956521739130437,
+        0,
+        1.7083333333333333,
+        6.333333333333336
+      ],
+      "functional_blue_Source_RGB_cells": 2,
+      "internally_nonconstant_generated_RGB_pixels": 24813,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "nearest_generated_donor_gap_pixels": 1185,
+      "origin": [
+        0,
+        0
+      ],
+      "output": {
+        "RGBA_sha256": "d03ea029d086119eb7e5175bc2505eded1454cd93ba41230e01be7438b9f706a",
+        "bytes": 38552,
+        "file": "3003b-derived.png",
+        "sha256": "bbb2e9a40a07f338cd5415bf9965ec3c44171e48d260369fcc0198d4d014d466"
+      },
+      "registered_generated_pixels": 25119,
+      "warm_Source_sample_cells": 47,
+      "warm_Source_sample_mean": [
+        57.61702127659574,
+        28.085106382978722,
+        24.76595744680851
+      ],
+      "warm_generated_sample_mean_before_gain": [
+        55.94547872340426,
+        29.67586436170213,
+        23.992021276595743
+      ],
+      "warm_material_RGB_gain": [
+        1.0298780632739892,
+        0.9463955637707948,
+        1.032258064516129
+      ]
+    },
+    {
+      "Source_painted_bounds": [
+        5,
+        4,
+        28,
+        28
+      ],
+      "Source_painted_cells": 411,
+      "asset": "3003c",
+      "fullcanvas_output_to_raw_affine": [
+        1.798913043478261,
+        0,
+        435.04347826086956,
+        0,
+        1.7135416666666667,
+        6.166666666666664
+      ],
+      "functional_blue_Source_RGB_cells": 2,
+      "internally_nonconstant_generated_RGB_pixels": 24816,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "nearest_generated_donor_gap_pixels": 1236,
+      "origin": [
+        0,
+        0
+      ],
+      "output": {
+        "RGBA_sha256": "984ed4ef95afa2890605462e09f4f34ea420fe30c33133bb4723b5b1e857c678",
+        "bytes": 40134,
+        "file": "3003c-derived.png",
+        "sha256": "dcd7540bb5e9a5109de9664164977aac344772cb703ed92be29e828dd99c7068"
+      },
+      "registered_generated_pixels": 25068,
+      "warm_Source_sample_cells": 48,
+      "warm_Source_sample_mean": [
+        82.45833333333333,
+        48.958333333333336,
+        42.625
+      ],
+      "warm_generated_sample_mean_before_gain": [
+        78.7392578125,
+        46.438151041666664,
+        38.572916666666664
+      ],
+      "warm_material_RGB_gain": [
+        1.04723279878621,
+        1.0542696518947414,
+        1.1050499594923036
+      ]
+    },
+    {
+      "Source_painted_bounds": [
+        5,
+        4,
+        28,
+        28
+      ],
+      "Source_painted_cells": 411,
+      "asset": "3003d",
+      "fullcanvas_output_to_raw_affine": [
+        1.7934782608695652,
+        0,
+        879.2608695652174,
+        0,
+        1.7135416666666667,
+        6.166666666666664
+      ],
+      "functional_blue_Source_RGB_cells": 2,
+      "internally_nonconstant_generated_RGB_pixels": 24813,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "nearest_generated_donor_gap_pixels": 1253,
+      "origin": [
+        0,
+        0
+      ],
+      "output": {
+        "RGBA_sha256": "b91b4863b2277aca1fa36d1b0a87b6c6b5a384c25fdd4f2fb37b1f2b70d46703",
+        "bytes": 40927,
+        "file": "3003d-derived.png",
+        "sha256": "8777336d1687aaa417aafb0f0520aeb40ec2ca53fd938c58462b23b5a9b4ca59"
+      },
+      "registered_generated_pixels": 25051,
+      "warm_Source_sample_cells": 48,
+      "warm_Source_sample_mean": [
+        104.60416666666667,
+        68.97916666666667,
+        59.3125
+      ],
+      "warm_generated_sample_mean_before_gain": [
+        101.41959635416667,
+        65.05826822916667,
+        54.005859375
+      ],
+      "warm_material_RGB_gain": [
+        1.0313999505714773,
+        1.0602674885794485,
+        1.0982604607428303
+      ]
+    },
+    {
+      "Source_painted_bounds": [
+        5,
+        4,
+        28,
+        28
+      ],
+      "Source_painted_cells": 411,
+      "asset": "3003e",
+      "fullcanvas_output_to_raw_affine": [
+        1.7880434782608696,
+        0,
+        1323.4782608695652,
+        0,
+        1.7083333333333333,
+        6.333333333333336
+      ],
+      "functional_blue_Source_RGB_cells": 2,
+      "internally_nonconstant_generated_RGB_pixels": 24786,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "nearest_generated_donor_gap_pixels": 1118,
+      "origin": [
+        0,
+        0
+      ],
+      "output": {
+        "RGBA_sha256": "a6515c05ef4c36229d339b6674af124d839fb30df2ef6efd038863c0a3390820",
+        "bytes": 41452,
+        "file": "3003e-derived.png",
+        "sha256": "9fc04f3742a5b866da08c679acdea92540141a20bb039608874d84e37eb4381d"
+      },
+      "registered_generated_pixels": 25186,
+      "warm_Source_sample_cells": 55,
+      "warm_Source_sample_mean": [
+        113.18181818181819,
+        77.34545454545454,
+        67.50909090909092
+      ],
+      "warm_generated_sample_mean_before_gain": [
+        108.74744318181818,
+        71.26392045454546,
+        59.315625
+      ],
+      "warm_material_RGB_gain": [
+        1.0407768207716483,
+        1.0853381915016602,
+        1.1381333486596645
+      ]
+    },
+    {
+      "Source_painted_bounds": [
+        5,
+        4,
+        28,
+        28
+      ],
+      "Source_painted_cells": 411,
+      "asset": "3003f",
+      "fullcanvas_output_to_raw_affine": [
+        1.798913043478261,
+        0,
+        -7.956521739130437,
+        0,
+        1.7239583333333333,
+        441.8333333333333
+      ],
+      "functional_blue_Source_RGB_cells": 2,
+      "internally_nonconstant_generated_RGB_pixels": 24815,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "nearest_generated_donor_gap_pixels": 1151,
+      "origin": [
+        0,
+        0
+      ],
+      "output": {
+        "RGBA_sha256": "b32062feffba4ca1a892217a9e58177788e47167992f49860a1d59e1684613e8",
+        "bytes": 42159,
+        "file": "3003f-derived.png",
+        "sha256": "613772ad1e13acdc0ad8a1a17c59c7ec2bb7d0d1660e6fbc6e8901b8aa8f6dc5"
+      },
+      "registered_generated_pixels": 25153,
+      "warm_Source_sample_cells": 65,
+      "warm_Source_sample_mean": [
+        109.58461538461539,
+        75.52307692307693,
+        65.6923076923077
+      ],
+      "warm_generated_sample_mean_before_gain": [
+        107.63774038461538,
+        73.2826923076923,
+        61.28822115384615
+      ],
+      "warm_material_RGB_gain": [
+        1.0180872897651265,
+        1.0305718109533684,
+        1.0718586125612355
+      ]
+    },
+    {
+      "Source_painted_bounds": [
+        5,
+        4,
+        28,
+        28
+      ],
+      "Source_painted_cells": 411,
+      "asset": "30040",
+      "fullcanvas_output_to_raw_affine": [
+        1.7934782608695652,
+        0,
+        436.2608695652174,
+        0,
+        1.734375,
+        441.5
+      ],
+      "functional_blue_Source_RGB_cells": 2,
+      "internally_nonconstant_generated_RGB_pixels": 24820,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "nearest_generated_donor_gap_pixels": 1190,
+      "origin": [
+        0,
+        0
+      ],
+      "output": {
+        "RGBA_sha256": "e76fcdbc6d937b8d2c88857bb12fcebe925d7ad959c9a41c45bc02ab417a08d3",
+        "bytes": 42641,
+        "file": "30040-derived.png",
+        "sha256": "6a17e0a8db05f1356a9603e442a42640f71ee34a10c7d9f4f0c6e5a576bd283b"
+      },
+      "registered_generated_pixels": 25114,
+      "warm_Source_sample_cells": 75,
+      "warm_Source_sample_mean": [
+        110.04,
+        86.01333333333334,
+        73.25333333333333
+      ],
+      "warm_generated_sample_mean_before_gain": [
+        99.51145833333334,
+        74.684375,
+        61.24333333333333
+      ],
+      "warm_material_RGB_gain": [
+        1.105802305010939,
+        1.151691144678299,
+        1.1961029771947966
+      ]
+    },
+    {
+      "Source_painted_bounds": [
+        5,
+        4,
+        28,
+        28
+      ],
+      "Source_painted_cells": 411,
+      "asset": "30041",
+      "fullcanvas_output_to_raw_affine": [
+        1.7880434782608696,
+        0,
+        879.4782608695652,
+        0,
+        1.734375,
+        441.5
+      ],
+      "functional_blue_Source_RGB_cells": 2,
+      "internally_nonconstant_generated_RGB_pixels": 24819,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "nearest_generated_donor_gap_pixels": 1126,
+      "origin": [
+        0,
+        0
+      ],
+      "output": {
+        "RGBA_sha256": "4a8d96c4e997b0dc6ee6bb538e95a06e2150c55aab7bf696519d3e20f6ff2b87",
+        "bytes": 42418,
+        "file": "30041-derived.png",
+        "sha256": "fd4841ee35abd6fb2e9b5fcc4d05d271930fca587f2b0926d84c6ea46212536c"
+      },
+      "registered_generated_pixels": 25178,
+      "warm_Source_sample_cells": 78,
+      "warm_Source_sample_mean": [
+        116.42307692307692,
+        94.5,
+        80.08974358974359
+      ],
+      "warm_generated_sample_mean_before_gain": [
+        108.9667467948718,
+        86.14923878205128,
+        71.20172275641026
+      ],
+      "warm_material_RGB_gain": [
+        1.0684275739849474,
+        1.0969336622819765,
+        1.1248287329190099
+      ]
+    },
+    {
+      "Source_painted_bounds": [
+        5,
+        4,
+        28,
+        28
+      ],
+      "Source_painted_cells": 411,
+      "asset": "30042",
+      "fullcanvas_output_to_raw_affine": [
+        1.7934782608695652,
+        0,
+        1323.2608695652175,
+        0,
+        1.7239583333333333,
+        441.8333333333333
+      ],
+      "functional_blue_Source_RGB_cells": 2,
+      "internally_nonconstant_generated_RGB_pixels": 24835,
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "nearest_generated_donor_gap_pixels": 1103,
+      "origin": [
+        0,
+        0
+      ],
+      "output": {
+        "RGBA_sha256": "616aad29a5250522b37086d7192e79eea59a90c1eba3d1bcdbbb1763691a4277",
+        "bytes": 42425,
+        "file": "30042-derived.png",
+        "sha256": "7906428227e16f087884e522447ce4846a2211b5de1a84b9ee76176033eb9dd7"
+      },
+      "registered_generated_pixels": 25201,
+      "warm_Source_sample_cells": 82,
+      "warm_Source_sample_mean": [
+        107.6829268292683,
+        87.58536585365853,
+        74.3048780487805
+      ],
+      "warm_generated_sample_mean_before_gain": [
+        95.7404725609756,
+        74.9860899390244,
+        61.68826219512195
+      ],
+      "warm_material_RGB_gain": [
+        1.1247377827667053,
+        1.168021508054085,
+        1.2045221474022365
+      ]
+    }
+  ],
+  "generated_RGB_controls_continuous_form": true,
+  "input_hashes": {
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-worm8-integration-20261018/data/hd/jobs/derived-wormrite-complete8-v2-20261018/parents/generator-return.png": "a5bcbc96045e63820d89b843864978e0f08cbbc5978e69e7d940e8de0d6aef20",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/PALETTE_DAT": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/WORMRITE_PIC": "1ee6fe89dcab965ea355d1d7ad85f9663f7adaa6e30c12e1c13c484b80c89b45",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/WORMRITE_PIC.1": "5ed479f74d45055846dbe79cc6413fefb04f31f4c50129eb81ba4c6e9893f380",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/WORMRITE_PIC.2": "d55feebc08737773f39cd810ced4eafe64556b6319e5d6470d3ab08b312a84b5",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/WORMRITE_PIC.3": "188b03592de19d275a8919aad461e460fa90c3f38fc37e31c71f2322f4a7bcca",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/WORMRITE_PIC.4": "ae2e65c51f61bcf65e9dda133d25b53b86093fa9b9d2f5b629483a6e22667362",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/WORMRITE_PIC.5": "594fbb50deb4b20eae1582c1bbbcd9c86a5ef871ebcd7438a85882d7668caf64",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/WORMRITE_PIC.6": "e616a36d0fc3de8095df1c66a233cb8f20ae31175393190301cbe41942b4b112",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/WORMRITE_PIC.7": "6e49e44a10764d9113df34cef980e1636afff547dc6a3d0a64de8313910b6a10"
+  },
+  "method": "derived-generated-worm-rgb-broad-material-source-alpha-shared-backing-v1",
+  "numpy_version": "2.3.5",
+  "output_class": "DERIVED_GENERATED_RGB_GEOMETRY_AND_BROAD_MATERIAL_CLEANUP",
+  "output_scale": 8,
+  "per_Source_cell_RGB_reconstruction": false,
+  "pillow_version": "12.3.0",
+  "python_implementation": "CPython",
+  "python_version": "3.12.14",
+  "shared_backing_RGB_gain": [
+    0.6970370448393179,
+    0.7337703918280226,
+    0.736272630931884
+  ]
+}

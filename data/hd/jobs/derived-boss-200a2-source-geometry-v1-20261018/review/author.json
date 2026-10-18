@@ -1,0 +1,370 @@
+{
+  "status": "AUTHOR_QUALIFIED_DERIVED_COMPLETE1_INTRINSIC_SOURCEF_PENDING_DIFFERENT_PEER_AND_CONTEXT",
+  "author": "/root/hd_boss200a2",
+  "same_generated_v7_v8_artist_and_cleanup_preparer": true,
+  "independent_artistic_review": false,
+  "asset": "200a2",
+  "source_name": "SHIP11G2_PIC",
+  "complete_family": true,
+  "frame_count": 1,
+  "logical_canvas": [
+    72,
+    40
+  ],
+  "origin": [
+    0,
+    0
+  ],
+  "qualified_complete1": true,
+  "all4_scales_qualified_by_author": true,
+  "qualified_frames": 1,
+  "held_derived_frames": 0,
+  "no_canonical_admission": true,
+  "Source": {
+    "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP11G2_PIC",
+    "sha256": "7b887dc7f08f154529df7b1960799e66c4e6df7b7e732ed5df53d6738460c557",
+    "size": 3086,
+    "mtime_ns": 1787663959506856852
+  },
+  "palette": {
+    "path": "/home/quintine/Projects/RaptorReplica/data/misc/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "size": 768,
+    "mtime_ns": 1787663959337906368
+  },
+  "untouched_parent_raw": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-source-registered-correction-v8-20261017/raw.png",
+    "sha256": "038d542c771354a665b6503e673040b377938c2db2fa88f98fcff31bac0fba72",
+    "size": 2123076,
+    "mtime_ns": 1792237786510320763
+  },
+  "derived_png": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/derived-v2-checked-tool/200a2-derived.png",
+    "sha256": "74793a37ed6983fa99a9349b093b8b6ac2e03f52a6546d09dc245cf3d8479cdf",
+    "size": 302305,
+    "mtime_ns": 1792280193210296724
+  },
+  "recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/boss-cleanup-recipe-v1.json",
+    "sha256": "16dc11e7673ac6b34ae529e76b4eab43c174fbce87b42f9c527be6812d1e561d",
+    "size": 1937,
+    "mtime_ns": 1792280140022562923
+  },
+  "tool": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_boss_cleanup.py",
+    "sha256": "53d07edbbb945baa2c5a3df01f03e2a11787c225b2d714541d5eca12a0fcd85b",
+    "size": 12116,
+    "mtime_ns": 1792280192650138520
+  },
+  "focused_tests_source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/test_hd_boss_cleanup.py",
+    "sha256": "5dc1984887650301b77d11dd20634d0b9e12a69404e1e913c07789a89307466c",
+    "size": 6566,
+    "mtime_ns": 1792280192650138520
+  },
+  "actual_tool_execution_receipt": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/derived-v2-checked-tool/derived-provenance.json",
+    "sha256": "989dd9ee3f237594720ba849e52733fc2852093b4a1a9a41468629731577769f",
+    "size": 9568,
+    "mtime_ns": 1792280193210794940
+  },
+  "execution": {
+    "method": "derived-generated-boss-source-geometry-rgb-preserved-v1",
+    "output_sha256": {
+      "200a2": "74793a37ed6983fa99a9349b093b8b6ac2e03f52a6546d09dc245cf3d8479cdf"
+    },
+    "parent_raw_sha256": [
+      "038d542c771354a665b6503e673040b377938c2db2fa88f98fcff31bac0fba72"
+    ],
+    "recipe_sha256": "16dc11e7673ac6b34ae529e76b4eab43c174fbce87b42f9c527be6812d1e561d",
+    "source_sha256": {
+      "200a2": "7b887dc7f08f154529df7b1960799e66c4e6df7b7e732ed5df53d6738460c557"
+    },
+    "status": "success",
+    "tool_sha256": "53d07edbbb945baa2c5a3df01f03e2a11787c225b2d714541d5eca12a0fcd85b"
+  },
+  "selected_pack_native_frame": {
+    "frame": 0,
+    "file": "200a2.png",
+    "logical_width": 72,
+    "logical_height": 40,
+    "origin": [
+      0,
+      0
+    ],
+    "source_sha256": "7b887dc7f08f154529df7b1960799e66c4e6df7b7e732ed5df53d6738460c557"
+  },
+  "provider_lineage": {
+    "parent_v8_original_receipt": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-source-registered-correction-v8-20261017/actual-generation-terminal.json",
+      "sha256": "c4e3ae0527078e4b422975f133d204fea5852977ad91d9ba7a9ddfbe83afd6e9",
+      "size": 2180,
+      "mtime_ns": 1792237786580009473
+    },
+    "parent_v8_old_artist_HOLD": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-source-registered-correction-v8-20261017/FROZEN-200A2-V8-ARTIST-HOLD-NO-CURRENT-QA.json",
+      "sha256": "6e8ec1b2135c9e037676a34115a8a69019337b306a5a8f17dfc43cd9f79d5495",
+      "size": 6878,
+      "mtime_ns": 1792237829635386154
+    },
+    "prior_provider_success_not_refusal": true,
+    "this_task_new_imagegen_calls": 0,
+    "all_Original_and_provider_raw_bytes_preserved": true
+  },
+  "method": "Full-canvas affine registration of existing generated RGB to authentic Source painted bounds, exact Source logical alpha mask, generated-texture gap fills and26 explicit Source-gray support/stem cells. Existing broad HD panel relief is preserved; not a whole-frame SourceRGB+grain reconstruction.",
+  "measured_derivation": {
+    "output_pixels": [
+      576,
+      320
+    ],
+    "direct_registered_generated_RGB_pixels": 129962,
+    "direct_generated_fraction": 0.9569539349670122,
+    "gap_filled_pixels": 4922,
+    "Source_supported_gap_fraction": 0.036242342130065976,
+    "dark_support_and_stem_cells": 26,
+    "direct_generated_internally_nonconstant_pixels": 125732,
+    "Source_painted_cells": 2122,
+    "output_painted_pixels": 135808,
+    "no_whole_OriginalNN_relabel": true
+  },
+  "actual_intrinsic": {
+    "library": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+      "sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+      "size": 22744978,
+      "mtime_ns": 1792245641851329918
+    },
+    "helper": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-sourceF-palette-review",
+      "sha256": "a90704f5cba83f7556a8066522097607fcbee816b4e870b2d2284af774c7b790",
+      "size": 1607488,
+      "mtime_ns": 1792245758422192560
+    },
+    "compiled_epoch": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/compiled-epoch.json",
+      "sha256": "38459e0067b17801b3c3c629c22e05dfee98928d451d8c8e0971b63c17288b52",
+      "size": 5917,
+      "mtime_ns": 1792245694562144018
+    },
+    "source18_bytes_exact_before_after": true,
+    "runtime_QA": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/actual-F-derived/runtime-qa.json",
+      "sha256": "2670f905dbb7e55b855351eee88ba18acef0603485621c15ef0e953fa66cd900",
+      "size": 3831,
+      "mtime_ns": 1792280246713896111
+    },
+    "actual_indexed_arrays": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/actual-F-derived/actual-indexed-source-and-scales.json",
+      "sha256": "8b558bb362a4390b53ba264759dc99d91c0ce69ebbde26fc3bdd8fd626a4a7c6",
+      "size": 1281737,
+      "mtime_ns": 1792280246716896042
+    },
+    "actual_helper_terminals": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/actual-sourceF-helper-terminals.json",
+      "sha256": "c0b21cfccb05e3d9a19d8a4ee9825748fa7586bf4069f8955bed39dc1ef56797",
+      "size": 519,
+      "mtime_ns": 1792280406895142464
+    },
+    "helper_calls": 2,
+    "compiler_calls": 0,
+    "World_calls": 0,
+    "derived_all4_success": true,
+    "held_aspect_diagnostic_all4_success": true,
+    "engine_errors_or_retries": 0
+  },
+  "geometry": {
+    "native1_painted_source": 2122,
+    "native1_derived_painted": 2122,
+    "native1_missing_Source_cells": 0,
+    "native1_added_Source_empty_cells": 0,
+    "native1_finalrow_feet": [
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "native1_transparent_gap33to37_exact": true,
+    "native1_right_support_x63_64_rows30to33_all_present": true,
+    "native1_central_stem35_36_rows36to38_all_present": true,
+    "unchanged_collision_or_logical_canvas": true,
+    "SourceNx_control_limits": "Only native1 Source is direct actualF catalog array. Scale2..4 Original controls are explicitly labeled direct Python render.rs mirror (unchangedSHA d4abd...), not misrepresented as a Rust oracle run. Derived/held arrays atall4 are actual SourceF helper output.",
+    "all_scale_masks": [
+      {
+        "scale": 1,
+        "SourceNx_mirror_visible": 2122,
+        "held_visible": 2016,
+        "derived_visible": 2122,
+        "derived_mask_difference_from_SourceNx": 0
+      },
+      {
+        "scale": 2,
+        "SourceNx_mirror_visible": 8455,
+        "held_visible": 8048,
+        "derived_visible": 8488,
+        "derived_mask_difference_from_SourceNx": 55
+      },
+      {
+        "scale": 3,
+        "SourceNx_mirror_visible": 18999,
+        "held_visible": 18115,
+        "derived_visible": 19098,
+        "derived_mask_difference_from_SourceNx": 149
+      },
+      {
+        "scale": 4,
+        "SourceNx_mirror_visible": 33787,
+        "held_visible": 32052,
+        "derived_visible": 33952,
+        "derived_mask_difference_from_SourceNx": 259
+      }
+    ]
+  },
+  "held_baseline": {
+    "role": "WHOLE_RAW_ASPECT_ONLY_DIAGNOSTIC_DERIVATIVE_NOT_UNTOUCHED_V8_APPROVAL",
+    "artwork": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/pack-held-aspect-only-diagnostic/200a2.png",
+      "sha256": "c630c3fae865493c2c82f25c0b32e8e6f29d56262d9a7db32bfdd300fc79ca9a",
+      "size": 281237,
+      "mtime_ns": 1792280246584899086
+    },
+    "runtime_arrays": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/actual-F-held-aspect-only-diagnostic/actual-indexed-source-and-scales.json",
+      "sha256": "639454ce14133906e9eb5aadb3922f062f32de883a5a504ffa35b6f04da7ddc9",
+      "size": 1285774,
+      "mtime_ns": 1792280246851892929
+    },
+    "native1_missing": 130,
+    "native1_added": 24,
+    "native1_finalrow_feet": [],
+    "old_v8_HOLD_preserved": true
+  },
+  "physical_whole_views": {
+    "before_recipe": [
+      "Complete Original nearest20x and native coordinate grid",
+      "Complete untouched v8 raw1681x936"
+    ],
+    "all4_native_role_boards": [
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/views/complete-native1-three-role-review.png",
+        "sha256": "363148e62cebc977c32852dfc7155c6098c3956ca80b91050a16bf0e9a06fb94",
+        "size": 54089,
+        "mtime_ns": 1792280322536139768
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/views/complete-native2-three-role-review.png",
+        "sha256": "a8111e5b4a0c6bb4642d801d10cc745e4a4612fb68e350da86f2f83c09568965",
+        "size": 96084,
+        "mtime_ns": 1792280322606138140
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/views/complete-native3-three-role-review.png",
+        "sha256": "c183adc0942de4bf76adb94f60e60e54f42a79267bb5d25313949752aa15b3c4",
+        "size": 144679,
+        "mtime_ns": 1792280322694136093
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/views/complete-native4-three-role-review.png",
+        "sha256": "000c6de26439567c7f4365e8e314897f8c2ef6d276f4624feafa8db252705a00",
+        "size": 206723,
+        "mtime_ns": 1792280322884131673
+      }
+    ],
+    "complete_body_views": [
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/views/wholebody-Original-held-derived-stack.png",
+        "sha256": "4837ed70d4ab1d7cdda606bcb22c6471b16a2e254b3c6edf56d97b335b54beb2",
+        "size": 547443,
+        "mtime_ns": 1792280323139125741
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/views/wholebody-role0-nearest2x.png",
+        "sha256": "c87050a70f8cb5dced71ad88a621f0f680d5df6424bfb60e6c38218f3df4f9dc",
+        "size": 11805,
+        "mtime_ns": 1792280322910131068
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/views/wholebody-role1-nearest2x.png",
+        "sha256": "d5a929b3c47b5a9bd1780a11d77c120553007949660d98b30cb218317fcbd6c2",
+        "size": 345842,
+        "mtime_ns": 1792280322986129301
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-derived-pixel-cleanup-v1-20261018/views/wholebody-role2-nearest2x.png",
+        "sha256": "21f7bbfd75d475ea90cec7cfe997f8204e722a90056651afe1f461eae496da75",
+        "size": 370837,
+        "mtime_ns": 1792280323066127440
+      }
+    ],
+    "author_personally_viewed_all_listed_final_boards": true,
+    "no_preview_crop": true
+  },
+  "author_material_decision": "QUALIFIED complete1 intrinsic at scales1\u20134. Feet now reach exact final-row Source positions with the intervening gap open; right dark descending support and black central connection occupy their Source positions. Fine generated vents, bolts, cylindrical relief, teal housings and amber panels remain recognizable, with clear fine detail at2\u20134. Native1 remains softer but readable. The explicit Source-guided repairs solve the earlier placement/outline blockers without replacing the broad generated material with OriginalNN.",
+  "qualifications": [
+    "Brighter/warmer and more articulated generated steel/bronze relief than Original; this is an HD interpretation, not RGB equality.",
+    "Exact logical Source outline introduces crisp native-cell contour steps and tiny matte/gap-fill transitions. Scale2/3/4 alpha differs55/149/259 subpixels from OriginalScaleNx rounded edges; no claim of exact Nx silhouette equality there.",
+    "Dark supports/stem use Source-guided gray means plus generated donor texture; native1 gray indices can differ by1\u20132 palette steps, while occupied geometry is exact.",
+    "Source-guided fill is3.62% of painted high-resolution pixels; support patches add1.23% logical cells with some overlap. All are explicit DERIVED work, never untouched provider output or newly generated imagery.",
+    "No live boss scene, movement, firing, assembled boss, shadow, collision, damage, host timing or genuine Original mission appearance approved by this intrinsic task."
+  ],
+  "focused_test_observation": {
+    "command": "bundled python3 -B -m unittest discover -s tools -p test_hd_boss_cleanup.py -v",
+    "latest_observed_exit": 0,
+    "tests_passed": 5,
+    "test_scope": "Synthetic Source alpha/feet/generatedRGB preservation, local Source-gap/patch behavior, schema/input/identity/output protection, missing-body rejection, deterministic PNG/execution binding.",
+    "independent_CODE_review": "Root relay states I2 PASS finaltool53d07 and5tests plus empty-body probe. Root retains exact different CODE receipt; this author does not fabricate its path or independent verdict."
+  },
+  "workflow_history": [
+    "Initial own diagnostic Source palette*4 was corrected before recipe/tool/QA to actual (x<<2)|(x>>4); native pixels now match authenticated existing Original PNG. Source geometry/binary untouched.",
+    "Private preprocess4eaa is an exploratory intermediate, not final selected media.",
+    "Initial4-test toola46 generated the same PNG74793a37; hardening added typed bool guards and majority/direct-detail checks,5tests pass, then final tool53d07 produced identical PNG under a fresh receipt. Exact historicala46 source snapshot retained privately.",
+    "View constructor first call omitted its required Q argument and stopped before writes; same saved script ran successfully with corrected argv. No game/helper/imagegen retry occurred."
+  ],
+  "existing_context_locator": {
+    "proof": {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/bosses-200a2-200a2-dark-two-region-master-edit-v5/actual-source-controlled-contexts/controlled-context-proof.json",
+      "sha256": "2dfea9d361c6441b22c4ef29b826fa3f771cc7296e3800f5a3c96f8ff05e3257",
+      "size": 24021,
+      "mtime_ns": 1791775422820793929
+    },
+    "status": "CONTROLLED_WORLD_ONLY_NOT_GENUINE_FULL_WAVE",
+    "routes": [
+      {
+        "mission": "base:sector_2_wave_2",
+        "original_spawn_tick": 4440,
+        "endpoint_tick": 4689
+      },
+      {
+        "mission": "base:sector_2_wave_6",
+        "original_spawn_tick": 1656,
+        "endpoint_tick": 1753
+      }
+    ],
+    "limits": "All other mission spawns removed; fixed nonfiring pilot[5,160]; no World-state injection, Source terrain and integer current endpoint only. Old v5/default7b evidence, not a genuine natural full-wave/assembled-boss/Host capture and not SourceF derived context.",
+    "known_saved_genuine_full_scene_locator": null
+  },
+  "standing_custody": {
+    "no_pending_owned_writer_call_lease": true,
+    "tool_and_selected_recipe_output_frozen": true,
+    "old_raw_Source_HOLDs_immutable": true,
+    "new_shared_files_only": [
+      "tools/hd_boss_cleanup.py",
+      "tools/test_hd_boss_cleanup.py"
+    ],
+    "no_other_tools_Source_Rust_Rootdata_canonical_docs_Git_mutation": true
+  },
+  "utc": "2026-10-17T23:41:49.740638+00:00",
+  "free_bytes": 6433640448
+}

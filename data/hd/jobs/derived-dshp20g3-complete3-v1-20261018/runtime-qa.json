@@ -1,0 +1,592 @@
+{
+  "actual_compiled_epoch": {
+    "mtime_ns": 1792245694562144018,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/compiled-epoch.json",
+    "sha256": "38459e0067b17801b3c3c629c22e05dfee98928d451d8c8e0971b63c17288b52",
+    "size": 5917
+  },
+  "actual_probe_receipt": {
+    "mtime_ns": 1792282808796217098,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-dshp3-integration-20261018/actual-final-job-SourceF-intrinsic-v2-terminal.json",
+    "sha256": "0a1dd6c467c482296772e6bf66da246f98dc4ccabf1d28cecc7f1ccbb2a36a73",
+    "size": 1092
+  },
+  "any_game_source_newer_than_library": false,
+  "artwork_sha256": {
+    "jobs/derived-dshp20g3-complete3-v1-20261018/derived/300a5-derived.png": "cd45b35317e4cad891c1afa55ef30e6de157b6175cfe6e6e2547d3f07da74476",
+    "jobs/derived-dshp20g3-complete3-v1-20261018/derived/300a6-derived.png": "eddb376ddbf66e10df1feae2cf5c4daa93b2ffd6196f284dabed8f88f6754339",
+    "jobs/derived-dshp20g3-complete3-v1-20261018/derived/300a7-derived.png": "86036f9c0cc891481990a212a7ccc5718a59c43d9a0f4bff70c7a1e30d8a66e7"
+  },
+  "candidate_sha256": "569c6d7dde8dbc0dce3e8e91e46cda456f5351afd73595ea967fe3a18e43901f",
+  "diagnostics": [],
+  "exact_previous_accepted_bank_bridge": {
+    "actual": {
+      "mtime_ns": 1792282808743271317,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-dshp3-integration-20261018/actual-final-job-SourceF-intrinsic-v2/actual-indexed-source-and-scales.json",
+      "sha256": "5d99b27edfa95e20d75b89c1f1b89c62e6d06dbc77ccdd958824742377235c5b",
+      "size": 9470033
+    },
+    "all_source_and_native_1_to_4_indices_equal": true,
+    "all_three_measured_frame_metrics_equal": true,
+    "previous": {
+      "mtime_ns": 1792280685446567591,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/actual-once-SourceF-derived-complete3-intrinsic5/actual-indexed-source-and-scales.json",
+      "sha256": "5d99b27edfa95e20d75b89c1f1b89c62e6d06dbc77ccdd958824742377235c5b",
+      "size": 9470033
+    }
+  },
+  "frame_bindings_sha256": "c9603e68d072654e7b99570c0af9f2b348ac89b98ac058e9479ef6ea3022d31d",
+  "frames": [
+    {
+      "asset": "300a5",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              2,
+              0,
+              112,
+              63
+            ],
+            "centroid": [
+              56.50920376712329,
+              31.85916095890411
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "visible_pixels": 4672
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              4,
+              0,
+              224,
+              126
+            ],
+            "centroid": [
+              113.52764680668668,
+              64.20654736390912
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              4,
+              0,
+              0
+            ],
+            "visible_pixels": 18664
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              6,
+              0,
+              336,
+              189
+            ],
+            "centroid": [
+              170.53470534991186,
+              96.53368110142442
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              9,
+              9,
+              0,
+              0
+            ],
+            "visible_pixels": 41982
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              8,
+              0,
+              448,
+              252
+            ],
+            "centroid": [
+              227.55136793590395,
+              128.8921326938021
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              16,
+              16,
+              0,
+              0
+            ],
+            "visible_pixels": 74638
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        112,
+        64
+      ],
+      "source_mask": {
+        "bounds": [
+          2,
+          0,
+          112,
+          63
+        ],
+        "centroid": [
+          56.50920376712329,
+          31.85916095890411
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "visible_pixels": 4672
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "2e351f4826f158ecea7328b3b80d65f318fdcabdb22d9398f61b9447d894a7ad"
+    },
+    {
+      "asset": "300a6",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              2,
+              0,
+              112,
+              63
+            ],
+            "centroid": [
+              56.48060390018872,
+              32.38582512057035
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "visible_pixels": 4769
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              4,
+              0,
+              224,
+              126
+            ],
+            "centroid": [
+              113.45698388536034,
+              65.25835914125243
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              4,
+              0,
+              0
+            ],
+            "visible_pixels": 19051
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              6,
+              0,
+              336,
+              189
+            ],
+            "centroid": [
+              170.43388256161313,
+              98.10231516056758
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              9,
+              9,
+              0,
+              0
+            ],
+            "visible_pixels": 42848
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              8,
+              0,
+              448,
+              252
+            ],
+            "centroid": [
+              227.412241897586,
+              130.98876360247306
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              16,
+              16,
+              0,
+              0
+            ],
+            "visible_pixels": 76181
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        112,
+        64
+      ],
+      "source_mask": {
+        "bounds": [
+          2,
+          0,
+          112,
+          63
+        ],
+        "centroid": [
+          56.48060390018872,
+          32.38582512057035
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "visible_pixels": 4769
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "e8f929a9926d631a5af7a87c9d32a6b74208712b671a08bfd01d4c67a2752b94"
+    },
+    {
+      "asset": "300a7",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              2,
+              0,
+              112,
+              63
+            ],
+            "centroid": [
+              56.484433374844336,
+              32.66459111664591
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "visible_pixels": 4818
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              4,
+              0,
+              224,
+              126
+            ],
+            "centroid": [
+              113.46988202276388,
+              65.79819136219531
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              4,
+              0,
+              0
+            ],
+            "visible_pixels": 19241
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              6,
+              0,
+              336,
+              189
+            ],
+            "centroid": [
+              170.44447782579556,
+              98.9040928104273
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              9,
+              9,
+              0,
+              0
+            ],
+            "visible_pixels": 43271
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              8,
+              0,
+              448,
+              252
+            ],
+            "centroid": [
+              227.43215701566257,
+              132.0602196659518
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              16,
+              16,
+              0,
+              0
+            ],
+            "visible_pixels": 76935
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        112,
+        64
+      ],
+      "source_mask": {
+        "bounds": [
+          2,
+          0,
+          112,
+          63
+        ],
+        "centroid": [
+          56.484433374844336,
+          32.66459111664591
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "visible_pixels": 4818
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "b4e2ca09b5fb08dd17b1b5a2a020dc67da6ec8adc9b86c0f5e65adbb788152fe"
+    }
+  ],
+  "library": "target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+  "library_modified_ns": 1792245641851329918,
+  "library_sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+  "limitation": "Gallery validation does not prove live scene reachability, terrain seam correctness or artistic fidelity. Opaque sprites have trivial alpha-mask overlap; compare visible source geometry manually.",
+  "measured_runtime_qa": {
+    "mtime_ns": 1792282808720271799,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-dshp3-integration-20261018/actual-final-job-SourceF-intrinsic-v2/runtime-qa.json",
+    "sha256": "ea802b5cb2af50a3fd9f85faf1d63a40d6d862c8ae11e4c6688ebf61415ba46a",
+    "size": 10740
+  },
+  "method": "actual Rust HdAssets::load and sprite at scales 1..4; Catalog palette; no artwork edits",
+  "scope": "Catalogue-only complete3 intrinsic loadability; no natural World, phase clock, shadow or gameplay context claim.",
+  "source_newer_than_library": false,
+  "validated_frames": 3
+}

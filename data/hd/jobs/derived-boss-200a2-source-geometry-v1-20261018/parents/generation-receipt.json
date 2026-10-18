@@ -1,0 +1,51 @@
+{
+  "lease": {
+    "action": "acquire",
+    "owner": "/root/hd_boss200a2",
+    "capacity": 4,
+    "acquired": true,
+    "lease_id": "c24d2818-4973-4cb6-8030-3ab0bf12c512",
+    "expires_at": "2026-10-17T12:19:02+00:00",
+    "renewal_command": "renew --owner /root/hd_boss200a2 --lease c24d2818-4973-4cb6-8030-3ab0bf12c512",
+    "active_reservations": 1,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "started": {
+    "action": "start",
+    "owner": "/root/hd_boss200a2",
+    "capacity": 4,
+    "changed": true,
+    "started_at": "2026-10-17T11:49:02+00:00",
+    "active_reservations": 1,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "report": {
+    "action": "report",
+    "owner": "/root/hd_boss200a2",
+    "capacity": 4,
+    "changed": true,
+    "active_reservations": 0,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "outcome": "success",
+  "errorText": "",
+  "output_hint": "Generated images are saved to /home/quintine/.codex/generated_images/01a1489c-42eb-77b3-bddf-e73c04004d34 as /home/quintine/.codex/generated_images/01a1489c-42eb-77b3-bddf-e73c04004d34/exec-2ee4a1c2-19e5-4df9-9cdf-cd723d65398f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "utc_saved": "2026-10-17T11:49:46.559662+00:00",
+  "actual_builtin_calls": 1,
+  "retries": 0,
+  "result_keys_saved": [
+    "output_hint"
+  ],
+  "image_url_omitted": true,
+  "native_saved_file": {
+    "path": "/home/quintine/.codex/generated_images/01a1489c-42eb-77b3-bddf-e73c04004d34/exec-2ee4a1c2-19e5-4df9-9cdf-cd723d65398f.png",
+    "sha256": "038d542c771354a665b6503e673040b377938c2db2fa88f98fcff31bac0fba72",
+    "size": 2123076
+  },
+  "workspace_untouched_raw": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss200a2-source-registered-correction-v8-20261017/raw.png",
+    "sha256": "038d542c771354a665b6503e673040b377938c2db2fa88f98fcff31bac0fba72",
+    "size": 2123076
+  },
+  "raw_copied_byte_identical": true
+}

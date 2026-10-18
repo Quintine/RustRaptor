@@ -1,0 +1,99 @@
+{
+  "alignment": {
+    "raw_painted_bounds": [
+      17,
+      47,
+      1664,
+      904
+    ],
+    "source_painted_bounds": [
+      1,
+      2,
+      71,
+      40
+    ]
+  },
+  "asset": "200a2",
+  "format_version": 1,
+  "gap_fill": {
+    "detail_gain": 0.6,
+    "generated_donor": [
+      310,
+      270,
+      388,
+      335
+    ]
+  },
+  "label": "Boss200a2 generated RGB preserved, Original fullcanvas geometry and targeted dark support repairs",
+  "logical_canvas": [
+    72,
+    40
+  ],
+  "origin": [
+    0,
+    0
+  ],
+  "output_scale": 8,
+  "palette": {
+    "path": "../../../misc/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "parent_raw": {
+    "path": "parents/generator-return.png",
+    "sha256": "038d542c771354a665b6503e673040b377938c2db2fa88f98fcff31bac0fba72"
+  },
+  "patches": [
+    {
+      "detail_gain": 0.42,
+      "generated_donor": [
+        1478,
+        615,
+        1507,
+        697
+      ],
+      "name": "right descending dark steel support through row33",
+      "target": [
+        63,
+        30,
+        65,
+        34
+      ]
+    },
+    {
+      "detail_gain": 0.42,
+      "generated_donor": [
+        178,
+        615,
+        202,
+        697
+      ],
+      "name": "left matching dark support",
+      "target": [
+        10,
+        30,
+        13,
+        34
+      ]
+    },
+    {
+      "detail_gain": 0.42,
+      "generated_donor": [
+        798,
+        640,
+        880,
+        821
+      ],
+      "name": "connected dark central stem35-36 through row38",
+      "target": [
+        35,
+        36,
+        37,
+        39
+      ]
+    }
+  ],
+  "source": {
+    "path": "../../../sprites/SHIP11G2_PIC",
+    "sha256": "7b887dc7f08f154529df7b1960799e66c4e6df7b7e732ed5df53d6738460c557"
+  }
+}

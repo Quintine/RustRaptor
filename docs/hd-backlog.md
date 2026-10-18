@@ -1,16 +1,18 @@
 # Original artwork HD backlog
 
-Current artwork/runtime checkpoint — 18 October 2026: the optional HD pack contains **5,485 reviewed pictures in 3,632 complete sequences**, including **4,360 Terrain pictures**. **268 originals still await approval**: 175 Terrain, 59 enemies and ground objects, 33 UI/other pictures and one boss. Held drafts and actual provider refusals remain part of that backlog.
+Current artwork/runtime checkpoint — 18 October 2026: the optional HD pack contains **5,500 reviewed pictures in 3,638 complete sequences**, including **4,363 Terrain pictures**. **253 originals still await approval**: 172 Terrain, 59 enemies and ground objects, and 22 UI/other pictures. All 249 boss pictures are reviewed; the full original-art backlog remains open.
 
-One new authentic-Source-only image supplies `203fb` and `203fc`. Its PNG is untouched, with two complete native definitions, plain sampling and unchanged 32×32 canvases, zero origins and fixed atlas crops. No optional policy is added; the nine existing palette opt-ins stay unchanged. Older plain and palette proposals retain their recorded holds.
+This append adds one boss picture (`200a2`), three Terrain pictures (`20400`, `20403`, `20406`), the complete three-frame DSHP20G3 family and the complete eight-frame WORMRITE family. All 15 published PNGs are explicitly derived scripted cleanups of retained generated parents. Their methods preserve continuous generated RGB or coherent parent texture while using Source geometry and declared functional color cues. They are not untouched generator returns.
 
-Separate reviews cover 19 genuine endpoints and 11 ordered comparisons from nine neighbor events. They include six freshly checked reverse contexts for registered `203fa`, including two new northeast-corner endpoints. No private validation gallery is used. Recorded grain, relief and density limits remain qualified; this is not seamless, all-placement or complete-route approval.
+Boss and Terrain reviews have distinct finite context scopes. The 11 DSHP/WORM catalogue graphics have complete-family intrinsic review and Source caller-absence evidence; that review carries no Original spawn, clock or World occurrence claim. The boss has two historical controlled-pose recompositions. Terrain review covers 39 genuine endpoints and one private self-repeat endpoint for `20400`, with 25 ordered comparisons; the private endpoint is not an Original-map occurrence. Earlier WORM, boss and Terrain source-only/v3 HOLDs remain attached to their older artifacts.
 
-Validation accepts all 5,485 frames with zero rejects, plus 45 mods with one override. Three installed-game SDL controls exited successfully and were personally reviewed. Their PNG, RGB and alpha data measured identical to H5483 across 6,220,800 pixels.
+Validation accepts all 5,500 frames with zero rejects, plus 45 mods with one override. Three installed-game SDL controls exited successfully and measured identical PNG, RGB and alpha output against H5485 across 6,220,800 pixels. Both the independent reviewer and Root viewed all three complete 1920 × 1080 screens; these controls carry no claim that the new pictures appeared.
 
-SourceF, both binaries and Mission 2 version 1.0.3 remain unchanged. Existing runtime and campaign tests retain their dated scopes. The latest closed native Windows result is SourceF H5483 at `fc36ea28`, including Mission 2 version 1.0.3: 401 passed, 26 ignored and none failed. That is not a native Windows result for this artwork revision. The [completion ledger](hd-completion.json), [backlog](hd-backlog.md) and [runtime evidence](hd-runtime-release.json) record exact authorities and limits. Validated package checkpoint; Git history records publication.
+The maintained cleanup and registration tools pass 101 tests; the final TARGT guard successor passes 12 separately (113 total). TARGT14 artwork is not admitted by this batch.
 
-Separate held proposal: the new Source-only study for `20400`, `20403` and `20406` remains a material HOLD because coarse rubble and weak olive coverage fail the Source reading. Its successful image call and technical QA add no approved coverage. Earlier holds remain unchanged (author receipt `654fd40d`, outside closure `5da4e3b8`).
+SourceF, both binaries, Mission 2 version 1.0.3 and the nine palette opt-ins remain unchanged. The latest closed native Windows result is SourceF H5485 at `f9f17e35`: 401 passed, 26 ignored and none failed. It is dated evidence for that earlier artwork package. Existing runtime and campaign checks keep their original scopes. The [backlog](hd-backlog.md), [completion ledger](hd-completion.json) and [runtime evidence](hd-runtime-release.json) record current authorities and limits. Validated package checkpoint; Git history records publication.
+
+Historical H5485 Source-only study, separate from the new coherent derived outputs: Separate held proposal: the new Source-only study for `20400`, `20403` and `20406` remains a material HOLD because coarse rubble and weak olive coverage fail the Source reading. Its successful image call and technical QA add no approved coverage. Earlier holds remain unchanged (author receipt `654fd40d`, outside closure `5da4e3b8`).
 
 Preserved 17 October 2026 Source-update checkpoint at 5,384 (historical coverage): Current Source C+D runtime — 17 October 2026, published `a073f73f`: HD coverage remains **5,384 frames / 3,551 sequences**, with **369 originals remaining** (260 Terrain, 75 enemies/ground objects, 33 UI/other, one boss). Both executables are rebuilt; 90 Rust / 78 Python tests, HD validation and three exact 1080p regression controls pass. Five old Rust checks remain ignored. Source C+D native Windows CI is pending; the prior `58723547` result (361 passed / 26 ignored / zero failed) is a different epoch. Earlier material, context and QA records below remain historical; this source update adds no art approval.
 
@@ -57,13 +59,13 @@ The published 3,592-frame admission adds **427 source/material-qualified origina
 | Category | Picture frames | Registered HD | Missing HD | Declared sequences / terrain sets |
 | --- | ---: | ---: | ---: | ---: |
 | Player banking | 21 | 21 | 0 | 3 |
-| Bosses | 249 | 248 | 1 | 79 |
+| Bosses | 249 | 249 | 0 | 79 |
 | Enemies and ground objects | 419 | 360 | 59 | 183 |
 | Player and enemy projectiles | 51 | 51 | 0 | 18 |
 | Explosions and effects | 281 | 281 | 0 | 25 |
 | Equipment and pickups | 47 | 47 | 0 | 23 |
-| Terrain | 4,535 | 4,360 | 175 | 4 |
-| Menus, portraits, HUD and other pictures | 150 | 117 | 33 | mixed static / animated |
+| Terrain | 4,535 | 4,363 | 172 | 4 |
+| Menus, portraits, HUD and other pictures | 150 | 128 | 22 | mixed static / animated |
 
 The completion ledger retains `format_version: 1` with `ledger_schema: family_review_refs_v1`. Each approved asset uses a stable `coordinator_review_ref`; `family_reviews` stores the candidate/binding identities and exact full immutable external receipt once. The original 2,132 normalization reduced 53,594,880 bytes to 8,406,611 (84.31%) without changing approval or artwork. New registrations update only their own status/evidence; native preservation has a separate closed record.
 

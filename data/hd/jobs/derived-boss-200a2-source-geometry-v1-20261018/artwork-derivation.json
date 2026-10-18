@@ -1,0 +1,45 @@
+{
+  "execution_receipt": {
+    "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/derived/derived-provenance.json",
+    "sha256": "0ff138c4821a1dcb2e41e2248a5a34402e946f48e0237ca65a9a4703f5af38f7"
+  },
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "derived-generated-boss-source-geometry-rgb-preserved-v1",
+  "outputs": {
+    "jobs/derived-boss-200a2-source-geometry-v1-20261018/derived/200a2-derived.png": "74793a37ed6983fa99a9349b093b8b6ac2e03f52a6546d09dc245cf3d8479cdf"
+  },
+  "parents": [
+    {
+      "imagegen_receipt": {
+        "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/parents/generation-receipt.json",
+        "sha256": "c4e3ae0527078e4b422975f133d204fea5852977ad91d9ba7a9ddfbe83afd6e9"
+      },
+      "prompt": {
+        "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/parents/prompt.txt",
+        "sha256": "e039a7e7d43ac4f9fe9076c88943799d2121a907caca849f4f7f75b76fa44035"
+      },
+      "raw_png": {
+        "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/parents/generator-return.png",
+        "sha256": "038d542c771354a665b6503e673040b377938c2db2fa88f98fcff31bac0fba72"
+      }
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/cleanup-recipe.json",
+    "sha256": "16ef82a1472b478e7cdef721731f080cfa3a2aa8b316c9150eb5e018dd794d81"
+  },
+  "sources": {
+    "200a2": "7b887dc7f08f154529df7b1960799e66c4e6df7b7e732ed5df53d6738460c557"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_boss_cleanup.py",
+      "sha256": "53d07edbbb945baa2c5a3df01f03e2a11787c225b2d714541d5eca12a0fcd85b"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    }
+  ]
+}

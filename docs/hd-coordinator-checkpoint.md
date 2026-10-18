@@ -1,14 +1,16 @@
 # HD coordinator checkpoint — 18 October 2026
 
-Current artwork/runtime checkpoint — 18 October 2026: the optional HD pack contains **5,485 reviewed pictures in 3,632 complete sequences**, including **4,360 Terrain pictures**. **268 originals still await approval**: 175 Terrain, 59 enemies and ground objects, 33 UI/other pictures and one boss. Held drafts and actual provider refusals remain part of that backlog.
+Current artwork/runtime checkpoint — 18 October 2026: the optional HD pack contains **5,500 reviewed pictures in 3,638 complete sequences**, including **4,363 Terrain pictures**. **253 originals still await approval**: 172 Terrain, 59 enemies and ground objects, and 22 UI/other pictures. All 249 boss pictures are reviewed; the full original-art backlog remains open.
 
-One new authentic-Source-only image supplies `203fb` and `203fc`. Its PNG is untouched, with two complete native definitions, plain sampling and unchanged 32×32 canvases, zero origins and fixed atlas crops. No optional policy is added; the nine existing palette opt-ins stay unchanged. Older plain and palette proposals retain their recorded holds.
+This append adds one boss picture (`200a2`), three Terrain pictures (`20400`, `20403`, `20406`), the complete three-frame DSHP20G3 family and the complete eight-frame WORMRITE family. All 15 published PNGs are explicitly derived scripted cleanups of retained generated parents. Their methods preserve continuous generated RGB or coherent parent texture while using Source geometry and declared functional color cues. They are not untouched generator returns.
 
-Separate reviews cover 19 genuine endpoints and 11 ordered comparisons from nine neighbor events. They include six freshly checked reverse contexts for registered `203fa`, including two new northeast-corner endpoints. No private validation gallery is used. Recorded grain, relief and density limits remain qualified; this is not seamless, all-placement or complete-route approval.
+Boss and Terrain reviews have distinct finite context scopes. The 11 DSHP/WORM catalogue graphics have complete-family intrinsic review and Source caller-absence evidence; that review carries no Original spawn, clock or World occurrence claim. The boss has two historical controlled-pose recompositions. Terrain review covers 39 genuine endpoints and one private self-repeat endpoint for `20400`, with 25 ordered comparisons; the private endpoint is not an Original-map occurrence. Earlier WORM, boss and Terrain source-only/v3 HOLDs remain attached to their older artifacts.
 
-Validation accepts all 5,485 frames with zero rejects, plus 45 mods with one override. Three installed-game SDL controls exited successfully and were personally reviewed. Their PNG, RGB and alpha data measured identical to H5483 across 6,220,800 pixels.
+Validation accepts all 5,500 frames with zero rejects, plus 45 mods with one override. Three installed-game SDL controls exited successfully and measured identical PNG, RGB and alpha output against H5485 across 6,220,800 pixels. Both the independent reviewer and Root viewed all three complete 1920 × 1080 screens; these controls carry no claim that the new pictures appeared.
 
-SourceF, both binaries and Mission 2 version 1.0.3 remain unchanged. Existing runtime and campaign tests retain their dated scopes. The latest closed native Windows result is SourceF H5483 at `fc36ea28`, including Mission 2 version 1.0.3: 401 passed, 26 ignored and none failed. That is not a native Windows result for this artwork revision. The [completion ledger](hd-completion.json), [backlog](hd-backlog.md) and [runtime evidence](hd-runtime-release.json) record exact authorities and limits. Validated package checkpoint; Git history records publication.
+The maintained cleanup and registration tools pass 101 tests; the final TARGT guard successor passes 12 separately (113 total). TARGT14 artwork is not admitted by this batch.
+
+SourceF, both binaries, Mission 2 version 1.0.3 and the nine palette opt-ins remain unchanged. The latest closed native Windows result is SourceF H5485 at `f9f17e35`: 401 passed, 26 ignored and none failed. It is dated evidence for that earlier artwork package. Existing runtime and campaign checks keep their original scopes. The [backlog](hd-backlog.md), [completion ledger](hd-completion.json) and [runtime evidence](hd-runtime-release.json) record current authorities and limits. Validated package checkpoint; Git history records publication.
 
 Preserved 17 October 2026 Source-update checkpoint at 5,384 (historical coverage): Current Source C+D checkpoint — 17 October 2026: remote-confirmed commit `a073f73f` installs the rational atlas sampler, protected terrain joins and bounded retained-Original policy. Coverage is unchanged at **5,384 frames / 3,551 sequences**, with **369 originals remaining** (260 Terrain, 75 enemies/ground objects, 33 UI/other, one boss); data remains **9,335 files / 8,179,315,857 bytes**. Both bundled executables were rebuilt. Validation passes 90 Rust and 78 Python tests (five pre-existing Rust checks ignored), all 5,384 HD frames with zero rejects, the 6,449-entry catalog and 45 mods/one override. Three fresh 1080p API-B/C+D controls match exactly across 6,220,800 pixels. Source C+D native Windows CI remains pending; `58723547` separately passed 361 tests, with 26 ignored and zero failed. No new artwork approval or full-HD completion follows. The following pre-C records retain their original epochs.
 
@@ -55,16 +57,16 @@ Published runtime history: The assembled bundled Linux/Windows data contains **3
 | Category | Registered / original pictures |
 | --- | ---: |
 | Player banking | 21 / 21 |
-| Bosses | 248 / 249 |
+| Bosses | 249 / 249 |
 | Enemies and ground objects | 360 / 419 |
 | Player and enemy projectiles | 51 / 51 |
 | Explosions and effects | 281 / 281 |
 | Equipment and pickups | 47 / 47 |
-| Terrain | 4,360 / 4,535 |
-| Menus, portraits, HUD and other pictures | 117 / 150 |
-| Total | 5,485 / 5,753 |
+| Terrain | 4,363 / 4,535 |
+| Menus, portraits, HUD and other pictures | 128 / 150 |
+| Total | 5,500 / 5,753 |
 
-All 6,449 catalog entries and 5,753 pictures were audited with zero HD source/hash/canvas/ID errors. **268 pictures await registration**. Picture ledger counts are {'registered': 5465, 'inprogress': 112, 'renderreachable': 20, 'candidate': 154, 'missing': 2}; candidate status is not art approval or live occurrence. All 307 native AGX/font records remain separately `native_preserved`, with no generated HD coverage. Unused/destroyed pictures remain required.
+All 6,449 catalog entries and 5,753 pictures were audited with zero HD source/hash/canvas/ID errors. **253 pictures await registration**. Picture ledger counts are {'registered': 5480, 'inprogress': 109, 'renderreachable': 20, 'candidate': 142, 'missing': 2}; candidate status is not art approval or live occurrence. All 307 native AGX/font records remain separately `native_preserved`, with no generated HD coverage. Unused/destroyed pictures remain required.
 
 ## Historical Stage2 API 1,148 output proof
 

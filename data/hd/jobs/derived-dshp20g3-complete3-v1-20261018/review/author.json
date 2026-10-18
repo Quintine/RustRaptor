@@ -1,0 +1,229 @@
+{
+  "status": "AUTHOR_QUALIFIED_COMPLETE3_DERIVED_SCRIPTED_CLEANUP_PENDING_DIFFERENT_WHOLE_MATERIAL_REVIEW",
+  "author": "/root/hd_dark_player",
+  "generated_parent_artist": "/root/hd_enemies_02",
+  "derived_editor": "/root/hd_dark_player",
+  "exact_assets": [
+    "300a5",
+    "300a6",
+    "300a7"
+  ],
+  "complete_family": true,
+  "qualified_author": 3,
+  "held_author": 0,
+  "execution": {
+    "method": "derived-generated-RGB-SourceScale4-geometry-coherent-dynamic-regions-v2",
+    "output_sha256": {
+      "300a5": "cd45b35317e4cad891c1afa55ef30e6de157b6175cfe6e6e2547d3f07da74476",
+      "300a6": "eddb376ddbf66e10df1feae2cf5c4daa93b2ffd6196f284dabed8f88f6754339",
+      "300a7": "86036f9c0cc891481990a212a7ccc5718a59c43d9a0f4bff70c7a1e30d8a66e7"
+    },
+    "parent_raw_sha256": [
+      "3ab3f1950699cea5865752176d42c2e6fe09e65a3039e00536ce2e8a8917a758"
+    ],
+    "recipe_sha256": "6ad7073db0d01c213d71cc1b0c15ef663aa79b714a16074c024bea0bffc4b3d7",
+    "source_sha256": {
+      "300a5": "2e351f4826f158ecea7328b3b80d65f318fdcabdb22d9398f61b9447d894a7ad",
+      "300a6": "e8f929a9926d631a5af7a87c9d32a6b74208712b671a08bfd01d4c67a2752b94",
+      "300a7": "b4e2ca09b5fb08dd17b1b5a2a020dc67da6ec8adc9b86c0f5e65adbb788152fe"
+    },
+    "status": "success",
+    "tool_sha256": "1e362d2dc1f1572d7e63582fc95773badf4187ef80fa19083f7595bff6cf28d8"
+  },
+  "normalized_execution": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/derived-complete3-coherent-dynamic-regions-v2/normalized-execution.json",
+    "sha256": "280133a7df36155d33e5999ba361b4a8a3172ae73ca840e7e88bfe16c4e86c9a",
+    "size": 922,
+    "mtime_ns": 1792280610149001945,
+    "mode": 33188
+  },
+  "recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/DSHP20G3-EXPLICIT-DERIVED-RGB-GEOMETRY-CLEANUP-RECIPE-v2.json",
+    "sha256": "6ad7073db0d01c213d71cc1b0c15ef663aa79b714a16074c024bea0bffc4b3d7",
+    "size": 2780,
+    "mtime_ns": 1792280609296359812,
+    "mode": 33188
+  },
+  "tool_original": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_dshp20_cleanup.py",
+    "sha256": "1e362d2dc1f1572d7e63582fc95773badf4187ef80fa19083f7595bff6cf28d8",
+    "size": 14510,
+    "mtime_ns": 1792280597818657287,
+    "mode": 33188
+  },
+  "tool_immutable_snapshot": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/immutable-tool-and-test-snapshot/hd_dshp20_cleanup.py",
+    "sha256": "1e362d2dc1f1572d7e63582fc95773badf4187ef80fa19083f7595bff6cf28d8",
+    "size": 14510,
+    "mtime_ns": 1792281061761934529,
+    "mode": 33188
+  },
+  "focused_tests": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/test_hd_dshp20_cleanup.py",
+    "sha256": "40be60d046d592a62b11f2c82c2579e0f2f9d0e8d4d4ad86627b1738e8916d78",
+    "size": 6007,
+    "mtime_ns": 1792280597823657168,
+    "mode": 33188
+  },
+  "actual_tests": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/focused-synthetic-tests-v2.log",
+    "sha256": "94ced01de285b72a1f871181c87df784eeade43e97c4aaa2e57dcd27c71820b2",
+    "size": 1492,
+    "mtime_ns": 1792280597976653529,
+    "mode": 33188
+  },
+  "meaningful_test_count": 8,
+  "method": "Full generated RGB is preserved by explicit registration and SourceScale4 geometry; uncovered small boundary samples use nearby generated RGB; Source-identical stationary backing shares full anchor RGB outside actual Source-changing connected-part envelopes; only authentic Source functional palette markers replace RGB directly. No highpass/noise/SourceNN broad reconstruction.",
+  "framing": "New separate448x256 RGBA PNGs on complete112x64/origin0 native canvases, onecomplete3/frame0\u20132 sequence, crop/atlas_grid/detail/cue/palette/coverage fields ABSENT. Parent rational viewport is a declared bitmap input operation, not a reinterpreted untouched output or a runtime crop-fit.",
+  "native_candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/DERIVED-COMPLETE3-NATIVE-CANDIDATE-NOT-APPROVED.json",
+    "sha256": "3c0c5452d95ece5f904d3f1675615cce8d60a2055e9bfdfd074d916d5bad6dd5",
+    "size": 3086,
+    "mtime_ns": 1792280685159872482,
+    "mode": 33188
+  },
+  "actual_manifest": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/derived-complete3-coherent-dynamic-regions-v2/hd.json",
+    "sha256": "3ccc467ac554037d5089fb0b6f3f06de1956e9e6d5148a014d1cb86427c2b9d3",
+    "size": 1226,
+    "mtime_ns": 1792280685159690991,
+    "mode": 33188
+  },
+  "derived_outputs": [
+    {
+      "RGBA_sha256": "799d0318d940bb755bacd7b4ff7d551c53ade6c3ec21180daa6e9ab94e3bee94",
+      "asset": "300a5",
+      "bytes": 115668,
+      "file": "300a5-derived.png",
+      "sha256": "cd45b35317e4cad891c1afa55ef30e6de157b6175cfe6e6e2547d3f07da74476"
+    },
+    {
+      "RGBA_sha256": "7e537e62ac8c5ecdb78f2401f2d0e7201567465d256dfe41bc1ff9ecf713ca48",
+      "asset": "300a6",
+      "bytes": 119715,
+      "file": "300a6-derived.png",
+      "sha256": "eddb376ddbf66e10df1feae2cf5c4daa93b2ffd6196f284dabed8f88f6754339"
+    },
+    {
+      "RGBA_sha256": "ce70c26355fdbabdf9b49c747798d1568912320c22b3bf221e1f5d0c5d3d4bcf",
+      "asset": "300a7",
+      "bytes": 122072,
+      "file": "300a7-derived.png",
+      "sha256": "86036f9c0cc891481990a212a7ccc5718a59c43d9a0f4bff70c7a1e30d8a66e7"
+    }
+  ],
+  "actual_SourceF_QA": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/ACTUAL-MEASURED-SOURCEF-DERIVED-COMPLETE3-QA-EPOCH-AND-FRAME-BINDING.json",
+    "sha256": "cc89e8475adda94ae4b65d92b39d53677443497c43e02e0ca1efba064d085e61",
+    "size": 4463,
+    "mtime_ns": 1792280685591008762,
+    "mode": 33188
+  },
+  "actual_terminal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/ACTUAL-ONE-SOURCEF-DERIVED-COMPLETE3-QA-TERMINAL.json",
+    "sha256": "e14a4d0414b8ba85c56774bd6c37d7619773982c306e3cd01f30ab733c72047e",
+    "size": 1789,
+    "mtime_ns": 1792280685454573490,
+    "mode": 33188
+  },
+  "technical_authentication": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/INDEPENDENT-DERIVED-RGBA-FULL-GENERATED-RGB-SOURCE-NX-AND-ACTUAL12-NATIVE-36-PANE-AUTHENTICATION.json",
+    "sha256": "1dfa5cb9db5bee4948da1411f2838b8b54dc8fb8f4103870ab8aad004752938e",
+    "size": 28024,
+    "mtime_ns": 1792280808389505645,
+    "mode": 33188
+  },
+  "peer_interface": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/COMPLETE3-DERIVED-RAW-SOURCE-OLD-HOLD-ACTUAL1TO4-AND-ANIMATION-PEER-INTERFACE.json",
+    "sha256": "b00d9f015232420e9101c9d6ecc3e74965978a4f024866835ad340edb878d2f2",
+    "size": 22165,
+    "mtime_ns": 1792281061948034959,
+    "mode": 33188
+  },
+  "author_decisions": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/AUTHOR-EXACT3-ALL4-WHOLE-MATERIAL-GEOMETRY-AND-ORDERED-PHASE-DECISIONS.json",
+    "sha256": "ded9da56f57ad76094462b82a51e6d33b6c27396212252c7b63d07b64adcc592",
+    "size": 14689,
+    "mtime_ns": 1792281061945566786,
+    "mode": 33188
+  },
+  "personal_journal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/PERSONAL-FULL-PARENT-FINAL-DERIVED-SOURCE-AND36-NATIVE-PANE-AUTHOR-JOURNAL.json",
+    "sha256": "297c9be73452cffeb3984a4d79ce51f368e6831480d1b82cde30e35fe29611f8",
+    "size": 20892,
+    "mtime_ns": 1792281061947473357,
+    "mode": 33188
+  },
+  "numeric_summary": {
+    "actual_native_planes": 12,
+    "new_native_samples": 645120,
+    "independent_SourceNx_control_samples": 645120,
+    "final_whole_pages": 4,
+    "complete_final_panes": 36,
+    "derived_SourceScale4_alpha_samples": 227754,
+    "shared_full_generated_RGB_samples": 64722,
+    "functional_Original_RGB_samples_total": 96,
+    "SourceNx_mask_exact_scales": [
+      1,
+      2,
+      4
+    ],
+    "native3_per_asset_missing_extra": [
+      [
+        27,
+        32
+      ],
+      [
+        33,
+        39
+      ],
+      [
+        31,
+        36
+      ]
+    ],
+    "reserved_labels_all12_exact": true,
+    "QA_diagnostics": []
+  },
+  "animation_limit": "Actual index comparisons show native4 stationarySource region exact0deltas; lowernative sampling has explicitly reported nonzero boundary-region palette changes (native1pair78/49/78 etc). No claim perfect allscale stationarity or actualWorld timing. Ordered0->1->2 body/cap/vent/port readability judged only as author.",
+  "material_limits": "Brighter/sharper, more strongly modeled generated metal and triangular beam shading remain compared with dimmer Original. The geometry mask does not itself approve internal art. Full generated panels are visibly retained, not SourceNN plus noise. Source silhouette stair-step and native3 resampling corner differences remain explicit.",
+  "history": "All old E02 rationalv2 d95e3da9/28cd9828 and I6 SourceE58f80f65/bebdd037 HOLD3 proofs, original raw3ab3, Source/canvases/defaults and earlier Dark/T2 holds remain unchanged. Preliminary derived v1 pixel-mosaic HOLD was preserved with original tool/output and no QA; the coherent dynamic-envelope v2 is this actual proposal. Synthetic RLE fixture error and unused-reference-tool preflight stop remain explicit. Only one successful SourceF helper call, no runtime retry.",
+  "old_author": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies02-DSHP20G3-complete3-apriori-rational4x7-Original-author-20261018-v2/CLOSED_ONE_NEW_COMPLETE3_RATIONAL4X7_DSHP20G3_BUILTIN_DIMENSION_PASS_ART_REGISTRATION_HOLD_NO_QA.json",
+    "sha256": "d95e3da96adcc5738a3292f3a872a90d32828494cf44729395a69007fc5242a6",
+    "size": 5707,
+    "mtime_ns": 1792242602860487241,
+    "mode": 33188
+  },
+  "old_diagnostic": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-DSHP20G3-rational-v2-actual-SourceE-complete3-diagnostic-20261018/CLOSED-ACTUAL-SOURCEE-DSHP20G3-RATIONAL-COMPLETE3-RUNTIME-DIAGNOSTIC-HOLD.json",
+    "sha256": "58f80f65e77212c49874eb5761307b1604cda485f36469ba61c9873b34a1a26c",
+    "size": 10201,
+    "mtime_ns": 1792243561408356034,
+    "mode": 33188
+  },
+  "closing_guards": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-DSHP20G3-complete3-derived-RGB-geometry-cleanup-SourceF-20261018-v1/CLOSING-OLD-PARENT-SOURCE-EVIDENCE-AND-ACTUAL-SOURCEF-INPUT-GUARDS.json",
+    "sha256": "d271f23fd77747c29173d9843367cb448963590dfc526bdd3532bae698791997",
+    "size": 1908,
+    "mtime_ns": 1792281062385787932,
+    "mode": 33188
+  },
+  "operations": {
+    "new_image_calls": 0,
+    "Cargo": 0,
+    "World": 0,
+    "helper_calls": 1,
+    "compiler": 0,
+    "shared_engine_Source_writes": 0,
+    "canonical_assets_writes": 0,
+    "docs": 0,
+    "Git": 0,
+    "artist_script_executions": 2,
+    "actual_helper_retries": 0
+  },
+  "roles": "This is a derived-art author verdict only. A genuinely different material/functional/wholefamily judgment and applicable genuine context remain pending. Root owns canonical integration; no registration or selfadmission.",
+  "scope_limit_bytes": 120000000,
+  "free_floor_bytes": 3000000000,
+  "custody": "All own new derived evidence/tool snapshots and named old Source/raw/default/evidence/currentF inputs frozen, no pending owned writer/call/lease/helper/QA/compiler/World/image."
+}

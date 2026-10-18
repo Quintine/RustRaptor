@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5485 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5500 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -24407,6 +24407,165 @@
         }
       },
       "frame_bindings_sha256": "216d34f63a17830cb2e3d85af4f8b6875ed9341df91ff40655b9d3912be27058"
+    },
+    {
+      "job_id": "derived-boss-200a2-source-geometry-v1-20261018",
+      "assets": [
+        "200a2"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-boss-200a2-source-geometry-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-boss-200a2-source-geometry-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-boss-200a2-source-geometry-v1-20261018/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/review/author.json",
+          "sha256": "c118c3deb146d039e4052c6b1d6437ed1bc40b9e7fb6ea22018efa0bb3ae8f83"
+        },
+        "root": {
+          "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/review/root-personal-review.json",
+          "sha256": "e82830e7b5d2296dacb07bc894ffbc82ba4e4e05042ff24b5118f4ce51937ffe"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/review/independent-art-and-controlled-context.json",
+        "sha256": "4e83953f43b61180dd84946aee6d3d4837e62a27e8a025101daed815b5566249"
+      },
+      "frame_bindings_sha256": "6208faf79778b7a4b958db12e8e57b6e54085dfb758aed7788e3b097c46eae42",
+      "artwork_derivation": {
+        "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/artwork-derivation.json",
+        "sha256": "87f56671983724391e15662597898e56e6d29196d7d9d95927263e62ec5a2bf4"
+      }
+    },
+    {
+      "job_id": "derived-terrain-20400-20403-20406-coherent-v1-20261018",
+      "assets": [
+        "20400",
+        "20403",
+        "20406"
+      ],
+      "frames": 3,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/review/author.json",
+          "sha256": "1efe011b997ae3e9cfbc01b4f22f5b3fae416867970ad8276510f46da07d5b8f"
+        },
+        "independent_intrinsic": {
+          "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/review/independent-intrinsic-material.json",
+          "sha256": "82f7ee9f9a2165bf8b20c4b0a436f4ee86337f57911597baab0ad88a2aaa4151"
+        },
+        "root_provided": {
+          "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/review/root-provided-personal-review.json",
+          "sha256": "72407b47298347e81d099ac689a117a2518b4e2337d712cbc6e31f1cb6fad15d"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/review/independent-intrinsic-material.json",
+        "sha256": "82f7ee9f9a2165bf8b20c4b0a436f4ee86337f57911597baab0ad88a2aaa4151"
+      },
+      "frame_bindings_sha256": "f6250ad1dcf97337514fcb3c54bb159733377dda2c2638cdb318b9466f7cfbad",
+      "artwork_derivation": {
+        "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/artwork-derivation.json",
+        "sha256": "ca736f6470c4e68612a63f1a3f6402b3f1ec3cd8152288fa1e2a7ad483d1c8d9"
+      }
+    },
+    {
+      "job_id": "derived-dshp20g3-complete3-v1-20261018",
+      "assets": [
+        "300a5",
+        "300a6",
+        "300a7"
+      ],
+      "frames": 3,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-dshp20g3-complete3-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-dshp20g3-complete3-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-dshp20g3-complete3-v1-20261018/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-dshp20g3-complete3-v1-20261018/review/author.json",
+          "sha256": "dea900bbb4db8aaa238f4636ec15cf8668f12ccdc7508b819f5b978d72245c26"
+        },
+        "root": {
+          "path": "jobs/derived-dshp20g3-complete3-v1-20261018/review/root-provided-personal-review.json",
+          "sha256": "17b6a4fe000906797ba22ec1ae8013dbd501074527b08fce32b19bf5a6ca21c5"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-dshp20g3-complete3-v1-20261018/review/independent-material.json",
+        "sha256": "f6f2fd39b70eb63851d4502255b58c0256decbb0b3cef295c7fbbbdd2f0ea4f3"
+      },
+      "frame_bindings_sha256": "c9603e68d072654e7b99570c0af9f2b348ac89b98ac058e9479ef6ea3022d31d",
+      "artwork_derivation": {
+        "path": "jobs/derived-dshp20g3-complete3-v1-20261018/artwork-derivation.json",
+        "sha256": "798c03805d2580861d698c3442a4990e2efbe533c42934dcda02a6ba8495ce06"
+      }
+    },
+    {
+      "job_id": "derived-wormrite-complete8-v2-20261018",
+      "assets": [
+        "3003b",
+        "3003c",
+        "3003d",
+        "3003e",
+        "3003f",
+        "30040",
+        "30041",
+        "30042"
+      ],
+      "frames": 8,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-wormrite-complete8-v2-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-wormrite-complete8-v2-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-wormrite-complete8-v2-20261018/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-wormrite-complete8-v2-20261018/review/author.json",
+          "sha256": "b7beabf7d76c97242bf84cf8c7ccdb40be88c884650b1a9263e23272a1c6df6f"
+        },
+        "root": {
+          "path": "jobs/derived-wormrite-complete8-v2-20261018/review/root-personal-review.json",
+          "sha256": "5e680be146678b897ab89cc2989231af365263727c5c4d8538dc8cc68db603f2"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-wormrite-complete8-v2-20261018/review/independent-material.json",
+        "sha256": "c233c33cbf663f69f5994d8bd46d89f181ff2cf360c65e808af861f8ee693c90"
+      },
+      "frame_bindings_sha256": "afc9ae069261f11becaf3135351ad61e5784b33622d26dec65321807f33ad8c7",
+      "artwork_derivation": {
+        "path": "jobs/derived-wormrite-complete8-v2-20261018/artwork-derivation.json",
+        "sha256": "6bb3600c81855af2870d6cd765207c1d020711498bf4770309144c4b4357380f"
+      }
     }
   ],
   "jobs": [
@@ -24506,8 +24665,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5485,
-  "registration_updated_at_utc": "2026-10-17T16:13:02.971766+00:00",
+  "registered_frame_count": 5500,
+  "registration_updated_at_utc": "2026-10-18T00:25:29.208239+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,

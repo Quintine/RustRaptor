@@ -1,0 +1,67 @@
+{
+  "artwork_derivation": {
+    "path": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/artwork-derivation.json",
+    "sha256": "ca736f6470c4e68612a63f1a3f6402b3f1ec3cd8152288fa1e2a7ad483d1c8d9"
+  },
+  "category": "Terrain",
+  "complete_family": true,
+  "format_version": 1,
+  "job_id": "derived-terrain-20400-20403-20406-coherent-v1-20261018",
+  "kind": "contextual_terrain_shard",
+  "sequences": [
+    {
+      "base_asset": 132096,
+      "frame_count": 1,
+      "frames": [
+        {
+          "file": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/derived/20400-DERIVED-source-guided-material-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "02ee58837e0189c997e6777cb0cd2e9d66babe48a3252209e20ffb57761e2bba"
+        }
+      ],
+      "name": "Coherent Source-material HD terrain 20400"
+    },
+    {
+      "base_asset": 132099,
+      "frame_count": 1,
+      "frames": [
+        {
+          "file": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/derived/20403-DERIVED-source-guided-material-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "d5779389a3fc84f260b27f85fa74b13778f528d5978c8a40e577e6570be5f0ea"
+        }
+      ],
+      "name": "Coherent Source-material HD terrain 20403"
+    },
+    {
+      "base_asset": 132102,
+      "frame_count": 1,
+      "frames": [
+        {
+          "file": "jobs/derived-terrain-20400-20403-20406-coherent-v1-20261018/derived/20406-DERIVED-source-guided-material-v1.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "17b3acb33c17ddf7394984a63a60123a1d16ea98e77d68a350886f2f49cd0e78"
+        }
+      ],
+      "name": "Coherent Source-material HD terrain 20406"
+    }
+  ]
+}

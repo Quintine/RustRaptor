@@ -1,0 +1,59 @@
+{
+  "execution_receipt": {
+    "path": "jobs/derived-wormrite-complete8-v2-20261018/derived/derived-provenance.json",
+    "sha256": "9b525d0d06f43430b395de36ffb0b45be6c0a4c6a9ada087810ff96c8ccfc4ee"
+  },
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "derived-generated-worm-rgb-broad-material-source-alpha-shared-backing-v1",
+  "outputs": {
+    "jobs/derived-wormrite-complete8-v2-20261018/derived/3003b-derived.png": "bbb2e9a40a07f338cd5415bf9965ec3c44171e48d260369fcc0198d4d014d466",
+    "jobs/derived-wormrite-complete8-v2-20261018/derived/3003c-derived.png": "dcd7540bb5e9a5109de9664164977aac344772cb703ed92be29e828dd99c7068",
+    "jobs/derived-wormrite-complete8-v2-20261018/derived/3003d-derived.png": "8777336d1687aaa417aafb0f0520aeb40ec2ca53fd938c58462b23b5a9b4ca59",
+    "jobs/derived-wormrite-complete8-v2-20261018/derived/3003e-derived.png": "9fc04f3742a5b866da08c679acdea92540141a20bb039608874d84e37eb4381d",
+    "jobs/derived-wormrite-complete8-v2-20261018/derived/3003f-derived.png": "613772ad1e13acdc0ad8a1a17c59c7ec2bb7d0d1660e6fbc6e8901b8aa8f6dc5",
+    "jobs/derived-wormrite-complete8-v2-20261018/derived/30040-derived.png": "6a17e0a8db05f1356a9603e442a42640f71ee34a10c7d9f4f0c6e5a576bd283b",
+    "jobs/derived-wormrite-complete8-v2-20261018/derived/30041-derived.png": "fd4841ee35abd6fb2e9b5fcc4d05d271930fca587f2b0926d84c6ea46212536c",
+    "jobs/derived-wormrite-complete8-v2-20261018/derived/30042-derived.png": "7906428227e16f087884e522447ce4846a2211b5de1a84b9ee76176033eb9dd7"
+  },
+  "parents": [
+    {
+      "imagegen_receipt": {
+        "path": "jobs/derived-wormrite-complete8-v2-20261018/parents/generation-receipt.json",
+        "sha256": "39214dd945d39963db7f8286c48399a930971e8e5bc74c1df378bdad4c93aa51"
+      },
+      "prompt": {
+        "path": "jobs/derived-wormrite-complete8-v2-20261018/parents/prompt.txt",
+        "sha256": "0b5daa1ff975f6427789de2b9bbf1c5b7d50971272876071c98d2886d4bbde42"
+      },
+      "raw_png": {
+        "path": "jobs/derived-wormrite-complete8-v2-20261018/parents/generator-return.png",
+        "sha256": "a5bcbc96045e63820d89b843864978e0f08cbbc5978e69e7d940e8de0d6aef20"
+      }
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-wormrite-complete8-v2-20261018/cleanup-recipe.json",
+    "sha256": "b5757e6e99a63c2d95b74eb2e1d4728c638d8616a9f2e96bf9df8f65e8394b10"
+  },
+  "sources": {
+    "3003b": "1ee6fe89dcab965ea355d1d7ad85f9663f7adaa6e30c12e1c13c484b80c89b45",
+    "3003c": "5ed479f74d45055846dbe79cc6413fefb04f31f4c50129eb81ba4c6e9893f380",
+    "3003d": "d55feebc08737773f39cd810ced4eafe64556b6319e5d6470d3ab08b312a84b5",
+    "3003e": "188b03592de19d275a8919aad461e460fa90c3f38fc37e31c71f2322f4a7bcca",
+    "3003f": "ae2e65c51f61bcf65e9dda133d25b53b86093fa9b9d2f5b629483a6e22667362",
+    "30040": "594fbb50deb4b20eae1582c1bbbcd9c86a5ef871ebcd7438a85882d7668caf64",
+    "30041": "e616a36d0fc3de8095df1c66a233cb8f20ae31175393190301cbe41942b4b112",
+    "30042": "6e49e44a10764d9113df34cef980e1636afff547dc6a3d0a64de8313910b6a10"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_worm_cleanup.py",
+      "sha256": "94df9f8cbfb1c13750918f751917de3379c787c8cd28a04238328d1f3eef333f"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    }
+  ]
+}

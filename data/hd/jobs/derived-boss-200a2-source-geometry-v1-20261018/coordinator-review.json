@@ -1,0 +1,42 @@
+{
+  "artwork_derivation": {
+    "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/artwork-derivation.json",
+    "sha256": "87f56671983724391e15662597898e56e6d29196d7d9d95927263e62ec5a2bf4"
+  },
+  "candidate_sha256": "c6d000bf44d08b1e260116a7bd2c42bab845c9863a27aa4fec0431da69ea3918",
+  "context_scope": "Two Source-verified historical controlled poses, recomposed using SourceF/current H5485; no new World run.",
+  "frame_bindings_sha256": "6208faf79778b7a4b958db12e8e57b6e54085dfb758aed7788e3b097c46eae42",
+  "independent_cleanup_code": {
+    "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/review/independent-cleanup-code.json",
+    "sha256": "2296a4705005c4b98006cc66ad46c9b422e84c408199caca3c7f2951402a2e84"
+  },
+  "independent_review": {
+    "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/review/independent-art-and-controlled-context.json",
+    "sha256": "4e83953f43b61180dd84946aee6d3d4837e62a27e8a025101daed815b5566249"
+  },
+  "originals_and_parent_raw_unchanged": true,
+  "qualifications": [
+    "Brighter mechanical relief",
+    "Crisp Source-shaped outline at higher scales",
+    "SourceNx high-scale alpha differs by 55/149/259 samples; native1 occupancy is exact"
+  ],
+  "reviewer": "/root",
+  "runtime_qa": "jobs/derived-boss-200a2-source-geometry-v1-20261018/runtime-qa.json",
+  "source_and_all_scale_visual_review": {
+    "author": {
+      "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/review/author.json",
+      "sha256": "c118c3deb146d039e4052c6b1d6437ed1bc40b9e7fb6ea22018efa0bb3ae8f83"
+    },
+    "root": {
+      "path": "jobs/derived-boss-200a2-source-geometry-v1-20261018/review/root-personal-review.json",
+      "sha256": "e82830e7b5d2296dacb07bc894ffbc82ba4e4e05042ff24b5118f4ce51937ffe"
+    },
+    "scales": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "status": "approved"
+}
