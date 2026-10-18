@@ -1,0 +1,19 @@
+Create a faithful high-resolution remake of sixteen original Raptor terrain tiles shown in the attached atlas. Sixteen independent 32 by 32 logical canvases, top-down orthographic, each occupying one EXACT equal quarter of the output width and height. Row-major tile IDs: 203ad,203ae,203af,203b0 /203b1,203b2,203b3,203b4 /203b5,203b6,203b7,203b8 /203b9,203ba,203bb,203bc. The output is one opaque square 4 by 4 atlas. NEVER draw a grid, border, separator, gutter, label or frame. Each tile texture extends fully to its four canonical edges; adjacent tiles simply touch. No shifted or unequal panels.
+Use the original atlas as the ONLY source of composition, shapes, palette and edge placement. Retain every original brown inset, gray concrete, flat black shadow, thin rim, source dark fleck and clipped mark. Add subtle, finely painted material detail inside those shapes, not a magnified square pixel mosaic. Do not invent walls, roads, objects, vents, stones, flames, trees or scenery. Keep muted gray, dark gray, brown and native reddish brown colors.
+203ad: brown left majority and dark gray right, original small tan marks at upper-left and bottom-left rim; exact source split and source shading.
+203ae: dark gray left, brown right, native top-left brown rim segment and lower-left rim segment where shown, no added lines between them.
+203af: dark gray top, brown bottom, original tiny tan rim fragments near left/right ends of the boundary; preserve native heights and flat shade.
+203b0: brown top half, dark gray bottom, native thin brown edge fragments at left/right corners; exact source.
+203b1: dark gray left, brown right with native thin vertical tan rim and sparse dark brown flecks, unchanged source width.
+203b2: entirely dark gray mottled flat shade, no objects or boundary invented.
+203b3: brown left, dark gray right with native thin tan vertical right trim at the source location; quiet source brown, not red.
+203b4: gray top/left most of tile, reddish-brown bottom-right inset entering bottom and right, original thin brown top/left rim and black mark near top-right; exact source outline.
+203b5: gray top strip, native reddish-brown bottom after a thin horizontal brown trim; exact source boundary height and native shade.
+203b6: gray top/right, reddish-brown bottom-left inset with thin native brown rim top/right and tiny dark source trim marks, exact corner width.
+203b7: full brown with diagonal dark brown lower-right flat shade, ORIGINAL scattered small gray/tan flecks near left/bottom and tiny black flecks along right. Preserve original fleck layout; do not make a new wreck or crater.
+203b8: dark gray most of tile; brown top-right small inset with native tiny top-left tan patch and bottom brown rim. Exact source placement.
+203b9: brown top majority, dark gray bottom after native brown horizontal rim; native few dark flecks only.
+203ba: brown top-left inset with native thin rim right/bottom, dark gray right/bottom; exact source corner and original little black marks.
+203bb: gray left and reddish-brown right divided by the native narrow tan/black vertical trim, exact width and edge colors.
+203bc: plain dark gray full tile, native subtle mottle only. No invented boundary or objects.
+Faithful original geometry first; genuinely refined small material detail, restrained native palette, no foreign atlas rules.

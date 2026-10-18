@@ -1,0 +1,431 @@
+{
+  "status": "QUALIFIED_DIFFERENT_COMPLETE4_COHERENT_DERIVED203B5_203B6_203B9_203BB_INTRINSIC_MATERIAL_ONLY",
+  "reviewer": "/root/iron_coast_5",
+  "actual_material_peer": "/root/iron_coast_5",
+  "actual_scripted_artist": "/root/hd_full_review",
+  "historical_generator_artist": "/root/hd_terrain_set_2",
+  "selected": [
+    "203b5",
+    "203b6",
+    "203b9",
+    "203bb"
+  ],
+  "qualified": 4,
+  "HOLD": 0,
+  "producer_report": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/CLOSED-ACTUAL-COHERENT-DERIVED4-SOURCEF-AUTHOR-QUALIFIED4-INTRINSIC-HANDOFF.json",
+    "sha256": "b5d99422fe35f057caa835fa214ca0789e6149aed207c3a79bc7679d22b8ae61",
+    "size": 54463,
+    "mtime_ns": 1792283248157879906,
+    "mode": 33188
+  },
+  "producer_strict": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018-strict-complete-coherent-DERIVED4-author-intrinsic-closure.json",
+    "sha256": "de5cf29abfbacdaf9004a5c667ed3155338ed34bf1231557103888ad9f5c8df9",
+    "size": 45065,
+    "mtime_ns": 1792283248682854269,
+    "mode": 33188
+  },
+  "producer_interface": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/COMPLETE-DERIVED4-WHOLE-NATIVE-AND-FILEONLY-JOIN-RISK-PHYSICAL-INTERFACE.json",
+    "sha256": "6403e38e574029a54a35ae9ad582928b2d2681a2b6ea863a4ce4f6337ba8484e",
+    "size": 71065,
+    "mtime_ns": 1792283130959412690,
+    "mode": 33188
+  },
+  "DERIVED_not_untouched_generator": true,
+  "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+  "actual_output_sha256": {
+    "203b5": "683f9faa24de63e8c70f302fd2a368e8cdfdfc30bf523975696dc80f0917c891",
+    "203b6": "72976149d2a0f1376e160fccf8300ecfcf95aaa6f99e65ec0151cdc1eb97b51f",
+    "203b9": "bc581c072ac79d82e71f65f7736469011d6270d89e2468e1f75df1055d664bfb",
+    "203bb": "ee8d4c78c0d99768ecc3c04a613b888183fceb4017d6a0a879fb9601126ee1ef"
+  },
+  "parent_raw": {
+    "mode": 33188,
+    "mtime_ns": 1791705907073744662,
+    "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-203ad-203bc/generated/atlas-v1.png",
+    "sha256": "939d74a58ad236b5f40066308db99c2501599ff49ae41f41bd78276a36b02ceb",
+    "size": 3425227
+  },
+  "parent_crop_texture_inputs_only": [
+    {
+      "asset": "203b5",
+      "crop": [
+        0,
+        627,
+        313,
+        313
+      ]
+    },
+    {
+      "asset": "203b6",
+      "crop": [
+        314,
+        627,
+        313,
+        313
+      ]
+    },
+    {
+      "asset": "203b9",
+      "crop": [
+        0,
+        941,
+        313,
+        313
+      ]
+    },
+    {
+      "asset": "203bb",
+      "crop": [
+        627,
+        941,
+        313,
+        313
+      ]
+    }
+  ],
+  "source_and_lineage": {
+    "mode": 33188,
+    "mtime_ns": 1792283041184336429,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/actual-DERIVED4/DERIVED-LINEAGE-AND-ACTUAL-RECONSTRUCTION-METRICS.json",
+    "sha256": "a8c42a985bc150d3b1ce19e7cf2c8c33d04c4a82e5e1379229477f3b92a91959",
+    "size": 18544
+  },
+  "actual_QA": {
+    "QA": {
+      "mode": 33188,
+      "mtime_ns": 1792283071901682592,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/actual-once-SourceF-DERIVED4-intrinsic5/runtime-qa.json",
+      "sha256": "f25b9cdafa7cea25d103f75f8cb3b7afbd3912842eae760549b8dab4d76e454a",
+      "size": 13616
+    },
+    "calls": 1,
+    "current_epoch": "SourceF38459e00/helpera90704f5/librarycfabd84b",
+    "diagnostics": [],
+    "exit_code": 0,
+    "index": {
+      "mode": 33188,
+      "mtime_ns": 1792283071906682485,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/actual-once-SourceF-DERIVED4-intrinsic5/actual-indexed-source-and-scales.json",
+      "sha256": "7b67dba70552441cf567360f187d9b4474aa494aa2040105b6e21d37ddbaa57b",
+      "size": 1835045
+    },
+    "native_manifest": {
+      "mode": 33188,
+      "mtime_ns": 1792283071608178224,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/private-DERIVED-complete4-native32-pack/hd.json",
+      "sha256": "37322d48bbcecbf5d22f69e4b87b4916d3025f437501b754c83f7f50b50849ce",
+      "size": 2023
+    },
+    "terminal": {
+      "mode": 33188,
+      "mtime_ns": 1792283071909014975,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/ACTUAL-DERIVED4-SOURCEF-QA-TERMINAL.json",
+      "sha256": "09c621c2bdb761860c42bcaccadb236a4266f0a27b81d7f8de71884f425be1fb",
+      "size": 1351
+    }
+  },
+  "per_ID": [
+    {
+      "asset": "203b5",
+      "status": "QUALIFIED_DERIVED_INTRINSIC_WITH_DISCLOSED_LIMITS",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959555445857,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/../../../data/misc/unnamed.1456",
+        "sha256": "39fcb3485b677b96c89a14b8dd2ea049bb960f8e1e2a61ec94dfd1dd2e2ef528",
+        "size": 1044
+      },
+      "derived": {
+        "mode": 33188,
+        "mtime_ns": 1792283040855348208,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/actual-DERIVED4/203b5-DERIVED-source-guided-material-v1.png",
+        "sha256": "683f9faa24de63e8c70f302fd2a368e8cdfdfc30bf523975696dc80f0917c891",
+        "size": 285947
+      },
+      "native": {
+        "base_asset": 132021,
+        "frame_count": 1,
+        "frames": [
+          {
+            "file": "203b5-DERIVED-source-guided-material-v1.png",
+            "frame": 0,
+            "logical_height": 32,
+            "logical_width": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "39fcb3485b677b96c89a14b8dd2ea049bb960f8e1e2a61ec94dfd1dd2e2ef528"
+          }
+        ],
+        "name": "DERIVED Source-guided terrain203b5"
+      },
+      "whole_Source_parent_new512_and_all_native_personally_viewed": true,
+      "scales": [
+        {
+          "scale": 1,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        },
+        {
+          "scale": 2,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        },
+        {
+          "scale": 3,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        },
+        {
+          "scale": 4,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        }
+      ],
+      "observation": "Upper gray field, lower warm red-brown field and horizontal tan rim preserve the Original arrangement. The old conspicuous thin red/silver trim is subdued, and no new full-length top/right atlas separator is visible in the whole512 or native outputs. Gray/soil grain is much finer and denser than Original; the broad tan rim is softer and quieter at1x.",
+      "old_HOLD_unchanged": true,
+      "context_approval": false
+    },
+    {
+      "asset": "203b6",
+      "status": "QUALIFIED_DERIVED_INTRINSIC_WITH_DISCLOSED_LIMITS",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959555503077,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/../../../data/misc/unnamed.1457",
+        "sha256": "b43b11ed55b2fbc8023b2d99c2e51312f486d75c1402919769fd70e8808499e8",
+        "size": 1044
+      },
+      "derived": {
+        "mode": 33188,
+        "mtime_ns": 1792283040944346302,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/actual-DERIVED4/203b6-DERIVED-source-guided-material-v1.png",
+        "sha256": "72976149d2a0f1376e160fccf8300ecfcf95aaa6f99e65ec0151cdc1eb97b51f",
+        "size": 272880
+      },
+      "native": {
+        "base_asset": 132022,
+        "frame_count": 1,
+        "frames": [
+          {
+            "file": "203b6-DERIVED-source-guided-material-v1.png",
+            "frame": 0,
+            "logical_height": 32,
+            "logical_width": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "b43b11ed55b2fbc8023b2d99c2e51312f486d75c1402919769fd70e8808499e8"
+          }
+        ],
+        "name": "DERIVED Source-guided terrain203b6"
+      },
+      "whole_Source_parent_new512_and_all_native_personally_viewed": true,
+      "scales": [
+        {
+          "scale": 1,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        },
+        {
+          "scale": 2,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        },
+        {
+          "scale": 3,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        },
+        {
+          "scale": 4,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        }
+      ],
+      "observation": "Lower-left brown corner, gray upper/right field and authentic dark vertical end/notch remain readable. The old bright top/right separator finish is subdued. The corner is blunt/soft at1x and the whole512 rim retains Source-shaped stepped modulation; this is a qualified Source-guided finish, not exact silhouette or generated-edge novelty.",
+      "old_HOLD_unchanged": true,
+      "context_approval": false
+    },
+    {
+      "asset": "203b9",
+      "status": "QUALIFIED_DERIVED_INTRINSIC_WITH_DISCLOSED_LIMITS",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959555672101,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/../../../data/misc/unnamed.1460",
+        "sha256": "bccd562072fb604ca85f2622edc0b527420b9c183fabaa908f4a3135a3c4c295",
+        "size": 1044
+      },
+      "derived": {
+        "mode": 33188,
+        "mtime_ns": 1792283041036344332,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/actual-DERIVED4/203b9-DERIVED-source-guided-material-v1.png",
+        "sha256": "bc581c072ac79d82e71f65f7736469011d6270d89e2468e1f75df1055d664bfb",
+        "size": 165500
+      },
+      "native": {
+        "base_asset": 132025,
+        "frame_count": 1,
+        "frames": [
+          {
+            "file": "203b9-DERIVED-source-guided-material-v1.png",
+            "frame": 0,
+            "logical_height": 32,
+            "logical_width": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "bccd562072fb604ca85f2622edc0b527420b9c183fabaa908f4a3135a3c4c295"
+          }
+        ],
+        "name": "DERIVED Source-guided terrain203b9"
+      },
+      "whole_Source_parent_new512_and_all_native_personally_viewed": true,
+      "scales": [
+        {
+          "scale": 1,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        },
+        {
+          "scale": 2,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        },
+        {
+          "scale": 3,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        },
+        {
+          "scale": 4,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        }
+      ],
+      "observation": "Dark brown upper majority, thin horizontal rim/black band and near-black lower ground remain in the Source arrangement. This is darker and less speckled than the held parent; the upper field is relatively quiet while fine lower aggregate survives at2\u20134. No new extra top/right separator is apparent; softness/value difference remains explicit.",
+      "old_HOLD_unchanged": true,
+      "context_approval": false
+    },
+    {
+      "asset": "203bb",
+      "status": "QUALIFIED_DERIVED_INTRINSIC_WITH_DISCLOSED_LIMITS",
+      "source": {
+        "mode": 33188,
+        "mtime_ns": 1787663959555786340,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/../../../data/misc/unnamed.1462",
+        "sha256": "e22e2eab94f2e3ce901fe5157c95d56fcad5e8309bff1e19dd94036f5c22c413",
+        "size": 1044
+      },
+      "derived": {
+        "mode": 33188,
+        "mtime_ns": 1792283041127342383,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/actual-DERIVED4/203bb-DERIVED-source-guided-material-v1.png",
+        "sha256": "ee8d4c78c0d99768ecc3c04a613b888183fceb4017d6a0a879fb9601126ee1ef",
+        "size": 301731
+      },
+      "native": {
+        "base_asset": 132027,
+        "frame_count": 1,
+        "frames": [
+          {
+            "file": "203bb-DERIVED-source-guided-material-v1.png",
+            "frame": 0,
+            "logical_height": 32,
+            "logical_width": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "e22e2eab94f2e3ce901fe5157c95d56fcad5e8309bff1e19dd94036f5c22c413"
+          }
+        ],
+        "name": "DERIVED Source-guided terrain203bb"
+      },
+      "whole_Source_parent_new512_and_all_native_personally_viewed": true,
+      "scales": [
+        {
+          "scale": 1,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        },
+        {
+          "scale": 2,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        },
+        {
+          "scale": 3,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        },
+        {
+          "scale": 4,
+          "status": "QUALIFIED_WITH_RIM_GRAIN_VALUE_LIMITS"
+        }
+      ],
+      "observation": "Gray left field, warm brown right field and narrow vertical tan boundary with dark inset interruptions remain legible through1\u20134. The old bright red/silver edge is muted. Fine dense grain, softer tan rim and Source-shaped stepped dark intervals remain qualifications; they do not create a new object or unsupported complete wall.",
+      "old_HOLD_unchanged": true,
+      "context_approval": false
+    }
+  ],
+  "file_only_risk_decisions": [
+    {
+      "name": "b5-b6-horizontal",
+      "decision": "NO_NEW_INTRINSIC_JOIN_RISK_HOLD",
+      "observation": "Tan horizontal rim continues into its corner end; gray and soil textures remain readable on both sides. File-only juxtaposition, not TerrainHd join approval."
+    },
+    {
+      "name": "b5-self-horizontal",
+      "decision": "NO_NEW_INTRINSIC_JOIN_RISK_HOLD",
+      "observation": "Repeated rim is level and the old separator does not reappear; fine texture/value transitions are qualified. Synthetic direct-body repetition only."
+    },
+    {
+      "name": "b9-self-horizontal",
+      "decision": "NO_NEW_INTRINSIC_JOIN_RISK_HOLD",
+      "observation": "Dark upper/lower fields and horizontal band repeat coherently; no new high-contrast atlas rule is apparent. File-only repeat only."
+    },
+    {
+      "name": "bb-self-vertical",
+      "decision": "NO_NEW_INTRINSIC_JOIN_RISK_HOLD",
+      "observation": "Vertical rim remains readable across the direct-body repeat; dark inset interruptions follow the Source-shaped boundary. Real shared-edge/corner composition remains separate."
+    }
+  ],
+  "limits": [
+    "Four exact complete1 DERIVED standalone frames only; other12 parent-atlas slots and all historical whole-family/separator HOLDs remain unchanged.",
+    "Source-guided macro contours and broad material tones are deliberate scripted derivation, with coherent generated-parent fine/mid luminance modulation. These PNGs are not untouched generator returns and no new imagegen or novelty-majority claim is made.",
+    "Finer/denser gray and soil grain, quieter darker203b9, softened/blunt tan rims and native1 softness remain explicit per-ID qualifications. No exact Source RGB or precise whole-silhouette equality claim.",
+    "Four file-only body adjacencies are limited risk previews. They do not approve current TerrainHd shared reads, foreign-owner edges/corners, Original placements, all-neighbor joins, World/gameplay or Host presentation.",
+    "Historical c0 parent arrays and old8ada-era judgments remain historical; actual new outputs use SourceF38459/cfabd/a907. No old output is relabelled current.",
+    "Pure SourceNx display controls are independently reconstructed from authentic Source indices; no additional engine/control-export invocation is claimed.",
+    "Counterfactual/generated-detail survival and PNG-to-runtime resampling metrics remain explicitly producer-authenticated evidence, not an independent recipe rerun or a substitute for this personal material judgment.",
+    "No registration, canonical/publication, context, runtime assembly or admission approval."
+  ],
+  "journal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-203b5-203b6-203b9-203bb-coherent-DERIVED4-independent-intrinsic-peer-20261018-v1/ACTUAL-WHOLE-DERIVED4-SOURCE-PARENT-NATIVE-AND-FILEONLY-RISK-PERSONAL-VIEW-JOURNAL.json",
+    "sha256": "0fa37b12d10913a9a3185e5d021aeca200669822732ca6a15b83c69d8a118282",
+    "size": 11649,
+    "mtime_ns": 1792283543040784664,
+    "mode": 33188
+  },
+  "independent_numeric_authentication": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-203b5-203b6-203b9-203bb-coherent-DERIVED4-independent-intrinsic-peer-20261018-v1/INDEPENDENT-DERIVED4-SOURCE-NATIVE-LINEAGE-AND96-PANE-SAVED-OUTPUT-AUTHENTICATION.json",
+    "sha256": "1b6994c22bcebad9a4fb7a304dcaee2afc82fb29c8e354b886c2e47e683632e8",
+    "size": 7437,
+    "mtime_ns": 1792283486892680422,
+    "mode": 33188
+  },
+  "authenticated_actual_native_indexRGB_samples": 122880,
+  "authenticated_whole_panels": 96,
+  "producer65_and_named58_exact_twice": true,
+  "independent_consumed_guard_count": 129,
+  "guard_digest": "a89db8f2b8b2e317a58844e422374efd3d510616cd778b0e139ea296f083cece",
+  "all_optional_crop_detail_palette_cue_coverage_fields_absent": true,
+  "actual_old_parent_epoch": "historical c0c3cfc7/ba61",
+  "actual_new_epoch": "SourceF38459e00/cfabd84b/a90704f5",
+  "custody": "Full direct complete65/58 named Source/raw/native/default/SourceF QA/history frozen/no pending owned writer/call/lease through seal; own reviewer files now frozen/no pending operation.",
+  "own_operations": {
+    "engine": 0,
+    "helper": 0,
+    "cleanup": 0,
+    "World": 0,
+    "QA": 0,
+    "compiler": 0,
+    "imagegen": 0,
+    "shared_Source_data_docs_Git": 0
+  },
+  "context_approval": false,
+  "admission": false
+}

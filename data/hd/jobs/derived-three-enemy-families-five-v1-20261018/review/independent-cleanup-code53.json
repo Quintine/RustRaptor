@@ -1,0 +1,71 @@
+{
+  "status": "SCOPED_INDEPENDENT_CODE_REVIEW_NO_OPEN_CONCRETE_FINDINGS_AFTER_SPRITE_RECEIPT_FIX",
+  "utc": "2026-10-17T23:39:24.981056+00:00",
+  "reviewer": "/root/iron_coast_2",
+  "reviewed_files": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_sprite_cleanup.py",
+      "sha256": "e1c32a64a14dc81e872fe14749f122094ccc6112a223c7a612e2431e7fc9597c",
+      "bytes": 12725
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/test_hd_sprite_cleanup.py",
+      "sha256": "217421bf9337dac0d85c8bc0313fe2ad637210a309895f14306d5a7422c3463b",
+      "bytes": 7796
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_boss_cleanup.py",
+      "sha256": "53d07edbbb945baa2c5a3df01f03e2a11787c225b2d714541d5eca12a0fcd85b",
+      "bytes": 12116
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/test_hd_boss_cleanup.py",
+      "sha256": "5dc1984887650301b77d11dd20634d0b9e12a69404e1e913c07789a89307466c",
+      "bytes": 6566
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+      "bytes": 9385
+    }
+  ],
+  "tests": {
+    "python": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "flags": [
+      "-B"
+    ],
+    "unique_existing_synthetic_tests_passed": 13,
+    "sprite": 8,
+    "boss": 5,
+    "final_corrected_sprite8_rerun": "PASS",
+    "independent_fully_transparent_boss_parent_rejected": "PASS"
+  },
+  "finding": {
+    "severity": "P2",
+    "component": "sprite provenance",
+    "issue": "Imported Source decoder bytes were not bound, so the receipt could not identify all output-affecting code.",
+    "resolution": "E02 added decoder_module path/SHA and an actual module hash assertion; no pixel algorithm changed.",
+    "status": "RESOLVED_AT_REVIEWED_FINAL_SPRITE_HASH"
+  },
+  "checks": [
+    "Explicit derived output classification; no untouched generation claim",
+    "Input source/raw/palette hash verification before output",
+    "Source-supported alpha and logical canvas tests",
+    "Existing output refusal and no input-byte mutation tests",
+    "Deterministic PNG and decoded RGBA receipt checks",
+    "Shared Source-identical sprite backing tests",
+    "Boss direct generated RGB preservation, source-gap fill and majority-missing/empty body rejection"
+  ],
+  "scope_limits": [
+    "Synthetic code/receipt review only; no game artwork or Source material quality judgment.",
+    "Sprite reconstructs Source palette material with bounded generated detail; boss preserves registered generated RGB outside explicit gap/support work. Neither is an untouched PNG or a claim of pixel-local editing.",
+    "Boss code changed during initial intake; the reviewed current hash includes the added missing-body guard/test. Later changes require only their actual delta review.",
+    "Terrain cleanup pair excluded until Full frozen handoff."
+  ],
+  "actual_shared_edits": 0,
+  "actual_compile_World_QA_media_canonical_docs_calls": 0,
+  "pending_own_writer_call_or_lease": false
+}

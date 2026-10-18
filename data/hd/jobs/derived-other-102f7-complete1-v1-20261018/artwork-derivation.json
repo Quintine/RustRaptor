@@ -1,0 +1,53 @@
+{
+  "detailed_provenance": {
+    "path": "jobs/derived-other-102f7-complete1-v1-20261018/derived/derived-provenance.json",
+    "sha256": "224dcf05f44bc482e7a881361b4658aac3abfdfe3aab2e99053c508641cd0647"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-other-102f7-complete1-v1-20261018/normalized-execution-object.json",
+    "sha256": "80818e7e904887e9058e8438a2ed364c11523e9c730bcbf4f9edc35aed89c80c"
+  },
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "derived-parent-full-RGB-SourceScale4-geometry-explicit-functional-Original-v1",
+  "outputs": {
+    "jobs/derived-other-102f7-complete1-v1-20261018/derived/102f7-derived.png": "6854b205f771eb369b157f7106d7b6cec590a7187485583def26f006b55e4f5d"
+  },
+  "parents": [
+    {
+      "imagegen_receipt": {
+        "path": "jobs/derived-other-102f7-complete1-v1-20261018/parents/actual-generation-receipt.json",
+        "sha256": "c7c290ef3cc09578a3a840f3454c15c4f4363bc479a4a1d195f029a40f9f2e7c"
+      },
+      "prompt": {
+        "path": "jobs/derived-other-102f7-complete1-v1-20261018/parents/prompt.txt",
+        "sha256": "7475689150a3db620e59e883198242bdda649a39d504b0fad4789b83ebf0ee43"
+      },
+      "raw_png": {
+        "path": "jobs/derived-other-102f7-complete1-v1-20261018/parents/generator-return.png",
+        "sha256": "9025be9558b7571274525db2dbfc4b7c5c08659ec60fa0c5dd46fad141a8fd9a"
+      }
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-other-102f7-complete1-v1-20261018/cleanup-recipe.json",
+    "sha256": "e98ae788a6aed3e38fe97fbbc624ce1fc12d038683c78e039fd41b0d2650a68e"
+  },
+  "sources": {
+    "102f7": "d3077af50cfcf0af2244b2c9c6a89d5f1650a6d4712311c612d59738471381d5"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_other_functional_cleanup.py",
+      "sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84"
+    },
+    {
+      "path": "tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    }
+  ]
+}

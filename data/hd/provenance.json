@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5500 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5521 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -24566,6 +24566,617 @@
         "path": "jobs/derived-wormrite-complete8-v2-20261018/artwork-derivation.json",
         "sha256": "6bb3600c81855af2870d6cd765207c1d020711498bf4770309144c4b4357380f"
       }
+    },
+    {
+      "job_id": "derived-three-enemy-families-five-v1-20261018",
+      "assets": [
+        "10315",
+        "10316",
+        "1033e",
+        "1033f",
+        "200bf"
+      ],
+      "frames": 5,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-three-enemy-families-five-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-three-enemy-families-five-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-three-enemy-families-five-v1-20261018/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-three-enemy-families-five-v1-20261018/review/author.json",
+          "sha256": "a356de0e41a83f4a10970dc101a854cc0ff4e16ebade647f639304315084c025"
+        },
+        "root": {
+          "path": "jobs/derived-three-enemy-families-five-v1-20261018/review/root-personal-intrinsic-and-controlled-context.json",
+          "sha256": "ac389242aec739e3e872da4a0e7114140d94120843745da0c50e38a69902c121"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-three-enemy-families-five-v1-20261018/review/independent-material.json",
+        "sha256": "655bb0f3fd9a5cc62a29331a1927a1cae6b0083f0d392255200276532c41c295"
+      },
+      "frame_bindings_sha256": "c5f8ff7abdd097dade496f746589c44d55ff6d45b846182e71c468a199399590",
+      "artwork_derivation": {
+        "path": "jobs/derived-three-enemy-families-five-v1-20261018/artwork-derivation.json",
+        "sha256": "715fb7f1b97e08f49e57997587f26292b37d55ac4b37d4886719a38fe1e8de1e"
+      }
+    },
+    {
+      "job_id": "derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018",
+      "assets": [
+        "203b5",
+        "203b6",
+        "203b9",
+        "203bb"
+      ],
+      "frames": 4,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/review/author.json",
+          "sha256": "b5d99422fe35f057caa835fa214ca0789e6149aed207c3a79bc7679d22b8ae61"
+        },
+        "independent_intrinsic": {
+          "path": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/review/independent-intrinsic-material.json",
+          "sha256": "ea264b8aaffe87e5964e031501756e622cd56867f2422d95b7e64dd0b703b9c9"
+        },
+        "root_provided": {
+          "path": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/review/root-provided-personal-review.json",
+          "sha256": "1ab678d6658746786150a531c41a8e81fc08890e471958a7b8eb73580111beba"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/review/independent-intrinsic-material.json",
+        "sha256": "ea264b8aaffe87e5964e031501756e622cd56867f2422d95b7e64dd0b703b9c9"
+      },
+      "frame_bindings_sha256": "e72fd56795b96a1fd4f19422c72a9dfd235d1bd98285cbe7b96ae59a0004f7bb",
+      "artwork_derivation": {
+        "path": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/artwork-derivation.json",
+        "sha256": "080e438582d0b934c7a20acfe16307deb70897b7cf2409705f0181d1ae89df55"
+      }
+    },
+    {
+      "job_id": "exact-alias-20395-20399-from-203a7-v1-20261018",
+      "assets": [
+        "20395",
+        "20399"
+      ],
+      "frames": 2,
+      "metadata": "hd.json",
+      "detail": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/provenance.json",
+      "coordinator_review": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/runtime-qa.json",
+      "review": {
+        "Root": {
+          "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/root-integration.json",
+          "sha256": "bccf12f626e9769772d1a58d34abd5c27c387db9d4d0957837a974bb12c05d96"
+        },
+        "different_context95": {
+          "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/independent-context.json",
+          "sha256": "9a9ac89553b30df6c0d6052cb8f6c613cae63758745867a23fa3ab5f5765bfbd"
+        },
+        "independent_intrinsic": {
+          "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/independent-intrinsic.json",
+          "sha256": "acd303a02e1cf5fe1a11db797fadc0c1660f0feead87f25b9275f8921a50420d"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/independent-intrinsic.json",
+        "sha256": "acd303a02e1cf5fe1a11db797fadc0c1660f0feead87f25b9275f8921a50420d"
+      },
+      "frame_bindings_sha256": "efd0d74d1412f4e9ae9e36ac25f751f6c2d18402bbfc084e8632ff9856a07470",
+      "approval_scope": "complete_standalone_terrain_selection_with_unchanged_registered_siblings",
+      "original_fallback_assets": [
+        "2038f",
+        "20390",
+        "2039b"
+      ],
+      "full_inventory": [
+        "2038d",
+        "2038e",
+        "2038f",
+        "20390",
+        "20391",
+        "20392",
+        "20393",
+        "20394",
+        "20395",
+        "20396",
+        "20397",
+        "20398",
+        "20399",
+        "2039a",
+        "2039b",
+        "2039c"
+      ],
+      "carried_registered_assets": [
+        "2038d",
+        "2038e",
+        "20391",
+        "20392",
+        "20393",
+        "20394",
+        "20396",
+        "20397",
+        "20398",
+        "2039a",
+        "2039c"
+      ],
+      "carried_registered_identity": {
+        "baseline": {
+          "path": "hd.json",
+          "sha256": "06489afc172cfdea6e19bad5ba648159a3ac82d0d7a04eddaf94198aa851bab7"
+        },
+        "contract_version": "standalone-terrain-carried-identity-v2",
+        "frame_bindings_sha256": "e043511ab224acf16b5ed3f04783613726881ceb9e8f832fb7df0b7b61353fe8",
+        "frames": {
+          "2038d": {
+            "frame_binding": {
+              "crop": [
+                0,
+                0,
+                313,
+                313
+              ],
+              "file": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/untouched-earlier1f-atlas.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "palette_constraint": "original-painted-ordinary-v1",
+              "source_sha256": "cf23aff3f23ccd8e71122a90767adc89ea5094d99afaaca259ac17e9e3c3cf9d"
+            },
+            "raw_sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+            "registration_record_index": 978,
+            "source_sha256": "cf23aff3f23ccd8e71122a90767adc89ea5094d99afaaca259ac17e9e3c3cf9d"
+          },
+          "2038e": {
+            "frame_binding": {
+              "crop": [
+                314,
+                0,
+                313,
+                313
+              ],
+              "file": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/untouched-earlier1f-atlas.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "palette_constraint": "original-painted-ordinary-v1",
+              "source_sha256": "e99e8395fd3ad4622debacccb424483a49acd187033716a2b8ab23fe8abfb2fa"
+            },
+            "raw_sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+            "registration_record_index": 978,
+            "source_sha256": "e99e8395fd3ad4622debacccb424483a49acd187033716a2b8ab23fe8abfb2fa"
+          },
+          "20391": {
+            "frame_binding": {
+              "file": "jobs/terrain-20391-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "ca0c6444be4f0d60e8dc1dfd86d706423f980da860991b9f7b0123a355460ac6"
+            },
+            "raw_sha256": "3264e82a68b28b880c2c8604312158e4b8a8360166ce803b1d1018c06d06fb6e",
+            "registration_record_index": 958,
+            "source_sha256": "ca0c6444be4f0d60e8dc1dfd86d706423f980da860991b9f7b0123a355460ac6"
+          },
+          "20392": {
+            "frame_binding": {
+              "file": "jobs/terrain-20392-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "63aa24ff5317e5f79234c0815d7c5a02a30c16a445398947d03f8fe162f21563"
+            },
+            "raw_sha256": "6be0cdfb112a4c93d39cb91d7b46f6f648f34fb6b81e62b823f3154e6e1b30e8",
+            "registration_record_index": 959,
+            "source_sha256": "63aa24ff5317e5f79234c0815d7c5a02a30c16a445398947d03f8fe162f21563"
+          },
+          "20393": {
+            "frame_binding": {
+              "file": "jobs/terrain-20393-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "8974df709eeb792f3494e85d8180eeb7d5839366ac177f093e691a7f8b208cd2"
+            },
+            "raw_sha256": "ed0569646e32fc3a4ce22c9ac384be37dab55344dc75cd8480fc6bcc45987b8d",
+            "registration_record_index": 960,
+            "source_sha256": "8974df709eeb792f3494e85d8180eeb7d5839366ac177f093e691a7f8b208cd2"
+          },
+          "20394": {
+            "frame_binding": {
+              "file": "jobs/terrain-20394-source-first-complete1-currentC-final-20261017/untouched-source-first-square.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "23678e19a8a1ecb576df516e31a99813856a8510dae2acb3f456334c11d93b54"
+            },
+            "raw_sha256": "486da72bfa419195ed3fe397eeb0853fa608a7a3a7eae1730e897efbe0afe7ff",
+            "registration_record_index": 961,
+            "source_sha256": "23678e19a8a1ecb576df516e31a99813856a8510dae2acb3f456334c11d93b54"
+          },
+          "20396": {
+            "frame_binding": {
+              "crop": [
+                314,
+                627,
+                313,
+                313
+              ],
+              "file": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/untouched-earlier1f-atlas.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "palette_constraint": "original-painted-ordinary-v1",
+              "source_sha256": "48e81bde00d63298cc418b56fe58092e405916a875ab89c22d8d93d7a562e917"
+            },
+            "raw_sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+            "registration_record_index": 978,
+            "source_sha256": "48e81bde00d63298cc418b56fe58092e405916a875ab89c22d8d93d7a562e917"
+          },
+          "20397": {
+            "frame_binding": {
+              "crop": [
+                627,
+                627,
+                313,
+                313
+              ],
+              "file": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/untouched-earlier1f-atlas.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "palette_constraint": "original-painted-ordinary-v1",
+              "source_sha256": "c0496a99584db387999004a92c84e5217c3e1a18a7fe53d4dbaf14176dcea1b1"
+            },
+            "raw_sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+            "registration_record_index": 978,
+            "source_sha256": "c0496a99584db387999004a92c84e5217c3e1a18a7fe53d4dbaf14176dcea1b1"
+          },
+          "20398": {
+            "frame_binding": {
+              "crop": [
+                941,
+                627,
+                313,
+                313
+              ],
+              "file": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/untouched-earlier1f-atlas.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "palette_constraint": "original-painted-ordinary-v1",
+              "source_sha256": "e98b7b86e1adc09919ef15510cd9946f16bdb6719770d5d541f9c601ba63f317"
+            },
+            "raw_sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+            "registration_record_index": 978,
+            "source_sha256": "e98b7b86e1adc09919ef15510cd9946f16bdb6719770d5d541f9c601ba63f317"
+          },
+          "2039a": {
+            "frame_binding": {
+              "file": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/generated/76b2622120a790f083343bd03bb3e0eb1f7e5a4666b8f78b034ddaa320b2bf2c.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "source_sha256": "fd699aa63043e332f681b84a18d17dceae38935f8213dec412e93f8d73d53556"
+            },
+            "raw_sha256": "76b2622120a790f083343bd03bb3e0eb1f7e5a4666b8f78b034ddaa320b2bf2c",
+            "registration_record_index": 956,
+            "source_sha256": "fd699aa63043e332f681b84a18d17dceae38935f8213dec412e93f8d73d53556"
+          },
+          "2039c": {
+            "frame_binding": {
+              "crop": [
+                941,
+                941,
+                313,
+                313
+              ],
+              "file": "jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/generated/1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761.png",
+              "frame": 0,
+              "logical_height": 32,
+              "logical_width": 32,
+              "origin": [
+                0,
+                0
+              ],
+              "palette_constraint": "original-painted-ordinary-v1",
+              "source_sha256": "79549702efcd7f35caf0bbd2cb2119360800969f6f7ae0c6566f73dfece3f4e0"
+            },
+            "raw_sha256": "1f240a2f9af40528ce49a2e75516d5e5b39a13d9e033ebef37569ca7ff4e7761",
+            "registration_record_index": 976,
+            "source_sha256": "79549702efcd7f35caf0bbd2cb2119360800969f6f7ae0c6566f73dfece3f4e0"
+          }
+        },
+        "provenance": {
+          "path": "provenance.json",
+          "sha256": "2ca4d5e8f893295fa8ba12aa7c4df7061074dde6d6fbdac825b076be2e1f8e6d"
+        },
+        "registration_records": [
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/runtime-qa.json",
+              "sha256": "3c22b674f2935c43e9d3bc9e031ea8be8b966360ddc4a8bd2cba5c55acda2403"
+            },
+            "assets": [
+              "2039a"
+            ],
+            "frame_bindings_sha256": "7b2760050a64936d9e7b9997892b5983e61fb0f525ecbb5f2af81287067ca09f",
+            "registration_record_index": 956,
+            "registration_record_sha256": "9124daa03e23b0d928282ad1ea613b51629a5ac4419a9c4203978bf87e78a6b1"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/terrain-20391-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+              "sha256": "a7d44700c7aee6ee1f54bf42a8bcfe8bf0823690f51231d74a4ecb738a598340"
+            },
+            "assets": [
+              "20391"
+            ],
+            "frame_bindings_sha256": "216d08abcb27d2e3b8bd2a40bab5a38b3b0fc4d96c0a75b5ee25551799edc729",
+            "registration_record_index": 958,
+            "registration_record_sha256": "9e04d72bd6394ce44ae460e44c5893055e82f0e2f090cd835024b33fb1740f52"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/terrain-20392-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+              "sha256": "7639c76beafbc658e3928fc67688499721179de8ce463a77fd900e5e31f316c8"
+            },
+            "assets": [
+              "20392"
+            ],
+            "frame_bindings_sha256": "587b85ea896eda1fa79c73e152ce34c8dfb6ff25c3e89d8bf8966ca7020bfb7b",
+            "registration_record_index": 959,
+            "registration_record_sha256": "08f5c947e285b000b908e1bfa2a5a914a04492067d78534dab28de54074efa5e"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/terrain-20393-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+              "sha256": "cd0035cae3bab914cc9cbb8d878f3bb318ff20e359ac5b661a9d41399472bdbe"
+            },
+            "assets": [
+              "20393"
+            ],
+            "frame_bindings_sha256": "3ec4ceb12af1a152021265d90b50b786536b6aa551ef409c4079f04b8d25c367",
+            "registration_record_index": 960,
+            "registration_record_sha256": "e6b607d513b518ebd409cbdeb6154c33877681df65264006ac842bc53e542f85"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/terrain-20394-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+              "sha256": "fc96740de4a532f09d7a37fe7fc6d37f729f3c4fd8ae33a92a65c3c95306c7ec"
+            },
+            "assets": [
+              "20394"
+            ],
+            "frame_bindings_sha256": "9b70892aec1e11110461987f41ef996d83e99df6d63614e309b45840d8e2ea54",
+            "registration_record_index": 961,
+            "registration_record_sha256": "b540b20294101bcc13ae177090b294b8cd1617edbed9b10a8e3529d7f5bd5de3"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/runtime-qa.json",
+              "sha256": "2dfd0d785f40f3a2ea0059bbe11a71bf0bd290ee56dacf2fb8073eeb04f8b1fb"
+            },
+            "assets": [
+              "2039c"
+            ],
+            "frame_bindings_sha256": "07605c89a39468efb77ed8d772d2b591612fb79652243dbeda1d39623a55a66f",
+            "registration_record_index": 976,
+            "registration_record_sha256": "41dcbd6c62d1db4e4aa9bec2e132f8136b4a206bb73a000e495b7a432e6252b6"
+          },
+          {
+            "accepted_runtime_qa": {
+              "path": "jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/runtime-qa.json",
+              "sha256": "72d33881bb76eba08a705bc11a78bb518985e1768d8bb742a484cb49f61663a0"
+            },
+            "assets": [
+              "2038d",
+              "2038e",
+              "20396",
+              "20397",
+              "20398"
+            ],
+            "frame_bindings_sha256": "a3dff679d95cdf54cd1e21dc11d438454ac9a3beb43747df8b7607cdd8d388b7",
+            "registration_record_index": 978,
+            "registration_record_sha256": "28116af1ecc1236759fab0e85bee761549156eb2000365e12bad813eb662f192"
+          }
+        ]
+      }
+    },
+    {
+      "job_id": "derived-other-102f7-complete1-v1-20261018",
+      "assets": [
+        "102f7"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-other-102f7-complete1-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-other-102f7-complete1-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-other-102f7-complete1-v1-20261018/runtime-qa.json",
+      "review": {
+        "Root_note": {
+          "path": "jobs/derived-other-102f7-complete1-v1-20261018/review/root-personal-note-verbatim.json",
+          "sha256": "09d7135e41afc8c1c5ae5d409c9b29b7329952e374e6e51678e704130b714de5"
+        },
+        "author": {
+          "path": "jobs/derived-other-102f7-complete1-v1-20261018/review/author.json",
+          "sha256": "c570fc012a5300d045dd7ab8056a5a826114f81f879934d7de49c470afb1cc28"
+        },
+        "different_material": {
+          "path": "jobs/derived-other-102f7-complete1-v1-20261018/review/independent-material.json",
+          "sha256": "b7b082ad39ebcee3119b788c6b839e338d6497e02f2c5977db1b9b1ca60305c5"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-other-102f7-complete1-v1-20261018/review/independent-material.json",
+        "sha256": "b7b082ad39ebcee3119b788c6b839e338d6497e02f2c5977db1b9b1ca60305c5"
+      },
+      "frame_bindings_sha256": "2c8dd3d98a7b4696ce1ef106311216653edfbebc2e03e2de637b40f25bd579d0",
+      "artwork_derivation": {
+        "path": "jobs/derived-other-102f7-complete1-v1-20261018/artwork-derivation.json",
+        "sha256": "f1a96ff9abc011a004b1dd676fc8853333e9c95041f88ae964c33a3ed0713070"
+      }
+    },
+    {
+      "job_id": "derived-other-10126-complete1-v1-20261018",
+      "assets": [
+        "10126"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-other-10126-complete1-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-other-10126-complete1-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-other-10126-complete1-v1-20261018/runtime-qa.json",
+      "review": {
+        "Root_note": {
+          "path": "jobs/derived-other-10126-complete1-v1-20261018/review/root-personal-note-verbatim.json",
+          "sha256": "09d7135e41afc8c1c5ae5d409c9b29b7329952e374e6e51678e704130b714de5"
+        },
+        "author": {
+          "path": "jobs/derived-other-10126-complete1-v1-20261018/review/author.json",
+          "sha256": "c570fc012a5300d045dd7ab8056a5a826114f81f879934d7de49c470afb1cc28"
+        },
+        "different_material": {
+          "path": "jobs/derived-other-10126-complete1-v1-20261018/review/independent-material.json",
+          "sha256": "b7b082ad39ebcee3119b788c6b839e338d6497e02f2c5977db1b9b1ca60305c5"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-other-10126-complete1-v1-20261018/review/independent-material.json",
+        "sha256": "b7b082ad39ebcee3119b788c6b839e338d6497e02f2c5977db1b9b1ca60305c5"
+      },
+      "frame_bindings_sha256": "e3962b091467e2c7db8ca39501feee310b17e30d626a9ccbe1aabdee66e79a14",
+      "artwork_derivation": {
+        "path": "jobs/derived-other-10126-complete1-v1-20261018/artwork-derivation.json",
+        "sha256": "2f068f2ee7eb36d5be138aa6d7046b36ab8fb3fedbd7ffffc3fcfb77f875bc2b"
+      }
+    },
+    {
+      "job_id": "derived-wormleft-complete8-v1-20261018",
+      "assets": [
+        "4002e",
+        "4002f",
+        "40030",
+        "40031",
+        "40032",
+        "40033",
+        "40034",
+        "40035"
+      ],
+      "frames": 8,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-wormleft-complete8-v1-20261018/candidate.json",
+      "coordinator_review": "jobs/derived-wormleft-complete8-v1-20261018/coordinator-review.json",
+      "runtime_qa": "jobs/derived-wormleft-complete8-v1-20261018/runtime-qa.json",
+      "review": {
+        "Root_personally_viewed_scales": [
+          1,
+          4
+        ],
+        "Root_portable_binding": {
+          "path": "jobs/derived-wormleft-complete8-v1-20261018/review/Root-note-portable-binding.json",
+          "sha256": "21d44f27dd0ad674e72025e16c4d0ac0950327494440845550d54fb7421e8765"
+        },
+        "Root_verbatim_note": {
+          "path": "jobs/derived-wormleft-complete8-v1-20261018/review/Root-personal-review-verbatim.json",
+          "sha256": "f651f6a0cff1737372333f566d0ea3c7ce40ff001b7921b1b52e6f4709dd2456"
+        },
+        "author": {
+          "path": "jobs/derived-wormleft-complete8-v1-20261018/review/author-complete8.json",
+          "sha256": "00301c14dd748f5df2b952003219d6eecf7edc4eb005d3327a086b9c6d67acec"
+        },
+        "author_and_independent_peer_viewed_all_scales": true,
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "path": "jobs/derived-wormleft-complete8-v1-20261018/review/independent-complete8-material.json",
+        "sha256": "9f1c430bc5ad11be3620705485b1d3d8957f433443027357caa118fc6b4550b9"
+      },
+      "frame_bindings_sha256": "e9e4a44fc33df2c3530eaefa868886fa066fcd429a40975d81b455eb4a48eb4a",
+      "artwork_derivation": {
+        "path": "jobs/derived-wormleft-complete8-v1-20261018/artwork-derivation.json",
+        "sha256": "d720a2ed8bffe6652824bf7fd00d44e0becb73e00213cb511a652aad2af04d77"
+      }
     }
   ],
   "jobs": [
@@ -24665,8 +25276,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5500,
-  "registration_updated_at_utc": "2026-10-18T00:25:29.208239+00:00",
+  "registered_frame_count": 5521,
+  "registration_updated_at_utc": "2026-10-18T01:31:23.413414+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,

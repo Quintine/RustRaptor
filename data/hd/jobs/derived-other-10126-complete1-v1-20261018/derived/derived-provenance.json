@@ -1,0 +1,104 @@
+{
+  "RGB_policy": "Preserve full generated RGB, except declared nearest generated-RGB fills, Source-identical full-RGB backing share, and literal functional Source palette cells; no noise/highpass reconstruction.",
+  "Source_derived_dynamic_component_halo_native": 1,
+  "decoder_module": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/tools/hd_frame_policy.py",
+    "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+  },
+  "dependencies": {
+    "RGB_geometry_tool": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    },
+    "Source_decoder": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    }
+  },
+  "dynamic_regions_native": [],
+  "execution": {
+    "method": "derived-parent-full-RGB-SourceScale4-geometry-explicit-functional-Original-v1",
+    "output_sha256": {
+      "10126": "61ce906d3e039965aa577d71320ad23fb9da882e0b423cf737410e24c482de73"
+    },
+    "parent_raw_sha256": [
+      "ab9d176869d45d79c48280c8e5317183af2db99d2da99ab2ae9200484256f0d1"
+    ],
+    "recipe_sha256": "3f39de4a659bf2d02bb8410cf009a8687d17a2aa954ab1a8e838dcbeefb9fde2",
+    "source_sha256": {
+      "10126": "7c9f659080f1eb33b5861351d5cfb0cd12549f6b9bf55d0bf0b65b5d75d3e5f5"
+    },
+    "status": "success",
+    "tool_sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84"
+  },
+  "frames": [
+    {
+      "SourceScale4_opaque_samples": 37883,
+      "Source_painted_cells": 2390,
+      "actual_sampling_bounds": [
+        "11",
+        "831/47",
+        "1694",
+        "897"
+      ],
+      "asset": "10126",
+      "derived_alpha_exact_SourceScale4": true,
+      "filled_generated_RGB_samples": 1230,
+      "functional_Original_RGB_samples": 0,
+      "generated_RGB_different_from_SourceNN_samples": 37824,
+      "logical_height": 48,
+      "logical_width": 88,
+      "maximum_donor_squared_distance": 144,
+      "no_Source_RGB_or_noise_fallback": true,
+      "origin": [
+        0,
+        0
+      ],
+      "original_sampled_RGB_preserved_before_stationary_share": 36653,
+      "removed_generated_outside_SourceScale4": 1880,
+      "stationary_full_RGB_replacements": 0
+    }
+  ],
+  "functional_Original": {
+    "RGBA_changes": 11,
+    "Source_indices": [
+      15
+    ],
+    "actual_Original_Scale4_RGBA_samples": 16,
+    "actual_Original_transparent_samples": 5,
+    "cells": [
+      [
+        46,
+        2
+      ]
+    ],
+    "outside_explicit_footprints_RGBA_exact": true,
+    "retained_Original_not_generated_HD": true
+  },
+  "geometry_method": "derived-generated-RGB-SourceScale4-geometry-coherent-dynamic-regions-v2",
+  "input_hashes": {
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-10126-complete1-v1-20261018/parents/generator-return.png": "ab9d176869d45d79c48280c8e5317183af2db99d2da99ab2ae9200484256f0d1",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/misc/PALETTE_DAT": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/sprites/SMLAP_PIC": "7c9f659080f1eb33b5861351d5cfb0cd12549f6b9bf55d0bf0b65b5d75d3e5f5"
+  },
+  "method": "derived-parent-full-RGB-SourceScale4-geometry-explicit-functional-Original-v1",
+  "numpy_version": "2.3.5",
+  "output": {
+    "RGBA_sha256": "5ca113fee68a90c0ffa0e91a0a115dada5d95c69097f5d3c3bc306cb73515d6d",
+    "asset": "10126",
+    "file": "10126-derived.png",
+    "sha256": "61ce906d3e039965aa577d71320ad23fb9da882e0b423cf737410e24c482de73",
+    "size": [
+      352,
+      192
+    ]
+  },
+  "output_class": "DERIVED_SCRIPTED_RGBA_NOT_UNTOUCHED_GENERATION",
+  "output_scale": 4,
+  "pillow_version": "12.3.0",
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "scope": "DERIVED broad generated RGB, SourceScale4 geometry and explicit retained Original functional cells; no game-context or art acceptance.",
+  "shared_SourceScale4_labels": 37883,
+  "source_mask": "Actual Original Scale4x = Scale2x twice; complete native canvas and origin retained.",
+  "stationary_anchor_asset": "10126"
+}

@@ -1,0 +1,83 @@
+{
+  "Root_combined_authority": {
+    "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/root-integration.json",
+    "sha256": "bccf12f626e9769772d1a58d34abd5c27c387db9d4d0957837a974bb12c05d96"
+  },
+  "Source_original_payload_sha256": "5162f4c0106f216dafba3d63b54a571b0f2a5fffd37f0944a94320c49c9082aa",
+  "actual_H5500_15_scene_bindings": {
+    "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/ACTUAL-H5500-BEFORE-AFTER-15-SCENE-BINDING-IDENTITY.json",
+    "sha256": "6570fffc776a0f6de308e502379e887ba341cb8ed7f57224cf692d31fede6a1a"
+  },
+  "actual_context_producer": {
+    "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/actual-context-producer.json",
+    "sha256": "be88742d3d36f808928947068015a060eb1ca85a4d5109b4e3b0f1114e17077f"
+  },
+  "actual_different_context": {
+    "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/independent-context.json",
+    "sha256": "9a9ac89553b30df6c0d6052cb8f6c613cae63758745867a23fa3ab5f5765bfbd"
+  },
+  "actual_prior3_QA": {
+    "actual_QA": {
+      "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/proofs/actual-measured3-bank/runtime-qa.json",
+      "sha256": "2a6fce2995899b14410736de1f5f51585abde2229117d9f243cbec08f16dcb64"
+    },
+    "actual_helper_calls": 1,
+    "actual_indexed_bank": {
+      "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/proofs/actual-measured3-bank/actual-indexed-source-and-scales.json",
+      "sha256": "a84158406fd61ed0abb86977418c3d1867b06026f1c8837f877fb36697a8ad51"
+    },
+    "actual_terminal": {
+      "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/proofs/actual-measured3-terminal.json",
+      "sha256": "2e5eba7235f86d8b834fa0c0192fd043951f84f43d9d3e8cd806c56ef8ae36a8"
+    },
+    "assets": [
+      "203a7",
+      "20395",
+      "20399"
+    ],
+    "original_measurement_attribution": "SourceF alias3 study at H5485. H5500 is the later integration baseline/context, not a rerun epoch.",
+    "retries": 0,
+    "validated_frames": 3
+  },
+  "all_native_fields_other_than_file_equal_actual_context": true,
+  "baseline_provenance_sha256": "2ca4d5e8f893295fa8ba12aa7c4df7061074dde6d6fbdac825b076be2e1f8e6d",
+  "baseline_sha256": "06489afc172cfdea6e19bad5ba648159a3ac82d0d7a04eddaf94198aa851bab7",
+  "full_raw_sha256": "1c8f99fe2ec22d3b7756a5e4b969cf03abec9621153d6a1157f1bc8a85b433a0",
+  "immutable_H5500_pack_equality": {
+    "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/ADDITIVE-ROOT-IMMUTABLE5500-PACK-EXACT-INPUT-IDENTITY-NO-RERENDER.json",
+    "sha256": "096853530fecff070c34a1bec8335f57024c8c99ce36c0d1fd206458c76f1918"
+  },
+  "new_QA_calls": 0,
+  "new_context_constructor_calls": 0,
+  "new_generation_calls": 0,
+  "new_pixel_operations": 0,
+  "per_asset_native_file_namespace_only": true,
+  "scope": {
+    "20395": {
+      "actual_neighbor_events": 1,
+      "genuine_endpoints": 8,
+      "ordered_views": 3,
+      "scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "20399": {
+      "Original_occurrences": 0,
+      "authority": "Root exact catalogue source/native/output alias integration; I5 intrinsic and donor equality, no invented scene.",
+      "composed_context": false,
+      "synthetic_probe": false
+    }
+  },
+  "source_contract": {
+    "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/source-contract.json",
+    "sha256": "33d4800f66342c0269c9293743c49465ba657072e3453d81cb52436bbcf540e5"
+  },
+  "source_recipe": {
+    "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/source-recipe.json",
+    "sha256": "bb5362ce687dec642a374c2b6e2237155df446a83d54bdafe4dd7c4ff41d982c"
+  },
+  "status": "CLOSED_EXACT_ALIAS2_CHANGED_CASE_SOURCE_AND_OUTPUT_IDENTITY"
+}

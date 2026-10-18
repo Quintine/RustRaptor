@@ -1,0 +1,418 @@
+{
+  "status": "ROOT_ACTIVATED_SOURCEF_ALIAS2_GENUINE8_NO_CATALOGUE_PROBE",
+  "selected": [
+    "20395",
+    "20399"
+  ],
+  "source_assets": [
+    "2022c",
+    "20233",
+    "20395",
+    "20399",
+    "203a4",
+    "203a7",
+    "203b1",
+    "203b3",
+    "203ba",
+    "203de",
+    "20454",
+    "20469",
+    "20470",
+    "204c8",
+    "204c9",
+    "205a1"
+  ],
+  "source_recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-alias20395-20399-SourceF-H5485-to-next-baseline-finite8-plan-20261018/FINITE8-GENUINE-ALIAS20395-THREE-VIEWS-ONE-204C8-EVENT-CATALOGUE20399-NO-PROBE-SOURCE-RECIPE.json",
+    "sha256": "bb5362ce687dec642a374c2b6e2237155df446a83d54bdafe4dd7c4ff41d982c"
+  },
+  "endpoints": [
+    {
+      "endpoint_index": 0,
+      "Source_key": "26e85ff23ad7e1c7c4ab1e880ca5311bbc39cdf786865a1df4d4966f01350b7b",
+      "columns": 3,
+      "ordered_source_ids": [
+        "203b3",
+        "203a7",
+        "203b1",
+        "203b3",
+        "20395",
+        "203b1",
+        "203b3",
+        "203a7",
+        "204c8"
+      ],
+      "mission": "base:sector_2_wave_4",
+      "row": 12,
+      "column": 4,
+      "role": "authentic_intact",
+      "Original_actor": null,
+      "changed_slot": null,
+      "Source_plan_kind": "own95"
+    },
+    {
+      "endpoint_index": 1,
+      "Source_key": "233842c7713caeed137c949f8ababbafce144cab0ac6da1c73a24c436b71cb4c",
+      "columns": 3,
+      "ordered_source_ids": [
+        "203b3",
+        "203a7",
+        "203b1",
+        "203b3",
+        "20395",
+        "203b1",
+        "203b3",
+        "203a7",
+        "205a1"
+      ],
+      "mission": "base:sector_2_wave_4",
+      "row": 12,
+      "column": 4,
+      "role": "genuine_one_cell_settled",
+      "Original_actor": {
+        "row": 13,
+        "column": 5,
+        "Original_tile": {
+          "intact": "204c8",
+          "settled": "205a1",
+          "health": 5,
+          "reward": 50,
+          "game": 1,
+          "FLATS_record": 955,
+          "FLATS_asset": "20001",
+          "FLATS_byte_offset": 7640,
+          "FLATS_payload": {
+            "path": "/home/quintine/Projects/RaptorReplica/data/misc/FLATSG2_ITM",
+            "sha256": "dc079c9af2e05357c40bf4d1c1299e51563dda28be75db060bb1f8e7c3581bae",
+            "size": 11496,
+            "mtime_ns": 1787663959481444612,
+            "mode": 33188
+          }
+        }
+      },
+      "changed_slot": 8,
+      "Source_plan_kind": "own95_same_SE_damage_event"
+    },
+    {
+      "endpoint_index": 2,
+      "Source_key": "08b73e340830cda1b8c4c0a72b7c4dbd232cca844fdf64caa0880585a44855a9",
+      "columns": 3,
+      "ordered_source_ids": [
+        "203a4",
+        "203a7",
+        "204c9",
+        "203b3",
+        "203a7",
+        "203b1",
+        "203b3",
+        "20395",
+        "203b1"
+      ],
+      "mission": "base:sector_2_wave_4",
+      "row": 11,
+      "column": 4,
+      "role": "authentic_intact",
+      "Original_actor": null,
+      "changed_slot": null,
+      "Source_plan_kind": "north_donor"
+    },
+    {
+      "endpoint_index": 3,
+      "Source_key": "4161aa35fe347813a2ab155bd4ae3d1ff8fe11b85ba905cf7f7f7d71d00ee80b",
+      "columns": 3,
+      "ordered_source_ids": [
+        "203b3",
+        "20395",
+        "203b1",
+        "203b3",
+        "203a7",
+        "204c8",
+        "203ba",
+        "203a7",
+        "203de"
+      ],
+      "mission": "base:sector_2_wave_4",
+      "row": 13,
+      "column": 4,
+      "role": "authentic_intact",
+      "Original_actor": null,
+      "changed_slot": null,
+      "Source_plan_kind": "south_donor"
+    },
+    {
+      "endpoint_index": 4,
+      "Source_key": "df3ca67a7e8ca9640be293def6fac0148aa5fd50dce557d2a535189650a0d42e",
+      "columns": 3,
+      "ordered_source_ids": [
+        "203b3",
+        "20395",
+        "203b1",
+        "203b3",
+        "203a7",
+        "205a1",
+        "203ba",
+        "203a7",
+        "203de"
+      ],
+      "mission": "base:sector_2_wave_4",
+      "row": 13,
+      "column": 4,
+      "role": "genuine_one_cell_settled",
+      "Original_actor": {
+        "row": 13,
+        "column": 5,
+        "Original_tile": {
+          "intact": "204c8",
+          "settled": "205a1",
+          "health": 5,
+          "reward": 50,
+          "game": 1,
+          "FLATS_record": 955,
+          "FLATS_asset": "20001",
+          "FLATS_byte_offset": 7640,
+          "FLATS_payload": {
+            "path": "/home/quintine/Projects/RaptorReplica/data/misc/FLATSG2_ITM",
+            "sha256": "dc079c9af2e05357c40bf4d1c1299e51563dda28be75db060bb1f8e7c3581bae",
+            "size": 11496,
+            "mtime_ns": 1787663959481444612,
+            "mode": 33188
+          }
+        }
+      },
+      "changed_slot": 5,
+      "Source_plan_kind": "south_donor_same_SE_damage_event"
+    },
+    {
+      "endpoint_index": 5,
+      "Source_key": "a6c586aff22226c41f759c3b14e36216aa3e87446f0cc5a38878ff1bd7f61316",
+      "columns": 3,
+      "ordered_source_ids": [
+        "20469",
+        "203b3",
+        "203a7",
+        "20454",
+        "203b3",
+        "20395",
+        "20470",
+        "203b3",
+        "203a7"
+      ],
+      "mission": "base:sector_2_wave_4",
+      "row": 12,
+      "column": 3,
+      "role": "authentic_intact",
+      "Original_actor": null,
+      "changed_slot": null,
+      "Source_plan_kind": "west_registered"
+    },
+    {
+      "endpoint_index": 6,
+      "Source_key": "8d167d4e004b472002937efc811f85d31cecb1b7b3368dee858989ac91e08015",
+      "columns": 3,
+      "ordered_source_ids": [
+        "203a7",
+        "203b1",
+        "2022c",
+        "20395",
+        "203b1",
+        "2022c",
+        "203a7",
+        "204c8",
+        "20233"
+      ],
+      "mission": "base:sector_2_wave_4",
+      "row": 12,
+      "column": 5,
+      "role": "authentic_intact",
+      "Original_actor": null,
+      "changed_slot": null,
+      "Source_plan_kind": "east_registered"
+    },
+    {
+      "endpoint_index": 7,
+      "Source_key": "50e69f7f2b718114d59da1edd9c5160e0108cbfc3a332d83c48c5ddb8db0d40e",
+      "columns": 3,
+      "ordered_source_ids": [
+        "203a7",
+        "203b1",
+        "2022c",
+        "20395",
+        "203b1",
+        "2022c",
+        "203a7",
+        "205a1",
+        "20233"
+      ],
+      "mission": "base:sector_2_wave_4",
+      "row": 12,
+      "column": 5,
+      "role": "genuine_one_cell_settled",
+      "Original_actor": {
+        "row": 13,
+        "column": 5,
+        "Original_tile": {
+          "intact": "204c8",
+          "settled": "205a1",
+          "health": 5,
+          "reward": 50,
+          "game": 1,
+          "FLATS_record": 955,
+          "FLATS_asset": "20001",
+          "FLATS_byte_offset": 7640,
+          "FLATS_payload": {
+            "path": "/home/quintine/Projects/RaptorReplica/data/misc/FLATSG2_ITM",
+            "sha256": "dc079c9af2e05357c40bf4d1c1299e51563dda28be75db060bb1f8e7c3581bae",
+            "size": 11496,
+            "mtime_ns": 1787663959481444612,
+            "mode": 33188
+          }
+        }
+      },
+      "changed_slot": 7,
+      "Source_plan_kind": "east_registered_same_SE_damage_event"
+    }
+  ],
+  "ordered_pairs": [
+    {
+      "pair_index": 0,
+      "before_endpoint": 0,
+      "settled_endpoint": 1,
+      "changed_slot": 8,
+      "event_id": "S2W4-r13c5-204c8-to-205a1",
+      "Original_actor": {
+        "intact": "204c8",
+        "settled": "205a1",
+        "health": 5,
+        "reward": 50,
+        "game": 1,
+        "FLATS_record": 955,
+        "FLATS_asset": "20001",
+        "FLATS_byte_offset": 7640,
+        "FLATS_payload": {
+          "path": "/home/quintine/Projects/RaptorReplica/data/misc/FLATSG2_ITM",
+          "sha256": "dc079c9af2e05357c40bf4d1c1299e51563dda28be75db060bb1f8e7c3581bae",
+          "size": 11496,
+          "mtime_ns": 1787663959481444612,
+          "mode": 33188
+        }
+      },
+      "separate_one_cell_state": true,
+      "independent_source_event": true
+    },
+    {
+      "pair_index": 1,
+      "before_endpoint": 3,
+      "settled_endpoint": 4,
+      "changed_slot": 5,
+      "event_id": "S2W4-r13c5-204c8-to-205a1",
+      "Original_actor": {
+        "intact": "204c8",
+        "settled": "205a1",
+        "health": 5,
+        "reward": 50,
+        "game": 1,
+        "FLATS_record": 955,
+        "FLATS_asset": "20001",
+        "FLATS_byte_offset": 7640,
+        "FLATS_payload": {
+          "path": "/home/quintine/Projects/RaptorReplica/data/misc/FLATSG2_ITM",
+          "sha256": "dc079c9af2e05357c40bf4d1c1299e51563dda28be75db060bb1f8e7c3581bae",
+          "size": 11496,
+          "mtime_ns": 1787663959481444612,
+          "mode": 33188
+        }
+      },
+      "separate_one_cell_state": true,
+      "independent_source_event": false
+    },
+    {
+      "pair_index": 2,
+      "before_endpoint": 6,
+      "settled_endpoint": 7,
+      "changed_slot": 7,
+      "event_id": "S2W4-r13c5-204c8-to-205a1",
+      "Original_actor": {
+        "intact": "204c8",
+        "settled": "205a1",
+        "health": 5,
+        "reward": 50,
+        "game": 1,
+        "FLATS_record": 955,
+        "FLATS_asset": "20001",
+        "FLATS_byte_offset": 7640,
+        "FLATS_payload": {
+          "path": "/home/quintine/Projects/RaptorReplica/data/misc/FLATSG2_ITM",
+          "sha256": "dc079c9af2e05357c40bf4d1c1299e51563dda28be75db060bb1f8e7c3581bae",
+          "size": 11496,
+          "mtime_ns": 1787663959481444612,
+          "mode": 33188
+        }
+      },
+      "separate_one_cell_state": true,
+      "independent_source_event": false
+    }
+  ],
+  "own_routes": [
+    {
+      "asset": "20395",
+      "private_full_sequence": {
+        "name": "Exact Source payload alias reuse 20395",
+        "base_asset": 131989,
+        "frame_count": 1,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "donor-atlas-v2-unchanged.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "5162f4c0106f216dafba3d63b54a571b0f2a5fffd37f0944a94320c49c9082aa",
+            "crop": [
+              627,
+              627,
+              313,
+              313
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "20399",
+      "private_full_sequence": {
+        "name": "Exact Source payload alias reuse 20399",
+        "base_asset": 131993,
+        "frame_count": 1,
+        "frames": [
+          {
+            "frame": 0,
+            "file": "donor-atlas-v2-unchanged.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "5162f4c0106f216dafba3d63b54a571b0f2a5fffd37f0944a94320c49c9082aa",
+            "crop": [
+              627,
+              627,
+              313,
+              313
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "Original_occurrence_counts": {
+    "20395": 1,
+    "20399": 0
+  },
+  "synthetic_probe_count": 0,
+  "generation_calls": 0,
+  "QA_attribution": "One prior actual donor+target2 QA; selected2 row projection may be typed but is NOT a fresh exact2 helper call."
+}

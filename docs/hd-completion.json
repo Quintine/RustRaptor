@@ -19,10 +19,10 @@
   ],
   "stage_contract": "Every generated candidate stays distinct from review, registration and render reachability. Original-only fallback is temporary for every required picture. Native cinematics/fonts have explicit preservation exceptions, not HD claims.",
   "picture_status_counts": {
-    "registered": 5480,
-    "inprogress": 109,
+    "registered": 5501,
+    "inprogress": 103,
     "renderreachable": 20,
-    "candidate": 142,
+    "candidate": 127,
     "missing": 2
   },
   "assets": {
@@ -7307,14 +7307,15 @@
       "canonical_source_asset": "10126",
       "family_id": "interface-other-10126-10126",
       "job_id": "interface-other-10126-10126",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
         "availability": "unverified",
         "evidence": []
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-Other-10126"
     },
     "10127": {
       "kind": "picture",
@@ -22841,14 +22842,15 @@
       "canonical_source_asset": "102f7",
       "family_id": "interface-other-102e1-102f7",
       "job_id": "interface-other-102e1-102f7",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
       "renderer": {
         "availability": "unverified",
         "evidence": []
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-Other-102f7"
     },
     "102f8": {
       "kind": "picture",
@@ -23843,7 +23845,7 @@
       "canonical_source_asset": "10315",
       "family_id": "enemies-10315-10316",
       "job_id": "enemies-10315-10316",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -23855,7 +23857,8 @@
         "manifest": "jobs/enemies-10315-10316/candidate.json",
         "sha256": "db80d26804a949b3a4b1a35ee5d465ff04e4fa52d15036022398be1b0abd1437",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-Boss5"
     },
     "10316": {
       "kind": "picture",
@@ -23876,7 +23879,7 @@
       "canonical_source_asset": "10316",
       "family_id": "enemies-10315-10316",
       "job_id": "enemies-10315-10316",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -23888,7 +23891,8 @@
         "manifest": "jobs/enemies-10315-10316/candidate.json",
         "sha256": "db80d26804a949b3a4b1a35ee5d465ff04e4fa52d15036022398be1b0abd1437",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-Boss5"
     },
     "10317": {
       "kind": "picture",
@@ -25229,7 +25233,7 @@
       "canonical_source_asset": "1033e",
       "family_id": "enemies-1033e-1033f",
       "job_id": "enemies-1033e-1033f",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -25241,7 +25245,8 @@
         "manifest": "jobs/enemies-1033e-1033f/candidate.json",
         "sha256": "65966d76a5311858e8c29649f7c0658421a52372689ef6f3d93ddc619659cfc2",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-Boss5"
     },
     "1033f": {
       "kind": "picture",
@@ -25262,7 +25267,7 @@
       "canonical_source_asset": "1033f",
       "family_id": "enemies-1033e-1033f",
       "job_id": "enemies-1033e-1033f",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -25274,7 +25279,8 @@
         "manifest": "jobs/enemies-1033e-1033f/candidate.json",
         "sha256": "65966d76a5311858e8c29649f7c0658421a52372689ef6f3d93ddc619659cfc2",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-Boss5"
     },
     "10340": {
       "kind": "picture",
@@ -56124,7 +56130,7 @@
       "canonical_source_asset": "200bf",
       "family_id": "enemies-200bf-200bf",
       "job_id": "enemies-200bf-200bf",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/iron_coast_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -56136,7 +56142,8 @@
         "manifest": "jobs/enemies-200bf-200bf/candidate.json",
         "sha256": "7cde307c378c582d9ca95ff7672eced0b1cbe0d884f5a517729671140211246a",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-Boss5"
     },
     "200c0": {
       "kind": "picture",
@@ -83175,7 +83182,7 @@
       "canonical_source_asset": "20395",
       "family_id": "terrain-2038d-2039c",
       "job_id": "terrain-2038d-2039c",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -83191,7 +83198,8 @@
         "manifest": "jobs/terrain-2038d-2039c/candidate.json",
         "sha256": "aaf2344557b1d146478f0dcd9c1ffd5392a08fad6e90bc3114e6ca4ca788ce24",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-alias2"
     },
     "20396": {
       "kind": "picture",
@@ -83326,7 +83334,7 @@
       "canonical_source_asset": "20395",
       "family_id": "terrain-2038d-2039c",
       "job_id": "terrain-2038d-2039c",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_2",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -83342,7 +83350,8 @@
         "manifest": "jobs/terrain-2038d-2039c/candidate.json",
         "sha256": "aaf2344557b1d146478f0dcd9c1ffd5392a08fad6e90bc3114e6ca4ca788ce24",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-alias2"
     },
     "2039a": {
       "kind": "picture",
@@ -84380,7 +84389,7 @@
       "canonical_source_asset": "203b5",
       "family_id": "terrain-203ad-203bc",
       "job_id": "terrain-203ad-203bc",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -84391,7 +84400,8 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-Terrain4"
     },
     "203b6": {
       "kind": "picture",
@@ -84412,7 +84422,7 @@
       "canonical_source_asset": "203b6",
       "family_id": "terrain-203ad-203bc",
       "job_id": "terrain-203ad-203bc",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -84423,7 +84433,8 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-Terrain4"
     },
     "203b7": {
       "kind": "picture",
@@ -84518,7 +84529,7 @@
       "canonical_source_asset": "203b9",
       "family_id": "terrain-203ad-203bc",
       "job_id": "terrain-203ad-203bc",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -84529,7 +84540,8 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-Terrain4"
     },
     "203ba": {
       "kind": "picture",
@@ -84587,7 +84599,7 @@
       "canonical_source_asset": "203bb",
       "family_id": "terrain-203ad-203bc",
       "job_id": "terrain-203ad-203bc",
-      "status": "inprogress",
+      "status": "registered",
       "owner": "/root/hd_terrain_set_2",
       "remaster_required": true,
       "registry_or_layout_referenced": true,
@@ -84598,7 +84610,8 @@
           "RustRaptor/tests/hd_terrain.rs",
           ".reference/terrain-hd/shoreline-draft-context-proof.png"
         ]
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-Terrain4"
     },
     "203bc": {
       "kind": "picture",
@@ -161751,7 +161764,7 @@
       "canonical_source_asset": "4002e",
       "family_id": "interface-other-4002e-40035",
       "job_id": "interface-other-4002e-40035",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -161763,7 +161776,8 @@
         "manifest": "jobs/interface-other-4002e-40035/candidate.json",
         "sha256": "213bef56002dfd5bb8bfacfbdf4413417e3d88b52da75e6dbcd4d1346b1c2db8",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-LEFT8"
     },
     "4002f": {
       "kind": "picture",
@@ -161784,7 +161798,7 @@
       "canonical_source_asset": "4002f",
       "family_id": "interface-other-4002e-40035",
       "job_id": "interface-other-4002e-40035",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -161796,7 +161810,8 @@
         "manifest": "jobs/interface-other-4002e-40035/candidate.json",
         "sha256": "213bef56002dfd5bb8bfacfbdf4413417e3d88b52da75e6dbcd4d1346b1c2db8",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-LEFT8"
     },
     "40030": {
       "kind": "picture",
@@ -161817,7 +161832,7 @@
       "canonical_source_asset": "40030",
       "family_id": "interface-other-4002e-40035",
       "job_id": "interface-other-4002e-40035",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -161829,7 +161844,8 @@
         "manifest": "jobs/interface-other-4002e-40035/candidate.json",
         "sha256": "213bef56002dfd5bb8bfacfbdf4413417e3d88b52da75e6dbcd4d1346b1c2db8",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-LEFT8"
     },
     "40031": {
       "kind": "picture",
@@ -161850,7 +161866,7 @@
       "canonical_source_asset": "40031",
       "family_id": "interface-other-4002e-40035",
       "job_id": "interface-other-4002e-40035",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -161862,7 +161878,8 @@
         "manifest": "jobs/interface-other-4002e-40035/candidate.json",
         "sha256": "213bef56002dfd5bb8bfacfbdf4413417e3d88b52da75e6dbcd4d1346b1c2db8",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-LEFT8"
     },
     "40032": {
       "kind": "picture",
@@ -161883,7 +161900,7 @@
       "canonical_source_asset": "40032",
       "family_id": "interface-other-4002e-40035",
       "job_id": "interface-other-4002e-40035",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -161895,7 +161912,8 @@
         "manifest": "jobs/interface-other-4002e-40035/candidate.json",
         "sha256": "213bef56002dfd5bb8bfacfbdf4413417e3d88b52da75e6dbcd4d1346b1c2db8",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-LEFT8"
     },
     "40033": {
       "kind": "picture",
@@ -161916,7 +161934,7 @@
       "canonical_source_asset": "40033",
       "family_id": "interface-other-4002e-40035",
       "job_id": "interface-other-4002e-40035",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -161928,7 +161946,8 @@
         "manifest": "jobs/interface-other-4002e-40035/candidate.json",
         "sha256": "213bef56002dfd5bb8bfacfbdf4413417e3d88b52da75e6dbcd4d1346b1c2db8",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-LEFT8"
     },
     "40034": {
       "kind": "picture",
@@ -161949,7 +161968,7 @@
       "canonical_source_asset": "40034",
       "family_id": "interface-other-4002e-40035",
       "job_id": "interface-other-4002e-40035",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -161961,7 +161980,8 @@
         "manifest": "jobs/interface-other-4002e-40035/candidate.json",
         "sha256": "213bef56002dfd5bb8bfacfbdf4413417e3d88b52da75e6dbcd4d1346b1c2db8",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-LEFT8"
     },
     "40035": {
       "kind": "picture",
@@ -161982,7 +162002,7 @@
       "canonical_source_asset": "40035",
       "family_id": "interface-other-4002e-40035",
       "job_id": "interface-other-4002e-40035",
-      "status": "candidate",
+      "status": "registered",
       "owner": "/root/hd_dark_player",
       "remaster_required": true,
       "registry_or_layout_referenced": false,
@@ -161994,7 +162014,8 @@
         "manifest": "jobs/interface-other-4002e-40035/candidate.json",
         "sha256": "213bef56002dfd5bb8bfacfbdf4413417e3d88b52da75e6dbcd4d1346b1c2db8",
         "validation_scope": "source-bound metadata, target ownership and artwork file presence; artistic/PNG/runtime review is separate"
-      }
+      },
+      "coordinator_review_ref": "SourceF-H5521-reviewed21-LEFT8"
     },
     "40036": {
       "kind": "picture",
@@ -237263,6 +237284,596 @@
         "Menus, portraits, HUD and other pictures": 8
       },
       "original_gameplay_occurrence_claimed": false
+    },
+    "SourceF-H5521-reviewed21-Boss5": {
+      "status": "REGISTERED_REVIEWED_COMPLETE_NATIVE_FAMILY",
+      "selected_assets": [
+        "10315",
+        "10316",
+        "1033e",
+        "1033f",
+        "200bf"
+      ],
+      "scope": "Five Enemy-category pictures in three complete native families: five controlled poses/all scales, two fresh controlled Worlds with other spawns suppressed and a historical 200bf recomposition. Not a natural full wave or current Host.",
+      "limits": [
+        "Brighter modeled metal and high-scale relief",
+        "Native1 softness and Source-step/alpha-rounding boundaries",
+        "Two explicitly controlled current World instances with other spawns suppressed, plus historical controlled200bf recomposition",
+        "Root personally viewed five complete native4 context triple pages; independent I6 viewed all20 scale boards",
+        "No full natural-wave/Host/all movement/all effects/all timing claim"
+      ],
+      "coordinator_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/data/hd/jobs/derived-three-enemy-families-five-v1-20261018/coordinator-review.json",
+        "sha256": "a527d5aff4872f0c614f6921474b2a51ca2592dae0ae3bdc17d63684a6b4b3b8",
+        "bytes": 5277
+      },
+      "native_candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/data/hd/jobs/derived-three-enemy-families-five-v1-20261018/candidate.json",
+        "sha256": "0c75a235723342cec1341ae196faa5fe6ead310c504976740ae30566462ace02",
+        "bytes": 2598
+      },
+      "source_and_all_scale_visual_review": {
+        "author": {
+          "path": "jobs/derived-three-enemy-families-five-v1-20261018/review/author.json",
+          "sha256": "a356de0e41a83f4a10970dc101a854cc0ff4e16ebade647f639304315084c025"
+        },
+        "root": {
+          "path": "jobs/derived-three-enemy-families-five-v1-20261018/review/root-personal-intrinsic-and-controlled-context.json",
+          "sha256": "ac389242aec739e3e872da4a0e7114140d94120843745da0c50e38a69902c121"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "context_scope_verbatim": {
+        "Host_or_all_timing_or_effects_claimed": false,
+        "SHIP20_ground_shadow": 0,
+        "SHIP37_air_shadow": 1,
+        "fresh_controlled_Worlds": 2,
+        "full_natural_wave_claimed": false,
+        "genuine_Original_MAP_spawns_selected": true,
+        "historical200bf_Worlds": 0,
+        "historical200bf_air_shadow": 1,
+        "other_spawns_suppressed": true,
+        "poses": 5,
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "different_review_authorities": [
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/data/hd/jobs/derived-three-enemy-families-five-v1-20261018/artwork-derivation.json",
+          "sha256": "715fb7f1b97e08f49e57997587f26292b37d55ac4b37d4886719a38fe1e8de1e",
+          "bytes": 4250
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/data/hd/jobs/derived-three-enemy-families-five-v1-20261018/review/controlled-context-producer.json",
+          "sha256": "3a3fd47ae9c5fdcb983b381155748132c6eab97f01e943762ce06da5da7ca387",
+          "bytes": 7785
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/data/hd/jobs/derived-three-enemy-families-five-v1-20261018/review/root-reviewed-tools-promotion.json",
+          "sha256": "c97381827b5fa9c15e7a200c7aaa2aa0e46d3db80c1e0ccbc60b65f29302087b",
+          "bytes": 349
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/data/hd/jobs/derived-three-enemy-families-five-v1-20261018/review/independent-cleanup-code53.json",
+          "sha256": "2296a4705005c4b98006cc66ad46c9b422e84c408199caca3c7f2951402a2e84",
+          "bytes": 3257
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/data/hd/jobs/derived-three-enemy-families-five-v1-20261018/review/independent-controlled-context.json",
+          "sha256": "a302537210fabcc56352b886a72d57ff7375d8678db0dbfa5b8b68bfeecf0517",
+          "bytes": 9570
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/data/hd/jobs/derived-three-enemy-families-five-v1-20261018/review/independent-dispatcher-v2-code.json",
+          "sha256": "22337ed138938df18d4bfba5afeff305fb00c1e20ab7494349c9f1d53e393880",
+          "bytes": 2964
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/data/hd/jobs/derived-three-enemy-families-five-v1-20261018/review/independent-material.json",
+          "sha256": "655bb0f3fd9a5cc62a29331a1927a1cae6b0083f0d392255200276532c41c295",
+          "bytes": 7545
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/data/hd/jobs/derived-three-enemy-families-five-v1-20261018/review/root-personal-intrinsic-and-controlled-context.json",
+          "sha256": "ac389242aec739e3e872da4a0e7114140d94120843745da0c50e38a69902c121",
+          "bytes": 1193
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/data/hd/jobs/derived-three-enemy-families-five-v1-20261018/review/author.json",
+          "sha256": "a356de0e41a83f4a10970dc101a854cc0ff4e16ebade647f639304315084c025",
+          "bytes": 37837
+        }
+      ],
+      "published_PNG_class": "DERIVED_SCRIPTED_CLEANUP_NOT_UNTOUCHED_GENERATOR_RETURN",
+      "old_parent_HOLD_refusal_and_generation_history_preserved": true
+    },
+    "SourceF-H5521-reviewed21-Terrain4": {
+      "status": "REGISTERED_REVIEWED_COMPLETE_NATIVE_FAMILY",
+      "selected_assets": [
+        "203b5",
+        "203b6",
+        "203b9",
+        "203bb"
+      ],
+      "scope": "Four Terrain pictures: 32 genuine endpoints and five ordered neighbor events/all scales; Root sampled four endpoints. Not all 85 placements, all foreign signatures or all state combinations.",
+      "limits": [
+        "Root sampled four of32 endpoints; independent peers reviewed full finite32/five ordered events.",
+        "Softer dimmer rim and native1 brown detail accepted; no all85 placements claim.",
+        "Other unrevised surrounding tiles retain original coarse material, a known mixed-texture limitation.",
+        "Fine/more uniform grain, visible existing foreign material/exposure boundaries; quiet203b9 and softer/dimmer rims/native1 brown detail.",
+        "Parent full16 atlas separator and prior material HOLDs remain unchanged, no full16 inventory or all-map approval."
+      ],
+      "coordinator_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain4-integration-20261018/data/hd/jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/coordinator-review.json",
+        "sha256": "68c04342324e86a079fa7570e1977f0cb49250f48ff8325197ed2b69132b3e24",
+        "bytes": 4118
+      },
+      "native_candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain4-integration-20261018/data/hd/jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/candidate.json",
+        "sha256": "3881125d95feaf941271d7bd4ef8ea99eb4f24b97954099f69713f593c619738",
+        "bytes": 2634
+      },
+      "source_and_all_scale_visual_review": {
+        "author": {
+          "path": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/review/author.json",
+          "sha256": "b5d99422fe35f057caa835fa214ca0789e6149aed207c3a79bc7679d22b8ae61"
+        },
+        "independent_intrinsic": {
+          "path": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/review/independent-intrinsic-material.json",
+          "sha256": "ea264b8aaffe87e5964e031501756e622cd56867f2422d95b7e64dd0b703b9c9"
+        },
+        "root_provided": {
+          "path": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/review/root-provided-personal-review.json",
+          "sha256": "1ab678d6658746786150a531c41a8e81fc08890e471958a7b8eb73580111beba"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "context_scope_verbatim": {
+        "World_calls": 0,
+        "all85_placements_inventoried": true,
+        "distinct_neighbor_events": 5,
+        "epoch": "Actual SourceF/H5500 freshly composed saved outputs; no later epoch relabeling.",
+        "genuine_Original_endpoints": 32,
+        "not_all80_foreign_ID_signatures_or259_reverse_vectors_or_state_combinations": true,
+        "ordered_comparison_views": 5,
+        "original_placement_counts": {
+          "203b5": 12,
+          "203b6": 2,
+          "203b9": 63,
+          "203bb": 8
+        },
+        "private_synthetic_endpoints": 0,
+        "representative69_role_and30_direction_coverage_only": true
+      },
+      "different_review_authorities": [
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain4-integration-20261018/data/hd/jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/review/actual-context-producer.json",
+          "sha256": "abe34a01240c0b8adcc096234e4d1212e89abdece25836e8763b2f681b5dbdfe",
+          "bytes": 22641
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain4-integration-20261018/data/hd/jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/artwork-derivation.json",
+          "sha256": "080e438582d0b934c7a20acfe16307deb70897b7cf2409705f0181d1ae89df55",
+          "bytes": 3099
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain4-integration-20261018/data/hd/jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/review/independent-cleanup-code.json",
+          "sha256": "716b0fbb19984977d55db25c5e706b78b57dac0fff8b3d0a124fa32047b25f1d",
+          "bytes": 3536
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain4-integration-20261018/data/hd/jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/review/independent-context.json",
+          "sha256": "b982d87001ad03a504683881be4c67758a6f28974154814b4970a68c9344f7f2",
+          "bytes": 8404
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain4-integration-20261018/data/hd/jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/review/independent-intrinsic-material.json",
+          "sha256": "ea264b8aaffe87e5964e031501756e622cd56867f2422d95b7e64dd0b703b9c9",
+          "bytes": 18822
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain4-integration-20261018/data/hd/jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/review/author.json",
+          "sha256": "b5d99422fe35f057caa835fa214ca0789e6149aed207c3a79bc7679d22b8ae61",
+          "bytes": 54463
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-terrain4-integration-20261018/data/hd/jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/review/root-provided-personal-review.json",
+          "sha256": "1ab678d6658746786150a531c41a8e81fc08890e471958a7b8eb73580111beba",
+          "bytes": 1227
+        }
+      ],
+      "published_PNG_class": "DERIVED_SCRIPTED_CLEANUP_NOT_UNTOUCHED_GENERATOR_RETURN",
+      "old_parent_HOLD_refusal_and_generation_history_preserved": true
+    },
+    "SourceF-H5521-reviewed21-alias2": {
+      "status": "REGISTERED_REVIEWED_COMPLETE_NATIVE_FAMILY",
+      "selected_assets": [
+        "20395",
+        "20399"
+      ],
+      "scope": "Two exact Source aliases of reviewed 203a7. Asset20395 has eight genuine endpoints and three ordered views of ONE204c8-to-205a1 neighbor event. Asset20399 is catalogue-only with no Original occurrence or composed scene.",
+      "limits": [
+        "Root personally sampled endpoint00/04 and pair00; ordered board displayed resized, not integer-readback claim.",
+        "I6 independently viewed all eight endpoints and three ordered views/all scales.",
+        "The three views depict ONE204c8->205a1 neighbor event.",
+        "20399 has zero Original occurrences; no composed scene or probe.",
+        "Finer/lighter scattered gravel and native1 softness remain qualified."
+      ],
+      "coordinator_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/exact-alias-20395-20399-from-203a7-v1-20261018/coordinator-review.json",
+        "sha256": "f3d9b35004e5751d128bb7c858162bfba1260350409cfbd0db77f730008854b9",
+        "bytes": 18040
+      },
+      "native_candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/exact-alias-20395-20399-from-203a7-v1-20261018/candidate.json",
+        "sha256": "62ddd1186856a15fb87407c051c4a98cb59321b90b0021430f29153008c05996",
+        "bytes": 14776
+      },
+      "source_and_all_scale_visual_review": {
+        "Root": {
+          "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/root-integration.json",
+          "sha256": "bccf12f626e9769772d1a58d34abd5c27c387db9d4d0957837a974bb12c05d96"
+        },
+        "different_context95": {
+          "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/independent-context.json",
+          "sha256": "9a9ac89553b30df6c0d6052cb8f6c613cae63758745867a23fa3ab5f5765bfbd"
+        },
+        "independent_intrinsic": {
+          "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/independent-intrinsic.json",
+          "sha256": "acd303a02e1cf5fe1a11db797fadc0c1660f0feead87f25b9275f8921a50420d"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "context_scope_verbatim": "Root-approved PRIVATE exact alias2 integration; selected2/carry11/fallback3, not whole16. Registration and global publication require separate Root authority.",
+      "different_review_authorities": [
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/independent-intrinsic.json",
+          "sha256": "acd303a02e1cf5fe1a11db797fadc0c1660f0feead87f25b9275f8921a50420d",
+          "bytes": 9710
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/root-integration.json",
+          "sha256": "bccf12f626e9769772d1a58d34abd5c27c387db9d4d0957837a974bb12c05d96",
+          "bytes": 2191
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/independent-context.json",
+          "sha256": "9a9ac89553b30df6c0d6052cb8f6c613cae63758745867a23fa3ab5f5765bfbd",
+          "bytes": 5690
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/coordinator-2039a-source-first-default-native-post5378-B-20261017-v1/runtime-qa.json",
+          "sha256": "3c22b674f2935c43e9d3bc9e031ea8be8b966360ddc4a8bd2cba5c55acda2403",
+          "bytes": 10989
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/terrain-20391-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+          "sha256": "a7d44700c7aee6ee1f54bf42a8bcfe8bf0823690f51231d74a4ecb738a598340",
+          "bytes": 11750
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/terrain-20392-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+          "sha256": "7639c76beafbc658e3928fc67688499721179de8ce463a77fd900e5e31f316c8",
+          "bytes": 11750
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/terrain-20393-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+          "sha256": "cd0035cae3bab914cc9cbb8d878f3bb318ff20e359ac5b661a9d41399472bdbe",
+          "bytes": 11750
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/terrain-20394-source-first-complete1-currentC-final-20261017/runtime-qa.json",
+          "sha256": "fc96740de4a532f09d7a37fe7fc6d37f729f3c4fd8ae33a92a65c3c95306c7ec",
+          "bytes": 11750
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/coordinator-2039c-historical16-selected1-palette-SourceE-H5425-FINAL-20261017-v1/runtime-qa.json",
+          "sha256": "2dfd0d785f40f3a2ea0059bbe11a71bf0bd290ee56dacf2fb8073eeb04f8b1fb",
+          "bytes": 10039
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/coordinator-earlier1f-selected5-palette-SourceE-H5442-FINAL-20261018-v1/runtime-qa.json",
+          "sha256": "72d33881bb76eba08a705bc11a78bb518985e1768d8bb742a484cb49f61663a0",
+          "bytes": 18154
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/Root-combined-standalone-integration-adapter.json",
+          "sha256": "00e82c110c464608691f0b47f5dd4d431b1d56d8b1eebfae733103808b4dc96a",
+          "bytes": 1928
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-exact-alias2-integration-20261018/data/hd/jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/independent-material-native-adapter.json",
+          "sha256": "4f4fd8ce40bc4e5d48f485ce7ff24ed0f30eefa4142a7c1e71099f49e2cd87c6",
+          "bytes": 2137
+        }
+      ],
+      "published_PNG_class": "EXACT_REVIEWED_SOURCE_ALIAS_NO_NEW_GENERATION",
+      "old_parent_HOLD_refusal_and_generation_history_preserved": true
+    },
+    "SourceF-H5521-reviewed21-Other-102f7": {
+      "status": "REGISTERED_REVIEWED_COMPLETE_NATIVE_FAMILY",
+      "selected_assets": [
+        "102f7"
+      ],
+      "scope": "ICON22 complete1 intrinsic review and finite Source caller-absence evidence; no active stock ItemDef/shop/HUD/legacy SWD caller, invented shop or World.",
+      "limits": [
+        "Meaningful broad generated RGB, panel/bevel/shading detail preserved; SourceScale4 geometry is derived, not untouched provider art.",
+        "All parents and old artwork HOLDs remain unchanged.",
+        "Native1 contact palette varies and remains occupied on all4 scales.",
+        "Root personally viewed both Other2 intrinsic all4 boards. The combined note’s native4 legacy ORDER scene and E01 all4 context-scale observations apply solely to 10126; 102f7 remains catalogue-only with no composed scene claimed."
+      ],
+      "coordinator_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-102f7-complete1-v1-20261018/coordinator-review.json",
+        "sha256": "ccbd7ff424ca686c11bda4479cfd5e9804af1b59f56cb51a95e5586bb5fc857d",
+        "bytes": 3581
+      },
+      "native_candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-102f7-complete1-v1-20261018/candidate.json",
+        "sha256": "001c5fa251b522c90090e05e014817d096ae5a113443367934632e794ac41c87",
+        "bytes": 942
+      },
+      "source_and_all_scale_visual_review": {
+        "Root_note": {
+          "path": "jobs/derived-other-102f7-complete1-v1-20261018/review/root-personal-note-verbatim.json",
+          "sha256": "09d7135e41afc8c1c5ae5d409c9b29b7329952e374e6e51678e704130b714de5"
+        },
+        "author": {
+          "path": "jobs/derived-other-102f7-complete1-v1-20261018/review/author.json",
+          "sha256": "c570fc012a5300d045dd7ab8056a5a826114f81f879934d7de49c470afb1cc28"
+        },
+        "different_material": {
+          "path": "jobs/derived-other-102f7-complete1-v1-20261018/review/independent-material.json",
+          "sha256": "b7b082ad39ebcee3119b788c6b839e338d6497e02f2c5977db1b9b1ca60305c5"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "context_scope_verbatim": "Catalogue-only ICON22; finite Source/native/mod inventory found no active stock ItemDef/shop/HUD or legacy SWD caller. No invented shop or World.",
+      "different_review_authorities": [
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-102f7-complete1-v1-20261018/artwork-derivation.json",
+          "sha256": "f1a96ff9abc011a004b1dd676fc8853333e9c95041f88ae964c33a3ed0713070",
+          "bytes": 2124
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-102f7-complete1-v1-20261018/review/independent-portable-code.json",
+          "sha256": "9360ab9e0ba2e86ddfb85323e4c6abc73dd757be6834442ba39dcf88b4304e68",
+          "bytes": 3166
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-102f7-complete1-v1-20261018/review/independent-material.json",
+          "sha256": "b7b082ad39ebcee3119b788c6b839e338d6497e02f2c5977db1b9b1ca60305c5",
+          "bytes": 32615
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-102f7-complete1-v1-20261018/review/portable-native-art-and-Root-review-identity-bridge.json",
+          "sha256": "48002f040071d16ddbff4091a64a04525b4f80aeafe66ddea1c9498a0fc5fc39",
+          "bytes": 2477
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-102f7-complete1-v1-20261018/review/root-personal-note-verbatim.json",
+          "sha256": "09d7135e41afc8c1c5ae5d409c9b29b7329952e374e6e51678e704130b714de5",
+          "bytes": 1253
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-102f7-complete1-v1-20261018/review/author.json",
+          "sha256": "c570fc012a5300d045dd7ab8056a5a826114f81f879934d7de49c470afb1cc28",
+          "bytes": 8230
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-102f7-complete1-v1-20261018/review/source-caller-plan.json",
+          "sha256": "9da2412a6e77a1a971dfa136564a2088cbab07035cd7a13d52e43ea5bdf4c34c",
+          "bytes": 176666
+        }
+      ],
+      "published_PNG_class": "DERIVED_SCRIPTED_CLEANUP_NOT_UNTOUCHED_GENERATOR_RETURN",
+      "old_parent_HOLD_refusal_and_generation_history_preserved": true
+    },
+    "SourceF-H5521-reviewed21-Other-10126": {
+      "status": "REGISTERED_REVIEWED_COMPLETE_NATIVE_FAMILY",
+      "selected_assets": [
+        "10126"
+      ],
+      "scope": "SMLAP complete1 plus Source-authentic legacy ORDER template at231,151/all4 scales; not a current Rust Host screen, executed legacy GUI, intro/AGX, World or timing proof.",
+      "limits": [
+        "Meaningful broad generated RGB, panel/bevel/shading detail preserved; SourceScale4 geometry is derived, not untouched provider art.",
+        "All parents and old artwork HOLDs remain unchanged.",
+        "Native1 G gray85 versus Original121; two native3 dark upper-star corners absent; stronger red/gold bevel and narrower gaps remain accepted limitations.",
+        "Root personally viewed both intrinsic all4 boards and only native4 full legacy scene; E01 independently viewed all4 context scales."
+      ],
+      "coordinator_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-10126-complete1-v1-20261018/coordinator-review.json",
+        "sha256": "9e8d0210afc26bbe1c0798e207b454412403b797d6ddb0befbc91bcff599b4a8",
+        "bytes": 3700
+      },
+      "native_candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-10126-complete1-v1-20261018/candidate.json",
+        "sha256": "527dcbe96a348b80e410497f157fe4ac5900e88a7b82358db62cf7cb0c016109",
+        "bytes": 941
+      },
+      "source_and_all_scale_visual_review": {
+        "Root_note": {
+          "path": "jobs/derived-other-10126-complete1-v1-20261018/review/root-personal-note-verbatim.json",
+          "sha256": "09d7135e41afc8c1c5ae5d409c9b29b7329952e374e6e51678e704130b714de5"
+        },
+        "author": {
+          "path": "jobs/derived-other-10126-complete1-v1-20261018/review/author.json",
+          "sha256": "c570fc012a5300d045dd7ab8056a5a826114f81f879934d7de49c470afb1cc28"
+        },
+        "different_material": {
+          "path": "jobs/derived-other-10126-complete1-v1-20261018/review/independent-material.json",
+          "sha256": "b7b082ad39ebcee3119b788c6b839e338d6497e02f2c5977db1b9b1ca60305c5"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "context_scope_verbatim": "Finite Source-authentic legacy ORDER template at231,151, all4 scales independently reviewed. Not a current Rust Host screen or executed original GUI, intro/AGX, World or timing proof.",
+      "different_review_authorities": [
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-10126-complete1-v1-20261018/artwork-derivation.json",
+          "sha256": "2f068f2ee7eb36d5be138aa6d7046b36ab8fb3fedbd7ffffc3fcfb77f875bc2b",
+          "bytes": 2124
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-10126-complete1-v1-20261018/review/independent-portable-code.json",
+          "sha256": "9360ab9e0ba2e86ddfb85323e4c6abc73dd757be6834442ba39dcf88b4304e68",
+          "bytes": 3166
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-10126-complete1-v1-20261018/review/independent-SMLAP-template-context.json",
+          "sha256": "f07bbb85bb66722179a1708f58c0f48d4bdf5b0fa21108da84d7f2fced81f57d",
+          "bytes": 69424
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-10126-complete1-v1-20261018/review/independent-material.json",
+          "sha256": "b7b082ad39ebcee3119b788c6b839e338d6497e02f2c5977db1b9b1ca60305c5",
+          "bytes": 32615
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-10126-complete1-v1-20261018/review/portable-native-art-and-Root-review-identity-bridge.json",
+          "sha256": "1c90cc3d5a5fc685e02aa9dec416120d1cd551a20acdf9273773eae70b35bad6",
+          "bytes": 2477
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-10126-complete1-v1-20261018/review/root-personal-note-verbatim.json",
+          "sha256": "09d7135e41afc8c1c5ae5d409c9b29b7329952e374e6e51678e704130b714de5",
+          "bytes": 1253
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-10126-complete1-v1-20261018/review/author.json",
+          "sha256": "c570fc012a5300d045dd7ab8056a5a826114f81f879934d7de49c470afb1cc28",
+          "bytes": 8230
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/data/hd/jobs/derived-other-10126-complete1-v1-20261018/review/source-caller-plan.json",
+          "sha256": "9da2412a6e77a1a971dfa136564a2088cbab07035cd7a13d52e43ea5bdf4c34c",
+          "bytes": 176666
+        }
+      ],
+      "published_PNG_class": "DERIVED_SCRIPTED_CLEANUP_NOT_UNTOUCHED_GENERATOR_RETURN",
+      "old_parent_HOLD_refusal_and_generation_history_preserved": true
+    },
+    "SourceF-H5521-reviewed21-LEFT8": {
+      "status": "REGISTERED_REVIEWED_COMPLETE_NATIVE_FAMILY",
+      "selected_assets": [
+        "4002e",
+        "4002f",
+        "40030",
+        "40031",
+        "40032",
+        "40033",
+        "40034",
+        "40035"
+      ],
+      "scope": "Complete eight-frame WORMLEFT intrinsic review and Source caller-absence trace; no natural phase clock, Original spawn, World or current runtime caller claimed.",
+      "limits": [
+        "Local lighter sculpted lip and stronger continuous folded relief are accepted HD interpretation.",
+        "Native1 softness and Source-stepped contour remain.",
+        "Actual static indexed/RGB variation25/26/34/30 is disclosed; no exact actual-native-static claim.",
+        "Original data incl18SWDs/176fields, libraries/MAPs/currentRust/bundledmods reveal no caller; no natural phaseclock/layer/World context invented."
+      ],
+      "coordinator_review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-wormleft8-integration-20261018/data/hd/jobs/derived-wormleft-complete8-v1-20261018/coordinator-review.json",
+        "sha256": "b156df9a6098cb78cccde520b8b173ead29123310babd619e0bdf5c3246cee4d",
+        "bytes": 2782
+      },
+      "native_candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-wormleft8-integration-20261018/data/hd/jobs/derived-wormleft-complete8-v1-20261018/candidate.json",
+        "sha256": "789d4b10bdaf45fb469ada02615ed21983807f5e6f0aa841840461dfb7b5d843",
+        "bytes": 3374
+      },
+      "source_and_all_scale_visual_review": {
+        "Root_personally_viewed_scales": [
+          1,
+          4
+        ],
+        "Root_portable_binding": {
+          "path": "jobs/derived-wormleft-complete8-v1-20261018/review/Root-note-portable-binding.json",
+          "sha256": "21d44f27dd0ad674e72025e16c4d0ac0950327494440845550d54fb7421e8765"
+        },
+        "Root_verbatim_note": {
+          "path": "jobs/derived-wormleft-complete8-v1-20261018/review/Root-personal-review-verbatim.json",
+          "sha256": "f651f6a0cff1737372333f566d0ea3c7ce40ff001b7921b1b52e6f4709dd2456"
+        },
+        "author": {
+          "path": "jobs/derived-wormleft-complete8-v1-20261018/review/author-complete8.json",
+          "sha256": "00301c14dd748f5df2b952003219d6eecf7edc4eb005d3327a086b9c6d67acec"
+        },
+        "author_and_independent_peer_viewed_all_scales": true,
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "context_scope_verbatim": "catalog_only_no_known_original_runtime_caller",
+      "different_review_authorities": [
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-wormleft8-integration-20261018/data/hd/jobs/derived-wormleft-complete8-v1-20261018/artwork-derivation.json",
+          "sha256": "d720a2ed8bffe6652824bf7fd00d44e0becb73e00213cb511a652aad2af04d77",
+          "bytes": 3328
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-wormleft8-integration-20261018/data/hd/jobs/derived-wormleft-complete8-v1-20261018/review/independent-cleanup-code.json",
+          "sha256": "6445d7aacb211e98f25b0ee7fc061de4d54d422b0db6a63e7f58ff1d76a71798",
+          "bytes": 5074
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-wormleft8-integration-20261018/data/hd/jobs/derived-wormleft-complete8-v1-20261018/review/independent-complete8-material.json",
+          "sha256": "9f1c430bc5ad11be3620705485b1d3d8957f433443027357caa118fc6b4550b9",
+          "bytes": 8409
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-wormleft8-integration-20261018/data/hd/jobs/derived-wormleft-complete8-v1-20261018/review/Root-note-portable-binding.json",
+          "sha256": "21d44f27dd0ad674e72025e16c4d0ac0950327494440845550d54fb7421e8765",
+          "bytes": 1414
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-wormleft8-integration-20261018/data/hd/jobs/derived-wormleft-complete8-v1-20261018/review/Root-personal-review-verbatim.json",
+          "sha256": "f651f6a0cff1737372333f566d0ea3c7ce40ff001b7921b1b52e6f4709dd2456",
+          "bytes": 1153
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-wormleft8-integration-20261018/data/hd/jobs/derived-wormleft-complete8-v1-20261018/review/author-complete8.json",
+          "sha256": "00301c14dd748f5df2b952003219d6eecf7edc4eb005d3327a086b9c6d67acec",
+          "bytes": 37464
+        },
+        {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-wormleft8-integration-20261018/data/hd/jobs/derived-wormleft-complete8-v1-20261018/review/Original-binary-SWD-Rust-mod-caller-trace.json",
+          "sha256": "2df51fc5e7b731075392eeab1b1f056b49cb3d0b47fc64662f7118c030139075",
+          "bytes": 1503690
+        }
+      ],
+      "published_PNG_class": "DERIVED_SCRIPTED_CLEANUP_NOT_UNTOUCHED_GENERATOR_RETURN",
+      "old_parent_HOLD_refusal_and_generation_history_preserved": true
     }
   },
   "native_preservation_reviews": {
@@ -245537,8 +246148,8 @@
       "history_scope": "All SourceC and older successful image-call, intrinsic, material, context, held-art and refusal authorities retain their original epochs and limits. The existing current_source_runtime object is a dated SourceC+D5384 checkpoint; latest_artwork_runtime is the unchanged SourceC H5425 artwork-release evidence. This activation changes runtime evidence only, with no asset/header/default/raw/status or family-review changes. Private constrained studies are not installed artwork."
     },
     "current_runtime": {
-      "record": "SourceF_H5500_derived15_art_append_current",
-      "scope": "Current installed SourceF H5500 derived-art append; earlier runtime, artwork and native evidence stay dated."
+      "record": "SourceF_H5521_reviewed21_art_append_current",
+      "scope": "Current SourceF H5521 reviewed21 append; prior artwork/runtime/Windows results remain dated."
     },
     "runtime5426": {
       "checkpoint_utc": "2026-10-17T12:31:23.439368+00:00",
@@ -246861,6 +247472,195 @@
         "TARGT14_artwork_admitted": false
       },
       "existing_checks": "Existing SourceF113 Rust/186 Python and65 campaign checks retain their dated scope; this append reruns no engine test suites."
+    },
+    "SourceF_H5521_reviewed21_art_append_current": {
+      "checkpoint_utc": "2026-10-18T01:43:23.822066+00:00",
+      "status": "ACTUAL_H5521_SOURCEF_REVIEWED21_ASSEMBLED_CLI_SDL_ROOT_PHYSICAL_PREPUSH_CHECKPOINT",
+      "registered_frames": 5521,
+      "complete_sequences": 3650,
+      "terrain_frames": 4369,
+      "remaining_original_pictures": 232,
+      "remaining_by_category": {
+        "Bosses": 0,
+        "Enemies and ground objects": 54,
+        "Menus, portraits, HUD and other pictures": 12,
+        "Terrain": 166
+      },
+      "selected_assets": [
+        "10126",
+        "102f7",
+        "10315",
+        "10316",
+        "1033e",
+        "1033f",
+        "200bf",
+        "20395",
+        "20399",
+        "203b5",
+        "203b6",
+        "203b9",
+        "203bb",
+        "4002e",
+        "4002f",
+        "40030",
+        "40031",
+        "40032",
+        "40033",
+        "40034",
+        "40035"
+      ],
+      "new_frames": 21,
+      "new_complete_sequences": 12,
+      "registered_categories": {
+        "Player banking": 21,
+        "Bosses": 249,
+        "Player and enemy projectiles": 51,
+        "Enemies and ground objects": 365,
+        "Explosions and effects": 281,
+        "Equipment and pickups": 47,
+        "Terrain": 4369,
+        "Menus, portraits, HUD and other pictures": 138
+      },
+      "assembly": {
+        "data_files": 9725,
+        "data_bytes": 8435456792
+      },
+      "new_selected_job_files": 214,
+      "restored_genuine_old_receipt_files": 7,
+      "actual_total_runtime_inventory_increment": 221,
+      "initial_214_9718_projection_is_not_final_inventory": true,
+      "private_registrar_attempt_history": [
+        {
+          "attempt": 1,
+          "exit": 1,
+          "terminal": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/batch21-private-registrar-terminal.json",
+            "sha256": "78b568ae24a893041b21e053458bfecb035c639b558b3dab4c71221af80d0290",
+            "bytes": 3016
+          },
+          "scope": "Actual failed private attempt; before canonical writes."
+        },
+        {
+          "attempt": 2,
+          "exit": 0,
+          "terminal": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/batch21-private-registrar-attempt2-terminal.json",
+            "sha256": "20b34a321ab6130e65a20f0883bd352ef26b26a3c383ce909c43752ab907b1e6",
+            "bytes": 1448
+          },
+          "scope": "Actual explicitly released continuation attempt2 succeeded privately; later actual Root publication is separately bound by assembly receipt."
+        }
+      ],
+      "receipt_restoration": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/batch21-missing-evidence-appendplan.json",
+        "sha256": "c02db1e653ec6cf8ecbd0f0f44139e83d02eb88863622f94d4a3a06dd2d5429d",
+        "bytes": 37960
+      },
+      "old_header_Source_and_PNG_bytes_preserved": true,
+      "no_new_QA_or_art_from_restoration": true,
+      "SourceF18_both_binaries_current45mods_M2v103_unchanged": true,
+      "installed_palette_opt_in_assets": [
+        "2038d",
+        "2038e",
+        "20396",
+        "20397",
+        "20398",
+        "2039c",
+        "203ff",
+        "2058b",
+        "2058c"
+      ],
+      "family_review_refs": {
+        "Boss5": "SourceF-H5521-reviewed21-Boss5",
+        "Terrain4": "SourceF-H5521-reviewed21-Terrain4",
+        "alias2": "SourceF-H5521-reviewed21-alias2",
+        "Other-102f7": "SourceF-H5521-reviewed21-Other-102f7",
+        "Other-10126": "SourceF-H5521-reviewed21-Other-10126",
+        "LEFT8": "SourceF-H5521-reviewed21-LEFT8"
+      },
+      "context_scope": {
+        "Boss5": "Five Enemy-category pictures in three complete native families: five controlled poses/all scales, two fresh controlled Worlds with other spawns suppressed and a historical 200bf recomposition. Not a natural full wave or current Host.",
+        "Terrain4": "Four Terrain pictures: 32 genuine endpoints and five ordered neighbor events/all scales; Root sampled four endpoints. Not all 85 placements, all foreign signatures or all state combinations.",
+        "alias2": "Two exact Source aliases of reviewed 203a7. Asset20395 has eight genuine endpoints and three ordered views of ONE204c8-to-205a1 neighbor event. Asset20399 is catalogue-only with no Original occurrence or composed scene.",
+        "Other-102f7": "ICON22 complete1 intrinsic review and finite Source caller-absence evidence; no active stock ItemDef/shop/HUD/legacy SWD caller, invented shop or World.",
+        "Other-10126": "SMLAP complete1 plus Source-authentic legacy ORDER template at231,151/all4 scales; not a current Rust Host screen, executed legacy GUI, intro/AGX, World or timing proof.",
+        "LEFT8": "Complete eight-frame WORMLEFT intrinsic review and Source caller-absence trace; no natural phase clock, Original spawn, World or current runtime caller claimed."
+      },
+      "evidence": {
+        "assembly": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/batch21-attempt2-assembly-with-proof7-receipt.json",
+          "sha256": "9b1a25bcb16759eb8321f43a2120e4a7fe065c1eb60e25c425ea28ccdbf29640",
+          "bytes": 39014
+        },
+        "CLI": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/cli-validation.json",
+          "sha256": "a62917c879fadb2955b8472a8d3318f282f267ba5ddf8ff862b0043daee5eb57",
+          "bytes": 1685
+        },
+        "Windows_count_metadata": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/windows-metadata-refresh.json",
+          "sha256": "2626c167047f9565cdebfd84e00c57a06c6805bc56206b13bb5e6f17141aa7ef",
+          "bytes": 421
+        },
+        "Root_art_review": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/FINAL-ROOT-COMPLETE-PHYSICAL-REVIEW.json",
+          "sha256": "30ea4be3ed4e0e6b667ea1d6f2be749f8779a4618e80740f67f0b55f4c75cbf7",
+          "bytes": 2337
+        },
+        "SDL_report": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies-actualH5521-SourceF-three-SDL-versus-H5500-execution-20261018-v1/CLOSED-ACTUAL-H5521-SOURCEF-INSTALLED-RUNSH-THREE-SDL-MEASURED-AND-PHYSICAL-REGRESSION-VERSUS-H5500.json",
+          "sha256": "63a09726eeb13ad14e9d4d8316ffac54eee7473c65f289b52481b2acecee598a",
+          "bytes": 14310
+        },
+        "SDL_strict": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-enemies-actualH5521-SourceF-three-SDL-versus-H5500-execution-20261018-v1-strict-complete-actualH5521-SourceF-three-SDL-regression-closure.json",
+          "sha256": "e617bc103fbe56c2adbbda26fd374f5294487d8a1b97ffae541fd096408ccd80",
+          "bytes": 138881
+        },
+        "Root_physical": {
+          "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/root-three-SDL-physical-review.json",
+          "sha256": "f3df36f07e4652166295e36a3930c5796228ec86061ecd9f8ddf2e319c0ac8de",
+          "bytes": 1799
+        }
+      },
+      "Windows_fix_observation": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5500-archivefix6b1a-native-Windows-CI-observation-20261018/ACTUAL-SELECTED-EXACT-ROOT-PUSH-RUN.json",
+        "sha256": "5a9102078b475116627e464ed2a0f3880d5206ed41d764d0bb84d033caf436d2",
+        "bytes": 889
+      },
+      "Windows_fix_narrative": "The exact H5500 archive-fix run39085892624 was still pending at the dated supplied observation; no success is inferred.",
+      "Windows_failed_H5500_0030": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-fixture-exact5500-asset0030-native-Windows-CI-observation-20261018/ACTUAL-EXACT5500-ASSET0030-NATIVE-WINDOWS-CI-OBSERVATION-FINAL.json",
+        "sha256": "b8dd8c3a0996c9f2435c0e5b73f7526fa9bdf004a1a10c87121bc6d0e0d465b3",
+        "bytes": 20612
+      },
+      "SDL_observations": {
+        "PNGs": 3,
+        "whole_screens_personally_viewed": 3,
+        "terminal0": 3,
+        "installed_game_processes": 3,
+        "retries": 0
+      },
+      "SDL_narrative": "Three fresh 1920×1080 software-SDL controls—menu, Original Sector 1 Wave 7 and Sector 3 Wave 9—each exited successfully and were personally reviewed as whole screens by the operator and Root. All three PNGs and decoded RGB/alpha planes are byte-identical to actual H5500 (zero changed pixels). These fixed presentation controls do not prove that any of the 21 new pictures appeared; existing mixed texture resolutions and Source-stepped shadows remain visible.",
+      "SDL_scope": "Actual installed SourceF run.sh/ELF, private profiles, exact120/600/600 presentation-frame inputs; presented RGBA only, not indexed reconstruction, complete playthrough, sound, performance, hardware or native Windows evidence.",
+      "tools130": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/actual-reviewed-maintained-tool-tests-v1.json",
+        "sha256": "be08c0b81df7ac03fd9b1a2ab64e4f2e598834faf7c12ef3e971c2ded6318c8a",
+        "bytes": 3008
+      },
+      "ZIP4_separate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/root-Windows-ZIP-required-data-selection.json",
+        "sha256": "68512e3dd17f6dbd9a2dc31cd22e8488123051d2c769697cd9f32cf3ffab0bdf",
+        "bytes": 915
+      },
+      "actual_H5521_required_ZIP_selection": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-next-publication-after5500-SourceF-20261018/root-5521-all-required-ZIP-paths-selected.json",
+        "sha256": "647e8568af0305158032b75d6c338c943455d0c7b27f368bb7f6d92c72d44c1f",
+        "bytes": 176
+      },
+      "actual_ZIP_created": false,
+      "native_Windows_H5521_execution": false,
+      "history_scope": "Only21 status/review-ref picture rows change; other5732picture rows and307native rows remain exact. All prior family/held/refusal/runtime authorities are retained. No native H5521 or full-HD-completion claim."
     }
   }
 }

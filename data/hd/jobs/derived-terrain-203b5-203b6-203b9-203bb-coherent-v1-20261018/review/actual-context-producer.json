@@ -1,0 +1,942 @@
+{
+  "status": "QUALIFIED_REPRESENTATIVE32_PRODUCER_PHYSICAL_DIFFERENT_PEER_PENDING",
+  "role": "CONTEXT_TECHNICAL_PRODUCER_AND_PERSONAL_PHYSICAL_REVIEWER",
+  "reviewer": "/root/hd_terrain_set_1",
+  "physical_review_closed": true,
+  "different_physical_review_closed": false,
+  "selected": [
+    "203b5",
+    "203b6",
+    "203b9",
+    "203bb"
+  ],
+  "DERIVED_not_generator_return": true,
+  "scope": {
+    "Original_positions": {
+      "203bb": 8,
+      "203b5": 12,
+      "203b9": 63,
+      "203b6": 2
+    },
+    "all_health_zero": true,
+    "Original_intact_placements": 85,
+    "all_only_mission": "base:sector_2_wave_4",
+    "all_original_centered_foreignID_signatures": 80,
+    "all_possible_registered_reverse_signatures": 259,
+    "actual_plan_intact_primary": 11,
+    "actual_plan_intact_reverse": 16,
+    "planned_genuine_endpoints": 32,
+    "ordered_views": 5,
+    "distinct_events": 5,
+    "World": 0,
+    "private_gallery": 0,
+    "scales": 128,
+    "three_role_planes": 384,
+    "whole_pages": 37
+  },
+  "scale_records": 128,
+  "unique_planes": 384,
+  "whole_pages": 37,
+  "page_body_readbacks": 504,
+  "context_HOLDs": 0,
+  "source_recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-coherent203b5-203b6-203b9-203bb-SourceF-H5500-finite-context-plan-20261018/FROZEN-COHERENT4-H5500-32-GENUINE-ENDPOINTS-FIVE-ORDERED-EVENTS-REPRESENTATIVE-SOURCE-RECIPE.json",
+    "sha256": "e8cfc774228d34c778a86419d9d5c0dcb4f256604e591b2161c1c3058f8c763e"
+  },
+  "source_plan_report": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-coherent203b5-203b6-203b9-203bb-SourceF-H5500-finite-context-plan-20261018/CLOSED-SOURCE-ONLY-COHERENT4-85-PLACEMENTS-FINITE32-CONTEXT-PLAN-NO-EXECUTION.json",
+    "sha256": "90e79eafd1c4867be79701f741d67f01598c72918b67e7a5ee0136f6d5d6c3ba",
+    "size": 13621,
+    "mtime_ns": 1792283721393022193,
+    "mode": 33188
+  },
+  "source_plan_strict": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-coherent203b5-203b6-203b9-203bb-SourceF-H5500-finite-context-plan-20261018-strict-complete-source-only-coherent4-finite32-plan-closure.json",
+    "sha256": "0df60cdf8ecaad7e2da27f1a9ed26448b9b88a42bacba4d51b0530f68bda9446",
+    "size": 4634,
+    "mtime_ns": 1792283721395798261,
+    "mode": 33188
+  },
+  "coverage": {
+    "both_b6_actual_occurrences_included": true,
+    "other_damage_combinations_unclaimed": true,
+    "other_distinct_foreign_ID_vectors_unrendered": true,
+    "primary69_structural_roles_covered_not_all80_pixels": true,
+    "primary_role_topology_obligations": [
+      [
+        "center",
+        "203b5"
+      ],
+      [
+        "center",
+        "203b6"
+      ],
+      [
+        "center",
+        "203b9"
+      ],
+      [
+        "center",
+        "203bb"
+      ],
+      [
+        "corner",
+        "203b5",
+        "NE",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "OWN:203b5",
+        "OWN:203b5"
+      ],
+      [
+        "corner",
+        "203b5",
+        "NE",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "OWN:203b5",
+        "OWN:203b6"
+      ],
+      [
+        "corner",
+        "203b5",
+        "NE",
+        "CURRENT_HD",
+        "NULL",
+        "OWN:203b5",
+        "NULL"
+      ],
+      [
+        "corner",
+        "203b5",
+        "NW",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "OWN:203b5"
+      ],
+      [
+        "corner",
+        "203b5",
+        "NW",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "OWN:203b5",
+        "OWN:203b5"
+      ],
+      [
+        "corner",
+        "203b5",
+        "NW",
+        "NULL",
+        "CURRENT_HD",
+        "NULL",
+        "OWN:203b5"
+      ],
+      [
+        "corner",
+        "203b5",
+        "SE",
+        "OWN:203b5",
+        "NULL",
+        "CURRENT_HD",
+        "NULL"
+      ],
+      [
+        "corner",
+        "203b5",
+        "SE",
+        "OWN:203b5",
+        "OWN:203b5",
+        "CURRENT_HD",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203b5",
+        "SE",
+        "OWN:203b5",
+        "OWN:203b6",
+        "CURRENT_HD",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203b5",
+        "SW",
+        "CURRENT_HD",
+        "OWN:203b5",
+        "OWN:203bb",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203b5",
+        "SW",
+        "NULL",
+        "OWN:203b5",
+        "NULL",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203b5",
+        "SW",
+        "OWN:203b5",
+        "OWN:203b5",
+        "CURRENT_HD",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203b6",
+        "NE",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "OWN:203b6",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203b6",
+        "NW",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "OWN:203b5",
+        "OWN:203b6"
+      ],
+      [
+        "corner",
+        "203b6",
+        "SE",
+        "OWN:203b6",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203b6",
+        "SW",
+        "OWN:203b5",
+        "OWN:203b6",
+        "CURRENT_HD",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203b9",
+        "NE",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "OWN:203b9",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203b9",
+        "NE",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "OWN:203b9",
+        "OWN:203b9"
+      ],
+      [
+        "corner",
+        "203b9",
+        "NE",
+        "CURRENT_HD",
+        "NULL",
+        "OWN:203b9",
+        "NULL"
+      ],
+      [
+        "corner",
+        "203b9",
+        "NW",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "OWN:203b9"
+      ],
+      [
+        "corner",
+        "203b9",
+        "NW",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "OWN:203b9",
+        "OWN:203b9"
+      ],
+      [
+        "corner",
+        "203b9",
+        "NW",
+        "NULL",
+        "CURRENT_HD",
+        "NULL",
+        "OWN:203b9"
+      ],
+      [
+        "corner",
+        "203b9",
+        "SE",
+        "OWN:203b9",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203b9",
+        "SE",
+        "OWN:203b9",
+        "NULL",
+        "CURRENT_HD",
+        "NULL"
+      ],
+      [
+        "corner",
+        "203b9",
+        "SE",
+        "OWN:203b9",
+        "OWN:203b9",
+        "CURRENT_HD",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203b9",
+        "SW",
+        "CURRENT_HD",
+        "OWN:203b9",
+        "CURRENT_HD",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203b9",
+        "SW",
+        "NULL",
+        "OWN:203b9",
+        "NULL",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203b9",
+        "SW",
+        "OWN:203b9",
+        "OWN:203b9",
+        "CURRENT_HD",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203bb",
+        "NE",
+        "CURRENT_HD",
+        "OWN:203b5",
+        "OWN:203bb",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203bb",
+        "NE",
+        "OWN:203bb",
+        "CURRENT_HD",
+        "OWN:203bb",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203bb",
+        "NW",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "OWN:203bb"
+      ],
+      [
+        "corner",
+        "203bb",
+        "NW",
+        "CURRENT_HD",
+        "OWN:203bb",
+        "CURRENT_HD",
+        "OWN:203bb"
+      ],
+      [
+        "corner",
+        "203bb",
+        "SE",
+        "OWN:203bb",
+        "CURRENT_HD",
+        "CURRENT_HD",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203bb",
+        "SE",
+        "OWN:203bb",
+        "CURRENT_HD",
+        "NULL",
+        "NULL"
+      ],
+      [
+        "corner",
+        "203bb",
+        "SE",
+        "OWN:203bb",
+        "CURRENT_HD",
+        "OWN:203bb",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203bb",
+        "SW",
+        "CURRENT_HD",
+        "OWN:203bb",
+        "CURRENT_HD",
+        "CURRENT_HD"
+      ],
+      [
+        "corner",
+        "203bb",
+        "SW",
+        "CURRENT_HD",
+        "OWN:203bb",
+        "CURRENT_HD",
+        "OWN:203bb"
+      ],
+      [
+        "corner",
+        "203bb",
+        "SW",
+        "CURRENT_HD",
+        "OWN:203bb",
+        "NULL",
+        "NULL"
+      ],
+      [
+        "edge",
+        "203b5",
+        "E",
+        "NULL"
+      ],
+      [
+        "edge",
+        "203b5",
+        "E",
+        "OWN:203b5"
+      ],
+      [
+        "edge",
+        "203b5",
+        "E",
+        "OWN:203b6"
+      ],
+      [
+        "edge",
+        "203b5",
+        "N",
+        "CURRENT_HD"
+      ],
+      [
+        "edge",
+        "203b5",
+        "S",
+        "CURRENT_HD"
+      ],
+      [
+        "edge",
+        "203b5",
+        "W",
+        "CURRENT_HD"
+      ],
+      [
+        "edge",
+        "203b5",
+        "W",
+        "NULL"
+      ],
+      [
+        "edge",
+        "203b5",
+        "W",
+        "OWN:203b5"
+      ],
+      [
+        "edge",
+        "203b6",
+        "E",
+        "CURRENT_HD"
+      ],
+      [
+        "edge",
+        "203b6",
+        "N",
+        "CURRENT_HD"
+      ],
+      [
+        "edge",
+        "203b6",
+        "S",
+        "CURRENT_HD"
+      ],
+      [
+        "edge",
+        "203b6",
+        "W",
+        "OWN:203b5"
+      ],
+      [
+        "edge",
+        "203b9",
+        "E",
+        "CURRENT_HD"
+      ],
+      [
+        "edge",
+        "203b9",
+        "E",
+        "NULL"
+      ],
+      [
+        "edge",
+        "203b9",
+        "E",
+        "OWN:203b9"
+      ],
+      [
+        "edge",
+        "203b9",
+        "N",
+        "CURRENT_HD"
+      ],
+      [
+        "edge",
+        "203b9",
+        "S",
+        "CURRENT_HD"
+      ],
+      [
+        "edge",
+        "203b9",
+        "W",
+        "CURRENT_HD"
+      ],
+      [
+        "edge",
+        "203b9",
+        "W",
+        "NULL"
+      ],
+      [
+        "edge",
+        "203b9",
+        "W",
+        "OWN:203b9"
+      ],
+      [
+        "edge",
+        "203bb",
+        "E",
+        "CURRENT_HD"
+      ],
+      [
+        "edge",
+        "203bb",
+        "N",
+        "CURRENT_HD"
+      ],
+      [
+        "edge",
+        "203bb",
+        "N",
+        "OWN:203bb"
+      ],
+      [
+        "edge",
+        "203bb",
+        "S",
+        "CURRENT_HD"
+      ],
+      [
+        "edge",
+        "203bb",
+        "S",
+        "NULL"
+      ],
+      [
+        "edge",
+        "203bb",
+        "S",
+        "OWN:203bb"
+      ],
+      [
+        "edge",
+        "203bb",
+        "W",
+        "CURRENT_HD"
+      ]
+    ],
+    "reverse30_cardinal_corner_direction_obligations": [
+      [
+        "reverse_active_corner",
+        "203b5",
+        -1,
+        -1
+      ],
+      [
+        "reverse_active_corner",
+        "203b5",
+        -1,
+        1
+      ],
+      [
+        "reverse_active_corner",
+        "203b5",
+        1,
+        -1
+      ],
+      [
+        "reverse_active_corner",
+        "203b5",
+        1,
+        1
+      ],
+      [
+        "reverse_active_corner",
+        "203b6",
+        -1,
+        -1
+      ],
+      [
+        "reverse_active_corner",
+        "203b6",
+        -1,
+        1
+      ],
+      [
+        "reverse_active_corner",
+        "203b6",
+        1,
+        -1
+      ],
+      [
+        "reverse_active_corner",
+        "203b6",
+        1,
+        1
+      ],
+      [
+        "reverse_active_corner",
+        "203b9",
+        -1,
+        -1
+      ],
+      [
+        "reverse_active_corner",
+        "203b9",
+        -1,
+        1
+      ],
+      [
+        "reverse_active_corner",
+        "203b9",
+        1,
+        -1
+      ],
+      [
+        "reverse_active_corner",
+        "203b9",
+        1,
+        1
+      ],
+      [
+        "reverse_active_corner",
+        "203bb",
+        -1,
+        -1
+      ],
+      [
+        "reverse_active_corner",
+        "203bb",
+        -1,
+        1
+      ],
+      [
+        "reverse_active_corner",
+        "203bb",
+        1,
+        -1
+      ],
+      [
+        "reverse_active_corner",
+        "203bb",
+        1,
+        1
+      ],
+      [
+        "reverse_edge",
+        "203b5",
+        -1,
+        0
+      ],
+      [
+        "reverse_edge",
+        "203b5",
+        0,
+        -1
+      ],
+      [
+        "reverse_edge",
+        "203b5",
+        0,
+        1
+      ],
+      [
+        "reverse_edge",
+        "203b6",
+        0,
+        -1
+      ],
+      [
+        "reverse_edge",
+        "203b6",
+        0,
+        1
+      ],
+      [
+        "reverse_edge",
+        "203b6",
+        1,
+        0
+      ],
+      [
+        "reverse_edge",
+        "203b9",
+        -1,
+        0
+      ],
+      [
+        "reverse_edge",
+        "203b9",
+        0,
+        -1
+      ],
+      [
+        "reverse_edge",
+        "203b9",
+        0,
+        1
+      ],
+      [
+        "reverse_edge",
+        "203b9",
+        1,
+        0
+      ],
+      [
+        "reverse_edge",
+        "203bb",
+        -1,
+        0
+      ],
+      [
+        "reverse_edge",
+        "203bb",
+        0,
+        -1
+      ],
+      [
+        "reverse_edge",
+        "203bb",
+        0,
+        1
+      ],
+      [
+        "reverse_edge",
+        "203bb",
+        1,
+        0
+      ]
+    ],
+    "reverse_direction_coverage_not_all259_pixels": true
+  },
+  "commands": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-coherent203b5-203b6-203b9-203bb-SourceF-H5500-actual32-context-20261018/ACTUAL-ONE-COMPILE-ONE-CONSTRUCTOR-ARGV.json",
+    "sha256": "7d1909ee80764b3b210da5d92c02b70057063f3dde17f330b753252b6e60269d",
+    "size": 3332,
+    "mtime_ns": 1792283799364624559,
+    "mode": 33188
+  },
+  "compile_terminal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-coherent203b5-203b6-203b9-203bb-SourceF-H5500-actual32-context-20261018/ACTUAL-ONE-COMPILE-TERMINAL.json",
+    "sha256": "cbbdee086ea210d76dab425bde321bcbc1e77a70645de5984b3c026373fe636d",
+    "size": 2070,
+    "mtime_ns": 1792283805374596074,
+    "mode": 33188
+  },
+  "constructor_terminal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-coherent203b5-203b6-203b9-203bb-SourceF-H5500-actual32-context-20261018/ACTUAL-ONE-CONSTRUCTOR-TERMINAL.json",
+    "sha256": "fce1e005e80c59df95694994d7db62924247cf1380949289e4872a6fbcd93069",
+    "size": 1814,
+    "mtime_ns": 1792283813498094307,
+    "mode": 33188
+  },
+  "immediate_guard_release": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-coherent203b5-203b6-203b9-203bb-SourceF-H5500-actual32-context-20261018/IMMEDIATE-AFTER-EXACT-GUARDS-LIVE-BOUNDARY-RELEASED.json",
+    "sha256": "4991f5b4b0a1d13bbd71e2579f252ee9eab29fb4fe2528e886a15a344a4e4224",
+    "size": 169,
+    "mtime_ns": 1792283813717042614,
+    "mode": 33188
+  },
+  "operations": {
+    "compile": 1,
+    "constructor": 1,
+    "World": 0,
+    "helper": 0,
+    "QA": 0,
+    "imagegen": 0,
+    "retries": 0,
+    "rawcopies": 0,
+    "globalwrites": 0
+  },
+  "interface": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-coherent203b5-203b6-203b9-203bb-SourceF-H5500-actual32-context-20261018/COMPLETE32-GENUINE-384-NATIVE-PANES-FIVE-ORDERED-EVENTS-PAGE-ARRAY-INTERFACE.json",
+    "sha256": "e2ec4aba87358de17fe346960e63684ef205877d88a8ab5d3353fb8bde41337c",
+    "size": 540308,
+    "mtime_ns": 1792283856791467253,
+    "mode": 33188
+  },
+  "file_only_authentication": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-coherent203b5-203b6-203b9-203bb-SourceF-H5500-actual32-context-20261018/FILE-ONLY-COHERENT4-32-ENDPOINTS-384-PLANES-188-COMPONENTS-AUTHENTICATION.json",
+    "sha256": "09855d4a72febaa3f3ce1116a02d5f25e9c5fc346a8cd9c715ea6069a636d104",
+    "size": 72927,
+    "mtime_ns": 1792283856773467821,
+    "mode": 33188
+  },
+  "body_guard_totals": {
+    "Original_control_samples": 8847360,
+    "all3_plane_samples": 26542080,
+    "baseline_Original_selected_owner_samples": 2150400,
+    "retained_baseline_samples": 0,
+    "retained_proposal_samples": 0,
+    "domain_samples": 0,
+    "outside_support_samples": 6438720,
+    "foreign_broad_interior_samples": 5127360,
+    "fallback_samples": 737280,
+    "padding_samples": 737280,
+    "delta_samples": 1300695,
+    "foreign_noncorner_edge_delta_samples": 106907,
+    "foreign_corner_delta_samples": 17731
+  },
+  "corner_scope": {
+    "before_inactive_stencil_scale_witnesses": 404,
+    "after_active_stencil_scale_witnesses": 348,
+    "after_inactive_due_to_Originalpadding": 56,
+    "all_before_inactive": true
+  },
+  "actual_baseline_hd": {
+    "mode": 33152,
+    "mtime_ns": 1792283129303448361,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/hd.json",
+    "sha256": "06489afc172cfdea6e19bad5ba648159a3ac82d0d7a04eddaf94198aa851bab7",
+    "size": 2956210
+  },
+  "actual_baseline_provenance": {
+    "mode": 33152,
+    "mtime_ns": 1792283129226450020,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd/provenance.json",
+    "sha256": "2ca4d5e8f893295fa8ba12aa7c4df7061074dde6d6fbdac825b076be2e1f8e6d",
+    "size": 1896327
+  },
+  "actual_immutable_baseline_root": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived15-publication-20261018/data/hd",
+  "SourceF_epoch": {
+    "mode": 33188,
+    "mtime_ns": 1792245694562144018,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/compiled-epoch.json",
+    "sha256": "38459e0067b17801b3c3c629c22e05dfee98928d451d8c8e0971b63c17288b52",
+    "size": 5917
+  },
+  "actual_library": {
+    "mtime_ns": 1792245641851329918,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+    "sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+    "size": 22744978
+  },
+  "actual_author_plain4_index_bank": {
+    "mode": 33188,
+    "mtime_ns": 1792283071906682485,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/actual-once-SourceF-DERIVED4-intrinsic5/actual-indexed-source-and-scales.json",
+    "sha256": "7b67dba70552441cf567360f187d9b4474aa494aa2040105b6e21d37ddbaa57b",
+    "size": 1835045
+  },
+  "actual_author_QA": {
+    "mode": 33188,
+    "mtime_ns": 1792283071901682592,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/actual-once-SourceF-DERIVED4-intrinsic5/runtime-qa.json",
+    "sha256": "f25b9cdafa7cea25d103f75f8cb3b7afbd3912842eae760549b8dab4d76e454a",
+    "size": 13616
+  },
+  "own16_prejoin_plain4_exact": true,
+  "final_Originaldetails_and_domains_transport_preserved_but_finite_modes_unexercised": true,
+  "author": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-full203b5-203b6-203b9-203bb-coherent-retexture-author-20261018/CLOSED-ACTUAL-COHERENT-DERIVED4-SOURCEF-AUTHOR-QUALIFIED4-INTRINSIC-HANDOFF.json",
+    "sha256": "b5d99422fe35f057caa835fa214ca0789e6149aed207c3a79bc7679d22b8ae61",
+    "size": 54463,
+    "mtime_ns": 1792283248157879906,
+    "mode": 33188
+  },
+  "different_intrinsic": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-203b5-203b6-203b9-203bb-coherent-DERIVED4-independent-intrinsic-peer-20261018-v1/INDEPENDENT-COHERENT-DERIVED4-203B5-203B6-203B9-203BB-WHOLE-INTRINSIC-MATERIAL-REVIEW.json",
+    "sha256": "ea264b8aaffe87e5964e031501756e622cd56867f2422d95b7e64dd0b703b9c9",
+    "size": 18822,
+    "mtime_ns": 1792283543041451569,
+    "mode": 33188
+  },
+  "different_intrinsic_strict": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron5-203b5-203b6-203b9-203bb-coherent-DERIVED4-independent-intrinsic-peer-20261018-v1-strict-complete-coherent-DERIVED4-independent-intrinsic-material-closure.json",
+    "sha256": "8a9577ddd0e653de2e74d72472dc95de57d5b55dcb366a959c1e6fba163e945a",
+    "size": 4612,
+    "mtime_ns": 1792283543043451526,
+    "mode": 33188
+  },
+  "author_custody": "Full direct standingACK all65own/58named exact, no pending writer/call/lease; new2038f/20390 disjoint.",
+  "decisions": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-coherent203b5-203b6-203b9-203bb-SourceF-H5500-actual32-context-20261018/PRODUCER-PER128-SCALE-AND5-ORDERED-EVENT-PHYSICAL-DECISIONS.json",
+    "sha256": "21a32ae89a587cee37feed8ab0264fe5647e9b768a907dd24abe97e458dd294a",
+    "size": 30989,
+    "mtime_ns": 1792284058429364201,
+    "mode": 33188
+  },
+  "whole_physical_journal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-coherent203b5-203b6-203b9-203bb-SourceF-H5500-actual32-context-20261018/PHYSICAL-WHOLE-PAGE-JOURNAL.json",
+    "sha256": "73076c56635f1ecdbe0d0bd1dd503f821ae3620a1f11f6ab1bcb25f0c99543d6",
+    "size": 5762,
+    "mtime_ns": 1792284058404962272,
+    "mode": 33188
+  },
+  "qualifications": [
+    "New gray/red-brown/charcoal regions retain finer, more uniform pebble grain and stronger or quieter local exposure than coarse Original; native1 is softer and small dark joints/cues stay tiny.",
+    "Existing richer rubble/green-shadow/blue pool/building surfaces create visible density/value islands; this finite review does not reapprove their material.",
+    "Representative structural-role coverage only:85placements/80centered full-ID signatures inventoried;32 endpoints are not all placements/all259reverse vectors/allneighbor-state combinations.",
+    "Five separate static one-cell Source neighbor changes, with shared intact endpoint16 reused four times; no simultaneousdamage/World/timing/survival claim."
+  ],
+  "named_guards": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-coherent203b5-203b6-203b9-203bb-SourceF-H5500-actual32-context-20261018/CLOSING-NAMED-SOURCE-NATIVE-RAW-LIBRARY-AND-H5500-INPUT-GUARDS.json",
+    "sha256": "f96d4581a0512ab632f7fde755639d9d7ca732589b57499f184af1b56ddbc517",
+    "size": 62908,
+    "mtime_ns": 1792284058886192792,
+    "mode": 33188
+  },
+  "all_old_proofs_and_separator_HOLDs_unchanged": true,
+  "no_canonical_admission_or_all_family_context_claim": true,
+  "no_pending_owned_writer_call_lease": true,
+  "free_bytes": 5755068416
+}

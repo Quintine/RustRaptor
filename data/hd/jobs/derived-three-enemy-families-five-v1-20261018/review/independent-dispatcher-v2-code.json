@@ -1,0 +1,48 @@
+{
+  "status": "PASS_DIFFERENT_BOSS5_DISPATCHER_V2_RECEIPT_ONLY_CODE_DELTA_REVIEW",
+  "reviewer": "/root/iron_coast_2",
+  "utc": "2026-10-18T01:07:45.202140+00:00",
+  "handoff": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/FROZEN-V2-RECEIPT-CORRECTION-CODE-HANDOFF.json",
+    "sha256": "3051feee2f7404b003c3b2db2c1fdf8871bb469bc97b994cbed59fbe34cf9a10",
+    "bytes": 2237
+  },
+  "dispatcher": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/private-tools/v2/hd_boss_cleanup_reproduce.py",
+    "sha256": "68e62afeeffd60fd553509be388b0e8ca29b25afe7ad7e7726f61093a2abf2c0",
+    "bytes": 8650
+  },
+  "tests": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/private-tools/v2/test_hd_boss_cleanup_reproduce.py",
+    "sha256": "d60b57924bbbc3d25295c49d149ef8b9539e5f96c06bac424123736610de9315",
+    "bytes": 7831
+  },
+  "prior_finding": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron2-Boss5-dispatcher-independent-code-review-20261018-v1/BOSS5-DISPATCHER-INDEPENDENT-CODE-RECEIPT-GUARD-FINDING.json",
+    "sha256": "76fcd88d51b94ea9fffc794d3b745a90cfeb4a406190536aad24a33033b71052",
+    "bytes": 4013
+  },
+  "synthetic_tests_passed": 11,
+  "log": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron2-Boss5-dispatcher-V2-receipt-delta-independent-code-review-20261018-v1/actual-focused-synthetic11.log",
+    "sha256": "1479942aeb24b4c1d4b8f4f7b8edb2e32bde208e04c7620994e63169134edb05",
+    "bytes": 1660
+  },
+  "concrete_open_findings": [],
+  "resolved": [
+    "Initial batch SHA captured before planning and unchanged after planning; aggregate records that initial SHA.",
+    "Batch, subrecipes, Source/parent/palette and cleanup/decoder hashes rechecked before/after actual subruns and before final aggregate success.",
+    "Every returned execution object must exactly equal all seven expected fields, including known cleanup method, status, recipe/tool/source/raw and output hashes.",
+    "Synthetic contradictions across all seven fields and mid-run batch/subrecipe changes reject without a successful batch receipt."
+  ],
+  "unchanged_scope": [
+    "No new pixel math, filtering, geometry or policy; exact same hash-bound53d07 cleanup and66184 decoder callsite.",
+    "Existing fresh sink and partial-failure artifacts remain honest; no new rollback/atomic-batch promise.",
+    "Six V2 handoff files remain exact; old459 code/finding/history untouched.",
+    "Only mocked synthetic cleanup subruns were run by reviewer; actual replay/PNG equality/SourceF QA remain coordinator/Root-owned evidence, not repeated or independently reapproved."
+  ],
+  "actual_pixel_cleanup_calls": 0,
+  "actual_QA_or_engine_calls": 0,
+  "shared_writes": false,
+  "pending_own_writer_call_or_lease": false
+}

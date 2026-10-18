@@ -1,0 +1,35 @@
+{
+  "acquire": {
+    "action": "acquire",
+    "owner": "/root/campaign_integration",
+    "capacity": 4,
+    "acquired": true,
+    "lease_id": "7767a234-0b48-49d2-a887-7f14df19b44a",
+    "expires_at": "2026-10-13T22:00:32+00:00",
+    "renewal_command": "renew --owner /root/campaign_integration --lease 7767a234-0b48-49d2-a887-7f14df19b44a",
+    "active_reservations": 1,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "start": {
+    "action": "start",
+    "owner": "/root/campaign_integration",
+    "capacity": 4,
+    "changed": true,
+    "started_at": "2026-10-13T21:30:32+00:00",
+    "active_reservations": 1,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "report": {
+    "action": "report",
+    "owner": "/root/campaign_integration",
+    "capacity": 4,
+    "changed": true,
+    "active_reservations": 0,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "tool_success": true,
+  "error": null,
+  "request_sha256": "87c1f565b8970aa61ab2ad1242faaceb04638a7770235d66b54d91dd1c1f1867",
+  "builtin_calls": 1,
+  "pending_calls": 0
+}

@@ -1,0 +1,55 @@
+{
+  "cleanup_tool": {
+    "path": "tools/hd_boss_cleanup.py",
+    "sha256": "53d07edbbb945baa2c5a3df01f03e2a11787c225b2d714541d5eca12a0fcd85b"
+  },
+  "decoder": {
+    "path": "tools/hd_frame_policy.py",
+    "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+  },
+  "format_version": 1,
+  "frames": [
+    {
+      "asset": "200bf",
+      "expected_output_sha256": "178bb6d93ab1cb3f29dfe60bcebb5d63ead2dae24f0427f1ac8886970d188cac",
+      "recipe": {
+        "path": "recipes/200bf.json",
+        "sha256": "6fa904cbfd3514038d931c665add83b30a183e5947a2c2f3abc9f2213a911495"
+      }
+    },
+    {
+      "asset": "10315",
+      "expected_output_sha256": "8ef04dfbd53d54242081e9fc1e59b1f58add35b3d8a2b1855d9e1c429009de03",
+      "recipe": {
+        "path": "recipes/10315.json",
+        "sha256": "d04b9a7e78d48100f4d401e234fcf4fc9078701061ba2f3f5f54162187823270"
+      }
+    },
+    {
+      "asset": "10316",
+      "expected_output_sha256": "a83a15bb55c9e5146ce0f40b3bc6fcabb346f57492e6c0c9233c23f04aa7297d",
+      "recipe": {
+        "path": "recipes/10316.json",
+        "sha256": "78ee667ca481f24cf41ef3d253a3fb5730bdfbf54a2eebd5af070d147c79ed94"
+      }
+    },
+    {
+      "asset": "1033e",
+      "expected_output_sha256": "6d9f9184ac55f77cbf6bba5b1a8f73922efb4e00939ba1f3fdecd32fd61930ae",
+      "recipe": {
+        "path": "recipes/1033e.json",
+        "sha256": "b81bd15029b7d6c60d28966e2c347b3863f38bdd9abbc373a6641593fe01e00c"
+      }
+    },
+    {
+      "asset": "1033f",
+      "expected_output_sha256": "e853d94e9d805577e2435e4eabfde43a040a5b88ce0ba29a5c91dce6499b5b14",
+      "recipe": {
+        "path": "recipes/1033f.json",
+        "sha256": "96f3c43c7d71b29a3afee341c2b8aadb9e2a58d7924bd779d3afe1a6b3d0a5ba"
+      }
+    }
+  ],
+  "kind": "boss_cleanup_reproduce_batch",
+  "method": "derived-generated-boss-source-geometry-batch-v1"
+}

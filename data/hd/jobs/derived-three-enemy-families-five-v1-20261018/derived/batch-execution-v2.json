@@ -1,0 +1,172 @@
+{
+  "actual_cleanup_subruns": 5,
+  "actual_dispatcher_calls": 1,
+  "cleanup_tool": {
+    "path": "tools/hd_boss_cleanup.py",
+    "sha256": "53d07edbbb945baa2c5a3df01f03e2a11787c225b2d714541d5eca12a0fcd85b"
+  },
+  "decoder": {
+    "path": "tools/hd_frame_policy.py",
+    "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+  },
+  "execution": {
+    "method": "derived-generated-boss-source-geometry-batch-v1",
+    "output_sha256": {
+      "10315": "8ef04dfbd53d54242081e9fc1e59b1f58add35b3d8a2b1855d9e1c429009de03",
+      "10316": "a83a15bb55c9e5146ce0f40b3bc6fcabb346f57492e6c0c9233c23f04aa7297d",
+      "1033e": "6d9f9184ac55f77cbf6bba5b1a8f73922efb4e00939ba1f3fdecd32fd61930ae",
+      "1033f": "e853d94e9d805577e2435e4eabfde43a040a5b88ce0ba29a5c91dce6499b5b14",
+      "200bf": "178bb6d93ab1cb3f29dfe60bcebb5d63ead2dae24f0427f1ac8886970d188cac"
+    },
+    "parent_raw_sha256": [
+      "720e308977a5e8110dbb5d7ccc40e4a96557cc6a530f6151b51d85182703d114",
+      "810b0579fdd1a64bdba08374a17febf470214850fc0ee8e3162d7536f2e5ce6c",
+      "f049c900fc9e9f3d44186895ad0af01b45c5ed5949fecf1daf2f75ecd7732495"
+    ],
+    "recipe_sha256": "3e8acd055ff7aecd21752341e360263a9c310eaa159aa16759485ca6ef950beb",
+    "source_sha256": {
+      "10315": "7736fdbca555a9448b42be64523d2a75fb1bae2946ad237e6d7df347e98315a5",
+      "10316": "db19f9e4082892eae12832c729be3f4435af0896ff43fcf121866da06aab2182",
+      "1033e": "00a6f1bebfb75af8dafbef2b974417f95580827ebcf5181f5ba6712845eaf865",
+      "1033f": "fa3f0a43946edd6de34f23c6288555b22c8a98cb841fe5c2353147b37fe5483e",
+      "200bf": "59d99f4da7b270bb16a0a0c4f45ffa7cd21672e8bb57e7a6c92dd3974ea8e54b"
+    },
+    "status": "success",
+    "tool_sha256": "68e62afeeffd60fd553509be388b0e8ca29b25afe7ad7e7726f61093a2abf2c0"
+  },
+  "format_version": 1,
+  "kind": "boss_cleanup_actual_batch_execution",
+  "scope": "Bookkeeping replay only; existing cleanup pixel algorithm unchanged; no approval/registration.",
+  "subruns": [
+    {
+      "asset": "200bf",
+      "execution": {
+        "method": "derived-generated-boss-source-geometry-rgb-preserved-v1",
+        "output_sha256": {
+          "200bf": "178bb6d93ab1cb3f29dfe60bcebb5d63ead2dae24f0427f1ac8886970d188cac"
+        },
+        "parent_raw_sha256": [
+          "720e308977a5e8110dbb5d7ccc40e4a96557cc6a530f6151b51d85182703d114"
+        ],
+        "recipe_sha256": "6fa904cbfd3514038d931c665add83b30a183e5947a2c2f3abc9f2213a911495",
+        "source_sha256": {
+          "200bf": "59d99f4da7b270bb16a0a0c4f45ffa7cd21672e8bb57e7a6c92dd3974ea8e54b"
+        },
+        "status": "success",
+        "tool_sha256": "53d07edbbb945baa2c5a3df01f03e2a11787c225b2d714541d5eca12a0fcd85b"
+      },
+      "provenance": {
+        "path": "200bf/derived-provenance.json",
+        "sha256": "eb3051e89c0460046310b141101911bdb683cceae8cf4cc594ee917ae9361206"
+      },
+      "recipe": {
+        "path": "recipes/200bf.json",
+        "sha256": "6fa904cbfd3514038d931c665add83b30a183e5947a2c2f3abc9f2213a911495"
+      }
+    },
+    {
+      "asset": "10315",
+      "execution": {
+        "method": "derived-generated-boss-source-geometry-rgb-preserved-v1",
+        "output_sha256": {
+          "10315": "8ef04dfbd53d54242081e9fc1e59b1f58add35b3d8a2b1855d9e1c429009de03"
+        },
+        "parent_raw_sha256": [
+          "810b0579fdd1a64bdba08374a17febf470214850fc0ee8e3162d7536f2e5ce6c"
+        ],
+        "recipe_sha256": "d04b9a7e78d48100f4d401e234fcf4fc9078701061ba2f3f5f54162187823270",
+        "source_sha256": {
+          "10315": "7736fdbca555a9448b42be64523d2a75fb1bae2946ad237e6d7df347e98315a5"
+        },
+        "status": "success",
+        "tool_sha256": "53d07edbbb945baa2c5a3df01f03e2a11787c225b2d714541d5eca12a0fcd85b"
+      },
+      "provenance": {
+        "path": "10315/derived-provenance.json",
+        "sha256": "ee16b4726daf395857d31998df14ab31c196e23c9efb48494d8ac4982ab412f3"
+      },
+      "recipe": {
+        "path": "recipes/10315.json",
+        "sha256": "d04b9a7e78d48100f4d401e234fcf4fc9078701061ba2f3f5f54162187823270"
+      }
+    },
+    {
+      "asset": "10316",
+      "execution": {
+        "method": "derived-generated-boss-source-geometry-rgb-preserved-v1",
+        "output_sha256": {
+          "10316": "a83a15bb55c9e5146ce0f40b3bc6fcabb346f57492e6c0c9233c23f04aa7297d"
+        },
+        "parent_raw_sha256": [
+          "810b0579fdd1a64bdba08374a17febf470214850fc0ee8e3162d7536f2e5ce6c"
+        ],
+        "recipe_sha256": "78ee667ca481f24cf41ef3d253a3fb5730bdfbf54a2eebd5af070d147c79ed94",
+        "source_sha256": {
+          "10316": "db19f9e4082892eae12832c729be3f4435af0896ff43fcf121866da06aab2182"
+        },
+        "status": "success",
+        "tool_sha256": "53d07edbbb945baa2c5a3df01f03e2a11787c225b2d714541d5eca12a0fcd85b"
+      },
+      "provenance": {
+        "path": "10316/derived-provenance.json",
+        "sha256": "2fb7ac3b20a7577cdaaadeba8f8b08c329a7f6af3cb84cb95b07faa6374ef5cd"
+      },
+      "recipe": {
+        "path": "recipes/10316.json",
+        "sha256": "78ee667ca481f24cf41ef3d253a3fb5730bdfbf54a2eebd5af070d147c79ed94"
+      }
+    },
+    {
+      "asset": "1033e",
+      "execution": {
+        "method": "derived-generated-boss-source-geometry-rgb-preserved-v1",
+        "output_sha256": {
+          "1033e": "6d9f9184ac55f77cbf6bba5b1a8f73922efb4e00939ba1f3fdecd32fd61930ae"
+        },
+        "parent_raw_sha256": [
+          "f049c900fc9e9f3d44186895ad0af01b45c5ed5949fecf1daf2f75ecd7732495"
+        ],
+        "recipe_sha256": "b81bd15029b7d6c60d28966e2c347b3863f38bdd9abbc373a6641593fe01e00c",
+        "source_sha256": {
+          "1033e": "00a6f1bebfb75af8dafbef2b974417f95580827ebcf5181f5ba6712845eaf865"
+        },
+        "status": "success",
+        "tool_sha256": "53d07edbbb945baa2c5a3df01f03e2a11787c225b2d714541d5eca12a0fcd85b"
+      },
+      "provenance": {
+        "path": "1033e/derived-provenance.json",
+        "sha256": "b4152acf8f0d0ea0b9e58c582ac3fa82e434a6e107287640b0666540659c6f0b"
+      },
+      "recipe": {
+        "path": "recipes/1033e.json",
+        "sha256": "b81bd15029b7d6c60d28966e2c347b3863f38bdd9abbc373a6641593fe01e00c"
+      }
+    },
+    {
+      "asset": "1033f",
+      "execution": {
+        "method": "derived-generated-boss-source-geometry-rgb-preserved-v1",
+        "output_sha256": {
+          "1033f": "e853d94e9d805577e2435e4eabfde43a040a5b88ce0ba29a5c91dce6499b5b14"
+        },
+        "parent_raw_sha256": [
+          "f049c900fc9e9f3d44186895ad0af01b45c5ed5949fecf1daf2f75ecd7732495"
+        ],
+        "recipe_sha256": "96f3c43c7d71b29a3afee341c2b8aadb9e2a58d7924bd779d3afe1a6b3d0a5ba",
+        "source_sha256": {
+          "1033f": "fa3f0a43946edd6de34f23c6288555b22c8a98cb841fe5c2353147b37fe5483e"
+        },
+        "status": "success",
+        "tool_sha256": "53d07edbbb945baa2c5a3df01f03e2a11787c225b2d714541d5eca12a0fcd85b"
+      },
+      "provenance": {
+        "path": "1033f/derived-provenance.json",
+        "sha256": "aa3dc9b75053d30ba93fd8eeea1539ee6b5287fc0413f17d98e468ce650eb18c"
+      },
+      "recipe": {
+        "path": "recipes/1033f.json",
+        "sha256": "96f3c43c7d71b29a3afee341c2b8aadb9e2a58d7924bd779d3afe1a6b3d0a5ba"
+      }
+    }
+  ]
+}

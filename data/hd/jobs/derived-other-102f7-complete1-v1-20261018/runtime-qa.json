@@ -1,0 +1,234 @@
+{
+  "actual_compiled_epoch": {
+    "mtime_ns": 1792245694562144018,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/compiled-epoch.json",
+    "sha256": "38459e0067b17801b3c3c629c22e05dfee98928d451d8c8e0971b63c17288b52",
+    "size": 5917
+  },
+  "actual_measured_validated_frames": 2,
+  "actual_probe_receipt": {
+    "mtime_ns": 1792285769848295576,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/actual-final-route-QA2-terminal.json",
+    "sha256": "dae9e19978f41ed96d8568fd468fd74808761fd13f36b8e9df2bbf51b1182ea9",
+    "size": 898
+  },
+  "any_game_source_newer_than_library": false,
+  "artwork_sha256": {
+    "jobs/derived-other-102f7-complete1-v1-20261018/derived/102f7-derived.png": "6854b205f771eb369b157f7106d7b6cec590a7187485583def26f006b55e4f5d"
+  },
+  "candidate_sha256": "001c5fa251b522c90090e05e014817d096ae5a113443367934632e794ac41c87",
+  "diagnostics": [],
+  "exact_previous_accepted_bank_bridge": {
+    "actual": {
+      "mtime_ns": 1792285769845421521,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/actual-final-route-SourceF-QA2-once/actual-indexed-source-and-scales.json",
+      "sha256": "69ea285975c77f0c204893f980915e29c7682113df37630348ee95e13103d743",
+      "size": 2139460
+    },
+    "all_measured_frame_metrics_equal": true,
+    "all_source_and_native_indices_equal": true,
+    "previous": {
+      "mtime_ns": 1792283635637421212,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-Other2-102f7-10126-derived-geometry-and-functional-Original-20261018-v1/actual-once-SourceF-derived2-intrinsic5/actual-indexed-source-and-scales.json",
+      "sha256": "69ea285975c77f0c204893f980915e29c7682113df37630348ee95e13103d743",
+      "size": 2139460
+    }
+  },
+  "frame_bindings_sha256": "2c8dd3d98a7b4696ce1ef106311216653edfbebc2e03e2de637b40f25bd579d0",
+  "frames": [
+    {
+      "asset": "102f7",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              0,
+              2,
+              23,
+              24
+            ],
+            "centroid": [
+              10.993775933609959,
+              12.066390041493776
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 482
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              4,
+              46,
+              48
+            ],
+            "centroid": [
+              22.434285714285714,
+              24.6587012987013
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 1925
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              6,
+              69,
+              72
+            ],
+            "centroid": [
+              33.87479787479788,
+              37.25132825132825
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 4329
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              8,
+              92,
+              96
+            ],
+            "centroid": [
+              45.34195140964012,
+              49.830713264908404
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 7697
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        24,
+        24
+      ],
+      "source_mask": {
+        "bounds": [
+          0,
+          2,
+          23,
+          24
+        ],
+        "centroid": [
+          10.993775933609959,
+          12.066390041493776
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 482
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "d3077af50cfcf0af2244b2c9c6a89d5f1650a6d4712311c612d59738471381d5"
+    }
+  ],
+  "library": "target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+  "library_modified_ns": 1792245641851329918,
+  "library_sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+  "limitation": "Gallery validation does not prove live scene reachability, terrain seam correctness or artistic fidelity. Opaque sprites have trivial alpha-mask overlap; compare visible source geometry manually.",
+  "measured_runtime_qa": {
+    "mtime_ns": 1792285769839421653,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/actual-final-route-SourceF-QA2-once/runtime-qa.json",
+    "sha256": "b0f14be6b1fd762905e818560a0e4a15a71fe7949d85ad3cd7c109b13bbea388",
+    "size": 7269
+  },
+  "measurement_scope": "One actual two-complete1 probe; this wrapper selects its exact single measured row without another invocation.",
+  "method": "actual Rust HdAssets::load and sprite at scales 1..4; Catalog palette; no artwork edits",
+  "scope": "Catalogue-only ICON22 intrinsic, or Source-authentic finite legacy ORDER reconstruction for SMLAP; no current Rust Host or executed old GUI.",
+  "source_newer_than_library": false,
+  "validated_frames": 1
+}

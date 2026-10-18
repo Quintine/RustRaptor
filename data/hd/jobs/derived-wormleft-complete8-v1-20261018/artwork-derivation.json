@@ -1,0 +1,59 @@
+{
+  "execution_receipt": {
+    "path": "jobs/derived-wormleft-complete8-v1-20261018/derived/derived-provenance.json",
+    "sha256": "e42bd26284d93f64a532d8407db95fea0ed0183ca46d578ef18c78194304aae3"
+  },
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "derived-generated-worm-rgb-broad-material-source-alpha-shared-backing-v1",
+  "outputs": {
+    "jobs/derived-wormleft-complete8-v1-20261018/derived/4002e-derived.png": "92a6c4ab01a2bd63cb9089786cf1326ff88ab34cfc74eaf1463504ac47782143",
+    "jobs/derived-wormleft-complete8-v1-20261018/derived/4002f-derived.png": "d4ac1bf8eff1d8b8fec9b3c1b8cde8a678e843644e8c9534cb9d4151a733fa12",
+    "jobs/derived-wormleft-complete8-v1-20261018/derived/40030-derived.png": "5445a8a1cd335c4618bad4825cf73b07f17855c0a880f707df73c1cfc10cf76f",
+    "jobs/derived-wormleft-complete8-v1-20261018/derived/40031-derived.png": "40c8f6e2180292bc639e9a27503ae8540f80475a41d42c1d610e2e731c2ffe3c",
+    "jobs/derived-wormleft-complete8-v1-20261018/derived/40032-derived.png": "02dd9c4d2d30ad2da16a8cbc0b518b02a53e129b06482922d84d8edede747fe1",
+    "jobs/derived-wormleft-complete8-v1-20261018/derived/40033-derived.png": "ae53fde3b5f5b3753f161d17f462a1e3e19a0b17a9649151a4847c05b26e8e91",
+    "jobs/derived-wormleft-complete8-v1-20261018/derived/40034-derived.png": "946ba6bc269205f97bc550bf7ca4d92751b80d7c05aefa2e615b74883565bddb",
+    "jobs/derived-wormleft-complete8-v1-20261018/derived/40035-derived.png": "89fbce6508e6f98e0d959e67a602608486ba130b0c8e9932d93a12d548ec8382"
+  },
+  "parents": [
+    {
+      "imagegen_receipt": {
+        "path": "jobs/derived-wormleft-complete8-v1-20261018/parents/generation-safe-actual-receipt.json",
+        "sha256": "a46f5fc25839aaba0369f8d393b7ef01bf16bba7ada6fe6f0a8721ef6b1bad53"
+      },
+      "prompt": {
+        "path": "jobs/derived-wormleft-complete8-v1-20261018/parents/prompt.txt",
+        "sha256": "2605e3473918dfba717f7d32509f4a107fe8712f759875f378c2fd14330822b9"
+      },
+      "raw_png": {
+        "path": "jobs/derived-wormleft-complete8-v1-20261018/parents/generator-return.png",
+        "sha256": "44b6adf043f35abcd59fa749c4c1b7f24b72fb81a49a0ea411cac203f049c916"
+      }
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-wormleft-complete8-v1-20261018/cleanup-recipe.json",
+    "sha256": "e37067fb4db3673d3496bc5e73eaf3195bcc4528c58102b2a42155129a6b87d2"
+  },
+  "sources": {
+    "4002e": "aa3d0d39326ad3cd66d22df347af0effc1ad246df744c8f93d671b16f8df46ae",
+    "4002f": "685291309deb898878d43084ddf399424ba0a0b0ac217a31781200c0e0d25864",
+    "40030": "32bd0adf25260379d03deff9bf580a62308be50a743e37b1fafacf70e017b2ce",
+    "40031": "fe7841632be28dbe0cf9bfaacb458a4d553da45b11e9663cc5bbbac7dd5eea77",
+    "40032": "c5fee2d528a6188a600612c6137fb7c1c214b4893487e322ae6f61f8237729c2",
+    "40033": "58f33b632d39ae3567bb4ddc1d736d19dcf039158e7b1483cbde930a990beca6",
+    "40034": "35987efc158d53c475f540e5855b0e69b27bb1b54df5b3c781a2d925ecf5d68c",
+    "40035": "48743228dc8f301945b80af20f0b05fe156eb70e36cd06005e9383a755738d3b"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_worm_cleanup.py",
+      "sha256": "94df9f8cbfb1c13750918f751917de3379c787c8cd28a04238328d1f3eef333f"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    }
+  ]
+}

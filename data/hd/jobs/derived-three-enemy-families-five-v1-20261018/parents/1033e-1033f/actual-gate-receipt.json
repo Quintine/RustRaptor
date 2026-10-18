@@ -1,0 +1,31 @@
+{
+  "job": "enemies-1033e-1033f-master-isolated-stripe-cleanup-campaign-20261014-v1",
+  "owner": "/root/campaign_integration",
+  "request_sha256": "5f690e9402ecd852af0422e6e808032c3f4f2bb2315479a4e6d496251b9881ef",
+  "preflight_sha256": "6dd604fda616f330d35c020607716cdea4bbd52a076fbe4c30a744f8995f2218",
+  "current_batch_call": 3,
+  "max_batch": 3,
+  "acquire": {
+    "chunk_id": "b2ea1f",
+    "wall_time_seconds": 0.000009557,
+    "exit_code": 0,
+    "original_token_count": 96,
+    "output": "{\n  \"action\": \"acquire\",\n  \"owner\": \"/root/campaign_integration\",\n  \"capacity\": 4,\n  \"acquired\": true,\n  \"lease_id\": \"99840676-e5f9-430b-a70a-39bb54f47c3a\",\n  \"expires_at\": \"2026-10-14T00:12:46+00:00\",\n  \"renewal_command\": \"renew --owner /root/campaign_integration --lease 99840676-e5f9-430b-a70a-39bb54f47c3a\",\n  \"active_reservations\": 1,\n  \"prepare_other_jobs_when_waiting\": true\n}\n"
+  },
+  "lease_id": "99840676-e5f9-430b-a70a-39bb54f47c3a",
+  "start": {
+    "chunk_id": "a69434",
+    "wall_time_seconds": 0.000008921,
+    "exit_code": 0,
+    "original_token_count": 55,
+    "output": "{\n  \"action\": \"start\",\n  \"owner\": \"/root/campaign_integration\",\n  \"capacity\": 4,\n  \"changed\": true,\n  \"started_at\": \"2026-10-13T23:42:46+00:00\",\n  \"active_reservations\": 1,\n  \"prepare_other_jobs_when_waiting\": true\n}\n"
+  },
+  "report": {
+    "chunk_id": "43df72",
+    "wall_time_seconds": 0.000009802,
+    "exit_code": 0,
+    "original_token_count": 44,
+    "output": "{\n  \"action\": \"report\",\n  \"owner\": \"/root/campaign_integration\",\n  \"capacity\": 4,\n  \"changed\": true,\n  \"active_reservations\": 0,\n  \"prepare_other_jobs_when_waiting\": true\n}\n"
+  },
+  "outcome": "success"
+}

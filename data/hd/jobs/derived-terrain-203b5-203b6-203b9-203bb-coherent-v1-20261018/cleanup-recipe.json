@@ -1,0 +1,90 @@
+{
+  "frames": [
+    {
+      "Source": {
+        "path": "../../../misc/unnamed.1456",
+        "sha256": "39fcb3485b677b96c89a14b8dd2ea049bb960f8e1e2a61ec94dfd1dd2e2ef528"
+      },
+      "asset": "203b5",
+      "crop": [
+        0,
+        627,
+        313,
+        313
+      ],
+      "parent_raw": {
+        "path": "parents/generator-return.png",
+        "sha256": "939d74a58ad236b5f40066308db99c2501599ff49ae41f41bd78276a36b02ceb"
+      }
+    },
+    {
+      "Source": {
+        "path": "../../../misc/unnamed.1457",
+        "sha256": "b43b11ed55b2fbc8023b2d99c2e51312f486d75c1402919769fd70e8808499e8"
+      },
+      "asset": "203b6",
+      "crop": [
+        314,
+        627,
+        313,
+        313
+      ],
+      "parent_raw": {
+        "path": "parents/generator-return.png",
+        "sha256": "939d74a58ad236b5f40066308db99c2501599ff49ae41f41bd78276a36b02ceb"
+      }
+    },
+    {
+      "Source": {
+        "path": "../../../misc/unnamed.1460",
+        "sha256": "bccd562072fb604ca85f2622edc0b527420b9c183fabaa908f4a3135a3c4c295"
+      },
+      "asset": "203b9",
+      "crop": [
+        0,
+        941,
+        313,
+        313
+      ],
+      "parent_raw": {
+        "path": "parents/generator-return.png",
+        "sha256": "939d74a58ad236b5f40066308db99c2501599ff49ae41f41bd78276a36b02ceb"
+      }
+    },
+    {
+      "Source": {
+        "path": "../../../misc/unnamed.1462",
+        "sha256": "e22e2eab94f2e3ce901fe5157c95d56fcad5e8309bff1e19dd94036f5c22c413"
+      },
+      "asset": "203bb",
+      "crop": [
+        627,
+        941,
+        313,
+        313
+      ],
+      "parent_raw": {
+        "path": "parents/generator-return.png",
+        "sha256": "939d74a58ad236b5f40066308db99c2501599ff49ae41f41bd78276a36b02ceb"
+      }
+    }
+  ],
+  "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+  "palette": {
+    "path": "../../../misc/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "parameters": {
+    "output_side": 512,
+    "residual_percentile": 80.0,
+    "residual_sigma_coarse": 10.0,
+    "residual_sigma_fine": 0.65,
+    "source_sigma": 3.0,
+    "texture_log_gain": {
+      "gray": 0.38,
+      "olive": 0.55,
+      "rim": 0.06,
+      "soil": 0.34
+    }
+  }
+}

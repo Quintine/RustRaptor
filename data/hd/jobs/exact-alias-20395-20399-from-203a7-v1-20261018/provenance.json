@@ -1,0 +1,44 @@
+{
+  "Root": {
+    "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/review/root-integration.json",
+    "sha256": "bccf12f626e9769772d1a58d34abd5c27c387db9d4d0957837a974bb12c05d96"
+  },
+  "actual_measured3": {
+    "actual_QA": {
+      "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/proofs/actual-measured3-bank/runtime-qa.json",
+      "sha256": "2a6fce2995899b14410736de1f5f51585abde2229117d9f243cbec08f16dcb64"
+    },
+    "actual_helper_calls": 1,
+    "actual_indexed_bank": {
+      "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/proofs/actual-measured3-bank/actual-indexed-source-and-scales.json",
+      "sha256": "a84158406fd61ed0abb86977418c3d1867b06026f1c8837f877fb36697a8ad51"
+    },
+    "actual_terminal": {
+      "path": "jobs/exact-alias-20395-20399-from-203a7-v1-20261018/proofs/actual-measured3-terminal.json",
+      "sha256": "2e5eba7235f86d8b834fa0c0192fd043951f84f43d9d3e8cd806c56ef8ae36a8"
+    },
+    "assets": [
+      "203a7",
+      "20395",
+      "20399"
+    ],
+    "original_measurement_attribution": "SourceF alias3 study at H5485. H5500 is the later integration baseline/context, not a rerun epoch.",
+    "retries": 0,
+    "validated_frames": 3
+  },
+  "carried11_are_unchanged_previous_registrations": true,
+  "catalogue20399_composed_context": false,
+  "donor_asset": "203a7",
+  "fallback3_remain_Original": [
+    "2038f",
+    "20390",
+    "2039b"
+  ],
+  "full_untouched_raw_sha256": "1c8f99fe2ec22d3b7756a5e4b969cf03abec9621153d6a1157f1bc8a85b433a0",
+  "method": "Exact Original-payload/palette/canvas/native/output alias reuse of accepted203a7, not new image generation or derived pixels.",
+  "selected_assets": [
+    "20395",
+    "20399"
+  ],
+  "source_payload_sha256": "5162f4c0106f216dafba3d63b54a571b0f2a5fffd37f0944a94320c49c9082aa"
+}

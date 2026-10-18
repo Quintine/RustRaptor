@@ -1,0 +1,753 @@
+{
+  "World_calls": 0,
+  "actual_QA3": {
+    "device": 55,
+    "inode": 5540294,
+    "mode": 292,
+    "mtime_ns": 1792282090207294401,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/runtime-qa.json",
+    "sha256": "2a6fce2995899b14410736de1f5f51585abde2229117d9f243cbec08f16dcb64",
+    "size": 10308
+  },
+  "actual_compile_calls": 0,
+  "actual_diagnostics": [],
+  "actual_helper_calls": 1,
+  "actual_indexed3": {
+    "device": 55,
+    "inode": 5540295,
+    "mode": 292,
+    "mtime_ns": 1792282090210294350,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/actual-indexed-source-and-scales.json",
+    "sha256": "a84158406fd61ed0abb86977418c3d1867b06026f1c8837f877fb36697a8ad51",
+    "size": 1329389
+  },
+  "actual_planes": [
+    {
+      "asset": "203a7",
+      "height": 32,
+      "indices_sha256": "82f3ff595926d7786a7b0a992d748b8325a71f5787f71c9e33e9a823b593c39a",
+      "pixels": 1024,
+      "ppm": {
+        "device": 55,
+        "inode": 5540279,
+        "mode": 420,
+        "mtime_ns": 1792282090195294608,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/203a7-original.ppm",
+        "sha256": "dc4416d3178eba8fb371196a30eb52d4084239caf209330ca3459555fb97e1fa",
+        "size": 3085
+      },
+      "role": "original",
+      "width": 32
+    },
+    {
+      "asset": "203a7",
+      "height": 32,
+      "indices_sha256": "2bc9813fe9f2071b21a0837aa604a35eb373534112f57af3d5179913245d6b0f",
+      "pixels": 1024,
+      "ppm": {
+        "device": 55,
+        "inode": 5540280,
+        "mode": 420,
+        "mtime_ns": 1792282090196294591,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/203a7-hd-1.ppm",
+        "sha256": "9a19fdd53dbe802edcfbdf739782f8489e64f3ff31f99e3d0c4f81238794af26",
+        "size": 3085
+      },
+      "role": "hd-1",
+      "width": 32
+    },
+    {
+      "asset": "203a7",
+      "height": 64,
+      "indices_sha256": "820191febccbca47e17b3b9ea6bcf0158e38fd31529c6d25fe58f014f2ebf988",
+      "pixels": 4096,
+      "ppm": {
+        "device": 55,
+        "inode": 5540281,
+        "mode": 420,
+        "mtime_ns": 1792282090197294573,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/203a7-hd-2.ppm",
+        "sha256": "97ab3d99232de9c556b74aee2c5db8e530a64b3133889129b1192f97c15e682f",
+        "size": 12301
+      },
+      "role": "hd-2",
+      "width": 64
+    },
+    {
+      "asset": "203a7",
+      "height": 96,
+      "indices_sha256": "0f7d59d282e5c86c3939041af2876d293565bb072b78467690571cc01b86e824",
+      "pixels": 9216,
+      "ppm": {
+        "device": 55,
+        "inode": 5540282,
+        "mode": 420,
+        "mtime_ns": 1792282090200294522,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/203a7-hd-3.ppm",
+        "sha256": "573d27839fa6b345b058c5755a9cf85935eb74bedc4091312ac2f94798146ecf",
+        "size": 27661
+      },
+      "role": "hd-3",
+      "width": 96
+    },
+    {
+      "asset": "203a7",
+      "height": 128,
+      "indices_sha256": "19974e31ac419fe1ad5ae3fe334f55b2124bdb746aeeda4d5f02bd7332c7eed8",
+      "pixels": 16384,
+      "ppm": {
+        "device": 55,
+        "inode": 5540283,
+        "mode": 420,
+        "mtime_ns": 1792282090203294470,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/203a7-hd-4.ppm",
+        "sha256": "08efd1609ec5fb7b1cf01c0de4d1b4abcaef31723493eb6df41bbf98378077ec",
+        "size": 49167
+      },
+      "role": "hd-4",
+      "width": 128
+    },
+    {
+      "asset": "20395",
+      "height": 32,
+      "indices_sha256": "82f3ff595926d7786a7b0a992d748b8325a71f5787f71c9e33e9a823b593c39a",
+      "pixels": 1024,
+      "ppm": {
+        "device": 55,
+        "inode": 5540284,
+        "mode": 420,
+        "mtime_ns": 1792282090204294453,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/20395-original.ppm",
+        "sha256": "dc4416d3178eba8fb371196a30eb52d4084239caf209330ca3459555fb97e1fa",
+        "size": 3085
+      },
+      "role": "original",
+      "width": 32
+    },
+    {
+      "asset": "20395",
+      "height": 32,
+      "indices_sha256": "2bc9813fe9f2071b21a0837aa604a35eb373534112f57af3d5179913245d6b0f",
+      "pixels": 1024,
+      "ppm": {
+        "device": 55,
+        "inode": 5540285,
+        "mode": 420,
+        "mtime_ns": 1792282090204294453,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/20395-hd-1.ppm",
+        "sha256": "9a19fdd53dbe802edcfbdf739782f8489e64f3ff31f99e3d0c4f81238794af26",
+        "size": 3085
+      },
+      "role": "hd-1",
+      "width": 32
+    },
+    {
+      "asset": "20395",
+      "height": 64,
+      "indices_sha256": "820191febccbca47e17b3b9ea6bcf0158e38fd31529c6d25fe58f014f2ebf988",
+      "pixels": 4096,
+      "ppm": {
+        "device": 55,
+        "inode": 5540286,
+        "mode": 420,
+        "mtime_ns": 1792282090204294453,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/20395-hd-2.ppm",
+        "sha256": "97ab3d99232de9c556b74aee2c5db8e530a64b3133889129b1192f97c15e682f",
+        "size": 12301
+      },
+      "role": "hd-2",
+      "width": 64
+    },
+    {
+      "asset": "20395",
+      "height": 96,
+      "indices_sha256": "0f7d59d282e5c86c3939041af2876d293565bb072b78467690571cc01b86e824",
+      "pixels": 9216,
+      "ppm": {
+        "device": 55,
+        "inode": 5540287,
+        "mode": 420,
+        "mtime_ns": 1792282090204294453,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/20395-hd-3.ppm",
+        "sha256": "573d27839fa6b345b058c5755a9cf85935eb74bedc4091312ac2f94798146ecf",
+        "size": 27661
+      },
+      "role": "hd-3",
+      "width": 96
+    },
+    {
+      "asset": "20395",
+      "height": 128,
+      "indices_sha256": "19974e31ac419fe1ad5ae3fe334f55b2124bdb746aeeda4d5f02bd7332c7eed8",
+      "pixels": 16384,
+      "ppm": {
+        "device": 55,
+        "inode": 5540288,
+        "mode": 420,
+        "mtime_ns": 1792282090205294436,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/20395-hd-4.ppm",
+        "sha256": "08efd1609ec5fb7b1cf01c0de4d1b4abcaef31723493eb6df41bbf98378077ec",
+        "size": 49167
+      },
+      "role": "hd-4",
+      "width": 128
+    },
+    {
+      "asset": "20399",
+      "height": 32,
+      "indices_sha256": "82f3ff595926d7786a7b0a992d748b8325a71f5787f71c9e33e9a823b593c39a",
+      "pixels": 1024,
+      "ppm": {
+        "device": 55,
+        "inode": 5540289,
+        "mode": 420,
+        "mtime_ns": 1792282090206294419,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/20399-original.ppm",
+        "sha256": "dc4416d3178eba8fb371196a30eb52d4084239caf209330ca3459555fb97e1fa",
+        "size": 3085
+      },
+      "role": "original",
+      "width": 32
+    },
+    {
+      "asset": "20399",
+      "height": 32,
+      "indices_sha256": "2bc9813fe9f2071b21a0837aa604a35eb373534112f57af3d5179913245d6b0f",
+      "pixels": 1024,
+      "ppm": {
+        "device": 55,
+        "inode": 5540290,
+        "mode": 420,
+        "mtime_ns": 1792282090206294419,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/20399-hd-1.ppm",
+        "sha256": "9a19fdd53dbe802edcfbdf739782f8489e64f3ff31f99e3d0c4f81238794af26",
+        "size": 3085
+      },
+      "role": "hd-1",
+      "width": 32
+    },
+    {
+      "asset": "20399",
+      "height": 64,
+      "indices_sha256": "820191febccbca47e17b3b9ea6bcf0158e38fd31529c6d25fe58f014f2ebf988",
+      "pixels": 4096,
+      "ppm": {
+        "device": 55,
+        "inode": 5540291,
+        "mode": 420,
+        "mtime_ns": 1792282090206294419,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/20399-hd-2.ppm",
+        "sha256": "97ab3d99232de9c556b74aee2c5db8e530a64b3133889129b1192f97c15e682f",
+        "size": 12301
+      },
+      "role": "hd-2",
+      "width": 64
+    },
+    {
+      "asset": "20399",
+      "height": 96,
+      "indices_sha256": "0f7d59d282e5c86c3939041af2876d293565bb072b78467690571cc01b86e824",
+      "pixels": 9216,
+      "ppm": {
+        "device": 55,
+        "inode": 5540292,
+        "mode": 420,
+        "mtime_ns": 1792282090206294419,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/20399-hd-3.ppm",
+        "sha256": "573d27839fa6b345b058c5755a9cf85935eb74bedc4091312ac2f94798146ecf",
+        "size": 27661
+      },
+      "role": "hd-3",
+      "width": 96
+    },
+    {
+      "asset": "20399",
+      "height": 128,
+      "indices_sha256": "19974e31ac419fe1ad5ae3fe334f55b2124bdb746aeeda4d5f02bd7332c7eed8",
+      "pixels": 16384,
+      "ppm": {
+        "device": 55,
+        "inode": 5540293,
+        "mode": 420,
+        "mtime_ns": 1792282090206294419,
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-once-SourceF-control3-bank/20399-hd-4.ppm",
+        "sha256": "08efd1609ec5fb7b1cf01c0de4d1b4abcaef31723493eb6df41bbf98378077ec",
+        "size": 49167
+      },
+      "role": "hd-4",
+      "width": 128
+    }
+  ],
+  "actual_terminal": {
+    "device": 55,
+    "inode": 5540296,
+    "mode": 292,
+    "mtime_ns": 1792282090213819232,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/actual-SourceF-control3-one-helper-terminal.json",
+    "sha256": "2e5eba7235f86d8b834fa0c0192fd043951f84f43d9d3e8cd806c56ef8ae36a8",
+    "size": 1921
+  },
+  "actual_validated_frames": 3,
+  "all15_P6_planes_independently_reproduced_from_saved_indices_and_actual_palette": true,
+  "approved_job_calls": 0,
+  "candidate": {
+    "device": 55,
+    "inode": 5540274,
+    "mode": 292,
+    "mtime_ns": 1792282090113590683,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/candidate-contract-PENDING.json",
+    "sha256": "350a4b2908156695cc37f64ed2d52fe52e8ff5384eb2ca816e86fc8451799b3f",
+    "size": 5730
+  },
+  "canonical_unchanged": "H5485/3632",
+  "comparisons": [
+    {
+      "Source1024_indices_exact": true,
+      "Source_pixels_compared": 1024,
+      "all_measured_QA_fields_except_asset_equal": true,
+      "donor": "203a7",
+      "native1_to4_P6_RGB_exact": true,
+      "native1_to4_indices_exact": true,
+      "native_pixels_compared": 30720,
+      "target": "20395"
+    },
+    {
+      "Source1024_indices_exact": true,
+      "Source_pixels_compared": 1024,
+      "all_measured_QA_fields_except_asset_equal": true,
+      "donor": "203a7",
+      "native1_to4_P6_RGB_exact": true,
+      "native1_to4_indices_exact": true,
+      "native_pixels_compared": 30720,
+      "target": "20399"
+    }
+  ],
+  "control3_native": {
+    "device": 55,
+    "inode": 5540272,
+    "mode": 292,
+    "mtime_ns": 1792282090105782747,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/private-control3-pack/hd.json",
+    "sha256": "79998e6306961e584da60c5dcbd99c20bffd40e845e37a9d8732d2ec39ead18e",
+    "size": 1793
+  },
+  "control_only": "203a7",
+  "derived_artwork_sidecar": "NOT_APPLICABLE_UNCHANGED_APPROVED_DONOR_PIXELS",
+  "dryrun_calls": 0,
+  "free_bytes": 6110990336,
+  "inputs": {
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-remaining268-current5485-exact-Original-payload-alias-opportunities-20261018/EXACT268-ORIGINAL-PAYLOAD-PALETTE-AND-CANVAS-ALIAS-AUDIT-TWO-OPPORTUNITIES.json": {
+      "device": 55,
+      "inode": 5540129,
+      "mode": 420,
+      "mtime_ns": 1792281769773848576,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-remaining268-current5485-exact-Original-payload-alias-opportunities-20261018/EXACT268-ORIGINAL-PAYLOAD-PALETTE-AND-CANVAS-ALIAS-AUDIT-TWO-OPPORTUNITIES.json",
+      "sha256": "133dad182170478b4c6db24782bd89eb31e1b2c70dac16220bbcb9bd7e398aff",
+      "size": 133908
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-sourceF-palette-review": {
+      "device": 55,
+      "inode": 5508502,
+      "mode": 493,
+      "mtime_ns": 1792245758422192560,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-sourceF-palette-review",
+      "sha256": "a90704f5cba83f7556a8066522097607fcbee816b4e870b2d2284af774c7b790",
+      "size": 1607488
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/compiled-epoch.json": {
+      "device": 55,
+      "inode": 5508347,
+      "mode": 420,
+      "mtime_ns": 1792245694562144018,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/compiled-epoch.json",
+      "sha256": "38459e0067b17801b3c3c629c22e05dfee98928d451d8c8e0971b63c17288b52",
+      "size": 5917
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-set2-shards3435-independent-review/independent-review.json": {
+      "device": 55,
+      "inode": 3532868,
+      "mode": 292,
+      "mtime_ns": 1791736109222699604,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-set2-shards3435-independent-review/independent-review.json",
+      "sha256": "9bab80b9462c615501484eb189ac87dabdf48a38adee4c9b10240543ec6d7807",
+      "size": 245041
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-ready392-private-metadata-preparation/terrain-2039d-203ac/material-provenance-adapter.json": {
+      "device": 55,
+      "inode": 4713555,
+      "mode": 420,
+      "mtime_ns": 1791778163890525705,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2-ready392-private-metadata-preparation/terrain-2039d-203ac/material-provenance-adapter.json",
+      "sha256": "68314312fc3a93ca46fcd349969662ec57308e03988a1f4bc1658bb1faf7f293",
+      "size": 160083
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/bin/raptor-rust": {
+      "device": 55,
+      "inode": 5508546,
+      "mode": 493,
+      "mtime_ns": 1792245832633695924,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/bin/raptor-rust",
+      "sha256": "5621787ba887ae77d396d848b833a66bd836cc50526d18e9b83fd09354affdfa",
+      "size": 11452456
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/bin/raptor-rust.exe": {
+      "device": 55,
+      "inode": 5509425,
+      "mode": 493,
+      "mtime_ns": 1792245973309049689,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/bin/raptor-rust.exe",
+      "sha256": "0a1c444c1a7bf82dda2999ab3968514817950afe44e73b6c0a8bde6847a0389d",
+      "size": 12093780
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/assets.rs": {
+      "device": 55,
+      "inode": 2443208,
+      "mode": 420,
+      "mtime_ns": 1791711112495415498,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/assets.rs",
+      "sha256": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+      "size": 16417
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio.rs": {
+      "device": 55,
+      "inode": 1538204,
+      "mode": 420,
+      "mtime_ns": 1791612018073210287,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio.rs",
+      "sha256": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+      "size": 42072
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio/opl3.rs": {
+      "device": 55,
+      "inode": 1555626,
+      "mode": 420,
+      "mtime_ns": 1791594274983451465,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio/opl3.rs",
+      "sha256": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+      "size": 55234
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/cinematics.rs": {
+      "device": 55,
+      "inode": 1548632,
+      "mode": 420,
+      "mtime_ns": 1791634621359594894,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/cinematics.rs",
+      "sha256": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+      "size": 29788
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/content.rs": {
+      "device": 55,
+      "inode": 1537581,
+      "mode": 420,
+      "mtime_ns": 1791671687237069939,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/content.rs",
+      "sha256": "7f35df7100c450ba4bb30a0fdc90101c115b5ae42a7aac57829441c5b7761647",
+      "size": 36359
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/desktop.rs": {
+      "device": 55,
+      "inode": 5481451,
+      "mode": 420,
+      "mtime_ns": 1792237712026820459,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/desktop.rs",
+      "sha256": "7aa876c1f74ea7b82ff0a5aa399bbbfaa18ea87ca81cab8a17c763654dca3812",
+      "size": 355988
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/hd.rs": {
+      "device": 55,
+      "inode": 5507804,
+      "mode": 420,
+      "mtime_ns": 1792245624444265090,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/hd.rs",
+      "sha256": "b17f4ee0757ee87d34e01ec76f3a6239c6e9044b42b4b10bd5f05b485f137a64",
+      "size": 159636
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/legacy_tables.rs": {
+      "device": 55,
+      "inode": 1537667,
+      "mode": 420,
+      "mtime_ns": 1791596592133246731,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/legacy_tables.rs",
+      "sha256": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+      "size": 26467
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/lib.rs": {
+      "device": 55,
+      "inode": 1530890,
+      "mode": 420,
+      "mtime_ns": 1791618787038761898,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/lib.rs",
+      "sha256": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+      "size": 318
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/main.rs": {
+      "device": 55,
+      "inode": 1538205,
+      "mode": 420,
+      "mtime_ns": 1791680086709570028,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/main.rs",
+      "sha256": "d270d1787700975220fed75bbb8d6cd8e38288093492fb2608252849e1f804d7",
+      "size": 11193
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/menu_art.rs": {
+      "device": 55,
+      "inode": 1616005,
+      "mode": 420,
+      "mtime_ns": 1791673814189962237,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/menu_art.rs",
+      "sha256": "1c3b8e58828c13099cf00c612b383efa1e402e27eaa7c8f5f0afc7f1ba44a0d0",
+      "size": 4325
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/mod_selection.rs": {
+      "device": 55,
+      "inode": 1586707,
+      "mode": 420,
+      "mtime_ns": 1791597772968721997,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/mod_selection.rs",
+      "sha256": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+      "size": 5447
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/modding.rs": {
+      "device": 55,
+      "inode": 5427458,
+      "mode": 420,
+      "mtime_ns": 1792218285065753129,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/modding.rs",
+      "sha256": "5ba4f50b39f577d792a55845c3bc281e94f8bc937eab6cc5e6201cff0cd6d6fc",
+      "size": 31740
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/persistence.rs": {
+      "device": 55,
+      "inode": 1537735,
+      "mode": 420,
+      "mtime_ns": 1791700137529541149,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/persistence.rs",
+      "sha256": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+      "size": 52762
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/render.rs": {
+      "device": 55,
+      "inode": 1537668,
+      "mode": 420,
+      "mtime_ns": 1791697273206972841,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/render.rs",
+      "sha256": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+      "size": 32172
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/simulation.rs": {
+      "device": 55,
+      "inode": 5414890,
+      "mode": 420,
+      "mtime_ns": 1792217299196752425,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/simulation.rs",
+      "sha256": "2537120f280a1cfcfcc73a42a4103a4435ba8aeb98e69c87fde3b885b97a9925",
+      "size": 140409
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/sound.rs": {
+      "device": 55,
+      "inode": 1555981,
+      "mode": 420,
+      "mtime_ns": 1791614563252113040,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/sound.rs",
+      "sha256": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+      "size": 11905
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/src/terrain_hd.rs": {
+      "device": 55,
+      "inode": 5507805,
+      "mode": 420,
+      "mtime_ns": 1792245624444740664,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/terrain_hd.rs",
+      "sha256": "e61f96f541c19863ce8d741363a1739b9276e25aee84795952c65565c775e392",
+      "size": 59391
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/b56dec4a47cd70b37ae917e4e44ecfbff49f2deee641dee13aa77580e0b5ab2b/libserde_json-89b5c242431768d3.rlib": {
+      "device": 55,
+      "inode": 5371348,
+      "mode": 292,
+      "mtime_ns": 1791697640587335184,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/b56dec4a47cd70b37ae917e4e44ecfbff49f2deee641dee13aa77580e0b5ab2b/libserde_json-89b5c242431768d3.rlib",
+      "sha256": "b56dec4a47cd70b37ae917e4e44ecfbff49f2deee641dee13aa77580e0b5ab2b",
+      "size": 2185458
+    },
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib": {
+      "device": 55,
+      "inode": 5508325,
+      "mode": 292,
+      "mtime_ns": 1792245641851329918,
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+      "sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+      "size": 22744978
+    },
+    "/home/quintine/Projects/RaptorReplica/data/hd/hd.json": {
+      "device": 55,
+      "inode": 5525681,
+      "mode": 384,
+      "mtime_ns": 1792253583082550841,
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/hd.json",
+      "sha256": "1237ac04026ebed5c5b8be2293b5d1cea1f7307979b32bb03e2c6637c8f89a1d",
+      "size": 2949828
+    },
+    "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-2039d-203ac/generated/atlas-v2.png": {
+      "device": 55,
+      "inode": 2256847,
+      "mode": 420,
+      "mtime_ns": 1791705838243336750,
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-2039d-203ac/generated/atlas-v2.png",
+      "sha256": "1c8f99fe2ec22d3b7756a5e4b969cf03abec9621153d6a1157f1bc8a85b433a0",
+      "size": 3964616
+    },
+    "/home/quintine/Projects/RaptorReplica/data/hd/provenance.json": {
+      "device": 55,
+      "inode": 5525680,
+      "mode": 384,
+      "mtime_ns": 1792253582990552689,
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/provenance.json",
+      "sha256": "9afbad296ec1eb07db2422d54553ac51e3c82e27bb0571a997d8d06fb9efdf61",
+      "size": 1889736
+    },
+    "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5485-20261018/handoff-manifest.json": {
+      "device": 55,
+      "inode": 5528725,
+      "mode": 292,
+      "mtime_ns": 1792253584983469494,
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5485-20261018/handoff-manifest.json",
+      "sha256": "af517c38feebfb8baadc9552dbfbb191d1798bd33dd0bf191464d3e57d586e4f",
+      "size": 4538178
+    },
+    "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5485-20261018/pack/hd.json": {
+      "device": 55,
+      "inode": 5527684,
+      "mode": 292,
+      "mtime_ns": 1792253583082550841,
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5485-20261018/pack/hd.json",
+      "sha256": "1237ac04026ebed5c5b8be2293b5d1cea1f7307979b32bb03e2c6637c8f89a1d",
+      "size": 2949828
+    },
+    "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5485-20261018/pack/provenance.json": {
+      "device": 55,
+      "inode": 5527685,
+      "mode": 292,
+      "mtime_ns": 1792253582990552689,
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/registered-class-review/handoff-5485-20261018/pack/provenance.json",
+      "sha256": "9afbad296ec1eb07db2422d54553ac51e3c82e27bb0571a997d8d06fb9efdf61",
+      "size": 1889736
+    },
+    "/home/quintine/Projects/RaptorReplica/data/misc/PALETTE_DAT": {
+      "device": 55,
+      "inode": 641615,
+      "mode": 420,
+      "mtime_ns": 1787663959337906368,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "size": 768
+    },
+    "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1424": {
+      "device": 55,
+      "inode": 644076,
+      "mode": 420,
+      "mtime_ns": 1787663959553529994,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1424",
+      "sha256": "5162f4c0106f216dafba3d63b54a571b0f2a5fffd37f0944a94320c49c9082aa",
+      "size": 1044
+    },
+    "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1428": {
+      "device": 55,
+      "inode": 644080,
+      "mode": 420,
+      "mtime_ns": 1787663959553777189,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1428",
+      "sha256": "5162f4c0106f216dafba3d63b54a571b0f2a5fffd37f0944a94320c49c9082aa",
+      "size": 1044
+    },
+    "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1442": {
+      "device": 55,
+      "inode": 644094,
+      "mode": 420,
+      "mtime_ns": 1787663959554614938,
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/unnamed.1442",
+      "sha256": "5162f4c0106f216dafba3d63b54a571b0f2a5fffd37f0944a94320c49c9082aa",
+      "size": 1044
+    }
+  },
+  "new_artwork_authorship_claimed": false,
+  "new_artwork_generation": 0,
+  "new_physical_raw_copies": 1,
+  "no_old_inode_mode_or_mtime_changed": true,
+  "no_pending_owned_writer_call_lease_or_process": true,
+  "own_immutable_closing_mode": "0444; actual terminal own-file modes describe execution-time state before final sealing",
+  "owner": "/root/hd_coordinator",
+  "pixel_edits": 0,
+  "private_logical_bytes": 9607136,
+  "raw": {
+    "device": 55,
+    "inode": 5540271,
+    "mode": 292,
+    "mtime_ns": 1791705838243336750,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/private-control3-pack/donor-atlas-v2-unchanged.png",
+    "sha256": "1c8f99fe2ec22d3b7756a5e4b969cf03abec9621153d6a1157f1bc8a85b433a0",
+    "size": 3964616
+  },
+  "raw_bytes_copied": 3964616,
+  "registrar_main_calls": 0,
+  "retries": 0,
+  "scope": {
+    "QA": "The actual execution validated all3 control+targets. It is not a fresh selected2 execution. Final registrar selected2 QA requires an explicitly attributed exact row projection or separately authorized exact2 execution.",
+    "approval": false,
+    "carried_registered_assets": [
+      "2038d",
+      "2038e",
+      "20391",
+      "20392",
+      "20393",
+      "20394",
+      "20396",
+      "20397",
+      "20398",
+      "2039a",
+      "2039c"
+    ],
+    "donor_original_material_provenance": "Audit133dad18 pins registered donor203a7 material68314312/original9bab80b9 pointer/assets/26; reused exact pixels, not a new independent target context decision.",
+    "full_inventory": [
+      "2038d",
+      "2038e",
+      "2038f",
+      "20390",
+      "20391",
+      "20392",
+      "20393",
+      "20394",
+      "20395",
+      "20396",
+      "20397",
+      "20398",
+      "20399",
+      "2039a",
+      "2039b",
+      "2039c"
+    ],
+    "original_fallback_assets": [
+      "2038f",
+      "20390",
+      "2039b"
+    ],
+    "selected2": "Two complete1 frame0 aliases, static standalone selection of original target16; no complete-family16 or newgeneration2 claim.",
+    "target20395": "Genuine target context pending Root allocation.",
+    "target20399": "Catalogue scope pending Root authority, no Original occurrence claim."
+  },
+  "selected": [
+    "20395",
+    "20399"
+  ],
+  "selected2_native": {
+    "device": 55,
+    "inode": 5540273,
+    "mode": 292,
+    "mtime_ns": 1792282090105868570,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-20395-20399-exact-source-alias2-SourceF-H5485-20261018/private-selected2-pack/hd.json",
+    "sha256": "38e45dec59819d634fdc974d0f1f3ba457db08f944243e4bb6e5e78165270df0",
+    "size": 1233
+  },
+  "source18_Target_library_mtime_bytes_H5485_donor_guards_exact_before_after": true,
+  "status": "CLOSED_EXACT_ALIAS2_PRIVATE_CANDIDATE_AND_ACTUAL_SOURCEF_CONTROL3_ALLSCALE_EQUALITY_NO_ADMISSION"
+}

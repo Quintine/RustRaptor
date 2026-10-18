@@ -1,0 +1,216 @@
+{
+  "status": "QUALIFIED_FIVE_CONTROLLED_POSES_ALL20_SCALES_HOLD0_NOT_ADMISSION",
+  "reviewer": "/root/iron_coast_6",
+  "different_technical_producer": "/root/hd_coordinator",
+  "producer_report": {
+    "mode": 292,
+    "mtime_ns": 1792284467358720482,
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-derived-Boss5-SourceF-H5500-controlled2-plus-historical1-actual-context-20261018/CLOSED-ACTUAL-DERIVED-BOSS5-SOURCEF-H5500-FIVE-CONTROLLED-POSES-ALLSCALE-PRODUCER-HANDOFF.json",
+    "sha256": "3a3fd47ae9c5fdcb983b381155748132c6eab97f01e943762ce06da5da7ca387",
+    "size": 7785
+  },
+  "producer_strict": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-derived-Boss5-SourceF-H5500-controlled2-plus-historical1-actual-context-20261018-strict-complete-five-controlled-poses-producer-closure.json",
+    "sha256": "1c868f074de38931eebbcb18ba7be3bc5b8866780a2c534e223f4feacb085299",
+    "size": 102977,
+    "mtime_ns": 1792284467409287183,
+    "mode": 33060
+  },
+  "interface": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-coordinator-derived-Boss5-SourceF-H5500-controlled2-plus-historical1-actual-context-20261018/COMPLETE-FIVE-POSES-ALL20-TRIPLET-BOARDS-60-WHOLE-ARRAY-PHYSICAL-INTERFACE.json",
+    "sha256": "9a92eb2cac8f9da0588fd89815db57d37378f2e08d33d046f2432f80d4597772",
+    "size": 72443,
+    "mtime_ns": 1792284308907944991,
+    "mode": 33060
+  },
+  "qualified_frames": [
+    "200bf",
+    "10315",
+    "10316",
+    "1033e",
+    "1033f"
+  ],
+  "held_frames": [],
+  "qualified_scale_views": 20,
+  "whole_ROI_triplet_pages_physically_viewed": 20,
+  "unique_ROI_panes": 60,
+  "whole_scene_arrays_authenticated": 60,
+  "actual_saved_poses": [
+    {
+      "actual_current_World_instances": 0,
+      "art_frame": 0,
+      "asset": "200bf",
+      "base_asset": "200bf",
+      "definition": "base:enemy_1_66",
+      "draw": [
+        116.0,
+        48.0
+      ],
+      "ground": false,
+      "historical_fixture_pointer": "/fixtures/5",
+      "interpolation_alpha": 0.5,
+      "kind": "historical7b_controlled_saved_pose_recomposition_World0",
+      "mission": "base:sector_2_wave_8",
+      "natural_fullwave_claim": false,
+      "other_spawns_suppressed": true,
+      "phase": 27,
+      "scroll": 1715,
+      "shadow_flag": 1,
+      "tick": 1715
+    },
+    {
+      "art_frame": 0,
+      "asset": "10315",
+      "base_asset": "10315",
+      "definition": "base:enemy_0_10",
+      "draw": [
+        3.5,
+        29.5
+      ],
+      "ground": true,
+      "interpolation_alpha": 0.5,
+      "kind": "fresh_controlled_Original_spawn_natural_display_phase",
+      "main_effects_recorded_but_not_in_picture": 0,
+      "mission": "base:sector_1_wave_1",
+      "natural_fullwave_claim": false,
+      "original_matched_spawn": {
+        "difficulty": 4,
+        "enemy": "base:enemy_0_10",
+        "tick": 1208,
+        "x": 16,
+        "y": -112
+      },
+      "other_spawns_suppressed": true,
+      "phase": 2,
+      "projectiles_recorded_but_not_in_finite_actor_terrain_shadow_picture": 0,
+      "scroll": 1370,
+      "shadow_flag": 0,
+      "tick": 1370
+    },
+    {
+      "art_frame": 1,
+      "asset": "10316",
+      "base_asset": "10315",
+      "definition": "base:enemy_0_10",
+      "draw": [
+        12.5,
+        32.5
+      ],
+      "ground": true,
+      "interpolation_alpha": 0.5,
+      "kind": "fresh_controlled_Original_spawn_natural_display_phase",
+      "main_effects_recorded_but_not_in_picture": 0,
+      "mission": "base:sector_1_wave_1",
+      "natural_fullwave_claim": false,
+      "original_matched_spawn": {
+        "difficulty": 4,
+        "enemy": "base:enemy_0_10",
+        "tick": 1208,
+        "x": 16,
+        "y": -112
+      },
+      "other_spawns_suppressed": true,
+      "phase": 5,
+      "projectiles_recorded_but_not_in_finite_actor_terrain_shadow_picture": 1,
+      "scroll": 1373,
+      "shadow_flag": 0,
+      "tick": 1373
+    },
+    {
+      "art_frame": 1,
+      "asset": "1033f",
+      "base_asset": "1033e",
+      "definition": "base:enemy_0_93",
+      "draw": [
+        187.5,
+        2.0
+      ],
+      "ground": false,
+      "interpolation_alpha": 0.5,
+      "kind": "fresh_controlled_Original_spawn_natural_display_phase",
+      "main_effects_recorded_but_not_in_picture": 0,
+      "mission": "base:sector_1_wave_8",
+      "natural_fullwave_claim": false,
+      "original_matched_spawn": {
+        "difficulty": 3,
+        "enemy": "base:enemy_0_93",
+        "tick": 376,
+        "x": 176,
+        "y": -112
+      },
+      "other_spawns_suppressed": true,
+      "phase": 0,
+      "projectiles_recorded_but_not_in_finite_actor_terrain_shadow_picture": 1,
+      "scroll": 440,
+      "shadow_flag": 1,
+      "tick": 440
+    },
+    {
+      "art_frame": 0,
+      "asset": "1033e",
+      "base_asset": "1033e",
+      "definition": "base:enemy_0_93",
+      "draw": [
+        188.0,
+        4.0
+      ],
+      "ground": false,
+      "interpolation_alpha": 0.5,
+      "kind": "fresh_controlled_Original_spawn_natural_display_phase",
+      "main_effects_recorded_but_not_in_picture": 0,
+      "mission": "base:sector_1_wave_8",
+      "natural_fullwave_claim": false,
+      "original_matched_spawn": {
+        "difficulty": 3,
+        "enemy": "base:enemy_0_93",
+        "tick": 376,
+        "x": 176,
+        "y": -112
+      },
+      "other_spawns_suppressed": true,
+      "phase": 1,
+      "projectiles_recorded_but_not_in_finite_actor_terrain_shadow_picture": 1,
+      "scroll": 441,
+      "shadow_flag": 1,
+      "tick": 441
+    }
+  ],
+  "main_finding": "All five selected actors remain readable and coherently placed in their saved terrain/shadow scenes. Higher-scale generated form remains visible against the registered backing; no new halo, actor-sized backing rectangle, shadow displacement or local terrain obstruction is observed. SHIP20 trails remain readable over water and SHIP37 lens/housing separates from the shoreline.200bf lower shaft/navigation cues remain readable on dark ground.",
+  "qualifications": [
+    "Sharper/brighter modeled metal and more regular plating/lens shapes retain the independent intrinsic material qualifications; this context verdict does not declare exact Source RGB/material identity.",
+    "Native1 merges small details; Source-stepped boundaries/trails and known native-scale alpha differences remain.",
+    "Two fresh authentic Original-spawn Worlds are controlled: other spawns suppressed, auto-complete disabled, fixed defaultdifficulty2 nonfiring pilot, unchanged AI/path/weapon/health. No natural complete-wave claim.",
+    "200bf is only a historical7b controlled saved pose recomposed at SourceF/H5500, not a new current World occurrence.",
+    "Only terrain/body/Original shadow are pictured. Player/projectiles/effects/secondary/UI/Host are omitted; one projectile is recorded at later controlled poses and is not visually approved.",
+    "All20 full ROIboards/60native panes were physically read. All60 whole320x200-logical viewport arrays were independently authenticated; no claim every whole viewport was personally displayed."
+  ],
+  "intrinsic_review_separate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-three-Boss-derived-families-five-SourceF-independent-material-review-20261018/INDEPENDENT-THREE-COMPLETE-ENEMY-FAMILIES-FIVE-DERIVED-SOURCEF-MATERIAL-REVIEW.json",
+    "sha256": "655bb0f3fd9a5cc62a29331a1927a1cae6b0083f0d392255200276532c41c295"
+  },
+  "independent_authentication": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-Boss5-SourceF-H5500-controlled-context-independent-physical-review-20261018/INDEPENDENT60-WHOLE-ARRAYS-20-COMPONENTS-SOURCE-SHADOW-AND-60-ROI-PANES-AUTHENTICATION.json",
+    "sha256": "3c738ec6ffc6d2013e108a2b14dfd90b8155d50ad408426e06b5d7cee53a1b61",
+    "size": 29486,
+    "mtime_ns": 1792284785222242313,
+    "mode": 33188
+  },
+  "personal_journal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron6-Boss5-SourceF-H5500-controlled-context-independent-physical-review-20261018/PERSONAL-ALL20-WHOLE-TRIPLET-ROI-CONTEXT-PHYSICAL-JOURNAL.json",
+    "sha256": "75cdaaa190a32016d87de82ee8c8bedb9cdd6569e217cee1178caa3e7349260c",
+    "size": 15817,
+    "mtime_ns": 1792284785222591063,
+    "mode": 33188
+  },
+  "reviewer_reader_history": "Initial own Python reader had a missing space in else1 and stopped at parse time before file reads or note writes. Corrected reader only; no producer/output changes. A component-class reader assertion also stopped because this driver declares transparency class255, unlike the earlier opaque terrain reader. It now follows the literal driver mapping with alpha independently bound by u16 indices.",
+  "history": "Original syntax compile failureca493f7, Root macro-only compile2b76eb16 and actual driverff065629 EXIT0 are preserved; file-only system Python import stop/bundled recovery had no engine repeat. Old raw/HOLD/refusal scopes remain literal.",
+  "operations": {
+    "engine_renderer_helper_QA": 0,
+    "World": 0,
+    "compiler": 0,
+    "imagegen_or_art_edits": 0,
+    "shared_Source_data_docs_Git_registrar_writes": 0
+  },
+  "custody": "Direct coordinator251-owned whole frozen/no-pending custody bound; immutable5500 header/raw/source and all frozen arrays/pages remain unchanged through closure. Released live R/data scope is not re-locked.",
+  "limits": "Different finite controlled context qualification only; no canonical/native admission or broader Host/gameplay approval."
+}

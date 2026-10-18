@@ -1,0 +1,29 @@
+{
+  "events": [
+    {
+      "timestamp_utc": "2026-10-18T00:49:50+00:00",
+      "event": "acquired",
+      "lease_id": "b213df6f-abcf-4d6d-a184-fa199864f65b",
+      "owner": "/root/hd_boss200a2",
+      "job_id": "WORMLEFT-Original8-continuous-form-boss-20261018-v1",
+      "expires_at": "2026-10-18T01:19:50+00:00"
+    },
+    {
+      "timestamp_utc": "2026-10-18T00:49:50+00:00",
+      "event": "started",
+      "lease_id": "b213df6f-abcf-4d6d-a184-fa199864f65b",
+      "owner": "/root/hd_boss200a2",
+      "job_id": "WORMLEFT-Original8-continuous-form-boss-20261018-v1",
+      "note": "Owner is submitting the built-in imagegen request; this slot requires an explicit report or release."
+    },
+    {
+      "timestamp_utc": "2026-10-18T00:50:19+00:00",
+      "event": "report",
+      "lease_id": "b213df6f-abcf-4d6d-a184-fa199864f65b",
+      "owner": "/root/hd_boss200a2",
+      "job_id": "WORMLEFT-Original8-continuous-form-boss-20261018-v1",
+      "outcome": "success"
+    }
+  ],
+  "released": true
+}

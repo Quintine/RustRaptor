@@ -1,0 +1,40 @@
+Correct ONLY the cyan/teal trail opacity in the FIRST generated two-frame HD atlas using the SECOND original source atlas as authority. Preserve the existing detailed ship bodies, their exact positions and the existing thin horizontal trail stroke geometry. The current raw trail strokes are alpha64–100 and disappear completely in the indexed game renderer, which requires alpha>=128. Every actual trail/particle stroke MUST have PNG alpha255 (100 percent opaque), just as the original indexed SD artwork does. Use subdued original dark teal RGB color for faint appearance, NOT low opacity. No additive blend, bloom, translucency, atmospheric haze, alpha veil or new soft effects. All EMPTY space outside actual trail/ship shapes stays exact alpha0. Keep thin horizontal top, bottom and left trace streaks in their exact original positions, distinct in both phases; do not paint the motion trails only onto the ship body, thicken them into flames, move them, or omit them. Exterior trails are a required gameplay visual, not optional decoration. Keep body/detail unchanged. Keep the entire two-cell atlas layout and original80x40 logical frame mapping anchored at0,0. Current generated atlas has extra outside vertical margin; retain that framing if editing it. Return corrected PNG with opaque teal strokes and true transparent empty space.
+Original logical contracts:
+{
+  "job": "enemies-10315-10316",
+  "frames": [
+    {
+      "frame": 0,
+      "asset": "10315",
+      "logical_canvas": [
+        80,
+        40
+      ],
+      "visible_bounds": [
+        2,
+        2,
+        78,
+        39
+      ],
+      "transparent_pixels": 1788,
+      "source_sha256": "7736fdbca555a9448b42be64523d2a75fb1bae2946ad237e6d7df347e98315a5"
+    },
+    {
+      "frame": 1,
+      "asset": "10316",
+      "logical_canvas": [
+        80,
+        40
+      ],
+      "visible_bounds": [
+        1,
+        5,
+        78,
+        40
+      ],
+      "transparent_pixels": 1775,
+      "source_sha256": "db19f9e4082892eae12832c729be3f4435af0896ff43fcf121866da06aab2182"
+    }
+  ]
+}
+

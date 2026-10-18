@@ -1,0 +1,75 @@
+{
+  "status": "SCOPED_INDEPENDENT_TERRAIN_CODE_REVIEW_NO_OPEN_CONCRETE_FINDINGS_AT_FINAL_COHERENT_SUCCESSOR",
+  "utc": "2026-10-17T23:51:29.038542+00:00",
+  "reviewer": "/root/iron_coast_2",
+  "reviewed_code_and_tests": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_retexture.py",
+      "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98",
+      "bytes": 16025
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/test_hd_terrain_retexture.py",
+      "sha256": "8e770c07e51cddc151761bd8359af799920d027494d90d2da99f9b3a02140b24",
+      "bytes": 4566
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+      "bytes": 14882
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/test_hd_terrain_cleanup.py",
+      "sha256": "bc41d699939b454a00e6589be45a07e4bd8ca494cac9d6613aeee7a1ac152165",
+      "bytes": 7581
+    }
+  ],
+  "tests": {
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "flags": [
+      "-B"
+    ],
+    "python": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "Pillow": "12.3.0",
+    "final_existing_tests_passed": 18,
+    "old_cleanup": 11,
+    "coherent_retexture": 7,
+    "independent_coherent_CLI_probes": [
+      "relative recipe from arbitrary current directory",
+      "repeatable PNG bytes and output receipt hash",
+      "all input and parent bytes preserved",
+      "bad input hash rejected before mkdir",
+      "NaN gain rejected before mkdir",
+      "out-of-bounds crop rejected before mkdir",
+      "existing output refuses overwrite"
+    ]
+  },
+  "math_review": {
+    "embedded_Source_decoder_and_ScaleNx_bound_by_tool_SHA": true,
+    "ScaleNx_equations_match_current_Rust_render_upscale": true,
+    "coherent_final_vs_actual_author_private_tool_changed_functions": [
+      "main"
+    ],
+    "all_other_functions_AST_identical": true,
+    "actual_pixel_and_math_changes": false
+  },
+  "finding": {
+    "issue": "Coherent standalone CLI receipt omitted output-affecting NumPy/Pillow runtime identity.",
+    "resolution": "Final coherent successor records Python/executable/NumPy/Pillow/platform identically in detailed report and normalized execution; focused CLI test asserts this.",
+    "status": "RESOLVED",
+    "old_cleanup_tool_and_held_v3_scopes_unchanged": true
+  },
+  "scope_limits": [
+    "Linux authoring only: read_regular requires os.O_NOFOLLOW; Windows game runtime does not invoke Python cleanup tools. Relative recipe paths and PNG outputs are portable; no Windows-authoring execution claim.",
+    "Old cleanup3284 CLI remains historical and lacks embedded runtime versions; existing actual author/runtime companion evidence is a separate binding, not rewritten here.",
+    "Code, synthetic data and receipt review only. No Source game files, actual parent artwork, QA, image generation, compiler, World, renderer, canonical registration or shared docs were changed or invoked.",
+    "No material/context/animation approval. Earlier v3 artwork HOLD remains unchanged; this code pass is not an artwork decision."
+  ],
+  "actual_shared_edits": 0,
+  "actual_engine_QA_compiler_World_media_canonical_docs_calls": 0,
+  "pending_own_writer_call_or_lease": false
+}

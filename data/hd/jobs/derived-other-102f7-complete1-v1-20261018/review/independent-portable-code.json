@@ -1,0 +1,53 @@
+{
+  "status": "PASS_DIFFERENT_OTHER2_PORTABLE_PROJECT_ROOT_PATH_ONLY_CODE_DELTA",
+  "reviewer": "/root/iron_coast_2",
+  "utc": "2026-10-18T01:08:37.201431+00:00",
+  "packet": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/FROZEN-PORTABLE-WRAPPER-IMPORT-PATH-ONLY-SUCCESSOR-CODE-PACKET.json",
+    "sha256": "d064cf58a071bcb5f963d42d18c9267eddce004d8d480b81631316a00a47ca09",
+    "bytes": 1582
+  },
+  "wrapper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/tools/hd_other_functional_cleanup.py",
+    "sha256": "f8078284e300947aec4d2c9e70cbc7198fa3cb5d34de6b36c07cacc5f3820a84",
+    "bytes": 5893
+  },
+  "old_reviewed_wrapper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dark-Other2-102f7-10126-derived-geometry-and-functional-Original-20261018-v1/hd_other_functional_cleanup.py",
+    "sha256": "00e2adad6df8b26bcb54d0bba0ca890e8c30b3ba1f10d5de130adbf57d7ae631",
+    "bytes": 5911
+  },
+  "tests": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/tools/test_hd_other_functional_cleanup.py",
+    "sha256": "ee7722bc12653c241b6c8c4b23ccdf7944afe4cf4482cd73a1d30d1eeec20931",
+    "bytes": 5005
+  },
+  "dependencies": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b",
+      "size": 14749
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-other2-integration-20261018/tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+      "size": 9385
+    }
+  ],
+  "focused_synthetic_tests_passed": 6,
+  "log": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron2-Other2-portable-path-only-independent-code-delta-20261018-v1/actual-portable-synthetic6.log",
+    "sha256": "72b8dc88c1dd52360284e7e1e29b44adc98ae78957bbc34f1ea23f21bf1ef86a",
+    "bytes": 1286
+  },
+  "concrete_open_findings": [],
+  "checks": [
+    "Exactly one top-level R assignment changed; complete module AST otherwise identical to reviewed00e2, including math/kernel/PNG encoding/CLI/receipt semantics.",
+    "R resolves to the project parent of tools; private geometry and decoder dependencies load from that same portable layout and retain c612/66184 hashes.",
+    "Unchanged six meaningful synthetic tests independently pass; full SourceScale4 RGBA functional footprints/outside equality and deterministic lineage behavior preserved.",
+    "All packet-pinned old/new/test/dependency bytes unchanged before/after."
+  ],
+  "scope": "Path-only portability delta for project/tools layout. No actual asset recipe, preview, art, QA, renderer/compiler/World, shared edit or new approval. Running a job-level copy outside tools would not be this documented layout.",
+  "pending_own_writer_call_or_lease": false,
+  "shared_writes": false
+}

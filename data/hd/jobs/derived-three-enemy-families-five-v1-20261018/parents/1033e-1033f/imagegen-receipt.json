@@ -1,0 +1,1208 @@
+{
+  "status": "HOLD_COMPLETE2_ISOLATED_SOURCE_ABSENT_BACKGROUND_STRIPE_UNCORRECTED",
+  "role": "Actual artist complete2 raw/source/native1\u20134 and ordered phase review",
+  "utc": "2026-10-13T23:52:37.176290+00:00",
+  "assets": [
+    "1033e",
+    "1033f"
+  ],
+  "candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f-master-isolated-stripe-cleanup-campaign-20261014-v1/candidate-complete2-fixed-oldcells-stripe-cleanup-v1.json",
+    "sha256": "a5b75025c0e012c0a015cc8b7f43aa1dedf9effad48713500dd06d1c95df4828",
+    "size": 4341,
+    "mtime_ns": 1791935098086841759
+  },
+  "raw": {
+    "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f-master-isolated-stripe-cleanup-campaign-20261014-v1/generated/complete2-isolated-stripe-cleanup-v1-untouched.png",
+    "sha256": "f049c900fc9e9f3d44186895ad0af01b45c5ed5949fecf1daf2f75ecd7732495",
+    "size": 2270458,
+    "mtime_ns": 1791934996144525997
+  },
+  "builtin": {
+    "path": "/home/quintine/.codex/generated_images/01a1245e-2e65-77f2-9b58-738721d533b9/exec-a67f2e65-4a32-4c7c-b724-0229ac9a9847.png",
+    "sha256": "f049c900fc9e9f3d44186895ad0af01b45c5ed5949fecf1daf2f75ecd7732495",
+    "size": 2270458,
+    "mtime_ns": 1791934996144525997
+  },
+  "fullreply": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/actual-complete-built-in-response.json",
+    "sha256": "e598b03f1b05639d8351303fafe6cf8d9548b55e0761b85effcc75ae00945ec5",
+    "size": 3027873,
+    "mtime_ns": 1791935051848312953
+  },
+  "response_builtin_copy_bytes_equal": true,
+  "preflight": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/SOURCE-HISTORY-AND-EXACT-COMPLETE2-MASTER-STRIPE-CLEANUP-PREFLIGHT.json",
+    "sha256": "6dd604fda616f330d35c020607716cdea4bbd52a076fbe4c30a744f8995f2218",
+    "size": 18740,
+    "mtime_ns": 1791934920556506281
+  },
+  "request": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/complete2-isolated-leftstripe-background-cleanup-v1.request.json",
+    "sha256": "5f690e9402ecd852af0422e6e808032c3f4f2bb2315479a4e6d496251b9881ef",
+    "size": 2459,
+    "mtime_ns": 1791934920555789393
+  },
+  "prompt": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/complete2-isolated-leftstripe-background-cleanup-v1.prompt.txt",
+    "sha256": "0ba297b7860e5999732f75ae52e9bc41bda820e7bb250f20e6b225f1e3538f12",
+    "size": 1975,
+    "mtime_ns": 1791934920555713371
+  },
+  "actual_tool_calls": 1,
+  "batchcall": 3,
+  "maxbatch": 3,
+  "lease": "99840676-e5f9-430b-a70a-39bb54f47c3a",
+  "gate_success_release_immediate_before_QA": true,
+  "actual_QA_successes": 1,
+  "compiler": 0,
+  "current_QA": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/actual-complete2-current8ada-intrinsic/runtime-qa.json",
+    "sha256": "8f0cb1755e6878ecd500c3e2ce33bfb92a52159c4bd3302fbb51e06541515c47",
+    "size": 7240,
+    "mtime_ns": 1791935098327297814
+  },
+  "current_indexed": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/actual-complete2-current8ada-intrinsic/actual-indexed-source-and-scales.json",
+    "sha256": "2af406dd31ed73add683a11647d7b471af3cbb865a0239f2b9305eb273204e7d",
+    "size": 514617,
+    "mtime_ns": 1791935098328297792
+  },
+  "current_binding": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/ACTUAL-COMPLETE2-CURRENT8ADA-QA-NATIVE-SOURCE-AND-EPOCH-BINDING.json",
+    "sha256": "d83a11b9aa9c640fb967ea60f62fcf49af2f0adb754202c36f8f3527e2d8c6a2",
+    "size": 14233,
+    "mtime_ns": 1791935098406896849
+  },
+  "native_PPMs": 10,
+  "source18": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/assets.rs",
+      "sha256": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+      "size": 16417,
+      "mtime_ns": 1791711112495415498
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio/opl3.rs",
+      "sha256": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+      "size": 55234,
+      "mtime_ns": 1791594274983451465
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio.rs",
+      "sha256": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+      "size": 42072,
+      "mtime_ns": 1791612018073210287
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/cinematics.rs",
+      "sha256": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+      "size": 29788,
+      "mtime_ns": 1791634621359594894
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/content.rs",
+      "sha256": "7f35df7100c450ba4bb30a0fdc90101c115b5ae42a7aac57829441c5b7761647",
+      "size": 36359,
+      "mtime_ns": 1791671687237069939
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/desktop.rs",
+      "sha256": "7a48e4e96ca3a926a4995dac7d31a1dca180b51aff7b682d17415c479ca1f04c",
+      "size": 351431,
+      "mtime_ns": 1791710653182062552
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/hd.rs",
+      "sha256": "bfb345af4414dfe2f870a341e5533700fa8a6322e41acdec1b1a406038f491e2",
+      "size": 101903,
+      "mtime_ns": 1791810577097954278
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/legacy_tables.rs",
+      "sha256": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+      "size": 26467,
+      "mtime_ns": 1791596592133246731
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/lib.rs",
+      "sha256": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+      "size": 318,
+      "mtime_ns": 1791618787038761898
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/main.rs",
+      "sha256": "d270d1787700975220fed75bbb8d6cd8e38288093492fb2608252849e1f804d7",
+      "size": 11193,
+      "mtime_ns": 1791680086709570028
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/menu_art.rs",
+      "sha256": "1c3b8e58828c13099cf00c612b383efa1e402e27eaa7c8f5f0afc7f1ba44a0d0",
+      "size": 4325,
+      "mtime_ns": 1791673814189962237
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/mod_selection.rs",
+      "sha256": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+      "size": 5447,
+      "mtime_ns": 1791597772968721997
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/modding.rs",
+      "sha256": "03626de55f4484aad19725c13301ddbb9c63d0d015716282db7177b7a1223fc4",
+      "size": 31495,
+      "mtime_ns": 1791711112496783607
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/persistence.rs",
+      "sha256": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+      "size": 52762,
+      "mtime_ns": 1791700137529541149
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/render.rs",
+      "sha256": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+      "size": 32172,
+      "mtime_ns": 1791697273206972841
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/simulation.rs",
+      "sha256": "0ec9f6da11ab82c1461868a7b147e4cdb14689fa7373bd0c24067d9014e9583a",
+      "size": 139766,
+      "mtime_ns": 1791706388595810371
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/sound.rs",
+      "sha256": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+      "size": 11905,
+      "mtime_ns": 1791614563252113040
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/terrain_hd.rs",
+      "sha256": "b30b4a65a9e646e9fe106041ad718eebd2740c6c90354267a7b17b770e50ebb0",
+      "size": 23637,
+      "mtime_ns": 1791671333482646664
+    }
+  ],
+  "library": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/8adae709e5fdbf56675bdc7f8766255a627e5cab720c5d26c2315462da509ce2/libraptor_replica-f076ad67c588e355.rlib",
+    "sha256": "8adae709e5fdbf56675bdc7f8766255a627e5cab720c5d26c2315462da509ce2",
+    "size": 22174610,
+    "mtime_ns": 1791810838461709737
+  },
+  "serde": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/ba61a9b6a7f97c994c6fdb2ab5e50915a5d6b456664f31709fd05306d56e48bd/libserde_json-89b5c242431768d3.rlib",
+    "sha256": "ba61a9b6a7f97c994c6fdb2ab5e50915a5d6b456664f31709fd05306d56e48bd",
+    "size": 2185458,
+    "mtime_ns": 1791593976756068839
+  },
+  "helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-loader-production-epoch-transparent-fullcanvas-rounding-20261013/actual-sprite-review",
+    "sha256": "028ae18d245a67c0e9483c6018bdfaf74fc085751dd3e1a857296cb5b00535f5",
+    "size": 1443184,
+    "mtime_ns": 1791810984928418008
+  },
+  "source_newer_than_library": false,
+  "any_game_source_newer_than_library": false,
+  "all_nonfile_headers_crop_cells_origin_source_defaults_unchanged": true,
+  "natural_dimensions": [
+    1774,
+    887
+  ],
+  "both_source_reserved240to255_zero": true,
+  "all_HD_reserved240to255_zero": true,
+  "concrete_blocker": "1033f Source fullx0 column is alpha0/transparent index256, but new actualfirst physicalcolumn retains7 samples2x,20 samples3x and27 gray samples4x at exacty33..59. The detached vertical strip remains visibly unchanged at the previously held location.",
+  "actual_source_and_stripe_indices": [
+    {
+      "asset": "1033f",
+      "scale": 1,
+      "first_physical_column_foreground": [],
+      "source_first_column_alltransparent": true
+    },
+    {
+      "asset": "1033f",
+      "scale": 2,
+      "first_physical_column_foreground": [
+        {
+          "y": 17,
+          "index": 11,
+          "RGB": [
+            150,
+            150,
+            150
+          ]
+        },
+        {
+          "y": 18,
+          "index": 13,
+          "RGB": [
+            138,
+            134,
+            134
+          ]
+        },
+        {
+          "y": 19,
+          "index": 12,
+          "RGB": [
+            142,
+            142,
+            142
+          ]
+        },
+        {
+          "y": 21,
+          "index": 18,
+          "RGB": [
+            97,
+            97,
+            97
+          ]
+        },
+        {
+          "y": 22,
+          "index": 19,
+          "RGB": [
+            93,
+            89,
+            89
+          ]
+        },
+        {
+          "y": 23,
+          "index": 18,
+          "RGB": [
+            97,
+            97,
+            97
+          ]
+        },
+        {
+          "y": 28,
+          "index": 22,
+          "RGB": [
+            69,
+            69,
+            69
+          ]
+        }
+      ],
+      "source_first_column_alltransparent": true
+    },
+    {
+      "asset": "1033f",
+      "scale": 3,
+      "first_physical_column_foreground": [
+        {
+          "y": 25,
+          "index": 7,
+          "RGB": [
+            182,
+            178,
+            178
+          ]
+        },
+        {
+          "y": 26,
+          "index": 8,
+          "RGB": [
+            174,
+            170,
+            170
+          ]
+        },
+        {
+          "y": 27,
+          "index": 7,
+          "RGB": [
+            182,
+            178,
+            178
+          ]
+        },
+        {
+          "y": 28,
+          "index": 7,
+          "RGB": [
+            182,
+            178,
+            178
+          ]
+        },
+        {
+          "y": 29,
+          "index": 8,
+          "RGB": [
+            174,
+            170,
+            170
+          ]
+        },
+        {
+          "y": 30,
+          "index": 12,
+          "RGB": [
+            142,
+            142,
+            142
+          ]
+        },
+        {
+          "y": 31,
+          "index": 12,
+          "RGB": [
+            142,
+            142,
+            142
+          ]
+        },
+        {
+          "y": 32,
+          "index": 13,
+          "RGB": [
+            138,
+            134,
+            134
+          ]
+        },
+        {
+          "y": 33,
+          "index": 15,
+          "RGB": [
+            121,
+            121,
+            121
+          ]
+        },
+        {
+          "y": 34,
+          "index": 13,
+          "RGB": [
+            138,
+            134,
+            134
+          ]
+        },
+        {
+          "y": 35,
+          "index": 14,
+          "RGB": [
+            130,
+            125,
+            125
+          ]
+        },
+        {
+          "y": 36,
+          "index": 16,
+          "RGB": [
+            113,
+            113,
+            113
+          ]
+        },
+        {
+          "y": 37,
+          "index": 17,
+          "RGB": [
+            105,
+            105,
+            105
+          ]
+        },
+        {
+          "y": 38,
+          "index": 17,
+          "RGB": [
+            105,
+            105,
+            105
+          ]
+        },
+        {
+          "y": 39,
+          "index": 18,
+          "RGB": [
+            97,
+            97,
+            97
+          ]
+        },
+        {
+          "y": 40,
+          "index": 18,
+          "RGB": [
+            97,
+            97,
+            97
+          ]
+        },
+        {
+          "y": 41,
+          "index": 18,
+          "RGB": [
+            97,
+            97,
+            97
+          ]
+        },
+        {
+          "y": 42,
+          "index": 18,
+          "RGB": [
+            97,
+            97,
+            97
+          ]
+        },
+        {
+          "y": 43,
+          "index": 19,
+          "RGB": [
+            93,
+            89,
+            89
+          ]
+        },
+        {
+          "y": 44,
+          "index": 20,
+          "RGB": [
+            85,
+            85,
+            85
+          ]
+        }
+      ],
+      "source_first_column_alltransparent": true
+    },
+    {
+      "asset": "1033f",
+      "scale": 4,
+      "first_physical_column_foreground": [
+        {
+          "y": 33,
+          "index": 9,
+          "RGB": [
+            166,
+            162,
+            162
+          ]
+        },
+        {
+          "y": 34,
+          "index": 10,
+          "RGB": [
+            158,
+            158,
+            158
+          ]
+        },
+        {
+          "y": 35,
+          "index": 8,
+          "RGB": [
+            174,
+            170,
+            170
+          ]
+        },
+        {
+          "y": 36,
+          "index": 7,
+          "RGB": [
+            182,
+            178,
+            178
+          ]
+        },
+        {
+          "y": 37,
+          "index": 6,
+          "RGB": [
+            186,
+            186,
+            186
+          ]
+        },
+        {
+          "y": 38,
+          "index": 7,
+          "RGB": [
+            182,
+            178,
+            178
+          ]
+        },
+        {
+          "y": 39,
+          "index": 7,
+          "RGB": [
+            182,
+            178,
+            178
+          ]
+        },
+        {
+          "y": 40,
+          "index": 9,
+          "RGB": [
+            166,
+            162,
+            162
+          ]
+        },
+        {
+          "y": 41,
+          "index": 11,
+          "RGB": [
+            150,
+            150,
+            150
+          ]
+        },
+        {
+          "y": 42,
+          "index": 10,
+          "RGB": [
+            158,
+            158,
+            158
+          ]
+        },
+        {
+          "y": 43,
+          "index": 11,
+          "RGB": [
+            150,
+            150,
+            150
+          ]
+        },
+        {
+          "y": 44,
+          "index": 12,
+          "RGB": [
+            142,
+            142,
+            142
+          ]
+        },
+        {
+          "y": 45,
+          "index": 12,
+          "RGB": [
+            142,
+            142,
+            142
+          ]
+        },
+        {
+          "y": 46,
+          "index": 11,
+          "RGB": [
+            150,
+            150,
+            150
+          ]
+        },
+        {
+          "y": 47,
+          "index": 12,
+          "RGB": [
+            142,
+            142,
+            142
+          ]
+        },
+        {
+          "y": 48,
+          "index": 13,
+          "RGB": [
+            138,
+            134,
+            134
+          ]
+        },
+        {
+          "y": 49,
+          "index": 14,
+          "RGB": [
+            130,
+            125,
+            125
+          ]
+        },
+        {
+          "y": 50,
+          "index": 14,
+          "RGB": [
+            130,
+            125,
+            125
+          ]
+        },
+        {
+          "y": 51,
+          "index": 15,
+          "RGB": [
+            121,
+            121,
+            121
+          ]
+        },
+        {
+          "y": 52,
+          "index": 16,
+          "RGB": [
+            113,
+            113,
+            113
+          ]
+        },
+        {
+          "y": 53,
+          "index": 16,
+          "RGB": [
+            113,
+            113,
+            113
+          ]
+        },
+        {
+          "y": 54,
+          "index": 16,
+          "RGB": [
+            113,
+            113,
+            113
+          ]
+        },
+        {
+          "y": 55,
+          "index": 16,
+          "RGB": [
+            113,
+            113,
+            113
+          ]
+        },
+        {
+          "y": 56,
+          "index": 16,
+          "RGB": [
+            113,
+            113,
+            113
+          ]
+        },
+        {
+          "y": 57,
+          "index": 17,
+          "RGB": [
+            105,
+            105,
+            105
+          ]
+        },
+        {
+          "y": 58,
+          "index": 17,
+          "RGB": [
+            105,
+            105,
+            105
+          ]
+        },
+        {
+          "y": 59,
+          "index": 17,
+          "RGB": [
+            105,
+            105,
+            105
+          ]
+        }
+      ],
+      "source_first_column_alltransparent": true
+    }
+  ],
+  "whole_picture_findings": "Both complete drone bodies remain recognizable with darkred eyes/pale glints, copper panels, segmented gray armor and lower dark apertures. New3/4 output still visibly contains separate left strip on second phase. This is an actual source-absent detached structure, not ordinary RGB shading, tiny occupied-cell rounding or opaque mask metric.",
+  "offfocus_changes": [
+    {
+      "asset": "1033e",
+      "changed_RGBA_pixels": 587320,
+      "samples": 786769,
+      "untargeted_frame_is_not_byte_identical": true
+    },
+    {
+      "asset": "1033f",
+      "changed_RGBA_pixels": 597225,
+      "samples": 786769,
+      "untargeted_frame_is_not_byte_identical": null
+    }
+  ],
+  "offfocus_limit": "Provider regenerated both cells, including587320 changedRGBA pixels in unrequested firstphase. Macrobody/eye/armor still viewed coherently but no byte-identity or only-target-pixels claim.",
+  "complete_physical_views": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/generated/raw-v1.png",
+      "viewer": "tools.view_image",
+      "detail": "original",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "role": "entire oldmaster"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/transparent-source-atlas.png",
+      "viewer": "tools.view_image",
+      "detail": "original",
+      "dimensions": [
+        576,
+        288
+      ],
+      "role": "complete authenticSourceNN"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/authentic-original-complete2-native48x24.png",
+      "viewer": "tools.view_image",
+      "detail": "original",
+      "dimensions": [
+        48,
+        24
+      ],
+      "role": "complete authenticnative"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/AUTHENTIC-COMPLETE2-SOURCE-AND-OLD-NATIVE1TO4-PREFLIGHT.png",
+      "viewer": "tools.view_image",
+      "detail": "original",
+      "dimensions": [
+        750,
+        580
+      ],
+      "role": "old wholeallscale"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f-master-isolated-stripe-cleanup-campaign-20261014-v1/generated/complete2-isolated-stripe-cleanup-v1-untouched.png",
+      "viewer": "tools.view_image",
+      "detail": "original",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "role": "entire unchanged provideroutput"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/1033e-whole-source-old-new-native1to4.png",
+      "viewer": "tools.view_image",
+      "detail": "original",
+      "dimensions": [
+        750,
+        440
+      ],
+      "role": "new entire Source/old/current1\u20134 body or orderedsequence",
+      "all_native_bodies_unresampled": true
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/1033f-whole-source-old-new-native1to4.png",
+      "viewer": "tools.view_image",
+      "detail": "original",
+      "dimensions": [
+        750,
+        440
+      ],
+      "role": "new entire Source/old/current1\u20134 body or orderedsequence",
+      "all_native_bodies_unresampled": true
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/complete2-source-and-current1to4-ordered-sequence.png",
+      "viewer": "tools.view_image",
+      "detail": "original",
+      "dimensions": [
+        320,
+        450
+      ],
+      "role": "new entire Source/old/current1\u20134 body or orderedsequence",
+      "all_native_bodies_unresampled": true
+    }
+  ],
+  "lossless_page_audit": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/COMPLETE2-ACTUAL-NATIVE-LOSSLESS-PAGES-ISOLATED-STRIPE-AND-OFFFOCUS-AUDIT.json",
+    "sha256": "bd977ad5bae0dd7727dc072d910eb3ef888dbdf2f691af315fab1eca610e2020",
+    "size": 21544,
+    "mtime_ns": 1791935216377122493
+  },
+  "old_debug_history_preserved": true,
+  "no_art_RGBA_pixel_edits": true,
+  "no_cropfit_mask_policy_or_palette_workaround": true,
+  "no_retry": true,
+  "no_context_World_or_Host": true,
+  "no_admission_or_canonical_Git_docs_changes": true,
+  "input_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/.claim.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0,
+      "mtime_ns": 1791619341127541319
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/source-sheet.png",
+      "sha256": "239735242ef6877fdfcd9885116563574388ab65d06e5593544b5585cabba46a",
+      "size": 6362,
+      "mtime_ns": 1791632588191796584
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/source-review.json",
+      "sha256": "655c5383a25d45f22187c5280d60fd390d3c350296e15d870bb754d4b284c84b",
+      "size": 1060,
+      "mtime_ns": 1791632799794578005
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/transparent-source-atlas.png",
+      "sha256": "710d55a35b358ac11e7f853282f18b179d9a4d3a83ddb306ad163cd1f19fb028",
+      "size": 3390,
+      "mtime_ns": 1791635877396519473
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/candidate.json",
+      "sha256": "65966d76a5311858e8c29649f7c0658421a52372689ef6f3d93ddc619659cfc2",
+      "size": 11999,
+      "mtime_ns": 1791643460904356483
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/job.json",
+      "sha256": "1236aeb2119f83f12fa86b0c903820d6900d913ea322037949734609e84166a8",
+      "size": 4496,
+      "mtime_ns": 1791724111796182511
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/sources/1033e.png",
+      "sha256": "6a158f376b8768db048b82ef86b7fd32dbdd89d4805d0f8cd8518a3a66740f3c",
+      "size": 1110,
+      "mtime_ns": 1791632588187935334
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/sources/1033f.png",
+      "sha256": "6dce9e09bd3d70cf100cb042dbeaa00d55487597941ea1ce888887ccc04d5230",
+      "size": 1100,
+      "mtime_ns": 1791632588188542057
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/generated/prompt-v1-prepared.txt",
+      "sha256": "14a19e9fc67b15b37dfccf0d352d362e16f9b35878986c840e5fca0d1c44038b",
+      "size": 2964,
+      "mtime_ns": 1791635877397715299
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/generated/prompt-v1.txt",
+      "sha256": "14a19e9fc67b15b37dfccf0d352d362e16f9b35878986c840e5fca0d1c44038b",
+      "size": 2964,
+      "mtime_ns": 1791639509552809001
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/generated/raw-v1.png",
+      "sha256": "51b3f651d2f620b60ab3fb5a637e42de55bf5d2f90dfecaaa319632dcade5609",
+      "size": 2383214,
+      "mtime_ns": 1791639536537607980
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/generated/generation-v1.json",
+      "sha256": "4d5a8f85f36d0465683d1ba538fdfa794081078e81698d80a913a60c55405d91",
+      "size": 493,
+      "mtime_ns": 1791639536561609298
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/1033e-original.ppm",
+      "sha256": "d5ae2188e1e6c830b82f6a95f416387c3d255bec0be3724418eb32ec2fcb9b00",
+      "size": 1741,
+      "mtime_ns": 1791671666404074792
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/1033e-hd-1.ppm",
+      "sha256": "24843f7efeaf13be6a5018468c431894a4de1f8ee4994856d570b5bb028bdb7a",
+      "size": 1741,
+      "mtime_ns": 1791671666424074792
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/1033e-hd-2.ppm",
+      "sha256": "35e2c0e6980340f8b2b44b3287ce870741d724d33bedfbd16d2269c3236c6755",
+      "size": 6925,
+      "mtime_ns": 1791671666481074790
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/1033e-hd-3.ppm",
+      "sha256": "5bef78333f63d60750e0b12f0a66e5fb84ae0e4fea9fb1051d7080f8e968af3b",
+      "size": 15565,
+      "mtime_ns": 1791671666613074787
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/1033e-hd-4.ppm",
+      "sha256": "43637daed64d73aa51705aca0b8c0af165f53082bac957bb678bd6e718a85250",
+      "size": 27661,
+      "mtime_ns": 1791671666743074784
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/1033f-original.ppm",
+      "sha256": "488d1b3219e24b845d83ab4e3a693450a0ed99ed4080b895eb3494fad9e77f21",
+      "size": 1741,
+      "mtime_ns": 1791671666746074784
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/1033f-hd-1.ppm",
+      "sha256": "ef5fdc6037665ddd48cbe0c010185ecf34f9206fab524beef6d385026184f361",
+      "size": 1741,
+      "mtime_ns": 1791671666765074784
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/1033f-hd-2.ppm",
+      "sha256": "4589940bd1e3dd17b61b49963218242ef67d64c58e437f370e401a9b59e0e3f7",
+      "size": 6925,
+      "mtime_ns": 1791671666819074782
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/1033f-hd-3.ppm",
+      "sha256": "55aefbda530f5f34e74d4e4c4ed34dee9bb339d86b2385803d3f9b0f5669db40",
+      "size": 15565,
+      "mtime_ns": 1791671666916074780
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/1033f-hd-4.ppm",
+      "sha256": "bc7f2c9100c4eb9c635f0d8eeab9dbc287fca654a980177d97acf7eeeac7af28",
+      "size": 27661,
+      "mtime_ns": 1791671667044074776
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/runtime-qa.json",
+      "sha256": "416a9056de3f528e2ed0421cbcbc1c8b7172d5b091c3d115256b1aa06e12e37f",
+      "size": 7960,
+      "mtime_ns": 1791671667062850533
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/runtime-contact-sheets.json",
+      "sha256": "78615c463b1bf03a7572fbb663f4800db9fa993e7f1db6c9b1ffa6052a861354",
+      "size": 164,
+      "mtime_ns": 1791671667076462814
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/runtime-contact-sheet.png",
+      "sha256": "b841a87ed745c4c3388b1815e3d620e40359119eecd9f089e212e9500340a220",
+      "size": 26907,
+      "mtime_ns": 1791671667076074775
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f/runtime-review/final-queue-pass.log",
+      "sha256": "e9990e27d743bf5560b06a6f0d65800de78b94caff06eb29fa448e2c043f922e",
+      "size": 203,
+      "mtime_ns": 1791671667088648633
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP37G1_PIC",
+      "sha256": "00a6f1bebfb75af8dafbef2b974417f95580827ebcf5181f5ba6712845eaf865",
+      "size": 1353,
+      "mtime_ns": 1787663959416006948
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP37G1_PIC.1",
+      "sha256": "fa3f0a43946edd6de34f23c6288555b22c8a98cb841fe5c2353147b37fe5483e",
+      "size": 1289,
+      "mtime_ns": 1787663959416066021
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "size": 768,
+      "mtime_ns": 1787663959337906368
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/INDEX",
+      "sha256": "4ce78e5e638b6603114dd233ceaa41f386c0963ba4aa02ecf88ce0215b096681",
+      "size": 188148,
+      "mtime_ns": 1787743156562281494
+    },
+    {
+      "path": "/home/quintine/.codex/generated_images/01a1245d-6057-70c2-a44c-c7a159ca21cb/exec-4c0e556f-c1e0-4013-a28d-6069feb2a9f7.png",
+      "sha256": "51b3f651d2f620b60ab3fb5a637e42de55bf5d2f90dfecaaa319632dcade5609",
+      "size": 2383214,
+      "mtime_ns": 1791639536357598093
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/authentic-original-complete2-native48x24.png",
+      "sha256": "b7972e2655dfdfd4a9dd29503a354819e5560b78109a93af9a33083281404598",
+      "size": 1314,
+      "mtime_ns": 1791934920385738379
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/assets.rs",
+      "sha256": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+      "size": 16417,
+      "mtime_ns": 1791711112495415498
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio/opl3.rs",
+      "sha256": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+      "size": 55234,
+      "mtime_ns": 1791594274983451465
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/audio.rs",
+      "sha256": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+      "size": 42072,
+      "mtime_ns": 1791612018073210287
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/cinematics.rs",
+      "sha256": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+      "size": 29788,
+      "mtime_ns": 1791634621359594894
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/content.rs",
+      "sha256": "7f35df7100c450ba4bb30a0fdc90101c115b5ae42a7aac57829441c5b7761647",
+      "size": 36359,
+      "mtime_ns": 1791671687237069939
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/desktop.rs",
+      "sha256": "7a48e4e96ca3a926a4995dac7d31a1dca180b51aff7b682d17415c479ca1f04c",
+      "size": 351431,
+      "mtime_ns": 1791710653182062552
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/hd.rs",
+      "sha256": "bfb345af4414dfe2f870a341e5533700fa8a6322e41acdec1b1a406038f491e2",
+      "size": 101903,
+      "mtime_ns": 1791810577097954278
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/legacy_tables.rs",
+      "sha256": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+      "size": 26467,
+      "mtime_ns": 1791596592133246731
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/lib.rs",
+      "sha256": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+      "size": 318,
+      "mtime_ns": 1791618787038761898
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/main.rs",
+      "sha256": "d270d1787700975220fed75bbb8d6cd8e38288093492fb2608252849e1f804d7",
+      "size": 11193,
+      "mtime_ns": 1791680086709570028
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/menu_art.rs",
+      "sha256": "1c3b8e58828c13099cf00c612b383efa1e402e27eaa7c8f5f0afc7f1ba44a0d0",
+      "size": 4325,
+      "mtime_ns": 1791673814189962237
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/mod_selection.rs",
+      "sha256": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+      "size": 5447,
+      "mtime_ns": 1791597772968721997
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/modding.rs",
+      "sha256": "03626de55f4484aad19725c13301ddbb9c63d0d015716282db7177b7a1223fc4",
+      "size": 31495,
+      "mtime_ns": 1791711112496783607
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/persistence.rs",
+      "sha256": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+      "size": 52762,
+      "mtime_ns": 1791700137529541149
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/render.rs",
+      "sha256": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+      "size": 32172,
+      "mtime_ns": 1791697273206972841
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/simulation.rs",
+      "sha256": "0ec9f6da11ab82c1461868a7b147e4cdb14689fa7373bd0c24067d9014e9583a",
+      "size": 139766,
+      "mtime_ns": 1791706388595810371
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/sound.rs",
+      "sha256": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+      "size": 11905,
+      "mtime_ns": 1791614563252113040
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/src/terrain_hd.rs",
+      "sha256": "b30b4a65a9e646e9fe106041ad718eebd2740c6c90354267a7b17b770e50ebb0",
+      "size": 23637,
+      "mtime_ns": 1791671333482646664
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-loader-production-epoch-transparent-fullcanvas-rounding-20261013/epoch.json",
+      "sha256": "3a8905b1e2aa91e3539895a96eecf1f78aa8123b7efe4cf37f222a657a32a473",
+      "size": 6135,
+      "mtime_ns": 1791810925673287001
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/8adae709e5fdbf56675bdc7f8766255a627e5cab720c5d26c2315462da509ce2/libraptor_replica-f076ad67c588e355.rlib",
+      "sha256": "8adae709e5fdbf56675bdc7f8766255a627e5cab720c5d26c2315462da509ce2",
+      "size": 22174610,
+      "mtime_ns": 1791810838461709737
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/ba61a9b6a7f97c994c6fdb2ab5e50915a5d6b456664f31709fd05306d56e48bd/libserde_json-89b5c242431768d3.rlib",
+      "sha256": "ba61a9b6a7f97c994c6fdb2ab5e50915a5d6b456664f31709fd05306d56e48bd",
+      "size": 2185458,
+      "mtime_ns": 1791593976756068839
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-loader-production-epoch-transparent-fullcanvas-rounding-20261013/actual-sprite-review",
+      "sha256": "028ae18d245a67c0e9483c6018bdfaf74fc085751dd3e1a857296cb5b00535f5",
+      "size": 1443184,
+      "mtime_ns": 1791810984928418008
+    },
+    {
+      "path": "/home/quintine/.codex/generated_images/01a1245e-2e65-77f2-9b58-738721d533b9/exec-a67f2e65-4a32-4c7c-b724-0229ac9a9847.png",
+      "sha256": "f049c900fc9e9f3d44186895ad0af01b45c5ed5949fecf1daf2f75ecd7732495",
+      "size": 2270458,
+      "mtime_ns": 1791934996144525997
+    }
+  ],
+  "old_parent_membership": {
+    "root": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f",
+    "members": [
+      ".claim.lock",
+      "candidate.json",
+      "generated/generation-v1.json",
+      "generated/prompt-v1-prepared.txt",
+      "generated/prompt-v1.txt",
+      "generated/raw-v1.png",
+      "job.json",
+      "runtime-review/1033e-hd-1.ppm",
+      "runtime-review/1033e-hd-2.ppm",
+      "runtime-review/1033e-hd-3.ppm",
+      "runtime-review/1033e-hd-4.ppm",
+      "runtime-review/1033e-original.ppm",
+      "runtime-review/1033f-hd-1.ppm",
+      "runtime-review/1033f-hd-2.ppm",
+      "runtime-review/1033f-hd-3.ppm",
+      "runtime-review/1033f-hd-4.ppm",
+      "runtime-review/1033f-original.ppm",
+      "runtime-review/final-queue-pass.log",
+      "runtime-review/runtime-contact-sheet.png",
+      "runtime-review/runtime-contact-sheets.json",
+      "runtime-review/runtime-qa.json",
+      "source-review.json",
+      "source-sheet.png",
+      "sources/1033e.png",
+      "sources/1033f.png",
+      "transparent-source-atlas.png"
+    ]
+  },
+  "no_pending_writer_call_lease": true
+}

@@ -1,0 +1,936 @@
+{
+  "actual_probe_receipt": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/ACTUAL-FINAL-ROUTE-SOURCEF-FIVE-QA-TERMINAL.json",
+    "sha256": "feddedd8343cd2c8f09571f013fcaf742785fb4958330028104b0355fd46cb15",
+    "size": 1874
+  },
+  "any_game_source_newer_than_library": false,
+  "artwork_sha256": {
+    "jobs/derived-three-enemy-families-five-v1-20261018/derived/10315/10315-derived.png": "8ef04dfbd53d54242081e9fc1e59b1f58add35b3d8a2b1855d9e1c429009de03",
+    "jobs/derived-three-enemy-families-five-v1-20261018/derived/10316/10316-derived.png": "a83a15bb55c9e5146ce0f40b3bc6fcabb346f57492e6c0c9233c23f04aa7297d",
+    "jobs/derived-three-enemy-families-five-v1-20261018/derived/1033e/1033e-derived.png": "6d9f9184ac55f77cbf6bba5b1a8f73922efb4e00939ba1f3fdecd32fd61930ae",
+    "jobs/derived-three-enemy-families-five-v1-20261018/derived/1033f/1033f-derived.png": "e853d94e9d805577e2435e4eabfde43a040a5b88ce0ba29a5c91dce6499b5b14",
+    "jobs/derived-three-enemy-families-five-v1-20261018/derived/200bf/200bf-derived.png": "178bb6d93ab1cb3f29dfe60bcebb5d63ead2dae24f0427f1ac8886970d188cac"
+  },
+  "candidate_sha256": "0c75a235723342cec1341ae196faa5fe6ead310c504976740ae30566462ace02",
+  "diagnostics": [],
+  "frame_bindings_sha256": "c5f8ff7abdd097dade496f746589c44d55ff6d45b846182e71c468a199399590",
+  "frames": [
+    {
+      "asset": "200bf",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              24,
+              39
+            ],
+            "centroid": [
+              11.495263870094723,
+              16.26792963464141
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2,
+              2,
+              0,
+              0
+            ],
+            "visible_pixels": 739
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              48,
+              78
+            ],
+            "centroid": [
+              23.490527740189446,
+              33.03585926928282
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              8,
+              8,
+              0,
+              0
+            ],
+            "visible_pixels": 2956
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              72,
+              117
+            ],
+            "centroid": [
+              35.48579161028417,
+              49.80378890392422
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              18,
+              18,
+              0,
+              0
+            ],
+            "visible_pixels": 6651
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              0,
+              0,
+              96,
+              156
+            ],
+            "centroid": [
+              47.48105548037889,
+              66.57171853856563
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              32,
+              32,
+              0,
+              0
+            ],
+            "visible_pixels": 11824
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        24,
+        40
+      ],
+      "source_mask": {
+        "bounds": [
+          0,
+          0,
+          24,
+          39
+        ],
+        "centroid": [
+          11.495263870094723,
+          16.26792963464141
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0
+        ],
+        "visible_pixels": 739
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "59d99f4da7b270bb16a0a0c4f45ffa7cd21672e8bb57e7a6c92dd3974ea8e54b"
+    },
+    {
+      "asset": "10315",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              2,
+              2,
+              78,
+              39
+            ],
+            "centroid": [
+              44.87960339943343,
+              21.906515580736542
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 1412
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              4,
+              4,
+              156,
+              78
+            ],
+            "centroid": [
+              90.25920679886686,
+              44.313031161473084
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 5648
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              6,
+              6,
+              234,
+              117
+            ],
+            "centroid": [
+              135.6388101983003,
+              66.71954674220963
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 12708
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              8,
+              8,
+              312,
+              156
+            ],
+            "centroid": [
+              181.0184135977337,
+              89.12606232294617
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 22592
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        80,
+        40
+      ],
+      "source_mask": {
+        "bounds": [
+          2,
+          2,
+          78,
+          39
+        ],
+        "centroid": [
+          44.87960339943343,
+          21.906515580736542
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 1412
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "7736fdbca555a9448b42be64523d2a75fb1bae2946ad237e6d7df347e98315a5"
+    },
+    {
+      "asset": "10316",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              1,
+              5,
+              78,
+              40
+            ],
+            "centroid": [
+              44.35298245614035,
+              22.022456140350876
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 1425
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              2,
+              10,
+              156,
+              80
+            ],
+            "centroid": [
+              89.2059649122807,
+              44.54491228070175
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 5700
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              3,
+              15,
+              234,
+              120
+            ],
+            "centroid": [
+              134.05894736842106,
+              67.06736842105263
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 12825
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              4,
+              20,
+              312,
+              160
+            ],
+            "centroid": [
+              178.9119298245614,
+              89.5898245614035
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 22800
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        80,
+        40
+      ],
+      "source_mask": {
+        "bounds": [
+          1,
+          5,
+          78,
+          40
+        ],
+        "centroid": [
+          44.35298245614035,
+          22.022456140350876
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 1425
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "db19f9e4082892eae12832c729be3f4435af0896ff43fcf121866da06aab2182"
+    },
+    {
+      "asset": "1033e",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              1,
+              0,
+              24,
+              23
+            ],
+            "centroid": [
+              12.0,
+              11.0
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 373
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              2,
+              0,
+              48,
+              46
+            ],
+            "centroid": [
+              24.5,
+              22.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 1492
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              3,
+              0,
+              72,
+              69
+            ],
+            "centroid": [
+              37.0,
+              34.0
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 3357
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              4,
+              0,
+              96,
+              92
+            ],
+            "centroid": [
+              49.5,
+              45.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 5968
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        24,
+        24
+      ],
+      "source_mask": {
+        "bounds": [
+          1,
+          0,
+          24,
+          23
+        ],
+        "centroid": [
+          12.0,
+          11.0
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 373
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "00a6f1bebfb75af8dafbef2b974417f95580827ebcf5181f5ba6712845eaf865"
+    },
+    {
+      "asset": "1033f",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              1,
+              0,
+              24,
+              23
+            ],
+            "centroid": [
+              12.0,
+              11.0
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 373
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              2,
+              0,
+              48,
+              46
+            ],
+            "centroid": [
+              24.5,
+              22.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 1492
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              3,
+              0,
+              72,
+              69
+            ],
+            "centroid": [
+              37.0,
+              34.0
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 3357
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              4,
+              0,
+              96,
+              92
+            ],
+            "centroid": [
+              49.5,
+              45.5
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 5968
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        24,
+        24
+      ],
+      "source_mask": {
+        "bounds": [
+          1,
+          0,
+          24,
+          23
+        ],
+        "centroid": [
+          12.0,
+          11.0
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 373
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "fa3f0a43946edd6de34f23c6288555b22c8a98cb841fe5c2353147b37fe5483e"
+    }
+  ],
+  "library": "target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+  "library_modified_ns": 1792245641851329918,
+  "library_sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+  "limitation": "Gallery validation does not prove live scene reachability, terrain seam correctness or artistic fidelity. Opaque sprites have trivial alpha-mask overlap; compare visible source geometry manually.",
+  "metadata_only_lineage_receipt_successor": {
+    "actual_candidate_preserved": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-derived-boss5-integration-20261018/preserved-v1-metadata/candidate.json",
+      "sha256": "7beeaab32a6dfc88a8b35f3605467ff402f4ef2e37842c00bc842eb52a035615",
+      "size": 2598
+    },
+    "actual_candidate_sha256_at_QA": "7beeaab32a6dfc88a8b35f3605467ff402f4ef2e37842c00bc842eb52a035615",
+    "additional_QA_executions": 0,
+    "all5_PNGs_identical": true,
+    "all_measured_fields_unchanged": true,
+    "all_renderer_bound_fields_identical": true,
+    "reason": "Focused bookkeeping receipt validation correction; actual final PNG routes, Source, headers, frames and bank unchanged.",
+    "successor_candidate_sha256": "0c75a235723342cec1341ae196faa5fe6ead310c504976740ae30566462ace02"
+  },
+  "method": "actual Rust HdAssets::load and sprite at scales 1..4; Catalog palette; no artwork edits",
+  "source_newer_than_library": false,
+  "validated_frames": 5
+}

@@ -1,0 +1,761 @@
+{
+  "status": "AUTHOR_QUALIFIED_COMPLETE3_FIVE_FRAMES_INTRINSIC_MATERIAL_ONLY_PENDING_DIFFERENT_PEER_AND_REAL_CONTEXT",
+  "owner": "/root/hd_boss200a2",
+  "completed_utc": "2026-10-18T00:24:57.235386+00:00",
+  "authorization": "User explicitly permitted scripted pixel cleanup; Root reassigned exactly DSHP24G2,SHIP20G1,SHIP37G1 privately. No new image authorization was used.",
+  "assets": [
+    "200bf",
+    "10315",
+    "10316",
+    "1033e",
+    "1033f"
+  ],
+  "selected_frames": [
+    {
+      "asset": "200bf",
+      "name": "DSHP24G2_PIC",
+      "complete_family": "enemies-200bf-200bf",
+      "frame_index": 0,
+      "frame_count": 1,
+      "logical_canvas": [
+        24,
+        40
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "selected_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-200bf-200bf/200bf-recipe.json",
+        "sha256": "9d3aebf3291180906b6998fbf7a1ecdece6229b575b89ac34a577384459688c9",
+        "size": 1478
+      },
+      "selected_output": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-200bf-200bf/200bf-derived/200bf-derived.png",
+        "sha256": "178bb6d93ab1cb3f29dfe60bcebb5d63ead2dae24f0427f1ac8886970d188cac",
+        "size": 108730
+      },
+      "portable_pack_output": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/pack-derived-v2/assets/200bf.png",
+        "sha256": "178bb6d93ab1cb3f29dfe60bcebb5d63ead2dae24f0427f1ac8886970d188cac",
+        "size": 108730
+      },
+      "actual_tool_provenance": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-200bf-200bf/200bf-derived/derived-provenance.json",
+        "sha256": "ca7678abe13e1abd326424a72f6b1d92a48a4c63ed2c5473ef6b962d07e8b782",
+        "size": 6278
+      },
+      "normalized_execution": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-200bf-200bf/200bf-normalized-execution.json",
+        "sha256": "12bcdf4d747aae2db4d3318ad5f094ffc562488f0ec604bed161e6944efc00cf",
+        "size": 1912
+      },
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/sprites/DSHP24G2_PIC",
+        "sha256": "59d99f4da7b270bb16a0a0c4f45ffa7cd21672e8bb57e7a6c92dd3974ea8e54b",
+        "size": 1495,
+        "mtime_ns": 1787663959508644657
+      },
+      "untouched_parent_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-200bf-v2-master-flat-shaft-navmarker-local-edit-campaign-20261014-v1/generated/flat-shaft-navmarker-local-edit-v1-untouched.png",
+        "sha256": "720e308977a5e8110dbb5d7ccc40e4a96557cc6a530f6151b51d85182703d114",
+        "size": 2102031,
+        "mtime_ns": 1791927083736957878
+      },
+      "direct_generated_fraction_of_painted": 0.9277951623815968,
+      "Source_painted_cells": 739,
+      "gap_filled_pixels": 2366,
+      "direct_generated_internally_nonconstant_pixels": 42789,
+      "explicit_gray_support_patch_cells": [
+        {
+          "cells": [
+            [
+              9,
+              36
+            ],
+            [
+              10,
+              36
+            ],
+            [
+              11,
+              36
+            ],
+            [
+              12,
+              36
+            ],
+            [
+              13,
+              36
+            ],
+            [
+              14,
+              36
+            ],
+            [
+              9,
+              37
+            ],
+            [
+              10,
+              37
+            ],
+            [
+              11,
+              37
+            ],
+            [
+              12,
+              37
+            ],
+            [
+              13,
+              37
+            ],
+            [
+              14,
+              37
+            ],
+            [
+              9,
+              38
+            ],
+            [
+              10,
+              38
+            ],
+            [
+              11,
+              38
+            ],
+            [
+              12,
+              38
+            ],
+            [
+              13,
+              38
+            ],
+            [
+              14,
+              38
+            ]
+          ],
+          "detail_gain": 0.5,
+          "generated_donor": [
+            390,
+            1340,
+            576,
+            1527
+          ],
+          "name": "Original flat connected six-wide dark shaft rows36to38",
+          "target": [
+            9,
+            36,
+            15,
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "asset": "10315",
+      "name": "SHIP20G1_PIC",
+      "complete_family": "enemies-10315-10316",
+      "frame_index": 0,
+      "frame_count": 2,
+      "logical_canvas": [
+        80,
+        40
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "selected_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-10315-10316/10315-recipe.json",
+        "sha256": "88ef878299490b5099a91cb0f43ab0575659367d9ee860f63f6692b1b372a431",
+        "size": 1111
+      },
+      "selected_output": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-10315-10316/10315-derived/10315-derived.png",
+        "sha256": "8ef04dfbd53d54242081e9fc1e59b1f58add35b3d8a2b1855d9e1c429009de03",
+        "size": 174147
+      },
+      "portable_pack_output": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/pack-derived-v2/assets/10315.png",
+        "sha256": "8ef04dfbd53d54242081e9fc1e59b1f58add35b3d8a2b1855d9e1c429009de03",
+        "size": 174147
+      },
+      "actual_tool_provenance": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-10315-10316/10315-derived/derived-provenance.json",
+        "sha256": "f11befca9487011e9498c1b730c40b6e442d40e53762a1e036d8790b3d0a2ab2",
+        "size": 15209
+      },
+      "normalized_execution": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-10315-10316/10315-normalized-execution.json",
+        "sha256": "7700415ba29cb2a650b168bed0ca236fb664485246343732cf90eb33aa0654a8",
+        "size": 1913
+      },
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP20G1_PIC",
+        "sha256": "7736fdbca555a9448b42be64523d2a75fb1bae2946ad237e6d7df347e98315a5",
+        "size": 2472,
+        "mtime_ns": 1787663959413628945
+      },
+      "untouched_parent_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-10315-10316/generated/raw-v3.png",
+        "sha256": "810b0579fdd1a64bdba08374a17febf470214850fc0ee8e3162d7536f2e5ce6c",
+        "size": 1032040,
+        "mtime_ns": 1791670119222608271
+      },
+      "direct_generated_fraction_of_painted": 0.8623517174220963,
+      "Source_painted_cells": 1412,
+      "gap_filled_pixels": 12439,
+      "direct_generated_internally_nonconstant_pixels": 76370,
+      "explicit_gray_support_patch_cells": []
+    },
+    {
+      "asset": "10316",
+      "name": "SHIP20G1_PIC",
+      "complete_family": "enemies-10315-10316",
+      "frame_index": 1,
+      "frame_count": 2,
+      "logical_canvas": [
+        80,
+        40
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "selected_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-10315-10316/10316-recipe.json",
+        "sha256": "e0b202890ba3c32c63a0228d856e4f99b7148dbcb857c4650638149f696d9b64",
+        "size": 1117
+      },
+      "selected_output": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-10315-10316/10316-derived/10316-derived.png",
+        "sha256": "a83a15bb55c9e5146ce0f40b3bc6fcabb346f57492e6c0c9233c23f04aa7297d",
+        "size": 171884
+      },
+      "portable_pack_output": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/pack-derived-v2/assets/10316.png",
+        "sha256": "a83a15bb55c9e5146ce0f40b3bc6fcabb346f57492e6c0c9233c23f04aa7297d",
+        "size": 171884
+      },
+      "actual_tool_provenance": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-10315-10316/10316-derived/derived-provenance.json",
+        "sha256": "b3558a93892e532be38c7b53496fd01eff3b2e6798778051a2d61e317b4b2453",
+        "size": 15350
+      },
+      "normalized_execution": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-10315-10316/10316-normalized-execution.json",
+        "sha256": "a703d0cb87715648326be102882ebc12d7f82929f60ad6607a7580b2b8693d68",
+        "size": 1913
+      },
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP20G1_PIC.1",
+        "sha256": "db19f9e4082892eae12832c729be3f4435af0896ff43fcf121866da06aab2182",
+        "size": 2357,
+        "mtime_ns": 1787663959413690919
+      },
+      "untouched_parent_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-10315-10316/generated/raw-v3.png",
+        "sha256": "810b0579fdd1a64bdba08374a17febf470214850fc0ee8e3162d7536f2e5ce6c",
+        "size": 1032040,
+        "mtime_ns": 1791670119222608271
+      },
+      "direct_generated_fraction_of_painted": 0.8421381578947369,
+      "Source_painted_cells": 1425,
+      "gap_filled_pixels": 14397,
+      "direct_generated_internally_nonconstant_pixels": 75294,
+      "explicit_gray_support_patch_cells": []
+    },
+    {
+      "asset": "1033e",
+      "name": "SHIP37G1_PIC",
+      "complete_family": "enemies-1033e-1033f",
+      "frame_index": 0,
+      "frame_count": 2,
+      "logical_canvas": [
+        24,
+        24
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "selected_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-1033e-1033f/1033e-recipe-v2-fullcanvas.json",
+        "sha256": "d2935fdf0ef7593e88b530811ff6169f96206944eb71509bbe7625e04904578d",
+        "size": 1237
+      },
+      "selected_output": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-1033e-1033f/1033e-derived-v2-fullcanvas/1033e-derived.png",
+        "sha256": "6d9f9184ac55f77cbf6bba5b1a8f73922efb4e00939ba1f3fdecd32fd61930ae",
+        "size": 56792
+      },
+      "portable_pack_output": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/pack-derived-v2/assets/1033e.png",
+        "sha256": "6d9f9184ac55f77cbf6bba5b1a8f73922efb4e00939ba1f3fdecd32fd61930ae",
+        "size": 56792
+      },
+      "actual_tool_provenance": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-1033e-1033f/1033e-derived-v2-fullcanvas/derived-provenance.json",
+        "sha256": "e1496618f5fd5a3caf3609f346d79e7b55ff388a1fe6e733877c338ce92eb3cf",
+        "size": 3701
+      },
+      "normalized_execution": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-1033e-1033f/1033e-normalized-execution-v2-fullcanvas.json",
+        "sha256": "ea4c242ab27e2ae6b7a3d05216a2f9f1ccec508f4826018b4ce66cc25059afbc",
+        "size": 1889
+      },
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP37G1_PIC",
+        "sha256": "00a6f1bebfb75af8dafbef2b974417f95580827ebcf5181f5ba6712845eaf865",
+        "size": 1353,
+        "mtime_ns": 1787663959416006948
+      },
+      "untouched_parent_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f-master-isolated-stripe-cleanup-campaign-20261014-v1/generated/complete2-isolated-stripe-cleanup-v1-untouched.png",
+        "sha256": "f049c900fc9e9f3d44186895ad0af01b45c5ed5949fecf1daf2f75ecd7732495",
+        "size": 2270458,
+        "mtime_ns": 1791934996144525997
+      },
+      "direct_generated_fraction_of_painted": 0.985212801608579,
+      "Source_painted_cells": 373,
+      "gap_filled_pixels": 353,
+      "direct_generated_internally_nonconstant_pixels": 23109,
+      "explicit_gray_support_patch_cells": []
+    },
+    {
+      "asset": "1033f",
+      "name": "SHIP37G1_PIC",
+      "complete_family": "enemies-1033e-1033f",
+      "frame_index": 1,
+      "frame_count": 2,
+      "logical_canvas": [
+        24,
+        24
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "selected_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-1033e-1033f/1033f-recipe-v2-fullcanvas.json",
+        "sha256": "a55d73bf08ad5741388c5dcf9342f13f6eb61c87b632d53ceeea75615df4cb08",
+        "size": 1243
+      },
+      "selected_output": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-1033e-1033f/1033f-derived-v2-fullcanvas/1033f-derived.png",
+        "sha256": "e853d94e9d805577e2435e4eabfde43a040a5b88ce0ba29a5c91dce6499b5b14",
+        "size": 55913
+      },
+      "portable_pack_output": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/pack-derived-v2/assets/1033f.png",
+        "sha256": "e853d94e9d805577e2435e4eabfde43a040a5b88ce0ba29a5c91dce6499b5b14",
+        "size": 55913
+      },
+      "actual_tool_provenance": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-1033e-1033f/1033f-derived-v2-fullcanvas/derived-provenance.json",
+        "sha256": "7cf350237d8cdf0f0e3a3f25ddeb4f1561e49bf620295dccb9c7ab43c73cfe83",
+        "size": 4539
+      },
+      "normalized_execution": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-1033e-1033f/1033f-normalized-execution-v2-fullcanvas.json",
+        "sha256": "adc8205f1580c7c2e5e31dabc3ebe6225adf840aba17de55c2015c06b8236201",
+        "size": 1889
+      },
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP37G1_PIC.1",
+        "sha256": "fa3f0a43946edd6de34f23c6288555b22c8a98cb841fe5c2353147b37fe5483e",
+        "size": 1289,
+        "mtime_ns": 1787663959416066021
+      },
+      "untouched_parent_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f-master-isolated-stripe-cleanup-campaign-20261014-v1/generated/complete2-isolated-stripe-cleanup-v1-untouched.png",
+        "sha256": "f049c900fc9e9f3d44186895ad0af01b45c5ed5949fecf1daf2f75ecd7732495",
+        "size": 2270458,
+        "mtime_ns": 1791934996144525997
+      },
+      "direct_generated_fraction_of_painted": 0.9655663538873994,
+      "Source_painted_cells": 373,
+      "gap_filled_pixels": 822,
+      "direct_generated_internally_nonconstant_pixels": 22654,
+      "explicit_gray_support_patch_cells": []
+    }
+  ],
+  "selected_pack": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/pack-derived-v2/hd.json",
+    "sha256": "81a12cdb22e04dfd051041107905415646bebd3039eba16b9fb610381dc19b98",
+    "size": 1966
+  },
+  "held_control_pack": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/pack-held/hd.json",
+    "sha256": "70aceadf39c11440e07ecaefbd62ea6d4ad2eb17d6d8a00a4971c41ee5a72429",
+    "size": 2456
+  },
+  "method": "Existing checked hd_boss_cleanup.py: preserve affine-registered generated body RGB, mask alpha exactly to full authentic Source logical cell occupancy, fill only absent Source-supported pixels from Original material with bounded existing generated donor detail; 200bf has18 explicit Source-gray shaft cells. These are DERIVED edits, never relabeled untouched generations.",
+  "runtime_before_any_actual_derivation": {
+    "Python_version": "3.12.14",
+    "Python_executable": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "NumPy_version": "2.3.5",
+    "Pillow_version": "12.3.0",
+    "decoder": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+      "size": 9385,
+      "mtime_ns": 1792245624445469263
+    },
+    "tool": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_boss_cleanup.py",
+      "sha256": "53d07edbbb945baa2c5a3df01f03e2a11787c225b2d714541d5eca12a0fcd85b",
+      "size": 12116,
+      "mtime_ns": 1792280192650138520
+    }
+  },
+  "execution_counts": {
+    "imagegen": 0,
+    "actual_scripted_frame_derivations": 7,
+    "selected_frames": 5,
+    "unchanged_tool_implementation": true,
+    "SourceF_intrinsic_helper_calls": 2,
+    "World_or_scene_calls": 0,
+    "compilers_or_Cargo": 0,
+    "provider_refusal_retries": 0
+  },
+  "initial_SHIP37_attempts": "Both first observed-alpha-bounds attempts are retained. Their registration could move a generated stripe inward, so both were superseded by fixed-old887square-cell registration using Source bbox landmarks, with under0.5rawpixel integer rounding. The Original24square canvas/origin remain unchanged and no crop hides a defect.",
+  "technical": {
+    "complete_frame_count": 5,
+    "scales": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "actual_helper_sha256": "a90704f5cba83f7556a8066522097607fcbee816b4e870b2d2284af774c7b790",
+    "actual_library_sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+    "all18_production_source_pins_match_before_and_after": true,
+    "isolated_loader_diagnostics": [],
+    "all5_Source_native1_masks_exact": true,
+    "all20_SourceNN_masks_exact": true,
+    "SourceNx_control": "2\u20134 are an explicitly labeled Python mirror of frozen render.rs, not claimed as actual Rust execution; complete controls expose documented contour rounding differences.",
+    "details": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/ALL4-ACTUAL-F-FIVE-FRAME-SOURCE-GEOMETRY-CUES-AND-WHOLE-FAMILY-REVIEW-INTERFACE.json",
+      "sha256": "78fd437a0d2275e8b373cca345c6ff5a2e754465067a7df3433d507c0d72a33a",
+      "size": 49159
+    },
+    "preflight": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/actual-F-before-two-isolated-loads.json",
+      "sha256": "513f492be894f233e9f6de79803634bb8d782d15e2eeef7a5e533438ba8cfdff",
+      "size": 4894
+    },
+    "postflight": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/actual-F-after-two-isolated-loads.json",
+      "sha256": "2d91222e85ced5921c016de2cfde804a781c7da07c8dff88ffc272652851029e",
+      "size": 7655
+    }
+  },
+  "family_verdicts": [
+    {
+      "family": "DSHP24G2_PIC",
+      "assets": [
+        "200bf"
+      ],
+      "verdict": "QUALIFIED_INTRINSIC_COMPLETE1",
+      "positive": "Recognizable dark metal and teal side rings, pale central cross and paired upper panels preserve generated metal relief. Full Source outline and dark attached terminal are restored; all4 exact green253/red252 marker cells survive at all4, and x9..14,y36..38 remains occupied with row39 transparent.",
+      "qualifications": "At native1 dark rim/bolt detail merges, and Source-restored lower shaft is a flat dark cap against brighter generated panel relief. Warm weathered metal and pale cross are brighter/more textured than Original; explicit SourceNN contour has sharp steps unlike ScaleNx controls. This is acceptable intrinsic HD treatment, not exact Original RGB identity."
+    },
+    {
+      "family": "SHIP20G1_PIC",
+      "assets": [
+        "10315",
+        "10316"
+      ],
+      "verdict": "QUALIFIED_INTRINSIC_COMPLETE2",
+      "positive": "Both authentic trail phases now survive at native1; whole ship steel body, dark square vent, circular black feature, rust mark and teal banding remain recognizable, with generated rivets/plates/shading visible at2\u20134. Full Source phase alpha399 changed cells is exact rather than relying on generated hairline trails.",
+      "qualifications": "Thin trails become deliberately crisp logical-cell streaks, with repeated bounded donor texture where Original-supported gaps were filled. The gray hull is cleaner/brighter and its vent/circle more regular than Original. Shared body material is coherent across both frames; scene movement/scale/layer or natural reachability not yet approved."
+    },
+    {
+      "family": "SHIP37G1_PIC",
+      "assets": [
+        "1033e",
+        "1033f"
+      ],
+      "verdict": "QUALIFIED_INTRINSIC_COMPLETE2",
+      "positive": "Fixed whole-frame registration preserves the large red lens above the dark gray aperture, warm central plate, steel annulus and side supports. Generated relief remains at2\u20134. Authentic16-cell alpha phase difference is preserved, while fullSource x0 stays empty at every scale and no detached stripe remains.",
+      "qualifications": "At native1 the Original white lens sparkle is softer, while the lens remains visibly red and separate from the lower dark opening. Bronze plate/bolts are more regular and bright than Original; SourceNN ring contour exposes hard stairs at enlarged view. Both complete frames share coherent registration and no body stretch is introduced by observed stray-alpha bounds."
+    }
+  ],
+  "physical_review": {
+    "whole_untouched_raw_parents": [
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-10315-10316/generated/raw-v3.png",
+        "sha256": "810b0579fdd1a64bdba08374a17febf470214850fc0ee8e3162d7536f2e5ce6c",
+        "size": 1032040
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f-master-isolated-stripe-cleanup-campaign-20261014-v1/generated/complete2-isolated-stripe-cleanup-v1-untouched.png",
+        "sha256": "f049c900fc9e9f3d44186895ad0af01b45c5ed5949fecf1daf2f75ecd7732495",
+        "size": 2270458
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-200bf-v2-master-flat-shaft-navmarker-local-edit-campaign-20261014-v1/generated/flat-shaft-navmarker-local-edit-v1-untouched.png",
+        "sha256": "720e308977a5e8110dbb5d7ccc40e4a96557cc6a530f6151b51d85182703d114",
+        "size": 2102031
+      }
+    ],
+    "whole_selected_DERIVED_PNGs": [
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-200bf-200bf/200bf-derived/200bf-derived.png",
+        "sha256": "178bb6d93ab1cb3f29dfe60bcebb5d63ead2dae24f0427f1ac8886970d188cac",
+        "size": 108730
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-10315-10316/10315-derived/10315-derived.png",
+        "sha256": "8ef04dfbd53d54242081e9fc1e59b1f58add35b3d8a2b1855d9e1c429009de03",
+        "size": 174147
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-10315-10316/10316-derived/10316-derived.png",
+        "sha256": "a83a15bb55c9e5146ce0f40b3bc6fcabb346f57492e6c0c9233c23f04aa7297d",
+        "size": 171884
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-1033e-1033f/1033e-derived-v2-fullcanvas/1033e-derived.png",
+        "sha256": "6d9f9184ac55f77cbf6bba5b1a8f73922efb4e00939ba1f3fdecd32fd61930ae",
+        "size": 56792
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/enemies-1033e-1033f/1033f-derived-v2-fullcanvas/1033f-derived.png",
+        "sha256": "e853d94e9d805577e2435e4eabfde43a040a5b88ce0ba29a5c91dce6499b5b14",
+        "size": 55913
+      }
+    ],
+    "all12_complete_family_pages_physically_viewed": [
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/all-scale-whole-family-review/enemies-200bf-200bf-complete-native1-three-role-whole.png",
+        "sha256": "6023235838fd7ce27728438015712fd045e5682a2629bad913372295899f9c18",
+        "size": 24131
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/all-scale-whole-family-review/enemies-200bf-200bf-complete-native2-three-role-whole.png",
+        "sha256": "31f8dbdbc97e69692e22aea24f714645a9dbacf6c7756d1fbae031177e53980a",
+        "size": 39993
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/all-scale-whole-family-review/enemies-200bf-200bf-complete-native3-three-role-whole.png",
+        "sha256": "b897d31365c79dc1a536da075d9781d4027470a10039c06ef97610daded8615c",
+        "size": 56108
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/all-scale-whole-family-review/enemies-200bf-200bf-complete-native4-three-role-whole.png",
+        "sha256": "5a3db7cb45fd4b190dda6b7389de425a4895c47401ede9bf403ba512bfa3c9cc",
+        "size": 80326
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/all-scale-whole-family-review/enemies-10315-10316-complete-native1-three-role-whole.png",
+        "sha256": "611a1f96ca7fae808af44d498f80f58de554a0430ffed0fc926c47cd635f86b1",
+        "size": 58833
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/all-scale-whole-family-review/enemies-10315-10316-complete-native2-three-role-whole.png",
+        "sha256": "ac5f3a5f43891a7189cfe13879a87a6868e29f62b1b6b4879da0750c6fc31991",
+        "size": 112291
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/all-scale-whole-family-review/enemies-10315-10316-complete-native3-three-role-whole.png",
+        "sha256": "0b187d4a7af4ff4e5b6ce0dd9132d481825947981c34f7cb3bdb215335f6e46c",
+        "size": 167381
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/all-scale-whole-family-review/enemies-10315-10316-complete-native4-three-role-whole.png",
+        "sha256": "6c938d8e8476fd36a9bf9b180523da5fdc2201cb5459d084635379e8a89e928a",
+        "size": 241076
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/all-scale-whole-family-review/enemies-1033e-1033f-complete-native1-three-role-whole.png",
+        "sha256": "dc99b426f858c81c2cdaf5ed7a6905c0c0719aff74959a941aefcd32ffb8aa74",
+        "size": 33524
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/all-scale-whole-family-review/enemies-1033e-1033f-complete-native2-three-role-whole.png",
+        "sha256": "f5639dd19a11f1f89d99002f4a53743f9a95e0497db1f863fdca0c0fca6a5052",
+        "size": 54701
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/all-scale-whole-family-review/enemies-1033e-1033f-complete-native3-three-role-whole.png",
+        "sha256": "1b10f42a7d83fc1d9254559cbe904428b57bd29f031e7ec76ba8811ead1ba68d",
+        "size": 77451
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/all-scale-whole-family-review/enemies-1033e-1033f-complete-native4-three-role-whole.png",
+        "sha256": "b6b50002984df0d09d52e6d5f9eaf7253b3c823b05d96708d8db9ed8a27066b8",
+        "size": 106084
+      }
+    ],
+    "all60_native_panes_in_complete_pages": true,
+    "Original_whole_source_boards_physically_viewed": [
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/physical-review/200bf-Original-first-derived-whole.png",
+        "sha256": "a86f2f06e906f0b2916d2461fae6cd6cfba4f619637cb606a5884a43fc0fee1a",
+        "size": 104336
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/physical-review/10315-Original-first-derived-whole.png",
+        "sha256": "85866d5e7494752674088e7ae675d571b128edab8f92fdfd104351af956869ed",
+        "size": 163835
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/physical-review/10316-Original-first-derived-whole.png",
+        "sha256": "e244e36dc379091f02396e5ea081e2c06e37960eaa3377a7aa24e0ed760e4f3e",
+        "size": 161995
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/physical-review/1033e-Original-first-derived-whole.png",
+        "sha256": "9f2e3a91eeef446ca5e90bf20767c7562ec6885f76196ee7f09894c0723de9b9",
+        "size": 55789
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-families5-derived-SourceF-20261018/physical-review/1033f-Original-first-derived-whole.png",
+        "sha256": "3ed5751a100649c9beef02d46eab2dd7601d41c2aa33a3577bb0296bbcda6eb9",
+        "size": 53065
+      }
+    ],
+    "SHIP37_selected_successor_PNGs_physically_viewed_separately": true
+  },
+  "history": {
+    "all_old_HOLDs_and_raws_preserved": true,
+    "scope": "Selected existing successful generated parents only. Bounded historical records were checked; no new call or attempt to bypass provider refusal occurred. This does not assert a global absence of unrelated old refusals.",
+    "three_original_job_candidates_remain_unmodified": true,
+    "old_master_outputs_are_not_reapproved": true
+  },
+  "scope_limits": [
+    "Different independent whole-material peer required.",
+    "Genuine current gameplay contexts and layer/shadow/order/caller behavior remain for Root; no World or scene helper invoked here.",
+    "No shared Source,R/data,canonical,docs,Git,global hd.json or Rust changes.",
+    "No partial family admission; selected complete1+complete2+complete2 only."
+  ],
+  "external_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-boss-next3-enemy-family-driver-20261018.py",
+      "sha256": "cafe97dd99303bab07cbecd966872fc5670bef26e82cce0b089d11fef316cdcb",
+      "size": 6412
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign1033e-1033f-master-isolated-stripe-cleanup-author-20261014-v1/COMPLETE2-MASTER-BACKGROUND-CLEANUP-SOURCE-ABSENT-STRIPE-REMAINS-HOLD.json",
+      "sha256": "8262f7824f8330974697ea84e45eae30c72a1b0c2af8d196a2e0569d2e641cca",
+      "size": 38726
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-campaign200bf-v2-master-flat-shaft-navmarker-local-edit-author-20261014-v1/COMPLETE1-JOINT-LOCAL-SHAFT-NAVIGATION-REPAIR-AUTHOR-METHOD-HOLD.json",
+      "sha256": "fbfae5e7d103c4557647210a696c90ed9a66d2194286d1509be992645839c5e7",
+      "size": 99536
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/actual-sourceF-palette-review",
+      "sha256": "a90704f5cba83f7556a8066522097607fcbee816b4e870b2d2284af774c7b790",
+      "size": 1607488
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-root-SourceF-retained256-production-build-20261018/compiled-epoch.json",
+      "sha256": "38459e0067b17801b3c3c629c22e05dfee98928d451d8c8e0971b63c17288b52",
+      "size": 5917
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/target/hd-review-libraries/cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50/libraptor_replica.rlib",
+      "sha256": "cfabd84bf95a56a3b5c3b48221d20e47985e4695ebb1290cb2fb46afb6b2be50",
+      "size": 22744978
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_boss_cleanup.py",
+      "sha256": "53d07edbbb945baa2c5a3df01f03e2a11787c225b2d714541d5eca12a0fcd85b",
+      "size": 12116
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+      "size": 9385
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/test_hd_boss_cleanup.py",
+      "sha256": "5dc1984887650301b77d11dd20634d0b9e12a69404e1e913c07789a89307466c",
+      "size": 6566
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-10315-10316/candidate.json",
+      "sha256": "db80d26804a949b3a4b1a35ee5d465ff04e4fa52d15036022398be1b0abd1437",
+      "size": 5529
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-10315-10316/coordinator-review.json",
+      "sha256": "b3a982308ab21ec8a3bfcc8f17dc4bb7eba386243699542ae9fe1f69a2ffd192",
+      "size": 371
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-10315-10316/generated/generation-v3.json",
+      "sha256": "3aef136d350b5875e4758411bcfbfd4eabafa7159881f74f48ae11ab857e6a9f",
+      "size": 531
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-10315-10316/generated/raw-v3.png",
+      "sha256": "810b0579fdd1a64bdba08374a17febf470214850fc0ee8e3162d7536f2e5ce6c",
+      "size": 1032040
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f-master-isolated-stripe-cleanup-campaign-20261014-v1/candidate-complete2-fixed-oldcells-stripe-cleanup-v1.json",
+      "sha256": "a5b75025c0e012c0a015cc8b7f43aa1dedf9effad48713500dd06d1c95df4828",
+      "size": 4341
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-1033e-1033f-master-isolated-stripe-cleanup-campaign-20261014-v1/generated/complete2-isolated-stripe-cleanup-v1-untouched.png",
+      "sha256": "f049c900fc9e9f3d44186895ad0af01b45c5ed5949fecf1daf2f75ecd7732495",
+      "size": 2270458
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-200bf-v2-master-flat-shaft-navmarker-local-edit-campaign-20261014-v1/candidate-joint-local-shaft-marker-edit-v1.json",
+      "sha256": "08ddc19f5f1ae9ca3fbd195734a539631e3f98ad0c9146cc5484149c237a4429",
+      "size": 3763
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/enemies-200bf-v2-master-flat-shaft-navmarker-local-edit-campaign-20261014-v1/generated/flat-shaft-navmarker-local-edit-v1-untouched.png",
+      "sha256": "720e308977a5e8110dbb5d7ccc40e4a96557cc6a530f6151b51d85182703d114",
+      "size": 2102031
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/misc/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "size": 768
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/sprites/DSHP24G2_PIC",
+      "sha256": "59d99f4da7b270bb16a0a0c4f45ffa7cd21672e8bb57e7a6c92dd3974ea8e54b",
+      "size": 1495
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP20G1_PIC",
+      "sha256": "7736fdbca555a9448b42be64523d2a75fb1bae2946ad237e6d7df347e98315a5",
+      "size": 2472
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP20G1_PIC.1",
+      "sha256": "db19f9e4082892eae12832c729be3f4435af0896ff43fcf121866da06aab2182",
+      "size": 2357
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP37G1_PIC",
+      "sha256": "00a6f1bebfb75af8dafbef2b974417f95580827ebcf5181f5ba6712845eaf865",
+      "size": 1353
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/data/sprites/SHIP37G1_PIC.1",
+      "sha256": "fa3f0a43946edd6de34f23c6288555b22c8a98cb841fe5c2353147b37fe5483e",
+      "size": 1289
+    }
+  ],
+  "no_pending_owned_writer_call_or_lease": true,
+  "free_bytes_at_freeze": 6035169280
+}

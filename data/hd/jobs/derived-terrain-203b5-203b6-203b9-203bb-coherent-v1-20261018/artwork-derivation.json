@@ -1,0 +1,55 @@
+{
+  "environment": {
+    "Pillow": "12.3.0",
+    "authoring_scope": "Linux authoring tool; game runtime uses PNGs, no runtime Python.",
+    "numpy": "2.3.5",
+    "parent_provenance_limit": "Historical independent raw/builtin/prompt provenance report is preserved verbatim as parent receipt; not represented as a complete provider service envelope. Full16 parent atlas and older separator HOLDs stay literal.",
+    "platform": "Linux-7.2.9-arch1-1-x86_64-with-glibc2.44",
+    "python": "3.12.14"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/derived/actual-cleanup-execution.json",
+    "sha256": "f27d48e5a209787bc11c8a7e43f412904e0b3efd091f2644e951e643982a8984"
+  },
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "source-broad-material-guidance-coherent-parent-fine-mid-logtexture-v1",
+  "outputs": {
+    "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/derived/203b5-DERIVED-source-guided-material-v1.png": "683f9faa24de63e8c70f302fd2a368e8cdfdfc30bf523975696dc80f0917c891",
+    "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/derived/203b6-DERIVED-source-guided-material-v1.png": "72976149d2a0f1376e160fccf8300ecfcf95aaa6f99e65ec0151cdc1eb97b51f",
+    "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/derived/203b9-DERIVED-source-guided-material-v1.png": "bc581c072ac79d82e71f65f7736469011d6270d89e2468e1f75df1055d664bfb",
+    "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/derived/203bb-DERIVED-source-guided-material-v1.png": "ee8d4c78c0d99768ecc3c04a613b888183fceb4017d6a0a879fb9601126ee1ef"
+  },
+  "parents": [
+    {
+      "imagegen_receipt": {
+        "path": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/parents/historical-imagegen-provenance-peer.json",
+        "sha256": "672554f3082c361896dff917432d409f476f4c93302faf5907a9966720f201ad"
+      },
+      "prompt": {
+        "path": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/parents/prompt.txt",
+        "sha256": "784b2b8e79d370ab93c3e195009c1db051f32b586a545893992509960b76b2fe"
+      },
+      "raw_png": {
+        "path": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/parents/generator-return.png",
+        "sha256": "939d74a58ad236b5f40066308db99c2501599ff49ae41f41bd78276a36b02ceb"
+      }
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-terrain-203b5-203b6-203b9-203bb-coherent-v1-20261018/cleanup-recipe.json",
+    "sha256": "551f76681194ae8011c8ca580ba902c93b08bec290b0eb22a00f98ea1785a632"
+  },
+  "sources": {
+    "203b5": "39fcb3485b677b96c89a14b8dd2ea049bb960f8e1e2a61ec94dfd1dd2e2ef528",
+    "203b6": "b43b11ed55b2fbc8023b2d99c2e51312f486d75c1402919769fd70e8808499e8",
+    "203b9": "bccd562072fb604ca85f2622edc0b527420b9c183fabaa908f4a3135a3c4c295",
+    "203bb": "e22e2eab94f2e3ce901fe5157c95d56fcad5e8309bff1e19dd94036f5c22c413"
+  },
+  "tools": [
+    {
+      "path": "tools/hd_terrain_retexture.py",
+      "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98"
+    }
+  ]
+}

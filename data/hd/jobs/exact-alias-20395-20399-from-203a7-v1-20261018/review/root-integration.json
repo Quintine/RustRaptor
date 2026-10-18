@@ -1,0 +1,37 @@
+{
+  "reviewer": "/root",
+  "status": "QUALIFIED_EXACT_ALIAS2_INTEGRATION",
+  "assets": [
+    "20395",
+    "20399"
+  ],
+  "personally_viewed": [
+    {
+      "path": ".reference/hd-terrain1-alias20395-20399-SourceF-H5500-genuine8-actual-context-20261018/lossless-whole-native-endpoint-pages/endpoint-00-whole-Original-baseline-proposal-native1to4.png",
+      "sha256": "392772887852ebf4b2acacd8f48b1951521384842296552528fa9117fe800e11"
+    },
+    {
+      "path": ".reference/hd-terrain1-alias20395-20399-SourceF-H5500-genuine8-actual-context-20261018/lossless-whole-native-endpoint-pages/endpoint-04-whole-Original-baseline-proposal-native1to4.png",
+      "sha256": "2cbf2cf6ffceb53ceae91d2a2574ca8bb6e0936fdae23d84750a3a74141ab941"
+    },
+    {
+      "path": ".reference/hd-terrain1-alias20395-20399-SourceF-H5500-genuine8-actual-context-20261018/lossless-ordered-one-cell-pair-pages/pair-00-whole-ordered-before-to-one-cell-settled.png",
+      "sha256": "e4b0d44178fa22fef91471daa28ed53e19615f0528f97d5d839f396e5823bf6d"
+    }
+  ],
+  "findings": "The20395 fallback grain square is replaced by continuous finer road compatible with its accepted donor and neighbors. Curbs, car and wreck placement remain readable. Slightly lighter/finer road and native1 softness remain qualified. Both endpoints and ordered one-cell state comparison are positive.",
+  "independent_intrinsic_sha256": "acd303a02e1cf5fe1a11db797fadc0c1660f0feead87f25b9275f8921a50420d",
+  "independent_context_sha256": "9a9ac89553b30df6c0d6052cb8f6c613cae63758745867a23fa3ab5f5765bfbd",
+  "scope": {
+    "20395": "8genuine endpoints/3ordered views of ONE204c8->205a1 neighbor event; Root sampled00/04/pair00, independent peer viewed all11 boards/all4.",
+    "20399": "Original catalogue-only with Source caller absence and exact Original+palette+output identity to reviewed203a7. No composed context or Original occurrence claimed."
+  },
+  "reuse_not_new_generation": true,
+  "selection": {
+    "selected": 2,
+    "carried": 11,
+    "original_fallback": 3
+  },
+  "no_new_artwork_derivation": true,
+  "authorization": "Root integration approval for the exact scoped reuse; registration and global publishing remain separate."
+}
