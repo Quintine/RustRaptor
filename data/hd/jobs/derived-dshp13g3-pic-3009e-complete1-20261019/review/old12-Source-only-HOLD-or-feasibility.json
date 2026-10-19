@@ -1,0 +1,118 @@
+{
+  "status": "SOURCE-ONLY-FIXED12-DONOR-HOLD",
+  "asset": "3009e",
+  "complete_singleton": true,
+  "new_calls": {
+    "genuine_builtin": 1,
+    "derived": 0,
+    "Rust_QA": 0
+  },
+  "genuine_raw_sha256": "0424fdf117116acb75e4bc45be0b843867790340e4183f64dbfd5c49bb06dcd3",
+  "physical_review": {
+    "Original_native": true,
+    "Original_nearest16_reference": true,
+    "genuine_raw_whole": true
+  },
+  "material_judgment": "Source-primary result contains genuinely authored steel grain, panels and restrained wear, beyond previous held NN-like output. Broad forms/components and marker placement remain recognizably the same actor; overall highlights too bright, needing exact Source-guided cap.",
+  "raw_geometry": "Natural1402\u00d71122 canvas, complete Source40\u00d732 interpretation; no viewport crop or recenter. SourceScale4 will retain original occupied shape; missing-source dark backing needs generated donor fills.",
+  "feasibility": {
+    "status": "SOURCE-ONLY-FIXED12-DONOR-HOLD",
+    "complete_singleton": true,
+    "logical": [
+      40,
+      32
+    ],
+    "Origin": [
+      0,
+      0
+    ],
+    "new_genuine_calls": 1,
+    "actual_derived_calls": 0,
+    "actual_QA_calls": 0,
+    "opaque_samples": 12771,
+    "missing_generated_samples": 2361,
+    "fraction_missing": 0.18487197556965,
+    "preferred_valid_donor_squared_distance_max": 144,
+    "failed_out_of12_bound_samples": 6,
+    "max_nearest_any_donor_squared_at_failed": 153,
+    "failed_detail": [
+      {
+        "output_xy": [
+          4,
+          48
+        ],
+        "SourceScale4_label": 31,
+        "nearest_any_donor_squared": 153
+      },
+      {
+        "output_xy": [
+          5,
+          48
+        ],
+        "SourceScale4_label": 31,
+        "nearest_any_donor_squared": 148
+      },
+      {
+        "output_xy": [
+          154,
+          48
+        ],
+        "SourceScale4_label": 31,
+        "nearest_any_donor_squared": 148
+      },
+      {
+        "output_xy": [
+          155,
+          48
+        ],
+        "SourceScale4_label": 31,
+        "nearest_any_donor_squared": 153
+      },
+      {
+        "output_xy": [
+          4,
+          49
+        ],
+        "SourceScale4_label": 31,
+        "nearest_any_donor_squared": 149
+      },
+      {
+        "output_xy": [
+          155,
+          49
+        ],
+        "SourceScale4_label": 31,
+        "nearest_any_donor_squared": 149
+      }
+    ],
+    "functional_Original_cells": [
+      [
+        2,
+        8
+      ],
+      [
+        38,
+        8
+      ]
+    ],
+    "functional_Original_indices": [
+      253,
+      252
+    ],
+    "predicted_functional_Original_RGB_samples_no_HD_credit": 32,
+    "physical_whole_Original_and_raw": true,
+    "fullviewport": [
+      0,
+      0,
+      1402,
+      1122
+    ]
+  },
+  "Original_functional_replacements_planned_no_HD_credit": 32,
+  "actual_Original_replacements": 0,
+  "no_HD_credit_or_admission": true,
+  "no_new_generation_retries": true,
+  "old_holds_preserved": true,
+  "canonical_or_Git_writes": false,
+  "planned_count_note": "Actual SourceScale4 occupied footprint count: some logical4x4 footprint samples are transparent, so no blanket32-sample assumption."
+}

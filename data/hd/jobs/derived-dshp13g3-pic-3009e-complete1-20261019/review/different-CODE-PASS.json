@@ -1,0 +1,100 @@
+{
+  "status": "PASS_DIFFERENT_CODE_FIXED_14_12_14_TEXT_CORRECTION_CLOSED",
+  "helper_sha256": "7a46ea9aef246f5877ff425c724480df92b7feaf98d661ccc98a42a9a654acb7",
+  "prior_math_reviewed_helper_sha256": "dd525f74f7d492900022a24a0679f44b43e9ce2391e8681ca21603176671282d",
+  "tests_sha256": "e4fe81d6752a90bb9c402df3348c15e20ac06faa0ecf31137351c5e8a5d164a1",
+  "recipes": {
+    "30097": "8ccf10ffce0eac97685cd413ef2d829e59175785f4af31bb916be064db44ac54",
+    "30099": "543a988d2ec512fdcce0f6fec6183306df583cd169febdf88ddc932d459ecd2a",
+    "3009e": "e0fafc9ea63d03d48fa43fc2f06680d20b5943c124678c0f116fa6e06a39d27d"
+  },
+  "actual_synthetics": {
+    "author": 23,
+    "independent": 3,
+    "total": 26,
+    "V2_pass": true,
+    "V3_pass": true
+  },
+  "source_facts": [
+    {
+      "asset": "30097",
+      "canvas": [
+        40,
+        32
+      ],
+      "source_sha256": "9787fa5867175d4c0fc946f34abbf6050b717c1ff08142605ebe31808c6e6f5a",
+      "raw_sha256": "6f60dc31d26c6e1a791ae0adbc980ba7d2462474cf249487e2fc2d49be1d83e6",
+      "recipe_sha256": "8ccf10ffce0eac97685cd413ef2d829e59175785f4af31bb916be064db44ac54",
+      "canonical_INDEX_route": "sprites/DSHP05G3_PIC",
+      "SourceScale4_opaque_samples": 13203,
+      "functional_Original_RGB_samples_no_HD_credit": 32,
+      "fixed_donor_bound": 14
+    },
+    {
+      "asset": "30099",
+      "canvas": [
+        40,
+        32
+      ],
+      "source_sha256": "16c28cb732407d132e167bd2003250defc04e42c5cbbfe78224c65e0c12a02dd",
+      "raw_sha256": "037af747349c6e5986c8273348a49b64e0d4e5c7cd260edaa33394fab40824ef",
+      "recipe_sha256": "543a988d2ec512fdcce0f6fec6183306df583cd169febdf88ddc932d459ecd2a",
+      "canonical_INDEX_route": "sprites/DSHP07G3_PIC",
+      "SourceScale4_opaque_samples": 12156,
+      "functional_Original_RGB_samples_no_HD_credit": 27,
+      "fixed_donor_bound": 12
+    },
+    {
+      "asset": "3009e",
+      "canvas": [
+        40,
+        32
+      ],
+      "source_sha256": "99e568f9c4116a5c7526bbe704d3b26df85a9b35154203d30f3a1fffdf003992",
+      "raw_sha256": "0424fdf117116acb75e4bc45be0b843867790340e4183f64dbfd5c49bb06dcd3",
+      "recipe_sha256": "e0fafc9ea63d03d48fa43fc2f06680d20b5943c124678c0f116fa6e06a39d27d",
+      "canonical_INDEX_route": "sprites/DSHP13G3_PIC",
+      "SourceScale4_opaque_samples": 12771,
+      "functional_Original_RGB_samples_no_HD_credit": 32,
+      "fixed_donor_bound": 14
+    }
+  ],
+  "unchanged_reviewed_AST": {
+    "sha": true,
+    "read": true,
+    "modules": true,
+    "cap_material": true
+  },
+  "text_correction": {
+    "only_scope_string_changes": true,
+    "identical_carried_files": 24,
+    "overall_no_Source_RGB_copy_claim_removed": true
+  },
+  "findings": [],
+  "review": [
+    "Fixed bounds30097=14,30099=12,3009e=14 enforced as literal int; adjacent values/floats/bools rejected. Brightness slack remains12.",
+    "Authenticated dependency code and synthetic fullpipeline tested with5unique inputs buffered once, all paths replaced after verification and Path.read_bytes denied; no decoder receipt reopening.",
+    "Independent hard12/14 geometry edge tests reject a chain beyond bound, verifying donors never cascade.",
+    "Canonical INDEX Source hashes and40x32canvas verified independently; SourceScale4 samples13203/12156/12771 and Original-influenced functional samples32/27/32 confirmed.",
+    "Proportional integer darken-only cap and all descriptor IO/dependency loader AST match previously reviewed30096 math; only method/asset/canvas/pins/fixed bounds and metadata differ."
+  ],
+  "qualification": [
+    "Conditional exactly one derive+one finalG2 per actor only; Root final ART admission still required, prior V1holds preserved.",
+    "33/6Source backing repair samples beyond old12 bound are geometry restoration with zeroHDdetailcredit; no new generated detail claimed.",
+    "32/27/32functional Original-influenced output footprints receive zeroHDcredit. Inherited c612 paints Originalpalette NN4blocks; differing Scale4x corner owners may then darken under unchanged cap. Runtime original_detail_cells preservation is separate later G2 declaration and not tested by this helper CODE review.",
+    "Cap-only literal_Original_RGB_replacements=0 describes only cap_material operation; whole pipeline has disclosed functional Original palette copies.",
+    "Source-only donor feasibility provided by producer was not recomputed from real artwork; no actual art derive/QA/World executed.",
+    "Private receipt scalarhashes still require honest normalized7field method/maps before standard canonical derivation admission."
+  ],
+  "reviewer_initial_fixture_correction": "First reserved243 synthetic assumed every NN4 functional-block tuple stayed exact palette; existing Scale4x cap legitimately darkens different-owner corners. Preserved failed assertion log; corrected explicit integer formula and Source-owned core pass. No production code changed.",
+  "actual_art_cleanup_calls": 0,
+  "engine_QA_calls": 0,
+  "canonical_Git_changes": 0,
+  "evidence": {
+    "review.py": "cee811e12944ea0792598c02661262eddc753390980001686662b8633ebf41e7",
+    "actual26.stderr": "eac0d4b6a966c622134c08b8c40d136c3a0443682f9b1dc7ce202b715246a428",
+    "V3-actual26.stderr": "493283b4266cd4798020d2728a0d1b8de99374d788c5edd4e7494fcc84ccbe02",
+    "verified-facts.json": "e4ab6409cee941aea05ebc4b1ccb177ff4ea375bd973205eed41220118300d78",
+    "INITIAL-OVERSTRONG-FUNCTIONAL-BLOCK-ASSERTION.stderr": "e907f11b4ff0380312589acc576162dc01146cf91e9cc92f36792264641c7ebd"
+  }
+}

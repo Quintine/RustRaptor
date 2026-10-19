@@ -1,0 +1,75 @@
+{
+  "method": "derived-30093-generated-fullRGB-SourceScale4-darken-only-Source-max-plus12-v1",
+  "geometry": {
+    "method": "derived-generated-RGB-SourceScale4-geometry-coherent-dynamic-regions-v2",
+    "output_class": "DERIVED_SCRIPTED_RGBA_NOT_UNTOUCHED_GENERATION",
+    "input_hashes": {
+      ".reference/hd-dshp01g3-30093-Original-primary-singleton-author-20261019-v1/Original-PALETTE_DAT": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      ".reference/hd-dshp01g3-30093-Original-primary-singleton-author-20261019-v1/Original-DSHP01G3_PIC": "6477ea0bb108eb2ff185af21d6cf45eb0afdef6fcf5dc7b22ab48a31889f9e45",
+      ".reference/hd-dshp01g3-30093-Original-primary-singleton-author-20261019-v1/raw-untouched-builtin-v1.png": "eb5f343d8aa19c8aa74b7da37f18ce36b31bb4660446d5b4ac4a1f3007593e80"
+    },
+    "output_scale": 4,
+    "shared_SourceScale4_labels": 9396,
+    "stationary_anchor_asset": "30093",
+    "Source_derived_dynamic_component_halo_native": 1,
+    "dynamic_regions_native": [],
+    "RGB_policy": "Preserve full generated RGB, except declared nearest generated-RGB fills, Source-identical full-RGB backing share, and literal functional Source palette cells; no noise/highpass reconstruction.",
+    "source_mask": "Actual Original Scale4x = Scale2x twice; complete native canvas and origin retained.",
+    "frames": [
+      {
+        "asset": "30093",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "Source_painted_cells": 591,
+        "SourceScale4_opaque_samples": 9396,
+        "derived_alpha_exact_SourceScale4": true,
+        "actual_sampling_bounds": [
+          "0",
+          "0",
+          "1254",
+          "1254"
+        ],
+        "removed_generated_outside_SourceScale4": 55,
+        "original_sampled_RGB_preserved_before_stationary_share": 9023,
+        "stationary_full_RGB_replacements": 0,
+        "functional_Original_RGB_samples": 0,
+        "generated_RGB_different_from_SourceNN_samples": 9240,
+        "filled_generated_RGB_samples": 373,
+        "maximum_donor_squared_distance": 18,
+        "no_Source_RGB_or_noise_fallback": true
+      }
+    ],
+    "decoder_module": {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    },
+    "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy_version": "2.3.5",
+    "pillow_version": "12.3.0"
+  },
+  "material_cap": {
+    "changed_generated_RGB_samples": 1806,
+    "opaque_samples": 9396,
+    "literal_Original_RGB_replacements": 0,
+    "Original_RGB_only_sets_brightness_ceiling": true,
+    "integer_math": "floor(parent_channel * min(255,max(OriginalRGB[SourceScale4label])+12) / parent_RGB_max) iff parent_RGB_max exceeds ceiling",
+    "brightness_slack": 12,
+    "alpha_unchanged": true,
+    "darken_only": true
+  },
+  "unique_authenticated_buffered_inputs": 5,
+  "scope": "DERIVED generated RGB with brightness changed; not untouched generation, no Source RGB copied, no context or art acceptance.",
+  "execution": {
+    "status": "success",
+    "tool_sha256": "5926b96c0469b45504a15b8cd67e3f84367ce971dee82ff6f578d32c3af3ccb5",
+    "recipe_sha256": "4181597a7995f1d428cbe7d73b5259691326be6019bdc888b93dd3710571434b",
+    "source_sha256": "6477ea0bb108eb2ff185af21d6cf45eb0afdef6fcf5dc7b22ab48a31889f9e45",
+    "parent_raw_sha256": "eb5f343d8aa19c8aa74b7da37f18ce36b31bb4660446d5b4ac4a1f3007593e80",
+    "output_sha256": "7656cb3b1685b623bb5d1edda54a3ec7ed05adb2c0f1df25701638c02f192397",
+    "RGBA_sha256": "14f16d1d2207d79481ac900ed3d3739f59fdea791bef4f97d45a835d33d70636"
+  }
+}

@@ -1,0 +1,513 @@
+{
+  "status": "QUALIFIED_FOUR_DISTINCT_COMPLETE_SINGLETONS_INTRINSIC_WITH_LIMITS",
+  "utc": "2026-10-19T03:04:11.792820+00:00",
+  "reviewer": "/root/windows_ci",
+  "qualified_frames": 4,
+  "held_frames": 0,
+  "assets": [
+    "30096",
+    "30097",
+    "30099",
+    "3009e"
+  ],
+  "independent_of_artist_and_preparer": true,
+  "decisions": [
+    {
+      "asset": "30096",
+      "intrinsic": "QUALIFIED_WITH_LIMITS",
+      "artist": "/root/dark_ship_remaining",
+      "preparer": "/root/dark_ship_remaining",
+      "reviewer": "/root/windows_ci",
+      "whole_genuine_raw_personally_viewed": true,
+      "whole_Original_derived_and_all_four_native_frames_personally_viewed": true,
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp04g3-30096-bounded-Source-material-CODE-proposal-20261019-v1/portable-project/data/hd/jobs/derived-dshp04g3-30096-complete1-20261019/sources/DSHP04G3_PIC",
+        "sha256": "25c7daca9d1f00b9f9f6580ec73e6de193bf719c956cda9155c933c2f2d1c1ee",
+        "bytes": 1011
+      },
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp04g3-30096-bounded-Source-material-CODE-proposal-20261019-v1/portable-project/data/hd/jobs/derived-dshp04g3-30096-complete1-20261019/candidate.json",
+        "sha256": "38a6f238e95f8c5df58f9a053f62a7dc18e4e2a3d3770bb273c6432258c80451",
+        "bytes": 1835
+      },
+      "derived_artwork": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp04g3-30096-bounded-Source-material-CODE-proposal-20261019-v1/portable-project/data/hd/jobs/derived-dshp04g3-30096-complete1-20261019/derived/30096-derived.png",
+        "sha256": "005b06ca534e4e309c3e2065bd685298f0d249806de8c67761656c88adc1d226",
+        "bytes": 19482
+      },
+      "genuine_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp04g3-30096-bounded-Source-material-CODE-proposal-20261019-v1/portable-project/data/hd/jobs/derived-dshp04g3-30096-complete1-20261019/parents/generator-return.png",
+        "sha256": "815bdcb76d075d1af5b21816c20937f645027ca65ec74d7347a532346cb1d85b",
+        "bytes": 1430584
+      },
+      "actual_QA": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp04g3-30096-bounded-Source-material-CODE-proposal-20261019-v1/portable-project/data/hd/jobs/derived-dshp04g3-30096-complete1-20261019/review/actual-currentG2-measurement/runtime-qa.json",
+        "sha256": "9973fbd7c0b3a502c17cdc1a88362f03a04fd176421fa745ada5bade5c4eccd4",
+        "bytes": 7121
+      },
+      "actual_indexed_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp04g3-30096-bounded-Source-material-CODE-proposal-20261019-v1/portable-project/data/hd/jobs/derived-dshp04g3-30096-complete1-20261019/review/actual-currentG2-measurement/actual-indexed-source-and-scales.json",
+        "sha256": "0eb0249653e4c42ce7372348aa792f4c096e05e434a20fc547a582637ace702a",
+        "bytes": 455149
+      },
+      "lineage": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp04g3-30096-bounded-Source-material-CODE-proposal-20261019-v1/portable-project/data/hd/jobs/derived-dshp04g3-30096-complete1-20261019/artwork-derivation.json",
+        "sha256": "18d003af9021d9ea2e23ccbbdcb8dc4114dcb9bf9eb3df5b1677d867be6249d6",
+        "bytes": 2122
+      },
+      "author": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp04g3-30096-bounded-Source-material-CODE-proposal-20261019-v1/portable-project/data/hd/jobs/derived-dshp04g3-30096-complete1-20261019/review/author-allnative-intrinsic.json",
+        "sha256": "bff99ba6ce74c346565dcec2be1e3b4c62207f6f6a39991147f991ef7c4ece7b",
+        "bytes": 2940
+      },
+      "physical_page": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-DSHP30096-97-99-9e-different-intrinsic-ART-review-20261019-v1/whole-review-pages/30096-whole-Original-derived-actual-native1to4.png",
+        "sha256": "4fc1545dcc6b8e248fe21a3c0df1fc04cde480e28d3210c6bdfa9470cb69dcc4",
+        "bytes": 63875
+      },
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "observations": "Asymmetric near-black left backing, recessed narrow right stem and upper-right cyan panel remain in their original positions. Generated soot/steel grain and mechanical seams add readable relief at3\u20134 while brightness stays restrained. The left dark mass is occupied Source support, not empty space; its full silhouette is retained.",
+      "independent_readonly_native_checks": [
+        {
+          "scale": 1,
+          "actual_mask_diff_vs_SourceScaleNx": 0,
+          "retained_SourceNx_footprint_samples": 0,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        },
+        {
+          "scale": 2,
+          "actual_mask_diff_vs_SourceScaleNx": 0,
+          "retained_SourceNx_footprint_samples": 0,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        },
+        {
+          "scale": 3,
+          "actual_mask_diff_vs_SourceScaleNx": 0,
+          "retained_SourceNx_footprint_samples": 0,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        },
+        {
+          "scale": 4,
+          "actual_mask_diff_vs_SourceScaleNx": 0,
+          "retained_SourceNx_footprint_samples": 0,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        }
+      ],
+      "SourceScale4_alpha_exact": true,
+      "Source_max_plus12_RGB_ceiling_verified": true,
+      "geometry_repair_fills_no_generated_detail_credit": 175,
+      "geometry_repair_fill_fraction": 0.018605145651711674,
+      "declared_max_preferred_donor_squared_distance": 17,
+      "functional_retained_SourceNx_total_footprint_samples_native4": 0,
+      "functional_Source_RGBA_influenced_opaque_samples_no_generated_credit": 0,
+      "live_context_approval": false,
+      "Root_approval": false
+    },
+    {
+      "asset": "30097",
+      "intrinsic": "QUALIFIED_WITH_LIMITS",
+      "artist": "/root/dark_ship_remaining",
+      "preparer": "/root/dark_ship_remaining",
+      "reviewer": "/root/windows_ci",
+      "whole_genuine_raw_personally_viewed": true,
+      "whole_Original_derived_and_all_four_native_frames_personally_viewed": true,
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp05g3_pic-30097-complete1-20261019/sources/DSHP05G3_PIC",
+        "sha256": "9787fa5867175d4c0fc946f34abbf6050b717c1ff08142605ebe31808c6e6f5a",
+        "bytes": 1764
+      },
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp05g3_pic-30097-complete1-20261019/candidate.json",
+        "sha256": "cf2dc7d485129a4f647d0793f196b5e7932e39a292a0b921cba83b9b8e4ce258",
+        "bytes": 2602
+      },
+      "derived_artwork": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp05g3_pic-30097-complete1-20261019/derived/30097-derived.png",
+        "sha256": "78c4f2035f0f1e5c722d411da2c183d7d35d6d9f9eedfa6422d644d1a8197f5e",
+        "bytes": 22407
+      },
+      "genuine_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp05g3_pic-30097-complete1-20261019/parents/generator-return.png",
+        "sha256": "6f60dc31d26c6e1a791ae0adbc980ba7d2462474cf249487e2fc2d49be1d83e6",
+        "bytes": 1438734
+      },
+      "actual_QA": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp05g3_pic-30097-complete1-20261019/review/actual-currentG2-measurement/runtime-qa.json",
+        "sha256": "4e0a6e96a9e7d54e40767e71c165d997e429bfd48ca8ec3189484cf66657f3ef",
+        "bytes": 7125
+      },
+      "actual_indexed_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp05g3_pic-30097-complete1-20261019/review/actual-currentG2-measurement/actual-indexed-source-and-scales.json",
+        "sha256": "7e5e511038180adef7dbcca43dfb9be34e19cbe9730d3d2370187669cf1cc6b4",
+        "bytes": 560913
+      },
+      "lineage": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp05g3_pic-30097-complete1-20261019/artwork-derivation.json",
+        "sha256": "524a070fc8ce37130909b7a43d5ce1153d7e9e0b911ebadea3dda88d1ccf2436",
+        "bytes": 2199
+      },
+      "author": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp05g3_pic-30097-complete1-20261019/review/author-allnative-intrinsic.json",
+        "sha256": "d218c984d6158ba61f235ba71ad8fe579ed1a4938880187e305725cd5078f3d9",
+        "bytes": 4929
+      },
+      "physical_page": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-DSHP30096-97-99-9e-different-intrinsic-ART-review-20261019-v1/whole-review-pages/30097-whole-Original-derived-actual-native1to4.png",
+        "sha256": "0d48f7fa846e036736b330396f8f006170006d60e09c23983a4b564449d0fc3a",
+        "bytes": 71050
+      },
+      "logical_canvas": [
+        40,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "observations": "Wide crossbar, twin side housings, narrow descending center pod and two swept lower supports retain original proportions. Gray panel seams and dull metal grain read clearly at3\u20134 without the overlit raw appearance. Green/red navigation marks remain distinct at their original edge positions.",
+      "independent_readonly_native_checks": [
+        {
+          "scale": 1,
+          "actual_mask_diff_vs_SourceScaleNx": 0,
+          "retained_SourceNx_footprint_samples": 2,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        },
+        {
+          "scale": 2,
+          "actual_mask_diff_vs_SourceScaleNx": 0,
+          "retained_SourceNx_footprint_samples": 8,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        },
+        {
+          "scale": 3,
+          "actual_mask_diff_vs_SourceScaleNx": 11,
+          "retained_SourceNx_footprint_samples": 18,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        },
+        {
+          "scale": 4,
+          "actual_mask_diff_vs_SourceScaleNx": 0,
+          "retained_SourceNx_footprint_samples": 32,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        }
+      ],
+      "SourceScale4_alpha_exact": true,
+      "Source_max_plus12_RGB_ceiling_verified": true,
+      "geometry_repair_fills_no_generated_detail_credit": 2733,
+      "geometry_repair_fill_fraction": 0.20699840945239717,
+      "declared_max_preferred_donor_squared_distance": 196,
+      "functional_retained_SourceNx_total_footprint_samples_native4": 32,
+      "functional_Source_RGBA_influenced_opaque_samples_no_generated_credit": 32,
+      "live_context_approval": false,
+      "Root_approval": false
+    },
+    {
+      "asset": "30099",
+      "intrinsic": "QUALIFIED_WITH_LIMITS",
+      "artist": "/root/dark_ship_remaining",
+      "preparer": "/root/dark_ship_remaining",
+      "reviewer": "/root/windows_ci",
+      "whole_genuine_raw_personally_viewed": true,
+      "whole_Original_derived_and_all_four_native_frames_personally_viewed": true,
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp07g3_pic-30099-complete1-20261019/sources/DSHP07G3_PIC",
+        "sha256": "16c28cb732407d132e167bd2003250defc04e42c5cbbfe78224c65e0c12a02dd",
+        "bytes": 1490
+      },
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp07g3_pic-30099-complete1-20261019/candidate.json",
+        "sha256": "ae2bba252e359e2ee1bdce9c9acfb07cbb29b537b960fbec633cae19fd0d5b9d",
+        "bytes": 2607
+      },
+      "derived_artwork": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp07g3_pic-30099-complete1-20261019/derived/30099-derived.png",
+        "sha256": "9630e9dfc4e3555cd623649f18b7b57edcd768e13673160a9cda5ef43c9c7dbd",
+        "bytes": 21278
+      },
+      "genuine_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp07g3_pic-30099-complete1-20261019/parents/generator-return.png",
+        "sha256": "037af747349c6e5986c8273348a49b64e0d4e5c7cd260edaa33394fab40824ef",
+        "bytes": 1397256
+      },
+      "actual_QA": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp07g3_pic-30099-complete1-20261019/review/actual-currentG2-measurement/runtime-qa.json",
+        "sha256": "1f605fab1fd53a6c8690f12be685c554f3e7bed6354d64f4241f294d2140be8e",
+        "bytes": 7125
+      },
+      "actual_indexed_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp07g3_pic-30099-complete1-20261019/review/actual-currentG2-measurement/actual-indexed-source-and-scales.json",
+        "sha256": "64449b5bb86ec9cde7979d8a3c0bd56bae140918b4d1ec6efd8527abba93144d",
+        "bytes": 567319
+      },
+      "lineage": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp07g3_pic-30099-complete1-20261019/artwork-derivation.json",
+        "sha256": "fe46e7b5010265c5119468b322fd10a900d2559d017f6cb6628e1d29616fbecd",
+        "bytes": 2199
+      },
+      "author": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp07g3_pic-30099-complete1-20261019/review/author-allnative-intrinsic.json",
+        "sha256": "5006520a9cec02bb7a7968c001a4013078a36c5698065bd643e68910c7eef745",
+        "bytes": 4928
+      },
+      "physical_page": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-DSHP30096-97-99-9e-different-intrinsic-ART-review-20261019-v1/whole-review-pages/30099-whole-Original-derived-actual-native1to4.png",
+        "sha256": "e9754081b2c0315ba84e6d11e93c08f6a090fd2b2e2576a3694171b2fb35d16d",
+        "bytes": 66829
+      },
+      "logical_canvas": [
+        40,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "observations": "Twin upright side towers, central inset panel with orange top slots and two lower gray pods keep their original arrangement. Fine seams and restrained scuffs remain visible; the dark central body does not become a new cutout or brighter unrelated shape.",
+      "independent_readonly_native_checks": [
+        {
+          "scale": 1,
+          "actual_mask_diff_vs_SourceScaleNx": 0,
+          "retained_SourceNx_footprint_samples": 2,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        },
+        {
+          "scale": 2,
+          "actual_mask_diff_vs_SourceScaleNx": 0,
+          "retained_SourceNx_footprint_samples": 8,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        },
+        {
+          "scale": 3,
+          "actual_mask_diff_vs_SourceScaleNx": 30,
+          "retained_SourceNx_footprint_samples": 18,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        },
+        {
+          "scale": 4,
+          "actual_mask_diff_vs_SourceScaleNx": 0,
+          "retained_SourceNx_footprint_samples": 32,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        }
+      ],
+      "SourceScale4_alpha_exact": true,
+      "Source_max_plus12_RGB_ceiling_verified": true,
+      "geometry_repair_fills_no_generated_detail_credit": 850,
+      "geometry_repair_fill_fraction": 0.06992431720960843,
+      "declared_max_preferred_donor_squared_distance": 137,
+      "functional_retained_SourceNx_total_footprint_samples_native4": 32,
+      "functional_Source_RGBA_influenced_opaque_samples_no_generated_credit": 27,
+      "live_context_approval": false,
+      "Root_approval": false
+    },
+    {
+      "asset": "3009e",
+      "intrinsic": "QUALIFIED_WITH_LIMITS",
+      "artist": "/root/dark_ship_remaining",
+      "preparer": "/root/dark_ship_remaining",
+      "reviewer": "/root/windows_ci",
+      "whole_genuine_raw_personally_viewed": true,
+      "whole_Original_derived_and_all_four_native_frames_personally_viewed": true,
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp13g3_pic-3009e-complete1-20261019/sources/DSHP13G3_PIC",
+        "sha256": "99e568f9c4116a5c7526bbe704d3b26df85a9b35154203d30f3a1fffdf003992",
+        "bytes": 1560
+      },
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp13g3_pic-3009e-complete1-20261019/candidate.json",
+        "sha256": "dae9e0d22e3d9d29c5db001e555044448768eacf95f0bd65425b856f17973d92",
+        "bytes": 2601
+      },
+      "derived_artwork": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp13g3_pic-3009e-complete1-20261019/derived/3009e-derived.png",
+        "sha256": "23d901ce08f9eb0d6770bfbfae9aafded264eb565b27ef4b4b444f0cf116497a",
+        "bytes": 21323
+      },
+      "genuine_raw": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp13g3_pic-3009e-complete1-20261019/parents/generator-return.png",
+        "sha256": "0424fdf117116acb75e4bc45be0b843867790340e4183f64dbfd5c49bb06dcd3",
+        "bytes": 1715941
+      },
+      "actual_QA": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp13g3_pic-3009e-complete1-20261019/review/actual-currentG2-measurement/runtime-qa.json",
+        "sha256": "61f624811ad9c93cf1d765714a43febffa9d1c92bb774a29235b6f170cf0a754",
+        "bytes": 7124
+      },
+      "actual_indexed_bank": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp13g3_pic-3009e-complete1-20261019/review/actual-currentG2-measurement/actual-indexed-source-and-scales.json",
+        "sha256": "d5c5ed51789a3b6b09f281b9953bbbeb8f36e4c659d9ea18f6b941a92fb17936",
+        "bytes": 566336
+      },
+      "lineage": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp13g3_pic-3009e-complete1-20261019/artwork-derivation.json",
+        "sha256": "0036e5f380172c10f44ef87322185169ef911a451d4947d065c92dedec5118a0",
+        "bytes": 2199
+      },
+      "author": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp05-07-13g3-separate3-functional-provenance-successor-CODE-20261019-v3/portable-project/data/hd/jobs/derived-dshp13g3_pic-3009e-complete1-20261019/review/author-allnative-intrinsic.json",
+        "sha256": "c999dedac53038276691f4c89a8fd0cc7b34fdac4031f454d09c76bf6fef2865",
+        "bytes": 4927
+      },
+      "physical_page": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-DSHP30096-97-99-9e-different-intrinsic-ART-review-20261019-v1/whole-review-pages/3009e-whole-Original-derived-actual-native1to4.png",
+        "sha256": "478fa71c0639fe9d9fb746c5b32f721032a94ae2fc1f14ba27009c42095dab72",
+        "bytes": 68092
+      },
+      "logical_canvas": [
+        40,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "observations": "Two tall side shoulders, inset cyan rails and low cyan boxes surround the tapered center stem as in Source. Small bright center facets, broad dark occupied backing and side markers remain distinct. Cyan stays subordinate to the dark hull, with useful metal/paint texture at3\u20134.",
+      "independent_readonly_native_checks": [
+        {
+          "scale": 1,
+          "actual_mask_diff_vs_SourceScaleNx": 0,
+          "retained_SourceNx_footprint_samples": 2,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        },
+        {
+          "scale": 2,
+          "actual_mask_diff_vs_SourceScaleNx": 0,
+          "retained_SourceNx_footprint_samples": 8,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        },
+        {
+          "scale": 3,
+          "actual_mask_diff_vs_SourceScaleNx": 3,
+          "retained_SourceNx_footprint_samples": 18,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        },
+        {
+          "scale": 4,
+          "actual_mask_diff_vs_SourceScaleNx": 0,
+          "retained_SourceNx_footprint_samples": 32,
+          "retained_SourceNx_exact": true,
+          "all_reserved_indices_exact_everywhere": true
+        }
+      ],
+      "SourceScale4_alpha_exact": true,
+      "Source_max_plus12_RGB_ceiling_verified": true,
+      "geometry_repair_fills_no_generated_detail_credit": 2361,
+      "geometry_repair_fill_fraction": 0.18487197556965,
+      "declared_max_preferred_donor_squared_distance": 196,
+      "functional_retained_SourceNx_total_footprint_samples_native4": 32,
+      "functional_Source_RGBA_influenced_opaque_samples_no_generated_credit": 32,
+      "live_context_approval": false,
+      "Root_approval": false
+    }
+  ],
+  "independent_readonly_check_receipt": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-DSHP30096-97-99-9e-different-intrinsic-ART-review-20261019-v1/READONLY-PINNED-INPUTS-AND-INDEPENDENT-NATIVE-GEOMETRY-MARKER-CHECKS.json",
+    "sha256": "47c44d7a1c1c69f31a3b5cf455a7ce5edd74e85f83da102735cd24bd0a38aedd",
+    "bytes": 75862
+  },
+  "provider_raw_byte_identity_verified": [
+    {
+      "path": "/home/quintine/.codex/generated_images/01a14e5c-a3b9-7703-905f-eb5c455cfd92/exec-03119c31-f66b-42e0-b6cb-c63da7fa652c.png",
+      "sha256": "815bdcb76d075d1af5b21816c20937f645027ca65ec74d7347a532346cb1d85b",
+      "bytes": 1430584
+    },
+    {
+      "path": "/home/quintine/.codex/generated_images/01a14e5c-a3b9-7703-905f-eb5c455cfd92/exec-eba4c413-7583-4be6-bf21-84920afe1bfa.png",
+      "sha256": "6f60dc31d26c6e1a791ae0adbc980ba7d2462474cf249487e2fc2d49be1d83e6",
+      "bytes": 1438734
+    },
+    {
+      "path": "/home/quintine/.codex/generated_images/01a14e5c-a3b9-7703-905f-eb5c455cfd92/exec-20ce833a-f040-4eae-9b04-26417321de61.png",
+      "sha256": "037af747349c6e5986c8273348a49b64e0d4e5c7cd260edaa33394fab40824ef",
+      "bytes": 1397256
+    },
+    {
+      "path": "/home/quintine/.codex/generated_images/01a14e5c-a3b9-7703-905f-eb5c455cfd92/exec-3e82ff33-a1df-4f9c-a823-771d86c36a6d.png",
+      "sha256": "0424fdf117116acb75e4bc45be0b843867790340e4183f64dbfd5c49bb06dcd3",
+      "bytes": 1715941
+    }
+  ],
+  "all_producer_frozen_pins_still_exact": true,
+  "physical_views": [
+    {
+      "asset": "30096",
+      "kind": "whole-Original-derived-actual-native1to4",
+      "page": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-DSHP30096-97-99-9e-different-intrinsic-ART-review-20261019-v1/whole-review-pages/30096-whole-Original-derived-actual-native1to4.png",
+        "sha256": "4fc1545dcc6b8e248fe21a3c0df1fc04cde480e28d3210c6bdfa9470cb69dcc4",
+        "bytes": 63875
+      },
+      "whole_frame_personally_viewed": true
+    },
+    {
+      "asset": "30097",
+      "kind": "whole-Original-derived-actual-native1to4",
+      "page": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-DSHP30096-97-99-9e-different-intrinsic-ART-review-20261019-v1/whole-review-pages/30097-whole-Original-derived-actual-native1to4.png",
+        "sha256": "0d48f7fa846e036736b330396f8f006170006d60e09c23983a4b564449d0fc3a",
+        "bytes": 71050
+      },
+      "whole_frame_personally_viewed": true
+    },
+    {
+      "asset": "30099",
+      "kind": "whole-Original-derived-actual-native1to4",
+      "page": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-DSHP30096-97-99-9e-different-intrinsic-ART-review-20261019-v1/whole-review-pages/30099-whole-Original-derived-actual-native1to4.png",
+        "sha256": "e9754081b2c0315ba84e6d11e93c08f6a090fd2b2e2576a3694171b2fb35d16d",
+        "bytes": 66829
+      },
+      "whole_frame_personally_viewed": true
+    },
+    {
+      "asset": "3009e",
+      "kind": "whole-Original-derived-actual-native1to4",
+      "page": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-DSHP30096-97-99-9e-different-intrinsic-ART-review-20261019-v1/whole-review-pages/3009e-whole-Original-derived-actual-native1to4.png",
+        "sha256": "478fa71c0639fe9d9fb746c5b32f721032a94ae2fc1f14ba27009c42095dab72",
+        "bytes": 68092
+      },
+      "whole_frame_personally_viewed": true
+    }
+  ],
+  "limits": [
+    "This is intrinsic ART qualification only. It supplies no genuine gameplay context, animation/shadow/collision execution result, Root approval, registrar admission or change to gameplay behavior. Owner is preparing natural context separately.",
+    "Original logical canvases/top-left origins and Source4 silhouette are preserved. Current runtime native1/2/4 masks match Source kernels;30096also matches3, while30097/30099/3009e have11/30/3 native3 edge differences respectively. Do not describe allscaleperfectmask identity.",
+    "Source252/253 marker footprints receive no generated-HD credit. Independent checks find exact SourceNx selected-cell and reserved-index values at all scales;30099native4 footprint includes32positions but27opaqueSource-influenced samples.",
+    "All disclosed same-parent geometry/backing fills, including bounded extended donors, are repairs rather than newly authored surface detail. Generated grain/seams and gray/cyan material within the original forms supply the visible improvement.",
+    "Fixed Source-controlled brightness reduction is derived color treatment, not untouched raw generation or direct OriginalNN-plus-fabricated texture. Near-black Source masses remain dark; small native1details are necessarily subtle.",
+    "Shadow and collision compatibility is bounded to unchanged source asset/logical canvas/origin and no source code modification in this review; actual World/shadow contexts remain pending.",
+    "One reviewer-only preparation assertion initially included transparent256 as a reserved label; corrected to240..255 and preserved separately. No art, QA bank or runtime behavior changed."
+  ],
+  "actual_operations": {
+    "saved_input_readonly_checks": 1,
+    "diagnostic_NN_wholeview_pages": 4,
+    "new_artwork": 0,
+    "new_QA": 0,
+    "new_World": 0,
+    "compiler": 0,
+    "canonical_writes": 0,
+    "Git_mutations": 0
+  }
+}

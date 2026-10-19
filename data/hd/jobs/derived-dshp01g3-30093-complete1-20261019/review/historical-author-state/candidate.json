@@ -1,0 +1,69 @@
+{
+  "format_version": 1,
+  "job_id": "derived-dshp01g3-30093-complete1-20261019",
+  "owner": "/root/dark_ship_remaining",
+  "complete_family": true,
+  "status": "pending_Root_and_different_art_acceptance",
+  "targets": [
+    {
+      "frame": 0,
+      "file": "jobs/derived-dshp01g3-30093-complete1-20261019/derived/30093-derived.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "6477ea0bb108eb2ff185af21d6cf45eb0afdef6fcf5dc7b22ab48a31889f9e45",
+      "crop": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "asset": "30093"
+    }
+  ],
+  "sequences": [
+    {
+      "name": "DSHP01G3_PIC",
+      "base_asset": 196755,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/derived-dshp01g3-30093-complete1-20261019/derived/30093-derived.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "6477ea0bb108eb2ff185af21d6cf45eb0afdef6fcf5dc7b22ab48a31889f9e45",
+          "crop": [
+            0,
+            0,
+            128,
+            128
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "artistic_approval": "pending_Root_and_different_art",
+    "source": "../Original-30093-exactRGBA.png",
+    "new_generation_calls": 1,
+    "scope": "Derived SourceScale4 geometry and generated RGB darken-only cap; no literal Original RGB replacement; no admission/context acceptance",
+    "derived_tool_sha256": "5926b96c0469b45504a15b8cd67e3f84367ce971dee82ff6f578d32c3af3ccb5",
+    "artwork_derivation": {
+      "path": "jobs/derived-dshp01g3-30093-complete1-20261019/artwork-derivation.json",
+      "sha256": "e5e9d1b2cb1ace85c4ddad353306078c157e133020e763ad361545b5f9a7645b"
+    },
+    "registered": false
+  },
+  "artwork_derivation": {
+    "path": "jobs/derived-dshp01g3-30093-complete1-20261019/artwork-derivation.json",
+    "sha256": "e5e9d1b2cb1ace85c4ddad353306078c157e133020e763ad361545b5f9a7645b"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "format_version": 1,
+  "job_id": "derived-dshp01g3-30093-complete1-20261019",
+  "owner": "/root/dark_ship_remaining",
+  "complete_family": true,
+  "status": "Root_art_approved_pending_Root_registration_and_publication",
+  "targets": [
+    {
+      "frame": 0,
+      "file": "jobs/derived-dshp01g3-30093-complete1-20261019/derived/30093-derived.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "6477ea0bb108eb2ff185af21d6cf45eb0afdef6fcf5dc7b22ab48a31889f9e45",
+      "crop": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "asset": "30093"
+    }
+  ],
+  "sequences": [
+    {
+      "name": "DSHP01G3_PIC",
+      "base_asset": 196755,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/derived-dshp01g3-30093-complete1-20261019/derived/30093-derived.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "6477ea0bb108eb2ff185af21d6cf45eb0afdef6fcf5dc7b22ab48a31889f9e45",
+          "crop": [
+            0,
+            0,
+            128,
+            128
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "artistic_approval": "Root_approved_4aac601b",
+    "source": "../Original-30093-exactRGBA.png",
+    "new_generation_calls": 1,
+    "scope": "Root4aac601b approved exact Original/raw/derived/allnative art and genuine controlled SourceG2/H5636 contexts, with disclosed limits. Exact finite H5647 input carry and public byte-identical reproduction are attached. Canonical registration and publication remain pending Root.",
+    "derived_tool_sha256": "5926b96c0469b45504a15b8cd67e3f84367ce971dee82ff6f578d32c3af3ccb5",
+    "artwork_derivation": {
+      "path": "jobs/derived-dshp01g3-30093-complete1-20261019/artwork-derivation.json",
+      "sha256": "04468e5c779740d17ba9fe2cd176915ca8e90c1952e36637ddf466e64397b90b"
+    },
+    "registered": false,
+    "Root_art_approval": {
+      "path": "jobs/_shared-DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/ROOT-DSHP5-APPROVED-INTRINSIC-AND-GENUINE-CONTEXT.json",
+      "sha256": "4aac601b5f04099ad6003f34d7eeedea6392a798111d0f41b20f26c2fbeee11e"
+    },
+    "runtime_qa": "jobs/derived-dshp01g3-30093-complete1-20261019/runtime-review/runtime-qa.json",
+    "context_epoch_carry": {
+      "path": "jobs/_shared-DSHP5-SourceG2-H5636-finite-context-proofs-20261019/FINITE-ALL5-H5636-TO-ACTUALH5647-CONSUMED-INPUT-CARRY.json",
+      "sha256": "0fc4f9f77993389c38bb23ba5e2c24d5d98e25d11d36c73554fb2315c2cead51"
+    },
+    "canonical_registration_performed": false
+  },
+  "artwork_derivation": {
+    "path": "jobs/derived-dshp01g3-30093-complete1-20261019/artwork-derivation.json",
+    "sha256": "04468e5c779740d17ba9fe2cd176915ca8e90c1952e36637ddf466e64397b90b"
+  }
+}

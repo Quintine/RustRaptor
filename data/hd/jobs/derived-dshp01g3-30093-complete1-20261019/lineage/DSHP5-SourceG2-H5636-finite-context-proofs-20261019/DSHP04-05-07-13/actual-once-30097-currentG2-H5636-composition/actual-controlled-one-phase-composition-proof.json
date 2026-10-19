@@ -1,0 +1,382 @@
+{
+  "World_calls_in_constructor": 0,
+  "actual_Original_controls_render_upscale": true,
+  "actual_target_components": [
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f0-s1-OriginalNx.classes.gz",
+        "height": 32,
+        "indices": "component-f0-s1-OriginalNx.u16le.gz",
+        "samples": 1280,
+        "width": 40
+      },
+      "frame": 0,
+      "measured_selected": {
+        "classes": "component-f0-s1-selected.classes.gz",
+        "height": 32,
+        "indices": "component-f0-s1-selected.u16le.gz",
+        "samples": 1280,
+        "width": 40
+      },
+      "scale": 1
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f0-s2-OriginalNx.classes.gz",
+        "height": 64,
+        "indices": "component-f0-s2-OriginalNx.u16le.gz",
+        "samples": 5120,
+        "width": 80
+      },
+      "frame": 0,
+      "measured_selected": {
+        "classes": "component-f0-s2-selected.classes.gz",
+        "height": 64,
+        "indices": "component-f0-s2-selected.u16le.gz",
+        "samples": 5120,
+        "width": 80
+      },
+      "scale": 2
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f0-s3-OriginalNx.classes.gz",
+        "height": 96,
+        "indices": "component-f0-s3-OriginalNx.u16le.gz",
+        "samples": 11520,
+        "width": 120
+      },
+      "frame": 0,
+      "measured_selected": {
+        "classes": "component-f0-s3-selected.classes.gz",
+        "height": 96,
+        "indices": "component-f0-s3-selected.u16le.gz",
+        "samples": 11520,
+        "width": 120
+      },
+      "scale": 3
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f0-s4-OriginalNx.classes.gz",
+        "height": 128,
+        "indices": "component-f0-s4-OriginalNx.u16le.gz",
+        "samples": 20480,
+        "width": 160
+      },
+      "frame": 0,
+      "measured_selected": {
+        "classes": "component-f0-s4-selected.classes.gz",
+        "height": 128,
+        "indices": "component-f0-s4-selected.u16le.gz",
+        "samples": 20480,
+        "width": 160
+      },
+      "scale": 4
+    }
+  ],
+  "constructor_calls": 1,
+  "diagnostics": [],
+  "foreign_baseline": "immutable currentH5636 consumed whole-sequence projection and raw hardlinks; currentSourceG2 domain-aware joins",
+  "rows": [
+    {
+      "Original_shadows_target": true,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "30097",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 721,
+      "frame": 0,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 0,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [
+            1
+          ],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s1-r0.classes.gz",
+            "height": 200,
+            "indices": "scene-0-s1-r0.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "Original-target-fixed5636-foreign"
+        },
+        {
+          "Original_shadow_entities": [
+            1
+          ],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s1-r1.classes.gz",
+            "height": 200,
+            "indices": "scene-0-s1-r1.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "current5636-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [
+            1
+          ],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s1-r2.classes.gz",
+            "height": 200,
+            "indices": "scene-0-s1-r2.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "proposed-derived-target-fixed5636-foreign"
+        }
+      ],
+      "scale": 1,
+      "scene": 0,
+      "target_canvas": [
+        40,
+        32
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        172,
+        3
+      ],
+      "terrain_replacements": 87,
+      "tick": 1146
+    },
+    {
+      "Original_shadows_target": true,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "30097",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 2857,
+      "frame": 0,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 0,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [
+            1
+          ],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s2-r0.classes.gz",
+            "height": 400,
+            "indices": "scene-0-s2-r0.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "Original-target-fixed5636-foreign"
+        },
+        {
+          "Original_shadow_entities": [
+            1
+          ],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s2-r1.classes.gz",
+            "height": 400,
+            "indices": "scene-0-s2-r1.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "current5636-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [
+            1
+          ],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s2-r2.classes.gz",
+            "height": 400,
+            "indices": "scene-0-s2-r2.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "proposed-derived-target-fixed5636-foreign"
+        }
+      ],
+      "scale": 2,
+      "scene": 0,
+      "target_canvas": [
+        80,
+        64
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        344,
+        6
+      ],
+      "terrain_replacements": 87,
+      "tick": 1146
+    },
+    {
+      "Original_shadows_target": true,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "30097",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 6549,
+      "frame": 0,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 0,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [
+            1
+          ],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s3-r0.classes.gz",
+            "height": 600,
+            "indices": "scene-0-s3-r0.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "Original-target-fixed5636-foreign"
+        },
+        {
+          "Original_shadow_entities": [
+            1
+          ],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s3-r1.classes.gz",
+            "height": 600,
+            "indices": "scene-0-s3-r1.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "current5636-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [
+            1
+          ],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s3-r2.classes.gz",
+            "height": 600,
+            "indices": "scene-0-s3-r2.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "proposed-derived-target-fixed5636-foreign"
+        }
+      ],
+      "scale": 3,
+      "scene": 0,
+      "target_canvas": [
+        120,
+        96
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        516,
+        9
+      ],
+      "terrain_replacements": 87,
+      "tick": 1146
+    },
+    {
+      "Original_shadows_target": true,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "30097",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 12094,
+      "frame": 0,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 0,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [
+            1
+          ],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s4-r0.classes.gz",
+            "height": 800,
+            "indices": "scene-0-s4-r0.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "Original-target-fixed5636-foreign"
+        },
+        {
+          "Original_shadow_entities": [
+            1
+          ],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s4-r1.classes.gz",
+            "height": 800,
+            "indices": "scene-0-s4-r1.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "current5636-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [
+            1
+          ],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s4-r2.classes.gz",
+            "height": 800,
+            "indices": "scene-0-s4-r2.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "proposed-derived-target-fixed5636-foreign"
+        }
+      ],
+      "scale": 4,
+      "scene": 0,
+      "target_canvas": [
+        160,
+        128
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        688,
+        12
+      ],
+      "terrain_replacements": 87,
+      "tick": 1146
+    }
+  ],
+  "scope": "Controlled authentic distinct DSHP complete1, one World retains exact chosen declared spawn and normalpilot2. Ground or air shadow follows unchanged Source definition. Terrain/enemies/Original shadows/main effects; excludes player/projectiles/pickups/secondary effects/UI/Host. Not natural mission/survival/purchase proof.",
+  "status": "ACTUAL_CONTROLLED_DISTINCT_DSHP_ONE_PHASE_ALL4_THREE_ROLES_SUCCESS",
+  "target_preblit_equals_own_frozen_G2_intrinsic_bank": true
+}

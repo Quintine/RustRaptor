@@ -1,0 +1,204 @@
+{
+  "format_version": 1,
+  "job_id": "enemies-2009f-200a0",
+  "owner": "/root/iron_coast_2",
+  "status": "candidate",
+  "complete_family": true,
+  "targets": [
+    {
+      "asset": "2009f",
+      "frame": 0,
+      "file": "jobs/enemies-2009f-200a0/generated/raw-v2.png",
+      "logical_width": 72,
+      "logical_height": 40,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "d6fe29ec5e113b37d668a7b8b61c9257fb5635a5a1181385cfadbae7cc899925",
+      "crop": [
+        3,
+        61,
+        1080,
+        600
+      ]
+    },
+    {
+      "asset": "200a0",
+      "frame": 1,
+      "file": "jobs/enemies-2009f-200a0/generated/raw-v2.png",
+      "logical_width": 72,
+      "logical_height": 40,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "7d2199f7eb44a5902db8825729dba02fd24ae81ad779f49893da3e33169186c4",
+      "crop": [
+        1092,
+        62,
+        1080,
+        600
+      ]
+    }
+  ],
+  "sequences": [
+    {
+      "name": "SHIP09G2_PIC",
+      "base_asset": 131231,
+      "frame_count": 2,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/enemies-2009f-200a0/generated/raw-v2.png",
+          "logical_width": 72,
+          "logical_height": 40,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "d6fe29ec5e113b37d668a7b8b61c9257fb5635a5a1181385cfadbae7cc899925",
+          "crop": [
+            3,
+            61,
+            1080,
+            600
+          ]
+        },
+        {
+          "frame": 1,
+          "file": "jobs/enemies-2009f-200a0/generated/raw-v2.png",
+          "logical_width": 72,
+          "logical_height": 40,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "7d2199f7eb44a5902db8825729dba02fd24ae81ad779f49893da3e33169186c4",
+          "crop": [
+            1092,
+            62,
+            1080,
+            600
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "source": "source-sheet.png",
+    "renderer_status": "exact_rust_review_complete_pending_corrected_pending_independent_review",
+    "artistic_approval": "pending_coordinator",
+    "validated_scales": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "every_frame_page_visually_reviewed": true,
+    "runtime_qa": "runtime-review/runtime-qa.json",
+    "contact_sheets": [
+      "runtime-review/runtime-contact-sheet.png"
+    ],
+    "source_newer_than_library": false,
+    "library": "target/debug/deps/libraptor_replica-d0db1ac8baa0b343.rlib",
+    "visual_notes": "Actual Rust v2 two-frame page inspected: targeted quiet teal RGB correction restores source-like trail palette at1x and4x, solid trails remain present and bronze hull geometry matches prior v1. V1 trail_palette hold and all original evidence are preserved in candidate-v1-held.json/runtime-review-v1-held. V2 remains held for independent palette/geometry acceptance; no production registration.",
+    "frame_metrics": [
+      {
+        "asset": "2009f",
+        "logical_alpha_mask_iou": 0.7112676056338029,
+        "source_bounds": [
+          2,
+          1,
+          71,
+          38
+        ],
+        "hd_1x_bounds": [
+          2,
+          0,
+          70,
+          37
+        ]
+      },
+      {
+        "asset": "200a0",
+        "logical_alpha_mask_iou": 0.7520981278244029,
+        "source_bounds": [
+          2,
+          4,
+          72,
+          39
+        ],
+        "hd_1x_bounds": [
+          1,
+          2,
+          72,
+          38
+        ]
+      }
+    ]
+  },
+  "provenance": {
+    "mode": "built-in image_gen",
+    "prompt": "generated/prompt-v2.txt",
+    "raw_output": "generated/raw-v2.png",
+    "raw_sha256": "ef41803c1d145419dbd88e19adb3fbfe69a618d6981daf92cae426c883183a2f",
+    "raw_dimensions": [
+      2172,
+      724
+    ],
+    "original_sources": [
+      "sprites/SHIP09G2_PIC",
+      "sprites/SHIP09G2_PIC.1"
+    ],
+    "crop_note": "Metadata-only aspect-correct crops remove generated outer margins and retain meaningful body geometry. Transparent sprites retain every alpha>=128 body pixel (the exact indexed-render visibility threshold). Single transparent sprites are framed against the original source occupied bounds without changing or resizing their raw pixels. Raw RGB/alpha bytes remain unchanged. Low-opacity generated outer matte noise may lie outside the crop; the per-frame excluded alpha maximum is recorded. No meaningful body geometry is cut, scaled, masked or painted. Opaque atlas cell rounding may remove at most one physical pixel of outer separator/border; this is explicitly marked and requires manual body-clipping review. Final indexed and artistic review remains required.",
+    "crops": [
+      {
+        "asset": "2009f",
+        "atlas_cell": [
+          0,
+          0,
+          1086,
+          724
+        ],
+        "crop": [
+          3,
+          61,
+          1080,
+          600
+        ],
+        "meaningful_alpha128_bounds": [
+          31,
+          61,
+          1059,
+          619
+        ],
+        "excluded_margin_max_alpha": 70,
+        "opaque_atlas_rounding_trim": false
+      },
+      {
+        "asset": "200a0",
+        "atlas_cell": [
+          1086,
+          0,
+          2172,
+          724
+        ],
+        "crop": [
+          1092,
+          62,
+          1080,
+          600
+        ],
+        "meaningful_alpha128_bounds": [
+          24,
+          99,
+          1086,
+          637
+        ],
+        "excluded_margin_max_alpha": 1,
+        "opaque_atlas_rounding_trim": false
+      }
+    ]
+  }
+}

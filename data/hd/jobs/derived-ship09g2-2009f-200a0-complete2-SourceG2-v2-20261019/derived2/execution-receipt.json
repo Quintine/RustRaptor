@@ -1,0 +1,89 @@
+{
+  "NumPy": "2.3.5",
+  "Pillow": "12.3.0",
+  "Python": "3.12.14",
+  "candidate_sha256": "142914a2dcfa36e174774301ebd083ee00aab40bd347286c50a4e813d670e0f9",
+  "caps": {
+    "chroma_min": 24,
+    "hue_max_fraction": [
+      74,
+      82
+    ],
+    "hue_min_fraction": [
+      20,
+      28
+    ],
+    "luminance_max": 41402,
+    "luminance_min": 3168,
+    "rgb_max": [
+      113,
+      174,
+      182
+    ],
+    "rgb_min": [
+      0,
+      16,
+      24
+    ]
+  },
+  "decoder_sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+  "execution": {
+    "method": "derived-SHIP09G2-complete2-all-Source-cyan-noncyan-hull-v2",
+    "output_sha256": {
+      "2009f": "5a1917e9901ef08240d228c53a82123328f31585a3eadca6352fdd892ddd806f",
+      "200a0": "381bfff23bea325d574d768e81c538d720b978e1b8da9bb126fe39a1eb7dd030"
+    },
+    "parent_raw_sha256": [
+      "a35f0b3d93afd49f78bc7205463986f2a846491c11defbf16cadadca7dc859c8"
+    ],
+    "recipe_sha256": "57b15a6cd1690ddff312e19caac6a7d995a8dc4a0b4b83609b9a587f4994abc5",
+    "source_sha256": {
+      "2009f": "d6fe29ec5e113b37d668a7b8b61c9257fb5635a5a1181385cfadbae7cc899925",
+      "200a0": "7d2199f7eb44a5902db8825729dba02fd24ae81ad779f49893da3e33169186c4"
+    },
+    "status": "success",
+    "tool_sha256": "c6074bf72ecdf5839df6a0e4b9a0275427258f2dbdebb439790e107c7574b02d"
+  },
+  "indexed_bank_sha256": "336fc7c53eccbf8dbcf6b4513b447c2449156a5b2640fdd715ea0be3dda9b74d",
+  "limits": [
+    "Every noncyan structural Source4 owner keeps exact existing G2 native4 palette RGBA of genuine raw, not an unquantized raw RGB identity claim.",
+    "All Source-cyan support/partition and Source-derived caps get zero generated-HD credit; every restored cyan RGB tuple comes unchanged from this phase raw.",
+    "Final alpha is exactly Source4cyan support plus baseline alpha at noncyan Source4 owners; Source4transparent owners are clear. Whole Original-alpha identity is not promised. Fresh G2allscale review required.",
+    "No generator invocation, grain or RGB gain; numerical reproduction does not confer independent art approval."
+  ],
+  "literal_QA_sha256": "6748b237f5c69b3d406285cea9e72ebcb5764c1727a40c2cbd120208c38176bf",
+  "reports": [
+    {
+      "Original_RGB_samples_painted": 0,
+      "RGBA_sha256": "bc517892040d519e88aa0b69fcc644956aaca2d7e4f83b0652853478d0b199ba",
+      "Source_cyan_RGB_outside_original_raw_donor_tuples": 0,
+      "all_Source_cyan_alpha_exact_to_SourceScale4": true,
+      "asset": "2009f",
+      "maximum_donor_logical_distance": 3.9863384338424788,
+      "missing_fraction": 0.6603815194619032,
+      "noncyan_structural_hull_RGBA_sha256": "928eee96793eb72f60a9228351ee0d27d68aa35bf52cf5ad8d47adb98d31e021",
+      "noncyan_structural_hull_exact_to_existing_G2_projection": true,
+      "raw_donor_RGB_colors": 16222,
+      "raw_donors": 33672,
+      "repaired": 5989,
+      "samples": 9069,
+      "used_donor_RGB_colors": 4588
+    },
+    {
+      "Original_RGB_samples_painted": 0,
+      "RGBA_sha256": "465ed0a6a566cfcf1b71be79b48ef3a04f1686c115b70b0117691f6bd39adf6f",
+      "Source_cyan_RGB_outside_original_raw_donor_tuples": 0,
+      "all_Source_cyan_alpha_exact_to_SourceScale4": true,
+      "asset": "200a0",
+      "maximum_donor_logical_distance": 2.3954922373042478,
+      "missing_fraction": 0.5968888888888889,
+      "noncyan_structural_hull_RGBA_sha256": "b454fe7e7edcaa6798bb60006bf1f83f23601dbe12459585f42331dadde17399",
+      "noncyan_structural_hull_exact_to_existing_G2_projection": true,
+      "raw_donor_RGB_colors": 16126,
+      "raw_donors": 32755,
+      "repaired": 5372,
+      "samples": 9000,
+      "used_donor_RGB_colors": 5058
+    }
+  ]
+}

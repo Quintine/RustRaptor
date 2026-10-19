@@ -1,0 +1,32 @@
+{
+  "status": "NAMESPACE_ONLY_SAME_PIXELS_NO_NEW_QA_OR_ART",
+  "producer_job": "derived-dshp07g3_pic-30099-complete1-20261019",
+  "publisher_job": "derived-dshp07g3-pic-30099-complete1-20261019",
+  "before_metadata_sha256": {
+    "candidate.json": "95d601f2e13023591e272bdad78d2504d918262bf78e1c74e79aa9d01384c89d",
+    "artwork-derivation.json": "73ef4bc0083e9835166818a688ef2dd8dafcc230ea005a6c2a2fbda79f5f9db1",
+    "normalized-execution.json": "46703453e1fc21c6a196ec97eeb47edcfe218bd25b2bec6b9e1f206e8cd447a2",
+    "runtime-review/runtime-qa.json": "86ab4e791c3def83e8c5bac45f1e288bbb815bd8bf863a8904b1fa7680a3e873"
+  },
+  "after_metadata_sha256": {
+    "candidate.json": "d7968b7c79d105131fadbd8ebeafb9c0dfa0210eff8da7f0189314f2fc94e8a2",
+    "artwork-derivation.json": "cd0084d5baa8aae7c8303f316a6ee0c9f79247228606792ef1e58f150fc2f445",
+    "normalized-execution.json": "7a086773ee337f7cfeff61fcc5efc94d68939ce623726facc13ac3c7ba5d6080",
+    "runtime-review/runtime-qa.json": "6ca56d592b173d13f886205f7a38ab543301886dafe3645a6b2c525437e8da50"
+  },
+  "old_frame_bindings_sha256": "26a462ef007eca6d36a7918d29970cf919785dd0bbf340a1cde9a72a0beb27b5",
+  "new_frame_bindings_sha256": "dee4379976d4e274e2a264611db62f43a54ef3801d7883e6fb1bef8736d00e71",
+  "all_frame_fields_except_portable_file_exact": true,
+  "all_PNG_sha256_exact": {
+    "jobs/derived-dshp07g3_pic-30099-complete1-20261019/derived/30099-derived.png": "9630e9dfc4e3555cd623649f18b7b57edcd768e13673160a9cda5ef43c9c7dbd"
+  },
+  "measured_frames_exact": true,
+  "Source18_library_and_diagnostics_exact": true,
+  "active_job_declaration_from_Original_ledger": true,
+  "all_old_metadata_archived_verbatim": true,
+  "shared_proofs_byte_identical_relocation": {
+    "old": "_shared-DSHP5-SourceG2-H5636-finite-context-proofs-20261019",
+    "new": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019"
+  },
+  "new_cleanup_QA_World_or_generator_calls": 0
+}

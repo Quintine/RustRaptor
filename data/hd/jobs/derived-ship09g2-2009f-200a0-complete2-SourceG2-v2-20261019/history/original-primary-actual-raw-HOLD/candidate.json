@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "job_id": "SHIP09G2-Original-primary-complete2-20261019-v1",
+  "complete_family": true,
+  "sequences": [
+    {
+      "name": "SHIP09G2_PIC",
+      "base_asset": 131231,
+      "frame_count": 2,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "generated/SHIP09G2-COMPLETE2-PROVIDER-RETURNED-UNTOUCHED.png",
+          "logical_width": 72,
+          "logical_height": 40,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "d6fe29ec5e113b37d668a7b8b61c9257fb5635a5a1181385cfadbae7cc899925",
+          "crop": [
+            30,
+            330,
+            729,
+            405
+          ]
+        },
+        {
+          "frame": 1,
+          "file": "generated/SHIP09G2-COMPLETE2-PROVIDER-RETURNED-UNTOUCHED.png",
+          "logical_width": 72,
+          "logical_height": 40,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "7d2199f7eb44a5902db8825729dba02fd24ae81ad779f49893da3e33169186c4",
+          "crop": [
+            763,
+            330,
+            729,
+            405
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "One builtin Original-only atlas. Equal729x405 aspect-correct margin crops preserve every alpha128 pixel; all RGBA untouched. Provider placement differs requested reference placement. No Original retention or repaint, no independent approval or World context."
+}

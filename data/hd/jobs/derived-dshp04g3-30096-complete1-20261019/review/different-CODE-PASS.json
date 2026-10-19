@@ -1,0 +1,57 @@
+{
+  "status": "PASS_30096_EXACT_REVIEWED_MATH_PORTABLE_SINGLETON_EXTENSION_CODE",
+  "helper_sha256": "beca62018b0e60a2aa7b846b3a668ca01656fae6293d0970417c664ecf72c540",
+  "recipe_sha256": "ec1cc090a368717b901a0839fbedbbba0683fff6fb09dc8db962646d02fd8394",
+  "tests_sha256": "3ea306eb9f67d26263c418459437488d13e49b8e4bd1faac95c0ef3e3ea3119f",
+  "actual_synthetic_tests_passed": 21,
+  "independent_AST_checks": {
+    "sha": true,
+    "read": true,
+    "modules": true,
+    "cap_material": true,
+    "derive": true
+  },
+  "validate_recipe_diff_only_asset_identity": true,
+  "unchanged_math_authority": {
+    "path": ".reference/hd-dshp01-30093-independent-bounded-CODE-review-20261019-v1/PASS-30093-BOUNDED-DARK-MATERIAL-INDEPENDENT-CODE.json",
+    "sha256": "67a0fdb374cf828244a225ae03127d8aab8098a901866c683676df1516eb67f1"
+  },
+  "independent_authentic_Source_facts": {
+    "asset": "30096",
+    "INDEX_source_path": "sprites/DSHP04G3_PIC",
+    "INDEX_size": 1011,
+    "source_sha256": "25c7daca9d1f00b9f9f6580ec73e6de193bf719c956cda9155c933c2f2d1c1ee",
+    "canvas": [
+      32,
+      32
+    ],
+    "kind": "RLE0",
+    "painted_cells": 591,
+    "reserved240to255_cells": 0
+  },
+  "portable_binding_checks": {
+    "source_raw_palette_and2dependencies": 5,
+    "all_contained_regular_nonsymlink_exact_hash": true,
+    "staged_recipe_equals_frozen_recipe": true
+  },
+  "math_scope": "Unchanged SourceScale4 alpha, same immutable generated RGB nearest/noncascading donor<=12outputpx and proportional integer darken-only Source-label maxRGB+12. No RGB gain, SourceRGB copying, noise, runtime RNG or geometry retuning.",
+  "provided_readonly_donor_feasibility_not_rerendered": {
+    "opaque_samples": 9406,
+    "filled": 175,
+    "missing_fraction": 0.018605145651711674,
+    "maximum_squared_distance": 17,
+    "maximum_bound_squared": 144
+  },
+  "limits": [
+    "Raw Source-shape/whole-art acceptance remains separate; CODE PASS alone does not upgrade generated material or Original remaster coverage.",
+    "Actual Source has0reserved240..255, so inherited c612 functional-color injection branch is inactive for this exact pin.",
+    "Private execution receipt uses scalarhashes; honest normalized7field method/map receipt still required before standard derivation admission, as recorded for30093.",
+    "Only authorized1.8GB+8MB output floor and asset/method/pins/output filenames changed outside exact shared math; no cap widening.",
+    "No real derived pixels, donor feasibility rerender, G2/SourceF QA, World or canonical/Git changes performed."
+  ],
+  "frozen_proposal_unchanged": true,
+  "evidence": {
+    "review.py": "d292aa70960be71e5671d7acfbc1b76ff7d1861c36d05ab73530ce96b550ea8b",
+    "actual21.stderr": "e9f5ce5547a8e53622f1cd368af6056ab44e10c03b71d0c017330582ce0af4a2"
+  }
+}

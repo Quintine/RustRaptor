@@ -1,0 +1,5 @@
+Private portable complete1 proposal, pending Root/different art. No registry approval.
+The exact actual recipe is preserved unchanged (SHA4181597a), with its project-relative .reference input layout copied into project. These are tiny Source/palette/raw files; no dependency on the original author checkout. The normalized seven-field execution maps the actual scalar result; its actual scalar/provenance are preserved and no second execution is claimed.
+Reproduction command (not executed here):
+python3 tools/hd_dshp01_dark_material.py data/hd/jobs/derived-dshp01g3-30093-complete1-20261019/cleanup-recipe-ACTUAL-EXACT.json 4181597a7995f1d428cbe7d73b5259691326be6019bdc888b93dd3710571434b PROJECT_ROOT NEW_ABSENT_OUTPUT
+The job candidate relocates PNG paths for standard data/hd layout; actual current G2 QA remains verbatim and the separate exact-PNG header carry records that metadata-only relocation. No additional helper execution is claimed. No canonical writes or Registrar calls occurred. Source logical/collision/movement fields unchanged.

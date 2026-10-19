@@ -1,0 +1,56 @@
+{
+  "format_version": 1,
+  "method": "derived-SHIP09G2-complete2-all-Source-cyan-noncyan-hull-v2",
+  "raw_png": {
+    "path": "inputs/raw.png",
+    "sha256": "a35f0b3d93afd49f78bc7205463986f2a846491c11defbf16cadadca7dc859c8"
+  },
+  "palette": {
+    "path": "inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "candidate": {
+    "path": "inputs/literal-candidate.json",
+    "sha256": "142914a2dcfa36e174774301ebd083ee00aab40bd347286c50a4e813d670e0f9"
+  },
+  "runtime_qa": {
+    "path": "inputs/literal-currentG2-runtime-qa.json",
+    "sha256": "6748b237f5c69b3d406285cea9e72ebcb5764c1727a40c2cbd120208c38176bf"
+  },
+  "indexed_bank": {
+    "path": "inputs/literal-currentG2-indexed-bank.json",
+    "sha256": "336fc7c53eccbf8dbcf6b4513b447c2449156a5b2640fdd715ea0be3dda9b74d"
+  },
+  "actual_invocation": {
+    "path": "inputs/literal-currentG2-invocation.json",
+    "sha256": "ebd6a4c03d329df7e9086f34913be5d931bbe91f5fb1723fd40e74a4c478887b"
+  },
+  "frames": [
+    {
+      "asset": "2009f",
+      "source": {
+        "path": "inputs/2009f.bin",
+        "sha256": "d6fe29ec5e113b37d668a7b8b61c9257fb5635a5a1181385cfadbae7cc899925"
+      },
+      "crop": [
+        30,
+        330,
+        729,
+        405
+      ]
+    },
+    {
+      "asset": "200a0",
+      "source": {
+        "path": "inputs/200a0.bin",
+        "sha256": "7d2199f7eb44a5902db8825729dba02fd24ae81ad779f49893da3e33169186c4"
+      },
+      "crop": [
+        763,
+        330,
+        729,
+        405
+      ]
+    }
+  ]
+}

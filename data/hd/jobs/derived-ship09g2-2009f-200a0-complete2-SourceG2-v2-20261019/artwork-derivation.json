@@ -1,0 +1,54 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "derived-SHIP09G2-complete2-all-Source-cyan-noncyan-hull-v2",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/inputs/raw.png",
+        "sha256": "a35f0b3d93afd49f78bc7205463986f2a846491c11defbf16cadadca7dc859c8"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/inputs/parents/actual-imagegen-immediate-release-verbatim.json",
+        "sha256": "8d15a4e8e36d98b7769c5e1b682aaa2b489e989e2714c1ac52880fcaa4c6de9a"
+      },
+      "prompt": {
+        "path": "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/inputs/parents/exact-Original-primary-prompt-verbatim.txt",
+        "sha256": "d268fdab2bb548e232c8ad7d61198e3137aaca2085e9f8121724065f5e507c6d"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_ship09_wake_cleanup.py",
+      "sha256": "c6074bf72ecdf5839df6a0e4b9a0275427258f2dbdebb439790e107c7574b02d"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/cleanup-recipe.json",
+    "sha256": "57b15a6cd1690ddff312e19caac6a7d995a8dc4a0b4b83609b9a587f4994abc5"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/derived2/execution-receipt.json",
+    "sha256": "cf81ce4939c643463fe414dd1f67dd640e9af59a1b4eded88161a798958ca0a8"
+  },
+  "sources": {
+    "2009f": "d6fe29ec5e113b37d668a7b8b61c9257fb5635a5a1181385cfadbae7cc899925",
+    "200a0": "7d2199f7eb44a5902db8825729dba02fd24ae81ad779f49893da3e33169186c4"
+  },
+  "outputs": {
+    "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/derived2/2009f.png": "5a1917e9901ef08240d228c53a82123328f31585a3eadca6352fdd892ddd806f",
+    "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/derived2/200a0.png": "381bfff23bea325d574d768e81c538d720b978e1b8da9bb126fe39a1eb7dd030"
+  },
+  "scope": "Exact actual c607 helper/57b15 recipe copied with all portable relative inputs. No new cleanup replay/QA/generation in packaging. Literal final currentG2 bank22686, all prior actual HOLD lineages and finite genuine World context are retained.",
+  "limits": [
+    "All Source-cyan support/ownership and Source-derived color/distance caps are functional, zero new-HD detail credit.",
+    "Restored cyan RGB tuples are unchanged eligible same-phase authentic generated donors; noncyan structure is unchanged literal initial G2 projection.",
+    "Final alpha is SourceScale4 cyan support plus baseline alpha at noncyan SourceScale4 owners; no whole Original-alpha identity claim.",
+    "Root final context and admission review remain separate."
+  ]
+}

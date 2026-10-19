@@ -1,0 +1,105 @@
+{
+  "status": "DIFFERENT_QUALIFIED_GENUINE_DSHP01_30093_S3W3_CURRENTG2_H5636_ALL4_CONTEXT_WITH_LIMITS_ROOT_PENDING",
+  "utc": "2026-10-19T03:05:44.257736+00:00",
+  "reviewer": "/root/mission_preview_design",
+  "asset": "30093",
+  "decision": "QUALIFIED_WITH_LIMITS",
+  "author_context": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-DSHP01G3-30093-currentG2-genuine-S3W3-H5636-context-20261019-v1/CLOSED-AUTHOR-DSHP01-30093-GENUINE-CURRENTG2-H5636-ALL4-CONTEXT.json",
+    "sha256": "7f7a3916560105ce2fbc536035dd39ca63492f7e6bcf84ce108bad9f5a5c70ed"
+  },
+  "prior_different_intrinsic": "064eaecb qualification is separate and unchanged",
+  "physical_ROI_pages": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-DSHP01G3-30093-currentG2-genuine-S3W3-H5636-context-20261019-v1/review-pages/30093-native1-genuine-ground-context-Original-current-proposed.png",
+      "sha256": "d6485b2932b89ca2331b9a75b534b1e8a2144add29ba3a2fe4b2ce8ee5a002b8",
+      "bytes": 7259
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-DSHP01G3-30093-currentG2-genuine-S3W3-H5636-context-20261019-v1/review-pages/30093-native2-genuine-ground-context-Original-current-proposed.png",
+      "sha256": "0dd9c66fa6b1b1e9529cf4bd4d6311bea2c7bcd8cf53e5f0a98d43d096c2f30b",
+      "bytes": 15713
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-DSHP01G3-30093-currentG2-genuine-S3W3-H5636-context-20261019-v1/review-pages/30093-native3-genuine-ground-context-Original-current-proposed.png",
+      "sha256": "9e440539029e80d649ae7a9d6079146f3daf6d2cdd0dda9f43a91384d3033d14",
+      "bytes": 28969
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-DSHP01G3-30093-currentG2-genuine-S3W3-H5636-context-20261019-v1/review-pages/30093-native4-genuine-ground-context-Original-current-proposed.png",
+      "sha256": "a2b210e3091de97ebec05a8892445361f7e2d30cf7e97ae89b4f4a92b62015a8",
+      "bytes": 46035
+    }
+  ],
+  "physical_whole_proposal_screens": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-DSHP01G3-30093-currentG2-genuine-S3W3-H5636-context-20261019-v1/review-pages/30093-native1-whole-proposed.png",
+      "sha256": "e06aabae57dfc40d08e29afd5c5e0f7dfe82a6441ec25fa67be48bce27c3ea25",
+      "bytes": 18230
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-DSHP01G3-30093-currentG2-genuine-S3W3-H5636-context-20261019-v1/review-pages/30093-native2-whole-proposed.png",
+      "sha256": "29ea48ef4d0016562e809e4d92956dfd3e9861dba2556b1d8c36d9f2c2281c5e",
+      "bytes": 61568
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-DSHP01G3-30093-currentG2-genuine-S3W3-H5636-context-20261019-v1/review-pages/30093-native3-whole-proposed.png",
+      "sha256": "0f8387350119b428ba33f6250a548841073a9904ed65bfe2ed7ebbc4c5536db7",
+      "bytes": 133160
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-DSHP01G3-30093-currentG2-genuine-S3W3-H5636-context-20261019-v1/review-pages/30093-native4-whole-proposed.png",
+      "sha256": "1d06e32eb200499aac01ca703737dd546916acadc5bdaa5d8c0917bf74d6676c",
+      "bytes": 234826
+    }
+  ],
+  "all4_complete_ROI_and4_whole_proposed_physically_viewed": true,
+  "actual_scope": {
+    "mission": "base:sector_3_wave_3",
+    "Source_spawn_ordinal": 141,
+    "Source_tick": 2296,
+    "Source_raw_difficulty": 4,
+    "pilot_difficulty": 2,
+    "captured_tick": 2432,
+    "health": 55,
+    "ground": true,
+    "Source_ground_shadow": true,
+    "Source_type5movement": true,
+    "reward_definition": 650,
+    "Input_default_noinput": true,
+    "no_entity_health_position_frame_timing_RNG_override": true,
+    "unrelated_declarations_suppressed_before_World": true
+  },
+  "observations": [
+    "At genuine initial left-entry placement, the complete dark32x32craft remains visually attached to the ground scene and its Original shadow. Allfour ROI comparisons and whole proposed scenes show no new halo, detached muzzleflash or new shadow shape.",
+    "Cyan canopy and lower gray outline remain identifiable against the genuinely dark terrain. Body material is dark and more segmented/crisp at3to4 than softerOriginal; fine markings are reduced atnative1. This is accepted context behavior with the prior intrinsic qualification unchanged.",
+    "Outer craft geometry is intact: actual SourceNx and proposal occupied masks are identical atallfour native scales, with591/2352/5283/9396 occupied samples respectively. No Source occupied support is omitted or added.",
+    "Original source shadow uses the same actual entity1 for all roles, before the ground body. Saved Original/current roles are exactly identical; proposal changes are confined to the own occupied support.",
+    "The target is fully visible at saved tick2432, previous[0,7]/current[2,8], alpha0.5. No invented centered position or altered enemy health is needed."
+  ],
+  "independent_numeric_check": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-DSHP01-30093-genuine-context-different-review-20261019-v1/ACTUAL-DIFFERENT-READONLY-DSHP01-CONTEXT-PIXEL-AND-INPUT-AUTHENTICATION.json",
+    "sha256": "044c462022ce4b9700068205befa97cc162f9627d04c68a1a3e9fbf5c0953a9e"
+  },
+  "actual_readonly_authentication": {
+    "exact_current_input_pins": 122,
+    "finite_input_bytes_hashed": 334271118,
+    "screen_arrays": 12,
+    "component_arrays": 8,
+    "screen_samples": 5760000,
+    "changed_samples": 12825,
+    "outside_own_alpha_changes": 0,
+    "all4preblits_equal_frozen_currentG2bank": true,
+    "all8PNG_nativeRGBbodies_exact_saved_planes": true,
+    "SourceNx_occupied_alpha_support_exact_all4": true
+  },
+  "limits": [
+    "Controlled exact Original normalpilot2/raw4S3W3declaration141, unrelated spawns suppressed beforeWorld. No natural fullmission, survival, economy, groundhit rules or difficulty-completeness qualification.",
+    "Finite single-pose initial-entry context for Sourceart1; no animation, later trajectory/scroll position or brighter background sampled.",
+    "Saved compositions include terrain, main effects and Original enemy shadow/body, but exclude player/projectiles/pickups/secondaryeffects/UI/Host. These are authentic controlled whole composition canvases, not fullgamewindow screenshots.",
+    "Dark surfaces remain less conspicuous against this dark floor; sharp panel segmentation is an intrinsic treatment change, not a gameplay change.",
+    "Root final approval, batch authority and registration remain separate."
+  ],
+  "Root_approval_pending": true,
+  "new_World_renderer_QA_art_cleanup_compile_canonical_Git_registration_calls": 0
+}

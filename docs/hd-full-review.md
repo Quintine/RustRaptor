@@ -1,5 +1,15 @@
 # Complete-original HD review
 
+Current artwork checkpoint — 19 October 2026: **5,654 reviewed pictures / 3,741 complete sequences**, including **4,441 Terrain pictures**. **99 originals remain**: 94 Terrain, four enemies/ground objects and one UI/other picture.
+
+This seven-picture append adds the complete two-frame SHIP09G2 family and five distinct dark DSHP singletons. All use derived genuine material with disclosed Source constraints. The six retained Original marker cells, geometry support, brightness/color/distance caps and backing fills earn no generated-HD detail credit. Literal SourceG2/H5636 scenes and finite H5647 input carries remain separate; visible dark material, downsampling and native-scale limits stay recorded.
+
+Six staged checks preceded one private registrar main. Runtime: **14,494 files / 8,907,045,232 bytes**. Final standalone launcher validation confirms **5,654 HD frames with zero rejects**; asset verification reports **6,449 assets**. The earlier combined launcher printed both complete results but ended with terminal143 and empty stderr; its uncertain cause is preserved separately. The fresh public HD-tool suite passed **491 synthetic tests**. Three namespace-normalized recipes were actually reproduced byte-exactly, preserving earlier recipes and receipts; no new engine QA or World ran during publication. SourceG2 binaries, 45 mods and 42 SD/HD briefings remain unchanged. Windows CI for fad806a failed checkout on a long filename before game/tests; CI-only11505721 enabled long paths, with its run pending at the recorded observation. No native H5654 result is claimed.
+
+# Earlier H5647 checkpoint — retained verbatim
+
+# Complete-original HD review
+
 Current artwork checkpoint — 19 October 2026: **5,647 reviewed pictures / 3,735 complete sequences**, including **4,441 Terrain pictures**. **106 originals remain**: 94 Terrain, 11 enemies/ground objects and one UI/other picture.
 
 This 11-picture append adds two gratings, three E3 terrain pictures, five first-campaign tiles and the copyright graphic. Copyright and the two unused tiles have catalogue/intrinsic approval without invented gameplay scenes. Other finite contexts keep their literal SourceG2/H5613 epoch and separate H5636 input carries. The 68 retained Original cells and Source-owned grating masks/gray anchors earn no generated-HD detail credit; visible texture, palette and native-scale limits remain recorded.

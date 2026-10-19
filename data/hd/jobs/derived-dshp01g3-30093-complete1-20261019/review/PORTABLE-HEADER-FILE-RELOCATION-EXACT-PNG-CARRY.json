@@ -1,0 +1,23 @@
+{
+  "actual_currentG2_QA": {
+    "path": "jobs/derived-dshp01g3-30093-complete1-20261019/review/actual-currentG2-measurement/runtime-qa.json",
+    "sha256": "0e8d2f026519d518c55b99e2d8f4d0213b3466294dab4684adbdc8c14dfe98f5"
+  },
+  "actual_measured_candidate_sha256": "baf9fd74f0e403be8fafeb38a18e970318b7e67ecfe0298de8b36263af39c3d8",
+  "proposed_candidate_sha256": "a2440ee9b567ea54dd91d1b5690b7113f07d6fbf2154ce81a7f5f939e23f82bf",
+  "actual_frame_binding_sha256": "82b47996fefbc0a79580009083d23c560293b1dc59f2f2490995ee96d4c61508",
+  "proposed_frame_binding_sha256": "80d89ec9913fd06a0948e273450e95b3a8176656bc936508e85f1b8a34692eb1",
+  "renamed_PNG_only": {
+    "30093-derived.png": "jobs/derived-dshp01g3-30093-complete1-20261019/derived/30093-derived.png"
+  },
+  "same_PNG_bytes": "7656cb3b1685b623bb5d1edda54a3ec7ed05adb2c0f1df25701638c02f192397",
+  "candidate_change": "file reference relocation, lineage header and review metadata only; same logical canvas/crop/origin/Source and exact PNG; no current helper or derived rerun",
+  "actual_counts": {
+    "generation": 1,
+    "untuned_G2": 1,
+    "derive": 1,
+    "final_G2": 1
+  },
+  "actual_QA_preserved_verbatim": true,
+  "not_new_QA": true
+}

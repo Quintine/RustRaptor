@@ -1,0 +1,72 @@
+{
+  "status": "AUTHOR-QUALIFIED-COMPLETE1-INTRINSIC-ONLY-PENDING-DIFFERENT-ART-AND-ROOT",
+  "asset": "30093",
+  "name": "DSHP01G3_PIC",
+  "complete_family": true,
+  "actual_calls": {
+    "builtin": 1,
+    "untuned_G2_intrinsic": 1,
+    "derived": 1,
+    "final_G2_intrinsic": 1,
+    "derived_retries": 0
+  },
+  "raw_untouched_SHA256": "eb5f343d8aa19c8aa74b7da37f18ce36b31bb4660446d5b4ac4a1f3007593e80",
+  "derived_PNG_SHA256": "7656cb3b1685b623bb5d1edda54a3ec7ed05adb2c0f1df25701638c02f192397",
+  "derived_RGBA_SHA256": "14f16d1d2207d79481ac900ed3d3739f59fdea791bef4f97d45a835d33d70636",
+  "actual_tool_SHA256": "5926b96c0469b45504a15b8cd67e3f84367ce971dee82ff6f578d32c3af3ccb5",
+  "actual_recipe_SHA256": "4181597a7995f1d428cbe7d73b5259691326be6019bdc888b93dd3710571434b",
+  "final_actual_G2_QA_SHA256": "0e8d2f026519d518c55b99e2d8f4d0213b3466294dab4684adbdc8c14dfe98f5",
+  "different_CODE_receipt_SHA256": "67a0fdb3",
+  "actual_logical_mask_IoU": 1.0,
+  "native_Source_kernel_mask_comparison": [
+    {
+      "scale": 1,
+      "actual_mask_pixels": 591,
+      "Source_kernel_mask_pixels": 591,
+      "mask_differing_samples": 0
+    },
+    {
+      "scale": 2,
+      "actual_mask_pixels": 2352,
+      "Source_kernel_mask_pixels": 2352,
+      "mask_differing_samples": 0
+    },
+    {
+      "scale": 3,
+      "actual_mask_pixels": 5283,
+      "Source_kernel_mask_pixels": 5283,
+      "mask_differing_samples": 0
+    },
+    {
+      "scale": 4,
+      "actual_mask_pixels": 9396,
+      "Source_kernel_mask_pixels": 9396,
+      "mask_differing_samples": 0
+    }
+  ],
+  "alpha_derived_SourceScale4": true,
+  "Original_RGB_samples_replaced": 0,
+  "generated_RGB_samples_darkened": 1806,
+  "generated_RGB_missing_samples_filled": 373,
+  "max_actual_preferred_donor_squared_distance": 18,
+  "donors_noncascading_within12px": true,
+  "all_reserved_palette_index_counts_zero": true,
+  "physical_review": {
+    "Original": true,
+    "genuine_raw_whole": true,
+    "derived_whole": true,
+    "native1": true,
+    "native2": true,
+    "native3": true,
+    "native4": true
+  },
+  "material_judgment": "The generated mottled steel surfaces survive while broad near-black metal backing and dark masses remain. Tiny upper-center teal patch, pale middle and long lower stem retain Original relative positions. Darken-only cap suppresses excessive top/central brightness; small panel seam texture remains genuinely generated. This is derived material, not untouched generation, and not a replacement of Original RGB.",
+  "limitations": [
+    "Material is a new interpretation of a 32px Source; no exact RGB equivalence claimed.",
+    "Native3 border coverage may differ from dedicated SourceScale3 due resident4-to3 resampling; exact differing sample count declared above.",
+    "No live genuine context review yet.",
+    "No canonical registry/HD credit/admission/Git changes."
+  ],
+  "untuned_HOLD_preserved": true,
+  "registration_authority": false
+}

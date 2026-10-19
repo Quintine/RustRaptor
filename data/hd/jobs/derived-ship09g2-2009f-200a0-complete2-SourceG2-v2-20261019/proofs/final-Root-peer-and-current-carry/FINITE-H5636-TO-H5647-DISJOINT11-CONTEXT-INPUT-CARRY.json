@@ -1,0 +1,116 @@
+{
+  "status": "EXACT_FINITE_INPUT_CARRY_H5636_TO_H5647_NO_NEW_RENDER",
+  "historic_context_author_sha256": "dbb509e0c8df7807c286b75357737ef8653a475bbc5779d4ae4cdaff80ed1b8a",
+  "historic_manifest_sha256": "68b238c8639dec79ec50e9c3a70f7ab18a5588b27de4f92325ae8472a16bb5b8",
+  "current_manifest_sha256": "e257ad25e8820bd2350e9e9e045937c157e33a1011b5ba0bc7adc9be286c3247",
+  "historic_headers": 5636,
+  "current_headers": 5647,
+  "old_renderer_metadata_all_exact": true,
+  "new_appended_asset_ids": [
+    "10016",
+    "103d5",
+    "103d6",
+    "104fa",
+    "104fc",
+    "104fd",
+    "203c6",
+    "203c7",
+    "304e6",
+    "304e9",
+    "304ea"
+  ],
+  "finite_consumed_asset_ids": [
+    "202ab",
+    "205c3",
+    "205c4",
+    "205ca",
+    "205cb",
+    "205cd",
+    "2062a",
+    "2062b",
+    "20638",
+    "2063a",
+    "2063c",
+    "2063d",
+    "2063e",
+    "20641",
+    "20642",
+    "20643",
+    "20646",
+    "20647",
+    "20648",
+    "20649",
+    "2064a",
+    "20659",
+    "20688"
+  ],
+  "new11_intersection_with_consumed": [],
+  "new11_intersection_with_target": [],
+  "finite_consumed_whole_sequence_pngs_exact": [
+    {
+      "file": "jobs/terrain-205bd-205cc/generated/atlas-v1.png",
+      "sha256": "607670732efe915346d68a99ba3dbf61e2ac495d78ac4b74758c32bc05392e05"
+    },
+    {
+      "file": "jobs/terrain-205cd-205dc/generated/atlas-v2.png",
+      "sha256": "b2d1e7c0ad0ead2dfc50a367a4e11e0f255038163fabc20dce42d735060746a6"
+    },
+    {
+      "file": "jobs/terrain-2062d-2063c/generated/atlas-v1.png",
+      "sha256": "642b8ead3f7e39f622a5cc5df714d10853912040b49b6103747a3a61324e523d"
+    },
+    {
+      "file": "jobs/terrain-2063d-2064c/generated/atlas-v1.png",
+      "sha256": "4ba488b84197267b65eac47235a3961347c0f8e4bf756ce188c1a2f1433b325b"
+    },
+    {
+      "file": "jobs/terrain-2067d-2068c/generated/atlas-v1.png",
+      "sha256": "afab6358abe0339e7df45b4780073b0edcc4548e67b74d180fb37d68e2055f67"
+    },
+    {
+      "file": "jobs/terrain-2029d-202ac/generated/atlas-v1.png",
+      "sha256": "7bc7da28d35a897e4a3aaec69eb78732ae3f4cb9b515f5d2fbe23cc19395ed1a"
+    },
+    {
+      "file": "jobs/terrain-2064d-2065c/generated/atlas-v2-rejected.png",
+      "sha256": "44b4c7f42d9ef0995330e9984e0e3c9ce3109ccf62a71284cf94bd62195d8bb2"
+    },
+    {
+      "file": "jobs/derived-forest2061d-2062c-single-organic-complete16-v1-20261018/derived/2062a-DERIVED-declared-material-v1.png",
+      "sha256": "1f617c01241251e437f6650b2dbb5d2a3b16b8a1578a251b9782fc3ff853884a"
+    },
+    {
+      "file": "jobs/derived-forest2061d-2062c-single-organic-complete16-v1-20261018/derived/2062b-DERIVED-declared-material-v1.png",
+      "sha256": "021d9cdf6e5ba830a29313e434d57a6373e158e580a6414147bf0ec9d1884d2a"
+    }
+  ],
+  "Source18_exact_to_actual_G2": {
+    "src/assets.rs": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+    "src/audio.rs": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+    "src/audio/opl3.rs": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+    "src/cinematics.rs": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+    "src/content.rs": "80021611102f22b3152164e88a3ee7ecc8c16e9b3a4563551a047c089f2ba7d2",
+    "src/desktop.rs": "82dfa448623cd05e12110d838b80a4f726fb037a73eec587accbadb4aef33178",
+    "src/hd.rs": "b17f4ee0757ee87d34e01ec76f3a6239c6e9044b42b4b10bd5f05b485f137a64",
+    "src/legacy_tables.rs": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+    "src/lib.rs": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+    "src/main.rs": "510d461e6d971749efbbed6570f08aca2605ecc61c16977ab9acb9170c7aba4a",
+    "src/menu_art.rs": "0506bbf30cc14794625b72ab1e6f5e2573e99a833105ce808913485d3452db06",
+    "src/mod_selection.rs": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+    "src/modding.rs": "d2b811416e06a5c743c11c77e5599ddcf5d3263de4f74363bc0731eaccc2c2ac",
+    "src/persistence.rs": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+    "src/render.rs": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+    "src/simulation.rs": "2537120f280a1cfcfcc73a42a4103a4435ba8aeb98e69c87fde3b885b97a9925",
+    "src/sound.rs": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+    "src/terrain_hd.rs": "e61f96f541c19863ce8d741363a1739b9276e25aee84795952c65565c775e392"
+  },
+  "helper_source_exact": true,
+  "scope": "Historical actual one-World/all24 screens remain literal H5636. Added11 do not touch any finite consumed terrain/effect/target asset. Existing sequence renderer metadata and every consumed whole-sequence PNG are unchanged, so finite context input carry to H5647 is exact. No newly captured or rendered H5647 screens claimed.",
+  "new_cleanup": 0,
+  "new_intrinsic_QA": 0,
+  "new_World": 0,
+  "new_composition": 0,
+  "canonical": 0,
+  "registrar": 0,
+  "Git": 0
+}

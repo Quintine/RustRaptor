@@ -1,0 +1,53 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "derived-30093-generated-fullRGB-SourceScale4-darken-only-Source-max-plus12-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-dshp01g3-30093-complete1-20261019/parents/generator-return.png",
+        "sha256": "eb5f343d8aa19c8aa74b7da37f18ce36b31bb4660446d5b4ac4a1f3007593e80"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-dshp01g3-30093-complete1-20261019/parents/generation-receipt-safe-primitives.json",
+        "sha256": "05a8dff8ffb8deb8f757145e27c599b3752c290e9ee4063e20cb9a2749c76f65"
+      },
+      "prompt": {
+        "path": "jobs/derived-dshp01g3-30093-complete1-20261019/parents/prompt.txt",
+        "sha256": "be09b3787669db4bf24bae74a5e5f4065113fa647d97865bbb804151c44a72ff"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_dshp01_dark_material.py",
+      "sha256": "5926b96c0469b45504a15b8cd67e3f84367ce971dee82ff6f578d32c3af3ccb5"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    },
+    {
+      "path": "tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-dshp01g3-30093-complete1-20261019/cleanup-recipe.json",
+    "sha256": "34736f4ae43608c1c954ec44201d747d7ad9b0857d1a353a851d5475ff8e081d"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-dshp01g3-30093-complete1-20261019/normalized-execution.json",
+    "sha256": "d64ba2dce9fe57bd72ca1d6160f2533ea35311f91ea0da15b1f133d15ef3b113"
+  },
+  "sources": {
+    "30093": "6477ea0bb108eb2ff185af21d6cf45eb0afdef6fcf5dc7b22ab48a31889f9e45"
+  },
+  "outputs": {
+    "jobs/derived-dshp01g3-30093-complete1-20261019/derived/30093-derived.png": "7656cb3b1685b623bb5d1edda54a3ec7ed05adb2c0f1df25701638c02f192397"
+  },
+  "detailed_provenance": {
+    "path": "jobs/derived-dshp01g3-30093-complete1-20261019/actual-public-reproduction-once/derived-provenance.json",
+    "sha256": "fe608cba049577fe75c5090052d68f748ff08c95c59422eb61e4611d67ffa540"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "status": "AUTHOR-QUALIFIED-COMPLETE1-INTRINSIC-PENDING-DIFFERENT-ART-CONTEXT-ROOT",
+  "asset": "30096",
+  "name": "DSHP04G3_PIC",
+  "complete_singleton": true,
+  "actual_counts": {
+    "builtin": 1,
+    "untuned_QA": 0,
+    "derived": 1,
+    "final_G2_QA": 1,
+    "retries": 0
+  },
+  "raw_sha256": "815bdcb76d075d1af5b21816c20937f645027ca65ec74d7347a532346cb1d85b",
+  "derived_png_sha256": "005b06ca534e4e309c3e2065bd685298f0d249806de8c67761656c88adc1d226",
+  "derived_RGBA_sha256": "fbe27ec2f31310789ea41b8482bb38ac0874b21c21541e5e12adacb5da0112d9",
+  "actual_tool_sha256": "beca62018b0e60a2aa7b846b3a668ca01656fae6293d0970417c664ecf72c540",
+  "actual_recipe_sha256": "ec1cc090a368717b901a0839fbedbbba0683fff6fb09dc8db962646d02fd8394",
+  "current_G2_QA_sha256": "9973fbd7c0b3a502c17cdc1a88362f03a04fd176421fa745ada5bade5c4eccd4",
+  "current_G2_candidate_sha256": "38a6f238e95f8c5df58f9a053f62a7dc18e4e2a3d3770bb273c6432258c80451",
+  "candidate_sha256_now": "38a6f238e95f8c5df58f9a053f62a7dc18e4e2a3d3770bb273c6432258c80451",
+  "candidate_unchanged_during_after_QA": true,
+  "different_CODE_sha256": "fb6ce5baefc6c18d2068bbda323ef5831ae5c33ce97dca4aefeac0f67cab05fc",
+  "physical_review": {
+    "Original": true,
+    "genuine_raw_whole": true,
+    "derived_whole": true,
+    "native1": true,
+    "native2": true,
+    "native3": true,
+    "native4": true
+  },
+  "native_masks": [
+    {
+      "scale": 1,
+      "Source_kernel_mask_differences": 0,
+      "painted_samples": 591
+    },
+    {
+      "scale": 2,
+      "Source_kernel_mask_differences": 0,
+      "painted_samples": 2354
+    },
+    {
+      "scale": 3,
+      "Source_kernel_mask_differences": 0,
+      "painted_samples": 5289
+    },
+    {
+      "scale": 4,
+      "Source_kernel_mask_differences": 0,
+      "painted_samples": 9406
+    }
+  ],
+  "logical_IoU": 1.0,
+  "reserved_palette_counts_all_zero": true,
+  "Original_RGB_replaced_samples": 0,
+  "darkened_generated_RGB_samples": 3946,
+  "filled_generated_RGB_samples": 175,
+  "actual_max_preferred_donor_squared_distance": 17,
+  "donors_noncascading": true,
+  "visual_judgment": "Faithful asymmetric left near-black body and narrow right stem, subdued tiny upper-right teal panel, complete dark backing retained. High-resolution soot/steel grain is visible inside original forms; brightness ceiling prevents raw overlit machinery from dominating. All native scales read as this exact Source actor; no unrelated phase/actor alias.",
+  "honest_limits": [
+    "Derived RGB with explicitly darkened material, never untouched generator output.",
+    "No Original RGB copied; Source max RGB only controls fixed per-label brightness ceiling.",
+    "Native3 exact mask differences recorded; no assumed equality.",
+    "No genuine gameplay scene/context or different ART acceptance yet.",
+    "No canonical/admission/Git operations."
+  ],
+  "metadata_failure_preserved": "AUTHOR-RAW-SHAPE-RELEASE-CHECK-AND-METADATA-PATH-ERROR.json"
+}

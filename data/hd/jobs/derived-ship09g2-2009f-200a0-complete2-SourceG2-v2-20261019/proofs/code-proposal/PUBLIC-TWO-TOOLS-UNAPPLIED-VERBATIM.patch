@@ -1,0 +1,666 @@
+--- /dev/null
++++ b/tools/hd_ship09_wake_cleanup.py
+@@ -0,0 +1,398 @@
++"""Restore ALL SHIP09G2 Source-cyan owners using genuine bounded cyan only.
++
++The protected noncyan hull is the literal existing G2 native4 palette projection.
++Source supplies every cyan owner/support (wake, halo, interior paint) and limits,
++never replacement RGB. No gains, synthetic grain, new generation or cascading
++fills. Reproduction is not independent artwork or publication approval.
++"""
++from __future__ import annotations
++import argparse
++import hashlib
++import io
++import json
++import math
++import os
++from pathlib import Path, PurePosixPath
++import stat
++import sys
++
++import numpy as np
++from PIL import Image, __version__ as PILLOW_VERSION
++
++METHOD = 'derived-SHIP09G2-complete2-all-Source-cyan-noncyan-hull-v2'
++DECODER_SHA = '66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e'
++G2_HELPER_SHA = '0338a925ccf26f856c9d5cc2230a3878ecafe6cd3a3d25903742d9e819ac8d12'
++G2_LIBRARY_SHA = '5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676'
++ASSETS = ['2009f', '200a0']
++MAX_BYTES = 32 * 1024 * 1024
++DISTANCE_CAP = 5.5
++MISSING_CAP = .90
++AGGREGATE_CAP = .85
++COLOR_TOLERANCE = 4
++MIN_DONORS = 128
++MIN_DONOR_COLORS = 32
++
++
++def sha(payload):
++    return hashlib.sha256(payload).hexdigest()
++
++
++def keys(value, fields, label):
++    if type(value) is not dict or set(value) != set(fields):
++        raise ValueError(f'{label}: exact fields required')
++
++
++def hash_string(value):
++    return type(value) is str and len(value) == 64 and all(c in '0123456789abcdef' for c in value)
++
++
++def regular_bytes(path):
++    """Bounded nonblocking no-follow regular-descriptor read, consumed once."""
++    path = Path(path)
++    if any(p.is_symlink() for p in [path, *path.parents]):
++        raise ValueError('symlink input path')
++    before = path.lstat()
++    if not stat.S_ISREG(before.st_mode) or before.st_size > MAX_BYTES:
++        raise ValueError('bounded regular input required')
++    flags = os.O_RDONLY | getattr(os, 'O_NOFOLLOW', 0) | getattr(os, 'O_NONBLOCK', 0)
++    with os.fdopen(os.open(path, flags), 'rb') as stream:
++        opened = os.fstat(stream.fileno())
++        if not stat.S_ISREG(opened.st_mode) or opened.st_size > MAX_BYTES:
++            raise ValueError('bounded regular input required')
++        data = stream.read(MAX_BYTES + 1)
++        after = os.fstat(stream.fileno())
++    def identity(v):
++        return v.st_dev, v.st_ino, v.st_size, v.st_mtime_ns, v.st_mode
++    if (len(data) > MAX_BYTES or identity(before) != identity(opened)
++            or identity(opened) != identity(after) or identity(path.lstat()) != identity(before)):
++        raise ValueError('input changed during bounded read')
++    return data
++
++
++def checked(binding, root):
++    keys(binding, {'path', 'sha256'}, 'binding')
++    name = binding['path']
++    if type(name) is not str or not name or '\\' in name or ':' in name:
++        raise ValueError('portable relative path required')
++    path = PurePosixPath(name)
++    if path.is_absolute() or any(p in ('', '.', '..') for p in name.split('/')):
++        raise ValueError('unsafe relative path')
++    if not hash_string(binding['sha256']):
++        raise ValueError('sha256 required')
++    data = regular_bytes(Path(root).joinpath(*path.parts))
++    if sha(data) != binding['sha256']:
++        raise ValueError('input hash mismatch: ' + name)
++    return data
++
++
++def verified_decoder(project):
++    data = checked(dict(path='tools/hd_frame_policy.py', sha256=DECODER_SHA), project)
++    scope = dict(__name__='_verified_source_decoder', __file__='<verified-source-decoder-buffer>')
++    exec(compile(data, '<verified-source-decoder-buffer>', 'exec'), scope)
++    return scope['_indices']
++
++
++def scale2(source):
++    b = np.concatenate([source[:1], source[:-1]], axis=0)
++    d = np.concatenate([source[:, :1], source[:, :-1]], axis=1)
++    f = np.concatenate([source[:, 1:], source[:, -1:]], axis=1)
++    g = np.concatenate([source[1:], source[-1:]], axis=0)
++    condition = (b != g) & (d != f)
++    out = np.empty((source.shape[0]*2, source.shape[1]*2), np.uint16)
++    out[0::2, 0::2] = np.where(condition & (d == b), d, source)
++    out[0::2, 1::2] = np.where(condition & (b == f), f, source)
++    out[1::2, 0::2] = np.where(condition & (d == g), d, source)
++    out[1::2, 1::2] = np.where(condition & (g == f), f, source)
++    return out
++
++
++def water(source):
++    return (source >= 144) & (source <= 159)
++
++
++def hull_guard(source):
++    """Source noncyan row envelope plus exactly one logical-cell halo."""
++    solid = (source < 256) & ~water(source)
++    core = np.zeros(source.shape, bool)
++    for y in range(40):
++        xs = np.where(solid[y])[0]
++        if len(xs):
++            core[y, xs.min():xs.max()+1] = True
++    if not core.any():
++        raise ValueError('missing Source hull')
++    guard = core.copy()
++    yy, xx = np.where(core)
++    for dy in (-1, 0, 1):
++        for dx in (-1, 0, 1):
++            guard[np.clip(yy+dy, 0, 39), np.clip(xx+dx, 0, 71)] = True
++    return guard
++
++
++def source_caps(sources, palette):
++    colors = np.concatenate([palette[s[water(s)]] for s in sources]).astype(np.int32)
++    if not len(colors):
++        raise ValueError('missing authentic Source cyan')
++    chroma = colors[:, 2]-colors[:, 0]
++    if np.any(chroma <= 0) or np.any(colors[:, 1] <= colors[:, 0]) or np.any(colors[:, 1] > colors[:, 2]):
++        raise ValueError('Source cyan hue domain required')
++    fractions = [(int(c[1]-c[0]), int(c[2]-c[0])) for c in colors]
++    minimum = min(fractions, key=lambda q:q[0]/q[1])
++    maximum = max(fractions, key=lambda q:q[0]/q[1])
++    light = colors @ np.array([54, 183, 19], np.int32)
++    return dict(rgb_min=np.maximum(0, colors.min(axis=0)-COLOR_TOLERANCE),
++                rgb_max=np.minimum(255, colors.max(axis=0)+COLOR_TOLERANCE),
++                hue_min_fraction=list(minimum), hue_max_fraction=list(maximum),
++                chroma_min=max(1, int(chroma.min())-COLOR_TOLERANCE),
++                luminance_min=int(light.min())-COLOR_TOLERANCE*256,
++                luminance_max=int(light.max())+COLOR_TOLERANCE*256)
++
++
++def cyan_donors(rgb, caps):
++    c = rgb.astype(np.int32)
++    green = c[:, :, 1]-c[:, :, 0]
++    blue = c[:, :, 2]-c[:, :, 0]
++    low, high = caps['hue_min_fraction'], caps['hue_max_fraction']
++    light = c @ np.array([54, 183, 19], np.int32)
++    return (np.all((c >= caps['rgb_min']) & (c <= caps['rgb_max']), axis=2)
++            & (blue >= caps['chroma_min']) & (green > 0) & (green <= blue)
++            & (green*low[1] >= blue*low[0])
++            & (green*high[1] <= blue*high[0])
++            & (light >= caps['luminance_min']) & (light <= caps['luminance_max']))
++
++
++def index_array(value, width, height, label):
++    if (type(value) is not dict or type(value.get('width')) is not int or type(value.get('height')) is not int
++            or value.get('width') != width or value.get('height') != height
++            or type(value.get('indices')) is not list or len(value['indices']) != width*height
++            or any(type(v) is not int or not 0 <= v <= 256 for v in value['indices'])):
++        raise ValueError(label + ': invalid indexed canvas')
++    return np.array(value['indices'], np.uint16).reshape(height, width)
++
++
++def render_frame(source, palette, raw, crop, baseline_indices, caps):
++    """Pure buffers; same-phase raw donors only, never derived output donors."""
++    source4 = scale2(scale2(source))
++    guard4 = (source4 < 256) & ~water(source4)
++    wake4 = water(source4)
++    if not wake4.any():
++        raise ValueError('missing Source cyan owners')
++    lut = np.zeros((257, 4), np.uint8)
++    lut[:256, :3] = palette
++    lut[:256, 3] = 255
++    baseline = lut[baseline_indices]
++    # All noncyan Source structural owners retain exact prior G2 RGBA.
++    # Source-cyan owners ALL receive eligible genuine RGB, including interior
++    # paint and the old halo. Source-transparent owners are never fabricated.
++    result = np.zeros(baseline.shape, np.uint8)
++    result[guard4] = baseline[guard4]
++    l, t, w, h = crop
++    sx, sy = w/72, h/40
++    region = raw[t:t+h, l:l+w]
++    eligible = ((region[:, :, 3] >= 128)
++                & cyan_donors(region[:, :, :3], caps))
++    donor_count = int(eligible.sum())
++    donor_colors = len(np.unique(region[:, :, :3][eligible], axis=0))
++    if donor_count < MIN_DONORS or donor_colors < MIN_DONOR_COLORS:
++        raise ValueError('insufficient genuine same-phase cyan texture')
++    out_y, out_x = np.where(wake4)
++    u = ((out_x+.5)/4)*sx
++    v = ((out_y+.5)/4)*sy
++    px, py = np.floor(u).astype(int), np.floor(v).astype(int)
++    direct = eligible[py, px]
++    fraction = float(np.mean(~direct))
++    if fraction > MISSING_CAP + 1e-12:
++        raise ValueError('fixed missing fraction exceeded')
++    maximum = 0.0
++    for point in np.where(~direct)[0]:
++        x0 = max(0, int(math.floor(u[point]-DISTANCE_CAP*sx-1)))
++        x1 = min(w, int(math.ceil(u[point]+DISTANCE_CAP*sx+1)))
++        y0 = max(0, int(math.floor(v[point]-DISTANCE_CAP*sy-1)))
++        y1 = min(h, int(math.ceil(v[point]+DISTANCE_CAP*sy+1)))
++        dy, dx = np.where(eligible[y0:y1, x0:x1])
++        if not len(dx):
++            raise ValueError('no bounded same-phase cyan donor')
++        dx, dy = dx+x0, dy+y0
++        distance2 = ((dx+.5-u[point])/sx)**2 + ((dy+.5-v[point])/sy)**2
++        nearest = int(np.argmin(distance2))  # row-major y/x tie order is fixed
++        distance = math.sqrt(float(distance2[nearest]))
++        if distance > DISTANCE_CAP + 1e-12:
++            raise ValueError('fixed donor distance exceeded')
++        px[point], py[point] = dx[nearest], dy[nearest]
++        maximum = max(maximum, distance)
++    chosen = region[py, px, :3]
++    result[out_y, out_x, :3] = chosen
++    result[out_y, out_x, 3] = 255
++    if (not np.array_equal(result[guard4], baseline[guard4])
++            or not np.array_equal(result[:, :, 3][~guard4], np.where(wake4, 255, 0)[~guard4])):
++        raise ValueError('noncyan hull or Source-cyan support changed')
++    return result, dict(samples=int(len(out_x)), repaired=int((~direct).sum()),
++        missing_fraction=fraction, maximum_donor_logical_distance=maximum,
++        raw_donors=donor_count, raw_donor_RGB_colors=donor_colors,
++        used_donor_RGB_colors=len(np.unique(chosen, axis=0)),
++        noncyan_structural_hull_RGBA_sha256=sha(result[guard4].tobytes()),
++        noncyan_structural_hull_exact_to_existing_G2_projection=True,
++        all_Source_cyan_alpha_exact_to_SourceScale4=True,
++        Original_RGB_samples_painted=0,
++        Source_cyan_RGB_outside_original_raw_donor_tuples=0)
++
++
++def run_recipe(recipe_path, output, project_root=None):
++    recipe_path, output = Path(recipe_path).absolute(), Path(output).absolute()
++    if output.exists() or any(p.is_symlink() for p in [output, *output.parents]):
++        raise ValueError('fresh nonsymlink output required')
++    if not output.parent.is_dir():
++        raise ValueError('existing output parent required')
++    own_sha = sha(regular_bytes(Path(__file__)))
++    rb = regular_bytes(recipe_path)
++    recipe = json.loads(rb)
++    keys(recipe, {'format_version', 'method', 'raw_png', 'palette', 'candidate',
++                  'runtime_qa', 'indexed_bank', 'actual_invocation', 'frames'}, 'recipe')
++    if type(recipe['format_version']) is not int or recipe['format_version'] != 1 or recipe['method'] != METHOD:
++        raise ValueError('fixed method/version required')
++    frames = recipe['frames']
++    if type(frames) is not list or len(frames) != 2 or [f.get('asset') for f in frames if type(f) is dict] != ASSETS:
++        raise ValueError('complete ordered SHIP09G2 pair required')
++    project = Path(project_root) if project_root else Path(__file__).resolve().parents[1]
++    decode = verified_decoder(project)
++    raw_payload = checked(recipe['raw_png'], recipe_path.parent)
++    with Image.open(io.BytesIO(raw_payload)) as im:
++        if im.format != 'PNG' or im.mode != 'RGBA' or im.size != (1536, 1024):
++            raise ValueError('exact1536x1024 RGBA raw atlas required')
++        raw = np.asarray(im).copy()
++    pb = checked(recipe['palette'], recipe_path.parent)
++    if len(pb) != 768 or max(pb) > 63:
++        raise ValueError('genuine VGA palette required')
++    p6 = np.frombuffer(pb, np.uint8).reshape(256, 3).astype(np.uint16)
++    palette = ((p6 << 2) | (p6 >> 4)).astype(np.uint8)
++    candidate_bytes = checked(recipe['candidate'], recipe_path.parent)
++    candidate = json.loads(candidate_bytes)
++    seqs = candidate.get('sequences')
++    if (type(seqs) is not list or len(seqs) != 1 or seqs[0].get('base_asset') != 0x2009f
++            or type(seqs[0]['base_asset']) is not int or seqs[0].get('frame_count') != 2
++            or type(seqs[0].get('frame_count')) is not int
++            or candidate.get('complete_family') is not True):
++        raise ValueError('literal complete candidate required')
++    cf = seqs[0].get('frames')
++    if type(cf) is not list or len(cf) != 2:
++        raise ValueError('candidate complete2 frame order required')
++    qa = json.loads(checked(recipe['runtime_qa'], recipe_path.parent))
++    rows = {asset: f for asset, f in zip(ASSETS, cf)}
++    binding = sha(json.dumps(rows, sort_keys=True, separators=(',', ':')).encode())
++    files = {f.get('file') for f in cf}
++    if (len(files) != 1 or any(type(f) is not str for f in files)
++            or qa.get('candidate_sha256') != sha(candidate_bytes)
++            or qa.get('frame_bindings_sha256') != binding
++            or type(qa.get('validated_frames')) is not int or qa.get('validated_frames') != 2 or qa.get('diagnostics') != []
++            or qa.get('actual_sourceG2_helper_sha256') != G2_HELPER_SHA
++            or qa.get('library_sha256') != G2_LIBRARY_SHA
++            or qa.get('source_newer_than_library') is not False
++            or qa.get('any_game_source_newer_than_library') is not False
++            or qa.get('artwork_sha256') != {next(iter(files)): sha(raw_payload)}):
++        raise ValueError('literal currentG2 QA/candidate/raw binding mismatch')
++    invocation = json.loads(checked(recipe['actual_invocation'], recipe_path.parent))
++    if (type(invocation.get('exit_code')) is not int or invocation.get('exit_code') != 0
++            or invocation.get('runtime_QA_sha256') != recipe['runtime_qa']['sha256']
++            or invocation.get('indexed_bank_sha256') != recipe['indexed_bank']['sha256']):
++        raise ValueError('actual invocation does not bind literal QA/indexed bank')
++    bank = json.loads(checked(recipe['indexed_bank'], recipe_path.parent))
++    if type(bank) is not list or len(bank) != 2 or [r.get('asset') for r in bank if type(r) is dict] != ASSETS:
++        raise ValueError('complete ordered actual bank required')
++    qr = qa.get('frames')
++    if type(qr) is not list or len(qr) != 2 or [r.get('asset') for r in qr if type(r) is dict] != ASSETS:
++        raise ValueError('complete ordered QA Source frames required')
++    sources, baselines, crops = [], [], []
++    for i, (frame, c, row) in enumerate(zip(frames, cf, bank)):
++        keys(frame, {'asset', 'source', 'crop'}, 'frame')
++        keys(c, {'frame', 'file', 'logical_width', 'logical_height', 'origin', 'source_sha256', 'crop'}, 'literal frame')
++        crop = frame['crop']
++        name = c['file']
++        if (type(name) is not str or not name or '\\' in name or ':' in name
++                or PurePosixPath(name).is_absolute() or any(p in ('', '.', '..') for p in name.split('/'))):
++            raise ValueError('portable literal artwork path required')
++        if (type(crop) is not list or len(crop) != 4 or any(type(v) is not int for v in crop)
++                or not 0 <= crop[0] < crop[0]+crop[2] <= 1536
++                or not 0 <= crop[1] < crop[1]+crop[3] <= 1024
++                or crop[2]*40 != crop[3]*72 or crop[2] < 288
++                or c['frame'] != i or type(c['frame']) is not int or c['crop'] != crop
++                or type(c['logical_width']) is not int or type(c['logical_height']) is not int
++                or type(c['origin']) is not list or any(type(v) is not int for v in c['origin'])
++                or c['logical_width'] != 72 or c['logical_height'] != 40 or c['origin'] != [0, 0]
++                or c['source_sha256'] != frame['source']['sha256']):
++            raise ValueError('exact canvas/crop/source binding required')
++        if (qr[i].get('source_sha256') != frame['source']['sha256'] or qr[i].get('logical_canvas') != [72, 40]):
++            raise ValueError('QA Source identity differs')
++        excluded = raw[:, i*768:(i+1)*768, 3].copy()
++        x, y, cw, ch = crop
++        excluded[y:y+ch, max(x, i*768)-i*768:min(x+cw, (i+1)*768)-i*768] = 0
++        if np.any(excluded >= 128):
++            raise ValueError('crop clips meaningful own-phase alpha')
++        if i == 1 and x < 768 and np.any(raw[y:y+ch, x:768, 3] >= 128):
++            raise ValueError('crop includes foreign phase alpha')
++        if not (i*768 <= crop[0] < crop[0]+crop[2] <= (i+1)*768):
++            # The authentic selected second crop starts5px before midpoint;
++            # neither crop may include the OTHER phase's alpha128 content.
++            if i != 1 or not 760 <= crop[0] < 768:
++                raise ValueError('crop escapes its own phase cell')
++        w, h, idx = decode(checked(frame['source'], recipe_path.parent))
++        if (w, h) != (72, 40) or any(v != 256 and not 0 <= v < 240 for v in idx):
++            raise ValueError('original72x40 ordinary Source required')
++        source = np.array(idx, np.uint16).reshape(40, 72)
++        if not np.array_equal(index_array(row.get('source'), 72, 40, 'bank Source'), source):
++            raise ValueError('bank Source differs from authenticated Source')
++        scales = row.get('scales')
++        if type(scales) is not list or len(scales) != 4 or [s.get('scale') for s in scales if type(s) is dict] != [1, 2, 3, 4]:
++            raise ValueError('ordered actual native1..4 bank required')
++        for k, s in enumerate(scales, 1):
++            if type(s.get('scale')) is not int:
++                raise ValueError('integer native scale required')
++            indexed = index_array(s, 72*k, 40*k, 'bank scale')
++            if np.any((indexed >= 240) & (indexed < 256)):
++                raise ValueError('ordinary Source bank gained reserved labels')
++        sources.append(source); baselines.append(indexed); crops.append(crop)
++    a = np.where(water(sources[0]), 256, sources[0])
++    b = np.where(water(sources[1]), 256, sources[1])
++    if not np.array_equal(a, b):
++        raise ValueError('authentic shared hull material differs between phases')
++    if not np.array_equal(hull_guard(sources[0]), hull_guard(sources[1])):
++        raise ValueError('shared hull envelope differs')
++    caps = source_caps(sources, palette)
++    payloads, reports = [], []
++    for frame, source, baseline, crop in zip(frames, sources, baselines, crops):
++        rgba, report = render_frame(source, palette, raw, crop, baseline, caps)
++        stream = io.BytesIO();Image.fromarray(rgba).save(stream, format='PNG', compress_level=9)
++        payloads.append((frame['asset'], stream.getvalue()))
++        reports.append(dict(asset=frame['asset'], RGBA_sha256=sha(rgba.tobytes()), **report))
++    if sum(r['repaired'] for r in reports)/sum(r['samples'] for r in reports) > AGGREGATE_CAP + 1e-12:
++        raise ValueError('complete2 aggregate repair cap exceeded')
++    if sha(regular_bytes(Path(__file__))) != own_sha:
++        raise ValueError('executing helper changed')
++    receipt = dict(execution=dict(status='success', method=METHOD, recipe_sha256=sha(rb),
++        tool_sha256=own_sha, source_sha256={f['asset']: f['source']['sha256'] for f in frames},
++        parent_raw_sha256=[sha(raw_payload)], output_sha256={a: sha(p) for a, p in payloads}),
++        decoder_sha256=DECODER_SHA, candidate_sha256=sha(candidate_bytes),
++        literal_QA_sha256=recipe['runtime_qa']['sha256'], indexed_bank_sha256=recipe['indexed_bank']['sha256'],
++        caps={k:v.tolist() if isinstance(v, np.ndarray) else v for k,v in caps.items()}, reports=reports,
++        Python=sys.version.split()[0], NumPy=np.__version__, Pillow=PILLOW_VERSION,
++        limits=['Every noncyan structural Source4 owner keeps exact existing G2 native4 palette RGBA of genuine raw, not an unquantized raw RGB identity claim.',
++                'All Source-cyan support/partition and Source-derived caps get zero generated-HD credit; every restored cyan RGB tuple comes unchanged from this phase raw.',
++                'Final alpha is exactly Source4cyan support plus baseline alpha at noncyan Source4 owners; Source4transparent owners are clear. Whole Original-alpha identity is not promised. Fresh G2allscale review required.',
++                'No generator invocation, grain or RGB gain; numerical reproduction does not confer independent art approval.'])
++    payloads.append(('execution-receipt', (json.dumps(receipt, indent=2, sort_keys=True)+'\n').encode()))
++    output.mkdir()  # exclusive; every input/frame/cap already validated in memory
++    for name, payload in payloads:
++        suffix = '.json' if name == 'execution-receipt' else '.png'
++        with (output/(name+suffix)).open('xb') as stream:
++            stream.write(payload)
++    return receipt
++
++
++def main():
++    p = argparse.ArgumentParser(description=__doc__)
++    p.add_argument('recipe', type=Path);p.add_argument('output', type=Path)
++    p.add_argument('--project-root', type=Path)
++    a = p.parse_args()
++    print(json.dumps(run_recipe(a.recipe, a.output, a.project_root)['execution'], sort_keys=True))
++
++
++if __name__ == '__main__':
++    main()
+--- /dev/null
++++ b/tools/test_hd_ship09_wake_cleanup.py
+@@ -0,0 +1,262 @@
++"""Synthetic genuine-RLE72x40 pairs; unmocked buffered CLI/receipt path.
++
++No real artwork is derived by these tests. Synthetic QA/bank records exercise
++provenance linkage, not a claim of an actual Rust invocation or artistic review.
++"""
++import importlib.util
++import json
++import os
++from pathlib import Path
++import shutil
++import struct
++import subprocess
++import sys
++import tempfile
++import unittest
++from unittest.mock import patch
++
++import numpy as np
++from PIL import Image
++
++HERE = Path(__file__).resolve().parent
++spec = importlib.util.spec_from_file_location('ship09_under_test', HERE/'hd_ship09_wake_cleanup.py')
++tool = importlib.util.module_from_spec(spec);spec.loader.exec_module(tool)
++PROJECT = HERE.parents[1] if HERE.parent.name == '.reference' else HERE.parent
++if not (PROJECT/'tools/hd_frame_policy.py').is_file():
++    PROJECT = next(p for p in HERE.parents if (p/'tools/hd_frame_policy.py').is_file())
++
++
++def rle(source):
++    h, w = source.shape
++    out = bytearray(struct.pack('<5i', 0, 0, 0, w, h))
++    for y in range(h):
++        x = 0
++        while x < w:
++            if source[y, x] == 256:
++                x += 1;continue
++            start = x
++            while x < w and source[y, x] < 256:x += 1
++            out.extend(struct.pack('<4i', start, y, y*w+start, x-start))
++            out.extend(bytes(int(z) for z in source[y, start:x]))
++    out.extend(struct.pack('<4i', 0, 0, -1, 0))
++    return bytes(out)
++
++
++class RecipeTests(unittest.TestCase):
++    def setUp(self):
++        self.tmp = tempfile.TemporaryDirectory();self.root = Path(self.tmp.name)
++        self.project = self.root/'project';(self.project/'tools').mkdir(parents=True)
++        shutil.copyfile(PROJECT/'tools/hd_frame_policy.py', self.project/'tools/hd_frame_policy.py')
++        self.base = self.root/'inputs';self.base.mkdir();self.output = self.root/'derived'
++        self.path = self.base/'recipe.json';self.crops = [[30,330,729,405],[763,330,729,405]]
++        # Synthetic VGA palette: only the authentic cyan ramp and brown/gray
++        # examples are material fixtures, not copies of an original sprite.
++        p = np.zeros((256,3),np.uint8)
++        for i in range(32):p[i] = [63-i*2]*3
++        for i in range(16):p[144+i] = [max(0,27-2*i),max(5,42-2*i),max(7,44-2*i)]
++        for i in range(209,240):p[i] = [42,27,15]
++        self.pb = p.tobytes();(self.base/'palette.bin').write_bytes(self.pb)
++        p16 = p.astype(np.uint16);self.palette = ((p16<<2)|(p16>>4)).astype(np.uint8)
++        self.sources = []
++        self.raw = np.zeros((1024,1536,4),np.uint8)
++        self.bank = []
++        for i in range(2):
++            s = np.full((40,72),256,np.uint16);s[10:31,7:46] = 215
++            s[14:27,34:43] = 16;s[18:20,15:30] = 151;s[9,15:20] = 151  # cyan hull paint
++            for y,x0,x1 in [(3+i,14,66),(35+i,15,69),(17+i,49,69)]:
++                s[y,x0:x1] = 144+(np.arange(x0,x1)+y)%16
++            self.sources.append(s);(self.base/(tool.ASSETS[i]+'.bin')).write_bytes(rle(s))
++            x,y,w,h = self.crops[i];yy,xx = np.indices((h,w));lx=np.floor((xx+.5)/(w/72)).astype(int);ly=np.floor((yy+.5)/(h/40)).astype(int)
++            idx=s[ly,lx];region=self.raw[y:y+h,x:x+w];paint=idx<256;region[paint,3]=255;region[paint,:3]=self.palette[idx[paint]]
++            blue=tool.water(idx);r=10+(xx*7+yy*11)%60;rgb=np.stack([r,r+53,r+60],axis=2).astype(np.uint8);region[blue,:3]=rgb[blue]
++            # Ineligible pale samples force local bounded repair; immutable raw
++            # still carries varied nearby darker generated-like cyan donors.
++            pale=blue & ((xx//35)%5==0);region[pale,:3]=[245,250,255]
++            scales=[]
++            for k in range(1,5):
++                b=np.repeat(np.repeat(s,k,axis=0),k,axis=1)
++                # Deliberately wrong exterior baseline waves; hull is protected.
++                guard=np.repeat(np.repeat(tool.hull_guard(s),k,axis=0),k,axis=1)
++                b[~guard]=256;b[(~guard)&(np.indices(b.shape)[0]==2*k)]=6
++                # Synthetic held pale glare exists on BOTH halo and internal
++                # Source-cyan paint, while real gray engine owners stay gray.
++                source_k=np.repeat(np.repeat(s,k,axis=0),k,axis=1)
++                b[tool.water(source_k)&guard]=1
++                scales.append(dict(scale=k,width=72*k,height=40*k,indices=b.ravel().tolist()))
++            self.bank.append(dict(asset=tool.ASSETS[i],source=dict(width=72,height=40,indices=s.ravel().tolist()),scales=scales))
++        self.save_raw();self.candidate=dict(format_version=1,job_id='synthetic-only',complete_family=True,sequences=[dict(name='SHIP09G2_PIC',base_asset=0x2009f,frame_count=2,frames=[dict(frame=i,file='raw.png',logical_width=72,logical_height=40,origin=[0,0],source_sha256='',crop=c)for i,c in enumerate(self.crops)])])
++        self.qa=dict(validated_frames=2,diagnostics=[],actual_sourceG2_helper_sha256=tool.G2_HELPER_SHA,library_sha256=tool.G2_LIBRARY_SHA,source_newer_than_library=False,any_game_source_newer_than_library=False,frames=[])
++        self.recipe=dict(format_version=1,method=tool.METHOD,frames=[dict(asset=a,source={},crop=c)for a,c in zip(tool.ASSETS,self.crops)])
++
++    def tearDown(self):self.tmp.cleanup()
++
++    def save_raw(self):Image.fromarray(self.raw).save(self.base/'raw.png')
++
++    def bind(self,p):return dict(path=str(p.relative_to(self.base)),sha256=tool.sha(p.read_bytes()))
++
++    def write(self):
++        for i,a in enumerate(tool.ASSETS):
++            self.recipe['frames'][i]['source']=self.bind(self.base/(a+'.bin'))
++            self.candidate['sequences'][0]['frames'][i]['source_sha256']=self.recipe['frames'][i]['source']['sha256']
++        (self.base/'candidate.json').write_text(json.dumps(self.candidate))
++        rows={a:f for a,f in zip(tool.ASSETS,self.candidate['sequences'][0]['frames'])}
++        self.qa.update(candidate_sha256=tool.sha((self.base/'candidate.json').read_bytes()),frame_bindings_sha256=tool.sha(json.dumps(rows,sort_keys=True,separators=(',',':')).encode()),artwork_sha256={'raw.png':tool.sha((self.base/'raw.png').read_bytes())},frames=[dict(asset=f['asset'],source_sha256=f['source']['sha256'],logical_canvas=[72,40])for f in self.recipe['frames']])
++        (self.base/'qa.json').write_text(json.dumps(self.qa));(self.base/'bank.json').write_text(json.dumps(self.bank))
++        inv=dict(exit_code=0,runtime_QA_sha256=tool.sha((self.base/'qa.json').read_bytes()),indexed_bank_sha256=tool.sha((self.base/'bank.json').read_bytes()))
++        (self.base/'invocation.json').write_text(json.dumps(inv))
++        for k,f in [('raw_png','raw.png'),('palette','palette.bin'),('candidate','candidate.json'),('runtime_qa','qa.json'),('indexed_bank','bank.json'),('actual_invocation','invocation.json')]:self.recipe[k]=self.bind(self.base/f)
++        self.path.write_text(json.dumps(self.recipe))
++
++    def run_real(self):self.write();return tool.run_recipe(self.path,self.output,self.project)
++
++    def reject(self,pattern='.*'):
++        self.write()
++        with self.assertRaisesRegex((ValueError,FileNotFoundError),pattern):tool.run_recipe(self.path,self.output,self.project)
++        self.assertFalse(self.output.exists())
++
++    def test_unmocked_complete2_RLE_receipt_exact_hull_wake_support_and_raw_RGB(self):
++        before=self.raw.copy();receipt=self.run_real();self.assertEqual(receipt,json.loads((self.output/'execution-receipt.json').read_text()));self.assertEqual(len(list(self.output.glob('*.png'))),2)
++        caps=tool.source_caps(self.sources,self.palette)
++        for i,a in enumerate(tool.ASSETS):
++            out=np.asarray(Image.open(self.output/(a+'.png')));s4=tool.scale2(tool.scale2(self.sources[i]));g=(s4<256)&~tool.water(s4);wake=tool.water(s4)
++            lut=np.zeros((257,4),np.uint8);lut[:256,:3]=self.palette;lut[:256,3]=255;baseline=lut[np.array(self.bank[i]['scales'][3]['indices']).reshape(160,288)]
++            self.assertTrue(np.array_equal(out[g],baseline[g]));self.assertTrue(np.array_equal(out[:,:,3][~g],np.where(wake,255,0)[~g]));self.assertTrue(np.all(tool.cyan_donors(out[:,:,:3],caps)[wake]))
++            x,y,w,h=self.crops[i];donors={tuple(z)for z in self.raw[y:y+h,x:x+w,:3].reshape(-1,3)};self.assertTrue(all(tuple(z)in donors for z in out[:,:,:3][wake]));self.assertGreater(receipt['reports'][i]['repaired'],0);self.assertEqual(receipt['reports'][i]['Original_RGB_samples_painted'],0)
++        self.assertTrue(np.array_equal(before,self.raw));self.assertEqual(receipt['execution']['parent_raw_sha256'],[tool.sha((self.base/'raw.png').read_bytes())])
++
++    def test_interior_and_halo_gray_glare_restored_while_gray_engine_is_unchanged(self):
++        receipt=self.run_real()
++        for i,a in enumerate(tool.ASSETS):
++            source4=tool.scale2(tool.scale2(self.sources[i]));cyan=tool.water(source4);noncyan=(source4<256)&~cyan
++            out=np.asarray(Image.open(self.output/(a+'.png')));parent=np.array(self.bank[i]['scales'][3]['indices']).reshape(160,288)
++            hull=np.repeat(np.repeat(tool.hull_guard(self.sources[i]),4,axis=0),4,axis=1)
++            self.assertTrue((cyan&hull&(parent==1)).any())
++            caps=tool.source_caps(self.sources,self.palette)
++            self.assertTrue(np.all(tool.cyan_donors(out[:,:,:3],caps)[cyan]))
++            self.assertTrue(np.all(out[:,:,3][cyan]==255))
++            engine=(source4==16);self.assertTrue(engine.any())
++            self.assertTrue(np.array_equal(out[:,:,:3][engine],self.palette[parent[engine]]))
++            self.assertTrue(np.array_equal(out[:,:,3][noncyan],np.where(parent[noncyan]<256,255,0)))
++    def test_noncyan_baseline_hole_is_preserved_instead_of_fabricating_Source_alpha(self):
++        s4=tool.scale2(tool.scale2(self.sources[0]));yy,xx=np.where(s4==16);pos=int(yy[0])*288+int(xx[0]);self.bank[0]['scales'][3]['indices'][pos]=256
++        self.run_real();out=np.asarray(Image.open(self.output/'2009f.png'));self.assertEqual(out[int(yy[0]),int(xx[0])].tolist(),[0,0,0,0])
++    def test_same_phase_raw_cyan_change_does_not_change_other_phase_or_noncyan_hull(self):
++        self.run_real();first=[np.asarray(Image.open(self.output/(a+'.png'))).copy()for a in tool.ASSETS]
++        shutil.rmtree(self.output);x,y,w,h=self.crops[0];region=self.raw[y:y+h,x:x+w];caps=tool.source_caps(self.sources,self.palette);eligible=(region[:,:,3]>=128)&tool.cyan_donors(region[:,:,:3],caps)
++        # Both hues are genuine synthetic eligible inputs, not a code gain.
++        yy,xx=np.indices((h,w));r=15+(xx*3+yy*7)%50;changed=np.stack([r,r+53,r+60],axis=2).astype(np.uint8);region[eligible,:3]=changed[eligible];self.save_raw();self.run_real();second=[np.asarray(Image.open(self.output/(a+'.png'))).copy()for a in tool.ASSETS]
++        self.assertTrue(np.array_equal(first[1],second[1]));s4=tool.scale2(tool.scale2(self.sources[0]));non=(s4<256)&~tool.water(s4)
++        self.assertTrue(np.array_equal(first[0][non],second[0][non]));self.assertFalse(np.array_equal(first[0],second[0]))
++    def test_Source_hue_caps_accept_genuine_cyan_but_reject_gray_pale_and_wrong_hue(self):
++        caps=tool.source_caps(self.sources,self.palette)
++        values=np.array([[[40,93,100],[240,245,255],[100,100,100],[10,40,100],[10,100,105]]],np.uint8)
++        self.assertEqual(tool.cyan_donors(values,caps).tolist(),[[True,False,False,False,False]])
++    def test_boolean_QA_frame_count_rejected(self):self.qa['validated_frames']=True;self.reject('QA/candidate')
++    def test_floating_indexed_dimensions_rejected(self):self.bank[0]['source']['width']=72.0;self.reject('indexed canvas')
++    def test_floating_literal_dimensions_rejected(self):self.candidate['sequences'][0]['frames'][0]['logical_width']=72.0;self.reject('canvas/crop')
++    def test_unsafe_literal_artwork_filename_rejected(self):
++        for f in self.candidate['sequences'][0]['frames']:f['file']='../raw.png'
++        # Bind the synthetic QA's raw name equally so its hash gate closes first.
++        self.write();v=json.loads((self.base/'qa.json').read_text());v['artwork_sha256']={'../raw.png':tool.sha((self.base/'raw.png').read_bytes())};(self.base/'qa.json').write_text(json.dumps(v));self.recipe['runtime_qa']=self.bind(self.base/'qa.json');inv=json.loads((self.base/'invocation.json').read_text());inv['runtime_QA_sha256']=self.recipe['runtime_qa']['sha256'];(self.base/'invocation.json').write_text(json.dumps(inv));self.recipe['actual_invocation']=self.bind(self.base/'invocation.json');self.path.write_text(json.dumps(self.recipe))
++        with self.assertRaisesRegex(ValueError,'portable literal'):tool.run_recipe(self.path,self.output,self.project)
++        self.assertFalse(self.output.exists())
++    def test_phase_order_rejected(self):self.recipe['frames'].reverse();self.reject('ordered')
++    def test_unknown_recipe_fields_rejected(self):self.recipe['hue_gain']=1.2;self.reject('exact fields')
++    def test_wrong_candidate_scale_or_anchor_rejected(self):self.candidate['sequences'][0]['frames'][0]['origin']=[1,0];self.reject('canvas/crop')
++    def test_later_frame_white_only_fails_before_any_output(self):
++        x,y,w,h=self.crops[1];a=self.raw[y:y+h,x:x+w];a[a[:,:,3]>=128,:3]=255;self.save_raw();self.reject('insufficient')
++    def test_shared_hull_material_change_rejected(self):
++        self.sources[1][20,10]=216;(self.base/'200a0.bin').write_bytes(rle(self.sources[1]));self.bank[1]['source']['indices']=self.sources[1].ravel().tolist();self.reject('shared hull')
++    def test_crop_aspect_rejected(self):self.recipe['frames'][0]['crop'][2]-=1;self.reject('canvas/crop')
++    def test_crop_meaningful_pixel_clipping_rejected(self):
++        self.raw[2,100]=[40,110,120,255];self.save_raw();self.reject('clips meaningful')
++    def test_foreign_cell_alpha_rejected(self):
++        self.crops[0][0]=38
++        self.raw[500,766]=[40,90,100,255];self.save_raw();self.reject('includes foreign')
++    def test_bank_source_tampering_rejected(self):self.bank[0]['source']['indices'][0]=5;self.reject('bank Source differs')
++    def test_bank_reserved_labels_rejected(self):self.bank[1]['scales'][2]['indices'][0]=244;self.reject('reserved')
++    def test_bank_boolean_index_rejected(self):self.bank[0]['scales'][0]['indices'][0]=False;self.reject('indexed canvas')
++    def test_bank_scale_missing_rejected(self):self.bank[0]['scales'].pop();self.reject('native1')
++    def test_wrong_QA_epoch_rejected(self):self.qa['library_sha256']='0'*64;self.reject('QA/candidate')
++    def test_wrong_QA_raw_hash_rejected(self):
++        self.write();v=json.loads((self.base/'qa.json').read_text());v['artwork_sha256']['raw.png']='0'*64;(self.base/'qa.json').write_text(json.dumps(v));self.recipe['runtime_qa']=self.bind(self.base/'qa.json');self.path.write_text(json.dumps(self.recipe))
++        with self.assertRaisesRegex(ValueError,'QA/candidate'):tool.run_recipe(self.path,self.output,self.project)
++        self.assertFalse(self.output.exists())
++    def test_invocation_does_not_bind_bank_rejected(self):
++        self.write();v=json.loads((self.base/'invocation.json').read_text());v['indexed_bank_sha256']='0'*64;(self.base/'invocation.json').write_text(json.dumps(v));self.recipe['actual_invocation']=self.bind(self.base/'invocation.json');self.path.write_text(json.dumps(self.recipe))
++        with self.assertRaisesRegex(ValueError,'actual invocation'):tool.run_recipe(self.path,self.output,self.project)
++        self.assertFalse(self.output.exists())
++    def test_source_binding_hash_rejected(self):
++        self.write();(self.base/'2009f.bin').write_bytes(b'wrong')
++        with self.assertRaisesRegex(ValueError,'hash mismatch'):tool.run_recipe(self.path,self.output,self.project)
++        self.assertFalse(self.output.exists())
++    def test_relative_escape_binding_rejected(self):
++        self.write();self.recipe['raw_png']['path']='../inputs/raw.png';self.path.write_text(json.dumps(self.recipe))
++        with self.assertRaisesRegex(ValueError,'relative path'):tool.run_recipe(self.path,self.output,self.project)
++        self.assertFalse(self.output.exists())
++    def test_decoder_hash_rejected(self):
++        (self.project/'tools/hd_frame_policy.py').write_text('raise AssertionError("unverified code executed")');self.reject('hash mismatch')
++    def test_existing_output_not_overwritten(self):
++        self.output.mkdir();keep=self.output/'keep';keep.write_text('old');self.write()
++        with self.assertRaisesRegex(ValueError,'fresh'):tool.run_recipe(self.path,self.output,self.project)
++        self.assertEqual(keep.read_text(),'old')
++    def test_symlink_input_and_output_rejected(self):
++        self.write();raw=self.base/'raw.png';old=self.base/'old.png';raw.rename(old);raw.symlink_to(old)
++        with self.assertRaisesRegex(ValueError,'symlink'):tool.run_recipe(self.path,self.output,self.project)
++        self.assertFalse(self.output.exists())
++        raw.unlink();old.rename(raw);self.output.symlink_to(self.root/'absent')
++        with self.assertRaisesRegex(ValueError,'nonsymlink'):tool.run_recipe(self.path,self.output,self.project)
++    def test_verified_decoder_buffer_used_after_path_replacement(self):
++        self.write();original=tool.checked;mutated=[]
++        def replace(binding,root):
++            data=original(binding,root)
++            if binding['path']=='tools/hd_frame_policy.py':
++                (Path(root)/binding['path']).write_text('raise AssertionError("reopened dependency")');mutated.append(True)
++            return data
++        with patch.object(tool,'checked',side_effect=replace):receipt=tool.run_recipe(self.path,self.output,self.project)
++        self.assertEqual(receipt['execution']['status'],'success');self.assertEqual(mutated,[True])
++    def test_verified_raw_buffer_used_after_path_replacement(self):
++        self.write();original=tool.checked;mutated=[]
++        def replace(binding,root):
++            data=original(binding,root)
++            if binding['path']=='raw.png':
++                (Path(root)/binding['path']).write_bytes(b'not reopened');mutated.append(True)
++            return data
++        with patch.object(tool,'checked',side_effect=replace):receipt=tool.run_recipe(self.path,self.output,self.project)
++        self.assertEqual(receipt['execution']['status'],'success');self.assertEqual(mutated,[True])
++    def test_wrong_png_layout_rejected(self):
++        Image.new('RGBA',(10,10)).save(self.base/'raw.png');self.reject('RGBA raw atlas')
++    def test_aggregate_missing_cap_cannot_pass_per_frame_caps(self):
++        for x,y,w,h in self.crops:
++            region=self.raw[y:y+h,x:x+w];yy,xx=np.indices((h,w));visible=region[:,:,3]>=128;region[visible & (xx%8!=0),:3]=255
++        self.save_raw();self.reject('aggregate')
++    def test_non_cascading_distance_bound_on_new_far_wake(self):
++        s=self.sources[0].copy();s[1,71]=150;caps=tool.source_caps([s,self.sources[1]],self.palette);baseline=np.array(self.bank[0]['scales'][3]['indices']).reshape(160,288)
++        with self.assertRaisesRegex(ValueError,'bounded same-phase|donor distance'):tool.render_frame(s,self.palette,self.raw,self.crops[0],baseline,caps)
++
++
++class DescriptorTests(unittest.TestCase):
++    def test_static_FIFO_does_not_block_in_real_subprocess(self):
++        if not hasattr(os,'mkfifo'):self.skipTest('FIFO unavailable')
++        with tempfile.TemporaryDirectory() as d:
++            fifo=Path(d)/'fifo';os.mkfifo(fifo)
++            code='import importlib.util,sys; s=importlib.util.spec_from_file_location("u",sys.argv[1]);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);m.regular_bytes(sys.argv[2])'
++            z=subprocess.run([sys.executable,'-c',code,str(HERE/'hd_ship09_wake_cleanup.py'),str(fifo)],capture_output=True,timeout=3)
++            self.assertNotEqual(z.returncode,0);self.assertIn(b'bounded regular input',z.stderr)
++    def test_regular_file_swapped_to_FIFO_between_lstat_and_open(self):
++        if not hasattr(os,'mkfifo'):self.skipTest('FIFO unavailable')
++        with tempfile.TemporaryDirectory() as d:
++            p=Path(d)/'input';p.write_bytes(b'old');original=os.open
++            def swap(path,flags,*a,**kw):
++                if Path(path)==p:p.unlink();os.mkfifo(p)
++                return original(path,flags,*a,**kw)
++            with patch.object(tool.os,'open',side_effect=swap):
++                with self.assertRaisesRegex(ValueError,'bounded regular'):tool.regular_bytes(p)
++    def test_bound_rejects_large_regular_input_before_read(self):
++        with tempfile.TemporaryDirectory() as d:
++            p=Path(d)/'large';p.write_bytes(b'x'*65)
++            with patch.object(tool,'MAX_BYTES',64):
++                with self.assertRaisesRegex(ValueError,'bounded regular'):tool.regular_bytes(p)
++
++
++if __name__ == '__main__':unittest.main()

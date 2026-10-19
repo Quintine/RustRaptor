@@ -1,0 +1,111 @@
+--- preserved-e099f7a0.py
++++ focused-all-Source-cyan-v2.py
+@@ -1,7 +1,7 @@
+-"""Restore SHIP09G2 exterior wakes using genuine bounded cyan texture only.
+-
+-The protected detailed hull is the literal existing current-G2 native4 palette
+-projection. Source supplies exterior wake ownership/support and color limits,
++"""Restore ALL SHIP09G2 Source-cyan owners using genuine bounded cyan only.
++
++The protected noncyan hull is the literal existing G2 native4 palette projection.
++Source supplies every cyan owner/support (wake, halo, interior paint) and limits,
+ never replacement RGB. No gains, synthetic grain, new generation or cascading
+ fills. Reproduction is not independent artwork or publication approval.
+ """
+@@ -19,7 +19,7 @@
+ import numpy as np
+ from PIL import Image, __version__ as PILLOW_VERSION
+ 
+-METHOD = 'derived-SHIP09G2-complete2-generated-hull-bounded-Source-wake-v1'
++METHOD = 'derived-SHIP09G2-complete2-all-Source-cyan-noncyan-hull-v2'
+ DECODER_SHA = '66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e'
+ G2_HELPER_SHA = '0338a925ccf26f856c9d5cc2230a3878ecafe6cd3a3d25903742d9e819ac8d12'
+ G2_LIBRARY_SHA = '5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676'
+@@ -171,33 +171,29 @@
+ 
+ def render_frame(source, palette, raw, crop, baseline_indices, caps):
+     """Pure buffers; same-phase raw donors only, never derived output donors."""
+-    guard = hull_guard(source)
+-    guard4 = np.repeat(np.repeat(guard, 4, axis=0), 4, axis=1)
+     source4 = scale2(scale2(source))
+-    if np.any((source4 < 256) & ~water(source4) & ~guard4):
+-        raise ValueError('Source nonwater escaped protected hull')
+-    wake4 = water(source4) & ~guard4
++    guard4 = (source4 < 256) & ~water(source4)
++    wake4 = water(source4)
+     if not wake4.any():
+-        raise ValueError('missing exterior Source wake')
++        raise ValueError('missing Source cyan owners')
+     lut = np.zeros((257, 4), np.uint8)
+     lut[:256, :3] = palette
+     lut[:256, 3] = 255
+     baseline = lut[baseline_indices]
+-    result = baseline.copy()
+-    # Exterior is exclusively owned by this phase's authentic wake support.
+-    result[~guard4] = 0
++    # All noncyan Source structural owners retain exact prior G2 RGBA.
++    # Source-cyan owners ALL receive eligible genuine RGB, including interior
++    # paint and the old halo. Source-transparent owners are never fabricated.
++    result = np.zeros(baseline.shape, np.uint8)
++    result[guard4] = baseline[guard4]
+     l, t, w, h = crop
+     sx, sy = w/72, h/40
+     region = raw[t:t+h, l:l+w]
+-    yy, xx = np.indices((h, w))
+-    lx = np.minimum(71, np.floor((xx+.5)/sx).astype(int))
+-    ly = np.minimum(39, np.floor((yy+.5)/sy).astype(int))
+-    eligible = ((region[:, :, 3] >= 128) & ~guard[ly, lx]
++    eligible = ((region[:, :, 3] >= 128)
+                 & cyan_donors(region[:, :, :3], caps))
+     donor_count = int(eligible.sum())
+     donor_colors = len(np.unique(region[:, :, :3][eligible], axis=0))
+     if donor_count < MIN_DONORS or donor_colors < MIN_DONOR_COLORS:
+-        raise ValueError('insufficient genuine exterior cyan texture')
++        raise ValueError('insufficient genuine same-phase cyan texture')
+     out_y, out_x = np.where(wake4)
+     u = ((out_x+.5)/4)*sx
+     v = ((out_y+.5)/4)*sy
+@@ -214,7 +210,7 @@
+         y1 = min(h, int(math.ceil(v[point]+DISTANCE_CAP*sy+1)))
+         dy, dx = np.where(eligible[y0:y1, x0:x1])
+         if not len(dx):
+-            raise ValueError('no bounded same-phase exterior cyan donor')
++            raise ValueError('no bounded same-phase cyan donor')
+         dx, dy = dx+x0, dy+y0
+         distance2 = ((dx+.5-u[point])/sx)**2 + ((dy+.5-v[point])/sy)**2
+         nearest = int(np.argmin(distance2))  # row-major y/x tie order is fixed
+@@ -228,16 +224,16 @@
+     result[out_y, out_x, 3] = 255
+     if (not np.array_equal(result[guard4], baseline[guard4])
+             or not np.array_equal(result[:, :, 3][~guard4], np.where(wake4, 255, 0)[~guard4])):
+-        raise ValueError('protected hull or exterior support changed')
++        raise ValueError('noncyan hull or Source-cyan support changed')
+     return result, dict(samples=int(len(out_x)), repaired=int((~direct).sum()),
+         missing_fraction=fraction, maximum_donor_logical_distance=maximum,
+         raw_donors=donor_count, raw_donor_RGB_colors=donor_colors,
+         used_donor_RGB_colors=len(np.unique(chosen, axis=0)),
+-        protected_hull_RGBA_sha256=sha(result[guard4].tobytes()),
+-        protected_hull_exact_to_existing_G2_projection=True,
+-        exterior_wake_alpha_exact_to_SourceScale4=True,
++        noncyan_structural_hull_RGBA_sha256=sha(result[guard4].tobytes()),
++        noncyan_structural_hull_exact_to_existing_G2_projection=True,
++        all_Source_cyan_alpha_exact_to_SourceScale4=True,
+         Original_RGB_samples_painted=0,
+-        RGB_outside_original_raw_donor_tuples=0)
++        Source_cyan_RGB_outside_original_raw_donor_tuples=0)
+ 
+ 
+ def run_recipe(recipe_path, output, project_root=None):
+@@ -377,9 +373,9 @@
+         literal_QA_sha256=recipe['runtime_qa']['sha256'], indexed_bank_sha256=recipe['indexed_bank']['sha256'],
+         caps={k:v.tolist() if isinstance(v, np.ndarray) else v for k,v in caps.items()}, reports=reports,
+         Python=sys.version.split()[0], NumPy=np.__version__, Pillow=PILLOW_VERSION,
+-        limits=['Protected hull is exact existing G2 native4 palette projection of genuine raw, not an unquantized raw RGB identity claim.',
+-                'Source exterior wake support and Source-derived caps get zero generated-HD credit; all wake RGB tuples come unchanged from this phase raw.',
+-                'Whole sprite Source alpha identity is not promised inside protected hull. Native1..3 interpolation and reindexing require fresh actual G2 review.',
++        limits=['Every noncyan structural Source4 owner keeps exact existing G2 native4 palette RGBA of genuine raw, not an unquantized raw RGB identity claim.',
++                'All Source-cyan support/partition and Source-derived caps get zero generated-HD credit; every restored cyan RGB tuple comes unchanged from this phase raw.',
++                'Final alpha is exactly Source4cyan support plus baseline alpha at noncyan Source4 owners; Source4transparent owners are clear. Whole Original-alpha identity is not promised. Fresh G2allscale review required.',
+                 'No generator invocation, grain or RGB gain; numerical reproduction does not confer independent art approval.'])
+     payloads.append(('execution-receipt', (json.dumps(receipt, indent=2, sort_keys=True)+'\n').encode()))
+     output.mkdir()  # exclusive; every input/frame/cap already validated in memory

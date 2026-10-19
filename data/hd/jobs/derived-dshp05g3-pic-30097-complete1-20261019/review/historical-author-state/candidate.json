@@ -1,0 +1,100 @@
+{
+  "format_version": 1,
+  "job_id": "derived-dshp05g3_pic-30097-complete1-20261019",
+  "owner": "/root/dark_ship_remaining",
+  "complete_family": true,
+  "status": "pending_different_ART_context_and_Root",
+  "targets": [
+    {
+      "frame": 0,
+      "file": "jobs/derived-dshp05g3_pic-30097-complete1-20261019/derived/30097-derived.png",
+      "logical_width": 40,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "9787fa5867175d4c0fc946f34abbf6050b717c1ff08142605ebe31808c6e6f5a",
+      "crop": [
+        0,
+        0,
+        160,
+        128
+      ],
+      "original_detail_cells": [
+        [
+          1,
+          5
+        ],
+        [
+          39,
+          5
+        ]
+      ],
+      "asset": "30097"
+    }
+  ],
+  "sequences": [
+    {
+      "name": "DSHP05G3_PIC",
+      "base_asset": 196759,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/derived-dshp05g3_pic-30097-complete1-20261019/derived/30097-derived.png",
+          "logical_width": 40,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "9787fa5867175d4c0fc946f34abbf6050b717c1ff08142605ebe31808c6e6f5a",
+          "crop": [
+            0,
+            0,
+            160,
+            128
+          ],
+          "original_detail_cells": [
+            [
+              1,
+              5
+            ],
+            [
+              39,
+              5
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "artwork_derivation": {
+    "path": "jobs/derived-dshp05g3_pic-30097-complete1-20261019/artwork-derivation.json",
+    "sha256": "524a070fc8ce37130909b7a43d5ce1153d7e9e0b911ebadea3dda88d1ccf2436"
+  },
+  "review": {
+    "artistic_approval": "pending_different_ART_and_Root",
+    "registered": false,
+    "artwork_derivation": {
+      "path": "jobs/derived-dshp05g3_pic-30097-complete1-20261019/artwork-derivation.json",
+      "sha256": "524a070fc8ce37130909b7a43d5ce1153d7e9e0b911ebadea3dda88d1ccf2436"
+    },
+    "retained_original_detail_policy": "retained-original-details-v2-painted0255",
+    "Original_marker_cells_no_HD_credit": [
+      [
+        1,
+        5
+      ],
+      [
+        39,
+        5
+      ]
+    ],
+    "extended_beyond12_Source_backing_repair_samples_no_HD_detail_credit": 33,
+    "fixed_donor_bound": 14,
+    "fixed_brightness_cap_slack": 12,
+    "scope": "One distinct complete singleton; no cross-actor phase alias or stationary sharing. Whole-derived author view promising; allnative/different ART/context remain pending."
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "job_id": "enemies-2009f-200a0",
+  "owner": "/root/hd_enemies_02",
+  "source_frames_visually_inspected": true,
+  "reviewed_at": "2026-10-10T10:43:15.839560+00:00",
+  "visual_notes": "Two-frame72x40 horizontally facing-left bronze/gray elliptical boat, large gray right-side engine pod; cyan wake swept right in phase-specific lines.",
+  "targets": [
+    {
+      "asset": "2009f",
+      "source_sha256": "d6fe29ec5e113b37d668a7b8b61c9257fb5635a5a1181385cfadbae7cc899925",
+      "logical_canvas": [
+        72,
+        40
+      ],
+      "source_alpha_range": [
+        0,
+        255
+      ],
+      "visible_bounds": [
+        2,
+        1,
+        71,
+        38
+      ],
+      "visible_centroid": [
+        28.491346877351393,
+        20.15951843491347
+      ],
+      "source_path": "sprites/SHIP09G2_PIC"
+    },
+    {
+      "asset": "200a0",
+      "source_sha256": "7d2199f7eb44a5902db8825729dba02fd24ae81ad779f49893da3e33169186c4",
+      "logical_canvas": [
+        72,
+        40
+      ],
+      "source_alpha_range": [
+        0,
+        255
+      ],
+      "visible_bounds": [
+        2,
+        4,
+        72,
+        39
+      ],
+      "visible_centroid": [
+        28.98716012084592,
+        20.516616314199396
+      ],
+      "source_path": "sprites/SHIP09G2_PIC.1"
+    }
+  ],
+  "generation_status": "reviewed_source_only; genuine HD generation and exact Rust/artistic approval still required unless separate candidate exists",
+  "reviewer": "/root/hd_enemies_02"
+}

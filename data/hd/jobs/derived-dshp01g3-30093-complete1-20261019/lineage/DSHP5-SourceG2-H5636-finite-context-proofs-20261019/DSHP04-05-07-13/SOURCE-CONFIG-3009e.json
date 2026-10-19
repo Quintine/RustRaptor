@@ -1,0 +1,40 @@
+{
+  "asset": "3009e",
+  "definition": "base:enemy_2_94",
+  "mission": "base:sector_3_wave_3",
+  "frame_count": 1,
+  "width": 40,
+  "height": 32,
+  "health": 25,
+  "ground": false,
+  "shadow": true,
+  "original_name": "DSHP13G3_PIC",
+  "pilot_difficulty": 2,
+  "starting_seed": 2048,
+  "Source_caller": {
+    "mission": "base:sector_3_wave_3",
+    "Source_map": "maps/MAP3G3_MAP",
+    "spawn_ordinal": 131,
+    "Source_row": 72,
+    "Source_x_cell": 2,
+    "group_row": 72,
+    "link": -1,
+    "game": 2,
+    "library": 94,
+    "definition": "base:enemy_2_94",
+    "raw_difficulty": 4,
+    "difficulty_code": 4,
+    "tick": 2168,
+    "spawn_x": 80,
+    "spawn_y": -112,
+    "legal_normal_pilot2_enabled": true,
+    "legal_pilot3_enabled": true
+  },
+  "chosen_spawn": {
+    "tick": 2168,
+    "enemy": "base:enemy_2_94",
+    "x": 80,
+    "y": -112,
+    "difficulty": 4
+  }
+}

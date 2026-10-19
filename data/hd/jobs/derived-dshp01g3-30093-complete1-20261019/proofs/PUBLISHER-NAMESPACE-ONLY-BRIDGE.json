@@ -1,0 +1,32 @@
+{
+  "status": "NAMESPACE_ONLY_SAME_PIXELS_NO_NEW_QA_OR_ART",
+  "producer_job": "derived-dshp01g3-30093-complete1-20261019",
+  "publisher_job": "derived-dshp01g3-30093-complete1-20261019",
+  "before_metadata_sha256": {
+    "candidate.json": "8db5c0e9c473c7f748ff09a9b143a729698edaa213e9d906d8bf16e2084660e0",
+    "artwork-derivation.json": "04468e5c779740d17ba9fe2cd176915ca8e90c1952e36637ddf466e64397b90b",
+    "normalized-execution.json": "d64ba2dce9fe57bd72ca1d6160f2533ea35311f91ea0da15b1f133d15ef3b113",
+    "runtime-review/runtime-qa.json": "083993027edbdcba4f6f6425efd81a8873403f3f2db0190d32271e90d7820adc"
+  },
+  "after_metadata_sha256": {
+    "candidate.json": "6f570dafcc4d6c3b07f1cfed3ca4c4d3743f7d85e5ff2fa7bde2970dd8548d50",
+    "artwork-derivation.json": "04468e5c779740d17ba9fe2cd176915ca8e90c1952e36637ddf466e64397b90b",
+    "normalized-execution.json": "d64ba2dce9fe57bd72ca1d6160f2533ea35311f91ea0da15b1f133d15ef3b113",
+    "runtime-review/runtime-qa.json": "d15a68484281bd992112af50480393a08a4be38c61b327ffa5662d888af47e40"
+  },
+  "old_frame_bindings_sha256": "80d89ec9913fd06a0948e273450e95b3a8176656bc936508e85f1b8a34692eb1",
+  "new_frame_bindings_sha256": "80d89ec9913fd06a0948e273450e95b3a8176656bc936508e85f1b8a34692eb1",
+  "all_frame_fields_except_portable_file_exact": true,
+  "all_PNG_sha256_exact": {
+    "jobs/derived-dshp01g3-30093-complete1-20261019/derived/30093-derived.png": "7656cb3b1685b623bb5d1edda54a3ec7ed05adb2c0f1df25701638c02f192397"
+  },
+  "measured_frames_exact": true,
+  "Source18_library_and_diagnostics_exact": true,
+  "active_job_declaration_from_Original_ledger": true,
+  "all_old_metadata_archived_verbatim": true,
+  "shared_proofs_byte_identical_relocation": {
+    "old": "_shared-DSHP5-SourceG2-H5636-finite-context-proofs-20261019",
+    "new": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019"
+  },
+  "new_cleanup_QA_World_or_generator_calls": 0
+}

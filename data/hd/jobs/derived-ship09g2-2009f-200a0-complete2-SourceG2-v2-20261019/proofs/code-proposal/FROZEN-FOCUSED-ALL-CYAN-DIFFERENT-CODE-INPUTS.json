@@ -1,0 +1,106 @@
+{
+  "status": "FROZEN_CODE_ONLY_37PASS_AWAIT_DIFFERENT_CODE",
+  "author_report_sha256": "0ab387296fe554269df565fe76bd39a9f9d6af9be21b901698a4e93ff1cd7137",
+  "files": {
+    "ACTUAL-SYNTHETIC37.stderr": {
+      "sha256": "622c15ff73c6226cc54c425a494ed69a9af4d4e9f92ce282f24d9a4960d1f9a9",
+      "bytes": 136
+    },
+    "ACTUAL-SYNTHETIC37.stdout": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "AUTHOR-FOCUSED-ALL-CYAN-CODE37PASS-NO-REAL-PIXELS.json": {
+      "sha256": "0ab387296fe554269df565fe76bd39a9f9d6af9be21b901698a4e93ff1cd7137",
+      "bytes": 4936
+    },
+    "FOCUSED-OWNERSHIP-ONLY-HELPER.patch": {
+      "sha256": "6bdbdd83a83f551015e8acf0dc722d3e0aec500805cf1c1de4c85a5e13a59792",
+      "bytes": 6707
+    },
+    "PROPOSED-EXACT-PORTABLE-ALL-CYAN-RECIPE-NOT-EXECUTED.json": {
+      "sha256": "57b15a6cd1690ddff312e19caac6a7d995a8dc4a0b4b83609b9a587f4994abc5",
+      "bytes": 1542
+    },
+    "PUBLIC-TWO-TOOLS-UNAPPLIED-VERBATIM.patch": {
+      "sha256": "3fe80b0a07739b148f680036dd727d13831aa1439010fb04cac593d04b4b400f",
+      "bytes": 42735
+    },
+    "READONLY-ACTUAL-RAW-DONOR-FEASIBILITY-NO-ARTWORK.json": {
+      "sha256": "7b6512ac612e83b5d2b28265f73e9fcb3b2fb5b3465aef369d76ab04f70694cc",
+      "bytes": 1245
+    },
+    "READONLY-ALL-CYAN-DONOR-PREFLIGHT-NO-ARTWORK.py": {
+      "sha256": "2f11a93b4e8586a7a1dc06fc51715e0cca5b48c4a41cfcd2a0a10009f09ac30a",
+      "bytes": 2778
+    },
+    "Source-only/WHOLE2-ALL-CYAN-AND-PRESERVED-NONCYAN-SOURCE-PARTITION.png": {
+      "sha256": "1e1b501201ab4cfbf28cf5c58e6179fe0eb08b7cac0380e285935ad44698381e",
+      "bytes": 28851
+    },
+    "Source-only/WHOLE2-SOURCE-CLASS-PARTITION.json": {
+      "sha256": "ce52c7dc7ea31667081bce5beb9ec7f373e11cb28bb5ef4b232c2bc6c06e874a",
+      "bytes": 601
+    },
+    "dependency-project/tools/hd_frame_policy.py": {
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+      "bytes": 9385
+    },
+    "hd_ship09_wake_cleanup.py": {
+      "sha256": "c6074bf72ecdf5839df6a0e4b9a0275427258f2dbdebb439790e107c7574b02d",
+      "bytes": 21379
+    },
+    "inputs/2009f.bin": {
+      "sha256": "d6fe29ec5e113b37d668a7b8b61c9257fb5635a5a1181385cfadbae7cc899925",
+      "bytes": 2469
+    },
+    "inputs/200a0.bin": {
+      "sha256": "7d2199f7eb44a5902db8825729dba02fd24ae81ad779f49893da3e33169186c4",
+      "bytes": 2240
+    },
+    "inputs/PALETTE_DAT": {
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "bytes": 768
+    },
+    "inputs/literal-candidate.json": {
+      "sha256": "142914a2dcfa36e174774301ebd083ee00aab40bd347286c50a4e813d670e0f9",
+      "bytes": 1421
+    },
+    "inputs/literal-currentG2-indexed-bank.json": {
+      "sha256": "336fc7c53eccbf8dbcf6b4513b447c2449156a5b2640fdd715ea0be3dda9b74d",
+      "bytes": 2643205
+    },
+    "inputs/literal-currentG2-invocation.json": {
+      "sha256": "ebd6a4c03d329df7e9086f34913be5d931bbe91f5fb1723fd40e74a4c478887b",
+      "bytes": 981
+    },
+    "inputs/literal-currentG2-runtime-qa.json": {
+      "sha256": "6748b237f5c69b3d406285cea9e72ebcb5764c1727a40c2cbd120208c38176bf",
+      "bytes": 10588
+    },
+    "inputs/parents/actual-imagegen-immediate-release-verbatim.json": {
+      "sha256": "8d15a4e8e36d98b7769c5e1b682aaa2b489e989e2714c1ac52880fcaa4c6de9a",
+      "bytes": 758
+    },
+    "inputs/parents/exact-Original-primary-prompt-verbatim.txt": {
+      "sha256": "d268fdab2bb548e232c8ad7d61198e3137aaca2085e9f8121724065f5e507c6d",
+      "bytes": 3194
+    },
+    "inputs/raw.png": {
+      "sha256": "a35f0b3d93afd49f78bc7205463986f2a846491c11defbf16cadadca7dc859c8",
+      "bytes": 1361559
+    },
+    "public-tool-proposal/tools/hd_ship09_wake_cleanup.py": {
+      "sha256": "c6074bf72ecdf5839df6a0e4b9a0275427258f2dbdebb439790e107c7574b02d",
+      "bytes": 21379
+    },
+    "public-tool-proposal/tools/test_hd_ship09_wake_cleanup.py": {
+      "sha256": "9602c1fe91d49b8c9552da79b2fdcce24137ca3be1c8eb223f21fb5f4a1faf0c",
+      "bytes": 20551
+    },
+    "test_hd_ship09_wake_cleanup.py": {
+      "sha256": "9602c1fe91d49b8c9552da79b2fdcce24137ca3be1c8eb223f21fb5f4a1faf0c",
+      "bytes": 20551
+    }
+  }
+}

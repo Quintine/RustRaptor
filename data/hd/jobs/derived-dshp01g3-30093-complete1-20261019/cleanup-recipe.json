@@ -1,0 +1,38 @@
+{
+  "format_version": 1,
+  "asset": "30093",
+  "palette": {
+    "path": "data/hd/jobs/derived-dshp01g3-30093-complete1-20261019/sources/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "source": {
+    "path": "data/hd/jobs/derived-dshp01g3-30093-complete1-20261019/sources/DSHP01G3_PIC",
+    "sha256": "6477ea0bb108eb2ff185af21d6cf45eb0afdef6fcf5dc7b22ab48a31889f9e45"
+  },
+  "raw_png": {
+    "path": "data/hd/jobs/derived-dshp01g3-30093-complete1-20261019/parents/generator-return.png",
+    "sha256": "eb5f343d8aa19c8aa74b7da37f18ce36b31bb4660446d5b4ac4a1f3007593e80"
+  },
+  "dependencies": {
+    "hd_frame_policy": {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    },
+    "hd_dshp20_cleanup": {
+      "path": "tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    }
+  },
+  "viewport": [
+    0,
+    0,
+    1254,
+    1254
+  ],
+  "origin": [
+    0,
+    0
+  ],
+  "brightness_slack": 12,
+  "donor_bound": 12
+}

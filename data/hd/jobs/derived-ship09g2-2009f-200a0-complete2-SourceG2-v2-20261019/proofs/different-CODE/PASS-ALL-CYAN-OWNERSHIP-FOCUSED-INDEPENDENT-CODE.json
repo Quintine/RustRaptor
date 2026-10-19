@@ -1,0 +1,51 @@
+{
+  "status": "PASS_DIFFERENT_FOCUSED_CODE_SYNTHETIC_ONLY",
+  "helper_sha256": "c6074bf72ecdf5839df6a0e4b9a0275427258f2dbdebb439790e107c7574b02d",
+  "test_sha256": "9602c1fe91d49b8c9552da79b2fdcce24137ca3be1c8eb223f21fb5f4a1faf0c",
+  "recipe_sha256": "57b15a6cd1690ddff312e19caac6a7d995a8dc4a0b4b83609b9a587f4994abc5",
+  "producer_seal_sha256": "45b8a1929e512283030c130d06bacd99cb21c1a70304ffeef48fbf7163f9a709",
+  "verified_producer_files": 25,
+  "source_partition": [
+    {
+      "asset": "2009f",
+      "cyan": 577,
+      "noncyan": 752,
+      "transparent": 1551
+    },
+    {
+      "asset": "200a0",
+      "cyan": 572,
+      "noncyan": 752,
+      "transparent": 1556
+    }
+  ],
+  "tests": {
+    "producer_actual": 37,
+    "independent_focused": 4,
+    "total": 41,
+    "result": "PASS",
+    "actual_log_sha256": "0c2343efd62206d034bc5e52b0c56705ea09bb7ac818f7f7d2862962ffcd57d7",
+    "review_script_sha256": "755a29f38f334e1239d53f15b60a4414226a86c2f11b3c8ea3a627a6144b5ca4"
+  },
+  "findings": [],
+  "review": [
+    "Focused AST delta limited to render_frame ownership/donor eligibility and run_recipe receipt labels; input descriptor IO, verified dependency compilation, Source decoding, color/hue/luminance predicate and 5.5/.90/.85 bounds unchanged.",
+    "Three-way partition: every SourceScale4 cyan sample restored with unchanged same-phase eligible raw RGB tuple and alpha255; noncyan structural samples preserve literal prior G2 palette RGBA including holes; Source-transparent samples clear RGBA.",
+    "Actual unmocked complete2 synthetic run and receipt succeed while Path.read_bytes is denied; static and raced FIFO negatives pass.",
+    "Independent phase-local donor change leaves other phase and all noncyan structural RGBA unchanged; gray Source-cyan canary repaired while genuine gray engine retained.",
+    "Physically inspected saved whole2 Source-only partition contact; no derived actual game artwork executed in review."
+  ],
+  "qualifications": [
+    "Code PASS authorizes only Root conditional one successor cleanup plus one fresh G2 trial; independent art review and Root admission remain required.",
+    "Source partition/support/caps are functional Source-guided repair and zero generated-HD detail credit. RGB donor relocation remains substantial and bounded, not invented detail.",
+    "Final alpha equals cyan SourceScale4 support union existing baseline alpha on noncyan SourceScale4 owners; full original-alpha equality is not claimed.",
+    "Prior held trial remains held. No cap widening or automatic replay authorized."
+  ],
+  "real_art_cleanup_calls": 0,
+  "QA_or_engine_calls": 0,
+  "canonical_or_git_mutations": 0,
+  "initial_review_run": {
+    "tests": 38,
+    "note": "First independent runner selected 34 RecipeTests plus4 independent; corrected runner explicitly adds3 DescriptorTests, all41 passed. No producer change."
+  }
+}

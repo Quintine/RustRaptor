@@ -1,0 +1,45 @@
+{
+  "status": "EXACT-APPROVED-PIXEL-PUBLIC-REPRODUCTION-AND-METADATA-HEADER-CARRY",
+  "actual_historical_QA": {
+    "path": "jobs/derived-dshp07g3_pic-30099-complete1-20261019/review/actual-currentG2-measurement/runtime-qa.json",
+    "sha256": "1f605fab1fd53a6c8690f12be685c554f3e7bed6354d64f4241f294d2140be8e"
+  },
+  "actual_new_public_reproduction": {
+    "path": "jobs/derived-dshp07g3_pic-30099-complete1-20261019/actual-public-reproduction-once/derived-provenance.json",
+    "sha256": "81dca806a0f54eda6bc0c04ce559123977a799b9b3fc77a8c5b577567788926b"
+  },
+  "actual_new_public_reproduction_calls": 1,
+  "new_original_art_or_G2_or_World_calls": 0,
+  "old_measured_candidate_sha256": "ae2bba252e359e2ee1bdce9c9acfb07cbb29b537b960fbec633cae19fd0d5b9d",
+  "final_candidate_sha256": "95d601f2e13023591e272bdad78d2504d918262bf78e1c74e79aa9d01384c89d",
+  "old_measured_frame_binding_sha256": "26a462ef007eca6d36a7918d29970cf919785dd0bbf340a1cde9a72a0beb27b5",
+  "final_frame_binding_sha256": "26a462ef007eca6d36a7918d29970cf919785dd0bbf340a1cde9a72a0beb27b5",
+  "old_artwork_sha256": {
+    "jobs/derived-dshp07g3_pic-30099-complete1-20261019/derived/30099-derived.png": "9630e9dfc4e3555cd623649f18b7b57edcd768e13673160a9cda5ef43c9c7dbd"
+  },
+  "final_artwork_sha256": {
+    "jobs/derived-dshp07g3_pic-30099-complete1-20261019/derived/30099-derived.png": "9630e9dfc4e3555cd623649f18b7b57edcd768e13673160a9cda5ef43c9c7dbd"
+  },
+  "approved_PNG_byte_identical_to_reproduced_and_proposed": true,
+  "frame_logical_size_origin_SourceSHA_crop_original_detail_cells_unchanged": true,
+  "historical_actual_QA_never_rewritten": true,
+  "Root_4aac601b_art_acceptance_carried_by_exact_pixels": true,
+  "H5636_context_preserved_and_finiteH5647_input_carry": {
+    "path": "jobs/_shared-DSHP5-SourceG2-H5636-finite-context-proofs-20261019/FINITE-ALL5-H5636-TO-ACTUALH5647-CONSUMED-INPUT-CARRY.json",
+    "sha256": "0fc4f9f77993389c38bb23ba5e2c24d5d98e25d11d36c73554fb2315c2cead51"
+  },
+  "all_required_tool_paths_public_and_byte_exact": [
+    {
+      "path": "tools/hd_dshp40_dark_material.py",
+      "sha256": "7a46ea9aef246f5877ff425c724480df92b7feaf98d661ccc98a42a9a654acb7"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    },
+    {
+      "path": "tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "status": "EXACT-APPROVED-PIXEL-PUBLIC-REPRODUCTION-AND-METADATA-HEADER-CARRY",
+  "actual_historical_QA": {
+    "path": "jobs/derived-dshp01g3-30093-complete1-20261019/review/actual-currentG2-measurement/runtime-qa.json",
+    "sha256": "0e8d2f026519d518c55b99e2d8f4d0213b3466294dab4684adbdc8c14dfe98f5"
+  },
+  "actual_new_public_reproduction": {
+    "path": "jobs/derived-dshp01g3-30093-complete1-20261019/actual-public-reproduction-once/derived-provenance.json",
+    "sha256": "fe608cba049577fe75c5090052d68f748ff08c95c59422eb61e4611d67ffa540"
+  },
+  "actual_new_public_reproduction_calls": 1,
+  "new_original_art_or_G2_or_World_calls": 0,
+  "old_measured_candidate_sha256": "baf9fd74f0e403be8fafeb38a18e970318b7e67ecfe0298de8b36263af39c3d8",
+  "final_candidate_sha256": "8db5c0e9c473c7f748ff09a9b143a729698edaa213e9d906d8bf16e2084660e0",
+  "old_measured_frame_binding_sha256": "82b47996fefbc0a79580009083d23c560293b1dc59f2f2490995ee96d4c61508",
+  "final_frame_binding_sha256": "80d89ec9913fd06a0948e273450e95b3a8176656bc936508e85f1b8a34692eb1",
+  "old_artwork_sha256": {
+    "30093-derived.png": "7656cb3b1685b623bb5d1edda54a3ec7ed05adb2c0f1df25701638c02f192397"
+  },
+  "final_artwork_sha256": {
+    "jobs/derived-dshp01g3-30093-complete1-20261019/derived/30093-derived.png": "7656cb3b1685b623bb5d1edda54a3ec7ed05adb2c0f1df25701638c02f192397"
+  },
+  "approved_PNG_byte_identical_to_reproduced_and_proposed": true,
+  "frame_logical_size_origin_SourceSHA_crop_original_detail_cells_unchanged": true,
+  "historical_actual_QA_never_rewritten": true,
+  "Root_4aac601b_art_acceptance_carried_by_exact_pixels": true,
+  "H5636_context_preserved_and_finiteH5647_input_carry": {
+    "path": "jobs/_shared-DSHP5-SourceG2-H5636-finite-context-proofs-20261019/FINITE-ALL5-H5636-TO-ACTUALH5647-CONSUMED-INPUT-CARRY.json",
+    "sha256": "0fc4f9f77993389c38bb23ba5e2c24d5d98e25d11d36c73554fb2315c2cead51"
+  },
+  "all_required_tool_paths_public_and_byte_exact": [
+    {
+      "path": "tools/hd_dshp01_dark_material.py",
+      "sha256": "5926b96c0469b45504a15b8cd67e3f84367ce971dee82ff6f578d32c3af3ccb5"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    },
+    {
+      "path": "tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    }
+  ]
+}

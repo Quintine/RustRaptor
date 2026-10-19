@@ -1,0 +1,70 @@
+{
+  "format_version": 1,
+  "job_id": "enemies-2009f-200a0",
+  "name": "SHIP09G2_PIC",
+  "category": "Enemies and ground objects",
+  "kind": "complete_family",
+  "owner": "/root/iron_coast_2",
+  "targets": [
+    {
+      "asset": "2009f",
+      "source_path": "sprites/SHIP09G2_PIC",
+      "source_sha256": "d6fe29ec5e113b37d668a7b8b61c9257fb5635a5a1181385cfadbae7cc899925",
+      "logical_canvas": [
+        72,
+        40
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "2009f",
+      "status": "candidate"
+    },
+    {
+      "asset": "200a0",
+      "source_path": "sprites/SHIP09G2_PIC.1",
+      "source_sha256": "7d2199f7eb44a5902db8825729dba02fd24ae81ad779f49893da3e33169186c4",
+      "logical_canvas": [
+        72,
+        40
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "200a0",
+      "status": "candidate"
+    }
+  ],
+  "declared_ranges": [
+    {
+      "name": "SHIP09G2_PIC",
+      "base_asset": "2009f",
+      "frames": 2
+    }
+  ],
+  "status_counts": {
+    "candidate": 2
+  },
+  "contract": {
+    "generation": "Use built-in imagegen with inspected original source sheets. Produce newly authored detail, materials and lighting; nearest/ScaleNx enlargement alone is not HD completion.",
+    "submission_gate": "Prepare and inspect sources and save the prompt before acquiring. In one functions.exec orchestration, acquire one of four slots, start the reservation, submit built-in imagegen only when start.changed is true, then classify and report the actual result immediately after await before returning to the model or doing QA. See RustRaptor/docs/hd-generation-workflow.md. Started and legacy-unknown requests require explicit finish; only unstarted reservations expire. If denied or cooling down, prepare/review other jobs. Do not substitute scaling for a failed remaster.",
+    "source_truth": "Keep every source orientation, silhouette, color identity, logical canvas, anchor and explicit source hash. Use each target's source_palette and source_palette_sha256; Apogee/Cygnus/Taiwan cards use their own palettes, not the gameplay palette. Inspect every frame before generating. Never invent poses or drop damaged/destroyed variants.",
+    "ownership": "Only this job's target IDs may be proposed. Neighbor/context references and exact-source aliases are reference-only; never claim or overwrite another job's IDs.",
+    "raw_output": "Keep raw generated PNG bytes, prompts, source references and provenance. Do not retouch generated RGB/alpha. Atlas/square margin crops are allowed only if they preserve all meaningful visible pixels and original aspect.",
+    "full_family": "Review all frames together at logical resolution and indexed 4× with exact Rust Lanczos3 resident→presentation resampling. A good still does not complete an animation family. Record partial candidates and rejections truthfully.",
+    "quality": "Check clipping, alpha halos, banking/animation centers, source bounds, pivots, tiny-projectile readability, palette fades/cycling, material continuity and intended timing. Near-black original body/backing pixels are occupied artwork, not empty background. For opaque pictures, mask overlap of 1 proves only coverage; compare source material, landmarks and internal geometry separately. Original ordinary pixels must not gain indices240..255; water/fire/individualblink source classes retain their semantics. Compare original and allscale dynamic-palette counts in runtime-qa.json. Numeric mask metrics support visual review, never replace it.",
+    "terrain": null,
+    "renderer": "Registration is separate from render reachability. Require a verified Rust rendering path and record scene/gallery evidence; unsupported terrain/mask/shader semantics remain explicitly pending.",
+    "result": "Write candidate.json with job_id, source_sha256 and every proposed target's file/logical dimensions/origin/crop, plus complete sequence metadata and review evidence. Only the coordinator edits global hd.json, completion ledger or provenance."
+  },
+  "source_sheet": "source-sheet.png",
+  "source_directory": "sources/",
+  "output_directory": "generated/",
+  "candidate_manifest": "candidate.json"
+}

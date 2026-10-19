@@ -1,0 +1,45 @@
+{
+  "status": "EXACT-APPROVED-PIXEL-PUBLIC-REPRODUCTION-AND-METADATA-HEADER-CARRY",
+  "actual_historical_QA": {
+    "path": "jobs/derived-dshp04g3-30096-complete1-20261019/review/actual-currentG2-measurement/runtime-qa.json",
+    "sha256": "9973fbd7c0b3a502c17cdc1a88362f03a04fd176421fa745ada5bade5c4eccd4"
+  },
+  "actual_new_public_reproduction": {
+    "path": "jobs/derived-dshp04g3-30096-complete1-20261019/actual-public-reproduction-once/derived-provenance.json",
+    "sha256": "c2de72d1f06146d5465fe68a96a3e6457e137803b70907842ebd211aaf1ea035"
+  },
+  "actual_new_public_reproduction_calls": 1,
+  "new_original_art_or_G2_or_World_calls": 0,
+  "old_measured_candidate_sha256": "38a6f238e95f8c5df58f9a053f62a7dc18e4e2a3d3770bb273c6432258c80451",
+  "final_candidate_sha256": "b13be4ec9682611644c3e0632a6adc7c25925b9f662bd09ba491725ede18107f",
+  "old_measured_frame_binding_sha256": "311c58eb69d385cc7e61e937b6a25421e990e80160e2382d4485e46a5e557ca6",
+  "final_frame_binding_sha256": "311c58eb69d385cc7e61e937b6a25421e990e80160e2382d4485e46a5e557ca6",
+  "old_artwork_sha256": {
+    "jobs/derived-dshp04g3-30096-complete1-20261019/derived/30096-derived.png": "005b06ca534e4e309c3e2065bd685298f0d249806de8c67761656c88adc1d226"
+  },
+  "final_artwork_sha256": {
+    "jobs/derived-dshp04g3-30096-complete1-20261019/derived/30096-derived.png": "005b06ca534e4e309c3e2065bd685298f0d249806de8c67761656c88adc1d226"
+  },
+  "approved_PNG_byte_identical_to_reproduced_and_proposed": true,
+  "frame_logical_size_origin_SourceSHA_crop_original_detail_cells_unchanged": true,
+  "historical_actual_QA_never_rewritten": true,
+  "Root_4aac601b_art_acceptance_carried_by_exact_pixels": true,
+  "H5636_context_preserved_and_finiteH5647_input_carry": {
+    "path": "jobs/_shared-DSHP5-SourceG2-H5636-finite-context-proofs-20261019/FINITE-ALL5-H5636-TO-ACTUALH5647-CONSUMED-INPUT-CARRY.json",
+    "sha256": "0fc4f9f77993389c38bb23ba5e2c24d5d98e25d11d36c73554fb2315c2cead51"
+  },
+  "all_required_tool_paths_public_and_byte_exact": [
+    {
+      "path": "tools/hd_dshp04_dark_material.py",
+      "sha256": "beca62018b0e60a2aa7b846b3a668ca01656fae6293d0970417c664ecf72c540"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    },
+    {
+      "path": "tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    }
+  ]
+}

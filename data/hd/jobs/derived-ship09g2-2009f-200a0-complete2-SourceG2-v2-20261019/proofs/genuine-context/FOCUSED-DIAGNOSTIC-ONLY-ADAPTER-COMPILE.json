@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "rustc",
+    "--edition=2024",
+    "-C",
+    "opt-level=1",
+    "-C",
+    "debuginfo=0",
+    "--extern",
+    "raptor_replica=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "--extern",
+    "serde_json=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libserde_json-89b5c242431768d3.rlib",
+    "--extern",
+    "flate2=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps/libflate2-808a135ff259ee28.rlib",
+    "-L",
+    "dependency=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps",
+    "-L",
+    "native=/home/quintine/Projects/RaptorReplica/RustRaptor/lib",
+    "-L",
+    "native=/home/quintine/.local/lib",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-currentG2-genuine-S2W9-H5636-context-20261019-v1/ship09_composition_diagnostic_source.rs",
+    "-o",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-currentG2-genuine-S2W9-H5636-context-20261019-v1/ship09-composition-diagnostic-adapter"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "source_sha256": "4a082b7137594681b11125361b66b411f43da374316fcf8ecd190d4e165937ea",
+  "no_World_execution": true
+}

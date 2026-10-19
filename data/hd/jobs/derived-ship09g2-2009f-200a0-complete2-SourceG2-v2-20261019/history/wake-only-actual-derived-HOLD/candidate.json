@@ -1,0 +1,37 @@
+{
+  "format_version": 1,
+  "job_id": "SHIP09G2-derived-wake-complete2-SourceG2-20261019-v1",
+  "complete_family": true,
+  "sequences": [
+    {
+      "name": "SHIP09G2_PIC",
+      "base_asset": 131231,
+      "frame_count": 2,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "derived2/2009f.png",
+          "logical_width": 72,
+          "logical_height": 40,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "d6fe29ec5e113b37d668a7b8b61c9257fb5635a5a1181385cfadbae7cc899925"
+        },
+        {
+          "frame": 1,
+          "file": "derived2/200a0.png",
+          "logical_width": 72,
+          "logical_height": 40,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "7d2199f7eb44a5902db8825729dba02fd24ae81ad779f49893da3e33169186c4"
+        }
+      ]
+    }
+  ],
+  "notes": "Exact one CODE6bc7c924-approved derivation e099f7a0/be0a224e. Protected hull is literal previous G2native4 palette RGBA; SourceScale4 exterior cyan support and Source-derived hue/luminance caps are functional with zero new detail credit. Exterior RGB unchanged genuine same-phase rawa35f donors, fixed5.5/.90/.85 caps. No Original-RGB paint or retained cells. Different ART/context/Root publication approval still pending."
+}

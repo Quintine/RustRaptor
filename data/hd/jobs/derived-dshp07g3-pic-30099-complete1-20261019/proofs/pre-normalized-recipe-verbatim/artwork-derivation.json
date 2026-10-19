@@ -1,0 +1,53 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "derived-DSHP05-07-13-distinct-singletons-generated-fullRGB-SourceScale4-darken-only-Source-max-plus12-source-bounded-donors-v2",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-dshp07g3-pic-30099-complete1-20261019/parents/generator-return.png",
+        "sha256": "037af747349c6e5986c8273348a49b64e0d4e5c7cd260edaa33394fab40824ef"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-dshp07g3-pic-30099-complete1-20261019/parents/generation-receipt-safe-primitives.json",
+        "sha256": "2137983f6c437f98a302340b0b7cdbe0da4e8fc5e5861cb92ba5aa0c65c0c67c"
+      },
+      "prompt": {
+        "path": "jobs/derived-dshp07g3-pic-30099-complete1-20261019/parents/prompt.txt",
+        "sha256": "3e6fac99d9a46c481d797859f6a5797106b9bc849f5ee1de750c45841f2f7d51"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_dshp40_dark_material.py",
+      "sha256": "7a46ea9aef246f5877ff425c724480df92b7feaf98d661ccc98a42a9a654acb7"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    },
+    {
+      "path": "tools/hd_dshp20_cleanup.py",
+      "sha256": "c6123e9591f0a169846677019ddcb944bf9c2b4c9184a7d8ab02a08546de409b"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-dshp07g3-pic-30099-complete1-20261019/cleanup-recipe.json",
+    "sha256": "543a988d2ec512fdcce0f6fec6183306df583cd169febdf88ddc932d459ecd2a"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-dshp07g3-pic-30099-complete1-20261019/normalized-execution.json",
+    "sha256": "7a086773ee337f7cfeff61fcc5efc94d68939ce623726facc13ac3c7ba5d6080"
+  },
+  "sources": {
+    "30099": "16c28cb732407d132e167bd2003250defc04e42c5cbbfe78224c65e0c12a02dd"
+  },
+  "outputs": {
+    "jobs/derived-dshp07g3-pic-30099-complete1-20261019/derived/30099-derived.png": "9630e9dfc4e3555cd623649f18b7b57edcd768e13673160a9cda5ef43c9c7dbd"
+  },
+  "detailed_provenance": {
+    "path": "jobs/derived-dshp07g3-pic-30099-complete1-20261019/actual-public-reproduction-once/derived-provenance.json",
+    "sha256": "81dca806a0f54eda6bc0c04ce559123977a799b9b3fc77a8c5b577567788926b"
+  }
+}

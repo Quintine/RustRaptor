@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5647 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5654 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -26886,6 +26886,247 @@
         "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/derivation/artwork-derivation.json",
         "sha256": "04d9822a975e94473edf401fd1208374d0506b8ba7fb25f55f8d5e2032b1aa27"
       }
+    },
+    {
+      "job_id": "derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019",
+      "assets": [
+        "2009f",
+        "200a0"
+      ],
+      "frames": 2,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/candidate.json",
+      "coordinator_review": "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/runtime-qa.json",
+      "review": {
+        "path": "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/proofs/final-author/AUTHOR-COMPLETE2-ALL-CYAN-CURRENTG2-QUAL-WITH-LIMITS.json",
+        "sha256": "fe0f564b6cc9cf3f91550f02434bb021c47c5cb99e403192448d8ef8a175cb84"
+      },
+      "independent_review": {
+        "intrinsic": {
+          "path": "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/proofs/different-intrinsic-ART/QUALIFIED-COMPLETE2-DIFFERENT-INTRINSIC-ART-ALL-NATIVES.json",
+          "sha256": "deceb5c74f38c712ba8305f3375cb7105ac2e9dbe30857926869911eae533faf"
+        },
+        "context": {
+          "path": "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/proofs/final-Root-peer-and-current-carry/different-genuine-context-QUAL-all24.json",
+          "sha256": "5d9f47a864b83915ad464bb354778af32e6b4343491a32f997117de22f970b0f"
+        }
+      },
+      "frame_bindings_sha256": "2cef41258b1db3c612497f7da759816d21bde188ff2379af9276620341c242b2",
+      "artwork_derivation": {
+        "path": "jobs/derived-ship09g2-2009f-200a0-complete2-SourceG2-v2-20261019/artwork-derivation.json",
+        "sha256": "bcb82b720c90766c07e32bf1c326c43d4674c43fff6283d32dd750d676a76309"
+      }
+    },
+    {
+      "job_id": "derived-dshp01g3-30093-complete1-20261019",
+      "assets": [
+        "30093"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-dshp01g3-30093-complete1-20261019/candidate.json",
+      "coordinator_review": "jobs/derived-dshp01g3-30093-complete1-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/derived-dshp01g3-30093-complete1-20261019/runtime-review/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/review/author-allnative-intrinsic.json",
+          "sha256": "8606c458c049c46ba957ab49470cb3d5ae34e76a14520e19e89c5c4b88a60058"
+        },
+        "different_material": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/QUALIFIED-30093-DIFFERENT-INTRINSIC-ART-REVIEW.json",
+          "sha256": "064eaecb14574043116390db97f4556f922d4655a5aa27bb8c492703fe7eb063"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "intrinsic": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/QUALIFIED-30093-DIFFERENT-INTRINSIC-ART-REVIEW.json",
+          "sha256": "064eaecb14574043116390db97f4556f922d4655a5aa27bb8c492703fe7eb063"
+        },
+        "genuine_context": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/DIFFERENT-QUALIFIED-DSHP01-30093-GENUINE-S3W3-ALL4-CONTEXT-WITH-LIMITS.json",
+          "sha256": "ec80b76613dfd85630707124a66a6b534c13599b61a35310648ec9015d9aa278"
+        }
+      },
+      "frame_bindings_sha256": "80d89ec9913fd06a0948e273450e95b3a8176656bc936508e85f1b8a34692eb1",
+      "artwork_derivation": {
+        "path": "jobs/derived-dshp01g3-30093-complete1-20261019/artwork-derivation.json",
+        "sha256": "04468e5c779740d17ba9fe2cd176915ca8e90c1952e36637ddf466e64397b90b"
+      }
+    },
+    {
+      "job_id": "derived-dshp04g3-30096-complete1-20261019",
+      "assets": [
+        "30096"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-dshp04g3-30096-complete1-20261019/candidate.json",
+      "coordinator_review": "jobs/derived-dshp04g3-30096-complete1-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/derived-dshp04g3-30096-complete1-20261019/runtime-review/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-dshp04g3-30096-complete1-20261019/review/author-allnative-intrinsic.json",
+          "sha256": "bff99ba6ce74c346565dcec2be1e3b4c62207f6f6a39991147f991ef7c4ece7b"
+        },
+        "different_material": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/DIFFERENT-ART-QUALIFIED-FOUR-DSHP-COMPLETE1-INTRINSIC-NATIVE1TO4-WITH-LIMITS.json",
+          "sha256": "c4a39b09b398532d4eff01b80c77c9bed10d013ba6ba557993bcd4ca46021558"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "intrinsic": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/DIFFERENT-ART-QUALIFIED-FOUR-DSHP-COMPLETE1-INTRINSIC-NATIVE1TO4-WITH-LIMITS.json",
+          "sha256": "c4a39b09b398532d4eff01b80c77c9bed10d013ba6ba557993bcd4ca46021558"
+        },
+        "genuine_context": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/DIFFERENT-ART-QUALIFIED-FOUR-DSHP-GENUINE-SOURCEG2-H5636-SAVED-CONTEXTS.json",
+          "sha256": "a5da9e9d13ddf0b5e550ae0c593cb128988acf9b97fd5d4a323cc2824c056380"
+        }
+      },
+      "frame_bindings_sha256": "311c58eb69d385cc7e61e937b6a25421e990e80160e2382d4485e46a5e557ca6",
+      "artwork_derivation": {
+        "path": "jobs/derived-dshp04g3-30096-complete1-20261019/artwork-derivation.json",
+        "sha256": "c0525ac7816af82432504c0f6737f6737f1362236464148bf971765e930be7e0"
+      }
+    },
+    {
+      "job_id": "derived-dshp05g3-pic-30097-complete1-20261019",
+      "assets": [
+        "30097"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-dshp05g3-pic-30097-complete1-20261019/candidate.json",
+      "coordinator_review": "jobs/derived-dshp05g3-pic-30097-complete1-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/derived-dshp05g3-pic-30097-complete1-20261019/runtime-review/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-dshp05g3-pic-30097-complete1-20261019/review/author-allnative-intrinsic.json",
+          "sha256": "d218c984d6158ba61f235ba71ad8fe579ed1a4938880187e305725cd5078f3d9"
+        },
+        "different_material": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/DIFFERENT-ART-QUALIFIED-FOUR-DSHP-COMPLETE1-INTRINSIC-NATIVE1TO4-WITH-LIMITS.json",
+          "sha256": "c4a39b09b398532d4eff01b80c77c9bed10d013ba6ba557993bcd4ca46021558"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "intrinsic": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/DIFFERENT-ART-QUALIFIED-FOUR-DSHP-COMPLETE1-INTRINSIC-NATIVE1TO4-WITH-LIMITS.json",
+          "sha256": "c4a39b09b398532d4eff01b80c77c9bed10d013ba6ba557993bcd4ca46021558"
+        },
+        "genuine_context": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/DIFFERENT-ART-QUALIFIED-FOUR-DSHP-GENUINE-SOURCEG2-H5636-SAVED-CONTEXTS.json",
+          "sha256": "a5da9e9d13ddf0b5e550ae0c593cb128988acf9b97fd5d4a323cc2824c056380"
+        }
+      },
+      "frame_bindings_sha256": "7e107bc9760d9a2cefcae3c8208807d0737de1324a806c28cef74226e7f55a80",
+      "artwork_derivation": {
+        "path": "jobs/derived-dshp05g3-pic-30097-complete1-20261019/artwork-derivation.json",
+        "sha256": "d6fadbf5fef457e5ef7671320953523fe3ff93e3b42bfb25b38fb0cdbf0e7236"
+      }
+    },
+    {
+      "job_id": "derived-dshp07g3-pic-30099-complete1-20261019",
+      "assets": [
+        "30099"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-dshp07g3-pic-30099-complete1-20261019/candidate.json",
+      "coordinator_review": "jobs/derived-dshp07g3-pic-30099-complete1-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/derived-dshp07g3-pic-30099-complete1-20261019/runtime-review/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-dshp07g3-pic-30099-complete1-20261019/review/author-allnative-intrinsic.json",
+          "sha256": "5006520a9cec02bb7a7968c001a4013078a36c5698065bd643e68910c7eef745"
+        },
+        "different_material": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/DIFFERENT-ART-QUALIFIED-FOUR-DSHP-COMPLETE1-INTRINSIC-NATIVE1TO4-WITH-LIMITS.json",
+          "sha256": "c4a39b09b398532d4eff01b80c77c9bed10d013ba6ba557993bcd4ca46021558"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "intrinsic": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/DIFFERENT-ART-QUALIFIED-FOUR-DSHP-COMPLETE1-INTRINSIC-NATIVE1TO4-WITH-LIMITS.json",
+          "sha256": "c4a39b09b398532d4eff01b80c77c9bed10d013ba6ba557993bcd4ca46021558"
+        },
+        "genuine_context": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/DIFFERENT-ART-QUALIFIED-FOUR-DSHP-GENUINE-SOURCEG2-H5636-SAVED-CONTEXTS.json",
+          "sha256": "a5da9e9d13ddf0b5e550ae0c593cb128988acf9b97fd5d4a323cc2824c056380"
+        }
+      },
+      "frame_bindings_sha256": "dee4379976d4e274e2a264611db62f43a54ef3801d7883e6fb1bef8736d00e71",
+      "artwork_derivation": {
+        "path": "jobs/derived-dshp07g3-pic-30099-complete1-20261019/artwork-derivation.json",
+        "sha256": "97d3867236bb12a873dc84cda85a0eb6ea647d6cb20ab01b919aa422226d3a65"
+      }
+    },
+    {
+      "job_id": "derived-dshp13g3-pic-3009e-complete1-20261019",
+      "assets": [
+        "3009e"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-dshp13g3-pic-3009e-complete1-20261019/candidate.json",
+      "coordinator_review": "jobs/derived-dshp13g3-pic-3009e-complete1-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/derived-dshp13g3-pic-3009e-complete1-20261019/runtime-review/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-dshp13g3-pic-3009e-complete1-20261019/review/author-allnative-intrinsic.json",
+          "sha256": "c999dedac53038276691f4c89a8fd0cc7b34fdac4031f454d09c76bf6fef2865"
+        },
+        "different_material": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/DIFFERENT-ART-QUALIFIED-FOUR-DSHP-COMPLETE1-INTRINSIC-NATIVE1TO4-WITH-LIMITS.json",
+          "sha256": "c4a39b09b398532d4eff01b80c77c9bed10d013ba6ba557993bcd4ca46021558"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "intrinsic": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/DIFFERENT-ART-QUALIFIED-FOUR-DSHP-COMPLETE1-INTRINSIC-NATIVE1TO4-WITH-LIMITS.json",
+          "sha256": "c4a39b09b398532d4eff01b80c77c9bed10d013ba6ba557993bcd4ca46021558"
+        },
+        "genuine_context": {
+          "path": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019/peer-and-Root-receipts/DIFFERENT-ART-QUALIFIED-FOUR-DSHP-GENUINE-SOURCEG2-H5636-SAVED-CONTEXTS.json",
+          "sha256": "a5da9e9d13ddf0b5e550ae0c593cb128988acf9b97fd5d4a323cc2824c056380"
+        }
+      },
+      "frame_bindings_sha256": "bfaf8ad2d28da2ba977a00a9317fbc4e59a27e82c2656b5d78b1b524f311fe1e",
+      "artwork_derivation": {
+        "path": "jobs/derived-dshp13g3-pic-3009e-complete1-20261019/artwork-derivation.json",
+        "sha256": "088dd373e00297847a657dfa300ff3165d45cf854a5099bcec6d503afdecfac1"
+      }
     }
   ],
   "jobs": [
@@ -26985,8 +27226,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5647,
-  "registration_updated_at_utc": "2026-10-19T04:05:31.035610+00:00",
+  "registered_frame_count": 5654,
+  "registration_updated_at_utc": "2026-10-19T05:46:23.925066+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,

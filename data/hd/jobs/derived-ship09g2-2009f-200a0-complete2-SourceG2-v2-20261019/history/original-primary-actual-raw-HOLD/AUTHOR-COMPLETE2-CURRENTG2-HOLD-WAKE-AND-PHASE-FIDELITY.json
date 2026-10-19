@@ -1,0 +1,74 @@
+{
+  "status": "AUTHOR_HOLD_COMPLETE2_WAKE_VALUE_AND_GEOMETRY_NOT_READY_FOR_PUBLICATION",
+  "assets": [
+    "2009f",
+    "200a0"
+  ],
+  "actual_ops": {
+    "builtin_imagegen": 1,
+    "cleanup": 0,
+    "currentG2_intrinsic_banks": 1,
+    "World": 0,
+    "canonical": 0,
+    "Git": 0
+  },
+  "raw": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-complete2-Original-primary-author-20261019-v1/generated/SHIP09G2-COMPLETE2-PROVIDER-RETURNED-UNTOUCHED.png",
+    "sha256": "a35f0b3d93afd49f78bc7205463986f2a846491c11defbf16cadadca7dc859c8"
+  },
+  "generation_and_immediate_lease_release": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-complete2-Original-primary-author-20261019-v1/ACTUAL-ONE-BUILTIN-SAFE-PRIMITIVES-AND-IMMEDIATE-LEASE-RELEASE.json",
+    "sha256": "8d15a4e8e36d98b7769c5e1b682aaa2b489e989e2714c1ac52880fcaa4c6de9a"
+  },
+  "prompt": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-complete2-Original-primary-author-20261019-v1/EXACT-ONE-ORIGINAL-PRIMARY-COMPLETE2-PROMPT.txt",
+    "sha256": "d268fdab2bb548e232c8ad7d61198e3137aaca2085e9f8121724065f5e507c6d"
+  },
+  "candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-complete2-Original-primary-author-20261019-v1/candidate.json",
+    "sha256": "142914a2dcfa36e174774301ebd083ee00aab40bd347286c50a4e813d670e0f9"
+  },
+  "runtime_QA": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-complete2-Original-primary-author-20261019-v1/actual-currentG2-intrinsic2/runtime-qa.json",
+    "sha256": "6748b237f5c69b3d406285cea9e72ebcb5764c1727a40c2cbd120208c38176bf"
+  },
+  "indexed_bank": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-complete2-Original-primary-author-20261019-v1/actual-currentG2-intrinsic2/actual-indexed-source-and-scales.json",
+    "sha256": "336fc7c53eccbf8dbcf6b4513b447c2449156a5b2640fdd715ea0be3dda9b74d"
+  },
+  "crop_proof": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-complete2-Original-primary-author-20261019-v1/METADATA-ONLY-ASPECT-CROPS-ALL-MEANINGFUL-ALPHA-KEPT.json",
+    "sha256": "aaa05a8fdf973064f042b6aa5feb62d3ef3b0c5b581ad7c29904ac9683091e33"
+  },
+  "numeric_support": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-complete2-Original-primary-author-20261019-v1/ACTUAL-CURRENTG2-SOURCE-ALPHA-WAKE-CLASS-METRICS.json",
+    "sha256": "52cde3e7275b3f3882aa9d09d55ee80469df3ba68d131aebf90cd7648478f56c"
+  },
+  "all2_whole_Original_and_raw_physically_viewed": true,
+  "all8_whole_actual_native_outputs_physically_viewed": true,
+  "whole_native_pages": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-complete2-Original-primary-author-20261019-v1/presentation-only/2009f-ALL-ORIGINAL-AND-ACTUAL-NATIVE1TO4-WHOLE.png",
+      "sha256": "a2eea85cbce0dc155224acc50e89ff433d724428f8a9d057422a59d525de0bad"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-complete2-Original-primary-author-20261019-v1/presentation-only/200a0-ALL-ORIGINAL-AND-ACTUAL-NATIVE1TO4-WHOLE.png",
+      "sha256": "109a3689234808a6dffe8df50774481b3cdfc65e41d02296e2d62e730a079522"
+    }
+  ],
+  "promising": [
+    "Hull landmarks, bronze plate material, silver twin-band pod, left-facing silhouette and separate genuine wake phases are preserved broadly. New authored material detail is substantial at3x/4x.",
+    "No alpha128 meaningful pixels are clipped by the two equal729x405 raw crops; no RGB/alpha edits occurred and no reserved240..255 labels appear."
+  ],
+  "issues": [
+    "Both wake phases gain conspicuous pale cyan/near-white sparkling streaks and bright droplet tips at2x/3x/4x; Original wake is restrained dark/mid teal. These draw too much attention relative to hull and alter water/material semantics.",
+    "Phase0 upper wake begins about2logical rows lower after the safest full-meaningful-pixel crop and several trails/gaps shift. Logical alpha IoUs0.7291/0.8313 support that a complete faithful two-phase treatment is not yet established.",
+    "Raw output contains low-alpha teal ambient backing despite requested transparency. Actual selected outputs have no opaque rectangle, but pale water streaks remain visible and are the blocking material concern."
+  ],
+  "next_possible_action_NOT_EXECUTED": "A separately authorized targeted quality edit of only wake streak values and exact per-phase Original wake locations, using this untouched raw as edit target and authentic Original pair as sole Source geometry; preserve hull RGB/material/landmarks. Alternatively prepare Source-bound bounded cleanup recipe and different CODE review before any pixel operation. No additional generation, cleanup or QA has been authorized or attempted here.",
+  "old_holds_preserved": "Historical v1/v2 remain held in ../data/hd/jobs/enemies-2009f-200a0; this is a separate new Original-primary attempt, not an upgrade of them.",
+  "limits": [
+    "No independent ART or context/reachability review. Technical successful load does not grant artwork approval.",
+    "One new successful call only. No retries, no CLI/API, no refused asset IDs."
+  ]
+}

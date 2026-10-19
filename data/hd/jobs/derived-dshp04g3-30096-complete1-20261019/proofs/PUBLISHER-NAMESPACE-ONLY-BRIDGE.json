@@ -1,0 +1,32 @@
+{
+  "status": "NAMESPACE_ONLY_SAME_PIXELS_NO_NEW_QA_OR_ART",
+  "producer_job": "derived-dshp04g3-30096-complete1-20261019",
+  "publisher_job": "derived-dshp04g3-30096-complete1-20261019",
+  "before_metadata_sha256": {
+    "candidate.json": "b13be4ec9682611644c3e0632a6adc7c25925b9f662bd09ba491725ede18107f",
+    "artwork-derivation.json": "c0525ac7816af82432504c0f6737f6737f1362236464148bf971765e930be7e0",
+    "normalized-execution.json": "6506b2806fe606277de6cfcfb98f7f1967e2989743dcf92a1f855eb74653bec8",
+    "runtime-review/runtime-qa.json": "2e65b637b31da1e923b3caac3a90055c4aa075231b3823e36e89183d084981cc"
+  },
+  "after_metadata_sha256": {
+    "candidate.json": "8d7954ab0d5c0cf11e2d189ae7183416bcbacb701c012f616eb7c62d268be0ae",
+    "artwork-derivation.json": "c0525ac7816af82432504c0f6737f6737f1362236464148bf971765e930be7e0",
+    "normalized-execution.json": "6506b2806fe606277de6cfcfb98f7f1967e2989743dcf92a1f855eb74653bec8",
+    "runtime-review/runtime-qa.json": "935df9acc4a3fe93328a743ddf93028d82b3e888dc5db93a26aecee5fafe8d17"
+  },
+  "old_frame_bindings_sha256": "311c58eb69d385cc7e61e937b6a25421e990e80160e2382d4485e46a5e557ca6",
+  "new_frame_bindings_sha256": "311c58eb69d385cc7e61e937b6a25421e990e80160e2382d4485e46a5e557ca6",
+  "all_frame_fields_except_portable_file_exact": true,
+  "all_PNG_sha256_exact": {
+    "jobs/derived-dshp04g3-30096-complete1-20261019/derived/30096-derived.png": "005b06ca534e4e309c3e2065bd685298f0d249806de8c67761656c88adc1d226"
+  },
+  "measured_frames_exact": true,
+  "Source18_library_and_diagnostics_exact": true,
+  "active_job_declaration_from_Original_ledger": true,
+  "all_old_metadata_archived_verbatim": true,
+  "shared_proofs_byte_identical_relocation": {
+    "old": "_shared-DSHP5-SourceG2-H5636-finite-context-proofs-20261019",
+    "new": "jobs/derived-dshp01g3-30093-complete1-20261019/lineage/DSHP5-SourceG2-H5636-finite-context-proofs-20261019"
+  },
+  "new_cleanup_QA_World_or_generator_calls": 0
+}

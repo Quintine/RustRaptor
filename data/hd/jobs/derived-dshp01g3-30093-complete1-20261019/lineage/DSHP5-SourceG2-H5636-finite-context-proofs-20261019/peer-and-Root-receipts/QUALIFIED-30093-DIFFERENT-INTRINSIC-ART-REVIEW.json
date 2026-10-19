@@ -1,0 +1,140 @@
+{
+  "actual_existing_G2_QA_sha256": "0e8d2f026519d518c55b99e2d8f4d0213b3466294dab4684adbdc8c14dfe98f5",
+  "asset": "30093",
+  "author": "/root/remaining_catalog",
+  "author_sha256": "8606c458c049c46ba957ab49470cb3d5ae34e76a14520e19e89c5c4b88a60058",
+  "canonical_Git_writes": 0,
+  "derived_sha256": "7656cb3b1685b623bb5d1edda54a3ec7ed05adb2c0f1df25701638c02f192397",
+  "different_from_author": true,
+  "held_frames": 0,
+  "independent_checks": [
+    {
+      "PNG_sha256": "e458485bf8ca56af6e3ce856547219f7f51a56d20cf8299547fec20623464866",
+      "indexed_mask_differences_from_SourceNx": 0,
+      "reserved_samples": 0,
+      "saved_visible_PNG_RGB_exact_actual_indexed_bank": true,
+      "scale": 1,
+      "transparent_index_samples_presented_only_as_opaque_matte": [
+        20,
+        28,
+        38
+      ],
+      "visible_samples": 591
+    },
+    {
+      "PNG_sha256": "290b7ab3338326d0dacda51c3f725ddb9972321c7defbde2d1b80087e522d37f",
+      "indexed_mask_differences_from_SourceNx": 0,
+      "reserved_samples": 0,
+      "saved_visible_PNG_RGB_exact_actual_indexed_bank": true,
+      "scale": 2,
+      "transparent_index_samples_presented_only_as_opaque_matte": [
+        20,
+        28,
+        38
+      ],
+      "visible_samples": 2352
+    },
+    {
+      "PNG_sha256": "12cf6877effd982437674804c96d34e1771e2af721c1706ea5706c4064f85a63",
+      "indexed_mask_differences_from_SourceNx": 0,
+      "reserved_samples": 0,
+      "saved_visible_PNG_RGB_exact_actual_indexed_bank": true,
+      "scale": 3,
+      "transparent_index_samples_presented_only_as_opaque_matte": [
+        20,
+        28,
+        38
+      ],
+      "visible_samples": 5283
+    },
+    {
+      "PNG_sha256": "76938cca8ad48f869ceff9084130410cbe40f97c03647369df8949bd939e7a67",
+      "indexed_mask_differences_from_SourceNx": 0,
+      "reserved_samples": 0,
+      "saved_visible_PNG_RGB_exact_actual_indexed_bank": true,
+      "scale": 4,
+      "transparent_index_samples_presented_only_as_opaque_matte": [
+        20,
+        28,
+        38
+      ],
+      "visible_samples": 9396
+    }
+  ],
+  "limits": [
+    "Intrinsic complete1 only; genuine terrain/ship-destruction caller context, scroll, shadow composition and actual mission still require separate review.",
+    "Generated-material interpretation with bounded darken-only brightness cap, not untouched generator output or exact Original RGB. Fine gray material is visible within the Source-stepped dark silhouette; native1 compresses fine texture.",
+    "373noncascading donorfills and1806darkened samples are disclosed. Original RGB replacement0 and reserved palette samples0: Source supplies coverage/brightness bounds, not credited replacement detail.",
+    "Actual indexed native1/2/3/4 masks match Source kernels exactly (591/2352/5283/9396painted). Author generic warning about possible native3 mismatch is not an observed mismatch here.",
+    "Native PNG review canvases intentionally flatten transparent pixels onto20,28,38matte; they are not substituted for genuine runtime RGBA or asserted to preserve alpha themselves. The initial reviewer mistaken alpha assumption is preserved separately.",
+    "Old untouched/rawHOLD and its bank remain unchanged. No global engine/context/palette equivalence is claimed."
+  ],
+  "material_judgment": "QUALIFIED: final wreck retains Source nearblack broad backing, coherent horizontal upper debris, paler gray center and narrow long lower rectangular opening/stem. Teal upper-center remnant stays localized. Genuine mottled steel and small panel seams remain without held raw overbrightness. No added wing, oversized luminous plate or structural clipping.",
+  "new_generation_cleanup_QA_World_code": 0,
+  "physical_scope": "Whole512SourceNN16, wholeuntouched1280raw, whole128derived, all4complete native32/64/96/128PNG presentation canvases. Native presentations use explicit opaque matte; actual coverage is independently checked from indexed bank.",
+  "physical_views": [
+    {
+      "dimensions": [
+        512,
+        512
+      ],
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp01g3-30093-Original-primary-singleton-author-20261019-v1/Original-30093-nearest16x-reference.png",
+      "sha256": "0c5322d43d25de0c33ff728ecbf65ebf9f6cda75e243d166db64713188fbabea"
+    },
+    {
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp01g3-30093-Original-primary-singleton-author-20261019-v1/raw-untouched-builtin-v1.png",
+      "sha256": "eb5f343d8aa19c8aa74b7da37f18ce36b31bb4660446d5b4ac4a1f3007593e80"
+    },
+    {
+      "dimensions": [
+        128,
+        128
+      ],
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp01g3-30093-Original-primary-singleton-author-20261019-v1/actual-once-bounded-derived-v1/30093-derived.png",
+      "sha256": "7656cb3b1685b623bb5d1edda54a3ec7ed05adb2c0f1df25701638c02f192397"
+    },
+    {
+      "dimensions": [
+        32,
+        32
+      ],
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp01g3-30093-Original-primary-singleton-author-20261019-v1/actual-once-SourceG2-derived-final-v1/30093-hd-1.png",
+      "sha256": "e458485bf8ca56af6e3ce856547219f7f51a56d20cf8299547fec20623464866"
+    },
+    {
+      "dimensions": [
+        64,
+        64
+      ],
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp01g3-30093-Original-primary-singleton-author-20261019-v1/actual-once-SourceG2-derived-final-v1/30093-hd-2.png",
+      "sha256": "290b7ab3338326d0dacda51c3f725ddb9972321c7defbde2d1b80087e522d37f"
+    },
+    {
+      "dimensions": [
+        96,
+        96
+      ],
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp01g3-30093-Original-primary-singleton-author-20261019-v1/actual-once-SourceG2-derived-final-v1/30093-hd-3.png",
+      "sha256": "12cf6877effd982437674804c96d34e1771e2af721c1706ea5706c4064f85a63"
+    },
+    {
+      "dimensions": [
+        128,
+        128
+      ],
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-dshp01g3-30093-Original-primary-singleton-author-20261019-v1/actual-once-SourceG2-derived-final-v1/30093-hd-4.png",
+      "sha256": "76938cca8ad48f869ceff9084130410cbe40f97c03647369df8949bd939e7a67"
+    }
+  ],
+  "qualified_frames": 1,
+  "raw_sha256": "eb5f343d8aa19c8aa74b7da37f18ce36b31bb4660446d5b4ac4a1f3007593e80",
+  "registration": false,
+  "reviewed_utc": "2026-10-19T00:55:14.681249+00:00",
+  "reviewer": "/root/ship_portability",
+  "source_sha256": "6477ea0bb108eb2ff185af21d6cf45eb0afdef6fcf5dc7b22ab48a31889f9e45",
+  "status": "QUALIFIED_30093_COMPLETE1_DERIVED_INTRINSIC_WITH_LIMITS_CONTEXT_PENDING"
+}

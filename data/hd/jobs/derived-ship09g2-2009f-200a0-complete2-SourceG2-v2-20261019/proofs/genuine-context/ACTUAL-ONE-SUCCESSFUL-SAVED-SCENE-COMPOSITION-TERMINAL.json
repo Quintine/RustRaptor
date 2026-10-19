@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-currentG2-genuine-S2W9-H5636-context-20261019-v1/ship09-context-adapter",
+    "compose",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-currentG2-genuine-S2W9-H5636-context-20261019-v1/actual-genuine-S2W9-decl141-capture.json",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-currentG2-genuine-S2W9-H5636-context-20261019-v1/fixed-H5636-full-headers-eligible-hardlinks",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-currentG2-genuine-S2W9-H5636-context-20261019-v1/isolated-selected-complete2-runtime-header",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-actual-all-cyan-derived2-currentG2-author-20261019-v2/actual-currentG2-intrinsic2/actual-indexed-source-and-scales.json",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-currentG2-genuine-S2W9-H5636-context-20261019-v1/actual-once-currentG2-H5636-allnative-composition"
+  ],
+  "exit_code": 101,
+  "stderr": "\nthread 'main' (131990) panicked at /home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SHIP09G2-currentG2-genuine-S2W9-H5636-context-20261019-v1/ship09_capture_and_composition.rs:37:599:\nassertion failed: foreign.diagnostics.is_empty() && target.diagnostics.is_empty()\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n",
+  "stdout": "",
+  "seconds": 0.19877847399766324,
+  "World_calls_in_compositor": 0,
+  "intrinsic_QA_calls": 0,
+  "metadata_only_wrapper_bridge": "Renderer fields and files unchanged; candidate-only job_id excluded from strict runtime pack header. Earlier pre-pixel stops preserved."
+}
