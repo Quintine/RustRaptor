@@ -1,0 +1,390 @@
+{
+  "status": "PASS_READONLY_COMPLETE_PACKET_NATIVE_PAGE_AND_DERIVED_SAMPLE_AUDIT",
+  "utc": "2026-10-18T23:39:43.104983+00:00",
+  "strict_sha256": "72ec16de7d663974327e13458d52ddb1aa7b1b4924885dc6e19c441233eee335",
+  "all_strict_files_byte_exact": true,
+  "strict_file_count": 60,
+  "all20_panes_readback_exact_to_declared_NNsize": true,
+  "actual_true_native_unresampled_panes": 10,
+  "diagnostic_NN_exact_integer_panes": 8,
+  "diagnostic_NN_noninteger_panes": 2,
+  "diagnostic_exception": "Both HD3 diagnostic panes are96\u2192256 nearest-neighbor (8/3); interface integer_NN_factor2 is false. Actual native96px bodies were independently physically viewed on unresampled pages. No frozen packet edited.",
+  "panes": [
+    {
+      "asset": "203c6",
+      "page": "203c6-whole-unresampled.png",
+      "role": "203c6-original.ppm",
+      "native_size": [
+        32,
+        32
+      ],
+      "shown_size": [
+        32,
+        32
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 1.0,
+      "declared_integer_factor": 1,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c6",
+      "page": "203c6-whole-unresampled.png",
+      "role": "203c6-hd-1.ppm",
+      "native_size": [
+        32,
+        32
+      ],
+      "shown_size": [
+        32,
+        32
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 1.0,
+      "declared_integer_factor": 1,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c6",
+      "page": "203c6-whole-unresampled.png",
+      "role": "203c6-hd-2.ppm",
+      "native_size": [
+        64,
+        64
+      ],
+      "shown_size": [
+        64,
+        64
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 1.0,
+      "declared_integer_factor": 1,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c6",
+      "page": "203c6-whole-unresampled.png",
+      "role": "203c6-hd-3.ppm",
+      "native_size": [
+        96,
+        96
+      ],
+      "shown_size": [
+        96,
+        96
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 1.0,
+      "declared_integer_factor": 1,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c6",
+      "page": "203c6-whole-unresampled.png",
+      "role": "203c6-hd-4.ppm",
+      "native_size": [
+        128,
+        128
+      ],
+      "shown_size": [
+        128,
+        128
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 1.0,
+      "declared_integer_factor": 1,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c6",
+      "page": "203c6-whole-integerNN.png",
+      "role": "203c6-original.ppm",
+      "native_size": [
+        32,
+        32
+      ],
+      "shown_size": [
+        256,
+        256
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 8.0,
+      "declared_integer_factor": 8,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c6",
+      "page": "203c6-whole-integerNN.png",
+      "role": "203c6-hd-1.ppm",
+      "native_size": [
+        32,
+        32
+      ],
+      "shown_size": [
+        256,
+        256
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 8.0,
+      "declared_integer_factor": 8,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c6",
+      "page": "203c6-whole-integerNN.png",
+      "role": "203c6-hd-2.ppm",
+      "native_size": [
+        64,
+        64
+      ],
+      "shown_size": [
+        256,
+        256
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 4.0,
+      "declared_integer_factor": 4,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c6",
+      "page": "203c6-whole-integerNN.png",
+      "role": "203c6-hd-3.ppm",
+      "native_size": [
+        96,
+        96
+      ],
+      "shown_size": [
+        256,
+        256
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 2.6666666666666665,
+      "declared_integer_factor": 2,
+      "integer_claim_exact": false
+    },
+    {
+      "asset": "203c6",
+      "page": "203c6-whole-integerNN.png",
+      "role": "203c6-hd-4.ppm",
+      "native_size": [
+        128,
+        128
+      ],
+      "shown_size": [
+        256,
+        256
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 2.0,
+      "declared_integer_factor": 2,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c7",
+      "page": "203c7-whole-unresampled.png",
+      "role": "203c7-original.ppm",
+      "native_size": [
+        32,
+        32
+      ],
+      "shown_size": [
+        32,
+        32
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 1.0,
+      "declared_integer_factor": 1,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c7",
+      "page": "203c7-whole-unresampled.png",
+      "role": "203c7-hd-1.ppm",
+      "native_size": [
+        32,
+        32
+      ],
+      "shown_size": [
+        32,
+        32
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 1.0,
+      "declared_integer_factor": 1,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c7",
+      "page": "203c7-whole-unresampled.png",
+      "role": "203c7-hd-2.ppm",
+      "native_size": [
+        64,
+        64
+      ],
+      "shown_size": [
+        64,
+        64
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 1.0,
+      "declared_integer_factor": 1,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c7",
+      "page": "203c7-whole-unresampled.png",
+      "role": "203c7-hd-3.ppm",
+      "native_size": [
+        96,
+        96
+      ],
+      "shown_size": [
+        96,
+        96
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 1.0,
+      "declared_integer_factor": 1,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c7",
+      "page": "203c7-whole-unresampled.png",
+      "role": "203c7-hd-4.ppm",
+      "native_size": [
+        128,
+        128
+      ],
+      "shown_size": [
+        128,
+        128
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 1.0,
+      "declared_integer_factor": 1,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c7",
+      "page": "203c7-whole-integerNN.png",
+      "role": "203c7-original.ppm",
+      "native_size": [
+        32,
+        32
+      ],
+      "shown_size": [
+        256,
+        256
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 8.0,
+      "declared_integer_factor": 8,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c7",
+      "page": "203c7-whole-integerNN.png",
+      "role": "203c7-hd-1.ppm",
+      "native_size": [
+        32,
+        32
+      ],
+      "shown_size": [
+        256,
+        256
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 8.0,
+      "declared_integer_factor": 8,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c7",
+      "page": "203c7-whole-integerNN.png",
+      "role": "203c7-hd-2.ppm",
+      "native_size": [
+        64,
+        64
+      ],
+      "shown_size": [
+        256,
+        256
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 4.0,
+      "declared_integer_factor": 4,
+      "integer_claim_exact": true
+    },
+    {
+      "asset": "203c7",
+      "page": "203c7-whole-integerNN.png",
+      "role": "203c7-hd-3.ppm",
+      "native_size": [
+        96,
+        96
+      ],
+      "shown_size": [
+        256,
+        256
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 2.6666666666666665,
+      "declared_integer_factor": 2,
+      "integer_claim_exact": false
+    },
+    {
+      "asset": "203c7",
+      "page": "203c7-whole-integerNN.png",
+      "role": "203c7-hd-4.ppm",
+      "native_size": [
+        128,
+        128
+      ],
+      "shown_size": [
+        256,
+        256
+      ],
+      "body_readback_exact": true,
+      "actual_scale_factor": 2.0,
+      "declared_integer_factor": 2,
+      "integer_claim_exact": true
+    }
+  ],
+  "measurements": [
+    {
+      "asset": "203c6",
+      "Source_original_PPM_exact": true,
+      "gray_logical_cells": 179,
+      "selected_RGBA_pixels": 2864,
+      "outside_exact_RGBA_pixels": 13520,
+      "all_alpha_exact": true,
+      "output_sha256": "fd913999df7a3c45f7c414071d0177fef53900968b9b542fae22f17e206954c3",
+      "gray_RGB_mean": [
+        71.6497905027933,
+        71.26466480446928,
+        71.26466480446928
+      ],
+      "constant_Y_offset": 21.478905865921796,
+      "maximum_Y_structure_rounding_error": 0.41629413407821403
+    },
+    {
+      "asset": "203c7",
+      "Source_original_PPM_exact": true,
+      "gray_logical_cells": 192,
+      "selected_RGBA_pixels": 3072,
+      "outside_exact_RGBA_pixels": 13312,
+      "all_alpha_exact": true,
+      "output_sha256": "0bee64e5fc22c22c98688ec8a9ce942788f07d40b185a7b36e715f496de93f20",
+      "gray_RGB_mean": [
+        70.376953125,
+        69.978515625,
+        69.978515625
+      ],
+      "constant_Y_offset": 21.433011002604175,
+      "maximum_Y_structure_rounding_error": 0.38998899739583237
+    }
+  ],
+  "actual_cleanup_or_QA_calls": 0,
+  "no_pixels_written": true
+}

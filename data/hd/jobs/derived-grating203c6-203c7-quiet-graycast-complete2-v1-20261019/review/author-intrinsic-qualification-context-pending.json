@@ -1,0 +1,72 @@
+{
+  "status": "AUTHOR_INTRINSIC_QUALIFIED2_CONTEXT_PENDING_NOT_ADMISSION",
+  "selected": [
+    "203c6",
+    "203c7"
+  ],
+  "actual_cleanup_invocations": 1,
+  "actual_new_currentG2_intrinsic_QA_invocations": 1,
+  "new_imagegen_invocations": 0,
+  "QA_sha256": "62d093c4ec0ec0580fa4c8e22c6eb39ba791bb1d3c37cfcb5f91cfbdebb36962",
+  "physical_review": [
+    "Both whole unresampled Original+native1/2/3/4 boards opened and inspected completely.",
+    "Both full integer-NN diagnostic boards opened and inspected completely.",
+    "Gray grating rib/frame contrast now reads at native1/2 and retains mottled generated variation at native3/4.",
+    "Ground remains dark/brown with authentic Source block geometry and subtle generated material variation; no bright raised chrome or expanded tan boxes."
+  ],
+  "limits": [
+    "Native1 is softer than Original at some edge pixels.",
+    "Native3/4 show granular gray variation and visibly Source-shaped brown ground blocks.",
+    "Generated luminance is preserved to rounding within the fixed Source-owned semantic mask; Original geometry and one aggregate gray anchor are not generated HD detail.",
+    "Outside equality is to disclosed Pillow Lanczos3 baseline, not old Rust helper resampling.",
+    "Genuine terrain contexts, different material peer, Root admission and portability checks still pending."
+  ],
+  "measurements": [
+    {
+      "asset": "203c6",
+      "selected_logical_cells": 179,
+      "selected_output_pixels": 2864,
+      "outside_exact_Pillow_baseline_pixels": 13520,
+      "changed_selected_pixels": 2864,
+      "before_RGB_mean": [
+        58.34252793296089,
+        48.071578212290504,
+        42.6875
+      ],
+      "after_RGB_mean": [
+        71.6497905027933,
+        71.26466480446928,
+        71.26466480446928
+      ],
+      "before_mean_R_minus_B": 15.655027932960893,
+      "after_mean_R_minus_B": 0.3851256983240223,
+      "all_alpha_exact": true,
+      "outside_exact": true,
+      "old_Rust_resampling_equality_claimed": false
+    },
+    {
+      "asset": "203c7",
+      "selected_logical_cells": 192,
+      "selected_output_pixels": 3072,
+      "outside_exact_Pillow_baseline_pixels": 13312,
+      "changed_selected_pixels": 3072,
+      "before_RGB_mean": [
+        56.8310546875,
+        46.934895833333336,
+        41.674479166666664
+      ],
+      "after_RGB_mean": [
+        70.376953125,
+        69.978515625,
+        69.978515625
+      ],
+      "before_mean_R_minus_B": 15.156575520833334,
+      "after_mean_R_minus_B": 0.3984375,
+      "all_alpha_exact": true,
+      "outside_exact": true,
+      "old_Rust_resampling_equality_claimed": false
+    }
+  ],
+  "prior_V2_HOLD_preserved": true,
+  "canonical_mutations": 0
+}

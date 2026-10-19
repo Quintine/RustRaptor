@@ -1,7 +1,7 @@
 {
   "generator": "built-in image_gen tool (imagegen skill)",
   "generated_on": "2026-10-10",
-  "status": "5636 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
+  "status": "5647 reviewed original picture frames registered as complete families or explicit standalone Terrain selections. Whole-catalog queues remain active; HD stays optional. Render reachability is recorded separately.",
   "rejected_variants": [
     {
       "file": "light-player-bank-0-hd-v1.png",
@@ -26648,6 +26648,244 @@
         }
       },
       "frame_bindings_sha256": "f71e6697a0d2f78be3c2579fdaa436d07fb35bb53b8f807a90a899307e1bf42b"
+    },
+    {
+      "job_id": "derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019",
+      "assets": [
+        "203c6",
+        "203c7"
+      ],
+      "frames": 2,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/provenance.json",
+      "coordinator_review": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/runtime-QA-portable-metadata-only-relocation.json",
+      "review": {
+        "author": {
+          "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/author-intrinsic-qualification-context-pending.json",
+          "sha256": "25b855775bc1fe603a7d4697641fec8265e0c23805c8a95e09b3273a9d4761f0"
+        },
+        "different_material": {
+          "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/different-intrinsic/QUALIFIED-DIFFERENT-GRATING2-FIXED-GRAYCAST-COMPLETE2-INTRINSIC-MATERIAL-REVIEW.json",
+          "sha256": "1525f89d9c2f3d377ad16d8902b8afed1c4d931087214e7d6e63f541daeb2cbe"
+        },
+        "scales": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "independent_review": {
+        "intrinsic": {
+          "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/different-intrinsic/QUALIFIED-DIFFERENT-GRATING2-FIXED-GRAYCAST-COMPLETE2-INTRINSIC-MATERIAL-REVIEW.json",
+          "sha256": "1525f89d9c2f3d377ad16d8902b8afed1c4d931087214e7d6e63f541daeb2cbe"
+        },
+        "context": {
+          "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/different-context/QUALIFIED-DIFFERENT-GRATING2-G2-H5613-GENUINE14-ALL168-NATIVE-CONTEXT-REVIEW.json",
+          "sha256": "17eb90c820bc0c9b1a602d7f48c6a95ce9559f0b4c2189cc6b84859b7a8ac00d"
+        }
+      },
+      "frame_bindings_sha256": "6bed8a3014f96ac4a85186685ff55b233c7f4c58b77dcc800dbb138d06fe47bb",
+      "artwork_derivation": {
+        "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/artwork-derivation.json",
+        "sha256": "3245c791c07e9d32e94b23b69d1ce98a8272acf6ef35de1747b15ea7df265c7d"
+      }
+    },
+    {
+      "job_id": "terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1",
+      "assets": [
+        "304e6",
+        "304e9",
+        "304ea"
+      ],
+      "frames": 3,
+      "metadata": "hd.json",
+      "detail": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/candidate.json",
+      "coordinator_review": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/coordinator-review.json",
+      "runtime_qa": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/review/author-intrinsic.json",
+          "sha256": "49b188133e2d90f6ad30ac23ede97472d7544f1d17f5c6ec043dc244302c53ad"
+        },
+        "different": {
+          "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/review/independent-intrinsic.json",
+          "sha256": "1dee7d21edd7035bf1064e6adf28dd7f0bc11ad255bec40c6b60cf50a54dcf0a"
+        }
+      },
+      "independent_review": {
+        "intrinsic": {
+          "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/review/independent-intrinsic.json",
+          "sha256": "1dee7d21edd7035bf1064e6adf28dd7f0bc11ad255bec40c6b60cf50a54dcf0a"
+        },
+        "context": {
+          "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/review/independent-context.json",
+          "sha256": "289a352a34f2001699781c3f2cb4de8b7668c88976f658f548448e664568f14b"
+        }
+      },
+      "frame_bindings_sha256": "10229e7e9866cc225f1198b6d161b86a6b00e61b76f07cddce8162977599f392"
+    },
+    {
+      "job_id": "derived-copyrght10016-global-aspect-SourceG2-v1-20261019",
+      "assets": [
+        "10016"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/candidate.json",
+      "coordinator_review": "jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/runtime-qa.json",
+      "review": {
+        "path": "jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/proofs/author-whole-source-raw-derived-all-native1to4-review.json",
+        "sha256": "6053336b35369549898f43f6f9ed0f3c6d2ac79e7c21fa3d909eaf958892e26b"
+      },
+      "independent_review": {
+        "path": "jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/proofs/different-10016-whole-material-QUALIFIED-WITH-LIMITS-verbatim.json",
+        "sha256": "9a4d02a16d24de5d7b006d8222ba3f2a7d67f9f3a107e33859adb99c71d1df27"
+      },
+      "frame_bindings_sha256": "bf783d85078edf27d7bff8f72c248f6e4a0c4d52ec54b12b9282098667a38e56",
+      "artwork_derivation": {
+        "path": "jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/artwork-derivation.json",
+        "sha256": "912e447671b4b5a98f4b87258ae3840d7368d9b6751dcb30ac470f15838d9e5e"
+      }
+    },
+    {
+      "job_id": "firstcampaign-104fa-SourceG2-used-complete1-20261019",
+      "assets": [
+        "104fa"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/firstcampaign-104fa-SourceG2-used-complete1-20261019/candidate.json",
+      "coordinator_review": "jobs/firstcampaign-104fa-SourceG2-used-complete1-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/firstcampaign-104fa-SourceG2-used-complete1-20261019/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-author-selected5.json",
+          "sha256": "74b1747a08d3b87e03beed952bbf134d92e9902f4f5637419f456b0524aa3ecb"
+        },
+        "different_intrinsic": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-different-intrinsic-selected5.json",
+          "sha256": "0c2bef01148b7e453406f6f0bb369f4fe0554c724981a79b90a1748ede724c0c"
+        }
+      },
+      "independent_review": {
+        "intrinsic": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-different-intrinsic-selected5.json",
+          "sha256": "0c2bef01148b7e453406f6f0bb369f4fe0554c724981a79b90a1748ede724c0c"
+        },
+        "context": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-different-used3-context-peer.json",
+          "sha256": "0fbf6ed77bffa73528faed89a2ef4865bb0ca9c899b293bee2c048c0a278a53d"
+        }
+      },
+      "frame_bindings_sha256": "83fdaee1479f01c6e17c95619bd8254cbe83e7f38896e9465333e9d78a0c0d7e"
+    },
+    {
+      "job_id": "firstcampaign-104fc-SourceG2-unused-complete1-20261019",
+      "assets": [
+        "104fc"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/firstcampaign-104fc-SourceG2-unused-complete1-20261019/candidate.json",
+      "coordinator_review": "jobs/firstcampaign-104fc-SourceG2-unused-complete1-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/firstcampaign-104fc-SourceG2-unused-complete1-20261019/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-author-selected5.json",
+          "sha256": "74b1747a08d3b87e03beed952bbf134d92e9902f4f5637419f456b0524aa3ecb"
+        },
+        "different_intrinsic": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-different-intrinsic-selected5.json",
+          "sha256": "0c2bef01148b7e453406f6f0bb369f4fe0554c724981a79b90a1748ede724c0c"
+        }
+      },
+      "independent_review": {
+        "intrinsic": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-different-intrinsic-selected5.json",
+          "sha256": "0c2bef01148b7e453406f6f0bb369f4fe0554c724981a79b90a1748ede724c0c"
+        },
+        "unused_machine": {
+          "path": "jobs/firstcampaign-104fc-SourceG2-unused-complete1-20261019/catalogue/actual-different-intrinsic-machine-peer.json",
+          "sha256": "a96fcd8f0b088c4ee708ef7592f2ee26e151137b8479a7f351df263620b8488f"
+        }
+      },
+      "frame_bindings_sha256": "983adef07b4c090a701de4d8bc770cdb1b13ebd33d60d3757a72e3e69914f481"
+    },
+    {
+      "job_id": "firstcampaign-104fd-SourceG2-unused-complete1-20261019",
+      "assets": [
+        "104fd"
+      ],
+      "frames": 1,
+      "metadata": "hd.json",
+      "detail": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/candidate.json",
+      "coordinator_review": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-author-selected5.json",
+          "sha256": "74b1747a08d3b87e03beed952bbf134d92e9902f4f5637419f456b0524aa3ecb"
+        },
+        "different_intrinsic": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-different-intrinsic-selected5.json",
+          "sha256": "0c2bef01148b7e453406f6f0bb369f4fe0554c724981a79b90a1748ede724c0c"
+        }
+      },
+      "independent_review": {
+        "intrinsic": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-different-intrinsic-selected5.json",
+          "sha256": "0c2bef01148b7e453406f6f0bb369f4fe0554c724981a79b90a1748ede724c0c"
+        },
+        "unused_machine": {
+          "path": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/catalogue/actual-different-intrinsic-machine-peer.json",
+          "sha256": "b0b80002e64ad19e98c833374bf226a44a2de7932e8ee3dd75fe34b8e3553185"
+        }
+      },
+      "frame_bindings_sha256": "68fdd525bf7bc9bbbcdd6509938b982ff078710808ccb8c740c41adcc8169185",
+      "artwork_derivation": {
+        "path": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/derivation/artwork-derivation.json",
+        "sha256": "0e5f8ed436ac1d2aee36a72fbfc3d8a843e0e8bd02c238f161e38c2278a02066"
+      }
+    },
+    {
+      "job_id": "firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019",
+      "assets": [
+        "103d5",
+        "103d6"
+      ],
+      "frames": 2,
+      "metadata": "hd.json",
+      "detail": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/candidate.json",
+      "coordinator_review": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/coordinator-review.json",
+      "runtime_qa": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/runtime-qa.json",
+      "review": {
+        "author": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-author-selected5.json",
+          "sha256": "74b1747a08d3b87e03beed952bbf134d92e9902f4f5637419f456b0524aa3ecb"
+        },
+        "different_intrinsic": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-different-intrinsic-selected5.json",
+          "sha256": "0c2bef01148b7e453406f6f0bb369f4fe0554c724981a79b90a1748ede724c0c"
+        }
+      },
+      "independent_review": {
+        "intrinsic": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-different-intrinsic-selected5.json",
+          "sha256": "0c2bef01148b7e453406f6f0bb369f4fe0554c724981a79b90a1748ede724c0c"
+        },
+        "context": {
+          "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-different-used3-context-peer.json",
+          "sha256": "0fbf6ed77bffa73528faed89a2ef4865bb0ca9c899b293bee2c048c0a278a53d"
+        }
+      },
+      "frame_bindings_sha256": "c42d47ff9f232819b8f5a13574b0236ed29eea4a8d95e1c1c9fa68ef8ae2ff7f",
+      "artwork_derivation": {
+        "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/derivation/artwork-derivation.json",
+        "sha256": "04d9822a975e94473edf401fd1208374d0506b8ba7fb25f55f8d5e2032b1aa27"
+      }
     }
   ],
   "jobs": [
@@ -26747,8 +26985,8 @@
       "coverage_added": 0
     }
   },
-  "registered_frame_count": 5636,
-  "registration_updated_at_utc": "2026-10-19T00:28:20.074347+00:00",
+  "registered_frame_count": 5647,
+  "registration_updated_at_utc": "2026-10-19T04:05:31.035610+00:00",
   "runtime_validation": {
     "registered_snapshot_frames": 4978,
     "frames": 4978,

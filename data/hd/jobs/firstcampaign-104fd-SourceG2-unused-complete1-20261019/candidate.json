@@ -1,0 +1,43 @@
+{
+  "format_version": 1,
+  "job_id": "firstcampaign-104fd-SourceG2-unused-complete1-20261019",
+  "name": "firstcampaign-104fd-SourceG2-unused-complete1-20261019",
+  "category": "Terrain",
+  "kind": "complete_family",
+  "complete_family": true,
+  "sequences": [
+    {
+      "name": "Original Source-bound reviewed V2 104fd",
+      "base_asset": 66813,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "89f7d875ee7dcf0076223162030df48a866d95b9b7e4bcc0dd037c937bce3ee2",
+          "original_detail_cells": [
+            [
+              2,
+              6
+            ],
+            [
+              28,
+              3
+            ]
+          ],
+          "file": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/artwork/104fd-derived.png"
+        }
+      ]
+    }
+  ],
+  "notes": "Complete standalone32x32 definitions. Only frame.file aliases changed from genuine author native fields. Generation/cleanup/QA and context remain their actual epochs; no new artistic execution.",
+  "artwork_derivation": {
+    "path": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/derivation/artwork-derivation.json",
+    "sha256": "0e5f8ed436ac1d2aee36a72fbfc3d8a843e0e8bd02c238f161e38c2278a02066"
+  }
+}

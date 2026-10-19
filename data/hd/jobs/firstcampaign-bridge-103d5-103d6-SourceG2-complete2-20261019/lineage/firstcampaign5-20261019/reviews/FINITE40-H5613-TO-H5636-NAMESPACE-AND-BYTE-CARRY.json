@@ -1,0 +1,771 @@
+{
+  "status": "PASS_FINITE40_UNCHANGED_CAPTURE_REMAINS_SOURCEG2_H5613",
+  "historical_manifest_sha256": "b13a4f7c494262527df1137ed6a5442e100fc51ec25680b7046e1c6f7820648a",
+  "current_manifest_sha256": "68b238c8639dec79ec50e9c3a70f7ab18a5588b27de4f92325ae8472a16bb5b8",
+  "historical_count": 5613,
+  "current_count": 5636,
+  "new23_disjoint_consumed40": [
+    "200ec",
+    "200ed",
+    "200ee",
+    "200ef",
+    "200f0",
+    "200f1",
+    "200f8",
+    "200f9",
+    "200fa",
+    "200fb",
+    "200fc",
+    "200fd",
+    "200fe",
+    "200ff",
+    "20100",
+    "20101",
+    "20102",
+    "20103",
+    "304b7",
+    "304b8",
+    "304cf",
+    "304d5",
+    "304d6"
+  ],
+  "finite": [
+    {
+      "asset": "10375",
+      "source": {
+        "path": "misc/unnamed.125",
+        "sha256": "72279422efdc677a1463809b28bf03aeb4b216884b981e9ea9992cb736b18a81",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected17/10375/generated-original-only-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "crop": [
+          0,
+          0,
+          1254,
+          1254
+        ],
+        "source_sha256": "72279422efdc677a1463809b28bf03aeb4b216884b981e9ea9992cb736b18a81"
+      },
+      "raw_sha256": "87a7476a06ebb210304c54e65d132cf2003ba43e4670459ca2155ed9bece945e"
+    },
+    {
+      "asset": "103a9",
+      "source": {
+        "path": "misc/unnamed.177",
+        "sha256": "08d66d9e7d8657b7ee7feb54fd179046fe861fe3b5d8213d4bd22a9c5c1e7580",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-103a0-103af/generated/atlas-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "08d66d9e7d8657b7ee7feb54fd179046fe861fe3b5d8213d4bd22a9c5c1e7580",
+        "crop": [
+          314,
+          627,
+          313,
+          313
+        ]
+      },
+      "raw_sha256": "ce8c66943cdc7372c17785860eef83ef4b336781a65460b6beae40169dcef9fc"
+    },
+    {
+      "asset": "103d0",
+      "source": {
+        "path": "misc/unnamed.216",
+        "sha256": "aedd4ad5aca012617801911eb404adb04c065b401dedd2c5163137ff95d68367",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/103d0/jobs/terrain-103d0-103df/generated/tile-103d0-v3.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "aedd4ad5aca012617801911eb404adb04c065b401dedd2c5163137ff95d68367"
+      },
+      "raw_sha256": "0cbe714500b27785b3af27400898f02aa2ff1af508d823bc0cb8f36bda865005"
+    },
+    {
+      "asset": "103d1",
+      "source": {
+        "path": "misc/unnamed.217",
+        "sha256": "49be39ae87ffc0f48c299a9b2d5a8e29f9161ce0fb60cb01a11fa5c48d7f1a6a",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/103d1/jobs/terrain-103d0-103df/generated/tile-103d1-v2.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "49be39ae87ffc0f48c299a9b2d5a8e29f9161ce0fb60cb01a11fa5c48d7f1a6a"
+      },
+      "raw_sha256": "57ace439ef4f33d72b29788b32ea0e3b6372740c3505e058c78ddeb13190534d"
+    },
+    {
+      "asset": "103d2",
+      "source": {
+        "path": "misc/unnamed.218",
+        "sha256": "8cfb0cb528feb075a4913fed841cdc27f6ed64a294e6fdfe119a6e0fff6246b0",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/103d2/jobs/terrain-103d0-103df/generated/tile-103d2-v2.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "8cfb0cb528feb075a4913fed841cdc27f6ed64a294e6fdfe119a6e0fff6246b0"
+      },
+      "raw_sha256": "62fe6dc6db870f9293613d29ef16444de55460db3f5dfc8965b061f94ac51b4e"
+    },
+    {
+      "asset": "103d4",
+      "source": {
+        "path": "misc/unnamed.220",
+        "sha256": "950d2db099bfcdaed6660d6b1f13717702a97fe17048dd175459c1082bfb1434",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/103d4/jobs/terrain-103d0-103df/generated/tile-103d4-v2.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "950d2db099bfcdaed6660d6b1f13717702a97fe17048dd175459c1082bfb1434"
+      },
+      "raw_sha256": "b125a7be5062408eb6b16093650cd1363ec452165408113416442e418955458e"
+    },
+    {
+      "asset": "103d5",
+      "source": {
+        "path": "misc/unnamed.221",
+        "sha256": "5ad6cdee19cca538f9e08b15fb5fee48a394903ced837e84e5fbb19e8a66dc94",
+        "bytes": 1044
+      },
+      "own_proposal_not_registered": true
+    },
+    {
+      "asset": "103d6",
+      "source": {
+        "path": "misc/unnamed.222",
+        "sha256": "8dda05de47883fcbb2540e92d7aabeaf5170ff7147ee55b39af145863d491a0f",
+        "bytes": 1044
+      },
+      "own_proposal_not_registered": true
+    },
+    {
+      "asset": "103d8",
+      "source": {
+        "path": "misc/unnamed.224",
+        "sha256": "3350e4e9b3f6cb778b82ef8587611dd0ec682a382d95a1c336e92dca11ff4e45",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/103d8/jobs/terrain-103d0-103df/generated/tile-103d8-v2.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "3350e4e9b3f6cb778b82ef8587611dd0ec682a382d95a1c336e92dca11ff4e45"
+      },
+      "raw_sha256": "85c43a632175e2d511b82e3fa60cb39827f61b1dbb075d71f631947bb9c06739"
+    },
+    {
+      "asset": "103da",
+      "source": {
+        "path": "misc/unnamed.226",
+        "sha256": "994cb3a041f3c0980c5b65ad3d25739a0c51a76a796c297d3570f360c36e866a",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/103da/jobs/terrain-103d0-103df/generated/tile-103da-v2.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "994cb3a041f3c0980c5b65ad3d25739a0c51a76a796c297d3570f360c36e866a"
+      },
+      "raw_sha256": "7915d9efdfce3d5ad39834345e4eeaf40e2deea575f1d3be4a1b04fb0085cebf"
+    },
+    {
+      "asset": "103db",
+      "source": {
+        "path": "misc/unnamed.227",
+        "sha256": "50bfe85bcd4fa2800455e99c6efac3d11d4c83cc11a32152d9278de8367fd608",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/103db/jobs/terrain-103d0-103df/generated/tile-103db-v2.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "50bfe85bcd4fa2800455e99c6efac3d11d4c83cc11a32152d9278de8367fd608"
+      },
+      "raw_sha256": "5f4ca9b293ecdef25ca3ea3dbc2aa4562b4053ee03b0b7f885f69a701aba8857"
+    },
+    {
+      "asset": "103dc",
+      "source": {
+        "path": "misc/unnamed.228",
+        "sha256": "1b436b0413daca51551a913bcf7f5f7decc288d10985835577ab97524c247d7e",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/103dc/jobs/terrain-103d0-103df/generated/tile-103dc-v2.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "1b436b0413daca51551a913bcf7f5f7decc288d10985835577ab97524c247d7e"
+      },
+      "raw_sha256": "4456acf70e628ed6d73fdc10803c1d1b101c5252c1171a0b13588c58e5200633"
+    },
+    {
+      "asset": "103dd",
+      "source": {
+        "path": "misc/unnamed.229",
+        "sha256": "ff9e7056e097011bd7a1736a9739bcaa1e5b21b75f672bca55a71d71f052755d",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/103dd/jobs/terrain-103d0-103df/generated/tile-103dd-v2.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "ff9e7056e097011bd7a1736a9739bcaa1e5b21b75f672bca55a71d71f052755d"
+      },
+      "raw_sha256": "5955b09f02fd0845071559957a598321418f93a0d99dfbbde367423c69053adb"
+    },
+    {
+      "asset": "103e3",
+      "source": {
+        "path": "misc/unnamed.235",
+        "sha256": "da7ee7a43d41d704a715427e998d926e986e5bd109b92985e717ddf3642f46a0",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-103e0-103ef/generated/atlas-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "da7ee7a43d41d704a715427e998d926e986e5bd109b92985e717ddf3642f46a0",
+        "crop": [
+          940,
+          0,
+          313,
+          313
+        ]
+      },
+      "raw_sha256": "1de996634c0edcca2e843c70fa11d6722de8760924582b484dd63e0c3285e745"
+    },
+    {
+      "asset": "103e4",
+      "source": {
+        "path": "misc/unnamed.236",
+        "sha256": "a35ae3e87afc64608559ce77425c6382c2fdda74c1d2fdde3585df5f41e738c7",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-103e0-103ef/generated/atlas-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "a35ae3e87afc64608559ce77425c6382c2fdda74c1d2fdde3585df5f41e738c7",
+        "crop": [
+          0,
+          314,
+          313,
+          313
+        ]
+      },
+      "raw_sha256": "1de996634c0edcca2e843c70fa11d6722de8760924582b484dd63e0c3285e745"
+    },
+    {
+      "asset": "10427",
+      "source": {
+        "path": "misc/unnamed.303",
+        "sha256": "4ea3952cba0138e572066f7cdad701bf94e4a30a508c5c2b0cef226d6ae33f34",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-10420-1042f/generated/tile-10427-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "4ea3952cba0138e572066f7cdad701bf94e4a30a508c5c2b0cef226d6ae33f34"
+      },
+      "raw_sha256": "bcca478cc9503265e2e11948727ca58be5bc4dbf6a8b9334ffea15dbb84afbda"
+    },
+    {
+      "asset": "10428",
+      "source": {
+        "path": "misc/unnamed.304",
+        "sha256": "3275dd3188a6a2b074100acf69116c2e503a2f7146c8177f4b5b3eb5ead4eed7",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-10420-1042f/generated/tile-10428-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "3275dd3188a6a2b074100acf69116c2e503a2f7146c8177f4b5b3eb5ead4eed7"
+      },
+      "raw_sha256": "19f2bd98e1a99d218e20e194953417846079e67b83319c11ebe8170e955cd6dc"
+    },
+    {
+      "asset": "1042b",
+      "source": {
+        "path": "misc/unnamed.307",
+        "sha256": "8e44e4336bf4b3a055c1cfeb1cf5d0de15b50b13f7a7a8992620e14286f37a38",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-10420-1042f/generated/tile-1042b-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "8e44e4336bf4b3a055c1cfeb1cf5d0de15b50b13f7a7a8992620e14286f37a38"
+      },
+      "raw_sha256": "381e35fb8fdc66dc75d395a84264869c4d35787e3c1646343b8df69865cb7c74"
+    },
+    {
+      "asset": "1042d",
+      "source": {
+        "path": "misc/unnamed.309",
+        "sha256": "fcb00055fb3709102979d2b123d18680690800c6ffa1ebd1d0864cf9fbf86459",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-10420-1042f/generated/tile-1042d-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "fcb00055fb3709102979d2b123d18680690800c6ffa1ebd1d0864cf9fbf86459"
+      },
+      "raw_sha256": "cdafba7cf06e075f75915127aa15498763c97204286abb4563652a060b7a1c72"
+    },
+    {
+      "asset": "10434",
+      "source": {
+        "path": "misc/unnamed.316",
+        "sha256": "623db0d1560718471d3137fa5b843c7fa79005ab0c060984c1535796ad06fb85",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-10430-1043f/generated/tile-10434-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "623db0d1560718471d3137fa5b843c7fa79005ab0c060984c1535796ad06fb85"
+      },
+      "raw_sha256": "1dee99144d8978b17813771ed2080fb4d2ce7fc167b1781c028e3542dff857fe"
+    },
+    {
+      "asset": "1049c",
+      "source": {
+        "path": "misc/unnamed.420",
+        "sha256": "b3dab6cb2402115d102f30e9e75c448b793b1658598e9654f475c89f8172231d",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-10490-1049f/generated/tile-1049c-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "b3dab6cb2402115d102f30e9e75c448b793b1658598e9654f475c89f8172231d"
+      },
+      "raw_sha256": "ff019abad146f4619b08e68c6d4c2024cc2cf0549f0aa78bda52dcfe5d68a69d"
+    },
+    {
+      "asset": "104b3",
+      "source": {
+        "path": "misc/unnamed.443",
+        "sha256": "a5bd1ef3019573bb456ddb61601412a1f583bdd052f4f795947abd52519d8671",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-104b0-104bf/generated/tile-104b3-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "a5bd1ef3019573bb456ddb61601412a1f583bdd052f4f795947abd52519d8671"
+      },
+      "raw_sha256": "67e7969ef8f9cf47398b278d180687c40880bbbc1220c80033ca6413fada3af0"
+    },
+    {
+      "asset": "104b8",
+      "source": {
+        "path": "misc/unnamed.448",
+        "sha256": "8ad166530af657fbc4f53af1c82351dd2464ce4b86291ba9cc37814755afe8a8",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-104b0-104bf/generated/tile-104b8-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "8ad166530af657fbc4f53af1c82351dd2464ce4b86291ba9cc37814755afe8a8"
+      },
+      "raw_sha256": "8bf74d637ee4176b591f58ca871b31c800ba98489d71bceb70f82783c1947cd3"
+    },
+    {
+      "asset": "104d1",
+      "source": {
+        "path": "misc/unnamed.473",
+        "sha256": "82fc32fc88b1df8f03505c7ca63aa9f91e5aebbb1da18cae6b7b8bf7079ca338",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-104d0-104df/generated/tile-104d1-v2.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "82fc32fc88b1df8f03505c7ca63aa9f91e5aebbb1da18cae6b7b8bf7079ca338"
+      },
+      "raw_sha256": "53cccda3fbdc30a338ad114b9d6721ff8fd3ff5c9dc654172f5896b98c5dc7c3"
+    },
+    {
+      "asset": "104d2",
+      "source": {
+        "path": "misc/unnamed.474",
+        "sha256": "683e6368fbb8c9f14026948029ed75ef64528a8c35ae8134cf8facd2f56c3be1",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-104d0-104df/generated/tile-104d2-v2.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "683e6368fbb8c9f14026948029ed75ef64528a8c35ae8134cf8facd2f56c3be1"
+      },
+      "raw_sha256": "b47d7dcd3eab7e8b4161c72b0555f8d5c53cc23714165de0de260ac2f698bbd6"
+    },
+    {
+      "asset": "104df",
+      "source": {
+        "path": "misc/unnamed.487",
+        "sha256": "0d8fcea907b8dd6060989da3784f08492e446ae1e1b5b4b6119ea653e0c0794d",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-104d0-104df/generated/tile-104df-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "0d8fcea907b8dd6060989da3784f08492e446ae1e1b5b4b6119ea653e0c0794d"
+      },
+      "raw_sha256": "3ef273451306337076904a813a71130417a36b088001521fe130c8a5af79263a"
+    },
+    {
+      "asset": "104f9",
+      "source": {
+        "path": "misc/unnamed.513",
+        "sha256": "824c954509d2c4e4b1baa14a5cb90006f431b18524ea2886774c29410c4ba277",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/104f9/jobs/terrain-104f0-104ff/generated/tile-104f9-v2.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "824c954509d2c4e4b1baa14a5cb90006f431b18524ea2886774c29410c4ba277"
+      },
+      "raw_sha256": "b4b73b81dd092b70d3c545df0d9fca54d2546a064b8383131aef663b902008eb"
+    },
+    {
+      "asset": "104fa",
+      "source": {
+        "path": "misc/unnamed.514",
+        "sha256": "9232e40260ffa3ee688e62e20186d95bb3289edf98e4a390a76d2afed93431c4",
+        "bytes": 1044
+      },
+      "own_proposal_not_registered": true
+    },
+    {
+      "asset": "104ff",
+      "source": {
+        "path": "misc/unnamed.519",
+        "sha256": "023f24e5892eefbbcc7c954730e1f0e8ab9c27a68fe81123021b01e34d016701",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/104ff/jobs/terrain-104f0-104ff/generated/tile-104ff-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "023f24e5892eefbbcc7c954730e1f0e8ab9c27a68fe81123021b01e34d016701"
+      },
+      "raw_sha256": "198156dd07eeda869fd562c664a639e3f3aa2ca6ae3dc851a423625101fcf735"
+    },
+    {
+      "asset": "10501",
+      "source": {
+        "path": "misc/unnamed.521",
+        "sha256": "914957fd2556b5844186d08d310fe8bcc0ea723d47fb1e597771a53a2c9eba25",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/10501/jobs/terrain-10500-1050f/generated/tile-10501-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "914957fd2556b5844186d08d310fe8bcc0ea723d47fb1e597771a53a2c9eba25"
+      },
+      "raw_sha256": "65f751f88ed8fa547ffa85921d6308a3b9b7bcf738fc3932a024b1932e4f4e05"
+    },
+    {
+      "asset": "10505",
+      "source": {
+        "path": "misc/unnamed.525",
+        "sha256": "07ed6dca707915b2851b0c8c5448deb8319a7921d3949fedaa978010d5b3f557",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/10505/jobs/terrain-10500-1050f/generated/tile-10505-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "07ed6dca707915b2851b0c8c5448deb8319a7921d3949fedaa978010d5b3f557"
+      },
+      "raw_sha256": "79d91183007439d4f78e6d7805849a1405d3e0f475fe2a2ab7fb000a6c294483"
+    },
+    {
+      "asset": "10507",
+      "source": {
+        "path": "misc/unnamed.527",
+        "sha256": "d9e0804561d73c83e66dc5c412acfbdd4918391be541e16cda062acc9b5b0d44",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/10507/jobs/terrain-10500-1050f/generated/tile-10507-v2.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "d9e0804561d73c83e66dc5c412acfbdd4918391be541e16cda062acc9b5b0d44"
+      },
+      "raw_sha256": "84e9940a174576342cdfee42955cbd1ea22eccb50be00a60b0aafc7b04bfe7d6"
+    },
+    {
+      "asset": "10509",
+      "source": {
+        "path": "misc/unnamed.529",
+        "sha256": "ad820e692971cf846c7f150ffddb0b0a8966f1b6afa035d8a83ba1a325b90ea2",
+        "bytes": 1044
+      },
+      "Original_fallback_still_unregistered": true
+    },
+    {
+      "asset": "10515",
+      "source": {
+        "path": "misc/unnamed.541",
+        "sha256": "2a03608190b979bb72d8d685502e11856380dc723bcb57fa52ec68b558222880",
+        "bytes": 1044
+      },
+      "Original_fallback_still_unregistered": true
+    },
+    {
+      "asset": "1051c",
+      "source": {
+        "path": "misc/unnamed.548",
+        "sha256": "453cf7c538d133ca7ba74d33d2812ae8b14ec67b06634fec28d8837379a7194c",
+        "bytes": 1044
+      },
+      "Original_fallback_still_unregistered": true
+    },
+    {
+      "asset": "10520",
+      "source": {
+        "path": "misc/unnamed.552",
+        "sha256": "6635d81bb031d0a371c13517d21d7e9e82171b39ded008e526154cfa0f030d07",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/10520/jobs/terrain-10520-1052f/generated/tile-10520-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "6635d81bb031d0a371c13517d21d7e9e82171b39ded008e526154cfa0f030d07"
+      },
+      "raw_sha256": "f3921c730c9729418093f43dab3e8eaa32dbe3a10227f6b8396c706a92a79a37"
+    },
+    {
+      "asset": "10521",
+      "source": {
+        "path": "misc/unnamed.553",
+        "sha256": "6b3bcd5cc096654b9593b39cf973e07771c63daa29c66ec83b14e6b10bd02011",
+        "bytes": 1044
+      },
+      "Original_fallback_still_unregistered": true
+    },
+    {
+      "asset": "10522",
+      "source": {
+        "path": "misc/unnamed.554",
+        "sha256": "605faaecd413992da9eecc35dd7eb48149b217e022b7faef8d0c8d5cb4639871",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "selected53/10522/jobs/terrain-10520-1052f/generated/tile-10522-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "605faaecd413992da9eecc35dd7eb48149b217e022b7faef8d0c8d5cb4639871"
+      },
+      "raw_sha256": "de574f4859520f51e34053375608b8affdbf18cc0f8c3d9d63bd8897fd65a468"
+    },
+    {
+      "asset": "1052f",
+      "source": {
+        "path": "misc/unnamed.567",
+        "sha256": "8d842492b10ea7a41b16c66f3227616a4d9ac6ab4983dfefe655d31f5142c20a",
+        "bytes": 1044
+      },
+      "Original_fallback_still_unregistered": true
+    },
+    {
+      "asset": "10530",
+      "source": {
+        "path": "misc/unnamed.568",
+        "sha256": "30243c7dbbd56de7c269e4c6d4e0aab90d8cadf3b3e36650bfb87d44d714271b",
+        "bytes": 1044
+      },
+      "native": {
+        "frame": 0,
+        "file": "jobs/terrain-10530-1053f/generated/tile-10530-v1.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "30243c7dbbd56de7c269e4c6d4e0aab90d8cadf3b3e36650bfb87d44d714271b"
+      },
+      "raw_sha256": "418f9b0ae3ed065cb42687e1eb9793c49e098b0fcb813ffc0338fb3cef3e727e"
+    }
+  ],
+  "limits": "Read-only Source/native/raw equality of 40 consumed assets. No current H5636 rendering, new QA or global whole-bank validation. Original H5613 contexts retain their literal epoch. Three used proposals unregistered; five Original fallbacks remain unapproved."
+}

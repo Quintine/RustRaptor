@@ -1,0 +1,61 @@
+//! Private ROOTRELEASE SourceG2 H5596 seven genuine static windows, explicit nine proposed siblings, no World.
+use std::{collections::{BTreeMap,BTreeSet},fs,io::Write,path::Path};
+use raptor_replica::{assets::{Catalog,Sprite},content::Registry,hd::{HdAssets,OriginalDetailCells,OriginalPalette},render::{Canvas,upscale},terrain_hd::{logical_sprite,selected_art,TerrainHd,Replacement,RetainedOriginalPlacement,PaletteConstraintPlacement,OverlayResult}};
+use serde_json::{Value,json};
+#[derive(Clone)]struct Layer{image:Sprite,retained:Option<OriginalDetailCells>,domain:Option<OriginalPalette>,record:Value}
+fn read(p:&Path)->Value{serde_json::from_slice(&fs::read(p).unwrap()).unwrap()}
+fn id(v:&Value)->u32{u32::from_str_radix(v.as_str().unwrap(),16).unwrap()}
+fn class(v:u16)->u8{match v{0..=239=>0,240..=244=>1,245..=249=>2,_=>v as u8}}
+fn gz(b:&[u8])->Vec<u8>{let mut z=flate2::write::GzEncoder::new(Vec::new(),flate2::Compression::default());z.write_all(b).unwrap();z.finish().unwrap()}
+fn emit(out:&Path,name:&str,image:&Sprite,pal:&[[u8;3];256])->Value{let mut b=Vec::new();let mut c=Vec::new();let mut ppm=format!("P6\n{} {}\n255\n",image.width,image.height).into_bytes();for &v in &image.pixels{assert!(v<256);b.extend(v.to_le_bytes());c.push(class(v));ppm.extend(pal[v as usize]);}let ip=format!("{name}.indices-u16le.gz");let cp=format!("{name}.classes-u8.gz");let rp=format!("{name}.ppm.gz");fs::write(out.join(&ip),gz(&b)).unwrap();fs::write(out.join(&cp),gz(&c)).unwrap();fs::write(out.join(&rp),gz(&ppm)).unwrap();json!({"width":image.width,"height":image.height,"indexed":ip,"classes":cp,"PPM":rp})}
+// Exact public frame metadata is checked before accepting trusted details/domains.
+fn metadata_stage(frame:&Value,retained:&Option<OriginalDetailCells>,domain:&Option<OriginalPalette>){
+ let expected:Vec<[u32;2]>=frame.get("original_detail_cells").and_then(|v|v.as_array()).map(|v|v.iter().map(|p|[p[0].as_u64().unwrap()as u32,p[1].as_u64().unwrap()as u32]).collect()).unwrap_or_default();
+ assert_eq!(retained.as_ref().map(|d|d.cells()).unwrap_or(&[]),expected.as_slice(),"trusted details match full native frame");
+ let opted=frame.get("palette_constraint").is_some_and(|v|!v.is_null());
+ assert_eq!(domain.is_some(),opted,"foreign/native palette domain must not be discarded");
+ if opted{assert_eq!(frame["palette_constraint"],"original-painted-ordinary-v1");}
+}
+fn bank_indices(bank:&Value,asset:u32,scale:usize)->Vec<u16>{
+ let row=bank.as_array().unwrap().iter().find(|r|id(&r["asset"])==asset).unwrap();
+ let rec=row["scales"].as_array().unwrap().iter().find(|r|r["scale"].as_u64()==Some(scale as u64)).unwrap();
+ assert_eq!([rec["width"].as_u64().unwrap(),rec["height"].as_u64().unwrap()],[(32*scale)as u64,(32*scale)as u64]);
+ rec["indices"].as_array().unwrap().iter().map(|v|v.as_u64().unwrap()as u16).collect()
+}
+
+
+
+
+fn support(ids:&[u32],own:&BTreeSet<u32>,active:&BTreeSet<u32>,cols:usize,rows:usize)->Vec<[usize;4]>{
+ let at=|x:i32,y:i32|->Option<usize>{if x<0||y<0||x>=cols as i32||y>=rows as i32{None}else{Some(y as usize*cols+x as usize)}};let mut r=BTreeSet::new();
+ for(t,v)in ids.iter().enumerate(){if !own.contains(v){continue}let tx=(t%cols)as i32;let ty=(t/cols)as i32;r.insert([t%cols*32,t/cols*32,(t%cols+1)*32,(t/cols+1)*32]);
+  for(dx,dy)in[(-1,0),(1,0),(0,-1),(0,1)]{let Some(q)=at(tx+dx,ty+dy)else{continue};if !active.contains(&ids[q])||own.contains(&ids[q]){continue}let x=q%cols*32;let y=q/cols*32;r.insert(match(dx,dy){(-1,0)=>[x+30,y+2,x+32,y+30],(1,0)=>[x,y+2,x+2,y+30],(0,-1)=>[x+2,y+30,x+30,y+32],_=>[x+2,y,x+30,y+2]});}
+  for vy in[ty,ty+1]{for vx in[tx,tx+1]{let pos=[(vx-1,vy-1),(vx,vy-1),(vx-1,vy),(vx,vy)];let slots:Option<Vec<_>>=pos.iter().map(|&(x,y)|at(x,y)).collect();let Some(slots)=slots else{continue};if !slots.iter().all(|q|active.contains(&ids[*q])){continue}for(&q,&(px,py))in slots.iter().zip(pos.iter()){if own.contains(&ids[q]){continue}let x=q%cols*32+if px==vx{0}else{30};let y=q/cols*32+if py==vy{0}else{30};r.insert([x,y,x+2,y+2]);}}}
+ }r.into_iter().collect()
+}
+fn compose(control:&Sprite,ids:&[u32],s:usize,layers:&BTreeMap<(u32,usize),Layer>,allowed:&BTreeSet<u32>,pal:&[[u8;3];256],cols:usize)->(Sprite,Value){
+ let(mut parts,mut retained,mut domains,mut used)=(Vec::new(),Vec::new(),Vec::new(),Vec::new());
+ for(t,&asset)in ids.iter().enumerate(){if !allowed.contains(&asset){continue}let l=&layers[&(asset,s)];let n=parts.len();if let Some(d)=&l.retained{retained.push(RetainedOriginalPlacement{replacement_index:n,details:d.clone()});}if let Some(p)=&l.domain{domains.push(PaletteConstraintPlacement{replacement_index:n,palette:p.clone()});}
+  parts.push(Replacement{image:l.image.clone(),position:[(t%cols*32)as i32,(t/cols*32)as i32],logical_size:[32,32]});used.push(json!({"slot":t,"asset":format!("{asset:05x}"),"position":[t%cols*32,t/cols*32],"component":l.record,"retained_cells":l.retained.as_ref().map(|d|d.cells()),"palette_domain":l.domain.as_ref().map(|d|d.indices())}));}
+ let composed=TerrainHd::default().compose_with_palette_constraints(control,&parts,&retained,&domains,s,pal);assert!(composed.results.iter().all(|r|*r==OverlayResult::Applied),"{:?}",composed.results);let mut rc=0;let mut dc=0;
+ for r in &retained{let p=&parts[r.replacement_index];for &[x,y]in r.details.cells(){for dy in 0..s{for dx in 0..s{let xx=(p.position[0]as usize+x as usize)*s+dx;let yy=(p.position[1]as usize+y as usize)*s+dy;assert_eq!(composed.image.pixels[yy*control.width+xx],control.pixels[yy*control.width+xx],"retained OriginalNx after every join");rc+=1;}}}}
+ for d in &domains{let p=&parts[d.replacement_index];for y in 0..32*s{for x in 0..32*s{let i=(p.position[1]as usize*s+y)*control.width+p.position[0]as usize*s+x;assert!(d.palette.contains(composed.image.pixels[i]),"joined owner escaped original palette domain");dc+=1;}}}
+ (composed.image,json!({"pre_blit":used,"retained_OriginalNx_samples":rc,"palette_domain_samples":dc}))
+}
+
+
+fn main(){
+ let a:Vec<String>=std::env::args().collect();assert_eq!(a.len(),6,"DATA BASE OWN BANK FRESH_OUTPUT");
+ let own=BTreeSet::from([0x304e6u32,0x304e9,0x304ea]);let c=Catalog::open(&a[1]).unwrap();let pal=c.palette().unwrap();let reg=Registry::base(&c).unwrap();let m=&reg.missions[&raptor_replica::content::ContentId::from("base:sector_3_wave_7")];assert_eq!(m.columns,9);assert_eq!(m.layout.len(),1350);
+ let mut ids=Vec::new();let mut defs=Vec::new();for y in 62..65{for x in 0..9{let t=&m.tiles[m.layout[y*9+x]];let asset=selected_art(t,true,false,false).asset.unwrap();ids.push(asset);defs.push(json!({"row":y,"column":x,"asset":format!("{asset:05x}"),"health":t.health,"reward":t.reward,"definition":t}));if own.contains(&asset){assert_eq!(y,63);assert_eq!(x,if asset==0x304e6{3}else if asset==0x304e9{6}else{7});assert_eq!(t.health,0);assert!(t.destroyed.is_none());}}}
+ let literal=read(&Path::new(&a[2]).join("hd.json"));let mut native=BTreeMap::new();for seq in literal["sequences"].as_array().unwrap(){for f in seq["frames"].as_array().unwrap(){native.insert(seq["base_asset"].as_u64().unwrap()as u32+f["frame"].as_u64().unwrap()as u32,f.clone());}}
+ assert_eq!(native.len(),5613);assert!(own.iter().all(|a|!native.contains_key(a)));let source:BTreeSet<u32>=ids.iter().copied().collect();assert_eq!(source.len(),25);let foreign:BTreeSet<u32>=source.iter().copied().filter(|a|native.contains_key(a)).collect();assert_eq!(foreign.len(),19);let active:BTreeSet<u32>=foreign.union(&own).copied().collect();let fallback:BTreeSet<u32>=source.difference(&active).copied().collect();assert_eq!(fallback,BTreeSet::from([0x304edu32,0x304ee,0x304ef]));
+ let pm=read(&Path::new(&a[3]).join("hd.json"));for seq in pm["sequences"].as_array().unwrap(){let asset=seq["base_asset"].as_u64().unwrap()as u32;assert!(own.contains(&asset));assert_eq!(seq["frame_count"],1);native.insert(asset,seq["frames"][0].clone());}let bank=read(Path::new(&a[4]));assert_eq!(bank.as_array().unwrap().len(),3);
+ let out=Path::new(&a[5]);assert!(!out.exists());fs::create_dir(out).unwrap();fs::create_dir(out.join("components")).unwrap();fs::create_dir(out.join("planes")).unwrap();fs::write(out.join("actual-palette-rgb.bin"),pal.iter().flat_map(|c|c.iter().copied()).collect::<Vec<_>>()).unwrap();
+ let mut baseline=HdAssets::load_lazy(Path::new(&a[2]),&c,None);let mut proposed=HdAssets::load_lazy(Path::new(&a[3]),&c,None);assert_eq!(baseline.registered_count(),5613);assert_eq!(proposed.registered_count(),3);assert!(baseline.diagnostics.is_empty()&&proposed.diagnostics.is_empty(),"base{:?} own{:?}",baseline.diagnostics,proposed.diagnostics);
+ let mut layers=BTreeMap::new();let mut components=Vec::new();for &asset in &active{let original=c.sprite(asset).unwrap();for s in 1..5{let hd=if own.contains(&asset){&mut proposed}else{&mut baseline};let(image,retained,domain)=hd.terrain_sprite_with_palette(asset,s,&pal).unwrap().unwrap();metadata_stage(&native[&asset],&retained,&domain);if own.contains(&asset){assert!(retained.is_none()&&domain.is_none());assert_eq!(image.pixels,bank_indices(&bank,asset,s));let b=bank.as_array().unwrap().iter().find(|b|id(&b["asset"])==asset).unwrap();assert_eq!(original.pixels,b["source"]["indices"].as_array().unwrap().iter().map(|v|v.as_u64().unwrap()as u16).collect::<Vec<_>>());}let mut record=emit(&out.join("components"),&format!("{asset:05x}-s{s}"),&image,&pal);record["asset"]=json!(format!("{asset:05x}"));record["scale"]=json!(s);record["native_frame"]=native[&asset].clone();components.push(record.clone());layers.insert((asset,s),Layer{image,retained,domain,record});}}
+ let regions=support(&ids,&own,&active,9,3);let mut canvas=Canvas{scale:1,image:Sprite{width:288,height:96,pixels:vec![0;288*96]}};for(slot,&asset)in ids.iter().enumerate(){canvas.blit(&c.sprite(asset).unwrap(),(slot%9*32)as i32,(slot/9*32)as i32);}
+ let mut records=Vec::new();for s in 1..5{let original=upscale(&canvas.image,s).unwrap();let(b,bi)=compose(&original,&ids,s,&layers,&foreign,&pal,9);let(p,pi)=compose(&original,&ids,s,&layers,&active,&pal,9);let(mut delta,mut outside,mut fallbackcount,mut foreigninterior)=(0usize,0usize,0usize,0usize);for i in 0..original.pixels.len(){let x=i%original.width;let y=i/original.width;let asset=ids[y/(32*s)*9+x/(32*s)];assert_eq!(class(original.pixels[i]),class(b.pixels[i]));assert_eq!(class(original.pixels[i]),class(p.pixels[i]));if own.contains(&asset){assert_eq!(b.pixels[i],original.pixels[i]);}if fallback.contains(&asset){assert_eq!(b.pixels[i],original.pixels[i]);assert_eq!(p.pixels[i],original.pixels[i]);fallbackcount+=1;}let allowed=regions.iter().any(|r|x>=r[0]*s&&x<r[2]*s&&y>=r[1]*s&&y<r[3]*s);if !allowed{assert_eq!(b.pixels[i],p.pixels[i]);outside+=1;}if foreign.contains(&asset)&&x%(32*s)>=2*s&&x%(32*s)<30*s&&y%(32*s)>=2*s&&y%(32*s)<30*s{assert_eq!(b.pixels[i],p.pixels[i]);foreigninterior+=1;}if b.pixels[i]!=p.pixels[i]{assert!(allowed);delta+=1;}}
+ let mut planes=serde_json::Map::new();for(role,img)in[("Original_joined_SourceNx",&original),("immutable_H5613_baseline",&b),("proposed_newE3",&p)]{planes.insert(role.into(),emit(&out.join("planes"),&format!("strip-s{s}-{role}"),img,&pal));}records.push(json!({"scale":s,"planes":planes,"baseline_inputs":bi,"proposal_inputs":pi,"support_rectangles":regions,"changed_samples":delta,"outside_support_samples_exact":outside,"Original_fallback_samples_exact":fallbackcount,"foreign_interior_samples_exact":foreigninterior}));}
+ assert!(baseline.diagnostics.is_empty()&&proposed.diagnostics.is_empty());let v=json!({"status":"ACTUAL_CURRENTG2_H5613_GENUINE_S3W7_ROW62_64_WHOLE9COLUMN_STRIP_ALL4_SUCCESS","Source_mission":"base:sector_3_wave_7","ordered_source_ids":ids.iter().map(|a|format!("{a:05x}")).collect::<Vec<_>>(),"authentic_Original_definitions":defs,"records":records,"components":components,"own":["304e6","304e9","304ea"],"foreign_Original_fallbacks":["304ed","304ee","304ef"],"source_state":"Literal initial MAP terrain; no damage/settled/declaration/neighbor mutation, selected_art true,false,false. NoWorld/tick/player/Host claim.","World_calls":0,"diagnostics":[]});fs::write(out.join("ACTUAL-CURRENTG2-H5613-NEW-E3-GENUINE-STRIP.json"),serde_json::to_vec_pretty(&v).unwrap()).unwrap();println!("CurrentG2 H5613 genuineS3W7 row62-64 strip;4scales12roleplanes88components;3Own+19Foreign+3Originalfallback;World0");
+}

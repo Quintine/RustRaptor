@@ -1,0 +1,30 @@
+{
+  "actual_candidate": {
+    "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/measurement/actual-original-cohort-candidate.json",
+    "sha256": "9668c6af67adb8ed28c951ee6dad077d7ac9a086327838d349c33b7adff25d8c"
+  },
+  "actual_QA": {
+    "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/measurement/actual-original-cohort-runtime-qa.json",
+    "sha256": "77753c91927d7a56734c6d0e11086a4056b50ef97d71dd9c073996f857c1fe2b"
+  },
+  "portable_candidate": {
+    "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/candidate.json",
+    "sha256": "63a22b50a5e522d989e5a4e84f7d967c0f311761eb3d2ad8a88636b57d5a1da9"
+  },
+  "selected": [
+    "103d5",
+    "103d6"
+  ],
+  "actual_tool_execution_count_unchanged": true,
+  "new_engine_or_art_calls": 0,
+  "all_native_frame_fields_except_file_exact": true,
+  "actual_QA_fields_changed": [
+    "frames subset",
+    "validated_frames",
+    "artwork_sha256 file namespace",
+    "candidate_sha256",
+    "frame_bindings_sha256",
+    "scope/invocation projection metadata"
+  ],
+  "limits": "Selected whole definitions, never animation slices. Original executed whole-cohort evidence stays unchanged. Unused originals have no genuine context and claim none."
+}

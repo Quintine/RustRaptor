@@ -1,0 +1,71 @@
+{
+  "status": "DIFFERENT_QUALIFIED_INTRINSIC_SINGLETON_WITH_EXPLICIT_LIMITS_ROOT_PENDING",
+  "utc": "2026-10-19T01:21:54.424116+00:00",
+  "reviewer": "/root/mission_preview_design",
+  "asset": "10016",
+  "candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-10016-one-derived-and-one-SourceG2-intrinsic-20261019-v1/private-data/hd/jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/candidate.json",
+    "sha256": "be0b2b0eb312ae3aa31b7e5ed336022d16009b1c97ea81dfdc6f7b1a76d584ec",
+    "bytes": 938
+  },
+  "artwork": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-10016-one-derived-and-one-SourceG2-intrinsic-20261019-v1/private-data/hd/jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/derived/10016-derived.png",
+    "sha256": "a6683cdadcb4ebfc70fd24abe91f272471e7a6521f1d214398460055af3c9cca",
+    "bytes": 115211
+  },
+  "runtime_QA": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-10016-one-derived-and-one-SourceG2-intrinsic-20261019-v1/private-data/hd/jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/runtime-qa.json",
+    "sha256": "373e1bb150eaf90200665fc8423109bdf05bdc24190b7b9159cbbecaa92e18a0",
+    "bytes": 6946
+  },
+  "genuine_parent": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-10016-one-derived-and-one-SourceG2-intrinsic-20261019-v1/private-data/hd/jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/inputs/10016-genuine-parent-untouched.png",
+    "sha256": "e36f4fe0ca5b2537a24b09e66d8255cef3ee227b6eebd6eda6a6a93f4d602c77"
+  },
+  "artwork_derivation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-10016-one-derived-and-one-SourceG2-intrinsic-20261019-v1/private-data/hd/jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/artwork-derivation.json",
+    "sha256": "912e447671b4b5a98f4b87258ae3840d7368d9b6751dcb30ac470f15838d9e5e"
+  },
+  "whole_actual_review_pages": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-10016-one-derived-and-one-SourceG2-intrinsic-20261019-v1/whole-visual-review-pages/10016-whole-Original-and-actual-native1to4-neutral-gray.png",
+      "sha256": "da2cde8edfea1611f35d4c72647c41e068f0a314acb1afa73f106bdc231505a3",
+      "bytes": 26097
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-10016-one-derived-and-one-SourceG2-intrinsic-20261019-v1/whole-visual-review-pages/10016-whole-Original-untouched-parent-and-final-derived-neutral-gray.png",
+      "sha256": "0bcfc05220e6dd85eb5f05c8a8e5dec6a3256cbdfdd5c98b3e744effdeb5e1c7",
+      "bytes": 130452
+    }
+  ],
+  "physically_viewed": [
+    "complete Original bitmap on neutral160gray",
+    "complete genuine untouched2167x725 parent",
+    "complete final2176x128 derived PNG",
+    "allfour complete actual currentSourceG2 native1to4 frames on neutral160gray",
+    "direct untouched transparent parent and finalderived at original image resolution"
+  ],
+  "decision": "QUALIFIED_WITH_LIMITS",
+  "findings": [
+    "Full COPYRIGHT CYGNUS STUDIOS INC., copyright ring and1994 retain Original spacing, skinny I, detached punctuation and counter openings. No missing word or clipped outer glyph observed.",
+    "Native1 andnative2 alpha support exactly match Source nearest-neighbor support. Native3 and4 show restrained uneven outer edges, without closing important counters or merging punctuation in the complete inspected frames.",
+    "Genuine parent has visible fine charcoal variation before interpolation, independently verified59088 RGB-varying3x3 windows where allnine alpha>=128. This is not proof of fullyopaque255 material; the explicit threshold is128.",
+    "New treatment is faithful and modest. Native1 is almost flat charcoal16, visually darker than Original charcoal24; mixed24/16 and occasional8 at higher scales provide subtle genuine texture. No dramatic surface-detail claim."
+  ],
+  "numeric_binding_check": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-10016-singleton-different-ART-review-20261019-v1/ACTUAL-READONLY-NUMERIC-AND-PARENT-BINDING-CHECK.json",
+    "sha256": "c20d7392eaf0b638454176177714e3b0a2eb98f1fad44a11481f01dbd96b5f88"
+  },
+  "limits": [
+    "Native1 has262of264 occupied cells index29(RGB16) and2index28(RGB24); Original occupied cells are flat index28(RGB24). This explicit dimness is accepted for this intrinsic catalog text review only.",
+    "Native3alpha differs from OriginalNN at11samples andnative4at235samples. No exact allscale alpha identity is asserted.",
+    "Exactly100 faint alpha1to15 samples outside window discarded; noalpha>=16 parent ink discarded by the globalcrop.",
+    "Source supplies no RGB/stencil in this deterministic derivative. Candidate has no Originalretention-cell metadata, so no Original-retained cells are credited as newHD.",
+    "Both diagnosticpages use neutralgray backing for visibility withoutRGBgain. Untouched transparent inputs were viewed directly as well.",
+    "Current18Rust/356modtext/18OriginalSWD audit hashes independently verified; its no-current-direct-caller claim is bounded. No currentUIscene,World,animation,runtimecontext,Rootapproval,registration or Gitpublication is claimed.",
+    "All prior HOLD artifacts stay historical and unchanged; this approval concerns only candidatebe0b2b0e and finalderiveda6683cda."
+  ],
+  "Root_approval_pending": true,
+  "new_generation_cleanup_QA_World_build_or_registration_calls": 0,
+  "canonical_or_Git_writes": 0
+}

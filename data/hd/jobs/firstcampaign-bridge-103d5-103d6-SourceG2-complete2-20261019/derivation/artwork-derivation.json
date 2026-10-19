@@ -1,0 +1,61 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reproducer/inputs/new-pair-master.png",
+        "sha256": "786270fcd25f15b764c4fc372d63856e2ccfd2ce55884b12b5222efba0967dd0"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/generation/pair/actual-primitive-receipt.json",
+        "sha256": "abb2ee74c5a866d8c659d225ec8a53eee6d09d77caa00c58925e2d40dd06c662"
+      },
+      "prompt": {
+        "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/generation/pair/prompt.txt",
+        "sha256": "3b289e5b75d1b0297a63823c8c69a0881f0c5d53211cea40750c4aa11cc1ef24"
+      }
+    },
+    {
+      "raw_png": {
+        "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reproducer/inputs/genuine-old-c22-road-atlas.png",
+        "sha256": "c22d774a552d121e181a248b8d65fa1c56a19f9c14211b125d0a78bbbedd9176"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/generation/c22/actual-original-generation-provenance.json",
+        "sha256": "b25c33640ad842d878a3e63b397321db869d5bdddb48d95706658211a284e692"
+      },
+      "prompt": {
+        "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/generation/c22/prompt.txt",
+        "sha256": "afe402298643336372671356f5057feb992f7c91aa0cc3bda3876041c6a87dc0"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_firstcampaign_source_components_v2_buffered.py",
+      "sha256": "15c97398e35485ff08ecf0ae7fcf5e6c52848ccbd3ffcbe2d27aba62dad06d40"
+    },
+    {
+      "path": "tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/derivation/actual-executed-recipe.json",
+    "sha256": "8e1735f683998bb1e17c817c6430f69c6225f9c0370d6799d075fa4c75c7f040"
+  },
+  "execution_receipt": {
+    "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/derivation/actual-execution-portable-namespace-bridge.json",
+    "sha256": "0689de384b0bf75247e81712a3bd3f3e5035b61c662a2f45f37109e5e9d2cb36"
+  },
+  "sources": {
+    "103d5": "5ad6cdee19cca538f9e08b15fb5fee48a394903ced837e84e5fbb19e8a66dc94",
+    "103d6": "8dda05de47883fcbb2540e92d7aabeaf5170ff7147ee55b39af145863d491a0f"
+  },
+  "outputs": {
+    "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/artwork/103d5-derived.png": "b9ca0511370eee3eda354ff50c261b1b4b4805e762ba04ffd6cd86843c7730d9",
+    "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/artwork/103d6-derived.png": "a401073f905934c26ff48a90368f8328bc7a959c48354dc811dcdfdc4c1e04d9"
+  }
+}

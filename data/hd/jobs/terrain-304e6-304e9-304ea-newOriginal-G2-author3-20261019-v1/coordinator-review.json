@@ -1,0 +1,75 @@
+{
+  "status": "approved",
+  "reviewer": "/root",
+  "frame_bindings_sha256": "10229e7e9866cc225f1198b6d161b86a6b00e61b76f07cddce8162977599f392",
+  "candidate_sha256": "a646cb1308c9fc56918e7315100a52b4c508b8038b0c3bcbb52399973930b1c6",
+  "runtime_qa": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/runtime-qa.json",
+  "source_and_all_scale_visual_review": {
+    "author": {
+      "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/review/author-intrinsic.json",
+      "sha256": "49b188133e2d90f6ad30ac23ede97472d7544f1d17f5c6ec043dc244302c53ad"
+    },
+    "different": {
+      "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/review/independent-intrinsic.json",
+      "sha256": "1dee7d21edd7035bf1064e6adf28dd7f0bc11ad255bec40c6b60cf50a54dcf0a"
+    }
+  },
+  "independent_review": {
+    "intrinsic": {
+      "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/review/independent-intrinsic.json",
+      "sha256": "1dee7d21edd7035bf1064e6adf28dd7f0bc11ad255bec40c6b60cf50a54dcf0a"
+    },
+    "context": {
+      "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/review/independent-context.json",
+      "sha256": "289a352a34f2001699781c3f2cb4de8b7668c88976f658f548448e664568f14b"
+    }
+  },
+  "actual_historical_context": {
+    "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/review/author-context.json",
+    "sha256": "6d14fabb7cffb749be4f0bbcf3db7d4d371071c5d6f43b9e7800c88d2edf6a6b"
+  },
+  "actual_historical_context_current_input_carry": {
+    "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/review/historicH5613-to-current5636-finite-input-carry.json",
+    "sha256": "d575b02f3b2d233115d8eaa5c8406c4f3daa2c2ce4a817ea167c853a413cfd8e"
+  },
+  "namespace_bridge": {
+    "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/measurement/portable-namespace-bridge.json",
+    "sha256": "82098fa35060e13f12a7c6a1f8f72eb20ee94c7c85835cf90b83ba7f4e24cf71"
+  },
+  "current_QA_epoch": "Actual SourceG2 original3 intrinsic invocation preserved",
+  "context_pixel_epoch": "Literal SourceG2/H5613 compositor output, current5636 finite input equality only",
+  "material_limits": [
+    "Submitted Original RGB previews were0..3/255 darker than true runtime palette because they used6bit*4; exact indexed geometry unaffected, all submitted files remain frozen and true-palette Source used for every actual native comparison.",
+    "Generated304e6/e9 panels have more regular narrow outlines and stronger pale-shelf/dark-triangle relief than the flat drawn Original. Native1 merges subtle panel wear; no claim of exact microgeometry.",
+    "304e9 small ordinary-brown diagonal remnant survives with reduced extent: under the explicit review RGB brown predicate, Original15cells vs native1 ten; centroid about0.6logical pixel right. At larger scales its painted edge is more irregular. This is not a protected palette animation label.",
+    "304ea broad gray fields and stepped red outer border remain recognizable; new medium-gray field is brighter and more textured, with fine ground grain and tiny left-edge brown fragment visible.",
+    "This is intrinsic material review only; no neighboring terrain seam, live gameplay or actual H5613 context rendering is implied.",
+    "The whole3-row strip has cropped terrain above/below; allowncenter tiles have genuine neighbor rows, but this is not a wholemission screen.",
+    "All3own tiles ordinary static palette, no animation/retainedOriginal cells; accepted stronger relief, lighter gray304ea and smaller e9brownremnant remain documented.",
+    "Independent context reviewer and Root final approval remain required; this author context report cannot register artwork."
+  ],
+  "Root_final_approval_required": false,
+  "actual_original_author_QA_calls": 1,
+  "actual_original_context_compositor_calls": 1,
+  "new_portable_QA_render_generation_cleanup_World_calls": 0,
+  "coordinator_record_author": "/root/publication_review",
+  "approval_scope": "Explicit Root-approved current complete native material and separately qualified finite context or catalogue-only scope; predecessor pending text remains historical.",
+  "Root_current_append_approval": {
+    "approved": true,
+    "authority_role": "project_root",
+    "actual_qualified_art_approval": {
+      "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/proofs/Root-actual-qualified-approval-verbatim.json",
+      "sha256": "332036effdbf4d685cbcba283690bdf7a9d3d1858839a1c26d3e72bfe95e98ac"
+    },
+    "notes": [
+      "Three Source panels preserve asymmetric shelves/triangular shadows and localized brown remnant. Generated outlines/relief are stronger, remnant smaller and right panel lighter; accepted finite limits.",
+      "All3Source/native1\u20134 intrinsic bodies and full genuine9x3 strip Original/baseline/proposed at1/4 personally viewed. Independent1dee7d21/289a352a covers all4context scales and precise components. Lower304ed/ee/ef are unremastered Original fallbacks with visible texture step, no seamless/fullbuilding claim.",
+      "Actual pixels are G2/H5613, current5636 finite19foreign/3fallback contributor carry is separate; no fabricated rerender. Submittedreference RGB expansion error0\u20133/255 is disclosed, actual palette/native views use correct runtime colors."
+    ],
+    "pending_predecessor": {
+      "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/proofs/producer-coordinator-pending-verbatim.json",
+      "sha256": "2aa666279c744d1e7d77466133ce60f315f310c02106471817f628dff4739a54"
+    },
+    "historical_pending_statements_superseded_only_by_this_actual_Root_approval": true
+  }
+}

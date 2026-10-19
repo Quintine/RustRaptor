@@ -1,0 +1,29 @@
+{
+  "argv": [
+    "rustc",
+    "--edition=2024",
+    "-C",
+    "opt-level=1",
+    "-C",
+    "debuginfo=0",
+    "--extern",
+    "raptor_replica=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "--extern",
+    "serde_json=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libserde_json-89b5c242431768d3.rlib",
+    "--extern",
+    "flate2=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps/libflate2-808a135ff259ee28.rlib",
+    "-L",
+    "dependency=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps",
+    "-L",
+    "native=/home/quintine/Projects/RaptorReplica/RustRaptor/lib",
+    "-L",
+    "native=/home/quintine/.local/lib",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-independent-304e6-304e9-304ea-intrinsic-and-H5613-context-20261019-v1/compose_E3_currentG2_H5613.rs",
+    "-o",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-independent-304e6-304e9-304ea-intrinsic-and-H5613-context-20261019-v1/E3-currentG2-composer"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "warning: unused import: `logical_sprite`\n --> /home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-independent-304e6-304e9-304ea-intrinsic-and-H5613-context-20261019-v1/compose_E3_currentG2_H5613.rs:3:154\n  |\n3 | ...ls,OriginalPalette},render::{Canvas,upscale},terrain_hd::{logical_sprite,selected_art,TerrainHd,Replacement,RetainedOriginalPlacem...\n  |                                                              ^^^^^^^^^^^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nwarning: 1 warning emitted\n\n",
+  "seconds": 3.9162557780000498
+}

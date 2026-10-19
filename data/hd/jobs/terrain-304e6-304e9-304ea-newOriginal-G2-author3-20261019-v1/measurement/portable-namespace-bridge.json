@@ -1,0 +1,37 @@
+{
+  "status": "PORTABLE_NAMESPACE_ONLY_NO_NEW_RUNTIME_EXECUTION",
+  "original_candidate": {
+    "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/measurement/original-candidate.json",
+    "sha256": "3223323e987643bd28c85d2eb7234b450a6acb9e34f2c1be1953fe986a6147e9"
+  },
+  "portable_candidate": {
+    "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/candidate.json",
+    "sha256": "a646cb1308c9fc56918e7315100a52b4c508b8038b0c3bcbb52399973930b1c6"
+  },
+  "original_QA": {
+    "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/measurement/original-runtime-qa.json",
+    "sha256": "ea829129f572957b79aa32124b99903c8b6c4191bec3bf8d3d42fdc907b24342"
+  },
+  "portable_QA": {
+    "path": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/runtime-qa.json",
+    "sha256": "1425678152695041f3c8f9e1427da57befb96f86af929534d5cda94765a5bb0a"
+  },
+  "file_route_mapping": {
+    "generated/untouched-genuine-builtin-atlas.png": "jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/generated/untouched-genuine-builtin-atlas.png"
+  },
+  "original_bindings": "263816019aadc92ab63ab675027939245885eb69d779fd39ebfc92a516bbc49a",
+  "portable_bindings": "10229e7e9866cc225f1198b6d161b86a6b00e61b76f07cddce8162977599f392",
+  "only_QA_fields_changed": [
+    "frame_bindings_sha256",
+    "candidate_sha256",
+    "candidate_sha256_at_start",
+    "artwork_sha256"
+  ],
+  "all_frame_fields_other_than_file_unchanged": true,
+  "all_original_QA_measurement_source_library_helper_epoch_fields_unchanged": true,
+  "actual_new_QA_calls": 0,
+  "actual_new_compositor_World_generation_cleanup_calls": 0,
+  "context_pixel_epoch": "Historical actual SourceG2/H5613, finite input carry only to5636",
+  "submitted_RGB_preview_error": "Original submitted6bit*4 RGB channel0..3 darker than true runtime palette; exact Source index geometry preserved. Actual native/context palettes are true runtime.",
+  "raw9578_unchanged": true
+}

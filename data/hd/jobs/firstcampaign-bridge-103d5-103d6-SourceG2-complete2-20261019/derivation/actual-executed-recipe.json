@@ -1,0 +1,90 @@
+{
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "operation": "pair",
+  "palette": {
+    "path": "inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "sources": [
+    {
+      "path": "inputs/103d5.pic",
+      "sha256": "5ad6cdee19cca538f9e08b15fb5fee48a394903ced837e84e5fbb19e8a66dc94",
+      "asset": "103d5"
+    },
+    {
+      "path": "inputs/103d6.pic",
+      "sha256": "8dda05de47883fcbb2540e92d7aabeaf5170ff7147ee55b39af145863d491a0f",
+      "asset": "103d6"
+    }
+  ],
+  "donors": {
+    "0": {
+      "path": "inputs/new-pair-master.png",
+      "sha256": "786270fcd25f15b764c4fc372d63856e2ccfd2ce55884b12b5222efba0967dd0",
+      "box": [
+        50,
+        520,
+        280,
+        330
+      ],
+      "texture_period": [
+        256,
+        256
+      ]
+    },
+    "1": {
+      "path": "inputs/new-pair-master.png",
+      "sha256": "786270fcd25f15b764c4fc372d63856e2ccfd2ce55884b12b5222efba0967dd0",
+      "box": [
+        495,
+        225,
+        42,
+        600
+      ],
+      "texture_period": [
+        64,
+        512
+      ]
+    },
+    "2": {
+      "path": "inputs/new-pair-master.png",
+      "sha256": "786270fcd25f15b764c4fc372d63856e2ccfd2ce55884b12b5222efba0967dd0",
+      "box": [
+        30,
+        30,
+        350,
+        130
+      ],
+      "texture_period": [
+        512,
+        256
+      ]
+    },
+    "3": {
+      "path": "inputs/new-pair-master.png",
+      "sha256": "786270fcd25f15b764c4fc372d63856e2ccfd2ce55884b12b5222efba0967dd0",
+      "box": [
+        650,
+        425,
+        480,
+        55
+      ],
+      "texture_period": [
+        1024,
+        96
+      ]
+    },
+    "4": {
+      "path": "inputs/genuine-old-c22-road-atlas.png",
+      "sha256": "c22d774a552d121e181a248b8d65fa1c56a19f9c14211b125d0a78bbbedd9176",
+      "box": [
+        450,
+        315,
+        95,
+        95
+      ]
+    }
+  },
+  "Source_contract": "Only shapes/low frequency colour from Original; genuine generated RGB fine band from exact material donors, amplitude<=19.5/channel. Exact protected SourceNx water samples preserved with no HD credit. No ordinary-only decoder bypass. No global nearest image substitute.",
+  "geometry": "The only two central Source water cross gaps are y16/y23; rail/coast/approach masks come from authentic SourceNx indices."
+}

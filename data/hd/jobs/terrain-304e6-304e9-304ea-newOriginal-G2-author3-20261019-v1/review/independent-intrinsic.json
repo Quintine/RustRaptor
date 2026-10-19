@@ -1,0 +1,119 @@
+{
+  "status": "QUALIFIED3_DIFFERENT_INTRINSIC_ART_REVIEW_WITH_FINITE_LIMITS",
+  "reviewer": "targt_full_context",
+  "author_interface": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-304e6-304e9-304ea-Original-primary-author-20261019-v1/FROZEN-NEW3-WHOLE-SOURCE-RAW-ALLNATIVE-INTRINSIC-PEER-INTERFACE.json",
+    "sha256": "076702ff16da55e72870ccf6e6f8d22f984bc1b9f9c1ee5cbfec6f69575842f6",
+    "bytes": 6800
+  },
+  "qualified": [
+    "304e6",
+    "304e9",
+    "304ea"
+  ],
+  "held": [],
+  "raw": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-304e6-304e9-304ea-Original-primary-author-20261019-v1/generated/untouched-genuine-builtin-atlas.png",
+    "sha256": "9578c2adc3f9c060178bfa5a1f84d8badc88906e96997e9f2d2fd2e916af5dda",
+    "bytes": 2330848
+  },
+  "actual_QA": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-304e6-304e9-304ea-Original-primary-author-20261019-v1/actual-once-SourceG2-intrinsic/runtime-qa.json",
+    "sha256": "ea829129f572957b79aa32124b99903c8b6c4191bec3bf8d3d42fdc907b24342",
+    "bytes": 13573
+  },
+  "actual_bank": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-304e6-304e9-304ea-Original-primary-author-20261019-v1/actual-once-SourceG2-intrinsic/actual-indexed-source-and-scales.json",
+    "sha256": "befa731cf04442dc98f1aed1c68a751fe858248dc470808e06aece5908586214",
+    "bytes": 1328524
+  },
+  "physical_review": {
+    "whole_raw_atlas": true,
+    "whole_Original_and_all4_actual_native_pages": 3,
+    "panes": 15,
+    "source_and_proposal_geometry_observations": [
+      "304e6 and304e9 each retain their three Source horizontal panel regions and three edge shelf/triangle positions; no false extra-shelf duplication claim. Generated borders are narrower/more regular and contrast of shelf/triangle depth is stronger.",
+      "304e9 brown diagonal fragment remains identifiable but has smaller native1extent. This ordinary painted trace is less prominent; accept with explicit disclosed finite limit, not protected animation semantics.",
+      "304ea preserves broad vertical gray fields, narrow dark channels, small left-edge brown trace and stepped right red boundary. Gray is lighter and textured; border orientation and field hierarchy match Source.",
+      "All3 remain opaque32x32 static terrain; no added machinery, lighting bloom, text, holes or transparent cutouts observed. Native1 loses some surface wear, while2\u20134 show restrained texture."
+    ]
+  },
+  "Source_classification": {
+    "category": "Terrain",
+    "game": 3,
+    "static_complete_frames": 3,
+    "source_picture_duplicates": 0,
+    "original_palette_indices_ordinary_0_to239": true,
+    "actual_native_indices_ordinary_0_to239": true,
+    "original_source_index_bytes_match_actual_G2_bank": true,
+    "sources": {
+      "304e6": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.3230",
+        "sha256": "97f4e63b0497b27b072bb2ddc83db83994833bc65d371ec9ff732c7faff0c986",
+        "bytes": 1044
+      },
+      "304e9": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.3233",
+        "sha256": "97dee2f9194e61b07b5c69bcdc32178931f27c168d4fa3d18139c02e8b218447",
+        "bytes": 1044
+      },
+      "304ea": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.3234",
+        "sha256": "9f456c7f8aa5c2e3100d8324bef220fa73e9c40da9a99686a7f8f224cf84fc2d",
+        "bytes": 1044
+      }
+    },
+    "all27MAPs_and4FLATS_independently_scanned": true,
+    "direct_callers": [
+      {
+        "asset": "304e6",
+        "map": "MAP7G3_MAP",
+        "row": 63,
+        "column": 3,
+        "health": -1,
+        "reward": 0
+      },
+      {
+        "asset": "304e9",
+        "map": "MAP7G3_MAP",
+        "row": 63,
+        "column": 6,
+        "health": -1,
+        "reward": 0
+      },
+      {
+        "asset": "304ea",
+        "map": "MAP7G3_MAP",
+        "row": 63,
+        "column": 7,
+        "health": -1,
+        "reward": 0
+      }
+    ],
+    "destroyed_callers": []
+  },
+  "submitted_reference_palette_disclosure": {
+    "max_channel_error": 3,
+    "cause": "submitted6bit*4 instead of true(bit<<2)|(bit>>4)",
+    "Source_index_geometry_exact": true,
+    "actual_review_uses_true_runtime_palette": true,
+    "original_submitted_files_unchanged": true
+  },
+  "context_approval": false,
+  "limits": [
+    "Submitted Original RGB previews were0..3/255 darker than true runtime palette because they used6bit*4; exact indexed geometry unaffected, all submitted files remain frozen and true-palette Source used for every actual native comparison.",
+    "Generated304e6/e9 panels have more regular narrow outlines and stronger pale-shelf/dark-triangle relief than the flat drawn Original. Native1 merges subtle panel wear; no claim of exact microgeometry.",
+    "304e9 small ordinary-brown diagonal remnant survives with reduced extent: under the explicit review RGB brown predicate, Original15cells vs native1 ten; centroid about0.6logical pixel right. At larger scales its painted edge is more irregular. This is not a protected palette animation label.",
+    "304ea broad gray fields and stepped red outer border remain recognizable; new medium-gray field is brighter and more textured, with fine ground grain and tiny left-edge brown fragment visible.",
+    "This is intrinsic material review only; no neighboring terrain seam, live gameplay or actual H5613 context rendering is implied."
+  ],
+  "operations": {
+    "new_imagegen": 0,
+    "new_QA": 0,
+    "new_cleanup": 0,
+    "new_build": 0,
+    "World": 0,
+    "compositor": 0,
+    "canonical_or_Git_or_registration": 0
+  }
+}

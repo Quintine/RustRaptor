@@ -1,0 +1,122 @@
+{
+  "status": "approved",
+  "prepared_by": "/root/grating_pair",
+  "Root_final_coordinator_pending": false,
+  "candidate_sha256": "f369d6d3aa114cb54f466c06c9fbcbfe9eaaaa1d684b1af7ca7aacb1c6a90e88",
+  "frame_bindings_sha256": "6bed8a3014f96ac4a85186685ff55b233c7f4c58b77dcc800dbb138d06fe47bb",
+  "runtime_qa": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/runtime-QA-portable-metadata-only-relocation.json",
+  "artwork_derivation": {
+    "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/artwork-derivation.json",
+    "sha256": "3245c791c07e9d32e94b23b69d1ce98a8272acf6ef35de1747b15ea7df265c7d"
+  },
+  "source_and_all_scale_visual_review": {
+    "author": {
+      "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/author-intrinsic-qualification-context-pending.json",
+      "sha256": "25b855775bc1fe603a7d4697641fec8265e0c23805c8a95e09b3273a9d4761f0"
+    },
+    "different_material": {
+      "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/different-intrinsic/QUALIFIED-DIFFERENT-GRATING2-FIXED-GRAYCAST-COMPLETE2-INTRINSIC-MATERIAL-REVIEW.json",
+      "sha256": "1525f89d9c2f3d377ad16d8902b8afed1c4d931087214e7d6e63f541daeb2cbe"
+    },
+    "scales": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "independent_cleanup_code": {
+    "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/different-code/PASS-FINAL-GRATING2-BOUNDED-GRAY-CAST-DIFFERENT-CODE-REVIEW.json",
+    "sha256": "ae1331cb40a006d9f28df50930572a5a6f231cc410213f519c53dd0ee2e1e0c8"
+  },
+  "independent_review": {
+    "intrinsic": {
+      "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/different-intrinsic/QUALIFIED-DIFFERENT-GRATING2-FIXED-GRAYCAST-COMPLETE2-INTRINSIC-MATERIAL-REVIEW.json",
+      "sha256": "1525f89d9c2f3d377ad16d8902b8afed1c4d931087214e7d6e63f541daeb2cbe"
+    },
+    "context": {
+      "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/different-context/QUALIFIED-DIFFERENT-GRATING2-G2-H5613-GENUINE14-ALL168-NATIVE-CONTEXT-REVIEW.json",
+      "sha256": "17eb90c820bc0c9b1a602d7f48c6a95ce9559f0b4c2189cc6b84859b7a8ac00d"
+    }
+  },
+  "genuine_context_review": {
+    "producer": {
+      "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/proofs/genuine-context-G2-H5613/CLOSED-GRATING2-G2-H5613-GENUINE14-TWO-EVENTS-AUTHOR-CONTEXT-QUAL2.json",
+      "sha256": "b4fb2f2912bc808bf7bf003e8114a0634eed316e4e2f6ad3ab14ee060f910d3c"
+    },
+    "different": {
+      "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/different-context/QUALIFIED-DIFFERENT-GRATING2-G2-H5613-GENUINE14-ALL168-NATIVE-CONTEXT-REVIEW.json",
+      "sha256": "17eb90c820bc0c9b1a602d7f48c6a95ce9559f0b4c2189cc6b84859b7a8ac00d"
+    },
+    "actual_pixel_epoch": "SourceG2/5b6 and immutableH5613/b13a4f7c; all12 real static callers +2 genuine legal foreign-neighbor states,14endpoints/168nativeplanes/220components",
+    "current_input_carry": {
+      "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/proofs/FINITE-55SOURCE-53FOREIGN-H5613-TO-H5636-INPUT-CARRY-NO-NEW-PIXELS.json",
+      "sha256": "58bc090a665090791d0c187645250eee4174621abe55f5a330219f866ca352d7"
+    }
+  },
+  "namespace_only_QA_carry": {
+    "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/PORTABLE-PATH-RELOCATION-WITNESS-NO-NEW-QA.json",
+    "sha256": "0d2d7a44aa28daded3f0d440090c8b797076081769bde00bba1b9568d52eb056"
+  },
+  "diagnostic_exception": {
+    "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/DIAGNOSTIC-HD3-NEAREST8OVER3-EXCEPTION.json",
+    "sha256": "52c55b3821f2f85fd388901938d8d05f1ec9837c0682b2e3cb86a9c504436e81"
+  },
+  "qualification_limits": [
+    "Native1 is softer than Original at some edge pixels.",
+    "Native3/4 show granular gray variation and visibly Source-shaped brown ground blocks.",
+    "Generated luminance is preserved to rounding within the fixed Source-owned semantic mask; Original geometry and one aggregate gray anchor are not generated HD detail.",
+    "Outside equality is to disclosed Pillow Lanczos3 baseline, not old Rust helper resampling.",
+    "Genuine terrain contexts, different material peer, Root admission and portability checks still pending.",
+    "Static health0 grating has no own destruction or reward; two legal foreign neighbor events preserve actualhealth/reward. No timing/World/replay claim.",
+    "All12 actual caller windows captured, but only two finite adjacent-actor states; all neighbor combinations are not claimed.",
+    "Source-shaped brown ground remains visibly blockier/less granular than neighboring existing HD textures; rectangular material transitions and inherited road/building boundaries remain visible.",
+    "Gray3/4 granular variation and native1 softness retained from intrinsic review; Original-owned semantic mask and aggregate gray color are not generated detail.",
+    "Intrinsic integerNN diagnostic HD3 was actually96-to256 nearest neighbor, not integer2; independently qualified actual unresampled native bodies are authoritative.",
+    "Wide ordered preview was resized by tool; full exact native halves subsequently inspected.",
+    "Actualcompiled adapter bytes preserved/restored exactly with disclosed post-executionmtime; zero new executions after preparation rewrite.",
+    "Existing quietV2HOLD, actual62dG2QA and literal historicalpackets remain unchanged; no canonical/Git mutations."
+  ],
+  "Source_owned_not_generated_detail": {
+    "complete_gray_mask_cells": {
+      "203c6": 179,
+      "203c7": 192
+    },
+    "one_aggregate_gray_anchor_per_frame": true,
+    "direct_percell_Original_RGB_copy_operation": false,
+    "coincidentally_matching_RGB_not_counted": true,
+    "generated_detail_origin": "UntouchedquietV2 raw local luminance; a singlefixedmeanoffset and neutralaggregatechroma anchor only. No SourceNx field copied into generatedHD."
+  },
+  "own_runtime_retained_Original_cells": 0,
+  "pending_approved_job_calls": 0,
+  "actual_cleanup_calls": 1,
+  "actual_intrinsic_QA_calls": 1,
+  "actual_context_compile_calls": 1,
+  "actual_context_composition_calls": 1,
+  "new_calls_in_this_packaging": 0,
+  "approval_scope": "Explicit Root-approved current complete native material and separately qualified finite context or catalogue-only scope; predecessor pending text remains historical.",
+  "genuine_context_current_input_carry": {
+    "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/proofs/FINITE-55SOURCE-53FOREIGN-H5613-TO-H5636-INPUT-CARRY-NO-NEW-PIXELS.json",
+    "sha256": "58bc090a665090791d0c187645250eee4174621abe55f5a330219f866ca352d7"
+  },
+  "reviewer": "/root",
+  "coordinator_record_author": "/root/publication_review",
+  "Root_current_append_approval": {
+    "approved": true,
+    "authority_role": "project_root",
+    "actual_qualified_art_approval": {
+      "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/proofs/Root-actual-qualified-approval-verbatim.json",
+      "sha256": "3356fccff843ddf6428ee101775aacd8f49fa08b05af0714b9d1593276b0d803"
+    },
+    "notes": [
+      "Neutral gray grilles and rib geometry read correctly; Source-shaped coarse brown ground and density changes against neighboring HD remain visible accepted limits. Both complete intrinsic boards and two actual full-scale context boards personally viewed.",
+      "Independent1525f89/17eb90c8 reviews cover all14genuine endpoints/168native bodies and ordered foreign-neighbor states. Own static health0/reward0 has no invented destruction. Literal G2/H5613 captures retain their epoch; finite55 carry58bc090a authenticates current5636 unchanged inputs.",
+      "Generated luminance detail remains, only fixed gray cast corrected; outside exact relative to disclosed Pillow baseline, not historical Rust raw raster. Enlarged3x diagnostic96\u2192256nearest8/3 label error is disclosed; true96-native bodies are exact."
+    ],
+    "pending_predecessor": {
+      "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/proofs/producer-coordinator-pending-verbatim.json",
+      "sha256": "6a4d63d9f8219fa5026372c2058afabb81db00401757380a1aa67c8d623bfe3a"
+    },
+    "historical_pending_statements_superseded_only_by_this_actual_Root_approval": true
+  }
+}

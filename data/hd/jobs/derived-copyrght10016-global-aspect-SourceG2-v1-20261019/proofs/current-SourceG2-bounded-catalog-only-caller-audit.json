@@ -1,0 +1,2038 @@
+{
+  "status": "CATALOG_ONLY_WITHIN_BOUNDED_CURRENT_SOURCE_MOD_AND_ORIGINAL_UI_AUDIT_NO_CONTEXT_CLAIM",
+  "asset": "10016",
+  "source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/COPYRGHT_PIC",
+    "sha256": "b3d5581f8f030ba8fb212505d0b69b44e9acdf2e89a5a0eb603b043b009ddcb2",
+    "bytes": 3004
+  },
+  "INDEX": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/INDEX",
+    "sha256": "4ce78e5e638b6603114dd233ceaa41f386c0963ba4aa02ecf88ce0215b096681",
+    "bytes": 188148
+  },
+  "current_Rust_files": [
+    {
+      "path": "src/assets.rs",
+      "sha256": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+      "bytes": 16417
+    },
+    {
+      "path": "src/audio/opl3.rs",
+      "sha256": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+      "bytes": 55234
+    },
+    {
+      "path": "src/audio.rs",
+      "sha256": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+      "bytes": 42072
+    },
+    {
+      "path": "src/cinematics.rs",
+      "sha256": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+      "bytes": 29788
+    },
+    {
+      "path": "src/content.rs",
+      "sha256": "80021611102f22b3152164e88a3ee7ecc8c16e9b3a4563551a047c089f2ba7d2",
+      "bytes": 36845
+    },
+    {
+      "path": "src/desktop.rs",
+      "sha256": "82dfa448623cd05e12110d838b80a4f726fb037a73eec587accbadb4aef33178",
+      "bytes": 368683
+    },
+    {
+      "path": "src/hd.rs",
+      "sha256": "b17f4ee0757ee87d34e01ec76f3a6239c6e9044b42b4b10bd5f05b485f137a64",
+      "bytes": 159636
+    },
+    {
+      "path": "src/legacy_tables.rs",
+      "sha256": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+      "bytes": 26467
+    },
+    {
+      "path": "src/lib.rs",
+      "sha256": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+      "bytes": 318
+    },
+    {
+      "path": "src/main.rs",
+      "sha256": "510d461e6d971749efbbed6570f08aca2605ecc61c16977ab9acb9170c7aba4a",
+      "bytes": 11252
+    },
+    {
+      "path": "src/menu_art.rs",
+      "sha256": "0506bbf30cc14794625b72ab1e6f5e2573e99a833105ce808913485d3452db06",
+      "bytes": 12134
+    },
+    {
+      "path": "src/mod_selection.rs",
+      "sha256": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+      "bytes": 5447
+    },
+    {
+      "path": "src/modding.rs",
+      "sha256": "d2b811416e06a5c743c11c77e5599ddcf5d3263de4f74363bc0731eaccc2c2ac",
+      "bytes": 42228
+    },
+    {
+      "path": "src/persistence.rs",
+      "sha256": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+      "bytes": 52762
+    },
+    {
+      "path": "src/render.rs",
+      "sha256": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+      "bytes": 32172
+    },
+    {
+      "path": "src/simulation.rs",
+      "sha256": "2537120f280a1cfcfcc73a42a4103a4435ba8aeb98e69c87fde3b885b97a9925",
+      "bytes": 140409
+    },
+    {
+      "path": "src/sound.rs",
+      "sha256": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+      "bytes": 11905
+    },
+    {
+      "path": "src/terrain_hd.rs",
+      "sha256": "e61f96f541c19863ce8d741363a1739b9276e25aee84795952c65565c775e392",
+      "bytes": 59391
+    }
+  ],
+  "Rust_direct_token_hits": [],
+  "bundled_mod_text_files": [
+    {
+      "path": "mods/aurora/art/briefing-provenance.json",
+      "sha256": "abe45abca0e84361166004f521eeabffa109a2be97b577ac101422e639920081",
+      "bytes": 2518
+    },
+    {
+      "path": "mods/aurora/content.json",
+      "sha256": "183c56df6cf01b55810966006e2d8ae5ff45f25fefb8b6ebada02cf26c66b8a1",
+      "bytes": 4557
+    },
+    {
+      "path": "mods/aurora/mod.toml",
+      "sha256": "ef1378b3f3f80ae9293f7a580232aac43511e84b92aed2e371cfd7e03f4ca9d4",
+      "bytes": 370
+    },
+    {
+      "path": "mods/aurora/scripts/cell.rhai",
+      "sha256": "8e946d0ff2506eb48046dfad77243826c61e4c387661e2a5ffdc8fe05706c5fe",
+      "bytes": 520
+    },
+    {
+      "path": "mods/aurora/scripts/drone.rhai",
+      "sha256": "e6cf68b1c722edc24357c05da63354c74e8dac763ae1e411c9c81c32e01d36c0",
+      "bytes": 691
+    },
+    {
+      "path": "mods/aurora/scripts/mission.rhai",
+      "sha256": "0f7420151269fd367114ef2b54ab2d68ff70ce3eb13efbe043d7339e83f026c0",
+      "bytes": 361
+    },
+    {
+      "path": "mods/aurora/scripts/weapon.rhai",
+      "sha256": "5155673c3ebaed112c0ffafb513ef817724e43927c75dabf28a2ec0ff3969a51",
+      "bytes": 624
+    },
+    {
+      "path": "mods/ion_lance/art-provenance.json",
+      "sha256": "32231827d4d8d5709c6f4e21e92fdfb9f16d36641dbf8a5b458544dff2c8a756",
+      "bytes": 4228
+    },
+    {
+      "path": "mods/ion_lance/content.json",
+      "sha256": "05ff4310b7cfdcc8a292dd2b9abd42ded04fb360b533c9b1fb8e9c5ba252127a",
+      "bytes": 1610
+    },
+    {
+      "path": "mods/ion_lance/mod.toml",
+      "sha256": "012ba45af2d21d611d92e7fdc02a8c500422f561a64a1050274db89f28ac3822",
+      "bytes": 280
+    },
+    {
+      "path": "mods/ion_lance/scripts/equipment.rhai",
+      "sha256": "c379b6063b999fb5cdb7f0e153277250e1d63a7e1cd2071bc45b91f82c88fe17",
+      "bytes": 329
+    },
+    {
+      "path": "mods/ion_lance/scripts/weapon.rhai",
+      "sha256": "e1ce73610cf51574e2bee5b74e2b95245ff678f229f191c5c242ca821ebe63cc",
+      "bytes": 2900
+    },
+    {
+      "path": "mods/iron_coast_boss/art-qa.json",
+      "sha256": "6315619c5e667e90c7f90c8dea8b07f8c3b3d9ebc51d943804f40ca991450d3a",
+      "bytes": 855
+    },
+    {
+      "path": "mods/iron_coast_boss/audio-recipe.json",
+      "sha256": "fa466f37d4763d7c41a583c68f308a9a209dc5910b7ef55df4f7648cb0d07a5f",
+      "bytes": 589
+    },
+    {
+      "path": "mods/iron_coast_boss/content.json",
+      "sha256": "9ee02264c2a64cedb8296f766e9077596fac73ae113949d47080569db20c5ac8",
+      "bytes": 1496
+    },
+    {
+      "path": "mods/iron_coast_boss/mod.toml",
+      "sha256": "1561c9a8dabbed5f6ad6f49fd354df360f0c22b45b7e759d0e165d85b307b26f",
+      "bytes": 303
+    },
+    {
+      "path": "mods/iron_coast_boss/provenance.json",
+      "sha256": "7ca3cc7952409059d18436be980f82faee992807c8867d158df3a483c51e6f81",
+      "bytes": 1727
+    },
+    {
+      "path": "mods/iron_coast_boss/scripts/ai.rhai",
+      "sha256": "3cd80fda007a143486faaf81256cce115ae00b39408187f3de846a33834a3f62",
+      "bytes": 7456
+    },
+    {
+      "path": "mods/iron_coast_boss_2/art-qa.json",
+      "sha256": "c59a1cb808931b52d978db7537d288290bca6476af738878a17f75a25740c73a",
+      "bytes": 1756
+    },
+    {
+      "path": "mods/iron_coast_boss_2/audio-recipe.json",
+      "sha256": "ea6cdea8a911601307750f343dd2190442009f7428cc328cbebaca2112d62025",
+      "bytes": 1020
+    },
+    {
+      "path": "mods/iron_coast_boss_2/content.json",
+      "sha256": "5c437b663aa5671a0a5843f4c93ed90f59a8dbd0638e98759ff4a84064b43e62",
+      "bytes": 1467
+    },
+    {
+      "path": "mods/iron_coast_boss_2/mod.toml",
+      "sha256": "22d04480b8d166434c00bde072ed0c59c2b6125a980cce5fb2bc8e36d9973434",
+      "bytes": 300
+    },
+    {
+      "path": "mods/iron_coast_boss_2/provenance.json",
+      "sha256": "71e51ea2ab1347b70fd9437923439f065f0060f864e2e988365151618fb2b813",
+      "bytes": 1306
+    },
+    {
+      "path": "mods/iron_coast_boss_2/scripts/ai.rhai",
+      "sha256": "cf117a8d59dbaf2ff194c7282d7cb1ba16175ad4d8e3b02e626bdb8ba1f5e9ae",
+      "bytes": 7579
+    },
+    {
+      "path": "mods/iron_coast_boss_2/validation/Cargo.toml",
+      "sha256": "6552adb6d5520f55c411745041e9adf3100a0af9279c8284c808480936a142ab",
+      "bytes": 247
+    },
+    {
+      "path": "mods/iron_coast_boss_2/validation/report.json",
+      "sha256": "fa9a21d4c6638e96886a4425cd28bbba96192486d1cc941b6c68d7416221b0c0",
+      "bytes": 1009
+    },
+    {
+      "path": "mods/iron_coast_boss_3/art-qa.json",
+      "sha256": "696648641df3e54c25381b766c3ef7b5e6f264fb319fab7addaeee4bea1b338d",
+      "bytes": 1173
+    },
+    {
+      "path": "mods/iron_coast_boss_3/audio-recipe.json",
+      "sha256": "03ffe33e0bf4ced57753ebadb23ce097c88e777995a98b0e3d69e79a6972b3e2",
+      "bytes": 960
+    },
+    {
+      "path": "mods/iron_coast_boss_3/content.json",
+      "sha256": "a7b5b9976859a136e7d02bcf78e6e99bd2e7afed9a9e4162211a946c2b2ae0bb",
+      "bytes": 1507
+    },
+    {
+      "path": "mods/iron_coast_boss_3/mod.toml",
+      "sha256": "85420735d4c5f7614b1c82b857687cc6acecca1e4baacf75c46e00de5cd1314f",
+      "bytes": 297
+    },
+    {
+      "path": "mods/iron_coast_boss_3/provenance.json",
+      "sha256": "172f93234702648dfed876207ed7dd8c87698b4183e853f739b913dbd987561e",
+      "bytes": 1083
+    },
+    {
+      "path": "mods/iron_coast_boss_3/scripts/ai.rhai",
+      "sha256": "5b709fe8db4fcf3506115fd7649e5ced3a9333e876bca9bd3ec871e3f8d35e14",
+      "bytes": 7544
+    },
+    {
+      "path": "mods/iron_coast_boss_4/acceptance-report.json",
+      "sha256": "e277ac3af842dd834d329a68c64da5ddb1ee642bb98328e5db0ad79c7374967e",
+      "bytes": 1562
+    },
+    {
+      "path": "mods/iron_coast_boss_4/art-qa.json",
+      "sha256": "d61a338cb88fc5c0981e4aab20b6fe127517f604a7b6c51f257a64ffae7cfef0",
+      "bytes": 1303
+    },
+    {
+      "path": "mods/iron_coast_boss_4/audio-recipe.json",
+      "sha256": "f58e3e01a6d2f682f1ca4f2318dcea5db20173bc166bb1f53309b6830548e194",
+      "bytes": 973
+    },
+    {
+      "path": "mods/iron_coast_boss_4/content.json",
+      "sha256": "b81ac674f1828e1cca526da3cda3e57dccb46cb8302143cfc15eb449e1090657",
+      "bytes": 1472
+    },
+    {
+      "path": "mods/iron_coast_boss_4/mod.toml",
+      "sha256": "a3fcbd75a98ae4d20fec59aaac270dca4e741f84e761f13c43788a238504a446",
+      "bytes": 310
+    },
+    {
+      "path": "mods/iron_coast_boss_4/provenance.json",
+      "sha256": "c784597656d51cb4f98976450180e185431d6d302fd397e62a77a514a2f55bec",
+      "bytes": 2293
+    },
+    {
+      "path": "mods/iron_coast_boss_4/scripts/ai.rhai",
+      "sha256": "c97bd5c79b798f6f03a8f5eab9b506a587d3a8497eee5f744e5a7fe4c7d3c4fa",
+      "bytes": 7634
+    },
+    {
+      "path": "mods/iron_coast_boss_5/art-qa.json",
+      "sha256": "2c9e91834a66e74a26eb381986e2ccb3f32595d5d28e83742e37126d0a93ca0f",
+      "bytes": 2268
+    },
+    {
+      "path": "mods/iron_coast_boss_5/audio-recipe.json",
+      "sha256": "e36836dc27322d388598127ae4e57280161a8cb7cda331163498dfaf0956a06f",
+      "bytes": 1041
+    },
+    {
+      "path": "mods/iron_coast_boss_5/content.json",
+      "sha256": "5336cd8cfe17ec35bb540e570b1a1294c5e4426a103e2f6fa7ff35299826e136",
+      "bytes": 1835
+    },
+    {
+      "path": "mods/iron_coast_boss_5/mod.toml",
+      "sha256": "4d4ddcdab2c979e1162b60cad3176333f8ced3e8cf19f5daa1a608033108cf93",
+      "bytes": 301
+    },
+    {
+      "path": "mods/iron_coast_boss_5/provenance.json",
+      "sha256": "2ae8f7ebb1ee8c8c367285b10eda29b32f376d561044d2b7c7102afebf76f1cd",
+      "bytes": 2723
+    },
+    {
+      "path": "mods/iron_coast_boss_5/scripts/ai.rhai",
+      "sha256": "33ff0e4e514c7cf4f5cf75ab56678ab92361e2ddb46c2e9926bd5477257be984",
+      "bytes": 7451
+    },
+    {
+      "path": "mods/iron_coast_boss_5/validation/Cargo.toml",
+      "sha256": "3f46046bc70a37db7859e3c2361e9e6d61c70c6d8344c6cdb9eb37baabe7bb66",
+      "bytes": 204
+    },
+    {
+      "path": "mods/iron_coast_boss_5/validation-results.json",
+      "sha256": "cd85594adb7b84d2bfb448afa1d52f5e470173d48f4a31b5be7247b5d2c33ff1",
+      "bytes": 838
+    },
+    {
+      "path": "mods/iron_coast_boss_6/art-qa.json",
+      "sha256": "798c6ca688885ff312b9f66293c7ca427963f5f667f767e1a442f21665429826",
+      "bytes": 1841
+    },
+    {
+      "path": "mods/iron_coast_boss_6/audio-recipe.json",
+      "sha256": "db86dfc890014afde43f10b02ff36b8ec7e9796ce2b36c38b6834b202d3c15be",
+      "bytes": 1068
+    },
+    {
+      "path": "mods/iron_coast_boss_6/content.json",
+      "sha256": "87aa51f1e81df57446e0f68f2fc5c9edc7bd7bb7caada4fcebe40ff3ffa43851",
+      "bytes": 1463
+    },
+    {
+      "path": "mods/iron_coast_boss_6/mod.toml",
+      "sha256": "7558a783ba407dd264fa47a9f3f4934376184fb0d0d55e79bd4abd183ccbe454",
+      "bytes": 301
+    },
+    {
+      "path": "mods/iron_coast_boss_6/provenance.json",
+      "sha256": "136fac8e3d2f568dd1e35212a5fffba2421172771fe0773391c1eb1f5535c50d",
+      "bytes": 1411
+    },
+    {
+      "path": "mods/iron_coast_boss_6/scripts/ai.rhai",
+      "sha256": "d3a58c1ab2237fc8f9c1cd94117413d384e575ba9c7a50b44e02ab7ed4136714",
+      "bytes": 7779
+    },
+    {
+      "path": "mods/iron_coast_boss_6/validation/Cargo.toml",
+      "sha256": "f488efc1f90785296b7ab25aecb0c3f2cbb018724df6144f6e1abc3e40fe11d3",
+      "bytes": 195
+    },
+    {
+      "path": "mods/iron_coast_boss_6/validation-results.json",
+      "sha256": "2e70d55a6bdcd10f078aa61d6e2c68b9d9611873a09f4c60b979fae900e84bdc",
+      "bytes": 1026
+    },
+    {
+      "path": "mods/iron_coast_campaign/art/provenance.json",
+      "sha256": "2c8d6a2456176a7067ad56941303425d6017403e66c46f88b08316c1da3ab191",
+      "bytes": 711
+    },
+    {
+      "path": "mods/iron_coast_campaign/content.json",
+      "sha256": "eb272af6cf5eee153cdf9347c7d7bfd9fe3843adc1c83fe4910cabfbfe6f12a1",
+      "bytes": 632
+    },
+    {
+      "path": "mods/iron_coast_campaign/mod.toml",
+      "sha256": "12a8067df6563452dfcfb8fc225f4789d820ea91d6785c9a08485e514c1d1745",
+      "bytes": 570
+    },
+    {
+      "path": "mods/iron_coast_depth_charge/art/generation-equipment-v1.json",
+      "sha256": "785ff74d12d0cd61477d9513098bbeda2635e6f185d7cd463aae82105ffebd6a",
+      "bytes": 723
+    },
+    {
+      "path": "mods/iron_coast_depth_charge/art/generation-projectile-v1.json",
+      "sha256": "2c27a855a5aba9af9ab3a70ecb4465ab7983d2207a9b9c76772365a5a3bee05d",
+      "bytes": 725
+    },
+    {
+      "path": "mods/iron_coast_depth_charge/art-provenance.json",
+      "sha256": "3ce317a863331283c0a056fe0a16ecfab464156d745f07f2cdd7627b34e5db60",
+      "bytes": 2338
+    },
+    {
+      "path": "mods/iron_coast_depth_charge/audio/provenance.json",
+      "sha256": "5e65a758e0095735716715cc3a79bfbece252d07e6076e7923ab9d5f6bb62c06",
+      "bytes": 908
+    },
+    {
+      "path": "mods/iron_coast_depth_charge/content.json",
+      "sha256": "0018754c435bf14a3567e2c0fee54845ac7954a625fc42b7e35c0ee637e8be05",
+      "bytes": 1812
+    },
+    {
+      "path": "mods/iron_coast_depth_charge/mod.toml",
+      "sha256": "380302a5ee9602a357d64bcd04672593d415d2685cdc20ee0afadd20909fd17a",
+      "bytes": 260
+    },
+    {
+      "path": "mods/iron_coast_depth_charge/prompts.json",
+      "sha256": "988e176fbd52de41ab4e3739ba894b0ddd6117fdc969b4bb31479caa54f1d6cb",
+      "bytes": 2481
+    },
+    {
+      "path": "mods/iron_coast_depth_charge/scripts/weapon.rhai",
+      "sha256": "7f92223a4e8981d067361dea691a6f65ae89e7fb4cbc84afbdcbb367420e257c",
+      "bytes": 2160
+    },
+    {
+      "path": "mods/iron_coast_depth_charge/validation/balance.json",
+      "sha256": "de572084829e6f56bdf6fcd2cf479343b341b17b1a94de14a21e88c3c5a82862",
+      "bytes": 18926
+    },
+    {
+      "path": "mods/iron_coast_depth_charge/validation/review.json",
+      "sha256": "f74ef555bd4ee17b147964ae41958b1fa9c372d6750102439c2ec6d382850d95",
+      "bytes": 8096
+    },
+    {
+      "path": "mods/iron_coast_mission_1/art/briefing-cinematic-provenance.json",
+      "sha256": "c2edc537748cb49f5ed35044811a576af18d5c962f1a1ff1922479cff11b5531",
+      "bytes": 2252
+    },
+    {
+      "path": "mods/iron_coast_mission_1/asset-report.json",
+      "sha256": "1b34514633b3d9089ce109514845d05a1fb2ae2c413a3f9c33d737184ce0785b",
+      "bytes": 2163
+    },
+    {
+      "path": "mods/iron_coast_mission_1/content.json",
+      "sha256": "b0487098b34e45cf84a1b367abb2aeda9b7ed1e86cac4eca5db1b9d480999ae3",
+      "bytes": 68837
+    },
+    {
+      "path": "mods/iron_coast_mission_1/mod.toml",
+      "sha256": "d0031ab85552f429fd0eeb538cbd268103c55e30f4c1ecde7cd532299dc72d25",
+      "bytes": 599
+    },
+    {
+      "path": "mods/iron_coast_mission_1/prompts.json",
+      "sha256": "c4117180c2b8537daf423f37c0bed3b133b357d2fafab83c185ec67d5271bff1",
+      "bytes": 3635
+    },
+    {
+      "path": "mods/iron_coast_mission_1/scripts/depot.rhai",
+      "sha256": "ff9077741e01ee9ba49ca5fef4b2952ae46ee355cdc566955194831341530a27",
+      "bytes": 390
+    },
+    {
+      "path": "mods/iron_coast_mission_1/scripts/mission.rhai",
+      "sha256": "58124d7a699ecf65d36cb5a5a12c7911dd701f5f8fecce6cd3214e90f908a686",
+      "bytes": 3785
+    },
+    {
+      "path": "mods/iron_coast_mission_1/scripts/repair.rhai",
+      "sha256": "1abc4dc3dd5817a5f8ceb21615cc8cadb0894243a9b0db41d981db2264850bfa",
+      "bytes": 171
+    },
+    {
+      "path": "mods/iron_coast_mission_2/acceptance-report.json",
+      "sha256": "faa24b08566f525e178ba0dbe96f0938349cfedc805f4760aaeabddde5e163b7",
+      "bytes": 6864
+    },
+    {
+      "path": "mods/iron_coast_mission_2/art/briefing-cinematic-provenance.json",
+      "sha256": "68f92d6e620de358a9387492d0e845ad09f9eec743f9a0ce28aad9ce1c841859",
+      "bytes": 2253
+    },
+    {
+      "path": "mods/iron_coast_mission_2/asset-report.json",
+      "sha256": "52549e9313525794fb84624c20e67b24af96a47ae22d789cf71c7cd4dbdee468",
+      "bytes": 2524
+    },
+    {
+      "path": "mods/iron_coast_mission_2/content.json",
+      "sha256": "a24cc3f962302e168d63cfcabe38bf76802eb856f6faf781333467f35145aaa8",
+      "bytes": 69456
+    },
+    {
+      "path": "mods/iron_coast_mission_2/mod.toml",
+      "sha256": "a42f1422ca920089d5cbb2e56b9fde5a11ada4752c1cfce45a958e82afc5e7ce",
+      "bytes": 572
+    },
+    {
+      "path": "mods/iron_coast_mission_2/prompts.json",
+      "sha256": "8989e07fa8812fd2f1bb4da7690f4a564934bdf4fab51969b2a7abdf5ab22a57",
+      "bytes": 3540
+    },
+    {
+      "path": "mods/iron_coast_mission_2/scripts/mission.rhai",
+      "sha256": "52b013e0519f44fb9edebcffebdb765820a24bbeacf13728bc7290ad08d05aaf",
+      "bytes": 2951
+    },
+    {
+      "path": "mods/iron_coast_mission_2/scripts/relay.rhai",
+      "sha256": "ce2e0085ff2b68af2a30e6a482acd82cce86654e50f367745476b95c7bbf87ce",
+      "bytes": 1785
+    },
+    {
+      "path": "mods/iron_coast_mission_2/validation/Cargo.toml",
+      "sha256": "aa90fa760778b68e7da5a2b0177defe03f4c4ba4f3a69095b9a5e5de93c76945",
+      "bytes": 253
+    },
+    {
+      "path": "mods/iron_coast_mission_3/art/briefing-cinematic-provenance.json",
+      "sha256": "2b5c6c9e8ca23c5dc65e783a2183930795d552824fa5207f77c9b4eb2e91d2a2",
+      "bytes": 2258
+    },
+    {
+      "path": "mods/iron_coast_mission_3/asset-report.json",
+      "sha256": "ba0c9adad39ec5892677a44fd531149ae2e6144e0cfac31f29923971de502738",
+      "bytes": 1982
+    },
+    {
+      "path": "mods/iron_coast_mission_3/content.json",
+      "sha256": "1001f3fa4f0ce3db1aa65da7ba2558aaef5f471c260b46a2c5203c380f451aec",
+      "bytes": 73317
+    },
+    {
+      "path": "mods/iron_coast_mission_3/mod.toml",
+      "sha256": "b7c36f2ab25726311d7403e26c57e98d4e785bb9302319845d7c9b914585d3e5",
+      "bytes": 593
+    },
+    {
+      "path": "mods/iron_coast_mission_3/prompts.json",
+      "sha256": "955d0780efc3c139db5b08be7e1fa6951f762b809398117793ac298bfd307672",
+      "bytes": 1143
+    },
+    {
+      "path": "mods/iron_coast_mission_3/scripts/convoy.rhai",
+      "sha256": "9780f8a62eef66f971b6c6906f29ab7430c1faf5aa703b84ab8a9d5b9c296f5d",
+      "bytes": 894
+    },
+    {
+      "path": "mods/iron_coast_mission_3/scripts/mission.rhai",
+      "sha256": "132937a30647c3ae5825e2a04dafbe9f3553944d22a3a029d02373adb57c76b6",
+      "bytes": 2588
+    },
+    {
+      "path": "mods/iron_coast_mission_4/acceptance-report.json",
+      "sha256": "24f8ad0daf241b980b4de78ea392846994ed03446840c960b2de5252891f3f19",
+      "bytes": 2908
+    },
+    {
+      "path": "mods/iron_coast_mission_4/art/briefing-sd-full-rgb-provenance.json",
+      "sha256": "9677d041d564b8a10f0431c1979b3f1e7224bfe9893ffb96525724c5fa78cb3e",
+      "bytes": 607
+    },
+    {
+      "path": "mods/iron_coast_mission_4/asset-report.json",
+      "sha256": "c75c5a180ab944c3cafbd67b23000d5cf861e4aab2adbf8e446d8eac966c6b94",
+      "bytes": 1745
+    },
+    {
+      "path": "mods/iron_coast_mission_4/content.json",
+      "sha256": "dd12d042cb0357d76daa481e0793173fdd8a487455cf58d1ded9c9876f27aacc",
+      "bytes": 74562
+    },
+    {
+      "path": "mods/iron_coast_mission_4/mod.toml",
+      "sha256": "097b6009dbde2ad3ebdb80ae119f4d61cba59b3e93612ee0256875762652dd6a",
+      "bytes": 640
+    },
+    {
+      "path": "mods/iron_coast_mission_4/prompts.json",
+      "sha256": "fdee4bb3fec4335231d9cde6798fdead5e5e881b3a31666f95daa5992fd8f7dc",
+      "bytes": 3036
+    },
+    {
+      "path": "mods/iron_coast_mission_4/scripts/mission.rhai",
+      "sha256": "29df77d74558b730e0af245513bb75901527eae588ca30ab20afac7de7991d7e",
+      "bytes": 3722
+    },
+    {
+      "path": "mods/iron_coast_mission_5/art/briefing-cinematic-provenance.json",
+      "sha256": "9e4071db22bec3ef468a3b41dba7a265f453fb55dbbd263155b69322df7d0ffb",
+      "bytes": 2254
+    },
+    {
+      "path": "mods/iron_coast_mission_5/asset-report.json",
+      "sha256": "1b93969c1bbe237626da0c8c5161d01767828401117db75c31a7304d98a63d0a",
+      "bytes": 3278
+    },
+    {
+      "path": "mods/iron_coast_mission_5/content.json",
+      "sha256": "2d07483bc00ff9addde679ab51bd27d0e8f48eca600df1f0c902e56015996634",
+      "bytes": 80782
+    },
+    {
+      "path": "mods/iron_coast_mission_5/mod.toml",
+      "sha256": "c83193309d75382cd700617246e36f5dd96a21166d859034d8e93d710a839e38",
+      "bytes": 616
+    },
+    {
+      "path": "mods/iron_coast_mission_5/prompts.json",
+      "sha256": "d42b627c2313c136c4a9fb56cfffac77f0ca994af93c6e01ae8c4b89f2513f5c",
+      "bytes": 3486
+    },
+    {
+      "path": "mods/iron_coast_mission_5/provenance.json",
+      "sha256": "f86959079e0bdafa13106887d75d4bacd46e0f2505e6908ba852de0e59dfca82",
+      "bytes": 1731
+    },
+    {
+      "path": "mods/iron_coast_mission_5/scripts/coolant.rhai",
+      "sha256": "8bc97be0a048eba400fd4c2df558f5964e43883c8ce001bdfe1024486c6fc5e4",
+      "bytes": 251
+    },
+    {
+      "path": "mods/iron_coast_mission_5/scripts/foundry.rhai",
+      "sha256": "cafdf0f3440cc8dcd3c6db21910f71c5f9abef7e9666ac83b1742b02601e8b30",
+      "bytes": 1435
+    },
+    {
+      "path": "mods/iron_coast_mission_5/scripts/mission.rhai",
+      "sha256": "4a971e6bbf6bed8757f53ac966a128ae7c783f5818088686e26f9c7bbd1194f8",
+      "bytes": 3878
+    },
+    {
+      "path": "mods/iron_coast_mission_5/validation-report.json",
+      "sha256": "f2d8e88ab2fc57c338e15540db22312ccdd9b86b250417dd5386da064e1f36c8",
+      "bytes": 4374
+    },
+    {
+      "path": "mods/iron_coast_mission_6/art/briefing-sd-full-rgb-provenance.json",
+      "sha256": "302f1e87e00d1aed1fb1aed1ae7a1193b1cb08878a8ee23dcca6b362cfb7b319",
+      "bytes": 607
+    },
+    {
+      "path": "mods/iron_coast_mission_6/asset-report.json",
+      "sha256": "627ed9348e40dc221cd9eb487bfbbc4857139665adce5657054ebd4d872ac49e",
+      "bytes": 1770
+    },
+    {
+      "path": "mods/iron_coast_mission_6/content.json",
+      "sha256": "2d3e8ecfa813338785d85f36ab752e8c79cbc2ac97d9d56f222e72b8415552d3",
+      "bytes": 83788
+    },
+    {
+      "path": "mods/iron_coast_mission_6/mod.toml",
+      "sha256": "b5367bcc43bf5af2f2f42feaf11ef247401daa0b6bc583d656455229c29b710e",
+      "bytes": 579
+    },
+    {
+      "path": "mods/iron_coast_mission_6/prompts.json",
+      "sha256": "dc408b5fd7bfd696b864e52af9ef1983dacddcf40bdd25bf6c9a59ec21531d3f",
+      "bytes": 3139
+    },
+    {
+      "path": "mods/iron_coast_mission_6/scripts/mission.rhai",
+      "sha256": "0b79244ea0cc92876dbf2adeb86a6efebba8cd8a5538f0004638efec556a6157",
+      "bytes": 3624
+    },
+    {
+      "path": "mods/iron_coast_mission_6/validation/Cargo.toml",
+      "sha256": "332cf067a13b7d827c99d5a11fd4f57a32943cd18ec2e64a320a01b9e110c690",
+      "bytes": 190
+    },
+    {
+      "path": "mods/iron_coast_mission_6/validation-results.json",
+      "sha256": "aaa4f60dbee063a3be15a82d48326bcb686a95d1f9954f7bff3ce2b200c34206",
+      "bytes": 4281
+    },
+    {
+      "path": "mods/iron_coast_music/content.json",
+      "sha256": "5b9576d96cff7d28c263923ba363dcd02b64cdf8698db9b04e32e311b7d74e88",
+      "bytes": 167
+    },
+    {
+      "path": "mods/iron_coast_music/mod.toml",
+      "sha256": "9a6c83b75abb7a13c1952f1bfae78da3b7784ba85c097451d6c729ebbc3c64b2",
+      "bytes": 322
+    },
+    {
+      "path": "mods/iron_coast_music/provenance.json",
+      "sha256": "b458a863473cf5f7fc781dc53aeb775b2e6a66f44c8998c7f2db3bb1f7e653c5",
+      "bytes": 1723
+    },
+    {
+      "path": "mods/iron_coast_music/validation.json",
+      "sha256": "c9c3534029179414420d1b10b36383ae543cd57c8e0cb378b7e4e37cf6c583f6",
+      "bytes": 1022
+    },
+    {
+      "path": "mods/iron_coast_railburst/art/generation-equipment-v1.json",
+      "sha256": "36a6269a6f5fab897a50b30cca04790d408d3de788c8a006ab12358b6cc5689e",
+      "bytes": 723
+    },
+    {
+      "path": "mods/iron_coast_railburst/art/generation-projectile-v1.json",
+      "sha256": "a796c9572556e404abf5c9baab84976c90c1c9972b50ee32484f27e1c1899f0d",
+      "bytes": 725
+    },
+    {
+      "path": "mods/iron_coast_railburst/art-provenance.json",
+      "sha256": "f6733c216d452adc03331d05d26ab853ba2c20282a3d85e5acc66e4c3b5a00db",
+      "bytes": 2338
+    },
+    {
+      "path": "mods/iron_coast_railburst/audio/provenance.json",
+      "sha256": "946e1e015df53e620c046c11bfbdef91e70db1affe20e73b56fb11dadeb0d5a8",
+      "bytes": 906
+    },
+    {
+      "path": "mods/iron_coast_railburst/content.json",
+      "sha256": "c20e79efbe83a6fd831a3a255786fe273242697526f99550f100c8aeb9c1851a",
+      "bytes": 1798
+    },
+    {
+      "path": "mods/iron_coast_railburst/mod.toml",
+      "sha256": "9cfe8abe321b2fc9d5f9f374671f1edbe4e23b1082d3dd05a9092d10682f0fb4",
+      "bytes": 261
+    },
+    {
+      "path": "mods/iron_coast_railburst/prompts.json",
+      "sha256": "a07d02ac46bc3e294b2749366cc2ef1d71e53afdf1d4e8cf0576bc38b05615d7",
+      "bytes": 2669
+    },
+    {
+      "path": "mods/iron_coast_railburst/scripts/weapon.rhai",
+      "sha256": "a30e4b2401cd96cce7d087106b2a819f1771a12e63db9b17dfd417c43cbb7b3d",
+      "bytes": 2380
+    },
+    {
+      "path": "mods/iron_coast_railburst/validation/balance.json",
+      "sha256": "67bd6af0ab6e0ecfa35ab504a7128a8da2cad1e1491da223e21d766413d62242",
+      "bytes": 19028
+    },
+    {
+      "path": "mods/iron_coast_railburst/validation/review.json",
+      "sha256": "45aa8ec4570b76931bd9b774c8f9f08d2c92f9800be3389182946ec6a9453607",
+      "bytes": 8060
+    },
+    {
+      "path": "mods/iron_coast_scout/art-qa.json",
+      "sha256": "ef201346d9a7616b8d7bfb3974eca9c034086cc9b3806b9859508532f155928b",
+      "bytes": 547
+    },
+    {
+      "path": "mods/iron_coast_scout/audio-recipe.json",
+      "sha256": "c74653d0cefa1d85cc8b288a4649790737b2e55ef119726004d25b3bbce80cd1",
+      "bytes": 589
+    },
+    {
+      "path": "mods/iron_coast_scout/content.json",
+      "sha256": "4c391c6afca745dd2a225830490196fdc1d2fe2e175ca29179969162e54d5d02",
+      "bytes": 1262
+    },
+    {
+      "path": "mods/iron_coast_scout/mod.toml",
+      "sha256": "236d2180ba63c73ec529e7f8d9caf8ae032405318882a4872e9ca5ea5da2cd64",
+      "bytes": 287
+    },
+    {
+      "path": "mods/iron_coast_scout/provenance.json",
+      "sha256": "aa9978431c7774ebd530e9b0661b95f65fe63d9b69c619430c1ec6111b98ece9",
+      "bytes": 1465
+    },
+    {
+      "path": "mods/iron_coast_scout/scripts/ai.rhai",
+      "sha256": "c7e15fd1a79525ab1a2ff93651bce19d776215e7a78a3986ebee1fd9ed183125",
+      "bytes": 6272
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_1/acceptance-report.json",
+      "sha256": "4ba6abc3d28a3131d2b7a7e968cd0694751ea1e5db4190d1dbb545383b1f1f27",
+      "bytes": 4926
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_1/artwork-reference.json",
+      "sha256": "a3b7b280a0552b8e183986162b25cd34f0cfc66c8e3a1f259c3aec48010071d2",
+      "bytes": 478
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_1/asset-report.json",
+      "sha256": "47cd7665858657dc316f5a29ddf210f45eb8ed723e31237710ada55381feebdd",
+      "bytes": 4747
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_1/content.json",
+      "sha256": "06d945df4b52b2147bc6e084f4d2c0c5a684f9b8ccfdd8f2b14cbf6c111c65bb",
+      "bytes": 1347
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_1/generation-provenance.json",
+      "sha256": "42bfad8a9147539635ae18057c50e3411e70e8ffa5bb5a5e47e450fd347d4219",
+      "bytes": 4317
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_1/mod.toml",
+      "sha256": "4d8a7e1101beab68fb354e000a0bec00f0de3fae9220346073804661c6b69b69",
+      "bytes": 301
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_1/scripts/ai.rhai",
+      "sha256": "831a52f71b9aabb5d9cc57f30496089b3d9be2b684fce7ca69911a52638f3c9f",
+      "bytes": 6765
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_1/validation/Cargo.toml",
+      "sha256": "e6b1f7c5e6c9ccdc4bc2da18a7c8f62e110eab8ba5861eff6317f1fb561aedb1",
+      "bytes": 259
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_2/acceptance-report.json",
+      "sha256": "ef332148c250672d869b0a7eb76712c798b2c2747dcf514ae58fc2b717f3d503",
+      "bytes": 4926
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_2/artwork-reference.json",
+      "sha256": "a3b7b280a0552b8e183986162b25cd34f0cfc66c8e3a1f259c3aec48010071d2",
+      "bytes": 478
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_2/asset-report.json",
+      "sha256": "aae01dfc03415a0995e6512fce62af1a740093691f3272a8b3f101eb3f983084",
+      "bytes": 4744
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_2/content.json",
+      "sha256": "e664d46f2cd4a20b7dff8030e6f8932fc5abeb321590e02b53d8a782687d3bda",
+      "bytes": 1331
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_2/generation-provenance.json",
+      "sha256": "f20ee12b9194272a668e0e21b007b3ad075a58fb0f84be11258aa1728af11285",
+      "bytes": 4264
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_2/mod.toml",
+      "sha256": "63f2f1ae615d39edf35ab4cb51f30ce4b73998cdd558cf3acf06f99f8161b72e",
+      "bytes": 295
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_2/scripts/ai.rhai",
+      "sha256": "2aa30681493e6212362510b5b9cd0ef688acb76c712e0c9c83017a9ead7fdfd0",
+      "bytes": 6715
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_3/asset-report.json",
+      "sha256": "d3158e5adf2756038e637b53d30c54c0cc44b23264c6b7aa61c809c0659db365",
+      "bytes": 2649
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_3/audio-recipe.json",
+      "sha256": "2a607cc75a8b56983b108a67eb253e37b3f9f166d9fce3abec12e1f24c895e32",
+      "bytes": 1084
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_3/content.json",
+      "sha256": "52f0c30c3a042788f99d6e0bc5a4d4c0be86d150316864dc469b07673784a5d6",
+      "bytes": 1448
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_3/mod.toml",
+      "sha256": "deafb7500336e7e42c19d1f1ac3561aec23b2cc279faefc301eb3743bd6725fb",
+      "bytes": 311
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_3/provenance-shell-v2.json",
+      "sha256": "a52e8901cec4a2a4b19c970e52067cfb6c05a6566ccb01059ef3884b553a04b0",
+      "bytes": 2114
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_3/provenance-shell.json",
+      "sha256": "4bc3c5814a18504ce9e5ec57d4785ed14c8a3f8772b7d62a769c23b359f33f3d",
+      "bytes": 2099
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_3/provenance-unit.json",
+      "sha256": "6e7141ef5777e4cf4fbed901d2ae767fa4208197633cd6769b4f69781b7e540f",
+      "bytes": 2097
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_3/scripts/ai.rhai",
+      "sha256": "b8a27f83703c700f65361f2be895dab8b4a547f54460543bcd9be825a9c02aef",
+      "bytes": 6776
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_3/validation/Cargo.toml",
+      "sha256": "3827314cad6f6e8540f8eb5f914210a2c57e426b24b736b86746fb988c1edd1e",
+      "bytes": 325
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_3/validation/compiler-binding.json",
+      "sha256": "035ac8bcda2b1d6060118d0c85f93a4fc11057390cb6f398e98eee300aceea2a",
+      "bytes": 1011
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_3/validation/retained-state-compiler-binding.json",
+      "sha256": "8432cd40af8800b73cfab2e502dd73b03d01d48b01c20444ec511bff02b68865",
+      "bytes": 1016
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_3/validation/retained-state.json",
+      "sha256": "3da8f6e02bdfbfbe796fa204da9435f52cc9a647998af15306500f4f9bf51c5f",
+      "bytes": 2178
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_4/asset-report.json",
+      "sha256": "3c95ef71ba1e59f90abd230c340a2ba4691f3008b87f4e33a6fc93bd651db017",
+      "bytes": 2649
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_4/audio-recipe.json",
+      "sha256": "eb3a945e7a2710f052115ce69ee0ddcecbbbf46dd2c34001036f526db2a7e321",
+      "bytes": 1084
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_4/content.json",
+      "sha256": "4f95b6c594d51e79011dcf221ee2242de3e8d6e83e4211115f132bc8bf8109c5",
+      "bytes": 1446
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_4/mod.toml",
+      "sha256": "cfcb1119c7f6c0d9c1737d6f8cf0ef3b78231ebf7af828af92b0e4c018aeb443",
+      "bytes": 309
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_4/provenance-shell-v2.json",
+      "sha256": "7d88f6574700a302b7f0883df763e16bf435a02bb510b0cda2fd1085946d0fa2",
+      "bytes": 2227
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_4/provenance-shell.json",
+      "sha256": "83566cd5cb9b3321e97820886263fa8a98af67cfe5d060b3ad228110da9d0526",
+      "bytes": 2260
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_4/provenance-unit.json",
+      "sha256": "1b4f8fd1f95b9d164dd578d62ebe8c59c76789270b44f996fb88b74af08b8128",
+      "bytes": 2097
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_4/scripts/ai.rhai",
+      "sha256": "288e637b5b09fa28425740f05dcb0603ad452e5427b585f5b30625769b61fa4d",
+      "bytes": 6779
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_4/validation/Cargo.toml",
+      "sha256": "89dfafd6841043fb1444002df07c752408ee408348cc0be011e2128533a55ec0",
+      "bytes": 325
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_4/validation/compiler-binding.json",
+      "sha256": "8fd3e012e960e66271cf1e7d025f45ccd44cce60b246d8d97a7956a22b48c80a",
+      "bytes": 1011
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_4/validation/retained-state-compiler-binding.json",
+      "sha256": "f597fc7256fd3b403d849b8f7fed7409c5f24984a7b5ea9824d5ddc457e60ae1",
+      "bytes": 1016
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_4/validation/retained-state.json",
+      "sha256": "48291d1bd66e389ad0e07d3510ffb8fc1a11e14d945412de5eaad1e31ea61d52",
+      "bytes": 2178
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_5/art-qa.json",
+      "sha256": "3624a04ffaa4cda6fb3561ed939754f7f869565aa7d63bf8b359b302b341b4a2",
+      "bytes": 1455
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_5/audio-recipe.json",
+      "sha256": "222915b0b17181524771762b7777579b9990f42941fb794b2524a30914a19d19",
+      "bytes": 1279
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_5/content.json",
+      "sha256": "ff488a3ae19cddfbe15970000b4c7ee0cf8ee6308a924e4036aadb4a22d349b7",
+      "bytes": 1633
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_5/mod.toml",
+      "sha256": "aa7b62a518393befe96110c92b37bdaa7ec47808f91f8e3a4b81f9dd6ec6258a",
+      "bytes": 287
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_5/prompts/request-v1.json",
+      "sha256": "83ee51ecfaa7de9829b50bc59b7e08f8345bd4cf14cf9322cc6ac3821aaa9340",
+      "bytes": 1672
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_5/provenance.json",
+      "sha256": "f13995902ef16f5597c8d9414f18c2349c276d10222482cd5598c3ad3428d8e2",
+      "bytes": 1137
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_5/scripts/ai.rhai",
+      "sha256": "3ef9d8435f3c5669fcb9ca89042b02f145ddcb381ac4cd83c2ecf456e8931ea1",
+      "bytes": 6895
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_5/validation/Cargo.toml",
+      "sha256": "0f5fbfa4b4e31fe59e438c3d60794ba33905fe6dd9f78b7c3d9abce6ef1f4e8c",
+      "bytes": 293
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_5/validation.json",
+      "sha256": "05d095c77b2e4290ecadc6134fafe301498084c59439de755d4651afac3c46de",
+      "bytes": 1820
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_6/art-qa.json",
+      "sha256": "4702701f786668132b81b04cbc83a4df45d7b724b15bcd94994731a291aeedc8",
+      "bytes": 1456
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_6/audio-recipe.json",
+      "sha256": "200ae6771ae8b645350575de36c0d4d1fb09f72f105c1cd2ca9af1dd84b2a4c4",
+      "bytes": 1280
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_6/content.json",
+      "sha256": "d7b6406e88d2b94f03ab1a16203bcd6340353aa85313353feae4659c5bfb8ae4",
+      "bytes": 1626
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_6/mod.toml",
+      "sha256": "ad21231533195d8e33aca29631a42d228b51cfa814c2677be4b8133316f70c6e",
+      "bytes": 287
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_6/prompts/request-v1.json",
+      "sha256": "170f2a784898b83965c7514caaed894b89b242d27cf25bb4ee9cd3a25866490d",
+      "bytes": 1561
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_6/provenance.json",
+      "sha256": "993cca6b1758af97fb6344176d5445255c4a94d3d9124b90814abedb1317d979",
+      "bytes": 1101
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_6/scripts/ai.rhai",
+      "sha256": "065a85183f96956136d90cb786a21c9cdd959a416bea50af4002e6732f00d73e",
+      "bytes": 6862
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_6/validation.json",
+      "sha256": "0c79232e2a38a9f985f54230569995c3f37c81a8ad33ee93711ef908018a89c0",
+      "bytes": 1762
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_7/art/provenance.json",
+      "sha256": "6a2bc898711f2efa2d90a10ac993503fcbcf04d8d54276153022342ffbf18710",
+      "bytes": 1299
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_7/art-qa.json",
+      "sha256": "c36a6572cae8041ae58639c95d1003b3833df236e0961dae307845acd2ce0a57",
+      "bytes": 1795
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_7/audio-recipe.json",
+      "sha256": "320705d7ba3485e28cec929dacbab37a64f9da8b2b64e665caa2e82e0705a997",
+      "bytes": 1366
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_7/content.json",
+      "sha256": "dd02b328787d186f8368da13d7f8064c7d6cfac279ed67de234ccaa7767cba22",
+      "bytes": 1686
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_7/mod.toml",
+      "sha256": "aecd955aa918d1795c9953dd08e0a835cab9e25735cc945e8e28a0fe58c7634f",
+      "bytes": 301
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_7/scripts/ai.rhai",
+      "sha256": "d0c5b75f03a05375166a3dab006100de8a006afe36385469252bc474485f6f81",
+      "bytes": 7062
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_7/validation-summary.json",
+      "sha256": "c9491f6b8e8529e6a5ee1b9a26247ae73ee633a2bdcf480ebb2671d004f775bf",
+      "bytes": 6085
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_8/art/provenance.json",
+      "sha256": "811911cc045300ab7bd1f5b615b4a85412f753f2e4ed0fdadc09b363076cebcf",
+      "bytes": 1297
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_8/art-qa.json",
+      "sha256": "9b664b6bafa8c93185d25c98dfc4f5af3f27236d034bf0767e86373b34f1785e",
+      "bytes": 2122
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_8/audio-recipe.json",
+      "sha256": "f93e60434179c7091127450a2407c18eb98b94cf2f262cd6f3cbb551c868bae3",
+      "bytes": 1368
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_8/content.json",
+      "sha256": "767066ce8f5952781896fbd68fdf7661e381b1dbb8551e4f1bfaca68eb28d395",
+      "bytes": 1675
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_8/mod.toml",
+      "sha256": "972c67bebce3d5826dc47a53bede17f1e3c00dc4f11b7e2ad5377adccba0dbf3",
+      "bytes": 297
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_8/scripts/ai.rhai",
+      "sha256": "007d6ea2fa765b381fdcbd1134804c908815daa77461ebf81b726a003c2526b5",
+      "bytes": 7514
+    },
+    {
+      "path": "mods/iron_coast_stage2_boss_8/validation-summary.json",
+      "sha256": "f730ebaa4da7448d30d1802458cbcfb6adfccc102842558ff20acdff433aeef8",
+      "bytes": 6048
+    },
+    {
+      "path": "mods/iron_coast_stage2_campaign/art/provenance.json",
+      "sha256": "fd41658429d2dd876b61fc81dd1a82997e63ee641f1e45df200135482e6e662a",
+      "bytes": 769
+    },
+    {
+      "path": "mods/iron_coast_stage2_campaign/content.json",
+      "sha256": "7586dbd9d982a09fb3fb10851518c445ef74f1e2cbf09dde4ea7b306e87ef4e2",
+      "bytes": 742
+    },
+    {
+      "path": "mods/iron_coast_stage2_campaign/mod.toml",
+      "sha256": "e88175ff63b58c81ff79fed718169863e52f076719d0702adef09acafa394337",
+      "bytes": 729
+    },
+    {
+      "path": "mods/iron_coast_stage2_interceptor/art-qa.json",
+      "sha256": "946a0e2a330461bddfff99e63a555740494d32d0435b6fb839d7fca5bdd0a51f",
+      "bytes": 2177
+    },
+    {
+      "path": "mods/iron_coast_stage2_interceptor/audio-recipe.json",
+      "sha256": "01473f818c62f75d2d3623c6594d742e7cc6492dbe5b81a6862f28ecac0c8d88",
+      "bytes": 1134
+    },
+    {
+      "path": "mods/iron_coast_stage2_interceptor/content.json",
+      "sha256": "9dce23724ad1f3e0ae24ac77dba3593be67e7b0348398836fcc4ce8941cfb855",
+      "bytes": 1652
+    },
+    {
+      "path": "mods/iron_coast_stage2_interceptor/contract.json",
+      "sha256": "054a77a223bb2f7fefb4904af4fff59ef7251a741657136c5c8614d58bb9aee6",
+      "bytes": 439
+    },
+    {
+      "path": "mods/iron_coast_stage2_interceptor/mod.toml",
+      "sha256": "b6ad55f9719027cf4e919aa378a75b2ba0b2a8c07ae9f05a50891030ee981d86",
+      "bytes": 317
+    },
+    {
+      "path": "mods/iron_coast_stage2_interceptor/provenance-projectile-v1.json",
+      "sha256": "419df697edd805fe15c42c8201e73894edfecf07ee9a4f8582b368bd24ec8e3a",
+      "bytes": 1389
+    },
+    {
+      "path": "mods/iron_coast_stage2_interceptor/provenance-unit-v1.json",
+      "sha256": "09ffd3e06ca5ea1ff81c7e2d0c10a06edd310c6bf71cae66f382166b82c6ce3f",
+      "bytes": 1407
+    },
+    {
+      "path": "mods/iron_coast_stage2_interceptor/scripts/ai.rhai",
+      "sha256": "7b15d3530056fd7324101b561025114be40e7cbac04013c7c02885f5604c9ca1",
+      "bytes": 6364
+    },
+    {
+      "path": "mods/iron_coast_stage2_interceptor/scripts/gun.rhai",
+      "sha256": "795b2efb8661ffbca5920e579f4abbb0fb552b2104d8cef0c9e52089453278b4",
+      "bytes": 215
+    },
+    {
+      "path": "mods/iron_coast_stage2_interceptor/validation/acceptance.json",
+      "sha256": "c199af85f681a3f6e481302eec64444cdc43c43685a905949d163fdce29db3d9",
+      "bytes": 2409
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_1/acceptance-report.json",
+      "sha256": "bd074b168cc6ab71666be35748257584a0a713d6149892634d604674e5303a79",
+      "bytes": 15460
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_1/art/briefing-cinematic-provenance.json",
+      "sha256": "48ae660a5a99d90a7d47750e61c1781ad4462e2d1114f62c3ed1ce3b1d1564d6",
+      "bytes": 2272
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_1/asset-report.json",
+      "sha256": "750d0bacfbe02ead4c723233e343b5078a4412ed26df1f9458b25ebaaf3b9d13",
+      "bytes": 121113
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_1/content.json",
+      "sha256": "c5e3e41b3f6a404640f759b6894a8e9dab784b4663067ea54d5947f532a9b619",
+      "bytes": 595841
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_1/generation-provenance.json",
+      "sha256": "72ce35c06dce296c6d213b67cc80ecac824941f79b0fbcdea0b89cc967db8e0b",
+      "bytes": 2780
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_1/mod.toml",
+      "sha256": "0f2f7c1a6059466069917c4cda49da038b91e7ccfd4c6660719ac7f772927bcd",
+      "bytes": 506
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_1/scripts/mission.rhai",
+      "sha256": "db7bb0446f03adc0f460579b36c55f1a4d5bbadb6fc156f42448a9fea914d6d3",
+      "bytes": 2499
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_2/acceptance-report.json",
+      "sha256": "94e96c7ef94df67bbca8a72e2bb64dfdc138fc9479d9cad6c6ef2918d1ddeb62",
+      "bytes": 15190
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_2/art/briefing-cinematic-provenance.json",
+      "sha256": "89f0768c37b8682cb5bcc20fac23fc9a0b580c26616704e6494346ceaf6855d8",
+      "bytes": 2268
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_2/asset-report.json",
+      "sha256": "f66b1c529efd7af95d5c9d1d526d61e28006b37946c1eef58434bf66ecc2a6d9",
+      "bytes": 121112
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_2/content.json",
+      "sha256": "fc998f946c9bc1096a15313f38b76f282805735463dc0a8c79d9c7277fafb7da",
+      "bytes": 597613
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_2/generation-provenance.json",
+      "sha256": "9f8a060addcf2b2a3b7b84df692395eb47583251900c10536770d521ed94df80",
+      "bytes": 2772
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_2/mod.toml",
+      "sha256": "2a78fb5aa9951177fcdcebb0c9a34a6f199d1554daf1d1c863ac4126291323a7",
+      "bytes": 500
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_2/scripts/mission.rhai",
+      "sha256": "75c8ddaaa35a95592dfecff65b50b95eb8738459a26999c56611cf529cc2c81f",
+      "bytes": 2507
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/art/briefing-cinematic-provenance.json",
+      "sha256": "9e28d1802e0c369fe48ff3091b94843a7a42286cab42c5a1a6df9a18b50d86b8",
+      "bytes": 2275
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/asset-report.json",
+      "sha256": "264479a65a8702448b4712e82d210d192eb6a6699214da5b8089dfa9ca6aa607",
+      "bytes": 3340
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/audio-recipe.json",
+      "sha256": "215759b41c5e3749e8e4867f361f4b15ee296ab2e92fb6323948c870d77046b2",
+      "bytes": 1832
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/content.json",
+      "sha256": "938eda8601ab4e5d568a71273b932ae4c14c9b55ba8e977d69e199ce75de7079",
+      "bytes": 109581
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/design.json",
+      "sha256": "48cbc1498c5cbde3aef4497ff767165233f3ae31a00512aa7d869e26492adcad",
+      "bytes": 735
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/mod.toml",
+      "sha256": "4fc1a7506bbc486e6271a89ff34867e683b86d17ec9c9c5410e233367127c9ef",
+      "bytes": 533
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/provenance-target.json",
+      "sha256": "1ee06113bd109058809f76cfd879773ec229ba001619bd48ae54e3908a1ae61e",
+      "bytes": 2103
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/provenance-terrain.json",
+      "sha256": "dbff1d686d9ec3edaa769bf3c823285728f14959b87b98d211d51ec0956f326a",
+      "bytes": 2107
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/scripts/mission.rhai",
+      "sha256": "1b277d3d11bf7364af58395e95d7ceb8a8ae4f358944f0ca772feb54449bebff",
+      "bytes": 2135
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/scripts/target.rhai",
+      "sha256": "df9e4efe71f732bf0b534bae3047d9adad3ace8ac3a2d4b78a48a1f7024e4d34",
+      "bytes": 1952
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/validation/Cargo.toml",
+      "sha256": "dd3f98e91cd44d7132f343d70b32a9e8bd1537ff1a053b07cc5b3292e3461ec5",
+      "bytes": 328
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/validation/acceptance.json",
+      "sha256": "e9f3c081b3184836e2c5dbadd02435d01e2722b00966bccc6b88e7bf3afa7d42",
+      "bytes": 9695
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/validation/compiler-binding.json",
+      "sha256": "f2cd61126ef208296b567a8efdb23ace998814a3acf5263bf2079f08ae511175",
+      "bytes": 1017
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/validation/retained-state-compiler-binding.json",
+      "sha256": "6412b0ac9995e971d8861f6b6da07003423e19bd777342958d40b347d307dfe9",
+      "bytes": 1019
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/validation/retained-state.json",
+      "sha256": "6b2696520155f61dbd0cf9ed18a80aeaef429a63fa4c781a8605b8b2476dd39e",
+      "bytes": 1908
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_3/validation/visual-review.json",
+      "sha256": "8ab95b9ed7b393632fee6aed3fc337dbc92d28304cfd6779b31708d3a1f5858e",
+      "bytes": 5245
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/art/briefing-cinematic-provenance.json",
+      "sha256": "0f3c955f045011e2186efca95841c364b3ecc96470d035fcd187cd1371fdf79e",
+      "bytes": 2270
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/asset-report.json",
+      "sha256": "a8d0de4b02809f60c62decbc14961dd38b3981082bce01b1002e075de6e25d46",
+      "bytes": 3340
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/audio-recipe.json",
+      "sha256": "6e1f79c3931a52172623c2a2f2b18051c004515a25e1e1c400fd015e2ca2e1db",
+      "bytes": 1832
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/content.json",
+      "sha256": "3de9a69bc2932bb5f0c543cc66946aca1ec99d35911c32c45f8f966564eebcc2",
+      "bytes": 109575
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/design.json",
+      "sha256": "7f32da0111a25663f8f2afde209029585ae946c3f33b9ea90c84ee42972a89fa",
+      "bytes": 732
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/mod.toml",
+      "sha256": "21d02c1798d3e3ea603b0a7dca785787c4b9fdfa13fc9f63eb542924a842af09",
+      "bytes": 524
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/provenance-target.json",
+      "sha256": "cfb13b739d2e00cc4b2d180f3e278ff97ece50f7c2401c763b219e6f60654aad",
+      "bytes": 2103
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/provenance-terrain.json",
+      "sha256": "add8ba7a4cdea9a1a980ffa7814216e8ce75765bfc60881ee6da3833b2a9014b",
+      "bytes": 2107
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/scripts/mission.rhai",
+      "sha256": "94002a1e4e23c03a8b789308f87945d8d79c5a9313b2a1b67bcce13dda089d92",
+      "bytes": 1986
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/scripts/target.rhai",
+      "sha256": "d1a93a334f1229a961efa437b18003e2bd59b0a7de68e19569bcc53b4a935df9",
+      "bytes": 1952
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/validation/Cargo.toml",
+      "sha256": "f4be385ad835c36d12b9ee1ffcda499dafc3e98bc3c4bca487917f98cd6e9b6e",
+      "bytes": 328
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/validation/acceptance.json",
+      "sha256": "4869223337dcac6bfde976304d3b4b109c81a0d36ad91865d87eb246466919c1",
+      "bytes": 9735
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/validation/compiler-binding.json",
+      "sha256": "b4f93353c8a49e6d62e1bbe155f099cd43fe0fa8ab3193351f333d15f08fd9db",
+      "bytes": 1017
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/validation/retained-state-compiler-binding.json",
+      "sha256": "2c608ff389d82f8ef646ae435103b5d78c70cf30302cbb761206493495e55ce2",
+      "bytes": 1019
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/validation/retained-state.json",
+      "sha256": "8626710e8d6b28fe516760b865a5a2fa373d6e8ffadd83779920d4a3b13bf92a",
+      "bytes": 1912
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_4/validation/visual-review.json",
+      "sha256": "02e9bf33701c581874ac215fddcc8da4da457e51a30090b5814ae0531606fd49",
+      "bytes": 5244
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_5/art/briefing-cinematic-provenance.json",
+      "sha256": "6dcaefcac9a9e527dbb4d4e42aa8c2856ba7b530cdd396a9257182cd5d040cb1",
+      "bytes": 2832
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_5/art-qa.json",
+      "sha256": "ffbdf2c67d0a5b55f065c814f32dd234de59bfa3093cc06034f423b8396e7e2b",
+      "bytes": 90719
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_5/audio-recipe.json",
+      "sha256": "2d13381a1cc69bd811651aaf78cd5988b4d9a03b6bae1b2d7b8587a988ad39d9",
+      "bytes": 2042
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_5/content.json",
+      "sha256": "ca80e79aca659966481682cb98c95d138015f859a4a882eeeadd0f96763c2a35",
+      "bytes": 80549
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_5/mod.toml",
+      "sha256": "893f882d74b26fa7f97d3c50be6458b22cef5a9bb70f1dd1998c61f208b22539",
+      "bytes": 584
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_5/prompts/request-v1.json",
+      "sha256": "c3c15e693128e9eed49a404639c384b3c693dd9b81f61b070c6bd6735c4817be",
+      "bytes": 1757
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_5/provenance.json",
+      "sha256": "15cc4694fcd6c6f515e16c7e74f4dc146ad9224b591e6b11f16a93a887969a9d",
+      "bytes": 975
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_5/scripts/mission.rhai",
+      "sha256": "81acb7c28d790077988021a76f2a1206a880e1514a53ccc6e2c0f11c9c1fef29",
+      "bytes": 3571
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_5/scripts/target.rhai",
+      "sha256": "f0a41eb77bf41f666036e0724f108cf5b84ab1423b2a5b22d568f7cd452fd1fa",
+      "bytes": 1243
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_5/validation.json",
+      "sha256": "85b205266dff89295041ba9a48d6361b69e3954628bec8280f91f07f3a3b4458",
+      "bytes": 8879
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_6/art/briefing-cinematic-provenance.json",
+      "sha256": "b4f7a7f11385e0c556615cf8712c95515efd1c160610a6ff53a034c569dde3b8",
+      "bytes": 2275
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_6/art-qa.json",
+      "sha256": "a0746a72f6621dd76b6eb952b078b13d3682de41f6730b1b963a3b2db7b29a53",
+      "bytes": 90719
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_6/audio-recipe.json",
+      "sha256": "60fd7f731e839b56c29d170b86d7a9d0d21fd7a213debace3e5f4ba8c099babb",
+      "bytes": 2042
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_6/content.json",
+      "sha256": "d8d789fdd1d4b82f18b805accffb2b7ecb9e78989195b38802647cb8f7cb6453",
+      "bytes": 80604
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_6/mod.toml",
+      "sha256": "87acca26cfb7910c799637d8e96e02f7ff2c8d6df747a0b82783fc331f69c0dc",
+      "bytes": 565
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_6/prompts/request-v1.json",
+      "sha256": "e3e73850a3e5c29eeae98811446c1809e4856bb9979bb911e605d1a4e6326afe",
+      "bytes": 1705
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_6/provenance.json",
+      "sha256": "24fa19b0b5f48ec5659dae914f12a9fc829def98b226ed7063b4b6baa3eeda77",
+      "bytes": 971
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_6/scripts/mission.rhai",
+      "sha256": "0300ac006e86967c11f3d1bd378c4162c3615a2a12e7d5e96d2f5a1bcb4fee39",
+      "bytes": 3571
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_6/scripts/target.rhai",
+      "sha256": "7362170df962ba65f953ddbd7b5ee427811c14d20cbd8cd04cd4fe9eed7b5972",
+      "bytes": 1243
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_6/validation.json",
+      "sha256": "ab1d5f26f2b8dcfbe81d4498ef28bc64dd61eb34eaa0c63c10958601172ec3aa",
+      "bytes": 8588
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_7/art/briefing-cinematic-provenance.json",
+      "sha256": "b3bed439f2ca8209ed04b00c5c90c907ac457da779c35be09f261231bc151341",
+      "bytes": 2279
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_7/art/provenance.json",
+      "sha256": "75a24d53b9687a2fc41a4227fc3f7302d48400ba2f4454c763663c28663a60c0",
+      "bytes": 1302
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_7/art-qa.json",
+      "sha256": "ccc20324e0dcd29f150bb5dfa7c6d36d5f5b630fb102a77f568024a9a0f03a5e",
+      "bytes": 1317
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_7/audio-recipe.json",
+      "sha256": "07184c074f3157d674f566d5691d8f66cf30e0b7f2da0f25e6a60a9dabb44a7e",
+      "bytes": 1355
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_7/content.json",
+      "sha256": "63e270202f46962effc6f40794856d2c33f547e051e30bd58b840dcb3008c027",
+      "bytes": 102077
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_7/mod.toml",
+      "sha256": "4d79a186077d2e28fcb63b4320102bb322335da2f0edd755012fcffb26a741e9",
+      "bytes": 578
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_7/scripts/mission.rhai",
+      "sha256": "76a166aad796410fc91d10636b52b26d66f75e90dc8127a070be68e8c1359e93",
+      "bytes": 3485
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_7/validation-summary.json",
+      "sha256": "b137c3ecafc11df0e2ce01d097e14368a1b788e58a75eb041c552cbcf024bc90",
+      "bytes": 16161
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_8/art/briefing-cinematic-provenance.json",
+      "sha256": "8a4064fbd1e42263d35b3dacef5f18ce86fab133848b443d5105db2605df6d7e",
+      "bytes": 2266
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_8/art/provenance.json",
+      "sha256": "e62bb456f1a4f369c844f3a3dc249e79996d5a63e973a76c24dc52f3b848abb3",
+      "bytes": 2446
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_8/art-qa.json",
+      "sha256": "c47fff0129ff1f54d6fa9a3c4e50df751de929c70c12269257ad9ff08dfb97b2",
+      "bytes": 1413
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_8/audio-recipe.json",
+      "sha256": "90814d63e1195e7dfa57948fae1b190aca238f4470f704779f947a6f23808685",
+      "bytes": 1355
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_8/content.json",
+      "sha256": "06dc829f8997879be76fb4eca871cc2e498a2570bb1aecf15065e8bb5892a06f",
+      "bytes": 102518
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_8/mod.toml",
+      "sha256": "1dfc8177020b2f3f891e94e153a5c3c84e7c062d1750b7c4a5833be9d0960a37",
+      "bytes": 552
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_8/scripts/mission.rhai",
+      "sha256": "e03f5a2f439bdfb1bbb4cd5ce37664ac0b52c2a7bf2093127bcd03a965ed2763",
+      "bytes": 3485
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_8/validation/Cargo.toml",
+      "sha256": "ed669472d516063a8c87661931399875fffcde28507f0e1f9563c1d819cd6c3d",
+      "bytes": 204
+    },
+    {
+      "path": "mods/iron_coast_stage2_mission_8/validation-summary.json",
+      "sha256": "150ede6bac1c7221a7a84ad32bb75b78cd0561006bf6e0981a4837c53558f51f",
+      "bytes": 16144
+    },
+    {
+      "path": "mods/iron_coast_stage2_music/content.json",
+      "sha256": "fccfc091f8e1a5c9134e8cc8025b7c4b74ae5836a5857c89b02f8b98f0397dad",
+      "bytes": 362
+    },
+    {
+      "path": "mods/iron_coast_stage2_music/mod.toml",
+      "sha256": "0d1db39ef046a4d0b5348ad53bbbdb7237e978b4c338725649262e460c7c414a",
+      "bytes": 342
+    },
+    {
+      "path": "mods/iron_coast_stage2_music/provenance.json",
+      "sha256": "d7c828aa5a37a36475153e2e6ebc94b5e4415c5902581772f7432dcc6b3d8c65",
+      "bytes": 6061
+    },
+    {
+      "path": "mods/iron_coast_stage2_music/validation.json",
+      "sha256": "4827b0e0aeec6e58090eb7dd218716964168446afe1702661569b42b1448f63c",
+      "bytes": 10744
+    },
+    {
+      "path": "mods/iron_coast_stage2_siege/RETUNE-ASSET-REUSE.json",
+      "sha256": "e51e3adec1f8d8cfae707fe2cff8f1cb366d97a7a29fd2d3205b699d63c5d746",
+      "bytes": 676
+    },
+    {
+      "path": "mods/iron_coast_stage2_siege/art-qa.json",
+      "sha256": "190dda0d53ea1b6dcced46fa0465be97fdf5bc4c3348856ed29dac56473c6507",
+      "bytes": 2175
+    },
+    {
+      "path": "mods/iron_coast_stage2_siege/audio-recipe.json",
+      "sha256": "b3e9a0fb4305d82a0680a577faff5eeaa9b0d271e6e708d6d9817e224729127a",
+      "bytes": 1134
+    },
+    {
+      "path": "mods/iron_coast_stage2_siege/content.json",
+      "sha256": "bc6cd1d863f0a2ae1e8effb421db85aedb16a861124ed7c4573e0790a0edf851",
+      "bytes": 1669
+    },
+    {
+      "path": "mods/iron_coast_stage2_siege/contract.json",
+      "sha256": "68a2849a6bd16ed011e1224f3018bafe7e0b87cdc2b2645fdcd80044a7a754bd",
+      "bytes": 432
+    },
+    {
+      "path": "mods/iron_coast_stage2_siege/mod.toml",
+      "sha256": "bf30dbc8d845c5b68a2a552d0865a9e51a27bc38b32cb964db0bf5026445e19e",
+      "bytes": 315
+    },
+    {
+      "path": "mods/iron_coast_stage2_siege/provenance-projectile-v1.json",
+      "sha256": "1790f05f7ee5892deafa4ebb92abe45b56c9c3215782bd05ad2f495899e15c9c",
+      "bytes": 1386
+    },
+    {
+      "path": "mods/iron_coast_stage2_siege/provenance-unit-v1.json",
+      "sha256": "2776bdd353c35b382e809436dffe29fbf0bfa3aff5e9876e71f20ef4473e913a",
+      "bytes": 1374
+    },
+    {
+      "path": "mods/iron_coast_stage2_siege/scripts/ai.rhai",
+      "sha256": "a2f31ea57bfbea10f8bf6ad3daa044fbcf453c38fc785b36230478abc29f2e5a",
+      "bytes": 5852
+    },
+    {
+      "path": "mods/iron_coast_stage2_siege/scripts/gun.rhai",
+      "sha256": "795b2efb8661ffbca5920e579f4abbb0fb552b2104d8cef0c9e52089453278b4",
+      "bytes": 215
+    },
+    {
+      "path": "mods/iron_coast_stage2_siege/validation/acceptance.json",
+      "sha256": "9b980950f0a515a348551e56a58a94f88a4c280dd8f852d84e21d2c522c71ec8",
+      "bytes": 2403
+    },
+    {
+      "path": "mods/iron_coast_stage2_skimmer/art-qa.json",
+      "sha256": "6ad9e013ac43536fec67b10d8bb662e46043dca561e8ad9ddd6d48ea4c94e7d7",
+      "bytes": 2177
+    },
+    {
+      "path": "mods/iron_coast_stage2_skimmer/audio-recipe.json",
+      "sha256": "1da25fe4c68c4dc37acc692452ec59262a7e55c5ae3644e2533c346ce0000c5d",
+      "bytes": 1134
+    },
+    {
+      "path": "mods/iron_coast_stage2_skimmer/content.json",
+      "sha256": "b273d308ae96755f9931ca0996730af527db01c96d7f36da004422da53083ca3",
+      "bytes": 1621
+    },
+    {
+      "path": "mods/iron_coast_stage2_skimmer/contract.json",
+      "sha256": "ebde0cbfe5d64a94b37d74bb371389550b2fde9ecb9f469f1e6c1ae568d7c38c",
+      "bytes": 429
+    },
+    {
+      "path": "mods/iron_coast_stage2_skimmer/mod.toml",
+      "sha256": "ca92d84d6dd79530960d680962a3dbb46228d94f71d767497876d3eb348a01cc",
+      "bytes": 307
+    },
+    {
+      "path": "mods/iron_coast_stage2_skimmer/provenance-projectile-v1.json",
+      "sha256": "5a93715449af13ad17ea35aefeb33dba983a18623e9b3f9adcc6a50e28de0563",
+      "bytes": 1388
+    },
+    {
+      "path": "mods/iron_coast_stage2_skimmer/provenance-unit-v1.json",
+      "sha256": "5265409f065e51a0ca4e20a6b34dd4d8ab78bd9051c9472d38dedcf603c49fce",
+      "bytes": 1376
+    },
+    {
+      "path": "mods/iron_coast_stage2_skimmer/scripts/ai.rhai",
+      "sha256": "73c474c0bbb063c9a55ea34aedeae618de94dfd24105cb06393a70df8f29515d",
+      "bytes": 6083
+    },
+    {
+      "path": "mods/iron_coast_stage2_skimmer/scripts/gun.rhai",
+      "sha256": "795b2efb8661ffbca5920e579f4abbb0fb552b2104d8cef0c9e52089453278b4",
+      "bytes": 215
+    },
+    {
+      "path": "mods/iron_coast_stage2_skimmer/validation/acceptance.json",
+      "sha256": "fddfe1feb2dfb3d7581257274e8379536a6114085d8c28d06010a7dc9749b8ec",
+      "bytes": 2405
+    },
+    {
+      "path": "mods/iron_coast_turret/art-qa.json",
+      "sha256": "866a64701236061c0cca8129cf55f170fe28d77f211e2ebaf7d74ee87e030dfe",
+      "bytes": 547
+    },
+    {
+      "path": "mods/iron_coast_turret/audio-recipe.json",
+      "sha256": "809991aa2e25e5f27aa46cfc72dd96787f40ce00a1b2737130593bc890716dc5",
+      "bytes": 591
+    },
+    {
+      "path": "mods/iron_coast_turret/content.json",
+      "sha256": "42a80893240b477aac201951f58118b9cc3c2ec5b41ece658ff30b2a4f916967",
+      "bytes": 1270
+    },
+    {
+      "path": "mods/iron_coast_turret/mod.toml",
+      "sha256": "44a25273a9fb6bb652473828bfe59cd447800a434f9bc981ce8f43aa37f1e948",
+      "bytes": 284
+    },
+    {
+      "path": "mods/iron_coast_turret/provenance.json",
+      "sha256": "fcadb0b24ce5a815ea34a9135dc7750d37acaac3fcbb05b70f5490ed1d749164",
+      "bytes": 1465
+    },
+    {
+      "path": "mods/iron_coast_turret/scripts/ai.rhai",
+      "sha256": "2df5e8b3ecf93b10e850b05f6cf8a3c18f8b550c5725bd901dac872e05fbb5a0",
+      "bytes": 5809
+    },
+    {
+      "path": "mods/lightning_cannon/art-provenance.json",
+      "sha256": "b104d778a515a4517b9dc48fc098e861b4d55c28b0e05f3414095ac466c3ff2a",
+      "bytes": 845
+    },
+    {
+      "path": "mods/lightning_cannon/balance-report.json",
+      "sha256": "aa08b40fa9d7618aef15c8b1ef29dc15fa2817b1d062ad4996a7a6b547186e4c",
+      "bytes": 4060
+    },
+    {
+      "path": "mods/lightning_cannon/content.json",
+      "sha256": "54cb9cd94b63df11d283e70b402a6c880e0a298850fd17f903fbddb5149994a4",
+      "bytes": 1517
+    },
+    {
+      "path": "mods/lightning_cannon/mod.toml",
+      "sha256": "81bbc932c5ed774f988c463b611bed14ae1378e5b164730d5415af165b580dbc",
+      "bytes": 474
+    },
+    {
+      "path": "mods/lightning_cannon/scripts/equipment.rhai",
+      "sha256": "e45195f482f588215a9d9e375339fd177365f2e5f7a76de8d6947b812bb43248",
+      "bytes": 327
+    },
+    {
+      "path": "mods/lightning_cannon/scripts/weapon.rhai",
+      "sha256": "172e6677b33b8a9cca5fc235767f6c3e64b26c1210499af941cc9e2104e24089",
+      "bytes": 2367
+    },
+    {
+      "path": "mods/lightning_shield/art-provenance.json",
+      "sha256": "be4b59f659335c36ed2fa6729352f6d852f41bae259ea4f8bd83cfc8bc1b8678",
+      "bytes": 845
+    },
+    {
+      "path": "mods/lightning_shield/balance-report.json",
+      "sha256": "576c3be1cda934abd494a627d35cd4f21355da15e572938da0bb5363af89908e",
+      "bytes": 4117
+    },
+    {
+      "path": "mods/lightning_shield/content.json",
+      "sha256": "e3577d0bf257fd1ec521ac9330e70976e009137d94a40b4731119f2c8adb4cd9",
+      "bytes": 1574
+    },
+    {
+      "path": "mods/lightning_shield/mod.toml",
+      "sha256": "f7b02ee8a2628ff3b17deca8aececac60a37ff7d5353a5325ba462ce39a39941",
+      "bytes": 495
+    },
+    {
+      "path": "mods/lightning_shield/scripts/equipment.rhai",
+      "sha256": "c2b8b3288e17203438474068b4e59dd5fa9af9044f377427fe365f51a6f4903e",
+      "bytes": 327
+    },
+    {
+      "path": "mods/lightning_shield/scripts/weapon.rhai",
+      "sha256": "c0a23e6fa000b205abfe20b2762e1aec2326b04fea4d0798b441e79970d493ec",
+      "bytes": 3282
+    },
+    {
+      "path": "mods/pulse_cannon/art-provenance.json",
+      "sha256": "606e13405891699a4031db4cc09650a3439a45e5625d703f08474c6d60b7c822",
+      "bytes": 4356
+    },
+    {
+      "path": "mods/pulse_cannon/content.json",
+      "sha256": "ec2a76d97805aa7fba66e35ed72a7fd6688ee3b11fee13d69bb10f5fbad20e61",
+      "bytes": 1689
+    },
+    {
+      "path": "mods/pulse_cannon/mod.toml",
+      "sha256": "3d047fc776d5e0b12cb648f3cf6c73b90c741b5d21516f04eef53415633f4acf",
+      "bytes": 289
+    },
+    {
+      "path": "mods/pulse_cannon/scripts/equipment.rhai",
+      "sha256": "8094c862f6c71d45ded6e9449fab97ca5996e97462a7955123a365b096d3689c",
+      "bytes": 332
+    },
+    {
+      "path": "mods/pulse_cannon/scripts/weapon.rhai",
+      "sha256": "8919fed2787cd0e7a61480192cdd1897b402764930683a163139595de7925537",
+      "bytes": 3326
+    },
+    {
+      "path": "mods/seeker_swarm/art-provenance.json",
+      "sha256": "c31f4090c47670d0806653de6b0a59a5bf955810878a33442467746db43629e3",
+      "bytes": 4284
+    },
+    {
+      "path": "mods/seeker_swarm/content.json",
+      "sha256": "0c0e6d16858f1a7c53a06c16d2b19db48cd925a9f7ec04f8ffa85f47592c7912",
+      "bytes": 1747
+    },
+    {
+      "path": "mods/seeker_swarm/mod.toml",
+      "sha256": "4c5a6801623411a11e7b27c82cbcdf4ec71aed7fc0fc7daea651cd584ba4d200",
+      "bytes": 289
+    },
+    {
+      "path": "mods/seeker_swarm/scripts/equipment.rhai",
+      "sha256": "a34f5f05024fb0bbd5fa25711f8eef266c499911eed180bfdfe986235c51bb4a",
+      "bytes": 332
+    },
+    {
+      "path": "mods/seeker_swarm/scripts/weapon.rhai",
+      "sha256": "41f99085c1b28845295560a695f81912505440700e04e28d559df36193d4edfe",
+      "bytes": 3375
+    }
+  ],
+  "bundled_mod_direct_token_hits": [],
+  "all_Original_SWD_resources": [
+    {
+      "asset": "10031",
+      "path": "data/ui/STORE_SWD",
+      "sha256": "8ad87bcea024e5fd829e5c90d34a4634a7894b86eb724db0cc19d5c2a69d98e8",
+      "bytes": 3327
+    },
+    {
+      "asset": "10032",
+      "path": "data/ui/MAIN_SWD",
+      "sha256": "e0d94a2ca9c1eead0d7a304752f56980527f29bd8f8ee5cef005fb30a85cc8c2",
+      "bytes": 1627
+    },
+    {
+      "asset": "10033",
+      "path": "data/ui/SHIPCOMP_SWD",
+      "sha256": "38766410a231d56d6192f5ddc7510d3b6c7c03a0ed9fc61c31433efebd428fab",
+      "bytes": 1955
+    },
+    {
+      "asset": "10034",
+      "path": "data/ui/HANGAR_SWD",
+      "sha256": "24fe70eb831dd32448f08c0f05c93454d204e9ac3402cdbc2caaef1975f65ef5",
+      "bytes": 1081
+    },
+    {
+      "asset": "10035",
+      "path": "data/ui/ASK_SWD",
+      "sha256": "5ac3879ab29978fdd25ea12f1466284dd41bd76bf38f39c67944772977dc8cc8",
+      "bytes": 1364
+    },
+    {
+      "asset": "10036",
+      "path": "data/ui/LOCKER_SWD",
+      "sha256": "528591837d876aa2179f4a1d20fa5c3827ac56996e717406a61ba0a2680354ee",
+      "bytes": 894
+    },
+    {
+      "asset": "10037",
+      "path": "data/ui/REGISTER_SWD",
+      "sha256": "a9f1ee8ab74681c0dae54993f03f757d34addba8f57e563bb8933af6bfcecccc",
+      "bytes": 1222
+    },
+    {
+      "asset": "10038",
+      "path": "data/ui/HELP_SWD",
+      "sha256": "8e5340998debec1d15827134ced621c0091547e9f9778d086fde0ccf322e5bc3",
+      "bytes": 1819
+    },
+    {
+      "asset": "10039",
+      "path": "data/ui/LOAD_SWD",
+      "sha256": "ae159bb5e4279b2b35079f0c39966e319d7e0f448efbcd377c5f54684f36084f",
+      "bytes": 2140
+    },
+    {
+      "asset": "1003a",
+      "path": "data/ui/MSG_SWD",
+      "sha256": "3306d0969115b2bc9baf799624d2c5299b1e4379a04eca1c5cfec8efa15305f3",
+      "bytes": 1045
+    },
+    {
+      "asset": "1003b",
+      "path": "data/ui/ORDER_SWD",
+      "sha256": "d46209f357c2a8e074617f1d17e8acd0162b25187f2437dfcb2e681d6d0b170b",
+      "bytes": 1312
+    },
+    {
+      "asset": "1003c",
+      "path": "data/ui/CREDIT_SWD",
+      "sha256": "d6ab958b6e37571014989841bdd37e0ca49fab3a87276a39fc98200466022831",
+      "bytes": 269
+    },
+    {
+      "asset": "1003d",
+      "path": "data/ui/ASKDIFF_SWD",
+      "sha256": "02d49b803734f38acba354694686ab1b8dcef0ca1dc63376e18ad3532599c81c",
+      "bytes": 1969
+    },
+    {
+      "asset": "1003e",
+      "path": "data/ui/WINGAME_SWD",
+      "sha256": "304630a1223419d69723902ffd22c2c4eea0388491e37dfca663fcbe78e99aff",
+      "bytes": 567
+    },
+    {
+      "asset": "1003f",
+      "path": "data/ui/OPTS_SWD",
+      "sha256": "920d7e47a9cc86a2cd22a0c16285a4bb120100d32dd7deb064ff5ed08c0054ca",
+      "bytes": 3702
+    },
+    {
+      "asset": "10040",
+      "path": "data/ui/LOADCOMP_SWD",
+      "sha256": "761469f74632a4e4af7cbc18e597ac7f4aa1c55404a91eb568609310c8ef82e5",
+      "bytes": 1949
+    },
+    {
+      "asset": "50016",
+      "path": "data/ui/NMAIN_SWD",
+      "sha256": "b5f68ed977811868762c8004fe88a0a7e7e06c54e854a8ef29edf118ceb7c98d",
+      "bytes": 1478
+    },
+    {
+      "asset": "50017",
+      "path": "data/ui/NOPTS_SWD",
+      "sha256": "6b6fac5eebe2d1781d6a563704430e6bb04ccd6911fe3062f733f81dd80e8aa4",
+      "bytes": 1500
+    }
+  ],
+  "SWD_COPYRGHT_name_matches": [],
+  "SWD_literal_numeric10016_records": [
+    {
+      "path": "data/ui/ORDER_SWD",
+      "offset": 1072,
+      "preceding16bytes_hex": "534d4359474c4f475f50494300000000",
+      "preceding16_ascii": "SMCYGLOG_PIC"
+    }
+  ],
+  "stale_numeric_explanation": "Only numeric occurrence is ORDER_SWD offset1072 following exact16-byte SMCYGLOG_PIC name; current INDEX resolves that name to10017, not COPYRGHT10016.",
+  "historical_Original_mission_and_SPRITE_census": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-remaining157-actualH5596-SourceG2-readonly-cohorts-20261019-v1/ACTUAL-H5596-SOURCEG2-REMAINING157-SMALL-COHORTS-AND-CALLERS.json",
+    "sha256": "16c14d429d5498f52dfe9005c5624e2f45808550eace927ea424737ab0fe6a5b",
+    "bytes": 400497
+  },
+  "historical_10016_caller_row": {
+    "direct_terrain": {
+      "count": 0,
+      "maps": [],
+      "first3": []
+    },
+    "destroyed_terrain": {
+      "count": 0,
+      "maps": [],
+      "first3": []
+    },
+    "enemy_animation_declarations": {
+      "count": 0,
+      "maps": [],
+      "first3": []
+    },
+    "matching_enemy_profiles": []
+  },
+  "limits": [
+    "This is a bounded literal name/hex/decimal/source-resource audit, not a proof that no future arbitrary script or generic catalog API can request the picture.",
+    "No genuine current Rust UI caller is known; no current UI placement or runtime screenshot is manufactured.",
+    "Old Original mission/Sprite census remains datedH5596; all Original source payloads and currentSourceG2 are unchanged."
+  ]
+}

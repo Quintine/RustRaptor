@@ -1,0 +1,70 @@
+{
+  "status": "DERIVED_NOT_ART_APPROVAL",
+  "execution": {
+    "status": "success",
+    "method": "generated-grating-semantic-gray-cohort-mean-cast-only-v1",
+    "recipe_sha256": "4089958c135d9315009b3ffd911b3020e67f1c98fab8b047baa1776106d600eb",
+    "tool_sha256": "a44be4d74907cce7f18a87c9e47b07f4aefdc3582631cdd40d152b0b76bef4a1",
+    "source_sha256": {
+      "203c6": "bdf3a65aeaf5b07f6ba5cee4b0842effd47432040c5c1671339a039f3103f5f3",
+      "203c7": "051d291f21fce569c03946c90f47c992cbbaaa8637fdec0f667e0de3d7d86e5a"
+    },
+    "parent_raw_sha256": [
+      "c4a18adecfa1bb23422740208cc496a509ec69bc26d46818bac920d66844e2c9"
+    ],
+    "output_sha256": {
+      "203c6": "fd913999df7a3c45f7c414071d0177fef53900968b9b542fae22f17e206954c3",
+      "203c7": "0bee64e5fc22c22c98688ec8a9ce942788f07d40b185a7b36e715f496de93f20"
+    }
+  },
+  "frames": [
+    {
+      "asset": "203c6",
+      "semantic_Source_cells": 179,
+      "corrected_output_pixels": 2864,
+      "unmodified_resized_parent_pixels": 13520,
+      "Source_aggregate_RGB": [
+        71.63128491620111,
+        71.26815642458101,
+        71.26815642458101
+      ],
+      "generated_luma_mean": 49.86645167597765,
+      "constant_gray_mean_offset": 21.478905865921796,
+      "raw_same_cohort_3x3_luma_witnesses": 107812,
+      "max_luma_structure_rounding_error": 0.41629413407821403,
+      "generated_luma_variance": 180.90236714179886,
+      "output_luma_variance": 182.5488033295042,
+      "exact_Original_pixel_copies": 0,
+      "outside_resized_parent_exact": true,
+      "selected_cells_sha256": "993151cf0502ae326ea036af5da26eb882dac3a23c5557f8322a46afe336ba6d",
+      "output_scale": 4
+    },
+    {
+      "asset": "203c7",
+      "semantic_Source_cells": 192,
+      "corrected_output_pixels": 3072,
+      "unmodified_resized_parent_pixels": 13312,
+      "Source_aggregate_RGB": [
+        70.375,
+        70.015625,
+        70.015625
+      ],
+      "generated_luma_mean": 48.659017122395824,
+      "constant_gray_mean_offset": 21.433011002604175,
+      "raw_same_cohort_3x3_luma_witnesses": 112310,
+      "max_luma_structure_rounding_error": 0.38998899739583237,
+      "generated_luma_variance": 205.14152211784483,
+      "output_luma_variance": 205.97525451642983,
+      "exact_Original_pixel_copies": 0,
+      "outside_resized_parent_exact": true,
+      "selected_cells_sha256": "a94217c23d00b779213e75b8e62529d3a724a4f903ef277a02be8fcc8bf72ef0",
+      "output_scale": 4
+    }
+  ],
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "Pillow": "12.3.0"
+  },
+  "limits": "Source owns semantic geometry and one aggregate gray anchor only; generated raw owns every luminance difference. No per-cell Source RGB copying, flat fallback, new pixels outside resized-parent selection, or quality approval. Resized-parent baseline uses Pillow Lanczos3; equality to old Rust raw-bank resampling is NOT claimed."
+}

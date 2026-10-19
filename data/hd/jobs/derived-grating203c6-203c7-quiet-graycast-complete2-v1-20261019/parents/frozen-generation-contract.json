@@ -1,0 +1,80 @@
+{
+  "status": "ROOT_AUTHORIZED_DISTINCT_SOURCE_PRIMARY_QUALITY_SUCCESSOR_ONE_CALL",
+  "utc": "2026-10-18T21:27:25.563003+00:00",
+  "owner": "/root/grating_pair",
+  "targets": [
+    {
+      "asset": "203c6",
+      "column": 0,
+      "row": 0,
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1473",
+        "sha256": "bdf3a65aeaf5b07f6ba5cee4b0842effd47432040c5c1671339a039f3103f5f3",
+        "bytes": 1044
+      },
+      "Original_native": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-203bd-203cc/sources/203c6.png",
+        "sha256": "3d6e43d23ca400de7b1785c0cb9635486f4bb84e06645f18653c7c5aa08c7f69",
+        "bytes": 1656
+      },
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ]
+    },
+    {
+      "asset": "203c7",
+      "column": 1,
+      "row": 0,
+      "Source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1474",
+        "sha256": "051d291f21fce569c03946c90f47c992cbbaaa8637fdec0f667e0de3d7d86e5a",
+        "bytes": 1044
+      },
+      "Original_native": {
+        "path": "/home/quintine/Projects/RaptorReplica/data/hd/jobs/terrain-203bd-203cc/sources/203c7.png",
+        "sha256": "ad809cb3f2c55e12950cf78f0ebd013437256d1886871b6d5946a73157a3c740",
+        "bytes": 1464
+      },
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ]
+    }
+  ],
+  "arguments": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating203c6-203c7-Original-primary-quiet-lowrelief-complete2-author-20261019-v2/EXACT-ONE-BUILTIN-ARGUMENTS.json",
+    "sha256": "2b0c31bf922cd79b0b168200bb50ae3a2aeb2f892effb489ff8809ecb695e94d",
+    "bytes": 2990
+  },
+  "reference": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating203c6-203c7-Original-primary-quiet-lowrelief-complete2-author-20261019-v2/references/ONLY-AUTHENTIC-ORIGINAL-PAIR-NN12-2X1.png",
+    "sha256": "9225320385bae284853a52175ff66d68eb7a55172ec2f9f54939f3b9a28831a2",
+    "bytes": 6585
+  },
+  "prior_quality_HOLD_preserved": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating203c6-203c7-Original-primary-complete2-author-20261018-v1/CLOSED-ONE-ORIGINAL-PRIMARY-GRATING2-AUTHOR-HOLD-BEFORE-QA.json",
+    "sha256": "5b9bec07df591c3118d88d9f19f31d3b75ad46f2de7195b706c67cb11c44f9ef",
+    "bytes": 3805
+  },
+  "distinction": "Only exact paired Original geometry; quiet near-flat charcoal/brown materials and thin irregular remnants are explicit, no old shiny atlas/reference supplied.",
+  "geometry": "Natural2x1 atlas_grid equal rational square cells, no fitting, cropping or reconstruction.",
+  "no_actual_policy_refusal_targets": true,
+  "operations_authorized": {
+    "builtin": 1,
+    "current_G2_intrinsic2": 1,
+    "new_compile": 0,
+    "World": 0,
+    "cleanup": 0,
+    "canonical_write": 0
+  },
+  "disk_free": 2672771072
+}

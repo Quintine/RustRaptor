@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "generated-grating-semantic-gray-cohort-mean-cast-only-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/parents/generator-return-untouched.png",
+        "sha256": "c4a18adecfa1bb23422740208cc496a509ec69bc26d46818bac920d66844e2c9"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/parents/actual-generation-terminal-receipt.json",
+        "sha256": "1f2466a1991baa3439b1d6d71636d0f01480a14624cff4fa0c9fa2947d1b6c82"
+      },
+      "prompt": {
+        "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/parents/prompt.txt",
+        "sha256": "9ce53f50a5133e6d4ffb0503e26f71d6493fe412662e025f3f54346f644d2cfc"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_grating_gray_cleanup.py",
+      "sha256": "a44be4d74907cce7f18a87c9e47b07f4aefdc3582631cdd40d152b0b76bef4a1"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/cleanup-recipe-EXACT-ACTUALLY-EXECUTED.json",
+    "sha256": "4089958c135d9315009b3ffd911b3020e67f1c98fab8b047baa1776106d600eb"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/derived/actual-execution-receipt.json",
+    "sha256": "ff038c8849e5788150beb406ef9f4d9b7e868550a831708d4ad0417a57000aa3"
+  },
+  "sources": {
+    "203c6": "bdf3a65aeaf5b07f6ba5cee4b0842effd47432040c5c1671339a039f3103f5f3",
+    "203c7": "051d291f21fce569c03946c90f47c992cbbaaa8637fdec0f667e0de3d7d86e5a"
+  },
+  "outputs": {
+    "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/derived/203c6-DERIVED-graycast-v1.png": "fd913999df7a3c45f7c414071d0177fef53900968b9b542fae22f17e206954c3",
+    "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/derived/203c7-DERIVED-graycast-v1.png": "0bee64e5fc22c22c98688ec8a9ce942788f07d40b185a7b36e715f496de93f20"
+  },
+  "detailed_provenance": {
+    "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/review/author-intrinsic-qualification-context-pending.json",
+    "sha256": "25b855775bc1fe603a7d4697641fec8265e0c23805c8a95e09b3273a9d4761f0"
+  }
+}

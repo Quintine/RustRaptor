@@ -1,0 +1,42 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "derived-10016-genuine-charcoal-single-global-aspect-refit-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/inputs/10016-genuine-parent-untouched.png",
+        "sha256": "e36f4fe0ca5b2537a24b09e66d8255cef3ee227b6eebd6eda6a6a93f4d602c77"
+      },
+      "prompt": {
+        "path": "jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/parents/original-successful-prompt.txt",
+        "sha256": "b9545f3916353ce6bf76352f83f9897e91eb7a32966d74193c96bb0f48744986"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/parents/original-imagegen-terminal-and-gate-release-verbatim.json",
+        "sha256": "29bbfb8ca14c1dbcc0d68ae594fd2b5e2db69992d645d246e1d24b0784440bab"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_global_aspect_cleanup.py",
+      "sha256": "24fc352661defec56cf12017bb90060fe059938f67c2a6b03fec90e66a9ab41a"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/cleanup-recipe.json",
+    "sha256": "c9a975adcb299a9d2f72e2d64499e5d8891d16a3df7ac0467896cc8cce9ca928"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/derived/execution-receipt.json",
+    "sha256": "0f5468257fc0dcbc63742b73aaf927f847e750f31a564c0578a945ddb5f02718"
+  },
+  "sources": {
+    "10016": "b3d5581f8f030ba8fb212505d0b69b44e9acdf2e89a5a0eb603b043b009ddcb2"
+  },
+  "outputs": {
+    "jobs/derived-copyrght10016-global-aspect-SourceG2-v1-20261019/derived/10016-derived.png": "a6683cdadcb4ebfc70fd24abe91f272471e7a6521f1d214398460055af3c9cca"
+  },
+  "scope": "One actual global crop/aspect correction from genuine saved parent; Source supplies no pixels, no new generation, tone adjustment, stencil or per-letter fit. Prior HOLDs remain historical."
+}

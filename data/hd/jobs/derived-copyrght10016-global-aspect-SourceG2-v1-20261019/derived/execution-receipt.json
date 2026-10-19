@@ -1,0 +1,41 @@
+{
+  "execution": {
+    "status": "success",
+    "method": "derived-10016-genuine-charcoal-single-global-aspect-refit-v1",
+    "recipe_sha256": "c9a975adcb299a9d2f72e2d64499e5d8891d16a3df7ac0467896cc8cce9ca928",
+    "tool_sha256": "24fc352661defec56cf12017bb90060fe059938f67c2a6b03fec90e66a9ab41a",
+    "source_sha256": {
+      "10016": "b3d5581f8f030ba8fb212505d0b69b44e9acdf2e89a5a0eb603b043b009ddcb2"
+    },
+    "parent_raw_sha256": [
+      "e36f4fe0ca5b2537a24b09e66d8255cef3ee227b6eebd6eda6a6a93f4d602c77"
+    ],
+    "output_sha256": {
+      "10016": "a6683cdadcb4ebfc70fd24abe91f272471e7a6521f1d214398460055af3c9cca"
+    }
+  },
+  "geometry": {
+    "parent_canvas": [
+      2167,
+      725
+    ],
+    "window": [
+      0,
+      289,
+      2167,
+      130
+    ],
+    "output_canvas": [
+      2176,
+      128
+    ],
+    "all_alpha16_ink_retained": true,
+    "omitted_alpha1_to15_samples": 100,
+    "output_RGBA_sha256": "0b6a94fb3d3951235a6153b997b9339fd13b8452eb831a07b860e333aa3a1119",
+    "operation": "one global crop then Lanczos aspect refit, no further pixel operations"
+  },
+  "pillow_version": "12.3.0",
+  "original_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+  "source_supplies_geometry_or_RGB": false,
+  "no_artistic_or_runtime_approval": true
+}

@@ -1,0 +1,110 @@
+{
+  "implementation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-five-Source-component-cleanup-CODE-proposal-20261019-v2-buffered/terrain_component_cleanup.py",
+    "sha256": "15c97398e35485ff08ecf0ae7fcf5e6c52848ccbd3ffcbe2d27aba62dad06d40",
+    "size": 12221,
+    "mtime_ns": 1792359346754998015,
+    "mode": 33188
+  },
+  "executed_dependency": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+    "size": 14882,
+    "mtime_ns": 1792280173116585173,
+    "mode": 33188
+  },
+  "recipe_input": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-five-Source-component-cleanup-CODE-proposal-20261019-v2-buffered/PAIR-UNEXECUTED-PORTABLE-RECIPE.json",
+    "sha256": "8e1735f683998bb1e17c817c6430f69c6225f9c0370d6799d075fa4c75c7f040",
+    "size": 2368,
+    "mtime_ns": 1792359346754605109,
+    "mode": 33188
+  },
+  "physical_authenticated_input_reads": 5,
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "operation": "pair",
+  "input_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-five-Source-component-cleanup-CODE-proposal-20261019-v2-buffered/inputs/103d5.pic",
+      "sha256": "5ad6cdee19cca538f9e08b15fb5fee48a394903ced837e84e5fbb19e8a66dc94",
+      "size": 1044,
+      "mtime_ns": 1787663959425609034,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-five-Source-component-cleanup-CODE-proposal-20261019-v2-buffered/inputs/103d6.pic",
+      "sha256": "8dda05de47883fcbb2540e92d7aabeaf5170ff7147ee55b39af145863d491a0f",
+      "size": 1044,
+      "mtime_ns": 1787663959425662526,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-five-Source-component-cleanup-CODE-proposal-20261019-v2-buffered/inputs/new-pair-master.png",
+      "sha256": "786270fcd25f15b764c4fc372d63856e2ccfd2ce55884b12b5222efba0967dd0",
+      "size": 2722513,
+      "mtime_ns": 1792355689004782780,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-five-Source-component-cleanup-CODE-proposal-20261019-v2-buffered/inputs/new-pair-master.png",
+      "sha256": "786270fcd25f15b764c4fc372d63856e2ccfd2ce55884b12b5222efba0967dd0",
+      "size": 2722513,
+      "mtime_ns": 1792355689004782780,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-five-Source-component-cleanup-CODE-proposal-20261019-v2-buffered/inputs/new-pair-master.png",
+      "sha256": "786270fcd25f15b764c4fc372d63856e2ccfd2ce55884b12b5222efba0967dd0",
+      "size": 2722513,
+      "mtime_ns": 1792355689004782780,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-five-Source-component-cleanup-CODE-proposal-20261019-v2-buffered/inputs/new-pair-master.png",
+      "sha256": "786270fcd25f15b764c4fc372d63856e2ccfd2ce55884b12b5222efba0967dd0",
+      "size": 2722513,
+      "mtime_ns": 1792355689004782780,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-five-Source-component-cleanup-CODE-proposal-20261019-v2-buffered/inputs/genuine-old-c22-road-atlas.png",
+      "sha256": "c22d774a552d121e181a248b8d65fa1c56a19f9c14211b125d0a78bbbedd9176",
+      "size": 3348630,
+      "mtime_ns": 1791665684392050698,
+      "mode": 33188
+    }
+  ],
+  "palette": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-five-Source-component-cleanup-CODE-proposal-20261019-v2-buffered/inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "size": 768,
+    "mtime_ns": 1787663959337906368,
+    "mode": 33188
+  },
+  "recipe_sha256": "8e1735f683998bb1e17c817c6430f69c6225f9c0370d6799d075fa4c75c7f040",
+  "metrics": {
+    "genuine_RGB_band_changed_nonfunctional_pixels": 510350,
+    "nonfunctional_pixels": 514560,
+    "protected_native4_samples": 608,
+    "protected_HDraw_pixels": 9728,
+    "protected_source_Nx_RGBA_exact": true,
+    "geometry_component_owner_sha256": "eeafddd64af080978678202414c8a17678605b826fe2e79858028073d8dde35c",
+    "retained_generated_texture_nonprotected_pixels": 511721
+  },
+  "output_is_derived_not_untouched": true,
+  "functional_retention_no_HD_credit": "Original protected cells>=240 retain exact SourceNx RGB/labels. No global Original-nearest fallback is claimed as HD.",
+  "outputs": [
+    {
+      "file": "103d5-derived.png",
+      "sha256": "b9ca0511370eee3eda354ff50c261b1b4b4805e762ba04ffd6cd86843c7730d9"
+    },
+    {
+      "file": "103d6-derived.png",
+      "sha256": "a401073f905934c26ff48a90368f8328bc7a959c48354dc811dcdfdc4c1e04d9"
+    },
+    {
+      "file": "derived-pair1024x512.png",
+      "sha256": "cf579510757a6757f43cb62db0e5c8e78d5f3956132bd95c6ca90b18d50ca182"
+    }
+  ]
+}

@@ -1,5 +1,15 @@
 # Current approved-artwork checkpoint — 19 October 2026
 
+Current artwork checkpoint — 19 October 2026: **5,647 reviewed pictures / 3,735 complete sequences**, including **4,441 Terrain pictures**. **106 originals remain**: 94 Terrain, 11 enemies/ground objects and one UI/other picture.
+
+This 11-picture append adds two gratings, three E3 terrain pictures, five first-campaign tiles and the copyright graphic. Copyright and the two unused tiles have catalogue/intrinsic approval without invented gameplay scenes. Other finite contexts keep their literal SourceG2/H5613 epoch and separate H5636 input carries. The 68 retained Original cells and Source-owned grating masks/gray anchors earn no generated-HD detail credit; visible texture, palette and native-scale limits remain recorded.
+
+Launcher checks verify **6,449 assets** and **5,647 HD frames with zero rejects**. Runtime: **13,551 files / 8,833,075,526 bytes**. Seven staged checks preceded one private registrar main; the fresh public HD-tool suite passed **389 synthetic tests**. SourceG2 binaries, 45 mods and 42 SD/HD mission briefings remain unchanged. Native Windows CI for `83a7c8cb` passed at 5,636 pictures and retains that scope. Earlier gameplay, scene, audio and performance evidence stays dated; other private artwork remains outside this append.
+
+# Earlier H5636 artwork and presentation checkpoints — retained verbatim
+
+# Current approved-artwork checkpoint — 19 October 2026
+
 Current artwork checkpoint — 19 October 2026: **5,636 reviewed pictures / 3,724 complete sequences**, including **4,431 Terrain pictures**. **117 originals remain**: 104 Terrain, 11 enemies/ground objects and two UI/other pictures.
 
 This 23-picture append adds PLATOON6, PERSON12 and five Terrain pictures. PLATOON is dormant catalogue artwork: Rust still lacks the classic secret/ship-computer activation, so no gameplay context is claimed. PERSON has genuine finite SourceG2/H5613 S2W4 ground contexts. Terrain keeps its literal SourceG2/H5596-plus9 captures, with separate finite64 input carries; retained Original faces and functional black support earn no generated-detail credit.

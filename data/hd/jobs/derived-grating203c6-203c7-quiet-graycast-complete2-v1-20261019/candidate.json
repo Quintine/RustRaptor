@@ -1,0 +1,53 @@
+{
+  "format_version": 1,
+  "job_id": "derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019",
+  "category": "Terrain",
+  "kind": "contextual_terrain_shard",
+  "complete_family": true,
+  "generation_inventory": [
+    "203c6",
+    "203c7"
+  ],
+  "sequences": [
+    {
+      "name": "Original-geometry generated quiet grating 203c6 complete1; fixed aggregate gray cast correction",
+      "base_asset": 132038,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/derived/203c6-DERIVED-graycast-v1.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "bdf3a65aeaf5b07f6ba5cee4b0842effd47432040c5c1671339a039f3103f5f3"
+        }
+      ]
+    },
+    {
+      "name": "Original-geometry generated quiet grating 203c7 complete1; fixed aggregate gray cast correction",
+      "base_asset": 132039,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/derived/203c7-DERIVED-graycast-v1.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "051d291f21fce569c03946c90f47c992cbbaaa8637fdec0f667e0de3d7d86e5a"
+        }
+      ]
+    }
+  ],
+  "artwork_derivation": {
+    "path": "jobs/derived-grating203c6-203c7-quiet-graycast-complete2-v1-20261019/artwork-derivation.json",
+    "sha256": "3245c791c07e9d32e94b23b69d1ce98a8272acf6ef35de1747b15ea7df265c7d"
+  }
+}

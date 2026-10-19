@@ -1,0 +1,45 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reproducer/inputs/new-triple-master.png",
+        "sha256": "c0eddf70f65ae0128adb3770a196930f7084fcb3c559c93f600d7950a8bcc766"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/generation/triple/actual-primitive-receipt.json",
+        "sha256": "d166cb9ab630f44a8a6e1c2915fbf3b9e5957ef2201997aa033c6f9854daacbc"
+      },
+      "prompt": {
+        "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/generation/triple/prompt.txt",
+        "sha256": "b51d0de4133be44813ed9c1ccf019e0340523594ad3522b5e3d17cdc2c011bcd"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_firstcampaign_source_components_v2_buffered.py",
+      "sha256": "15c97398e35485ff08ecf0ae7fcf5e6c52848ccbd3ffcbe2d27aba62dad06d40"
+    },
+    {
+      "path": "tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/derivation/actual-executed-recipe.json",
+    "sha256": "bd249259f053ee411f04df6a5da4999e50888a23234fe06f07d63e5358e07e60"
+  },
+  "execution_receipt": {
+    "path": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/derivation/actual-execution-portable-namespace-bridge.json",
+    "sha256": "7ae3ab06c28994d72e3c2b01039eaf22cc18a18b98c4973012578a026194bc89"
+  },
+  "sources": {
+    "104fd": "89f7d875ee7dcf0076223162030df48a866d95b9b7e4bcc0dd037c937bce3ee2"
+  },
+  "outputs": {
+    "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/artwork/104fd-derived.png": "b1fee16093d1321622531fe3f504517b3ed93ef0ac4ce477523591703fc784d6"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "execution": {
+    "status": "success",
+    "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+    "recipe_sha256": "8e1735f683998bb1e17c817c6430f69c6225f9c0370d6799d075fa4c75c7f040",
+    "tool_sha256": "15c97398e35485ff08ecf0ae7fcf5e6c52848ccbd3ffcbe2d27aba62dad06d40",
+    "source_sha256": {
+      "103d5": "5ad6cdee19cca538f9e08b15fb5fee48a394903ced837e84e5fbb19e8a66dc94",
+      "103d6": "8dda05de47883fcbb2540e92d7aabeaf5170ff7147ee55b39af145863d491a0f"
+    },
+    "parent_raw_sha256": [
+      "786270fcd25f15b764c4fc372d63856e2ccfd2ce55884b12b5222efba0967dd0",
+      "c22d774a552d121e181a248b8d65fa1c56a19f9c14211b125d0a78bbbedd9176"
+    ],
+    "output_sha256": {
+      "103d5": "b9ca0511370eee3eda354ff50c261b1b4b4805e762ba04ffd6cd86843c7730d9",
+      "103d6": "a401073f905934c26ff48a90368f8328bc7a959c48354dc811dcdfdc4c1e04d9"
+    }
+  },
+  "actual_unchanged_receipt": {
+    "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/derivation/actual-execution-receipt.json",
+    "sha256": "c49c104678ca3f49f926052585960adaa25efc5b061a30545e7b45d5fd7fafe6"
+  },
+  "scope": "Projection of actual authenticated inputs/outputs and tool identity only. Historical execution recipe bytes and SHA remain exact; relative replay recipe is separately supplied and has never been executed again."
+}

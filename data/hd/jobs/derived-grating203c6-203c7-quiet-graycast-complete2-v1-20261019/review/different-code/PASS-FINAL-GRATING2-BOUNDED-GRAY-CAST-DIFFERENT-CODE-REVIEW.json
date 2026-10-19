@@ -1,0 +1,55 @@
+{
+  "status": "PASS_DIFFERENT_CODE_REVIEW_AND_21_SYNTHETIC_ONLY_REGRESSIONS",
+  "reviewer": "/root/stag_portability",
+  "utc": "2026-10-18T23:22:43.492209+00:00",
+  "reviewed_files_sha256": {
+    "hd_grating_gray_cleanup.py": "a44be4d74907cce7f18a87c9e47b07f4aefdc3582631cdd40d152b0b76bef4a1",
+    "test_hd_grating_gray_cleanup.py": "078b81df887fa8ddf7cf03ac10a00cf24ad8bb451133c17e571d3b65bedaa750"
+  },
+  "initial_FINDING_preserved": {
+    "helper_sha256": "a7ec5b6e3da48c82f83abe4b03d2b49b82398bcd925db4006eca7642d477c1c8",
+    "FIFO_block_reproduced": true,
+    "evidence": "INITIAL-FIFO-HANG-CONCRETE-FINDING.json",
+    "final_fix": "O_NONBLOCK on final/root/component descriptors; FIFO rejects before read; exact regular size and stable descriptor metadata validated"
+  },
+  "independent_tests": {
+    "count": 21,
+    "exit_code": 0,
+    "seconds": 0.3,
+    "Python": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "argv": [
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_hd_grating_gray_cleanup"
+    ],
+    "stderr_sha256": "9146cc641f4ba7939d94a8a66884b68938d97ef8d0e1099d35a613c73d4e6f90",
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "findings_closed": [
+    "FIFO blocking before regular-file check",
+    "short-read length mismatch",
+    "strict RGB/RGBA bounded PNG canvas",
+    "malformed frame objects"
+  ],
+  "reviewed_contract": {
+    "selection": "Only fixed per-asset rectangle intersected with all authentic Source indices11..30; exact selected-cell digest; stable two-frame order",
+    "color": "One aggregate Source gray RGB anchor per frame, max chroma8, one fixed luminance offset bounded absolute32; clipping rejects",
+    "generated_structure": "Each selected resized-parent pixel retains generated luminance difference up to at most0.5 per-pixel quantization error; no per-cell SourceRGB field",
+    "outside": "All RGBA outside selected4xmask byte-identical to Pillow Lanczos resized generated-parent baseline",
+    "IO": "No-follow descriptor traversal; NONBLOCK; regular-file/size/short-read/stat-change checks; hashes authenticate buffered bytes; derive never reopens filenames; reauthentication before fresh no-overwrite publication",
+    "shape_palette": "Exact uncompressed opaque32x32 Source1044bytes;768byte six-bit palette; bounded2x1RGB/RGBAPNG; all alpha255",
+    "publication": "Linux renameat2 no-replace; synthesized fixtures prove existing output untouched; no native Windows execution claim"
+  },
+  "limitations": [
+    "This is code approval only; no production recipe/material/art/context approval or actual cleanup/QA run.",
+    "Outside guarantee is relative to Pillow resized parent, not old Rust raw-bank resampling.",
+    "Source aggregate brightness transfer may shift local generated luminance by up to32; visual review remains required.",
+    "exact_Original_pixel_copies=0 records absence of direct per-cell SourceRGB copying operations; it is not a measured count of coincidentally equal output colors."
+  ],
+  "actual_production_cleanup_calls": 0,
+  "actual_game_QA_or_World_calls": 0,
+  "canonical_changes": false,
+  "Git_changes": false
+}

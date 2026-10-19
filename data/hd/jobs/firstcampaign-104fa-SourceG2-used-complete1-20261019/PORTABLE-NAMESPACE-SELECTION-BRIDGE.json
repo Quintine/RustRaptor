@@ -1,0 +1,29 @@
+{
+  "actual_candidate": {
+    "path": "jobs/firstcampaign-104fa-SourceG2-used-complete1-20261019/measurement/actual-original-cohort-candidate.json",
+    "sha256": "981f0149a446d6f177e824f92bcc96e8907f9162ebcc3c98fa71f76f6cdbdf77"
+  },
+  "actual_QA": {
+    "path": "jobs/firstcampaign-104fa-SourceG2-used-complete1-20261019/measurement/actual-original-cohort-runtime-qa.json",
+    "sha256": "b8caef89a118e297b24732ee699749397ec6992d762388d4f303f80f6587b6c9"
+  },
+  "portable_candidate": {
+    "path": "jobs/firstcampaign-104fa-SourceG2-used-complete1-20261019/candidate.json",
+    "sha256": "b50127faa28cad88339874fc775dbe96595af34977828e392a0332bbdbace1ee"
+  },
+  "selected": [
+    "104fa"
+  ],
+  "actual_tool_execution_count_unchanged": true,
+  "new_engine_or_art_calls": 0,
+  "all_native_frame_fields_except_file_exact": true,
+  "actual_QA_fields_changed": [
+    "frames subset",
+    "validated_frames",
+    "artwork_sha256 file namespace",
+    "candidate_sha256",
+    "frame_bindings_sha256",
+    "scope/invocation projection metadata"
+  ],
+  "limits": "Selected whole definitions, never animation slices. Original executed whole-cohort evidence stays unchanged. Unused originals have no genuine context and claim none."
+}

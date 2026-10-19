@@ -1,0 +1,53 @@
+{
+  "status": "QUALIFIED_DIFFERENT_INTRINSIC_MATERIAL_PEER_COMPLETE2_WITH_LIMITS_CONTEXT_PENDING",
+  "reviewer": "/root/stag_portability",
+  "utc": "2026-10-18T23:40:28.272494+00:00",
+  "author_packet": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grating2-fixed-graycast-once-currentG2-author-20261019-v1",
+  "author_strict_sha256": "72ec16de7d663974327e13458d52ddb1aa7b1b4924885dc6e19c441233eee335",
+  "author_intrinsic_report_sha256": "25b855775bc1fe603a7d4697641fec8265e0c23805c8a95e09b3273a9d4761f0",
+  "actual_SourceG2_QA_sha256": "62d093c4ec0ec0580fa4c8e22c6eb39ba791bb1d3c37cfcb5f91cfbdebb36962",
+  "read_only_audit_sha256": "0f5a3080bdba75430b60585a529b56e3708a9443d406d44644b36dc06fa08af1",
+  "physically_opened_and_fully_viewed": [
+    "untouched1774x887 quietV2 originalpair raw, bothwhole887px panels",
+    "203c6 actualderived128x128RGBPNG",
+    "203c7 actualderived128x128RGBPNG",
+    "203c6 unresampledwhole Original32+native32/64/96/128page",
+    "203c7 unresampledwhole Original32+native32/64/96/128page",
+    "203c6 whole enlargednearest-neighbor diagnostic page (HD3 noninteger exception disclosed)",
+    "203c7 whole enlargednearest-neighbor diagnostic page (HD3 noninteger exception disclosed)"
+  ],
+  "frames": [
+    {
+      "asset": "203c6",
+      "intrinsic_result": "QUALIFIED_WITH_LIMITS",
+      "observations": "Right-side vertical grating keeps the Source long rectangular frame, repeated horizontal ribs, dark apertures and lower open bay. Corrected neutral gray separates the structure from brown earth without raised bright chrome or enlarged framing. At1x its ribs are softer than Original;2x improves separation;3x/4x retain generated mottled gray grain and faithful silhouette. Brown ground, dark center channel and scattered fragments keep the Source coarse spatial layout.",
+      "output_sha256": "fd913999df7a3c45f7c414071d0177fef53900968b9b542fae22f17e206954c3"
+    },
+    {
+      "asset": "203c7",
+      "intrinsic_result": "QUALIFIED_WITH_LIMITS",
+      "observations": "Upper horizontal grating keeps Source rails, repeated vertical bars, dark apertures and right end bay. Corrected gray reads as the same ordinary worn structure rather than tan earth. Native1 is mildly soft but legible; native2/3/4 retain the bar arrangement and generated irregular surface tone. The lower earth/debris pattern remains deliberately blocky and dark.",
+      "output_sha256": "0bee64e5fc22c22c98688ec8a9ce942788f07d40b185a7b36e715f496de93f20"
+    }
+  ],
+  "ownership": {
+    "Source": "Original canvas, semantic bar/ground geometry and complete179/192-cell gray selection plus one aggregate gray RGB anchor perframe; not generated detail credit",
+    "generated": "QuietV2 untouchedraw supplies local luminance variation throughout selected grating and nonselected brown/debris artwork after disclosed resize",
+    "derived": "One fixed-graycast cleanup changes2864/3072 selected128px output samples. No per-cell SourceRGB copying; direct-copy operation count does not exclude coincidental color matches.",
+    "outside": "13520/13312 outside samples and allalpha exact to Pillow Lanczos resizedraw baseline; not equal-oldRustresampler claim"
+  },
+  "limitations": [
+    "Static intrinsic views do not establish temporal shimmer behavior, live reachability, joins/seams or genuine context approval.",
+    "Native1 is softer at some grating edge pixels than Original; native3/4 surfaces have visible grain.",
+    "Brown ground is conspicuously Source-shaped with coarse blocks; geometry/aggregate color are not newly generated HD detail.",
+    "Two enlarged HD3 diagnostic panes actually96\u2192256 nearest-neighbor (8/3), not claimedintegerfactor2. True native96px pages were fully physically viewed and exactreadback verified; frozen packet unchanged.",
+    "SourceG2 intrinsic QA has trivial opaque alphaIoU1; it does not establish material fidelity by itself."
+  ],
+  "genuine_context_approval": false,
+  "Root_final_admission_or_registration": false,
+  "prior_quiet_V2_HOLD_preserved": true,
+  "actual_cleanup_calls_by_reviewer": 0,
+  "actual_QA_context_or_World_calls_by_reviewer": 0,
+  "actual_imagegen_calls_by_reviewer": 0,
+  "canonical_or_Git_changes": false
+}

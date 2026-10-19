@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-grating2-G2-H5613-genuine14-context-peer-20261019-v1/audit_readonly.py", line 27, in <module>
+    assert np.array_equal(a[~support],b[~support])and np.array_equal(ac[~support],bc[~support]);outside+=int((~support).sum());assert int((~support).sum())==record['outside_support_samples_exact']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

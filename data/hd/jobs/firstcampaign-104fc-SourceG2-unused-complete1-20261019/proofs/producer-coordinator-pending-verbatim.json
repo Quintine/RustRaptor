@@ -1,0 +1,71 @@
+{
+  "status": "pending_root_final_approval",
+  "frame_bindings_sha256": "983adef07b4c090a701de4d8bc770cdb1b13ebd33d60d3757a72e3e69914f481",
+  "candidate_sha256": "11596fed4fdd1bae285a3767e794da05316f6f346e1e5b2201930325d0d94dc3",
+  "source_and_all_scale_visual_review": false,
+  "independent_review": false,
+  "runtime_qa": "jobs/firstcampaign-104fc-SourceG2-unused-complete1-20261019/runtime-qa.json",
+  "retained_original_detail_review": {
+    "cells_by_asset": {
+      "104fc": [
+        [
+          4,
+          26
+        ],
+        [
+          7,
+          14
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          11,
+          24
+        ],
+        [
+          13,
+          9
+        ],
+        [
+          30,
+          5
+        ],
+        [
+          30,
+          9
+        ]
+      ]
+    },
+    "retained_original_not_generated_HD": true,
+    "policy_version": "retained-original-details-v2-painted0255",
+    "painted_Source_palette_domain": [
+      0,
+      255
+    ],
+    "functional_palette_effects_are_retained_Original": true,
+    "frame_bindings_sha256": "983adef07b4c090a701de4d8bc770cdb1b13ebd33d60d3757a72e3e69914f481",
+    "hybrid_allscale_and_genuine_context_independent_review": false,
+    "hybrid_review_scope": "catalog_only_unused_original_terrain",
+    "catalog_only_no_original_runtime_caller": true,
+    "catalog_only_independent_whole_material_and_allscale_review": true,
+    "catalog_only_source_trace": {
+      "path": "jobs/firstcampaign-104fc-SourceG2-unused-complete1-20261019/catalogue/CLOSED-UNUSED-ALL27MAPS-ALL4FLATS-SOURCE-TRACE.json",
+      "sha256": "eaf0b9a6e61d8b63db1614a7680d761320ddb373778dda29cf74b9f2e610cccf"
+    },
+    "catalog_only_actual_allscale_QA": {
+      "path": "jobs/firstcampaign-104fc-SourceG2-unused-complete1-20261019/runtime-qa.json",
+      "sha256": "87d39752f71dfd7bbc6f4a73c9eb70c7bb43cd94c584978666099b82a0365c41"
+    }
+  },
+  "pending": [
+    "Root explicit final approval",
+    "Portable independent review bindings",
+    "Root explicit unused whole-intrinsic approval and exact machine contract"
+  ],
+  "finite_context_epoch_carry": {
+    "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/FINITE40-H5613-TO-H5636-NAMESPACE-AND-BYTE-CARRY.json",
+    "sha256": "98b45f7d65c1e7d2ff0211db1ff64b0ae8f621164c3d83408d111bdb53c3f9b2"
+  }
+}

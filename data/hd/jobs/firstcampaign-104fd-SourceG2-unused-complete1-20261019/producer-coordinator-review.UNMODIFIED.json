@@ -1,0 +1,155 @@
+{
+  "status": "approved",
+  "frame_bindings_sha256": "68fdd525bf7bc9bbbcdd6509938b982ff078710808ccb8c740c41adcc8169185",
+  "candidate_sha256": "efcc1ef27143b40549127202fa02392d2751cb4c0df27ed4788d7a9b83c1b014",
+  "source_and_all_scale_visual_review": {
+    "author": {
+      "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-author-selected5.json",
+      "sha256": "74b1747a08d3b87e03beed952bbf134d92e9902f4f5637419f456b0524aa3ecb"
+    },
+    "different_intrinsic": {
+      "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-different-intrinsic-selected5.json",
+      "sha256": "0c2bef01148b7e453406f6f0bb369f4fe0554c724981a79b90a1748ede724c0c"
+    }
+  },
+  "independent_review": {
+    "intrinsic": {
+      "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/actual-different-intrinsic-selected5.json",
+      "sha256": "0c2bef01148b7e453406f6f0bb369f4fe0554c724981a79b90a1748ede724c0c"
+    },
+    "unused_machine": {
+      "path": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/catalogue/actual-different-intrinsic-machine-peer.json",
+      "sha256": "b0b80002e64ad19e98c833374bf226a44a2de7932e8ee3dd75fe34b8e3553185"
+    }
+  },
+  "runtime_qa": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/runtime-qa.json",
+  "retained_original_detail_review": {
+    "cells_by_asset": {
+      "104fd": [
+        [
+          2,
+          6
+        ],
+        [
+          28,
+          3
+        ]
+      ]
+    },
+    "retained_original_not_generated_HD": true,
+    "policy_version": "retained-original-details-v2-painted0255",
+    "painted_Source_palette_domain": [
+      0,
+      255
+    ],
+    "functional_palette_effects_are_retained_Original": true,
+    "frame_bindings_sha256": "68fdd525bf7bc9bbbcdd6509938b982ff078710808ccb8c740c41adcc8169185",
+    "hybrid_allscale_and_genuine_context_independent_review": false,
+    "hybrid_review_scope": "catalog_only_unused_original_terrain",
+    "catalog_only_no_original_runtime_caller": true,
+    "catalog_only_independent_whole_material_and_allscale_review": true,
+    "catalog_only_source_trace": {
+      "path": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/catalogue/CLOSED-UNUSED-ALL27MAPS-ALL4FLATS-SOURCE-TRACE.json",
+      "sha256": "c8e84fc7fa981e58d7d685fc67ca27ce359f63fc401cb277b00ddcfa86227327"
+    },
+    "catalog_only_actual_allscale_QA": {
+      "path": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/runtime-qa.json",
+      "sha256": "b54b4d4d500080012b96f3f7bd35466a2c93e758faeb28abe1c1f616f42055ca"
+    },
+    "catalog_only_independent_material": {
+      "path": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/catalogue/actual-different-intrinsic-machine-peer.json",
+      "sha256": "b0b80002e64ad19e98c833374bf226a44a2de7932e8ee3dd75fe34b8e3553185"
+    },
+    "catalog_only_root_approval": {
+      "path": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/catalogue/Root-unused-whole-intrinsic-approval-verbatim.json",
+      "sha256": "c4537a6e6e72af7c83cddb3ced8dbfc270ffef6dfbd0900440a288c34eb3c19c"
+    },
+    "catalog_only_material_contract": {
+      "status": "qualified",
+      "scope": "complete_native_picture_intrinsic_all_scales",
+      "asset": "104fd",
+      "reviewer": "/root/ship_portability",
+      "artist": "/root/remaining_catalog",
+      "preparer": "/root/remaining_catalog",
+      "qualified_frames": 1,
+      "held_frames": 0,
+      "retained_cell_count": 2,
+      "native_frame": {
+        "frame": 0,
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "89f7d875ee7dcf0076223162030df48a866d95b9b7e4bcc0dd037c937bce3ee2",
+        "original_detail_cells": [
+          [
+            2,
+            6
+          ],
+          [
+            28,
+            3
+          ]
+        ],
+        "file": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/artwork/104fd-derived.png"
+      },
+      "retained_cells": [
+        [
+          2,
+          6
+        ],
+        [
+          28,
+          3
+        ]
+      ],
+      "native_scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "pending": [],
+  "finite_context_epoch_carry": {
+    "path": "jobs/firstcampaign-bridge-103d5-103d6-SourceG2-complete2-20261019/lineage/firstcampaign5-20261019/reviews/FINITE40-H5613-TO-H5636-NAMESPACE-AND-BYTE-CARRY.json",
+    "sha256": "98b45f7d65c1e7d2ff0211db1ff64b0ae8f621164c3d83408d111bdb53c3f9b2"
+  },
+  "artwork_derivation": {
+    "path": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/derivation/artwork-derivation.json",
+    "sha256": "0e5f8ed436ac1d2aee36a72fbfc3d8a843e0e8bd02c238f161e38c2278a02066"
+  },
+  "reviewer": "/root",
+  "coordinator_record_author": "/root/publication_review",
+  "qualification_limits": [
+    "All five whole Original/actualnative1\u20134 bodies personally viewed. Bridge post/slat/gap geometry, broken edges/rocks and yellow lines remain faithful. Warm/cool plank variation, fine ripples/foam, stronger worn structural texture, soft approach grain and stretched104fdwarp remain qualified limits. Genuine generated material and borrowed c22 road texture provenance are explicit.",
+    "Personally viewed one whole genuine bridge-pair3role1\u20134 board and ordered104farow23native4intact/settled board. Independent0fbf6ed7 reviews all18wholepages/120unique roles+48ordered duplicates, all6actualpairplacements+bothlegal104faevents. Texture/seam variation remains visible; these are finite controlled static states, not natural combat timing or seamless allplacements.",
+    "ActualpixelsG2/H5613 retain that epoch. Finite40Source/current5636 input carry authenticates32foreign/canonicalraw plus5unchangedOriginalfallbacks; no invented newcurrentrerender.",
+    "All68functionalOriginalcells receive noHDcredit; used59cells/9060joined retained samples and unused9cells separate. Pairglobal244fringes differ0/2/6/10 and0/1/3/5 outsideprotectedowners;398allowed water-class substitutions in scenes mean no blanketglobal244equality claim.",
+    "104fc/fd are unused byall27MAP/4FLATS, approved under separate strict Rootintrinsic records85f67899/c4537a6e; additive machine receiptsa96fcd8f/b0b80002 bind exactsingletons, no invented gameplaycontext."
+  ],
+  "approval_scope": "Root approved finite firstcampaign5; used3 preserve literalG2/H5613 real-context and current5636 input carry; unused2 have strict all27MAP/fourFLATS no-caller intrinsic contracts, no invented scene.",
+  "Root_current_append_approval": {
+    "approved": true,
+    "authority_role": "project_root",
+    "actual_qualified_art_approval": {
+      "path": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/proofs/Root-firstcampaign5-qualified-verbatim.json",
+      "sha256": "78feb6b2878ae76f0c020b3520f1324c41f6004977835e265e94356bcd7f80cd"
+    },
+    "notes": [
+      "All five whole Original/actualnative1\u20134 bodies personally viewed. Bridge post/slat/gap geometry, broken edges/rocks and yellow lines remain faithful. Warm/cool plank variation, fine ripples/foam, stronger worn structural texture, soft approach grain and stretched104fdwarp remain qualified limits. Genuine generated material and borrowed c22 road texture provenance are explicit.",
+      "Personally viewed one whole genuine bridge-pair3role1\u20134 board and ordered104farow23native4intact/settled board. Independent0fbf6ed7 reviews all18wholepages/120unique roles+48ordered duplicates, all6actualpairplacements+bothlegal104faevents. Texture/seam variation remains visible; these are finite controlled static states, not natural combat timing or seamless allplacements.",
+      "ActualpixelsG2/H5613 retain that epoch. Finite40Source/current5636 input carry authenticates32foreign/canonicalraw plus5unchangedOriginalfallbacks; no invented newcurrentrerender.",
+      "All68functionalOriginalcells receive noHDcredit; used59cells/9060joined retained samples and unused9cells separate. Pairglobal244fringes differ0/2/6/10 and0/1/3/5 outsideprotectedowners;398allowed water-class substitutions in scenes mean no blanketglobal244equality claim.",
+      "104fc/fd are unused byall27MAP/4FLATS, approved under separate strict Rootintrinsic records85f67899/c4537a6e; additive machine receiptsa96fcd8f/b0b80002 bind exactsingletons, no invented gameplaycontext."
+    ],
+    "pending_predecessor": {
+      "path": "jobs/firstcampaign-104fd-SourceG2-unused-complete1-20261019/proofs/producer-coordinator-pending-verbatim.json",
+      "sha256": "9d7877c3a1f5a641f4190d071c5d1b3e27e039db02aa9b2dd74e44d26e0ffb7e"
+    },
+    "historical_pending_statements_superseded_by_actual_Root_approval": true
+  }
+}
