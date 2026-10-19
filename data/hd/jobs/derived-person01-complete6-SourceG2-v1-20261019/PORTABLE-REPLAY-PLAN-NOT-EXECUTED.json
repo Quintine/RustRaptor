@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "python3",
+    "tools/hd_person01_cleanup.py",
+    "data/hd/jobs/derived-person01-complete6-SourceG2-v1-20261019/cleanup-recipe.json",
+    "ABSENT_OUTPUT"
+  ],
+  "requires": [
+    "Python3",
+    "NumPy",
+    "Pillow"
+  ],
+  "tool_dependencies": "tools/hd_infantry_cleanup.py5368774a and tools/hd_frame_policy.py66184a47; exact copied bytes in this proposal",
+  "status": "PLAN_ONLY_ROOT_RELEASE_REQUIRED_FOR_ANY_NEW_REPLAY"
+}

@@ -1,0 +1,469 @@
+{
+  "contract_version": "original-dormant-enemy-animation-source-v1",
+  "no_genuine_original_runtime_context_claimed": true,
+  "catalogue": {
+    "path": "data/INDEX",
+    "sha256": "4ce78e5e638b6603114dd233ceaa41f386c0963ba4aa02ecf88ce0215b096681",
+    "bytes": 188148
+  },
+  "palette": {
+    "path": "data/misc/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "bytes": 768
+  },
+  "family": {
+    "name": "PLATOON1_PIC",
+    "assets": [
+      "200ec",
+      "200ed",
+      "200ee",
+      "200ef",
+      "200f0",
+      "200f1"
+    ],
+    "frame_count": 6
+  },
+  "phases": [
+    {
+      "asset": "200ec",
+      "Source": {
+        "path": "data/sprites/PLATOON1_PIC",
+        "sha256": "bfe9f4c4dfde7ed99e1e6efe536d15372b927202725d70c44ea84c70a4bfe8b0",
+        "bytes": 473
+      },
+      "header_le_i32": [
+        0,
+        2,
+        21,
+        24,
+        24
+      ]
+    },
+    {
+      "asset": "200ed",
+      "Source": {
+        "path": "data/sprites/PLATOON1_PIC.1",
+        "sha256": "d6a7ca98aa5d3bb57fea86ae1dc4a7e0053ee5bbff6d0052292a11e7642a618e",
+        "bytes": 459
+      },
+      "header_le_i32": [
+        0,
+        2,
+        21,
+        24,
+        24
+      ]
+    },
+    {
+      "asset": "200ee",
+      "Source": {
+        "path": "data/sprites/PLATOON1_PIC.2",
+        "sha256": "c6c2b9bf84962839a98e184a4eeb7efae5690ad4e8ab6775f2c6fb3cb3c57f9c",
+        "bytes": 466
+      },
+      "header_le_i32": [
+        0,
+        2,
+        21,
+        24,
+        24
+      ]
+    },
+    {
+      "asset": "200ef",
+      "Source": {
+        "path": "data/sprites/PLATOON1_PIC.3",
+        "sha256": "71d0c0a5b95a6b7e8cdcfcb0808a7535a9f6a17ce892ccff02ae277abc90f151",
+        "bytes": 473
+      },
+      "header_le_i32": [
+        0,
+        2,
+        21,
+        24,
+        24
+      ]
+    },
+    {
+      "asset": "200f0",
+      "Source": {
+        "path": "data/sprites/PLATOON1_PIC.4",
+        "sha256": "d8679790b3d189430121109029f0a6c998baee9cbcd4a047ed3a6c2f2a92e053",
+        "bytes": 459
+      },
+      "header_le_i32": [
+        0,
+        2,
+        21,
+        24,
+        24
+      ]
+    },
+    {
+      "asset": "200f1",
+      "Source": {
+        "path": "data/sprites/PLATOON1_PIC.5",
+        "sha256": "729c16f16b84e34aded2ad6b4dc02655ebf6e7b4c69e439f76580766cce538ec",
+        "bytes": 466
+      },
+      "header_le_i32": [
+        0,
+        2,
+        21,
+        24,
+        24
+      ]
+    }
+  ],
+  "sprite_libraries": [
+    {
+      "path": "data/misc/SPRITE1_ITM",
+      "sha256": "b4978c09f1929738f65508683d5c3ca07ea05b1afcbf11c85456224898d36694",
+      "bytes": 69168
+    },
+    {
+      "path": "data/misc/SPRITE2_ITM",
+      "sha256": "d4c69a59bad7e0c7001dcc549fbb6e78028c8710d86ee12fc8e056ec2ae42379",
+      "bytes": 86592
+    },
+    {
+      "path": "data/misc/SPRITE3_ITM",
+      "sha256": "57874c28c4cc86eb4d173d225f2d79dbb595300f9ac6e091fa8aac9740d87433",
+      "bytes": 63888
+    },
+    {
+      "path": "data/misc/SPRITE4_ITM",
+      "sha256": "4924e83cdeaf12b2fc998533502e2282326b333cd29b1367f84b8a2a4e0c6a97",
+      "bytes": 59136
+    }
+  ],
+  "sprite_callers": [
+    {
+      "game": 1,
+      "ordinal": 83,
+      "name": "PLATOON1_PIC",
+      "base_asset": "200ec",
+      "frame_count": 6,
+      "enemy_id": "base:enemy_1_83",
+      "record_sha256": "509ac2a356782eae01a314646c0831dfd87fce498498b1468766b2bc90b695f6"
+    }
+  ],
+  "current_rust_sources": [
+    {
+      "path": "src/assets.rs",
+      "sha256": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+      "bytes": 16417
+    },
+    {
+      "path": "src/audio/opl3.rs",
+      "sha256": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+      "bytes": 55234
+    },
+    {
+      "path": "src/audio.rs",
+      "sha256": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+      "bytes": 42072
+    },
+    {
+      "path": "src/cinematics.rs",
+      "sha256": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+      "bytes": 29788
+    },
+    {
+      "path": "src/content.rs",
+      "sha256": "80021611102f22b3152164e88a3ee7ecc8c16e9b3a4563551a047c089f2ba7d2",
+      "bytes": 36845
+    },
+    {
+      "path": "src/desktop.rs",
+      "sha256": "82dfa448623cd05e12110d838b80a4f726fb037a73eec587accbadb4aef33178",
+      "bytes": 368683
+    },
+    {
+      "path": "src/hd.rs",
+      "sha256": "b17f4ee0757ee87d34e01ec76f3a6239c6e9044b42b4b10bd5f05b485f137a64",
+      "bytes": 159636
+    },
+    {
+      "path": "src/legacy_tables.rs",
+      "sha256": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+      "bytes": 26467
+    },
+    {
+      "path": "src/lib.rs",
+      "sha256": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+      "bytes": 318
+    },
+    {
+      "path": "src/main.rs",
+      "sha256": "510d461e6d971749efbbed6570f08aca2605ecc61c16977ab9acb9170c7aba4a",
+      "bytes": 11252
+    },
+    {
+      "path": "src/menu_art.rs",
+      "sha256": "0506bbf30cc14794625b72ab1e6f5e2573e99a833105ce808913485d3452db06",
+      "bytes": 12134
+    },
+    {
+      "path": "src/mod_selection.rs",
+      "sha256": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+      "bytes": 5447
+    },
+    {
+      "path": "src/modding.rs",
+      "sha256": "d2b811416e06a5c743c11c77e5599ddcf5d3263de4f74363bc0731eaccc2c2ac",
+      "bytes": 42228
+    },
+    {
+      "path": "src/persistence.rs",
+      "sha256": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+      "bytes": 52762
+    },
+    {
+      "path": "src/render.rs",
+      "sha256": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+      "bytes": 32172
+    },
+    {
+      "path": "src/simulation.rs",
+      "sha256": "2537120f280a1cfcfcc73a42a4103a4435ba8aeb98e69c87fde3b885b97a9925",
+      "bytes": 140409
+    },
+    {
+      "path": "src/sound.rs",
+      "sha256": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+      "bytes": 11905
+    },
+    {
+      "path": "src/terrain_hd.rs",
+      "sha256": "e61f96f541c19863ce8d741363a1739b9276e25aee84795952c65565c775e392",
+      "bytes": 59391
+    }
+  ],
+  "current_library": {
+    "path": "target/hd-review-libraries/5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676/libraptor_replica.rlib",
+    "sha256": "5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676",
+    "bytes": 22772516
+  },
+  "maps": [
+    {
+      "path": "data/maps/MAP1G1_MAP",
+      "sha256": "bfa4386e554ee029a9ac7f2f5d0c4cb5c3000e5d7512c7c8246d75deecb48939",
+      "bytes": 12588
+    },
+    {
+      "path": "data/maps/MAP2G1_MAP",
+      "sha256": "f6a2f140f86a6bd91b6d137f149c69a7509e37ef93f54513d16ac826a02d5d69",
+      "bytes": 12396
+    },
+    {
+      "path": "data/maps/MAP3G1_MAP",
+      "sha256": "d119b94ecf744c4b4a14ea1f2de99898050efeddfb6438a8393d0a91f7ca5dc9",
+      "bytes": 14676
+    },
+    {
+      "path": "data/maps/MAP4G1_MAP",
+      "sha256": "908e65d46cceaa17f4243f54e5f40773051950423e4a5f840fa92742c94f7cff",
+      "bytes": 12948
+    },
+    {
+      "path": "data/maps/MAP5G1_MAP",
+      "sha256": "4eb985c26cbe5862d73282e8c0af06589e667ddd3c9ee19f5f436cf4150b9f36",
+      "bytes": 15012
+    },
+    {
+      "path": "data/maps/MAP6G1_MAP",
+      "sha256": "605f63c38a82689a2d776a641576be1a61ad97da52cbaa8f76dea74798d024e2",
+      "bytes": 12228
+    },
+    {
+      "path": "data/maps/MAP7G1_MAP",
+      "sha256": "03b016972af559632627c37d5cfb321f24d6f09c18b6465039cc3d5b2051ffbc",
+      "bytes": 12996
+    },
+    {
+      "path": "data/maps/MAP8G1_MAP",
+      "sha256": "bdc13404abe376689fc78fac4b585a641d68bfc8939cc6b51cc5811d734555bf",
+      "bytes": 13476
+    },
+    {
+      "path": "data/maps/MAP9G1_MAP",
+      "sha256": "f09110d48c0a86989333aa5087e48b02ea06aff7488777e5365f1f3b5c8e835f",
+      "bytes": 12852
+    },
+    {
+      "path": "data/maps/MAP1G2_MAP",
+      "sha256": "b2bf31aacf9e686c0583ecaf78d5af870f3b326d57e78382aa3d279f778cfbd5",
+      "bytes": 13332
+    },
+    {
+      "path": "data/maps/MAP2G2_MAP",
+      "sha256": "0776eabbb0e18b76a2121fa0ec505099b77564af8abe721bb2a05aca43d12ebd",
+      "bytes": 14460
+    },
+    {
+      "path": "data/maps/MAP3G2_MAP",
+      "sha256": "e071f964e54556946595b3fbda178ece3995efe3a1978589586d60f59ad82719",
+      "bytes": 15012
+    },
+    {
+      "path": "data/maps/MAP4G2_MAP",
+      "sha256": "8f15fe7ef807a5d75f4c345213bfe4e4694b53cdb38204f5aa3dc0c45dcfce09",
+      "bytes": 12564
+    },
+    {
+      "path": "data/maps/MAP5G2_MAP",
+      "sha256": "c5f907c0c743554998128fcb0047c262815c77c2ac2aa6c4941a91f4820a0aac",
+      "bytes": 13548
+    },
+    {
+      "path": "data/maps/MAP6G2_MAP",
+      "sha256": "3573cbc922e985145220c5acc30cffcea0bbb26834142fc9e5a496790f5b8483",
+      "bytes": 12156
+    },
+    {
+      "path": "data/maps/MAP7G2_MAP",
+      "sha256": "555e6d42a4c4edc50f100b54d4d7850339c902ca32cc408b420fa5c4d50254fe",
+      "bytes": 12708
+    },
+    {
+      "path": "data/maps/MAP8G2_MAP",
+      "sha256": "7556d96680a0bb382e629ce2ffb2d4a5e1e15b5b87ba450350d8d0e4ac387d51",
+      "bytes": 12036
+    },
+    {
+      "path": "data/maps/MAP9G2_MAP",
+      "sha256": "a1c7a1d1ca473bff76259bb40b3d51fe728b00997efdbcb4b4400ceef9db99c2",
+      "bytes": 13668
+    },
+    {
+      "path": "data/maps/MAP1G3_MAP",
+      "sha256": "2687a6d2e601e67f16f3ec69ff8b007dcfa6610f3dd812af4a1a20e9c1db036e",
+      "bytes": 13020
+    },
+    {
+      "path": "data/maps/MAP2G3_MAP",
+      "sha256": "1d87c8760de45b12c0f43d9354cbd81cfd6993a34933aae6940b87712c4b29e3",
+      "bytes": 13140
+    },
+    {
+      "path": "data/maps/MAP3G3_MAP",
+      "sha256": "76b8443d883c56d4de1a9874cbeeef3b009036bf53982ef8d5b49a233e8098be",
+      "bytes": 12012
+    },
+    {
+      "path": "data/maps/MAP4G3_MAP",
+      "sha256": "7b1ec34500093951f8202d26780360f8ab83fb1cb9fcc18ebdd14e6db20eb026",
+      "bytes": 13284
+    },
+    {
+      "path": "data/maps/MAP5G3_MAP",
+      "sha256": "af69d2ca9295b5763c1b5fe84464d58661ef534faa912a914db9458b9115190c",
+      "bytes": 11940
+    },
+    {
+      "path": "data/maps/MAP6G3_MAP",
+      "sha256": "78429a723d8e73a0b46134cbb99abf0904a4c39ddb9ff25b26ac9c2703159d36",
+      "bytes": 13668
+    },
+    {
+      "path": "data/maps/MAP7G3_MAP",
+      "sha256": "9f5d2ef60050c1b41e57146d8df871507ceda20757158b4a84bd0f9f8c8b9bf3",
+      "bytes": 12876
+    },
+    {
+      "path": "data/maps/MAP8G3_MAP",
+      "sha256": "8e8dc013dad4628d3737337e4125f4155d70ed94ebb5c5edf0b8cdc8d5eb5525",
+      "bytes": 14148
+    },
+    {
+      "path": "data/maps/MAP9G3_MAP",
+      "sha256": "e1bd018fc5286e864d94e56e691a4e6ab23f5c87c3069be4f94779422fcdd1f0",
+      "bytes": 14052
+    }
+  ],
+  "map_declarations": [
+    {
+      "map": "data/maps/MAP1G2_MAP",
+      "ordinal": 254,
+      "byte_offset": 11508,
+      "fields": [
+        -1,
+        83,
+        0,
+        31,
+        1,
+        1
+      ],
+      "raw_bytes_hex": "ffffffff53000000000000001f0000000100000001000000",
+      "enabled_by_pilot_difficulty": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "map": "data/maps/MAP4G2_MAP",
+      "ordinal": 189,
+      "byte_offset": 9948,
+      "fields": [
+        -1,
+        83,
+        0,
+        51,
+        1,
+        2
+      ],
+      "raw_bytes_hex": "ffffffff5300000000000000330000000100000002000000",
+      "enabled_by_pilot_difficulty": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "map": "data/maps/MAP6G2_MAP",
+      "ordinal": 103,
+      "byte_offset": 7884,
+      "fields": [
+        -1,
+        83,
+        0,
+        80,
+        1,
+        1
+      ],
+      "raw_bytes_hex": "ffffffff5300000000000000500000000100000001000000",
+      "enabled_by_pilot_difficulty": [
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ],
+  "counts": {
+    "maps": 27,
+    "sprite_libraries": 4,
+    "sprite_records": 528,
+    "family_library_callers": 1,
+    "spawn_records": 8778,
+    "family_map_declarations": 3,
+    "ordinary_difficulty_callers": 0
+  },
+  "original_source_trace": {
+    "path": "jobs/derived-platoon1-complete6-SourceG2-v1-20261019/proofs/actual-classic-secret-source-trace-verbatim.json",
+    "sha256": "99e5b8bc20acce4eb1eb7d7b74282fc80c84ab2694abe4647a87af8a4a12489b"
+  },
+  "independent_original_census": {
+    "path": "jobs/derived-platoon1-complete6-SourceG2-v1-20261019/proofs/different-four-SPRITE-27MAP-census-verbatim.json",
+    "sha256": "216a02f6c27f143f9314c0d746a963df94da330d0491118cae862569c7c3511f"
+  },
+  "independent_original_crosscheck": {
+    "path": "jobs/derived-platoon1-complete6-SourceG2-v1-20261019/proofs/different-original-source-trace-crosscheck-verbatim.json",
+    "sha256": "c00bfb6e7616012331673852ca98ac23829666035693b50b5735aef385d5df09"
+  },
+  "classic_secret_parity_gap": "Classic raw codes1/2 denote SECRET2/3, enabled through classic secret/ship-computer state. Current Rust implements normal codes3/4/5 only; no secret activation path or genuine Original runtime context is claimed. This is a documented parity gap, not a spawn/difficulty change."
+}

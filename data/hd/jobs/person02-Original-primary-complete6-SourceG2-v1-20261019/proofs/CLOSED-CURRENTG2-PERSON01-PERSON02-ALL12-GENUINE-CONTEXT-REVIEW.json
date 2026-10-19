@@ -1,0 +1,108 @@
+{
+  "status": "QUALIFIED_FINITE_GENUINE_CURRENTG2_CONTROLLED_CONTEXT_ALL12_PHASES_ALL4_NATIVE",
+  "reviewer": "targt_full_context",
+  "families": [
+    "PERSON01",
+    "PERSON02"
+  ],
+  "assets": [
+    "200f8",
+    "200f9",
+    "200fa",
+    "200fb",
+    "200fc",
+    "200fd",
+    "200fe",
+    "200ff",
+    "20100",
+    "20101",
+    "20102",
+    "20103"
+  ],
+  "source_census": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/SOURCE-CALLER-CENSUS.json",
+    "sha256": "ce8a3da1d1361944ef0dc9dba180e49a5c317af54e291a81b4269d1636f81bf9",
+    "bytes": 15159
+  },
+  "captures": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/person01-actual-genuine-capture.json",
+      "sha256": "9448177d5843fd15161fb5f1867de41268d95ab813e26a2bf6db25b4f8d927e5",
+      "bytes": 1905829
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/person02-actual-genuine-capture.json",
+      "sha256": "b72b4f2a8ad6ede5ebcd451e6b12d0a60c1a3b75a432cea0a59391fd6988e6b4",
+      "bytes": 1913968
+    }
+  ],
+  "actual_composition": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/actual-twelve-scene-allnative-composition-v3-consumed-closure/actual-controlled-twelve-phase-composition-proof.json",
+    "sha256": "51c54ca0ffdfcd6c45d5271bd51f7041f09d4986af5d92c9118cd3b62b6bf5da",
+    "bytes": 111458
+  },
+  "strict_audit": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/SAVED-CONTEXT-STRICT-ALPHA-AUDIT-AND-PHYSICAL-REVIEW-INDEX.json",
+    "sha256": "c1c074f755137a555f776d7036a453e6fd12877da3a4aee650d2a25fbc552c20",
+    "bytes": 7959
+  },
+  "physical_review": {
+    "all8_native_ROI_pages_personally_viewed": true,
+    "whole12_proposed_native4_screens_personally_viewed": true,
+    "whole_other_native_scales_personally_viewed": false,
+    "observations": [
+      "Both proposed infantry families preserve the original8x8 logical canvas, small green clothing, dark lower body and tiny bright retained face cell without detached effects or border artifacts.",
+      "All six Source animation phases remain aligned and readable against authentic S2W4 industrial roadway/roof surroundings. Generated detail is subtle at native1 and clearer at native4, consistent with original small infantry scale.",
+      "Exact no-shadow ground Source definition remains unchanged; no invented air or ground shadow added.",
+      "Whole native4 views place the soldier near the entering upper screen boundary but the entire8x8 canvas is in view; no invented interior placement or later-phase pose."
+    ]
+  },
+  "counts": {
+    "screen_samples": 69120000,
+    "inside_target_changed": 2066,
+    "outside_canvas_changed": 0,
+    "outside_own_alpha_changed": 0
+  },
+  "fixed_foreign_bank": {
+    "status": "CURRENT_H5613_47_UNCHANGED_WHOLE_CONSUMED_SEQUENCES_18_RAW_HARDLINKS",
+    "full_frozen_manifest": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/fixed-published-H5613/hd.json",
+      "sha256": "b13a4f7c494262527df1137ed6a5442e100fc51ec25680b7046e1c6f7820648a",
+      "bytes": 3050664
+    },
+    "consumed_projection": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/fixed-H5613-consumed-whole-sequence-projection-v3/hd.json",
+      "sha256": "6d342842e761cbbd724fee0c1cb057fbad1a4cd93b9900b90616b0399df7a543",
+      "bytes": 27039
+    },
+    "closure_receipt": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/FOCUSED-PRE-RENDER-METADATA-CLOSURE-FIX3.json",
+      "sha256": "2aeeee0b07d82b0dcc996546d33da4b96b3b09fef3de124caabcc1d829a9b4f5",
+      "bytes": 3239
+    }
+  },
+  "actual_operations": {
+    "adapter_compiles": 1,
+    "Worlds": 2,
+    "composition_process_invocations": 3,
+    "metadata_load_stops_before_any_scene_rendering": 2,
+    "successful_saved_scene_compositions": 1,
+    "rendered_scenes": 12,
+    "scales": 4,
+    "roles": 3,
+    "new_intrinsic_QA": 0,
+    "imagegen": 0,
+    "cleanup": 0,
+    "canonical_writes": 0,
+    "registrar": 0
+  },
+  "limits": [
+    "Two controlled exact S2W4 raw4 spawn declarations, pilot2 and noinput; all6visible chronological animation phases each. Source terrain and Ground actors; no player/projectile/pickup/secondaryeffect/UI/Host. Not natural fullmission/survival proof.",
+    "Only two exact authentic enabled S2W4 raw4 declarations sampled; no claim all missions/difficulties, green natural terrain, UI/Host or full rendered gameplay.",
+    "Controlled declarations suppress all unrelated spawn declarations before World initialization; actual Source definition/position/timing/health/RNG/pilot/noinput preserved.",
+    "Source-only authoring metadata pack omissions were corrected in fresh successors without recapturing Worlds or altering pixels; first two failed attempts are preserved.",
+    "Independent material approval and Root final publication authority remain separate; this context report does not register artwork."
+  ],
+  "input_pins_all_still_exact_after_composition_and_review": true,
+  "free_bytes": 2529636352
+}

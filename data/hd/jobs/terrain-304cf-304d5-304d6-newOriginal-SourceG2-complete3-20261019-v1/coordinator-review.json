@@ -1,0 +1,78 @@
+{
+  "status": "approved",
+  "reviewer": "/root",
+  "Root_final_coordinator_pending": false,
+  "candidate_sha256": "dfa67d1de26090a5927c3a911311f50331873a9d9053ae86efada8f36f391ae8",
+  "frame_bindings_sha256": "f71e6697a0d2f78be3c2579fdaa436d07fb35bb53b8f807a90a899307e1bf42b",
+  "runtime_qa": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/runtime-qa.json",
+  "source_and_all_scale_visual_review": {
+    "author": {
+      "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/proofs/ACTUAL-WHOLE-RAW-SOURCE-AND-ALL-NATIVE-PHYSICAL-REVIEW.json",
+      "sha256": "ef297ac367eae86f8863f385ce2c2e30e4f352cc7df8cfc480cb499c1f51456c"
+    },
+    "scales": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "independent_review": {
+    "intrinsic": {
+      "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/proofs/independent-intrinsic.json",
+      "sha256": "5d26a56dbb80ce485cb328a324283f1f4e4a8f05216d15be79968c02874b9d36"
+    },
+    "context": {
+      "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/proofs/independent-context-G2-H5596-plus9.json",
+      "sha256": "1d4c374ea5df70aa50fd40ec2e458bdaa8acc1a1a62029e9dd8e8c7465d77a23"
+    }
+  },
+  "genuine_context_review": {
+    "producer": {
+      "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/proofs/author-context-G2-H5596-plus9.json",
+      "sha256": "328acb7fd2187b34c9391c6ddfde3bb1324663fee8f14c4ddc9e53f69a23d8a6"
+    },
+    "different": {
+      "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/proofs/independent-context-G2-H5596-plus9.json",
+      "sha256": "1d4c374ea5df70aa50fd40ec2e458bdaa8acc1a1a62029e9dd8e8c7465d77a23"
+    },
+    "historical_scope": "ActualG2 H5596 plus explicit9 proposals:7windows28scales84wholebodies",
+    "current_input_carry": {
+      "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/proofs/H5596-plus9-to-H5613-input-carry.json",
+      "sha256": "3d89db3005c3c4bb032d33cfe797b50a7859880b21f2fa9c067fbeabeea03535"
+    }
+  },
+  "namespace_only_QA_carry": {
+    "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/measurement/QA-NAMESPACE-ONLY-CARRY.json",
+    "sha256": "b94d769b1dfa23a51dc5647c49c5872d87558d0bc5afc952827b1eac8815cb22"
+  },
+  "generation_lineage": {
+    "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/generation-lineage.json",
+    "sha256": "f6ecf3c6cb7baa893f7a5f4f807aa31ae573c291c918c5a3ff7f910539291daa"
+  },
+  "qualification_limits": [
+    "Edges/frame surfaces are brighter and have stronger relief/highlights than the softly shaded Original. The new material is a remastered interpretation, not pixel-identical geometry or original RGB.",
+    "Native1 reduces fine texture and softens narrow structure/slot detail; all4nativeviews preserve overall Source organization with this limit.",
+    "Historical predecessor was intrinsic-only when authored; literal statement preserved in producer proof. Final context scope is actual SourceG2/H5596 plus9, qualified by Root and independent reviews, with finite H5613 input carry only.",
+    "Red ground is brighter/more granular than Original broad maroon patches. Broken gray rims and cavity remnants show stronger chipped/rubble relief and fine cracks; no exact Original Source interior sample equality is claimed.",
+    "304cf/304d5/304d6 cavity shape/asymmetry, gray remnant placement and ground-side identity remain recognized in all4nativeoutputs; this is no claim that stronger relief is invisible.",
+    "Fourth lower-right2x2cell isunusedgeneratedbackground, not anOriginalasset or countedcompletion.",
+    "Actual SourceG2 H5596 + explicit prior4/new5 proposal;7windows28scales84wholebodies. This remains the true historical pixel epoch.",
+    "No fresh H5613 capture; finite input carry only. Prior4 installed now; the original baseline role remains literal H5596.",
+    "Stronger bevel/chipped relief, native1 merging and inherited local texture boundaries remain qualified limits."
+  ],
+  "new_QA_image_cleanup_context_calls": 0,
+  "own_retained_Original_cells": 0,
+  "approval_scope": "Root-approved finite Source-primary intrinsic and genuine SourceG2/H5596-plus9 context, with explicit finite H5613 input carry; no new context pixels.",
+  "coordinator_record_author": "/root/publication_review",
+  "Root_current_batch23_approval": {
+    "approved": true,
+    "reviewer": "/root",
+    "utc": "2026-10-19T00:27:16.640500+00:00",
+    "notes": "Root approves complete Terrain3 in the finite intrinsic/context scope of its bound independent and Root reviews. Historical invocation epochs, Source functional retention and known material limitations remain literal; no wider gameplay coverage claimed."
+  },
+  "prior_producer_coordinator_verbatim": {
+    "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/proofs/producer-coordinator-pending-verbatim.json",
+    "sha256": "480ab1538986d87e7ad79d57fa96b69a1b5c697d01b78abdb1e9a75853bec428"
+  }
+}

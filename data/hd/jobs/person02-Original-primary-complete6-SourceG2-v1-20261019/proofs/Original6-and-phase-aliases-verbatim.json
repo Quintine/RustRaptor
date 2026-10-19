@@ -1,0 +1,241 @@
+{
+  "rows": [
+    {
+      "asset": "200fe",
+      "frame": 0,
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/PERSON02_PIC",
+        "sha256": "d7eeaf32569e9ca8a98ec42e49f53ed4ae253053405ce503f111f784cb9b91cb",
+        "bytes": 110
+      },
+      "header": [
+        0,
+        2,
+        4,
+        8,
+        8
+      ],
+      "canvas": [
+        8,
+        8
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "visible": 10,
+      "bbox": [
+        2,
+        2,
+        6,
+        6
+      ],
+      "central_face": [
+        4,
+        3
+      ],
+      "central_face_index": 183
+    },
+    {
+      "asset": "200ff",
+      "frame": 1,
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/PERSON02_PIC.1",
+        "sha256": "f4fd7f0ad984786b43b5dd218506a86dcec6bd57682235369f1f50956628d3b3",
+        "bytes": 107
+      },
+      "header": [
+        0,
+        2,
+        4,
+        8,
+        8
+      ],
+      "canvas": [
+        8,
+        8
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "visible": 7,
+      "bbox": [
+        2,
+        2,
+        6,
+        6
+      ],
+      "central_face": [
+        4,
+        3
+      ],
+      "central_face_index": 183
+    },
+    {
+      "asset": "20100",
+      "frame": 2,
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/PERSON02_PIC.2",
+        "sha256": "ac169d46192110f1d94ffb9870898cd655272b09134d2ec85371f532e560acfa",
+        "bytes": 106
+      },
+      "header": [
+        0,
+        2,
+        4,
+        8,
+        8
+      ],
+      "canvas": [
+        8,
+        8
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "visible": 6,
+      "bbox": [
+        2,
+        2,
+        6,
+        6
+      ],
+      "central_face": [
+        4,
+        3
+      ],
+      "central_face_index": 183
+    },
+    {
+      "asset": "20101",
+      "frame": 3,
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/PERSON02_PIC.3",
+        "sha256": "b5fe15e3267bb4202878ba34a5a688a0292d191933d5e15582c52817c92f2d1b",
+        "bytes": 110
+      },
+      "header": [
+        0,
+        2,
+        4,
+        8,
+        8
+      ],
+      "canvas": [
+        8,
+        8
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "visible": 10,
+      "bbox": [
+        2,
+        2,
+        6,
+        6
+      ],
+      "central_face": [
+        4,
+        3
+      ],
+      "central_face_index": 183
+    },
+    {
+      "asset": "20102",
+      "frame": 4,
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/PERSON02_PIC.4",
+        "sha256": "7e0728f401676982b568aa8514e16180831079b59bbc5cb8ae715aee0ac38a01",
+        "bytes": 106
+      },
+      "header": [
+        0,
+        2,
+        4,
+        8,
+        8
+      ],
+      "canvas": [
+        8,
+        8
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "visible": 6,
+      "bbox": [
+        2,
+        2,
+        6,
+        6
+      ],
+      "central_face": [
+        4,
+        3
+      ],
+      "central_face_index": 183
+    },
+    {
+      "asset": "20103",
+      "frame": 5,
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/sprites/PERSON02_PIC.5",
+        "sha256": "28fc4c1631d8a4b55a13b1adcb6e692a16f1e8ff0bf3d5b3efb35cf9eeadd97e",
+        "bytes": 107
+      },
+      "header": [
+        0,
+        2,
+        4,
+        8,
+        8
+      ],
+      "canvas": [
+        8,
+        8
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "visible": 7,
+      "bbox": [
+        2,
+        2,
+        6,
+        6
+      ],
+      "central_face": [
+        4,
+        3
+      ],
+      "central_face_index": 183
+    }
+  ],
+  "exact_whole_Source_index_aliases": {
+    "200fe": "200fe",
+    "200ff": "200ff",
+    "20100": "20100",
+    "20101": "20101",
+    "20102": "20100",
+    "20103": "200ff"
+  },
+  "all6_sequence_frames_required": true,
+  "semantic": "One small top-down green infantry actor per8x8canvas, not a platoon. Thin green helmet/body rows, muted tan face at(4,3), hand alternates upper/lower-left; blackweapon/boot cells remain occupied, bottomboot mostlyleft2 exceptphase3at3.",
+  "palette": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "bytes": 768
+  },
+  "frame1_and5_same": true,
+  "frame2_and4_same": true,
+  "new_generation": 0,
+  "cleanup": 0,
+  "QA": 0,
+  "Original_only_references": true
+}

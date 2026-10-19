@@ -1,0 +1,35 @@
+{
+  "tool": "builtin image_gen.imagegen",
+  "actual_image_calls": 1,
+  "actual_generation_assets": [
+    "304cf",
+    "304d5",
+    "304d6"
+  ],
+  "untouched_returned_raw": {
+    "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/generated/untouched-genuine-builtin-atlas.png",
+    "sha256": "d2d0345d7188df50d7fe3285757d77f1dda345f18d1f73fc24177c3afabf6bff"
+  },
+  "source_only_references": [
+    {
+      "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/Originals/Original-NN-readable-atlas.png",
+      "sha256": "46ee02ce1fdd11f187424135530585e9466966154ca4a0885bc6e99ab687ff0f"
+    },
+    {
+      "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/Originals/Original-native-atlas.png",
+      "sha256": "aa58846ae7cc62ca00704fe5e7cbfaeec25521aee250894b3166a715f903528d"
+    }
+  ],
+  "prompt": {
+    "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/generation-prompt.txt",
+    "sha256": "55832fae624b81cda0b9abb1a29f00a918b04006b3520212d3a072c3af1657ad"
+  },
+  "actual_provider_receipt": {
+    "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/proofs/ACTUAL-ONE-BUILTIN-SAFE-RESULT.json",
+    "sha256": "9b8d951a3d2915253dbf04b784e7b60aa80910098f8b8bb4abc03a4d2314cea1"
+  },
+  "no_cleanup": true,
+  "no_original_retention": true,
+  "original_pixels_not_composited_into_return": true,
+  "reproducibility": "Read prompt with the relative Original reference files here. Provider receipt preserves its actual historical absolute provenance; it is not a live path dependency."
+}

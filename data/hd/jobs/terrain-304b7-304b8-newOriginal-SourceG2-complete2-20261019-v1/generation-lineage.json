@@ -1,0 +1,34 @@
+{
+  "tool": "builtin image_gen.imagegen",
+  "actual_image_calls": 1,
+  "actual_generation_assets": [
+    "304b7",
+    "304b8"
+  ],
+  "untouched_returned_raw": {
+    "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/generated/untouched-genuine-builtin-atlas.png",
+    "sha256": "512a74e6c34b7048364cc85bb53cbc22249b08d35d090d07581515798f18137f"
+  },
+  "source_only_references": [
+    {
+      "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/Originals/Original-NN-readable-atlas.png",
+      "sha256": "783f86ff9275fa87c8e7d9629a0647e1bd5a02bc4e9f8b00561ff889e14b5937"
+    },
+    {
+      "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/Originals/Original-native-atlas.png",
+      "sha256": "df31177839eb97cf08c3176ec1026b2d4bcba0be34149137e75e170ce39618b5"
+    }
+  ],
+  "prompt": {
+    "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/generation-prompt.txt",
+    "sha256": "a62230547f4382cee638a66ed10d4e42063f2b27fbc5953e3ad8143247a061b1"
+  },
+  "actual_provider_receipt": {
+    "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/proofs/ACTUAL-ONE-BUILTIN-SAFE-RESULT.json",
+    "sha256": "835620cb2a1af8d41a6f0c865df51fd9e1744a6e98bfca2d8edf2b376de2758a"
+  },
+  "no_cleanup": true,
+  "no_original_retention": true,
+  "original_pixels_not_composited_into_return": true,
+  "reproducibility": "Read prompt with the relative Original reference files here. Provider receipt preserves its actual historical absolute provenance; it is not a live path dependency."
+}

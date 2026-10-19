@@ -1,0 +1,55 @@
+{
+  "status": "FOCUSED_CODE_SUCCESSOR_READY_NO_GENUINE_CHILD_PIXELS",
+  "preserved_v1": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON01-portable-dispatcher-code-proposal-20261019-v1/FROZEN-REVIEW-INPUTS.json",
+    "sha256": "0de3acf0f7cb59ca54ab5dd1925a34e56d3c8ab936d7c8dfc39b23746c8f1284",
+    "bytes": 7537
+  },
+  "old_proposal_all24_files_hashes_exact": true,
+  "held_different_CODE": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-person01-dispatcher-different-CODE-review-20261019-v1/DIFFERENT-PERSON01-DISPATCHER-CODE-HOLD-19PASS-ONE-IO-FINDING.json",
+    "sha256": "c5b1e3c5974d0d0a223ee0fc8d2f4278f0bf988563609405f9b8239b549e42ac",
+    "bytes": 2917
+  },
+  "helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON01-portable-dispatcher-bootstrap-IO-successor-code-20261019-v2/hd_person01_cleanup.py",
+    "sha256": "bbb13aac1a5617af509a7107bfabd290c75e0b7094a50e14a35be9a5eac79ad5",
+    "bytes": 12001
+  },
+  "tests": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON01-portable-dispatcher-bootstrap-IO-successor-code-20261019-v2/test_hd_person01_cleanup.py",
+    "sha256": "79ecf03ab10e023a8952ca4f2d68a44a9768236de359d00bb443887d1bfeb5ed",
+    "bytes": 9868
+  },
+  "recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON01-portable-dispatcher-bootstrap-IO-successor-code-20261019-v2/EXACT-PORTABLE-PERSON01-RECIPE-NOT-EXECUTED.json",
+    "sha256": "e771616f46068a288deed8e30565ab20e552495fafda6bbf09f500e9418ceb9b",
+    "bytes": 2322
+  },
+  "focused_patch": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON01-portable-dispatcher-bootstrap-IO-successor-code-20261019-v2/FOCUSED-BOOTSTRAP-REGULAR-DESCRIPTOR-ONLY.patch",
+    "sha256": "1e6016cc2780fa824b5c562f1b0f6894e29818d8bc9800fa3688abfdd1ef30fc",
+    "bytes": 4225
+  },
+  "changes": "Only parent bootstrap gets nonsymlink/regular/<=1MiB precheck, O_NOFOLLOW|O_NONBLOCK descriptor, fstat regular/bound checks, bounded read and before/after identity. Pixel/alias/math/caps/provenance unchanged. Buffer-replacement test now wraps this reader so it stays meaningful.",
+  "actual_synthetic_tests": {
+    "tests": 21,
+    "PASS": 21,
+    "failed": 0,
+    "errors": 0,
+    "elapsed_seconds": 3.273,
+    "observed_actual_final_tool_run": true,
+    "FIFO_negative": "Real POSIX FIFO at parent-helper path, separate CLI subprocess timeout3seconds: rejected promptly, nonzeroexit, nooutput; process reaped.",
+    "directory_negative": true,
+    "buffer_replacement_after_new_descriptor_read": true
+  },
+  "genuine_operations": {
+    "child_cleanup": 0,
+    "SourceF": 0,
+    "SourceG2": 0,
+    "World": 0,
+    "imagegen": 0,
+    "canonical": 0
+  },
+  "Root_execution_release_still_required": true
+}

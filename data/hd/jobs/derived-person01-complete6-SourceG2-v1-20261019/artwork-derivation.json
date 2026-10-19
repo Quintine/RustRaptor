@@ -1,0 +1,61 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "derived-PERSON01-complete6-exact-Source-crop-of-PLATOON1-generated-top-bodies-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-person01-complete6-SourceG2-v1-20261019/parent/inputs/PLATOON1-generated-parent-untouched.png",
+        "sha256": "82a92f95fe2ad326effd3739af355289828460d2196f4cecc86c3b8933e557a7"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-person01-complete6-SourceG2-v1-20261019/imagegen-parent/ACTUAL-ONE-BUILTIN-GATE-AND-TERMINAL-RELEASE.json",
+        "sha256": "ae76eeea3c50a3ec820005f963812249ba86d6a5774bc53bb125c52f3e24e296"
+      },
+      "prompt": {
+        "path": "jobs/derived-person01-complete6-SourceG2-v1-20261019/imagegen-parent/EXACT-ONE-ORIGINAL-PRIMARY-COMPLETE6-PROMPT.txt",
+        "sha256": "8a065fc03fdb652faf13d7e5136eb15532c98ced43feb7b80dd8ec93bc0b926b"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_person01_cleanup.py",
+      "sha256": "bbb13aac1a5617af509a7107bfabd290c75e0b7094a50e14a35be9a5eac79ad5"
+    },
+    {
+      "path": "tools/hd_infantry_cleanup.py",
+      "sha256": "5368774adb98af834df4fddb7ebe24310e6b35be110adf56b9961a6d36edd866"
+    },
+    {
+      "path": "tools/hd_frame_policy.py",
+      "sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-person01-complete6-SourceG2-v1-20261019/cleanup-recipe.json",
+    "sha256": "e771616f46068a288deed8e30565ab20e552495fafda6bbf09f500e9418ceb9b"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-person01-complete6-SourceG2-v1-20261019/execution-receipt.json",
+    "sha256": "73610cf77940e2a387d806cde25063843e771bbc860fdf588697fe9bfb983093"
+  },
+  "sources": {
+    "200f8": "752628fa06883e207c87709a30f75b8d019d4afcbab939a26253fc8af128be02",
+    "200f9": "fb6db67d44d7364a1621cc368f729ffbba7be7cb950c775fe0678f6eecb6557e",
+    "200fa": "b96301475a6d648435c72547368052ba4b772f2b9ae48c7fe3846ec39a8ad6b8",
+    "200fb": "c159acb456f7426719a05284c0efc364bb06cf11342eb10751b95c8009c4d46f",
+    "200fc": "b96301475a6d648435c72547368052ba4b772f2b9ae48c7fe3846ec39a8ad6b8",
+    "200fd": "95ccabe25a3ceb816cdb4aeb555e448e9982057e2fb6ca47998ec7544e324875"
+  },
+  "outputs": {
+    "jobs/derived-person01-complete6-SourceG2-v1-20261019/derived6/200f8.png": "3f2565db066a522ad714e7cb5ba64773c5ccff6f46730cc344115d844a4ee5dc",
+    "jobs/derived-person01-complete6-SourceG2-v1-20261019/derived6/200f9.png": "74f86cbfb1a946429604080169346d9ff24bca28a17c2fbe9da6f575c740f426",
+    "jobs/derived-person01-complete6-SourceG2-v1-20261019/derived6/200fa.png": "cb56cbb539a8ac5176fe57a43ab4c1567f8b94e2e22cffb504a28ba678106072",
+    "jobs/derived-person01-complete6-SourceG2-v1-20261019/derived6/200fb.png": "b968d584572a7359562e009148be8b80ed983ff081e2481004a8c5b2f4581af7",
+    "jobs/derived-person01-complete6-SourceG2-v1-20261019/derived6/200fc.png": "74064d74da3fcaf08bafafba94e7ee7ecbc5cee10793ce37ffe537c9c58abfd9",
+    "jobs/derived-person01-complete6-SourceG2-v1-20261019/derived6/200fd.png": "d819438da5acd2076e0d58160a8964712ce99e9652973682bc4e6830ddc88907"
+  },
+  "scope": "Exact actual e771 recipe and bbb13aac execution packaged unchanged with all relative inputs. No portable replay or new QA was run during packaging; this is not a new generator invocation. Source64 aliases, Source alpha and face are functional retention with zero new detail credit.",
+  "inherited_black_support_limitation": "Up to89.7436% top-body near-black support completion, no synthetic new generated texture credit."
+}

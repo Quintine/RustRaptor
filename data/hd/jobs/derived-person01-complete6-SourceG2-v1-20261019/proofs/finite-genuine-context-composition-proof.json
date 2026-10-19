@@ -1,0 +1,4142 @@
+{
+  "World_calls_in_constructor": 0,
+  "actual_Original_controls_render_upscale": true,
+  "actual_target_components": [
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f0-s1-OriginalNx.classes.gz",
+        "height": 8,
+        "indices": "component-f0-s1-OriginalNx.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "frame": 0,
+      "measured_selected": {
+        "classes": "component-f0-s1-selected.classes.gz",
+        "height": 8,
+        "indices": "component-f0-s1-selected.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "scale": 1
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f0-s2-OriginalNx.classes.gz",
+        "height": 16,
+        "indices": "component-f0-s2-OriginalNx.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "frame": 0,
+      "measured_selected": {
+        "classes": "component-f0-s2-selected.classes.gz",
+        "height": 16,
+        "indices": "component-f0-s2-selected.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "scale": 2
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f0-s3-OriginalNx.classes.gz",
+        "height": 24,
+        "indices": "component-f0-s3-OriginalNx.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "frame": 0,
+      "measured_selected": {
+        "classes": "component-f0-s3-selected.classes.gz",
+        "height": 24,
+        "indices": "component-f0-s3-selected.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "scale": 3
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f0-s4-OriginalNx.classes.gz",
+        "height": 32,
+        "indices": "component-f0-s4-OriginalNx.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "frame": 0,
+      "measured_selected": {
+        "classes": "component-f0-s4-selected.classes.gz",
+        "height": 32,
+        "indices": "component-f0-s4-selected.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "scale": 4
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f1-s1-OriginalNx.classes.gz",
+        "height": 8,
+        "indices": "component-f1-s1-OriginalNx.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "frame": 1,
+      "measured_selected": {
+        "classes": "component-f1-s1-selected.classes.gz",
+        "height": 8,
+        "indices": "component-f1-s1-selected.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "scale": 1
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f1-s2-OriginalNx.classes.gz",
+        "height": 16,
+        "indices": "component-f1-s2-OriginalNx.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "frame": 1,
+      "measured_selected": {
+        "classes": "component-f1-s2-selected.classes.gz",
+        "height": 16,
+        "indices": "component-f1-s2-selected.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "scale": 2
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f1-s3-OriginalNx.classes.gz",
+        "height": 24,
+        "indices": "component-f1-s3-OriginalNx.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "frame": 1,
+      "measured_selected": {
+        "classes": "component-f1-s3-selected.classes.gz",
+        "height": 24,
+        "indices": "component-f1-s3-selected.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "scale": 3
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f1-s4-OriginalNx.classes.gz",
+        "height": 32,
+        "indices": "component-f1-s4-OriginalNx.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "frame": 1,
+      "measured_selected": {
+        "classes": "component-f1-s4-selected.classes.gz",
+        "height": 32,
+        "indices": "component-f1-s4-selected.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "scale": 4
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f2-s1-OriginalNx.classes.gz",
+        "height": 8,
+        "indices": "component-f2-s1-OriginalNx.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "frame": 2,
+      "measured_selected": {
+        "classes": "component-f2-s1-selected.classes.gz",
+        "height": 8,
+        "indices": "component-f2-s1-selected.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "scale": 1
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f2-s2-OriginalNx.classes.gz",
+        "height": 16,
+        "indices": "component-f2-s2-OriginalNx.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "frame": 2,
+      "measured_selected": {
+        "classes": "component-f2-s2-selected.classes.gz",
+        "height": 16,
+        "indices": "component-f2-s2-selected.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "scale": 2
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f2-s3-OriginalNx.classes.gz",
+        "height": 24,
+        "indices": "component-f2-s3-OriginalNx.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "frame": 2,
+      "measured_selected": {
+        "classes": "component-f2-s3-selected.classes.gz",
+        "height": 24,
+        "indices": "component-f2-s3-selected.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "scale": 3
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f2-s4-OriginalNx.classes.gz",
+        "height": 32,
+        "indices": "component-f2-s4-OriginalNx.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "frame": 2,
+      "measured_selected": {
+        "classes": "component-f2-s4-selected.classes.gz",
+        "height": 32,
+        "indices": "component-f2-s4-selected.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "scale": 4
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f3-s1-OriginalNx.classes.gz",
+        "height": 8,
+        "indices": "component-f3-s1-OriginalNx.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "frame": 3,
+      "measured_selected": {
+        "classes": "component-f3-s1-selected.classes.gz",
+        "height": 8,
+        "indices": "component-f3-s1-selected.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "scale": 1
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f3-s2-OriginalNx.classes.gz",
+        "height": 16,
+        "indices": "component-f3-s2-OriginalNx.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "frame": 3,
+      "measured_selected": {
+        "classes": "component-f3-s2-selected.classes.gz",
+        "height": 16,
+        "indices": "component-f3-s2-selected.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "scale": 2
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f3-s3-OriginalNx.classes.gz",
+        "height": 24,
+        "indices": "component-f3-s3-OriginalNx.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "frame": 3,
+      "measured_selected": {
+        "classes": "component-f3-s3-selected.classes.gz",
+        "height": 24,
+        "indices": "component-f3-s3-selected.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "scale": 3
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f3-s4-OriginalNx.classes.gz",
+        "height": 32,
+        "indices": "component-f3-s4-OriginalNx.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "frame": 3,
+      "measured_selected": {
+        "classes": "component-f3-s4-selected.classes.gz",
+        "height": 32,
+        "indices": "component-f3-s4-selected.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "scale": 4
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f4-s1-OriginalNx.classes.gz",
+        "height": 8,
+        "indices": "component-f4-s1-OriginalNx.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "frame": 4,
+      "measured_selected": {
+        "classes": "component-f4-s1-selected.classes.gz",
+        "height": 8,
+        "indices": "component-f4-s1-selected.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "scale": 1
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f4-s2-OriginalNx.classes.gz",
+        "height": 16,
+        "indices": "component-f4-s2-OriginalNx.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "frame": 4,
+      "measured_selected": {
+        "classes": "component-f4-s2-selected.classes.gz",
+        "height": 16,
+        "indices": "component-f4-s2-selected.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "scale": 2
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f4-s3-OriginalNx.classes.gz",
+        "height": 24,
+        "indices": "component-f4-s3-OriginalNx.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "frame": 4,
+      "measured_selected": {
+        "classes": "component-f4-s3-selected.classes.gz",
+        "height": 24,
+        "indices": "component-f4-s3-selected.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "scale": 3
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f4-s4-OriginalNx.classes.gz",
+        "height": 32,
+        "indices": "component-f4-s4-OriginalNx.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "frame": 4,
+      "measured_selected": {
+        "classes": "component-f4-s4-selected.classes.gz",
+        "height": 32,
+        "indices": "component-f4-s4-selected.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "scale": 4
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f5-s1-OriginalNx.classes.gz",
+        "height": 8,
+        "indices": "component-f5-s1-OriginalNx.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "frame": 5,
+      "measured_selected": {
+        "classes": "component-f5-s1-selected.classes.gz",
+        "height": 8,
+        "indices": "component-f5-s1-selected.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "scale": 1
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f5-s2-OriginalNx.classes.gz",
+        "height": 16,
+        "indices": "component-f5-s2-OriginalNx.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "frame": 5,
+      "measured_selected": {
+        "classes": "component-f5-s2-selected.classes.gz",
+        "height": 16,
+        "indices": "component-f5-s2-selected.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "scale": 2
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f5-s3-OriginalNx.classes.gz",
+        "height": 24,
+        "indices": "component-f5-s3-OriginalNx.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "frame": 5,
+      "measured_selected": {
+        "classes": "component-f5-s3-selected.classes.gz",
+        "height": 24,
+        "indices": "component-f5-s3-selected.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "scale": 3
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f5-s4-OriginalNx.classes.gz",
+        "height": 32,
+        "indices": "component-f5-s4-OriginalNx.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "frame": 5,
+      "measured_selected": {
+        "classes": "component-f5-s4-selected.classes.gz",
+        "height": 32,
+        "indices": "component-f5-s4-selected.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "scale": 4
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f6-s1-OriginalNx.classes.gz",
+        "height": 8,
+        "indices": "component-f6-s1-OriginalNx.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "frame": 6,
+      "measured_selected": {
+        "classes": "component-f6-s1-selected.classes.gz",
+        "height": 8,
+        "indices": "component-f6-s1-selected.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "scale": 1
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f6-s2-OriginalNx.classes.gz",
+        "height": 16,
+        "indices": "component-f6-s2-OriginalNx.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "frame": 6,
+      "measured_selected": {
+        "classes": "component-f6-s2-selected.classes.gz",
+        "height": 16,
+        "indices": "component-f6-s2-selected.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "scale": 2
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f6-s3-OriginalNx.classes.gz",
+        "height": 24,
+        "indices": "component-f6-s3-OriginalNx.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "frame": 6,
+      "measured_selected": {
+        "classes": "component-f6-s3-selected.classes.gz",
+        "height": 24,
+        "indices": "component-f6-s3-selected.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "scale": 3
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f6-s4-OriginalNx.classes.gz",
+        "height": 32,
+        "indices": "component-f6-s4-OriginalNx.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "frame": 6,
+      "measured_selected": {
+        "classes": "component-f6-s4-selected.classes.gz",
+        "height": 32,
+        "indices": "component-f6-s4-selected.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "scale": 4
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f7-s1-OriginalNx.classes.gz",
+        "height": 8,
+        "indices": "component-f7-s1-OriginalNx.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "frame": 7,
+      "measured_selected": {
+        "classes": "component-f7-s1-selected.classes.gz",
+        "height": 8,
+        "indices": "component-f7-s1-selected.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "scale": 1
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f7-s2-OriginalNx.classes.gz",
+        "height": 16,
+        "indices": "component-f7-s2-OriginalNx.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "frame": 7,
+      "measured_selected": {
+        "classes": "component-f7-s2-selected.classes.gz",
+        "height": 16,
+        "indices": "component-f7-s2-selected.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "scale": 2
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f7-s3-OriginalNx.classes.gz",
+        "height": 24,
+        "indices": "component-f7-s3-OriginalNx.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "frame": 7,
+      "measured_selected": {
+        "classes": "component-f7-s3-selected.classes.gz",
+        "height": 24,
+        "indices": "component-f7-s3-selected.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "scale": 3
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f7-s4-OriginalNx.classes.gz",
+        "height": 32,
+        "indices": "component-f7-s4-OriginalNx.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "frame": 7,
+      "measured_selected": {
+        "classes": "component-f7-s4-selected.classes.gz",
+        "height": 32,
+        "indices": "component-f7-s4-selected.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "scale": 4
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f8-s1-OriginalNx.classes.gz",
+        "height": 8,
+        "indices": "component-f8-s1-OriginalNx.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "frame": 8,
+      "measured_selected": {
+        "classes": "component-f8-s1-selected.classes.gz",
+        "height": 8,
+        "indices": "component-f8-s1-selected.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "scale": 1
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f8-s2-OriginalNx.classes.gz",
+        "height": 16,
+        "indices": "component-f8-s2-OriginalNx.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "frame": 8,
+      "measured_selected": {
+        "classes": "component-f8-s2-selected.classes.gz",
+        "height": 16,
+        "indices": "component-f8-s2-selected.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "scale": 2
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f8-s3-OriginalNx.classes.gz",
+        "height": 24,
+        "indices": "component-f8-s3-OriginalNx.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "frame": 8,
+      "measured_selected": {
+        "classes": "component-f8-s3-selected.classes.gz",
+        "height": 24,
+        "indices": "component-f8-s3-selected.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "scale": 3
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f8-s4-OriginalNx.classes.gz",
+        "height": 32,
+        "indices": "component-f8-s4-OriginalNx.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "frame": 8,
+      "measured_selected": {
+        "classes": "component-f8-s4-selected.classes.gz",
+        "height": 32,
+        "indices": "component-f8-s4-selected.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "scale": 4
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f9-s1-OriginalNx.classes.gz",
+        "height": 8,
+        "indices": "component-f9-s1-OriginalNx.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "frame": 9,
+      "measured_selected": {
+        "classes": "component-f9-s1-selected.classes.gz",
+        "height": 8,
+        "indices": "component-f9-s1-selected.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "scale": 1
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f9-s2-OriginalNx.classes.gz",
+        "height": 16,
+        "indices": "component-f9-s2-OriginalNx.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "frame": 9,
+      "measured_selected": {
+        "classes": "component-f9-s2-selected.classes.gz",
+        "height": 16,
+        "indices": "component-f9-s2-selected.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "scale": 2
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f9-s3-OriginalNx.classes.gz",
+        "height": 24,
+        "indices": "component-f9-s3-OriginalNx.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "frame": 9,
+      "measured_selected": {
+        "classes": "component-f9-s3-selected.classes.gz",
+        "height": 24,
+        "indices": "component-f9-s3-selected.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "scale": 3
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f9-s4-OriginalNx.classes.gz",
+        "height": 32,
+        "indices": "component-f9-s4-OriginalNx.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "frame": 9,
+      "measured_selected": {
+        "classes": "component-f9-s4-selected.classes.gz",
+        "height": 32,
+        "indices": "component-f9-s4-selected.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "scale": 4
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f10-s1-OriginalNx.classes.gz",
+        "height": 8,
+        "indices": "component-f10-s1-OriginalNx.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "frame": 10,
+      "measured_selected": {
+        "classes": "component-f10-s1-selected.classes.gz",
+        "height": 8,
+        "indices": "component-f10-s1-selected.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "scale": 1
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f10-s2-OriginalNx.classes.gz",
+        "height": 16,
+        "indices": "component-f10-s2-OriginalNx.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "frame": 10,
+      "measured_selected": {
+        "classes": "component-f10-s2-selected.classes.gz",
+        "height": 16,
+        "indices": "component-f10-s2-selected.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "scale": 2
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f10-s3-OriginalNx.classes.gz",
+        "height": 24,
+        "indices": "component-f10-s3-OriginalNx.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "frame": 10,
+      "measured_selected": {
+        "classes": "component-f10-s3-selected.classes.gz",
+        "height": 24,
+        "indices": "component-f10-s3-selected.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "scale": 3
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f10-s4-OriginalNx.classes.gz",
+        "height": 32,
+        "indices": "component-f10-s4-OriginalNx.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "frame": 10,
+      "measured_selected": {
+        "classes": "component-f10-s4-selected.classes.gz",
+        "height": 32,
+        "indices": "component-f10-s4-selected.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "scale": 4
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f11-s1-OriginalNx.classes.gz",
+        "height": 8,
+        "indices": "component-f11-s1-OriginalNx.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "frame": 11,
+      "measured_selected": {
+        "classes": "component-f11-s1-selected.classes.gz",
+        "height": 8,
+        "indices": "component-f11-s1-selected.u16le.gz",
+        "samples": 64,
+        "width": 8
+      },
+      "scale": 1
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f11-s2-OriginalNx.classes.gz",
+        "height": 16,
+        "indices": "component-f11-s2-OriginalNx.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "frame": 11,
+      "measured_selected": {
+        "classes": "component-f11-s2-selected.classes.gz",
+        "height": 16,
+        "indices": "component-f11-s2-selected.u16le.gz",
+        "samples": 256,
+        "width": 16
+      },
+      "scale": 2
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f11-s3-OriginalNx.classes.gz",
+        "height": 24,
+        "indices": "component-f11-s3-OriginalNx.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "frame": 11,
+      "measured_selected": {
+        "classes": "component-f11-s3-selected.classes.gz",
+        "height": 24,
+        "indices": "component-f11-s3-selected.u16le.gz",
+        "samples": 576,
+        "width": 24
+      },
+      "scale": 3
+    },
+    {
+      "actual_Original_ScaleNx": {
+        "classes": "component-f11-s4-OriginalNx.classes.gz",
+        "height": 32,
+        "indices": "component-f11-s4-OriginalNx.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "frame": 11,
+      "measured_selected": {
+        "classes": "component-f11-s4-selected.classes.gz",
+        "height": 32,
+        "indices": "component-f11-s4-selected.u16le.gz",
+        "samples": 1024,
+        "width": 32
+      },
+      "scale": 4
+    }
+  ],
+  "constructor_calls": 1,
+  "diagnostics": [],
+  "foreign_baseline": "immutable currentH5613 header and consumed raw hardlinks; currentSourceG2 domain-aware joins",
+  "rows": [
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200f8",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 7,
+      "frame": 0,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s1-r0.classes.gz",
+            "height": 200,
+            "indices": "scene-0-s1-r0.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s1-r1.classes.gz",
+            "height": 200,
+            "indices": "scene-0-s1-r1.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s1-r2.classes.gz",
+            "height": 200,
+            "indices": "scene-0-s1-r2.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 1,
+      "scene": 0,
+      "target_canvas": [
+        8,
+        8
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        95,
+        5
+      ],
+      "terrain_replacements": 88,
+      "tick": 3441
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200f8",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 29,
+      "frame": 0,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s2-r0.classes.gz",
+            "height": 400,
+            "indices": "scene-0-s2-r0.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s2-r1.classes.gz",
+            "height": 400,
+            "indices": "scene-0-s2-r1.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s2-r2.classes.gz",
+            "height": 400,
+            "indices": "scene-0-s2-r2.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 2,
+      "scene": 0,
+      "target_canvas": [
+        16,
+        16
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        190,
+        9
+      ],
+      "terrain_replacements": 88,
+      "tick": 3441
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200f8",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 65,
+      "frame": 0,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s3-r0.classes.gz",
+            "height": 600,
+            "indices": "scene-0-s3-r0.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s3-r1.classes.gz",
+            "height": 600,
+            "indices": "scene-0-s3-r1.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s3-r2.classes.gz",
+            "height": 600,
+            "indices": "scene-0-s3-r2.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 3,
+      "scene": 0,
+      "target_canvas": [
+        24,
+        24
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        285,
+        14
+      ],
+      "terrain_replacements": 88,
+      "tick": 3441
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200f8",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 114,
+      "frame": 0,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s4-r0.classes.gz",
+            "height": 800,
+            "indices": "scene-0-s4-r0.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s4-r1.classes.gz",
+            "height": 800,
+            "indices": "scene-0-s4-r1.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-0-s4-r2.classes.gz",
+            "height": 800,
+            "indices": "scene-0-s4-r2.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 4,
+      "scene": 0,
+      "target_canvas": [
+        32,
+        32
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        380,
+        18
+      ],
+      "terrain_replacements": 88,
+      "tick": 3441
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200f9",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 5,
+      "frame": 1,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-1-s1-r0.classes.gz",
+            "height": 200,
+            "indices": "scene-1-s1-r0.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-1-s1-r1.classes.gz",
+            "height": 200,
+            "indices": "scene-1-s1-r1.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-1-s1-r2.classes.gz",
+            "height": 200,
+            "indices": "scene-1-s1-r2.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 1,
+      "scene": 1,
+      "target_canvas": [
+        8,
+        8
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        99,
+        7
+      ],
+      "terrain_replacements": 88,
+      "tick": 3443
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200f9",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 13,
+      "frame": 1,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-1-s2-r0.classes.gz",
+            "height": 400,
+            "indices": "scene-1-s2-r0.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-1-s2-r1.classes.gz",
+            "height": 400,
+            "indices": "scene-1-s2-r1.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-1-s2-r2.classes.gz",
+            "height": 400,
+            "indices": "scene-1-s2-r2.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 2,
+      "scene": 1,
+      "target_canvas": [
+        16,
+        16
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        198,
+        13
+      ],
+      "terrain_replacements": 88,
+      "tick": 3443
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200f9",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 29,
+      "frame": 1,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-1-s3-r0.classes.gz",
+            "height": 600,
+            "indices": "scene-1-s3-r0.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-1-s3-r1.classes.gz",
+            "height": 600,
+            "indices": "scene-1-s3-r1.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-1-s3-r2.classes.gz",
+            "height": 600,
+            "indices": "scene-1-s3-r2.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 3,
+      "scene": 1,
+      "target_canvas": [
+        24,
+        24
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        297,
+        20
+      ],
+      "terrain_replacements": 88,
+      "tick": 3443
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200f9",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 51,
+      "frame": 1,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-1-s4-r0.classes.gz",
+            "height": 800,
+            "indices": "scene-1-s4-r0.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-1-s4-r1.classes.gz",
+            "height": 800,
+            "indices": "scene-1-s4-r1.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-1-s4-r2.classes.gz",
+            "height": 800,
+            "indices": "scene-1-s4-r2.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 4,
+      "scene": 1,
+      "target_canvas": [
+        32,
+        32
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        396,
+        26
+      ],
+      "terrain_replacements": 88,
+      "tick": 3443
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fa",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 6,
+      "frame": 2,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-2-s1-r0.classes.gz",
+            "height": 200,
+            "indices": "scene-2-s1-r0.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-2-s1-r1.classes.gz",
+            "height": 200,
+            "indices": "scene-2-s1-r1.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-2-s1-r2.classes.gz",
+            "height": 200,
+            "indices": "scene-2-s1-r2.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 1,
+      "scene": 2,
+      "target_canvas": [
+        8,
+        8
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        103,
+        9
+      ],
+      "terrain_replacements": 88,
+      "tick": 3445
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fa",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 19,
+      "frame": 2,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-2-s2-r0.classes.gz",
+            "height": 400,
+            "indices": "scene-2-s2-r0.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-2-s2-r1.classes.gz",
+            "height": 400,
+            "indices": "scene-2-s2-r1.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-2-s2-r2.classes.gz",
+            "height": 400,
+            "indices": "scene-2-s2-r2.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 2,
+      "scene": 2,
+      "target_canvas": [
+        16,
+        16
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        206,
+        17
+      ],
+      "terrain_replacements": 88,
+      "tick": 3445
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fa",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 45,
+      "frame": 2,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-2-s3-r0.classes.gz",
+            "height": 600,
+            "indices": "scene-2-s3-r0.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-2-s3-r1.classes.gz",
+            "height": 600,
+            "indices": "scene-2-s3-r1.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-2-s3-r2.classes.gz",
+            "height": 600,
+            "indices": "scene-2-s3-r2.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 3,
+      "scene": 2,
+      "target_canvas": [
+        24,
+        24
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        309,
+        26
+      ],
+      "terrain_replacements": 88,
+      "tick": 3445
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fa",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 71,
+      "frame": 2,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-2-s4-r0.classes.gz",
+            "height": 800,
+            "indices": "scene-2-s4-r0.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-2-s4-r1.classes.gz",
+            "height": 800,
+            "indices": "scene-2-s4-r1.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-2-s4-r2.classes.gz",
+            "height": 800,
+            "indices": "scene-2-s4-r2.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 4,
+      "scene": 2,
+      "target_canvas": [
+        32,
+        32
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        412,
+        34
+      ],
+      "terrain_replacements": 88,
+      "tick": 3445
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fb",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 8,
+      "frame": 3,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-3-s1-r0.classes.gz",
+            "height": 200,
+            "indices": "scene-3-s1-r0.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-3-s1-r1.classes.gz",
+            "height": 200,
+            "indices": "scene-3-s1-r1.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-3-s1-r2.classes.gz",
+            "height": 200,
+            "indices": "scene-3-s1-r2.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 1,
+      "scene": 3,
+      "target_canvas": [
+        8,
+        8
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        107,
+        11
+      ],
+      "terrain_replacements": 88,
+      "tick": 3447
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fb",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 31,
+      "frame": 3,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-3-s2-r0.classes.gz",
+            "height": 400,
+            "indices": "scene-3-s2-r0.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-3-s2-r1.classes.gz",
+            "height": 400,
+            "indices": "scene-3-s2-r1.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-3-s2-r2.classes.gz",
+            "height": 400,
+            "indices": "scene-3-s2-r2.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 2,
+      "scene": 3,
+      "target_canvas": [
+        16,
+        16
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        214,
+        21
+      ],
+      "terrain_replacements": 88,
+      "tick": 3447
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fb",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 70,
+      "frame": 3,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-3-s3-r0.classes.gz",
+            "height": 600,
+            "indices": "scene-3-s3-r0.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-3-s3-r1.classes.gz",
+            "height": 600,
+            "indices": "scene-3-s3-r1.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-3-s3-r2.classes.gz",
+            "height": 600,
+            "indices": "scene-3-s3-r2.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 3,
+      "scene": 3,
+      "target_canvas": [
+        24,
+        24
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        321,
+        32
+      ],
+      "terrain_replacements": 88,
+      "tick": 3447
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fb",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 109,
+      "frame": 3,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-3-s4-r0.classes.gz",
+            "height": 800,
+            "indices": "scene-3-s4-r0.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-3-s4-r1.classes.gz",
+            "height": 800,
+            "indices": "scene-3-s4-r1.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-3-s4-r2.classes.gz",
+            "height": 800,
+            "indices": "scene-3-s4-r2.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 4,
+      "scene": 3,
+      "target_canvas": [
+        32,
+        32
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        428,
+        42
+      ],
+      "terrain_replacements": 88,
+      "tick": 3447
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fc",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 6,
+      "frame": 4,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-4-s1-r0.classes.gz",
+            "height": 200,
+            "indices": "scene-4-s1-r0.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-4-s1-r1.classes.gz",
+            "height": 200,
+            "indices": "scene-4-s1-r1.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-4-s1-r2.classes.gz",
+            "height": 200,
+            "indices": "scene-4-s1-r2.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 1,
+      "scene": 4,
+      "target_canvas": [
+        8,
+        8
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        87,
+        1
+      ],
+      "terrain_replacements": 88,
+      "tick": 3437
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fc",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 20,
+      "frame": 4,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-4-s2-r0.classes.gz",
+            "height": 400,
+            "indices": "scene-4-s2-r0.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-4-s2-r1.classes.gz",
+            "height": 400,
+            "indices": "scene-4-s2-r1.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-4-s2-r2.classes.gz",
+            "height": 400,
+            "indices": "scene-4-s2-r2.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 2,
+      "scene": 4,
+      "target_canvas": [
+        16,
+        16
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        174,
+        1
+      ],
+      "terrain_replacements": 88,
+      "tick": 3437
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fc",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 48,
+      "frame": 4,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-4-s3-r0.classes.gz",
+            "height": 600,
+            "indices": "scene-4-s3-r0.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-4-s3-r1.classes.gz",
+            "height": 600,
+            "indices": "scene-4-s3-r1.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-4-s3-r2.classes.gz",
+            "height": 600,
+            "indices": "scene-4-s3-r2.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 3,
+      "scene": 4,
+      "target_canvas": [
+        24,
+        24
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        261,
+        2
+      ],
+      "terrain_replacements": 88,
+      "tick": 3437
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fc",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 82,
+      "frame": 4,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-4-s4-r0.classes.gz",
+            "height": 800,
+            "indices": "scene-4-s4-r0.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-4-s4-r1.classes.gz",
+            "height": 800,
+            "indices": "scene-4-s4-r1.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-4-s4-r2.classes.gz",
+            "height": 800,
+            "indices": "scene-4-s4-r2.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 4,
+      "scene": 4,
+      "target_canvas": [
+        32,
+        32
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        348,
+        2
+      ],
+      "terrain_replacements": 88,
+      "tick": 3437
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fd",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 4,
+      "frame": 5,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-5-s1-r0.classes.gz",
+            "height": 200,
+            "indices": "scene-5-s1-r0.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-5-s1-r1.classes.gz",
+            "height": 200,
+            "indices": "scene-5-s1-r1.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-5-s1-r2.classes.gz",
+            "height": 200,
+            "indices": "scene-5-s1-r2.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 1,
+      "scene": 5,
+      "target_canvas": [
+        8,
+        8
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        91,
+        3
+      ],
+      "terrain_replacements": 88,
+      "tick": 3439
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fd",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 13,
+      "frame": 5,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-5-s2-r0.classes.gz",
+            "height": 400,
+            "indices": "scene-5-s2-r0.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-5-s2-r1.classes.gz",
+            "height": 400,
+            "indices": "scene-5-s2-r1.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-5-s2-r2.classes.gz",
+            "height": 400,
+            "indices": "scene-5-s2-r2.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 2,
+      "scene": 5,
+      "target_canvas": [
+        16,
+        16
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        182,
+        5
+      ],
+      "terrain_replacements": 88,
+      "tick": 3439
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fd",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 32,
+      "frame": 5,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-5-s3-r0.classes.gz",
+            "height": 600,
+            "indices": "scene-5-s3-r0.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-5-s3-r1.classes.gz",
+            "height": 600,
+            "indices": "scene-5-s3-r1.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-5-s3-r2.classes.gz",
+            "height": 600,
+            "indices": "scene-5-s3-r2.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 3,
+      "scene": 5,
+      "target_canvas": [
+        24,
+        24
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        273,
+        8
+      ],
+      "terrain_replacements": 88,
+      "tick": 3439
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fd",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 55,
+      "frame": 5,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 2,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-5-s4-r0.classes.gz",
+            "height": 800,
+            "indices": "scene-5-s4-r0.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-5-s4-r1.classes.gz",
+            "height": 800,
+            "indices": "scene-5-s4-r1.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-5-s4-r2.classes.gz",
+            "height": 800,
+            "indices": "scene-5-s4-r2.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 4,
+      "scene": 5,
+      "target_canvas": [
+        32,
+        32
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        364,
+        10
+      ],
+      "terrain_replacements": 88,
+      "tick": 3439
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fe",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 6,
+      "frame": 0,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-6-s1-r0.classes.gz",
+            "height": 200,
+            "indices": "scene-6-s1-r0.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-6-s1-r1.classes.gz",
+            "height": 200,
+            "indices": "scene-6-s1-r1.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-6-s1-r2.classes.gz",
+            "height": 200,
+            "indices": "scene-6-s1-r2.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 1,
+      "scene": 6,
+      "target_canvas": [
+        8,
+        8
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        191,
+        5
+      ],
+      "terrain_replacements": 88,
+      "tick": 3473
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fe",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 29,
+      "frame": 0,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-6-s2-r0.classes.gz",
+            "height": 400,
+            "indices": "scene-6-s2-r0.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-6-s2-r1.classes.gz",
+            "height": 400,
+            "indices": "scene-6-s2-r1.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-6-s2-r2.classes.gz",
+            "height": 400,
+            "indices": "scene-6-s2-r2.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 2,
+      "scene": 6,
+      "target_canvas": [
+        16,
+        16
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        381,
+        9
+      ],
+      "terrain_replacements": 88,
+      "tick": 3473
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fe",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 78,
+      "frame": 0,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-6-s3-r0.classes.gz",
+            "height": 600,
+            "indices": "scene-6-s3-r0.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-6-s3-r1.classes.gz",
+            "height": 600,
+            "indices": "scene-6-s3-r1.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-6-s3-r2.classes.gz",
+            "height": 600,
+            "indices": "scene-6-s3-r2.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 3,
+      "scene": 6,
+      "target_canvas": [
+        24,
+        24
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        572,
+        14
+      ],
+      "terrain_replacements": 88,
+      "tick": 3473
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200fe",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 132,
+      "frame": 0,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-6-s4-r0.classes.gz",
+            "height": 800,
+            "indices": "scene-6-s4-r0.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-6-s4-r1.classes.gz",
+            "height": 800,
+            "indices": "scene-6-s4-r1.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-6-s4-r2.classes.gz",
+            "height": 800,
+            "indices": "scene-6-s4-r2.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 4,
+      "scene": 6,
+      "target_canvas": [
+        32,
+        32
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        762,
+        18
+      ],
+      "terrain_replacements": 88,
+      "tick": 3473
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200ff",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 4,
+      "frame": 1,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-7-s1-r0.classes.gz",
+            "height": 200,
+            "indices": "scene-7-s1-r0.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-7-s1-r1.classes.gz",
+            "height": 200,
+            "indices": "scene-7-s1-r1.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-7-s1-r2.classes.gz",
+            "height": 200,
+            "indices": "scene-7-s1-r2.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 1,
+      "scene": 7,
+      "target_canvas": [
+        8,
+        8
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        189,
+        7
+      ],
+      "terrain_replacements": 88,
+      "tick": 3475
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200ff",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 23,
+      "frame": 1,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-7-s2-r0.classes.gz",
+            "height": 400,
+            "indices": "scene-7-s2-r0.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-7-s2-r1.classes.gz",
+            "height": 400,
+            "indices": "scene-7-s2-r1.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-7-s2-r2.classes.gz",
+            "height": 400,
+            "indices": "scene-7-s2-r2.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 2,
+      "scene": 7,
+      "target_canvas": [
+        16,
+        16
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        377,
+        13
+      ],
+      "terrain_replacements": 88,
+      "tick": 3475
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200ff",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 54,
+      "frame": 1,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-7-s3-r0.classes.gz",
+            "height": 600,
+            "indices": "scene-7-s3-r0.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-7-s3-r1.classes.gz",
+            "height": 600,
+            "indices": "scene-7-s3-r1.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-7-s3-r2.classes.gz",
+            "height": 600,
+            "indices": "scene-7-s3-r2.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 3,
+      "scene": 7,
+      "target_canvas": [
+        24,
+        24
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        566,
+        20
+      ],
+      "terrain_replacements": 88,
+      "tick": 3475
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "200ff",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 97,
+      "frame": 1,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-7-s4-r0.classes.gz",
+            "height": 800,
+            "indices": "scene-7-s4-r0.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-7-s4-r1.classes.gz",
+            "height": 800,
+            "indices": "scene-7-s4-r1.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-7-s4-r2.classes.gz",
+            "height": 800,
+            "indices": "scene-7-s4-r2.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 4,
+      "scene": 7,
+      "target_canvas": [
+        32,
+        32
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        754,
+        26
+      ],
+      "terrain_replacements": 88,
+      "tick": 3475
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20100",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 3,
+      "frame": 2,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-8-s1-r0.classes.gz",
+            "height": 200,
+            "indices": "scene-8-s1-r0.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-8-s1-r1.classes.gz",
+            "height": 200,
+            "indices": "scene-8-s1-r1.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-8-s1-r2.classes.gz",
+            "height": 200,
+            "indices": "scene-8-s1-r2.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 1,
+      "scene": 8,
+      "target_canvas": [
+        8,
+        8
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        187,
+        9
+      ],
+      "terrain_replacements": 88,
+      "tick": 3477
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20100",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 18,
+      "frame": 2,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-8-s2-r0.classes.gz",
+            "height": 400,
+            "indices": "scene-8-s2-r0.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-8-s2-r1.classes.gz",
+            "height": 400,
+            "indices": "scene-8-s2-r1.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-8-s2-r2.classes.gz",
+            "height": 400,
+            "indices": "scene-8-s2-r2.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 2,
+      "scene": 8,
+      "target_canvas": [
+        16,
+        16
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        373,
+        17
+      ],
+      "terrain_replacements": 88,
+      "tick": 3477
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20100",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 43,
+      "frame": 2,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-8-s3-r0.classes.gz",
+            "height": 600,
+            "indices": "scene-8-s3-r0.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-8-s3-r1.classes.gz",
+            "height": 600,
+            "indices": "scene-8-s3-r1.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-8-s3-r2.classes.gz",
+            "height": 600,
+            "indices": "scene-8-s3-r2.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 3,
+      "scene": 8,
+      "target_canvas": [
+        24,
+        24
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        560,
+        26
+      ],
+      "terrain_replacements": 88,
+      "tick": 3477
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20100",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 78,
+      "frame": 2,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-8-s4-r0.classes.gz",
+            "height": 800,
+            "indices": "scene-8-s4-r0.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-8-s4-r1.classes.gz",
+            "height": 800,
+            "indices": "scene-8-s4-r1.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-8-s4-r2.classes.gz",
+            "height": 800,
+            "indices": "scene-8-s4-r2.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 4,
+      "scene": 8,
+      "target_canvas": [
+        32,
+        32
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        746,
+        34
+      ],
+      "terrain_replacements": 88,
+      "tick": 3477
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20101",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 8,
+      "frame": 3,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-9-s1-r0.classes.gz",
+            "height": 200,
+            "indices": "scene-9-s1-r0.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-9-s1-r1.classes.gz",
+            "height": 200,
+            "indices": "scene-9-s1-r1.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-9-s1-r2.classes.gz",
+            "height": 200,
+            "indices": "scene-9-s1-r2.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 1,
+      "scene": 9,
+      "target_canvas": [
+        8,
+        8
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        185,
+        11
+      ],
+      "terrain_replacements": 88,
+      "tick": 3479
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20101",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 31,
+      "frame": 3,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-9-s2-r0.classes.gz",
+            "height": 400,
+            "indices": "scene-9-s2-r0.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-9-s2-r1.classes.gz",
+            "height": 400,
+            "indices": "scene-9-s2-r1.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-9-s2-r2.classes.gz",
+            "height": 400,
+            "indices": "scene-9-s2-r2.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 2,
+      "scene": 9,
+      "target_canvas": [
+        16,
+        16
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        369,
+        21
+      ],
+      "terrain_replacements": 88,
+      "tick": 3479
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20101",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 78,
+      "frame": 3,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-9-s3-r0.classes.gz",
+            "height": 600,
+            "indices": "scene-9-s3-r0.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-9-s3-r1.classes.gz",
+            "height": 600,
+            "indices": "scene-9-s3-r1.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-9-s3-r2.classes.gz",
+            "height": 600,
+            "indices": "scene-9-s3-r2.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 3,
+      "scene": 9,
+      "target_canvas": [
+        24,
+        24
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        554,
+        32
+      ],
+      "terrain_replacements": 88,
+      "tick": 3479
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20101",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 132,
+      "frame": 3,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-9-s4-r0.classes.gz",
+            "height": 800,
+            "indices": "scene-9-s4-r0.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-9-s4-r1.classes.gz",
+            "height": 800,
+            "indices": "scene-9-s4-r1.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-9-s4-r2.classes.gz",
+            "height": 800,
+            "indices": "scene-9-s4-r2.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 4,
+      "scene": 9,
+      "target_canvas": [
+        32,
+        32
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        738,
+        42
+      ],
+      "terrain_replacements": 88,
+      "tick": 3479
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20102",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 3,
+      "frame": 4,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-10-s1-r0.classes.gz",
+            "height": 200,
+            "indices": "scene-10-s1-r0.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-10-s1-r1.classes.gz",
+            "height": 200,
+            "indices": "scene-10-s1-r1.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-10-s1-r2.classes.gz",
+            "height": 200,
+            "indices": "scene-10-s1-r2.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 1,
+      "scene": 10,
+      "target_canvas": [
+        8,
+        8
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        195,
+        1
+      ],
+      "terrain_replacements": 88,
+      "tick": 3469
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20102",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 18,
+      "frame": 4,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-10-s2-r0.classes.gz",
+            "height": 400,
+            "indices": "scene-10-s2-r0.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-10-s2-r1.classes.gz",
+            "height": 400,
+            "indices": "scene-10-s2-r1.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-10-s2-r2.classes.gz",
+            "height": 400,
+            "indices": "scene-10-s2-r2.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 2,
+      "scene": 10,
+      "target_canvas": [
+        16,
+        16
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        389,
+        1
+      ],
+      "terrain_replacements": 88,
+      "tick": 3469
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20102",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 43,
+      "frame": 4,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-10-s3-r0.classes.gz",
+            "height": 600,
+            "indices": "scene-10-s3-r0.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-10-s3-r1.classes.gz",
+            "height": 600,
+            "indices": "scene-10-s3-r1.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-10-s3-r2.classes.gz",
+            "height": 600,
+            "indices": "scene-10-s3-r2.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 3,
+      "scene": 10,
+      "target_canvas": [
+        24,
+        24
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        584,
+        2
+      ],
+      "terrain_replacements": 88,
+      "tick": 3469
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20102",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 78,
+      "frame": 4,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-10-s4-r0.classes.gz",
+            "height": 800,
+            "indices": "scene-10-s4-r0.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-10-s4-r1.classes.gz",
+            "height": 800,
+            "indices": "scene-10-s4-r1.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-10-s4-r2.classes.gz",
+            "height": 800,
+            "indices": "scene-10-s4-r2.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 4,
+      "scene": 10,
+      "target_canvas": [
+        32,
+        32
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        778,
+        2
+      ],
+      "terrain_replacements": 88,
+      "tick": 3469
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20103",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 4,
+      "frame": 5,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-11-s1-r0.classes.gz",
+            "height": 200,
+            "indices": "scene-11-s1-r0.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-11-s1-r1.classes.gz",
+            "height": 200,
+            "indices": "scene-11-s1-r1.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-11-s1-r2.classes.gz",
+            "height": 200,
+            "indices": "scene-11-s1-r2.u16le.gz",
+            "samples": 64000,
+            "width": 320
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 1,
+      "scene": 11,
+      "target_canvas": [
+        8,
+        8
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        193,
+        3
+      ],
+      "terrain_replacements": 88,
+      "tick": 3471
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20103",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 23,
+      "frame": 5,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-11-s2-r0.classes.gz",
+            "height": 400,
+            "indices": "scene-11-s2-r0.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-11-s2-r1.classes.gz",
+            "height": 400,
+            "indices": "scene-11-s2-r1.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-11-s2-r2.classes.gz",
+            "height": 400,
+            "indices": "scene-11-s2-r2.u16le.gz",
+            "samples": 256000,
+            "width": 640
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 2,
+      "scene": 11,
+      "target_canvas": [
+        16,
+        16
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        385,
+        5
+      ],
+      "terrain_replacements": 88,
+      "tick": 3471
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20103",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 54,
+      "frame": 5,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-11-s3-r0.classes.gz",
+            "height": 600,
+            "indices": "scene-11-s3-r0.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-11-s3-r1.classes.gz",
+            "height": 600,
+            "indices": "scene-11-s3-r1.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-11-s3-r2.classes.gz",
+            "height": 600,
+            "indices": "scene-11-s3-r2.u16le.gz",
+            "samples": 576000,
+            "width": 960
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 3,
+      "scene": 11,
+      "target_canvas": [
+        24,
+        24
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        578,
+        8
+      ],
+      "terrain_replacements": 88,
+      "tick": 3471
+    },
+    {
+      "Original_shadows_target": false,
+      "all_target_occupied_samples_in_viewport": true,
+      "asset": "20103",
+      "current_baseline_equals_Original_target": true,
+      "current_to_proposed_changes": 97,
+      "frame": 5,
+      "outside_target_canvas_changes": 0,
+      "palette_domain_placements": 1,
+      "retained_terrain_placements": 0,
+      "roles": [
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-11-s4-r0.classes.gz",
+            "height": 800,
+            "indices": "scene-11-s4-r0.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "Original-target-fixed5613-foreign"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-11-s4-r1.classes.gz",
+            "height": 800,
+            "indices": "scene-11-s4-r1.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "current5613-target-fallback"
+        },
+        {
+          "Original_shadow_entities": [],
+          "actor_order": [
+            1
+          ],
+          "files": {
+            "classes": "scene-11-s4-r2.classes.gz",
+            "height": 800,
+            "indices": "scene-11-s4-r2.u16le.gz",
+            "samples": 1024000,
+            "width": 1280
+          },
+          "role": "proposed-derived-target-fixed5613-foreign"
+        }
+      ],
+      "scale": 4,
+      "scene": 11,
+      "target_canvas": [
+        32,
+        32
+      ],
+      "target_canvas_clipped_samples": 0,
+      "target_native_top_left": [
+        770,
+        10
+      ],
+      "terrain_replacements": 88,
+      "tick": 3471
+    }
+  ],
+  "scope": "Controlled OriginalS2W4 PERSON01 complete6 and PERSON02 complete6, two Worlds each retain one exact raw4 spawn and normalpilot2. Terrain/enemies/Original shadows/main effects; excludes player/projectiles/pickups/secondary effects/UI/Host. Not natural mission/survival/purchase proof.",
+  "status": "ACTUAL_CONTROLLED_INFANTRY_COMBINED_TWELVE_PHASES_ALL4_THREE_ROLES_SUCCESS",
+  "target_preblit_equals_frozen_G2_12_bank": true
+}

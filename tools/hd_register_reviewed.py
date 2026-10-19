@@ -21,6 +21,7 @@ from hd_art_audit import checked_palette, validate_hd_frame
 from hd_art_source import decode
 from hd_art_derivation import validate_derivation
 from hd_frame_policy import validate_frame_policy, retained_review_version_ok, original_palette_indices
+from hd_dormant_enemy_review import DORMANT_ENEMY_SCOPE, approved_dormant_enemy_animation
 
 
 CARRIED_TERRAIN_V2 = "standalone-terrain-carried-identity-v2"
@@ -885,16 +886,23 @@ def approved_job(root, identity, project):
         raise ValueError(f"missing complete visual/independent review: {identity}")
     retained_details = {asset: frame["original_detail_cells"] for asset, frame in rows.items()
                         if frame.get("original_detail_cells")}
+    declaration = review.get("retained_original_detail_review", {})
+    dormant_enemy = candidate.get("approval_scope") == DORMANT_ENEMY_SCOPE
+    if (declaration.get("hybrid_review_scope") == DORMANT_ENEMY_SCOPE) != dormant_enemy:
+        raise ValueError("dormant enemy scope must be explicit in candidate and review")
     if retained_details:
-        declaration = review.get("retained_original_detail_review", {})
         catalog_only = declaration.get("hybrid_review_scope") == "catalog_only_no_known_original_runtime_caller"
         unused_terrain = declaration.get("hybrid_review_scope") == "catalog_only_unused_original_terrain"
-        if (catalog_only or unused_terrain) and selection is not None:
+        if (catalog_only or unused_terrain or dormant_enemy) and selection is not None:
             raise ValueError("catalog-only scope cannot replace contextual Terrain approval")
         qualified_scope = declaration.get("hybrid_allscale_and_genuine_context_independent_review") is True
         if catalog_only or unused_terrain:
             qualified_scope = (declaration.get("hybrid_allscale_and_genuine_context_independent_review") is False
                                and declaration.get("catalog_only_no_original_runtime_caller") is True
+                               and declaration.get("catalog_only_independent_whole_material_and_allscale_review") is True)
+        if dormant_enemy:
+            qualified_scope = (declaration.get("hybrid_allscale_and_genuine_context_independent_review") is False
+                               and declaration.get("catalog_dormant_no_genuine_runtime_context_claimed") is True
                                and declaration.get("catalog_only_independent_whole_material_and_allscale_review") is True)
         if (not same_json(declaration.get("cells_by_asset"), retained_details)
                 or declaration.get("retained_original_not_generated_HD") is not True
@@ -955,6 +963,8 @@ def approved_job(root, identity, project):
         for asset, frame in rows.items():
             validate_hd_frame(root, frame, payloads[asset], pictures[asset])
         approved_standalone_evidence(root, selection, review, rows, qa)
+    elif dormant_enemy:
+        approved_dormant_enemy_animation(root, project, candidate, job, review, rows, qa)
     elif retained_details and catalog_only:
         approved_catalog_only_retained_evidence(root, project, declaration, rows, qa)
     elif retained_details and unused_terrain:
@@ -1025,6 +1035,10 @@ def main():
         })
         if candidate.get("artwork_derivation"):
             additions[-1]["artwork_derivation"] = candidate["artwork_derivation"]
+        if candidate.get("approval_scope") == DORMANT_ENEMY_SCOPE:
+            additions[-1]["approval_scope"] = DORMANT_ENEMY_SCOPE
+            additions[-1]["no_genuine_original_runtime_context_claimed"] = True
+            additions[-1]["dormant_source_trace"] = review["retained_original_detail_review"]["dormant_source_trace"]
         if candidate.get("complete_standalone_selection"):
             additions[-1]["approval_scope"] = "complete_standalone_terrain_selection"
             additions[-1]["original_fallback_assets"] = candidate["original_fallback_assets"]

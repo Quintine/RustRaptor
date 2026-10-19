@@ -1,0 +1,154 @@
+{
+  "status": "AUTHOR_INTRINSIC_QUAL6_WITH_EXPLICIT_LIMITS_DIFFERENT_ART_PEER_REQUIRED",
+  "author": "/root/infantry_remaining",
+  "person": "PERSON02",
+  "scope": "Six complete whole frames of this family only: actual SourceG2 intrinsic Rust palette outputs at native1,2,3,4. No independent ART approval, live World rendering, reachability, registration or canonical publication is claimed.",
+  "candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/candidate.json",
+    "sha256": "8a3fe68834a79848db2cf37bddd4c251a33ad1cdb3c787036e7eb9bffe1ff4f1",
+    "bytes": 4140
+  },
+  "runtime_QA": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/actual-currentG2-intrinsic6/runtime-qa.json",
+    "sha256": "c688cec73353d24a769196bc448581645dcb37b6a28d23d5ba465368b281777c",
+    "bytes": 24043
+  },
+  "actual_indexed_bank": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/actual-currentG2-intrinsic6/actual-indexed-source-and-scales.json",
+    "sha256": "37b1b80c05b692f3c17a59c625d41ba90bbbba5fb587ae97ef2296ba2db772e7",
+    "bytes": 180848
+  },
+  "numeric_checks": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/ACTUAL-G2-NUMERIC-SOURCE-FACE-ALPHA-AND-ALIASES.json",
+    "sha256": "7d26fb29e96b4ae54f8da163d997c9e42d25b69044681b2967f63bfeb697542b",
+    "bytes": 9436
+  },
+  "actual_invocation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/actual-currentG2-intrinsic6/ACTUAL-CURRENT-SOURCEG2-INVOCATION.json",
+    "sha256": "c064fa66b906d5ad42c5373ec1e6bf61172851695740f4600e7517ae278c3216",
+    "bytes": 995
+  },
+  "exact_compiled_SourceG2_receipt": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-SourceG2-current-intrinsic-helper-and-epoch-carry-private-20261019-v1/CURRENT-SOURCEG2-HELPER-COMPILE-RECEIPT.json",
+    "sha256": "33c9d199e76c31180dd1408863cbb9d3aa1504fbd43ae64ef2d02517845879b7",
+    "bytes": 4085
+  },
+  "physical_review": {
+    "all6_whole_Original_and_selected_art": true,
+    "all24_whole_native_outputs": true,
+    "native_review_method": "Each of three physically viewed pages contains two complete frames: whole Original and all4actual indexed/palette outputs, both NN-enlarged160x160 and true native8/16/24/32 display. Review-only canvases never feed renderer.",
+    "pages": [
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/presentation-only/ACTUAL-G2-ALL-NATIVE-PAGE-1.png",
+        "sha256": "706a374b9d189d0f0c38763ed3f44126b4027eeeffd730a2d7d3918889bee588",
+        "bytes": 15877
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/presentation-only/ACTUAL-G2-ALL-NATIVE-PAGE-2.png",
+        "sha256": "3ce95b3a3f714c085cb06e4f62ca8dc9965f6a6b6f9f03d288bdf488eb8bdd76",
+        "bytes": 15709
+      },
+      {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/presentation-only/ACTUAL-G2-ALL-NATIVE-PAGE-3.png",
+        "sha256": "a0ec2067791b21754d3b280fab951f68ae5807b2a575d80797e3391bbb43d64a",
+        "bytes": 15293
+      }
+    ],
+    "source_alpha_IoU_at_native1": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "retained_Original_face_samples_verified": 180,
+    "retained_faces_zero_new_HD_credit": true,
+    "all_scales_reserved_palette_240_255_samples": 0
+  },
+  "actual_ops": {
+    "imagegen": 1,
+    "cleanup": 0,
+    "helper_invocations_total": 1,
+    "successful_currentG2_intrinsic_banks": 1,
+    "predecode_failed_helper_invocations": 0,
+    "World": 0,
+    "canonical_write": 0,
+    "engine_build": 0,
+    "Git": 0
+  },
+  "limits": [
+    "Both historical family/raw HOLDs remain preserved and are not upgraded by this different selected candidate.",
+    "The source actors are exceptionally small (6\u201310 painted Original cells). New material shading is visible at native3/4; this is a faithful tiny source treatment, not newly invented anatomy or enlarged collision geometry.",
+    "No live mission or difficulty reachability assertion. Original declarations and actual difficulty gates must be resolved separately by the gameplay/context owner.",
+    "This author cannot independently approve their own artwork; different ART peer and Root admission remain required.",
+    "Raw atlas is a literal block-silhouette interpretation with generated beveled/cloth-like material shading; it is not a detailed anatomical reinterpretation. That restrained treatment is intentional for only4x4 painted logical extent.",
+    "Untouched provider RGBA contains low-alpha ambient colored pixels outside its visible actor. Actual runtime thresholding discards this faint backing: native1 occupancy matches Source exactly; native2 masks are also exact nearest-Source, native3/4 contain only2\u20134edge-sample differences. All24 selected whole palette outputs show no detached glow, opaque rectangle or cast shadow.",
+    "The two returned duplicate-pose raw cells4/5 have their own material variations. They are preserved but not selected, not claimed pixel-identical and not credited as additional accepted artwork; final complete6 uses exact Source-identity cells2/1.",
+    "One Source central face4,3 perframe is functionally retained (180actual samples over all scales), with zero new generated-HD detail credit. No raw RGBA edits or cleanup occurred."
+  ],
+  "genuine_generation": {
+    "untouched_raw": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/generated/PERSON02-COMPLETE6-PROVIDER-RETURNED-UNTOUCHED.png",
+      "sha256": "856a0960305f3e124c7c29420573689b3e726a9cd200dce5643d826a587523a7",
+      "bytes": 1148903
+    },
+    "raw_dimensions": [
+      1536,
+      1024
+    ],
+    "generation_and_immediate_lease_release": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/ACTUAL-ONE-BUILTIN-SAFE-PRIMITIVES-AND-IMMEDIATE-LEASE-RELEASE.json",
+      "sha256": "a42bcdcc3f183a20c66a1183a225e1f131c373ac3bbb26985eeca297e779f0d3",
+      "bytes": 712
+    },
+    "raw_identity_and_alpha": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/RAW-IDENTITY-AND-ALPHA-COUNTS.json",
+      "sha256": "7f0964de6ce041c3d06fb6ded2d6b796ca8d38c762bc764dfe33644a57f8792a",
+      "bytes": 2709
+    },
+    "Original_only_arguments": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/EXACT-APPROVED-BUILTIN-ARGUMENTS.json",
+      "sha256": "27320237ecd038d465d96351b324ddd74491107cc6ee1f99d83fe0ddd5697153",
+      "bytes": 3306
+    },
+    "no_old_generated_PERSON01_reference_or_material": true
+  },
+  "phase_identity": {
+    "exact_Source_and_actual_native_all4_aliases": [
+      {
+        "frame": 4,
+        "equals_frame": 2,
+        "whole_Source_and_all4_actual_native_scales_exact": true
+      },
+      {
+        "frame": 5,
+        "equals_frame": 1,
+        "whole_Source_and_all4_actual_native_scales_exact": true
+      }
+    ],
+    "raw_selected_cells": [
+      0,
+      1,
+      2,
+      3,
+      2,
+      1
+    ],
+    "all6_sequence_frames_supplied": true,
+    "unused_returned_raw_cells": [
+      4,
+      5
+    ],
+    "unused_raw_cells_preserved": true,
+    "unused_cells_have_zero_selected_art_credit": true
+  },
+  "visible_review_notes": [
+    "200fe: upper-left tan and upper-right black strip preserve handedness; lower-left boot and lower green strip remain at Source position.",
+    "200ff: tan upper-left hand, narrow center and lower-left boot remain correctly joined without added anatomy.",
+    "20100: green upper pair and tan lower-left hand remain correct; original black single lower-left boot preserved.",
+    "20101: left black upper end, right black lower end and tan lower-left hand match Source phase3 rather than mirroring the complete actor.",
+    "20102 uses exactly selected phase2 raw cell and exact Source alias; all4 actual native indexed outputs are identical to20100.",
+    "20103 uses exactly selected phase1 raw cell and exact Source alias; all4 actual native indexed outputs are identical to200ff."
+  ]
+}

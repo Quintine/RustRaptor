@@ -1,0 +1,28 @@
+{
+  "status": "EXACT_ART_AND_RENDERER_FIELDS_EXCEPT_PACK_RELATIVE_FILE_NAMESPACE",
+  "actual_original_QA": {
+    "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/measurement/actual-G2-runtime-qa-original-namespace.json",
+    "sha256": "42fcc5d0ad911e303b325ee32ecd5e5dc55703084a51afdff7947caf07eba5be"
+  },
+  "original_candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-stream-304b7-304b8-304cf-304d5-304d6-Source-primary-author-20261019-v1/family-304cf-304d5-304d6/candidate.json",
+    "sha256": "a418a4d7d32205ac7500990f842308073a8768fca757392cf062ba01054629a1",
+    "size": 2216
+  },
+  "old_identity": {
+    "candidate_sha256": "a418a4d7d32205ac7500990f842308073a8768fca757392cf062ba01054629a1",
+    "frame_bindings_sha256": "82cfd2823036f1deb828f6b74fd8a48d1acf27ae21dbdeff48a483053f146af0",
+    "artwork_sha256": {
+      "generated/untouched-genuine-builtin-atlas.png": "d2d0345d7188df50d7fe3285757d77f1dda345f18d1f73fc24177c3afabf6bff"
+    }
+  },
+  "new_identity": {
+    "candidate_sha256": "dfa67d1de26090a5927c3a911311f50331873a9d9053ae86efada8f36f391ae8",
+    "frame_bindings_sha256": "f71e6697a0d2f78be3c2579fdaa436d07fb35bb53b8f807a90a899307e1bf42b"
+  },
+  "all_indexed_arrays_unchanged": {
+    "path": "jobs/terrain-304cf-304d5-304d6-newOriginal-SourceG2-complete3-20261019-v1/measurement/actual-G2-indexed-bank.json",
+    "sha256": "4bfffbcd413da732e5c51f51d68daa933ce28292f8cd6625c0b75e58d9fb0633"
+  },
+  "new_QA_calls": 0
+}

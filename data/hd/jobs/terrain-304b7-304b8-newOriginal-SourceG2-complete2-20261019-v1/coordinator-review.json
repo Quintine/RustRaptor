@@ -1,0 +1,77 @@
+{
+  "status": "approved",
+  "reviewer": "/root",
+  "Root_final_coordinator_pending": false,
+  "candidate_sha256": "c7538bebcfbdc75583a3c6e9b54ba3c7b31789c4d78daf26d0b42bd434235d18",
+  "frame_bindings_sha256": "305bfbd6fcd7b8689284d3983d21b84732f2aba265c6296b91e090be7b64692e",
+  "runtime_qa": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/runtime-qa.json",
+  "source_and_all_scale_visual_review": {
+    "author": {
+      "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/proofs/ACTUAL-WHOLE-RAW-SOURCE-AND-ALL-NATIVE-PHYSICAL-REVIEW.json",
+      "sha256": "109293a13fb0dfab2cb650ae615b1fdcd913356945b64153b9fcd016cbae84bb"
+    },
+    "scales": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "independent_review": {
+    "intrinsic": {
+      "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/proofs/independent-intrinsic.json",
+      "sha256": "5d26a56dbb80ce485cb328a324283f1f4e4a8f05216d15be79968c02874b9d36"
+    },
+    "context": {
+      "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/proofs/independent-context-G2-H5596-plus9.json",
+      "sha256": "1d4c374ea5df70aa50fd40ec2e458bdaa8acc1a1a62029e9dd8e8c7465d77a23"
+    }
+  },
+  "genuine_context_review": {
+    "producer": {
+      "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/proofs/author-context-G2-H5596-plus9.json",
+      "sha256": "328acb7fd2187b34c9391c6ddfde3bb1324663fee8f14c4ddc9e53f69a23d8a6"
+    },
+    "different": {
+      "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/proofs/independent-context-G2-H5596-plus9.json",
+      "sha256": "1d4c374ea5df70aa50fd40ec2e458bdaa8acc1a1a62029e9dd8e8c7465d77a23"
+    },
+    "historical_scope": "ActualG2 H5596 plus explicit9 proposals:7windows28scales84wholebodies",
+    "current_input_carry": {
+      "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/proofs/H5596-plus9-to-H5613-input-carry.json",
+      "sha256": "3d89db3005c3c4bb032d33cfe797b50a7859880b21f2fa9c067fbeabeea03535"
+    }
+  },
+  "namespace_only_QA_carry": {
+    "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/measurement/QA-NAMESPACE-ONLY-CARRY.json",
+    "sha256": "22680c6a962863a653ae2d7729dffac5002a89e0b79a5ce225b54aa4b6f44c31"
+  },
+  "generation_lineage": {
+    "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/generation-lineage.json",
+    "sha256": "4b209a906530c602fd523b223bb2183e9b57f9d46dbf1fa8cd505bdfb43f218f"
+  },
+  "qualification_limits": [
+    "Edges/frame surfaces are brighter and have stronger relief/highlights than the softly shaded Original. The new material is a remastered interpretation, not pixel-identical geometry or original RGB.",
+    "Native1 reduces fine texture and softens narrow structure/slot detail; all4nativeviews preserve overall Source organization with this limit.",
+    "Historical predecessor was intrinsic-only when authored; literal statement preserved in producer proof. Final context scope is actual SourceG2/H5596 plus9, qualified by Root and independent reviews, with finite H5613 input carry only.",
+    "304b7 generated inner rails/crosspieces are more crisp/regular and framed than Original; Source sparse pattern and dark openings remain recognized.",
+    "304b8 hasexact3shortgraybars physicallyread at1-4 anditsordinarydark-redaperture; raised/shadowed edges are strongerthanSource. No reserved/animatedfireeffect is claimed.",
+    "Actual SourceG2 H5596 + explicit prior4/new5 proposal;7windows28scales84wholebodies. This remains the true historical pixel epoch.",
+    "No fresh H5613 capture; finite input carry only. Prior4 installed now; the original baseline role remains literal H5596.",
+    "Stronger bevel/chipped relief, native1 merging and inherited local texture boundaries remain qualified limits."
+  ],
+  "new_QA_image_cleanup_context_calls": 0,
+  "own_retained_Original_cells": 0,
+  "approval_scope": "Root-approved finite Source-primary intrinsic and genuine SourceG2/H5596-plus9 context, with explicit finite H5613 input carry; no new context pixels.",
+  "coordinator_record_author": "/root/publication_review",
+  "Root_current_batch23_approval": {
+    "approved": true,
+    "reviewer": "/root",
+    "utc": "2026-10-19T00:27:16.630419+00:00",
+    "notes": "Root approves complete Terrain2 in the finite intrinsic/context scope of its bound independent and Root reviews. Historical invocation epochs, Source functional retention and known material limitations remain literal; no wider gameplay coverage claimed."
+  },
+  "prior_producer_coordinator_verbatim": {
+    "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/proofs/producer-coordinator-pending-verbatim.json",
+    "sha256": "5449650e2494ca27838d421af7ed2c8bc3395d981c060905026657af3b2d55dd"
+  }
+}

@@ -1,0 +1,1452 @@
+{
+  "NumPy": "2.3.5",
+  "Pillow": "12.3.0",
+  "Python": "3.12.14",
+  "decoder_sha256": "66184a4758027dadbadb5e20fe90b2add2b9fc218b7810304b1a1ea2de74f58e",
+  "execution": {
+    "method": "derived-PERSON01-complete6-exact-Source-crop-of-PLATOON1-generated-top-bodies-v1",
+    "output_sha256": {
+      "200f8": "3f2565db066a522ad714e7cb5ba64773c5ccff6f46730cc344115d844a4ee5dc",
+      "200f9": "74f86cbfb1a946429604080169346d9ff24bca28a17c2fbe9da6f575c740f426",
+      "200fa": "cb56cbb539a8ac5176fe57a43ab4c1567f8b94e2e22cffb504a28ba678106072",
+      "200fb": "b968d584572a7359562e009148be8b80ed983ff081e2481004a8c5b2f4581af7",
+      "200fc": "74064d74da3fcaf08bafafba94e7ee7ecbc5cee10793ce37ffe537c9c58abfd9",
+      "200fd": "d819438da5acd2076e0d58160a8964712ce99e9652973682bc4e6830ddc88907"
+    },
+    "parent_raw_sha256": [
+      "82a92f95fe2ad326effd3739af355289828460d2196f4cecc86c3b8933e557a7"
+    ],
+    "recipe_sha256": "e771616f46068a288deed8e30565ab20e552495fafda6bbf09f500e9418ceb9b",
+    "source_sha256": {
+      "200f8": "752628fa06883e207c87709a30f75b8d019d4afcbab939a26253fc8af128be02",
+      "200f9": "fb6db67d44d7364a1621cc368f729ffbba7be7cb950c775fe0678f6eecb6557e",
+      "200fa": "b96301475a6d648435c72547368052ba4b772f2b9ae48c7fe3846ec39a8ad6b8",
+      "200fb": "c159acb456f7426719a05284c0efc364bb06cf11342eb10751b95c8009c4d46f",
+      "200fc": "b96301475a6d648435c72547368052ba4b772f2b9ae48c7fe3846ec39a8ad6b8",
+      "200fd": "95ccabe25a3ceb816cdb4aeb555e448e9982057e2fb6ca47998ec7544e324875"
+    },
+    "status": "success",
+    "tool_sha256": "bbb13aac1a5617af509a7107bfabd290c75e0b7094a50e14a35be9a5eac79ad5"
+  },
+  "limits": [
+    "Source crop aliases are not encoded-payload aliases.",
+    "Original alpha and one Source face per frame get zero generated detail credit.",
+    "Substantial inherited near-black functional support is not new generated texture.",
+    "Parent and child material/context approval remain separate."
+  ],
+  "parent_execution_receipt_sha256": "326f27f9d4727370d5823760f9509c592e60809996e541c13e1f371ad1302258",
+  "parent_helper_sha256": "5368774adb98af834df4fddb7ebe24310e6b35be110adf56b9961a6d36edd866",
+  "parent_recipe_sha256": "ca50e5cdf9e25f7f6e1ad39d56131479c65a32edf62d513d8da3fa42c3255a4a",
+  "reports": [
+    {
+      "Original_master_samples": 16,
+      "RGBA_sha256": "3644e70c8eae85636a11a6061a058949625d65dae6492d0b1e608131e40f6f52",
+      "asset": "200f8",
+      "exact_parent_RGBA_crop": [
+        20,
+        0,
+        32,
+        32
+      ],
+      "functional_Original_cells": [
+        [
+          3,
+          3
+        ]
+      ],
+      "own_SourceScale4_alpha_exact": true,
+      "own_source_sha256": "752628fa06883e207c87709a30f75b8d019d4afcbab939a26253fc8af128be02",
+      "parent_PNG_sha256": "9472a583fe79889ea05099b440ab5d5d5ddf6563083329fc71813b4afc0607c1",
+      "parent_asset": "200ec",
+      "parent_material_report": {
+        "Original_RGBA_changed_samples": 96,
+        "SourceScale4_alpha_exact": true,
+        "components": [
+          {
+            "body": "top",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 1.4044274235949086,
+            "missing_fraction": 0.5714285714285714,
+            "raw_donors": 1021,
+            "repaired": 24,
+            "samples": 42
+          },
+          {
+            "body": "top",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.6101370422560146,
+            "missing_fraction": 0.32,
+            "raw_donors": 2122,
+            "repaired": 24,
+            "samples": 75
+          },
+          {
+            "body": "top",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.19688061258868675,
+            "missing_fraction": 0.26666666666666666,
+            "raw_donors": 874,
+            "repaired": 8,
+            "samples": 30
+          },
+          {
+            "body": "middle_left",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.47335484468994143,
+            "missing_fraction": 0.7435897435897436,
+            "raw_donors": 750,
+            "repaired": 29,
+            "samples": 39
+          },
+          {
+            "body": "middle_left",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.636853983218658,
+            "missing_fraction": 0.2948717948717949,
+            "raw_donors": 2486,
+            "repaired": 23,
+            "samples": 78
+          },
+          {
+            "body": "middle_left",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.156034747359061,
+            "missing_fraction": 0.06666666666666667,
+            "raw_donors": 871,
+            "repaired": 2,
+            "samples": 30
+          },
+          {
+            "body": "middle_right",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.5972817745776663,
+            "missing_fraction": 0.7368421052631579,
+            "raw_donors": 616,
+            "repaired": 28,
+            "samples": 38
+          },
+          {
+            "body": "middle_right",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.05574058888256265,
+            "missing_fraction": 0.024390243902439025,
+            "raw_donors": 1889,
+            "repaired": 1,
+            "samples": 41
+          },
+          {
+            "body": "middle_right",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.08638590114607726,
+            "missing_fraction": 0.2,
+            "raw_donors": 785,
+            "repaired": 6,
+            "samples": 30
+          },
+          {
+            "body": "lower_middle",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.37989436005832433,
+            "missing_fraction": 0.5,
+            "raw_donors": 416,
+            "repaired": 7,
+            "samples": 14
+          },
+          {
+            "body": "lower_middle",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.1907415023815171,
+            "missing_fraction": 0.15151515151515152,
+            "raw_donors": 1854,
+            "repaired": 5,
+            "samples": 33
+          },
+          {
+            "body": "lower_middle",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.24277384349731582,
+            "missing_fraction": 0.36666666666666664,
+            "raw_donors": 791,
+            "repaired": 11,
+            "samples": 30
+          },
+          {
+            "body": "lower_left",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 1.2432368243246843,
+            "missing_fraction": 0.6666666666666666,
+            "raw_donors": 876,
+            "repaired": 28,
+            "samples": 42
+          },
+          {
+            "body": "lower_left",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.45907170713580536,
+            "missing_fraction": 0.30666666666666664,
+            "raw_donors": 2253,
+            "repaired": 23,
+            "samples": 75
+          },
+          {
+            "body": "lower_left",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.3193464454483135,
+            "missing_fraction": 0.4,
+            "raw_donors": 900,
+            "repaired": 12,
+            "samples": 30
+          },
+          {
+            "body": "lower_right",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.6518621416878658,
+            "missing_fraction": 0.8717948717948718,
+            "raw_donors": 705,
+            "repaired": 34,
+            "samples": 39
+          },
+          {
+            "body": "lower_right",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.42964241381609647,
+            "missing_fraction": 0.3333333333333333,
+            "raw_donors": 2443,
+            "repaired": 26,
+            "samples": 78
+          },
+          {
+            "body": "lower_right",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.25956551400443423,
+            "missing_fraction": 0.26666666666666666,
+            "raw_donors": 849,
+            "repaired": 8,
+            "samples": 30
+          }
+        ],
+        "functional_Original_cells": [
+          [
+            4,
+            20
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            16
+          ],
+          [
+            16,
+            8
+          ],
+          [
+            18,
+            19
+          ]
+        ],
+        "functional_Original_master_samples": 96,
+        "restored_black_is_functional_support_not_generated_detail": true
+      }
+    },
+    {
+      "Original_master_samples": 16,
+      "RGBA_sha256": "d714c6ca7c33c4167762339e233f5e2122328d74f3a4f18de09fa3febe7e182d",
+      "asset": "200f9",
+      "exact_parent_RGBA_crop": [
+        20,
+        0,
+        32,
+        32
+      ],
+      "functional_Original_cells": [
+        [
+          3,
+          3
+        ]
+      ],
+      "own_SourceScale4_alpha_exact": true,
+      "own_source_sha256": "fb6db67d44d7364a1621cc368f729ffbba7be7cb950c775fe0678f6eecb6557e",
+      "parent_PNG_sha256": "4f77fb87b1ecee94bbcfd57d69ce35e166f782773743e01dedb76c1281e41769",
+      "parent_asset": "200ed",
+      "parent_material_report": {
+        "Original_RGBA_changed_samples": 96,
+        "SourceScale4_alpha_exact": true,
+        "components": [
+          {
+            "body": "top",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.24268171250455484,
+            "missing_fraction": 0.35714285714285715,
+            "raw_donors": 464,
+            "repaired": 5,
+            "samples": 14
+          },
+          {
+            "body": "top",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.08592137843583575,
+            "missing_fraction": 0.12121212121212122,
+            "raw_donors": 1931,
+            "repaired": 4,
+            "samples": 33
+          },
+          {
+            "body": "top",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.228455966258547,
+            "missing_fraction": 0.26666666666666666,
+            "raw_donors": 843,
+            "repaired": 8,
+            "samples": 30
+          },
+          {
+            "body": "middle_left",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.5924319638478066,
+            "missing_fraction": 0.7368421052631579,
+            "raw_donors": 535,
+            "repaired": 28,
+            "samples": 38
+          },
+          {
+            "body": "middle_left",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.07458865995972226,
+            "missing_fraction": 0.07317073170731707,
+            "raw_donors": 1851,
+            "repaired": 3,
+            "samples": 41
+          },
+          {
+            "body": "middle_left",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.13576025034027436,
+            "missing_fraction": 0.13333333333333333,
+            "raw_donors": 819,
+            "repaired": 4,
+            "samples": 30
+          },
+          {
+            "body": "middle_right",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.28715674559339954,
+            "missing_fraction": 0.5714285714285714,
+            "raw_donors": 427,
+            "repaired": 8,
+            "samples": 14
+          },
+          {
+            "body": "middle_right",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.11040739281199992,
+            "missing_fraction": 0.12121212121212122,
+            "raw_donors": 1963,
+            "repaired": 4,
+            "samples": 33
+          },
+          {
+            "body": "middle_right",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.21863567205153325,
+            "missing_fraction": 0.3333333333333333,
+            "raw_donors": 812,
+            "repaired": 10,
+            "samples": 30
+          },
+          {
+            "body": "lower_middle",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.4611236299571921,
+            "missing_fraction": 0.6842105263157895,
+            "raw_donors": 472,
+            "repaired": 26,
+            "samples": 38
+          },
+          {
+            "body": "lower_middle",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.1446902412969377,
+            "missing_fraction": 0.14634146341463414,
+            "raw_donors": 1763,
+            "repaired": 6,
+            "samples": 41
+          },
+          {
+            "body": "lower_middle",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.13927855637961467,
+            "missing_fraction": 0.16666666666666666,
+            "raw_donors": 754,
+            "repaired": 5,
+            "samples": 30
+          },
+          {
+            "body": "lower_left",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.21698251052809386,
+            "missing_fraction": 0.35714285714285715,
+            "raw_donors": 438,
+            "repaired": 5,
+            "samples": 14
+          },
+          {
+            "body": "lower_left",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.1433798904322668,
+            "missing_fraction": 0.12121212121212122,
+            "raw_donors": 1871,
+            "repaired": 4,
+            "samples": 33
+          },
+          {
+            "body": "lower_left",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.2550182249613992,
+            "missing_fraction": 0.2,
+            "raw_donors": 802,
+            "repaired": 6,
+            "samples": 30
+          },
+          {
+            "body": "lower_right",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.5261270683549519,
+            "missing_fraction": 0.7105263157894737,
+            "raw_donors": 539,
+            "repaired": 27,
+            "samples": 38
+          },
+          {
+            "body": "lower_right",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.05207075353138887,
+            "missing_fraction": 0.04878048780487805,
+            "raw_donors": 2107,
+            "repaired": 2,
+            "samples": 41
+          },
+          {
+            "body": "lower_right",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.1811420429405879,
+            "missing_fraction": 0.16666666666666666,
+            "raw_donors": 807,
+            "repaired": 5,
+            "samples": 30
+          }
+        ],
+        "functional_Original_cells": [
+          [
+            4,
+            20
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            16
+          ],
+          [
+            16,
+            8
+          ],
+          [
+            18,
+            19
+          ]
+        ],
+        "functional_Original_master_samples": 96,
+        "restored_black_is_functional_support_not_generated_detail": true
+      }
+    },
+    {
+      "Original_master_samples": 16,
+      "RGBA_sha256": "90354c4b11f997379fef117916a9ad504d7bd3daff63f4058268410bdb7ded5a",
+      "asset": "200fa",
+      "exact_parent_RGBA_crop": [
+        20,
+        0,
+        32,
+        32
+      ],
+      "functional_Original_cells": [
+        [
+          3,
+          3
+        ]
+      ],
+      "own_SourceScale4_alpha_exact": true,
+      "own_source_sha256": "b96301475a6d648435c72547368052ba4b772f2b9ae48c7fe3846ec39a8ad6b8",
+      "parent_PNG_sha256": "f16f152178c0325c1136fd359458016ee70583714b28f5f3e6e81f2fbe425a6f",
+      "parent_asset": "200ee",
+      "parent_material_report": {
+        "Original_RGBA_changed_samples": 96,
+        "SourceScale4_alpha_exact": true,
+        "components": [
+          {
+            "body": "top",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.46763295276707456,
+            "missing_fraction": 0.6842105263157895,
+            "raw_donors": 564,
+            "repaired": 26,
+            "samples": 38
+          },
+          {
+            "body": "top",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.07929726554962427,
+            "missing_fraction": 0.0975609756097561,
+            "raw_donors": 1866,
+            "repaired": 4,
+            "samples": 41
+          },
+          {
+            "body": "top",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.13255848050237204,
+            "missing_fraction": 0.1,
+            "raw_donors": 776,
+            "repaired": 3,
+            "samples": 30
+          },
+          {
+            "body": "middle_left",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.21642951632619356,
+            "missing_fraction": 0.35714285714285715,
+            "raw_donors": 393,
+            "repaired": 5,
+            "samples": 14
+          },
+          {
+            "body": "middle_left",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.0620750012897621,
+            "missing_fraction": 0.09090909090909091,
+            "raw_donors": 1998,
+            "repaired": 3,
+            "samples": 33
+          },
+          {
+            "body": "middle_left",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.21768598963333544,
+            "missing_fraction": 0.26666666666666666,
+            "raw_donors": 843,
+            "repaired": 8,
+            "samples": 30
+          },
+          {
+            "body": "middle_right",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 1.442021021419489,
+            "missing_fraction": 0.5714285714285714,
+            "raw_donors": 1037,
+            "repaired": 24,
+            "samples": 42
+          },
+          {
+            "body": "middle_right",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.6243630304590368,
+            "missing_fraction": 0.28,
+            "raw_donors": 2186,
+            "repaired": 21,
+            "samples": 75
+          },
+          {
+            "body": "middle_right",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.23610500344561527,
+            "missing_fraction": 0.3333333333333333,
+            "raw_donors": 852,
+            "repaired": 10,
+            "samples": 30
+          },
+          {
+            "body": "lower_middle",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.6737152754635818,
+            "missing_fraction": 0.6923076923076923,
+            "raw_donors": 708,
+            "repaired": 27,
+            "samples": 39
+          },
+          {
+            "body": "lower_middle",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.5970060146452498,
+            "missing_fraction": 0.2948717948717949,
+            "raw_donors": 2438,
+            "repaired": 23,
+            "samples": 78
+          },
+          {
+            "body": "lower_middle",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.17669919239921691,
+            "missing_fraction": 0.13333333333333333,
+            "raw_donors": 842,
+            "repaired": 4,
+            "samples": 30
+          },
+          {
+            "body": "lower_left",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.39835219576492614,
+            "missing_fraction": 0.6052631578947368,
+            "raw_donors": 659,
+            "repaired": 23,
+            "samples": 38
+          },
+          {
+            "body": "lower_left",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.09713385650857907,
+            "missing_fraction": 0.12195121951219512,
+            "raw_donors": 1824,
+            "repaired": 5,
+            "samples": 41
+          },
+          {
+            "body": "lower_left",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.169276641278177,
+            "missing_fraction": 0.1,
+            "raw_donors": 804,
+            "repaired": 3,
+            "samples": 30
+          },
+          {
+            "body": "lower_right",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.3003124766612761,
+            "missing_fraction": 0.42857142857142855,
+            "raw_donors": 440,
+            "repaired": 6,
+            "samples": 14
+          },
+          {
+            "body": "lower_right",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.05500301262249927,
+            "missing_fraction": 0.09090909090909091,
+            "raw_donors": 2049,
+            "repaired": 3,
+            "samples": 33
+          },
+          {
+            "body": "lower_right",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.228455966258547,
+            "missing_fraction": 0.26666666666666666,
+            "raw_donors": 840,
+            "repaired": 8,
+            "samples": 30
+          }
+        ],
+        "functional_Original_cells": [
+          [
+            4,
+            20
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            16
+          ],
+          [
+            16,
+            8
+          ],
+          [
+            18,
+            19
+          ]
+        ],
+        "functional_Original_master_samples": 96,
+        "restored_black_is_functional_support_not_generated_detail": true
+      }
+    },
+    {
+      "Original_master_samples": 16,
+      "RGBA_sha256": "f5e98c5e05a537e34fbca43b7c6da5785a00f5aa1998cacbe46ca4f4384a43d0",
+      "asset": "200fb",
+      "exact_parent_RGBA_crop": [
+        20,
+        0,
+        32,
+        32
+      ],
+      "functional_Original_cells": [
+        [
+          3,
+          3
+        ]
+      ],
+      "own_SourceScale4_alpha_exact": true,
+      "own_source_sha256": "c159acb456f7426719a05284c0efc364bb06cf11342eb10751b95c8009c4d46f",
+      "parent_PNG_sha256": "75409b6fb5eee0f2d6c123d9fae385be09d9bea8345e22bd2cd0955bff3e6d82",
+      "parent_asset": "200ef",
+      "parent_material_report": {
+        "Original_RGBA_changed_samples": 96,
+        "SourceScale4_alpha_exact": true,
+        "components": [
+          {
+            "body": "top",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.8267763971906097,
+            "missing_fraction": 0.8974358974358975,
+            "raw_donors": 694,
+            "repaired": 35,
+            "samples": 39
+          },
+          {
+            "body": "top",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.5434311597946795,
+            "missing_fraction": 0.32051282051282054,
+            "raw_donors": 2189,
+            "repaired": 25,
+            "samples": 78
+          },
+          {
+            "body": "top",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.2551450013749368,
+            "missing_fraction": 0.3,
+            "raw_donors": 908,
+            "repaired": 9,
+            "samples": 30
+          },
+          {
+            "body": "middle_left",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 1.0904974276267003,
+            "missing_fraction": 0.6190476190476191,
+            "raw_donors": 1063,
+            "repaired": 26,
+            "samples": 42
+          },
+          {
+            "body": "middle_left",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.5289800233920844,
+            "missing_fraction": 0.3466666666666667,
+            "raw_donors": 2182,
+            "repaired": 26,
+            "samples": 75
+          },
+          {
+            "body": "middle_left",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.2405561816039659,
+            "missing_fraction": 0.3333333333333333,
+            "raw_donors": 901,
+            "repaired": 10,
+            "samples": 30
+          },
+          {
+            "body": "middle_right",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.29316215344261354,
+            "missing_fraction": 0.5,
+            "raw_donors": 407,
+            "repaired": 7,
+            "samples": 14
+          },
+          {
+            "body": "middle_right",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.06755803441723476,
+            "missing_fraction": 0.06060606060606061,
+            "raw_donors": 2015,
+            "repaired": 2,
+            "samples": 33
+          },
+          {
+            "body": "middle_right",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.22008303091940817,
+            "missing_fraction": 0.23333333333333334,
+            "raw_donors": 838,
+            "repaired": 7,
+            "samples": 30
+          },
+          {
+            "body": "lower_middle",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.5304840278629324,
+            "missing_fraction": 0.75,
+            "raw_donors": 476,
+            "repaired": 30,
+            "samples": 40
+          },
+          {
+            "body": "lower_middle",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.16449478820377286,
+            "missing_fraction": 0.12195121951219512,
+            "raw_donors": 1908,
+            "repaired": 5,
+            "samples": 41
+          },
+          {
+            "body": "lower_middle",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.16199387722319103,
+            "missing_fraction": 0.2,
+            "raw_donors": 801,
+            "repaired": 6,
+            "samples": 30
+          },
+          {
+            "body": "lower_left",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.651968715832859,
+            "missing_fraction": 0.6944444444444444,
+            "raw_donors": 720,
+            "repaired": 25,
+            "samples": 36
+          },
+          {
+            "body": "lower_left",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.3996810521978997,
+            "missing_fraction": 0.32051282051282054,
+            "raw_donors": 2397,
+            "repaired": 25,
+            "samples": 78
+          },
+          {
+            "body": "lower_left",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.18175437269254732,
+            "missing_fraction": 0.3,
+            "raw_donors": 848,
+            "repaired": 9,
+            "samples": 30
+          },
+          {
+            "body": "lower_right",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 1.4804468526679884,
+            "missing_fraction": 0.5952380952380952,
+            "raw_donors": 1005,
+            "repaired": 25,
+            "samples": 42
+          },
+          {
+            "body": "lower_right",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.6341179396597794,
+            "missing_fraction": 0.26666666666666666,
+            "raw_donors": 2366,
+            "repaired": 20,
+            "samples": 75
+          },
+          {
+            "body": "lower_right",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.2565556815340935,
+            "missing_fraction": 0.3,
+            "raw_donors": 864,
+            "repaired": 9,
+            "samples": 30
+          }
+        ],
+        "functional_Original_cells": [
+          [
+            4,
+            20
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            16
+          ],
+          [
+            16,
+            8
+          ],
+          [
+            18,
+            19
+          ]
+        ],
+        "functional_Original_master_samples": 96,
+        "restored_black_is_functional_support_not_generated_detail": true
+      }
+    },
+    {
+      "Original_master_samples": 16,
+      "RGBA_sha256": "565654f4a2ea366e310bed5118f2c3833e0f9d2adf65e4c99d98a579f8b39540",
+      "asset": "200fc",
+      "exact_parent_RGBA_crop": [
+        20,
+        0,
+        32,
+        32
+      ],
+      "functional_Original_cells": [
+        [
+          3,
+          3
+        ]
+      ],
+      "own_SourceScale4_alpha_exact": true,
+      "own_source_sha256": "b96301475a6d648435c72547368052ba4b772f2b9ae48c7fe3846ec39a8ad6b8",
+      "parent_PNG_sha256": "5da0d53db6b4edc0639666efabbd60a9f45a118548ad9db0fdace8557c915fb9",
+      "parent_asset": "200f0",
+      "parent_material_report": {
+        "Original_RGBA_changed_samples": 96,
+        "SourceScale4_alpha_exact": true,
+        "components": [
+          {
+            "body": "top",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.4891176863609729,
+            "missing_fraction": 0.7368421052631579,
+            "raw_donors": 500,
+            "repaired": 28,
+            "samples": 38
+          },
+          {
+            "body": "top",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.10034662148993581,
+            "missing_fraction": 0.12195121951219512,
+            "raw_donors": 1923,
+            "repaired": 5,
+            "samples": 41
+          },
+          {
+            "body": "top",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.1093259369675246,
+            "missing_fraction": 0.13333333333333333,
+            "raw_donors": 824,
+            "repaired": 4,
+            "samples": 30
+          },
+          {
+            "body": "middle_left",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.24107116402101886,
+            "missing_fraction": 0.5,
+            "raw_donors": 399,
+            "repaired": 7,
+            "samples": 14
+          },
+          {
+            "body": "middle_left",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.17879573214201602,
+            "missing_fraction": 0.15151515151515152,
+            "raw_donors": 1882,
+            "repaired": 5,
+            "samples": 33
+          },
+          {
+            "body": "middle_left",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.19646103627821523,
+            "missing_fraction": 0.36666666666666664,
+            "raw_donors": 842,
+            "repaired": 11,
+            "samples": 30
+          },
+          {
+            "body": "middle_right",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.41342999386109525,
+            "missing_fraction": 0.6842105263157895,
+            "raw_donors": 642,
+            "repaired": 26,
+            "samples": 38
+          },
+          {
+            "body": "middle_right",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.04722236782052778,
+            "missing_fraction": 0.07317073170731707,
+            "raw_donors": 1984,
+            "repaired": 3,
+            "samples": 41
+          },
+          {
+            "body": "middle_right",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.17396186777952488,
+            "missing_fraction": 0.2,
+            "raw_donors": 824,
+            "repaired": 6,
+            "samples": 30
+          },
+          {
+            "body": "lower_middle",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.2233401599010149,
+            "missing_fraction": 0.42857142857142855,
+            "raw_donors": 402,
+            "repaired": 6,
+            "samples": 14
+          },
+          {
+            "body": "lower_middle",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.08749838608465857,
+            "missing_fraction": 0.06060606060606061,
+            "raw_donors": 1976,
+            "repaired": 2,
+            "samples": 33
+          },
+          {
+            "body": "lower_middle",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.26903721873218295,
+            "missing_fraction": 0.3,
+            "raw_donors": 808,
+            "repaired": 9,
+            "samples": 30
+          },
+          {
+            "body": "lower_left",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.39687692220387494,
+            "missing_fraction": 0.6578947368421053,
+            "raw_donors": 625,
+            "repaired": 25,
+            "samples": 38
+          },
+          {
+            "body": "lower_left",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.16939296597862202,
+            "missing_fraction": 0.14634146341463414,
+            "raw_donors": 1877,
+            "repaired": 6,
+            "samples": 41
+          },
+          {
+            "body": "lower_left",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.2551049717582385,
+            "missing_fraction": 0.36666666666666664,
+            "raw_donors": 839,
+            "repaired": 11,
+            "samples": 30
+          },
+          {
+            "body": "lower_right",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.2801637438285138,
+            "missing_fraction": 0.42857142857142855,
+            "raw_donors": 410,
+            "repaired": 6,
+            "samples": 14
+          },
+          {
+            "body": "lower_right",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.13699603582658715,
+            "missing_fraction": 0.12121212121212122,
+            "raw_donors": 1976,
+            "repaired": 4,
+            "samples": 33
+          },
+          {
+            "body": "lower_right",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.175101201706334,
+            "missing_fraction": 0.3,
+            "raw_donors": 816,
+            "repaired": 9,
+            "samples": 30
+          }
+        ],
+        "functional_Original_cells": [
+          [
+            4,
+            20
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            16
+          ],
+          [
+            16,
+            8
+          ],
+          [
+            18,
+            19
+          ]
+        ],
+        "functional_Original_master_samples": 96,
+        "restored_black_is_functional_support_not_generated_detail": true
+      }
+    },
+    {
+      "Original_master_samples": 16,
+      "RGBA_sha256": "a003d3c69eb3d7c84680ca0ad91a0efee1d3e02fdfef2fdb6cabeafa7fda33cb",
+      "asset": "200fd",
+      "exact_parent_RGBA_crop": [
+        20,
+        0,
+        32,
+        32
+      ],
+      "functional_Original_cells": [
+        [
+          3,
+          3
+        ]
+      ],
+      "own_SourceScale4_alpha_exact": true,
+      "own_source_sha256": "95ccabe25a3ceb816cdb4aeb555e448e9982057e2fb6ca47998ec7544e324875",
+      "parent_PNG_sha256": "1c3dfff3110411ca691ed49b7cd03ffec7013a47b0909168e9a2465f268982fa",
+      "parent_asset": "200f1",
+      "parent_material_report": {
+        "Original_RGBA_changed_samples": 96,
+        "SourceScale4_alpha_exact": true,
+        "components": [
+          {
+            "body": "top",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.25431552614417213,
+            "missing_fraction": 0.5,
+            "raw_donors": 441,
+            "repaired": 7,
+            "samples": 14
+          },
+          {
+            "body": "top",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.20572954063155563,
+            "missing_fraction": 0.12121212121212122,
+            "raw_donors": 1938,
+            "repaired": 4,
+            "samples": 33
+          },
+          {
+            "body": "top",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.2832037564493382,
+            "missing_fraction": 0.4,
+            "raw_donors": 804,
+            "repaired": 12,
+            "samples": 30
+          },
+          {
+            "body": "middle_left",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.35044902699192,
+            "missing_fraction": 0.7105263157894737,
+            "raw_donors": 514,
+            "repaired": 27,
+            "samples": 38
+          },
+          {
+            "body": "middle_left",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.1848247104733156,
+            "missing_fraction": 0.12195121951219512,
+            "raw_donors": 1952,
+            "repaired": 5,
+            "samples": 41
+          },
+          {
+            "body": "middle_left",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.1478105357432456,
+            "missing_fraction": 0.16666666666666666,
+            "raw_donors": 818,
+            "repaired": 5,
+            "samples": 30
+          },
+          {
+            "body": "middle_right",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.8250775200629961,
+            "missing_fraction": 0.7435897435897436,
+            "raw_donors": 740,
+            "repaired": 29,
+            "samples": 39
+          },
+          {
+            "body": "middle_right",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.39990385667330774,
+            "missing_fraction": 0.3076923076923077,
+            "raw_donors": 2505,
+            "repaired": 24,
+            "samples": 78
+          },
+          {
+            "body": "middle_right",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.13176156917368248,
+            "missing_fraction": 0.2,
+            "raw_donors": 832,
+            "repaired": 6,
+            "samples": 30
+          },
+          {
+            "body": "lower_middle",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 1.105553869071507,
+            "missing_fraction": 0.5714285714285714,
+            "raw_donors": 942,
+            "repaired": 24,
+            "samples": 42
+          },
+          {
+            "body": "lower_middle",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.6144633132903565,
+            "missing_fraction": 0.29333333333333333,
+            "raw_donors": 2300,
+            "repaired": 22,
+            "samples": 75
+          },
+          {
+            "body": "lower_middle",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.3394982316536454,
+            "missing_fraction": 0.36666666666666664,
+            "raw_donors": 884,
+            "repaired": 11,
+            "samples": 30
+          },
+          {
+            "body": "lower_left",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.24170215041308024,
+            "missing_fraction": 0.5,
+            "raw_donors": 441,
+            "repaired": 7,
+            "samples": 14
+          },
+          {
+            "body": "lower_left",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.10623658170535137,
+            "missing_fraction": 0.12121212121212122,
+            "raw_donors": 1952,
+            "repaired": 4,
+            "samples": 33
+          },
+          {
+            "body": "lower_left",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.2217576541268676,
+            "missing_fraction": 0.26666666666666666,
+            "raw_donors": 824,
+            "repaired": 8,
+            "samples": 30
+          },
+          {
+            "body": "lower_right",
+            "material": "near_black",
+            "material_class": 0,
+            "maximum_donor_logical_distance": 0.38948279631271815,
+            "missing_fraction": 0.7105263157894737,
+            "raw_donors": 563,
+            "repaired": 27,
+            "samples": 38
+          },
+          {
+            "body": "lower_right",
+            "material": "green",
+            "material_class": 1,
+            "maximum_donor_logical_distance": 0.15751684554897252,
+            "missing_fraction": 0.0975609756097561,
+            "raw_donors": 2056,
+            "repaired": 4,
+            "samples": 41
+          },
+          {
+            "body": "lower_right",
+            "material": "tan",
+            "material_class": 2,
+            "maximum_donor_logical_distance": 0.2509053280814769,
+            "missing_fraction": 0.23333333333333334,
+            "raw_donors": 848,
+            "repaired": 7,
+            "samples": 30
+          }
+        ],
+        "functional_Original_cells": [
+          [
+            4,
+            20
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            16
+          ],
+          [
+            16,
+            8
+          ],
+          [
+            18,
+            19
+          ]
+        ],
+        "functional_Original_master_samples": 96,
+        "restored_black_is_functional_support_not_generated_detail": true
+      }
+    }
+  ]
+}

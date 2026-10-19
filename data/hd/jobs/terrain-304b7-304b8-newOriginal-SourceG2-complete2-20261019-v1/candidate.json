@@ -1,0 +1,99 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1",
+  "category": "Terrain",
+  "kind": "contextual_terrain_shard",
+  "complete_family": true,
+  "generation_inventory": [
+    "304b7",
+    "304b8"
+  ],
+  "sequences": [
+    {
+      "name": "Original-primary terrain 304b7",
+      "base_asset": 197815,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/generated/untouched-genuine-builtin-atlas.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "ddc76ebe34289fd2941379744ec3ec0512757b4e9d5e622cab9ba051b647478f",
+          "atlas_grid": {
+            "columns": 2,
+            "rows": 1,
+            "column": 0,
+            "row": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "Original-primary terrain 304b8",
+      "base_asset": 197816,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/generated/untouched-genuine-builtin-atlas.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "6f584179a0c8f3b3c24e51dfd47f7ee43cda77119acb8e71d2e4efe64769e2ec",
+          "atlas_grid": {
+            "columns": 2,
+            "rows": 1,
+            "column": 1,
+            "row": 0
+          }
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "asset": "304b7",
+      "frame": 0,
+      "file": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/generated/untouched-genuine-builtin-atlas.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "ddc76ebe34289fd2941379744ec3ec0512757b4e9d5e622cab9ba051b647478f",
+      "atlas_grid": {
+        "columns": 2,
+        "rows": 1,
+        "column": 0,
+        "row": 0
+      }
+    },
+    {
+      "asset": "304b8",
+      "frame": 0,
+      "file": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/generated/untouched-genuine-builtin-atlas.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "6f584179a0c8f3b3c24e51dfd47f7ee43cda77119acb8e71d2e4efe64769e2ec",
+      "atlas_grid": {
+        "columns": 2,
+        "rows": 1,
+        "column": 1,
+        "row": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "mode": "built-in image_gen",
+  "raw_output": "jobs/person02-Original-primary-complete6-SourceG2-v1-20261019/generated/PERSON02-COMPLETE6-PROVIDER-RETURNED-UNTOUCHED.png",
+  "raw_sha256": "856a0960305f3e124c7c29420573689b3e726a9cd200dce5643d826a587523a7",
+  "prompt": "jobs/person02-Original-primary-complete6-SourceG2-v1-20261019/generation/EXACT-PROMPT.txt",
+  "actual_receipt": {
+    "path": "jobs/person02-Original-primary-complete6-SourceG2-v1-20261019/generation/ACTUAL-ONE-BUILTIN-SAFE-PRIMITIVES-AND-IMMEDIATE-LEASE-RELEASE.json",
+    "sha256": "a42bcdcc3f183a20c66a1183a225e1f131c373ac3bbb26985eeca297e779f0d3"
+  },
+  "exact_arguments_verbatim": {
+    "path": "jobs/person02-Original-primary-complete6-SourceG2-v1-20261019/generation/EXACT-APPROVED-BUILTIN-ARGUMENTS.json",
+    "sha256": "27320237ecd038d465d96351b324ddd74491107cc6ee1f99d83fe0ddd5697153"
+  },
+  "Original_only_references": true,
+  "cleanup": 0,
+  "phase_selected_raw_cells": [
+    0,
+    1,
+    2,
+    3,
+    2,
+    1
+  ],
+  "note": "Actual builtin receipt and arguments preserve historical paths verbatim; complete Original reference bytes are bundled under generation/Original-references. No invented fresh call/QA."
+}

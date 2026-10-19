@@ -1,5 +1,15 @@
 # HD coordinator checkpoint — 18 October 2026
 
+Current artwork checkpoint — 19 October 2026: **5,636 reviewed pictures / 3,724 complete sequences**, including **4,431 Terrain pictures**. **117 originals remain**: 104 Terrain, 11 enemies/ground objects and two UI/other pictures.
+
+This 23-picture append adds PLATOON6, PERSON12 and five Terrain pictures. PLATOON is dormant catalogue artwork: Rust still lacks the classic secret/ship-computer activation, so no gameplay context is claimed. PERSON has genuine finite SourceG2/H5613 S2W4 ground contexts. Terrain keeps its literal SourceG2/H5596-plus9 captures, with separate finite64 input carries; retained Original faces and functional black support earn no generated-detail credit.
+
+Launcher checks verify **6,449 assets** and **5,636 HD frames, zero rejects**. Runtime: **11,128 files / 8,748,933,415 bytes**. Five staged checks preceded one registrar main. **357 distinct synthetic passes** came from 336 + 21 tests, not one fresh 357-test run. SourceG2 binaries, 45 mods and 42 SD/HD briefings are unchanged. Native Windows CI for `ff4ebf35` passed at 5,613 pictures; this does not establish native execution of the 5,636-picture pack or complete mission, audio or performance coverage. Earlier evidence and preserved metadata/prelaunch stops retain their scope.
+
+# Earlier H5613 checkpoint — retained verbatim
+
+# HD coordinator checkpoint — 18 October 2026
+
 Current artwork checkpoint — 19 October 2026: **5,613 reviewed pictures in 3,716 complete sequences**, including **4,426 Terrain pictures**. **140 originals await approval**: 109 Terrain, 29 enemies/ground objects and two UI/other pictures.
 
 This append approves exactly 17 pictures: unused catalogue Terrain20582, two ridge tiles, four shallow structural tiles, seven destroyed-terrain pictures and three dark-ship pictures. Functional Original details retain separate credit; the unused asset has no invented gameplay context. New SourceG2 intrinsic measurements match the reviewed historical pixels. Older SourceF context captures keep their true epoch, with finite input carries and visible material qualifications recorded separately.

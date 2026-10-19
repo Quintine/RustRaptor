@@ -1,0 +1,62 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1",
+  "owner": "/root/terrain_repair_plan",
+  "name": "Original-primary family-304b7-304b8",
+  "category": "Terrain",
+  "kind": "contextual_terrain_shard",
+  "targets": [
+    {
+      "asset": "304b7",
+      "canonical_source_asset": "304b7",
+      "source_path": "misc/unnamed.3183",
+      "source_sha256": "ddc76ebe34289fd2941379744ec3ec0512757b4e9d5e622cab9ba051b647478f",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "original_binary": {
+        "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/Originals/304b7.bin",
+        "sha256": "ddc76ebe34289fd2941379744ec3ec0512757b4e9d5e622cab9ba051b647478f"
+      },
+      "original_png": {
+        "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/Originals/304b7.png",
+        "sha256": "52365e6b965c582a3cc685c7696b615fdb552083b3704fc0b4f529e237e2a0af"
+      }
+    },
+    {
+      "asset": "304b8",
+      "canonical_source_asset": "304b8",
+      "source_path": "misc/unnamed.3184",
+      "source_sha256": "6f584179a0c8f3b3c24e51dfd47f7ee43cda77119acb8e71d2e4efe64769e2ec",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "original_binary": {
+        "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/Originals/304b8.bin",
+        "sha256": "6f584179a0c8f3b3c24e51dfd47f7ee43cda77119acb8e71d2e4efe64769e2ec"
+      },
+      "original_png": {
+        "path": "jobs/terrain-304b7-304b8-newOriginal-SourceG2-complete2-20261019-v1/Originals/304b8.png",
+        "sha256": "6d0ca485a9c43087d6ea5f2457b2000a3e82168a1e1fe5f66d23283b8aa95267"
+      }
+    }
+  ],
+  "generation_inventory": {
+    "actual_assets": [
+      "304b7",
+      "304b8"
+    ],
+    "actual_new_image_calls": 1
+  },
+  "historical_HOLDs_preserved_outside_this_complete_new_family": true
+}

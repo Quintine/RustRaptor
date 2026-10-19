@@ -1,0 +1,54 @@
+{
+  "status": "PASS_DIFFERENT_PERSON01_FOCUSED_BOOTSTRAP_IO_CODE_21PLUS2_SYNTHETICS_INITIAL_FIFO_FINDING_CLOSED",
+  "utc": "2026-10-18T22:05:51.871448+00:00",
+  "reviewer": "/root/dark_ship_remaining",
+  "author": "/root/infantry_remaining",
+  "helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON01-portable-dispatcher-bootstrap-IO-successor-code-20261019-v2/hd_person01_cleanup.py",
+    "sha256": "bbb13aac1a5617af509a7107bfabd290c75e0b7094a50e14a35be9a5eac79ad5"
+  },
+  "tests": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-infantry-PERSON01-portable-dispatcher-bootstrap-IO-successor-code-20261019-v2/test_hd_person01_cleanup.py",
+    "sha256": "79ecf03ab10e023a8952ca4f2d68a44a9768236de359d00bb443887d1bfeb5ed"
+  },
+  "recipe_sha256": "e771616f46068a288deed8e30565ab20e552495fafda6bbf09f500e9418ceb9b",
+  "old_finding": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-person01-dispatcher-different-CODE-review-20261019-v1/DIFFERENT-PERSON01-DISPATCHER-CODE-HOLD-19PASS-ONE-IO-FINDING.json",
+    "sha256": "c5b1e3c5974d0d0a223ee0fc8d2f4278f0bf988563609405f9b8239b549e42ac",
+    "preserved": true,
+    "closed_by_focused_V2": true
+  },
+  "code_delta": "Only bootstrap helper reader changes: <=1MiB, nonsymlink, regularprecheck, O_NOFOLLOW|O_NONBLOCK, regularfstat/sizegate, boundedread and identitychecks; hash verified buffer compiled once. No pixel/alias/phase/crop/material/cap/provenance math changed.",
+  "ast_exact_unchanged_functions": [
+    "digest",
+    "exact",
+    "png_bytes",
+    "run_recipe",
+    "main"
+  ],
+  "actual_tests": {
+    "author_suite_independently_rerun": 21,
+    "passed": 21,
+    "failed": 0,
+    "errors": 0,
+    "terminal_sha256": "046d61794b66f37345ab6ee4c711897a05384f7691368589590756314052a982",
+    "independent_extra_descriptor_negatives": 2,
+    "extra_cases": [
+      "oversized parent rejected",
+      "regularfile replaced byFIFO between lstat andopen rejected nonblocking"
+    ],
+    "extra_evidence_sha256": "4700f3c828130a165e3ebf156ac746924c9f73b105138797ddb0b16e8eca21a0"
+  },
+  "authenticated_files_both_frozen_packets": 48,
+  "actual_Original_Source_alias_check": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-person01-dispatcher-different-CODE-review-20261019-v1-ADDITIVE-ACTUAL-SOURCE-ALIAS-CHECK.json",
+    "sha256": "07a5e4a1b6000a4f9c53eb969176d53fb67e17bedab57c9bf00cef71f39a0000"
+  },
+  "review_result": "CODE_PASS, no outstanding findings within this fixed dispatcher scope. Exact sixphase parent-source alias/crop, Originalface and verifiedbuffer/provenance tests pass. StaticFIFO bootstrap hang fixed; postlstat FIFO swap also bounded.",
+  "limitations": [
+    "No genuinePERSON01PNG/parentRGBA render, SourceF/G2 QA, World, newgeneration, canonical/toolpromotion or registrar calls performed by reviewer.",
+    "CodePASS authorizes no artwork/admission itself; Root release still required for actualchildcleanup and currentG2intrinsic.",
+    "Generatedmaterialstillmustbe judged all6nativephases, including Originalposes2/4identical with own-phase generatedRGB.",
+    "No filesystem-adversary sandbox or broad engine/platform certification claimed."
+  ]
+}

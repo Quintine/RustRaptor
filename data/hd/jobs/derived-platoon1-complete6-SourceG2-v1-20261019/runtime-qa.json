@@ -1,0 +1,1137 @@
+{
+  "actual_invocation_candidate_sha256": "411dab56226d3992f19f512870d86048a958ae5b0319852a4d7020478d0b7c89",
+  "actual_invocation_frame_bindings_sha256": "ec968a880506281fd29b03b993178d38e99d21bdcf0af483d145349fc0cd8bd9",
+  "actual_new_helper_invocations": 1,
+  "actual_sourceG2_helper_sha256": "0338a925ccf26f856c9d5cc2230a3878ecafe6cd3a3d25903742d9e819ac8d12",
+  "actual_sourceG2_source18_sha256": {
+    "src/assets.rs": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+    "src/audio.rs": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+    "src/audio/opl3.rs": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+    "src/cinematics.rs": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+    "src/content.rs": "80021611102f22b3152164e88a3ee7ecc8c16e9b3a4563551a047c089f2ba7d2",
+    "src/desktop.rs": "82dfa448623cd05e12110d838b80a4f726fb037a73eec587accbadb4aef33178",
+    "src/hd.rs": "b17f4ee0757ee87d34e01ec76f3a6239c6e9044b42b4b10bd5f05b485f137a64",
+    "src/legacy_tables.rs": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+    "src/lib.rs": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+    "src/main.rs": "510d461e6d971749efbbed6570f08aca2605ecc61c16977ab9acb9170c7aba4a",
+    "src/menu_art.rs": "0506bbf30cc14794625b72ab1e6f5e2573e99a833105ce808913485d3452db06",
+    "src/mod_selection.rs": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+    "src/modding.rs": "d2b811416e06a5c743c11c77e5599ddcf5d3263de4f74363bc0731eaccc2c2ac",
+    "src/persistence.rs": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+    "src/render.rs": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+    "src/simulation.rs": "2537120f280a1cfcfcc73a42a4103a4435ba8aeb98e69c87fde3b885b97a9925",
+    "src/sound.rs": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+    "src/terrain_hd.rs": "e61f96f541c19863ce8d741363a1739b9276e25aee84795952c65565c775e392"
+  },
+  "any_game_source_newer_than_library": false,
+  "artwork_sha256": {
+    "jobs/derived-platoon1-complete6-SourceG2-v1-20261019/derived/200ec.png": "9472a583fe79889ea05099b440ab5d5d5ddf6563083329fc71813b4afc0607c1",
+    "jobs/derived-platoon1-complete6-SourceG2-v1-20261019/derived/200ed.png": "4f77fb87b1ecee94bbcfd57d69ce35e166f782773743e01dedb76c1281e41769",
+    "jobs/derived-platoon1-complete6-SourceG2-v1-20261019/derived/200ee.png": "f16f152178c0325c1136fd359458016ee70583714b28f5f3e6e81f2fbe425a6f",
+    "jobs/derived-platoon1-complete6-SourceG2-v1-20261019/derived/200ef.png": "75409b6fb5eee0f2d6c123d9fae385be09d9bea8345e22bd2cd0955bff3e6d82",
+    "jobs/derived-platoon1-complete6-SourceG2-v1-20261019/derived/200f0.png": "5da0d53db6b4edc0639666efabbd60a9f45a118548ad9db0fdace8557c915fb9",
+    "jobs/derived-platoon1-complete6-SourceG2-v1-20261019/derived/200f1.png": "1c3dfff3110411ca691ed49b7cd03ffec7013a47b0909168e9a2465f268982fa"
+  },
+  "candidate_notes_changed_during_review": true,
+  "candidate_sha256": "b14353da41e29ce9abe1b611cb853cff716eff88675aebbe41972ea104776124",
+  "candidate_sha256_at_start": "411dab56226d3992f19f512870d86048a958ae5b0319852a4d7020478d0b7c89",
+  "diagnostics": [],
+  "frame_bindings_sha256": "553d800dfc7513c741694286749954c06a1adbcb29c2ce0d026397d5f8ebd949",
+  "frames": [
+    {
+      "asset": "200ec",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              3,
+              2,
+              21,
+              23
+            ],
+            "centroid": [
+              9.773584905660377,
+              12.735849056603774
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 53
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              6,
+              4,
+              42,
+              46
+            ],
+            "centroid": [
+              20.228155339805824,
+              25.83495145631068
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 206
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              9,
+              6,
+              63,
+              69
+            ],
+            "centroid": [
+              30.566265060240966,
+              38.9277108433735
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 415
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              12,
+              8,
+              84,
+              92
+            ],
+            "centroid": [
+              40.95994832041344,
+              52.094315245478036
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 774
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        24,
+        24
+      ],
+      "source_mask": {
+        "bounds": [
+          3,
+          2,
+          21,
+          23
+        ],
+        "centroid": [
+          9.773584905660377,
+          12.735849056603774
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 53
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "bfe9f4c4dfde7ed99e1e6efe536d15372b927202725d70c44ea84c70a4bfe8b0"
+    },
+    {
+      "asset": "200ed",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              3,
+              2,
+              20,
+              23
+            ],
+            "centroid": [
+              9.564102564102564,
+              13.051282051282051
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 39
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              6,
+              4,
+              40,
+              46
+            ],
+            "centroid": [
+              19.606666666666666,
+              27.133333333333333
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 150
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              9,
+              6,
+              60,
+              69
+            ],
+            "centroid": [
+              29.696969696969695,
+              41.0
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 297
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              12,
+              8,
+              80,
+              92
+            ],
+            "centroid": [
+              39.736559139784944,
+              54.87275985663082
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 558
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        24,
+        24
+      ],
+      "source_mask": {
+        "bounds": [
+          3,
+          2,
+          20,
+          23
+        ],
+        "centroid": [
+          9.564102564102564,
+          13.051282051282051
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 39
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "d6a7ca98aa5d3bb57fea86ae1dc4a7e0053ee5bbff6d0052292a11e7642a618e"
+    },
+    {
+      "asset": "200ee",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              2,
+              2,
+              20,
+              23
+            ],
+            "centroid": [
+              10.0,
+              12.673913043478262
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 46
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              4,
+              4,
+              40,
+              46
+            ],
+            "centroid": [
+              20.247191011235955,
+              25.808988764044944
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 178
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              6,
+              6,
+              60,
+              69
+            ],
+            "centroid": [
+              30.6376404494382,
+              38.88202247191011
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 356
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              8,
+              8,
+              80,
+              92
+            ],
+            "centroid": [
+              40.969969969969966,
+              52.051051051051054
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 666
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        24,
+        24
+      ],
+      "source_mask": {
+        "bounds": [
+          2,
+          2,
+          20,
+          23
+        ],
+        "centroid": [
+          10.0,
+          12.673913043478262
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 46
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "c6c2b9bf84962839a98e184a4eeb7efae5690ad4e8ab6775f2c6fb3cb3c57f9c"
+    },
+    {
+      "asset": "200ef",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              3,
+              2,
+              21,
+              23
+            ],
+            "centroid": [
+              9.622641509433961,
+              12.88679245283019
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 53
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              6,
+              4,
+              42,
+              46
+            ],
+            "centroid": [
+              19.639024390243904,
+              26.39512195121951
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 205
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              9,
+              6,
+              63,
+              69
+            ],
+            "centroid": [
+              29.557692307692307,
+              39.93990384615385
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 416
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              12,
+              8,
+              84,
+              92
+            ],
+            "centroid": [
+              39.653298835705044,
+              53.3738680465718
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 773
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        24,
+        24
+      ],
+      "source_mask": {
+        "bounds": [
+          3,
+          2,
+          21,
+          23
+        ],
+        "centroid": [
+          9.622641509433961,
+          12.88679245283019
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 53
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "71d0c0a5b95a6b7e8cdcfcb0808a7535a9f6a17ce892ccff02ae277abc90f151"
+    },
+    {
+      "asset": "200f0",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              2,
+              2,
+              20,
+              23
+            ],
+            "centroid": [
+              9.487179487179487,
+              12.717948717948717
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 39
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              4,
+              4,
+              40,
+              46
+            ],
+            "centroid": [
+              19.286666666666665,
+              25.746666666666666
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 150
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              6,
+              6,
+              60,
+              69
+            ],
+            "centroid": [
+              29.181818181818183,
+              38.76767676767677
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 297
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              8,
+              8,
+              80,
+              92
+            ],
+            "centroid": [
+              39.04838709677419,
+              51.89068100358423
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 558
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        24,
+        24
+      ],
+      "source_mask": {
+        "bounds": [
+          2,
+          2,
+          20,
+          23
+        ],
+        "centroid": [
+          9.487179487179487,
+          12.717948717948717
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 39
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "d8679790b3d189430121109029f0a6c998baee9cbcd4a047ed3a6c2f2a92e053"
+    },
+    {
+      "asset": "200f1",
+      "hd_masks": [
+        {
+          "mask": {
+            "bounds": [
+              3,
+              2,
+              20,
+              23
+            ],
+            "centroid": [
+              10.23913043478261,
+              12.782608695652174
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 46
+          },
+          "scale": 1
+        },
+        {
+          "mask": {
+            "bounds": [
+              6,
+              4,
+              40,
+              46
+            ],
+            "centroid": [
+              21.235955056179776,
+              26.258426966292134
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 178
+          },
+          "scale": 2
+        },
+        {
+          "mask": {
+            "bounds": [
+              9,
+              6,
+              60,
+              69
+            ],
+            "centroid": [
+              32.21348314606742,
+              39.598314606741575
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 356
+          },
+          "scale": 3
+        },
+        {
+          "mask": {
+            "bounds": [
+              12,
+              8,
+              80,
+              92
+            ],
+            "centroid": [
+              43.08408408408408,
+              53.012012012012015
+            ],
+            "palette_indices_240_to_255_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "visible_pixels": 666
+          },
+          "scale": 4
+        }
+      ],
+      "logical_alpha_mask_iou": 1.0,
+      "logical_canvas": [
+        24,
+        24
+      ],
+      "source_mask": {
+        "bounds": [
+          3,
+          2,
+          20,
+          23
+        ],
+        "centroid": [
+          10.23913043478261,
+          12.782608695652174
+        ],
+        "palette_indices_240_to_255_counts": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "visible_pixels": 46
+      },
+      "source_palette": "PALETTE_DAT",
+      "source_sha256": "729c16f16b84e34aded2ad6b4dc02655ebf6e7b4c69e439f76580766cce538ec"
+    }
+  ],
+  "library": "target/hd-review-libraries/5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676/libraptor_replica.rlib",
+  "library_build_origin": ".reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+  "library_build_origin_modified_ns": 1792326752687554590,
+  "library_modified_ns": 1792326752687554590,
+  "library_sha256": "5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676",
+  "limitation": "Gallery validation does not prove live scene reachability, terrain seam correctness or artistic fidelity. Opaque sprites have trivial alpha-mask overlap; compare visible source geometry manually.",
+  "metadata_only_final_namespace_bridge": {
+    "path": "jobs/derived-platoon1-complete6-SourceG2-v1-20261019/proofs/actual-G2-frame-and-PNG-final-namespace-bridge.json",
+    "sha256": "82df20320cb69b4899138bc5b9c5e3b8c8b002b19d19c228558b0c6d6560c092"
+  },
+  "method": "actual Rust HdAssets::load and sprite at scales 1..4; Catalog palette; no artwork edits",
+  "review_helper_source": "tools/hd_palette_review.rs",
+  "review_helper_source_sha256": "46916afd1d2dfec3ebdf61f4a567980b5459846e04817715f5281d73204c5a2f",
+  "scope": "Actual SourceG2 intrinsic measurement was performed once on the literal prior candidate/PNG paths; this final header binds identical six PNG bytes/non-file native fields/scalar rows through an explicit metadata-only namespace bridge. No new G2 QA or SourceF pixel-epoch relabeling. One later portable cleanup replay reproduced all accepted PNGs. A second metadata-only bridge opts this identical complete animation into the explicit dormant intrinsic contract; kind/scope fields change only. No new measurement or context claim.",
+  "source_newer_than_library": false,
+  "static_card_palette_mode": false,
+  "validated_frames": 6,
+  "metadata_only_dormant_scope_optin": {
+    "path": "jobs/derived-platoon1-complete6-SourceG2-v1-20261019/proofs/dormant-optin-metadata-only-current-QA-bridge.json",
+    "sha256": "49e1290946004ae0b8315f9be4412c199ec76d7d569d136f008cf1be0304881c"
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "status": "QUALIFIED_WITH_EXPLICIT_LIMITS_ALL12_INTRINSIC_AND_FINITE_GENUINE_CURRENTG2_CONTEXT",
+  "reviewer": "/root/ridge_pair",
+  "review_role": "Independent art/context reviewer; neither family author nor context producer",
+  "assets": [
+    "200f8",
+    "200f9",
+    "200fa",
+    "200fb",
+    "200fc",
+    "200fd",
+    "200fe",
+    "200ff",
+    "20100",
+    "20101",
+    "20102",
+    "20103"
+  ],
+  "families": [
+    {
+      "name": "PERSON01_PIC",
+      "assets": [
+        "200f8",
+        "200f9",
+        "200fa",
+        "200fb",
+        "200fc",
+        "200fd"
+      ],
+      "candidate": {
+        "path": ".reference/hd-infantry-PERSON01-actual-derived6-currentG2-author-20261019-v1/candidate.json",
+        "sha256": "3db2420b8187549a0e377fe8895b100b7281264b32c487a8ed9ccf35e533a649",
+        "bytes": 3045
+      },
+      "author": {
+        "path": ".reference/hd-infantry-PERSON01-actual-derived6-currentG2-author-20261019-v1/AUTHOR-COMPLETE6-ACTUAL-CURRENTG2-QUAL-WITH-LIMITS.json",
+        "sha256": "39011094b5c7d18e10fd13d832fd49ac68d4dc91675417fbc36cd54c832cfd66",
+        "bytes": 17143
+      },
+      "frozen": {
+        "path": ".reference/hd-infantry-PERSON01-actual-derived6-currentG2-author-20261019-v1/FROZEN-ALL-ACTUAL-INPUTS-AND-AUTHOR-REVIEW.json",
+        "sha256": "33c66141b5dc4ae6748052ec25bfa2cf42064f8f6dd67579087a32c29b62b64e",
+        "bytes": 9672
+      },
+      "runtime_QA": {
+        "path": ".reference/hd-infantry-PERSON01-actual-derived6-currentG2-author-20261019-v1/actual-currentG2-intrinsic6-final-u32/runtime-qa.json",
+        "sha256": "ca569ee417d3ff582113e6fef2dc2b0936e3fc30bb5e90715b2cb569b6c01aa9",
+        "bytes": 24492
+      },
+      "verdict": "QUALIFIED derived exact same-phase PLATOON1 top-body material; no new generation claimed"
+    },
+    {
+      "name": "PERSON02_PIC",
+      "assets": [
+        "200fe",
+        "200ff",
+        "20100",
+        "20101",
+        "20102",
+        "20103"
+      ],
+      "candidate": {
+        "path": ".reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/candidate.json",
+        "sha256": "8a3fe68834a79848db2cf37bddd4c251a33ad1cdb3c787036e7eb9bffe1ff4f1",
+        "bytes": 4140
+      },
+      "author": {
+        "path": ".reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/AUTHOR-COMPLETE6-ACTUAL-CURRENTG2-QUAL-WITH-LIMITS.json",
+        "sha256": "bc1402c4a0f799cf0a5f6fb893dec7ebb2a897bc30e6914746362ca0740665e0",
+        "bytes": 8874
+      },
+      "frozen": {
+        "path": ".reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/FROZEN-ALL-ACTUAL-INPUTS-AND-AUTHOR-REVIEW.json",
+        "sha256": "cd80d0a5ef79ce8cd869ee5a3fc2b2c4fe76454f0b635fac00cde189ae088b58",
+        "bytes": 8273
+      },
+      "runtime_QA": {
+        "path": ".reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/actual-currentG2-intrinsic6/runtime-qa.json",
+        "sha256": "c688cec73353d24a769196bc448581645dcb37b6a28d23d5ba465368b281777c",
+        "bytes": 24043
+      },
+      "verdict": "QUALIFIED genuine Original-primary generated complete family with exact duplicate-Source-pose bindings"
+    }
+  ],
+  "genuine_context": {
+    "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/CLOSED-CURRENTG2-PERSON01-PERSON02-ALL12-GENUINE-CONTEXT-REVIEW.json",
+    "sha256": "c15e5b58907cbfcf3773eb8862d19087c24166b07b6520162a486990a7cd9f7a",
+    "bytes": 5649
+  },
+  "independent_checks": [
+    {
+      "path": ".reference/hd-PERSON01-PERSON02-independent-whole12-intrinsic-context-review-20261019-v1/INDEPENDENT-SAVED-INPUTS-AND-ARRAY-CHECKS.json",
+      "sha256": "32383440b76e2e155c2783630bb0429e9d07456cc52617775d81c75bdf7d1d2a",
+      "bytes": 11295
+    },
+    {
+      "path": ".reference/hd-PERSON01-PERSON02-independent-whole12-intrinsic-context-review-20261019-v1/INDEPENDENT-GALLERY-AND-LITERAL-SPAWN-CHECKS.json",
+      "sha256": "e9b2073daaa42332f517a9cdd800c042c02e2c9d3a4d9177bc5005523f5681ad",
+      "bytes": 623
+    }
+  ],
+  "physical_review": {
+    "completed": true,
+    "presentations": [
+      {
+        "path": ".reference/hd-infantry-PERSON01-actual-derived6-currentG2-author-20261019-v1/presentation-only/ACTUAL-G2-ALL-NATIVE-PAGE-1.png",
+        "sha256": "aaa711793038263ce44689b5e957c521bb008ec42853facb8623158c7063edf8",
+        "bytes": 15713
+      },
+      {
+        "path": ".reference/hd-infantry-PERSON01-actual-derived6-currentG2-author-20261019-v1/presentation-only/ACTUAL-G2-ALL-NATIVE-PAGE-2.png",
+        "sha256": "5c29e7de9b0881997f9870e9f7a08d0b9b8235fd64522444c218b81911acbe74",
+        "bytes": 15738
+      },
+      {
+        "path": ".reference/hd-infantry-PERSON01-actual-derived6-currentG2-author-20261019-v1/presentation-only/ACTUAL-G2-ALL-NATIVE-PAGE-3.png",
+        "sha256": "903c58774bc694e0448989af57972a3564a31f38a37d174a1d441c803913d027",
+        "bytes": 14999
+      },
+      {
+        "path": ".reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/presentation-only/ACTUAL-G2-ALL-NATIVE-PAGE-1.png",
+        "sha256": "706a374b9d189d0f0c38763ed3f44126b4027eeeffd730a2d7d3918889bee588",
+        "bytes": 15877
+      },
+      {
+        "path": ".reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/presentation-only/ACTUAL-G2-ALL-NATIVE-PAGE-2.png",
+        "sha256": "3ce95b3a3f714c085cb06e4f62ca8dc9965f6a6b6f9f03d288bdf488eb8bdd76",
+        "bytes": 15709
+      },
+      {
+        "path": ".reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/presentation-only/ACTUAL-G2-ALL-NATIVE-PAGE-3.png",
+        "sha256": "a0ec2067791b21754d3b280fab951f68ae5807b2a575d80797e3391bbb43d64a",
+        "bytes": 15293
+      },
+      {
+        "path": ".reference/hd-infantry-PERSON01-portable-dispatcher-bootstrap-IO-successor-code-20261019-v2/parent/inputs/PLATOON1-generated-parent-untouched.png",
+        "sha256": "82a92f95fe2ad326effd3739af355289828460d2196f4cecc86c3b8933e557a7",
+        "bytes": 1543924
+      },
+      {
+        "path": ".reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/generated/PERSON02-COMPLETE6-PROVIDER-RETURNED-UNTOUCHED.png",
+        "sha256": "856a0960305f3e124c7c29420573689b3e726a9cd200dce5643d826a587523a7",
+        "bytes": 1148903
+      },
+      {
+        "path": ".reference/hd-infantry-PERSON02-actual-Original-primary6-author-20261019-v1/presentation-only/ALL6-ORIGINAL-VS-RAW-WHOLE.png",
+        "sha256": "d07d52e276bd813c583b45e8a60fd3873d3c50abc312e147a67b8502ed548436",
+        "bytes": 108044
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/PERSON01-all6-native1-genuine-ground-context.png",
+        "sha256": "8a1b1e87134e879b93f3c17a9b4250440572321e6adf34752e283605086804a4",
+        "bytes": 31839
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/PERSON01-all6-native2-genuine-ground-context.png",
+        "sha256": "ea2c054fecea91e8d947a3361c2204162438dac8d3847518d2c4c98c416bf0c8",
+        "bytes": 78125
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/PERSON01-all6-native3-genuine-ground-context.png",
+        "sha256": "0be57f0dbd14cd59501ad2c3aaa17e73ee6647af0fec33eeb8f9640616e6926f",
+        "bytes": 154073
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/PERSON01-all6-native4-genuine-ground-context.png",
+        "sha256": "899f721f8fbb6bb7a407881d91ccc17492a5c0fdaa23cfd4ec0d6a95c6822ebf",
+        "bytes": 257892
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/PERSON02-all6-native1-genuine-ground-context.png",
+        "sha256": "ec94605b11f14f873443f0e72f32cdbcbfe6e844f59e5708c325b2397020ae4c",
+        "bytes": 30200
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/PERSON02-all6-native2-genuine-ground-context.png",
+        "sha256": "f7bb198346d36d971f51dd3352a5c235a52777d8c7ec8cd006e9f61ac13a3bbf",
+        "bytes": 76116
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/PERSON02-all6-native3-genuine-ground-context.png",
+        "sha256": "4ecc0b6542545b03ead79f2df49221dcf6c0f8e1bcf02b34fd58f76d7e38cb2b",
+        "bytes": 149636
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/PERSON02-all6-native4-genuine-ground-context.png",
+        "sha256": "820975f28ea4fed8c6bb45ca814b94c341db8e3f1beaad784d2a68ca73648ab7",
+        "bytes": 252614
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/scene00-200f8-whole-native4-proposed.png",
+        "sha256": "06705b7c14a7dad246ebb539601303fce0033375cf3a7584de540c6a7ea21f21",
+        "bytes": 808125
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/scene01-200f9-whole-native4-proposed.png",
+        "sha256": "7a26ba8f29cd3045b6022cacb40da023caf238af8daffd7acfda83dfd1961ef9",
+        "bytes": 800838
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/scene02-200fa-whole-native4-proposed.png",
+        "sha256": "62606a98a4afa897ce2cdc331a5ea32c10e65986641bf5b230bc827743d13836",
+        "bytes": 793555
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/scene03-200fb-whole-native4-proposed.png",
+        "sha256": "3ff1e10e291134c1d6a47703e88bb410d5de54eda4799224e1f609da9d32fc37",
+        "bytes": 786062
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/scene04-200fc-whole-native4-proposed.png",
+        "sha256": "5ab9d7b93f578c77a7a27798fdd5fcb3eaff9d7caa7fe7143253ec1e8a237dd6",
+        "bytes": 822521
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/scene05-200fd-whole-native4-proposed.png",
+        "sha256": "587f7ec91d74b4d45412d17caaa9c181af68d60a0cb5c20a2db3a4a2c7dd83a6",
+        "bytes": 815136
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/scene06-200fe-whole-native4-proposed.png",
+        "sha256": "e9c80022de2d31364e66ca6997ecac5f4dc4a9b15891695fef6b113024c10771",
+        "bytes": 701229
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/scene07-200ff-whole-native4-proposed.png",
+        "sha256": "bc10b9074f40e58586861448b238334693b013cfa6aae51329f68e77d3b4aed7",
+        "bytes": 693689
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/scene08-20100-whole-native4-proposed.png",
+        "sha256": "2d71bf3392eba6b27670b46d79ee337f5889bdcd7f36f9596cf9a99d3c185199",
+        "bytes": 685942
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/scene09-20101-whole-native4-proposed.png",
+        "sha256": "310e411faa1e1f2c2b8bfd341a89c8c9d3d2b156e2d76bb6997ccbea435a04aa",
+        "bytes": 679079
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/scene10-20102-whole-native4-proposed.png",
+        "sha256": "4f7e3e6426290643af99352272e80f2af004815e954d045cd4392497da859e45",
+        "bytes": 716159
+      },
+      {
+        "path": ".reference/hd-PERSON01-PERSON02-currentG2-genuine-S2W4-H5613-context-20261019-v1/review-pages/scene11-20103-whole-native4-proposed.png",
+        "sha256": "85e5d3968ac10df80bb13683a5d6793780b5b207f2b022bbe03ab0a5491c50c7",
+        "bytes": 708421
+      }
+    ],
+    "intrinsic_scope": "All12 Original frames and all48 actual indexed native1\u20134 results physically viewed in six complete paired-frame pages. Both untouched raw masters viewed whole; all6 PERSON02 Original-versus-raw cells viewed.",
+    "context_scope": "All8 complete family/native1\u20134 ROI pages with Original/current/proposed roles, all12 whole1280x800 native4 proposed screenshots physically viewed. Actor fully in upper viewport, actual industrial S2W4 terrain surrounds. The current and Original target controls are identical; foreground/background preserved.",
+    "findings": [
+      "The tiny olive/green/tan/near-black infantry poses retain Source occupancy, logical8x8 canvas and Source alignment; generated material is restrained at actual gameplay size. No detached extra actor, opaque plate, shadow or glow appears in selected output.",
+      "PERSON01 uses authentic small inherited top-body material. Native1 green helmets may quantize dark gray/olive; documented palette narrowing remains visible but does not create an actionable new geometric defect. Its native2\u20134 filtered edges differ from nearest-neighbor Original, so no all-scale nearest-alpha equality is claimed.",
+      "PERSON02 preserves the sparse original silhouette rather than inventing anatomy. Native4 cloth material reads as subtle shading in the small occupied body. Exact decoded Source phase4=2 and phase5=1 use identical atlas selections and identical all4 indexed outputs, avoiding introduced duplicate-pose material flicker.",
+      "At the industrial street/roof boundary all12 poses remain small but legible; no observed displacement, clipped occupied sample, detached backing or unrelated terrain edit. These are actual entering upper-viewport contexts, not a broad placement/background gallery."
+    ]
+  },
+  "lineage_and_credit_limits": [
+    "PERSON01 is derived, not newly image-generated: all6 Original8x8 images are exact64-index crops [5,0,8,8] of same-phase OriginalPLATOON1; all6 final32x32 RGBA files exactly equal actual parentRGBA crops [20,0,32,32]. Encoded source payloads are not falsely declared aliases. All nonface painted output RGB occurs unchanged in the genuine same-phase generated top-body donor region. Parent helper5368774a and dispatcherbbb13aac are historical fixed inputs; this review executes neither.",
+    "Inherited PERSON01 near-black repair reaches35/39=89.74358974358975% in200fb top-body near-black support. This is functional occupied support with zero new generated-HD-detail credit, not evidence of rich newly generated black texture. Donor distance/material class caps, no gain/grain and no cascading donor fills remain the recorded method.",
+    "Each frame retains exactly one authentic face cell;180 actual native samples per family,360 total, carry zero generated-detail credit. Original alpha/retained support and exact Source aliases also do not earn new generated-art credit.",
+    "PERSON02 untouched raw master856a0960 is genuine new artwork; faint low-alpha ambient backing visible in raw is excluded by actual runtime alpha selection. Unselected raw phase4/5 variants remain preserved and are not separately accepted artwork.",
+    "PERSON01 Sourcepose200fc equals200fa but same-phase PLATOON1 material differs slightly; no complete-output alias or artificial no-flicker assertion is made for PERSON01."
+  ],
+  "verified_runtime_scope": {
+    "epoch": "Actual SourceG2, immutable foreign H5613",
+    "Source18_current_bytes_exact": true,
+    "saved_intrinsic_Source_indices": 768,
+    "saved_intrinsic_native_indices": 23040,
+    "RGB_gallery_PPMs_exact": 60,
+    "frozen_owned_files": 106,
+    "saved_context_screens": 144,
+    "saved_context_screen_samples": 69120000,
+    "changed_samples_inside_target": 2066,
+    "changes_outside_target_canvas": 0,
+    "changes_outside_union_own_alpha": 0,
+    "foreign_projection_whole_sequences": 47,
+    "foreign_raw_files": 18,
+    "literal_callers": "SPRITE2_ITM records61/62 health5 reward50 shadow0; MAP4G2 declaration231 at10956 and233 at11004 raw4. Grouped-row conversion exactly yields ticks3320/3352 x80/176 y-112. Normal pilotdifficulty2; one retained exact Source spawn per controlled World,297 others suppressed before initialization. Chronological six animation phases captured without entity/frame/health/RNG overrides."
+  },
+  "scope_exclusions": [
+    "No natural fullmission survival, progression, combat collision, audio, menu/UI, Host presentation, all-difficulty or all-mission verification.",
+    "No green/forest terrain or lower/mid-viewport contrast approval; actual contexts here cover the finite industrial upper-viewport route only.",
+    "This closure adds independent review to actual existing G2 results; it does not relabel historical QA or claim another execution."
+  ],
+  "operations_by_this_reviewer": {
+    "new_imagegen": 0,
+    "new_cleanup": 0,
+    "new_intrinsic_QA": 0,
+    "new_World": 0,
+    "new_engine_build": 0,
+    "new_scene_composition": 0,
+    "canonical_changes": 0,
+    "Git_changes": 0,
+    "private_readonly_saved_data_checks": true
+  },
+  "actionable_defects": [],
+  "hold": false,
+  "free_bytes": 2191855616
+}
