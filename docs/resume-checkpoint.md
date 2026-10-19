@@ -1,3 +1,11 @@
+# Paused at user request — 19 October 2026
+
+All agents stopped; no background artwork, rendering or build process remains. The published game is at `126d28ba`: **5,654 reviewed pictures / 3,741 sequences**, with **58 of the requested 157 completed and 99 still awaiting publication**. Installed validation accepts all 5,654 HD pictures with zero rejects; 491 public synthetic tests and the native Windows workflow for this game commit passed.
+
+A further 39-picture batch and other reviewed artwork are saved privately, not counted as published. Three historical QA-receipt restorations and the 80-file helper/test proposal have **not** been applied. Late-nine texture repair has not executed; the latest five-tile context review stopped partway through. Resume from the [machine-readable pause checkpoint](hd-pause-2026-10-19.json), which pins the local handoffs, unfinished gates and exact next steps. Private `.reference/` evidence remains on this drive and must be preserved. Do not restart agents until the user asks to continue.
+
+# Earlier published checkpoint — preserved below
+
 # Current approved-artwork checkpoint — 19 October 2026
 
 Current artwork checkpoint — 19 October 2026: **5,654 reviewed pictures / 3,741 complete sequences**, including **4,441 Terrain pictures**. **99 originals remain**: 94 Terrain, four enemies/ground objects and one UI/other picture.
