@@ -1,0 +1,132 @@
+{
+  "status": "PRIVATE_RECIPE_ONLY_ISOTROPIC_MATERIAL_SUCCESSOR_AWAIT_DIFFERENT_ART_CODE_INPUT_PASS",
+  "helper": {
+    "path": ".reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/terrain_component_cleanup.py",
+    "sha256": "52c5b600456c88dde443ba2add000cf9b4f9a3131d1a6a124fb657de410d591e",
+    "byteexact_previous_differentCODE72_pass": true
+  },
+  "tests_unchanged": [
+    {
+      "path": ".reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/test_buffered_io.py",
+      "sha256": "f79d9a32e3006b040e2448cf763ee05d3df18c25e6f80210ce7dc6e2956d8ea4"
+    },
+    {
+      "path": ".reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/test_further_selector.py",
+      "sha256": "f2fdee70b743b1b127ac5ed7d60218b45bb8b1747bda5648a1cf67734fae9ef4"
+    },
+    {
+      "path": ".reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/test_late_selector.py",
+      "sha256": "7f50333a9ad9dbd7ae2aaf92772826f2076d05c2d5be9a989b68c80dcda0451d"
+    },
+    {
+      "path": ".reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/test_next_pair_selector.py",
+      "sha256": "45417f1a40e72c07ad059b186a5b0d7888d6b199ea91574e76a8b39967bd579e"
+    },
+    {
+      "path": ".reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/test_nine_selector.py",
+      "sha256": "01dbc58041caadf23f6c863df33f12e982a9fa1544b7bd00fba7a78c6639948d"
+    },
+    {
+      "path": ".reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/test_quartet_selector.py",
+      "sha256": "74f3eaffa361e651b630671f6b5ef357decde22f1643338dcb3af4d4075e1851"
+    },
+    {
+      "path": ".reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/test_singleton_selector.py",
+      "sha256": "1ea6aa17350de6a1f0e4a15cf704a0d2d1f65141a15cd179e163a84ac36ac2e9"
+    },
+    {
+      "path": ".reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/test_terrain_component_cleanup.py",
+      "sha256": "da58e349d3e131ba38cd0f8720e5392a1c55ce60cd325d033a45c1257ba269ef"
+    }
+  ],
+  "changes": [
+    {
+      "cohort": "coast4",
+      "old_recipe_sha256": "3e4082546ead740f1e99aaf9db63a1dc455781e700ea90f21b87b512f273c6fa",
+      "new_recipe_sha256": "66773395e5f3f3704bc346c90180b0ac43405857d3afff2416ad6d6972c01822",
+      "only_changed_json_pointer": "/donors/0",
+      "before": {
+        "path": "inputs/new-ramp105f3-master.png",
+        "sha256": "0ced99a554ca7c4f82d89e3501f63fa4589cee6244511d305b8f8a63999960f0",
+        "box": [
+          515,
+          880,
+          160,
+          40
+        ]
+      },
+      "after": {
+        "path": "inputs/new-coast4-master.png",
+        "sha256": "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d",
+        "box": [
+          1110,
+          320,
+          80,
+          80
+        ]
+      }
+    },
+    {
+      "cohort": "ground4",
+      "old_recipe_sha256": "2e41d6b7c1dec109b90b8e67368998ff7d303c6f1c86efe01bbf25a15ba2b5bb",
+      "new_recipe_sha256": "88d843d1ccf7eab28410a5401ac244dc1591c5bbbf021850221481b512dde5ec",
+      "only_changed_json_pointer": "/donors/0",
+      "before": {
+        "path": "inputs/new-ramp105f3-master.png",
+        "sha256": "0ced99a554ca7c4f82d89e3501f63fa4589cee6244511d305b8f8a63999960f0",
+        "box": [
+          515,
+          880,
+          160,
+          40
+        ]
+      },
+      "after": {
+        "path": "inputs/new-coast4-master.png",
+        "sha256": "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d",
+        "box": [
+          1110,
+          320,
+          80,
+          80
+        ]
+      }
+    },
+    {
+      "cohort": "ramp105f3",
+      "old_recipe_sha256": "8019498302d37a9cd8faa526efe1e637da2858d08db2ea5acb3a31a0f2050b3a",
+      "new_recipe_sha256": "f42ad3f26c13c5c4901bd58cc5e16013da88fdfe45c2bcbd72becffdf1b57fd5",
+      "only_changed_json_pointer": "/donors/0",
+      "before": {
+        "path": "inputs/new-ramp105f3-master.png",
+        "sha256": "0ced99a554ca7c4f82d89e3501f63fa4589cee6244511d305b8f8a63999960f0",
+        "box": [
+          515,
+          880,
+          160,
+          40
+        ]
+      },
+      "after": {
+        "path": "inputs/new-coast4-master.png",
+        "sha256": "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d",
+        "box": [
+          1110,
+          320,
+          80,
+          80
+        ]
+      }
+    }
+  ],
+  "concrete_author_HOLD": "Whole36native physically viewed: stretched160x40 graystrip introduces verticalhairline/rainlike finegrain on grayplatforms/darkfittings3\u20134 (105e0/105ebclear). Source criticalgeometry/colorroles remain; no artadmission proposed for firsttrial. Firstcandidate/QA/PNG/recipes preserved.",
+  "method_fix": "Same52c5 helper/math/masks/gain/Sourcefunctional&109fidelity/other5donors. Gray source crop now80x80 physical sourcepixels resized uniformly to512x512 (anisotropy1), rather160x40 crop scaled nonuniformly (anisotropy4). Genuine sameprovider5574graymaterial, no generated/newpixel/capsearch.",
+  "physical_crop_preview": ".reference/hd-firstcampaign105e0-105ef-and105f3-Original-primary-author-20261019-v1/READONLY-GENUINE-SQUARE-GRAY-DONOR-80-NN6.png",
+  "genuine_provider_raw": {
+    "path": ".reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/inputs/new-coast4-master.png",
+    "sha256": "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d"
+  },
+  "actual_successor_cleanup_QA": false,
+  "canonical_writes": false,
+  "bounded_execution_after_pass": "StandingRoot one finite successorcleanup+onefinalG2 per4/4/1 completecohort after differentART/method/inputPASS; no retryifunchangedfailure."
+}

@@ -1,0 +1,65 @@
+{
+  "status": "ALL_PENDING_PORTABLE_RECIPES_ACTUALLY_REPLAYED_ONCE_AND_EXACT",
+  "actual_calls": 13,
+  "cohorts": [
+    {
+      "cohort": "dark6",
+      "actual_relocated_recipe_calls": 2,
+      "actual_byte_equality_closure": {
+        "path": "jobs/derived-dark-terrain-six-cohort1-20261019/future50-source-replay-and-tool-proposal-closures/FINAL-DARK6-TWOJOBS-PORTABLE-REPRODUCTION-READINESS-HANDOFF.json",
+        "sha256": "0b8e80cce84a650ba51a26f3174eb247fea0c6d6cfdc9c4bfbe7a9fa258665c5"
+      }
+    },
+    {
+      "cohort": "night5",
+      "actual_relocated_recipe_calls": 2,
+      "actual_byte_equality_closure": {
+        "path": "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/future50-source-replay-and-tool-proposal-closures/PASS-NIGHT5-EXACT-TWO-RELOCATED-BYTE-REPRODUCTIONS-AND-ISOLATED-TESTS.json",
+        "sha256": "ca63782c88f415eaf2fe8d7835e36fb1cfb3ad05fe54dc9ac722d27caee7f805"
+      }
+    },
+    {
+      "cohort": "windows6",
+      "actual_relocated_recipe_calls": 1,
+      "actual_byte_equality_closure": {
+        "path": "jobs/derived-original-terrain6-SourceG2-20261019-v1/proofs/actual-relocated-public-reproduction/PASS-ACTUAL-RELOCATED-PUBLIC-REPLAY-SIX-BYTE-EQUALITY-AND-34-ISOLATED-TESTS.json",
+        "sha256": "db5558aa54ca769ce602d4563acf593d9560a3bae4d1352c924fe5b294a316ed"
+      }
+    },
+    {
+      "cohort": "late9",
+      "actual_relocated_recipe_calls": 3,
+      "actual_byte_equality_closure": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/future50-source-replay-and-tool-proposal-closures/ACTUAL-PORTABLE-THREE-RECIPES-NINE-PNGS-BYTE-EQUAL-REPRODUCTION.json",
+        "sha256": "991898faf26cb3c9157c5622ec5a6a925e93fd3a1398f6d3b4400e06aae7ff30"
+      }
+    },
+    {
+      "cohort": "firstcampaign5",
+      "actual_relocated_recipe_calls": 3,
+      "actual_byte_equality_closure": {
+        "path": "jobs/derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1/lineage/portable-reproduction-actual-central-20261020/PASS-ACTUAL-3-RELOCATED-REPRODUCTIONS-AND128-ISOLATED-SYNTHETICS.json",
+        "sha256": "b3962229e969068ebf54052b442c854bbc33b059189e30ca9bbe1667fa91fdf9"
+      }
+    },
+    {
+      "cohort": "repaired10521",
+      "actual_relocated_recipe_calls": 1,
+      "actual_byte_equality_closure": {
+        "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/review/actual-relocated-portable-replay-argv-and-pins-verbatim.json",
+        "sha256": "3ea15f4e5302f7f24531d2435e9e60800edac43644a5c53724ea39739f3cb6b8"
+      }
+    },
+    {
+      "cohort": "ruin_existing_fbv2",
+      "actual_relocated_recipe_calls": 1,
+      "actual_byte_equality_closure": {
+        "path": "jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/review/portable-existing-fbV2-exact-relocated-replay.json",
+        "sha256": "f01b17405c1b1549bcd240b73f446ef9670c3630b0fe81cdc1e65c4456df7bac"
+      }
+    }
+  ],
+  "no_replay_duplication_by_normalizer": true,
+  "direct_genuine_atlas_crops_do_not_require_an_invented_cleanup_call": true,
+  "original_parent_or_intermediate_not_credited_as_extra_registered_HD": true
+}

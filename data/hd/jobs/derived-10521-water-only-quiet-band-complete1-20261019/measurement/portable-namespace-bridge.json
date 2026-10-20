@@ -1,0 +1,29 @@
+{
+  "original_candidate": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/measurement/original-candidate.json",
+    "sha256": "c38b08684944304a4fe36b032ebe1579cafbf9c2421bded41499c5815a230c42"
+  },
+  "original_QA": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/measurement/actual-G2/runtime-qa.json",
+    "sha256": "1d9faaf2f4f2af5664a64bf7597e2551358c54e5c3102073fab22b21fcfeb9c9"
+  },
+  "portable_candidate": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/candidate.json",
+    "sha256": "a70182808b880bbf3ced43e3e2f023296f393562eae690a87c359cb6467f7285"
+  },
+  "portable_QA": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/runtime-qa.json",
+    "sha256": "74f09639d33aaab2efa9d09d0c46f4c9cab5bffeeb7f54d3423563bc8bf36ef5"
+  },
+  "original_frame_bindings_sha256": "dd01735f17625fecf4eec09191300d77871e6a15e77664cc295a6f077c5b46bb",
+  "portable_frame_bindings_sha256": "76dd92a2fd143b33de350c4eba388892f5a1b8f087d785dbb08ab3286c71fc6e",
+  "namespace_only_file_change": {
+    "derived/10521-water-remediated.png": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/derived/10521-water-remediated.png"
+  },
+  "artwork_derivation_added": "Source-bound lineage metadata only",
+  "measurements_unchanged": true,
+  "new_QA_cleanup_render_generation_World_calls": 0,
+  "sourceG2_build_witness": ".reference/hd-E3-complete3-portable-currentG2-proposal-20261019-v1/data/hd/jobs/terrain-304e6-304e9-304ea-newOriginal-G2-author3-20261019-v1/runtime-qa.json",
+  "sourceG2_build_witness_sha256": "1425678152695041f3c8f9e1427da57befb96f86af929534d5cda94765a5bb0a",
+  "metadata_header_capture_limitation": "Compiled actual executable used immutable G2 library. Current build/source18 witness checked after execution, not an atomic QA-start snapshot. Original start receipt pins helper/candidate/art exactly."
+}

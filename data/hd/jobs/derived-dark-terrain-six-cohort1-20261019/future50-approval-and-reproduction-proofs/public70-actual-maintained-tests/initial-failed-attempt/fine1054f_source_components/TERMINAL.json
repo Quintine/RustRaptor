@@ -1,0 +1,27 @@
+{
+  "group": "fine1054f_source_components",
+  "status": "PASS",
+  "returncode": 0,
+  "actual_tests_run": 48,
+  "skipped": 0,
+  "actual_passed_tests": 48,
+  "summary": "OK",
+  "duration_seconds": 17.75632643699646,
+  "argv": [
+    "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-v",
+    "-s",
+    "tools/fine1054f_source_components",
+    "-p",
+    "test*.py"
+  ],
+  "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/actual-public70-fresh-isolated-nine-suites/project",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "f851bd7115e99e7003467d48386cbdd09bdd66fdc4a8367abec7d78adfd58557",
+  "fixture_classification": "Synthetic fixtures only; root includes tiny Rust dependency-universe fixture compilation, not actual game G2/QA/World/artwork cleanup/reproduction.",
+  "ignored_tests_not_counted_as_passed": true
+}

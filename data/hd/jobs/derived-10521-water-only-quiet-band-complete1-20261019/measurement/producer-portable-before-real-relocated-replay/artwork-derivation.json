@@ -1,0 +1,63 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "10521-Source-water-only-quiet-genuine-RGB-fineband-preserve-nonwater-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/parents/old-dock3-generator-return.png",
+        "sha256": "8f890b3c24b8a6fd029ba02872dce06e7dd4b07875a7f363d72d8e88577afbc6"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/parents/old-dock3-generation-receipt.json",
+        "sha256": "87ee3b263360884846576e994bd862e9f97c03d21b8eb9d7de899c0d7612fa6a"
+      },
+      "prompt": {
+        "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/parents/old-dock3-prompt.txt",
+        "sha256": "fef3fcdf6045e47c2ef28df7df12841a6f3709f6b1a6625fed038d2c16644b6e"
+      }
+    },
+    {
+      "raw_png": {
+        "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/inputs/quiet-genuine-water-pavement-untouched.png",
+        "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/parents/quiet-water-safe-provider-projection.json",
+        "sha256": "edf60a030a79005cf7ac7e7549fc56853f7b84490871acb4187e94deddb18983"
+      },
+      "prompt": {
+        "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/parents/quiet-water-prompt.txt",
+        "sha256": "fe381488e83c507ac376225ecbf80978a5666f8de4c66a4ecf80c01f4b470a53"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_water_material10521.py",
+      "sha256": "af6e084a626244b25f32ed877353c6f627d1410ad56056623c1280df00be9ec0"
+    },
+    {
+      "path": "tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/cleanup-recipe.json",
+    "sha256": "5841dc51a47c2c0490bbf8e8f2ed7ca1c75bc808b94b1e626d07ae11d264c208"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/derivation-execution.json",
+    "sha256": "ddd640015311140c1b6cccd80ce2ed88932212a1c5d1d7538a047815e655a4f6"
+  },
+  "sources": {
+    "10521": "6b3bcd5cc096654b9593b39cf973e07771c63daa29c66ec83b14e6b10bd02011"
+  },
+  "outputs": {
+    "jobs/derived-10521-water-only-quiet-band-complete1-20261019/derived/10521-water-remediated.png": "4537697a969fc2b1ecd4b9042184117f89025fd5bc3b2f8d3bb70165d3ec85d0"
+  },
+  "ancestry_disclosure": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/ancestry-crop-and-provider-disclosure.json",
+    "sha256": "25af9ee9cf6584a3b1ae8a121930721e9f7f6abf144e6bbc4257cc6e1eb6c953"
+  }
+}

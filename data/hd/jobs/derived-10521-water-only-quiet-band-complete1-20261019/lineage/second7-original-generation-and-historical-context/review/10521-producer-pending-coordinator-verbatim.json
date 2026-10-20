@@ -1,0 +1,46 @@
+{
+  "status": "pending_different_ART_and_Root_final_approval",
+  "reviewer": "Root approval required",
+  "candidate_sha256": "a70182808b880bbf3ced43e3e2f023296f393562eae690a87c359cb6467f7285",
+  "frame_bindings_sha256": "76dd92a2fd143b33de350c4eba388892f5a1b8f087d785dbb08ab3286c71fc6e",
+  "runtime_qa": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/runtime-qa.json",
+  "artwork_derivation": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/artwork-derivation.json",
+    "sha256": "498ff53f9dca7793b79eec0bc728357623efd8a3eccf7cdcb7f4a68cec696a5b"
+  },
+  "source_and_all_scale_visual_review": {
+    "author": {
+      "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/review/author.json",
+      "sha256": "8bd6dc2f037f206830344231fc863593417c3b7e581939c94d3bdb00e0b837e9"
+    }
+  },
+  "independent_review": {
+    "CODE": {
+      "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/review/independent-CODE.json",
+      "sha256": "d82df68a4a322668b6eee6b935ee20d722e1dcb36e9d4d6397c03ea7e0125fff"
+    },
+    "ART": "pending"
+  },
+  "retained_original_detail_review": {
+    "policy_version": "retained-original-details-v2-painted0255",
+    "cells_by_asset": {
+      "10521": [
+        [
+          5,
+          4
+        ]
+      ]
+    },
+    "retained_original_not_generated_HD": true,
+    "painted_Source_palette_domain": [
+      0,
+      255
+    ],
+    "functional_palette_effects_are_retained_Original": true,
+    "hybrid_allscale_and_genuine_context_independent_review": false,
+    "frame_bindings_sha256": "76dd92a2fd143b33de350c4eba388892f5a1b8f087d785dbb08ab3286c71fc6e"
+  },
+  "Root_final_approval_required": true,
+  "actual_historical_context_epoch": "SourceG2 literal H5647; controls byteexact original held context",
+  "new_portable_QA_cleanup_render_generation_World_calls": 0
+}

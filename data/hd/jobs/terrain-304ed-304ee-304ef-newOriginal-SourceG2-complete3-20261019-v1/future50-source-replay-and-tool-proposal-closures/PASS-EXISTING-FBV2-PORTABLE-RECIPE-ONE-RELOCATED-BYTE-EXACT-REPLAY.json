@@ -1,0 +1,1371 @@
+{
+  "status": "PASS_EXACT_EXISTING_APPROVED_DERIVATION_REPLAY_NO_NEW_ARTWORK",
+  "terminal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/EXISTING-PORTABLE-RECIPE-ONE-RELOCATED-REPLAY-TERMINAL.json",
+    "sha256": "6790125a659d90c262d7c7925567aeb28b90f8dd127cbed8f7283dc51d1688ca",
+    "bytes": 621
+  },
+  "source_job": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2",
+  "relocated_job": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces",
+  "helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/derive-own-green-patch.py",
+    "sha256": "fb95544d4d92252ff025d5dc404dd13e6a1a3c202ee2ae95fc32a6dd60819fa0",
+    "bytes": 7758
+  },
+  "recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/reproduce-own-green-patch-recipe.json",
+    "sha256": "d53621bbdbf4d34b3361f477a47da443e76c7a9343284d6e22c31438d444a4c8",
+    "bytes": 590
+  },
+  "inputs": {
+    "Source": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/Originals/304fb.bin",
+      "sha256": "10948daaac0b7f89fca96da7b7b1d3e5113d9880afff7758448c078c846ce08b",
+      "bytes": 1044
+    },
+    "palette": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/Originals/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "bytes": 768
+    },
+    "master": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/generated/untouched-parent-atlas.png",
+      "sha256": "b262139b3887dd31be4b130b33357e3525279d5e42780896b12c8675006dc5d0",
+      "bytes": 2850782
+    }
+  },
+  "output": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/ONE-REPLAY-EXISTING-APPROVED-RECIPE.png",
+    "sha256": "4f34686ffa3a324b8d9ca037f02c6ed031c0af408d0482abb2d0403f0911b886",
+    "bytes": 2605761
+  },
+  "expected_supplied_master": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/generated/derived-coherent-own-green-patch-complete3.png",
+    "sha256": "4f34686ffa3a324b8d9ca037f02c6ed031c0af408d0482abb2d0403f0911b886",
+    "bytes": 2605761
+  },
+  "exact_PNG_bytes_and_RGB": true,
+  "replay_report": {
+    "method": "direct-own-generated-green-contiguous-patch-transfer-v2",
+    "Source_component_cells": 212,
+    "Source_component_sorted": [
+      [
+        10,
+        11
+      ],
+      [
+        10,
+        12
+      ],
+      [
+        10,
+        13
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        11,
+        13
+      ],
+      [
+        11,
+        14
+      ],
+      [
+        11,
+        15
+      ],
+      [
+        12,
+        10
+      ],
+      [
+        12,
+        11
+      ],
+      [
+        12,
+        12
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        12,
+        14
+      ],
+      [
+        12,
+        15
+      ],
+      [
+        13,
+        9
+      ],
+      [
+        13,
+        10
+      ],
+      [
+        13,
+        11
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        14,
+        8
+      ],
+      [
+        14,
+        9
+      ],
+      [
+        14,
+        10
+      ],
+      [
+        14,
+        11
+      ],
+      [
+        14,
+        12
+      ],
+      [
+        14,
+        13
+      ],
+      [
+        14,
+        14
+      ],
+      [
+        15,
+        8
+      ],
+      [
+        15,
+        9
+      ],
+      [
+        15,
+        10
+      ],
+      [
+        15,
+        11
+      ],
+      [
+        15,
+        12
+      ],
+      [
+        15,
+        13
+      ],
+      [
+        15,
+        14
+      ],
+      [
+        16,
+        8
+      ],
+      [
+        16,
+        9
+      ],
+      [
+        16,
+        10
+      ],
+      [
+        16,
+        11
+      ],
+      [
+        16,
+        12
+      ],
+      [
+        16,
+        13
+      ],
+      [
+        16,
+        14
+      ],
+      [
+        16,
+        15
+      ],
+      [
+        16,
+        16
+      ],
+      [
+        17,
+        9
+      ],
+      [
+        17,
+        10
+      ],
+      [
+        17,
+        11
+      ],
+      [
+        17,
+        14
+      ],
+      [
+        17,
+        15
+      ],
+      [
+        17,
+        16
+      ],
+      [
+        18,
+        14
+      ],
+      [
+        18,
+        15
+      ],
+      [
+        18,
+        16
+      ],
+      [
+        18,
+        17
+      ],
+      [
+        18,
+        18
+      ],
+      [
+        18,
+        19
+      ],
+      [
+        18,
+        27
+      ],
+      [
+        19,
+        14
+      ],
+      [
+        19,
+        15
+      ],
+      [
+        19,
+        16
+      ],
+      [
+        19,
+        17
+      ],
+      [
+        19,
+        18
+      ],
+      [
+        19,
+        19
+      ],
+      [
+        19,
+        20
+      ],
+      [
+        19,
+        25
+      ],
+      [
+        19,
+        26
+      ],
+      [
+        19,
+        27
+      ],
+      [
+        19,
+        29
+      ],
+      [
+        19,
+        30
+      ],
+      [
+        20,
+        14
+      ],
+      [
+        20,
+        15
+      ],
+      [
+        20,
+        17
+      ],
+      [
+        20,
+        18
+      ],
+      [
+        20,
+        19
+      ],
+      [
+        20,
+        20
+      ],
+      [
+        20,
+        25
+      ],
+      [
+        20,
+        26
+      ],
+      [
+        20,
+        27
+      ],
+      [
+        20,
+        28
+      ],
+      [
+        20,
+        29
+      ],
+      [
+        20,
+        30
+      ],
+      [
+        20,
+        31
+      ],
+      [
+        21,
+        18
+      ],
+      [
+        21,
+        19
+      ],
+      [
+        21,
+        20
+      ],
+      [
+        21,
+        24
+      ],
+      [
+        21,
+        25
+      ],
+      [
+        21,
+        26
+      ],
+      [
+        21,
+        27
+      ],
+      [
+        21,
+        28
+      ],
+      [
+        21,
+        29
+      ],
+      [
+        21,
+        30
+      ],
+      [
+        22,
+        19
+      ],
+      [
+        22,
+        20
+      ],
+      [
+        22,
+        21
+      ],
+      [
+        22,
+        22
+      ],
+      [
+        22,
+        23
+      ],
+      [
+        22,
+        24
+      ],
+      [
+        22,
+        25
+      ],
+      [
+        22,
+        26
+      ],
+      [
+        22,
+        27
+      ],
+      [
+        22,
+        28
+      ],
+      [
+        22,
+        29
+      ],
+      [
+        22,
+        30
+      ],
+      [
+        22,
+        31
+      ],
+      [
+        23,
+        18
+      ],
+      [
+        23,
+        19
+      ],
+      [
+        23,
+        20
+      ],
+      [
+        23,
+        21
+      ],
+      [
+        23,
+        22
+      ],
+      [
+        23,
+        23
+      ],
+      [
+        23,
+        24
+      ],
+      [
+        23,
+        25
+      ],
+      [
+        23,
+        26
+      ],
+      [
+        23,
+        27
+      ],
+      [
+        23,
+        28
+      ],
+      [
+        23,
+        29
+      ],
+      [
+        23,
+        30
+      ],
+      [
+        23,
+        31
+      ],
+      [
+        24,
+        16
+      ],
+      [
+        24,
+        17
+      ],
+      [
+        24,
+        18
+      ],
+      [
+        24,
+        19
+      ],
+      [
+        24,
+        20
+      ],
+      [
+        24,
+        21
+      ],
+      [
+        24,
+        22
+      ],
+      [
+        24,
+        23
+      ],
+      [
+        24,
+        24
+      ],
+      [
+        24,
+        25
+      ],
+      [
+        24,
+        26
+      ],
+      [
+        24,
+        27
+      ],
+      [
+        24,
+        28
+      ],
+      [
+        24,
+        29
+      ],
+      [
+        24,
+        30
+      ],
+      [
+        24,
+        31
+      ],
+      [
+        25,
+        16
+      ],
+      [
+        25,
+        17
+      ],
+      [
+        25,
+        18
+      ],
+      [
+        25,
+        19
+      ],
+      [
+        25,
+        20
+      ],
+      [
+        25,
+        21
+      ],
+      [
+        25,
+        22
+      ],
+      [
+        25,
+        23
+      ],
+      [
+        25,
+        24
+      ],
+      [
+        25,
+        25
+      ],
+      [
+        25,
+        26
+      ],
+      [
+        25,
+        27
+      ],
+      [
+        25,
+        28
+      ],
+      [
+        25,
+        29
+      ],
+      [
+        25,
+        30
+      ],
+      [
+        25,
+        31
+      ],
+      [
+        26,
+        16
+      ],
+      [
+        26,
+        17
+      ],
+      [
+        26,
+        18
+      ],
+      [
+        26,
+        19
+      ],
+      [
+        26,
+        20
+      ],
+      [
+        26,
+        21
+      ],
+      [
+        26,
+        23
+      ],
+      [
+        26,
+        24
+      ],
+      [
+        26,
+        25
+      ],
+      [
+        26,
+        26
+      ],
+      [
+        26,
+        27
+      ],
+      [
+        26,
+        28
+      ],
+      [
+        26,
+        29
+      ],
+      [
+        26,
+        30
+      ],
+      [
+        26,
+        31
+      ],
+      [
+        27,
+        19
+      ],
+      [
+        27,
+        22
+      ],
+      [
+        27,
+        23
+      ],
+      [
+        27,
+        24
+      ],
+      [
+        27,
+        25
+      ],
+      [
+        27,
+        26
+      ],
+      [
+        27,
+        27
+      ],
+      [
+        27,
+        28
+      ],
+      [
+        27,
+        29
+      ],
+      [
+        27,
+        30
+      ],
+      [
+        27,
+        31
+      ],
+      [
+        28,
+        20
+      ],
+      [
+        28,
+        21
+      ],
+      [
+        28,
+        22
+      ],
+      [
+        28,
+        23
+      ],
+      [
+        28,
+        24
+      ],
+      [
+        28,
+        25
+      ],
+      [
+        28,
+        26
+      ],
+      [
+        28,
+        27
+      ],
+      [
+        28,
+        28
+      ],
+      [
+        28,
+        29
+      ],
+      [
+        28,
+        30
+      ],
+      [
+        28,
+        31
+      ],
+      [
+        29,
+        20
+      ],
+      [
+        29,
+        21
+      ],
+      [
+        29,
+        22
+      ],
+      [
+        29,
+        23
+      ],
+      [
+        29,
+        24
+      ],
+      [
+        29,
+        25
+      ],
+      [
+        29,
+        26
+      ],
+      [
+        29,
+        27
+      ],
+      [
+        29,
+        28
+      ],
+      [
+        29,
+        29
+      ],
+      [
+        29,
+        30
+      ],
+      [
+        29,
+        31
+      ],
+      [
+        30,
+        20
+      ],
+      [
+        30,
+        21
+      ],
+      [
+        30,
+        22
+      ],
+      [
+        30,
+        23
+      ],
+      [
+        30,
+        24
+      ],
+      [
+        30,
+        25
+      ],
+      [
+        30,
+        26
+      ],
+      [
+        30,
+        27
+      ],
+      [
+        30,
+        28
+      ],
+      [
+        30,
+        29
+      ],
+      [
+        30,
+        30
+      ],
+      [
+        30,
+        31
+      ]
+    ],
+    "Source_roi": [
+      12,
+      8,
+      19,
+      12
+    ],
+    "atlas_cell": [
+      1,
+      0
+    ],
+    "tile_side": 627,
+    "neutral_island_pixels": 882,
+    "island_bbox_before_pad": [
+      296,
+      178,
+      350,
+      216
+    ],
+    "target_bbox": [
+      288,
+      170,
+      358,
+      224
+    ],
+    "target_pixels": 3390,
+    "donor_pixels": 52181,
+    "target_logical_area": 8.830078676464977,
+    "pad_raw_pixels": 8,
+    "new_RGB_colors_synthesized": 0,
+    "changed_pixels": 3390,
+    "outside_support_exact": true,
+    "fa_fc_and_unused_exact": true,
+    "donor_patch_bbox": [
+      434,
+      459,
+      504,
+      513
+    ],
+    "translation": [
+      146,
+      289
+    ],
+    "full_patch_green_pixels": 3218,
+    "full_patch_area": 3780,
+    "candidate_patch_count": 1226,
+    "coherent_unscaled_translation": true,
+    "output_sha256": "4f34686ffa3a324b8d9ca037f02c6ed031c0af408d0482abb2d0403f0911b886"
+  },
+  "copied_files": [
+    {
+      "relative": "Originals/304fa.bin",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/Originals/304fa.bin",
+        "sha256": "d5d89c771bbf3ca5e74277e5517815f512cc83334e46d8bbf62e6f895645504d",
+        "bytes": 1044
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/Originals/304fa.bin",
+        "sha256": "d5d89c771bbf3ca5e74277e5517815f512cc83334e46d8bbf62e6f895645504d",
+        "bytes": 1044
+      }
+    },
+    {
+      "relative": "Originals/304fb.bin",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/Originals/304fb.bin",
+        "sha256": "10948daaac0b7f89fca96da7b7b1d3e5113d9880afff7758448c078c846ce08b",
+        "bytes": 1044
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/Originals/304fb.bin",
+        "sha256": "10948daaac0b7f89fca96da7b7b1d3e5113d9880afff7758448c078c846ce08b",
+        "bytes": 1044
+      }
+    },
+    {
+      "relative": "Originals/304fc.bin",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/Originals/304fc.bin",
+        "sha256": "d4dad20e5d3da7d358b2e89b02cf4b7f564b88733154c6f1e41ed90e306a4be3",
+        "bytes": 1044
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/Originals/304fc.bin",
+        "sha256": "d4dad20e5d3da7d358b2e89b02cf4b7f564b88733154c6f1e41ed90e306a4be3",
+        "bytes": 1044
+      }
+    },
+    {
+      "relative": "Originals/PALETTE_DAT",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/Originals/PALETTE_DAT",
+        "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+        "bytes": 768
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/Originals/PALETTE_DAT",
+        "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+        "bytes": 768
+      }
+    },
+    {
+      "relative": "candidate.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/candidate.json",
+        "sha256": "9a94db976ee4cded8c8fd5b09c4c07bae806633bf007b5740a0047df2aabb377",
+        "bytes": 3909
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/candidate.json",
+        "sha256": "9a94db976ee4cded8c8fd5b09c4c07bae806633bf007b5740a0047df2aabb377",
+        "bytes": 3909
+      }
+    },
+    {
+      "relative": "coordinator-review.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/coordinator-review.json",
+        "sha256": "742390965cf3c617d4e0235e309ce9785fb5d2a70e78d78911dd0db263f28695",
+        "bytes": 3785
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/coordinator-review.json",
+        "sha256": "742390965cf3c617d4e0235e309ce9785fb5d2a70e78d78911dd0db263f28695",
+        "bytes": 3785
+      }
+    },
+    {
+      "relative": "derive-own-green-patch.py",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/derive-own-green-patch.py",
+        "sha256": "fb95544d4d92252ff025d5dc404dd13e6a1a3c202ee2ae95fc32a6dd60819fa0",
+        "bytes": 7758
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/derive-own-green-patch.py",
+        "sha256": "fb95544d4d92252ff025d5dc404dd13e6a1a3c202ee2ae95fc32a6dd60819fa0",
+        "bytes": 7758
+      }
+    },
+    {
+      "relative": "generated/derived-coherent-own-green-patch-complete3.png",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/generated/derived-coherent-own-green-patch-complete3.png",
+        "sha256": "4f34686ffa3a324b8d9ca037f02c6ed031c0af408d0482abb2d0403f0911b886",
+        "bytes": 2605761
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/generated/derived-coherent-own-green-patch-complete3.png",
+        "sha256": "4f34686ffa3a324b8d9ca037f02c6ed031c0af408d0482abb2d0403f0911b886",
+        "bytes": 2605761
+      }
+    },
+    {
+      "relative": "generated/untouched-parent-atlas.png",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/generated/untouched-parent-atlas.png",
+        "sha256": "b262139b3887dd31be4b130b33357e3525279d5e42780896b12c8675006dc5d0",
+        "bytes": 2850782
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/generated/untouched-parent-atlas.png",
+        "sha256": "b262139b3887dd31be4b130b33357e3525279d5e42780896b12c8675006dc5d0",
+        "bytes": 2850782
+      }
+    },
+    {
+      "relative": "generation-lineage.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/generation-lineage.json",
+        "sha256": "b9b42860fa9817a765ea7c32ea990287fdc67d4ee8f04dc55f52be157925ea6b",
+        "bytes": 2987
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/generation-lineage.json",
+        "sha256": "b9b42860fa9817a765ea7c32ea990287fdc67d4ee8f04dc55f52be157925ea6b",
+        "bytes": 2987
+      }
+    },
+    {
+      "relative": "generation-prompt.txt",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/generation-prompt.txt",
+        "sha256": "e95037a600ea5582ae2665fe62e8fa35ae272ef9af027b3d60ae918dabef6248",
+        "bytes": 3426
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/generation-prompt.txt",
+        "sha256": "e95037a600ea5582ae2665fe62e8fa35ae272ef9af027b3d60ae918dabef6248",
+        "bytes": 3426
+      }
+    },
+    {
+      "relative": "job.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/job.json",
+        "sha256": "0e0f1f2be8a3dcdf58108e193cb7f849143beca7ee67af40d52887ed92b80256",
+        "bytes": 2702
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/job.json",
+        "sha256": "0e0f1f2be8a3dcdf58108e193cb7f849143beca7ee67af40d52887ed92b80256",
+        "bytes": 2702
+      }
+    },
+    {
+      "relative": "measurement/QA-NAMESPACE-AND-EXACT-SUBSET-CARRY.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/measurement/QA-NAMESPACE-AND-EXACT-SUBSET-CARRY.json",
+        "sha256": "a8052d53d77885264991f8f449559d56e0628faa3f33c86009d8131fa7cf1113",
+        "bytes": 1335
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/measurement/QA-NAMESPACE-AND-EXACT-SUBSET-CARRY.json",
+        "sha256": "a8052d53d77885264991f8f449559d56e0628faa3f33c86009d8131fa7cf1113",
+        "bytes": 1335
+      }
+    },
+    {
+      "relative": "measurement/actual-G2-indexed-bank.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/measurement/actual-G2-indexed-bank.json",
+        "sha256": "9fc91b0ef58bbad297f54848db5e0805d78fc3281e7e924cb6129c01f3042b95",
+        "bytes": 1336327
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/measurement/actual-G2-indexed-bank.json",
+        "sha256": "9fc91b0ef58bbad297f54848db5e0805d78fc3281e7e924cb6129c01f3042b95",
+        "bytes": 1336327
+      }
+    },
+    {
+      "relative": "measurement/actual-G2-invocation.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/measurement/actual-G2-invocation.json",
+        "sha256": "efdb761f9aeab094c65dc604ef28c196f99f04d901e3e536292bf1987e23d481",
+        "bytes": 944
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/measurement/actual-G2-invocation.json",
+        "sha256": "efdb761f9aeab094c65dc604ef28c196f99f04d901e3e536292bf1987e23d481",
+        "bytes": 944
+      }
+    },
+    {
+      "relative": "measurement/actual-G2-runtime-qa-original-namespace.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/measurement/actual-G2-runtime-qa-original-namespace.json",
+        "sha256": "29f65ba8ef8645830b56d0236d6f6d9cc7d7d33c81bf1381a1b659b8822a4ea4",
+        "bytes": 13584
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/measurement/actual-G2-runtime-qa-original-namespace.json",
+        "sha256": "29f65ba8ef8645830b56d0236d6f6d9cc7d7d33c81bf1381a1b659b8822a4ea4",
+        "bytes": 13584
+      }
+    },
+    {
+      "relative": "provenance.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/provenance.json",
+        "sha256": "aeacd86b39f91d23617069e387fecbf02d0d465f2902da82cdf2f60fc08cdb97",
+        "bytes": 6038
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/provenance.json",
+        "sha256": "aeacd86b39f91d23617069e387fecbf02d0d465f2902da82cdf2f60fc08cdb97",
+        "bytes": 6038
+      }
+    },
+    {
+      "relative": "references/Original-NN-readable-atlas.png",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/references/Original-NN-readable-atlas.png",
+        "sha256": "56ac2ac0d45ced41030b7ded071609a1ef503342cd8eeadfa1c87198d3378c9b",
+        "bytes": 14387
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/references/Original-NN-readable-atlas.png",
+        "sha256": "56ac2ac0d45ced41030b7ded071609a1ef503342cd8eeadfa1c87198d3378c9b",
+        "bytes": 14387
+      }
+    },
+    {
+      "relative": "references/Original-native-atlas.png",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/references/Original-native-atlas.png",
+        "sha256": "18a0ae6eebfd39af89c11de666df903871ba9d00661b3ec15a5fcf4e356e47e6",
+        "bytes": 4615
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/references/Original-native-atlas.png",
+        "sha256": "18a0ae6eebfd39af89c11de666df903871ba9d00661b3ec15a5fcf4e356e47e6",
+        "bytes": 4615
+      }
+    },
+    {
+      "relative": "reproduce-own-green-patch-recipe.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/reproduce-own-green-patch-recipe.json",
+        "sha256": "d53621bbdbf4d34b3361f477a47da443e76c7a9343284d6e22c31438d444a4c8",
+        "bytes": 590
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/reproduce-own-green-patch-recipe.json",
+        "sha256": "d53621bbdbf4d34b3361f477a47da443e76c7a9343284d6e22c31438d444a4c8",
+        "bytes": 590
+      }
+    },
+    {
+      "relative": "review/actual-builtin-arguments-historical.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/review/actual-builtin-arguments-historical.json",
+        "sha256": "8df03e8edf4bda4fd7141652ddc12b94f08cb534377e3f8d26e02190d31d06d0",
+        "bytes": 3947
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/review/actual-builtin-arguments-historical.json",
+        "sha256": "8df03e8edf4bda4fd7141652ddc12b94f08cb534377e3f8d26e02190d31d06d0",
+        "bytes": 3947
+      }
+    },
+    {
+      "relative": "review/actual-builtin-return.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/review/actual-builtin-return.json",
+        "sha256": "7b9ebbefcd2f7e4ce772f2e98f5c07a296c64135439ff4cfb47ce15add1a3494",
+        "bytes": 758
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/review/actual-builtin-return.json",
+        "sha256": "7b9ebbefcd2f7e4ce772f2e98f5c07a296c64135439ff4cfb47ce15add1a3494",
+        "bytes": 758
+      }
+    },
+    {
+      "relative": "review/actual-derived-ancestry.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/review/actual-derived-ancestry.json",
+        "sha256": "b470f982f61c02b97a77c5be5285ef5c511a81711406fcfcf7c0e08014c3a1ec",
+        "bytes": 1219
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/review/actual-derived-ancestry.json",
+        "sha256": "b470f982f61c02b97a77c5be5285ef5c511a81711406fcfcf7c0e08014c3a1ec",
+        "bytes": 1219
+      }
+    },
+    {
+      "relative": "review/author-context.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/review/author-context.json",
+        "sha256": "b36cdcce372fd01e38d2ff9727410d4b63027659f2ae8072eba26871b71c2ce0",
+        "bytes": 3390
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/review/author-context.json",
+        "sha256": "b36cdcce372fd01e38d2ff9727410d4b63027659f2ae8072eba26871b71c2ce0",
+        "bytes": 3390
+      }
+    },
+    {
+      "relative": "review/author-intrinsic.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/review/author-intrinsic.json",
+        "sha256": "5326e84a42000291c9a80abc43ddd88b24b154ac1081ecb7bf4163b0091a60d0",
+        "bytes": 5722
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/review/author-intrinsic.json",
+        "sha256": "5326e84a42000291c9a80abc43ddd88b24b154ac1081ecb7bf4163b0091a60d0",
+        "bytes": 5722
+      }
+    },
+    {
+      "relative": "review/context-audit.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/review/context-audit.json",
+        "sha256": "c9762bdd92d7ce7a94e37fbd0679c90becdc64022e7b4789c7972f36baa827dd",
+        "bytes": 369750
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/review/context-audit.json",
+        "sha256": "c9762bdd92d7ce7a94e37fbd0679c90becdc64022e7b4789c7972f36baa827dd",
+        "bytes": 369750
+      }
+    },
+    {
+      "relative": "review/context-census.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/review/context-census.json",
+        "sha256": "459d993b4b905829c20697eedb0ab3fe67bdbbd24baf989c87c57b46bf70742a",
+        "bytes": 17153
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/review/context-census.json",
+        "sha256": "459d993b4b905829c20697eedb0ab3fe67bdbbd24baf989c87c57b46bf70742a",
+        "bytes": 17153
+      }
+    },
+    {
+      "relative": "review/context-finite-bindings.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/review/context-finite-bindings.json",
+        "sha256": "3d368d2de04c276cc7b275682e77d4c74e0f120246fa3166213dd62c0d611465",
+        "bytes": 65847
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/review/context-finite-bindings.json",
+        "sha256": "3d368d2de04c276cc7b275682e77d4c74e0f120246fa3166213dd62c0d611465",
+        "bytes": 65847
+      }
+    },
+    {
+      "relative": "review/context-recipe.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/review/context-recipe.json",
+        "sha256": "3bf783b90d58c2c88951154ae6449d90d9b25a7bbbc505e9a54cefc6ef6c834f",
+        "bytes": 49953
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/review/context-recipe.json",
+        "sha256": "3bf783b90d58c2c88951154ae6449d90d9b25a7bbbc505e9a54cefc6ef6c834f",
+        "bytes": 49953
+      }
+    },
+    {
+      "relative": "review/different-CODE.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/review/different-CODE.json",
+        "sha256": "f391072a0b7ef97754eda996a7dde2b1a4006038d2e37b6d8534905e7cb1882b",
+        "bytes": 6640
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/review/different-CODE.json",
+        "sha256": "f391072a0b7ef97754eda996a7dde2b1a4006038d2e37b6d8534905e7cb1882b",
+        "bytes": 6640
+      }
+    },
+    {
+      "relative": "review/different-intrinsic-original-material.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/review/different-intrinsic-original-material.json",
+        "sha256": "c1618145644e14d9056efcf54fa7b30bb10f63b79e5f219fb391fe831a0717a7",
+        "bytes": 5647
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/review/different-intrinsic-original-material.json",
+        "sha256": "c1618145644e14d9056efcf54fa7b30bb10f63b79e5f219fb391fe831a0717a7",
+        "bytes": 5647
+      }
+    },
+    {
+      "relative": "runtime-qa.json",
+      "source": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/runtime-qa.json",
+        "sha256": "a6977c771db70eedcaed054637751c0da2f73f5780029593ae36643eef227434",
+        "bytes": 13767
+      },
+      "relocated": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/runtime-qa.json",
+        "sha256": "a6977c771db70eedcaed054637751c0da2f73f5780029593ae36643eef227434",
+        "bytes": 13767
+      }
+    }
+  ],
+  "actual_replay_invocations": 1,
+  "new_imagegen_G2_context_builds": 0,
+  "existing_approved_pixel_recipe_executed_once": true,
+  "canonical_and_source_job_writes": 0
+}

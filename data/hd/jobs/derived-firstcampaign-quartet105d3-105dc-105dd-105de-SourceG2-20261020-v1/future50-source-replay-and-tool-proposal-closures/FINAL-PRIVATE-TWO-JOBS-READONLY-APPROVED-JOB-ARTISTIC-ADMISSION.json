@@ -1,0 +1,82 @@
+{
+  "status": "PRIVATE_ARTISTIC_ADMISSION_PASS_2JOBS_5ROWS_ROOT_PUBLICATION_SEPARATE",
+  "jobs": [
+    {
+      "job_id": "derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1",
+      "ids": [
+        "105d3",
+        "105dc",
+        "105dd",
+        "105de"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/project/data/hd/jobs/derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1/candidate.json",
+        "sha256": "e653a3a4dfaafa56010a871d9e73ab8558331dc03ee5432ebedd056400e2beb5",
+        "size": 2769
+      },
+      "review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/project/data/hd/jobs/derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1/coordinator-review.json",
+        "sha256": "38d5bac798e29f58912e2cb5566a7b4212ae7e441e96c3faac52cd32611227cb",
+        "size": 5735
+      },
+      "QA": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/project/data/hd/jobs/derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1/runtime-qa.json",
+        "sha256": "18c40e780fe15f59b77e9998a82a4d4e572f64719fba666349bdeec28ba01402",
+        "size": 17822
+      },
+      "lineage": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/project/data/hd/jobs/derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1/artwork-derivation.json",
+        "sha256": "3e953223dfbaf0cdceabbf7a571d0137de80fb38b20306c42daab3bf926c7adf",
+        "size": 3224
+      },
+      "frame_bindings_sha256": "09f50f50025619810a4cac84576038a578294ee2426986ea362806a50efadedf",
+      "read_only_approved_job": "PASS",
+      "new_runtime_QA": 0,
+      "retained_unique_Original_owner_cells": 1
+    },
+    {
+      "job_id": "derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1",
+      "ids": [
+        "105a4"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/project/data/hd/jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/candidate.json",
+        "sha256": "32419d7d18d49521bbc8dba564b30637cbbace1cdcb59b454cb7a313e79f97a5",
+        "size": 7638
+      },
+      "review": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/project/data/hd/jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/coordinator-review.json",
+        "sha256": "faf8b0add989fb5242f664c048164fd4eabfd2c2281d930e3282a26af1714c39",
+        "size": 10631
+      },
+      "QA": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/project/data/hd/jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/runtime-qa.json",
+        "sha256": "5d677457e6303440ad4369731c2656684925f5a0642a1333a9a072d84565146f",
+        "size": 7346
+      },
+      "lineage": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/project/data/hd/jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/artwork-derivation.json",
+        "sha256": "92c4d396f229247fe3d20ce229e8e45d02a848136720bf7509be7be5ae6ab6f3",
+        "size": 3662
+      },
+      "frame_bindings_sha256": "ac4713dd9f72ffe01f0e90f135f67aee8c236f1600f8409af3b113fa94aa31d1",
+      "read_only_approved_job": "PASS",
+      "new_runtime_QA": 0,
+      "retained_unique_Original_owner_cells": 105
+    }
+  ],
+  "independent_context": {
+    "path": "jobs/_shared-firstcampaign5-literal-SourceG2-H5654-context-20261020/reviews/QUALIFIED-DIFFERENT-FIRSTCAMPAIGN5-GENUINE10-ALL40-NATIVE-240SAVED-BODY-CONTEXT-REVIEW.json",
+    "sha256": "56d25e7aef81cac005036ee6786665cfc567f76b412280b624c39d734ef293cd"
+  },
+  "literal_context": "SourceG2/H5654; no future epoch or World timing claim",
+  "one_readonly_approved_job_per_job": true,
+  "new_calls": {
+    "compile": 0,
+    "context": 0,
+    "cleanup": 0,
+    "image": 0,
+    "runtimeQA": 0
+  },
+  "canonical_or_Git_writes": 0
+}

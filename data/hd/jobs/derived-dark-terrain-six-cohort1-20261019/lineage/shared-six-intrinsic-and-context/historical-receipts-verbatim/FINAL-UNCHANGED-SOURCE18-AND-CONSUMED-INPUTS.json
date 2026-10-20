@@ -1,0 +1,1058 @@
+{
+  "source18": {
+    "src/assets.rs": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+    "src/audio.rs": "dcf352dcc16e383de389648d9fc288f682e7c2bfc92277db6ee76e198e3ad054",
+    "src/audio/opl3.rs": "e875db410274e3b4e725e68f160862782baa768c993c132f3c09976da683b396",
+    "src/cinematics.rs": "aff809dd2e2bce1c80b64d6200bfc54682221b750a81af6bd3cedb3a4cf95838",
+    "src/content.rs": "80021611102f22b3152164e88a3ee7ecc8c16e9b3a4563551a047c089f2ba7d2",
+    "src/desktop.rs": "82dfa448623cd05e12110d838b80a4f726fb037a73eec587accbadb4aef33178",
+    "src/hd.rs": "b17f4ee0757ee87d34e01ec76f3a6239c6e9044b42b4b10bd5f05b485f137a64",
+    "src/legacy_tables.rs": "eb4afd71d40dd98072f4180360b573e0c7ea5914829d70ee08bd08ca23702190",
+    "src/lib.rs": "15c6b6392771719083818a85bf5d23fa6f402a3e1685ebabaeaa871007e2802c",
+    "src/main.rs": "510d461e6d971749efbbed6570f08aca2605ecc61c16977ab9acb9170c7aba4a",
+    "src/menu_art.rs": "0506bbf30cc14794625b72ab1e6f5e2573e99a833105ce808913485d3452db06",
+    "src/mod_selection.rs": "a756017ae5bc4854959491fdb09226598f92e437a882075b298f8b77f5ebd2de",
+    "src/modding.rs": "d2b811416e06a5c743c11c77e5599ddcf5d3263de4f74363bc0731eaccc2c2ac",
+    "src/persistence.rs": "9a4adf1e33d3504db3d4d3e6091316cc7116fb35c89b2de8fbd4640d368aa0e2",
+    "src/render.rs": "d4abdccbc3c1ee840ef8548bcff43080521937ef9f9f5ed69e810f417ef1e842",
+    "src/simulation.rs": "2537120f280a1cfcfcc73a42a4103a4435ba8aeb98e69c87fde3b885b97a9925",
+    "src/sound.rs": "aff6779b85f9f4f4bc30a15ad75ec6fdd61d42895639700f4842870636e73c4b",
+    "src/terrain_hd.rs": "e61f96f541c19863ce8d741363a1739b9276e25aee84795952c65565c775e392"
+  },
+  "immutable_inputs": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2353",
+      "sha256": "1d2c63f6c5f54a514286fc64098421c8a56dc78025a931414fe321b72a82db67"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2354",
+      "sha256": "a4a6a90a13422007c42491ac6e61340a84c6f0f7c0981342d6d16654af28cc84"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2355",
+      "sha256": "bd093978a4edda74c5a105f4aa7e07d9acb31ed4276a6dc71de46afe49a8b425"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2356",
+      "sha256": "a0afa8fabbb359d20b8b31a2029a87bdc675ed479b1fd24487c0d1deb815720c"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2357",
+      "sha256": "c7b57701e835bd078164c4d2eae4bcd58ad80873f555e240b12e739a1a70b1b8"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2358",
+      "sha256": "12d3d1e261d2cb6e7ba54e923a6a81e277c337c41e06f8ea28d2b0ca08fc7712"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2360",
+      "sha256": "22f8eb2718e05fd537f0a9caa250c62f1d7de3760d5514dbbbb4f95ca44e7452"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2361",
+      "sha256": "500ac7186cbb6cf20c4d3d2f06284032961e0f9c08bd70e03cd55952666491d2"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2362",
+      "sha256": "07fc0d1a64a4a7234cbeeca418d1a7b1f9c2331cafa86789a788d4e2137705bb"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2365",
+      "sha256": "eb582f267d1fa219c63050e16115617d1cb9b58bd8a18f6a126c3c9b2d2d5388"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2366",
+      "sha256": "e5b19cc87578380339b9a92ed1265ac617ebdf2beff76ce18fa1ecedea05be98"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2367",
+      "sha256": "798de3ec45e1e05557886b875a6ff9f5c0ec60049459d036add146b0cef83298"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2368",
+      "sha256": "910cdda7185046e343f7c353d1114780a3b35f37b905d24481766e389c2a1dd8"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2369",
+      "sha256": "2258745c0452ed63cc3ded3d4d02dd0359001238b7389fad8d7804b4c97da1f3"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2372",
+      "sha256": "51be4fb116794b29b2e4bd6dec035933386cd7cb33b54358b134d26ad3d487ca"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2373",
+      "sha256": "2e130db73c466a4d1b00efffeafe5c365cd768adf632857db8fe07606d3f7bdf"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2374",
+      "sha256": "cec872f6fe4e460a7dbe9f2333cdfd52572de13fe58f79e685e9bb4d8f0892cf"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2375",
+      "sha256": "d455730d709657855316e2d3af79442ef62e02b5e555947d5263db2446b13050"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2376",
+      "sha256": "427f1d0ae21f1ab688412003ee09556c2bdd16593b0596b39064b67a6c18b6ce"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2381",
+      "sha256": "1758d66f23611c20ef07797df9afa5ea42056fe052f367bb814e394d6a8ef2c8"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2382",
+      "sha256": "b4f8f20f71935eb8715e5fcadd3f3465ac8bc405eabacafe9ef81de002943e99"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2383",
+      "sha256": "8678831782232abcee69247fb109cb9bac5571bf7f1d62c61f9793380616d12d"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2384",
+      "sha256": "cfe4b1ac1652ba3382b6937fadfb35677cd8c12a1200f58fa517d70eb23afa34"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2385",
+      "sha256": "4340e6d08e3267b64ab9be8c5c9089fdadfd4ba6a68c74b0441d94982a80e4bc"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2421",
+      "sha256": "9921bd526a167715804cd881b49c6b7a2aee25768c01c26bc3846d364257330e"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2422",
+      "sha256": "c78c2a4a13664b94b27fe30762867dcda5a5213d69866f975af52569f72d4a1e"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2423",
+      "sha256": "d5a0945b28418eb790a7f47389783b96ad065a773fb0ae6200655dc0b3cb2dad"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2424",
+      "sha256": "c60fa9aa600b0be372834d2b9991320528e9dc221f4ef58a0a711b7eaa36acda"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2425",
+      "sha256": "1be14eb2d6d2c4a09e3745a3d4a6f52811a6280900581da26123394a761b9f9b"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2426",
+      "sha256": "70153c47b217824dcc0189920ce2fe3a2c1d7943cd599d490ed03c8b18824ab4"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2427",
+      "sha256": "9c370900214a601e40200cb67e959f042323d001f7a2e6de3627e5044a2078b5"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2428",
+      "sha256": "efe519f5c33bfa6230a9c0e8e91869e4d4be1db1fd89946dcfe637f6e6f177b7"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2429",
+      "sha256": "12094dafa21ec210d5ff524eec5f6a78631a03a01ef68d280a2d305419ee202e"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2430",
+      "sha256": "be1a4bb657f9a131562901684adacd79a2dde05bfc4d4a3b9d5e042f6f8c890c"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2431",
+      "sha256": "ca3cbf10c5e7f270300a908af345b4dc7c92916e397578094f19ab276eb78802"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2432",
+      "sha256": "4d87a0251b8b064c6ab5835ae31f5eaabfec405f56b0408980f93484b70470d1"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2433",
+      "sha256": "98ad29ef10bf1a2db8c3b072ab84165c9999ee6b0931db42417e34fd1b89a132"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2434",
+      "sha256": "1791f086a175001c2630ad0efdd2588424d973eadcdd6049d217721f950142c9"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2435",
+      "sha256": "ce29513fcfaf4639afd072902de4a9d3653fca1944659056e0619d36297fa3f0"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2436",
+      "sha256": "be151484d73ebe4461115391c3fcea20f109a14b0f2eee1ce13f1cbb34014355"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2437",
+      "sha256": "1bc44da4af434515f06d474349a7cf4eddc8e12a46051078d52ae54b8e4b8e01"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2438",
+      "sha256": "e8ec062133c377e8a4f725640653fbe7875d80b69136e8e49727fc90b7099e72"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2439",
+      "sha256": "94535a42137c571b2cd3d6c1808f6fdd7399702f2250ecfcc790cd649383ff16"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2440",
+      "sha256": "fe007b8c1098e77166a3be2f50fce7dfdc6d3a86eceb02ca7361802c10d459a1"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2441",
+      "sha256": "c9acde36a4eba021ede70d02f13a63be869b8403636d0d8e61b2647484b26aa7"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2442",
+      "sha256": "d3e794986991e6f551fbeee707f058d428edd959834be04730bc2f28345fee7a"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2444",
+      "sha256": "ca09a82a3379d6bdf15360a3469e7d7f0a278c1edfaab835c4b7d3e80ebff239"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2445",
+      "sha256": "4fda3a0f494f7e3d1a1fa6ac17cb7beeab367a6037d7c105889b70a226909525"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2446",
+      "sha256": "1cff147135c60d71a2141bb2daf439376edfddd48392f7fa97f956e378bdbe9a"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2447",
+      "sha256": "4d39e7d667501dca5941243b5f371e4e783663faaf5f69c64385a98c41e015af"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2622",
+      "sha256": "5580043e71ef015c94d0d09fd8af9d9e1d2c15455485a8783d6b45a1e76e7160"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2626",
+      "sha256": "81f9c6a9779d3004d6c98689aa967647039de3ab74e98d2bff4e84a1ae96cf12"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2627",
+      "sha256": "9579158f35d28db151b239914a230f36cb396d33a093d1bcaf49ded12019b1c4"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2628",
+      "sha256": "e931dc88e18f5010a1d314173423b1c1bda06cf1b4bf2c11e42d5f6a40af1f07"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2631",
+      "sha256": "2826618765cce6f8cc4456f73cbf0da54d515abc053d0ba07f047f253ce1fa85"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2658",
+      "sha256": "380a74e2e9224384f65bcc3ab0f157122f62a3fe202730657271f46333d839a9"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.2713",
+      "sha256": "0a68733409981a29887a89ddd3630f8e5de28d3dd401461c2bb5f0c7c149df25"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.3022",
+      "sha256": "f5d18037180b866d9bb627d2dbaf0e5424e5d8577242c4ed07f0ec167456a1ad"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.3023",
+      "sha256": "3d6b6f7591679716a82c02878fa4e55e0cc334effaf9558a33117c0561870056"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/INDEX",
+      "sha256": "4ce78e5e638b6603114dd233ceaa41f386c0963ba4aa02ecf88ce0215b096681",
+      "size": 188148
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "size": 768
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/FLATSG1_ITM",
+      "sha256": "882cd3f7d793e427771877ce5b74d6f6db4ed19385ebe79ade51b7a22bb70140",
+      "size": 5376
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/FLATSG2_ITM",
+      "sha256": "dc079c9af2e05357c40bf4d1c1299e51563dda28be75db060bb1f8e7c3581bae",
+      "size": 11496
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/FLATSG3_ITM",
+      "sha256": "1611bd91aa62d353bcd8a0ce298803a75a82aa03b1acd866fb256e07b7e89d5a",
+      "size": 8656
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/FLATSG4_ITM",
+      "sha256": "6a880587e587c64f08a7c841be55eba5a93ea64042a88383b47b81033e2bee11",
+      "size": 10752
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/SPRITE1_ITM",
+      "sha256": "b4978c09f1929738f65508683d5c3ca07ea05b1afcbf11c85456224898d36694",
+      "size": 69168
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/SPRITE2_ITM",
+      "sha256": "d4c69a59bad7e0c7001dcc549fbb6e78028c8710d86ee12fc8e056ec2ae42379",
+      "size": 86592
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/SPRITE3_ITM",
+      "sha256": "57874c28c4cc86eb4d173d225f2d79dbb595300f9ac6e091fa8aac9740d87433",
+      "size": 63888
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/SPRITE4_ITM",
+      "sha256": "4924e83cdeaf12b2fc998533502e2282326b333cd29b1367f84b8a2a4e0c6a97",
+      "size": 59136
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP1G1_MAP",
+      "sha256": "bfa4386e554ee029a9ac7f2f5d0c4cb5c3000e5d7512c7c8246d75deecb48939",
+      "size": 12588
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP2G1_MAP",
+      "sha256": "f6a2f140f86a6bd91b6d137f149c69a7509e37ef93f54513d16ac826a02d5d69",
+      "size": 12396
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP3G1_MAP",
+      "sha256": "d119b94ecf744c4b4a14ea1f2de99898050efeddfb6438a8393d0a91f7ca5dc9",
+      "size": 14676
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP4G1_MAP",
+      "sha256": "908e65d46cceaa17f4243f54e5f40773051950423e4a5f840fa92742c94f7cff",
+      "size": 12948
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP5G1_MAP",
+      "sha256": "4eb985c26cbe5862d73282e8c0af06589e667ddd3c9ee19f5f436cf4150b9f36",
+      "size": 15012
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP6G1_MAP",
+      "sha256": "605f63c38a82689a2d776a641576be1a61ad97da52cbaa8f76dea74798d024e2",
+      "size": 12228
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP7G1_MAP",
+      "sha256": "03b016972af559632627c37d5cfb321f24d6f09c18b6465039cc3d5b2051ffbc",
+      "size": 12996
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP8G1_MAP",
+      "sha256": "bdc13404abe376689fc78fac4b585a641d68bfc8939cc6b51cc5811d734555bf",
+      "size": 13476
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP9G1_MAP",
+      "sha256": "f09110d48c0a86989333aa5087e48b02ea06aff7488777e5365f1f3b5c8e835f",
+      "size": 12852
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP1G2_MAP",
+      "sha256": "b2bf31aacf9e686c0583ecaf78d5af870f3b326d57e78382aa3d279f778cfbd5",
+      "size": 13332
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP2G2_MAP",
+      "sha256": "0776eabbb0e18b76a2121fa0ec505099b77564af8abe721bb2a05aca43d12ebd",
+      "size": 14460
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP3G2_MAP",
+      "sha256": "e071f964e54556946595b3fbda178ece3995efe3a1978589586d60f59ad82719",
+      "size": 15012
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP4G2_MAP",
+      "sha256": "8f15fe7ef807a5d75f4c345213bfe4e4694b53cdb38204f5aa3dc0c45dcfce09",
+      "size": 12564
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP5G2_MAP",
+      "sha256": "c5f907c0c743554998128fcb0047c262815c77c2ac2aa6c4941a91f4820a0aac",
+      "size": 13548
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP6G2_MAP",
+      "sha256": "3573cbc922e985145220c5acc30cffcea0bbb26834142fc9e5a496790f5b8483",
+      "size": 12156
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP7G2_MAP",
+      "sha256": "555e6d42a4c4edc50f100b54d4d7850339c902ca32cc408b420fa5c4d50254fe",
+      "size": 12708
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP8G2_MAP",
+      "sha256": "7556d96680a0bb382e629ce2ffb2d4a5e1e15b5b87ba450350d8d0e4ac387d51",
+      "size": 12036
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP9G2_MAP",
+      "sha256": "a1c7a1d1ca473bff76259bb40b3d51fe728b00997efdbcb4b4400ceef9db99c2",
+      "size": 13668
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP1G3_MAP",
+      "sha256": "2687a6d2e601e67f16f3ec69ff8b007dcfa6610f3dd812af4a1a20e9c1db036e",
+      "size": 13020
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP2G3_MAP",
+      "sha256": "1d87c8760de45b12c0f43d9354cbd81cfd6993a34933aae6940b87712c4b29e3",
+      "size": 13140
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP3G3_MAP",
+      "sha256": "76b8443d883c56d4de1a9874cbeeef3b009036bf53982ef8d5b49a233e8098be",
+      "size": 12012
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP4G3_MAP",
+      "sha256": "7b1ec34500093951f8202d26780360f8ab83fb1cb9fcc18ebdd14e6db20eb026",
+      "size": 13284
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP5G3_MAP",
+      "sha256": "af69d2ca9295b5763c1b5fe84464d58661ef534faa912a914db9458b9115190c",
+      "size": 11940
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP6G3_MAP",
+      "sha256": "78429a723d8e73a0b46134cbb99abf0904a4c39ddb9ff25b26ac9c2703159d36",
+      "size": 13668
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP7G3_MAP",
+      "sha256": "9f5d2ef60050c1b41e57146d8df871507ceda20757158b4a84bd0f9f8c8b9bf3",
+      "size": 12876
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP8G3_MAP",
+      "sha256": "8e8dc013dad4628d3737337e4125f4155d70ed94ebb5c5edf0b8cdc8d5eb5525",
+      "size": 14148
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP9G3_MAP",
+      "sha256": "e1bd018fc5286e864d94e56e691a4e6ab23f5c87c3069be4f94779422fcdd1f0",
+      "size": 14052
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-3016d-v1.png",
+      "sha256": "a0c7742961dca3212dca14e756d7b0044dd524296f775a4d2247dd8a87608fcf"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-3016e-v1.png",
+      "sha256": "294e497acf52c945b5cedbc822988d3f3cd175a939466e6dada6a3ac0eada35a"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-3016f-v1.png",
+      "sha256": "9f30f738b99b4248248c9979bbd4085666c90e9efe471c2d8671461d552b0a6e"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-30170-v1.png",
+      "sha256": "e4245259d338065c8cac8aac723e9eafa530cae124b3c08258a820e2dd2769be"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-30171-v1.png",
+      "sha256": "b70250a90139c4693f771d7a20a54cc88ffdaa79c592c9dc6fabf5ad6d5a5aa6"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-30172-v1.png",
+      "sha256": "aef1d9d030abc1c57682fd779578d0a6765b4006088d548e2badbcb852ee9100"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-30173-v1.png",
+      "sha256": "71d0e24b367dab27d00fa3d2c027c27aa9391d14066d52e2e96ed66357addde1"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-30174-v1.png",
+      "sha256": "2f963b5e9d741d08214df2c2ae9abb48351015d3b0028015a5968db2ee14d799"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-30175-v1.png",
+      "sha256": "c917149bae89413009ff8e1967a1cd21e5fc1a0b9aa8961f04e4927d9bfad198"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-30176-v1.png",
+      "sha256": "586f9573b35e2d04f43ab8cc4b9b5d70e75f9180566d5758623985fe847a9f80"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-30177-v1.png",
+      "sha256": "6cb4d5719429183ef94dbf6cfb55ca6b1a3c22b290d15d9f51ba88e69b77c9d1"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-30178-v1.png",
+      "sha256": "c94226666a07941a334599e152ee16314fc2cebcb276078e4d7dd719bef1134e"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-30179-v1.png",
+      "sha256": "1b6f8f14f993d4162cfdcdf19f8ee4941e5cc44b8c5acf27c4b9c476536b2490"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-3017a-v1.png",
+      "sha256": "8e5ce8054f44e01e21c169107a5bf10848909870f4e3a5fbe26e7240d193a9a7"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-3017b-v1.png",
+      "sha256": "c06e732c3a3d308676c2d28fbc99d82afe08f318550ce146782322ecc5534737"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3016d-3017c/generated/raw-standalone-3017c-v1.png",
+      "sha256": "29ad77e5098832fdf015e873d9c10ccfd72c4de68fee3a93a200f641499f2f74"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-3017d-v1.png",
+      "sha256": "1dfab68820335a8c36e09b335a6e39c9774d83d0eca201bc708ff457d03d9ed0"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-3017e-v1.png",
+      "sha256": "0c12db230976b3f778a48ce4f1922ec1a263c547fa21abf16742664941026486"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-3017f-v1.png",
+      "sha256": "b52dd1cb1988ec626386be1800f59dd75c0a617e1ed8e41bb589466d2413e103"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-30180-v1.png",
+      "sha256": "9f55cfc8f820f7339d0e29126e1609a66358a059f5a0603eb53ea3181662f1cd"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-30181-v1.png",
+      "sha256": "bc0aa90e8967301a9650466c86a1298d583a19ecb23aad1c096486a128524ed4"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-30182-v1.png",
+      "sha256": "cbd370db443c49bc182000501d41e46431c1ea0797bf46a391e2933512f27b8b"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-30183-v1.png",
+      "sha256": "93cf477eed4ff8453de736a0daee5d3423b75ddeb8b3ff803c476cdd6be0bb77"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-30184-v1.png",
+      "sha256": "83a7cff8902023a7e5998f288b4b737fc92352c3a14a4743e3ca7e58daf93c7e"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-30185-v1.png",
+      "sha256": "cd4d4f488c2a70ebd8f2d0b3ec163f139e26ad7b4cbf9967fe9c811c2945d9ff"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-30186-v1.png",
+      "sha256": "07ac7994cdf0159e5a8298e14f35fbb5de69ebb57bf1be8d34dda352e3f4989f"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-30187-v1.png",
+      "sha256": "4594c8ae4812d179f6eea7f6385d9430a36eae0cefc1efd20d9f0917d4f149df"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-30188-v1.png",
+      "sha256": "ac65299d738cd9ee73d3e496ea1c7b1a4dcbe16f12ff7598c3af7e63e950ab06"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-30189-v1.png",
+      "sha256": "ba1a4c8e32ceda4a8d57cf4aa47ed9cfc1cbf6b75873176733d73396c98751db"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-3018a-v1.png",
+      "sha256": "4431249b8fd23d38a7bb3c8ad3409be9b7602565d674c3d9d41fc416e60b6e60"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-3018b-v1.png",
+      "sha256": "58ffb56dd23199f12ebbc8a0ac11b4f3bbde4fefdd1d3667dce9b51627bbd024"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3017d-3018c/generated/raw-standalone-3018c-v1.png",
+      "sha256": "80a85f08e76703fc006a77ac81e540b70a16d81fc0868aca9e68f533cb73434d"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-3018d-v1.png",
+      "sha256": "08c044dd934b7d8ec428554edbbb9488f080f6c07591c207e7b605e7273cf836"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-3018e-v1.png",
+      "sha256": "d4763e2a95fc0359d49831ceb7287853c3a42bce77131a899bf7022a43bdec27"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-3018f-v1.png",
+      "sha256": "a9b8b513e7af717dbe90e349c074527fccc03e196e2967f6e1d22c02294385a8"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-30190-v1.png",
+      "sha256": "59a095fc1202c71c5d57cc1f6562ec281450922ebe99f8bedb0abf54bd8866bc"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-30191-v1.png",
+      "sha256": "1252311ec71dae205c990fefc4e5329da2138bd08252b01cdaa9f42c46bddd60"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-30192-v1.png",
+      "sha256": "739e7287f8043e16b5bd9a79ac141b7e1fb270e01f2e539ad9a24d4ef8b67660"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-30193-v1.png",
+      "sha256": "22debcf044fd1cd50888d8f278de46a741988cec1e8916a7f9343ac002bf4b3a"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-30194-v1.png",
+      "sha256": "4b08d94cc2489472bb3fc82dca6d7159dec641430e855cf7a8646809f1c6ba93"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-30195-v1.png",
+      "sha256": "d0e875746771abcaf432d1dc764c120541588755314c86ab1a93c41b7347975f"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-30196-v1.png",
+      "sha256": "bca63fa5d64584d4baf23f7d8444846c5aff79a65840a7bc8de391c34320f493"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-30197-v1.png",
+      "sha256": "d836d31843a4787e6a3c684db8f1d8508720923984700ad17f15acbe59b17bef"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-30198-v1.png",
+      "sha256": "1521ee5128567c6825631d7d7661c2d05b1fddfe27e23df5f5786c9e2d137d5c"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-30199-v1.png",
+      "sha256": "e67bce66678b7a59245a571c580731004708abe6b66ff1f6414e105d55dff03d"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-3019a-v1.png",
+      "sha256": "38d7ef4062a8f8d59f11e2c85279b9923126270016bd3ead7a1a2a46d933c401"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-3019b-v1.png",
+      "sha256": "284e09d2962969419f7a56038f2971ebacc063686c34f5550189767bf7ad709d"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3018d-3019c/generated/raw-standalone-3019c-v1.png",
+      "sha256": "bfd2ec995ff33e8284dbe84c6bb867991d7fa6f6483f19c0712ac225a997066b"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301bd-301cc/generated/raw-standalone-301bd-v1.png",
+      "sha256": "2fb534e1e3eed6459e4fc987d81952e13d4e6c363d09125ec4e2d01920d23a91"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301bd-301cc/generated/raw-standalone-301be-v1.png",
+      "sha256": "87c9f934c190a9f50b7884c736a8b10430105a92e74e34aae85e89eab4abd7b9"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301bd-301cc/generated/raw-standalone-301bf-v1.png",
+      "sha256": "722b8a3c7341f414f838f3aa60aa62249531d278ca59339104cf078daf997907"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301bd-301cc/generated/raw-standalone-301c0-v1.png",
+      "sha256": "b4e243528dbe3267caa43edfdcaaac1a2cf2d914eeb9eeb581537cc2f2d8af2b"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301bd-301cc/generated/raw-standalone-301c1-v1.png",
+      "sha256": "6147abb1b7bb65ba3be04ee79d0ea16bf1c43d66333067095590c23186104c83"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301bd-301cc/generated/raw-standalone-301c2-v1.png",
+      "sha256": "93c8b41c4c595f4aa9c86d0165431e37884cdc1ba711d711ff518e5d5cbdd0db"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301bd-301cc/generated/raw-standalone-301c4-v1.png",
+      "sha256": "c72188758ded63aba824c2e47b84e7af3c9dbe55897628f661d9b0c178385730"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301bd-301cc/generated/raw-standalone-301c5-v1.png",
+      "sha256": "42dd1fa607ac3accdeb3d973657a4c7324a6087c87d398f87f27760e43bfd569"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301bd-301cc/generated/raw-standalone-301c6-v1.png",
+      "sha256": "250ead1f4cabf93a5cd90e681e323714eeaeaed6f2074dc4840c00357eef95e2"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301bd-301cc/generated/raw-standalone-301c7-v1.png",
+      "sha256": "85112b9a361bd315ebfc5f0f495fc42af04be5652480175180090e628f9bea82"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301bd-301cc/generated/raw-standalone-301c9-v1.png",
+      "sha256": "0a37c79c352064d72568be25187e3d09d4e098b15df35f6af6a3c574e55dd779"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301bd-301cc/generated/raw-standalone-301ca-v1.png",
+      "sha256": "77fd8bac7813f98bc563507c7e8ed5c50236276e20fc12a0b87f6dd01fe667ba"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301bd-301cc/generated/raw-standalone-301cb-v1.png",
+      "sha256": "10afcfad2d0b40ee8a465ad92d6314ffb18f3de911e0d994d1aff47a20cb7383"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301cd-301dc/generated/raw-standalone-301cd-v1.png",
+      "sha256": "76bcfdf9664f2d0b138d0b2e76efe4d1595dc8fdb69b582625d668fe98014b2f"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301cd-301dc/generated/raw-standalone-301ce-v1.png",
+      "sha256": "700f4891a9c5a1f51e0bc7ee7bf44fb2ecdf7db52b67475eecc950ad0189a482"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301cd-301dc/generated/raw-standalone-301cf-v1.png",
+      "sha256": "c715b6dc56c4bcdcca5c20918dda76c451a8c19750251c06f453ca878dfbfd72"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301cd-301dc/generated/raw-standalone-301d0-v1.png",
+      "sha256": "2a3e02a115c78a74924b67fc6cdadf2418a2fc703a4964fd1e541c94b412d4c6"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301cd-301dc/generated/raw-standalone-301d2-v1.png",
+      "sha256": "f70063c32a2fdeb14502af867b8d415444b034a14933c087aeed7f9d077e9c92"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301cd-301dc/generated/raw-standalone-301d5-v1.png",
+      "sha256": "d836beec2c05cca5467c5822dfacf2768cf7531c18a54a396ca5a8f701f9cc99"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-301cd-301dc/generated/raw-standalone-301d6-v1.png",
+      "sha256": "46c58824bf13fb3b602fb709bffdeacf718f8490c948b66fa1ab1273b040cf1d"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-3027d-v1.png",
+      "sha256": "5e5e36e3b6241aa8597b5ee4ffa8c4e5595ebf76bca841dad4bae15d973caedd"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-3027e-v1.png",
+      "sha256": "bcd71aa5401914424abe9b0f86c631a43ffa7f90c36da4a3066c80052dba3a80"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-3027f-v1.png",
+      "sha256": "9941fde373efb631a848314d466ab692fc90b2ad63bdcdeb9df6d71899631260"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-30280-v1.png",
+      "sha256": "812670ac59a68ba80a62433d6060b6a2476a4a96f57a9e9849820f98e8ccf88b"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-30281-v1.png",
+      "sha256": "53b297acdcc8c3f01c9016266a7924699663d6c2629b4402f546f2ae350aef0a"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-30282-v1.png",
+      "sha256": "0845a26da594a01a03d9ab645b87979e666387c4fcfca9aa7673fc7496aba393"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-30283-v1.png",
+      "sha256": "c93ea02817a90a5ca2b1aa8195c77f57ae04c73d4a206bf42e4a7c3ecff17462"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-30284-v1.png",
+      "sha256": "2b5e881d569fa3a53351d5430f85535d1ad7d8223d42f455a49eb0d13b5cc07f"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-30285-v1.png",
+      "sha256": "f4dcac968f0642ba772f738eb99cc87b958dd2fc750dbca252e355107ef95906"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-30286-v1.png",
+      "sha256": "705f2c7c0f33bd7ecb1afb2c25d341ab44a0ca379cdb7fd5475f7cb81a901c5e"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-30287-v1.png",
+      "sha256": "ad3c3a2e02c78feaeb03e01c0de9964465434f4c53b3f33e5a08834676ee5a3e"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-30288-v1.png",
+      "sha256": "ac53de84465d6c92da5c43e589cd416eb7c6c5caf631859f70f6bbba18e4a8ad"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-30289-v1.png",
+      "sha256": "4c6723cd49d7d41f1d6bd46117be910e931ca923c31aa6ca67102cf283887a6c"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-3028a-v1.png",
+      "sha256": "c1c2deebdb7b50257fd940d5f8cc282c69f34c2879a14ee9e55a7612e8f4f5e4"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-3028b-v1.png",
+      "sha256": "121bf71d2ee748c6a815444c00dedd60aa3c90a2a2674470797fbe02b4bcf854"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3027d-3028c/generated/raw-standalone-3028c-v1.png",
+      "sha256": "37b851b50607d6e4bb429c2ba7d812915776da7b3daff34be5be2c70a78580ca"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-3028d-v1.png",
+      "sha256": "7f7c11400b8690ca82c48bb863ea3ae0264c90e572731a8a7a11349bd8a58c97"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-3028e-v1.png",
+      "sha256": "c910a724466426054e9df390598864400be0148303d8c95dd31d87f67bc8d214"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-3028f-v1.png",
+      "sha256": "4821faf0c7e6987e3885d21ffba9557358cd95e5129ae8dc46b4e61b44ea31e4"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-30290-v1.png",
+      "sha256": "65f78d44cb6d9a9cb5bb44814e1ce95255066d2d304d8781a5f03ce8ec06ebb5"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-30291-v1.png",
+      "sha256": "bad1ca3fb08b871bed2fc90af09fcaa50fde4f0900e6bbfbf6887a8bb488bde0"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-30292-v1.png",
+      "sha256": "c6ccd0970f3438ab54d409b116ccd15b76a10acc9f0a4cc0fcdb83aa79ebaf7c"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-30293-v1.png",
+      "sha256": "a601178617b5bebf99e5a6e488901b98362152c3fc4c0626516bc7d6ad77f57a"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-30294-v1.png",
+      "sha256": "c83058de0de8124d2b0b83befac0bacb17be0e39e14fde0410f6819b42c06c55"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-30295-v1.png",
+      "sha256": "fc4c5515f349f50d83b461c539ad048c0f3234066b80f3b645262d1f2f93ed46"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-30296-v1.png",
+      "sha256": "f41b53656965f5c5ba18cb5bd67a64b08ef707319006b92cdbfe6ab367ccda7e"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-30297-v1.png",
+      "sha256": "18e9a9b09c33cc24ef9e68e9629de4330773200236311bb7f355c46fcd952af8"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-30298-v1.png",
+      "sha256": "99b95d24ebdaf7836425807aa8174c6aa3fd12dc1db1e089aff815531cc8aaeb"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-30299-v1.png",
+      "sha256": "7ff56f3cd805a72180936058c79b6072c766a8c2dc35f6745c40e0f9c32887dd"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-3029a-v1.png",
+      "sha256": "20fa3b9587b12ccaf54ab7a7c5a955ba8cc1b7c0cbf7ea4caf3e40cac3e86ac3"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-3029b-v1.png",
+      "sha256": "e9b235bc27a02ebd3f7bb9434a9ea13d2f22b4523b81845f2177c64dd7f8f49a"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3028d-3029c/generated/raw-standalone-3029c-v1.png",
+      "sha256": "46047bc03077b42038fc58608ae3b2652b1d75eabf4a58f0960f61db552806c0"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-3029d-v1.png",
+      "sha256": "316f94660576c9fd6c73e911d762153ebaf920f8eec95f58c4fae97a76ea89c9"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-3029e-v1.png",
+      "sha256": "4882250c3ff9649af908bf8f9f8854ac8c7a9dae5d1550bd9a989c7d06ab6fbf"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-3029f-v1.png",
+      "sha256": "79d6fea57467d09a739bddbe0a7eedf4815768ec2ffc81e99c438da743f2db2a"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-302a0-v1.png",
+      "sha256": "33e85510ee83c78aafac23833e9db6876aaafc53d8a15e9c1edc95770244d15a"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-302a1-v1.png",
+      "sha256": "a303487f3d77c73edbb0466cd81b3af6baef5b79dacb646589d27c62a62fc346"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-302a2-v1.png",
+      "sha256": "e9c42590c53fda481eac08e8a63e48eb98d8bc66539516e87a10f1eecd99c0a8"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-302a3-v1.png",
+      "sha256": "85e6e3fbfcda63e126f5e51ac7d3512f60901b2caf663764d9d977e0628f7967"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-302a4-v1.png",
+      "sha256": "868494af23608a825228152da7feec80ad03ee6b435fd46321d6a37b2e368152"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-302a5-v1.png",
+      "sha256": "e12d03c53dd69d37089106696641cb473315952687a5479ef95cca4889491865"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-302a6-v1.png",
+      "sha256": "45a3504d347921256cd88d4a332f36fbaf5a55e03f7f94537cfef32fb399cdc5"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-302a7-v1.png",
+      "sha256": "27ccd1b870a05f9661a816315ecf575019f8e589d9014ccb6a8a550ddf92ff55"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-302a8-v1.png",
+      "sha256": "fa2efeb03415017bc094d32e506a3d8fd16d46fc3f1b9001f615a3e4b77f4f17"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-302a9-v1.png",
+      "sha256": "1a4c7cb4e7b57339ecc97f3578adae8c844a61c182dfc69e6ca8f8a9819afe8a"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-302aa-v1.png",
+      "sha256": "e7bc99119238cf1642bf5dea21cddb68ae5c924b9c667d2d1037aec3feab484e"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-302ab-v1.png",
+      "sha256": "1ff5bb1c8fd90b41f9b9397354eb9fadcca0f7f862b142cbb3775cfa33f52822"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3029d-302ac/generated/raw-standalone-302ac-v1.png",
+      "sha256": "843a29d375f0e3bcb15548219eb9caa3f0194da00734b7d7a3e6b390cb987108"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-3040d.png",
+      "sha256": "d6cb220102ef67c89e162ae6900f5768e0f5af135f92a2290b99772a394cd593"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-3040e.png",
+      "sha256": "f6a0a5f4ce7d6b8e6654d37c0bab0110d9727f4dd48b701ede82b92d7d2d23fb"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-3040f.png",
+      "sha256": "c1ea041724ebf0c07d1b008d4ca85137e92201f6aa237af581b824326216ae90"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30410.png",
+      "sha256": "dd93df7d32581e26f66546b4d30bdda65609173c88103a6797f1b995f9843fcd"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30411.png",
+      "sha256": "3e4952bbd61271f9cdce3e2abbbc4ef162a4a591ab0f1a85139f4c6914ead917"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30412.png",
+      "sha256": "9e175ca91541ba8e101611ab72e6a97339be7249556f8a25c1038a1e0614372b"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30413.png",
+      "sha256": "62a6cecb2a9763762e470034c78ec997f580bc915c19dc85c0aaa95635df6403"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30414.png",
+      "sha256": "c15e343ba5959d5a5821dd87b1d737196949344c88b57908f1b55daaf2adfa5f"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30415.png",
+      "sha256": "ee5d647627d53e08c14c8bb45ce8073a839bbeb63d1c578c3fe454a9d73a6211"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30416.png",
+      "sha256": "1dc5f0316d92bb9e46c027fbe663e73163df40a85e021bc194c751f99a7181ab"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30417.png",
+      "sha256": "96b40c86c81c4e61b2cb779876a8819392d26064f34f3035f06ed73180adced6"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30418.png",
+      "sha256": "e9a041584fede452c9ce7bb74388314ebf1afd9c0948a3afaf3579afce2131b0"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-30419.png",
+      "sha256": "7e57573f50131f008f59e2f682985f9639c5f5517ac14c4b3150162e93456c2a"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-3041a.png",
+      "sha256": "863d2ac12afcf913769f0e914619039986ac9424081fbefc0e3f922b625cb16f"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-3041b.png",
+      "sha256": "e83f796d741622b3efebb405e428fee5e257932a932a82ca93837653f96072ba"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/jobs/terrain-3040d-3041c/generated/raw-v2-tile-3041c.png",
+      "sha256": "be7bce41465aee4b2d41eed168574920630def4f60185951e17bd07acfad3fed"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-ELIGIBILITY-recovery-20261019-v2/complete-literal-H5654-baseline/hd.json",
+      "sha256": "104dc8f0d154f6a3e8edf6c72283205cb1f323daf8c225a8ca3a56680ac87f5b"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-PREPARED-20261019-v1/FINITE-59-SOURCE-AND-FULL-NATIVE-METADATA-BINDINGS.json",
+      "sha256": "e4527cf2fb0e45c96c6a71e274f39aae91bfb47dc6a6d9104d83599418705331"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-Original-primary-clean-material-author-20261019-v1/AUTHOR-FINAL-ALL6-INTRINSIC-QUALIFIED.json",
+      "sha256": "71a1f7312e25bcb8bd57f797ef80f5f109504caa0241e1e174c511f103e332a6"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-Original-primary-clean-material-author-20261019-v1/actual-final-G2-cohort1/actual-indexed-source-and-scales.json",
+      "sha256": "48268c4199cdbb5e76e87b737ea835fa810a81e0f84e4e5defee863bb8e79257"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-Original-primary-clean-material-author-20261019-v1/actual-final-G2-cohort1/actual-indexed-source-and-scales.json",
+      "sha256": "48268c4199cdbb5e76e87b737ea835fa810a81e0f84e4e5defee863bb8e79257"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-Original-primary-clean-material-author-20261019-v1/actual-final-G2-cohort1/actual-indexed-source-and-scales.json",
+      "sha256": "48268c4199cdbb5e76e87b737ea835fa810a81e0f84e4e5defee863bb8e79257"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-Original-primary-clean-material-author-20261019-v1/actual-final-G2-cohort2/actual-indexed-source-and-scales.json",
+      "sha256": "61e65d86011f2e843ecde0bbba11064ff69096f0ab74d54ca007dcece50307dd"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-Original-primary-clean-material-author-20261019-v1/actual-final-G2-cohort2/actual-indexed-source-and-scales.json",
+      "sha256": "61e65d86011f2e843ecde0bbba11064ff69096f0ab74d54ca007dcece50307dd"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-Original-primary-clean-material-author-20261019-v1/actual-final-G2-cohort2/actual-indexed-source-and-scales.json",
+      "sha256": "61e65d86011f2e843ecde0bbba11064ff69096f0ab74d54ca007dcece50307dd"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-PREPARED-20261019-v1/proposal-selected6/301c3-derived.png",
+      "sha256": "253869a7479fa09b8cfbf3d9fbf81b58b4196017908db980247460c99afebfc6",
+      "size": 86566,
+      "mtime_ns": 1792395509329176522,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-PREPARED-20261019-v1/proposal-selected6/301c8-derived.png",
+      "sha256": "2c9d2af2a4efad83cbc8b0b542670066e861b454940810ca67dd440c992ca7ad",
+      "size": 86775,
+      "mtime_ns": 1792395509329327767,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-PREPARED-20261019-v1/proposal-selected6/301cc-derived.png",
+      "sha256": "cf90694640801d340e702f34a1628820839362c8aefe674e09d57762b4e86e60",
+      "size": 67781,
+      "mtime_ns": 1792395509329385042,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-PREPARED-20261019-v1/proposal-selected6/301d1-derived.png",
+      "sha256": "e0f66bc181544ef5a79b78b74ec87f65b63dea2680453fb0eda1b2905ad0e611",
+      "size": 76589,
+      "mtime_ns": 1792395510729824330,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-PREPARED-20261019-v1/proposal-selected6/301d4-derived.png",
+      "sha256": "4fe1fc281c45d506740a232df0875bbfc20a9675b23083294a68f3f33cb5a6cb",
+      "size": 66937,
+      "mtime_ns": 1792395510729890318,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-six-currentG2-H5654-genuine-S3W3-five-window-context-PREPARED-20261019-v1/proposal-selected6/301d7-derived.png",
+      "sha256": "8a3c2f2898b70ae4b91323307110bcee413520ea68d9544dd4a7911327ae9efd",
+      "size": 64079,
+      "mtime_ns": 1792395510729936303,
+      "mode": 33188
+    }
+  ],
+  "actual_compile_calls": 0,
+  "actual_constructor_calls": 1,
+  "total_context_compile_calls_including_predecessor": 1,
+  "total_context_constructor_calls_including_predecessor": 2,
+  "preserved_predecessor_constructor_failed_before_component_or_plane_render": true,
+  "World_calls": 0,
+  "new_intrinsic_QA_calls": 0
+}

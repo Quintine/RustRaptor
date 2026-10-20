@@ -1,0 +1,219 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-dark-six-independent-cohort1-20261019-v1",
+  "owner": "/root/dark_ship_remaining",
+  "category": "Terrain",
+  "kind": "contextual_terrain_shard",
+  "complete_family": false,
+  "complete_independent_singletons": true,
+  "status": "private-derived-final-intrinsic-trial-not-art-approved",
+  "sequences": [
+    {
+      "name": "Original-independent-terrain-301c3",
+      "base_asset": 197059,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "301c3-derived.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "9c370900214a601e40200cb67e959f042323d001f7a2e6de3627e5044a2078b5",
+          "original_detail_cells": [
+            [
+              15,
+              16
+            ],
+            [
+              16,
+              16
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Original-independent-terrain-301c8",
+      "base_asset": 197064,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "301c8-derived.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "4d87a0251b8b064c6ab5835ae31f5eaabfec405f56b0408980f93484b70470d1",
+          "original_detail_cells": [
+            [
+              15,
+              16
+            ],
+            [
+              15,
+              17
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Original-independent-terrain-301cc",
+      "base_asset": 197068,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "301cc-derived.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "be151484d73ebe4461115391c3fcea20f109a14b0f2eee1ce13f1cbb34014355",
+          "original_detail_cells": [
+            [
+              13,
+              19
+            ],
+            [
+              13,
+              20
+            ],
+            [
+              13,
+              25
+            ],
+            [
+              13,
+              26
+            ],
+            [
+              19,
+              19
+            ],
+            [
+              19,
+              20
+            ],
+            [
+              19,
+              25
+            ],
+            [
+              19,
+              26
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "asset": "301c3",
+      "frame": 0,
+      "file": "301c3-derived.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "9c370900214a601e40200cb67e959f042323d001f7a2e6de3627e5044a2078b5",
+      "original_detail_cells": [
+        [
+          15,
+          16
+        ],
+        [
+          16,
+          16
+        ]
+      ]
+    },
+    {
+      "asset": "301c8",
+      "frame": 0,
+      "file": "301c8-derived.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "4d87a0251b8b064c6ab5835ae31f5eaabfec405f56b0408980f93484b70470d1",
+      "original_detail_cells": [
+        [
+          15,
+          16
+        ],
+        [
+          15,
+          17
+        ]
+      ]
+    },
+    {
+      "asset": "301cc",
+      "frame": 0,
+      "file": "301cc-derived.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "be151484d73ebe4461115391c3fcea20f109a14b0f2eee1ce13f1cbb34014355",
+      "original_detail_cells": [
+        [
+          13,
+          19
+        ],
+        [
+          13,
+          20
+        ],
+        [
+          13,
+          25
+        ],
+        [
+          13,
+          26
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          19,
+          20
+        ],
+        [
+          19,
+          25
+        ],
+        [
+          19,
+          26
+        ]
+      ]
+    }
+  ],
+  "review": {
+    "registered": false,
+    "artistic_approval": false,
+    "actual_derivation_receipt": ".reference/hd-terrain-six-Original-primary-clean-material-author-20261019-v1/actual-derived-cohort1/ACTUAL-DERIVATION-RECEIPT.json",
+    "actual_derivation_receipt_sha256": "7259f2ffb280ee958038794682212c5be989aea559b5b4cc348495e1795abc65",
+    "scope": "Three distinct Original terrain tiles, not animation phases. Source-scale geometry and broad RGB with real generated fine/mid luminance. Pale-tip/lavender retained SourceNx cells receive zero HD detail credit. Neighbor joins not yet reviewed."
+  }
+}

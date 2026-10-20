@@ -1,0 +1,47 @@
+{
+  "method": "Source-night-hardware-fine-material-v1",
+  "cohort": "hardware2",
+  "sources": [
+    {
+      "asset": "2054d",
+      "path": "sources/2054d.pic",
+      "sha256": "53c48a3ce6452e2f31378ea19c6c55741fe7ca00f44130c31767691826db7679"
+    },
+    {
+      "asset": "2054e",
+      "path": "sources/2054e.pic",
+      "sha256": "a0af561811ac3dc187748135b1572772a8c12c4f4960396fca8eea8920d062ca"
+    }
+  ],
+  "palette": {
+    "path": "inputs/palette.dat",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "donors": {
+    "1": {
+      "path": "inputs/genuine-untouched-atlas.png",
+      "sha256": "05a8eb2f0f2423f337d65f50225d65fbbc9a90b067a5b5ea6f17250bf9ecd5c6",
+      "box": [
+        80,
+        115,
+        650,
+        150
+      ]
+    },
+    "2": {
+      "path": "inputs/genuine-untouched-atlas.png",
+      "sha256": "05a8eb2f0f2423f337d65f50225d65fbbc9a90b067a5b5ea6f17250bf9ecd5c6",
+      "box": [
+        80,
+        115,
+        650,
+        150
+      ]
+    }
+  },
+  "output_side": 512,
+  "band_sigma": 2.0,
+  "band_clip": 12.0,
+  "band_strength": 0.5,
+  "source_owner_classification": "31 exact opaque black; 24..30 dark gray; 0..23 gray; 54..58 olive; >=240 exact functional"
+}

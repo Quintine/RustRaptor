@@ -1,0 +1,43 @@
+{
+  "tool": "builtin image_gen.imagegen",
+  "historical_actual_image_calls": 1,
+  "new_image_calls_this_package": 0,
+  "actual_generation_assets": [
+    "304ed",
+    "304ee",
+    "304ef"
+  ],
+  "selected_assets": [
+    "304ed",
+    "304ee",
+    "304ef"
+  ],
+  "actual_provider_receipt": {
+    "path": "jobs/terrain-304ed-304ee-304ef-newOriginal-SourceG2-complete3-20261019-v1/review/actual-builtin-return.json",
+    "sha256": "badebd729586c1f3fdf284e27b130167ee02a60be71303c0dbd2b673a6fc751a"
+  },
+  "exact_submitted_Source_references": [
+    {
+      "path": "jobs/terrain-304ed-304ee-304ef-newOriginal-SourceG2-complete3-20261019-v1/references/Original-native-atlas.png",
+      "sha256": "2942ce33afbbcd579f72ffbd592890b406ea1bf8482b7bc6f1a7121f8c1368f2"
+    },
+    {
+      "path": "jobs/terrain-304ed-304ee-304ef-newOriginal-SourceG2-complete3-20261019-v1/references/Original-NN-readable-atlas.png",
+      "sha256": "a74ab096d93cbc9feb2d7edb0d734b0b83b39778b87ab26e819f210aecf432d1"
+    }
+  ],
+  "generation_prompt": {
+    "path": "jobs/terrain-304ed-304ee-304ef-newOriginal-SourceG2-complete3-20261019-v1/generation-prompt.txt",
+    "sha256": "1cf393ced5b7177de625b1d4b571bdfb189e2c0c9e9ab137b694175ab8669470"
+  },
+  "raw_artwork": {
+    "jobs/terrain-304ed-304ee-304ef-newOriginal-SourceG2-complete3-20261019-v1/generated/untouched-genuine-builtin-atlas.png": "870d0500c3377714715a5c6758c5ec063967a9d2aa73f3d15fd73b4f63b6d205"
+  },
+  "original_Source_RGB_not_composited_into_generated_material": true,
+  "retained_Source_cells_noHDcredit": {
+    "304ed": 0,
+    "304ee": 0,
+    "304ef": 0
+  },
+  "genuine_context_scope": "Literal SourceG2/H5654 saved finitecontexts; Root differentcontext receipt still pending; not a fresh currentbankcapture."
+}

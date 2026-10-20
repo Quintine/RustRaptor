@@ -1,0 +1,16 @@
+{
+  "status": "AUTHOR_HOLD_2054e_RUNTIME_C_CLAMP_NOTCH_LOST",
+  "scope": "Whole native1..4 intrinsic review only. First generated masters, recipe, derived PNG and QA remain unchanged.",
+  "candidate_sha256": "4824ff71c0c535d4bdb8568f3d0f86ffc4aa7aa1b98be962aefb532d7eebb199",
+  "runtime_qa_sha256": "77119c5bf3b17bbc16cc2586d3d54a68daaf8c51b12a4da63fe18232118de4de",
+  "finding": "Two ordinary opaque black clamp notch Source cells (3,16),(29,16) brighten under runtime resampling. Exact Source-owned black in the derived PNG alone does not preserve logical notch topology at all native scales.",
+  "native1_Source_indices": [
+    31,
+    31
+  ],
+  "native1_actual_indices": [
+    21,
+    23
+  ],
+  "approved_followup_kind": "Bounded two-cell ordinary Source-retention metadata only, zero generated HD credit for retained cells; no new generation or RGB cleanup."
+}

@@ -1,0 +1,101 @@
+{
+  "implementation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/terrain_night_hardware_cleanup.py",
+    "sha256": "1b448911a7af01e1f19aae945f1e581c2b2a8f7bb66ed7ad597bd6450cd9191c",
+    "size": 10029,
+    "mtime_ns": 1792392080427554483,
+    "mode": 33188
+  },
+  "executed_dependency": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+    "size": 14882,
+    "mtime_ns": 1792280173116585173,
+    "mode": 33188
+  },
+  "recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/recipe.json",
+    "sha256": "a5cfd3f676ffbd37f6d7f9f4c0cf19565422949b0e78e64267cd4536fa7c6772",
+    "size": 1232,
+    "mtime_ns": 1792392023915795739,
+    "mode": 33188
+  },
+  "authenticated_input_reads": 4,
+  "input_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/inputs/palette.dat",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "size": 768,
+      "mtime_ns": 1787663959337906368,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/inputs/genuine-untouched-atlas.png",
+      "sha256": "05a8eb2f0f2423f337d65f50225d65fbbc9a90b067a5b5ea6f17250bf9ecd5c6",
+      "size": 2013002,
+      "mtime_ns": 1792391791225572191,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/inputs/genuine-untouched-atlas.png",
+      "sha256": "05a8eb2f0f2423f337d65f50225d65fbbc9a90b067a5b5ea6f17250bf9ecd5c6",
+      "size": 2013002,
+      "mtime_ns": 1792391791225572191,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/sources/2054d.pic",
+      "sha256": "53c48a3ce6452e2f31378ea19c6c55741fe7ca00f44130c31767691826db7679",
+      "size": 1044,
+      "mtime_ns": 1787663959580320607,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/sources/2054e.pic",
+      "sha256": "a0af561811ac3dc187748135b1572772a8c12c4f4960396fca8eea8920d062ca",
+      "size": 1044,
+      "mtime_ns": 1787663959580377073,
+      "mode": 33188
+    }
+  ],
+  "method": "Source-night-hardware-fine-material-v1",
+  "cohort": "hardware2",
+  "output_is_derived_not_untouched": true,
+  "global_Original_nearest_fallback": false,
+  "metrics": [
+    {
+      "asset": "2054d",
+      "original_detail_cells": [],
+      "functional_retention_HD_credit": 0,
+      "opaque_black_HD_credit": 0,
+      "functional_HDR_pixels": 0,
+      "opaque_black_HDR_pixels": 74656,
+      "black_and_functional_RGB_exact": true,
+      "genuine_fine_RGB_changed_nonexcluded_pixels": 163858,
+      "nonexcluded_material_pixels": 187488,
+      "source_geometry_owners_sha256": "38399dfe9ac3f7972f21616688889c926caf989b3baac4bb77a32c0a818b5c6e"
+    },
+    {
+      "asset": "2054e",
+      "original_detail_cells": [],
+      "functional_retention_HD_credit": 0,
+      "opaque_black_HD_credit": 0,
+      "functional_HDR_pixels": 0,
+      "opaque_black_HDR_pixels": 141776,
+      "black_and_functional_RGB_exact": true,
+      "genuine_fine_RGB_changed_nonexcluded_pixels": 105635,
+      "nonexcluded_material_pixels": 120368,
+      "source_geometry_owners_sha256": "2b6db7119916a18f58ac36733568f31b34a08f7d190d2a1834a9f494d4bccbac"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "2054d-derived.png",
+      "sha256": "e767ca64c5621634de4676ec93135ef1338767b594083972177d94b1c1b55260"
+    },
+    {
+      "file": "2054e-derived.png",
+      "sha256": "9721c9cbc3c0727f9a41520bf831976cf6085b357c5c431777747c221934b1e8"
+    }
+  ]
+}

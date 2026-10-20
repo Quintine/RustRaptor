@@ -1,0 +1,266 @@
+{
+  "implementation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/terrain_component_cleanup.py",
+    "sha256": "52c5b600456c88dde443ba2add000cf9b4f9a3131d1a6a124fb657de410d591e",
+    "size": 38789,
+    "mtime_ns": 1792402258952842979,
+    "mode": 33188
+  },
+  "executed_dependency": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+    "size": 14882,
+    "mtime_ns": 1792280173116585173,
+    "mode": 33188
+  },
+  "recipe_input": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/ground4-UNEXECUTED-RECIPE.json",
+    "sha256": "88d843d1ccf7eab28410a5401ac244dc1591c5bbbf021850221481b512dde5ec",
+    "size": 3197,
+    "mtime_ns": 1792407297693298492,
+    "mode": 33188
+  },
+  "physical_authenticated_input_reads": 8,
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "operation": "late-first-tiles",
+  "input_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/inputs/new-coast4-master.png",
+      "sha256": "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d",
+      "size": 3311641,
+      "mtime_ns": 1792398781554144164,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/inputs/new-coast4-master.png",
+      "sha256": "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d",
+      "size": 3311641,
+      "mtime_ns": 1792398781554144164,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/inputs/new-ground4-master.png",
+      "sha256": "5daa5222f57820ae04d25f34dbc64d3b3fc241edd909a3dd448bcc7aaecea639",
+      "size": 3570230,
+      "mtime_ns": 1792400168990059209,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/inputs/new-ramp105f3-master.png",
+      "sha256": "0ced99a554ca7c4f82d89e3501f63fa4589cee6244511d305b8f8a63999960f0",
+      "size": 4081171,
+      "mtime_ns": 1792401071273003961,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/inputs/new-coast4-master.png",
+      "sha256": "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d",
+      "size": 3311641,
+      "mtime_ns": 1792398781554144164,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/inputs/new-coast4-master.png",
+      "sha256": "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d",
+      "size": 3311641,
+      "mtime_ns": 1792398781554144164,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/inputs/105e6.pic",
+      "sha256": "f72a35b8f99d1be95e3025393749ed15216d87755ab1b3fbdc13147dbdd2897a",
+      "size": 1044,
+      "mtime_ns": 1787663959457798370,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/inputs/105e7.pic",
+      "sha256": "e48c1ce3443630dfdef413cc6502f06cc101fe3f67de794ee2031e48d67539c0",
+      "size": 1044,
+      "mtime_ns": 1787663959457855540,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/inputs/105eb.pic",
+      "sha256": "e1f6180621940fe66a9796f9864826ee42eb58f15bbfd4e41bf59342b8a7b0e6",
+      "size": 1044,
+      "mtime_ns": 1787663959458111191,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/inputs/105ed.pic",
+      "sha256": "e7acf7c79e2fdc021254b7ba1134858e634af0ff9662c26b9e5c20f372b0c959",
+      "size": 1044,
+      "mtime_ns": 1787663959458222149,
+      "mode": 33188
+    }
+  ],
+  "palette": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "size": 768,
+    "mtime_ns": 1787663959337906368,
+    "mode": 33188
+  },
+  "recipe_sha256": "88d843d1ccf7eab28410a5401ac244dc1591c5bbbf021850221481b512dde5ec",
+  "metrics": {
+    "selected_ids": [
+      "105e6",
+      "105e7",
+      "105eb",
+      "105ed"
+    ],
+    "assets": [
+      {
+        "asset": "105e6",
+        "original_detail_cells": [
+          [
+            23,
+            5
+          ],
+          [
+            24,
+            8
+          ],
+          [
+            25,
+            6
+          ],
+          [
+            28,
+            8
+          ]
+        ],
+        "raw_Source_reserved_cells": 4,
+        "functional_support_union_cells": 4,
+        "Source_fidelity_owner_union_cells": 4,
+        "Source109_ordinary_green_cells": 0,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 261120,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 249088,
+        "geometry_owner_sha256": "2463201f382dea190f6303144aaebac652e4f4d366763118566d51c166921c64",
+        "Original_functional_HD_credit": 0
+      },
+      {
+        "asset": "105e7",
+        "original_detail_cells": [
+          [
+            12,
+            6
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            16,
+            21
+          ],
+          [
+            20,
+            16
+          ],
+          [
+            20,
+            22
+          ],
+          [
+            22,
+            16
+          ],
+          [
+            23,
+            14
+          ]
+        ],
+        "raw_Source_reserved_cells": 7,
+        "functional_support_union_cells": 7,
+        "Source_fidelity_owner_union_cells": 7,
+        "Source109_ordinary_green_cells": 0,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 260352,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 244299,
+        "geometry_owner_sha256": "8545c4a45227ff4bc0eb98eb81b32fe37904eec1dd3f389e1b8f5880c0470a96",
+        "Original_functional_HD_credit": 0
+      },
+      {
+        "asset": "105eb",
+        "original_detail_cells": [
+          [
+            14,
+            6
+          ],
+          [
+            16,
+            7
+          ],
+          [
+            19,
+            4
+          ],
+          [
+            22,
+            18
+          ],
+          [
+            24,
+            3
+          ]
+        ],
+        "raw_Source_reserved_cells": 5,
+        "functional_support_union_cells": 5,
+        "Source_fidelity_owner_union_cells": 5,
+        "Source109_ordinary_green_cells": 0,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 260864,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 213554,
+        "geometry_owner_sha256": "03ab95161549b43b8e760c9bf19ff65e354cb93d89adb155991a42690bf0f560",
+        "Original_functional_HD_credit": 0
+      },
+      {
+        "asset": "105ed",
+        "original_detail_cells": [
+          [
+            23,
+            6
+          ]
+        ],
+        "raw_Source_reserved_cells": 1,
+        "functional_support_union_cells": 1,
+        "Source_fidelity_owner_union_cells": 1,
+        "Source109_ordinary_green_cells": 0,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 261888,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 252594,
+        "geometry_owner_sha256": "9faabb270d279a2c87aff6792f82e9e5ba1022d4214b2d6dabe213c8e2e4d232",
+        "Original_functional_HD_credit": 0
+      }
+    ],
+    "global_SourceNx_nearest_fallback": false,
+    "fine_band_sigma": 3.0,
+    "fine_band_clip": 16,
+    "fine_band_strength": 0.5,
+    "donor_repetition": false,
+    "contract": "Exact SourceNx geometry/color base; all protectedwater/fire/individual plus two ordinary109green105e9indicators are explicitSourcefidelity/noHDcredit.79darkred and181paleearth honestly classified byactualpalette."
+  },
+  "output_is_derived_not_untouched": true,
+  "functional_retention_no_HD_credit": "Original protected cells>=240 retain exact SourceNx RGB/labels. No global Original-nearest fallback is claimed as HD.",
+  "outputs": [
+    {
+      "file": "105e6-derived.png",
+      "sha256": "d46c50463e9a8fbb16ecb23716cef2edd50ffe29581a5409193424a886fa7208"
+    },
+    {
+      "file": "105e7-derived.png",
+      "sha256": "490d6178bf103b22dcf25e3a4b2d82689583cefe54b471827cf2d2b668d5fbd7"
+    },
+    {
+      "file": "105eb-derived.png",
+      "sha256": "b6fda5dbf6ec2de4115fc4d4cc02ce74a93d593ff67971e335b192aa58482989"
+    },
+    {
+      "file": "105ed-derived.png",
+      "sha256": "fdce276d04c3aa920235b1c1e284df100486a548d84f34640f56633b4fef9041"
+    }
+  ]
+}

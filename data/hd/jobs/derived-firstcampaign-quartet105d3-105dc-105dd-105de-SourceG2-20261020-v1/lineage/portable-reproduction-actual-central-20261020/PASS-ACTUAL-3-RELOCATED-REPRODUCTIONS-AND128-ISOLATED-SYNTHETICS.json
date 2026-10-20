@@ -1,0 +1,292 @@
+{
+  "status": "PASS_ACTUAL_TWO64_SYNTHETIC_SUITES_AND_EXACT3_RELOCATED_REPRODUCTIONS",
+  "tests": 128,
+  "actual_recipe_replay_calls": 3,
+  "records": [
+    {
+      "name": "tests-firstcampaign5_quartet",
+      "argv": [
+        "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/tools/firstcampaign5_quartet",
+        "-p",
+        "test_*.py"
+      ],
+      "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project",
+      "start_utc": "2026-10-20T09:24:42Z",
+      "exit_code": 0,
+      "end_utc": "2026-10-20T09:24:55Z",
+      "stdout": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/tests-firstcampaign5_quartet/stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      },
+      "stderr": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/tests-firstcampaign5_quartet/stderr.txt",
+        "sha256": "71759825892b3a701e66336fbff8d3a6f982f8387a75a9b9d6c848426d820b69",
+        "size": 164
+      }
+    },
+    {
+      "name": "tests-firstcampaign5_green",
+      "argv": [
+        "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/tools/firstcampaign5_green",
+        "-p",
+        "test_*.py"
+      ],
+      "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project",
+      "start_utc": "2026-10-20T09:24:55Z",
+      "exit_code": 0,
+      "end_utc": "2026-10-20T09:25:07Z",
+      "stdout": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/tests-firstcampaign5_green/stdout.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      },
+      "stderr": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/tests-firstcampaign5_green/stderr.txt",
+        "sha256": "6f1f7e845a65dc3a883cd3ce101ba787c4560b62aa88fc2d73c8ed61cd6ec5ad",
+        "size": 164
+      }
+    },
+    {
+      "name": "replay-quartet",
+      "argv": [
+        "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/tools/firstcampaign5_quartet/terrain_component_cleanup.py",
+        "--recipe",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/data/hd/jobs/derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1/reproducer/recipe.json",
+        "--output",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-quartet"
+      ],
+      "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project",
+      "start_utc": "2026-10-20T09:25:07Z",
+      "exit_code": 0,
+      "end_utc": "2026-10-20T09:25:09Z",
+      "stdout": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/replay-quartet/stdout.txt",
+        "sha256": "485bcd6abb0a99bb56ecdee61f1a9d567179f2e0452747a3f0c7f1d09f2a0cef",
+        "size": 1976
+      },
+      "stderr": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/replay-quartet/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      }
+    },
+    {
+      "name": "replay-green-parent",
+      "argv": [
+        "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/tools/firstcampaign5_green_parent/terrain_component_cleanup.py",
+        "--recipe",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/data/hd/jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/reproducer/parent-reproducer/recipe.json",
+        "--output",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-green-parent"
+      ],
+      "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project",
+      "start_utc": "2026-10-20T09:25:09Z",
+      "exit_code": 0,
+      "end_utc": "2026-10-20T09:25:10Z",
+      "stdout": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/replay-green-parent/stdout.txt",
+        "sha256": "f42abe658683d9717e77c94f924ecc9e7f404f2e344998a33b16656d6ab7b4b8",
+        "size": 1168
+      },
+      "stderr": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/replay-green-parent/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      }
+    },
+    {
+      "name": "replay-green-final",
+      "argv": [
+        "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-B",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/tools/firstcampaign5_green/terrain_component_cleanup.py",
+        "--recipe",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/data/hd/jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/reproducer/recipe.json",
+        "--output",
+        "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-green-final"
+      ],
+      "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project",
+      "start_utc": "2026-10-20T09:25:10Z",
+      "exit_code": 0,
+      "end_utc": "2026-10-20T09:25:10Z",
+      "stdout": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/replay-green-final/stdout.txt",
+        "sha256": "821b4eabf0108c3d896c6ae7abb39d48606e80b457bc86f645cab7f2dcd1473e",
+        "size": 1781
+      },
+      "stderr": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/replay-green-final/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      }
+    }
+  ],
+  "reproductions": {
+    "quartet": {
+      "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-quartet",
+      "actual_receipt": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-quartet/ACTUAL-DERIVATION-RECEIPT.json",
+        "sha256": "cbe01f8a7f69840ac90d8d57b1c811232ad0911d159772394e221f9cbbf258b4",
+        "size": 9665
+      },
+      "tool": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/tools/firstcampaign5_quartet/terrain_component_cleanup.py",
+        "sha256": "f0fb3e248cfa8d26568d0f27007fad98c0d8e3c78d14a20b034aa4610fd52445",
+        "size": 33791
+      },
+      "recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/data/hd/jobs/derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1/reproducer/recipe.json",
+        "sha256": "d31c1498363480732a2c7cd3cf677c4d608380d2f737a7118cc51eb05c5d6987",
+        "size": 2798
+      }
+    },
+    "green-parent": {
+      "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-green-parent",
+      "actual_receipt": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-green-parent/ACTUAL-DERIVATION-RECEIPT.json",
+        "sha256": "284ae220477174e5f6da29c2b4a7b7453323758be58c2e0968e6d143a59d19b9",
+        "size": 7089
+      },
+      "tool": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/tools/firstcampaign5_green_parent/terrain_component_cleanup.py",
+        "sha256": "57132a11256eac6f3952b2dedf23edd68c68a0c99048abbad9dbb6512c9854fb",
+        "size": 29500
+      },
+      "recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/data/hd/jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/reproducer/parent-reproducer/recipe.json",
+        "sha256": "275c7dbbfe1678cecd074555d9a958673535b70e4e0df11d22e604ae5748419d",
+        "size": 2265
+      }
+    },
+    "green-final": {
+      "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-green-final",
+      "actual_receipt": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-green-final/ACTUAL-DERIVATION-RECEIPT.json",
+        "sha256": "029de73a096fb55ee850f5ee62e0d6b1ef91e7bff12dd1ba35cbf63fb1aa3264",
+        "size": 9065
+      },
+      "tool": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/tools/firstcampaign5_green/terrain_component_cleanup.py",
+        "sha256": "ec1df21bdcba317e1a6eebdeb4d6f4634be4136f00c35853fcac1569d7b9efb3",
+        "size": 33453
+      },
+      "recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/data/hd/jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/reproducer/recipe.json",
+        "sha256": "7c29d730ef8eaebfb6a39b44e69e010b33789b8ef2fb2dde4f5edf6cc6a3ce60",
+        "size": 1679
+      }
+    }
+  },
+  "approved_final_pngs_byteexact": [
+    {
+      "asset": "105d3",
+      "actual": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-quartet/105d3-derived.png",
+        "sha256": "e433b7e50f3cf3066b88d79c7df6676e279bc9e8b64b2c26bd02a135492b69e4",
+        "size": 153423
+      },
+      "approved": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/project/data/hd/jobs/derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1/derived/105d3-derived.png",
+        "sha256": "e433b7e50f3cf3066b88d79c7df6676e279bc9e8b64b2c26bd02a135492b69e4",
+        "size": 153423
+      },
+      "byte_exact": true
+    },
+    {
+      "asset": "105dc",
+      "actual": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-quartet/105dc-derived.png",
+        "sha256": "3a8a4282244a5b89425096fde4844472485931781a8759eda8afb7a613d45572",
+        "size": 162914
+      },
+      "approved": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/project/data/hd/jobs/derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1/derived/105dc-derived.png",
+        "sha256": "3a8a4282244a5b89425096fde4844472485931781a8759eda8afb7a613d45572",
+        "size": 162914
+      },
+      "byte_exact": true
+    },
+    {
+      "asset": "105dd",
+      "actual": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-quartet/105dd-derived.png",
+        "sha256": "48d26126fcaf0db4843fba3a490f58c8f3a85efb538c1e9c93a3b3227f6b47d8",
+        "size": 134805
+      },
+      "approved": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/project/data/hd/jobs/derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1/derived/105dd-derived.png",
+        "sha256": "48d26126fcaf0db4843fba3a490f58c8f3a85efb538c1e9c93a3b3227f6b47d8",
+        "size": 134805
+      },
+      "byte_exact": true
+    },
+    {
+      "asset": "105de",
+      "actual": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-quartet/105de-derived.png",
+        "sha256": "b1524534e38827409860c090466983aa034da30217bd1e020a7c0c5f2179ca36",
+        "size": 129651
+      },
+      "approved": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/project/data/hd/jobs/derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1/derived/105de-derived.png",
+        "sha256": "b1524534e38827409860c090466983aa034da30217bd1e020a7c0c5f2179ca36",
+        "size": 129651
+      },
+      "byte_exact": true
+    },
+    {
+      "asset": "105a4",
+      "actual": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-green-final/105a4-derived.png",
+        "sha256": "9e59fd266a8ed326c9f45fe4e35a587d69cc1861b0e4fddf13ea2cac22ceb599",
+        "size": 199673
+      },
+      "approved": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/project/data/hd/jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/derived/105a4-derived.png",
+        "sha256": "9e59fd266a8ed326c9f45fe4e35a587d69cc1861b0e4fddf13ea2cac22ceb599",
+        "size": 199673
+      },
+      "byte_exact": true
+    }
+  ],
+  "actual_parent105a4_byteexact": {
+    "actual": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/output-green-parent/105a4-derived.png",
+      "sha256": "0a5b170f1453238ac34861c92da6bcbd0018eba6903cd6ac4a2f60fdea6cc003",
+      "size": 206665
+    },
+    "frozen_parent": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/data/hd/jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/reproducer/inputs/held-parent105a4-derived.png",
+      "sha256": "0a5b170f1453238ac34861c92da6bcbd0018eba6903cd6ac4a2f60fdea6cc003",
+      "size": 206665
+    },
+    "byte_exact": true,
+    "stage": "Actual parent replay uses full contained 105a4/105a7recipe. Final unchanged successor recipe reads its frozen held-parent copy with this identical sha; no recipe/path rewrite or extra replay."
+  },
+  "scope": "Portability reproduction only: approved artwork/candidate/QA/lineage bytes unchanged. Exactlyone call per3recipe. Real absoluteargv/tools/recipes/inputpins and receipts preserved; historical SourceG2 runtime candidate_at_start/epoch not rewritten.",
+  "frozen975_map": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-two-portable-jobs-SourceG2-H5654-20261020-v1/FINAL-PRIVATE-PAYLOAD-ONLY-FILEMAP.json",
+    "sha256": "c66ac1af8878bb93e820009a613eaf2b1754070c7c922127ab2159d948375e97",
+    "size": 327025
+  },
+  "source_53_unchanged": true,
+  "engine_compile_context_World_runtimeQA_imagegen_calls": 0,
+  "canonical_Git_writes": 0
+}

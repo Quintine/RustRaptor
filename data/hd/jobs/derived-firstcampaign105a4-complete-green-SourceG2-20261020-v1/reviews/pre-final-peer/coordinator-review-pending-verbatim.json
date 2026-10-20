@@ -1,0 +1,495 @@
+{
+  "status": "pending_different_context_and_Root_approval",
+  "reviewer": "/root/stag_portability",
+  "candidate_sha256": "32419d7d18d49521bbc8dba564b30637cbbace1cdcb59b454cb7a313e79f97a5",
+  "frame_bindings_sha256": "ac4713dd9f72ffe01f0e90f135f67aee8c236f1600f8409af3b113fa94aa31d1",
+  "runtime_qa": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/runtime-qa.json",
+  "artwork_derivation": {
+    "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/artwork-derivation.json",
+    "sha256": "92c4d396f229247fe3d20ce229e8e45d02a848136720bf7509be7be5ae6ab6f3"
+  },
+  "source_and_all_scale_visual_review": {
+    "author": {
+      "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/reviews/author-intrinsic-verbatim.json",
+      "sha256": "4f60bb82d9d02dc9d7a79d271b67c0576d9d0c3cba5347063b12b52c15908c72"
+    },
+    "different_intrinsic": {
+      "path": "jobs/_shared-firstcampaign5-literal-SourceG2-H5654-context-20261020/reviews/green-different-intrinsic-verbatim.json",
+      "sha256": "e3c3b898f0c47039d2981f558c5fce539d069defc0648cd9ccf9f9b20d84ed4f"
+    },
+    "native_scales": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "independent_review": {
+    "intrinsic": {
+      "path": "jobs/_shared-firstcampaign5-literal-SourceG2-H5654-context-20261020/reviews/green-different-intrinsic-verbatim.json",
+      "sha256": "e3c3b898f0c47039d2981f558c5fce539d069defc0648cd9ccf9f9b20d84ed4f"
+    },
+    "context_pending": true
+  },
+  "genuine_context_review": {
+    "author": {
+      "path": "jobs/_shared-firstcampaign5-literal-SourceG2-H5654-context-20261020/context/AUTHOR-QUALIFIED-FIRSTCAMPAIGN5-LITERAL-H5654-GENUINE10-FINISHED-AFTER-RESUME-20261020.json",
+      "sha256": "a08e6d5e603d9f69fd54a121881ba575e283b13ebd03981e0fd3d61f06fcfed2"
+    },
+    "interface": {
+      "path": "jobs/_shared-firstcampaign5-literal-SourceG2-H5654-context-20261020/context/COMPLETE10-GENUINE-120-NATIVE-PANES-FIVE-ORDERED-VIEWS-PAGE-ARRAY-INTERFACE.json",
+      "sha256": "3966870461e3da3e0a6576009dc9abd01c3690cfdd2a77757c1c5436d3675519"
+    },
+    "literal_scope": "Actual SourceG2/H5654:10representative genuine windows/five real one-actor states,120whole native planes. No current baseline relabel/allcaller/World timing claim."
+  },
+  "retained_original_detail_review": {
+    "cells_by_asset": {
+      "105a4": [
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          25
+        ],
+        [
+          2,
+          25
+        ],
+        [
+          2,
+          29
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          3,
+          25
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          21
+        ],
+        [
+          5,
+          25
+        ],
+        [
+          5,
+          29
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          6,
+          21
+        ],
+        [
+          6,
+          25
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          13
+        ],
+        [
+          7,
+          21
+        ],
+        [
+          7,
+          29
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          8,
+          21
+        ],
+        [
+          8,
+          25
+        ],
+        [
+          8,
+          29
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          17
+        ],
+        [
+          9,
+          25
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          10,
+          17
+        ],
+        [
+          10,
+          21
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          11,
+          21
+        ],
+        [
+          11,
+          29
+        ],
+        [
+          12,
+          5
+        ],
+        [
+          12,
+          29
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          13,
+          9
+        ],
+        [
+          13,
+          25
+        ],
+        [
+          13,
+          29
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          14,
+          5
+        ],
+        [
+          14,
+          9
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          15,
+          9
+        ],
+        [
+          15,
+          29
+        ],
+        [
+          16,
+          25
+        ],
+        [
+          16,
+          29
+        ],
+        [
+          17,
+          9
+        ],
+        [
+          17,
+          25
+        ],
+        [
+          17,
+          29
+        ],
+        [
+          18,
+          5
+        ],
+        [
+          19,
+          5
+        ],
+        [
+          19,
+          21
+        ],
+        [
+          19,
+          25
+        ],
+        [
+          20,
+          1
+        ],
+        [
+          20,
+          5
+        ],
+        [
+          20,
+          13
+        ],
+        [
+          20,
+          29
+        ],
+        [
+          21,
+          9
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          21,
+          25
+        ],
+        [
+          22,
+          5
+        ],
+        [
+          22,
+          9
+        ],
+        [
+          23,
+          1
+        ],
+        [
+          23,
+          17
+        ],
+        [
+          23,
+          21
+        ],
+        [
+          23,
+          25
+        ],
+        [
+          24,
+          1
+        ],
+        [
+          24,
+          13
+        ],
+        [
+          24,
+          25
+        ],
+        [
+          24,
+          29
+        ],
+        [
+          25,
+          5
+        ],
+        [
+          25,
+          9
+        ],
+        [
+          25,
+          17
+        ],
+        [
+          25,
+          21
+        ],
+        [
+          25,
+          25
+        ],
+        [
+          25,
+          29
+        ],
+        [
+          26,
+          1
+        ],
+        [
+          26,
+          5
+        ],
+        [
+          26,
+          13
+        ],
+        [
+          26,
+          17
+        ],
+        [
+          26,
+          21
+        ],
+        [
+          27,
+          1
+        ],
+        [
+          27,
+          5
+        ],
+        [
+          27,
+          21
+        ],
+        [
+          27,
+          25
+        ],
+        [
+          27,
+          29
+        ],
+        [
+          28,
+          1
+        ],
+        [
+          28,
+          5
+        ],
+        [
+          28,
+          21
+        ],
+        [
+          29,
+          1
+        ],
+        [
+          29,
+          5
+        ],
+        [
+          29,
+          9
+        ],
+        [
+          29,
+          21
+        ],
+        [
+          29,
+          29
+        ],
+        [
+          30,
+          9
+        ],
+        [
+          30,
+          17
+        ],
+        [
+          30,
+          21
+        ],
+        [
+          30,
+          29
+        ]
+      ]
+    },
+    "retained_original_not_generated_HD": true,
+    "policy_version": "retained-original-details-v3-max128-quarter-painted0255",
+    "painted_Source_palette_domain": [
+      0,
+      255
+    ],
+    "functional_palette_effects_are_retained_Original": true,
+    "frame_bindings_sha256": "ac4713dd9f72ffe01f0e90f135f67aee8c236f1600f8409af3b113fa94aa31d1",
+    "hybrid_allscale_and_genuine_context_independent_review": false
+  },
+  "qualification_limits": [
+    "Finite representative10 genuine windows cover all5 roles from25relevant callers; no allcaller or allneighbor-state-combination coverage.",
+    "Controlled legal one-cell states only, no World/natural combat timing/scrolling or temporal shimmer claim.",
+    "Gray/remnant structural edges and redfork are softer than crisp SourceNx or some installed neighboring HD pieces. Restrained fine detail and inherited material/tile tonal changes remain visible; no universal seamlessness claim.",
+    "105green ordinary Source-owner cells plus onepalette241 owner are Original restoration, not generatedHD detail; 106unique owners and3,240joined retained samples include repeated105dd appearances.",
+    "105eb/105e0 are exact Original fallback in this H5654 epoch, not remaster credit. Later installing them changes consumed context contributors and requires truthful finite carry/review.",
+    "Actual native bank is POST-retention: public terrain prejoin equality is checked only outside retained masks, then isolated SourceNx restoration equals the saved bank. Joined restoration uses whole joined Original SourceNx.",
+    "Page label approved proposal means prior intrinsic acceptance only; different context and Root final review are pending at author seal.",
+    "No new context run, compile, intrinsicQA, cleanup, generation or pixel output during the resumed session. Original stop/partial record preserved verbatim."
+  ],
+  "pending": [
+    "Different context peer",
+    "Root personal context/append approval"
+  ],
+  "no_new_cleanup_image_QA_context_calls": true
+}

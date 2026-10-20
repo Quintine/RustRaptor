@@ -1,0 +1,45 @@
+{
+  "argv": [
+    "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-v",
+    "-s",
+    "tools/ship15_component_registration",
+    "-p",
+    "test*.py"
+  ],
+  "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/actual-public70-fresh-isolated-nine-suites/project",
+  "source_group": {
+    "name": "ship15_component_registration",
+    "start_directory": "tools/ship15_component_registration",
+    "cwd": "isolated_project_root",
+    "argv": [
+      "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/ship15_component_registration",
+      "-p",
+      "test*.py"
+    ],
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "test_module_count": 1,
+    "static_declared_test_methods": 11,
+    "files": [
+      {
+        "path": "tools/ship15_component_registration/test_ship15_component_cleanup.py",
+        "sha256": "64a13e076c4395771faab5d682d8fa9d9fe3afbeb4d9cd8c660561b464de2539",
+        "bytes": 13489
+      }
+    ],
+    "run_in_separate_process": true
+  },
+  "time_unix": 1792490512.4643707
+}

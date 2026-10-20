@@ -1,0 +1,30 @@
+{
+  "execution": {
+    "status": "success",
+    "method": "Source-night-hardware-fine-material-v1",
+    "recipe_sha256": "a5cfd3f676ffbd37f6d7f9f4c0cf19565422949b0e78e64267cd4536fa7c6772",
+    "tool_sha256": "1b448911a7af01e1f19aae945f1e581c2b2a8f7bb66ed7ad597bd6450cd9191c",
+    "source_sha256": {
+      "2054d": "53c48a3ce6452e2f31378ea19c6c55741fe7ca00f44130c31767691826db7679",
+      "2054e": "a0af561811ac3dc187748135b1572772a8c12c4f4960396fca8eea8920d062ca"
+    },
+    "parent_raw_sha256": [
+      "05a8eb2f0f2423f337d65f50225d65fbbc9a90b067a5b5ea6f17250bf9ecd5c6"
+    ],
+    "output_sha256": {
+      "2054d": "e767ca64c5621634de4676ec93135ef1338767b594083972177d94b1c1b55260",
+      "2054e": "9721c9cbc3c0727f9a41520bf831976cf6085b357c5c431777747c221934b1e8"
+    }
+  },
+  "normalization": {
+    "kind": "Read-only normalization of actual completed derivation to portable path aliases; no new execution, no altered actual receipt.",
+    "unchanged_actual_receipt": {
+      "path": "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/measurement/UNCHANGED-ACTUAL-DERIVATION-RECEIPT.json",
+      "sha256": "65058c2218101fab952b52b2392f326d6bb8f742fb279a8145289038d789ee84"
+    },
+    "unchanged_actual_recipe_sha256": "a5cfd3f676ffbd37f6d7f9f4c0cf19565422949b0e78e64267cd4536fa7c6772",
+    "actual_executions": 1,
+    "new_cleanup_executions": 0,
+    "all_output_bytes_identical": true
+  }
+}

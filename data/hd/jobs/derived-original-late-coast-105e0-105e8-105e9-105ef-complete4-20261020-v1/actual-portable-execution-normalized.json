@@ -1,0 +1,31 @@
+{
+  "execution": {
+    "status": "success",
+    "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+    "recipe_sha256": "66773395e5f3f3704bc346c90180b0ac43405857d3afff2416ad6d6972c01822",
+    "tool_sha256": "52c5b600456c88dde443ba2add000cf9b4f9a3131d1a6a124fb657de410d591e",
+    "source_sha256": {
+      "105e0": "6a106577d7a2678c089629ade7ccf1b2a1226d538ce25d4adb296fb7635b1c2b",
+      "105e8": "2120760e489942f9090300ddaf7cae03b9ea58a27192e1893811b73722716c5a",
+      "105e9": "dba83486f2a6f21252538f3eb751c7013d3b1c108a33f9f87c8c0787a6cd0f99",
+      "105ef": "48ebcff020932f78283a529fe0a275ac0f1318cb979be429e4e092d86a08c40b"
+    },
+    "parent_raw_sha256": [
+      "0ced99a554ca7c4f82d89e3501f63fa4589cee6244511d305b8f8a63999960f0",
+      "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d",
+      "5daa5222f57820ae04d25f34dbc64d3b3fc241edd909a3dd448bcc7aaecea639"
+    ],
+    "output_sha256": {
+      "105e0": "da7b908ca03bf0c4347fe82494f227f3e2c5e6c3e6555e31ec7742432311e01d",
+      "105e8": "39f3a78546d99502dc651bf635c7d8667a6079757021f4e2aca32863fb4540de",
+      "105e9": "9f6b89d7fcbc7bda180fdf7ffdbb53676274bb1e3b1c32f7db76fe9ac3ed365c",
+      "105ef": "0c8c54e4d9bf831847368b2c02d2579eb22a23e8a4a1522c4ac9ef6de4a7018e"
+    }
+  },
+  "literal_actual_execution_receipt": {
+    "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/measurement/coast4/actual-relocated-byte-reproduction-receipt-verbatim.json",
+    "sha256": "6b714716578722775d4c1302e0efba36812190dbc5780dcb2f0a61865ef3f06a"
+  },
+  "literal_actual_recipe_input_path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/coast4-EXECUTABLE-PORTABLE-RECIPE.json",
+  "scope": "Exact field projection from actual one-shot relocated recipe execution; selected9 output bytes matched actual G2-reviewed PNGs. No fabricated or relabeled historical execution."
+}

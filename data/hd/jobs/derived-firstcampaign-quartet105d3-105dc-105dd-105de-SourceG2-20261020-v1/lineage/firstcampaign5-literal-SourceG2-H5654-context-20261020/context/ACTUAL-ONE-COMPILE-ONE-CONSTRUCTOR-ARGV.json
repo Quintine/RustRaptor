@@ -1,0 +1,42 @@
+{
+  "compile_argv": [
+    "/usr/bin/rustc",
+    "--edition=2024",
+    "-O",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/compose_Firstcampaign5_dynamic_SourceG2_H5654.rs",
+    "--extern",
+    "raptor_replica=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "--extern",
+    "serde_json=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libserde_json-89b5c242431768d3.rlib",
+    "--extern",
+    "flate2=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps/libflate2-808a135ff259ee28.rlib",
+    "-L",
+    "dependency=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps",
+    "-L",
+    "native=/home/quintine/.local/lib",
+    "-o",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/compose-firstcampaign5-genuine10-actual-SourceG2"
+  ],
+  "constructor_argv": [
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/compose-firstcampaign5-genuine10-actual-SourceG2",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/immutable-H5654-data/hd",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/combined-private-own5-pack",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/ROOT-GO-ACTUAL-G2-H5654-FIRSTCAMPAIGN5-INPUT.json",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/actual-context10"
+  ],
+  "source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/compose_Firstcampaign5_dynamic_SourceG2_H5654.rs",
+    "sha256": "813b4916219d8bafa1503e0cb8de49aeda9a2bdc7d65d0d551510267324b4b21",
+    "size": 22214,
+    "mtime_ns": 1792408565851460692,
+    "mode": 33188
+  },
+  "contract": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/FROZEN-FIRSTCAMPAIGN5-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+    "sha256": "bf88b031adc33aaad8a21abc323d7cd38a42381494b4d9cc12b3d56b18c87e6f",
+    "size": 86474,
+    "mtime_ns": 1792408409382840342,
+    "mode": 33188
+  }
+}

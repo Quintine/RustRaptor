@@ -1,0 +1,87 @@
+{
+  "status": "QUALIFIED_DIFFERENT_INTRINSIC_ART6_ALL24_WITH_LIMITS_GENUINE_CONTEXT_ROOT_PENDING",
+  "reviewer": "/root/ship_code_review",
+  "author": "/root/terrain_repair_plan",
+  "interfaces": {
+    "grille": "c5c83afebd9140b2933433ec82c3090caa361f8ff374dad8c3a8b73376b39fe9",
+    "final_ruin_V2": "744a99fc84a658f3b3695c14d0e6c8c18ea7a3649f43a7c89d32a845a54f4fc8"
+  },
+  "per_asset": [
+    {
+      "asset": "304ed",
+      "result": "QUAL_WITH_LIMITS",
+      "finding": "QUAL: gray rectangularpanel, narrow yellow/dark band and lowerblackslot retained; genuine fine wornmetal/concrete detail visible2\u20134. Highscalechecker edges rounded/diagonal and paneldepth stronger thanSource.",
+      "wholepage_sha256": "7b8266d1aa04839a3e780077f462129fb9b32c1e5c4f75267065054635535937",
+      "Original_and_actual_all4_physically_viewed": true
+    },
+    {
+      "asset": "304ee",
+      "result": "QUAL_WITH_LIMITS",
+      "finding": "QUAL: shallowcheckerfield, bordercorner and narrow brownrustline retained; fine surfacewear is readable at2\u20134. Checkercontrast/palehighlights stronger thanSource.",
+      "wholepage_sha256": "6f4a99fcd9ac53f9c6a2b26c068164ecaa397619a28650d316c2df3045a58609",
+      "Original_and_actual_all4_physically_viewed": true
+    },
+    {
+      "asset": "304ef",
+      "result": "QUAL_WITH_LIMITS",
+      "finding": "QUAL: partialleftcheckerfield, centralgraywalkway, steppedrightdarkpanel and singleyellowrightedge mark align atall4. More pronounced rust and relief remain within Source layout.",
+      "wholepage_sha256": "056905c5b2ddc682bd91feab631d875d1825e92b2b336034014f8edee32c67e2",
+      "Original_and_actual_all4_physically_viewed": true
+    },
+    {
+      "asset": "304fa",
+      "result": "QUAL_WITH_LIMITS",
+      "finding": "QUAL: irregularblackrupture, distinct graychips and lower-right greenmaterial followSource layout, with new coherent fine fracture detail. Graychips/relief stronger thanSource; native1merges fragments.",
+      "wholepage_sha256": "e56d1d1037ad1e5b3c5a272287884232c670a0fb56191cb60917e8c59d6a35fb",
+      "Original_and_actual_all4_physically_viewed": true
+    },
+    {
+      "asset": "304fb",
+      "result": "QUAL_WITH_LIMITS",
+      "finding": "QUAL finalV2: paleunsupportedisland removed with coherent own darkgreenmaterial. Mild localpatchshade shift visible at large scale but no prominent rectangularborder or streaks; green/brown/blackcenter remains recognizable. Native4twoedgegray>65 samples are disclosed and visually minor, no exactmicrocolorclaim.",
+      "wholepage_sha256": "bdae546fb3edfd674c96f8e9db40ac382fb754d724be62b81efbd60f9fb1f347",
+      "Original_and_actual_all4_physically_viewed": true
+    },
+    {
+      "asset": "304fc",
+      "result": "QUAL_WITH_LIMITS",
+      "finding": "QUAL: diagonalblackrupture, thinuppergrayfragments and lowerleftgreenmaterial retained. Fine fracturedsurface natural, contrast/relief stronger thanSource; unchanged raw/native arrays carried from authored family.",
+      "wholepage_sha256": "cebcc3fef7a3ac3a5925405eefe768f30bc84df46f0b0c73a716e793272158bd",
+      "Original_and_actual_all4_physically_viewed": true
+    }
+  ],
+  "physical_raw_masters": [
+    {
+      "path": ".reference/hd-terrain-304ed-304ee-304ef-304fa-304fb-304fc-Original-primary-author-20261019-v1/family-304ed-304ee-304ef/generated/untouched-genuine-builtin-atlas.png",
+      "sha256": "870d0500c3377714715a5c6758c5ec063967a9d2aa73f3d15fd73b4f63b6d205",
+      "whole_original_detail": true
+    },
+    {
+      "path": ".reference/hd-terrain-304ed-304ee-304ef-304fa-304fb-304fc-Original-primary-author-20261019-v1/family-304fa-304fb-304fc/generated/untouched-genuine-builtin-atlas.png",
+      "sha256": "b262139b3887dd31be4b130b33357e3525279d5e42780896b12c8675006dc5d0",
+      "whole_original_detail": true
+    },
+    {
+      "path": ".reference/hd-304fb-coherent-green-derived-complete3-author-20261019-v2/generated/derived-coherent-own-green-patch-complete3.png",
+      "sha256": "4f34686ffa3a324b8d9ca037f02c6ed031c0af408d0482abb2d0403f0911b886",
+      "whole_original_detail": true
+    }
+  ],
+  "saved_array_audit_sha256": "cdf78abf4d32c1385ac70f79d876bc732793241466de5260f4ff08ee0de07356",
+  "actual_native_pixels": 184320,
+  "all24PPMs_and30pagebodies_exact": true,
+  "allindices_ordinary0to239": true,
+  "Original_retention": 0,
+  "fbV2_ancestry": "All3390changedRGB equal genuine ownmaster translated[146,289] without scaling/rotation; fa/fc/unusedRGB exact, fa/fcSource+native1..4bankrows exactcarried.",
+  "limits": [
+    "Intrinsicqualification only. Genuine terrainneighbor/mission/state contexts and Rootfinaladmission remain pending. No exact seam/state/palettecycling/gameplay claim.",
+    "304fbV2uses Source semantic212cell component for masks only, noOriginalRGB. Fixed3390pixel scope includes padding beyond882grayisland; patch shades differ slightly and are accepted visually only in intrinsic view.",
+    "Grille checker/hazard/relief and rust more pronounced; ruinedgraychips/greenmaterial brighter and more detailed thanSource. Native1collapses thin fragments. These aesthetic differences remain explicit.",
+    "V1nearest-donor smear staysHOLD/noQA and is excluded; finalV2onecleanup+onefinalcomplete3QA alreadyexecuted byauthor. No newgeneration/cleanup/QA/recomposition duringreview.",
+    "304fa/fcunchanged outputs are carried existing authored newfamily data, notadditional newlygeneratedHDcredit."
+  ],
+  "findings_requiring_revision": [],
+  "CODE_receipt_separate_sha256": "f391072a0b7ef97754eda996a7dde2b1a4006038d2e37b6d8534905e7cb1882b",
+  "review_newcleanup_QA_World_imagegen_calls": 0,
+  "canonical_Git_mutations": 0
+}

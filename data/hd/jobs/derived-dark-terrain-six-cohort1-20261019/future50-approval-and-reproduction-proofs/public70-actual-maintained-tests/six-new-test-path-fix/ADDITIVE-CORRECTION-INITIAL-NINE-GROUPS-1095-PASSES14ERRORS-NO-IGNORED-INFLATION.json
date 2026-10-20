@@ -1,0 +1,106 @@
+{
+  "status": "INITIAL_ATTEMPT_FAILED_PRESERVED",
+  "original_summary": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/actual-public70-fresh-isolated-nine-suites/ACTUAL-NINE-FRESH-PUBLIC-SUITES-SUMMARY.json",
+    "sha256": "e8c9062f23cc0d32655e6a0b81e78cd4fa1eb7ffa013397aba0528f946fb4f6d"
+  },
+  "original_summary_incorrect_passed_field_and_all_synthetic_label_must_not_be_used": true,
+  "actual_run": 1109,
+  "actual_passed": 1095,
+  "actual_errors": 14,
+  "actual_failures": 0,
+  "actual_skips": 0,
+  "groups": [
+    {
+      "group": "root",
+      "status": "FAIL",
+      "run": 734,
+      "passed": 728,
+      "errors": 6,
+      "failures": 0,
+      "skipped": 0,
+      "fixture_scope": "Mixed synthetic and authentic Original/PIC integration tests; no production cleanup or game G2/QA/World."
+    },
+    {
+      "group": "fine10536_source_components",
+      "status": "PASS",
+      "run": 40,
+      "passed": 40,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "fixture_scope": "Mixed synthetic and authentic Original/PIC integration tests; no production cleanup or game G2/QA/World."
+    },
+    {
+      "group": "fine1054f_source_components",
+      "status": "PASS",
+      "run": 48,
+      "passed": 48,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "fixture_scope": "Mixed synthetic and authentic Original/PIC integration tests; no production cleanup or game G2/QA/World."
+    },
+    {
+      "group": "fine1059e_source_components",
+      "status": "PASS",
+      "run": 56,
+      "passed": 56,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "fixture_scope": "Mixed synthetic and authentic Original/PIC integration tests; no production cleanup or game G2/QA/World."
+    },
+    {
+      "group": "firstcampaign5_green",
+      "status": "PASS",
+      "run": 64,
+      "passed": 64,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "fixture_scope": "Mixed synthetic and authentic Original/PIC integration tests; no production cleanup or game G2/QA/World."
+    },
+    {
+      "group": "firstcampaign5_quartet",
+      "status": "PASS",
+      "run": 64,
+      "passed": 64,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "fixture_scope": "Mixed synthetic and authentic Original/PIC integration tests; no production cleanup or game G2/QA/World."
+    },
+    {
+      "group": "late9_source_components",
+      "status": "FAIL",
+      "run": 72,
+      "passed": 64,
+      "errors": 8,
+      "failures": 0,
+      "skipped": 0,
+      "fixture_scope": "Mixed synthetic and authentic Original/PIC integration tests; no production cleanup or game G2/QA/World."
+    },
+    {
+      "group": "quiet9_source_components",
+      "status": "PASS",
+      "run": 20,
+      "passed": 20,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "fixture_scope": "Mixed synthetic and authentic Original/PIC integration tests; no production cleanup or game G2/QA/World."
+    },
+    {
+      "group": "ship15_component_registration",
+      "status": "PASS",
+      "run": 11,
+      "passed": 11,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "fixture_scope": "Mixed synthetic and authentic Original/PIC integration tests; no production cleanup or game G2/QA/World."
+    }
+  ],
+  "root_cause": "Fresh isolated root lacked authentic bundled Original catalog/PIC inputs; late9 new public tests depended on unpublished inputs/*.pic folder. Pixel helper code and assertions did not fail."
+}

@@ -1,0 +1,27 @@
+{
+  "group": "ship15_component_registration",
+  "status": "PASS",
+  "returncode": 0,
+  "actual_tests_run": 11,
+  "skipped": 0,
+  "actual_passed_tests": 11,
+  "summary": "OK",
+  "duration_seconds": 1.010977029800415,
+  "argv": [
+    "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-v",
+    "-s",
+    "tools/ship15_component_registration",
+    "-p",
+    "test*.py"
+  ],
+  "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/actual-public70-fresh-isolated-nine-suites/project",
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "15f0fc16101f49b3525fc325846b85b3a150e8a5fb83ff106d92ec91989e69e4",
+  "fixture_classification": "Synthetic fixtures only; root includes tiny Rust dependency-universe fixture compilation, not actual game G2/QA/World/artwork cleanup/reproduction.",
+  "ignored_tests_not_counted_as_passed": true
+}

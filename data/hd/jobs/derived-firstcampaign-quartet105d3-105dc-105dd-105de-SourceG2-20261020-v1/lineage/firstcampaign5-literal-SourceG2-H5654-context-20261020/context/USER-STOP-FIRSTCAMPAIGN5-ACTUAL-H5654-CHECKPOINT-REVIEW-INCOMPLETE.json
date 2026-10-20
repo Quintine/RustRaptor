@@ -1,0 +1,239 @@
+{
+  "status": "USER_STOP_REQUESTED_CHECKPOINT_REVIEW_INCOMPLETE_PRIVATE_ONLY",
+  "saved_utc": "2026-10-19T11:26:39.467311+00:00",
+  "stop_authority": "Root actual NEW_TASK: USER ASK STOP/WRAP UP NOW. No new generation/cleanup/QA/context/review. Let only currently in-flight one constructor finish safely then STOP before full physical review or new peer dispatch. Save concise durable checkpoint.",
+  "private_root": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1",
+  "selected": [
+    "105a4",
+    "105d3",
+    "105dc",
+    "105dd",
+    "105de"
+  ],
+  "literal_baseline": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/immutable-H5654-data/hd/hd.json",
+    "sha256": "104dc8f0d154f6a3e8edf6c72283205cb1f323daf8c225a8ca3a56680ac87f5b",
+    "size": 3081167,
+    "mtime_ns": 1792408408382281406,
+    "mode": 33188
+  },
+  "baseline_registered": 5654,
+  "baseline_raw_hardlink_identity": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/IMMUTABLE-LITERAL-BASELINE-RAW-HARDLINK-IDENTITIES-NO-8GB-COPY-OR-REHASH.json",
+    "sha256": "258794414b5be18fc0a2ef8b296cc8316463c5526e069026d2dee5347819b3da",
+    "size": 1722408,
+    "mtime_ns": 1792408408857542603,
+    "mode": 33188
+  },
+  "raw_dependency_routes": 3088,
+  "SourceG2_library": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "sha256": "5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676",
+    "mtime_ns": 1792326752687554590
+  },
+  "source_contract": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/FROZEN-FIRSTCAMPAIGN5-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+    "sha256": "bf88b031adc33aaad8a21abc323d7cd38a42381494b4d9cc12b3d56b18c87e6f",
+    "size": 86474,
+    "mtime_ns": 1792408409382840342
+  },
+  "actual_recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/ROOT-GO-ACTUAL-G2-H5654-FIRSTCAMPAIGN5-INPUT.json",
+    "sha256": "7b5f8ebf01e91401e2b59171830551660a39951eb99e060dc16e30f6a9a76a6e",
+    "size": 48663,
+    "mtime_ns": 1792408928492849245
+  },
+  "compile_and_constructor_argv": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/ACTUAL-ONE-COMPILE-ONE-CONSTRUCTOR-ARGV.json",
+    "sha256": "d0f4c8961b874547b6db866724a35f002497b0a4f14831dc0c1b7925f2ce20bb",
+    "size": 2897,
+    "mtime_ns": 1792408928493270198
+  },
+  "adapter_source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/compose_Firstcampaign5_dynamic_SourceG2_H5654.rs",
+    "sha256": "813b4916219d8bafa1503e0cb8de49aeda9a2bdc7d65d0d551510267324b4b21",
+    "size": 22214,
+    "mtime_ns": 1792408565851460692
+  },
+  "compiled_adapter": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/compose-firstcampaign5-genuine10-actual-SourceG2",
+    "sha256": "7eadf3e0556ff0dd4c13ea122da79be273905381646aef6d420dcefca96a8fdb",
+    "size": 2044752,
+    "mtime_ns": 1792408934634522477
+  },
+  "executor_source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/execute_firstcampaign5_context_once.py",
+    "sha256": "64f2efdd01de7677a76ea942f00c57796b45275547a1d234f2c45cd7dc165c61",
+    "size": 5725,
+    "mtime_ns": 1792408713474388348
+  },
+  "compile_terminal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/ACTUAL-ONE-COMPILE-TERMINAL.json",
+    "sha256": "fed6604d0f119b95eed8fda5de2135a9f51de64856f69ba55a27de50d33f4f03",
+    "size": 820,
+    "mtime_ns": 1792408935062719535
+  },
+  "constructor_terminal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/ACTUAL-ONE-CONSTRUCTOR-TERMINAL.json",
+    "sha256": "8806cebfdb8891a9cb32c891150144c84d4d341ac4668377a79f357ff7b0ecdb",
+    "size": 828,
+    "mtime_ns": 1792408939679522168
+  },
+  "compile_exit": 0,
+  "constructor_exit": 0,
+  "actual_compile_count": 1,
+  "actual_constructor_count": 1,
+  "actual_context_proof": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/actual-context10/ACTUAL-SOURCEG2-FIRSTCAMPAIGN5-GENUINE10-40-SCALES-120-PLANES-5VIEWS-5EVENTS.json",
+    "sha256": "56e06d2596f06263d54cbc71405269344e2c9804e6e94c230df4e4dd3339d194",
+    "size": 1423036,
+    "mtime_ns": 1792408939273522192
+  },
+  "saved_file_only_authentication": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/FILE-ONLY-FIRSTCAMPAIGN5-10-ENDPOINTS-120-PLANES-128-COMPONENTS-AUTHENTICATION.json",
+    "sha256": "8acf51fd5323d6c4fd57b89bcabb02e0e139d15d0de6d64ca23c76eff833ed63",
+    "size": 46033,
+    "mtime_ns": 1792409020820644666
+  },
+  "physical_interface": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/COMPLETE10-GENUINE-120-NATIVE-PANES-FIVE-ORDERED-VIEWS-PAGE-ARRAY-INTERFACE.json",
+    "sha256": "3966870461e3da3e0a6576009dc9abd01c3690cfdd2a77757c1c5436d3675519",
+    "size": 339070,
+    "mtime_ns": 1792409020831517199
+  },
+  "scope": {
+    "real_relevant_callers": 25,
+    "representative_genuine_endpoints": 10,
+    "scale_records": 40,
+    "whole_native_planes": 120,
+    "actual_components": 128,
+    "Original_context_assets": 34,
+    "registered_foreign_assets": 27,
+    "ordered_real_one_actor_transitions": 5,
+    "all_callers_captured": false,
+    "World": 0,
+    "new_intrinsic_QA": 0
+  },
+  "retention": {
+    "unique_Original_cells_no_HDcredit": 106,
+    "ordinary_Sourcegreen_105a4": 105,
+    "Sourcepalette241_105dd": 1,
+    "protected_cell_105dd": [
+      6,
+      28
+    ],
+    "actual_joined_retained_samples": 3240,
+    "Original_HD_credit": 0
+  },
+  "saved_authentication_totals": {
+    "Original_control_samples": 2764800,
+    "all3_plane_samples": 8294400,
+    "baseline_Original_selected_owner_samples": 276480,
+    "retained_baseline_samples": 0,
+    "retained_proposal_samples": 3240,
+    "domain_samples": 0,
+    "outside_support_samples": 2435520,
+    "foreign_broad_interior_samples": 1905120,
+    "fallback_samples": 61440,
+    "padding_samples": 0,
+    "delta_samples": 145365,
+    "foreign_noncorner_edge_delta_samples": 21740,
+    "foreign_corner_delta_samples": 4810
+  },
+  "input_closing_guard": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/IMMEDIATE-EXACT-CLOSING-GUARDS-AND-BOUNDARY-RELEASED.json",
+    "sha256": "f992690dcd6bba3cea6c42c660066632b1d60389cef38c727c8db357ed1a83c4",
+    "size": 252,
+    "mtime_ns": 1792408939944393614
+  },
+  "physical_review_before_stop": {
+    "complete_endpoint_pages_physically_viewed": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "unique_whole_native_planes_physically_viewed": 96,
+    "complete_endpoint_pages_NOT_viewed": [
+      8,
+      9
+    ],
+    "ordered_pair_pages_NOT_viewed": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "author_qualified": false,
+    "full_physical_review_incomplete": true,
+    "new_peer_dispatched": false
+  },
+  "owned_process_status": {
+    "compile_and_constructor_already_exited": true,
+    "presenter_already_exited": true,
+    "currently_owned_workload_processes": [],
+    "no_pending_external_image_call": true
+  },
+  "remaining_next_session": [
+    "Read this checkpoint and verify exact existing input/output hashes before resuming; no need to rerun constructor or intrinsicQA.",
+    "Physically view complete endpoint08 and09 atnative1\u20134 and allfive orderedpair pages. The8 earlier endpoint pages were viewed before stop; no full author ART qualification exists yet.",
+    "Complete author finite-context ART assessment with explicit limitations, then seal private own context packet.",
+    "Have a genuinely different peer review complete contexts; no peer task was dispatched before stop.",
+    "Root personal context approval, then prepare portable quartet+corrected105a4 job(s) with all exact source/raw/recipes/QA/green-retention lineage, existing helper dependencies and literal H5654 context scope.",
+    "Before any future publication compare actual finite contributors if baseline advances; preserve literalH5654 pixels and recapture only truly changed consumed inputs if needed.",
+    "Do not execute inherited quiet9 finalization/publishing scripts against these five: this is a separate private incomplete packet."
+  ],
+  "Original_fallbacks": [
+    "105eb",
+    "105e0"
+  ],
+  "per_actor_states": [
+    {
+      "before": "105d0",
+      "settled": "105d3",
+      "health": 20,
+      "reward": 200,
+      "before_endpoint": 1,
+      "settled_endpoint": 2
+    },
+    {
+      "before": "1059b",
+      "settled": "105a4",
+      "health": 10,
+      "reward": 50,
+      "before_endpoint": 4,
+      "settled_endpoint": 5
+    },
+    {
+      "before": "105dc",
+      "settled": "105eb",
+      "health": 20,
+      "reward": 200,
+      "before_endpoint": 3,
+      "settled_endpoint": 6
+    },
+    {
+      "before": "105dd",
+      "settled": "105e0",
+      "health": 20,
+      "reward": 200,
+      "before_endpoint": 0,
+      "settled_endpoint": 7
+    },
+    {
+      "before": "105de",
+      "settled": "105e1",
+      "health": 20,
+      "reward": 200,
+      "before_endpoint": 8,
+      "settled_endpoint": 9
+    }
+  ],
+  "source_only_scripts_prepared_but_no_portable_jobs_created": true,
+  "canonical_or_Git_writes": 0
+}

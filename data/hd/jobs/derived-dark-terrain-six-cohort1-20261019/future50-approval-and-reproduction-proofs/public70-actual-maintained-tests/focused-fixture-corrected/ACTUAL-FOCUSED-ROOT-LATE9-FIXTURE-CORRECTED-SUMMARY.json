@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "groups": [
+    {
+      "group": "root",
+      "status": "PASS",
+      "returncode": 0,
+      "run": 734,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "passed": 734,
+      "duration_seconds": 28.197401523590088,
+      "summary": "OK",
+      "stderr_sha256": "52530b6f4885b6bee4218cef66ace2d2739b0192de3a6d7b6a1ea99ee459fa54",
+      "stdout_sha256": "4c392167136fd46d5f10608fd418ef3c8738a44249d70f736413dbd717b534aa",
+      "fixture_scope": "Mixed synthetic plus authentic Original catalogue/PIC integrations; no production cleanup/G2/QA/World."
+    },
+    {
+      "group": "late9_source_components",
+      "status": "PASS",
+      "returncode": 0,
+      "run": 72,
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "passed": 72,
+      "duration_seconds": 17.1900053024292,
+      "summary": "OK",
+      "stderr_sha256": "faccfbbae5dfff64f3d0b3d0974c8a1461affc1d0fc80585c961ecc700d39475",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "fixture_scope": "Mixed synthetic plus authentic Original catalogue/PIC integrations; no production cleanup/G2/QA/World."
+    }
+  ],
+  "actual_focused_tests_run": 806,
+  "actual_focused_passes": 806,
+  "errors": 0,
+  "failures": 0,
+  "skips": 0,
+  "scope": "Only two previously failing suites rerun in a fresh actual-public-code carrier with read-only Original inputs; seven earlier independent passed groups remain separately evidenced. Not a fresh all1109passrun.",
+  "initial_failure_preserved": true,
+  "all_public_and_original_fixture_bytes_unchanged_during_tests": true,
+  "production_cleanup_replays_G2_context_World": 0
+}

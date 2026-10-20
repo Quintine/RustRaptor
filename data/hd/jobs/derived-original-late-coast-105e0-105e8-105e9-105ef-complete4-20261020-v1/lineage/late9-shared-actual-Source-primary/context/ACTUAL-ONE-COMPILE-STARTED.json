@@ -1,0 +1,21 @@
+{
+  "argv": [
+    "/usr/bin/rustc",
+    "--edition=2024",
+    "-O",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-SourceG2-H5654-genuine-context-author-20261020-v1/compose_late9_genuine13_SourceG2_H5654.rs",
+    "--extern",
+    "raptor_replica=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "--extern",
+    "serde_json=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libserde_json-89b5c242431768d3.rlib",
+    "--extern",
+    "flate2=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps/libflate2-808a135ff259ee28.rlib",
+    "-L",
+    "dependency=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps",
+    "-L",
+    "native=/home/quintine/.local/lib",
+    "-o",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-SourceG2-H5654-genuine-context-author-20261020-v1/compose-late9-genuine13-actual-SourceG2"
+  ],
+  "started_ns": 1792484063449161963
+}

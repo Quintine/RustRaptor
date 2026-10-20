@@ -1,0 +1,150 @@
+{
+  "status": "PASS_REPRODUCIBILITY_ONLY_NOT_NEW_ART_OR_APPROVAL",
+  "source_handoff": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-two-portable-jobs-shared-lineage-H5654-20261019-v1/FINAL-NIGHT5-PORTABLE2-DIFFERENT-ART-CONTEXT-COMPLETE-ROOT-HANDOFF.json",
+    "sha256": "23b4406ddc35906ca52e6267759b1f713a0f50c22182c0099b9255a82339eaa8",
+    "bytes": 4061
+  },
+  "historical_project_manifest": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-two-portable-jobs-shared-lineage-H5654-20261019-v1/FINAL-PORTABLE2-PROJECT-FILE-MANIFEST.json",
+    "sha256": "d560397738c8eda76df281ae4e99ef1ca76f330604399482e9b1f39b5465d47f",
+    "bytes": 364927
+  },
+  "historical_files_verified_before_and_after": 1253,
+  "python": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "isolated_test_run": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-relocated-two-recipes-byte-reproduction-and-public-proposal-20261020-v1/ISOLATED-EXACT-HELPER-TESTS-TERMINAL.json",
+    "sha256": "2efb2b7d18930ecc41059c84583d20c38f2764007e57bec8694c828f2264182c",
+    "bytes": 1243
+  },
+  "test_count": 5,
+  "relocated_reproduction_runs": 2,
+  "results": [
+    {
+      "job_id": "terrain-night-hardware2-Original-primary-Source-material-20261019-v1",
+      "cohort": "hardware2",
+      "exact_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-relocated-two-recipes-byte-reproduction-and-public-proposal-20261020-v1/relocated project without original root/data/hd/jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/reproducer/recipe.json",
+        "sha256": "a5cfd3f676ffbd37f6d7f9f4c0cf19565422949b0e78e64267cd4536fa7c6772",
+        "bytes": 1232
+      },
+      "historical_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-two-portable-jobs-shared-lineage-H5654-20261019-v1/project/data/hd/jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/reproducer/recipe.json",
+        "sha256": "a5cfd3f676ffbd37f6d7f9f4c0cf19565422949b0e78e64267cd4536fa7c6772",
+        "bytes": 1232
+      },
+      "new_actual_reproduction_receipt": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-relocated-two-recipes-byte-reproduction-and-public-proposal-20261020-v1/ACTUAL-RELOCATED-REPRODUCTION-hardware2/ACTUAL-DERIVATION-RECEIPT.json",
+        "sha256": "5ad3b6cfe9746f283a2961fcb8945874898744b01b5379a852b749d3823b9a21",
+        "bytes": 5270
+      },
+      "accepted_output_checks": [
+        {
+          "asset": "2054d",
+          "accepted": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-two-portable-jobs-shared-lineage-H5654-20261019-v1/project/data/hd/jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/2054d-derived.png",
+            "sha256": "e767ca64c5621634de4676ec93135ef1338767b594083972177d94b1c1b55260",
+            "bytes": 163161
+          },
+          "relocated": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-relocated-two-recipes-byte-reproduction-and-public-proposal-20261020-v1/ACTUAL-RELOCATED-REPRODUCTION-hardware2/2054d-derived.png",
+            "sha256": "e767ca64c5621634de4676ec93135ef1338767b594083972177d94b1c1b55260",
+            "bytes": 163161
+          },
+          "exact_bytes": true
+        },
+        {
+          "asset": "2054e",
+          "accepted": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-two-portable-jobs-shared-lineage-H5654-20261019-v1/project/data/hd/jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/2054e-derived.png",
+            "sha256": "9721c9cbc3c0727f9a41520bf831976cf6085b357c5c431777747c221934b1e8",
+            "bytes": 114568
+          },
+          "relocated": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-relocated-two-recipes-byte-reproduction-and-public-proposal-20261020-v1/ACTUAL-RELOCATED-REPRODUCTION-hardware2/2054e-derived.png",
+            "sha256": "9721c9cbc3c0727f9a41520bf831976cf6085b357c5c431777747c221934b1e8",
+            "bytes": 114568
+          },
+          "exact_bytes": true
+        }
+      ],
+      "all_input_reads_within_relocated_recipe_tree": true,
+      "helper_and_dependency_executed_from_relocated_project": true,
+      "new_G2_or_context_calls": 0
+    },
+    {
+      "job_id": "terrain-night-dark3-Original-primary-Source-material-20261019-v1",
+      "cohort": "dark3",
+      "exact_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-relocated-two-recipes-byte-reproduction-and-public-proposal-20261020-v1/relocated project without original root/data/hd/jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/reproducer/recipe.json",
+        "sha256": "2af8d67381a4b70d4be3ad710ed89b868c0489de94893ea41dad3dd7cafa6943",
+        "bytes": 1608
+      },
+      "historical_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-two-portable-jobs-shared-lineage-H5654-20261019-v1/project/data/hd/jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/reproducer/recipe.json",
+        "sha256": "2af8d67381a4b70d4be3ad710ed89b868c0489de94893ea41dad3dd7cafa6943",
+        "bytes": 1608
+      },
+      "new_actual_reproduction_receipt": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-relocated-two-recipes-byte-reproduction-and-public-proposal-20261020-v1/ACTUAL-RELOCATED-REPRODUCTION-dark3/ACTUAL-DERIVATION-RECEIPT.json",
+        "sha256": "b843cb22df65238cce5840533d9b316c1be268a1f2359f825a02d79619bef37b",
+        "bytes": 7231
+      },
+      "accepted_output_checks": [
+        {
+          "asset": "2057f",
+          "accepted": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-two-portable-jobs-shared-lineage-H5654-20261019-v1/project/data/hd/jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/2057f-derived.png",
+            "sha256": "16c4c596da0bb2d4ad8ac1dd7cd1e91c197b2cd96f16eb98d95d80c613b14501",
+            "bytes": 28995
+          },
+          "relocated": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-relocated-two-recipes-byte-reproduction-and-public-proposal-20261020-v1/ACTUAL-RELOCATED-REPRODUCTION-dark3/2057f-derived.png",
+            "sha256": "16c4c596da0bb2d4ad8ac1dd7cd1e91c197b2cd96f16eb98d95d80c613b14501",
+            "bytes": 28995
+          },
+          "exact_bytes": true
+        },
+        {
+          "asset": "20581",
+          "accepted": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-two-portable-jobs-shared-lineage-H5654-20261019-v1/project/data/hd/jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/20581-derived.png",
+            "sha256": "894c283431cffa99d7537004015ecaad445e5a46b38916c5860d532f68ca5226",
+            "bytes": 92766
+          },
+          "relocated": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-relocated-two-recipes-byte-reproduction-and-public-proposal-20261020-v1/ACTUAL-RELOCATED-REPRODUCTION-dark3/20581-derived.png",
+            "sha256": "894c283431cffa99d7537004015ecaad445e5a46b38916c5860d532f68ca5226",
+            "bytes": 92766
+          },
+          "exact_bytes": true
+        },
+        {
+          "asset": "20588",
+          "accepted": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-two-portable-jobs-shared-lineage-H5654-20261019-v1/project/data/hd/jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/20588-derived.png",
+            "sha256": "59c110ffb7da50271dbb377d8d811170dfecb97a3bba9be88ba77f8a2e45302c",
+            "bytes": 165020
+          },
+          "relocated": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-relocated-two-recipes-byte-reproduction-and-public-proposal-20261020-v1/ACTUAL-RELOCATED-REPRODUCTION-dark3/20588-derived.png",
+            "sha256": "59c110ffb7da50271dbb377d8d811170dfecb97a3bba9be88ba77f8a2e45302c",
+            "bytes": 165020
+          },
+          "exact_bytes": true
+        }
+      ],
+      "all_input_reads_within_relocated_recipe_tree": true,
+      "helper_and_dependency_executed_from_relocated_project": true,
+      "new_G2_or_context_calls": 0
+    }
+  ],
+  "original_historical_receipts_preserved_verbatim": true,
+  "new_actual_reproduction_receipts_are_separate": true,
+  "new_image_generation": 0,
+  "new_G2": 0,
+  "new_context": 0,
+  "new_World": 0,
+  "canonical": 0,
+  "Git": 0
+}

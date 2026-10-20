@@ -1,0 +1,27 @@
+{
+  "execution": {
+    "status": "success",
+    "method": "10521-Source-water-only-quiet-genuine-RGB-fineband-preserve-nonwater-v1",
+    "recipe_sha256": "5841dc51a47c2c0490bbf8e8f2ed7ca1c75bc808b94b1e626d07ae11d264c208",
+    "tool_sha256": "af6e084a626244b25f32ed877353c6f627d1410ad56056623c1280df00be9ec0",
+    "source_sha256": {
+      "10521": "6b3bcd5cc096654b9593b39cf973e07771c63daa29c66ec83b14e6b10bd02011"
+    },
+    "parent_raw_sha256": [
+      "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23",
+      "8f890b3c24b8a6fd029ba02872dce06e7dd4b07875a7f363d72d8e88577afbc6"
+    ],
+    "output_sha256": {
+      "10521": "4537697a969fc2b1ecd4b9042184117f89025fd5bc3b2f8d3bb70165d3ec85d0"
+    }
+  },
+  "actual_verbatim_execution": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/measurement/original-cleanup-execution.json",
+    "sha256": "5c43c315977c924cca982771a91c8e7ed40f52746b82d212adca1941c7384617"
+  },
+  "ancestry_disclosure": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/ancestry-crop-and-provider-disclosure.json",
+    "sha256": "25af9ee9cf6584a3b1ae8a121930721e9f7f6abf144e6bbc4257cc6e1eb6c953"
+  },
+  "scope": "Metadata projection of the one real original-path cleanup; no portable replay claimed. Full old master ancestry enters via its authenticated exact cropped input."
+}

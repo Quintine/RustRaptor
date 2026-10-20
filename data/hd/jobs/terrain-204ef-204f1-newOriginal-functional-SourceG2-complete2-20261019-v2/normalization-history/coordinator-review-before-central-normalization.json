@@ -1,0 +1,52 @@
+{
+  "status": "pending",
+  "reviewer": "/root/terrain_repair_plan",
+  "Root_final_coordinator_pending": true,
+  "candidate_sha256": "5b94baabcb376a5fc8e873693071a38360778206f54b9445eec3d8b644c3257c",
+  "frame_bindings_sha256": "db8f3a595d84be3cfa7aaaf358a89b4aa6ad176dec0f774e63e4b7c63ef3a9d4",
+  "runtime_qa": "jobs/terrain-204ef-204f1-newOriginal-functional-SourceG2-complete2-20261019-v2/runtime-qa.json",
+  "generation_lineage": {
+    "path": "jobs/terrain-204ef-204f1-newOriginal-functional-SourceG2-complete2-20261019-v2/generation-lineage.json",
+    "sha256": "f40d015671773f065a33626f9953879ed17193f304241b49eabba75cb1ac216f"
+  },
+  "proofs": {
+    "author-intrinsic.json": {
+      "path": "jobs/terrain-204ef-204f1-newOriginal-functional-SourceG2-complete2-20261019-v2/review/author-intrinsic.json",
+      "sha256": "be732bac75b1ab604f6b54b69931bb15e633a095aa07c2e62243e0567831c10f"
+    },
+    "different-intrinsic-original-material.json": {
+      "path": "jobs/terrain-204ef-204f1-newOriginal-functional-SourceG2-complete2-20261019-v2/review/different-intrinsic-original-material.json",
+      "sha256": "defbdb1036d172b837e12bfcf056db2f3ed79cf16fcdf9ce2f2886ba4e9e212c"
+    },
+    "actual-builtin-return.json": {
+      "path": "jobs/terrain-204ef-204f1-newOriginal-functional-SourceG2-complete2-20261019-v2/review/actual-builtin-return.json",
+      "sha256": "ec117e4c2d67b6ff62da6130392e818dc965164f836f3269a99cb671a7acf809"
+    },
+    "actual-builtin-arguments-historical.json": {
+      "path": "jobs/terrain-204ef-204f1-newOriginal-functional-SourceG2-complete2-20261019-v2/review/actual-builtin-arguments-historical.json",
+      "sha256": "ad5eed9ac935d85385559de2a83c5fc3d6de7aaaa8cb16a0429415164408128e"
+    },
+    "author-context.json": {
+      "path": "jobs/terrain-204ef-204f1-newOriginal-functional-SourceG2-complete2-20261019-v2/review/author-context.json",
+      "sha256": "c95d76b18acb86cb93ddbb4fe0682fcb05ccacbb2f7979c72c877236ae9e0958"
+    },
+    "context-audit.json": {
+      "path": "jobs/terrain-204ef-204f1-newOriginal-functional-SourceG2-complete2-20261019-v2/review/context-audit.json",
+      "sha256": "3eed2115f5cd2bf9831ea99d8ea47b6c064a066719cbe563bebc6d14ec70703e"
+    },
+    "context-finite-bindings.json": {
+      "path": "jobs/terrain-204ef-204f1-newOriginal-functional-SourceG2-complete2-20261019-v2/review/context-finite-bindings.json",
+      "sha256": "607a84e036c52e8809bb3093138085d9c9bc9061143c13fee06cdb592c30f2be"
+    },
+    "context-recipe.json": {
+      "path": "jobs/terrain-204ef-204f1-newOriginal-functional-SourceG2-complete2-20261019-v2/review/context-recipe.json",
+      "sha256": "9eba659227aafcbea0bffdb4a3d6f79140943c6466d5b44aff3fd80cf269d44d"
+    },
+    "context-census.json": {
+      "path": "jobs/terrain-204ef-204f1-newOriginal-functional-SourceG2-complete2-20261019-v2/review/context-census.json",
+      "sha256": "01b85f21b1f87cb91a9517f109987ab289698d73863fb56ea23928656876c928"
+    }
+  },
+  "approval_scope": "Author intrinsic/context QUAL as applicable; different intrinsic material already qualified. Differentcontext orunusedcomplete1 binding receipts and Rootfinalapproval will be attached separately. This pendingjob cannot be registered asapproved.",
+  "new_QA_image_cleanup_context_builds_canonical_registrar_calls": 0
+}

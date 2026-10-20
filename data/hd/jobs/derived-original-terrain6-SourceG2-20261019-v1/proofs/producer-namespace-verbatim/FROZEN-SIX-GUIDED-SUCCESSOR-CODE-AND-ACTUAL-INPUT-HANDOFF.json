@@ -1,0 +1,243 @@
+{
+  "status": "AWAIT-DIFFERENT-CODE-INPUT-PASS-REAL-CLEANUP-AND-QA-UNEXECUTED",
+  "predecessor_helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-fine-material-CODE-proposal-20261019-v1/terrain_five_fine_cleanup.py",
+    "sha256": "a2ebca44516fc850482bd3ca312e778d3596cd47202869f41a14c57927ef5f59"
+  },
+  "predecessor_CODE_receipt": "d369430d0a8c68c44aea5582ff930ed1ade340dec98ec8a22c3b3245dbdaa4de",
+  "helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-six-remaining-terrain-guided-fine-successor-20261019-v2/terrain_six_fine_cleanup.py",
+    "sha256": "6386821517c7bc4118566052c45ea3261e0e9aefadf0ce8f425635034649a0dc"
+  },
+  "tests": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-six-remaining-terrain-guided-fine-successor-20261019-v2/test_terrain_six_fine_cleanup.py",
+    "sha256": "9b06dc8c4bd94929daa5a51b5c86ea1265cf5f335c51ab4e317ff8b98c22c38b",
+    "actual_tests_pass": 34
+  },
+  "recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-six-remaining-terrain-guided-fine-successor-20261019-v2/recipe.json",
+    "sha256": "996b73568e9b6224febf469ca7450e53277858b16ddd01ebb36f0e25867c406a"
+  },
+  "actual_Source_and_parent_bindings": [
+    {
+      "asset": "2069f",
+      "Source_sha256": "abd15ac0040097763ad755ee11da01ff528f3643c59ac9b039da7ae5ff6ba513",
+      "parent_raw_sha256": "fde55fcd27e8b1e880e04fab7de1e5baa7026f9a55edf3a2b29673b276efb772",
+      "Source_material_counts": {
+        "0": 18,
+        "1": 23,
+        "2": 0,
+        "3": 317,
+        "4": 365,
+        "5": 0,
+        "6": 301,
+        "7": 0
+      },
+      "protected_Source_cells": 0,
+      "all_native1to4_protected_owner_union": [],
+      "original_detail_quarter_bound_pass": true,
+      "ordinary_96to111_green_never_retained": true,
+      "actual_cleanup_executions": 0
+    },
+    {
+      "asset": "206a2",
+      "Source_sha256": "99b6c1679a0830e4d1ec61c3be09d8e7a24706f76e83b2c13e9ab911dbd0bdd1",
+      "parent_raw_sha256": "d417fb362001319ead7b5b584c726b5044717e68a0266d4a7ff301a7249abf6e",
+      "Source_material_counts": {
+        "0": 179,
+        "1": 253,
+        "2": 0,
+        "3": 16,
+        "4": 556,
+        "5": 0,
+        "6": 7,
+        "7": 13
+      },
+      "protected_Source_cells": 13,
+      "all_native1to4_protected_owner_union": [
+        [
+          3,
+          25
+        ],
+        [
+          6,
+          27
+        ],
+        [
+          9,
+          27
+        ],
+        [
+          13,
+          20
+        ],
+        [
+          13,
+          21
+        ],
+        [
+          13,
+          22
+        ],
+        [
+          15,
+          25
+        ],
+        [
+          18,
+          23
+        ],
+        [
+          19,
+          19
+        ],
+        [
+          19,
+          21
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          20,
+          21
+        ],
+        [
+          27,
+          23
+        ]
+      ],
+      "original_detail_quarter_bound_pass": true,
+      "ordinary_96to111_green_never_retained": true,
+      "actual_cleanup_executions": 0
+    },
+    {
+      "asset": "206a7",
+      "Source_sha256": "c0aaf8b37f9b0e70abb59f985d1b92079af3206bbb1c01b8ffc7c70631a745ca",
+      "parent_raw_sha256": "1ef6ff128cd0e1ff75f5a26f6f156c5d431f83c2b98c14925b73cb6aa7fba786",
+      "Source_material_counts": {
+        "0": 117,
+        "1": 315,
+        "2": 0,
+        "3": 0,
+        "4": 588,
+        "5": 0,
+        "6": 0,
+        "7": 4
+      },
+      "protected_Source_cells": 4,
+      "all_native1to4_protected_owner_union": [
+        [
+          3,
+          3
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          22,
+          5
+        ]
+      ],
+      "original_detail_quarter_bound_pass": true,
+      "ordinary_96to111_green_never_retained": true,
+      "actual_cleanup_executions": 0
+    },
+    {
+      "asset": "301fc",
+      "Source_sha256": "b7b1754f0c5222035f8f46df242822de26dfc7bc11bcc63e87cec3353b22f7a1",
+      "parent_raw_sha256": "535159e5a33281728b9b6397342075347085be10ebeee4aee82b609bcdc3991b",
+      "Source_material_counts": {
+        "0": 107,
+        "1": 141,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 776,
+        "7": 0
+      },
+      "protected_Source_cells": 0,
+      "all_native1to4_protected_owner_union": [],
+      "original_detail_quarter_bound_pass": true,
+      "ordinary_96to111_green_never_retained": true,
+      "actual_cleanup_executions": 0
+    },
+    {
+      "asset": "301fd",
+      "Source_sha256": "80e924120e1167274f4ede7b3766032bc97e62039eae878705405d7e987499cc",
+      "parent_raw_sha256": "51b79475ac45229987f969be7bc66b3c6ba6789a0da5459b4b0e829e44483e37",
+      "Source_material_counts": {
+        "0": 62,
+        "1": 583,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 379,
+        "7": 0
+      },
+      "protected_Source_cells": 0,
+      "all_native1to4_protected_owner_union": [],
+      "original_detail_quarter_bound_pass": true,
+      "ordinary_96to111_green_never_retained": true,
+      "actual_cleanup_executions": 0
+    },
+    {
+      "asset": "30201",
+      "Source_sha256": "8b41d8298e48eedfcc5a4a9e0d0a6af79044ba54b80f8a393e068abbbd6b5583",
+      "parent_raw_sha256": "9c213ecb6f5f2ab7cfceef4cc014a81e1ab43ce42471813f83997b4cb26b64e7",
+      "Source_material_counts": {
+        "0": 605,
+        "1": 419,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0
+      },
+      "protected_Source_cells": 0,
+      "all_native1to4_protected_owner_union": [],
+      "original_detail_quarter_bound_pass": true,
+      "ordinary_96to111_green_never_retained": true,
+      "actual_cleanup_executions": 0
+    }
+  ],
+  "raw_only_proposal_preserved_unexecuted": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-six-remaining-terrain-SourceG2-author-20261019-v1/UNEXECUTED-CODE-INPUT-PEER-HANDOFF.json",
+  "genuine_builtin6_terminal_map": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-ci-six-remaining-terrain-SourceG2-author-20261019-v1/GENUINE-SIX-BUILTIN-TERMINAL-PROMPT-AND-GATE-BINDINGS.json",
+    "sha256": "3c78df00d4ca4f44a112f7f78a35d899f7bf1a1b89306e47c70a9fb634fda534"
+  },
+  "old_HOLDs_preserved": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-set2-shards8283-compact-independent-review/manual-art-verdict.json",
+      "sha256": "564d4882c7ad3ab548cf26cfb505c712b030e9cd5844ded60be619c3e50fd4df"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-2069f-v3-advice/advice-review.json",
+      "sha256": "686e93d2acd3c52a9feca37b16eff0e05439121e475f6726aa418a3a12d853fe"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-held206a2-206a7-focused-gray-face-quality-author-20261014/206a2/CLOSED206a2-ONE-ACTIVATED-LOCAL-EDIT-ACTUAL-AUTHOR-OUTCOME.json",
+      "sha256": "d500efc38cd19d8e3b12aa26e3c8fddb69d298c78f42f6043492d4823e6d8110"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain1-held206a2-206a7-focused-gray-face-quality-author-20261014/206a7/CLOSED206a7-ONE-ACTIVATED-LOCAL-EDIT-ACTUAL-AUTHOR-OUTCOME.json",
+      "sha256": "8c89dbb6e26e81d02cc8c572c9d54a5298c6e047465d5fd91e373715a13a9fcc"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/.reference/source-only-terrain3-middle70-iron6-post3592/carried-explicit-decision80-source-only-index.json",
+      "sha256": "70ba9299ffdb78c03721f8967313d31f6af319f8ee97081d995cd6a9b01a0fbf"
+    }
+  ],
+  "Root_input_findings_and_route": "Root personally whole6SourceNN8+raws: donors usable, directfullRGB unsuitable. Preserve301fd grooves, muted301fc green and sparse206a2/a7 machinery via fixed separated-Source-material lowfrequency fields plus genuine fine RGB band sigma3 clip16*.5. No new generation. Source coarse geometry/color and protected Original receive no HD detail credit.",
+  "Source_reference_clarification": "All six1024referencefiles independently equal exact32x repeat of native32 SourceRGB. Soft-looking UI presentation is not an on-disk blurred or resampled Source file.",
+  "no_actual_cleanup_QA_World_or_canonical_Git": true
+}

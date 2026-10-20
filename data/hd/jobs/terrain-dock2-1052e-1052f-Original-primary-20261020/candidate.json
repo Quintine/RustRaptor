@@ -1,0 +1,93 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-dock2-1052e-1052f-Original-primary-20261020",
+  "owner": "/root/iron_coast_names",
+  "status": "candidate",
+  "complete_family": true,
+  "coherent_family_scope": "Complete independent singleton Original pictures selected here only; not whole legacy16. Old10521 excluded and replaced by separate water-successor job.",
+  "targets": [
+    {
+      "asset": "1052e",
+      "frame": 0,
+      "file": "jobs/terrain-dock2-1052e-1052f-Original-primary-20261020/1052e-generated-direct-cell.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "b88d1f6ea05658b4d13534e34139481962d3905066a38bd0920ae2a02206a014"
+    },
+    {
+      "asset": "1052f",
+      "frame": 0,
+      "file": "jobs/terrain-dock2-1052e-1052f-Original-primary-20261020/1052f-generated-direct-cell.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "8d842492b10ea7a41b16c66f3227616a4d9ac6ab4983dfefe655d31f5142c20a"
+    }
+  ],
+  "sequences": [
+    {
+      "name": "Original-primary terrain1052e",
+      "base_asset": 66862,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-dock2-1052e-1052f-Original-primary-20261020/1052e-generated-direct-cell.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "b88d1f6ea05658b4d13534e34139481962d3905066a38bd0920ae2a02206a014"
+        }
+      ]
+    },
+    {
+      "name": "Original-primary terrain1052f",
+      "base_asset": 66863,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-dock2-1052e-1052f-Original-primary-20261020/1052f-generated-direct-cell.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "8d842492b10ea7a41b16c66f3227616a4d9ac6ab4983dfefe655d31f5142c20a"
+        }
+      ]
+    }
+  ],
+  "method": "DirectcropofgenuineOriginal-primaryatlas; noRGBcleanup,manualcolorpaintingorOriginalretentionfield.",
+  "provenance": {
+    "raw_sha256": "8f890b3c24b8a6fd029ba02872dce06e7dd4b07875a7f363d72d8e88577afbc6",
+    "actual_builtin_calls": 1,
+    "raw_dimensions": [
+      2172,
+      724
+    ],
+    "grid": [
+      3,
+      1
+    ],
+    "cell_dimensions": [
+      724,
+      724
+    ]
+  },
+  "complete_selected_cohort": [
+    "1052e",
+    "1052f"
+  ]
+}

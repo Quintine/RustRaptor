@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "Source-night-hardware-fine-material-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/reproducer/inputs/genuine-untouched-atlas.png",
+        "sha256": "05a8eb2f0f2423f337d65f50225d65fbbc9a90b067a5b5ea6f17250bf9ecd5c6"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/generation/actual-generation-safe-summary.json",
+        "sha256": "8b2a62c7cf03a92eb08bff56b063ab89d1203e0e632373ec92d198259c595db6"
+      },
+      "prompt": {
+        "path": "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/generation/prompt.txt",
+        "sha256": "dfe2f032abfa246329ad847402393759e8c49a35c21854c3f1c07d676280b2ad"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/terrain_night_hardware_cleanup.py",
+      "sha256": "1b448911a7af01e1f19aae945f1e581c2b2a8f7bb66ed7ad597bd6450cd9191c"
+    },
+    {
+      "path": "tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/reproducer/recipe.json",
+    "sha256": "a5cfd3f676ffbd37f6d7f9f4c0cf19565422949b0e78e64267cd4536fa7c6772"
+  },
+  "execution_receipt": {
+    "path": "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/measurement/PORTABLE-ACTUAL-DERIVATION-EXECUTION-ALIAS.json",
+    "sha256": "9f2e16a011fa8cdefd9e2ecb1e58de56997c75c69fa88931ed5b19b697c4eb73"
+  },
+  "sources": {
+    "2054d": "53c48a3ce6452e2f31378ea19c6c55741fe7ca00f44130c31767691826db7679",
+    "2054e": "a0af561811ac3dc187748135b1572772a8c12c4f4960396fca8eea8920d062ca"
+  },
+  "outputs": {
+    "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/2054d-derived.png": "e767ca64c5621634de4676ec93135ef1338767b594083972177d94b1c1b55260",
+    "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/2054e-derived.png": "9721c9cbc3c0727f9a41520bf831976cf6085b357c5c431777747c221934b1e8"
+  }
+}

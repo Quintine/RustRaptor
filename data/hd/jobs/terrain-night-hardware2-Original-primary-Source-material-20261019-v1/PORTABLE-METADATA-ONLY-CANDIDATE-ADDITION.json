@@ -1,0 +1,21 @@
+{
+  "status": "Portable lineage metadata addition only; no runtime fields changed or new QA call.",
+  "actual_candidate": {
+    "path": "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/measurement/UNCHANGED-ACTUAL-CANDIDATE.json",
+    "sha256": "01629cab282c371a88c1289e2d4bf750869f2f9a171364c25bd4fc7220a8235c"
+  },
+  "portable_candidate": {
+    "path": "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/candidate.json",
+    "sha256": "866d94898807f9a64965899387b99a1f9ecfb31ab0a9eea8c329fa6419b8b889"
+  },
+  "changed_top_level_fields": [
+    "artwork_derivation"
+  ],
+  "unchanged_sequences_and_targets": true,
+  "actual_QA": {
+    "path": "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/measurement/actual-final-SourceG2/runtime-qa.json",
+    "sha256": "33a591093fc3f76d99a6d8662577ff2a9f89765757cbd2644c99f5e1b144f378"
+  },
+  "actual_QA_candidate_hash_is_historical": true,
+  "new_intrinsic_QA_calls": 0
+}

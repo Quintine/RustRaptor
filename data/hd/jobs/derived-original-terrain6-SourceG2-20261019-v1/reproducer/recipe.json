@@ -1,0 +1,113 @@
+{
+  "method": "terrain-six-Source-separated-materials-genuine-fine-RGB-band-v1",
+  "palette": {
+    "path": "inputs/palette.bin",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "frames": [
+    {
+      "asset": "2069f",
+      "source": {
+        "path": "inputs/2069f.bin",
+        "sha256": "abd15ac0040097763ad755ee11da01ff528f3643c59ac9b039da7ae5ff6ba513"
+      },
+      "donor": {
+        "path": "inputs/2069f-genuine-builtin-v1.png",
+        "sha256": "fde55fcd27e8b1e880e04fab7de1e5baa7026f9a55edf3a2b29673b276efb772",
+        "box": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "asset": "206a2",
+      "source": {
+        "path": "inputs/206a2.bin",
+        "sha256": "99b6c1679a0830e4d1ec61c3be09d8e7a24706f76e83b2c13e9ab911dbd0bdd1"
+      },
+      "donor": {
+        "path": "inputs/206a2-genuine-builtin-v1.png",
+        "sha256": "d417fb362001319ead7b5b584c726b5044717e68a0266d4a7ff301a7249abf6e",
+        "box": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "asset": "206a7",
+      "source": {
+        "path": "inputs/206a7.bin",
+        "sha256": "c0aaf8b37f9b0e70abb59f985d1b92079af3206bbb1c01b8ffc7c70631a745ca"
+      },
+      "donor": {
+        "path": "inputs/206a7-genuine-builtin-v1.png",
+        "sha256": "1ef6ff128cd0e1ff75f5a26f6f156c5d431f83c2b98c14925b73cb6aa7fba786",
+        "box": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "asset": "301fc",
+      "source": {
+        "path": "inputs/301fc.bin",
+        "sha256": "b7b1754f0c5222035f8f46df242822de26dfc7bc11bcc63e87cec3353b22f7a1"
+      },
+      "donor": {
+        "path": "inputs/301fc-genuine-builtin-v1.png",
+        "sha256": "535159e5a33281728b9b6397342075347085be10ebeee4aee82b609bcdc3991b",
+        "box": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "asset": "301fd",
+      "source": {
+        "path": "inputs/301fd.bin",
+        "sha256": "80e924120e1167274f4ede7b3766032bc97e62039eae878705405d7e987499cc"
+      },
+      "donor": {
+        "path": "inputs/301fd-genuine-builtin-v1.png",
+        "sha256": "51b79475ac45229987f969be7bc66b3c6ba6789a0da5459b4b0e829e44483e37",
+        "box": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      }
+    },
+    {
+      "asset": "30201",
+      "source": {
+        "path": "inputs/30201.bin",
+        "sha256": "8b41d8298e48eedfcc5a4a9e0d0a6af79044ba54b80f8a393e068abbbd6b5583"
+      },
+      "donor": {
+        "path": "inputs/30201-genuine-builtin-v1.png",
+        "sha256": "9c213ecb6f5f2ab7cfceef4cc014a81e1ab43ce42471813f83997b4cb26b64e7",
+        "box": [
+          0,
+          0,
+          1254,
+          1254
+        ]
+      }
+    }
+  ],
+  "lineage": "DERIVED: fixed authentic SourceScale4 separated material fields plus genuine generated donor fine RGB band; no coarse generated shape/color and no synthesized procedural texture. Exactly one complete fullcanvas donor per Source tile, no tiling.",
+  "functional_contract": "Keep exact union of Source tiny-color80..95/112..191 and cycling240..255 footprints across native1\u20134 as explicit retained Original detail; green96..111 is genuine fine material, never misclassified retention. Source coarse geometry/color and retained Original carry zero generated HD credit."
+}

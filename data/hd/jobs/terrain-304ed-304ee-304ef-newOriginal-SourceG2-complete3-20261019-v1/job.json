@@ -1,0 +1,85 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-304ed-304ee-304ef-newOriginal-SourceG2-complete3-20261019-v1",
+  "owner": "/root/terrain_repair_plan",
+  "name": "Original-primary terrain 304ed,304ee,304ef",
+  "category": "Terrain",
+  "kind": "contextual_terrain_shard",
+  "targets": [
+    {
+      "asset": "304ed",
+      "canonical_source_asset": "304ed",
+      "source_path": "misc/unnamed.3237",
+      "source_sha256": "5770bf086d53894e22635aec402c6a50715ccd38da9d0cb8c7f14a9ab15d4364",
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "original_binary": {
+        "path": "jobs/terrain-304ed-304ee-304ef-newOriginal-SourceG2-complete3-20261019-v1/Originals/304ed.bin",
+        "sha256": "5770bf086d53894e22635aec402c6a50715ccd38da9d0cb8c7f14a9ab15d4364"
+      }
+    },
+    {
+      "asset": "304ee",
+      "canonical_source_asset": "304ee",
+      "source_path": "misc/unnamed.3238",
+      "source_sha256": "bace7f09082b38a7351cad0b3ea10be911cc743c292c0dd22415051e992c502c",
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "original_binary": {
+        "path": "jobs/terrain-304ed-304ee-304ef-newOriginal-SourceG2-complete3-20261019-v1/Originals/304ee.bin",
+        "sha256": "bace7f09082b38a7351cad0b3ea10be911cc743c292c0dd22415051e992c502c"
+      }
+    },
+    {
+      "asset": "304ef",
+      "canonical_source_asset": "304ef",
+      "source_path": "misc/unnamed.3239",
+      "source_sha256": "6be9a0631a2ce72cc46d21f0c5e73022354eb91310189be817762af2442a430e",
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "original_binary": {
+        "path": "jobs/terrain-304ed-304ee-304ef-newOriginal-SourceG2-complete3-20261019-v1/Originals/304ef.bin",
+        "sha256": "6be9a0631a2ce72cc46d21f0c5e73022354eb91310189be817762af2442a430e"
+      }
+    }
+  ],
+  "generation_inventory": {
+    "actual_assets": [
+      "304ed",
+      "304ee",
+      "304ef"
+    ],
+    "selected_assets": [
+      "304ed",
+      "304ee",
+      "304ef"
+    ],
+    "actual_historical_new_image_calls": 1,
+    "new_image_calls_this_package": 0
+  },
+  "status": "private_complete_source_job_Root_registration_pending"
+}

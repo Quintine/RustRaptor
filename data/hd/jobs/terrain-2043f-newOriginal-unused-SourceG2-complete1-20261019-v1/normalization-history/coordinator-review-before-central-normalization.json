@@ -1,0 +1,32 @@
+{
+  "status": "pending",
+  "reviewer": "/root/terrain_repair_plan",
+  "Root_final_coordinator_pending": true,
+  "candidate_sha256": "60288645f257cbca16594b4f0768349ca2ac66d062112d4913f70bf4b6570483",
+  "frame_bindings_sha256": "c1adcd230165ea656e8d7d24a5d3a794aa7e073563bffdb961417918ef42835e",
+  "runtime_qa": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/runtime-qa.json",
+  "generation_lineage": {
+    "path": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/generation-lineage.json",
+    "sha256": "dc8ccce2559a351d1f420dc7a094d86f1fbbaba03b5e6820bdeb28ac569abff2"
+  },
+  "proofs": {
+    "author-intrinsic.json": {
+      "path": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/review/author-intrinsic.json",
+      "sha256": "af8751c4b03dc6e78a52506a9c50225a702b0f7dd93fc563adafc1600ba6e411"
+    },
+    "different-intrinsic-original-material.json": {
+      "path": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/review/different-intrinsic-original-material.json",
+      "sha256": "defbdb1036d172b837e12bfcf056db2f3ed79cf16fcdf9ce2f2886ba4e9e212c"
+    },
+    "actual-builtin-return.json": {
+      "path": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/review/actual-builtin-return.json",
+      "sha256": "6b5a2e5e0174f21e1e41a5d2fdaeb7af01dee10cdf4a97b27b27f25b9227aadb"
+    },
+    "actual-builtin-arguments-historical.json": {
+      "path": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/review/actual-builtin-arguments-historical.json",
+      "sha256": "a99f7f473ab354a26b7c3ab952949ce5d88d5d466fea06d640c2676fb9721fae"
+    }
+  },
+  "approval_scope": "Author intrinsic/context QUAL as applicable; different intrinsic material already qualified. Differentcontext orunusedcomplete1 binding receipts and Rootfinalapproval will be attached separately. This pendingjob cannot be registered asapproved.",
+  "new_QA_image_cleanup_context_builds_canonical_registrar_calls": 0
+}

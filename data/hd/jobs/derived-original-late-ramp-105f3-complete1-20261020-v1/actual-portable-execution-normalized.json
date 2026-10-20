@@ -1,0 +1,25 @@
+{
+  "execution": {
+    "status": "success",
+    "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+    "recipe_sha256": "f42ad3f26c13c5c4901bd58cc5e16013da88fdfe45c2bcbd72becffdf1b57fd5",
+    "tool_sha256": "52c5b600456c88dde443ba2add000cf9b4f9a3131d1a6a124fb657de410d591e",
+    "source_sha256": {
+      "105f3": "5e8eba223adc7ed3ff0a062f79a7dce18a4330f83d270568967043635ca14a8d"
+    },
+    "parent_raw_sha256": [
+      "0ced99a554ca7c4f82d89e3501f63fa4589cee6244511d305b8f8a63999960f0",
+      "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d",
+      "5daa5222f57820ae04d25f34dbc64d3b3fc241edd909a3dd448bcc7aaecea639"
+    ],
+    "output_sha256": {
+      "105f3": "e34304e3bf530b8ca5cbc24b12d6f17d6fcea92f28a0c8d40470cdb3760dfd1a"
+    }
+  },
+  "literal_actual_execution_receipt": {
+    "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/measurement/ramp105f3/actual-relocated-byte-reproduction-receipt-verbatim.json",
+    "sha256": "9498fc4da5a68e0f59dd692323f44c2909ee73632dfa38c405d92a7532f78983"
+  },
+  "literal_actual_recipe_input_path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/ramp105f3-EXECUTABLE-PORTABLE-RECIPE.json",
+  "scope": "Exact field projection from actual one-shot relocated recipe execution; selected9 output bytes matched actual G2-reviewed PNGs. No fabricated or relabeled historical execution."
+}

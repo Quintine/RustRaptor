@@ -1,0 +1,119 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-industrial3-10523-1052c-Original-primary-20261019",
+  "owner": "/root/iron_coast_names",
+  "status": "candidate",
+  "complete_family": true,
+  "coherent_family_scope": "exactselected3terrainframes only;notwholelegacy16",
+  "targets": [
+    {
+      "asset": "10523",
+      "frame": 0,
+      "file": "jobs/terrain-industrial3-10523-1052c-Original-primary-20261019/10523-generated-direct-cell.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "2bfb8c888b6c91cf7c304255a1bb0f3e041ba1d4c0171c2e7c5e7484e4760c57"
+    },
+    {
+      "asset": "10524",
+      "frame": 0,
+      "file": "jobs/terrain-industrial3-10523-1052c-Original-primary-20261019/10524-generated-direct-cell.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "d09ae895c81ff1c0859e4bfbf7ccf1a0019ac577df76510dbd03ca31515d8d3c"
+    },
+    {
+      "asset": "1052c",
+      "frame": 0,
+      "file": "jobs/terrain-industrial3-10523-1052c-Original-primary-20261019/1052c-generated-direct-cell.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "d1c73c8cc4c2b8d932811fcf019fbb452ce1690a350da92bb73627fa0a20a4f4"
+    }
+  ],
+  "sequences": [
+    {
+      "name": "Original-primary terrain10523",
+      "base_asset": 66851,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-industrial3-10523-1052c-Original-primary-20261019/10523-generated-direct-cell.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "2bfb8c888b6c91cf7c304255a1bb0f3e041ba1d4c0171c2e7c5e7484e4760c57"
+        }
+      ]
+    },
+    {
+      "name": "Original-primary terrain10524",
+      "base_asset": 66852,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-industrial3-10523-1052c-Original-primary-20261019/10524-generated-direct-cell.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "d09ae895c81ff1c0859e4bfbf7ccf1a0019ac577df76510dbd03ca31515d8d3c"
+        }
+      ]
+    },
+    {
+      "name": "Original-primary terrain1052c",
+      "base_asset": 66860,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-industrial3-10523-1052c-Original-primary-20261019/1052c-generated-direct-cell.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "d1c73c8cc4c2b8d932811fcf019fbb452ce1690a350da92bb73627fa0a20a4f4"
+        }
+      ]
+    }
+  ],
+  "method": "DirectcropofgenuineOriginal-primaryatlas; noRGBcleanup,manualcolorpaintingorOriginalretentionfield.",
+  "provenance": {
+    "raw_sha256": "276f4c455b9416ad04152ee682f03b3a059c82bd8c7ab002516511673c1120d2",
+    "actual_builtin_calls": 1,
+    "raw_dimensions": [
+      2172,
+      724
+    ],
+    "grid": [
+      3,
+      1
+    ],
+    "cell_dimensions": [
+      724,
+      724
+    ]
+  }
+}

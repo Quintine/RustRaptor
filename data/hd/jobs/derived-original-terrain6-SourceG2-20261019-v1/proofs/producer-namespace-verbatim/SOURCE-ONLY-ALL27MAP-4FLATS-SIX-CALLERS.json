@@ -1,0 +1,348 @@
+{
+  "status": "SOURCE-ONLY-ALL27MAP-4FLATS-SIX-TERRAIN-INTACT-AND-SETTLED-CENSUS-NO-CONTEXT-CLAIM",
+  "maps": 27,
+  "layout_cells": 36450,
+  "spawn_declarations": 8778,
+  "pins": {
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/FLATSG1_ITM": "882cd3f7d793e427771877ce5b74d6f6db4ed19385ebe79ade51b7a22bb70140",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/FLATSG2_ITM": "dc079c9af2e05357c40bf4d1c1299e51563dda28be75db060bb1f8e7c3581bae",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/FLATSG3_ITM": "1611bd91aa62d353bcd8a0ce298803a75a82aa03b1acd866fb256e07b7e89d5a",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/FLATSG4_ITM": "6a880587e587c64f08a7c841be55eba5a93ea64042a88383b47b81033e2bee11",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP1G1_MAP": "bfa4386e554ee029a9ac7f2f5d0c4cb5c3000e5d7512c7c8246d75deecb48939",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP2G1_MAP": "f6a2f140f86a6bd91b6d137f149c69a7509e37ef93f54513d16ac826a02d5d69",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP3G1_MAP": "d119b94ecf744c4b4a14ea1f2de99898050efeddfb6438a8393d0a91f7ca5dc9",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP4G1_MAP": "908e65d46cceaa17f4243f54e5f40773051950423e4a5f840fa92742c94f7cff",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP5G1_MAP": "4eb985c26cbe5862d73282e8c0af06589e667ddd3c9ee19f5f436cf4150b9f36",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP6G1_MAP": "605f63c38a82689a2d776a641576be1a61ad97da52cbaa8f76dea74798d024e2",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP7G1_MAP": "03b016972af559632627c37d5cfb321f24d6f09c18b6465039cc3d5b2051ffbc",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP8G1_MAP": "bdc13404abe376689fc78fac4b585a641d68bfc8939cc6b51cc5811d734555bf",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP9G1_MAP": "f09110d48c0a86989333aa5087e48b02ea06aff7488777e5365f1f3b5c8e835f",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP1G2_MAP": "b2bf31aacf9e686c0583ecaf78d5af870f3b326d57e78382aa3d279f778cfbd5",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP2G2_MAP": "0776eabbb0e18b76a2121fa0ec505099b77564af8abe721bb2a05aca43d12ebd",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP3G2_MAP": "e071f964e54556946595b3fbda178ece3995efe3a1978589586d60f59ad82719",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP4G2_MAP": "8f15fe7ef807a5d75f4c345213bfe4e4694b53cdb38204f5aa3dc0c45dcfce09",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP5G2_MAP": "c5f907c0c743554998128fcb0047c262815c77c2ac2aa6c4941a91f4820a0aac",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP6G2_MAP": "3573cbc922e985145220c5acc30cffcea0bbb26834142fc9e5a496790f5b8483",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP7G2_MAP": "555e6d42a4c4edc50f100b54d4d7850339c902ca32cc408b420fa5c4d50254fe",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP8G2_MAP": "7556d96680a0bb382e629ce2ffb2d4a5e1e15b5b87ba450350d8d0e4ac387d51",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP9G2_MAP": "a1c7a1d1ca473bff76259bb40b3d51fe728b00997efdbcb4b4400ceef9db99c2",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP1G3_MAP": "2687a6d2e601e67f16f3ec69ff8b007dcfa6610f3dd812af4a1a20e9c1db036e",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP2G3_MAP": "1d87c8760de45b12c0f43d9354cbd81cfd6993a34933aae6940b87712c4b29e3",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP3G3_MAP": "76b8443d883c56d4de1a9874cbeeef3b009036bf53982ef8d5b49a233e8098be",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP4G3_MAP": "7b1ec34500093951f8202d26780360f8ab83fb1cb9fcc18ebdd14e6db20eb026",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP5G3_MAP": "af69d2ca9295b5763c1b5fe84464d58661ef534faa912a914db9458b9115190c",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP6G3_MAP": "78429a723d8e73a0b46134cbb99abf0904a4c39ddb9ff25b26ac9c2703159d36",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP7G3_MAP": "9f5d2ef60050c1b41e57146d8df871507ceda20757158b4a84bd0f9f8c8b9bf3",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP8G3_MAP": "8e8dc013dad4628d3737337e4125f4155d70ed94ebb5c5edf0b8cdc8d5eb5525",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP9G3_MAP": "e1bd018fc5286e864d94e56e691a4e6ab23f5c87c3069be4f94779422fcdd1f0"
+  },
+  "targets": {
+    "301fc": {
+      "intact_callers": [
+        {
+          "mission": "base:sector_3_wave_3",
+          "row": 15,
+          "column": 3,
+          "MAP_byte_offset": 564,
+          "flat": 271,
+          "game": 2,
+          "intact": "301fc",
+          "settled": "30505",
+          "raw_health": 10,
+          "health": 10,
+          "reward": 100,
+          "legal_destruction_endpoint": true
+        },
+        {
+          "mission": "base:sector_3_wave_3",
+          "row": 15,
+          "column": 7,
+          "MAP_byte_offset": 580,
+          "flat": 271,
+          "game": 2,
+          "intact": "301fc",
+          "settled": "30505",
+          "raw_health": 10,
+          "health": 10,
+          "reward": 100,
+          "legal_destruction_endpoint": true
+        },
+        {
+          "mission": "base:sector_3_wave_3",
+          "row": 19,
+          "column": 3,
+          "MAP_byte_offset": 708,
+          "flat": 271,
+          "game": 2,
+          "intact": "301fc",
+          "settled": "30505",
+          "raw_health": 10,
+          "health": 10,
+          "reward": 100,
+          "legal_destruction_endpoint": true
+        },
+        {
+          "mission": "base:sector_3_wave_3",
+          "row": 19,
+          "column": 7,
+          "MAP_byte_offset": 724,
+          "flat": 271,
+          "game": 2,
+          "intact": "301fc",
+          "settled": "30505",
+          "raw_health": 10,
+          "health": 10,
+          "reward": 100,
+          "legal_destruction_endpoint": true
+        }
+      ],
+      "settled_callers": [],
+      "FLATS_references": [
+        {
+          "game": 2,
+          "flat": 271,
+          "intact": "301fc",
+          "settled": "30505",
+          "raw_health": 10,
+          "health": 10,
+          "reward": 100
+        }
+      ]
+    },
+    "301fd": {
+      "intact_callers": [
+        {
+          "mission": "base:sector_3_wave_3",
+          "row": 15,
+          "column": 8,
+          "MAP_byte_offset": 584,
+          "flat": 272,
+          "game": 2,
+          "intact": "301fd",
+          "settled": "30506",
+          "raw_health": 15,
+          "health": 15,
+          "reward": 100,
+          "legal_destruction_endpoint": true
+        },
+        {
+          "mission": "base:sector_3_wave_3",
+          "row": 19,
+          "column": 8,
+          "MAP_byte_offset": 728,
+          "flat": 272,
+          "game": 2,
+          "intact": "301fd",
+          "settled": "30506",
+          "raw_health": 15,
+          "health": 15,
+          "reward": 100,
+          "legal_destruction_endpoint": true
+        }
+      ],
+      "settled_callers": [],
+      "FLATS_references": [
+        {
+          "game": 2,
+          "flat": 272,
+          "intact": "301fd",
+          "settled": "30506",
+          "raw_health": 15,
+          "health": 15,
+          "reward": 100
+        }
+      ]
+    },
+    "2069f": {
+      "intact_callers": [
+        {
+          "mission": "base:sector_2_wave_3",
+          "row": 22,
+          "column": 0,
+          "MAP_byte_offset": 804,
+          "flat": 1426,
+          "game": 1,
+          "intact": "2069f",
+          "settled": "206a0",
+          "raw_health": 10,
+          "health": 10,
+          "reward": 50,
+          "legal_destruction_endpoint": true
+        },
+        {
+          "mission": "base:sector_2_wave_3",
+          "row": 23,
+          "column": 0,
+          "MAP_byte_offset": 840,
+          "flat": 1426,
+          "game": 1,
+          "intact": "2069f",
+          "settled": "206a0",
+          "raw_health": 10,
+          "health": 10,
+          "reward": 50,
+          "legal_destruction_endpoint": true
+        },
+        {
+          "mission": "base:sector_2_wave_3",
+          "row": 24,
+          "column": 1,
+          "MAP_byte_offset": 880,
+          "flat": 1426,
+          "game": 1,
+          "intact": "2069f",
+          "settled": "206a0",
+          "raw_health": 10,
+          "health": 10,
+          "reward": 50,
+          "legal_destruction_endpoint": true
+        }
+      ],
+      "settled_callers": [],
+      "FLATS_references": [
+        {
+          "game": 1,
+          "flat": 1426,
+          "intact": "2069f",
+          "settled": "206a0",
+          "raw_health": 10,
+          "health": 10,
+          "reward": 50
+        }
+      ]
+    },
+    "30201": {
+      "intact_callers": [
+        {
+          "mission": "base:sector_3_wave_3",
+          "row": 29,
+          "column": 8,
+          "MAP_byte_offset": 1088,
+          "flat": 276,
+          "game": 2,
+          "intact": "30201",
+          "settled": "301ac",
+          "raw_health": 25,
+          "health": 25,
+          "reward": 300,
+          "legal_destruction_endpoint": true
+        },
+        {
+          "mission": "base:sector_3_wave_3",
+          "row": 49,
+          "column": 2,
+          "MAP_byte_offset": 1784,
+          "flat": 276,
+          "game": 2,
+          "intact": "30201",
+          "settled": "301ac",
+          "raw_health": 25,
+          "health": 25,
+          "reward": 300,
+          "legal_destruction_endpoint": true
+        }
+      ],
+      "settled_callers": [],
+      "FLATS_references": [
+        {
+          "game": 2,
+          "flat": 276,
+          "intact": "30201",
+          "settled": "301ac",
+          "raw_health": 25,
+          "health": 25,
+          "reward": 300
+        }
+      ]
+    },
+    "206a7": {
+      "intact_callers": [
+        {
+          "mission": "base:sector_2_wave_5",
+          "row": 2,
+          "column": 2,
+          "MAP_byte_offset": 92,
+          "flat": 1434,
+          "game": 1,
+          "intact": "206a7",
+          "settled": "206a7",
+          "raw_health": 0,
+          "health": 0,
+          "reward": 0,
+          "legal_destruction_endpoint": false
+        },
+        {
+          "mission": "base:sector_2_wave_5",
+          "row": 2,
+          "column": 6,
+          "MAP_byte_offset": 108,
+          "flat": 1434,
+          "game": 1,
+          "intact": "206a7",
+          "settled": "206a7",
+          "raw_health": 0,
+          "health": 0,
+          "reward": 0,
+          "legal_destruction_endpoint": false
+        }
+      ],
+      "settled_callers": [],
+      "FLATS_references": [
+        {
+          "game": 1,
+          "flat": 1434,
+          "intact": "206a7",
+          "settled": "206a7",
+          "raw_health": 0,
+          "health": 0,
+          "reward": 0
+        }
+      ]
+    },
+    "206a2": {
+      "intact_callers": [
+        {
+          "mission": "base:sector_2_wave_5",
+          "row": 0,
+          "column": 2,
+          "MAP_byte_offset": 20,
+          "flat": 1429,
+          "game": 1,
+          "intact": "206a2",
+          "settled": "206a2",
+          "raw_health": 0,
+          "health": 0,
+          "reward": 0,
+          "legal_destruction_endpoint": false
+        },
+        {
+          "mission": "base:sector_2_wave_5",
+          "row": 0,
+          "column": 6,
+          "MAP_byte_offset": 36,
+          "flat": 1429,
+          "game": 1,
+          "intact": "206a2",
+          "settled": "206a2",
+          "raw_health": 0,
+          "health": 0,
+          "reward": 0,
+          "legal_destruction_endpoint": false
+        }
+      ],
+      "settled_callers": [],
+      "FLATS_references": [
+        {
+          "game": 1,
+          "flat": 1429,
+          "intact": "206a2",
+          "settled": "206a2",
+          "raw_health": 0,
+          "health": 0,
+          "reward": 0
+        }
+      ]
+    }
+  },
+  "no_World_or_render": true
+}

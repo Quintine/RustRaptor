@@ -1,0 +1,37 @@
+Six original terrain remasters: 2069f, 206a2, 206a7, 301fc, 301fd, 30201
+
+The six unmodified built-in PNG returns supply only a genuine fine RGB band.
+The original 32x32 indexed artwork supplies coarse material shapes, colors and
+features. It does not receive generated HD-detail credit. Low-frequency donor
+shapes/colors are discarded. No procedural noise, repeated texture, new gameplay
+geometry, or runtime source changes are involved.
+
+Fixed method: separate Source gray/dark/red/soil/olive/rust/green material fields;
+SourceScale4 labels; normalized same-material Gaussian sigma1; 512x512 output;
+genuine donor minus Gaussian sigma3, clipped to +/-16 RGB, strength0.5. Gray and
+dark-gray use achromatic detail. Green96..111 remains generated fine material,
+including96..99; it is not classified as retained Original detail.
+
+Original tiny-color80..95/112..191 and cycling240..255 retain exact Source pixels.
+Their complete native1..4 supporting logical-owner union is13cells for206a2,
+4cells for206a7, and zero for the other four. These owner footprints retain no
+HD-detail credit. Runtime original_detail_cells restores them after joins.
+
+The recipe and source are deliberately fixed. Reproduce in a NEW output folder:
+python3 terrain_six_fine_cleanup.py --recipe recipe.json --output NEW_OUTPUT
+Requires Python, NumPy, Pillow and the hash-bound public tools/hd_terrain_cleanup.py
+under the game root. The authoring helper requires secure POSIX file descriptors;
+the resulting ordinary PNG artwork and Rust game do not require this authoring
+helper to run on Windows or Linux.
+
+Historical direct-RGB proposal was never executed on real artwork. All six real
+PNG outputs were created by ONE guided cleanup process. One initial intrinsic
+helper invocation correctly rejected incorrect candidate source_sha256 metadata
+before sprite measurements. The corrected candidate uses ORIGINAL PIC hashes,
+with identical PNG bytes, and its single final helper invocation passed all six
+frames at native1..4. Both attempts remain preserved and counted honestly.
+
+Intrinsic inspection does not prove terrain seams or destruction timing. The
+separate SourceG2/H5654 finite-context task covers six actual intact3x3 MAP windows
+and four Source-legal single-tile settled endpoints. It uses no World and makes no
+natural combat/timing claim. Keep its final receipts separate from intrinsic QA.

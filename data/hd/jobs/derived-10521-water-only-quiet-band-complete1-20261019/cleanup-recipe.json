@@ -1,0 +1,39 @@
+{
+  "method": "10521-Source-water-only-quiet-genuine-RGB-fineband-preserve-nonwater-v1",
+  "asset": "10521",
+  "inputs": {
+    "source": {
+      "path": "inputs/10521.pic",
+      "sha256": "6b3bcd5cc096654b9593b39cf973e07771c63daa29c66ec83b14e6b10bd02011"
+    },
+    "palette": {
+      "path": "inputs/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+    },
+    "old_png": {
+      "path": "inputs/old10521-unchanged.png",
+      "sha256": "268713889acf81e1be7f416be48bb97a438118a30a934167bd545b57145e8061"
+    },
+    "donor": {
+      "path": "inputs/quiet-genuine-water-pavement-untouched.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23"
+    }
+  },
+  "donor_box": [
+    0,
+    0,
+    887,
+    887
+  ],
+  "parameters": {
+    "source_sigma": 1.0,
+    "donor_band_sigma": 3.0,
+    "donor_band_clip": 16.0,
+    "donor_band_gain": 0.5
+  },
+  "dependency": {
+    "path": "tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+  },
+  "scope": "One water-only derived10521. Oldapproved nonwater RGB pixel bytes remain exact; other6frames unchanged. Sourcecoarsecolors/geometry/protectedfunctional support are notHDcredit. No generation."
+}

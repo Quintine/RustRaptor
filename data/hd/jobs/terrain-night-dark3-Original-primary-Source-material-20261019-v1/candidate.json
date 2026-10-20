@@ -1,0 +1,189 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-night-dark3-Original-primary-Source-material-20261019-v1",
+  "owner": "/root/iron_coast_names",
+  "status": "candidate",
+  "complete_family": true,
+  "coherent_family_scope": "exact selected 3 Original night terrain cells, not the legacy 16-picture catalog group",
+  "targets": [
+    {
+      "asset": "2057f",
+      "frame": 0,
+      "file": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/2057f-derived.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "7de84a5c17d769cbe82296150a8328b05f0e61b1fe65d361f723651b56bcf958"
+    },
+    {
+      "asset": "20581",
+      "frame": 0,
+      "file": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/20581-derived.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "18544694589ff0582bc7ac9cdb66f804348035b98e52f860abebef56645990b1",
+      "original_detail_cells": [
+        [
+          4,
+          15
+        ],
+        [
+          16,
+          4
+        ],
+        [
+          16,
+          27
+        ],
+        [
+          27,
+          15
+        ]
+      ]
+    },
+    {
+      "asset": "20588",
+      "frame": 0,
+      "file": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/20588-derived.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "1ae18dde9cfd42b3fa3e227afa068a9a485b5cd7b7783d6214b7116a621b8d97",
+      "original_detail_cells": [
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          30
+        ],
+        [
+          24,
+          1
+        ],
+        [
+          24,
+          30
+        ]
+      ]
+    }
+  ],
+  "sequences": [
+    {
+      "name": "Original-primary night terrain 2057f",
+      "base_asset": 132479,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/2057f-derived.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "7de84a5c17d769cbe82296150a8328b05f0e61b1fe65d361f723651b56bcf958"
+        }
+      ]
+    },
+    {
+      "name": "Original-primary night terrain 20581",
+      "base_asset": 132481,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/20581-derived.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "18544694589ff0582bc7ac9cdb66f804348035b98e52f860abebef56645990b1",
+          "original_detail_cells": [
+            [
+              4,
+              15
+            ],
+            [
+              16,
+              4
+            ],
+            [
+              16,
+              27
+            ],
+            [
+              27,
+              15
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Original-primary night terrain 20588",
+      "base_asset": 132488,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/20588-derived.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "1ae18dde9cfd42b3fa3e227afa068a9a485b5cd7b7783d6214b7116a621b8d97",
+          "original_detail_cells": [
+            [
+              8,
+              1
+            ],
+            [
+              8,
+              30
+            ],
+            [
+              24,
+              1
+            ],
+            [
+              24,
+              30
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "method": "Genuine Original-primary atlas fine RGB material under exact SourceNx material ownership; opaque black and functional regions remain Source, excluded from HD credit. Derived output, not an untouched generator return.",
+  "provenance": {
+    "genuine_builtin_calls": 1,
+    "raw_sha256": "2638079a3de2a1aa36a3cfc4637f714f790fb2896aebe3a9cb5cb50a3d01a5c5",
+    "recipe_sha256": "2af8d67381a4b70d4be3ad710ed89b868c0489de94893ea41dad3dd7cafa6943",
+    "cleanup_tool_sha256": "1b448911a7af01e1f19aae945f1e581c2b2a8f7bb66ed7ad597bd6450cd9191c",
+    "actual_cleanup_executions": 1,
+    "different_code_binding_review": ".reference/hd-independent-night5-CODE-and-actualbinding-review-20261019-v1/PASS-DIFFERENT-NIGHT5-CODE-AND-ACTUAL-BINDINGS-NO-REAL-CLEANUP.json",
+    "different_code_binding_review_sha256": "3f5a28286fcc7593fb06e198d5b34e2b21ed2f394f0e344c0cb27945387a8920",
+    "actual_derivation_receipt_sha256": "47c21d8da5bc16a6bc69017b798627387dbb94f4bd7bbdcb6acad6f128885297"
+  },
+  "artwork_derivation": {
+    "path": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/artwork-derivation.json",
+    "sha256": "e075d11f9b2a2a79c7978651332324e8eade76970bf925adf4db21702166a5e7"
+  }
+}

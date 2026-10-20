@@ -1,0 +1,157 @@
+{
+  "status": "PRIVATE_FOUR_NAMESPACES_SEVEN_SELECTED_PICTURES_PENDING_FINAL50_ROOT",
+  "existing_repaired10521_job": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-second7-private-four-jobs-normalization-SourceG2-20261020-v1/data/hd/jobs/derived-10521-water-only-quiet-band-complete1-20261019",
+  "existing_repaired10521_sha256": "4537697a969fc2b1ecd4b9042184117f89025fd5bc3b2f8d3bb70165d3ec85d0",
+  "unchanged_other6_jobs": [
+    {
+      "job_id": "terrain-dock2-1052e-1052f-Original-primary-20261020",
+      "assets": [
+        "1052e",
+        "1052f"
+      ],
+      "candidate": {
+        "path": "jobs/terrain-dock2-1052e-1052f-Original-primary-20261020/candidate.json",
+        "sha256": "34d3d6fa183b0fc13aa1c9f650bb250303d0ec5232dc174e69d25b4c31ff96d5"
+      },
+      "QA": {
+        "path": "jobs/terrain-dock2-1052e-1052f-Original-primary-20261020/runtime-qa.json",
+        "sha256": "ce83b899a2a4ac4ead291a9e39a60b0a140e65d559d6f4c4ac1c3ae2966abcd1"
+      },
+      "new_PNG_bytes": 1644840
+    },
+    {
+      "job_id": "terrain-industrial3-10523-1052c-Original-primary-20261019",
+      "assets": [
+        "10523",
+        "10524",
+        "1052c"
+      ],
+      "candidate": {
+        "path": "jobs/terrain-industrial3-10523-1052c-Original-primary-20261019/candidate.json",
+        "sha256": "53e9e16dc7bd5092fb6a638ed503c77759b5d7e435035221046576cd0686f8aa"
+      },
+      "QA": {
+        "path": "jobs/terrain-industrial3-10523-1052c-Original-primary-20261019/runtime-qa.json",
+        "sha256": "c081178974d4208e7ddb6c0a2f7e55d737fbca0deef4fa4ae096fc00a035ad16"
+      },
+      "new_PNG_bytes": 2792184
+    },
+    {
+      "job_id": "terrain-destroyed1-1052d-1052d-Original-primary-20261019",
+      "assets": [
+        "1052d"
+      ],
+      "candidate": {
+        "path": "jobs/terrain-destroyed1-1052d-1052d-Original-primary-20261019/candidate.json",
+        "sha256": "7d6d906371e4f353b1bc96587fa9e6e02d6a42766c74a93479dc899a4cb096ea"
+      },
+      "QA": {
+        "path": "jobs/terrain-destroyed1-1052d-1052d-Original-primary-20261019/runtime-qa.json",
+        "sha256": "6abb37678c8da89bcca68649f61fcfcff14c2c6ad63c38f1ed3b69b1d55b49b0"
+      },
+      "new_PNG_bytes": 3179474
+    }
+  ],
+  "other6_direct_genuine_parent_pixel_checks": [
+    {
+      "asset": "1052e",
+      "PNG_sha256": "0d329ef5346f4cb01d1ba8b84350b931ef6cb5b1890aea2f16ea692f236597ec",
+      "raw_parent_sha256": "8f890b3c24b8a6fd029ba02872dce06e7dd4b07875a7f363d72d8e88577afbc6",
+      "actual_original_atlas_crop": [
+        724,
+        0,
+        724,
+        724
+      ],
+      "decoded_pixels_exact_genuine_atlas_crop": true,
+      "new_art_or_crop_write": false
+    },
+    {
+      "asset": "1052f",
+      "PNG_sha256": "405b68abd359854ed9b5f780f4e249a0081d75e6552a10bacbe0ebf70749cfb7",
+      "raw_parent_sha256": "8f890b3c24b8a6fd029ba02872dce06e7dd4b07875a7f363d72d8e88577afbc6",
+      "actual_original_atlas_crop": [
+        1448,
+        0,
+        724,
+        724
+      ],
+      "decoded_pixels_exact_genuine_atlas_crop": true,
+      "new_art_or_crop_write": false
+    },
+    {
+      "asset": "10523",
+      "PNG_sha256": "0c6f188b12567999800fae6bf3ab09e85181573f309d7737db25fde438348574",
+      "raw_parent_sha256": "276f4c455b9416ad04152ee682f03b3a059c82bd8c7ab002516511673c1120d2",
+      "actual_original_atlas_crop": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "decoded_pixels_exact_genuine_atlas_crop": true,
+      "new_art_or_crop_write": false
+    },
+    {
+      "asset": "10524",
+      "PNG_sha256": "38aae74c0e745c981d5dfe92703ba2ef8be0663f92af13e44fc841116ba0bc68",
+      "raw_parent_sha256": "276f4c455b9416ad04152ee682f03b3a059c82bd8c7ab002516511673c1120d2",
+      "actual_original_atlas_crop": [
+        724,
+        0,
+        724,
+        724
+      ],
+      "decoded_pixels_exact_genuine_atlas_crop": true,
+      "new_art_or_crop_write": false
+    },
+    {
+      "asset": "1052c",
+      "PNG_sha256": "11e44ba9a6985d34e04f4797064a12b343810abc683363074431c5697bba4e12",
+      "raw_parent_sha256": "276f4c455b9416ad04152ee682f03b3a059c82bd8c7ab002516511673c1120d2",
+      "actual_original_atlas_crop": [
+        1448,
+        0,
+        724,
+        724
+      ],
+      "decoded_pixels_exact_genuine_atlas_crop": true,
+      "new_art_or_crop_write": false
+    },
+    {
+      "asset": "1052d",
+      "PNG_sha256": "eb9dde72d43a052bd0e191c1060a5096563c896d825c800614f60f26bb0cc83f",
+      "raw_parent_sha256": "15c59365b5eafa3d36c2def5314ea588d859bc77edcd42d04572b9ff57587a8e",
+      "actual_original_atlas_crop": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "decoded_pixels_exact_genuine_atlas_crop": true,
+      "new_art_or_crop_write": false
+    }
+  ],
+  "producer_guards_exact": {
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-10521-water-only-quiet-band-remediation-20261019-v1/portable-project/data/hd/jobs/derived-10521-water-only-quiet-band-complete1-20261019/candidate.json": "a70182808b880bbf3ced43e3e2f023296f393562eae690a87c359cb6467f7285",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-10521-water-only-quiet-band-remediation-20261019-v1/portable-project/data/hd/jobs/derived-10521-water-only-quiet-band-complete1-20261019/runtime-qa.json": "74f09639d33aaab2efa9d09d0c46f4c9cab5bffeeb7f54d3423563bc8bf36ef5",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-10521-water-only-quiet-band-remediation-20261019-v1/portable-project/data/hd/jobs/derived-10521-water-only-quiet-band-complete1-20261019/coordinator-review.json": "f333f0e2fbc829f9da79207d9d680b5592262cc4fc979e67fb9e8ffee0a6e459",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain10521-1052f-Original-primary-author-20261019-v1/dock3/candidate-notes.json": "a676b6dcaca28505e6ae9fa88b47cc4a205ccef94cdeee53473215559d6aa000",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain10521-1052f-Original-primary-author-20261019-v1/dock3/actual-SourceG2-intrinsic/runtime-qa.json": "935d726ca62ef79cb9d459827a9c631644df34fab574f72057c6912c31c34303",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain10521-1052f-Original-primary-author-20261019-v1/dock3/private-hd/jobs/terrain-dock3-10521-1052f-Original-primary-20261019/1052e-generated-direct-cell.png": "0d329ef5346f4cb01d1ba8b84350b931ef6cb5b1890aea2f16ea692f236597ec",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain10521-1052f-Original-primary-author-20261019-v1/dock3/private-hd/jobs/terrain-dock3-10521-1052f-Original-primary-20261019/1052f-generated-direct-cell.png": "405b68abd359854ed9b5f780f4e249a0081d75e6552a10bacbe0ebf70749cfb7",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain10521-1052f-Original-primary-author-20261019-v1/industrial3/candidate-notes.json": "d218717950d811ff203505f8d1dffacb9863048f530314daacf163eec0824358",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain10521-1052f-Original-primary-author-20261019-v1/industrial3/actual-SourceG2-intrinsic/runtime-qa.json": "143bd56a11edcf8930b9738198f2c7b43a664d767f9c829add25d83472e68640",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain10521-1052f-Original-primary-author-20261019-v1/industrial3/private-hd/jobs/terrain-industrial3-10523-1052c-Original-primary-20261019/10523-generated-direct-cell.png": "0c6f188b12567999800fae6bf3ab09e85181573f309d7737db25fde438348574",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain10521-1052f-Original-primary-author-20261019-v1/industrial3/private-hd/jobs/terrain-industrial3-10523-1052c-Original-primary-20261019/10524-generated-direct-cell.png": "38aae74c0e745c981d5dfe92703ba2ef8be0663f92af13e44fc841116ba0bc68",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain10521-1052f-Original-primary-author-20261019-v1/industrial3/private-hd/jobs/terrain-industrial3-10523-1052c-Original-primary-20261019/1052c-generated-direct-cell.png": "11e44ba9a6985d34e04f4797064a12b343810abc683363074431c5697bba4e12",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain10521-1052f-Original-primary-author-20261019-v1/destroyed1/candidate-notes.json": "f34babfe1c586f2d2eb19ca8f249381d042d635bbc0e4fcdda6c0982f4bd5a69",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain10521-1052f-Original-primary-author-20261019-v1/destroyed1/actual-SourceG2-intrinsic/runtime-qa.json": "375c4c45f799a02a9d9cbc2e3924b0bb1d4674b1ade2b5bc9813c9c753f98624",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain10521-1052f-Original-primary-author-20261019-v1/destroyed1/private-hd/jobs/terrain-destroyed1-1052d-1052d-Original-primary-20261019/1052d-generated-direct-cell.png": "eb9dde72d43a052bd0e191c1060a5096563c896d825c800614f60f26bb0cc83f"
+  },
+  "new_art_cleanup_QA_context_or_Git_calls": 0,
+  "portable10521_actual_replay_pending": true,
+  "public_tools_unchanged": true,
+  "old_10521_HOLD_preserved": true,
+  "context_case3_4_6_not_disjoint": true
+}

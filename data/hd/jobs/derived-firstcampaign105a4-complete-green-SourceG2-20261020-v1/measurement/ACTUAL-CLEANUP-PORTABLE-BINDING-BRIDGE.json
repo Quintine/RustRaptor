@@ -1,0 +1,32 @@
+{
+  "execution": {
+    "status": "success",
+    "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+    "recipe_sha256": "7c29d730ef8eaebfb6a39b44e69e010b33789b8ef2fb2dde4f5edf6cc6a3ce60",
+    "tool_sha256": "ec1df21bdcba317e1a6eebdeb4d6f4634be4136f00c35853fcac1569d7b9efb3",
+    "source_sha256": {
+      "105a4": "6d28b5af3aa1d6ec57b7f88545e23c64ff54e0ba5d768546c24178f958d5a631"
+    },
+    "parent_raw_sha256": [
+      "72f75613c04054d23b94da26b3beb3ee6fb3d63be9d739aebdb353f0c9577c7b",
+      "b305fbe79b583b5c8b3fc356871db3b9ad42953b54e02bf876b4170f73946add"
+    ],
+    "output_sha256": {
+      "105a4": "9e59fd266a8ed326c9f45fe4e35a587d69cc1861b0e4fddf13ea2cac22ceb599"
+    }
+  },
+  "scope": "Binding closure of already completed two-stage derivation. Finalgreen helper restores105 Source owners onto earlier heldderivedPNG. That earlier actual parent uses both genuine b305fbe7 and72f75613 masters; this metadata closure binds the complete transitive parent set, not a new cleanup or direct-read claim.",
+  "literal_actual_receipt": {
+    "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/reproducer/ACTUAL-ORIGINAL-EXECUTION-RECEIPT.json",
+    "sha256": "e713651deed2ff0c8d1b207565c7ef8197ca574abfd021ce50bf7585e784999e"
+  },
+  "new_cleanup_calls": 0,
+  "transitive_held_parent_execution_receipt": {
+    "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/reproducer/inputs/actual-parent-execution-receipt.json",
+    "sha256": "7af85414bc9b7c415906c55eeb4a4781484ad057b4d43c7f53faa194fdf5b03b"
+  },
+  "transitive_held_parent_recipe": {
+    "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/reproducer/parent-reproducer/recipe.json",
+    "sha256": "275c7dbbfe1678cecd074555d9a958673535b70e4e0df11d22e604ae5748419d"
+  }
+}

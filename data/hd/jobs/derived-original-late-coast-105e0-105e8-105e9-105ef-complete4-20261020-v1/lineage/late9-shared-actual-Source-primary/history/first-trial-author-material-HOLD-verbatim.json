@@ -1,0 +1,36 @@
+{
+  "status": "AUTHOR_MATERIAL_HOLD_NO_ADMISSION",
+  "ids": [
+    "105e0",
+    "105e8",
+    "105e9",
+    "105ef",
+    "105e6",
+    "105e7",
+    "105eb",
+    "105ed",
+    "105f3"
+  ],
+  "actual_first_trial_QA": [
+    {
+      "path": ".reference/hd-firstcampaign105e0-105ef-and105f3-Original-primary-author-20261019-v1/coast4/actual-once-final-current-SourceG2/runtime-qa.json",
+      "sha256": "a59413a04dc1df44083b4c1d88e5b1cc25afcce722ff9128517399df33672f02"
+    },
+    {
+      "path": ".reference/hd-firstcampaign105e0-105ef-and105f3-Original-primary-author-20261019-v1/ground4/actual-once-final-current-SourceG2/runtime-qa.json",
+      "sha256": "b0f417a41bc2b10c107d73659f36b597b6c60206ecdfc0f6205b6a966c431aea"
+    },
+    {
+      "path": ".reference/hd-firstcampaign105e0-105ef-and105f3-Original-primary-author-20261019-v1/ramp105f3/actual-once-final-current-SourceG2/runtime-qa.json",
+      "sha256": "77220d1e623fb3d8ccba4b9140d460c2e44d08456baae225c3522cc4aeda1745"
+    }
+  ],
+  "physical_whole_native_panes_viewed": 36,
+  "finding": "Whole36native physically viewed: stretched160x40 graystrip introduces verticalhairline/rainlike finegrain on grayplatforms/darkfittings3\u20134 (105e0/105ebclear). Source criticalgeometry/colorroles remain; no artadmission proposed for firsttrial. Firstcandidate/QA/PNG/recipes preserved.",
+  "proposed_bounded_fix": {
+    "path": ".reference/hd-late9-isotropic-gray-material-successor-CODE-proposal-20261019-v2/FROZEN-ONLY-GRAY-SQUARE-DONOR-RECIPE-SUCCESSOR-READY.json",
+    "sha256": "b77ae2d98a3910db57aad731e7b7bcef5233a385644a946ccc361ed17319bdb7"
+  },
+  "new_call_or_cleanup_or_QA": false,
+  "all_old_first_outputs_preserved": true
+}

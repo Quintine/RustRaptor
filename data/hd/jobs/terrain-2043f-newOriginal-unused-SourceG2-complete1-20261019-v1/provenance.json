@@ -1,0 +1,56 @@
+{
+  "job_id": "terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1",
+  "generation_lineage": {
+    "path": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/generation-lineage.json",
+    "sha256": "dc8ccce2559a351d1f420dc7a094d86f1fbbaba03b5e6820bdeb28ac569abff2"
+  },
+  "source_originals": [
+    {
+      "asset": "2043f",
+      "canonical_source_asset": "2043f",
+      "source_path": "misc/unnamed.1594",
+      "source_sha256": "e39ab7f5f54a89ea63df4045cd7af1cca8e6af9bee7f50cd73be450f6206059f",
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "original_binary": {
+        "path": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/Originals/2043f.bin",
+        "sha256": "e39ab7f5f54a89ea63df4045cd7af1cca8e6af9bee7f50cd73be450f6206059f"
+      }
+    }
+  ],
+  "actual_G2_original_qa": {
+    "path": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/measurement/actual-G2-runtime-qa-original-namespace.json",
+    "sha256": "53bbf331d199e91c4be29ab93cb45633ecef9c4538baa13cb0193142d552793c"
+  },
+  "namespace_subset_carry": {
+    "path": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/measurement/QA-NAMESPACE-AND-EXACT-SUBSET-CARRY.json",
+    "sha256": "dcbc6d4a996a52a9e802a47b7899a77b715416ec18068d3c94be4bc55b5dca2f"
+  },
+  "review_proofs": {
+    "author-intrinsic.json": {
+      "path": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/review/author-intrinsic.json",
+      "sha256": "af8751c4b03dc6e78a52506a9c50225a702b0f7dd93fc563adafc1600ba6e411"
+    },
+    "different-intrinsic-original-material.json": {
+      "path": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/review/different-intrinsic-original-material.json",
+      "sha256": "defbdb1036d172b837e12bfcf056db2f3ed79cf16fcdf9ce2f2886ba4e9e212c"
+    },
+    "actual-builtin-return.json": {
+      "path": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/review/actual-builtin-return.json",
+      "sha256": "6b5a2e5e0174f21e1e41a5d2fdaeb7af01dee10cdf4a97b27b27f25b9227aadb"
+    },
+    "actual-builtin-arguments-historical.json": {
+      "path": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/review/actual-builtin-arguments-historical.json",
+      "sha256": "a99f7f473ab354a26b7c3ab952949ce5d88d5d466fea06d640c2676fb9721fae"
+    }
+  },
+  "reproducibility": "Candidate/render/artwork routes and submittedrefs are inside this portableHD tree. Copied immutable reports preserve literal historical path witnesses only; these are not runtime or reproduction dependencies. Contexts retain trueH5654pixel epoch."
+}

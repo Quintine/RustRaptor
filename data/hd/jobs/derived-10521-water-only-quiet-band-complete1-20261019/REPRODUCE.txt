@@ -1,0 +1,3 @@
+No automatic replay has been run from this portable job. To reproduce after authorization, use an absent output directory inside this job:
+python3 tools/hd_water_material10521.py --recipe data/hd/jobs/derived-10521-water-only-quiet-band-complete1-20261019/cleanup-recipe.json --output data/hd/jobs/derived-10521-water-only-quiet-band-complete1-20261019/replayed-water
+The exact expected10521 PNG SHA-256 is 4537697a969fc2b1ecd4b9042184117f89025fd5bc3b2f8d3bb70165d3ec85d0. Pin helper/recipe/all inputs before and after, check current disk floor externally. This is scripted derivation from genuine generated parent material, not a new generator return.

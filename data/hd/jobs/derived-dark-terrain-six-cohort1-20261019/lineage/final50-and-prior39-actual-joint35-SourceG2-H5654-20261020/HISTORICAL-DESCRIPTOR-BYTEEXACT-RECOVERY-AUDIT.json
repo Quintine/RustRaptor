@@ -1,0 +1,10 @@
+{
+  "status": "RECOVERED_FIRST_FAILED_DESCRIPTOR_EXACT_RECORDED_SHA",
+  "first_descriptor_sha256": "8c4d96fff4730faf6c7db2accd230d5d4b1fb372554b54d954fd653d20a5f880",
+  "final_clean_descriptor_unchanged": "2f5f8bae6a045de5b69620779ad8c351b12b421da5a65143303dbd5d5a979aaa",
+  "cause": "First failed descriptor had been hardlinked as a preserved copy before a later file-only descriptor write; writing through the original path also changed that hardlink.",
+  "recovery": "Reconstructed the first descriptor using byte-identical actual endpoint records and unchanged descriptor fields. Serialized exactbody SHA equals the SHA recorded before the overwrite. Detached the preserved hardlink and restored precisely these bytes.",
+  "first_base_inventory_preserved_separately": true,
+  "actual_source_pixel_component_recipe_constructor_files_changed": 0,
+  "new_runtime_QA_calls": 0
+}

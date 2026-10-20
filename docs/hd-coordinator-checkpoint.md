@@ -1,5 +1,17 @@
 # HD coordinator checkpoint — 18 October 2026
 
+Current artwork checkpoint — 20 October 2026: **5,743 reviewed pictures / 3,830 complete sequences**, including **4,530 Terrain pictures**. **Ten originals remain unapproved**: five Terrain, four enemies/ground objects and one UI/other picture. Generation was declined for those ten; they are not counted as remastered.
+
+This 50-picture Terrain append covers dark/night material, coastlines, industrial structures and the remaining first/late-campaign terrain. Its PNG provenance is 32 Source-guided derived pictures, nine selections from untouched genuine atlases, three pictures sharing one partially derived atlas, and six lossless genuine-atlas crops. Only 304fb is patched in the shared atlas; 304fa/304fc cells remain unchanged genuine pixels. All 211 retained Original owners, Source geometry and tonal backing earn no generated-HD-detail credit. Stepped joins, dark material and native-scale detail limits remain documented. Two unused assets, 2043f/20458, have catalogue/intrinsic approval without an invented runtime placement.
+
+Old measurements keep their literal epochs. A separate current check reviewed 35 genuine terrain states at native1–4 using H5654 accepted stages plus the frozen 89-picture overlay, covering interactions between the prior 39 and this 50. Its overlay is not a full installed 5743 measured bank. Different review covered all 560 complete saved native bodies; Root reviewed all 35 native4. These static checks do not claim all callers, World timing or full missions.
+
+Twenty staged checks preceded one private registrar main. Runtime: **32,373 files / 10,376,039,515 bytes**. Launcher checks exited 0 with **6,449 assets verified** and **5,743 HD frames validated, zero rejects**. Public tool checks closed **1,109 distinct passing cases** across nine isolated groups, mixing synthetic fixtures and authenticated Original-data integrations. The initial missing-fixture failures and corrected counts remain preserved; only the affected groups were rerun. Actual portable reproductions and earlier held artwork remain pinned separately. SourceG2 binaries, 45 mods and 42 SD/HD briefings are unchanged. No native Windows 5743 result is claimed.
+
+# Earlier checkpoints — retained verbatim
+
+# HD coordinator checkpoint — 18 October 2026
+
 Current artwork checkpoint — 20 October 2026: **5,693 reviewed pictures / 3,780 complete sequences**, including **4,480 Terrain pictures**. **60 originals remain**: 55 Terrain, four enemies/ground objects and one UI/other picture.
 
 This 39-picture Terrain append covers quiet roads/bridges, shorelines, damaged terrain, industrial material and fine terrain. Its PNGs comprise 32 Source-guided derived images, six lossless genuine-atlas crops and one untouched full generator return 10510. Original geometry, tonal backing and retained functional/gray/fidelity cells earn no generated-HD-detail credit. Restrained fine material, native1 downsampling and inherited stepped or mixed-material joins remain documented limits.

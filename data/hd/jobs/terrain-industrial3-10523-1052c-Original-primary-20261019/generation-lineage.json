@@ -1,0 +1,61 @@
+{
+  "format_version": 1,
+  "raw_master": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/lineage/second7-original-generation-and-historical-context/generation/industrial3/returned-untouched-atlas.png",
+    "sha256": "276f4c455b9416ad04152ee682f03b3a059c82bd8c7ab002516511673c1120d2"
+  },
+  "actual_builtin_receipt": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/lineage/second7-original-generation-and-historical-context/generation/industrial3/actual-generation-safe-summary.json",
+    "sha256": "b15284a5d5ff3f9ef7da74b798e9a15bb6dca16aa2da802015bfd971d62f5140"
+  },
+  "prompt": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/lineage/second7-original-generation-and-historical-context/generation/industrial3/prompt.txt",
+    "sha256": "aa6049baaadf7a7425213ad9ee9bbd4f188ccc3bb8a809bf31905520d39a7ff5"
+  },
+  "actual_Original_reference": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/lineage/second7-original-generation-and-historical-context/generation/industrial3/Original-only-input.png",
+    "sha256": "37468787d6f8e2dbfcdef66ec1e2f656023da044d36512efa379798808178404"
+  },
+  "crop_pixel_checks": [
+    {
+      "asset": "10523",
+      "PNG_sha256": "0c6f188b12567999800fae6bf3ab09e85181573f309d7737db25fde438348574",
+      "raw_parent_sha256": "276f4c455b9416ad04152ee682f03b3a059c82bd8c7ab002516511673c1120d2",
+      "actual_original_atlas_crop": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "decoded_pixels_exact_genuine_atlas_crop": true,
+      "new_art_or_crop_write": false
+    },
+    {
+      "asset": "10524",
+      "PNG_sha256": "38aae74c0e745c981d5dfe92703ba2ef8be0663f92af13e44fc841116ba0bc68",
+      "raw_parent_sha256": "276f4c455b9416ad04152ee682f03b3a059c82bd8c7ab002516511673c1120d2",
+      "actual_original_atlas_crop": [
+        724,
+        0,
+        724,
+        724
+      ],
+      "decoded_pixels_exact_genuine_atlas_crop": true,
+      "new_art_or_crop_write": false
+    },
+    {
+      "asset": "1052c",
+      "PNG_sha256": "11e44ba9a6985d34e04f4797064a12b343810abc683363074431c5697bba4e12",
+      "raw_parent_sha256": "276f4c455b9416ad04152ee682f03b3a059c82bd8c7ab002516511673c1120d2",
+      "actual_original_atlas_crop": [
+        1448,
+        0,
+        724,
+        724
+      ],
+      "decoded_pixels_exact_genuine_atlas_crop": true,
+      "new_art_or_crop_write": false
+    }
+  ],
+  "new_RGBcleanup_or_generation": 0
+}

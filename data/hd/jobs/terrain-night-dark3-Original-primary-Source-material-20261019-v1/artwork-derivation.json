@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "Source-night-hardware-fine-material-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/reproducer/inputs/genuine-untouched-atlas.png",
+        "sha256": "2638079a3de2a1aa36a3cfc4637f714f790fb2896aebe3a9cb5cb50a3d01a5c5"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/generation/actual-generation-safe-summary.json",
+        "sha256": "5674568f61b8bb0a8997a115cb6f8fe1b8e9d49255d598c5f5742caf254048a0"
+      },
+      "prompt": {
+        "path": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/generation/prompt.txt",
+        "sha256": "cc2221142dbd98afbde0bcdf2e0bb6470ddfbb9ea340fbd208e5a51bc56da5d7"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/terrain_night_hardware_cleanup.py",
+      "sha256": "1b448911a7af01e1f19aae945f1e581c2b2a8f7bb66ed7ad597bd6450cd9191c"
+    },
+    {
+      "path": "tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/reproducer/recipe.json",
+    "sha256": "2af8d67381a4b70d4be3ad710ed89b868c0489de94893ea41dad3dd7cafa6943"
+  },
+  "execution_receipt": {
+    "path": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/measurement/PORTABLE-ACTUAL-DERIVATION-EXECUTION-ALIAS.json",
+    "sha256": "0b0a9ebe391e67f1ebccb6721a0bfd521558401e6f5487c77f3a7edab6022b2b"
+  },
+  "sources": {
+    "2057f": "7de84a5c17d769cbe82296150a8328b05f0e61b1fe65d361f723651b56bcf958",
+    "20581": "18544694589ff0582bc7ac9cdb66f804348035b98e52f860abebef56645990b1",
+    "20588": "1ae18dde9cfd42b3fa3e227afa068a9a485b5cd7b7783d6214b7116a621b8d97"
+  },
+  "outputs": {
+    "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/2057f-derived.png": "16c4c596da0bb2d4ad8ac1dd7cd1e91c197b2cd96f16eb98d95d80c613b14501",
+    "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/20581-derived.png": "894c283431cffa99d7537004015ecaad445e5a46b38916c5860d532f68ca5226",
+    "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/20588-derived.png": "59c110ffb7da50271dbb377d8d811170dfecb97a3bba9be88ba77f8a2e45302c"
+  }
+}

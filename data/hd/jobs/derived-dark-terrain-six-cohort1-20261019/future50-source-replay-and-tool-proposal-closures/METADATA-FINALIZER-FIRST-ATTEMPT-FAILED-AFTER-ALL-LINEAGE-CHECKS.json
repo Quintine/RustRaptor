@@ -1,0 +1,8 @@
+{
+  "status": "preserved failure",
+  "error": "OSError18 cross-device link while archiving /tmp launch script after both read-only derivation validators passed",
+  "pixel_execution": false,
+  "reproduction_replays_before_failure": 2,
+  "synthetic_tests_before_failure": 20,
+  "recovery": "Copy only tiny /tmp source scripts using shutil.copyfile. No replay, test suite or measurement repeated."
+}

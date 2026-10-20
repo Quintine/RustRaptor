@@ -1,0 +1,123 @@
+{
+  "status": "PASS_DIFFERENT_V2_COHERENT_PATCH_CODE_AND_BINDINGS_16PLUS7_NO_ACTUAL_CLEANUP",
+  "reviewer": "/root/publication_review",
+  "UTC": "2026-10-19T04:02:26.090998+00:00",
+  "review_request": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-304fb-coherent-own-green-RGB-patch-repair-CODE-proposal-20261019-v2/FROZEN-V2-COHERENT-RGB-PATCH-CODE-REVIEW-REQUEST.json",
+    "sha256": "d8426ff12860f11e4fb2feefa4d0786418439a864d7e294df5fedadbcfc865ef",
+    "bytes": 2164
+  },
+  "helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-304fb-coherent-own-green-RGB-patch-repair-CODE-proposal-20261019-v2/repair_own_generated_green_contiguous_v2.py",
+    "sha256": "fb95544d4d92252ff025d5dc404dd13e6a1a3c202ee2ae95fc32a6dd60819fa0",
+    "size": 7758
+  },
+  "tests": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-304fb-coherent-own-green-RGB-patch-repair-CODE-proposal-20261019-v2/test_repair_own_generated_green_contiguous_v2.py",
+    "sha256": "108a318c863f810d0443d3dafee8f9aa763cbc6c1d4d9b66f45d86c966cfb23f",
+    "size": 4244
+  },
+  "recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-304fb-coherent-own-green-RGB-patch-repair-CODE-proposal-20261019-v2/PROPOSED-V2-COHERENT-PATCH-RECIPE-NO-ACTUAL-PIXEL-CLEANUP.json",
+    "sha256": "2a569b61c3303a0a86cb2bc7a1e2fcd6ca6433e5299bdad41cd0bcfc7759456a",
+    "size": 868
+  },
+  "actual_readonly_inputs": {
+    "master": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-304ed-304ee-304ef-304fa-304fb-304fc-Original-primary-author-20261019-v1/family-304fa-304fb-304fc/generated/untouched-genuine-builtin-atlas.png",
+      "sha256": "b262139b3887dd31be4b130b33357e3525279d5e42780896b12c8675006dc5d0",
+      "bytes": 2850782
+    },
+    "Source": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.3251",
+      "sha256": "10948daaac0b7f89fca96da7b7b1d3e5113d9880afff7758448c078c846ce08b",
+      "bytes": 1044
+    },
+    "palette": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "bytes": 768
+    }
+  },
+  "prior_V1_CODE_and_actual_HOLD_preserved": {
+    "CODE": "58ba30f269e1ba9f3677a4370625cc71c1e441d7cba479ecbb65c32c2411dbb4",
+    "actual_ART_HOLD": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-304fb-own-green-derived-complete3-author-20261019-v1/HOLD-DERIVED1-VISIBLE-NEAREST-DONOR-STREAKS-NO-QA.json",
+      "sha256": "83f3baddac6eaefa1092efe67ef9650633ecdf3d1e4a0f326dba34858d064271",
+      "bytes": 534
+    },
+    "V1_held_not_superseded_as_approval": true
+  },
+  "actual_checks": {
+    "author_synthetics_passed": 16,
+    "independent_delta_checks_passed": 7,
+    "Source_component_cells": 212,
+    "neutral_island_pixels": 882,
+    "target_pixels": 3390,
+    "target_bbox": [
+      288,
+      170,
+      358,
+      224
+    ],
+    "contiguous_patch_top_left": [
+      434,
+      459
+    ],
+    "patch_size": [
+      70,
+      54
+    ],
+    "translation": [
+      146,
+      289
+    ],
+    "full_patch_green_pixels": 3218,
+    "full_patch_area": 3780,
+    "green_fraction": 0.8513227513227514,
+    "real_actual_input_bytes_unchanged": true
+  },
+  "findings": [
+    "Complete Source-component selection, target/support bounds and pinned regular-file I/O are AST-identical to independently reviewed V1; no retention/split of212-cell component.",
+    "V2 removes nearest-donor propagation entirely. It selects one full contiguous unscaled own-generated green/dark-shade rectangle, with every pixel inside authentic Source component and outside target, at least85percent strictly green and remaining pixels genuine maxRGB<=65 dark shade.",
+    "Integral sums and exact integer85percent threshold are correct; independent489/576 rejection and490/576 acceptance tests pass. Bright nongreen holes cannot be admitted as shade.",
+    "Stable selection minimizes top-left squared distance, then y and x. An independent four-way synthetic distance tie selects the expected upper patch; actual readonly row/column-window search independently confirms434,459 and3218green pixels.",
+    "Every changed synthetic pixel is a single exact original donor RGB at the same translation vector. Multicolor spatial coherence, immutable inputs, other atlas cells and all outside-target RGB are exact. No rotation, resampling, blending, luminance synthesis, SourceRGB copies or noise."
+  ],
+  "limits": [
+    "CODE/bindings only, not approval of repaired artwork or native rendering. No actual V2 repaired output exists from this reviewer.",
+    "Full3780-pixel patch threshold is85percent green; only3390 mask-selected pixels are copied. The green fraction of that irregular copied subset can differ from full-patch fraction.",
+    "An unblended translated texture can still introduce a patch edge, repeated material or mismatched shading. Different ART must inspect actual output/support before any G2 qualification.",
+    "CLI --analyze still reports common support planning only; it does not exercise coherent-patch selection. Actual pinned search was separately authenticated by this review without calling real repair."
+  ],
+  "evidence": {
+    "author_tests": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-publication-review-304fb-coherent-patch-v2-different-CODE-20261019-v1/ACTUAL-AUTHOR16-RERUN.stderr",
+      "sha256": "9c687aeb0f78307636c958942c450234e3e9aac1428a8588ef7a38ccf330553a",
+      "bytes": 115
+    },
+    "independent_tests": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-publication-review-304fb-coherent-patch-v2-different-CODE-20261019-v1/ACTUAL-INDEPENDENT7-DELTA-CHECKS.stderr",
+      "sha256": "6a0da5b18ee53bf3b36cca909b8f1337a6376e4bff38118baf035e4c87912599",
+      "bytes": 105
+    },
+    "independent_source": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-publication-review-304fb-coherent-patch-v2-different-CODE-20261019-v1/independent_v2_checks.py",
+      "sha256": "5937ff905731df91516be1cb4f4b4afa3e7334abd645aae2da3f9b5234370690",
+      "bytes": 5139
+    }
+  },
+  "operations": {
+    "actual_V2_cleanup": 0,
+    "new_G2_QA": 0,
+    "generation": 0,
+    "compositor": 0,
+    "build": 0,
+    "registrar_main": 0,
+    "canonical_or_Git_mutations": 0,
+    "real_Image_repair_or_save": 0,
+    "actual_readonly_plan_and_window_search": 1,
+    "synthetic_repairs_only": true,
+    "ART_material_review": 0
+  }
+}

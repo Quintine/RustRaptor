@@ -1,0 +1,57 @@
+{
+  "status": "ACTUAL_READONLY_APPROVED_JOB_PASS_ROOT_APPROVED_ALL6",
+  "job_id": "derived-original-terrain6-SourceG2-20261019-v1",
+  "assets": [
+    "2069f",
+    "206a2",
+    "206a7",
+    "301fc",
+    "301fd",
+    "30201"
+  ],
+  "candidate_sha256": "89d858b240fd2b28f3b089809fe0991801d622d3f65acb04bca955f6fc26b746",
+  "coordinator_sha256": "ee8c226e76794cf664db5ecd2b3c4a381ab77fa503ee3328e0505dbb7f5bbcd9",
+  "runtime_qa_sha256": "72af2f0df53b1940db539c37c6965cd05d029e0b7f6cc3acce7351e0693404df",
+  "frame_bindings_sha256": "6140e290ffe79d3a62c1f450366627ed30130aae038e8fe5f4980c4f65ee2b61",
+  "Root_approval": {
+    "path": "jobs/derived-original-terrain6-SourceG2-20261019-v1/proofs/final-Root-approval/ROOT-WINDOWS6-APPROVED-INTRINSIC-AND-FINITE-CONTEXT.json",
+    "sha256": "487f136eda8faba6ef6bf216bdeb8fc36e6b834e7e098f2f5b75ed7787a65da8"
+  },
+  "validation_carrier": {
+    "target/hd-review-libraries/5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676/libraptor_replica.rlib": {
+      "sha256": "5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676",
+      "size": 22772516,
+      "mtime_ns": 1792326752687554590
+    },
+    "src/assets.rs": {
+      "sha256": "44515745330b47a6a99761c449225c67cbee95c7b1f9d653d919ed09032b1beb",
+      "size": 16417,
+      "mtime_ns": 1791711112495415498
+    },
+    "src/hd.rs": {
+      "sha256": "b17f4ee0757ee87d34e01ec76f3a6239c6e9044b42b4b10bd5f05b485f137a64",
+      "size": 159636,
+      "mtime_ns": 1792245624444265090
+    },
+    "tools/terrain_six_fine_cleanup.py": {
+      "sha256": "6386821517c7bc4118566052c45ea3261e0e9aefadf0ce8f425635034649a0dc",
+      "size": 12124,
+      "mtime_ns": 1792391717076698707
+    },
+    "tools/test_terrain_six_fine_cleanup.py": {
+      "sha256": "9b06dc8c4bd94929daa5a51b5c86ea1265cf5f335c51ab4e317ff8b98c22c38b",
+      "size": 10101,
+      "mtime_ns": 1792391717076874456
+    },
+    "tools/hd_terrain_cleanup.py": {
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+      "size": 14882,
+      "mtime_ns": 1792280173116585173
+    }
+  },
+  "actual_validator": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_register_reviewed.py",
+  "actual_validator_sha256": "573c1f07bf6d9c1b164a13e6c9ba5e13cb5678b26308afc4d9475c72fda487aa",
+  "private_project_files_unchanged_by_admission": true,
+  "registrar_main_or_canonical_mutations": 0,
+  "new_art_QA_render_World_or_compile": 0
+}

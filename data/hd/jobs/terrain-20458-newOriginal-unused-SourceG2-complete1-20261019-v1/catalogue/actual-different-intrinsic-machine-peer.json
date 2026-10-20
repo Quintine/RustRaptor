@@ -1,0 +1,125 @@
+{
+  "asset": "20458",
+  "status": "QUALIFIED",
+  "qualified_complete1": true,
+  "all4_scales_qualified": true,
+  "complete_native_frames": 1,
+  "native_scales": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "actual_artist": "/root/terrain_repair_plan",
+  "hybrid_trial_preparer": "/root/terrain_repair_plan",
+  "reviewer": "/root/ridge_pair",
+  "different_from_artist_and_preparer": true,
+  "held_frames": 0,
+  "Source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1619",
+    "sha256": "8624cde2b0f51bd9002f3aba3cd796b12e7e3d95df39a66cc85791b0ce179565",
+    "bytes": 1044
+  },
+  "candidate": {
+    "path": "jobs/terrain-20458-newOriginal-unused-SourceG2-complete1-20261019-v1/candidate.json",
+    "sha256": "493bdce84d7e81bbeb0fe1d3afcddd9da197949cf263e0fd2ce49c064059a92d"
+  },
+  "native_frame": {
+    "frame": 0,
+    "file": "jobs/terrain-20458-newOriginal-unused-SourceG2-complete1-20261019-v1/generated/untouched-genuine-builtin-atlas.png",
+    "logical_width": 32,
+    "logical_height": 32,
+    "origin": [
+      0,
+      0
+    ],
+    "source_sha256": "8624cde2b0f51bd9002f3aba3cd796b12e7e3d95df39a66cc85791b0ce179565",
+    "atlas_grid": {
+      "columns": 2,
+      "rows": 1,
+      "column": 1,
+      "row": 0
+    },
+    "original_detail_cells": []
+  },
+  "raw": {
+    "path": "jobs/terrain-20458-newOriginal-unused-SourceG2-complete1-20261019-v1/generated/untouched-genuine-builtin-atlas.png",
+    "sha256": "90c17f3cbcc798fdd0e76c4cc05f7f9b0d735a9a61758b72e42608a06963b377"
+  },
+  "exact_original_detail_cells": [],
+  "scales": [
+    {
+      "scale": 1,
+      "indices_RGB_and_SourceNearest_functional_classes_exact": true,
+      "individual250plus_SourceNearest_exact": true,
+      "SourceNx_class_control_difference_samples": 0,
+      "Source_functional_samples": 0,
+      "fire_index_phase_differences": 0
+    },
+    {
+      "scale": 2,
+      "indices_RGB_and_SourceNearest_functional_classes_exact": true,
+      "individual250plus_SourceNearest_exact": true,
+      "SourceNx_class_control_difference_samples": 0,
+      "Source_functional_samples": 0,
+      "fire_index_phase_differences": 0
+    },
+    {
+      "scale": 3,
+      "indices_RGB_and_SourceNearest_functional_classes_exact": true,
+      "individual250plus_SourceNearest_exact": true,
+      "SourceNx_class_control_difference_samples": 0,
+      "Source_functional_samples": 0,
+      "fire_index_phase_differences": 0
+    },
+    {
+      "scale": 4,
+      "indices_RGB_and_SourceNearest_functional_classes_exact": true,
+      "individual250plus_SourceNearest_exact": true,
+      "SourceNx_class_control_difference_samples": 0,
+      "Source_functional_samples": 0,
+      "fire_index_phase_differences": 0
+    }
+  ],
+  "material_findings": "Tan building panel retains the shallow upper inset, long horizontal black slit, smaller divided window, lower opening/crosspiece and stepped side recesses. Highlight bevel and left-side shadow are deeper than Source, while the logical panel position and openings remain readable all4scales. Catalogue-only; no gameplay placement/seam claim.",
+  "catalogue_only_unused": true,
+  "no_genuine_original_gameplay_context_claimed": true,
+  "prior_genuine_complete_intrinsic_review": {
+    "path": "jobs/terrain-20458-newOriginal-unused-SourceG2-complete1-20261019-v1/review/different-intrinsic-original-material.json",
+    "sha256": "defbdb1036d172b837e12bfcf056db2f3ed79cf16fcdf9ce2f2886ba4e9e212c"
+  },
+  "physical_reviewer_of_prior_report": "/root/terrain_context_review",
+  "actual_new_physical_views_for_this_receipt": 0,
+  "purpose": "Different saved-only mechanical binding of the genuine prior all4-scales complete-picture intrinsic qualification to this exact metadata-only singleton candidate. Does not claim a new physical review.",
+  "strict_saved_machine_checks": [
+    {
+      "scale": 1,
+      "saved_index_samples": 1024,
+      "actual_PPM_palette_exact": true,
+      "Source_functional_indices": 0,
+      "retained_cells": 0
+    },
+    {
+      "scale": 2,
+      "saved_index_samples": 4096,
+      "actual_PPM_palette_exact": true,
+      "Source_functional_indices": 0,
+      "retained_cells": 0
+    },
+    {
+      "scale": 3,
+      "saved_index_samples": 9216,
+      "actual_PPM_palette_exact": true,
+      "Source_functional_indices": 0,
+      "retained_cells": 0
+    },
+    {
+      "scale": 4,
+      "saved_index_samples": 16384,
+      "actual_PPM_palette_exact": true,
+      "Source_functional_indices": 0,
+      "retained_cells": 0
+    }
+  ],
+  "new_generation_cleanup_QA_renderer_World_calls": 0
+}

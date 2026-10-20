@@ -1,0 +1,74 @@
+{
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "operation": "further-first-tiles",
+  "palette": {
+    "path": "inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "sources": [
+    {
+      "asset": "105a4",
+      "path": "inputs/105a4.pic",
+      "sha256": "6d28b5af3aa1d6ec57b7f88545e23c64ff54e0ba5d768546c24178f958d5a631"
+    },
+    {
+      "asset": "105a7",
+      "path": "inputs/105a7.pic",
+      "sha256": "a2df4bd0a8bde84f68909c2cead77308be57bf24342662be2720d808b5c5c4c6"
+    }
+  ],
+  "donors": {
+    "0": {
+      "path": "inputs/new-1059e-master.png",
+      "sha256": "72f75613c04054d23b94da26b3beb3ee6fb3d63be9d739aebdb353f0c9577c7b",
+      "box": [
+        80,
+        120,
+        140,
+        180
+      ]
+    },
+    "1": {
+      "path": "inputs/new-105a4-105a7-master.png",
+      "sha256": "b305fbe79b583b5c8b3fc356871db3b9ad42953b54e02bf876b4170f73946add",
+      "box": [
+        390,
+        370,
+        120,
+        120
+      ]
+    },
+    "2": {
+      "path": "inputs/new-105a4-105a7-master.png",
+      "sha256": "b305fbe79b583b5c8b3fc356871db3b9ad42953b54e02bf876b4170f73946add",
+      "box": [
+        1100,
+        30,
+        170,
+        140
+      ]
+    },
+    "3": {
+      "path": "inputs/new-105a4-105a7-master.png",
+      "sha256": "b305fbe79b583b5c8b3fc356871db3b9ad42953b54e02bf876b4170f73946add",
+      "box": [
+        940,
+        230,
+        100,
+        140
+      ]
+    },
+    "4": {
+      "path": "inputs/new-105a4-105a7-master.png",
+      "sha256": "b305fbe79b583b5c8b3fc356871db3b9ad42953b54e02bf876b4170f73946add",
+      "box": [
+        367,
+        17,
+        24,
+        28
+      ]
+    }
+  },
+  "lineage": "Own genuine builtin1059e72f75613 and105a4/105a7b305fbe7. Explicit fixed genuine donor fields, no repeats. Source geometry/class/color base plus same approved finite fine RGB band sigma3 clip16 strength0.5; no tuning or OriginalNx-only HD claim.",
+  "functional_contract": "Actual selected3 are opaque unreserved Source32, zero original_detail_cells. Explicit Source green100..111 and dark24..31 masks preserve foliage and seam geometry; mapper rejects all unsupported/reserved labels rather than bypassing any guard."
+}

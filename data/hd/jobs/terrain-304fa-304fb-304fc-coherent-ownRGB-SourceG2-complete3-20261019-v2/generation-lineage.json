@@ -1,0 +1,66 @@
+{
+  "tool": "builtin image_gen.imagegen",
+  "historical_actual_image_calls": 1,
+  "new_image_calls_this_package": 0,
+  "actual_generation_assets": [
+    "304fa",
+    "304fb",
+    "304fc"
+  ],
+  "selected_assets": [
+    "304fa",
+    "304fb",
+    "304fc"
+  ],
+  "actual_provider_receipt": {
+    "path": "jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/review/actual-builtin-return.json",
+    "sha256": "7b9ebbefcd2f7e4ce772f2e98f5c07a296c64135439ff4cfb47ce15add1a3494"
+  },
+  "exact_submitted_Source_references": [
+    {
+      "path": "jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/references/Original-native-atlas.png",
+      "sha256": "18a0ae6eebfd39af89c11de666df903871ba9d00661b3ec15a5fcf4e356e47e6"
+    },
+    {
+      "path": "jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/references/Original-NN-readable-atlas.png",
+      "sha256": "56ac2ac0d45ced41030b7ded071609a1ef503342cd8eeadfa1c87198d3378c9b"
+    }
+  ],
+  "generation_prompt": {
+    "path": "jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/generation-prompt.txt",
+    "sha256": "e95037a600ea5582ae2665fe62e8fa35ae272ef9af027b3d60ae918dabef6248"
+  },
+  "raw_artwork": {
+    "jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/generated/derived-coherent-own-green-patch-complete3.png": "4f34686ffa3a324b8d9ca037f02c6ed031c0af408d0482abb2d0403f0911b886"
+  },
+  "original_Source_RGB_not_composited_into_generated_material": true,
+  "retained_Source_cells_noHDcredit": {
+    "304fa": 0,
+    "304fb": 0,
+    "304fc": 0
+  },
+  "genuine_context_scope": "Literal SourceG2/H5654 saved finitecontexts; Root differentcontext receipt still pending; not a fresh currentbankcapture.",
+  "derivation": {
+    "method": "direct-own-generated-green-contiguous-patch-transfer-v2",
+    "helper": {
+      "path": "jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/derive-own-green-patch.py",
+      "sha256": "fb95544d4d92252ff025d5dc404dd13e6a1a3c202ee2ae95fc32a6dd60819fa0"
+    },
+    "recipe": {
+      "path": "jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/reproduce-own-green-patch-recipe.json",
+      "sha256": "d53621bbdbf4d34b3361f477a47da443e76c7a9343284d6e22c31438d444a4c8"
+    },
+    "parent_master": {
+      "path": "jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/generated/untouched-parent-atlas.png",
+      "sha256": "b262139b3887dd31be4b130b33357e3525279d5e42780896b12c8675006dc5d0"
+    },
+    "produced_rgb_translation": [
+      146,
+      289
+    ],
+    "changed_own_fb_RGB_pixels": 3390,
+    "new_RGB_colors_synthesized": 0,
+    "retained_Source_cells0": true,
+    "reproduce": "From this jobdirectory: python3 derive-own-green-patch.py --recipe reproduce-own-green-patch-recipe.json --output NEW-OUTSIDE-PNG. Saved final master is already supplied; packaging invokes no new cleanup."
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "argv": [
+    "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-v",
+    "-s",
+    "tools/fine10536_source_components",
+    "-p",
+    "test*.py"
+  ],
+  "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/actual-public70-fresh-isolated-nine-suites/project",
+  "source_group": {
+    "name": "fine10536_source_components",
+    "start_directory": "tools/fine10536_source_components",
+    "cwd": "isolated_project_root",
+    "argv": [
+      "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/fine10536_source_components",
+      "-p",
+      "test*.py"
+    ],
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "test_module_count": 4,
+    "static_declared_test_methods": 40,
+    "files": [
+      {
+        "path": "tools/fine10536_source_components/test_buffered_io.py",
+        "sha256": "f79d9a32e3006b040e2448cf763ee05d3df18c25e6f80210ce7dc6e2956d8ea4",
+        "bytes": 3996
+      },
+      {
+        "path": "tools/fine10536_source_components/test_next_pair_selector.py",
+        "sha256": "45417f1a40e72c07ad059b186a5b0d7888d6b199ea91574e76a8b39967bd579e",
+        "bytes": 3358
+      },
+      {
+        "path": "tools/fine10536_source_components/test_nine_selector.py",
+        "sha256": "01dbc58041caadf23f6c863df33f12e982a9fa1544b7bd00fba7a78c6639948d",
+        "bytes": 3262
+      },
+      {
+        "path": "tools/fine10536_source_components/test_terrain_component_cleanup.py",
+        "sha256": "da58e349d3e131ba38cd0f8720e5392a1c55ce60cd325d033a45c1257ba269ef",
+        "bytes": 3698
+      }
+    ],
+    "run_in_separate_process": true
+  },
+  "time_unix": 1792490459.5268657
+}

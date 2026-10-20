@@ -1,0 +1,52 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/generation/ACTUAL-ORIGINAL-PRIMARY-RETURNED-UNTOUCHED.png",
+        "sha256": "b305fbe79b583b5c8b3fc356871db3b9ad42953b54e02bf876b4170f73946add"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/generation/ACTUAL-BUILTIN-PRIMITIVE-RECEIPT.json",
+        "sha256": "a399a80aa09cc5259c8e77896d0044e20147c6c8ff8ec3efb6326d75c090c8df"
+      },
+      "prompt": {
+        "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/generation/prompt.txt",
+        "sha256": "c6ebe8754d2136c64c42bfc66cccd403ba3c3bc73570d9f26c6e98ffe55144c2"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/firstcampaign5_green/terrain_component_cleanup.py",
+      "sha256": "ec1df21bdcba317e1a6eebdeb4d6f4634be4136f00c35853fcac1569d7b9efb3"
+    },
+    {
+      "path": "tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+    },
+    {
+      "path": "tools/firstcampaign5_green_parent/terrain_component_cleanup.py",
+      "sha256": "57132a11256eac6f3952b2dedf23edd68c68a0c99048abbad9dbb6512c9854fb"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/reproducer/recipe.json",
+    "sha256": "7c29d730ef8eaebfb6a39b44e69e010b33789b8ef2fb2dde4f5edf6cc6a3ce60"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/measurement/ACTUAL-CLEANUP-PORTABLE-BINDING-BRIDGE.json",
+    "sha256": "55fe64fe45cb5d898e6229df2b30303192460cdb583866a08b068703aad3fede"
+  },
+  "sources": {
+    "105a4": "6d28b5af3aa1d6ec57b7f88545e23c64ff54e0ba5d768546c24178f958d5a631"
+  },
+  "outputs": {
+    "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/derived/105a4-derived.png": "9e59fd266a8ed326c9f45fe4e35a587d69cc1861b0e4fddf13ea2cac22ceb599"
+  },
+  "Original_Source_ownership_is_not_HD_detail": true,
+  "green_parent_chain_is_derived_not_an_untouched_return": true,
+  "reproduction": "Use the exact project tools helper and this job-contained recipe. Green stage first has its full unchanged parent-reproducer to rebuild the held two-frame input, then runs full-green successor; no such replay was performed for packaging."
+}

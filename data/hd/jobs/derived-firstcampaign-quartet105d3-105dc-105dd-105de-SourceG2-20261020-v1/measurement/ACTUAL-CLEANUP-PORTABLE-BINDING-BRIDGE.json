@@ -1,0 +1,29 @@
+{
+  "execution": {
+    "status": "success",
+    "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+    "recipe_sha256": "d31c1498363480732a2c7cd3cf677c4d608380d2f737a7118cc51eb05c5d6987",
+    "tool_sha256": "f0fb3e248cfa8d26568d0f27007fad98c0d8e3c78d14a20b034aa4610fd52445",
+    "source_sha256": {
+      "105d3": "a9339b020566351e6a6717995c70442c1acba278c154821169a6714681ac2d93",
+      "105dc": "ac5322698956da028eacacbbd1de6d0eae776e8335e0787522f6d5fb7db35f61",
+      "105dd": "e4b706aa324a92fdd94a573816e139c1751f2f9c4cbcece6e0bfe73f4d2328a1",
+      "105de": "d6d3cf3ebeb13acc162f0c8c2b51a576231177b3e26bae3e2bbfcf08f3c7eafe"
+    },
+    "parent_raw_sha256": [
+      "c393bb3554a8a71c9a62f1b030523e1f190deab1ff7defa92b7f3325993b169f"
+    ],
+    "output_sha256": {
+      "105d3": "e433b7e50f3cf3066b88d79c7df6676e279bc9e8b64b2c26bd02a135492b69e4",
+      "105dc": "3a8a4282244a5b89425096fde4844472485931781a8759eda8afb7a613d45572",
+      "105dd": "48d26126fcaf0db4843fba3a490f58c8f3a85efb538c1e9c93a3b3227f6b47d8",
+      "105de": "b1524534e38827409860c090466983aa034da30217bd1e020a7c0c5f2179ca36"
+    }
+  },
+  "scope": "Read-only binding of already completed actual derivation; exact source, recipe, tool and output hashes unchanged. No cleanup replay. Green105a4 preserves exact held-parent full recipe/helper/input tree and actual parent receipt; only full105 Sourcegreen restoration changed parent.",
+  "literal_actual_receipt": {
+    "path": "jobs/derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1/reproducer/ACTUAL-ORIGINAL-EXECUTION-RECEIPT.json",
+    "sha256": "8921a6592207bf7b4b39444c665cd57d8710d9193229e0412e91efedad514926"
+  },
+  "new_cleanup_calls": 0
+}

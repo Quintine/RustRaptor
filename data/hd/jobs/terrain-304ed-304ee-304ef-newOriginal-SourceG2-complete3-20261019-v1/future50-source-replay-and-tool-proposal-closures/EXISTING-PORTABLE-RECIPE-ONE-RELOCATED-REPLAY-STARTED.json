@@ -1,0 +1,42 @@
+{
+  "authority": "Root resumed bounded packaging/replay; explicitly confirmed exactreplayonce noadditionalgate.",
+  "argv": [
+    "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/derive-own-green-patch.py",
+    "--recipe",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/reproduce-own-green-patch-recipe.json",
+    "--output",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/ONE-REPLAY-EXISTING-APPROVED-RECIPE.png"
+  ],
+  "helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/derive-own-green-patch.py",
+    "sha256": "fb95544d4d92252ff025d5dc404dd13e6a1a3c202ee2ae95fc32a6dd60819fa0",
+    "bytes": 7758
+  },
+  "recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/reproduce-own-green-patch-recipe.json",
+    "sha256": "d53621bbdbf4d34b3361f477a47da443e76c7a9343284d6e22c31438d444a4c8",
+    "bytes": 590
+  },
+  "inputs": {
+    "Source": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/Originals/304fb.bin",
+      "sha256": "10948daaac0b7f89fca96da7b7b1d3e5113d9880afff7758448c078c846ce08b",
+      "bytes": 1044
+    },
+    "palette": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/Originals/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "bytes": 768
+    },
+    "master": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain-plan-private-resume-closeout-20261020-v1/Relocated RustRaptor terrain job with spaces/generated/untouched-parent-atlas.png",
+      "sha256": "b262139b3887dd31be4b130b33357e3525279d5e42780896b12c8675006dc5d0",
+      "bytes": 2850782
+    }
+  },
+  "copied_job_files": 32,
+  "copied_raw_bytes": 0,
+  "all_inputs_inside_relocated_job": true,
+  "start_unix": 1792486651.2255125
+}

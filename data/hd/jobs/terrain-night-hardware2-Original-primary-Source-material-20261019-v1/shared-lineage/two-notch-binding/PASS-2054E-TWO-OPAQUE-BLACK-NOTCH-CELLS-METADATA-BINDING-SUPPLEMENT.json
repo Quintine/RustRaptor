@@ -1,0 +1,135 @@
+{
+  "status": "PASS_ADDITIVE_TWO_CELL_METADATA_BINDING_ONLY_NO_NEW_CODE_OR_ART_REVIEW",
+  "reviewer": "/root/terrain_context_review",
+  "original_CODE_gate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-independent-night5-CODE-and-actualbinding-review-20261019-v1/PASS-DIFFERENT-NIGHT5-CODE-AND-ACTUAL-BINDINGS-NO-REAL-CLEANUP.json",
+    "sha256": "3f5a28286fcc7593fb06e198d5b34e2b21ed2f394f0e344c0cb27945387a8920"
+  },
+  "prior_candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/hardware2/candidate-prepared-before-cleanup.json",
+    "sha256": "1d7b857e0f18feb16c0d34ed4b53bad07331f8882dd9651baad4c4a4cff2b7a9"
+  },
+  "final_candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/hardware2/candidate-two-clamp-notch-retention-successor.json",
+    "sha256": "01629cab282c371a88c1289e2d4bf750869f2f9a171364c25bd4fc7220a8235c"
+  },
+  "final_runtime_QA": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/hardware2/actual-SourceG2-two-clamp-notch-retention-successor/runtime-qa.json",
+    "sha256": "33a591093fc3f76d99a6d8662577ff2a9f89765757cbd2644c99f5e1b144f378"
+  },
+  "saved_actual_bank": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/hardware2/actual-SourceG2-two-clamp-notch-retention-successor/actual-indexed-source-and-scales.json",
+    "sha256": "f6c76a12c8ca7a2ae5ad06fddbf81184ebf6ebc6307a5b09ee90971d8048688e"
+  },
+  "frame_bindings_sha256": "5c9732dbea041f34d89204e5bbd6bf06ee33f7853f675f292510a124c346e2bd",
+  "change": "Only2054e original_detail_cells [[3,16],[29,16]] added to native frame.2054d unchanged. Exact helper/recipes remain original CODE-passed bytes. Final candidate other provenance-stage fields may change; all runtime native fields are compared exactly.",
+  "retained_notches": {
+    "Source": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/sources/2054e.pic",
+      "sha256": "a0af561811ac3dc187748135b1572772a8c12c4f4960396fca8eea8920d062ca"
+    },
+    "Source_palette_index": 31,
+    "meaning": "Opaque Source black clamp-notch cue, not transparency; Original not generatedHD detail.",
+    "retained_logical_cells": 2,
+    "all4_scales": [
+      {
+        "scale": 1,
+        "logical_cell": [
+          3,
+          16
+        ],
+        "SourceNx_indices_exact": true,
+        "samples": 1
+      },
+      {
+        "scale": 1,
+        "logical_cell": [
+          29,
+          16
+        ],
+        "SourceNx_indices_exact": true,
+        "samples": 1
+      },
+      {
+        "scale": 2,
+        "logical_cell": [
+          3,
+          16
+        ],
+        "SourceNx_indices_exact": true,
+        "samples": 4
+      },
+      {
+        "scale": 2,
+        "logical_cell": [
+          29,
+          16
+        ],
+        "SourceNx_indices_exact": true,
+        "samples": 4
+      },
+      {
+        "scale": 3,
+        "logical_cell": [
+          3,
+          16
+        ],
+        "SourceNx_indices_exact": true,
+        "samples": 9
+      },
+      {
+        "scale": 3,
+        "logical_cell": [
+          29,
+          16
+        ],
+        "SourceNx_indices_exact": true,
+        "samples": 9
+      },
+      {
+        "scale": 4,
+        "logical_cell": [
+          3,
+          16
+        ],
+        "SourceNx_indices_exact": true,
+        "samples": 16
+      },
+      {
+        "scale": 4,
+        "logical_cell": [
+          29,
+          16
+        ],
+        "SourceNx_indices_exact": true,
+        "samples": 16
+      }
+    ],
+    "exact_sample_total": 60
+  },
+  "unchanged_2054d_all5_PPMs": [
+    {
+      "name": "2054d-hd-1.ppm",
+      "sha256": "b1f8edcb7f6d7cbd0ee360cf8d47dbc97ed9e3acbdace4989cfa94bdfe2b353f"
+    },
+    {
+      "name": "2054d-hd-2.ppm",
+      "sha256": "d9bd415c9a0681f6f6330afa319391d23e6e35e04e2ed5d5d7f2879207968ee5"
+    },
+    {
+      "name": "2054d-hd-3.ppm",
+      "sha256": "1cb0b500bceb2f616718239150fd300304161fbd9668f9c3babdc6f73c0892d2"
+    },
+    {
+      "name": "2054d-hd-4.ppm",
+      "sha256": "4d1883fca95cf6b201729d3def095fcd133b79120a3849fec5725ca00c3acfdc"
+    },
+    {
+      "name": "2054d-original.ppm",
+      "sha256": "02cffa2a3fc4244c9de81aca5a25dd0949b6c68cec0b8b6925054d2690bf2bb1"
+    }
+  ],
+  "scope": "Read-only native-frame/Source/saved-bank binding supplement. The author has executed separately approved real derivation/G2; this review does not claim zero historical runs or approve generated output appearance. No helper/derive/G2/World execution by this reviewer.",
+  "reviewer_new_real_cleanup_G2_World_calls": 0,
+  "canonical_mutations": 0
+}

@@ -1,0 +1,103 @@
+{
+  "status": "PASS_READONLY_RESUME_NO_NEW_QA_ENGINE_OR_PIXEL_OUTPUT",
+  "utc": "2026-10-20T07:51:49.624131+00:00",
+  "checkpoint_sha256": "adc799a8da3adb64a1fa31a24da3f1b67d1de871d949c50f897606e35f12467d",
+  "checkpoint_pins_verified": [
+    {
+      "name": "literal_baseline",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/immutable-H5654-data/hd/hd.json",
+      "sha256": "104dc8f0d154f6a3e8edf6c72283205cb1f323daf8c225a8ca3a56680ac87f5b"
+    },
+    {
+      "name": "baseline_raw_hardlink_identity",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/IMMUTABLE-LITERAL-BASELINE-RAW-HARDLINK-IDENTITIES-NO-8GB-COPY-OR-REHASH.json",
+      "sha256": "258794414b5be18fc0a2ef8b296cc8316463c5526e069026d2dee5347819b3da"
+    },
+    {
+      "name": "SourceG2_library",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+      "sha256": "5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676"
+    },
+    {
+      "name": "source_contract",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/FROZEN-FIRSTCAMPAIGN5-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+      "sha256": "bf88b031adc33aaad8a21abc323d7cd38a42381494b4d9cc12b3d56b18c87e6f"
+    },
+    {
+      "name": "actual_recipe",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/ROOT-GO-ACTUAL-G2-H5654-FIRSTCAMPAIGN5-INPUT.json",
+      "sha256": "7b5f8ebf01e91401e2b59171830551660a39951eb99e060dc16e30f6a9a76a6e"
+    },
+    {
+      "name": "compile_and_constructor_argv",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/ACTUAL-ONE-COMPILE-ONE-CONSTRUCTOR-ARGV.json",
+      "sha256": "d0f4c8961b874547b6db866724a35f002497b0a4f14831dc0c1b7925f2ce20bb"
+    },
+    {
+      "name": "adapter_source",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/compose_Firstcampaign5_dynamic_SourceG2_H5654.rs",
+      "sha256": "813b4916219d8bafa1503e0cb8de49aeda9a2bdc7d65d0d551510267324b4b21"
+    },
+    {
+      "name": "compiled_adapter",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/compose-firstcampaign5-genuine10-actual-SourceG2",
+      "sha256": "7eadf3e0556ff0dd4c13ea122da79be273905381646aef6d420dcefca96a8fdb"
+    },
+    {
+      "name": "executor_source",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/execute_firstcampaign5_context_once.py",
+      "sha256": "64f2efdd01de7677a76ea942f00c57796b45275547a1d234f2c45cd7dc165c61"
+    },
+    {
+      "name": "compile_terminal",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/ACTUAL-ONE-COMPILE-TERMINAL.json",
+      "sha256": "fed6604d0f119b95eed8fda5de2135a9f51de64856f69ba55a27de50d33f4f03"
+    },
+    {
+      "name": "constructor_terminal",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/ACTUAL-ONE-CONSTRUCTOR-TERMINAL.json",
+      "sha256": "8806cebfdb8891a9cb32c891150144c84d4d341ac4668377a79f357ff7b0ecdb"
+    },
+    {
+      "name": "actual_context_proof",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/actual-context10/ACTUAL-SOURCEG2-FIRSTCAMPAIGN5-GENUINE10-40-SCALES-120-PLANES-5VIEWS-5EVENTS.json",
+      "sha256": "56e06d2596f06263d54cbc71405269344e2c9804e6e94c230df4e4dd3339d194"
+    },
+    {
+      "name": "saved_file_only_authentication",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/FILE-ONLY-FIRSTCAMPAIGN5-10-ENDPOINTS-120-PLANES-128-COMPONENTS-AUTHENTICATION.json",
+      "sha256": "8acf51fd5323d6c4fd57b89bcabb02e0e139d15d0de6d64ca23c76eff833ed63"
+    },
+    {
+      "name": "physical_interface",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/COMPLETE10-GENUINE-120-NATIVE-PANES-FIVE-ORDERED-VIEWS-PAGE-ARRAY-INTERFACE.json",
+      "sha256": "3966870461e3da3e0a6576009dc9abd01c3690cfdd2a77757c1c5436d3675519"
+    },
+    {
+      "name": "input_closing_guard",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-SourceG2-H5654-genuine-context-20261019-v1/IMMEDIATE-EXACT-CLOSING-GUARDS-AND-BOUNDARY-RELEASED.json",
+      "sha256": "f992690dcd6bba3cea6c42c660066632b1d60389cef38c727c8db357ed1a83c4"
+    }
+  ],
+  "read_only_audit_script_sha256": "4957d5935f74a525d3f3e13a0afdc29a2a2c94409a0b5b4a3c41835373bea8d6",
+  "actual_array_totals": {
+    "Original_control_samples": 2764800,
+    "all3_plane_samples": 8294400,
+    "baseline_Original_selected_owner_samples": 276480,
+    "retained_baseline_samples": 0,
+    "retained_proposal_samples": 3240,
+    "domain_samples": 0,
+    "outside_support_samples": 2435520,
+    "foreign_broad_interior_samples": 1905120,
+    "fallback_samples": 61440,
+    "padding_samples": 0,
+    "delta_samples": 145365,
+    "foreign_noncorner_edge_delta_samples": 21740,
+    "foreign_corner_delta_samples": 4810
+  },
+  "whole_page_body_readbacks": 240,
+  "raw_bank_routes_stat_only": 3088,
+  "full_bank_raw_rehash": 0,
+  "engine_constructor_or_intrinsicQA_calls": 0,
+  "pixel_outputs_or_edits": 0
+}

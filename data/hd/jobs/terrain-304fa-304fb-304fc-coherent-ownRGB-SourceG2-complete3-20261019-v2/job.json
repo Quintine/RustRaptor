@@ -1,0 +1,85 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2",
+  "owner": "/root/terrain_repair_plan",
+  "name": "Original-primary terrain 304fa,304fb,304fc",
+  "category": "Terrain",
+  "kind": "contextual_terrain_shard",
+  "targets": [
+    {
+      "asset": "304fa",
+      "canonical_source_asset": "304fa",
+      "source_path": "misc/unnamed.3250",
+      "source_sha256": "d5d89c771bbf3ca5e74277e5517815f512cc83334e46d8bbf62e6f895645504d",
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "original_binary": {
+        "path": "jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/Originals/304fa.bin",
+        "sha256": "d5d89c771bbf3ca5e74277e5517815f512cc83334e46d8bbf62e6f895645504d"
+      }
+    },
+    {
+      "asset": "304fb",
+      "canonical_source_asset": "304fb",
+      "source_path": "misc/unnamed.3251",
+      "source_sha256": "10948daaac0b7f89fca96da7b7b1d3e5113d9880afff7758448c078c846ce08b",
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "original_binary": {
+        "path": "jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/Originals/304fb.bin",
+        "sha256": "10948daaac0b7f89fca96da7b7b1d3e5113d9880afff7758448c078c846ce08b"
+      }
+    },
+    {
+      "asset": "304fc",
+      "canonical_source_asset": "304fc",
+      "source_path": "misc/unnamed.3252",
+      "source_sha256": "d4dad20e5d3da7d358b2e89b02cf4b7f564b88733154c6f1e41ed90e306a4be3",
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "original_binary": {
+        "path": "jobs/terrain-304fa-304fb-304fc-coherent-ownRGB-SourceG2-complete3-20261019-v2/Originals/304fc.bin",
+        "sha256": "d4dad20e5d3da7d358b2e89b02cf4b7f564b88733154c6f1e41ed90e306a4be3"
+      }
+    }
+  ],
+  "generation_inventory": {
+    "actual_assets": [
+      "304fa",
+      "304fb",
+      "304fc"
+    ],
+    "selected_assets": [
+      "304fa",
+      "304fb",
+      "304fc"
+    ],
+    "actual_historical_new_image_calls": 1,
+    "new_image_calls_this_package": 0
+  },
+  "status": "private_complete_source_job_Root_registration_pending"
+}

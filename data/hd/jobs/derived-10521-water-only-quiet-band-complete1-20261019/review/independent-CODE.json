@@ -1,0 +1,79 @@
+{
+  "actual_game_cleanup_QA_World_render_generation_calls": 0,
+  "actual_readonly_bindings": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ship-10521-water-only-independent-CODE-and-bindings-review-20261019-v1/ACTUAL-READONLY-SOURCE-AND-LINEAGE-BINDINGS.json",
+    "sha256": "765d53cf7781c3c71d65c17ae703adb5905f6f24ac60ebe2577d930762a5874b"
+  },
+  "author": "/root/targt_full_context",
+  "author_test_rerun": {
+    "elapsed_seconds": 1.262,
+    "errors": 0,
+    "exit_code": 0,
+    "failures": 0,
+    "log": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ship-10521-water-only-independent-CODE-and-bindings-review-20261019-v1/author-tests.stderr",
+      "sha256": "1993958670d3c103605c4f5834623fef16262f6a1c3e4e80a8648ad7bcab9b73"
+    },
+    "tests": 5
+  },
+  "canonical_Git_mutations": 0,
+  "checks": [
+    "Concrete Source10521PIC/palette bytes match canonical INDEX/PALETTE. True water is everycell of upper16logical rows, ordinary149..159orcycling240..244, and no lowerwater. ScaleNx4/rational724nearest mask is exactly upper362rows.",
+    "Old724RGB is exact pre-held10521mastercrop [0,0,724,724]from2172x724genuine8f890batlas. Exact lower362RGBrows are preserved by source-only ownership assignment; no generated geometry or donor coarsefield is substituted.",
+    "Genuine donor4fa10c1d matches stagedPNG, original untouched master and actual builtin provider savedartifact bytes. Frozen donorcrop0,0,887,887is inbounds; actualrawmetadata/prompts/Originalreference lineage supplied and priorphysicaldonorreview remain separate.",
+    "Independent separableGaussian/convolution oracle matches bounded fineband donor-minusGaussian3,clipplus/minus16,gain.5(maximumRGBresidual8). NormalizedGaussian1waterbase does not bleed lowerdockcoarsecolors into water.",
+    "Independent synthetic full724RGBcomparison proves exact intendedwater output and unchanged lowerhalf; reversing genuine synthetic donor changes onlywater. Constantdonor cannot claim survivingnewHDdetail.",
+    "ProtectedSourcecyclingRGB restoredexact at724rationalmask. Allscale1..4SourceNxprotectedowner union independently recomputed fromtrueSource; metadata must carry that exactunion to finalcandidate.",
+    "Descriptor-walkregularboundedEOFread withnonsymlinkancestors, exactinputSHA, verifiedbufferedmathdependency3284, fixedrecipefield/floatparameters, freshcontainedoutput andpre-writeinputvalidation reviewed. Syntheticrunreceipt recordsactualhelper/input/outputhashes andcorrectderived/notgenerator status."
+  ],
+  "different_from_author": true,
+  "exact_allscale_retained_Source_owner_cells": [
+    [
+      5,
+      4
+    ]
+  ],
+  "exact_recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-10521-water-only-quiet-band-remediation-20261019-v1/FROZEN-WATER-ONLY-RECIPE.json",
+    "sha256": "5841dc51a47c2c0490bbf8e8f2ed7ca1c75bc808b94b1e626d07ae11d264c208"
+  },
+  "findings_requiring_revision": [],
+  "frozen_proposal": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-10521-water-only-quiet-band-remediation-20261019-v1/FROZEN-CODE-RECIPE-BINDINGS-PROPOSAL.json",
+    "sha256": "fcd093cbe23c6e7bd65bc87cc0ef20f1edb0de2fcf10bc516f2469dc54ce5272"
+  },
+  "helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-10521-water-only-quiet-band-remediation-20261019-v1/tools/hd_water_material10521.py",
+    "sha256": "af6e084a626244b25f32ed877353c6f627d1410ad56056623c1280df00be9ec0"
+  },
+  "independent_test_log": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ship-10521-water-only-independent-CODE-and-bindings-review-20261019-v1/independent-tests.stderr",
+    "sha256": "eced22c2f664b31c0e7f5783d5067262e0eb91d992bbc4fadc012d9e919da62f"
+  },
+  "independent_test_source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ship-10521-water-only-independent-CODE-and-bindings-review-20261019-v1/independent_review.py",
+    "sha256": "237de7b5c4543eff2e2201d6777accb25a2dc9e0b66c57e7b5207d69a979e101"
+  },
+  "independent_tests": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ship-10521-water-only-independent-CODE-and-bindings-review-20261019-v1/INDEPENDENT-6-TESTS-AND-EXACT-ACTUAL-BINDINGS.json",
+    "sha256": "030de387bfadbd1b0dce3ec497999fa1521a0fc9e5681f01ffe3706065565796"
+  },
+  "inputs_unchanged": true,
+  "reviewed_utc": "2026-10-19T10:02:30.281307+00:00",
+  "reviewer": "/root/ship_portability",
+  "scope_limits": [
+    "CODEandactualinputbindingqualificationonly, noart/nativepalette/contextapproval. One actualcleanupandfinalG2andfiniteaffectedcontext needseparateexistingRootauthority andsubsequentphysicalreview.",
+    "Nonwaterexactness claim is specifically old724rawRGBrows362..723. Existing HdAssetsLanczosdownsampling may mix values near the water/dockedge; finalnativepixels/Sourceclasssupport/functionalowners andneighborseams must be checked inactualG2/context, not assumed bitidentical fromthisrawclaim.",
+    "Sourcecoarsefield, geometry, protectedcyclingRGB and retainedfunctionalowners receivezeroHDcredit; genuine fineRGBcontribution alone doesnotestablishcleanHDquality.",
+    "Toolmax16MiBinputs/4MpixelPNGdecodeandfixed724outputarebounded. Freshoutputmkdirisnotoverwrite, buthostileconcurrentoutputparentreplacement andOSwritepartialoutput areoutside thisfrozenprivatescope. Helperselfopenreceipt isnot anatomicPythonexecutioncapture; use externalpre/post exacthelperpins.",
+    "Helperdoesnotitselfenforcediskfloor; ownerexecutionwrappermustretainRootcurrentdiskfloorcheck before oneactualrun.",
+    "All frozen source/recipe/input hashes unchanged. Two compactnumeric literal spellings inreviewer-onlytest emitSyntaxWarnings buttestsparsedandexecuted6PASS; nohelper/testproduceredit needed.",
+    "Reviewerperformedonlysyntheticderive/run andreadonlyrealinputdecode/masks. No actualassetcleanup, G2, World, engine/compositor/render, imagegeneration, registrar, canonicalmutation orGitoperation."
+  ],
+  "status": "PASS_DIFFERENT_10521_WATER_ONLY_CODE_AND_EXACT_ACTUAL_BINDINGS",
+  "synthetic_run_calls": 1,
+  "tests": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-10521-water-only-quiet-band-remediation-20261019-v1/tools/test_hd_water_material10521.py",
+    "sha256": "7167c84154a48b1186d95347f47457a4121076658f3e93fea38b5dd2a1009470"
+  }
+}

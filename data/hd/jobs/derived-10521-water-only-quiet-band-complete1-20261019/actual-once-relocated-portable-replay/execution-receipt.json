@@ -1,0 +1,30 @@
+{
+  "status": "success",
+  "method": "10521-Source-water-only-quiet-genuine-RGB-fineband-preserve-nonwater-v1",
+  "recipe_sha256": "5841dc51a47c2c0490bbf8e8f2ed7ca1c75bc808b94b1e626d07ae11d264c208",
+  "tool_sha256": "af6e084a626244b25f32ed877353c6f627d1410ad56056623c1280df00be9ec0",
+  "inputs": {
+    "source": "6b3bcd5cc096654b9593b39cf973e07771c63daa29c66ec83b14e6b10bd02011",
+    "palette": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "old_png": "268713889acf81e1be7f416be48bb97a438118a30a934167bd545b57145e8061",
+    "donor": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23"
+  },
+  "output_sha256": "4537697a969fc2b1ecd4b9042184117f89025fd5bc3b2f8d3bb70165d3ec85d0",
+  "metrics": {
+    "water_pixels": 262088,
+    "nonwater_changed_pixels": 0,
+    "genuine_fine_band_changed_water_pixels": 248953,
+    "old_to_new_water_changed_pixels": 262086,
+    "Original_protected_RGB_exact": true,
+    "original_detail_cells": [
+      [
+        5,
+        4
+      ]
+    ],
+    "Original_coarse_geometry_and_retained_cells_HD_credit": 0,
+    "donor_coarse_shapes_colors_not_copied": true
+  },
+  "new_generation_calls": 0,
+  "derived_not_generator_return": true
+}

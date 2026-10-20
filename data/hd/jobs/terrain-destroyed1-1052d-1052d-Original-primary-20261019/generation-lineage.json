@@ -1,0 +1,35 @@
+{
+  "format_version": 1,
+  "raw_master": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/lineage/second7-original-generation-and-historical-context/generation/destroyed1/returned-untouched-atlas.png",
+    "sha256": "15c59365b5eafa3d36c2def5314ea588d859bc77edcd42d04572b9ff57587a8e"
+  },
+  "actual_builtin_receipt": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/lineage/second7-original-generation-and-historical-context/generation/destroyed1/actual-generation-safe-summary.json",
+    "sha256": "e379863e587dfd5649a10648f7a9cfdb3b0dd18ecc6ff4da5d527366f0e25af6"
+  },
+  "prompt": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/lineage/second7-original-generation-and-historical-context/generation/destroyed1/prompt.txt",
+    "sha256": "bd49ed1f49a157a7c13a27ec174d21910783e20aa6b7ae0b08471b794b9c9ae3"
+  },
+  "actual_Original_reference": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/lineage/second7-original-generation-and-historical-context/generation/destroyed1/Original-only-input.png",
+    "sha256": "113405f76b1ed9f4526075ede43aa549bdb4ffaf19fc42414236b93bbad9ae0f"
+  },
+  "crop_pixel_checks": [
+    {
+      "asset": "1052d",
+      "PNG_sha256": "eb9dde72d43a052bd0e191c1060a5096563c896d825c800614f60f26bb0cc83f",
+      "raw_parent_sha256": "15c59365b5eafa3d36c2def5314ea588d859bc77edcd42d04572b9ff57587a8e",
+      "actual_original_atlas_crop": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "decoded_pixels_exact_genuine_atlas_crop": true,
+      "new_art_or_crop_write": false
+    }
+  ],
+  "new_RGBcleanup_or_generation": 0
+}

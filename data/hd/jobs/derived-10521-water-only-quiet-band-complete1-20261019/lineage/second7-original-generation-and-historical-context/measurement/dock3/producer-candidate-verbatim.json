@@ -1,0 +1,119 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-dock3-10521-1052f-Original-primary-20261019",
+  "owner": "/root/iron_coast_names",
+  "status": "candidate",
+  "complete_family": true,
+  "coherent_family_scope": "exactselected3terrainframes only;notwholelegacy16",
+  "targets": [
+    {
+      "asset": "10521",
+      "frame": 0,
+      "file": "jobs/terrain-dock3-10521-1052f-Original-primary-20261019/10521-generated-direct-cell.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "6b3bcd5cc096654b9593b39cf973e07771c63daa29c66ec83b14e6b10bd02011"
+    },
+    {
+      "asset": "1052e",
+      "frame": 0,
+      "file": "jobs/terrain-dock3-10521-1052f-Original-primary-20261019/1052e-generated-direct-cell.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "b88d1f6ea05658b4d13534e34139481962d3905066a38bd0920ae2a02206a014"
+    },
+    {
+      "asset": "1052f",
+      "frame": 0,
+      "file": "jobs/terrain-dock3-10521-1052f-Original-primary-20261019/1052f-generated-direct-cell.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "8d842492b10ea7a41b16c66f3227616a4d9ac6ab4983dfefe655d31f5142c20a"
+    }
+  ],
+  "sequences": [
+    {
+      "name": "Original-primary terrain10521",
+      "base_asset": 66849,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-dock3-10521-1052f-Original-primary-20261019/10521-generated-direct-cell.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "6b3bcd5cc096654b9593b39cf973e07771c63daa29c66ec83b14e6b10bd02011"
+        }
+      ]
+    },
+    {
+      "name": "Original-primary terrain1052e",
+      "base_asset": 66862,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-dock3-10521-1052f-Original-primary-20261019/1052e-generated-direct-cell.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "b88d1f6ea05658b4d13534e34139481962d3905066a38bd0920ae2a02206a014"
+        }
+      ]
+    },
+    {
+      "name": "Original-primary terrain1052f",
+      "base_asset": 66863,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-dock3-10521-1052f-Original-primary-20261019/1052f-generated-direct-cell.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "8d842492b10ea7a41b16c66f3227616a4d9ac6ab4983dfefe655d31f5142c20a"
+        }
+      ]
+    }
+  ],
+  "method": "DirectcropofgenuineOriginal-primaryatlas; noRGBcleanup,manualcolorpaintingorOriginalretentionfield.",
+  "provenance": {
+    "raw_sha256": "8f890b3c24b8a6fd029ba02872dce06e7dd4b07875a7f363d72d8e88577afbc6",
+    "actual_builtin_calls": 1,
+    "raw_dimensions": [
+      2172,
+      724
+    ],
+    "grid": [
+      3,
+      1
+    ],
+    "cell_dimensions": [
+      724,
+      724
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-destroyed1-1052d-1052d-Original-primary-20261019",
+  "owner": "/root/iron_coast_names",
+  "status": "candidate",
+  "complete_family": true,
+  "coherent_family_scope": "Complete independent singleton Original pictures selected here only; not whole legacy16. Old10521 excluded and replaced by separate water-successor job.",
+  "targets": [
+    {
+      "asset": "1052d",
+      "frame": 0,
+      "file": "jobs/terrain-destroyed1-1052d-1052d-Original-primary-20261019/1052d-generated-direct-cell.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "aba0a2c5842e3170f9a306c5cab425a69a690719c3054ee77acb5d6a68363956"
+    }
+  ],
+  "sequences": [
+    {
+      "name": "Original-primary terrain1052d",
+      "base_asset": 66861,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-destroyed1-1052d-1052d-Original-primary-20261019/1052d-generated-direct-cell.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "aba0a2c5842e3170f9a306c5cab425a69a690719c3054ee77acb5d6a68363956"
+        }
+      ]
+    }
+  ],
+  "method": "DirectcropofgenuineOriginal-primaryatlas; noRGBcleanup,manualcolorpaintingorOriginalretentionfield.",
+  "provenance": {
+    "raw_sha256": "15c59365b5eafa3d36c2def5314ea588d859bc77edcd42d04572b9ff57587a8e",
+    "actual_builtin_calls": 1,
+    "raw_dimensions": [
+      1254,
+      1254
+    ],
+    "grid": [
+      1,
+      1
+    ],
+    "cell_dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "complete_selected_cohort": [
+    "1052d"
+  ]
+}

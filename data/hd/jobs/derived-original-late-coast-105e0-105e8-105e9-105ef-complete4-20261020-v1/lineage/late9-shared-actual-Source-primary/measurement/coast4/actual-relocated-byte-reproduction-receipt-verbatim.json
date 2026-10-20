@@ -1,0 +1,274 @@
+{
+  "implementation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/terrain_component_cleanup.py",
+    "sha256": "52c5b600456c88dde443ba2add000cf9b4f9a3131d1a6a124fb657de410d591e",
+    "size": 38789,
+    "mtime_ns": 1792402258952842979,
+    "mode": 33188
+  },
+  "executed_dependency": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+    "size": 14882,
+    "mtime_ns": 1792280173116585173,
+    "mode": 33188
+  },
+  "recipe_input": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/coast4-EXECUTABLE-PORTABLE-RECIPE.json",
+    "sha256": "66773395e5f3f3704bc346c90180b0ac43405857d3afff2416ad6d6972c01822",
+    "size": 3197,
+    "mtime_ns": 1792407297685651145,
+    "mode": 33188
+  },
+  "physical_authenticated_input_reads": 8,
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "operation": "late-first-tiles",
+  "input_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/inputs/new-coast4-master.png",
+      "sha256": "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d",
+      "size": 3311641,
+      "mtime_ns": 1792398781554144164,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/inputs/new-coast4-master.png",
+      "sha256": "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d",
+      "size": 3311641,
+      "mtime_ns": 1792398781554144164,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/inputs/new-ground4-master.png",
+      "sha256": "5daa5222f57820ae04d25f34dbc64d3b3fc241edd909a3dd448bcc7aaecea639",
+      "size": 3570230,
+      "mtime_ns": 1792400168990059209,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/inputs/new-ramp105f3-master.png",
+      "sha256": "0ced99a554ca7c4f82d89e3501f63fa4589cee6244511d305b8f8a63999960f0",
+      "size": 4081171,
+      "mtime_ns": 1792401071273003961,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/inputs/new-coast4-master.png",
+      "sha256": "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d",
+      "size": 3311641,
+      "mtime_ns": 1792398781554144164,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/inputs/new-coast4-master.png",
+      "sha256": "5574d3b679f6aedd7261965d00df736907a93b7b99829241826cd7ab9f863b0d",
+      "size": 3311641,
+      "mtime_ns": 1792398781554144164,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/inputs/105e0.pic",
+      "sha256": "6a106577d7a2678c089629ade7ccf1b2a1226d538ce25d4adb296fb7635b1c2b",
+      "size": 1044,
+      "mtime_ns": 1787663959457432476,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/inputs/105e8.pic",
+      "sha256": "2120760e489942f9090300ddaf7cae03b9ea58a27192e1893811b73722716c5a",
+      "size": 1044,
+      "mtime_ns": 1787663959457911542,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/inputs/105e9.pic",
+      "sha256": "dba83486f2a6f21252538f3eb751c7013d3b1c108a33f9f87c8c0787a6cd0f99",
+      "size": 1044,
+      "mtime_ns": 1787663959457989831,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/inputs/105ef.pic",
+      "sha256": "48ebcff020932f78283a529fe0a275ac0f1318cb979be429e4e092d86a08c40b",
+      "size": 1044,
+      "mtime_ns": 1787663959458336667,
+      "mode": 33188
+    }
+  ],
+  "palette": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "size": 768,
+    "mtime_ns": 1787663959337906368,
+    "mode": 33188
+  },
+  "recipe_sha256": "66773395e5f3f3704bc346c90180b0ac43405857d3afff2416ad6d6972c01822",
+  "metrics": {
+    "selected_ids": [
+      "105e0",
+      "105e8",
+      "105e9",
+      "105ef"
+    ],
+    "assets": [
+      {
+        "asset": "105e0",
+        "original_detail_cells": [
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            31
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "raw_Source_reserved_cells": 4,
+        "functional_support_union_cells": 4,
+        "Source_fidelity_owner_union_cells": 4,
+        "Source109_ordinary_green_cells": 0,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 261120,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 196147,
+        "geometry_owner_sha256": "a03ef92faf1c26bb584d38612bfe3ccfe513345146a3bf3eebb174e3d1d8a3f1",
+        "Original_functional_HD_credit": 0
+      },
+      {
+        "asset": "105e8",
+        "original_detail_cells": [
+          [
+            4,
+            5
+          ],
+          [
+            18,
+            31
+          ]
+        ],
+        "raw_Source_reserved_cells": 2,
+        "functional_support_union_cells": 2,
+        "Source_fidelity_owner_union_cells": 2,
+        "Source109_ordinary_green_cells": 0,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 261632,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 217060,
+        "geometry_owner_sha256": "5f14521290c839ea953e5ffac5f7eb7672954e7639e3acf8613a62721791cfde",
+        "Original_functional_HD_credit": 0
+      },
+      {
+        "asset": "105e9",
+        "original_detail_cells": [
+          [
+            6,
+            22
+          ],
+          [
+            8,
+            22
+          ]
+        ],
+        "raw_Source_reserved_cells": 0,
+        "functional_support_union_cells": 0,
+        "Source_fidelity_owner_union_cells": 2,
+        "Source109_ordinary_green_cells": 2,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 261632,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 209510,
+        "geometry_owner_sha256": "f8129f40df64bbcc3be4af89c8add535a32de50037d0be4c26057a452ba9c326",
+        "Original_functional_HD_credit": 0
+      },
+      {
+        "asset": "105ef",
+        "original_detail_cells": [
+          [
+            4,
+            13
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            27
+          ],
+          [
+            6,
+            20
+          ],
+          [
+            8,
+            23
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            16,
+            28
+          ],
+          [
+            23,
+            30
+          ],
+          [
+            25,
+            16
+          ],
+          [
+            25,
+            29
+          ]
+        ],
+        "raw_Source_reserved_cells": 11,
+        "functional_support_union_cells": 11,
+        "Source_fidelity_owner_union_cells": 11,
+        "Source109_ordinary_green_cells": 0,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 259328,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 222263,
+        "geometry_owner_sha256": "00764338bf606ad2eba0807687af9b23264e60f1b1fd3627821da42aa03de42d",
+        "Original_functional_HD_credit": 0
+      }
+    ],
+    "global_SourceNx_nearest_fallback": false,
+    "fine_band_sigma": 3.0,
+    "fine_band_clip": 16,
+    "fine_band_strength": 0.5,
+    "donor_repetition": false,
+    "contract": "Exact SourceNx geometry/color base; all protectedwater/fire/individual plus two ordinary109green105e9indicators are explicitSourcefidelity/noHDcredit.79darkred and181paleearth honestly classified byactualpalette."
+  },
+  "output_is_derived_not_untouched": true,
+  "functional_retention_no_HD_credit": "Original protected cells>=240 retain exact SourceNx RGB/labels. No global Original-nearest fallback is claimed as HD.",
+  "outputs": [
+    {
+      "file": "105e0-derived.png",
+      "sha256": "da7b908ca03bf0c4347fe82494f227f3e2c5e6c3e6555e31ec7742432311e01d"
+    },
+    {
+      "file": "105e8-derived.png",
+      "sha256": "39f3a78546d99502dc651bf635c7d8667a6079757021f4e2aca32863fb4540de"
+    },
+    {
+      "file": "105e9-derived.png",
+      "sha256": "9f6b89d7fcbc7bda180fdf7ffdbb53676274bb1e3b1c32f7db76fe9ac3ed365c"
+    },
+    {
+      "file": "105ef-derived.png",
+      "sha256": "0c8c54e4d9bf831847368b2c02d2579eb22a23e8a4a1522c4ac9ef6de4a7018e"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "status": "PASS_DIFFERENT_CODE_AND_ACTUAL_FIXTURE_BINDINGS",
+  "author": "/root/ship_portability",
+  "reviewer": "/root/publication_review",
+  "exact_six_delta_receipt_sha256": "e5381078583dd209051285758e6ccccd3959f798af0b9204731c267acfb2f0a3",
+  "files": [
+    {
+      "path": "tools/late9_source_components/test_further_selector.py",
+      "normalized_AST_exact_except_fixture_IO": true,
+      "test_methods": 8,
+      "new_sha256": "36f911fed469c382ffd073d30ae5961b60a6a05896a1ac5349c899c4366b11f9"
+    },
+    {
+      "path": "tools/late9_source_components/test_late_selector.py",
+      "normalized_AST_exact_except_fixture_IO": true,
+      "test_methods": 8,
+      "new_sha256": "fa38b9a9b7d602f6055fc597921b571d4f17c5623be2a41dc6b80f9cedf4d7af"
+    },
+    {
+      "path": "tools/late9_source_components/test_next_pair_selector.py",
+      "normalized_AST_exact_except_fixture_IO": true,
+      "test_methods": 8,
+      "new_sha256": "94582981d3c01147f7c3602b748de0580181ec12cb1a5a34cf5cccf69b685afa"
+    },
+    {
+      "path": "tools/late9_source_components/test_nine_selector.py",
+      "normalized_AST_exact_except_fixture_IO": true,
+      "test_methods": 8,
+      "new_sha256": "f93ea428e87d7604fded7fd90cfdaf7df41c6fdd452a7a1984fd40c6aae1809b"
+    },
+    {
+      "path": "tools/late9_source_components/test_quartet_selector.py",
+      "normalized_AST_exact_except_fixture_IO": true,
+      "test_methods": 8,
+      "new_sha256": "40702266ed8b84491067a664d93892558c2900a5b0642dce1dffc9ca353aa18d"
+    },
+    {
+      "path": "tools/late9_source_components/test_singleton_selector.py",
+      "normalized_AST_exact_except_fixture_IO": true,
+      "test_methods": 8,
+      "new_sha256": "c7d9a196a0569152a3dc0415eb3a8a4be57950b2d1bb78b11d4bce9668fcfbfb"
+    }
+  ],
+  "test_methods_in_six_files": 48,
+  "actual_Original_catalogue_fixtures_checked": 29,
+  "private_synthetic_loader_contract_checks": [
+    "unique_contained_exact_length",
+    "duplicate_numeric_ID",
+    "unknown_ID",
+    "absolute_path",
+    "parent_escape",
+    "symlink_escape",
+    "length_mismatch"
+  ],
+  "unchanged_helpers_math_assertions_and_test_case_definitions": true,
+  "existing_versioned_public_files_overwritten": false,
+  "scope": "Test-only fixture lookup now reads actual already-bundled Original catalogue. Six new uncommitted test modules only; normalized complete AST is exact apart from fixture IO/import/shared loader. These29 input byte checks and7 private loader contracts are independent review evidence, not the maintained suite or production art/cleanup replay. Fresh root/late9 test reruns remain owner duty.",
+  "production_cleanup_QA_G2_World_render_or_canonical_writes": 0
+}

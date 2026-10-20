@@ -1,0 +1,138 @@
+{
+  "format_version": 1,
+  "method": "six-dark-Source-gray-lavender-generated-fine-mid-buffered-v1",
+  "dependencies": {
+    "hd_terrain_retexture": {
+      "path": "tools/hd_terrain_retexture.py",
+      "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98"
+    },
+    "hd_terrain_group_retexture": {
+      "path": "tools/hd_terrain_group_retexture.py",
+      "sha256": "24e3751d26090699f2d8d317ed98f73e05f51f3caa6dc2bf21fc40a109068a27"
+    }
+  },
+  "palette": {
+    "path": "data/misc/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "parameters": {
+    "output_side": 512,
+    "source_sigma": 3.0,
+    "residual_sigma_fine": 0.65,
+    "residual_sigma_coarse": 10.0,
+    "residual_percentile": 80.0
+  },
+  "material_groups": [
+    {
+      "name": "pale",
+      "indices": [
+        1
+      ],
+      "texture_log_gain": 0.06,
+      "quiet_from_source_variance": true
+    },
+    {
+      "name": "gray",
+      "indices": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "texture_log_gain": 0.38,
+      "quiet_from_source_variance": true
+    },
+    {
+      "name": "floor",
+      "indices": [
+        28,
+        29,
+        30,
+        31
+      ],
+      "texture_log_gain": 0.38,
+      "quiet_from_source_variance": true
+    },
+    {
+      "name": "lavender",
+      "indices": [
+        113
+      ],
+      "texture_log_gain": 0.06,
+      "quiet_from_source_variance": true
+    }
+  ],
+  "frames": [
+    {
+      "asset": "301d1",
+      "Source": {
+        "path": "data/misc/unnamed.2441",
+        "sha256": "c9acde36a4eba021ede70d02f13a63be869b8403636d0d8e61b2647484b26aa7"
+      },
+      "parent_raw": {
+        "path": ".reference/hd-terrain-six-Original-primary-clean-material-author-20261019-v1/301d1/provider-raw-v1.png",
+        "sha256": "b35415096e86ef4e3e7b73994f1f2ab7e7ef44109b7a339bf8325e3189aa69cc"
+      },
+      "origin": [
+        0,
+        0
+      ],
+      "crop": [
+        0,
+        0,
+        1254,
+        1254
+      ]
+    },
+    {
+      "asset": "301d4",
+      "Source": {
+        "path": "data/misc/unnamed.2444",
+        "sha256": "ca09a82a3379d6bdf15360a3469e7d7f0a278c1edfaab835c4b7d3e80ebff239"
+      },
+      "parent_raw": {
+        "path": ".reference/hd-terrain-six-Original-primary-clean-material-author-20261019-v1/301d4/provider-raw-v1.png",
+        "sha256": "b4cf5cfde22ea1ab889cea70a905d3320ec7395a20e8657f69716251c4a9f166"
+      },
+      "origin": [
+        0,
+        0
+      ],
+      "crop": [
+        0,
+        0,
+        1254,
+        1254
+      ]
+    },
+    {
+      "asset": "301d7",
+      "Source": {
+        "path": "data/misc/unnamed.2447",
+        "sha256": "4d39e7d667501dca5941243b5f371e4e783663faaf5f69c64385a98c41e015af"
+      },
+      "parent_raw": {
+        "path": ".reference/hd-terrain-six-Original-primary-clean-material-author-20261019-v1/301d7/provider-raw-v1.png",
+        "sha256": "569ecfbae3dc723f1bc2c2dca2f0aa3d452f94e3c68d11bb21ca48b02537d4e7"
+      },
+      "origin": [
+        0,
+        0
+      ],
+      "crop": [
+        0,
+        0,
+        1254,
+        1254
+      ]
+    }
+  ]
+}

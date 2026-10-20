@@ -1,0 +1,21 @@
+{
+  "status": "Portable lineage metadata addition only; no runtime fields changed or new QA call.",
+  "actual_candidate": {
+    "path": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/measurement/UNCHANGED-ACTUAL-CANDIDATE.json",
+    "sha256": "b9dfcc645ed1e67e4fe1dddc507e700becaf751442f79e166e2a69855867a041"
+  },
+  "portable_candidate": {
+    "path": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/candidate.json",
+    "sha256": "0c50d51a186ac69b2260765acb9502db6779526e1c7ba224727be3ab43209a42"
+  },
+  "changed_top_level_fields": [
+    "artwork_derivation"
+  ],
+  "unchanged_sequences_and_targets": true,
+  "actual_QA": {
+    "path": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/measurement/actual-final-SourceG2/runtime-qa.json",
+    "sha256": "61c47f21ed0d98b6bc760685470317fc29361ab28bde38ec59d656fba7493170"
+  },
+  "actual_QA_candidate_hash_is_historical": true,
+  "new_intrinsic_QA_calls": 0
+}

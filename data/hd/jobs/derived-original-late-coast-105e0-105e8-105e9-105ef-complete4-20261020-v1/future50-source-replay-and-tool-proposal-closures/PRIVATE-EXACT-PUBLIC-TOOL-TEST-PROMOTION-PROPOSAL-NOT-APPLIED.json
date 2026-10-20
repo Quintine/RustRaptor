@@ -1,0 +1,82 @@
+{
+  "status": "PRIVATE_PROPOSAL_ONLY_NO_PUBLIC_WRITES",
+  "helper_source": {
+    "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/terrain_component_cleanup.py",
+    "sha256": "52c5b600456c88dde443ba2add000cf9b4f9a3131d1a6a124fb657de410d591e"
+  },
+  "helper_target": "tools/late9_source_components/terrain_component_cleanup.py",
+  "tools": [
+    {
+      "path": "tools/late9_source_components/terrain_component_cleanup.py",
+      "sha256": "52c5b600456c88dde443ba2add000cf9b4f9a3131d1a6a124fb657de410d591e"
+    },
+    {
+      "path": "tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+    }
+  ],
+  "tests": [
+    {
+      "source": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/code-proposal/test_buffered_io.py",
+        "sha256": "f79d9a32e3006b040e2448cf763ee05d3df18c25e6f80210ce7dc6e2956d8ea4"
+      },
+      "target": "tools/late9_source_components/test_buffered_io.py"
+    },
+    {
+      "source": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/code-proposal/test_further_selector.py",
+        "sha256": "f2fdee70b743b1b127ac5ed7d60218b45bb8b1747bda5648a1cf67734fae9ef4"
+      },
+      "target": "tools/late9_source_components/test_further_selector.py"
+    },
+    {
+      "source": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/code-proposal/test_late_selector.py",
+        "sha256": "7f50333a9ad9dbd7ae2aaf92772826f2076d05c2d5be9a989b68c80dcda0451d"
+      },
+      "target": "tools/late9_source_components/test_late_selector.py"
+    },
+    {
+      "source": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/code-proposal/test_next_pair_selector.py",
+        "sha256": "45417f1a40e72c07ad059b186a5b0d7888d6b199ea91574e76a8b39967bd579e"
+      },
+      "target": "tools/late9_source_components/test_next_pair_selector.py"
+    },
+    {
+      "source": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/code-proposal/test_nine_selector.py",
+        "sha256": "01dbc58041caadf23f6c863df33f12e982a9fa1544b7bd00fba7a78c6639948d"
+      },
+      "target": "tools/late9_source_components/test_nine_selector.py"
+    },
+    {
+      "source": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/code-proposal/test_quartet_selector.py",
+        "sha256": "74f3eaffa361e651b630671f6b5ef357decde22f1643338dcb3af4d4075e1851"
+      },
+      "target": "tools/late9_source_components/test_quartet_selector.py"
+    },
+    {
+      "source": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/code-proposal/test_singleton_selector.py",
+        "sha256": "1ea6aa17350de6a1f0e4a15cf704a0d2d1f65141a15cd179e163a84ac36ac2e9"
+      },
+      "target": "tools/late9_source_components/test_singleton_selector.py"
+    },
+    {
+      "source": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/code-proposal/test_terrain_component_cleanup.py",
+        "sha256": "da58e349d3e131ba38cd0f8720e5392a1c55ce60cd325d033a45c1257ba269ef"
+      },
+      "target": "tools/late9_source_components/test_terrain_component_cleanup.py"
+    }
+  ],
+  "actual_different_CODE72_report": ".reference/hd-late9-different-CODE-review-20261019-v1/PASS-LATE9-DIFFERENT-CODE72-INPUTS-AND-EXPLICIT-SOURCE-FIDELITY-METHOD.json",
+  "actual_recipe_only_successor_CODE_input_report": {
+    "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/different-recipe-CODE-input-verbatim.json",
+    "sha256": "c8141256f6d2f87ce9409d4d60bd19ef6b2e73ef607422c11b5b4f20abaa52fc"
+  },
+  "additional_tests_or_cleanup_QA": 0
+}

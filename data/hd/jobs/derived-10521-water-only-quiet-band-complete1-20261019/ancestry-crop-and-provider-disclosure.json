@@ -1,0 +1,30 @@
+{
+  "old_master": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/parents/old-dock3-generator-return.png",
+    "sha256": "8f890b3c24b8a6fd029ba02872dce06e7dd4b07875a7f363d72d8e88577afbc6"
+  },
+  "actual_old_cleanup_input": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/inputs/old10521-unchanged.png",
+    "sha256": "268713889acf81e1be7f416be48bb97a438118a30a934167bd545b57145e8061"
+  },
+  "crop": [
+    0,
+    0,
+    724,
+    724
+  ],
+  "crop_pixel_equality": "Authenticated by different CODE review, actual input is exact first724columns of old2172x724 master; helper reads cropped input, not full parent",
+  "quiet_master": {
+    "path": "jobs/derived-10521-water-only-quiet-band-complete1-20261019/inputs/quiet-genuine-water-pavement-untouched.png",
+    "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23"
+  },
+  "quiet_used_box": [
+    0,
+    0,
+    887,
+    887
+  ],
+  "quiet_provider_projection": "Only the inline image_url_descriptor removed, original receipt hash and all remaining fields preserved. Actual image bytes are separate PNG. No new generation.",
+  "actual_cleanup_count": 1,
+  "portable_cleanup_replay_count": 0
+}

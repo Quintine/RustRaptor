@@ -1,0 +1,63 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-2027b-2027c-newOriginal-functional-SourceG2-complete2-20261019-v2",
+  "owner": "/root/terrain_repair_plan",
+  "name": "Original-primary terrain 2027b,2027c",
+  "category": "Terrain",
+  "kind": "contextual_terrain_shard",
+  "targets": [
+    {
+      "asset": "2027b",
+      "canonical_source_asset": "2027b",
+      "source_path": "misc/unnamed.1142",
+      "source_sha256": "3fcafb40e7f287374bcd2ea54a41d2c157ea96b5c74bf006d0cfca017fc57ae8",
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "original_binary": {
+        "path": "jobs/terrain-2027b-2027c-newOriginal-functional-SourceG2-complete2-20261019-v2/Originals/2027b.bin",
+        "sha256": "3fcafb40e7f287374bcd2ea54a41d2c157ea96b5c74bf006d0cfca017fc57ae8"
+      }
+    },
+    {
+      "asset": "2027c",
+      "canonical_source_asset": "2027c",
+      "source_path": "misc/unnamed.1143",
+      "source_sha256": "91f1e3e20413540509793a842640fd1939e04222266c7e838fc39b39813a47ca",
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "original_binary": {
+        "path": "jobs/terrain-2027b-2027c-newOriginal-functional-SourceG2-complete2-20261019-v2/Originals/2027c.bin",
+        "sha256": "91f1e3e20413540509793a842640fd1939e04222266c7e838fc39b39813a47ca"
+      }
+    }
+  ],
+  "generation_inventory": {
+    "actual_assets": [
+      "2027b",
+      "2027c"
+    ],
+    "selected_assets": [
+      "2027b",
+      "2027c"
+    ],
+    "actual_historical_new_image_calls": 1,
+    "new_image_calls_this_package": 0
+  },
+  "status": "private_complete_source_job_Root_registration_pending"
+}

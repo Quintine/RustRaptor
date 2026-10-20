@@ -1,0 +1,453 @@
+{
+  "status": "QUALIFIED_5_WITH_LIMITS_HOLD_0_DIFFERENT_INTRINSIC_ART_ONLY",
+  "reviewer": "/root/ridge_pair",
+  "original_artist": "/root/iron_coast_names",
+  "scope": {
+    "exact_assets": [
+      "2054d",
+      "2054e",
+      "2057f",
+      "20581",
+      "20588"
+    ],
+    "whole_literal_Originals": 5,
+    "whole_raw_masters": 2,
+    "whole_saved_dark_raw_cells_additionally_viewed": 3,
+    "whole_final_RGB_images": 5,
+    "whole_native_scales_per_asset": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "whole_final_native_bodies": 20,
+    "whole_SourceNx_controls": 20,
+    "no_mission_or_join_context_approval": true
+  },
+  "physical_review": "Physically viewed all listed complete images. All five 1328x710 native boards contain complete SourceNx and actual rows at integer NN8/4/3/2; body bounds fit within the image. The large dark raw master was also viewed as all three complete existing 724x724 raw-cell images for exact original-detail coverage. No new art, review board or runtime render was created.",
+  "per_asset": [
+    {
+      "asset": "2054d",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "finding": "QUALIFIED WITH LIMITS. The plain broad upper gray plate, downward triangle and pale tip preserve the Source silhouette. Restrained smooth gray relief; no invented grille or vent geometry.",
+      "bindings": {
+        "asset": "2054d",
+        "Source_sha256": "53c48a3ce6452e2f31378ea19c6c55741fe7ca00f44130c31767691826db7679",
+        "candidate_sha256": "01629cab282c371a88c1289e2d4bf750869f2f9a171364c25bd4fc7220a8235c",
+        "QA_sha256": "33a591093fc3f76d99a6d8662577ff2a9f89765757cbd2644c99f5e1b144f378",
+        "raw_master_sha256": "05a8eb2f0f2423f337d65f50225d65fbbc9a90b067a5b5ea6f17250bf9ecd5c6",
+        "derived_PNG_sha256": "e767ca64c5621634de4676ec93135ef1338767b594083972177d94b1c1b55260",
+        "whole_native_board_sha256": "3c0c93f809c144b3ff2c3674429d661536ba4e2bb3e81026a443f5cbd43d7492",
+        "retained_logical_cells": [],
+        "scales": [
+          {
+            "scale": 1,
+            "indices": 1024,
+            "retained_SourceNx_samples": 0,
+            "functional_SourceNx_samples_exact": 0,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 2,
+            "indices": 4096,
+            "retained_SourceNx_samples": 0,
+            "functional_SourceNx_samples_exact": 0,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 3,
+            "indices": 9216,
+            "retained_SourceNx_samples": 0,
+            "functional_SourceNx_samples_exact": 0,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 4,
+            "indices": 16384,
+            "retained_SourceNx_samples": 0,
+            "functional_SourceNx_samples_exact": 0,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          }
+        ],
+        "Original_black_512_samples": 74656,
+        "Original_functional_512_samples": 0,
+        "all_Source_black_and_functional_512_RGB_exact": true,
+        "these_samples_new_HD_credit": 0
+      }
+    },
+    {
+      "asset": "2054e",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "finding": "QUALIFIED WITH LIMITS only on the two-clamp-notch metadata successor. Bars, ring and downward face remain coherent; the two Source owners (3,16) and (29,16) retain exact SourceNx. Old first-pass notch HOLD remains preserved and is not approved. All four native scales outside those owners are unchanged, and all five 2054d Source/native PPMs remain byte-identical.",
+      "bindings": {
+        "asset": "2054e",
+        "Source_sha256": "a0af561811ac3dc187748135b1572772a8c12c4f4960396fca8eea8920d062ca",
+        "candidate_sha256": "01629cab282c371a88c1289e2d4bf750869f2f9a171364c25bd4fc7220a8235c",
+        "QA_sha256": "33a591093fc3f76d99a6d8662577ff2a9f89765757cbd2644c99f5e1b144f378",
+        "raw_master_sha256": "05a8eb2f0f2423f337d65f50225d65fbbc9a90b067a5b5ea6f17250bf9ecd5c6",
+        "derived_PNG_sha256": "9721c9cbc3c0727f9a41520bf831976cf6085b357c5c431777747c221934b1e8",
+        "whole_native_board_sha256": "00236187ecbb3fb4eeaa424b3cc4185d16365feb0702b6020e80fecb7d2c5a70",
+        "retained_logical_cells": [
+          [
+            3,
+            16
+          ],
+          [
+            29,
+            16
+          ]
+        ],
+        "scales": [
+          {
+            "scale": 1,
+            "indices": 1024,
+            "retained_SourceNx_samples": 2,
+            "functional_SourceNx_samples_exact": 0,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 2,
+            "indices": 4096,
+            "retained_SourceNx_samples": 8,
+            "functional_SourceNx_samples_exact": 0,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 3,
+            "indices": 9216,
+            "retained_SourceNx_samples": 18,
+            "functional_SourceNx_samples_exact": 0,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 4,
+            "indices": 16384,
+            "retained_SourceNx_samples": 32,
+            "functional_SourceNx_samples_exact": 0,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          }
+        ],
+        "Original_black_512_samples": 141776,
+        "Original_functional_512_samples": 0,
+        "all_Source_black_and_functional_512_RGB_exact": true,
+        "these_samples_new_HD_credit": 0
+      }
+    },
+    {
+      "asset": "2057f",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "finding": "QUALIFIED WITH LIMITS. Sparse almost-black negative space and faint authentic right/bottom material remain bare. No top/left frame or new hardware silhouette has been transferred from the raw donor.",
+      "bindings": {
+        "asset": "2057f",
+        "Source_sha256": "7de84a5c17d769cbe82296150a8328b05f0e61b1fe65d361f723651b56bcf958",
+        "candidate_sha256": "b9dfcc645ed1e67e4fe1dddc507e700becaf751442f79e166e2a69855867a041",
+        "QA_sha256": "61c47f21ed0d98b6bc760685470317fc29361ab28bde38ec59d656fba7493170",
+        "raw_master_sha256": "2638079a3de2a1aa36a3cfc4637f714f790fb2896aebe3a9cb5cb50a3d01a5c5",
+        "derived_PNG_sha256": "16c4c596da0bb2d4ad8ac1dd7cd1e91c197b2cd96f16eb98d95d80c613b14501",
+        "whole_native_board_sha256": "6ee7776c0593bbafa8018871c275edacd882ef350a7697c3bb4b1bd0e33d5fb1",
+        "retained_logical_cells": [],
+        "scales": [
+          {
+            "scale": 1,
+            "indices": 1024,
+            "retained_SourceNx_samples": 0,
+            "functional_SourceNx_samples_exact": 0,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 2,
+            "indices": 4096,
+            "retained_SourceNx_samples": 0,
+            "functional_SourceNx_samples_exact": 0,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 3,
+            "indices": 9216,
+            "retained_SourceNx_samples": 0,
+            "functional_SourceNx_samples_exact": 0,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 4,
+            "indices": 16384,
+            "retained_SourceNx_samples": 0,
+            "functional_SourceNx_samples_exact": 0,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          }
+        ],
+        "Original_black_512_samples": 235824,
+        "Original_functional_512_samples": 0,
+        "all_Source_black_and_functional_512_RGB_exact": true,
+        "these_samples_new_HD_credit": 0
+      }
+    },
+    {
+      "asset": "20581",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "finding": "QUALIFIED WITH LIMITS. Olive perimeter blocks, dark center and red functional cues remain legible. All six checked right-contact samples are neutral gray rather than gold, although their final palette values are not all identical to the original single-cell values.",
+      "bindings": {
+        "asset": "20581",
+        "Source_sha256": "18544694589ff0582bc7ac9cdb66f804348035b98e52f860abebef56645990b1",
+        "candidate_sha256": "b9dfcc645ed1e67e4fe1dddc507e700becaf751442f79e166e2a69855867a041",
+        "QA_sha256": "61c47f21ed0d98b6bc760685470317fc29361ab28bde38ec59d656fba7493170",
+        "raw_master_sha256": "2638079a3de2a1aa36a3cfc4637f714f790fb2896aebe3a9cb5cb50a3d01a5c5",
+        "derived_PNG_sha256": "894c283431cffa99d7537004015ecaad445e5a46b38916c5860d532f68ca5226",
+        "whole_native_board_sha256": "0b93cd5dfe2d85ce427f35c164d4a47fc37a7dd5dd5a24407b0a171e75e35e9b",
+        "retained_logical_cells": [
+          [
+            4,
+            15
+          ],
+          [
+            16,
+            4
+          ],
+          [
+            16,
+            27
+          ],
+          [
+            27,
+            15
+          ]
+        ],
+        "scales": [
+          {
+            "scale": 1,
+            "indices": 1024,
+            "retained_SourceNx_samples": 4,
+            "functional_SourceNx_samples_exact": 4,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 2,
+            "indices": 4096,
+            "retained_SourceNx_samples": 16,
+            "functional_SourceNx_samples_exact": 16,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 3,
+            "indices": 9216,
+            "retained_SourceNx_samples": 36,
+            "functional_SourceNx_samples_exact": 36,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 4,
+            "indices": 16384,
+            "retained_SourceNx_samples": 64,
+            "functional_SourceNx_samples_exact": 56,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          }
+        ],
+        "Original_black_512_samples": 151488,
+        "Original_functional_512_samples": 896,
+        "all_Source_black_and_functional_512_RGB_exact": true,
+        "these_samples_new_HD_credit": 0
+      }
+    },
+    {
+      "asset": "20588",
+      "verdict": "QUALIFIED_WITH_LIMITS",
+      "finding": "QUALIFIED WITH LIMITS. Gray/black structure and protected red cues remain coherent. No continuous rusty lower fringe. Precisely two native1 lower-row samples at x=8 and x=24 are dim warm RGB(16,8,4); the other 30 lower-row samples are gray RGB(8,8,8). This review does not claim that every bottom pixel is neutral or independently establish the cause of the two warm samples.",
+      "bindings": {
+        "asset": "20588",
+        "Source_sha256": "1ae18dde9cfd42b3fa3e227afa068a9a485b5cd7b7783d6214b7116a621b8d97",
+        "candidate_sha256": "b9dfcc645ed1e67e4fe1dddc507e700becaf751442f79e166e2a69855867a041",
+        "QA_sha256": "61c47f21ed0d98b6bc760685470317fc29361ab28bde38ec59d656fba7493170",
+        "raw_master_sha256": "2638079a3de2a1aa36a3cfc4637f714f790fb2896aebe3a9cb5cb50a3d01a5c5",
+        "derived_PNG_sha256": "59c110ffb7da50271dbb377d8d811170dfecb97a3bba9be88ba77f8a2e45302c",
+        "whole_native_board_sha256": "62a120218fa9f2532d18aa41fe84a42a8ab4013da585337aec91f8f66eb50fd3",
+        "retained_logical_cells": [
+          [
+            8,
+            1
+          ],
+          [
+            8,
+            30
+          ],
+          [
+            24,
+            1
+          ],
+          [
+            24,
+            30
+          ]
+        ],
+        "scales": [
+          {
+            "scale": 1,
+            "indices": 1024,
+            "retained_SourceNx_samples": 4,
+            "functional_SourceNx_samples_exact": 4,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 2,
+            "indices": 4096,
+            "retained_SourceNx_samples": 16,
+            "functional_SourceNx_samples_exact": 16,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 3,
+            "indices": 9216,
+            "retained_SourceNx_samples": 36,
+            "functional_SourceNx_samples_exact": 36,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          },
+          {
+            "scale": 4,
+            "indices": 16384,
+            "retained_SourceNx_samples": 64,
+            "functional_SourceNx_samples_exact": 56,
+            "PPM_and_lossless_PNG_exact": true,
+            "complete_Source_and_actual_board_rectangles_exact": true
+          }
+        ],
+        "Original_black_512_samples": 65552,
+        "Original_functional_512_samples": 896,
+        "all_Source_black_and_functional_512_RGB_exact": true,
+        "these_samples_new_HD_credit": 0
+      }
+    }
+  ],
+  "checked_saved_proof": {
+    "path": ".reference/hd-night5-independent-intrinsic-ART-and-native-audit-20261019-v1/PASS-INDEPENDENT-NIGHT5-SAVED-NATIVE-AND-MATERIAL-FIDELITY.json",
+    "sha256": "547525a1c980f45d86cd78ccb3825429f7babc54af4da8ad0663403d1223d3b9",
+    "literal_Source_indices": 5120,
+    "actual_final_native_indices": 153600,
+    "whole_board_body_rectangles": 40,
+    "declared_exact_retained_SourceNx_samples": 300,
+    "notch_successor_changed_native_samples": [
+      2,
+      8,
+      16,
+      26
+    ],
+    "notch_successor_changes_outside_two_owners": 0,
+    "all_20_native_PPM_and_lossless_PNG_pairs_palette_exact": true,
+    "all_current_18_Rust_Source_hashes_and_G2_library_binding_checked": true
+  },
+  "visual_and_credit_limits": [
+    "This is a Source-geometry-preserving, restrained material treatment with intentionally coarse relief; it is not a claim that the whole tile was newly generated in high resolution.",
+    "Exact black negative space, functional cycling samples and explicitly Source-retained cells have zero generated-HD credit. Retained high-resolution notch samples follow exact SourceNx; not every sample in the owner footprint is black because ScaleNx can include a genuine adjacent Source value.",
+    "No new geometric objects were accepted from raw donor art; no cleanup module was executed by this reviewer. Genuine master bindings and producer material/cleanup method are checked through saved outputs and the separate CODE review, not independently re-derived here.",
+    "All native snapshots are static intrinsic views. Genuine MAP neighbors, seams, mission use, runtime palette phases and canonical admission remain outside this review and require their separate finite context evidence."
+  ],
+  "physically_viewed_files": [
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/Original5-complete-contact-NN10.png",
+      "sha256": "9bd089d309b4cd1172d49cb2b11bfe29fd545ba38ef242f86727cb1fbf76fda2"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/hardware2/returned-untouched-atlas.png",
+      "sha256": "05a8eb2f0f2423f337d65f50225d65fbbc9a90b067a5b5ea6f17250bf9ecd5c6"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/dark3/returned-untouched-atlas.png",
+      "sha256": "2638079a3de2a1aa36a3cfc4637f714f790fb2896aebe3a9cb5cb50a3d01a5c5"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/dark3/2057f-untouched-cell-review-only.png",
+      "sha256": "d2a60f294c31335174f53cce17d02aa534abb80afd3cab6c7a8f7409dcefd2af"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/dark3/20581-untouched-cell-review-only.png",
+      "sha256": "09543b034656f72e4aafb13eda135e7294064b9b834c0cb6c13899af156a9772"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/dark3/20588-untouched-cell-review-only.png",
+      "sha256": "dbe6cd3fa74ecb80cec211cee14ee077a36f990fc05f7735a5caae68d0381e4b"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/hardware2/private-hd/jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/2054d-derived.png",
+      "sha256": "e767ca64c5621634de4676ec93135ef1338767b594083972177d94b1c1b55260"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/hardware2/whole-native-final-review-pages/2054d-complete-SourceNx-and-G2-all4.png",
+      "sha256": "3c0c93f809c144b3ff2c3674429d661536ba4e2bb3e81026a443f5cbd43d7492"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/hardware2/private-hd/jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/2054e-derived.png",
+      "sha256": "9721c9cbc3c0727f9a41520bf831976cf6085b357c5c431777747c221934b1e8"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/hardware2/whole-native-final-review-pages/2054e-complete-SourceNx-and-G2-all4.png",
+      "sha256": "00236187ecbb3fb4eeaa424b3cc4185d16365feb0702b6020e80fecb7d2c5a70"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/dark3/private-hd/jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/2057f-derived.png",
+      "sha256": "16c4c596da0bb2d4ad8ac1dd7cd1e91c197b2cd96f16eb98d95d80c613b14501"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/dark3/whole-native-final-review-pages/2057f-complete-SourceNx-and-G2-all4.png",
+      "sha256": "6ee7776c0593bbafa8018871c275edacd882ef350a7697c3bb4b1bd0e33d5fb1"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/dark3/private-hd/jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/20581-derived.png",
+      "sha256": "894c283431cffa99d7537004015ecaad445e5a46b38916c5860d532f68ca5226"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/dark3/whole-native-final-review-pages/20581-complete-SourceNx-and-G2-all4.png",
+      "sha256": "0b93cd5dfe2d85ce427f35c164d4a47fc37a7dd5dd5a24407b0a171e75e35e9b"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/dark3/private-hd/jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/20588-derived.png",
+      "sha256": "59c110ffb7da50271dbb377d8d811170dfecb97a3bba9be88ba77f8a2e45302c"
+    },
+    {
+      "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/dark3/whole-native-final-review-pages/20588-complete-SourceNx-and-G2-all4.png",
+      "sha256": "62a120218fa9f2532d18aa41fe84a42a8ab4013da585337aec91f8f66eb50fd3"
+    }
+  ],
+  "handoff": {
+    "path": ".reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/FINAL-NIGHT5-CURRENT-SOURCEG2-INTRINSIC-AUTHOR-HANDOFF.json",
+    "sha256": "5f305826d53e69508fefc466fbd3cdf5d57b393f338bd984ad6a1971cada3a30"
+  },
+  "different_CODE_review_sha256": "3f5a28286fcc7593fb06e198d5b34e2b21ed2f394f0e344c0cb27945387a8920",
+  "historical_producer_execution_counts": {
+    "genuine_builtin_imagegen_calls": 2,
+    "actual_RGB_cleanup_calls": 2,
+    "actual_initial_SourceG2_calls": 2,
+    "bounded_ordinary_retention_metadata_successors": 1,
+    "actual_final_successor_SourceG2_calls": 1,
+    "new_Cargo_builds": 0,
+    "World_invocations": 0,
+    "canonical_or_Git_mutations": 0
+  },
+  "new_reviewer_operations": {
+    "generation": 0,
+    "RGB_cleanup": 0,
+    "renderer": 0,
+    "runtime_QA": 0,
+    "World": 0,
+    "engine_build": 0,
+    "canonical_mutation": 0,
+    "Git_mutation": 0
+  },
+  "own_checker_parse_stop": "The reviewer first saved a checker with an invalid Python identifier beginning in digits; it stopped at parse before any check or runtime operation. That exact failed file is retained. Only the reviewer field identifier was corrected, then the read-only saved-data audit passed; this is not a producer cleanup or QA retry."
+}

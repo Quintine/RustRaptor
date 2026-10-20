@@ -1,0 +1,50 @@
+{
+  "argv": [
+    "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-v",
+    "-s",
+    "tools/quiet9_source_components",
+    "-p",
+    "test*.py"
+  ],
+  "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/actual-public70-fresh-isolated-nine-suites/project",
+  "source_group": {
+    "name": "quiet9_source_components",
+    "start_directory": "tools/quiet9_source_components",
+    "cwd": "isolated_project_root",
+    "argv": [
+      "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/quiet9_source_components",
+      "-p",
+      "test*.py"
+    ],
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "test_module_count": 2,
+    "static_declared_test_methods": 20,
+    "files": [
+      {
+        "path": "tools/quiet9_source_components/test_nine_selector.py",
+        "sha256": "01dbc58041caadf23f6c863df33f12e982a9fa1544b7bd00fba7a78c6639948d",
+        "bytes": 3262
+      },
+      {
+        "path": "tools/quiet9_source_components/test_terrain_component_cleanup.py",
+        "sha256": "da58e349d3e131ba38cd0f8720e5392a1c55ce60cd325d033a45c1257ba269ef",
+        "bytes": 3698
+      }
+    ],
+    "run_in_separate_process": true
+  },
+  "time_unix": 1792490497.7631235
+}

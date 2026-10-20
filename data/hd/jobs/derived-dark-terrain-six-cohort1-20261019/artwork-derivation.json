@@ -1,0 +1,85 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "six-dark-Source-gray-lavender-generated-fine-mid-buffered-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-dark-terrain-six-cohort1-20261019/parents/301c3-provider-return.png",
+        "sha256": "dc4244108b9e760f324f4279e530ef2e02a799b087fe21570668c345fbe37b43"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-dark-terrain-six-cohort1-20261019/parents/301c3-generation-receipt-safe-primitives.json",
+        "sha256": "96c0d3d04f1596a1ac5ba20c0dcd5fc902fcbe60099f1e1a6e5bb9ca3db1445e"
+      },
+      "prompt": {
+        "path": "jobs/derived-dark-terrain-six-cohort1-20261019/parents/301c3-prompt.txt",
+        "sha256": "1c6bca8b67184e3c89f3753f626ff55fd8067be6901eb1c8a31663212b35ffbd"
+      }
+    },
+    {
+      "raw_png": {
+        "path": "jobs/derived-dark-terrain-six-cohort1-20261019/parents/301c8-provider-return.png",
+        "sha256": "8b6d719ecd4762156a81e9f0173ccea0dcfd9d1967b3fae6f04f82d6aba9297d"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-dark-terrain-six-cohort1-20261019/parents/301c8-generation-receipt-safe-primitives.json",
+        "sha256": "c3700628cf00922ab46d0fe4c1b5eb1dacf7e0e5f0ce7db0a860c10380e7de21"
+      },
+      "prompt": {
+        "path": "jobs/derived-dark-terrain-six-cohort1-20261019/parents/301c8-prompt.txt",
+        "sha256": "1c6bca8b67184e3c89f3753f626ff55fd8067be6901eb1c8a31663212b35ffbd"
+      }
+    },
+    {
+      "raw_png": {
+        "path": "jobs/derived-dark-terrain-six-cohort1-20261019/parents/301cc-provider-return.png",
+        "sha256": "e2cf0453dfc61b5729ef9c968bf48dc6dc3deb42e1fa6e1e520904ebf4f6e502"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-dark-terrain-six-cohort1-20261019/parents/301cc-generation-receipt-safe-primitives.json",
+        "sha256": "c1090868ddfb0932a083114f8bf18acde2ec9584356e3abcc15ce0e19d212bca"
+      },
+      "prompt": {
+        "path": "jobs/derived-dark-terrain-six-cohort1-20261019/parents/301cc-prompt.txt",
+        "sha256": "1c6bca8b67184e3c89f3753f626ff55fd8067be6901eb1c8a31663212b35ffbd"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_dark_terrain_six.py",
+      "sha256": "822b765819b703cae820c3a6d4e47aa131ab081bda544db0a6b3951c9843f190"
+    },
+    {
+      "path": "tools/hd_terrain_retexture.py",
+      "sha256": "0e4d7d5a4f7a7ddf6e396e757691156dfc74d231d9925744c342078532b89a98"
+    },
+    {
+      "path": "tools/hd_terrain_group_retexture.py",
+      "sha256": "24e3751d26090699f2d8d317ed98f73e05f51f3caa6dc2bf21fc40a109068a27"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-dark-terrain-six-cohort1-20261019/cleanup-recipe.json",
+    "sha256": "5eae8d535aef68c8407371ee0762da72674f1521abe43b2af0c3173d39b20518"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-dark-terrain-six-cohort1-20261019/normalized-execution.json",
+    "sha256": "f34b657b11cfb8da908aaa59abcceaef71c0a3f1330c6518cac86a917543e1a9"
+  },
+  "sources": {
+    "301c3": "9c370900214a601e40200cb67e959f042323d001f7a2e6de3627e5044a2078b5",
+    "301c8": "4d87a0251b8b064c6ab5835ae31f5eaabfec405f56b0408980f93484b70470d1",
+    "301cc": "be151484d73ebe4461115391c3fcea20f109a14b0f2eee1ce13f1cbb34014355"
+  },
+  "outputs": {
+    "jobs/derived-dark-terrain-six-cohort1-20261019/derived/301c3-derived.png": "253869a7479fa09b8cfbf3d9fbf81b58b4196017908db980247460c99afebfc6",
+    "jobs/derived-dark-terrain-six-cohort1-20261019/derived/301c8-derived.png": "2c9d2af2a4efad83cbc8b0b542670066e861b454940810ca67dd440c992ca7ad",
+    "jobs/derived-dark-terrain-six-cohort1-20261019/derived/301cc-derived.png": "cf90694640801d340e702f34a1628820839362c8aefe674e09d57762b4e86e60"
+  },
+  "detailed_provenance": {
+    "path": "jobs/derived-dark-terrain-six-cohort1-20261019/actual-relocated-reproduction-once/ACTUAL-DERIVATION-RECEIPT.json",
+    "sha256": "e61f1b912d54610e6897100dff9461d880b2b9eda87b689809614c4ab0465ee4"
+  }
+}

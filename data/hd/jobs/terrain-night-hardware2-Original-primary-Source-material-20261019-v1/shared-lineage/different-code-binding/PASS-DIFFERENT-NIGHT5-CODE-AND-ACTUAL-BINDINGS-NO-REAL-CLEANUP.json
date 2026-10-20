@@ -1,0 +1,676 @@
+{
+  "status": "PASS_DIFFERENT_CODE_AND_EXACT_ACTUAL5_BINDINGS_BEFORE_FIRST_REAL_CLEANUP",
+  "reviewer": "/root/terrain_context_review",
+  "author": "/root/iron_coast_names",
+  "different_from_author": true,
+  "request": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/CODE-AND-ACTUAL-BINDING-REVIEW-REQUEST.json",
+    "sha256": "738bd608458a2acd2196b392f00a7567718ac583a5f3171065300e1e48791fe9",
+    "bytes": 4288
+  },
+  "tool": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/terrain_night_hardware_cleanup.py",
+    "sha256": "1b448911a7af01e1f19aae945f1e581c2b2a8f7bb66ed7ad597bd6450cd9191c",
+    "bytes": 10029
+  },
+  "authenticated_dependency": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+    "bytes": 14882
+  },
+  "synthetic_test_source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-independent-night5-CODE-and-actualbinding-review-20261019-v1/test_terrain_night_hardware_cleanup.py",
+    "sha256": "9ef776e2f76ff2733b191031464651f66d62a49ea0acc10a546326c4b8eba74b",
+    "bytes": 2902
+  },
+  "actual_synthetic_suite": {
+    "tests": 5,
+    "passed": 5,
+    "exit_code": 0,
+    "stdout": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-independent-night5-CODE-and-actualbinding-review-20261019-v1/actual-isolated-five-synthetic-tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "stderr": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-independent-night5-CODE-and-actualbinding-review-20261019-v1/actual-isolated-five-synthetic-tests.stderr",
+      "sha256": "32c7f03b07f859a0983424f7f94e1c81245879af41e29ec6ad233ab3e4b430bd",
+      "bytes": 103
+    },
+    "isolation": "Exact copied helper/test bytes under independent folder; PYTHONDONTWRITEBYTECODE=1; test temporary writes restricted to this copy folder. No synthetic test temp writes in original producer."
+  },
+  "cohorts": [
+    {
+      "cohort": "hardware2",
+      "recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/recipe.json",
+        "sha256": "a5cfd3f676ffbd37f6d7f9f4c0cf19565422949b0e78e64267cd4536fa7c6772",
+        "bytes": 1232
+      },
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/hardware2/candidate-prepared-before-cleanup.json",
+        "sha256": "1d7b857e0f18feb16c0d34ed4b53bad07331f8882dd9651baad4c4a4cff2b7a9",
+        "bytes": 2706
+      },
+      "frame_bindings_sha256": "7c3006a054582fb2d0098fe34dc3cea965e7231504742a9bd72399dc32038626",
+      "materials": [
+        {
+          "asset": "2054d",
+          "Source": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/sources/2054d.pic",
+            "sha256": "53c48a3ce6452e2f31378ea19c6c55741fe7ca00f44130c31767691826db7679",
+            "bytes": 1044
+          },
+          "canonical_Source": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1864",
+            "sha256": "53c48a3ce6452e2f31378ea19c6c55741fe7ca00f44130c31767691826db7679",
+            "bytes": 1044
+          },
+          "source_header_le_i32": [
+            1,
+            1,
+            0,
+            32,
+            32
+          ],
+          "palette_indices_counts": {
+            "1": 2,
+            "13": 2,
+            "14": 4,
+            "15": 3,
+            "16": 11,
+            "17": 19,
+            "18": 9,
+            "19": 5,
+            "20": 22,
+            "21": 53,
+            "22": 57,
+            "23": 46,
+            "24": 44,
+            "25": 153,
+            "26": 77,
+            "27": 41,
+            "28": 58,
+            "29": 103,
+            "30": 30,
+            "31": 285
+          },
+          "material_owner_class_counts": {
+            "0": 285,
+            "1": 506,
+            "2": 233
+          },
+          "Original_functional_support_union": [],
+          "prepared_native_frame": {
+            "frame": 0,
+            "file": "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/2054d-derived.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "53c48a3ce6452e2f31378ea19c6c55741fe7ca00f44130c31767691826db7679"
+          }
+        },
+        {
+          "asset": "2054e",
+          "Source": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/sources/2054e.pic",
+            "sha256": "a0af561811ac3dc187748135b1572772a8c12c4f4960396fca8eea8920d062ca",
+            "bytes": 1044
+          },
+          "canonical_Source": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1865",
+            "sha256": "a0af561811ac3dc187748135b1572772a8c12c4f4960396fca8eea8920d062ca",
+            "bytes": 1044
+          },
+          "source_header_le_i32": [
+            1,
+            1,
+            0,
+            32,
+            32
+          ],
+          "palette_indices_counts": {
+            "1": 10,
+            "13": 1,
+            "14": 1,
+            "15": 2,
+            "16": 6,
+            "17": 2,
+            "18": 6,
+            "19": 4,
+            "20": 7,
+            "21": 8,
+            "22": 13,
+            "23": 14,
+            "24": 11,
+            "25": 61,
+            "26": 38,
+            "27": 94,
+            "28": 63,
+            "29": 84,
+            "30": 50,
+            "31": 549
+          },
+          "material_owner_class_counts": {
+            "0": 549,
+            "1": 401,
+            "2": 74
+          },
+          "Original_functional_support_union": [],
+          "prepared_native_frame": {
+            "frame": 0,
+            "file": "jobs/terrain-night-hardware2-Original-primary-Source-material-20261019-v1/2054e-derived.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "a0af561811ac3dc187748135b1572772a8c12c4f4960396fca8eea8920d062ca"
+          }
+        }
+      ],
+      "donor_crops": [
+        {
+          "material_class": 1,
+          "raw": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/inputs/genuine-untouched-atlas.png",
+            "sha256": "05a8eb2f0f2423f337d65f50225d65fbbc9a90b067a5b5ea6f17250bf9ecd5c6",
+            "bytes": 2013002
+          },
+          "dimensions": [
+            1774,
+            887
+          ],
+          "crop_xywh": [
+            80,
+            115,
+            650,
+            150
+          ],
+          "RGB_min": [
+            27,
+            26,
+            30
+          ],
+          "RGB_max": [
+            114,
+            115,
+            114
+          ],
+          "RGB_mean": [
+            60.90898461538462,
+            61.84276923076923,
+            64.34786666666666
+          ],
+          "coarse_geometry_not_transferred": true
+        },
+        {
+          "material_class": 2,
+          "raw": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/inputs/genuine-untouched-atlas.png",
+            "sha256": "05a8eb2f0f2423f337d65f50225d65fbbc9a90b067a5b5ea6f17250bf9ecd5c6",
+            "bytes": 2013002
+          },
+          "dimensions": [
+            1774,
+            887
+          ],
+          "crop_xywh": [
+            80,
+            115,
+            650,
+            150
+          ],
+          "RGB_min": [
+            27,
+            26,
+            30
+          ],
+          "RGB_max": [
+            114,
+            115,
+            114
+          ],
+          "RGB_mean": [
+            60.90898461538462,
+            61.84276923076923,
+            64.34786666666666
+          ],
+          "coarse_geometry_not_transferred": true
+        }
+      ]
+    },
+    {
+      "cohort": "dark3",
+      "recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/recipe.json",
+        "sha256": "2af8d67381a4b70d4be3ad710ed89b868c0489de94893ea41dad3dd7cafa6943",
+        "bytes": 1608
+      },
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/dark3/candidate-prepared-before-cleanup.json",
+        "sha256": "0229e115c63435ab305295d4fc42dca10d1b65a399dd13e14effbdf0924dfefc",
+        "bytes": 4620
+      },
+      "frame_bindings_sha256": "5ac98ef379b80c987ef6ad043fe9ac5dcc016e0ce61c9de959ac26e6a0ca45ad",
+      "materials": [
+        {
+          "asset": "2057f",
+          "Source": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/sources/2057f.pic",
+            "sha256": "7de84a5c17d769cbe82296150a8328b05f0e61b1fe65d361f723651b56bcf958",
+            "bytes": 1044
+          },
+          "canonical_Source": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1914",
+            "sha256": "7de84a5c17d769cbe82296150a8328b05f0e61b1fe65d361f723651b56bcf958",
+            "bytes": 1044
+          },
+          "source_header_le_i32": [
+            1,
+            1,
+            0,
+            32,
+            32
+          ],
+          "palette_indices_counts": {
+            "22": 2,
+            "23": 7,
+            "24": 11,
+            "25": 17,
+            "26": 19,
+            "27": 15,
+            "28": 14,
+            "29": 12,
+            "30": 9,
+            "31": 918
+          },
+          "material_owner_class_counts": {
+            "0": 918,
+            "1": 97,
+            "2": 9
+          },
+          "Original_functional_support_union": [],
+          "prepared_native_frame": {
+            "frame": 0,
+            "file": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/2057f-derived.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "7de84a5c17d769cbe82296150a8328b05f0e61b1fe65d361f723651b56bcf958"
+          }
+        },
+        {
+          "asset": "20581",
+          "Source": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/sources/20581.pic",
+            "sha256": "18544694589ff0582bc7ac9cdb66f804348035b98e52f860abebef56645990b1",
+            "bytes": 1044
+          },
+          "canonical_Source": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1916",
+            "sha256": "18544694589ff0582bc7ac9cdb66f804348035b98e52f860abebef56645990b1",
+            "bytes": 1044
+          },
+          "source_header_le_i32": [
+            1,
+            1,
+            0,
+            32,
+            32
+          ],
+          "palette_indices_counts": {
+            "24": 2,
+            "25": 30,
+            "26": 9,
+            "27": 3,
+            "28": 62,
+            "29": 53,
+            "30": 100,
+            "31": 581,
+            "54": 80,
+            "55": 52,
+            "56": 24,
+            "57": 16,
+            "58": 8,
+            "252": 4
+          },
+          "material_owner_class_counts": {
+            "0": 581,
+            "1": 259,
+            "3": 180,
+            "4": 4
+          },
+          "Original_functional_support_union": [
+            [
+              4,
+              15
+            ],
+            [
+              16,
+              4
+            ],
+            [
+              16,
+              27
+            ],
+            [
+              27,
+              15
+            ]
+          ],
+          "prepared_native_frame": {
+            "frame": 0,
+            "file": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/20581-derived.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "18544694589ff0582bc7ac9cdb66f804348035b98e52f860abebef56645990b1",
+            "original_detail_cells": [
+              [
+                4,
+                15
+              ],
+              [
+                16,
+                4
+              ],
+              [
+                16,
+                27
+              ],
+              [
+                27,
+                15
+              ]
+            ]
+          }
+        },
+        {
+          "asset": "20588",
+          "Source": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/sources/20588.pic",
+            "sha256": "1ae18dde9cfd42b3fa3e227afa068a9a485b5cd7b7783d6214b7116a621b8d97",
+            "bytes": 1044
+          },
+          "canonical_Source": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1923",
+            "sha256": "1ae18dde9cfd42b3fa3e227afa068a9a485b5cd7b7783d6214b7116a621b8d97",
+            "bytes": 1044
+          },
+          "source_header_le_i32": [
+            1,
+            1,
+            0,
+            32,
+            32
+          ],
+          "palette_indices_counts": {
+            "20": 4,
+            "23": 4,
+            "24": 1,
+            "25": 14,
+            "27": 39,
+            "28": 60,
+            "29": 1,
+            "30": 638,
+            "31": 259,
+            "252": 4
+          },
+          "material_owner_class_counts": {
+            "0": 259,
+            "1": 753,
+            "2": 8,
+            "4": 4
+          },
+          "Original_functional_support_union": [
+            [
+              8,
+              1
+            ],
+            [
+              8,
+              30
+            ],
+            [
+              24,
+              1
+            ],
+            [
+              24,
+              30
+            ]
+          ],
+          "prepared_native_frame": {
+            "frame": 0,
+            "file": "jobs/terrain-night-dark3-Original-primary-Source-material-20261019-v1/20588-derived.png",
+            "logical_width": 32,
+            "logical_height": 32,
+            "origin": [
+              0,
+              0
+            ],
+            "source_sha256": "1ae18dde9cfd42b3fa3e227afa068a9a485b5cd7b7783d6214b7116a621b8d97",
+            "original_detail_cells": [
+              [
+                8,
+                1
+              ],
+              [
+                8,
+                30
+              ],
+              [
+                24,
+                1
+              ],
+              [
+                24,
+                30
+              ]
+            ]
+          }
+        }
+      ],
+      "donor_crops": [
+        {
+          "material_class": 1,
+          "raw": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/inputs/genuine-untouched-atlas.png",
+            "sha256": "2638079a3de2a1aa36a3cfc4637f714f790fb2896aebe3a9cb5cb50a3d01a5c5",
+            "bytes": 2195115
+          },
+          "dimensions": [
+            2172,
+            724
+          ],
+          "crop_xywh": [
+            35,
+            40,
+            580,
+            580
+          ],
+          "RGB_min": [
+            0,
+            0,
+            0
+          ],
+          "RGB_max": [
+            36,
+            38,
+            39
+          ],
+          "RGB_mean": [
+            4.73319857312723,
+            4.852895362663496,
+            5.64788644470868
+          ],
+          "coarse_geometry_not_transferred": true
+        },
+        {
+          "material_class": 2,
+          "raw": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/inputs/genuine-untouched-atlas.png",
+            "sha256": "2638079a3de2a1aa36a3cfc4637f714f790fb2896aebe3a9cb5cb50a3d01a5c5",
+            "bytes": 2195115
+          },
+          "dimensions": [
+            2172,
+            724
+          ],
+          "crop_xywh": [
+            35,
+            40,
+            580,
+            580
+          ],
+          "RGB_min": [
+            0,
+            0,
+            0
+          ],
+          "RGB_max": [
+            36,
+            38,
+            39
+          ],
+          "RGB_mean": [
+            4.73319857312723,
+            4.852895362663496,
+            5.64788644470868
+          ],
+          "coarse_geometry_not_transferred": true
+        },
+        {
+          "material_class": 3,
+          "raw": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/inputs/genuine-untouched-atlas.png",
+            "sha256": "2638079a3de2a1aa36a3cfc4637f714f790fb2896aebe3a9cb5cb50a3d01a5c5",
+            "bytes": 2195115
+          },
+          "dimensions": [
+            2172,
+            724
+          ],
+          "crop_xywh": [
+            1014,
+            15,
+            100,
+            50
+          ],
+          "RGB_min": [
+            0,
+            0,
+            0
+          ],
+          "RGB_max": [
+            225,
+            222,
+            163
+          ],
+          "RGB_mean": [
+            108.3362,
+            103.2782,
+            53.3326
+          ],
+          "coarse_geometry_not_transferred": true
+        }
+      ]
+    }
+  ],
+  "actual_input_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/inputs/palette.dat",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "bytes": 768
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/sources/2054d.pic",
+      "sha256": "53c48a3ce6452e2f31378ea19c6c55741fe7ca00f44130c31767691826db7679",
+      "bytes": 1044
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/sources/2054e.pic",
+      "sha256": "a0af561811ac3dc187748135b1572772a8c12c4f4960396fca8eea8920d062ca",
+      "bytes": 1044
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/inputs/genuine-untouched-atlas.png",
+      "sha256": "05a8eb2f0f2423f337d65f50225d65fbbc9a90b067a5b5ea6f17250bf9ecd5c6",
+      "bytes": 2013002
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/hardware2/inputs/genuine-untouched-atlas.png",
+      "sha256": "05a8eb2f0f2423f337d65f50225d65fbbc9a90b067a5b5ea6f17250bf9ecd5c6",
+      "bytes": 2013002
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/inputs/palette.dat",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "bytes": 768
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/sources/2057f.pic",
+      "sha256": "7de84a5c17d769cbe82296150a8328b05f0e61b1fe65d361f723651b56bcf958",
+      "bytes": 1044
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/sources/20581.pic",
+      "sha256": "18544694589ff0582bc7ac9cdb66f804348035b98e52f860abebef56645990b1",
+      "bytes": 1044
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/sources/20588.pic",
+      "sha256": "1ae18dde9cfd42b3fa3e227afa068a9a485b5cd7b7783d6214b7116a621b8d97",
+      "bytes": 1044
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/inputs/genuine-untouched-atlas.png",
+      "sha256": "2638079a3de2a1aa36a3cfc4637f714f790fb2896aebe3a9cb5cb50a3d01a5c5",
+      "bytes": 2195115
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/inputs/genuine-untouched-atlas.png",
+      "sha256": "2638079a3de2a1aa36a3cfc4637f714f790fb2896aebe3a9cb5cb50a3d01a5c5",
+      "bytes": 2195115
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-iron-names-terrain2054d-2054e-and2057f-20581-20588-Original-primary-author-20261019-v1/source-material-code-proposal/dark3/inputs/genuine-untouched-atlas.png",
+      "sha256": "2638079a3de2a1aa36a3cfc4637f714f790fb2896aebe3a9cb5cb50a3d01a5c5",
+      "bytes": 2195115
+    }
+  ],
+  "CODE_findings": [
+    "Bounded regular O_NOFOLLOW component-by-component reads authenticate SHA against buffered immutable bytes before decoding; finite source32 and opaque singlePNG constraints enforced.",
+    "Actual recipes select exact complete cohorts and fixed512/sigma2/clip12/strength0.5. Source owners use public authenticated SourceNx math; gray/olive normalized in-class shading prevents cross-material color transfer.",
+    "Only clipped fine RGB donor band transfers; coarse donor machinery geometry is not copied. Source31 opaque-black and>=240 functional owners remain exact Original RGB; these receive zero HD credit.",
+    "Prepared frame Source hashes/canvas/origin and fullscale functional support unions match actual Original bytes:20581/20588fourretainedcells each, others0.",
+    "Output is prepared completely before creating a new output directory; successful receipt explicitly says derived, records actualtool/dependency/recipe/input/output hashes. Read-onlybinding audit did not invoke real derive/main, write real outputs or run G2."
+  ],
+  "donor_visual_binding": "Both genuine untouched wholemasters visually opened. Hardware gray box lies inside plain upperplate; dark gray box excludes outerframe; olive box lies in topmiddle olivepanel. The dark3 wholemaster was display-resized2172x724\u21922048x683; literal bounds and RGBstatistics use exact original pixels, no fullnativeARTapproval claimed.",
+  "scope": "Different CODE plus exact actual-input/recipe/preparedframe binding gate only. This permits the author\u2019s separately Root-authorized finite first cleanup and final G2 checks; output ART, allnativefidelity, genuine contexts and final admission remain unreviewed.",
+  "limits": [
+    "Not a generic security review of arbitrary untrusted CLI recipes/output paths: exact bound private recipes and intended new private output directories reviewed.",
+    "Fine donor variation may be subtle in very dark classes; generated material contribution must be measured in actual output and material readability independently reviewed.",
+    "Prepared candidate source/detail fields are bound; no real derivedoutput exists or is approved by this receipt.",
+    "Genuine Source opaque black/functional retention is Original material, no generatedHD detail credit."
+  ],
+  "new_real_calls": {
+    "cleanup": 0,
+    "G2": 0,
+    "World": 0,
+    "imagegen": 0,
+    "compositor": 0
+  },
+  "canonical_mutations": 0
+}

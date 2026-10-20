@@ -1,0 +1,569 @@
+{
+  "required_roles": [
+    [
+      "105a4",
+      "settled"
+    ],
+    [
+      "105d3",
+      "settled"
+    ],
+    [
+      "105dc",
+      "direct"
+    ],
+    [
+      "105dd",
+      "direct"
+    ],
+    [
+      "105de",
+      "direct"
+    ]
+  ],
+  "covered_roles": [
+    [
+      "105a4",
+      "settled"
+    ],
+    [
+      "105d3",
+      "settled"
+    ],
+    [
+      "105dc",
+      "direct"
+    ],
+    [
+      "105dd",
+      "direct"
+    ],
+    [
+      "105de",
+      "direct"
+    ]
+  ],
+  "selected_caller_centers": [
+    {
+      "mission": "base:sector_1_wave_1",
+      "row": 93,
+      "column": 5,
+      "Original_tile": {
+        "intact": "105dd",
+        "settled": "105e0",
+        "health": 20,
+        "reward": 200,
+        "game": 0,
+        "FLATS_record": 637,
+        "FLATS_asset": "100fd",
+        "FLATS_byte_offset": 5096
+      },
+      "roles": [
+        "direct"
+      ]
+    },
+    {
+      "mission": "base:sector_1_wave_1",
+      "row": 25,
+      "column": 4,
+      "Original_tile": {
+        "intact": "105d0",
+        "settled": "105d3",
+        "health": 20,
+        "reward": 200,
+        "game": 0,
+        "FLATS_record": 624,
+        "FLATS_asset": "100fd",
+        "FLATS_byte_offset": 4992
+      },
+      "roles": [
+        "settled"
+      ]
+    },
+    {
+      "mission": "base:sector_1_wave_3",
+      "row": 40,
+      "column": 2,
+      "Original_tile": {
+        "intact": "105dc",
+        "settled": "105eb",
+        "health": 20,
+        "reward": 200,
+        "game": 0,
+        "FLATS_record": 636,
+        "FLATS_asset": "100fd",
+        "FLATS_byte_offset": 5088
+      },
+      "roles": [
+        "direct"
+      ]
+    },
+    {
+      "mission": "base:sector_1_wave_6",
+      "row": 47,
+      "column": 5,
+      "Original_tile": {
+        "intact": "1059b",
+        "settled": "105a4",
+        "health": 10,
+        "reward": 50,
+        "game": 0,
+        "FLATS_record": 571,
+        "FLATS_asset": "100fd",
+        "FLATS_byte_offset": 4568
+      },
+      "roles": [
+        "settled"
+      ]
+    }
+  ],
+  "endpoints": [
+    {
+      "endpoint_index": 0,
+      "Source_key": "4a2ed7651257a84debd5652ca310b4fda790f59b5194e5d38d93e8b5ce62fdd2",
+      "mission": "base:sector_1_wave_1",
+      "row": 93,
+      "column": 5,
+      "columns": 3,
+      "ordered_source_ids": [
+        "104e4",
+        "104b8",
+        "104dd",
+        "104b8",
+        "105dd",
+        "105de",
+        "104b8",
+        "105c8",
+        "105c9"
+      ],
+      "role": "authentic_intact",
+      "settled_actors": [],
+      "semantic_scope": "Literal MAP/FLATS positions; one genuine settled actor at a time, no timing/World claim."
+    },
+    {
+      "endpoint_index": 1,
+      "Source_key": "96a8b3651e2c3d194b98ed76ef3b7ba68bee19e3cd6d25e955a9dc1fe4d0d9df",
+      "mission": "base:sector_1_wave_1",
+      "row": 25,
+      "column": 4,
+      "columns": 3,
+      "ordered_source_ids": [
+        "105c8",
+        "105c9",
+        "105ca",
+        "105cf",
+        "105d0",
+        "105d1",
+        "105d6",
+        "105d7",
+        "105d8"
+      ],
+      "role": "authentic_intact",
+      "settled_actors": [],
+      "semantic_scope": "Literal MAP/FLATS positions; one genuine settled actor at a time, no timing/World claim."
+    },
+    {
+      "endpoint_index": 2,
+      "Source_key": "23a4839ca3d0afcfce873c690baeb2fd6a5c5853fed9cbf946d262de1a674853",
+      "mission": "base:sector_1_wave_1",
+      "row": 25,
+      "column": 4,
+      "columns": 3,
+      "ordered_source_ids": [
+        "105c8",
+        "105c9",
+        "105ca",
+        "105cf",
+        "105d3",
+        "105d1",
+        "105d6",
+        "105d7",
+        "105d8"
+      ],
+      "role": "controlled_one_genuine_actor_settled",
+      "settled_actors": [
+        {
+          "row": 25,
+          "column": 4,
+          "Original_tile": {
+            "intact": "105d0",
+            "settled": "105d3",
+            "health": 20,
+            "reward": 200,
+            "game": 0,
+            "FLATS_record": 624,
+            "FLATS_asset": "100fd",
+            "FLATS_byte_offset": 4992
+          }
+        }
+      ],
+      "semantic_scope": "Literal MAP/FLATS positions; one genuine settled actor at a time, no timing/World claim."
+    },
+    {
+      "endpoint_index": 3,
+      "Source_key": "6d7b307409fa3a1b31306f063c60dfec533454f35b08fce87277ad79d12bbe48",
+      "mission": "base:sector_1_wave_3",
+      "row": 40,
+      "column": 2,
+      "columns": 3,
+      "ordered_source_ids": [
+        "104b2",
+        "105ce",
+        "105d5",
+        "104b2",
+        "105dc",
+        "105e3",
+        "104b2",
+        "104b2",
+        "104b2"
+      ],
+      "role": "authentic_intact",
+      "settled_actors": [],
+      "semantic_scope": "Literal MAP/FLATS positions; one genuine settled actor at a time, no timing/World claim."
+    },
+    {
+      "endpoint_index": 4,
+      "Source_key": "b6b729febe387c11a4b49c2a6d15a467b324da9430de9a9607486b6dc4deee4a",
+      "mission": "base:sector_1_wave_6",
+      "row": 47,
+      "column": 5,
+      "columns": 3,
+      "ordered_source_ids": [
+        "10599",
+        "105bf",
+        "105bc",
+        "105a0",
+        "1059b",
+        "105a2",
+        "105c4",
+        "105bf",
+        "1041e"
+      ],
+      "role": "authentic_intact",
+      "settled_actors": [],
+      "semantic_scope": "Literal MAP/FLATS positions; one genuine settled actor at a time, no timing/World claim."
+    },
+    {
+      "endpoint_index": 5,
+      "Source_key": "f885f239a22edc3df8bbfaf0b6c1ccb20a584e66ce06a8ebb561033bb8260235",
+      "mission": "base:sector_1_wave_6",
+      "row": 47,
+      "column": 5,
+      "columns": 3,
+      "ordered_source_ids": [
+        "10599",
+        "105bf",
+        "105bc",
+        "105a0",
+        "105a4",
+        "105a2",
+        "105c4",
+        "105bf",
+        "1041e"
+      ],
+      "role": "controlled_one_genuine_actor_settled",
+      "settled_actors": [
+        {
+          "row": 47,
+          "column": 5,
+          "Original_tile": {
+            "intact": "1059b",
+            "settled": "105a4",
+            "health": 10,
+            "reward": 50,
+            "game": 0,
+            "FLATS_record": 571,
+            "FLATS_asset": "100fd",
+            "FLATS_byte_offset": 4568
+          }
+        }
+      ],
+      "semantic_scope": "Literal MAP/FLATS positions; one genuine settled actor at a time, no timing/World claim."
+    },
+    {
+      "endpoint_index": 6,
+      "Source_key": "bc00a3b807e2e9d1d04f03e7794f2a896cefe20c862a9663e598f56434a69c94",
+      "mission": "base:sector_1_wave_3",
+      "row": 40,
+      "column": 2,
+      "columns": 3,
+      "ordered_source_ids": [
+        "104b2",
+        "105ce",
+        "105d5",
+        "104b2",
+        "105eb",
+        "105e3",
+        "104b2",
+        "104b2",
+        "104b2"
+      ],
+      "role": "controlled_one_genuine_actor_settled",
+      "settled_actors": [
+        {
+          "row": 40,
+          "column": 2,
+          "Original_tile": {
+            "intact": "105dc",
+            "settled": "105eb",
+            "health": 20,
+            "reward": 200,
+            "game": 0,
+            "FLATS_record": 636,
+            "FLATS_asset": "100fd",
+            "FLATS_byte_offset": 5088
+          }
+        }
+      ],
+      "semantic_scope": "Literal MAP/FLATS positions; one genuine settled actor at a time, no timing/World claim."
+    },
+    {
+      "endpoint_index": 7,
+      "Source_key": "ac4ee07f6d8b985e64afaf7fb1b97cac7c82e142045bf22bd83b66a3456b7006",
+      "mission": "base:sector_1_wave_1",
+      "row": 93,
+      "column": 5,
+      "columns": 3,
+      "ordered_source_ids": [
+        "104e4",
+        "104b8",
+        "104dd",
+        "104b8",
+        "105e0",
+        "105de",
+        "104b8",
+        "105c8",
+        "105c9"
+      ],
+      "role": "controlled_one_genuine_actor_settled",
+      "settled_actors": [
+        {
+          "row": 93,
+          "column": 5,
+          "Original_tile": {
+            "intact": "105dd",
+            "settled": "105e0",
+            "health": 20,
+            "reward": 200,
+            "game": 0,
+            "FLATS_record": 637,
+            "FLATS_asset": "100fd",
+            "FLATS_byte_offset": 5096
+          }
+        }
+      ],
+      "semantic_scope": "Literal MAP/FLATS positions; one genuine settled actor at a time, no timing/World claim."
+    },
+    {
+      "endpoint_index": 8,
+      "Source_key": "1715d4979a4c16d4507c86f42f29381e9c0f481f3c6c30fabfa882002bcdc158",
+      "mission": "base:sector_1_wave_1",
+      "row": 93,
+      "column": 6,
+      "columns": 3,
+      "ordered_source_ids": [
+        "104b8",
+        "104dd",
+        "104d8",
+        "105dd",
+        "105de",
+        "105df",
+        "105c8",
+        "105c9",
+        "105ca"
+      ],
+      "role": "authentic_intact",
+      "settled_actors": [],
+      "semantic_scope": "Literal MAP/FLATS positions; one genuine settled actor at a time, no timing/World claim."
+    },
+    {
+      "endpoint_index": 9,
+      "Source_key": "6cd5094ac6ad666d81fc339b4bdbf4654c8a969f21678e067e857b98d3223997",
+      "mission": "base:sector_1_wave_1",
+      "row": 93,
+      "column": 6,
+      "columns": 3,
+      "ordered_source_ids": [
+        "104b8",
+        "104dd",
+        "104d8",
+        "105dd",
+        "105e1",
+        "105df",
+        "105c8",
+        "105c9",
+        "105ca"
+      ],
+      "role": "controlled_one_genuine_actor_settled",
+      "settled_actors": [
+        {
+          "row": 93,
+          "column": 6,
+          "Original_tile": {
+            "intact": "105de",
+            "settled": "105e1",
+            "health": 20,
+            "reward": 200,
+            "game": 0,
+            "FLATS_record": 638,
+            "FLATS_asset": "100fd",
+            "FLATS_byte_offset": 5104
+          }
+        }
+      ],
+      "semantic_scope": "Literal MAP/FLATS positions; one genuine settled actor at a time, no timing/World claim."
+    }
+  ],
+  "ordered_pairs": [
+    {
+      "pair_index": 0,
+      "before_endpoint": 1,
+      "settled_endpoint": 2,
+      "changed_slot": 4,
+      "Original_actor": {
+        "intact": "105d0",
+        "settled": "105d3",
+        "health": 20,
+        "reward": 200,
+        "game": 0,
+        "FLATS_record": 624,
+        "FLATS_asset": "100fd",
+        "FLATS_byte_offset": 4992
+      },
+      "actor_position": [
+        25,
+        4
+      ],
+      "event_id": "base:sector_1_wave_1:r25c4:105d0-to-105d3",
+      "separate_one_cell_state": true,
+      "comparison_kind": "genuine_original_actor_transition",
+      "all_scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "pair_index": 1,
+      "before_endpoint": 4,
+      "settled_endpoint": 5,
+      "changed_slot": 4,
+      "Original_actor": {
+        "intact": "1059b",
+        "settled": "105a4",
+        "health": 10,
+        "reward": 50,
+        "game": 0,
+        "FLATS_record": 571,
+        "FLATS_asset": "100fd",
+        "FLATS_byte_offset": 4568
+      },
+      "actor_position": [
+        47,
+        5
+      ],
+      "event_id": "base:sector_1_wave_6:r47c5:1059b-to-105a4",
+      "separate_one_cell_state": true,
+      "comparison_kind": "genuine_original_actor_transition",
+      "all_scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "pair_index": 2,
+      "before_endpoint": 3,
+      "settled_endpoint": 6,
+      "changed_slot": 4,
+      "Original_actor": {
+        "intact": "105dc",
+        "settled": "105eb",
+        "health": 20,
+        "reward": 200,
+        "game": 0,
+        "FLATS_record": 636,
+        "FLATS_asset": "100fd",
+        "FLATS_byte_offset": 5088
+      },
+      "actor_position": [
+        40,
+        2
+      ],
+      "event_id": "base:sector_1_wave_3:r40c2:105dc-to-105eb",
+      "separate_one_cell_state": true,
+      "comparison_kind": "genuine_original_actor_transition",
+      "all_scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "pair_index": 3,
+      "before_endpoint": 0,
+      "settled_endpoint": 7,
+      "changed_slot": 4,
+      "Original_actor": {
+        "intact": "105dd",
+        "settled": "105e0",
+        "health": 20,
+        "reward": 200,
+        "game": 0,
+        "FLATS_record": 637,
+        "FLATS_asset": "100fd",
+        "FLATS_byte_offset": 5096
+      },
+      "actor_position": [
+        93,
+        5
+      ],
+      "event_id": "base:sector_1_wave_1:r93c5:105dd-to-105e0",
+      "separate_one_cell_state": true,
+      "comparison_kind": "genuine_original_actor_transition",
+      "all_scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "pair_index": 4,
+      "before_endpoint": 8,
+      "settled_endpoint": 9,
+      "changed_slot": 4,
+      "Original_actor": {
+        "intact": "105de",
+        "settled": "105e1",
+        "health": 20,
+        "reward": 200,
+        "game": 0,
+        "FLATS_record": 638,
+        "FLATS_asset": "100fd",
+        "FLATS_byte_offset": 5104
+      },
+      "actor_position": [
+        93,
+        6
+      ],
+      "event_id": "base:sector_1_wave_1:r93c6:105de-to-105e1",
+      "separate_one_cell_state": true,
+      "comparison_kind": "genuine_original_actor_transition",
+      "all_scales": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "all5_covered": true,
+  "all_callers_captured": false,
+  "World": 0,
+  "new_intrinsic_QA": 0,
+  "author_art_unchanged": true
+}

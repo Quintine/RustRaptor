@@ -1,0 +1,28 @@
+{
+  "name": "tests-firstcampaign5_green",
+  "argv": [
+    "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project/tools/firstcampaign5_green",
+    "-p",
+    "test_*.py"
+  ],
+  "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/project",
+  "start_utc": "2026-10-20T09:24:55Z",
+  "exit_code": 0,
+  "end_utc": "2026-10-20T09:25:07Z",
+  "stdout": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/tests-firstcampaign5_green/stdout.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size": 0
+  },
+  "stderr": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-firstcampaign5-actual-central-portability3replays-20261020-v2/tests-firstcampaign5_green/stderr.txt",
+    "sha256": "6f1f7e845a65dc3a883cd3ce101ba787c4560b62aa88fc2d73c8ed61cd6ec5ad",
+    "size": 164
+  }
+}

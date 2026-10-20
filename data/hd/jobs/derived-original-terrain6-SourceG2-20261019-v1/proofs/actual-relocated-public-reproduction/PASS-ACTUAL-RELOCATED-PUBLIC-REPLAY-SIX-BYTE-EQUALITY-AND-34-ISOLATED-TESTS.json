@@ -1,0 +1,113 @@
+{
+  "status": "ACTUAL_PUBLIC_RELOCATED_FIXED_RECIPE_REPLAY_BYTE_IDENTICAL_ALL6_AND_34_ISOLATED_TESTS_PASS",
+  "helper_pins": {
+    "terrain_six_fine_cleanup.py": "6386821517c7bc4118566052c45ea3261e0e9aefadf0ce8f425635034649a0dc",
+    "test_terrain_six_fine_cleanup.py": "9b06dc8c4bd94929daa5a51b5c86ea1265cf5f335c51ab4e317ff8b98c22c38b",
+    "hd_terrain_cleanup.py": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+  },
+  "recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/project/data/hd/jobs/derived-original-terrain6-SourceG2-20261019-v1/reproducer/recipe.json",
+    "sha256": "996b73568e9b6224febf469ca7450e53277858b16ddd01ebb36f0e25867c406a",
+    "bytes": 3431
+  },
+  "tests": {
+    "status": "TERMINAL",
+    "argv": [
+      "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/project/tools/test_terrain_six_fine_cleanup.py"
+    ],
+    "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/project/tools",
+    "python": {
+      "path": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+      "bytes": 30894944
+    },
+    "start_unix_ns": 1792483869508939467,
+    "exit_code": 0,
+    "elapsed_seconds": 1.8685953500098549,
+    "end_unix_ns": 1792483871377762013,
+    "stdout": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/ACTUAL-ISOLATED-PUBLIC-TOOL-TESTS.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "stderr": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/ACTUAL-ISOLATED-PUBLIC-TOOL-TESTS.stderr",
+      "sha256": "dd4a23634381601bb7dcd82e48916878c7e725f2516306464aeb479ca3464e20",
+      "bytes": 133
+    }
+  },
+  "replay": {
+    "status": "TERMINAL",
+    "argv": [
+      "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/project/tools/terrain_six_fine_cleanup.py",
+      "--recipe",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/project/data/hd/jobs/derived-original-terrain6-SourceG2-20261019-v1/reproducer/recipe.json",
+      "--output",
+      "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/actual-once-relocated-public-fixed-recipe-replay"
+    ],
+    "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/project",
+    "python": {
+      "path": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+      "bytes": 30894944
+    },
+    "start_unix_ns": 1792483871444937899,
+    "exit_code": 0,
+    "elapsed_seconds": 1.8679402279958595,
+    "end_unix_ns": 1792483873313098534,
+    "stdout": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/ACTUAL-ONCE-RELOCATED-PUBLIC-RECIPE-REPLAY.stdout",
+      "sha256": "3dd5a2b548a324f8d7b187639f935568268287761dbc71d3ced0191636f6c1e1",
+      "bytes": 2707
+    },
+    "stderr": {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/ACTUAL-ONCE-RELOCATED-PUBLIC-RECIPE-REPLAY.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  },
+  "PNG_comparison": [
+    {
+      "asset": "2069f",
+      "replay_sha256": "3353249c7dcfcb5a6737bd36e97d946c257ae8d1be472775e69b6ef104a3416e",
+      "accepted_sha256": "3353249c7dcfcb5a6737bd36e97d946c257ae8d1be472775e69b6ef104a3416e",
+      "byte_equal": true
+    },
+    {
+      "asset": "206a2",
+      "replay_sha256": "64a44a57c7e306ca65610dfc50ec2b27f029f35163735e0f408774a7ed357fb0",
+      "accepted_sha256": "64a44a57c7e306ca65610dfc50ec2b27f029f35163735e0f408774a7ed357fb0",
+      "byte_equal": true
+    },
+    {
+      "asset": "206a7",
+      "replay_sha256": "e3f938efc501e1da49bc447ea7a8284c09faf66e5374050062d6bb655c7668d0",
+      "accepted_sha256": "e3f938efc501e1da49bc447ea7a8284c09faf66e5374050062d6bb655c7668d0",
+      "byte_equal": true
+    },
+    {
+      "asset": "301fc",
+      "replay_sha256": "19c1c529e7068a7b83d918700f2d77c1f8dc596782c65e5c929da54212a869c0",
+      "accepted_sha256": "19c1c529e7068a7b83d918700f2d77c1f8dc596782c65e5c929da54212a869c0",
+      "byte_equal": true
+    },
+    {
+      "asset": "301fd",
+      "replay_sha256": "152c4318620dd25f6a6c6fde2cb5b2bc60dda04594c9097de8f2fb1b6505e3ec",
+      "accepted_sha256": "152c4318620dd25f6a6c6fde2cb5b2bc60dda04594c9097de8f2fb1b6505e3ec",
+      "byte_equal": true
+    },
+    {
+      "asset": "30201",
+      "replay_sha256": "b779ca33afb95ffeb337b4b2db58d2f455433d8384d4befb4e18df1b1a5159c8",
+      "accepted_sha256": "b779ca33afb95ffeb337b4b2db58d2f455433d8384d4befb4e18df1b1a5159c8",
+      "byte_equal": true
+    }
+  ],
+  "all_preexisting_portable_files_byte_unchanged": true,
+  "actual_additional_cleanup_replay_processes": 1,
+  "additional_imagegen_game_intrinsic_QA_context_World_compile_or_registration_processes": 0,
+  "scope": "Reproducibility check of already qualified pixels. Original author cleanup and this additional relocated public-helper replay are separate actual executions; no newly authored image or refreshed rendering evidence."
+}

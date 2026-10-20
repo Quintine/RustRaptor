@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "rustc",
+    "--edition=2024",
+    "-C",
+    "opt-level=1",
+    "-C",
+    "debuginfo=0",
+    "--extern",
+    "raptor_replica=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "--extern",
+    "serde_json=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libserde_json-89b5c242431768d3.rlib",
+    "--extern",
+    "flate2=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps/libflate2-808a135ff259ee28.rlib",
+    "-L",
+    "dependency=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps",
+    "-L",
+    "native=/home/quintine/Projects/RaptorReplica/RustRaptor/lib",
+    "-L",
+    "native=/home/quintine/.local/lib",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-10521-water-only-quiet-band-remediation-20261019-v1/compose_focused10521_water_successor_three_SourceG2_H5647.rs",
+    "-o",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-10521-water-only-quiet-band-remediation-20261019-v1/focused10521-context-composer"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "warning: unused imports: `logical_sprite` and `selected_art`\n --> /home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-10521-water-only-quiet-band-remediation-20261019-v1/compose_focused10521_water_successor_three_SourceG2_H5647.rs:3:154\n  |\n3 | ...inalPalette},render::{Canvas,upscale},terrain_hd::{logical_sprite,selected_art,TerrainHd,Replacement,RetainedOriginalPlacement,Pal...\n  |                                                       ^^^^^^^^^^^^^^ ^^^^^^^^^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nwarning: 1 warning emitted\n\n",
+  "seconds": 6.491629566007759,
+  "source_sha256": "2cdfeed1c5ffd7dc7c4956261b74f4f836d69f87a67b565a2b0d6e818028fa04"
+}

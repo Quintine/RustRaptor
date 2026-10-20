@@ -1,0 +1,25 @@
+{
+  "status": "UNAPPLIED_ROOT_PROMOTION_PENDING",
+  "helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-relocated-two-recipes-byte-reproduction-and-public-proposal-20261020-v1/public-source-proposal/tools/terrain_night_hardware_cleanup.py",
+    "sha256": "1b448911a7af01e1f19aae945f1e581c2b2a8f7bb66ed7ad597bd6450cd9191c",
+    "bytes": 10029
+  },
+  "helper_destination": "tools/terrain_night_hardware_cleanup.py",
+  "test": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-relocated-two-recipes-byte-reproduction-and-public-proposal-20261020-v1/public-source-proposal/tools/test_terrain_night_hardware_cleanup.py",
+    "sha256": "9ef776e2f76ff2733b191031464651f66d62a49ea0acc10a546326c4b8eba74b",
+    "bytes": 2902
+  },
+  "test_destination": "tools/test_terrain_night_hardware_cleanup.py",
+  "existing_dependency": {
+    "path": "tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+    "promote": false
+  },
+  "unapplied_patch": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-night5-relocated-two-recipes-byte-reproduction-and-public-proposal-20261020-v1/PUBLIC-EXACT-HELPER-AND-TEST-UNAPPLIED.patch",
+    "sha256": "23aefcc715690ee7aade5158441e9c9ac24ff23f5a97b4425ed89af21dfb4f6a",
+    "bytes": 13282
+  }
+}

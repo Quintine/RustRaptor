@@ -1,0 +1,92 @@
+{
+  "status": "PRIVATE_SOURCE_ONLY_PORTABLE_PREPARATION_NOT_ADMISSION",
+  "jobs": [
+    {
+      "job_id": "derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1",
+      "candidate": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/candidate.json",
+        "sha256": "33e2480fb651317da9f2bfc085c8dde2c8b9c159272731f39ce8a1d19d492241"
+      },
+      "QA": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/runtime-qa.json",
+        "sha256": "e0fd7c5e21f888d9563d03ed7fe94f0b150f9788810f7eed83ecef5cbb222cff"
+      },
+      "ids": [
+        "105e0",
+        "105e8",
+        "105e9",
+        "105ef"
+      ],
+      "sequences": 4,
+      "new_output_bytes": 666089,
+      "portable_recipe": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/coast4-EXECUTABLE-PORTABLE-RECIPE.json",
+        "sha256": "66773395e5f3f3704bc346c90180b0ac43405857d3afff2416ad6d6972c01822"
+      }
+    },
+    {
+      "job_id": "derived-original-late-ground-105e6-105e7-105eb-105ed-complete4-20261020-v1",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-ground-105e6-105e7-105eb-105ed-complete4-20261020-v1",
+      "candidate": {
+        "path": "jobs/derived-original-late-ground-105e6-105e7-105eb-105ed-complete4-20261020-v1/candidate.json",
+        "sha256": "5b82e05208fa42931e086b9b9de877ab2ebb803f9e6d5127ce0f0fa4ad65ed82"
+      },
+      "QA": {
+        "path": "jobs/derived-original-late-ground-105e6-105e7-105eb-105ed-complete4-20261020-v1/runtime-qa.json",
+        "sha256": "011fada3fcb3ea0bad28d3f7482bbeaef66bde8129c187892b30f3208e46d702"
+      },
+      "ids": [
+        "105e6",
+        "105e7",
+        "105eb",
+        "105ed"
+      ],
+      "sequences": 4,
+      "new_output_bytes": 890436,
+      "portable_recipe": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/ground4-EXECUTABLE-PORTABLE-RECIPE.json",
+        "sha256": "88d843d1ccf7eab28410a5401ac244dc1591c5bbbf021850221481b512dde5ec"
+      }
+    },
+    {
+      "job_id": "derived-original-late-ramp-105f3-complete1-20261020-v1",
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-late9-private-portable-three-jobs-SourceG2-20261020-v1/data/hd/jobs/derived-original-late-ramp-105f3-complete1-20261020-v1",
+      "candidate": {
+        "path": "jobs/derived-original-late-ramp-105f3-complete1-20261020-v1/candidate.json",
+        "sha256": "86326fbdd711ae07a7fdca86ac55da24f39b215894e925bb2df49a2f797b4dc7"
+      },
+      "QA": {
+        "path": "jobs/derived-original-late-ramp-105f3-complete1-20261020-v1/runtime-qa.json",
+        "sha256": "c5d599a00c35cac1e9e503ece2f051f25a58e120da59fe0aa3e55a53141ff1b9"
+      },
+      "ids": [
+        "105f3"
+      ],
+      "sequences": 1,
+      "new_output_bytes": 251588,
+      "portable_recipe": {
+        "path": "jobs/derived-original-late-coast-105e0-105e8-105e9-105ef-complete4-20261020-v1/lineage/late9-shared-actual-Source-primary/reproducer/ramp105f3-EXECUTABLE-PORTABLE-RECIPE.json",
+        "sha256": "f42ad3f26c13c5c4901bd58cc5e16013da88fdfe45c2bcbd72becffdf1b57fd5"
+      }
+    }
+  ],
+  "selected9": [
+    "105e0",
+    "105e6",
+    "105e7",
+    "105e8",
+    "105e9",
+    "105eb",
+    "105ed",
+    "105ef",
+    "105f3"
+  ],
+  "genuine_masters3_once_in_shared_inputs": true,
+  "portable_replay_pending": true,
+  "different_intrinsic_pending": true,
+  "genuine_context_pending": true,
+  "Root_art_approval_pending": true,
+  "new_generation_cleanup_QA_World_calls": 0,
+  "public_tools_untouched": true
+}

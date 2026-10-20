@@ -1,0 +1,250 @@
+{
+  "argv": [
+    "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-v",
+    "-s",
+    "tools",
+    "-p",
+    "test*.py"
+  ],
+  "cwd": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-final50-private-normalized-append-after5693-SourceG2-20261020-v1/actual-public70-fresh-isolated-nine-suites/project",
+  "source_group": {
+    "name": "root",
+    "start_directory": "tools",
+    "cwd": "isolated_project_root",
+    "argv": [
+      "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools",
+      "-p",
+      "test*.py"
+    ],
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "test_module_count": 42,
+    "static_declared_test_methods": 734,
+    "files": [
+      {
+        "path": "tools/test_hd_art_audit.py",
+        "sha256": "6365f60d112f8e8c1c7aa10eaa772bc7867c94d8b69560fef42988f224c1c675",
+        "bytes": 6787
+      },
+      {
+        "path": "tools/test_hd_art_derivation.py",
+        "sha256": "e4d7cbb68bab84dfe741362996bf6f23b3b7d0834a13b214131dfe2dbf3e8e27",
+        "bytes": 6413
+      },
+      {
+        "path": "tools/test_hd_boss_cleanup.py",
+        "sha256": "5dc1984887650301b77d11dd20634d0b9e12a69404e1e913c07789a89307466c",
+        "bytes": 6566
+      },
+      {
+        "path": "tools/test_hd_boss_cleanup_reproduce.py",
+        "sha256": "d60b57924bbbc3d25295c49d149ef8b9539e5f96c06bac424123736610de9315",
+        "bytes": 7831
+      },
+      {
+        "path": "tools/test_hd_candidate_review.py",
+        "sha256": "2e2d2ca679655348de6080e075f661157a4b556548b1f5ab8c77e957ab921090",
+        "bytes": 3119
+      },
+      {
+        "path": "tools/test_hd_dark_terrain_six.py",
+        "sha256": "2de82c638ffb0d725018a635e8b106d53f6796b245a60bcb26322f71d87da734",
+        "bytes": 7874
+      },
+      {
+        "path": "tools/test_hd_darkship_cleanup.py",
+        "sha256": "cd451c1b1265f98787765939fb6d8b67beb223292ceb5eb595cda1277972adb6",
+        "bytes": 5775
+      },
+      {
+        "path": "tools/test_hd_dormant_enemy_review.py",
+        "sha256": "2d500850e89c6d490e1d8866c63b07c833f4ff06017918f0f8aad12b6df503aa",
+        "bytes": 26924
+      },
+      {
+        "path": "tools/test_hd_dshp01_dark_material.py",
+        "sha256": "2b764e65eab8956754693441b26087a6b5081bc2d3b71a7ffe6c5022cb1c99f1",
+        "bytes": 5750
+      },
+      {
+        "path": "tools/test_hd_dshp04_dark_material.py",
+        "sha256": "d5d5eb7ee8d04037550b07b1a44cc9d984edbb82725ee29e045ad754071b88c8",
+        "bytes": 5750
+      },
+      {
+        "path": "tools/test_hd_dshp20_cleanup.py",
+        "sha256": "50e0d2cddc3a03bb169521213186023a39d8d8f58aa84a73e37f1b8ae2aa7ba3",
+        "bytes": 6434
+      },
+      {
+        "path": "tools/test_hd_dshp40_dark_material.py",
+        "sha256": "299eb4151dfaf92a4021f35e7b756ebe2628e28eeb50d823f9dc50c835264e26",
+        "bytes": 6199
+      },
+      {
+        "path": "tools/test_hd_followon302e1_quiet_floor_cleanup.py",
+        "sha256": "03c42d9047a31574e5265ec42131ab176f2879db10c4279f52b73fe9c0ee9fb5",
+        "bytes": 8523
+      },
+      {
+        "path": "tools/test_hd_followon30380_panel_outline_fidelity.py",
+        "sha256": "cdbdf90b56afe72773c73afa584d1df74bfd988d96ff1b4fefe54624d3ed716d",
+        "bytes": 8963
+      },
+      {
+        "path": "tools/test_hd_followon_landmark_fine_cleanup.py",
+        "sha256": "19cfa8d8e1ed5e21a279fec3690cea90d25d6243f1a665adafd0797c600759f9",
+        "bytes": 8028
+      },
+      {
+        "path": "tools/test_hd_global_aspect_cleanup.py",
+        "sha256": "4d809c63ad780996b0e05963c055439efdbec101a6723612713551c233e4ac9c",
+        "bytes": 7931
+      },
+      {
+        "path": "tools/test_hd_grating_gray_cleanup.py",
+        "sha256": "078b81df887fa8ddf7cf03ac10a00cf24ad8bb451133c17e571d3b65bedaa750",
+        "bytes": 10655
+      },
+      {
+        "path": "tools/test_hd_industrial_fine_cleanup.py",
+        "sha256": "1fc85d4c12eca0e24d5087aefabdb79564fc8275951f149497e10fbad908750c",
+        "bytes": 6153
+      },
+      {
+        "path": "tools/test_hd_infantry_cleanup.py",
+        "sha256": "e6f7936dec2e85c0d660eec30c645c8c23178837e6ec930eabc22bc1cf57e79c",
+        "bytes": 11922
+      },
+      {
+        "path": "tools/test_hd_job_queue.py",
+        "sha256": "9c047cebbdb8acb53c8e88653bf797769b6a177a2c8bc9b7fd009fa83fe20068",
+        "bytes": 14029
+      },
+      {
+        "path": "tools/test_hd_other_functional_cleanup.py",
+        "sha256": "ee7722bc12653c241b6c8c4b23ccdf7944afe4cf4482cd73a1d30d1eeec20931",
+        "bytes": 5005
+      },
+      {
+        "path": "tools/test_hd_person01_cleanup.py",
+        "sha256": "79ecf03ab10e023a8952ca4f2d68a44a9768236de359d00bb443887d1bfeb5ed",
+        "bytes": 9868
+      },
+      {
+        "path": "tools/test_hd_receipt_portability.py",
+        "sha256": "755785f6500c3f97faf257fec116d4cbf4a2053aa5c5d1d8fd6150599dbc6d09",
+        "bytes": 8299
+      },
+      {
+        "path": "tools/test_hd_register_reviewed.py",
+        "sha256": "5a9a84122f28a7ed683918ff3e0b7c5113400ebaf3ff65fb7ed56cb83e638548",
+        "bytes": 64577
+      },
+      {
+        "path": "tools/test_hd_ship09_wake_cleanup.py",
+        "sha256": "9602c1fe91d49b8c9552da79b2fdcce24137ca3be1c8eb223f21fb5f4a1faf0c",
+        "bytes": 20551
+      },
+      {
+        "path": "tools/test_hd_ship20_cleanup.py",
+        "sha256": "4c6a096d113c528ef201e8a758f1b7713e4b9e384575335efc48535dfdbcc850",
+        "bytes": 7280
+      },
+      {
+        "path": "tools/test_hd_sprite_cleanup.py",
+        "sha256": "217421bf9337dac0d85c8bc0313fe2ad637210a309895f14306d5a7422c3463b",
+        "bytes": 7796
+      },
+      {
+        "path": "tools/test_hd_stag03_cleanup.py",
+        "sha256": "b00f8a69b16871334c5821025d5980e61cc5088a3bf56af272e6cd19953138b6",
+        "bytes": 12501
+      },
+      {
+        "path": "tools/test_hd_targt_rebuild.py",
+        "sha256": "695e1398ebd29ab4169039a4bea53a56d085af5c9a26fea02e7fb5fcbd69c124",
+        "bytes": 9310
+      },
+      {
+        "path": "tools/test_hd_targt_soil_retexture.py",
+        "sha256": "020c7bff07da25aea11cc201c792c019e3c5df11c51983705ac78c30d15711ba",
+        "bytes": 7456
+      },
+      {
+        "path": "tools/test_hd_terrain_cleanup.py",
+        "sha256": "bc41d699939b454a00e6589be45a07e4bd8ca494cac9d6613aeee7a1ac152165",
+        "bytes": 7581
+      },
+      {
+        "path": "tools/test_hd_terrain_five_fine_cleanup.py",
+        "sha256": "ec4a70f6ed6222e0f8035f1ccd89611f2007bb989a003c88ba59bb0b74d01197",
+        "bytes": 9416
+      },
+      {
+        "path": "tools/test_hd_terrain_group_retexture.py",
+        "sha256": "9df1d367cc0b2a8c418374507caf285ac73a0fe05884b635a39571f4c3efd941",
+        "bytes": 18902
+      },
+      {
+        "path": "tools/test_hd_terrain_retexture.py",
+        "sha256": "8e770c07e51cddc151761bd8359af799920d027494d90d2da99f9b3a02140b24",
+        "bytes": 4566
+      },
+      {
+        "path": "tools/test_hd_ui_cleanup.py",
+        "sha256": "1bd9b8c70a09e40eac5969be1218e9c488bcfb1bcd8964c958be9ab4ebc39d22",
+        "bytes": 15506
+      },
+      {
+        "path": "tools/test_hd_unused_terrain_retained.py",
+        "sha256": "38c88bf25b5861fdba1c9cb81154cf754fe044d3877ef6d0296d0430ed0f6a02",
+        "bytes": 12049
+      },
+      {
+        "path": "tools/test_hd_water_material10521.py",
+        "sha256": "7167c84154a48b1186d95347f47457a4121076658f3e93fea38b5dd2a1009470",
+        "bytes": 1800
+      },
+      {
+        "path": "tools/test_hd_worm_cleanup.py",
+        "sha256": "90c426f0e0b0a0990b3f9badcd2b29923ed86ea41b601c934434f06dc5f601e4",
+        "bytes": 7895
+      },
+      {
+        "path": "tools/test_runtime_archives.py",
+        "sha256": "e4b0c17203ad851507f0d9c93c86ed1c83325fde7dc0f7575cd6a1b7c5623ccc",
+        "bytes": 4133
+      },
+      {
+        "path": "tools/test_runtime_data_selection.py",
+        "sha256": "85b5b333ff9084103480d7fa34f9705f24bd5a931e24f85aac15208c4af6d5fc",
+        "bytes": 8465
+      },
+      {
+        "path": "tools/test_terrain_night_hardware_cleanup.py",
+        "sha256": "9ef776e2f76ff2733b191031464651f66d62a49ea0acc10a546326c4b8eba74b",
+        "bytes": 2902
+      },
+      {
+        "path": "tools/test_terrain_six_fine_cleanup.py",
+        "sha256": "9b06dc8c4bd94929daa5a51b5c86ea1265cf5f335c51ab4e317ff8b98c22c38b",
+        "bytes": 10101
+      }
+    ],
+    "run_in_separate_process": true
+  },
+  "time_unix": 1792490459.5266902
+}

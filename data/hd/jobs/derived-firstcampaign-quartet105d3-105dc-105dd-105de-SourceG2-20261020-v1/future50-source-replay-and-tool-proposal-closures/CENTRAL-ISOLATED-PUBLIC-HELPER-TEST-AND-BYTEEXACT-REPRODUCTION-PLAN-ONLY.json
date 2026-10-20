@@ -1,0 +1,78 @@
+{
+  "status": "PREPARED_ONLY_NO_NEW_TEST_OR_REPLAY_EXECUTION",
+  "normalizer_project_argument": "Central future50 isolated project root, wait for ship_portability actual immutable ready path",
+  "python": "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "synthetic_test_commands": [
+    [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/firstcampaign5_quartet",
+      "-p",
+      "test_*.py"
+    ],
+    [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tools/firstcampaign5_green",
+      "-p",
+      "test_*.py"
+    ]
+  ],
+  "actual_expected_existing_proof": "64 tests each in donor proposals. Parenthelper is predecessor57132a11, no standalone new parent tests; its exact reproduction is covered by green parent recipe.",
+  "reproduction_calls": [
+    {
+      "helper": "tools/firstcampaign5_quartet/terrain_component_cleanup.py",
+      "recipe": "data/hd/jobs/derived-firstcampaign-quartet105d3-105dc-105dd-105de-SourceG2-20261020-v1/reproducer/recipe.json",
+      "argv": [
+        "--recipe",
+        "<recipe>",
+        "--output",
+        "<fresh-output/quartet>"
+      ],
+      "expected_output_ids": [
+        "105d3",
+        "105dc",
+        "105dd",
+        "105de"
+      ]
+    },
+    {
+      "helper": "tools/firstcampaign5_green_parent/terrain_component_cleanup.py",
+      "recipe": "data/hd/jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/reproducer/parent-reproducer/recipe.json",
+      "argv": [
+        "--recipe",
+        "<recipe>",
+        "--output",
+        "<fresh-output/green-parent>"
+      ],
+      "expected_output_ids": [
+        "105a4",
+        "105a7"
+      ],
+      "compare_parent105a4": "0a5b170f1453238ac34861c92da6bcbd0018eba6903cd6ac4a2f60fdea6cc003"
+    },
+    {
+      "helper": "tools/firstcampaign5_green/terrain_component_cleanup.py",
+      "recipe": "data/hd/jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/reproducer/recipe.json",
+      "argv": [
+        "--recipe",
+        "<recipe>",
+        "--output",
+        "<fresh-output/green-final>"
+      ],
+      "expected_output_ids": [
+        "105a4"
+      ]
+    }
+  ],
+  "bounds": "One necessary relocated byteexact reproduction per distinct recipe in freshoutput; no cleanup method changes, no G2, no new accepted artwork. Compare PNGbytes against immutable finalraws and parent105a4; preserve executed tool/dependency/inputpins/receipt/exit stdout stderr. Do not change actual historic at-startQA or imply old receipt was run after relocation.",
+  "Root_authority": "Root message: routine53 publictools test/replays if notactual yet prepactualvalidation once isolatedprivate normalizer (no artwork/newG2). No actual calls made by this preparation."
+}

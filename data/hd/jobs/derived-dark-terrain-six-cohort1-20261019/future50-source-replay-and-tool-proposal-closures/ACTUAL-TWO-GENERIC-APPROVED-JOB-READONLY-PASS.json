@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "jobs": [
+    {
+      "job_id": "derived-dark-terrain-six-cohort1-20261019",
+      "assets": [
+        "301c3",
+        "301c8",
+        "301cc"
+      ],
+      "candidate": {
+        "path": "data/hd/jobs/derived-dark-terrain-six-cohort1-20261019/candidate.json",
+        "sha256": "1788a2069fc74160e63f07523f8851ddabd971fbead1b96d402c3f46e9ad47a5"
+      },
+      "coordinator_review": {
+        "path": "data/hd/jobs/derived-dark-terrain-six-cohort1-20261019/coordinator-review.json",
+        "sha256": "add37e73091f6a7d0735453a77846e0ece90cb1c477f17865fa46e19a84066db"
+      }
+    },
+    {
+      "job_id": "derived-dark-terrain-six-cohort2-20261019",
+      "assets": [
+        "301d1",
+        "301d4",
+        "301d7"
+      ],
+      "candidate": {
+        "path": "data/hd/jobs/derived-dark-terrain-six-cohort2-20261019/candidate.json",
+        "sha256": "be0f0ec007de966e4d5ec223ebd3275141921bf962560f062a7c8600cf22697f"
+      },
+      "coordinator_review": {
+        "path": "data/hd/jobs/derived-dark-terrain-six-cohort2-20261019/coordinator-review.json",
+        "sha256": "f6b21db81f1de5267974b9ae2e4468aaf59b7b44bda567f75f626ad318bbf8c4"
+      }
+    }
+  ],
+  "actual_calls": 2,
+  "canonical_write": false,
+  "registrar_main_calls": 0,
+  "Root_authorized_grouped_inventory_normalization": true,
+  "actual_new_generation_QA_context_World_calls": 0
+}

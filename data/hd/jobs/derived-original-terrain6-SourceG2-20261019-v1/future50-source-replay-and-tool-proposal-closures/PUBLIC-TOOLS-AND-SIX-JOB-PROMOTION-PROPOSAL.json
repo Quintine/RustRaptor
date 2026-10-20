@@ -1,0 +1,46 @@
+{
+  "status": "SOURCE_ONLY_PUBLIC_PROMOTION_PROPOSAL_ROOT_APPROVAL_PENDING",
+  "exact_source_handoff": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/FINAL-V2-PORTABLE-SIX-ACTUAL-REPRODUCTION-CLOSED-ROOT-APPROVAL-PENDING.json",
+    "sha256": "c9a70a67e98db7f034b33ea49bd632e0c5095e31a18b6748f79fded13700c002"
+  },
+  "new_public_tools": [
+    {
+      "source": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/project/tools/terrain_six_fine_cleanup.py",
+      "target": "tools/terrain_six_fine_cleanup.py",
+      "sha256": "6386821517c7bc4118566052c45ea3261e0e9aefadf0ce8f425635034649a0dc"
+    },
+    {
+      "source": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/project/tools/test_terrain_six_fine_cleanup.py",
+      "target": "tools/test_terrain_six_fine_cleanup.py",
+      "sha256": "9b06dc8c4bd94929daa5a51b5c86ea1265cf5f335c51ab4e317ff8b98c22c38b"
+    }
+  ],
+  "existing_public_dependency": {
+    "target": "tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+    "canonical_matches": true
+  },
+  "job_source": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-windows-six-final-portable-job-and-source-proposal-20261019-v1/project/data/hd/jobs/derived-original-terrain6-SourceG2-20261019-v1",
+  "job_target": "data/hd/jobs/derived-original-terrain6-SourceG2-20261019-v1",
+  "selected_assets": [
+    "2069f",
+    "206a2",
+    "206a7",
+    "301fc",
+    "301fd",
+    "30201"
+  ],
+  "source_inventory_files": 1007,
+  "source_inventory_logical_bytes": 58721312,
+  "candidate_sha256": "89d858b240fd2b28f3b089809fe0991801d622d3f65acb04bca955f6fc26b746",
+  "runtime_qa_sha256": "72af2f0df53b1940db539c37c6965cd05d029e0b7f6cc3acce7351e0693404df",
+  "required_before_registration": [
+    "Actual Root personal visual art approval with accepted limits, copied verbatim into job proofs",
+    "Root-approved final coordinator binding the unchanged candidate and exact frame map",
+    "Read-only approved_job check against promoted helper and current library",
+    "Root owns normal staging/validation/publication"
+  ],
+  "no_execution_authority_created": true,
+  "actual_operations_in_this_proposal": 0
+}

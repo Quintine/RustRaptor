@@ -1,0 +1,13 @@
+{
+  "status": "AWAIT-DIFFERENT-CODE-AND-INPUT-ART-PASS-NO-ACTUAL-CLEANUP-OR-QA",
+  "pins": {
+    "private-tools/hd_opaque_terrain_finalize.py": "4be3b04150748f052011a07c61098ba1a9a43bc0cdab7e6fb64a2c8d578e2f84",
+    "private-tools/test_hd_opaque_terrain_finalize.py": "28444792127ce8dd213272b5e7aac346dd58108aeda1ce276a57367575434594",
+    "private-tools/hd_global_aspect_cleanup.py": "24fc352661defec56cf12017bb90060fe059938f67c2a6b03fec90e66a9ab41a",
+    "RECIPE-SIX-UNEXECUTED.json": "791c92841504a96cae437e630774660ff0d4c0e60eac14f66e7596a7d07dd511",
+    "SOURCE-SIX-EXACT-INPUTS.json": "4299a02cd4a7012ba708a4c26acdbce63981ff8975ce93dd893ff02d4a965165",
+    "GENUINE-SIX-BUILTIN-TERMINAL-PROMPT-AND-GATE-BINDINGS.json": "3c78df00d4ca4f44a112f7f78a35d899f7bf1a1b89306e47c70a9fb634fda534"
+  },
+  "known_input_brightness_concern": "301fc raw green brighter/warmer than Source; ordinary RGB finalizer proposes no correction. Different ART may require a concrete bounded successor before execution.",
+  "all_Source_and_original_canonical_data_unchanged": true
+}

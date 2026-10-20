@@ -1,0 +1,53 @@
+{
+  "status": "PASS_FULL_TRANSITIVE_GENERATIVE_PARENT_CLOSURE_NO_PIXEL_CHANGES",
+  "job_id": "derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/generation/ACTUAL-ORIGINAL-PRIMARY-RETURNED-UNTOUCHED.png",
+        "sha256": "b305fbe79b583b5c8b3fc356871db3b9ad42953b54e02bf876b4170f73946add"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/generation/ACTUAL-BUILTIN-PRIMITIVE-RECEIPT.json",
+        "sha256": "a399a80aa09cc5259c8e77896d0044e20147c6c8ff8ec3efb6326d75c090c8df"
+      },
+      "prompt": {
+        "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/generation/prompt.txt",
+        "sha256": "c6ebe8754d2136c64c42bfc66cccd403ba3c3bc73570d9f26c6e98ffe55144c2"
+      }
+    },
+    {
+      "raw_png": {
+        "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/reproducer/parent-reproducer/inputs/new-1059e-master.png",
+        "sha256": "72f75613c04054d23b94da26b3beb3ee6fb3d63be9d739aebdb353f0c9577c7b"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/generation/transitive1059e/ACTUAL-BUILTIN-PRIMITIVE-RECEIPT.json",
+        "sha256": "99d2b8f8faa0006d222b7f0b287f45c53c4b4c605d5f9fc174b6b9143de098ef"
+      },
+      "prompt": {
+        "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/generation/transitive1059e/prompt.txt",
+        "sha256": "ee27003ce13c85ca27bb5d09d965516206ce2dd9a414da7ff578da9959356d72"
+      }
+    }
+  ],
+  "candidate": {
+    "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/candidate.json",
+    "sha256": "32419d7d18d49521bbc8dba564b30637cbbace1cdcb59b454cb7a313e79f97a5"
+  },
+  "derivation": {
+    "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/artwork-derivation.json",
+    "sha256": "92c4d396f229247fe3d20ce229e8e45d02a848136720bf7509be7be5ae6ab6f3"
+  },
+  "QA": {
+    "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/runtime-qa.json",
+    "sha256": "5d677457e6303440ad4369731c2656684925f5a0642a1333a9a072d84565146f"
+  },
+  "actual_start_candidate_sha256": "843d600443cd455492adfc737ff7d931944eed1acbbe16b2ecab994232cc3e68",
+  "review": {
+    "path": "jobs/derived-firstcampaign105a4-complete-green-SourceG2-20261020-v1/coordinator-review.json",
+    "sha256": "f0d04a27bf9b80e5eac609989cfb44d4e73318aa0bfc77016dfd5735d84415b8"
+  },
+  "new_cleanup_QA_image_or_context_calls": 0,
+  "preserved_precompletion_records": "reviews/pre-transitive-completion/"
+}

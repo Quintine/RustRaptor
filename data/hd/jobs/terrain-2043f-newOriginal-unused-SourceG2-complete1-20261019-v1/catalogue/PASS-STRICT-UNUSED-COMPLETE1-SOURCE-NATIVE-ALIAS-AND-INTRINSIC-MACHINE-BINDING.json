@@ -1,0 +1,111 @@
+{
+  "status": "PASS_STRICT_UNUSED_BINDING_ROOT_PERSONAL_APPROVAL_STILL_REQUIRED",
+  "asset": "2043f",
+  "candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/candidate.json",
+    "sha256": "60288645f257cbca16594b4f0768349ca2ac66d062112d4913f70bf4b6570483",
+    "bytes": 1527
+  },
+  "frame_bindings_sha256": "c1adcd230165ea656e8d7d24a5d3a794aa7e073563bffdb961417918ef42835e",
+  "Source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/unnamed.1594",
+    "sha256": "e39ab7f5f54a89ea63df4045cd7af1cca8e6af9bee7f50cd73be450f6206059f",
+    "bytes": 1044
+  },
+  "raw": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-grille-ruin6-industrial6-compact-portable-SourceG2-H5654-20261019-v1/data/hd/jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/generated/untouched-genuine-builtin-atlas.png",
+    "sha256": "90c17f3cbcc798fdd0e76c4cc05f7f9b0d735a9a61758b72e42608a06963b377",
+    "bytes": 2482574
+  },
+  "saved_native_indices": 30720,
+  "saved_scales": [
+    {
+      "scale": 1,
+      "saved_index_samples": 1024,
+      "actual_PPM_palette_exact": true,
+      "Source_functional_indices": 0,
+      "retained_cells": 0
+    },
+    {
+      "scale": 2,
+      "saved_index_samples": 4096,
+      "actual_PPM_palette_exact": true,
+      "Source_functional_indices": 0,
+      "retained_cells": 0
+    },
+    {
+      "scale": 3,
+      "saved_index_samples": 9216,
+      "actual_PPM_palette_exact": true,
+      "Source_functional_indices": 0,
+      "retained_cells": 0
+    },
+    {
+      "scale": 4,
+      "saved_index_samples": 16384,
+      "actual_PPM_palette_exact": true,
+      "Source_functional_indices": 0,
+      "retained_cells": 0
+    }
+  ],
+  "all_saved_QA_frames_exact_original_subset": true,
+  "all_original_bank_indices_carried_byte_exact": true,
+  "all_native_metadata_fields_except_path_alias_and_missing_equivalent_empty_retention_exact": true,
+  "source_direct_callers": [],
+  "source_settled_callers": [],
+  "source_census_maps": 27,
+  "source_census_layout_cells": 36450,
+  "source_census_FLATS": 4,
+  "source_census_spawns": 8778,
+  "machine_peer": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-industrial2043f-20458-unused-catalogue-strict-binding-independent-20261020-v1/2043f/actual-different-intrinsic-machine-peer.json",
+    "sha256": "7094998121909563dfe52ca5b5ab0b6db95eed0f78d168d7c4b588801ea9a913",
+    "bytes": 4656
+  },
+  "material_contract": {
+    "status": "qualified",
+    "scope": "complete_native_picture_intrinsic_all_scales",
+    "asset": "2043f",
+    "reviewer": "/root/ridge_pair",
+    "artist": "/root/terrain_repair_plan",
+    "preparer": "/root/terrain_repair_plan",
+    "qualified_frames": 1,
+    "held_frames": 0,
+    "retained_cell_count": 0,
+    "native_frame": {
+      "frame": 0,
+      "file": "jobs/terrain-2043f-newOriginal-unused-SourceG2-complete1-20261019-v1/generated/untouched-genuine-builtin-atlas.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "e39ab7f5f54a89ea63df4045cd7af1cca8e6af9bee7f50cd73be450f6206059f",
+      "atlas_grid": {
+        "columns": 2,
+        "rows": 1,
+        "column": 0,
+        "row": 0
+      },
+      "original_detail_cells": []
+    },
+    "retained_cells": [],
+    "native_scales": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "actual_validator_function": "_approved_catalog_intrinsic_material",
+  "validator_source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_register_reviewed.py",
+    "sha256": "573c1f07bf6d9c1b164a13e6c9ba5e13cb5678b26308afc4d9475c72fda487aa",
+    "bytes": 68224
+  },
+  "pure_material_contract_function_passed": true,
+  "no_new_runtime_measurement_or_physical_view_claimed": true,
+  "Root_unused_personal_approval": "PENDING - Root explicitly owns whole-allnative review",
+  "new_generation_cleanup_G2_render_World_calls": 0
+}
