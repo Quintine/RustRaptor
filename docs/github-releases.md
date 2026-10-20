@@ -1,5 +1,7 @@
 # Downloadable releases
 
+Current release: [0.1.0 Preview — Linux and Windows](https://github.com/Quintine/RustRaptor/releases/tag/v0.1.0-preview.20261020).
+
 The GitHub release provides playable Linux x86_64 and Windows x86_64 packages.
 Cargo, Python, the old engine and a Git checkout are unnecessary for play.
 

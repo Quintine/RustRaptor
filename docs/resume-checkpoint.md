@@ -1,5 +1,11 @@
 # Current approved-artwork checkpoint — 20 October 2026
 
+Published release checkpoint — 20 October 2026: [RustRaptor 0.1.0 Preview](https://github.com/Quintine/RustRaptor/releases/tag/v0.1.0-preview.20261020) is public, with all 13 assets verified: seven complete shared-data ZIPs, Linux and Windows platform ZIPs, two installers, the versioned manifest and checksums. The helpers assemble one self-contained folder with original data, 45 mods and their artwork/audio.
+
+The release tag is fixed at `7ecaa42b29ff0db5d2f7cdfe6da0a3221dfea555`. [Native Windows game validation](https://github.com/Quintine/RustRaptor/actions/runs/39410204613) passed at that exact commit. [Hosted export](https://github.com/Quintine/RustRaptor/actions/runs/39411973689) checked every archive and all remote hashes; final independent review matched all 48,209 archive payload rows and 13 remote assets. The later maintenance commit `991b471f` adds the hosted publishing controller without moving the release tag or changing game data.
+
+Current HD coverage is **5,743 / 5,753 original pictures**. Ten remain unapproved and retain original-art fallback. The reviewed 50-picture append was published in `443d7785`; no further artwork was generated for the release.
+
 Current artwork checkpoint — 20 October 2026: **5,743 reviewed pictures / 3,830 complete sequences**, including **4,530 Terrain pictures**. **Ten originals remain unapproved**: five Terrain, four enemies/ground objects and one UI/other picture. Generation was declined for those ten; they are not counted as remastered.
 
 This 50-picture Terrain append covers dark/night material, coastlines, industrial structures and the remaining first/late-campaign terrain. Its PNG provenance is 32 Source-guided derived pictures, nine selections from untouched genuine atlases, three pictures sharing one partially derived atlas, and six lossless genuine-atlas crops. Only 304fb is patched in the shared atlas; 304fa/304fc cells remain unchanged genuine pixels. All 211 retained Original owners, Source geometry and tonal backing earn no generated-HD-detail credit. Stepped joins, dark material and native-scale detail limits remain documented. Two unused assets, 2043f/20458, have catalogue/intrinsic approval without an invented runtime placement.
