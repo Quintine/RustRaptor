@@ -1,0 +1,28 @@
+{
+  "method": "followon302e1-fixed-quiet-floor-fine-material-v1",
+  "palette": {
+    "path": "inputs/1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204-PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "frames": [
+    {
+      "asset": "302e1",
+      "source": {
+        "path": "inputs/0a68733409981a29887a89ddd3630f8e5de28d3dd401461c2bb5f0c7c149df25-302e1.pic",
+        "sha256": "0a68733409981a29887a89ddd3630f8e5de28d3dd401461c2bb5f0c7c149df25"
+      },
+      "donor": {
+        "path": "inputs/d454690c31ce47d13dc7db29bb1f81db612b9ca2f9d0eba9aeabe4eef2d2b123-genuine-master.png",
+        "sha256": "d454690c31ce47d13dc7db29bb1f81db612b9ca2f9d0eba9aeabe4eef2d2b123",
+        "box": [
+          1155,
+          300,
+          80,
+          80
+        ]
+      }
+    }
+  ],
+  "lineage": "Own genuine Original-primary builtin material; 302e1 own raw pixelblocked HOLD retained unused. Neutral fine RGB material borrowed explicitly from genuine30380 panel interior [1155,300,80,80]; no geometry, no tiling. One fixed quiet-floor successor after genuine-context visual and Source/neighbor contrast failure. Reuse already-reviewed industrial fine-band constants sigma3/clip16/strength0.5, SourcewithinclassGaussian0.5 unchanged, same genuine donor crop. No regeneration/parameter sweep.",
+  "functional_contract": "SourceGuide Scale4 material owners, sigma0.5 within class, genuine band sigma8 clip26 strength0.75. Gray/dark/green achromatic detail; Source31black, >=240functional and selected ordinary colored cues exact.40372violet halo Sourcebacking exact. SourceNx1..4 owner union predeclared; all Source-backed pixels zeroHDcredit. All7coloredSourceowners stayexact. Only302e1 uses quietfineband sigma3clip16strength0.5; otherknowncohorts unchanged and notexecuted inthisrecipe."
+}

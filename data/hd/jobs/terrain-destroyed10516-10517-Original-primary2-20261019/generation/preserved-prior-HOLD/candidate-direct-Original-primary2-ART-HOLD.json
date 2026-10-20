@@ -1,0 +1,89 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-destroyed10516-10517-Original-primary2-20261019",
+  "owner": "/root/iron_coast_names",
+  "status": "artistic_hold",
+  "complete_family": true,
+  "coherent_family_scope": "exactselected2destroyedframes only",
+  "targets": [
+    {
+      "asset": "10516",
+      "frame": 0,
+      "file": "jobs/terrain-destroyed10516-10517-Original-primary2-20261019/10516-generated-direct-cell.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "342b2e80330b05a0b6d9583d0f21581c4a2445a69e7c19d0bcd0a2b43e7a7200"
+    },
+    {
+      "asset": "10517",
+      "frame": 0,
+      "file": "jobs/terrain-destroyed10516-10517-Original-primary2-20261019/10517-generated-direct-cell.png",
+      "logical_width": 32,
+      "logical_height": 32,
+      "origin": [
+        0,
+        0
+      ],
+      "source_sha256": "7cc85aed778438a62df1e048448a4591a2616f9a4dbf00e65d658a97f42b607f"
+    }
+  ],
+  "sequences": [
+    {
+      "name": "Original-primary destroyed10516",
+      "base_asset": 66838,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-destroyed10516-10517-Original-primary2-20261019/10516-generated-direct-cell.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "342b2e80330b05a0b6d9583d0f21581c4a2445a69e7c19d0bcd0a2b43e7a7200"
+        }
+      ]
+    },
+    {
+      "name": "Original-primary destroyed10517",
+      "base_asset": 66839,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/terrain-destroyed10516-10517-Original-primary2-20261019/10517-generated-direct-cell.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "7cc85aed778438a62df1e048448a4591a2616f9a4dbf00e65d658a97f42b607f"
+        }
+      ]
+    }
+  ],
+  "method": "directOriginal-primary2cellatlas,887squarecrops; noRGBcleanuporOriginalretentionoverlay; runtimeSourceG2preservesthesourcepaletteclasses.",
+  "provenance": {
+    "raw_sha256": "0c32a4f739c8aa8136ecf43f139cd6b37309e065cd0586b8f534fa2f8483632e",
+    "actual_builtin_calls": 1,
+    "grid": [
+      2,
+      1
+    ],
+    "cell_dimensions": [
+      887,
+      887
+    ]
+  },
+  "review": {
+    "status": "AUTHOR_HOLD_10517_directraw_omits_existing_Source_upperleft_grayconduit;10516promisingbutpairnotapproved",
+    "allOriginal/native1to4_physically_viewed": true
+  }
+}

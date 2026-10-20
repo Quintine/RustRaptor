@@ -1,0 +1,443 @@
+{
+  "format_version": 1,
+  "name": "Source aligned genuine fine industrial earth2",
+  "complete_family": false,
+  "complete_selected_cohort": [
+    "205fe",
+    "205ff"
+  ],
+  "sequences": [
+    {
+      "name": "Original remaining industrial 205fe",
+      "base_asset": 132606,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/derived-industrial-earth2-SourceG2-20261019-v1/derived/205fe-derived.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "9dd58fe65d28f14abcad1e60e8e9a1b67ffca18ce2bde5de7f590e145e16bb0d",
+          "original_detail_cells": []
+        }
+      ]
+    },
+    {
+      "name": "Original remaining industrial 205ff",
+      "base_asset": 132607,
+      "frame_count": 1,
+      "frames": [
+        {
+          "frame": 0,
+          "file": "jobs/derived-industrial-earth2-SourceG2-20261019-v1/derived/205ff-derived.png",
+          "logical_width": 32,
+          "logical_height": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "66dc43a16fa27341616eeef8b200c402b34188680f9f432ba20ecf5041f56f4c",
+          "original_detail_cells": []
+        }
+      ]
+    }
+  ],
+  "job_id": "derived-industrial-earth2-SourceG2-20261019-v1",
+  "category": "Terrain",
+  "kind": "contextual_terrain_shard",
+  "complete_standalone_selection": true,
+  "approval_scope": "complete_standalone_terrain_selection",
+  "inventory_job_id": "terrain-205fd-2060c",
+  "full_inventory": [
+    "205fd",
+    "205fe",
+    "205ff",
+    "20600",
+    "20601",
+    "20602",
+    "20603",
+    "20604",
+    "20605",
+    "20606",
+    "20607",
+    "20608",
+    "20609",
+    "2060a",
+    "2060b",
+    "2060c"
+  ],
+  "selected_assets": [
+    "205fe",
+    "205ff"
+  ],
+  "original_fallback_assets": [],
+  "carried_registered_assets": [
+    "205fd",
+    "20600",
+    "20601",
+    "20602",
+    "20603",
+    "20604",
+    "20605",
+    "20606",
+    "20607",
+    "20608",
+    "20609",
+    "2060a",
+    "2060b",
+    "2060c"
+  ],
+  "carried_registered_identity": {
+    "contract_version": "standalone-terrain-carried-identity-v2",
+    "baseline": {
+      "path": "hd.json",
+      "sha256": "104dc8f0d154f6a3e8edf6c72283205cb1f323daf8c225a8ca3a56680ac87f5b"
+    },
+    "provenance": {
+      "path": "provenance.json",
+      "sha256": "fb5bc85bdfbb899876c0cf9c8a9af03db9cdd5fdc711e129fb3ed299709d12ae"
+    },
+    "frames": {
+      "205fd": {
+        "frame_binding": {
+          "crop": [
+            0,
+            0,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "ec6def0f217f31e19c05f09cad1e5f99aafbbc5d659d40a1e70701cda7ae7456"
+        },
+        "source_sha256": "ec6def0f217f31e19c05f09cad1e5f99aafbbc5d659d40a1e70701cda7ae7456",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      },
+      "20600": {
+        "frame_binding": {
+          "crop": [
+            941,
+            0,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "d2aaca81d4e4f10cb0589cbe2ef7d63f9bc84fc88273d9fcd0a9f3c3c7e84637"
+        },
+        "source_sha256": "d2aaca81d4e4f10cb0589cbe2ef7d63f9bc84fc88273d9fcd0a9f3c3c7e84637",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      },
+      "20601": {
+        "frame_binding": {
+          "crop": [
+            0,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "84a98d1a7678c17431bda893ec312f287b4aa1e42cfda673f39935cf84e17b35"
+        },
+        "source_sha256": "84a98d1a7678c17431bda893ec312f287b4aa1e42cfda673f39935cf84e17b35",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      },
+      "20602": {
+        "frame_binding": {
+          "crop": [
+            314,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "3cb8b45a27b4df9c9ca7b82f3f0ac9b938f941d8c99afe4f5f3e12e500d002d6"
+        },
+        "source_sha256": "3cb8b45a27b4df9c9ca7b82f3f0ac9b938f941d8c99afe4f5f3e12e500d002d6",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      },
+      "20603": {
+        "frame_binding": {
+          "crop": [
+            627,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "5d0778b7ec38f7e0bb8b75988312340427bdc3a25ea68844f5975be22e6ae2fd"
+        },
+        "source_sha256": "5d0778b7ec38f7e0bb8b75988312340427bdc3a25ea68844f5975be22e6ae2fd",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      },
+      "20604": {
+        "frame_binding": {
+          "crop": [
+            941,
+            314,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "03aaeee24b325c5dc245d0ce247274efb67e4f227a312e2772001e50a1e99326"
+        },
+        "source_sha256": "03aaeee24b325c5dc245d0ce247274efb67e4f227a312e2772001e50a1e99326",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      },
+      "20605": {
+        "frame_binding": {
+          "crop": [
+            0,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "90bf9221e23324e43c3a95f288cff5cdb737e6714bb1d745d8377e5f07894d89"
+        },
+        "source_sha256": "90bf9221e23324e43c3a95f288cff5cdb737e6714bb1d745d8377e5f07894d89",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      },
+      "20606": {
+        "frame_binding": {
+          "crop": [
+            314,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "8c346f1ffb7acbbb16475be99febe32953a3c9d484b58c913c918509309557c5"
+        },
+        "source_sha256": "8c346f1ffb7acbbb16475be99febe32953a3c9d484b58c913c918509309557c5",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      },
+      "20607": {
+        "frame_binding": {
+          "crop": [
+            627,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "a21bc595e98440262e07bcb3375a5c96eb0dbbcf8e72d0e21cc25ce86863ce5a"
+        },
+        "source_sha256": "a21bc595e98440262e07bcb3375a5c96eb0dbbcf8e72d0e21cc25ce86863ce5a",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      },
+      "20608": {
+        "frame_binding": {
+          "crop": [
+            941,
+            627,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "d7c1d4514c7ed5e96b2cf9e3b9dae3e893eb30686c06e65302906ab2ba97aecf"
+        },
+        "source_sha256": "d7c1d4514c7ed5e96b2cf9e3b9dae3e893eb30686c06e65302906ab2ba97aecf",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      },
+      "20609": {
+        "frame_binding": {
+          "crop": [
+            0,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "5e4b88533b6f1e0fc4b5263480ad7040952e12d230dd11a8f9dbdff4259c62de"
+        },
+        "source_sha256": "5e4b88533b6f1e0fc4b5263480ad7040952e12d230dd11a8f9dbdff4259c62de",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      },
+      "2060a": {
+        "frame_binding": {
+          "crop": [
+            314,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "043b79282162cb1b068541397c74bf967147119da2967d2ce12a7773b8cd3bd1"
+        },
+        "source_sha256": "043b79282162cb1b068541397c74bf967147119da2967d2ce12a7773b8cd3bd1",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      },
+      "2060b": {
+        "frame_binding": {
+          "crop": [
+            627,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "de4ea927f2c4d0134ab0b2a6b255129c3f8e559f808938d8920cdd695c49c0de"
+        },
+        "source_sha256": "de4ea927f2c4d0134ab0b2a6b255129c3f8e559f808938d8920cdd695c49c0de",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      },
+      "2060c": {
+        "frame_binding": {
+          "crop": [
+            941,
+            941,
+            313,
+            313
+          ],
+          "file": "jobs/terrain-205fd-2060c/generated/atlas-v2.png",
+          "frame": 0,
+          "logical_height": 32,
+          "logical_width": 32,
+          "origin": [
+            0,
+            0
+          ],
+          "source_sha256": "c982aa8826620295aacdbd8cecb36002387789aca62422c05b1dd6c0c3fe07d7"
+        },
+        "source_sha256": "c982aa8826620295aacdbd8cecb36002387789aca62422c05b1dd6c0c3fe07d7",
+        "raw_sha256": "2393eba965466577d9f4f881f46fce0319606dad2b87dcd8280cd3764be488b7",
+        "registration_record_index": 462
+      }
+    },
+    "frame_bindings_sha256": "afe46bfdb1c5e2260ce2be6398c584b62959c2b5ff95ac90552666defc355433",
+    "registration_records": [
+      {
+        "registration_record_index": 462,
+        "registration_record_sha256": "99ce43fe42381fddd76bf8e9e79f4215f35452cb45c4e2d5f8a57cfbf54da1ce",
+        "assets": [
+          "205fd",
+          "20600",
+          "20601",
+          "20602",
+          "20603",
+          "20604",
+          "20605",
+          "20606",
+          "20607",
+          "20608",
+          "20609",
+          "2060a",
+          "2060b",
+          "2060c"
+        ],
+        "frame_bindings_sha256": "afe46bfdb1c5e2260ce2be6398c584b62959c2b5ff95ac90552666defc355433",
+        "accepted_runtime_qa": {
+          "path": "registered-class-review/batch-3592-final-successor-metadata/jobs/terrain-205fd-2060c/runtime-qa-exact-alias.json",
+          "sha256": "ea977812a05b80f790a613ac7d55cc86615beca2a06c885fc7f885afe7a49d46"
+        }
+      }
+    ]
+  }
+}

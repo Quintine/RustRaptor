@@ -1,0 +1,165 @@
+{
+  "implementation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1054f-10561-fine-material-singletons-CODE-proposal-20261019-v1/terrain_component_cleanup.py",
+    "sha256": "cb639e9e115efc4ebfe6a07cf29012e3d22bc4c2881d90f5586ae243acf651b2",
+    "size": 25042,
+    "mtime_ns": 1792375828885455161,
+    "mode": 33188
+  },
+  "executed_dependency": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+    "size": 14882,
+    "mtime_ns": 1792280173116585173,
+    "mode": 33188
+  },
+  "recipe_input": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1054f-10561-fine-material-singletons-CODE-proposal-20261019-v1/1054f-UNEXECUTED-RECIPE.json",
+    "sha256": "0fea03fc4708ba28835ff0c739d65c067bdab5bc9addb54cf1aa4748335cea82",
+    "size": 2067,
+    "mtime_ns": 1792375679455498810,
+    "mode": 33188
+  },
+  "physical_authenticated_input_reads": 4,
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "operation": "first-singleton-tiles",
+  "input_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1054f-10561-fine-material-singletons-CODE-proposal-20261019-v1/inputs/new-1054f-master.png",
+      "sha256": "c065ee47d233db8a45622a3e09ba3ef72c74069c61607f152fc32d6629368343",
+      "size": 3910225,
+      "mtime_ns": 1792375063460596455,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1054f-10561-fine-material-singletons-CODE-proposal-20261019-v1/inputs/new-10561-master.png",
+      "sha256": "eab1f064dde67d01a4f734d905e2c7ff1180860de6cb21e8453212d3afdeb323",
+      "size": 4086554,
+      "mtime_ns": 1792375264692584133,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1054f-10561-fine-material-singletons-CODE-proposal-20261019-v1/inputs/new-10561-master.png",
+      "sha256": "eab1f064dde67d01a4f734d905e2c7ff1180860de6cb21e8453212d3afdeb323",
+      "size": 4086554,
+      "mtime_ns": 1792375264692584133,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1054f-10561-fine-material-singletons-CODE-proposal-20261019-v1/inputs/new-10561-master.png",
+      "sha256": "eab1f064dde67d01a4f734d905e2c7ff1180860de6cb21e8453212d3afdeb323",
+      "size": 4086554,
+      "mtime_ns": 1792375264692584133,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1054f-10561-fine-material-singletons-CODE-proposal-20261019-v1/inputs/new-10561-master.png",
+      "sha256": "eab1f064dde67d01a4f734d905e2c7ff1180860de6cb21e8453212d3afdeb323",
+      "size": 4086554,
+      "mtime_ns": 1792375264692584133,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1054f-10561-fine-material-singletons-CODE-proposal-20261019-v1/inputs/1054f.pic",
+      "sha256": "6d753a9128486c43b35aaca4844b1cb72a76677a92a9e61a01f5037b6645c68e",
+      "size": 1044,
+      "mtime_ns": 1787663959448641192,
+      "mode": 33188
+    }
+  ],
+  "palette": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1054f-10561-fine-material-singletons-CODE-proposal-20261019-v1/inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "size": 768,
+    "mtime_ns": 1787663959337906368,
+    "mode": 33188
+  },
+  "recipe_sha256": "0fea03fc4708ba28835ff0c739d65c067bdab5bc9addb54cf1aa4748335cea82",
+  "metrics": {
+    "selected_ids": [
+      "1054f"
+    ],
+    "assets": [
+      {
+        "asset": "1054f",
+        "original_detail_cells": [
+          [
+            1,
+            4
+          ],
+          [
+            6,
+            19
+          ],
+          [
+            12,
+            17
+          ],
+          [
+            12,
+            22
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            16,
+            9
+          ],
+          [
+            16,
+            10
+          ],
+          [
+            17,
+            24
+          ],
+          [
+            20,
+            23
+          ],
+          [
+            21,
+            14
+          ],
+          [
+            21,
+            22
+          ],
+          [
+            22,
+            13
+          ],
+          [
+            23,
+            5
+          ]
+        ],
+        "raw_Source_reserved_cells": 12,
+        "functional_support_union_cells": 12,
+        "Source_fidelity_owner_union_cells": 13,
+        "Source102_raw_original_retention_cells": 1,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 258816,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 254194,
+        "geometry_owner_sha256": "e25a53e32d718109fdf5df3f84800c62f304fc1280b5bae9064979f882c0c67d",
+        "Original_functional_HD_credit": 0
+      }
+    ],
+    "global_SourceNx_nearest_fallback": false,
+    "fine_band_sigma": 3.0,
+    "fine_band_clip": 16,
+    "fine_band_strength": 0.5,
+    "donor_repetition": false,
+    "extra_Source_fidelity_retention": "Isolated ordinary102 green fixture SourceNx footprint, in addition to all>=240; all owner cells noHDcredit."
+  },
+  "output_is_derived_not_untouched": true,
+  "functional_retention_no_HD_credit": "Original protected cells>=240 retain exact SourceNx RGB/labels. No global Original-nearest fallback is claimed as HD.",
+  "outputs": [
+    {
+      "file": "1054f-derived.png",
+      "sha256": "a13c5502b4cf9b132d7f4a5e2ac98cc1200642f00da2f6fb03d104243419b582"
+    }
+  ]
+}

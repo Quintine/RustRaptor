@@ -1,0 +1,1 @@
+Private finite Source-shaped RGB fine band sigma3/clip16/strength0.5, no repetition; gray/dark band explicitly achromatic mean. All actualSource opaque/unreserved. Place under game root with pinned tools dependency and NumPy/Pillow, run --recipe recipe.json --output NEW directory. Author executed each original recipe once; no replay.

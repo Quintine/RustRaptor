@@ -1,0 +1,41 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "followon302e1-fixed-quiet-floor-fine-material-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/inputs/d454690c31ce47d13dc7db29bb1f81db612b9ca2f9d0eba9aeabe4eef2d2b123-genuine-master.png",
+        "sha256": "d454690c31ce47d13dc7db29bb1f81db612b9ca2f9d0eba9aeabe4eef2d2b123"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/genuine-302e1-imagegen_receipt-e08e0c673870.json",
+        "sha256": "e08e0c673870e9e182f15f56650e0a2f26ae22a434840449b05ac4fea538edfe"
+      },
+      "prompt": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/genuine-302e1-prompt-34d794879ef3.txt",
+        "sha256": "34d794879ef3f9eb430301dad49d0224b6874c80c02a2b7cef395d1ce2b58025"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_followon302e1_quiet_floor_cleanup.py",
+      "sha256": "df2d1a9b84d8f173504ccd36c3f59f411a2f34177ffed7614af8dd37842b4c9d"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/302e1-recipe.json",
+    "sha256": "26c8fbea1765c19bc91fb5b59b6210aa2d09ce72e30af28e6a0f299d43a09d69"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-terrain-302e1-SourceG2-complete1-20261019/execution-receipt.json",
+    "sha256": "7a664ce97756343e3ac0651f00e69d8d9d684e3282252d61f4c2e7410e0ee4e4"
+  },
+  "sources": {
+    "302e1": "0a68733409981a29887a89ddd3630f8e5de28d3dd401461c2bb5f0c7c149df25"
+  },
+  "outputs": {
+    "jobs/derived-terrain-302e1-SourceG2-complete1-20261019/derived/302e1-derived.png": "d7c2aa5e382d5be9dcf37ab5e23571ee1beb511d84ec7c6397fb5c68d6dbcf1a"
+  }
+}

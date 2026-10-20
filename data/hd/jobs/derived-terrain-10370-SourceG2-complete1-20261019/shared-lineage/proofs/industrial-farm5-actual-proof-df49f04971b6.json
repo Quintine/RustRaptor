@@ -1,0 +1,286 @@
+{
+  "status": "PASS_DIFFERENT_CODE_AND_EXACT_GENUINE_INPUT_BINDINGS_INDUSTRIAL7_GUARD_V2",
+  "helper_sha256": "6685ec45a54c00429ef05bac9a00d54ed0bc481ecb3ee8e6cc100a67dadb5be3",
+  "tests_sha256": "52a396783b60c7667d455b4122fb933b43b4de064f65ab6979a0e0bb7aefbe72",
+  "dependency_sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+  "recipe_sha256": {
+    "farm5": "6a4e2bf2bef05005f8295ee45d5f08723c9afebfec773ad9a1ae95c1ca12a5f8",
+    "earth2": "f66f26b2f25b0259366caf1fddf99b36c0251029bed8d286b58f2d8a8ddba950"
+  },
+  "portable_candidate_bindings": {
+    "farm5": {
+      "candidate_sha256": "80f59a37456f019b41e96e6ccc54638dbd1cc39cd80021efb2bf452b24ec7875",
+      "helper_sha256": "6685ec45a54c00429ef05bac9a00d54ed0bc481ecb3ee8e6cc100a67dadb5be3",
+      "recipe_sha256": "6a4e2bf2bef05005f8295ee45d5f08723c9afebfec773ad9a1ae95c1ca12a5f8"
+    },
+    "earth2": {
+      "candidate_sha256": "8b9766d766f5097bdfaf9e680d10d3bd98cfce9cd111749ec61a725506ff138e",
+      "helper_sha256": "6685ec45a54c00429ef05bac9a00d54ed0bc481ecb3ee8e6cc100a67dadb5be3",
+      "recipe_sha256": "f66f26b2f25b0259366caf1fddf99b36c0251029bed8d286b58f2d8a8ddba950"
+    }
+  },
+  "synthetic_tests": {
+    "author": 27,
+    "independent": 5,
+    "total": 32,
+    "result": "PASS",
+    "predecessor_math26_result": "PASS"
+  },
+  "input_facts": [
+    {
+      "asset": "20593",
+      "cohort": "farm5",
+      "source_sha256": "ba7a5fc9d686e7ae8ac62a476f3bffa7d0985b872a0bc1bc9243e40226b53aeb",
+      "canonical_INDEX_route": "misc/unnamed.1934",
+      "canvas": [
+        32,
+        32
+      ],
+      "reserved_Source_cells": 0,
+      "declared_functional_union": [],
+      "own_donor_box": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "genuine_master_sha256": "6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "reference_board_exact_SourceNN16": true,
+      "recipe_sha256": "6a4e2bf2bef05005f8295ee45d5f08723c9afebfec773ad9a1ae95c1ca12a5f8",
+      "provider_receipt_sha256": "9f09bf7d4651e8ac4000888790778cd5ae6ef8c6d17eee100a8b200aad98d96b"
+    },
+    {
+      "asset": "20594",
+      "cohort": "farm5",
+      "source_sha256": "4ab69e9d5bb004565597e1073a5d878e02966b7737180e605faff6054b3b44cd",
+      "canonical_INDEX_route": "misc/unnamed.1935",
+      "canvas": [
+        32,
+        32
+      ],
+      "reserved_Source_cells": 0,
+      "declared_functional_union": [],
+      "own_donor_box": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "genuine_master_sha256": "6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "reference_board_exact_SourceNN16": true,
+      "recipe_sha256": "6a4e2bf2bef05005f8295ee45d5f08723c9afebfec773ad9a1ae95c1ca12a5f8",
+      "provider_receipt_sha256": "9f09bf7d4651e8ac4000888790778cd5ae6ef8c6d17eee100a8b200aad98d96b"
+    },
+    {
+      "asset": "2059a",
+      "cohort": "farm5",
+      "source_sha256": "dfcfcfbcf8021fff02dbe0b700d1fcd9a806121a4bc1b38e01b39ee0c06d3288",
+      "canonical_INDEX_route": "misc/unnamed.1941",
+      "canvas": [
+        32,
+        32
+      ],
+      "reserved_Source_cells": 0,
+      "declared_functional_union": [],
+      "own_donor_box": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "genuine_master_sha256": "6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "reference_board_exact_SourceNN16": true,
+      "recipe_sha256": "6a4e2bf2bef05005f8295ee45d5f08723c9afebfec773ad9a1ae95c1ca12a5f8",
+      "provider_receipt_sha256": "9f09bf7d4651e8ac4000888790778cd5ae6ef8c6d17eee100a8b200aad98d96b"
+    },
+    {
+      "asset": "2059b",
+      "cohort": "farm5",
+      "source_sha256": "134ee0fe10a0353bf2f89ae065fa9515af77c3ddc9e9196fce0fd1d615147456",
+      "canonical_INDEX_route": "misc/unnamed.1942",
+      "canvas": [
+        32,
+        32
+      ],
+      "reserved_Source_cells": 0,
+      "declared_functional_union": [],
+      "own_donor_box": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "genuine_master_sha256": "6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "reference_board_exact_SourceNN16": true,
+      "recipe_sha256": "6a4e2bf2bef05005f8295ee45d5f08723c9afebfec773ad9a1ae95c1ca12a5f8",
+      "provider_receipt_sha256": "9f09bf7d4651e8ac4000888790778cd5ae6ef8c6d17eee100a8b200aad98d96b"
+    },
+    {
+      "asset": "2059c",
+      "cohort": "farm5",
+      "source_sha256": "a144c21a0883988b3cde2977bb592c5fee61fb11d03d4c5e812da7c19d08da02",
+      "canonical_INDEX_route": "misc/unnamed.1943",
+      "canvas": [
+        32,
+        32
+      ],
+      "reserved_Source_cells": 11,
+      "declared_functional_union": [
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          21
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          11,
+          16
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          22,
+          13
+        ],
+        [
+          27,
+          4
+        ]
+      ],
+      "own_donor_box": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "genuine_master_sha256": "6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9",
+      "master_dimensions": [
+        1536,
+        1024
+      ],
+      "reference_board_exact_SourceNN16": true,
+      "recipe_sha256": "6a4e2bf2bef05005f8295ee45d5f08723c9afebfec773ad9a1ae95c1ca12a5f8",
+      "provider_receipt_sha256": "9f09bf7d4651e8ac4000888790778cd5ae6ef8c6d17eee100a8b200aad98d96b"
+    },
+    {
+      "asset": "205fe",
+      "cohort": "earth2",
+      "source_sha256": "9dd58fe65d28f14abcad1e60e8e9a1b67ffca18ce2bde5de7f590e145e16bb0d",
+      "canonical_INDEX_route": "misc/unnamed.2041",
+      "canvas": [
+        32,
+        32
+      ],
+      "reserved_Source_cells": 0,
+      "declared_functional_union": [],
+      "own_donor_box": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "genuine_master_sha256": "4e13c035095d2ead5a115280389d6f8000f0441676f0b1b2e4fba2efaaaf7862",
+      "master_dimensions": [
+        1774,
+        887
+      ],
+      "reference_board_exact_SourceNN16": true,
+      "recipe_sha256": "f66f26b2f25b0259366caf1fddf99b36c0251029bed8d286b58f2d8a8ddba950",
+      "provider_receipt_sha256": "3912778764545cc8cd4e50cbea94b879b3c4413c4ed5bb422dbe84bb723e349e"
+    },
+    {
+      "asset": "205ff",
+      "cohort": "earth2",
+      "source_sha256": "66dc43a16fa27341616eeef8b200c402b34188680f9f432ba20ecf5041f56f4c",
+      "canonical_INDEX_route": "misc/unnamed.2042",
+      "canvas": [
+        32,
+        32
+      ],
+      "reserved_Source_cells": 0,
+      "declared_functional_union": [],
+      "own_donor_box": [
+        887,
+        0,
+        887,
+        887
+      ],
+      "genuine_master_sha256": "4e13c035095d2ead5a115280389d6f8000f0441676f0b1b2e4fba2efaaaf7862",
+      "master_dimensions": [
+        1774,
+        887
+      ],
+      "reference_board_exact_SourceNN16": true,
+      "recipe_sha256": "f66f26b2f25b0259366caf1fddf99b36c0251029bed8d286b58f2d8a8ddba950",
+      "provider_receipt_sha256": "3912778764545cc8cd4e50cbea94b879b3c4413c4ed5bb422dbe84bb723e349e"
+    }
+  ],
+  "checks": [
+    "Actual decoded Source7bytes match canonicalINDEX; opaque single32PIC headers exact. Material labels supported, only2059c11reservedfirecells, Scale1..4ownerunion11 and candidateoriginal_detail_cells exact before QA.",
+    "Each precise own-tile crop lies in a genuine returnedmaster and matches intended referencegrid order. Both master hashes match provider files and author receipts; prompt and actualeditreference hashes verified; originalreferenceboards verified byteexact SourceNN16. Both wholemasters and references physically viewed.",
+    "Verified3284dependency compiled from authenticated bufferedbytes; private32Kdecoder does not bypass ordinarydecoder rejection. Descriptor traversal refuses symlinks, FIFO static and regular-toFIFO race fail without blocking. Cached master survives pathname replacement and conflictinghash fails.",
+    "Independent synthetic fullcohort main writes twooutputs from4authenticatedreads, masterreadonce afterreplacement; malformedsecondSource fails before anyoutputdir. All5frame cohort is prevalidated beforewrites by same code path.",
+    "Fine residual is Gaussian sigma3 highpass clipped\u00b116 times.5: maximum\u00b18channelprequantization; neutralgraycomponents0/1 use equalchannelresidual. Synthetic inputsimmutable, constantdonor cannot claimHD. EveryprotectedScaleNxowner is contained in declaredunion.",
+    "Guard-only successor preserves all preexisting nonmainAST. Adds conservative1.8GiBfloor+32MiB+2xRGBoutputreserve and fresh existing nonsymlink parent/ancestors before preparation; exactboundary/rejectbelowfloor tests pass."
+  ],
+  "findings_requiring_revision": [],
+  "closed_findings": [
+    "V1 lacked persistent private disk floor and allowed symlink output parents; immutableV2guards fixboth without math/recipe changes. V1 remains preserved/not executed."
+  ],
+  "scope_limits": [
+    "CODE PASS releases only Rootstanding one actualcleanup plus one actualG2 percohort (farm5 andearth2); no retries/capchanges. Final material/contextART andRootadmission remain separate.",
+    "Source supplies all coarse geometry, palette and lowfrequencycolor; genuine ownmaster contributes only bounded fineRGBband. This is derived artwork, no untouchedrawRGB retention or generatedcoarsegeometry claim. Sourcebase/functional fire do not receive generatedHDdetailcredit. Positive residualsamplecount alone cannot establish visualremasterquality.",
+    "2059c11functional Sourcefireowners must retain actualSourceNx atnative1..4 using predeclaredownerunion; this helper master4proof does not replace finalG2allscaleverification.",
+    "Private actualreceipt must be honestly normalized to standard7field method/source/parent/outputmaps before later canonical derivationadmission; currentprivate form is not claimed already admitted.",
+    "Outputguard checks existing nonsymlink paths andexclusive freshdir; hostile concurrent outputancestor replacement is outside fixed-private-trialscope. Partial output onOSwritefailure is not transactionally rolledback and must be preserved/reported, not silently retried."
+  ],
+  "real_art_cleanup_QA_World_calls": 0,
+  "canonical_Git_changes": 0,
+  "evidence": {
+    "review_synthetic.py": "fb553d53fcf37b2653bfce24120bb1d069d871737a7689951ae71c39ac9bf427",
+    "initial26.stderr": "5a180f6dbfe688b95c680383b9a0d459161084478340210282b6f59310db93b2",
+    "guard32.stderr": "1002fae540f1a42bb878089652a99cace021d7fa183c3ee347a367c1b09024ff",
+    "GUARD-ONLY-DELTA-AND-32-SYNTHETIC-FACTS.json": "b42c8be09f15d5d55fc755fe5bc570d772c6293c38d7f46f3c6bec7429580d50",
+    "EXACT-SOURCE-PROVIDER-REFERENCE-AND-RECIPE-BINDINGS.json": "410eec8c29cd96ab5676c6b65da9fe6beffdd17a0f3f0455be5a66493b698333"
+  }
+}

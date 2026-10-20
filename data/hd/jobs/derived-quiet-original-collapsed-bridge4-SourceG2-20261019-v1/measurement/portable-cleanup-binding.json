@@ -1,0 +1,82 @@
+{
+  "execution": {
+    "status": "success",
+    "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+    "recipe_sha256": "78f2af6e1d6fdf018e90eedec8f45fdfdaaf256c9c331a26210aac895c2d09e4",
+    "tool_sha256": "ff286585834d42aff8fca0951a118aaa5c3b51294dc078b3b1fe8d04b37f5fbd",
+    "source_sha256": {
+      "10504": "61c3b71919e6cb92a37bae1e427ff682b8b236d8e435f7e9c51400a53732f041",
+      "1050b": "96242dabf808eeb23f0b062e7a45e3a75668c6e37d30f4b7f0c197e22c6d2729",
+      "1050c": "86d2782cdf1080e2971accb068e9d810a19c3c85a3c0c8550e91a3ab5a52a834",
+      "1050e": "bdc9c5b0d3c2b14f1c1e5ada1c30cd0b97adee06a1d5a34a7fa2d35c0cc11e1f"
+    },
+    "parent_raw_sha256": [
+      "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23",
+      "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b",
+      "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c"
+    ],
+    "output_sha256": {
+      "10504": "61c47dee335c42cd6d7c9a986f612e0fafc5bec72c5523efe15c8b30fd436689",
+      "1050b": "9b7b4bbf16d15fdd18cdc3c02b440d720aadf0746686f0ed6b9d001c9a4c78fc",
+      "1050c": "7cee0d016aa506acfcabf468381d56ba27d89600a5cb1fabf938e5e9381fc7d1",
+      "1050e": "a4a6ba053dc3af5882057a3adc5d69d793864aa1428b4b44392b83d7f4442807"
+    }
+  },
+  "scope": "Binding bridge of the already completed once-only cleanup. Exact recipe/tool/input/output bytes unchanged; no cleanup replay happened during packaging. Original receipt is retained verbatim.",
+  "actual_cleanup_receipt": {
+    "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/measurement/literal-actual-cleanup-receipt.json",
+    "sha256": "54a3fcdeacecd0035deeda2c2ae50d1ecfe9798caf6814d92b6b751d15838217"
+  },
+  "historical_absolute_paths_are_provenance_not_live_dependencies": true,
+  "portable_recipe_input_refs": [
+    {
+      "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/inputs/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+    },
+    {
+      "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/inputs/10504.pic",
+      "sha256": "61c3b71919e6cb92a37bae1e427ff682b8b236d8e435f7e9c51400a53732f041"
+    },
+    {
+      "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/inputs/1050b.pic",
+      "sha256": "96242dabf808eeb23f0b062e7a45e3a75668c6e37d30f4b7f0c197e22c6d2729"
+    },
+    {
+      "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/inputs/1050c.pic",
+      "sha256": "86d2782cdf1080e2971accb068e9d810a19c3c85a3c0c8550e91a3ab5a52a834"
+    },
+    {
+      "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/inputs/1050e.pic",
+      "sha256": "bdc9c5b0d3c2b14f1c1e5ada1c30cd0b97adee06a1d5a34a7fa2d35c0cc11e1f"
+    },
+    {
+      "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23"
+    },
+    {
+      "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/inputs/new-bridge4-master.png",
+      "sha256": "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b"
+    },
+    {
+      "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/inputs/new-bridge4-master.png",
+      "sha256": "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b"
+    },
+    {
+      "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23"
+    },
+    {
+      "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/inputs/new-road5-master.png",
+      "sha256": "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c"
+    }
+  ],
+  "portable_cleanup_argv": [
+    "python3",
+    "tools/quiet9_source_components/terrain_component_cleanup.py",
+    "--recipe",
+    "data/hd/jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/cleanup-recipe.json",
+    "--output",
+    "CHOOSE_FRESH_PRIVATE_OUTPUT"
+  ],
+  "new_cleanup_calls": 0
+}

@@ -1,0 +1,287 @@
+{
+  "actual_QA": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/actual-once-final-current-SourceG2/runtime-qa.json",
+    "sha256": "04610980c2dd07e46ec60b58ce6fd3dc20048af93c144dad5e138ff2926b03d2"
+  },
+  "actual_artist": "/root/industrial_remaining",
+  "actual_indexed_bank": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/actual-once-final-current-SourceG2/actual-indexed-source-and-scales.json",
+    "sha256": "a4d2644a43cfcdf36c89d5d25b45b0e11eb5ffbcfd3faa604453c61f9c59010a"
+  },
+  "all4_scales_qualified": true,
+  "asset": "302e1",
+  "author_packet": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/AUTHOR-QUAL-QUIET302E1-ALL4-NATIVE-WITH-LIMITS.json",
+    "sha256": "08ee0b1e146d726465cc0fc56d07404626c3f1330c84901da824ecb151b90ffa"
+  },
+  "candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/final-reviewed-quiet-floor-pack/candidate.json",
+    "sha256": "5bb1a59a7bd276076f78069a79f9be8daa4504a4b56907dcf793cf8c04998e93"
+  },
+  "canonical_Git_mutations": 0,
+  "closing_guard": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ship-302e1-fixedquiet-independent-intrinsic-ART-review-20261019-v1/STRICT-CLOSING-UNCHANGED-PRODUCER-GUARDS.json",
+    "sha256": "54817ee685147dd4e0519a57267b1c280c3ec2a2f440ba09987db2c151bbf0c0"
+  },
+  "complete_native_frames": 1,
+  "derived_artwork": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/final-reviewed-quiet-floor-pack/302e1-derived.png",
+    "sha256": "d7c2aa5e382d5be9dcf37ab5e23571ee1beb511d84ec7c6397fb5c68d6dbcf1a"
+  },
+  "different_CODE_and_binding": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-ship-302e1-quiet-floor-independent-CODE-and-bindings-review-20261019-v1/PASS-FIXED302E1-QUIET-FLOOR-DIFFERENT-CODE-AND-ACTUAL-BINDINGS-36PLUS7.json",
+    "sha256": "6ec9d4bb98a4b86e6a2de9e0b487f4c7a99b06e974c0eaad946597e9d054cdc8"
+  },
+  "different_from_artist_and_preparer": true,
+  "exact_original_detail_cells": [
+    [
+      7,
+      15
+    ],
+    [
+      7,
+      16
+    ],
+    [
+      7,
+      17
+    ],
+    [
+      7,
+      18
+    ],
+    [
+      7,
+      19
+    ],
+    [
+      7,
+      20
+    ],
+    [
+      7,
+      21
+    ]
+  ],
+  "findings": [
+    "The dense raised high-contrast wrinkle/corrugation field in the held version is substantially reduced. New floor texture reads as a quiet dark surface with coarse Source mottling and finer subtle genuine grain, especially at native3/4.",
+    "The white triangular/mechanical assembly, diagonal light dotted stem, black surrounding floor shapes and seven-cell vertical colored strip remain readable at all4native scales. No Source geometry or origin shift is apparent.",
+    "The seven colored logical owners are exact SourceNx support across all4scales (210native samples), with zero generated-HD credit. No new reserved palette samples appear.",
+    "Native4dim-floor mean/std is quiet17.665/7.992versus Source17.230/7.731and held17.843/12.529. This confirms the quieter tonal range but does not itself prove neighboring terrain compatibility."
+  ],
+  "held_frames": 0,
+  "hybrid_trial_preparer": "/root/industrial_remaining",
+  "independent_checks": [
+    {
+      "PPM": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/actual-once-final-current-SourceG2/302e1-hd-1.ppm",
+        "sha256": "955f419a2886e1baa88b023f581a65ee64e24b2c9f2da51b62b96956214b5a36"
+      },
+      "SourceNx_owner_samples": 7,
+      "all7Source_colored_owners_exact": true,
+      "changed_from_held_samples": 317,
+      "dimfloor_Source24to31_statistics": {
+        "Source": {
+          "mean": 17.364948453608246,
+          "samples": 970,
+          "std": 7.933798783790327
+        },
+        "held": {
+          "mean": 18.131958762886597,
+          "samples": 970,
+          "std": 7.945634169077693
+        },
+        "quiet": {
+          "mean": 17.68659793814433,
+          "samples": 970,
+          "std": 7.174462569993879
+        }
+      },
+      "lossless_png": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/whole-saved-native-quiet-floor-pages/302e1-fixedquiet-native1-lossless.png",
+        "sha256": "47ac7a7eba031d33664ea3cac026328bf20d5241ac474114497d357bf7f323fa"
+      },
+      "native_RGB_exact_to_indexed": true,
+      "new_reserved_samples": 0,
+      "scale": 1,
+      "whole_page_all3_panes_exact": true
+    },
+    {
+      "PPM": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/actual-once-final-current-SourceG2/302e1-hd-2.ppm",
+        "sha256": "b759077b76a0362e1b067d13c46b2bfff98fccad884e7ea524da33e3f2489b99"
+      },
+      "SourceNx_owner_samples": 28,
+      "all7Source_colored_owners_exact": true,
+      "changed_from_held_samples": 2591,
+      "dimfloor_Source24to31_statistics": {
+        "Source": {
+          "mean": 17.349124613800207,
+          "samples": 3884,
+          "std": 7.846141924920528
+        },
+        "held": {
+          "mean": 17.896069344318573,
+          "samples": 3884,
+          "std": 11.823410571016984
+        },
+        "quiet": {
+          "mean": 17.664263645726056,
+          "samples": 3884,
+          "std": 7.908584502813779
+        }
+      },
+      "lossless_png": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/whole-saved-native-quiet-floor-pages/302e1-fixedquiet-native2-lossless.png",
+        "sha256": "239114b606b411047bf7015a265365e193c117aeabf1c4e64d33121a7dc339ad"
+      },
+      "native_RGB_exact_to_indexed": true,
+      "new_reserved_samples": 0,
+      "scale": 2,
+      "whole_page_all3_panes_exact": true
+    },
+    {
+      "PPM": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/actual-once-final-current-SourceG2/302e1-hd-3.ppm",
+        "sha256": "fef4b6b03ac9be7bad365d6250787deae6cc9c70005f1cb03b26aeda68a26407"
+      },
+      "SourceNx_owner_samples": 63,
+      "all7Source_colored_owners_exact": true,
+      "changed_from_held_samples": 6007,
+      "dimfloor_Source24to31_statistics": {
+        "Source": {
+          "mean": 17.297185998627317,
+          "samples": 8742,
+          "std": 7.799080649463983
+        },
+        "held": {
+          "mean": 17.895828567070847,
+          "samples": 8742,
+          "std": 12.476239503999576
+        },
+        "quiet": {
+          "mean": 17.69370090749638,
+          "samples": 8742,
+          "std": 8.065884030592605
+        }
+      },
+      "lossless_png": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/whole-saved-native-quiet-floor-pages/302e1-fixedquiet-native3-lossless.png",
+        "sha256": "ef85b2129cbf24afa45704ab16b1141244791d51b23e0b961057e431df5f128f"
+      },
+      "native_RGB_exact_to_indexed": true,
+      "new_reserved_samples": 0,
+      "scale": 3,
+      "whole_page_all3_panes_exact": true
+    },
+    {
+      "PPM": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/actual-once-final-current-SourceG2/302e1-hd-4.ppm",
+        "sha256": "d56b71dbd98b113f3af15da175948a79bf260479e5c05f399da4112eee653c46"
+      },
+      "SourceNx_owner_samples": 112,
+      "all7Source_colored_owners_exact": true,
+      "changed_from_held_samples": 10746,
+      "dimfloor_Source24to31_statistics": {
+        "Source": {
+          "mean": 17.23009758602979,
+          "samples": 15576,
+          "std": 7.731030474255473
+        },
+        "held": {
+          "mean": 17.843434343434343,
+          "samples": 15576,
+          "std": 12.52901776457898
+        },
+        "quiet": {
+          "mean": 17.665040232836844,
+          "samples": 15576,
+          "std": 7.992356224051495
+        }
+      },
+      "lossless_png": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/whole-saved-native-quiet-floor-pages/302e1-fixedquiet-native4-lossless.png",
+        "sha256": "115ff246eb9dd20c05d5adc393129ed5771262d900de683a46418c359bcef233"
+      },
+      "native_RGB_exact_to_indexed": true,
+      "new_reserved_samples": 0,
+      "scale": 4,
+      "whole_page_all3_panes_exact": true
+    }
+  ],
+  "independently_verified_Source_owner_samples": 210,
+  "independently_verified_actual_native_RGB_samples": 30720,
+  "independently_verified_whole_page_RGB_samples": 1769472,
+  "limits": [
+    "Intrinsic qualification only. Old genuine6context HOLD and noisy held artwork remain frozen; the new exact candidate still needs one genuine neighbor-context comparison and Root approval before admission.",
+    "This is derived Source-guided artwork: coarse geometry/material field comes from Source; bounded fine genuine RGB grain comes from explicitly borrowed neutral30380master crop1155,300,80,80. Own pixelblocked302e1master remains unused. It is not an untouched imagegen remaster.",
+    "At native1the finer grain largely averages away; at3/4it is deliberately subtle. Source-backed seven colored cue cells/black floor support and coarse Source field receive no generated HD detail credit.",
+    "No live palette cycling, animation, World/combat/collision, sound, mission completion or all-placement seam approval. No new cleanup/G2/compositor/renderer/generator/canonical/Git action by this reviewer."
+  ],
+  "native_scales": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "physical_scope": {
+    "Source_native_bodies": 4,
+    "complete_native_comparison_bodies": 12,
+    "held_native_bodies": 4,
+    "image_files": 3,
+    "no_crop": true,
+    "quiet_native_bodies": 4
+  },
+  "physical_views": [
+    {
+      "complete_bodies": 12,
+      "dimensions": [
+        1184,
+        1664
+      ],
+      "image": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/whole-saved-native-quiet-floor-pages/302e1-Original-held-fixedquiet-complete-all4-native.png",
+        "sha256": "dee7962cb55dd1f3e3cb090762b5987da8270fb40ebee64adf09b925acb7c6f9"
+      },
+      "integer_NN": [
+        12,
+        6,
+        4,
+        3
+      ],
+      "physically_viewed_whole": true,
+      "role": "SourceNx-held-fixedquiet whole comparison all4native"
+    },
+    {
+      "image": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/final-reviewed-quiet-floor-pack/reproducer/inputs/genuine-master.png",
+        "sha256": "d454690c31ce47d13dc7db29bb1f81db612b9ca2f9d0eba9aeabe4eef2d2b123"
+      },
+      "physically_viewed_whole": true,
+      "role": "Genuine30380material source master borrowed explicitly"
+    },
+    {
+      "image": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/final-reviewed-quiet-floor-pack/302e1-derived.png",
+        "sha256": "d7c2aa5e382d5be9dcf37ab5e23571ee1beb511d84ec7c6397fb5c68d6dbcf1a"
+      },
+      "physically_viewed_whole": true,
+      "role": "Actual fixedquiet512derived RGB"
+    }
+  ],
+  "qualified_complete1": true,
+  "qualified_frames": 1,
+  "raw_genuine_borrowed_material": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/final-reviewed-quiet-floor-pack/reproducer/inputs/genuine-master.png",
+    "sha256": "d454690c31ce47d13dc7db29bb1f81db612b9ca2f9d0eba9aeabe4eef2d2b123"
+  },
+  "registered": false,
+  "reviewed_utc": "2026-10-19T08:56:30.544199+00:00",
+  "reviewer": "/root/ship_portability",
+  "reviewer_new_cleanup_QA_World_render_generation_calls": 0,
+  "source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/final-reviewed-quiet-floor-pack/reproducer/inputs/302e1.pic",
+    "sha256": "0a68733409981a29887a89ddd3630f8e5de28d3dd401461c2bb5f0c7c149df25"
+  },
+  "status": "QUALIFIED_FIXEDQUIET302E1_COMPLETE1_INTRINSIC_WITH_LIMITS"
+}

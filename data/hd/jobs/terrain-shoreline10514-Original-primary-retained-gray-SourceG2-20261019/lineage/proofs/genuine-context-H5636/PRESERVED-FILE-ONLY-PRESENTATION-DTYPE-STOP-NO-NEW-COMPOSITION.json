@@ -1,0 +1,4 @@
+{
+  "error": "NumPy select int64 scalar choices into uint16 array fails same_kind cast; stopped before page/image output.",
+  "fix": "Use explicit same-dtype where arrays. Empty page directories preserved. Existing saved native arrays untouched; no new compositor/World/QA invoked."
+}

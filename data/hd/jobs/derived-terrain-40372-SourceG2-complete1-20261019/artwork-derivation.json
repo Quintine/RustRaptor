@@ -1,0 +1,41 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "followon-five-Source-landmark-coherent-fine-material-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/inputs/efc00681ec2fc2826271e6388d9fbe6057a1cbb99a22f09666783039e2f048d1-genuine-master.png",
+        "sha256": "efc00681ec2fc2826271e6388d9fbe6057a1cbb99a22f09666783039e2f048d1"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/genuine-40372-imagegen_receipt-49da9e355cad.json",
+        "sha256": "49da9e355cad78857b7ac0daee7379d560323bc19786ce74ae920dcc1bbc6b5a"
+      },
+      "prompt": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/genuine-40372-prompt-85c961f2089e.txt",
+        "sha256": "85c961f2089e792938b544b23ee8cadb01e657961e6c03076de58f41bb678cf8"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_followon_landmark_fine_cleanup.py",
+      "sha256": "5df17db01259c7906d4c419110ee7df1912cf97dd5ec55b02d2cac2687d457be"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/40372-recipe.json",
+    "sha256": "d2deba51ac4c295921c335f7f9a6c71d730a2561584810cb395aad3920635273"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-terrain-40372-SourceG2-complete1-20261019/execution-receipt.json",
+    "sha256": "12de67f09141d331d5c43995ba7ba41106d61184098dd05443f4c0bdb759f316"
+  },
+  "sources": {
+    "40372": "4bcb43677ec1a32785da5e52b057b913e3bd25719c3fec736675bbe3512bd181"
+  },
+  "outputs": {
+    "jobs/derived-terrain-40372-SourceG2-complete1-20261019/derived/40372-derived.png": "7b7431382b113085fc9e99534430e6bb9b88becbb37eda42cb1c30f7ba631884"
+  }
+}

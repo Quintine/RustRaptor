@@ -1,0 +1,47 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/generation-provenance/ACTUAL-ORIGINAL-PRIMARY-PAIR-RETURNED-UNTOUCHED.png",
+        "sha256": "c80f61d519adbab3f9d6032fb7f1730cac2e3e8c1af9cd569a83440c0a656840"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/generation-provenance/ACTUAL-BUILTIN-PRIMITIVE-RECEIPT.json",
+        "sha256": "f8c2bd48ff2ee5f1d760a81c85a8ab68736786a929868be669bf5c6d5e29344a"
+      },
+      "prompt": {
+        "path": "jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/generation-provenance/prompt.txt",
+        "sha256": "0bfe3e09262caedfe30a791908bde227dc7b72ff8aacb9080ec55ec3b9910229"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/fine10536_source_components/terrain_component_cleanup.py",
+      "sha256": "e6a3826c430578b86c25783a115e85e2baf17744e674f451297d38d8fc466df6"
+    },
+    {
+      "path": "tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/reproducer/recipe.json",
+    "sha256": "abb774b5d4317f6c6293b6522129829ae128c484601078af12cbe619ee9369ad"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/execution-receipt.json",
+    "sha256": "6d09fd60a454c3ae212502b9fa053b0f505d811e4135d29dfcd5f1ada30aa880"
+  },
+  "sources": {
+    "10536": "a759f036325d08115b5994bde532481956bf6d1c9b368522407b93b5e0c4f1fb",
+    "1053e": "6e65cd7f381b64e21b4d11a2842246cc1336a46e91afd7803fba27b5c9cc65b9"
+  },
+  "outputs": {
+    "jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/10536-derived.png": "a2751108ac377eaf2a4c727cd7d7a1a60b6f913d308e979d3da8fab1a7073e42",
+    "jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/1053e-derived.png": "71ce8a3bee788490914ae628b94baed42bb878cac5e4dc6398c638f89c9cca0a"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "asset_or_cohort": "farm5",
+  "command": [
+    "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/portable-project/tools/hd_industrial_fine_cleanup.py",
+    "--recipe",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/portable-project/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/farm5-recipe.json",
+    "--output",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/farm5/derived"
+  ],
+  "exit_code": 0,
+  "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/farm5/derived",
+  "changed_recipe_sha256": "d2a30528849c75c22431cc30d059998159b6cbe7d24c62009916507981880a04",
+  "helper_sha256": "6685ec45a54c00429ef05bac9a00d54ed0bc481ecb3ee8e6cc100a67dadb5be3",
+  "original_recipe_sha256": "6a4e2bf2bef05005f8295ee45d5f08723c9afebfec773ad9a1ae95c1ca12a5f8",
+  "matches": {
+    "20593": {
+      "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/farm5/derived/20593-derived.png",
+      "sha256": "3c1fdde14255adc9ec7c409daf3ebc21b8e0558145642a2a29ce6fe41a1b8c1e",
+      "byte_equal_reviewed_png": true
+    },
+    "20594": {
+      "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/farm5/derived/20594-derived.png",
+      "sha256": "f72010517a55942803a3bd71e947f2a2762fe9cff4db8c7abb6b05e98d298e90",
+      "byte_equal_reviewed_png": true
+    },
+    "2059a": {
+      "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/farm5/derived/2059a-derived.png",
+      "sha256": "739c2b8681432e9793859501dc4025fd169217291d9400e9aad2758a064215bd",
+      "byte_equal_reviewed_png": true
+    },
+    "2059b": {
+      "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/farm5/derived/2059b-derived.png",
+      "sha256": "c05928abf6c23a89e14d1a5c81160b46e028b2901cd470bb5f3f5a1b6ee53b29",
+      "byte_equal_reviewed_png": true
+    },
+    "2059c": {
+      "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/farm5/derived/2059c-derived.png",
+      "sha256": "0592c81e4666d861d4c5c1138a043c1011fd275b708781237e00a96fa289d9e9",
+      "byte_equal_reviewed_png": true
+    }
+  },
+  "status": "PASS_EXACT_RELOCATED_RECIPE_BYTE_EQUAL_REVIEWED_PNG"
+}

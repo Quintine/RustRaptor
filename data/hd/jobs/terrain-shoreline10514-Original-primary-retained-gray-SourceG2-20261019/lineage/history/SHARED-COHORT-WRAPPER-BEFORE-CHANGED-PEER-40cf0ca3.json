@@ -1,0 +1,41 @@
+{
+  "format_version": 1,
+  "status": "SHARED_SHORELINE4_COHORT_LINEAGE_CONTEXT_AND_ACTUAL_QA",
+  "original_artist": "/root/iron_coast_names",
+  "assets": [
+    "10514",
+    "10515",
+    "1051b",
+    "1051c"
+  ],
+  "actual_shared_generation_calls": 1,
+  "master": {
+    "path": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/generated/returned-untouched-four-cell-master.png",
+    "sha256": "eca43a75313243b03f67731e79b50fcbc9388a3e05ce06f38ac064fb60a3237d"
+  },
+  "prompt": {
+    "path": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/generation-prompt.txt",
+    "sha256": "f43999bf7e22346f2042d20a11267f73699d67910bb92a8f104d92093aab9f32"
+  },
+  "provider": {
+    "path": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/generation-provider-primitive-receipt.json",
+    "sha256": "20958c2fbc9966ecbdce9842c55c58ab62051480d557553a283b2ebe79c393f5"
+  },
+  "full4_actual_intrinsic_QA": {
+    "path": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/actual-original-full4-G2-intrinsic/runtime-qa.json",
+    "sha256": "915185ad8677adbe9cf58a56a570a7fbd969f9de81385e6455fbec77b2d4d89d"
+  },
+  "all_original_sources_and_palette_root": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/Originals",
+  "historical_context_root": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636",
+  "changed_H5647_context_root": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5647-affected-endpoint3",
+  "finite_consumed_artwork_root": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/finite-consumed-artwork",
+  "historical_context_different_review": {
+    "path": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/review/independent-context-H5636/QUALIFIED-SHORELINE4-DIFFERENT-GENUINE18-ALLNATIVE-CONTEXT-ART-REVIEW-CORRECT-ARTIST-SUCCESSOR.json",
+    "sha256": "2346eb71ed0ba510d6d1baa564813dfa8adf372149456afc23cb57cc0a4f1ea9"
+  },
+  "Root_fixed4_intrinsic_approval": "Root message: Root final art approved intrinsics fixed4; awaiting changed2page peer thenminimalcontextRootnote.",
+  "changed_H5647_different_peer_pending": true,
+  "new_runtime_intrinsic_QA_or_artwork_changes": 0,
+  "metadata_reference_base": "data/hd, cross-new-job relative references",
+  "historical_evidence_preserved_verbatim": true
+}

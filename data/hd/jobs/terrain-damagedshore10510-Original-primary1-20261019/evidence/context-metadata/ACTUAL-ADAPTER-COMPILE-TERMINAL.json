@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "/usr/bin/rustc",
+    "--edition=2024",
+    "-O",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-first7-used3-SourceG2-H5636-genuine14-context-author-20261019-v1/compose_first7_SourceG2_H5636.rs",
+    "--extern",
+    "raptor_replica=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "--extern",
+    "serde_json=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libserde_json-89b5c242431768d3.rlib",
+    "--extern",
+    "flate2=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps/libflate2-808a135ff259ee28.rlib",
+    "-L",
+    "dependency=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps",
+    "-L",
+    "native=/home/quintine/.local/lib",
+    "-o",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-first7-used3-SourceG2-H5636-genuine14-context-author-20261019-v1/compose-first7-currentG2"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 5.2292299719993025,
+  "stdout": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-first7-used3-SourceG2-H5636-genuine14-context-author-20261019-v1/ACTUAL-ADAPTER-COMPILE.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size": 0,
+    "mtime_ns": 1792382614316931073,
+    "mode": 33188
+  },
+  "stderr": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-first7-used3-SourceG2-H5636-genuine14-context-author-20261019-v1/ACTUAL-ADAPTER-COMPILE.stderr",
+    "sha256": "0894832c51cec45edd2b87c3a92ccfa9b85a4332538279882c620bd2f4b584f8",
+    "size": 575,
+    "mtime_ns": 1792382619512133788,
+    "mode": 33188
+  },
+  "free_bytes": 5015130112
+}

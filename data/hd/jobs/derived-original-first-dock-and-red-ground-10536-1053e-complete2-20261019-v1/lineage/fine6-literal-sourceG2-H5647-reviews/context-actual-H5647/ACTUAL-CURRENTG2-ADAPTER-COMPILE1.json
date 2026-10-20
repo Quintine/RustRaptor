@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "rustc",
+    "--edition=2024",
+    "-C",
+    "opt-level=1",
+    "-C",
+    "debuginfo=0",
+    "--extern",
+    "raptor_replica=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "--extern",
+    "serde_json=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libserde_json-89b5c242431768d3.rlib",
+    "--extern",
+    "flate2=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps/libflate2-808a135ff259ee28.rlib",
+    "-L",
+    "dependency=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps",
+    "-L",
+    "native=/home/quintine/Projects/RaptorReplica/RustRaptor/lib",
+    "-L",
+    "native=/home/quintine/.local/lib",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-six10536-1053e-1054f-10561-1059e-105a7-currentG2-H5647-genuine9-context-20261019-v1/compose_qualified6_genuine9_SourceG2_H5647.rs",
+    "-o",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-six10536-1053e-1054f-10561-1059e-105a7-currentG2-H5647-genuine9-context-20261019-v1/qualified6-context-composer"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "warning: unused import: `logical_sprite`\n --> /home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-six10536-1053e-1054f-10561-1059e-105a7-currentG2-H5647-genuine9-context-20261019-v1/compose_qualified6_genuine9_SourceG2_H5647.rs:3:154\n  |\n3 | ...ls,OriginalPalette},render::{Canvas,upscale},terrain_hd::{logical_sprite,selected_art,TerrainHd,Replacement,RetainedOriginalPlacem...\n  |                                                              ^^^^^^^^^^^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nwarning: 1 warning emitted\n\n",
+  "seconds": 3.896695731993532,
+  "source_sha256": "1907b869b9ad4bd81da0afc86b7c1df004570ccce3f3d35da900f736527374ff"
+}

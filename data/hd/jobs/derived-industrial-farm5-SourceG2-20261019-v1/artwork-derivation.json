@@ -1,0 +1,49 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "industrial-Source-shape-genuine-fine-RGB-band-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/inputs/6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9-genuine-master.png",
+        "sha256": "6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/industrial-farm5-imagegen_receipt-9f09bf7d4651.json",
+        "sha256": "9f09bf7d4651e8ac4000888790778cd5ae6ef8c6d17eee100a8b200aad98d96b"
+      },
+      "prompt": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/industrial-farm5-prompt-a182d9ba418a.txt",
+        "sha256": "a182d9ba418a6cb1f87bb4690ee9583fb02c61239973492906e46c9a92b3f3e2"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_industrial_fine_cleanup.py",
+      "sha256": "6685ec45a54c00429ef05bac9a00d54ed0bc481ecb3ee8e6cc100a67dadb5be3"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/farm5-recipe.json",
+    "sha256": "d2a30528849c75c22431cc30d059998159b6cbe7d24c62009916507981880a04"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-industrial-farm5-SourceG2-20261019-v1/execution-receipt.json",
+    "sha256": "cf20f53d7a0422ba0b1abba32eda979e8f17b4c995ab19cd24b9113e79925948"
+  },
+  "sources": {
+    "20593": "ba7a5fc9d686e7ae8ac62a476f3bffa7d0985b872a0bc1bc9243e40226b53aeb",
+    "20594": "4ab69e9d5bb004565597e1073a5d878e02966b7737180e605faff6054b3b44cd",
+    "2059a": "dfcfcfbcf8021fff02dbe0b700d1fcd9a806121a4bc1b38e01b39ee0c06d3288",
+    "2059b": "134ee0fe10a0353bf2f89ae065fa9515af77c3ddc9e9196fce0fd1d615147456",
+    "2059c": "a144c21a0883988b3cde2977bb592c5fee61fb11d03d4c5e812da7c19d08da02"
+  },
+  "outputs": {
+    "jobs/derived-industrial-farm5-SourceG2-20261019-v1/derived/20593-derived.png": "3c1fdde14255adc9ec7c409daf3ebc21b8e0558145642a2a29ce6fe41a1b8c1e",
+    "jobs/derived-industrial-farm5-SourceG2-20261019-v1/derived/20594-derived.png": "f72010517a55942803a3bd71e947f2a2762fe9cff4db8c7abb6b05e98d298e90",
+    "jobs/derived-industrial-farm5-SourceG2-20261019-v1/derived/2059a-derived.png": "739c2b8681432e9793859501dc4025fd169217291d9400e9aad2758a064215bd",
+    "jobs/derived-industrial-farm5-SourceG2-20261019-v1/derived/2059b-derived.png": "c05928abf6c23a89e14d1a5c81160b46e028b2901cd470bb5f3f5a1b6ee53b29",
+    "jobs/derived-industrial-farm5-SourceG2-20261019-v1/derived/2059c-derived.png": "0592c81e4666d861d4c5c1138a043c1011fd275b708781237e00a96fa289d9e9"
+  }
+}

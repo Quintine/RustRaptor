@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "/usr/bin/rustc",
+    "--edition=2024",
+    "-O",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-shoreline4-H5647-affected-endpoint3-context-successor-author-20261019-v1/compose_affected_endpoint3.rs",
+    "--extern",
+    "raptor_replica=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "--extern",
+    "serde_json=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libserde_json-89b5c242431768d3.rlib",
+    "--extern",
+    "flate2=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps/libflate2-808a135ff259ee28.rlib",
+    "-L",
+    "dependency=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps",
+    "-L",
+    "native=/home/quintine/.local/lib",
+    "-o",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-shoreline4-H5647-affected-endpoint3-context-successor-author-20261019-v1/compose-shoreline4-changed-endpoint3-currentG2"
+  ],
+  "status": "ACTUAL_STARTED",
+  "ns": 1792384981775915588
+}

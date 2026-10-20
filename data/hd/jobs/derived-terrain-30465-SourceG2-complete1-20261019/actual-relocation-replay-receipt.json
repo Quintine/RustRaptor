@@ -1,0 +1,229 @@
+{
+  "output_guard": {
+    "minimum_free_bytes": 1932735284,
+    "output_reserve_bytes": 35127296,
+    "actual_free_bytes": 3549458432,
+    "existing_nonsymlink_parent": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/30465"
+  },
+  "implementation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/portable-project/tools/hd_followon_landmark_fine_cleanup.py",
+    "sha256": "5df17db01259c7906d4c419110ee7df1912cf97dd5ec55b02d2cac2687d457be",
+    "size": 13150,
+    "mtime_ns": 1792402616386055527,
+    "mode": 33188
+  },
+  "executed_dependency": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/portable-project/tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+    "size": 14882,
+    "mtime_ns": 1792402616388675370,
+    "mode": 33188
+  },
+  "recipe_input": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/portable-project/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/30465-recipe.json",
+    "sha256": "fcaa74019cf9f0d630f22152074c345d31ffcf63ff9605dc4807fb6aae265cdc",
+    "size": 1336,
+    "mtime_ns": 1792402616502833737,
+    "mode": 33188
+  },
+  "physical_authenticated_input_reads": 3,
+  "method": "followon-five-Source-landmark-coherent-fine-material-v1",
+  "input_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/portable-project/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/inputs/a8644af5a415034fbcf0dea8d148de598b67535ee9a5899d77858cc66ae7a77e-30465.pic",
+      "sha256": "a8644af5a415034fbcf0dea8d148de598b67535ee9a5899d77858cc66ae7a77e",
+      "size": 1044,
+      "mtime_ns": 1792402616480636386,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/portable-project/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/inputs/f7ff2ed53347a5bd7b2c3143ca225d3e4e1211f908c9fcbcd8dcc97e5090de80-genuine-master.png",
+      "sha256": "f7ff2ed53347a5bd7b2c3143ca225d3e4e1211f908c9fcbcd8dcc97e5090de80",
+      "size": 3718631,
+      "mtime_ns": 1792402616482909346,
+      "mode": 33188
+    }
+  ],
+  "palette": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/portable-project/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/inputs/1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204-PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "size": 768,
+    "mtime_ns": 1792402616389923812,
+    "mode": 33188
+  },
+  "recipe_sha256": "fcaa74019cf9f0d630f22152074c345d31ffcf63ff9605dc4807fb6aae265cdc",
+  "metrics": {
+    "selected_ids": [
+      "30465"
+    ],
+    "assets": [
+      {
+        "asset": "30465",
+        "original_detail_cells": [
+          [
+            4,
+            16
+          ],
+          [
+            6,
+            18
+          ],
+          [
+            7,
+            18
+          ],
+          [
+            8,
+            18
+          ],
+          [
+            9,
+            18
+          ],
+          [
+            10,
+            18
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            11,
+            17
+          ],
+          [
+            12,
+            17
+          ],
+          [
+            13,
+            4
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            13,
+            16
+          ],
+          [
+            14,
+            5
+          ],
+          [
+            14,
+            15
+          ],
+          [
+            15,
+            6
+          ],
+          [
+            15,
+            7
+          ],
+          [
+            15,
+            8
+          ],
+          [
+            15,
+            13
+          ],
+          [
+            15,
+            14
+          ],
+          [
+            16,
+            7
+          ],
+          [
+            16,
+            8
+          ],
+          [
+            16,
+            9
+          ],
+          [
+            16,
+            10
+          ],
+          [
+            16,
+            11
+          ],
+          [
+            16,
+            12
+          ],
+          [
+            18,
+            21
+          ],
+          [
+            19,
+            15
+          ],
+          [
+            19,
+            16
+          ],
+          [
+            19,
+            17
+          ],
+          [
+            19,
+            21
+          ],
+          [
+            20,
+            21
+          ],
+          [
+            28,
+            12
+          ],
+          [
+            28,
+            13
+          ],
+          [
+            28,
+            14
+          ]
+        ],
+        "raw_Source_reserved_cells": 19,
+        "functional_or_colored_cue_raw_samples": 32,
+        "Source_fidelity_owner_union_cells": 34,
+        "all_cue_and_reserved_SourceNx_RGB_exact": true,
+        "Source31_black_pixels_exact": 0,
+        "Source_violet_path_halo_HDR_pixels": 0,
+        "all_backing_SourceNx_RGB_exact": true,
+        "Original_backing_HDR_samples_no_HDcredit": 8704,
+        "nonretained_HDR_pixels": 253440,
+        "genuine_RGB_band_changed_nonretained_HDR_pixels": 252495,
+        "Original_functional_HD_credit": 0,
+        "geometry_owner_sha256": "250ec9a04de48cb5e7ff60192f002a1542196d474acafe2b1ce14d7a569f3f4d"
+      }
+    ],
+    "source_base_sigma": 0.5,
+    "fine_band_sigma": 8.0,
+    "fine_band_clip": 26,
+    "fine_band_strength": 0.75,
+    "donor_repetition": false,
+    "global_SourceNx_nearest_fallback": false
+  },
+  "output_is_derived_not_untouched": true,
+  "functional_retention_no_HD_credit": "Protected Source labels240..255, explicit ordinary Sourcecoloredcue unions, black31 and40372pathhalo retain OriginalRGB with zeroHDcredit. Actualdeclared ownercells SourceNx restored atnative1..4; fine generated texture elsewhere is separate.",
+  "outputs": [
+    {
+      "file": "30465-derived.png",
+      "sha256": "13edc468b8109671695a3e0e7b16171e1ea045e4a791599127ef8ff29f426dfd"
+    }
+  ]
+}

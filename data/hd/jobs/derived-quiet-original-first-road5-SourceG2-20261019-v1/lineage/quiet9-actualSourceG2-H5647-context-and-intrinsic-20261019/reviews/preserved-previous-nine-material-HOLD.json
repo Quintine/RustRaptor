@@ -1,0 +1,387 @@
+{
+  "status": "HOLD9_DIFFERENT_INTRINSIC_MATERIAL_REVIEW_CONCRETE_PAVEMENT_AND_WATER_FINDINGS",
+  "reviewer": "/root/stag_portability",
+  "utc": "2026-10-19T01:46:40.010546+00:00",
+  "author_handoff_sha256": "f35820c17ea70095783d16a0850f1b5aa8acece217a7784da8d6226b8dd50394",
+  "author_closure_sha256": "f6478bcd13192963e5e94a2f158e572720c3da4ad242676cd1fdedf4c4ea9163",
+  "technical_audit_sha256": "92b629ab2aa7262bf18e781429660bd01c916ddf98ba408c416a58a90a5e70bc",
+  "reviewed_physical_scope": "Both complete authentic Original atlases, both complete untouched raw atlases, all9 complete512 derived PNGs, and all9 complete SourceNx/native1\u20134 integerNN3 comparison boards. Every36 native whole body inspected.",
+  "not_blanket_inference": "Every selected frame independently exhibits at least one concrete water or pavement material issue listed below. No frame is granted approval by subtraction.",
+  "material_classes": {
+    "0": "Water: Source148..159 plus protected240..244",
+    "1": "Gray/black structure: <32 or173",
+    "2": "Red/brown soil:182..218",
+    "3": "Pavement/concrete:219..239",
+    "4": "Ochre/paint:80..95",
+    "5": "Protected individual/fire:245..255"
+  },
+  "per_frame": [
+    {
+      "asset": "10502",
+      "result": "HOLD_INTRINSIC_MATERIAL",
+      "offending_material_classes": [
+        3,
+        0
+      ],
+      "finding": "Large looping/cellular pavement relief across lower apron, and a repeated high-contrast water-band motif; stronger and more pictorial than Original flat pavement/water.",
+      "examples": [
+        {
+          "derived512_reference_xy": [
+            256,
+            440
+          ],
+          "Source_logical_xy": [
+            16,
+            27
+          ],
+          "Source_palette_index": 228,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        },
+        {
+          "derived512_reference_xy": [
+            60,
+            180
+          ],
+          "Source_logical_xy": [
+            3,
+            11
+          ],
+          "Source_palette_index": 158,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        }
+      ],
+      "whole_Source_native1to4_board": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/road-damage5/whole-final-Source-and-actual-native1to4/10502-WHOLE-SourceNx-and-ACTUAL-G2-native1to4-NN3.png",
+      "whole_derived512": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/road-damage5/actual-once-reviewed-selector-derived/10502-derived.png",
+      "whole_board_sha256": "3c8cb47d6d56ccfdee70226b06cad8f8e8a629fd0f161dd0f617472902f618b3",
+      "derived_sha256": "7d2028a8ef061611d4bb529169c3e0cc3fb14fa3025c403e1cdd909e4675b30c",
+      "all_native1to4_whole_bodies_physically_viewed": true,
+      "complete_derived512_physically_viewed": true
+    },
+    {
+      "asset": "10506",
+      "result": "HOLD_INTRINSIC_MATERIAL",
+      "offending_material_classes": [
+        3
+      ],
+      "finding": "Right pavement strip carries the same large cellular/curl material rather than quiet concrete; survives native3/4.",
+      "examples": [
+        {
+          "derived512_reference_xy": [
+            430,
+            250
+          ],
+          "Source_logical_xy": [
+            26,
+            15
+          ],
+          "Source_palette_index": 231,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        }
+      ],
+      "whole_Source_native1to4_board": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/road-damage5/whole-final-Source-and-actual-native1to4/10506-WHOLE-SourceNx-and-ACTUAL-G2-native1to4-NN3.png",
+      "whole_derived512": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/road-damage5/actual-once-reviewed-selector-derived/10506-derived.png",
+      "whole_board_sha256": "abaa18d11d55f5f402fe142fe0dbecf364dc74b7148729d4dc2ab7ebc5ff34a4",
+      "derived_sha256": "a9e5e4d46cb3c37a0aebf17cfd046481bab1cb6fa69fb6be5fa285104862021d",
+      "all_native1to4_whole_bodies_physically_viewed": true,
+      "complete_derived512_physically_viewed": true
+    },
+    {
+      "asset": "10508",
+      "result": "HOLD_INTRINSIC_MATERIAL",
+      "offending_material_classes": [
+        3
+      ],
+      "finding": "Left pavement carries pronounced looping/cellular surface motifs that compete with the authentic broken ochre edge.",
+      "examples": [
+        {
+          "derived512_reference_xy": [
+            60,
+            250
+          ],
+          "Source_logical_xy": [
+            3,
+            15
+          ],
+          "Source_palette_index": 228,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        }
+      ],
+      "whole_Source_native1to4_board": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/road-damage5/whole-final-Source-and-actual-native1to4/10508-WHOLE-SourceNx-and-ACTUAL-G2-native1to4-NN3.png",
+      "whole_derived512": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/road-damage5/actual-once-reviewed-selector-derived/10508-derived.png",
+      "whole_board_sha256": "9c2cdb24db1dce7d7ea9c61e1aa6e04076caaa24153cf2e4992d80735f47c565",
+      "derived_sha256": "954ce2c1d222bd16d8d5e9f064af95c7bc180df7530f754cf2015e50207df0af",
+      "all_native1to4_whole_bodies_physically_viewed": true,
+      "complete_derived512_physically_viewed": true
+    },
+    {
+      "asset": "10509",
+      "result": "HOLD_INTRINSIC_MATERIAL",
+      "offending_material_classes": [
+        3
+      ],
+      "finding": "Worst clean pavement example: large repeated organic/cellular ridge pattern spans the otherwise plain T/apron. Original has low-contrast concrete variation, not this dominant motif.",
+      "examples": [
+        {
+          "derived512_reference_xy": [
+            256,
+            320
+          ],
+          "Source_logical_xy": [
+            16,
+            20
+          ],
+          "Source_palette_index": 227,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        }
+      ],
+      "whole_Source_native1to4_board": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/road-damage5/whole-final-Source-and-actual-native1to4/10509-WHOLE-SourceNx-and-ACTUAL-G2-native1to4-NN3.png",
+      "whole_derived512": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/road-damage5/actual-once-reviewed-selector-derived/10509-derived.png",
+      "whole_board_sha256": "12b8a09316e0c1726c2dbfa311a0cb65c0528fea908f306422924241afa6aedb",
+      "derived_sha256": "f482ca738b4fe04919100b7c8f3bda51c70ceea804e7ff0b050ebf39bd0ee00c",
+      "all_native1to4_whole_bodies_physically_viewed": true,
+      "complete_derived512_physically_viewed": true
+    },
+    {
+      "asset": "1050a",
+      "result": "HOLD_INTRINSIC_MATERIAL",
+      "offending_material_classes": [
+        3,
+        0
+      ],
+      "finding": "Upper pavement curls and lower water-band pattern distract from faithful central destroyed-road silhouette; generated material is visibly over-patterned.",
+      "examples": [
+        {
+          "derived512_reference_xy": [
+            256,
+            70
+          ],
+          "Source_logical_xy": [
+            16,
+            4
+          ],
+          "Source_palette_index": 229,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        },
+        {
+          "derived512_reference_xy": [
+            300,
+            450
+          ],
+          "Source_logical_xy": [
+            18,
+            28
+          ],
+          "Source_palette_index": 158,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        }
+      ],
+      "whole_Source_native1to4_board": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/road-damage5/whole-final-Source-and-actual-native1to4/1050a-WHOLE-SourceNx-and-ACTUAL-G2-native1to4-NN3.png",
+      "whole_derived512": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/road-damage5/actual-once-reviewed-selector-derived/1050a-derived.png",
+      "whole_board_sha256": "ffb4e8eb84b86e300b82f88122f6e244a0fca61442f4c17036ee5e38754e8d05",
+      "derived_sha256": "cfb128b686b1b9959af2f22c478741f4b3f2a00743b4f0970723bfab7974fc9c",
+      "all_native1to4_whole_bodies_physically_viewed": true,
+      "complete_derived512_physically_viewed": true
+    },
+    {
+      "asset": "10504",
+      "result": "HOLD_INTRINSIC_MATERIAL",
+      "offending_material_classes": [
+        0
+      ],
+      "finding": "Open lower water includes repeated pale oval/debris-like forms unrelated to authentic rock placements; material reads as extra rocks/islands rather than water-only ripples.",
+      "examples": [
+        {
+          "derived512_reference_xy": [
+            290,
+            390
+          ],
+          "Source_logical_xy": [
+            18,
+            24
+          ],
+          "Source_palette_index": 153,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        },
+        {
+          "derived512_reference_xy": [
+            340,
+            350
+          ],
+          "Source_logical_xy": [
+            21,
+            21
+          ],
+          "Source_palette_index": 152,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        },
+        {
+          "derived512_reference_xy": [
+            125,
+            390
+          ],
+          "Source_logical_xy": [
+            7,
+            24
+          ],
+          "Source_palette_index": 153,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        }
+      ],
+      "whole_Source_native1to4_board": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/collapsed-bridge4/whole-final-Source-and-actual-native1to4/10504-WHOLE-SourceNx-and-ACTUAL-G2-native1to4-NN3.png",
+      "whole_derived512": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/collapsed-bridge4/actual-once-reviewed-selector-derived/10504-derived.png",
+      "whole_board_sha256": "61b8b6e0056179b0a89b868692ed7822ee25235d94765281ce4f3da5533f5b74",
+      "derived_sha256": "1caadd64b554093f15e29d5161ae7cf0172be450a293781f1867be8a712355b4",
+      "all_native1to4_whole_bodies_physically_viewed": true,
+      "complete_derived512_physically_viewed": true
+    },
+    {
+      "asset": "1050b",
+      "result": "HOLD_INTRINSIC_MATERIAL",
+      "offending_material_classes": [
+        0
+      ],
+      "finding": "Lower-right open water repeats the same oval/debris-like donor motif, independently of Original rock positions.",
+      "examples": [
+        {
+          "derived512_reference_xy": [
+            320,
+            390
+          ],
+          "Source_logical_xy": [
+            20,
+            24
+          ],
+          "Source_palette_index": 152,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        }
+      ],
+      "whole_Source_native1to4_board": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/collapsed-bridge4/whole-final-Source-and-actual-native1to4/1050b-WHOLE-SourceNx-and-ACTUAL-G2-native1to4-NN3.png",
+      "whole_derived512": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/collapsed-bridge4/actual-once-reviewed-selector-derived/1050b-derived.png",
+      "whole_board_sha256": "5520723370899359aa09a71b08d38cd051f053affbdb8d1577f040ac5ac4b5ba",
+      "derived_sha256": "9f27578dbd029822de3b9372ba619f2a6c76e66134d5ba847be20bdb9c27e2c8",
+      "all_native1to4_whole_bodies_physically_viewed": true,
+      "complete_derived512_physically_viewed": true
+    },
+    {
+      "asset": "1050c",
+      "result": "HOLD_INTRINSIC_MATERIAL",
+      "offending_material_classes": [
+        0
+      ],
+      "finding": "Two pale oval/debris-like motifs lie across open upper water; these reference locations are ordinary Source water indices151/150, not authored brown rock shapes.",
+      "examples": [
+        {
+          "derived512_reference_xy": [
+            320,
+            135
+          ],
+          "Source_logical_xy": [
+            20,
+            8
+          ],
+          "Source_palette_index": 151,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        },
+        {
+          "derived512_reference_xy": [
+            125,
+            135
+          ],
+          "Source_logical_xy": [
+            7,
+            8
+          ],
+          "Source_palette_index": 150,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        }
+      ],
+      "whole_Source_native1to4_board": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/collapsed-bridge4/whole-final-Source-and-actual-native1to4/1050c-WHOLE-SourceNx-and-ACTUAL-G2-native1to4-NN3.png",
+      "whole_derived512": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/collapsed-bridge4/actual-once-reviewed-selector-derived/1050c-derived.png",
+      "whole_board_sha256": "1696baa99ed9dbbe633b0dd874f213c9100fc3eaf73ec3145c6bba021820ae1c",
+      "derived_sha256": "f0a9208aed93a618336a2680cbc48a1e639e095788a966b5b825b9011fc6f723",
+      "all_native1to4_whole_bodies_physically_viewed": true,
+      "complete_derived512_physically_viewed": true
+    },
+    {
+      "asset": "1050e",
+      "result": "HOLD_INTRINSIC_MATERIAL",
+      "offending_material_classes": [
+        0
+      ],
+      "finding": "Strong repeated water example: same oval/debris-like donor shape repeats vertically roughly256px apart in open water; both reference cells are ordinary Source water index152.",
+      "examples": [
+        {
+          "derived512_reference_xy": [
+            320,
+            135
+          ],
+          "Source_logical_xy": [
+            20,
+            8
+          ],
+          "Source_palette_index": 152,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        },
+        {
+          "derived512_reference_xy": [
+            320,
+            390
+          ],
+          "Source_logical_xy": [
+            20,
+            24
+          ],
+          "Source_palette_index": 152,
+          "outside_functional_union": true,
+          "scope": "Reference point within the visual issue region, not an automated object detector."
+        }
+      ],
+      "whole_Source_native1to4_board": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/collapsed-bridge4/whole-final-Source-and-actual-native1to4/1050e-WHOLE-SourceNx-and-ACTUAL-G2-native1to4-NN3.png",
+      "whole_derived512": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/collapsed-bridge4/actual-once-reviewed-selector-derived/1050e-derived.png",
+      "whole_board_sha256": "0b04ed9247e2e4bf415162f371bedd12918fe95e1798a2f4db2f2750a12ee795",
+      "derived_sha256": "482329b191090b0db0696986c7c2c86c3d274752c5d5918068c817df72ac277a",
+      "all_native1to4_whole_bodies_physically_viewed": true,
+      "complete_derived512_physically_viewed": true
+    }
+  ],
+  "technical_passes_do_not_establish_art_fidelity": {
+    "Source_geometry_and_Original_motifs_preserved": true,
+    "functional_union166_cells_exact_no_HD_credit": true,
+    "saved36_native_PPM_bank_and_whole_pages_exact": true,
+    "actual_generated_RGB_band_contribution_present": true,
+    "no_new_large_decking_or_support_geometry_found": true
+  },
+  "positive_findings": "Authentic water/road/soil partitions, holes, ochre edges, gray rails/support positions and damaged body extents remain faithful. Rejection targets generated material appearance, not Source geometry or protected functionality.",
+  "donor_reason": "Frozen recipes water0 donor patches include conspicuous raw features and repeat on256x256 periods; existing pavement3 raw crops generate large low-frequency/cellular-looking high-band patterns. Code bounds/reproducibility can pass while these remain visually unsuitable.",
+  "two_Root_priority_boards": [
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/road-damage5/whole-final-Source-and-actual-native1to4/10509-WHOLE-SourceNx-and-ACTUAL-G2-native1to4-NN3.png",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/collapsed-bridge4/whole-final-Source-and-actual-native1to4/1050e-WHOLE-SourceNx-and-ACTUAL-G2-native1to4-NN3.png"
+  ],
+  "auxiliary_full512_priority": [
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/road-damage5/actual-once-reviewed-selector-derived/10509-derived.png",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-firstcampaign-nine10502-1050e-Original-primary-author-20261019-v1/collapsed-bridge4/actual-once-reviewed-selector-derived/1050e-derived.png"
+  ],
+  "claims_not_made": [
+    "No new engine/collision objects are inferred; rocks/islands describe unwanted pictorial material motifs only.",
+    "No genuine context/seam/timing/World qualification.",
+    "No coverage or registration increment."
+  ],
+  "new_production_cleanup_QA_imagegen_calls": 0,
+  "canonical_or_Git_changes": false,
+  "all_author_packets_and_old_results_preserved": true,
+  "next_gate": "Root physically reviews priority boards and concrete source-only material replacement proposal before any additional generation or cleanup."
+}

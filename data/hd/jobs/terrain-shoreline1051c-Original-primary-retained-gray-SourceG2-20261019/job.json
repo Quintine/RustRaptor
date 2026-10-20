@@ -1,0 +1,40 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-shoreline1051c-Original-primary-retained-gray-SourceG2-20261019",
+  "name": "Original shoreline1051c",
+  "owner": "/root/iron_coast_names",
+  "packager": "/root/ridge_pair",
+  "category": "Terrain",
+  "kind": "contextual_terrain_shard",
+  "targets": [
+    {
+      "asset": "1051c",
+      "source_path": "misc/unnamed.548",
+      "source_sha256": "453cf7c538d133ca7ba74d33d2812ae8b14ec67b06634fec28d8837379a7194c",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+    }
+  ],
+  "shared_generation_cohort": [
+    "10514",
+    "10515",
+    "1051b",
+    "1051c"
+  ],
+  "actual_shared_image_calls": 1,
+  "actual_new_image_calls_in_packaging": 0,
+  "all_retained_Original_no_HD_credit": true,
+  "shared_lineage": {
+    "path": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/SHARED-COHORT-LINEAGE.json",
+    "sha256": "af1964e8e5fb637efa548cae6942c61d54a01280218f5dfa7d10336a80319c6e"
+  },
+  "shared_cohort_artwork_and_proof_root": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage"
+}

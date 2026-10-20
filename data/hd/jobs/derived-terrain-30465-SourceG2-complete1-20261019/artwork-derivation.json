@@ -1,0 +1,41 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "followon-five-Source-landmark-coherent-fine-material-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/inputs/f7ff2ed53347a5bd7b2c3143ca225d3e4e1211f908c9fcbcd8dcc97e5090de80-genuine-master.png",
+        "sha256": "f7ff2ed53347a5bd7b2c3143ca225d3e4e1211f908c9fcbcd8dcc97e5090de80"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/genuine-30465-imagegen_receipt-c5d53ba6ad6d.json",
+        "sha256": "c5d53ba6ad6d6b377b369313af4af23a3d1d748f7046b75ae9c1ca8a619f7728"
+      },
+      "prompt": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/genuine-30465-prompt-bcd8b74a9a74.txt",
+        "sha256": "bcd8b74a9a74403af58fc067a76c8dffee11525f466ef1f50635bbe508dbcb8f"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_followon_landmark_fine_cleanup.py",
+      "sha256": "5df17db01259c7906d4c419110ee7df1912cf97dd5ec55b02d2cac2687d457be"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/30465-recipe.json",
+    "sha256": "fcaa74019cf9f0d630f22152074c345d31ffcf63ff9605dc4807fb6aae265cdc"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-terrain-30465-SourceG2-complete1-20261019/execution-receipt.json",
+    "sha256": "7fc6f5c6d88d69416c1e9c33ef022a6995d46073c021d36e6255773cafc9501e"
+  },
+  "sources": {
+    "30465": "a8644af5a415034fbcf0dea8d148de598b67535ee9a5899d77858cc66ae7a77e"
+  },
+  "outputs": {
+    "jobs/derived-terrain-30465-SourceG2-complete1-20261019/derived/30465-derived.png": "13edc468b8109671695a3e0e7b16171e1ea045e4a791599127ef8ff29f426dfd"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "status": "EXACT_EXISTING_CURRENTG2_NATIVE_REPORTS_NO_NEW_QA",
+  "literal_actual_QA": {
+    "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/measurement/literal-actual-SourceG2-runtime-qa.json",
+    "sha256": "875795b7ebae10c6ea6d51885fcce3e1a4eb41bbd32fa597a32c8092d9d70efd"
+  },
+  "literal_actual_bank": {
+    "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/measurement/literal-actual-POST-retention-indexed-bank.json",
+    "sha256": "29c8c95b04706293224245737ee97eca8b2f0bdc196bbd6d9fb4164254e8053c"
+  },
+  "old_identity": {
+    "candidate_sha256": "438d7708f5e6ec91ccfb894a44393c71498fad7ebcc6eaddfd8fb0ed837bb780",
+    "frame_bindings_sha256": "53f8e781d10618e83a1a709bef62d2ac357f38fe3442154d027866e7f9a91d64",
+    "artwork_sha256": {
+      "10502-derived.png": "c22dab3891374bed35989be491548b1492c94b570bdad50fc3ffa81ea8941492",
+      "10506-derived.png": "54cc9866a9a8fc0f1d38d62ded895c6334dbc95346f8f255482bc012ec0cf563",
+      "10508-derived.png": "de79a23765bc310d5b5a8c572c7e45202229e59d56dfe00373cdedfe9ae8fe3b",
+      "10509-derived.png": "41f38e0d17383244aa7a96815040d1c6b924fa4d5686c958dae185bbb00ebbcc",
+      "1050a-derived.png": "af8535bb17513a4bafced3e85de65961a3cd41c76005d5bd9a6c70299dfd6dff"
+    },
+    "library": ".reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "library_sha256": "5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676",
+    "library_modified_ns": 1792326752687554590
+  },
+  "portable_identity": {
+    "candidate_sha256": "e1d2df4fdf2d1bdb486c31adbdc6ffa85bf9a2247f4b781d9f265d672ee5e2c9",
+    "frame_bindings_sha256": "8d6c82a30f86e5841dc0b23e88727e866cc9d3de530cdba82abe474060616ded",
+    "artwork_sha256": {
+      "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/derived/10502-derived.png": "c22dab3891374bed35989be491548b1492c94b570bdad50fc3ffa81ea8941492",
+      "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/derived/10506-derived.png": "54cc9866a9a8fc0f1d38d62ded895c6334dbc95346f8f255482bc012ec0cf563",
+      "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/derived/10508-derived.png": "de79a23765bc310d5b5a8c572c7e45202229e59d56dfe00373cdedfe9ae8fe3b",
+      "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/derived/10509-derived.png": "41f38e0d17383244aa7a96815040d1c6b924fa4d5686c958dae185bbb00ebbcc",
+      "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/derived/1050a-derived.png": "af8535bb17513a4bafced3e85de65961a3cd41c76005d5bd9a6c70299dfd6dff"
+    },
+    "library": "target/hd-review-libraries/5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676/libraptor_replica.rlib",
+    "library_sha256": "5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676",
+    "library_modified_ns": 1792326752687554590
+  },
+  "frame_reports_byte_semantically_unchanged": true,
+  "retention_semantics": "Actual bank is POST-SourceNx-retention. Context prejoin compared only outside166cellmask, isolated SourceNx restoration matches entire literal bank. Joined restore uses whole Original3x3 SourceNx.",
+  "new_QA_calls": 0
+}

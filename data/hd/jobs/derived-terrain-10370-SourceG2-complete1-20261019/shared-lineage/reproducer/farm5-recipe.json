@@ -1,0 +1,96 @@
+{
+  "method": "industrial-Source-shape-genuine-fine-RGB-band-v1",
+  "palette": {
+    "path": "inputs/1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204-PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "frames": [
+    {
+      "asset": "20593",
+      "source": {
+        "path": "inputs/ba7a5fc9d686e7ae8ac62a476f3bffa7d0985b872a0bc1bc9243e40226b53aeb-20593.pic",
+        "sha256": "ba7a5fc9d686e7ae8ac62a476f3bffa7d0985b872a0bc1bc9243e40226b53aeb"
+      },
+      "donor": {
+        "path": "inputs/6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9-genuine-master.png",
+        "sha256": "6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9",
+        "box": [
+          0,
+          0,
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "asset": "20594",
+      "source": {
+        "path": "inputs/4ab69e9d5bb004565597e1073a5d878e02966b7737180e605faff6054b3b44cd-20594.pic",
+        "sha256": "4ab69e9d5bb004565597e1073a5d878e02966b7737180e605faff6054b3b44cd"
+      },
+      "donor": {
+        "path": "inputs/6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9-genuine-master.png",
+        "sha256": "6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9",
+        "box": [
+          512,
+          0,
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "asset": "2059a",
+      "source": {
+        "path": "inputs/dfcfcfbcf8021fff02dbe0b700d1fcd9a806121a4bc1b38e01b39ee0c06d3288-2059a.pic",
+        "sha256": "dfcfcfbcf8021fff02dbe0b700d1fcd9a806121a4bc1b38e01b39ee0c06d3288"
+      },
+      "donor": {
+        "path": "inputs/6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9-genuine-master.png",
+        "sha256": "6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9",
+        "box": [
+          1024,
+          0,
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "asset": "2059b",
+      "source": {
+        "path": "inputs/134ee0fe10a0353bf2f89ae065fa9515af77c3ddc9e9196fce0fd1d615147456-2059b.pic",
+        "sha256": "134ee0fe10a0353bf2f89ae065fa9515af77c3ddc9e9196fce0fd1d615147456"
+      },
+      "donor": {
+        "path": "inputs/6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9-genuine-master.png",
+        "sha256": "6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9",
+        "box": [
+          0,
+          512,
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "asset": "2059c",
+      "source": {
+        "path": "inputs/a144c21a0883988b3cde2977bb592c5fee61fb11d03d4c5e812da7c19d08da02-2059c.pic",
+        "sha256": "a144c21a0883988b3cde2977bb592c5fee61fb11d03d4c5e812da7c19d08da02"
+      },
+      "donor": {
+        "path": "inputs/6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9-genuine-master.png",
+        "sha256": "6842e095a0d4937a76be4d94d59e39dfc58c2973d24aa96826023bcd61ee15b9",
+        "box": [
+          512,
+          512,
+          512,
+          512
+        ]
+      }
+    }
+  ],
+  "lineage": "Own genuine Original-primary builtin returned master, untouched original preserved. Only restrained fine generated RGB band sigma3,clip16,strength0.5 is used, no coarse generated structure/palette. Complete own tile crop stretched once to512; no tiling or procedural noise.",
+  "functional_contract": "Exact SourceNx material owners and protected240..255 SourceRGBA retained. Source245..251 embers in2059c are explicitly retained, never generated HD credit. All Scale1..4 owner support union is declared before actual G2 QA."
+}

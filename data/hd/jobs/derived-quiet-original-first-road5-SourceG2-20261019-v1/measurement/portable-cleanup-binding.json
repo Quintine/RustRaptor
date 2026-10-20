@@ -1,0 +1,88 @@
+{
+  "execution": {
+    "status": "success",
+    "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+    "recipe_sha256": "e7c5eda42987c36e13499a224c5a40da8dd843a3de179f78f9162056865513ca",
+    "tool_sha256": "ff286585834d42aff8fca0951a118aaa5c3b51294dc078b3b1fe8d04b37f5fbd",
+    "source_sha256": {
+      "10502": "412a22ffdc6c4bc25c534e2a5b10878adeb2e938f526fceb2918bead09d537d5",
+      "10506": "a5ecb160c8edbc1502f0069b80d066f65877737eaffa948401ed3eb00224276b",
+      "10508": "83b0eb5df8794a63690a306962fc9f4c0fc2795634c257acf76c15bc83870ee7",
+      "10509": "ad820e692971cf846c7f150ffddb0b0a8966f1b6afa035d8a83ba1a325b90ea2",
+      "1050a": "7516dde8481dc40892327f551cd04812d69a7db79c28ebc1af451fc0e7a507fa"
+    },
+    "parent_raw_sha256": [
+      "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23",
+      "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b",
+      "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c"
+    ],
+    "output_sha256": {
+      "10502": "c22dab3891374bed35989be491548b1492c94b570bdad50fc3ffa81ea8941492",
+      "10506": "54cc9866a9a8fc0f1d38d62ded895c6334dbc95346f8f255482bc012ec0cf563",
+      "10508": "de79a23765bc310d5b5a8c572c7e45202229e59d56dfe00373cdedfe9ae8fe3b",
+      "10509": "41f38e0d17383244aa7a96815040d1c6b924fa4d5686c958dae185bbb00ebbcc",
+      "1050a": "af8535bb17513a4bafced3e85de65961a3cd41c76005d5bd9a6c70299dfd6dff"
+    }
+  },
+  "scope": "Binding bridge of the already completed once-only cleanup. Exact recipe/tool/input/output bytes unchanged; no cleanup replay happened during packaging. Original receipt is retained verbatim.",
+  "actual_cleanup_receipt": {
+    "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/measurement/literal-actual-cleanup-receipt.json",
+    "sha256": "be351579bbea525fb75a838638f699a29b561bec30321d65f12f712d5b9a3a31"
+  },
+  "historical_absolute_paths_are_provenance_not_live_dependencies": true,
+  "portable_recipe_input_refs": [
+    {
+      "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/inputs/PALETTE_DAT",
+      "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+    },
+    {
+      "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/inputs/10502.pic",
+      "sha256": "412a22ffdc6c4bc25c534e2a5b10878adeb2e938f526fceb2918bead09d537d5"
+    },
+    {
+      "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/inputs/10506.pic",
+      "sha256": "a5ecb160c8edbc1502f0069b80d066f65877737eaffa948401ed3eb00224276b"
+    },
+    {
+      "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/inputs/10508.pic",
+      "sha256": "83b0eb5df8794a63690a306962fc9f4c0fc2795634c257acf76c15bc83870ee7"
+    },
+    {
+      "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/inputs/10509.pic",
+      "sha256": "ad820e692971cf846c7f150ffddb0b0a8966f1b6afa035d8a83ba1a325b90ea2"
+    },
+    {
+      "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/inputs/1050a.pic",
+      "sha256": "7516dde8481dc40892327f551cd04812d69a7db79c28ebc1af451fc0e7a507fa"
+    },
+    {
+      "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23"
+    },
+    {
+      "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/inputs/new-road5-master.png",
+      "sha256": "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c"
+    },
+    {
+      "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/inputs/new-bridge4-master.png",
+      "sha256": "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b"
+    },
+    {
+      "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23"
+    },
+    {
+      "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/inputs/new-road5-master.png",
+      "sha256": "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c"
+    }
+  ],
+  "portable_cleanup_argv": [
+    "python3",
+    "tools/quiet9_source_components/terrain_component_cleanup.py",
+    "--recipe",
+    "data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/cleanup-recipe.json",
+    "--output",
+    "CHOOSE_FRESH_PRIVATE_OUTPUT"
+  ],
+  "new_cleanup_calls": 0
+}

@@ -1,0 +1,59 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/generation-provenance/1054f/ACTUAL-ORIGINAL-PRIMARY-RETURNED-UNTOUCHED.png",
+        "sha256": "c065ee47d233db8a45622a3e09ba3ef72c74069c61607f152fc32d6629368343"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/generation-provenance/1054f/ACTUAL-BUILTIN-PRIMITIVE-RECEIPT.json",
+        "sha256": "145c6582efd2106797b8ba8d3da21b7ebd01d8162f9fb7b8296f2e4036491843"
+      },
+      "prompt": {
+        "path": "jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/generation-provenance/1054f/prompt.txt",
+        "sha256": "0174ac6386e33af0c329840437d2ff6015eae803b50d80f997d69979f1fffcca"
+      }
+    },
+    {
+      "raw_png": {
+        "path": "jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/generation-provenance/10561/ACTUAL-ORIGINAL-PRIMARY-RETURNED-UNTOUCHED.png",
+        "sha256": "eab1f064dde67d01a4f734d905e2c7ff1180860de6cb21e8453212d3afdeb323"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/generation-provenance/10561/ACTUAL-BUILTIN-PRIMITIVE-RECEIPT.json",
+        "sha256": "f895d108610813d0a6e9063327154bda5386f5c9ea97b4999fd283d80f63e0a9"
+      },
+      "prompt": {
+        "path": "jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/generation-provenance/10561/prompt.txt",
+        "sha256": "97c59868978ceedd97b4515644e8e19ea0dddd6b9290bc7556a95a8382b1f80a"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/fine1054f_source_components/terrain_component_cleanup.py",
+      "sha256": "cb639e9e115efc4ebfe6a07cf29012e3d22bc4c2881d90f5586ae243acf651b2"
+    },
+    {
+      "path": "tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/reproducer/recipe.json",
+    "sha256": "0fea03fc4708ba28835ff0c739d65c067bdab5bc9addb54cf1aa4748335cea82"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/execution-receipt.json",
+    "sha256": "7122e15ed4449b7f83e955b210eb1a615a433f01048749f03a28e7871aef25b7"
+  },
+  "sources": {
+    "1054f": "6d753a9128486c43b35aaca4844b1cb72a76677a92a9e61a01f5037b6645c68e"
+  },
+  "outputs": {
+    "jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/1054f-derived.png": "a13c5502b4cf9b132d7f4a5e2ac98cc1200642f00da2f6fb03d104243419b582"
+  }
+}

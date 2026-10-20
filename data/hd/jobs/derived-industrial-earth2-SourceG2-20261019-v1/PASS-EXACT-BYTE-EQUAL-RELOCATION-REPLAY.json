@@ -1,0 +1,29 @@
+{
+  "asset_or_cohort": "earth2",
+  "command": [
+    "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/portable-project/tools/hd_industrial_fine_cleanup.py",
+    "--recipe",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/portable-project/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/earth2-recipe.json",
+    "--output",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/earth2/derived"
+  ],
+  "exit_code": 0,
+  "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/earth2/derived",
+  "changed_recipe_sha256": "41bb1d0f0bfe3d19281cd9e35cfbd613f69dedd055a50b458d67a707fff0ff74",
+  "helper_sha256": "6685ec45a54c00429ef05bac9a00d54ed0bc481ecb3ee8e6cc100a67dadb5be3",
+  "original_recipe_sha256": "f66f26b2f25b0259366caf1fddf99b36c0251029bed8d286b58f2d8a8ddba950",
+  "matches": {
+    "205fe": {
+      "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/earth2/derived/205fe-derived.png",
+      "sha256": "cd0bd8cde78d92a40b882428d7677340f1b5076685ab598e1af21c1b2070ecd2",
+      "byte_equal_reviewed_png": true
+    },
+    "205ff": {
+      "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/earth2/derived/205ff-derived.png",
+      "sha256": "ddd6ecad98bced3d5f685630e6faaf1769ba141bd1e997c9bacaf226f6e55684",
+      "byte_equal_reviewed_png": true
+    }
+  },
+  "status": "PASS_EXACT_RELOCATED_RECIPE_BYTE_EQUAL_REVIEWED_PNG"
+}

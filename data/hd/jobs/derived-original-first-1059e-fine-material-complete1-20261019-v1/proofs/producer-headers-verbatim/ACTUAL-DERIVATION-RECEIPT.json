@@ -1,0 +1,110 @@
+{
+  "implementation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1059e-105a4-105a7-fine-material-CODE-proposal-20261019-v1/terrain_component_cleanup.py",
+    "sha256": "57132a11256eac6f3952b2dedf23edd68c68a0c99048abbad9dbb6512c9854fb",
+    "size": 29500,
+    "mtime_ns": 1792379100948815356,
+    "mode": 33188
+  },
+  "executed_dependency": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+    "size": 14882,
+    "mtime_ns": 1792280173116585173,
+    "mode": 33188
+  },
+  "recipe_input": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1059e-105a4-105a7-fine-material-CODE-proposal-20261019-v1/1059e-UNEXECUTED-RECIPE.json",
+    "sha256": "485ed2a713b969cef812d43055573b30c9260d4b5266cb48de789307bfad88ce",
+    "size": 2111,
+    "mtime_ns": 1792378910507168817,
+    "mode": 33188
+  },
+  "physical_authenticated_input_reads": 4,
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "operation": "further-first-tiles",
+  "input_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1059e-105a4-105a7-fine-material-CODE-proposal-20261019-v1/inputs/new-1059e-master.png",
+      "sha256": "72f75613c04054d23b94da26b3beb3ee6fb3d63be9d739aebdb353f0c9577c7b",
+      "size": 3729302,
+      "mtime_ns": 1792378120195409287,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1059e-105a4-105a7-fine-material-CODE-proposal-20261019-v1/inputs/new-105a4-105a7-master.png",
+      "sha256": "b305fbe79b583b5c8b3fc356871db3b9ad42953b54e02bf876b4170f73946add",
+      "size": 3715489,
+      "mtime_ns": 1792378410969391483,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1059e-105a4-105a7-fine-material-CODE-proposal-20261019-v1/inputs/new-105a4-105a7-master.png",
+      "sha256": "b305fbe79b583b5c8b3fc356871db3b9ad42953b54e02bf876b4170f73946add",
+      "size": 3715489,
+      "mtime_ns": 1792378410969391483,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1059e-105a4-105a7-fine-material-CODE-proposal-20261019-v1/inputs/new-105a4-105a7-master.png",
+      "sha256": "b305fbe79b583b5c8b3fc356871db3b9ad42953b54e02bf876b4170f73946add",
+      "size": 3715489,
+      "mtime_ns": 1792378410969391483,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1059e-105a4-105a7-fine-material-CODE-proposal-20261019-v1/inputs/new-105a4-105a7-master.png",
+      "sha256": "b305fbe79b583b5c8b3fc356871db3b9ad42953b54e02bf876b4170f73946add",
+      "size": 3715489,
+      "mtime_ns": 1792378410969391483,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1059e-105a4-105a7-fine-material-CODE-proposal-20261019-v1/inputs/1059e.pic",
+      "sha256": "ff9dd37e153ae37a7952951a1324954e29ad300f4ea9b620607847dddd662b8a",
+      "size": 1044,
+      "mtime_ns": 1787663959453547765,
+      "mode": 33188
+    }
+  ],
+  "palette": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next1059e-105a4-105a7-fine-material-CODE-proposal-20261019-v1/inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "size": 768,
+    "mtime_ns": 1787663959337906368,
+    "mode": 33188
+  },
+  "recipe_sha256": "485ed2a713b969cef812d43055573b30c9260d4b5266cb48de789307bfad88ce",
+  "metrics": {
+    "selected_ids": [
+      "1059e"
+    ],
+    "assets": [
+      {
+        "asset": "1059e",
+        "original_detail_cells": [],
+        "raw_Source_reserved_cells": 0,
+        "functional_support_union_cells": 0,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 262144,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 235719,
+        "geometry_owner_sha256": "09fa0d4029a6642953d68623b9ae7e5fbbde391939a179511a12c728375740fe",
+        "Original_functional_HD_credit": 0
+      }
+    ],
+    "global_SourceNx_nearest_fallback": false,
+    "fine_band_sigma": 3.0,
+    "fine_band_clip": 16,
+    "fine_band_strength": 0.5,
+    "donor_repetition": false,
+    "contract": "Actual selected3Source contain no reserved labels; unsupported/any reserved input rejected, never reclassified ordinary. Exact green/dark/structural component boundaries follow SourceNx."
+  },
+  "output_is_derived_not_untouched": true,
+  "functional_retention_no_HD_credit": "Original protected cells>=240 retain exact SourceNx RGB/labels. No global Original-nearest fallback is claimed as HD.",
+  "outputs": [
+    {
+      "file": "1059e-derived.png",
+      "sha256": "46a91c3f99830a6b5d2144fdc13f8e5a993bdcbf41b2911cf26ee0dfe1cbd1d0"
+    }
+  ]
+}

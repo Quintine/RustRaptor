@@ -1,0 +1,30 @@
+{
+  "status": "PASS_FILE_ONLY_RUNTIME_NAMESPACE_ALIAS_NO_NEW_G2",
+  "original_candidate": {
+    "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/intrinsic/farm5/ACTUAL-ORIGINAL-CANDIDATE-UNMODIFIED.json",
+    "sha256": "80f59a37456f019b41e96e6ccc54638dbd1cc39cd80021efb2bf452b24ec7875"
+  },
+  "original_actual_qa": {
+    "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/intrinsic/farm5/runtime-qa.json",
+    "sha256": "a0152db654bb03831243488490daaf3e61201cba2aa2d3165bd1535a1f989989"
+  },
+  "portable_candidate": {
+    "path": "jobs/derived-industrial-farm5-SourceG2-20261019-v1/candidate.json",
+    "sha256": "f8bf4cf31c4927baae39c0ec7a3217838e243f85993f699213823d2da8060be1"
+  },
+  "portable_runtime_qa": {
+    "path": "jobs/derived-industrial-farm5-SourceG2-20261019-v1/runtime-qa.json",
+    "sha256": "74ed2c6330a317f08e81d4327b647204bc4108ca4bb159c4ef18eb3ddc9e2c95"
+  },
+  "original_frame_bindings_sha256": "4a994f85460d64cfad00e72e445905d4c9da85812e45cd351bf6034e675048c2",
+  "new_frame_bindings_sha256": "3ac35c3beba8c473e4d1ad814e608e605584df0eea63c615bdc6c72f68422718",
+  "only_renderer_field_change": "file path; all Source/hash/canvas/origin/crop/policy/retained-owner fields exact",
+  "rawPNG_byte_equal": true,
+  "actual_relocation_replay": {
+    "path": "jobs/derived-industrial-farm5-SourceG2-20261019-v1/PASS-EXACT-BYTE-EQUAL-RELOCATION-REPLAY.json",
+    "sha256": "49a7f4949923ea0b843951c7ef92a94c20dd38da6de71b0c9c98971233225d1b"
+  },
+  "original_actual_helper_calls": 1,
+  "new_G2_calls": 0,
+  "library_sha256": "5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676"
+}

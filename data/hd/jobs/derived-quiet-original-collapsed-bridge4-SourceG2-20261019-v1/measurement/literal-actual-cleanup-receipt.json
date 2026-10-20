@@ -1,0 +1,714 @@
+{
+  "implementation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/terrain_component_cleanup.py",
+    "sha256": "ff286585834d42aff8fca0951a118aaa5c3b51294dc078b3b1fe8d04b37f5fbd",
+    "size": 16585,
+    "mtime_ns": 1792368256837047866,
+    "mode": 33188
+  },
+  "executed_dependency": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+    "size": 14882,
+    "mtime_ns": 1792280173116585173,
+    "mode": 33188
+  },
+  "recipe_input": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/bridge4-QUIET-MATERIAL-UNEXECUTED-RECIPE.json",
+    "sha256": "78f2af6e1d6fdf018e90eedec8f45fdfdaaf256c9c331a26210aac895c2d09e4",
+    "size": 2928,
+    "mtime_ns": 1792375963226425065,
+    "mode": 33188
+  },
+  "physical_authenticated_input_reads": 8,
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "operation": "nine-tiles",
+  "input_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23",
+      "size": 2683323,
+      "mtime_ns": 1792375649330560582,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/new-bridge4-master.png",
+      "sha256": "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b",
+      "size": 3552784,
+      "mtime_ns": 1792366001767151315,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/new-bridge4-master.png",
+      "sha256": "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b",
+      "size": 3552784,
+      "mtime_ns": 1792366001767151315,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23",
+      "size": 2683323,
+      "mtime_ns": 1792375649330560582,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/new-road5-master.png",
+      "sha256": "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c",
+      "size": 2803452,
+      "mtime_ns": 1792365221603199086,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/10504.pic",
+      "sha256": "61c3b71919e6cb92a37bae1e427ff682b8b236d8e435f7e9c51400a53732f041",
+      "size": 1044,
+      "mtime_ns": 1787663959443935422,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/1050b.pic",
+      "sha256": "96242dabf808eeb23f0b062e7a45e3a75668c6e37d30f4b7f0c197e22c6d2729",
+      "size": 1044,
+      "mtime_ns": 1787663959444348051,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/1050c.pic",
+      "sha256": "86d2782cdf1080e2971accb068e9d810a19c3c85a3c0c8550e91a3ab5a52a834",
+      "size": 1044,
+      "mtime_ns": 1787663959444403205,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/1050e.pic",
+      "sha256": "bdc9c5b0d3c2b14f1c1e5ada1c30cd0b97adee06a1d5a34a7fa2d35c0cc11e1f",
+      "size": 1044,
+      "mtime_ns": 1787663959444520072,
+      "mode": 33188
+    }
+  ],
+  "palette": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "size": 768,
+    "mtime_ns": 1787663959337906368,
+    "mode": 33188
+  },
+  "recipe_sha256": "78f2af6e1d6fdf018e90eedec8f45fdfdaaf256c9c331a26210aac895c2d09e4",
+  "metrics": {
+    "selected_ids": [
+      "10504",
+      "1050b",
+      "1050c",
+      "1050e"
+    ],
+    "assets": [
+      {
+        "asset": "10504",
+        "original_detail_cells": [
+          [
+            0,
+            20
+          ],
+          [
+            3,
+            31
+          ],
+          [
+            4,
+            19
+          ],
+          [
+            6,
+            24
+          ],
+          [
+            9,
+            30
+          ],
+          [
+            10,
+            21
+          ],
+          [
+            10,
+            28
+          ],
+          [
+            10,
+            29
+          ],
+          [
+            11,
+            14
+          ],
+          [
+            12,
+            22
+          ],
+          [
+            14,
+            31
+          ],
+          [
+            15,
+            17
+          ],
+          [
+            16,
+            17
+          ],
+          [
+            16,
+            26
+          ],
+          [
+            17,
+            31
+          ],
+          [
+            18,
+            19
+          ],
+          [
+            19,
+            27
+          ],
+          [
+            20,
+            24
+          ],
+          [
+            21,
+            27
+          ],
+          [
+            22,
+            22
+          ],
+          [
+            22,
+            26
+          ],
+          [
+            23,
+            29
+          ],
+          [
+            24,
+            16
+          ],
+          [
+            24,
+            23
+          ],
+          [
+            25,
+            27
+          ],
+          [
+            25,
+            28
+          ],
+          [
+            26,
+            18
+          ],
+          [
+            26,
+            19
+          ],
+          [
+            26,
+            21
+          ],
+          [
+            27,
+            21
+          ],
+          [
+            29,
+            21
+          ]
+        ],
+        "raw_Source_reserved_cells": 31,
+        "functional_support_union_cells": 31,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 254208,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 252559,
+        "geometry_owner_sha256": "bbb328a3fb2782d727df2e4a035059cdf84b1918bccb8c29ed72ee4f5e2fcfc2",
+        "Original_functional_HD_credit": 0
+      },
+      {
+        "asset": "1050b",
+        "original_detail_cells": [
+          [
+            4,
+            16
+          ],
+          [
+            5,
+            18
+          ],
+          [
+            5,
+            19
+          ],
+          [
+            7,
+            24
+          ],
+          [
+            7,
+            25
+          ],
+          [
+            8,
+            23
+          ],
+          [
+            8,
+            24
+          ],
+          [
+            10,
+            18
+          ],
+          [
+            10,
+            20
+          ],
+          [
+            11,
+            26
+          ],
+          [
+            11,
+            29
+          ],
+          [
+            12,
+            19
+          ],
+          [
+            13,
+            24
+          ],
+          [
+            14,
+            16
+          ],
+          [
+            17,
+            19
+          ],
+          [
+            18,
+            16
+          ],
+          [
+            18,
+            30
+          ],
+          [
+            19,
+            18
+          ],
+          [
+            19,
+            20
+          ],
+          [
+            21,
+            23
+          ],
+          [
+            22,
+            16
+          ],
+          [
+            25,
+            28
+          ],
+          [
+            25,
+            31
+          ],
+          [
+            27,
+            17
+          ],
+          [
+            27,
+            19
+          ],
+          [
+            27,
+            21
+          ],
+          [
+            29,
+            25
+          ],
+          [
+            30,
+            16
+          ],
+          [
+            30,
+            17
+          ],
+          [
+            30,
+            19
+          ],
+          [
+            31,
+            16
+          ],
+          [
+            31,
+            17
+          ],
+          [
+            31,
+            25
+          ],
+          [
+            31,
+            26
+          ]
+        ],
+        "raw_Source_reserved_cells": 32,
+        "functional_support_union_cells": 34,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 253440,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 251769,
+        "geometry_owner_sha256": "17178877f5fdbbf8091eed980cffb8417fa5d6bca44e9da7ce7180146ffd5085",
+        "Original_functional_HD_credit": 0
+      },
+      {
+        "asset": "1050c",
+        "original_detail_cells": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            6
+          ],
+          [
+            3,
+            15
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            5,
+            12
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            13
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            16
+          ],
+          [
+            14,
+            4
+          ],
+          [
+            15,
+            9
+          ],
+          [
+            16,
+            2
+          ],
+          [
+            16,
+            6
+          ],
+          [
+            18,
+            6
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            21,
+            5
+          ],
+          [
+            21,
+            6
+          ],
+          [
+            21,
+            7
+          ],
+          [
+            22,
+            6
+          ],
+          [
+            22,
+            7
+          ],
+          [
+            23,
+            5
+          ],
+          [
+            23,
+            6
+          ],
+          [
+            24,
+            0
+          ],
+          [
+            24,
+            3
+          ],
+          [
+            24,
+            5
+          ],
+          [
+            24,
+            6
+          ],
+          [
+            24,
+            9
+          ],
+          [
+            25,
+            14
+          ],
+          [
+            27,
+            5
+          ]
+        ],
+        "raw_Source_reserved_cells": 32,
+        "functional_support_union_cells": 36,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 252928,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 251337,
+        "geometry_owner_sha256": "0dda0278072c8ea9627a8280faca4dd8c101974ac774b6be89cb3bff4902f5f2",
+        "Original_functional_HD_credit": 0
+      },
+      {
+        "asset": "1050e",
+        "original_detail_cells": [
+          [
+            15,
+            23
+          ],
+          [
+            16,
+            19
+          ],
+          [
+            17,
+            6
+          ],
+          [
+            17,
+            28
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            18,
+            24
+          ],
+          [
+            18,
+            25
+          ],
+          [
+            19,
+            18
+          ],
+          [
+            19,
+            19
+          ],
+          [
+            19,
+            24
+          ],
+          [
+            19,
+            25
+          ],
+          [
+            20,
+            11
+          ],
+          [
+            20,
+            18
+          ],
+          [
+            20,
+            19
+          ],
+          [
+            23,
+            8
+          ],
+          [
+            23,
+            30
+          ],
+          [
+            25,
+            9
+          ],
+          [
+            25,
+            10
+          ],
+          [
+            25,
+            27
+          ],
+          [
+            27,
+            17
+          ],
+          [
+            27,
+            22
+          ],
+          [
+            27,
+            27
+          ],
+          [
+            29,
+            17
+          ],
+          [
+            29,
+            18
+          ],
+          [
+            30,
+            15
+          ],
+          [
+            30,
+            17
+          ],
+          [
+            30,
+            18
+          ],
+          [
+            30,
+            29
+          ],
+          [
+            30,
+            30
+          ],
+          [
+            31,
+            11
+          ],
+          [
+            31,
+            23
+          ],
+          [
+            31,
+            29
+          ],
+          [
+            31,
+            30
+          ]
+        ],
+        "raw_Source_reserved_cells": 25,
+        "functional_support_union_cells": 33,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 253696,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 251995,
+        "geometry_owner_sha256": "66e940c7c537f635680e07ba02ee4084c49f4878fef4faee8d6f76b9b970f415",
+        "Original_functional_HD_credit": 0
+      }
+    ],
+    "global_SourceNx_nearest_fallback": false
+  },
+  "output_is_derived_not_untouched": true,
+  "functional_retention_no_HD_credit": "Original protected cells>=240 retain exact SourceNx RGB/labels. No global Original-nearest fallback is claimed as HD.",
+  "outputs": [
+    {
+      "file": "10504-derived.png",
+      "sha256": "61c47dee335c42cd6d7c9a986f612e0fafc5bec72c5523efe15c8b30fd436689"
+    },
+    {
+      "file": "1050b-derived.png",
+      "sha256": "9b7b4bbf16d15fdd18cdc3c02b440d720aadf0746686f0ed6b9d001c9a4c78fc"
+    },
+    {
+      "file": "1050c-derived.png",
+      "sha256": "7cee0d016aa506acfcabf468381d56ba27d89600a5cb1fabf938e5e9381fc7d1"
+    },
+    {
+      "file": "1050e-derived.png",
+      "sha256": "a4a6ba053dc3af5882057a3adc5d69d793864aa1428b4b44392b83d7f4442807"
+    }
+  ]
+}

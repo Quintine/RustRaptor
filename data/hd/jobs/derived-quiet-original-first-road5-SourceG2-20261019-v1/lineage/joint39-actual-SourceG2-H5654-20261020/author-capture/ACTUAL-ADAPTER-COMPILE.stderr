@@ -1,0 +1,18 @@
+warning: unused import: `logical_sprite`
+ --> /home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-joint11-SourceG2-H5654-context-author-20261020-v1/compose_joint39_genuine11_SourceG2_H5654.rs:3:154
+  |
+3 | ...ls,OriginalPalette},render::{Canvas,upscale},terrain_hd::{logical_sprite,selected_art,TerrainHd,Replacement,RetainedOriginalPlacem...
+  |                                                              ^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `bank_indices` is never used
+  --> /home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-joint11-SourceG2-H5654-context-author-20261020-v1/compose_joint39_genuine11_SourceG2_H5654.rs:19:4
+   |
+19 | fn bank_indices(bank:&Value,asset:u32,scale:usize)->Vec<u16>{
+   |    ^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: 2 warnings emitted
+

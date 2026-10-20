@@ -1,0 +1,96 @@
+{
+  "method": "terrain-five-Source-separated-materials-genuine-fine-RGB-band-v1",
+  "palette": {
+    "path": "inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "frames": [
+    {
+      "asset": "2068f",
+      "source": {
+        "path": "inputs/2068f.bin",
+        "sha256": "883289cef6e737b8edd9ef51800a666c6f9fa005ac4bc57cae1caa64187c127f"
+      },
+      "donor": {
+        "path": "inputs/genuine-master.png",
+        "sha256": "750c669a711524faceb9f17f335ea60f8c56da8b6a2c3db0818ce50f2bc8154e",
+        "box": [
+          0,
+          0,
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "asset": "20690",
+      "source": {
+        "path": "inputs/20690.bin",
+        "sha256": "7ed202d8729c03004af33dc95fdb74bedcd174c829ad8028f79c0883935464e4"
+      },
+      "donor": {
+        "path": "inputs/genuine-master.png",
+        "sha256": "750c669a711524faceb9f17f335ea60f8c56da8b6a2c3db0818ce50f2bc8154e",
+        "box": [
+          512,
+          0,
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "asset": "20698",
+      "source": {
+        "path": "inputs/20698.bin",
+        "sha256": "e85d9e4bd9966245796354d1339cf5a548f71564fdff4598fb26187e618d1ac6"
+      },
+      "donor": {
+        "path": "inputs/genuine-master.png",
+        "sha256": "750c669a711524faceb9f17f335ea60f8c56da8b6a2c3db0818ce50f2bc8154e",
+        "box": [
+          1024,
+          0,
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "asset": "20699",
+      "source": {
+        "path": "inputs/20699.bin",
+        "sha256": "7855cff3fa9e4616805ffa8b90bb4efd92ded5c2621ba768de86df09656d7691"
+      },
+      "donor": {
+        "path": "inputs/genuine-master.png",
+        "sha256": "750c669a711524faceb9f17f335ea60f8c56da8b6a2c3db0818ce50f2bc8154e",
+        "box": [
+          0,
+          512,
+          512,
+          512
+        ]
+      }
+    },
+    {
+      "asset": "2069c",
+      "source": {
+        "path": "inputs/2069c.bin",
+        "sha256": "0ddf1975af9188206903e74e2394877d92501719e03589d97779a85ecb8b8537"
+      },
+      "donor": {
+        "path": "inputs/genuine-master.png",
+        "sha256": "750c669a711524faceb9f17f335ea60f8c56da8b6a2c3db0818ce50f2bc8154e",
+        "box": [
+          512,
+          512,
+          512,
+          512
+        ]
+      }
+    }
+  ],
+  "lineage": "Own one genuine Original-only five-target coherent atlas, untouched raw750c. Same fixed fine RGB residual sigma3/clip16/strength.5 as industrial method; no coarse generated structure/color/glow. Every tile uses only its own original registered512 square crop, no tiling, synthesis or donor cross-tile.",
+  "functional_contract": "SourceScale4 owns ordinary material boundaries and low-frequency color, zero new-HD credit; genuinely generated fine RGB band supplies detail. Source material groups independently normalized: gray<24,darkgray24..31,maroon32..47,soil192..239,olive58..63,rust64..79,green100..111. Tiny ordinary rare colors80..99/112..191 and cycling240..255 retain exact SourceNx on all1\u20134 support union, zero new-HD detail credit. Sixth black cell is excluded."
+}

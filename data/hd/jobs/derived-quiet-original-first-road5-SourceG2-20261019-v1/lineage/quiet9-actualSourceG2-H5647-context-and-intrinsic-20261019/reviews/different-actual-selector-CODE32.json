@@ -1,0 +1,78 @@
+{
+  "status": "PASS_DIFFERENT_CODE_NINE_TERRAIN_SELECTOR32_PLUS_INDEPENDENT_COMPONENT_CHECK",
+  "utc": "2026-10-19T00:17:43.018445+00:00",
+  "reviewer": "/root/mission_preview_design",
+  "author": "/root/remaining_catalog",
+  "helper": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-nine1050-Source-component-selector-CODE-proposal-20261019-v1/terrain_component_cleanup.py",
+    "sha256": "ff286585834d42aff8fca0951a118aaa5c3b51294dc078b3b1fe8d04b37f5fbd"
+  },
+  "frozen_author_packet": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-nine1050-Source-component-selector-CODE-proposal-20261019-v1/FROZEN-SOURCE-ONLY-NINE-SELECTOR-CODE32-READY.json",
+    "sha256": "9f8967100548492678747ddc5e2dba7b8700ceccc6f71881099ac0d44e9db7e1"
+  },
+  "recipes": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-nine1050-Source-component-selector-CODE-proposal-20261019-v1/road5-UNEXECUTED-PORTABLE-RECIPE.json",
+      "sha256": "c32e02821c60121de9eb8d5e3d6e633c36cd6ea5b791ac6ef68540b5ebc2af34"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-nine1050-Source-component-selector-CODE-proposal-20261019-v1/bridge4-UNEXECUTED-PORTABLE-RECIPE.json",
+      "sha256": "c9f2189113b5e55101d266d25e20a859eb3a321e846c490383f931f1c2feb7b5"
+    }
+  ],
+  "actual_test_count": 32,
+  "synthetic_test_count": 31,
+  "Original_only_geometry_support_test_count": 1,
+  "independent_synthetic_metamorphic_checks": 1,
+  "actual_tests_exit": 0,
+  "baseline24_tests_and_all_old_functions_classes_AST_unchanged_except_extended_main": true,
+  "findings_remaining": [],
+  "functional_Source_credit_rules": [
+    "Explicit148..159water/191soil; protected240..244water and245..255otherfunctional labels retained asOriginal, notordinarymaterial.",
+    "ExactSourceNx4 RGB restoredforprotectedkernel pixels; finaloriginal_detail_cells mustusetheScale1..4 logicalsupportunion, including34/36/33cells for1050b/c/e.",
+    "Generatedtexturecredit excludesentirelogicalsupportownerfootprints, notonlyreservedrawpixels; OriginalfunctionalHDcredit0.",
+    "Zero surviving genuineRGB-band change outsideOriginalretention rejectsasOriginal-only, nevercountsasHD."
+  ],
+  "geometry_and_provenance": [
+    "Exactlycompletewhitelisted5-road/4-bridgeSourcecohorts, opaque32x32 headers and512x512output.",
+    "SourceNx indexedmaterialowners+maskedSourcepalette lowfrequencybase providecoarsegeometry/color; genuine generatedRGB highband limitedto19.5/channel.",
+    "BothgenuinePNGinputs matchuntouchedauthorANDactualprovideroriginal bytehashes; primitivebuiltinreceipts/prompts pinned.",
+    "Finiteexplicitdonorboxesandperiods within1024x1536road/1254squarebridgeparents; crossdonorsdeclaredascontemporaneoussameterrainfamilymaterials.",
+    "Independentochredonorperturbation changes61440pixels onlywithinitsowncomponent,0outside/0protectedwaterfire; geometry/supportunionunchanged."
+  ],
+  "IO_and_reproducibility": [
+    "Exactprior15c97398 nofollowcomponent/O_NONBLOCK regular boundedEOF/restat reader andinputbytecache/BytesIOdecode preserved.",
+    "16MiBinput/64KiBrecipe/4MpixelPNG caps; eachcohortderivedfullyinmemorybefore outputfoldercreation.",
+    "Pinned3284cf6f mathdependencyexecutedfromverifiedbytes; implementation/dependency/recipe/input/outputhash receipts retained."
+  ],
+  "evidence": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-nineTerrain-selector-different-CODE-review-20261019-v1/ACTUAL32-TEST-AND-UNCHANGED-BASELINE-RESULT.json",
+      "sha256": "41de43b56bebddfafe1802b73b7c20c229a3b0f473914699bf40b106ab3eb67c"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-nineTerrain-selector-different-CODE-review-20261019-v1/READONLY-ACTUAL-NINE-ORIGINAL-OPAQUE-SOURCE-AND-FUNCTIONAL-CENSUS.json",
+      "sha256": "59909ada237de283a3309d9c00ded1484ee3ac2c3d09b534ba5ff4f857fb6318"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-nineTerrain-selector-different-CODE-review-20261019-v1/READONLY-ORIGINAL-SOURCENX-FUNCTIONAL-SUPPORT-CELL-UNION-PLAN.json",
+      "sha256": "9f3693c92d162a1464bdd43470bde1f7fd31986eae17218feea397f958ac7799"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-nineTerrain-selector-different-CODE-review-20261019-v1/READONLY-TRUE-GENERATED-PARENTS-AND-CONCRETE-DONOR-BOUNDS.json",
+      "sha256": "28223d84a70758f231287a13c24b031214730d47e002d2df29f3cbd0272c0632"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-nineTerrain-selector-different-CODE-review-20261019-v1/DIFFERENT-SYNTHETIC-COMPONENT-ISOLATION-AND-WATER-FIRE-RETENTION-CHECK.json",
+      "sha256": "235e26e9dc8d126a9e6b677fb76f145043402d21e5070e9addb8f1126b29d4f3"
+    }
+  ],
+  "physical_source_only_donor_boards_viewed": 2,
+  "limits": [
+    "CODE/methodimplementation review, notartisticquality/seam/actualNativeG2qualification.",
+    "Rootmustreviewconcretedonorboundstwofixedrecipesandrelease actualonce-per5/4cohort cleanup; currentG2QA onlyafterfinalcandidatebindingsfixed.",
+    "Actualgeneratedartcleanup/currentRustQA/generation/recomposition/canonicalwrites/Gitoperations byreviewer0.",
+    "Original-only supportplanning and1Originalgeometrytest are explicitlydistinguishedfromsyntheticfixtures andcandidateQA."
+  ]
+}

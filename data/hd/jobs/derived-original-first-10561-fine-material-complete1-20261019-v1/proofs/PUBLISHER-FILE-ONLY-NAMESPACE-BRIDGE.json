@@ -1,0 +1,49 @@
+{
+  "status": "PRIVATE_NAMESPACE_ONLY_SELECTED_SAME_PIXELS_NO_NEW_QA",
+  "producer_candidate": {
+    "path": "jobs/derived-original-first-10561-fine-material-complete1-20261019-v1/proofs/producer-headers-verbatim/candidate.json",
+    "sha256": "793d9ebe4d88bc92585fdedba930520ada75bec894cff3b06d327c4b94467afb"
+  },
+  "producer_job": {
+    "path": "jobs/derived-original-first-10561-fine-material-complete1-20261019-v1/proofs/producer-headers-verbatim/job.json",
+    "sha256": "6604cd95675db758807067d5e47e1deac50327ca063a99de21e9bfbe18e50fe1"
+  },
+  "literal_actual_QA": {
+    "path": "jobs/derived-original-first-10561-fine-material-complete1-20261019-v1/proofs/literal-actual-currentG2/runtime-qa.json",
+    "sha256": "f3faff00934583521864af5d141506965c087941eba46c634cacf5c10efdbf93"
+  },
+  "literal_actual_cleanup": {
+    "path": "jobs/derived-original-first-10561-fine-material-complete1-20261019-v1/proofs/producer-headers-verbatim/ACTUAL-DERIVATION-RECEIPT.json",
+    "sha256": "ac812512e8f53f8d7d951c8f16974063419e44bacee143ae037a38e3877c9c92"
+  },
+  "selected_assets": [
+    "10561"
+  ],
+  "new_candidate": {
+    "path": "jobs/derived-original-first-10561-fine-material-complete1-20261019-v1/candidate.json",
+    "sha256": "5467ca5f9bd2987d5914f4e9c1e20ce672adc326ecc24a1b31d299984ebe7ff9"
+  },
+  "projected_QA": {
+    "path": "jobs/derived-original-first-10561-fine-material-complete1-20261019-v1/runtime-qa.json",
+    "sha256": "94c765e23fd1a9a02c1f69a51df9f956330fcc3b66e114ea4a2fb0a66e922faf"
+  },
+  "old_frame_bindings_sha256": "342eb3a516ca95773d6c75e4aef2887035e81aa996bc31694ad9e6b2cf8eac4e",
+  "new_frame_bindings_sha256": "90a05358a84e626c370a1e526de1924ac30e24ecdf8c66a18932a98d1cd2ca52",
+  "all_selected_fields_except_file_exact": true,
+  "selected_actual_measured_frames_exact": true,
+  "cleanup_recipe_replay_pending": false,
+  "old_QA_unchanged": true,
+  "new_generator_cleanup_QA_World_calls": 0,
+  "actual_portable_reproduction": {
+    "path": "jobs/derived-original-first-10561-fine-material-complete1-20261019-v1/proofs/ACTUAL-PORTABLE-REPLAY-INVOCATION.json",
+    "sha256": "acf17dccd7ce5388b065054ee987ab36d1f24167422d93bf4ddb537233c3968a"
+  },
+  "candidate_before_lineage_binding": {
+    "path": "jobs/derived-original-first-10561-fine-material-complete1-20261019-v1/proofs/candidate-before-lineage-binding.json",
+    "sha256": "f986d8203e53020a3afae7c38bd526c7533a459ad12d20f42809f6dc9d514a6f"
+  },
+  "projected_QA_before_lineage_binding": {
+    "path": "jobs/derived-original-first-10561-fine-material-complete1-20261019-v1/proofs/projected-QA-before-lineage-binding.json",
+    "sha256": "880fd4d12a3959ed8c7b816237440fb454c09a357746f35caf1b2e78df26d6c4"
+  }
+}

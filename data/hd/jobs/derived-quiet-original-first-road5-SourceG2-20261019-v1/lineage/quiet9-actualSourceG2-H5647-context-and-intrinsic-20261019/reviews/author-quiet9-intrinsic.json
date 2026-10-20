@@ -1,0 +1,205 @@
+{
+  "status": "AUTHOR_QUALIFIED9_QUIET_MATERIAL_REMEDIATION_ALL36_NATIVE_COMPLETE_DIFFERENT_ART_PENDING",
+  "author": "/root/stag_portability",
+  "utc": "2026-10-19T03:06:09.870087+00:00",
+  "one_new_builtin_master_sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23",
+  "all_three_genuine_raw_providers_explicit": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/new-road5-master.png",
+      "sha256": "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c",
+      "role": "Prior genuine Original-primary road master, unchanged donors1/4 only as existing recipes specify"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/new-bridge4-master.png",
+      "sha256": "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b",
+      "role": "Prior genuine Original-primary bridge master, unchanged donor1/2 as existing recipes specify"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23",
+      "role": "ONE new genuine Original-primary quiet material master, donor0water and3pavement only; full887square panels, period512"
+    }
+  ],
+  "prompt_path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/prompt.txt",
+  "prompt_sha256": "fe381488e83c507ac376225ecbf80978a5666f8de4c66a4ecf80c01f4b470a53",
+  "tool_mode": "builtin image_gen.imagegen via imagegen SKILL; no API/CLI fallback",
+  "skill_path": "/home/quintine/.codex/skills/.system/imagegen/SKILL.md",
+  "different_sourcebinding_donorplan_PASS_sha256": "8b7ae0deacb04cd9f39a8f5dd1f5cc1811356948248aa8f6ad4d6e223f6bae39",
+  "exact_existing_helper_sha256": "ff286585834d42aff8fca0951a118aaa5c3b51294dc078b3b1fe8d04b37f5fbd",
+  "exact_dependency_sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+  "successor_recipe_sha256": [
+    "e7c5eda42987c36e13499a224c5a40da8dd843a3de179f78f9162056865513ca",
+    "78f2af6e1d6fdf018e90eedec8f45fdfdaaf256c9c331a26210aac895c2d09e4"
+  ],
+  "changed_material_contract": "Only RGB donors0water/3pavement and their new crop bindings/512periods changed. Fields1/2/4, Source IDs/bytes/geometry, component owner masks, transfer parameters and166 functional declarations remain exact.",
+  "actual_technical_result_path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/ACTUAL-TWO-COHORTS-FINAL-QUIET-MATERIAL-G2-TECHNICAL-RESULT-ART-PENDING.json",
+  "actual_technical_result_sha256": "bb872749b66acfcf15999510a4ab2840522a599acb0f5c367e6954f840135f74",
+  "actual_SourceG2_cohorts": [
+    {
+      "cohort": "road-damage5",
+      "actual_cleanup_calls": 1,
+      "total_CLI_attempts": 2,
+      "completed_native_QA_calls": 1,
+      "recipe_sha256": "e7c5eda42987c36e13499a224c5a40da8dd843a3de179f78f9162056865513ca",
+      "candidate_sha256": "438d7708f5e6ec91ccfb894a44393c71498fad7ebcc6eaddfd8fb0ed837bb780",
+      "runtime_manifest_sha256": "e375b1828ae02b2ddd3497f1a65bd996d727603d79423803be1859c5a5514e1d",
+      "derived_receipt_sha256": "be351579bbea525fb75a838638f699a29b561bec30321d65f12f712d5b9a3a31",
+      "actual_QA_sha256": "875795b7ebae10c6ea6d51885fcce3e1a4eb41bbd32fa597a32c8092d9d70efd",
+      "literal_CLI_QA_sha256": "ef47fe0cb5cd93d0ebd7403f3dbe447fc87d76eeffff5cd99e9a1d3f366a7aae",
+      "bank_sha256": "29c8c95b04706293224245737ee97eca8b2f0bdc196bbd6d9fb4164254e8053c",
+      "artwork_sha256": {
+        "10502-derived.png": "c22dab3891374bed35989be491548b1492c94b570bdad50fc3ffa81ea8941492",
+        "10506-derived.png": "54cc9866a9a8fc0f1d38d62ded895c6334dbc95346f8f255482bc012ec0cf563",
+        "10508-derived.png": "de79a23765bc310d5b5a8c572c7e45202229e59d56dfe00373cdedfe9ae8fe3b",
+        "10509-derived.png": "41f38e0d17383244aa7a96815040d1c6b924fa4d5686c958dae185bbb00ebbcc",
+        "1050a-derived.png": "af8535bb17513a4bafced3e85de65961a3cd41c76005d5bd9a6c70299dfd6dff"
+      }
+    },
+    {
+      "cohort": "collapsed-bridge4",
+      "actual_cleanup_calls": 1,
+      "total_CLI_attempts": 1,
+      "completed_native_QA_calls": 1,
+      "recipe_sha256": "78f2af6e1d6fdf018e90eedec8f45fdfdaaf256c9c331a26210aac895c2d09e4",
+      "candidate_sha256": "7631cd293353d5e059a89520d45f155cde2cc67eb4e72e9ad8f3b6c5c941ff7d",
+      "runtime_manifest_sha256": "425a04fc7323b7f45eeee159ead970e32859953a4d40d0c192bd0518006218a5",
+      "derived_receipt_sha256": "54a3fcdeacecd0035deeda2c2ae50d1ecfe9798caf6814d92b6b751d15838217",
+      "actual_QA_sha256": "c27cd63d0051b253ac144c96ef20185e0445809f7cc2339820c18133453469d7",
+      "literal_CLI_QA_sha256": "bf2184d988ce64c2aa3eb7cac421d47f4b5985e5622570dc3bf73b75ea14b2b8",
+      "bank_sha256": "6cd5a3012307981dcc23a1ddc29dc639bb17664ba3ea6d67c9f4f45914cdfe88",
+      "artwork_sha256": {
+        "10504-derived.png": "61c47dee335c42cd6d7c9a986f612e0fafc5bec72c5523efe15c8b30fd436689",
+        "1050b-derived.png": "9b7b4bbf16d15fdd18cdc3c02b440d720aadf0746686f0ed6b9d001c9a4c78fc",
+        "1050c-derived.png": "7cee0d016aa506acfcabf468381d56ba27d89600a5cb1fabf938e5e9381fc7d1",
+        "1050e-derived.png": "a4a6ba053dc3af5882057a3adc5d69d793864aa1428b4b44392b83d7f4442807"
+      }
+    }
+  ],
+  "physical_interface_path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/ALL-NINE-108-WHOLE-NATIVE-PANES-SOURCE-HELD-QUIET-PHYSICAL-REVIEW-INTERFACE.json",
+  "physical_interface_sha256": "79bbd200b4645a1b295b7a24a3dee7d37e9bae5ce2d794da47c7835b8b8de5a9",
+  "physical_scope": "Entire new1774x887quietraw; both untouched old Original-primary masters already whole-viewed in prior intrinsic review; all9new512wholederivedimages; all9complete1260x1200Original-held-quiet comparisonpages with all108nativebodies, including all36actualnewG2bodies.",
+  "per_frame": [
+    {
+      "asset": "10502",
+      "author_intrinsic_result": "QUALIFIED_WITH_ORIGINAL_RETENTION_AND_CONTEXT_LIMITS",
+      "whole_512_derived_physically_viewed": true,
+      "all_Original_held_and_quiet_native1to4_whole_bodies_physically_viewed": true,
+      "functional_Original_union_cells_no_HD_credit": 6,
+      "observation": "Original road/apron/damage/ochre silhouettes remain exact in role comparison. Earlier pavement curls and broad water donor motifs are absent; quiet fine generated grain remains visible at native2\u20134 without overpowering the form.",
+      "whole_native_comparison_page": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/road-damage5/whole-Source-held-and-actual-quiet-native1to4/10502-WHOLE-Original-held-QUIET-actualG2-native1to4-NN3.png",
+      "page_sha256": "2d6db458a22ea54cf545fb830adfd4303c464002cd6eeb922869fc413d4bd0d9"
+    },
+    {
+      "asset": "10506",
+      "author_intrinsic_result": "QUALIFIED_WITH_ORIGINAL_RETENTION_AND_CONTEXT_LIMITS",
+      "whole_512_derived_physically_viewed": true,
+      "all_Original_held_and_quiet_native1to4_whole_bodies_physically_viewed": true,
+      "functional_Original_union_cells_no_HD_credit": 6,
+      "observation": "Original road/apron/damage/ochre silhouettes remain exact in role comparison. Earlier pavement curls and broad water donor motifs are absent; quiet fine generated grain remains visible at native2\u20134 without overpowering the form.",
+      "whole_native_comparison_page": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/road-damage5/whole-Source-held-and-actual-quiet-native1to4/10506-WHOLE-Original-held-QUIET-actualG2-native1to4-NN3.png",
+      "page_sha256": "f471cbfdd79dda7ba5daeec239b534a6d333e181240ffb0a39bfd35bda49cc89"
+    },
+    {
+      "asset": "10508",
+      "author_intrinsic_result": "QUALIFIED_WITH_ORIGINAL_RETENTION_AND_CONTEXT_LIMITS",
+      "whole_512_derived_physically_viewed": true,
+      "all_Original_held_and_quiet_native1to4_whole_bodies_physically_viewed": true,
+      "functional_Original_union_cells_no_HD_credit": 9,
+      "observation": "Original road/apron/damage/ochre silhouettes remain exact in role comparison. Earlier pavement curls and broad water donor motifs are absent; quiet fine generated grain remains visible at native2\u20134 without overpowering the form.",
+      "whole_native_comparison_page": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/road-damage5/whole-Source-held-and-actual-quiet-native1to4/10508-WHOLE-Original-held-QUIET-actualG2-native1to4-NN3.png",
+      "page_sha256": "83ab2839d8003ccda71bb4003f81a2a8d0233753cfd0ecb630632954e9e41c00"
+    },
+    {
+      "asset": "10509",
+      "author_intrinsic_result": "QUALIFIED_WITH_ORIGINAL_RETENTION_AND_CONTEXT_LIMITS",
+      "whole_512_derived_physically_viewed": true,
+      "all_Original_held_and_quiet_native1to4_whole_bodies_physically_viewed": true,
+      "functional_Original_union_cells_no_HD_credit": 0,
+      "observation": "Original road/apron/damage/ochre silhouettes remain exact in role comparison. Earlier pavement curls and broad water donor motifs are absent; quiet fine generated grain remains visible at native2\u20134 without overpowering the form.",
+      "whole_native_comparison_page": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/road-damage5/whole-Source-held-and-actual-quiet-native1to4/10509-WHOLE-Original-held-QUIET-actualG2-native1to4-NN3.png",
+      "page_sha256": "18f4be8600bf01818d8956b689dade70612ba1d5accce16c5704bfda809d8bd5"
+    },
+    {
+      "asset": "1050a",
+      "author_intrinsic_result": "QUALIFIED_WITH_ORIGINAL_RETENTION_AND_CONTEXT_LIMITS",
+      "whole_512_derived_physically_viewed": true,
+      "all_Original_held_and_quiet_native1to4_whole_bodies_physically_viewed": true,
+      "functional_Original_union_cells_no_HD_credit": 11,
+      "observation": "Original road/apron/damage/ochre silhouettes remain exact in role comparison. Earlier pavement curls and broad water donor motifs are absent; quiet fine generated grain remains visible at native2\u20134 without overpowering the form.",
+      "whole_native_comparison_page": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/road-damage5/whole-Source-held-and-actual-quiet-native1to4/1050a-WHOLE-Original-held-QUIET-actualG2-native1to4-NN3.png",
+      "page_sha256": "a2e4731ec163054bd4bf45cacf79e02a6efc7155f3d1fce8e859cda294724084"
+    },
+    {
+      "asset": "10504",
+      "author_intrinsic_result": "QUALIFIED_WITH_ORIGINAL_RETENTION_AND_CONTEXT_LIMITS",
+      "whole_512_derived_physically_viewed": true,
+      "all_Original_held_and_quiet_native1to4_whole_bodies_physically_viewed": true,
+      "functional_Original_union_cells_no_HD_credit": 31,
+      "observation": "Original shoreline/deck voids and surviving gray support fragments remain readable. Earlier extra oval/debris-like water donor motifs are absent; open water has quiet fine ripple variation; native3/4 retain genuine material while Original functional spots/supports remain visibly coarse.",
+      "whole_native_comparison_page": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/collapsed-bridge4/whole-Source-held-and-actual-quiet-native1to4/10504-WHOLE-Original-held-QUIET-actualG2-native1to4-NN3.png",
+      "page_sha256": "b79e320bf75837d9e1596c62c53ea260bc73e69774960a3a53c97f3e893614de"
+    },
+    {
+      "asset": "1050b",
+      "author_intrinsic_result": "QUALIFIED_WITH_ORIGINAL_RETENTION_AND_CONTEXT_LIMITS",
+      "whole_512_derived_physically_viewed": true,
+      "all_Original_held_and_quiet_native1to4_whole_bodies_physically_viewed": true,
+      "functional_Original_union_cells_no_HD_credit": 34,
+      "observation": "Original shoreline/deck voids and surviving gray support fragments remain readable. Earlier extra oval/debris-like water donor motifs are absent; open water has quiet fine ripple variation; native3/4 retain genuine material while Original functional spots/supports remain visibly coarse.",
+      "whole_native_comparison_page": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/collapsed-bridge4/whole-Source-held-and-actual-quiet-native1to4/1050b-WHOLE-Original-held-QUIET-actualG2-native1to4-NN3.png",
+      "page_sha256": "2ba45cf02df6cf029564e604cc5465699bafc7049cf413821a08eb90d41fa3d8"
+    },
+    {
+      "asset": "1050c",
+      "author_intrinsic_result": "QUALIFIED_WITH_ORIGINAL_RETENTION_AND_CONTEXT_LIMITS",
+      "whole_512_derived_physically_viewed": true,
+      "all_Original_held_and_quiet_native1to4_whole_bodies_physically_viewed": true,
+      "functional_Original_union_cells_no_HD_credit": 36,
+      "observation": "Original shoreline/deck voids and surviving gray support fragments remain readable. Earlier extra oval/debris-like water donor motifs are absent; open water has quiet fine ripple variation; native3/4 retain genuine material while Original functional spots/supports remain visibly coarse.",
+      "whole_native_comparison_page": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/collapsed-bridge4/whole-Source-held-and-actual-quiet-native1to4/1050c-WHOLE-Original-held-QUIET-actualG2-native1to4-NN3.png",
+      "page_sha256": "4f40ed00e3cbe14c078743f2846014385d99b729b43ef81b4d70b135d59906b8"
+    },
+    {
+      "asset": "1050e",
+      "author_intrinsic_result": "QUALIFIED_WITH_ORIGINAL_RETENTION_AND_CONTEXT_LIMITS",
+      "whole_512_derived_physically_viewed": true,
+      "all_Original_held_and_quiet_native1to4_whole_bodies_physically_viewed": true,
+      "functional_Original_union_cells_no_HD_credit": 33,
+      "observation": "Original shoreline/deck voids and surviving gray support fragments remain readable. Earlier extra oval/debris-like water donor motifs are absent; open water has quiet fine ripple variation; native3/4 retain genuine material while Original functional spots/supports remain visibly coarse.",
+      "whole_native_comparison_page": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/collapsed-bridge4/whole-Source-held-and-actual-quiet-native1to4/1050e-WHOLE-Original-held-QUIET-actualG2-native1to4-NN3.png",
+      "page_sha256": "8dc296db0b118be0818c0ce3f26ebae41a21d138b061bdd18ee3e18a251410c9"
+    }
+  ],
+  "Original_functional_union_no_HD_credit_cells": 166,
+  "all36_native_original_union_owner_and_reserved_labels_exact": true,
+  "raw_nonmaterial0_3_pixels_unchanged": true,
+  "raw_actual_reserved_SourceNx_samples_unchanged": true,
+  "initial_raw_union_audit_scope_correction": "Initial check overrequired all512subpixels of entire logical owner union. Approved unchanged helper protects reservedSourceNx raw support; ordinary uncredited union subpixels may change donor before complete166owner restoration in native1\u20134. Initial script/stop preserved; cleanup never rerun.",
+  "initial_manifest_schema_stop": "First road CLI EXIT101 on artist-only complete_family field before anysprite/PPM/index output. Root released strict-schema metadata-only successor. Candidate renderer bindings/art bytes unchanged; first failedattempt preserved.",
+  "actual_counts": {
+    "new_imagegen_calls": 1,
+    "new_cleanup_calls": 2,
+    "all_G2_CLI_attempts": 3,
+    "completed_G2_native_QA_calls": 2,
+    "metadata_only_preoutput_G2_failure": 1,
+    "new_Rust_compiles": 0,
+    "cleanup_reruns": 0,
+    "contexts_or_World": 0,
+    "canonical_or_Git_changes": 0
+  },
+  "qualification_limits": [
+    "This is AUTHOR intrinsic qualification; a different finalARTpeer and Root still required.",
+    "Original shape/low-frequency colors are reconstruction guidance and do not receive generated-detail credit. Genuine fine RGB bands survive separately.",
+    "All166 Original functional union cells receive no newHD detail credit; coarse spots/structure can remain sharper/blockier than surrounding texture.",
+    "Quiet materials are intentionally restrained; native1 is close to Original and mildly soft. This does not claim equal detail at every display scale.",
+    "Unchanged gray/redsoil/ochre donors retain their prior material character; no whole-family16 regeneration claimed.",
+    "No genuine Source caller/destroyed-neighbor/seam or temporal motion qualification yet."
+  ],
+  "prior_HOLD9_and_all_old_art_recipes_QA_preserved": true,
+  "pending": [
+    "Root assigns DIFFERENT final materialARTpeer on all9/36native outputs.",
+    "Only after actualqualification, bounded Original MAP/state census and genuine contexts with registered family neighbors.",
+    "Root admission and portable reproduction/registration packaging later."
+  ],
+  "free_bytes": 5146963968
+}

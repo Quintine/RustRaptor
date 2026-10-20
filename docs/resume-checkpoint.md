@@ -1,3 +1,15 @@
+# Current approved-artwork checkpoint — 20 October 2026
+
+Current artwork checkpoint — 20 October 2026: **5,693 reviewed pictures / 3,780 complete sequences**, including **4,480 Terrain pictures**. **60 originals remain**: 55 Terrain, four enemies/ground objects and one UI/other picture.
+
+This 39-picture Terrain append covers quiet roads/bridges, shorelines, damaged terrain, industrial material and fine terrain. Its PNGs comprise 32 Source-guided derived images, six lossless genuine-atlas crops and one untouched full generator return 10510. Original geometry, tonal backing and retained functional/gray/fidelity cells earn no generated-HD-detail credit. Restrained fine material, native1 downsampling and inherited stepped or mixed-material joins remain documented limits.
+
+The old intrinsic and finite scene captures retain their literal epochs. A separate current joint check reviewed 11 affected genuine terrain states at native1–4, using H5654 accepted stages plus the frozen39 overlay. Its 39-definition header was an overlay, not a measured registered5693 bank. The initial constructor rejected a strict header before graphics (101); a metadata-only header successor passed on the same binary (0). Different review covered all 176 complete saved bodies; Root reviewed all 11 native4. These static checks do not claim all callers, World timing or full missions.
+
+An earlier authority-preparation check stopped on a shared proof route before staging; its metadata correction and zero stage/main scope are preserved. Twenty-one staged checks preceded one private registrar main. Runtime: **22,424 files / 9,666,147,217 bytes**. Launcher checks exited0 with **6,449 assets verified** and **5,693 HD frames validated, zero rejects**. Five fresh Python processes passed **820 distinct cases**: 656 maintained root cases and 164 versioned namespace cases, comprising 804 synthetic/generated-fixture contracts and 16 authentic Original-data integrations. Five bounded fine6 recipe reproductions matched every selected PNG; the historical 105a4 companion remains unselected. SourceG2 binaries, 45 mods and 42 SD/HD briefings are unchanged. Native Windows 5654 success39229967668 remains dated; no native 5693 result is claimed.
+
+# Earlier artwork and presentation checkpoints — retained verbatim
+
 # Resumed — 20 October 2026
 
 Work resumed at the user’s request. The installed artwork remains **5,654 reviewed pictures / 3,741 sequences**, with **99 originals awaiting publication**. Three historical accepted QA receipts have been restored byte-for-byte, with their exact runtime-manifest entries; no artwork, engine binary or mod changed. See [the restoration receipt](hd-proof-repair-2026-10-20.json). The runtime now contains **14,497 data files / 8,907,233,712 bytes**.

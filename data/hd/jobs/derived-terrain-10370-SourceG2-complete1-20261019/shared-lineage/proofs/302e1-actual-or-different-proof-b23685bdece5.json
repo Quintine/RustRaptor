@@ -1,0 +1,125 @@
+{
+  "output_guard": {
+    "minimum_free_bytes": 1932735284,
+    "output_reserve_bytes": 35127296,
+    "actual_free_bytes": 3851718656,
+    "existing_nonsymlink_parent": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor"
+  },
+  "implementation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/final-reviewed-quiet-floor-pack/reproducer/followon302e1_quiet_floor_cleanup.py",
+    "sha256": "df2d1a9b84d8f173504ccd36c3f59f411a2f34177ffed7614af8dd37842b4c9d",
+    "size": 13308,
+    "mtime_ns": 1792394106693964693,
+    "mode": 33188
+  },
+  "executed_dependency": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+    "size": 14882,
+    "mtime_ns": 1792280173116585173,
+    "mode": 33188
+  },
+  "recipe_input": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/final-reviewed-quiet-floor-pack/reproducer/recipe.json",
+    "sha256": "79bcf2d67f3bf0d757c29f54d1b8ab1682719b8f07bbeac4372ba40b43610263",
+    "size": 1654,
+    "mtime_ns": 1792394106695346598,
+    "mode": 33188
+  },
+  "physical_authenticated_input_reads": 3,
+  "method": "followon302e1-fixed-quiet-floor-fine-material-v1",
+  "input_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/final-reviewed-quiet-floor-pack/reproducer/inputs/302e1.pic",
+      "sha256": "0a68733409981a29887a89ddd3630f8e5de28d3dd401461c2bb5f0c7c149df25",
+      "size": 1044,
+      "mtime_ns": 1787663959671835944,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/final-reviewed-quiet-floor-pack/reproducer/inputs/genuine-master.png",
+      "sha256": "d454690c31ce47d13dc7db29bb1f81db612b9ca2f9d0eba9aeabe4eef2d2b123",
+      "size": 2523667,
+      "mtime_ns": 1792388265735788062,
+      "mode": 33188
+    }
+  ],
+  "palette": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon10370-302e1-30380-30465-40372-Original-primary-author-20261019-v1/302e1/fixed-quiet-floor-successor/final-reviewed-quiet-floor-pack/reproducer/inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "size": 768,
+    "mtime_ns": 1787663959337906368,
+    "mode": 33188
+  },
+  "recipe_sha256": "79bcf2d67f3bf0d757c29f54d1b8ab1682719b8f07bbeac4372ba40b43610263",
+  "metrics": {
+    "selected_ids": [
+      "302e1"
+    ],
+    "assets": [
+      {
+        "asset": "302e1",
+        "original_detail_cells": [
+          [
+            7,
+            15
+          ],
+          [
+            7,
+            16
+          ],
+          [
+            7,
+            17
+          ],
+          [
+            7,
+            18
+          ],
+          [
+            7,
+            19
+          ],
+          [
+            7,
+            20
+          ],
+          [
+            7,
+            21
+          ]
+        ],
+        "raw_Source_reserved_cells": 0,
+        "functional_or_colored_cue_raw_samples": 7,
+        "Source_fidelity_owner_union_cells": 7,
+        "all_cue_and_reserved_SourceNx_RGB_exact": true,
+        "Source31_black_pixels_exact": 17056,
+        "Source_violet_path_halo_HDR_pixels": 0,
+        "all_backing_SourceNx_RGB_exact": true,
+        "Original_backing_HDR_samples_no_HDcredit": 18848,
+        "nonretained_HDR_pixels": 243296,
+        "genuine_RGB_band_changed_nonretained_HDR_pixels": 207905,
+        "Original_functional_HD_credit": 0,
+        "geometry_owner_sha256": "01de611be3c11f315f26f65a8650a0c56dcda7eb0e16b05f15d975aabcf4af7a"
+      }
+    ],
+    "source_base_sigma": 0.5,
+    "executed_fine_band_by_asset": {
+      "302e1": {
+        "sigma": 3.0,
+        "clip": 16,
+        "strength": 0.5
+      }
+    },
+    "donor_repetition": false,
+    "global_SourceNx_nearest_fallback": false
+  },
+  "output_is_derived_not_untouched": true,
+  "functional_retention_no_HD_credit": "Protected Source labels240..255, explicit ordinary Sourcecoloredcue unions, black31 and40372pathhalo retain OriginalRGB with zeroHDcredit. Actualdeclared ownercells SourceNx restored atnative1..4; fine generated texture elsewhere is separate.",
+  "outputs": [
+    {
+      "file": "302e1-derived.png",
+      "sha256": "d7c2aa5e382d5be9dcf37ab5e23571ee1beb511d84ec7c6397fb5c68d6dbcf1a"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "status": "TECHNICAL_PASS_QUIET_MATERIAL9_FINAL_ART_PENDING",
+  "cohorts": [
+    {
+      "cohort": "road-damage5",
+      "actual_cleanup_calls": 1,
+      "total_CLI_attempts": 2,
+      "completed_native_QA_calls": 1,
+      "recipe_sha256": "e7c5eda42987c36e13499a224c5a40da8dd843a3de179f78f9162056865513ca",
+      "candidate_sha256": "438d7708f5e6ec91ccfb894a44393c71498fad7ebcc6eaddfd8fb0ed837bb780",
+      "runtime_manifest_sha256": "e375b1828ae02b2ddd3497f1a65bd996d727603d79423803be1859c5a5514e1d",
+      "derived_receipt_sha256": "be351579bbea525fb75a838638f699a29b561bec30321d65f12f712d5b9a3a31",
+      "actual_QA_sha256": "875795b7ebae10c6ea6d51885fcce3e1a4eb41bbd32fa597a32c8092d9d70efd",
+      "literal_CLI_QA_sha256": "ef47fe0cb5cd93d0ebd7403f3dbe447fc87d76eeffff5cd99e9a1d3f366a7aae",
+      "bank_sha256": "29c8c95b04706293224245737ee97eca8b2f0bdc196bbd6d9fb4164254e8053c",
+      "artwork_sha256": {
+        "10502-derived.png": "c22dab3891374bed35989be491548b1492c94b570bdad50fc3ffa81ea8941492",
+        "10506-derived.png": "54cc9866a9a8fc0f1d38d62ded895c6334dbc95346f8f255482bc012ec0cf563",
+        "10508-derived.png": "de79a23765bc310d5b5a8c572c7e45202229e59d56dfe00373cdedfe9ae8fe3b",
+        "10509-derived.png": "41f38e0d17383244aa7a96815040d1c6b924fa4d5686c958dae185bbb00ebbcc",
+        "1050a-derived.png": "af8535bb17513a4bafced3e85de65961a3cd41c76005d5bd9a6c70299dfd6dff"
+      }
+    },
+    {
+      "cohort": "collapsed-bridge4",
+      "actual_cleanup_calls": 1,
+      "total_CLI_attempts": 1,
+      "completed_native_QA_calls": 1,
+      "recipe_sha256": "78f2af6e1d6fdf018e90eedec8f45fdfdaaf256c9c331a26210aac895c2d09e4",
+      "candidate_sha256": "7631cd293353d5e059a89520d45f155cde2cc67eb4e72e9ad8f3b6c5c941ff7d",
+      "runtime_manifest_sha256": "425a04fc7323b7f45eeee159ead970e32859953a4d40d0c192bd0518006218a5",
+      "derived_receipt_sha256": "54a3fcdeacecd0035deeda2c2ae50d1ecfe9798caf6814d92b6b751d15838217",
+      "actual_QA_sha256": "c27cd63d0051b253ac144c96ef20185e0445809f7cc2339820c18133453469d7",
+      "literal_CLI_QA_sha256": "bf2184d988ce64c2aa3eb7cac421d47f4b5985e5622570dc3bf73b75ea14b2b8",
+      "bank_sha256": "6cd5a3012307981dcc23a1ddc29dc639bb17664ba3ea6d67c9f4f45914cdfe88",
+      "artwork_sha256": {
+        "10504-derived.png": "61c47dee335c42cd6d7c9a986f612e0fafc5bec72c5523efe15c8b30fd436689",
+        "1050b-derived.png": "9b7b4bbf16d15fdd18cdc3c02b440d720aadf0746686f0ed6b9d001c9a4c78fc",
+        "1050c-derived.png": "7cee0d016aa506acfcabf468381d56ba27d89600a5cb1fabf938e5e9381fc7d1",
+        "1050e-derived.png": "a4a6ba053dc3af5882057a3adc5d69d793864aa1428b4b44392b83d7f4442807"
+      }
+    }
+  ],
+  "total_actual_cleanup_calls": 2,
+  "total_actual_CLI_attempts": 3,
+  "total_completed_native_G2_calls": 2,
+  "initial_road_manifest_deserialize_failure_preserved": true,
+  "initial_raw_union_guard_assumption_failure_preserved": true,
+  "no_cleanup_reruns_or_pixel_tuning": true,
+  "new_Rust_compiles": 0,
+  "generated_material_plate_calls": 1,
+  "functional_original_union_cells_exact_native_no_HD_credit": 166,
+  "only_raw_material0_3_changed": true,
+  "canonical_or_Git_changes": false,
+  "Root_final_art_and_context_pending": true,
+  "free_bytes": 5240659968,
+  "utc": "2026-10-19T02:55:00.002552+00:00"
+}

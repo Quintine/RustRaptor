@@ -1,0 +1,329 @@
+{
+  "implementation": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/terrain_component_cleanup.py",
+    "sha256": "ff286585834d42aff8fca0951a118aaa5c3b51294dc078b3b1fe8d04b37f5fbd",
+    "size": 16585,
+    "mtime_ns": 1792368256837047866,
+    "mode": 33188
+  },
+  "executed_dependency": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/tools/hd_terrain_cleanup.py",
+    "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092",
+    "size": 14882,
+    "mtime_ns": 1792280173116585173,
+    "mode": 33188
+  },
+  "recipe_input": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/road5-QUIET-MATERIAL-UNEXECUTED-RECIPE.json",
+    "sha256": "e7c5eda42987c36e13499a224c5a40da8dd843a3de179f78f9162056865513ca",
+    "size": 3082,
+    "mtime_ns": 1792375963216339911,
+    "mode": 33188
+  },
+  "physical_authenticated_input_reads": 9,
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "operation": "nine-tiles",
+  "input_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23",
+      "size": 2683323,
+      "mtime_ns": 1792375649330560582,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/new-road5-master.png",
+      "sha256": "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c",
+      "size": 2803452,
+      "mtime_ns": 1792365221603199086,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/new-bridge4-master.png",
+      "sha256": "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b",
+      "size": 3552784,
+      "mtime_ns": 1792366001767151315,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23",
+      "size": 2683323,
+      "mtime_ns": 1792375649330560582,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/new-road5-master.png",
+      "sha256": "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c",
+      "size": 2803452,
+      "mtime_ns": 1792365221603199086,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/10502.pic",
+      "sha256": "412a22ffdc6c4bc25c534e2a5b10878adeb2e938f526fceb2918bead09d537d5",
+      "size": 1044,
+      "mtime_ns": 1787663959443819776,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/10506.pic",
+      "sha256": "a5ecb160c8edbc1502f0069b80d066f65877737eaffa948401ed3eb00224276b",
+      "size": 1044,
+      "mtime_ns": 1787663959444059854,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/10508.pic",
+      "sha256": "83b0eb5df8794a63690a306962fc9f4c0fc2795634c257acf76c15bc83870ee7",
+      "size": 1044,
+      "mtime_ns": 1787663959444176402,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/10509.pic",
+      "sha256": "ad820e692971cf846c7f150ffddb0b0a8966f1b6afa035d8a83ba1a325b90ea2",
+      "size": 1044,
+      "mtime_ns": 1787663959444235580,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/1050a.pic",
+      "sha256": "7516dde8481dc40892327f551cd04812d69a7db79c28ebc1af451fc0e7a507fa",
+      "size": 1044,
+      "mtime_ns": 1787663959444291582,
+      "mode": 33188
+    }
+  ],
+  "palette": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-nine1050-quiet-materialplate-remediation-20261019-v1/inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+    "size": 768,
+    "mtime_ns": 1787663959337906368,
+    "mode": 33188
+  },
+  "recipe_sha256": "e7c5eda42987c36e13499a224c5a40da8dd843a3de179f78f9162056865513ca",
+  "metrics": {
+    "selected_ids": [
+      "10502",
+      "10506",
+      "10508",
+      "10509",
+      "1050a"
+    ],
+    "assets": [
+      {
+        "asset": "10502",
+        "original_detail_cells": [
+          [
+            3,
+            13
+          ],
+          [
+            11,
+            15
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            18,
+            0
+          ],
+          [
+            22,
+            13
+          ],
+          [
+            28,
+            7
+          ]
+        ],
+        "raw_Source_reserved_cells": 6,
+        "functional_support_union_cells": 6,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 260608,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 258240,
+        "geometry_owner_sha256": "1d4c6a84ca49b6c1ad8efcca4cd14e5336ee8c92a561f9228ffa48c3b83ec91a",
+        "Original_functional_HD_credit": 0
+      },
+      {
+        "asset": "10506",
+        "original_detail_cells": [
+          [
+            0,
+            19
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            16,
+            20
+          ],
+          [
+            18,
+            12
+          ]
+        ],
+        "raw_Source_reserved_cells": 6,
+        "functional_support_union_cells": 6,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 260608,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 256717,
+        "geometry_owner_sha256": "1b5b4b6bd31450ae87e9c56dbcef7a1f152223c882872abcd33c2b4d344cdd5d",
+        "Original_functional_HD_credit": 0
+      },
+      {
+        "asset": "10508",
+        "original_detail_cells": [
+          [
+            10,
+            23
+          ],
+          [
+            11,
+            13
+          ],
+          [
+            12,
+            14
+          ],
+          [
+            17,
+            22
+          ],
+          [
+            21,
+            5
+          ],
+          [
+            22,
+            8
+          ],
+          [
+            23,
+            6
+          ],
+          [
+            24,
+            5
+          ],
+          [
+            31,
+            0
+          ]
+        ],
+        "raw_Source_reserved_cells": 9,
+        "functional_support_union_cells": 9,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 259840,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 257294,
+        "geometry_owner_sha256": "3299966ba91bc90ccfd9c9054511e2b017ad330311443cbfd69e703cd9c4f742",
+        "Original_functional_HD_credit": 0
+      },
+      {
+        "asset": "10509",
+        "original_detail_cells": [],
+        "raw_Source_reserved_cells": 0,
+        "functional_support_union_cells": 0,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 262144,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 258820,
+        "geometry_owner_sha256": "0f280aff63ba03bf12d4d2de3c8de9997a15d179fe7847b8ff74ba733802afaa",
+        "Original_functional_HD_credit": 0
+      },
+      {
+        "asset": "1050a",
+        "original_detail_cells": [
+          [
+            3,
+            20
+          ],
+          [
+            5,
+            22
+          ],
+          [
+            6,
+            19
+          ],
+          [
+            6,
+            20
+          ],
+          [
+            10,
+            16
+          ],
+          [
+            10,
+            27
+          ],
+          [
+            19,
+            26
+          ],
+          [
+            20,
+            23
+          ],
+          [
+            21,
+            24
+          ],
+          [
+            22,
+            18
+          ],
+          [
+            22,
+            26
+          ]
+        ],
+        "raw_Source_reserved_cells": 11,
+        "functional_support_union_cells": 11,
+        "all_functional_SourceNx_RGB_exact": true,
+        "nonfunctional_HDR_pixels": 259328,
+        "genuine_RGB_band_changed_nonfunctional_HDR_pixels": 255664,
+        "geometry_owner_sha256": "059fd8cb15acb851e78573d8704ce43969da0c7b3d4c511b7bf9f3b9790cda2b",
+        "Original_functional_HD_credit": 0
+      }
+    ],
+    "global_SourceNx_nearest_fallback": false
+  },
+  "output_is_derived_not_untouched": true,
+  "functional_retention_no_HD_credit": "Original protected cells>=240 retain exact SourceNx RGB/labels. No global Original-nearest fallback is claimed as HD.",
+  "outputs": [
+    {
+      "file": "10502-derived.png",
+      "sha256": "c22dab3891374bed35989be491548b1492c94b570bdad50fc3ffa81ea8941492"
+    },
+    {
+      "file": "10506-derived.png",
+      "sha256": "54cc9866a9a8fc0f1d38d62ded895c6334dbc95346f8f255482bc012ec0cf563"
+    },
+    {
+      "file": "10508-derived.png",
+      "sha256": "de79a23765bc310d5b5a8c572c7e45202229e59d56dfe00373cdedfe9ae8fe3b"
+    },
+    {
+      "file": "10509-derived.png",
+      "sha256": "41f38e0d17383244aa7a96815040d1c6b924fa4d5686c958dae185bbb00ebbcc"
+    },
+    {
+      "file": "1050a-derived.png",
+      "sha256": "af8535bb17513a4bafced3e85de65961a3cd41c76005d5bd9a6c70299dfd6dff"
+    }
+  ]
+}

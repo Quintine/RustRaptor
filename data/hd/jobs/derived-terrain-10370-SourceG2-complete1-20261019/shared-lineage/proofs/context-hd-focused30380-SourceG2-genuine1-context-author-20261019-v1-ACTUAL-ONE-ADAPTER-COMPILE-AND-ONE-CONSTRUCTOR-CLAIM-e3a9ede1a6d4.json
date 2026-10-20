@@ -1,0 +1,49 @@
+{
+  "Root_GO": true,
+  "source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-focused30380-SourceG2-genuine1-context-author-20261019-v1/compose_focused30380_SourceG2_actual_H.rs",
+    "sha256": "e52a978f78f927b2c327d8f78f637330b3b2928914ac135602216f40d58f50fa",
+    "size": 18585,
+    "mtime_ns": 1792394368354580335,
+    "mode": 33188
+  },
+  "recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-focused30380-SourceG2-genuine1-context-author-20261019-v1/SEALED-FOCUSED30380-GENUINE1-CURRENTG2-RECIPE.json",
+    "sha256": "f1348e3016c396c2579e910257fb4315f49fe7a1cfd8b79452aca55845834cee",
+    "size": 6985,
+    "mtime_ns": 1792395561827130199,
+    "mode": 33188
+  },
+  "actual_G2_library": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "sha256": "5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676",
+    "size": 22772516,
+    "mtime_ns": 1792326752687554590,
+    "mode": 33060
+  },
+  "compile_argv": [
+    "/usr/bin/rustc",
+    "--edition=2024",
+    "-O",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-focused30380-SourceG2-genuine1-context-author-20261019-v1/compose_focused30380_SourceG2_actual_H.rs",
+    "--extern",
+    "raptor_replica=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "--extern",
+    "serde_json=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libserde_json-89b5c242431768d3.rlib",
+    "--extern",
+    "flate2=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps/libflate2-808a135ff259ee28.rlib",
+    "-L",
+    "dependency=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps",
+    "-L",
+    "native=/home/quintine/.local/lib",
+    "-o",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-focused30380-SourceG2-genuine1-context-author-20261019-v1/compose-focused30380-currentG2"
+  ],
+  "constructor_argv": [
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-focused30380-SourceG2-genuine1-context-author-20261019-v1/compose-focused30380-currentG2",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-focused30380-SourceG2-genuine1-context-author-20261019-v1/SEALED-FOCUSED30380-GENUINE1-CURRENTG2-RECIPE.json",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-focused30380-SourceG2-genuine1-context-author-20261019-v1/actual-once-focused30380-genuine1-G2"
+  ],
+  "no_World_QA_enginebuild_image_cleanup_canonical": true,
+  "floor_bytes": 1932735284
+}

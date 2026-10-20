@@ -1,0 +1,1602 @@
+{
+  "format_version": 1,
+  "job_id": "terrain-2068d-2069c",
+  "name": "Terrain set 2 shard 89",
+  "category": "Terrain",
+  "kind": "contextual_terrain_shard",
+  "owner": "/root/hd_terrain_set_2",
+  "targets": [
+    {
+      "asset": "2068d",
+      "source_path": "misc/unnamed.2184",
+      "source_sha256": "ab4b8eee74a5eac0380937e49e0512ec4d7df59151c15aa84bdcca6a71ee1fb7",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "2068d",
+      "status": "registered",
+      "terrain_context": {
+        "roles": [
+          "destroyed"
+        ],
+        "state_partners": [
+          "2068c"
+        ],
+        "neighbors": {
+          "north": [
+            "205d1",
+            "205d2",
+            "205d3",
+            "205d5",
+            "20645",
+            "2064c"
+          ],
+          "south": [
+            "20273",
+            "20693",
+            "20694"
+          ],
+          "west": [
+            "2027f",
+            "20280",
+            "2068c",
+            "2068d",
+            "20691"
+          ],
+          "east": [
+            "2019f",
+            "2027f",
+            "20280",
+            "2068c",
+            "2068d"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 13,
+            "column": 0,
+            "intact_3x3": [
+              null,
+              "205d5",
+              "2064c",
+              null,
+              "2068c",
+              "20280",
+              null,
+              "20693",
+              "20273"
+            ],
+            "target_3x3": [
+              null,
+              "205d5",
+              "2064c",
+              null,
+              "2068d",
+              "20280",
+              null,
+              "20693",
+              "20273"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 13,
+            "column": 2,
+            "intact_3x3": [
+              "2064c",
+              "205d1",
+              "20644",
+              "20280",
+              "2068c",
+              "20280",
+              "20273",
+              "20693",
+              "20275"
+            ],
+            "target_3x3": [
+              "2064c",
+              "205d1",
+              "20644",
+              "20280",
+              "2068d",
+              "20280",
+              "20273",
+              "20693",
+              "20275"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 13,
+            "column": 4,
+            "intact_3x3": [
+              "20644",
+              "205d1",
+              "205d2",
+              "20280",
+              "2068c",
+              "2019f",
+              "20275",
+              "20273",
+              "201a4"
+            ],
+            "target_3x3": [
+              "20644",
+              "205d1",
+              "205d2",
+              "20280",
+              "2068d",
+              "2019f",
+              "20275",
+              "20273",
+              "201a4"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "2068e",
+      "source_path": "misc/unnamed.2185",
+      "source_sha256": "c1a4741b72ae4a8958c89304511b3f17f826605d4d49bccc495ed11c812e2702",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "2068e",
+      "status": "registered",
+      "terrain_context": {
+        "roles": [
+          "destroyed"
+        ],
+        "state_partners": [
+          "20685"
+        ],
+        "neighbors": {
+          "north": [
+            "20273",
+            "20694"
+          ],
+          "south": [
+            "205d1"
+          ],
+          "west": [
+            "2027b",
+            "2027c"
+          ],
+          "east": [
+            "20180"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 15,
+            "column": 4,
+            "intact_3x3": [
+              "20275",
+              "20273",
+              "201a4",
+              "2027b",
+              "20685",
+              "20180",
+              "2064c",
+              "205d1",
+              "205d1"
+            ],
+            "target_3x3": [
+              "20275",
+              "20273",
+              "201a4",
+              "2027b",
+              "2068e",
+              "20180",
+              "2064c",
+              "205d1",
+              "205d1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "2068f",
+      "source_path": "misc/unnamed.2186",
+      "source_sha256": "883289cef6e737b8edd9ef51800a666c6f9fa005ac4bc57cae1caa64187c127f",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "2068f",
+      "status": "inprogress",
+      "terrain_context": {
+        "roles": [
+          "intact"
+        ],
+        "state_partners": [
+          "20695"
+        ],
+        "neighbors": {
+          "north": [
+            "205d4"
+          ],
+          "south": [
+            "20690",
+            "2069c"
+          ],
+          "west": [
+            "205ce"
+          ],
+          "east": [
+            "205cc"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 26,
+            "column": 6,
+            "intact_3x3": [
+              "205c1",
+              "205d4",
+              "205c2",
+              "205ce",
+              "2068f",
+              "205cc",
+              "205ce",
+              "20690",
+              "205cc"
+            ],
+            "target_3x3": [
+              "205c1",
+              "205d4",
+              "205c2",
+              "205ce",
+              "2068f",
+              "205cc",
+              "205ce",
+              "20690",
+              "205cc"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "20690",
+      "source_path": "misc/unnamed.2187",
+      "source_sha256": "7ed202d8729c03004af33dc95fdb74bedcd174c829ad8028f79c0883935464e4",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "20690",
+      "status": "inprogress",
+      "terrain_context": {
+        "roles": [
+          "intact"
+        ],
+        "state_partners": [
+          "2069c"
+        ],
+        "neighbors": {
+          "north": [
+            "2068f",
+            "20695"
+          ],
+          "south": [
+            "205d2"
+          ],
+          "west": [
+            "205ce"
+          ],
+          "east": [
+            "205cc"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 27,
+            "column": 6,
+            "intact_3x3": [
+              "205ce",
+              "2068f",
+              "205cc",
+              "205ce",
+              "20690",
+              "205cc",
+              "205d5",
+              "205d2",
+              "205cc"
+            ],
+            "target_3x3": [
+              "205ce",
+              "2068f",
+              "205cc",
+              "205ce",
+              "20690",
+              "205cc",
+              "205d5",
+              "205d2",
+              "205cc"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "20691",
+      "source_path": "misc/unnamed.2188",
+      "source_sha256": "863ba6c953ed8f021c50ccffc55063c729eeca17eec2a9ba47907ca55b07385e",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "20691",
+      "status": "registered",
+      "terrain_context": {
+        "roles": [
+          "intact"
+        ],
+        "state_partners": [],
+        "neighbors": {
+          "north": [
+            "2064b"
+          ],
+          "south": [
+            "10398"
+          ],
+          "west": [],
+          "east": [
+            "2068c",
+            "2068d"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 17,
+            "column": 0,
+            "intact_3x3": [
+              null,
+              "2064b",
+              "205d2",
+              null,
+              "20691",
+              "2068c",
+              null,
+              "10398",
+              "20273"
+            ],
+            "target_3x3": [
+              null,
+              "2064b",
+              "205d2",
+              null,
+              "20691",
+              "2068c",
+              null,
+              "10398",
+              "20273"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "20692",
+      "source_path": "misc/unnamed.2189",
+      "source_sha256": "b497ff9704511ac9054fabae33dd0f2de7b2ebf57ba16ec18bb4a3d3d5257948",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "20692",
+      "status": "registered",
+      "terrain_context": {
+        "roles": [
+          "intact"
+        ],
+        "state_partners": [],
+        "neighbors": {
+          "north": [
+            "10398"
+          ],
+          "south": [
+            "2064b"
+          ],
+          "west": [],
+          "east": [
+            "2069a",
+            "2069b"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 20,
+            "column": 0,
+            "intact_3x3": [
+              null,
+              "10398",
+              "20693",
+              null,
+              "20692",
+              "2069a",
+              null,
+              "2064b",
+              "205d2"
+            ],
+            "target_3x3": [
+              null,
+              "10398",
+              "20693",
+              null,
+              "20692",
+              "2069a",
+              null,
+              "2064b",
+              "205d2"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "20693",
+      "source_path": "misc/unnamed.2190",
+      "source_sha256": "8557d50df465cb33d016564fdeac4bc18b30da2b07fae84af4f1e53a765a9bdf",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "20693",
+      "status": "registered",
+      "terrain_context": {
+        "roles": [
+          "intact"
+        ],
+        "state_partners": [
+          "20694"
+        ],
+        "neighbors": {
+          "north": [
+            "20273",
+            "20275",
+            "2027f",
+            "20280",
+            "2068c",
+            "2068d",
+            "20693",
+            "20694"
+          ],
+          "south": [
+            "20273",
+            "2027b",
+            "2027c",
+            "20693",
+            "20694",
+            "2069a",
+            "2069b"
+          ],
+          "west": [
+            "10398",
+            "20273",
+            "20275",
+            "20693",
+            "20694"
+          ],
+          "east": [
+            "20273",
+            "20275",
+            "20693",
+            "20694"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 14,
+            "column": 0,
+            "intact_3x3": [
+              null,
+              "2068c",
+              "20280",
+              null,
+              "20693",
+              "20273",
+              null,
+              "2069a",
+              "2027b"
+            ],
+            "target_3x3": [
+              null,
+              "2068c",
+              "20280",
+              null,
+              "20693",
+              "20273",
+              null,
+              "2069a",
+              "2027b"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 14,
+            "column": 2,
+            "intact_3x3": [
+              "20280",
+              "2068c",
+              "20280",
+              "20273",
+              "20693",
+              "20275",
+              "2027b",
+              "2069a",
+              "2027b"
+            ],
+            "target_3x3": [
+              "20280",
+              "2068c",
+              "20280",
+              "20273",
+              "20693",
+              "20275",
+              "2027b",
+              "2069a",
+              "2027b"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 18,
+            "column": 2,
+            "intact_3x3": [
+              "2068c",
+              "20280",
+              "2068c",
+              "20273",
+              "20693",
+              "20693",
+              "20693",
+              "20273",
+              "20693"
+            ],
+            "target_3x3": [
+              "2068c",
+              "20280",
+              "2068c",
+              "20273",
+              "20693",
+              "20693",
+              "20693",
+              "20273",
+              "20693"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "20694",
+      "source_path": "misc/unnamed.2191",
+      "source_sha256": "a84e9ec68d9e5dbc10ddb38e233f10de133eebf8eb02f64850adab750e8eb617",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "20694",
+      "status": "registered",
+      "terrain_context": {
+        "roles": [
+          "destroyed"
+        ],
+        "state_partners": [
+          "20273",
+          "20275",
+          "20693"
+        ],
+        "neighbors": {
+          "north": [
+            "20273",
+            "20275",
+            "2027f",
+            "20280",
+            "2068c",
+            "2068d",
+            "20693",
+            "20694"
+          ],
+          "south": [
+            "20273",
+            "20275",
+            "2027b",
+            "2027c",
+            "20685",
+            "2068e",
+            "20693",
+            "20694",
+            "2069a",
+            "2069b"
+          ],
+          "west": [
+            "10398",
+            "20273",
+            "20275",
+            "20693",
+            "20694"
+          ],
+          "east": [
+            "201a4",
+            "20273",
+            "20275",
+            "20693",
+            "20694"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 14,
+            "column": 0,
+            "intact_3x3": [
+              null,
+              "2068c",
+              "20280",
+              null,
+              "20693",
+              "20273",
+              null,
+              "2069a",
+              "2027b"
+            ],
+            "target_3x3": [
+              null,
+              "2068c",
+              "20280",
+              null,
+              "20694",
+              "20273",
+              null,
+              "2069a",
+              "2027b"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 14,
+            "column": 1,
+            "intact_3x3": [
+              "2068c",
+              "20280",
+              "2068c",
+              "20693",
+              "20273",
+              "20693",
+              "2069a",
+              "2027b",
+              "2069a"
+            ],
+            "target_3x3": [
+              "2068c",
+              "20280",
+              "2068c",
+              "20693",
+              "20694",
+              "20693",
+              "2069a",
+              "2027b",
+              "2069a"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 14,
+            "column": 2,
+            "intact_3x3": [
+              "20280",
+              "2068c",
+              "20280",
+              "20273",
+              "20693",
+              "20275",
+              "2027b",
+              "2069a",
+              "2027b"
+            ],
+            "target_3x3": [
+              "20280",
+              "2068c",
+              "20280",
+              "20273",
+              "20694",
+              "20275",
+              "2027b",
+              "2069a",
+              "2027b"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "20695",
+      "source_path": "misc/unnamed.2192",
+      "source_sha256": "56650b64ad443352c4b9366f6a6721f470396480e5eaf2babd741ab4656c4d06",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "20695",
+      "status": "registered",
+      "terrain_context": {
+        "roles": [
+          "destroyed"
+        ],
+        "state_partners": [
+          "2068f"
+        ],
+        "neighbors": {
+          "north": [
+            "205d4"
+          ],
+          "south": [
+            "20690",
+            "2069c"
+          ],
+          "west": [
+            "205ce"
+          ],
+          "east": [
+            "205cc"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 26,
+            "column": 6,
+            "intact_3x3": [
+              "205c1",
+              "205d4",
+              "205c2",
+              "205ce",
+              "2068f",
+              "205cc",
+              "205ce",
+              "20690",
+              "205cc"
+            ],
+            "target_3x3": [
+              "205c1",
+              "205d4",
+              "205c2",
+              "205ce",
+              "20695",
+              "205cc",
+              "205ce",
+              "20690",
+              "205cc"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "20696",
+      "source_path": "misc/unnamed.2193",
+      "source_sha256": "ce387b4c25713c58260e25fd95bbfc4df6554bcf0249f0a32f058434e19d1507",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "20696",
+      "status": "registered",
+      "terrain_context": {
+        "roles": [
+          "intact"
+        ],
+        "state_partners": [],
+        "neighbors": {
+          "north": [
+            "205d5"
+          ],
+          "south": [
+            "2069d"
+          ],
+          "west": [
+            "205c7"
+          ],
+          "east": [
+            "20697"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 29,
+            "column": 5,
+            "intact_3x3": [
+              "205d4",
+              "205d5",
+              "205d2",
+              "205c7",
+              "20696",
+              "20697",
+              "205ce",
+              "2069d",
+              "2069e"
+            ],
+            "target_3x3": [
+              "205d4",
+              "205d5",
+              "205d2",
+              "205c7",
+              "20696",
+              "20697",
+              "205ce",
+              "2069d",
+              "2069e"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "20697",
+      "source_path": "misc/unnamed.2194",
+      "source_sha256": "60ba1dfaced26288346aca112e754a9917e5ac6dda55a0cfdaba182c8b416b8e",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "20697",
+      "status": "registered",
+      "terrain_context": {
+        "roles": [
+          "intact"
+        ],
+        "state_partners": [],
+        "neighbors": {
+          "north": [
+            "205d2"
+          ],
+          "south": [
+            "2069e"
+          ],
+          "west": [
+            "20696"
+          ],
+          "east": [
+            "205cc"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 29,
+            "column": 6,
+            "intact_3x3": [
+              "205d5",
+              "205d2",
+              "205cc",
+              "20696",
+              "20697",
+              "205cc",
+              "2069d",
+              "2069e",
+              "205cc"
+            ],
+            "target_3x3": [
+              "205d5",
+              "205d2",
+              "205cc",
+              "20696",
+              "20697",
+              "205cc",
+              "2069d",
+              "2069e",
+              "205cc"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "20698",
+      "source_path": "misc/unnamed.2195",
+      "source_sha256": "e85d9e4bd9966245796354d1339cf5a548f71564fdff4598fb26187e618d1ac6",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "20698",
+      "status": "inprogress",
+      "terrain_context": {
+        "roles": [
+          "intact"
+        ],
+        "state_partners": [
+          "20699"
+        ],
+        "neighbors": {
+          "north": [
+            "20698",
+            "20699",
+            "2069a",
+            "2069b"
+          ],
+          "south": [
+            "205c5",
+            "20698",
+            "20699"
+          ],
+          "west": [
+            "205d1",
+            "205d2"
+          ],
+          "east": [
+            "205c5",
+            "205cc",
+            "20644"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 21,
+            "column": 3,
+            "intact_3x3": [
+              "2027b",
+              "2069a",
+              "2069a",
+              "205d1",
+              "20698",
+              "20644",
+              "205d2",
+              "20698",
+              "205c5"
+            ],
+            "target_3x3": [
+              "2027b",
+              "2069a",
+              "2069a",
+              "205d1",
+              "20698",
+              "20644",
+              "205d2",
+              "20698",
+              "205c5"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 22,
+            "column": 3,
+            "intact_3x3": [
+              "205d1",
+              "20698",
+              "20644",
+              "205d2",
+              "20698",
+              "205c5",
+              "205d1",
+              "20698",
+              "205cc"
+            ],
+            "target_3x3": [
+              "205d1",
+              "20698",
+              "20644",
+              "205d2",
+              "20698",
+              "205c5",
+              "205d1",
+              "20698",
+              "205cc"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 23,
+            "column": 3,
+            "intact_3x3": [
+              "205d2",
+              "20698",
+              "205c5",
+              "205d1",
+              "20698",
+              "205cc",
+              "205d2",
+              "205c5",
+              "205c9"
+            ],
+            "target_3x3": [
+              "205d2",
+              "20698",
+              "205c5",
+              "205d1",
+              "20698",
+              "205cc",
+              "205d2",
+              "205c5",
+              "205c9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "20699",
+      "source_path": "misc/unnamed.2196",
+      "source_sha256": "7855cff3fa9e4616805ffa8b90bb4efd92ded5c2621ba768de86df09656d7691",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "20699",
+      "status": "inprogress",
+      "terrain_context": {
+        "roles": [
+          "destroyed"
+        ],
+        "state_partners": [
+          "20698"
+        ],
+        "neighbors": {
+          "north": [
+            "20698",
+            "20699",
+            "2069a",
+            "2069b"
+          ],
+          "south": [
+            "205c5",
+            "20698",
+            "20699"
+          ],
+          "west": [
+            "205d1",
+            "205d2"
+          ],
+          "east": [
+            "205c5",
+            "205cc",
+            "20644"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 21,
+            "column": 3,
+            "intact_3x3": [
+              "2027b",
+              "2069a",
+              "2069a",
+              "205d1",
+              "20698",
+              "20644",
+              "205d2",
+              "20698",
+              "205c5"
+            ],
+            "target_3x3": [
+              "2027b",
+              "2069a",
+              "2069a",
+              "205d1",
+              "20699",
+              "20644",
+              "205d2",
+              "20698",
+              "205c5"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 22,
+            "column": 3,
+            "intact_3x3": [
+              "205d1",
+              "20698",
+              "20644",
+              "205d2",
+              "20698",
+              "205c5",
+              "205d1",
+              "20698",
+              "205cc"
+            ],
+            "target_3x3": [
+              "205d1",
+              "20698",
+              "20644",
+              "205d2",
+              "20699",
+              "205c5",
+              "205d1",
+              "20698",
+              "205cc"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 23,
+            "column": 3,
+            "intact_3x3": [
+              "205d2",
+              "20698",
+              "205c5",
+              "205d1",
+              "20698",
+              "205cc",
+              "205d2",
+              "205c5",
+              "205c9"
+            ],
+            "target_3x3": [
+              "205d2",
+              "20698",
+              "205c5",
+              "205d1",
+              "20699",
+              "205cc",
+              "205d2",
+              "205c5",
+              "205c9"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "2069a",
+      "source_path": "misc/unnamed.2197",
+      "source_sha256": "d3ad4ec0d40b912d7d018caa339fc747752a9c42827579e309da8bfd6681c1eb",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "2069a",
+      "status": "registered",
+      "terrain_context": {
+        "roles": [
+          "intact"
+        ],
+        "state_partners": [
+          "2069b"
+        ],
+        "neighbors": {
+          "north": [
+            "20273",
+            "20275",
+            "20693",
+            "20694"
+          ],
+          "south": [
+            "205d1",
+            "205d2",
+            "20644",
+            "2064b",
+            "20698",
+            "20699"
+          ],
+          "west": [
+            "2027b",
+            "2027c",
+            "20692",
+            "2069a",
+            "2069b"
+          ],
+          "east": [
+            "2027b",
+            "2027c",
+            "2069a",
+            "2069b"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 15,
+            "column": 0,
+            "intact_3x3": [
+              null,
+              "20693",
+              "20273",
+              null,
+              "2069a",
+              "2027b",
+              null,
+              "2064b",
+              "205d2"
+            ],
+            "target_3x3": [
+              null,
+              "20693",
+              "20273",
+              null,
+              "2069a",
+              "2027b",
+              null,
+              "2064b",
+              "205d2"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 15,
+            "column": 2,
+            "intact_3x3": [
+              "20273",
+              "20693",
+              "20275",
+              "2027b",
+              "2069a",
+              "2027b",
+              "205d2",
+              "205d1",
+              "2064c"
+            ],
+            "target_3x3": [
+              "20273",
+              "20693",
+              "20275",
+              "2027b",
+              "2069a",
+              "2027b",
+              "205d2",
+              "205d1",
+              "2064c"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 20,
+            "column": 1,
+            "intact_3x3": [
+              "10398",
+              "20693",
+              "20273",
+              "20692",
+              "2069a",
+              "2027b",
+              "2064b",
+              "205d2",
+              "205d1"
+            ],
+            "target_3x3": [
+              "10398",
+              "20693",
+              "20273",
+              "20692",
+              "2069a",
+              "2027b",
+              "2064b",
+              "205d2",
+              "205d1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "2069b",
+      "source_path": "misc/unnamed.2198",
+      "source_sha256": "4c542360a508cf794d02cc6f6dcea9c1d267ac0921c9f80adb3c807c0b5f5280",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "2069b",
+      "status": "registered",
+      "terrain_context": {
+        "roles": [
+          "destroyed"
+        ],
+        "state_partners": [
+          "2069a"
+        ],
+        "neighbors": {
+          "north": [
+            "20273",
+            "20275",
+            "20693",
+            "20694"
+          ],
+          "south": [
+            "205d1",
+            "205d2",
+            "20644",
+            "2064b",
+            "20698",
+            "20699"
+          ],
+          "west": [
+            "2027b",
+            "2027c",
+            "20692",
+            "2069a",
+            "2069b"
+          ],
+          "east": [
+            "2027b",
+            "2027c",
+            "2069a",
+            "2069b"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 15,
+            "column": 0,
+            "intact_3x3": [
+              null,
+              "20693",
+              "20273",
+              null,
+              "2069a",
+              "2027b",
+              null,
+              "2064b",
+              "205d2"
+            ],
+            "target_3x3": [
+              null,
+              "20693",
+              "20273",
+              null,
+              "2069b",
+              "2027b",
+              null,
+              "2064b",
+              "205d2"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 15,
+            "column": 2,
+            "intact_3x3": [
+              "20273",
+              "20693",
+              "20275",
+              "2027b",
+              "2069a",
+              "2027b",
+              "205d2",
+              "205d1",
+              "2064c"
+            ],
+            "target_3x3": [
+              "20273",
+              "20693",
+              "20275",
+              "2027b",
+              "2069b",
+              "2027b",
+              "205d2",
+              "205d1",
+              "2064c"
+            ]
+          },
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 20,
+            "column": 1,
+            "intact_3x3": [
+              "10398",
+              "20693",
+              "20273",
+              "20692",
+              "2069a",
+              "2027b",
+              "2064b",
+              "205d2",
+              "205d1"
+            ],
+            "target_3x3": [
+              "10398",
+              "20693",
+              "20273",
+              "20692",
+              "2069b",
+              "2027b",
+              "2064b",
+              "205d2",
+              "205d1"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "asset": "2069c",
+      "source_path": "misc/unnamed.2199",
+      "source_sha256": "0ddf1975af9188206903e74e2394877d92501719e03589d97779a85ecb8b8537",
+      "logical_canvas": [
+        32,
+        32
+      ],
+      "source_palette": "PALETTE_DAT",
+      "source_palette_sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204",
+      "origin": [
+        0,
+        0
+      ],
+      "canonical_source_asset": "2069c",
+      "status": "inprogress",
+      "terrain_context": {
+        "roles": [
+          "destroyed"
+        ],
+        "state_partners": [
+          "20690"
+        ],
+        "neighbors": {
+          "north": [
+            "2068f",
+            "20695"
+          ],
+          "south": [
+            "205d2"
+          ],
+          "west": [
+            "205ce"
+          ],
+          "east": [
+            "205cc"
+          ]
+        },
+        "samples": [
+          {
+            "mission": "base:sector_2_wave_3",
+            "row": 27,
+            "column": 6,
+            "intact_3x3": [
+              "205ce",
+              "2068f",
+              "205cc",
+              "205ce",
+              "20690",
+              "205cc",
+              "205d5",
+              "205d2",
+              "205cc"
+            ],
+            "target_3x3": [
+              "205ce",
+              "2068f",
+              "205cc",
+              "205ce",
+              "2069c",
+              "205cc",
+              "205d5",
+              "205d2",
+              "205cc"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "declared_ranges": [],
+  "status_counts": {
+    "registered": 11,
+    "inprogress": 5
+  },
+  "contract": {
+    "generation": "Use built-in imagegen with inspected original source sheets. Produce newly authored detail, materials and lighting; nearest/ScaleNx enlargement alone is not HD completion.",
+    "submission_gate": "Prepare and inspect sources and save the prompt before acquiring. In one functions.exec orchestration, acquire one of four slots, start the reservation, submit built-in imagegen only when start.changed is true, then classify and report the actual result immediately after await before returning to the model or doing QA. See RustRaptor/docs/hd-generation-workflow.md. Started and legacy-unknown requests require explicit finish; only unstarted reservations expire. If denied or cooling down, prepare/review other jobs. Do not substitute scaling for a failed remaster.",
+    "source_truth": "Keep every source orientation, silhouette, color identity, logical canvas, anchor and explicit source hash. Use each target's source_palette and source_palette_sha256; Apogee/Cygnus/Taiwan cards use their own palettes, not the gameplay palette. Inspect every frame before generating. Never invent poses or drop damaged/destroyed variants.",
+    "ownership": "Only this job's target IDs may be proposed. Neighbor/context references and exact-source aliases are reference-only; never claim or overwrite another job's IDs.",
+    "raw_output": "Keep raw generated PNG bytes, prompts, source references and provenance. Do not retouch generated RGB/alpha. Atlas/square margin crops are allowed only if they preserve all meaningful visible pixels and original aspect.",
+    "full_family": "Review all frames together at logical resolution and indexed 4× with exact Rust Lanczos3 resident→presentation resampling. A good still does not complete an animation family. Record partial candidates and rejections truthfully.",
+    "quality": "Check clipping, alpha halos, banking/animation centers, source bounds, pivots, tiny-projectile readability, palette fades/cycling, material continuity and intended timing. Near-black original body/backing pixels are occupied artwork, not empty background. For opaque pictures, mask overlap of 1 proves only coverage; compare source material, landmarks and internal geometry separately. Original ordinary pixels must not gain indices240..255; water/fire/individualblink source classes retain their semantics. Compare original and allscale dynamic-palette counts in runtime-qa.json. Numeric mask metrics support visual review, never replace it.",
+    "terrain": "Generate each canonical tile from its own exact source; supplied 3×3 neighbors are separate continuity-review references, not scenery to copy into the target. Check all cardinal adjacency sets, repeated tile aliases and intact/destroyed state partners. Preserve coastline/topography crossings, native edge colors and exact reusable tile identity. Equal-grid atlas crops must preserve each tile's complete logical composition; reject displaced panel boundaries or foreign row strips. Review every required adjacent pair, including state changes; full opaque 32×32 terrain canvases are valid. Do not publish context-specific alternate art for one repeated ID. The validated renderer shares adjoining HD edge/corner colors only where original surface class/geometry agrees, and transitions HD/original boundaries towards the joined original layer over two logical pixels; see RustRaptor/docs/hd-terrain.md. Feathering cannot repair shifted coastlines or make a low-resolution grid acceptable; detailed interiors must remain newly authored HD art. Preserve source water indices 240..244, fire 245..249 and single-index glow/flash 250..255; ordinary terrain maps to 0..239.",
+    "renderer": "Registration is separate from render reachability. Require a verified Rust rendering path and record scene/gallery evidence; unsupported terrain/mask/shader semantics remain explicitly pending.",
+    "result": "Write candidate.json with job_id, source_sha256 and every proposed target's file/logical dimensions/origin/crop, plus complete sequence metadata and review evidence. Only the coordinator edits global hd.json, completion ledger or provenance."
+  },
+  "source_sheet": "source-sheet.png",
+  "source_directory": "sources/",
+  "output_directory": "generated/",
+  "candidate_manifest": "candidate.json",
+  "terrain_set": "Terrain set 2",
+  "candidate_error": "standalone selection approval rejected: asset/HD code changed after review: terrain-2068d-2069c"
+}

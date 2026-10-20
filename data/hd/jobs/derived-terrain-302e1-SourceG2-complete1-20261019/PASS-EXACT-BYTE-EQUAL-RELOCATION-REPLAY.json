@@ -1,0 +1,24 @@
+{
+  "asset_or_cohort": "302e1",
+  "command": [
+    "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/portable-project/tools/hd_followon302e1_quiet_floor_cleanup.py",
+    "--recipe",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/portable-project/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/302e1-recipe.json",
+    "--output",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/302e1/derived"
+  ],
+  "exit_code": 0,
+  "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/302e1/derived",
+  "changed_recipe_sha256": "26c8fbea1765c19bc91fb5b59b6210aa2d09ce72e30af28e6a0f299d43a09d69",
+  "helper_sha256": "df2d1a9b84d8f173504ccd36c3f59f411a2f34177ffed7614af8dd37842b4c9d",
+  "original_recipe_sha256": "79bcf2d67f3bf0d757c29f54d1b8ab1682719b8f07bbeac4372ba40b43610263",
+  "matches": {
+    "302e1": {
+      "output": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-followon5-final-portable-shared-lineage-20261019-v1/actual-once-relocation-replays/302e1/derived/302e1-derived.png",
+      "sha256": "d7c2aa5e382d5be9dcf37ab5e23571ee1beb511d84ec7c6397fb5c68d6dbcf1a",
+      "byte_equal_reviewed_png": true
+    }
+  },
+  "status": "PASS_EXACT_RELOCATED_RECIPE_BYTE_EQUAL_REVIEWED_PNG"
+}

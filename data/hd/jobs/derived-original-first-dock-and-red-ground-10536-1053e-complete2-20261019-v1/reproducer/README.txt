@@ -1,0 +1,1 @@
+Private reviewed Source-shaped genuine RGB derivation. Place under game root with pinned tools/hd_terrain_cleanup.py and use bundled NumPy/Pillow Python. Execute helper --recipe recipe.json --output a NEW directory; compare outputs to actual-once execution receipt. No author replay was run. Original functional243 logical owner is retained without HD credit.

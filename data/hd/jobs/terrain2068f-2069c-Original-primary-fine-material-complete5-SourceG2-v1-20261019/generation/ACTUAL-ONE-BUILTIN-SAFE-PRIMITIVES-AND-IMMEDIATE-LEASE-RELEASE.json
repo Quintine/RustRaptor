@@ -1,0 +1,42 @@
+{
+  "actual_builtin_calls": 1,
+  "lease": "c86faa85-509b-4e20-b588-e5ecb5f55c08",
+  "outcome": "success",
+  "type": "object",
+  "keys": [
+    "image_url",
+    "output_hint"
+  ],
+  "isError": null,
+  "output_hint": "Generated images are saved to /home/quintine/.codex/generated_images/01a14e5c-fa9e-7791-8f9a-80482e6cddbf as /home/quintine/.codex/generated_images/01a14e5c-fa9e-7791-8f9a-80482e6cddbf/exec-3db16d27-4897-438f-8d96-4f6f2aa5f981.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "error": "",
+  "gate_terminal_exit_code": 0,
+  "no_automatic_retry": true,
+  "acquire": {
+    "action": "acquire",
+    "owner": "/root/infantry_remaining",
+    "capacity": 4,
+    "acquired": true,
+    "lease_id": "c86faa85-509b-4e20-b588-e5ecb5f55c08",
+    "expires_at": "2026-10-19T04:40:28+00:00",
+    "renewal_command": "renew --owner /root/infantry_remaining --lease c86faa85-509b-4e20-b588-e5ecb5f55c08",
+    "active_reservations": 2,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "start": {
+    "action": "start",
+    "owner": "/root/infantry_remaining",
+    "capacity": 4,
+    "changed": true,
+    "started_at": "2026-10-19T04:10:28+00:00",
+    "active_reservations": 2,
+    "prepare_other_jobs_when_waiting": true
+  },
+  "immediate_terminal": {
+    "chunk_id": "460075",
+    "wall_time_seconds": 0.000135962,
+    "exit_code": 0,
+    "original_token_count": 43,
+    "output": "{\n  \"action\": \"report\",\n  \"owner\": \"/root/infantry_remaining\",\n  \"capacity\": 4,\n  \"changed\": true,\n  \"active_reservations\": 0,\n  \"prepare_other_jobs_when_waiting\": true\n}\n"
+  }
+}

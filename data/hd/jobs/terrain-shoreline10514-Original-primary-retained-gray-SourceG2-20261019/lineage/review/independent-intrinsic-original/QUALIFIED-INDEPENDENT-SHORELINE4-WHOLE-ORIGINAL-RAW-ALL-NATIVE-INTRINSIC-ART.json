@@ -1,0 +1,138 @@
+{
+  "status": "QUALIFIED_WITH_LIMITS_EXACT4_INTRINSIC_ART_ONLY",
+  "reviewer": "/root/ridge_pair",
+  "independent_of_author": "/root/iron_coast_names",
+  "ids": [
+    "10514",
+    "10515",
+    "1051b",
+    "1051c"
+  ],
+  "author": {
+    "path": ".reference/hd-iron-names-terrain10510-1051c-Original-primary-author-20261019-v1/shoreline4/AUTHOR-QUALIFIED4-CURRENT-SOURCEG2-INTRINSIC-ONLY.json",
+    "sha256": "5af77461354f79debf427e9ebc93ad6cd1c709fcb0f1ec5ebf20247b3e13b5d5",
+    "bytes": 1562
+  },
+  "candidate": {
+    "path": ".reference/hd-iron-names-terrain10510-1051c-Original-primary-author-20261019-v1/shoreline4/candidate-notes.json",
+    "sha256": "eaf74b54ec6b67e5f1896e13e8d48c6e594dd63264eaf3619c961731f63b3356",
+    "bytes": 20542
+  },
+  "raw": {
+    "path": ".reference/hd-iron-names-terrain10510-1051c-Original-primary-author-20261019-v1/shoreline4/returned-untouched-atlas.png",
+    "sha256": "eca43a75313243b03f67731e79b50fcbc9388a3e05ce06f38ac064fb60a3237d",
+    "bytes": 3337681
+  },
+  "runtime_QA": {
+    "path": ".reference/hd-iron-names-terrain10510-1051c-Original-primary-author-20261019-v1/shoreline4/actual-SourceG2-intrinsic/runtime-qa.json",
+    "sha256": "915185ad8677adbe9cf58a56a570a7fbd969f9de81385e6455fbec77b2d4d89d",
+    "bytes": 17610
+  },
+  "independent_saved_data_check": {
+    "path": ".reference/hd-shoreline4-independent-intrinsic-ART-review-20261019-v1/INDEPENDENT-EXACT-SOURCE-GRAY-OWNERS-RAW-CROPS-AND-NATIVE-CHECKS.json",
+    "sha256": "68cdc95815f232691b10f503dce598514b936472fab42d22f58c9cb52567a142",
+    "bytes": 14454
+  },
+  "physical_review": {
+    "completed": true,
+    "views": [
+      {
+        "path": ".reference/hd-iron-names-terrain10510-1051c-Original-primary-author-20261019-v1/shoreline4/Original-only-input.png",
+        "sha256": "757feec98be5367341196d104f164b16de9362f1a7aac2beaeb15f65ff8821f6",
+        "bytes": 15808
+      },
+      {
+        "path": ".reference/hd-iron-names-terrain10510-1051c-Original-primary-author-20261019-v1/shoreline4/returned-untouched-atlas.png",
+        "sha256": "eca43a75313243b03f67731e79b50fcbc9388a3e05ce06f38ac064fb60a3237d",
+        "bytes": 3337681
+      },
+      {
+        "path": ".reference/hd-iron-names-terrain10510-1051c-Original-primary-author-20261019-v1/shoreline4/actual-SourceG2-intrinsic/10514-whole-Original-and-all-native.png",
+        "sha256": "ce663cb25c1cd6199b4883f8092189288518f469d9da78718edc0f3cd754d2b4",
+        "bytes": 69647
+      },
+      {
+        "path": ".reference/hd-iron-names-terrain10510-1051c-Original-primary-author-20261019-v1/shoreline4/actual-SourceG2-intrinsic/10515-whole-Original-and-all-native.png",
+        "sha256": "2fc135336ecc3dd8ff2c22255d5b91067e69292b99e8a97ccda1ba160db2ad25",
+        "bytes": 62859
+      },
+      {
+        "path": ".reference/hd-iron-names-terrain10510-1051c-Original-primary-author-20261019-v1/shoreline4/actual-SourceG2-intrinsic/1051b-whole-Original-and-all-native.png",
+        "sha256": "529744203418d246c4d8edeb9efe5ce3100410b17aebf55a9522c8f3ab72b2ef",
+        "bytes": 66236
+      },
+      {
+        "path": ".reference/hd-iron-names-terrain10510-1051c-Original-primary-author-20261019-v1/shoreline4/actual-SourceG2-intrinsic/1051c-whole-Original-and-all-native.png",
+        "sha256": "5e53f17f735686a5b6dc0f5f547236296bee53bf1c40b9af1f3fedd96cb5b4e4",
+        "bytes": 67495
+      }
+    ],
+    "scope": "Whole Original source-only4 contact, whole genuine untouched2x2 master, each complete Original32x32 and all4 actual native outputs32/64/96/128 viewed in existing whole-frame comparison pages. NN enlargement is presentation only.",
+    "material_findings": [
+      {
+        "asset": "10514",
+        "finding": "Red-brown land remains left, teal water remains right; the curving coastline and inherited narrow gray functional rim are legible. Generated earth and water carry stronger fine texture than Source. Boundary gray is visibly stepped at high scale and explicitly Source-retained."
+      },
+      {
+        "asset": "10515",
+        "finding": "Upper red-brown land and lower teal water preserve the broad downward-pointed coastline. Central land tonal ridges become more pronounced under generated texture. Gray boundary stepping remains Source functional detail rather than claimed new shoreline artistry."
+      },
+      {
+        "asset": "1051b",
+        "finding": "Teal water left/red-brown land right preserves the narrow vertical shore. Native2\u20134 land shows modest darker ridge texture; actual selected gray cells keep the old contour. No extra structure, padding or missing canvas observed."
+      },
+      {
+        "asset": "1051c",
+        "finding": "Upper teal water/lower gray-tan and red-brown land retains the central raised-looking rocky texture and shoreline arch present in Source. Detailed pale/tan ridge peaks remain within the broad old light area. Final rim is the deliberately functional Source sample restoration."
+      }
+    ],
+    "actionable_intrinsic_defects": []
+  },
+  "independent_verification": {
+    "original_catalog_payload_SHA_and_all4096_indices_exact": true,
+    "Original_reference_contact_all4_exact_NN": true,
+    "genuine_raw_master_matches_original_provider_saved_PNG": true,
+    "raw_master_dimensions": [
+      1254,
+      1254
+    ],
+    "all4_direct627_RGBA_cell_crops_exact": true,
+    "all20_Original_or_final_PPMs_RGB_exact": true,
+    "actual_native_indices_verified": 122880,
+    "Source18_library_and_actual_helper_QA_current_exact": true,
+    "opaque_actual_canvases_all16": true,
+    "gray_logical_cell_counts": {
+      "10514": 33,
+      "10515": 35,
+      "1051b": 49,
+      "1051c": 24
+    },
+    "declared_cells_equal_all_literal_Source_gray_palette17_through24_cells": true,
+    "gray_color_evidence": "Selected Source indices17\u201324 have VGA neutral/near-neutral RGB: e.g17=(26,26,26),19=(23,22,22),24=(13,13,13). They are original gray functional owners, not generated replacement art.",
+    "all_retained_owner_footprints_equal_literal_Original_ScaleNx_controls": true,
+    "retained_OriginalNx_samples_across_all4_scales": 4230,
+    "retained_generated_HD_credit": 0,
+    "retention_edge_note": "ScaleNx controls can pull a neighboring water or ground sample into a retained owner footprint. Those actual samples were compared to the exact Original control; this review does not falsely require every retained scaled pixel to remain gray.",
+    "outside_retained_footprints_Source_reserved_palette_class_ownership_exact": true,
+    "producer_files_unchanged_after_review": 40
+  },
+  "limits": [
+    "Intrinsically qualified exact four coherent selected terrain assets only; no all16 legacy family completion claim.",
+    "Fine ground detail and rippled water are stronger than Original flat shading; the narrow gray rim remains visibly stepped functional Original retention. All141 logical gray cells and4230 actual scaled retained samples earn zero new generated-HD-detail credit.",
+    "The returned master and selected tiles are opaque; alpha equality is trivial and does not establish geometry or artistic fidelity.",
+    "No real neighboring joins, terrain seams, live World, scrolling/motion, palette-cycle phase, Source mission reachability or full-mission contrast approval. Finite genuine MAP caller contexts are required before admission.",
+    "No generated image, pixel cleanup, intrinsic QA, engine build, World initialization or scene composition was executed by this reviewer; only existing saved bytes were checked."
+  ],
+  "registration_authorized_by_this_report": false,
+  "hold": false,
+  "operations_by_reviewer": {
+    "imagegen": 0,
+    "pixel_cleanup": 0,
+    "intrinsic_QA": 0,
+    "World": 0,
+    "build": 0,
+    "context_composition": 0,
+    "canonical_or_Git_writes": 0
+  },
+  "free_bytes": 5642682368
+}

@@ -1,0 +1,83 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/inputs/new-road5-master.png",
+        "sha256": "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/generation/road-damage5/literal-provider-receipt.json",
+        "sha256": "6f7ae1eb6d3761e881309c468da26943879e3247b862f58b23174bd3bb5def0a"
+      },
+      "prompt": {
+        "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/generation/road-damage5/prompt.txt",
+        "sha256": "067395b4de361849ec0fe4ed9b5dadc1dbdb8d3183ca008ce8fe2195dabeae11"
+      }
+    },
+    {
+      "raw_png": {
+        "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/inputs/new-bridge4-master.png",
+        "sha256": "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/generation/collapsed-bridge4/literal-provider-receipt.json",
+        "sha256": "e81085762aea31e121ecea33684e8ba1b16a8a33348623e35325aa05cfaa7129"
+      },
+      "prompt": {
+        "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/generation/collapsed-bridge4/prompt.txt",
+        "sha256": "69d0a594d4d70613ba1156ee54b52a59801667f2460d75c72be6c87307f0f8dc"
+      }
+    },
+    {
+      "raw_png": {
+        "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+        "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/generation/quiet-material-plate/literal-provider-receipt.json",
+        "sha256": "3d49643b216a0426e615924c80f7d98e7638d03600f98f8942031f40286e2327"
+      },
+      "prompt": {
+        "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/generation/quiet-material-plate/prompt.txt",
+        "sha256": "fe381488e83c507ac376225ecbf80978a5666f8de4c66a4ecf80c01f4b470a53"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/quiet9_source_components/terrain_component_cleanup.py",
+      "sha256": "ff286585834d42aff8fca0951a118aaa5c3b51294dc078b3b1fe8d04b37f5fbd"
+    },
+    {
+      "path": "tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/cleanup-recipe.json",
+    "sha256": "78f2af6e1d6fdf018e90eedec8f45fdfdaaf256c9c331a26210aac895c2d09e4"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/measurement/portable-cleanup-binding.json",
+    "sha256": "93ba8eb73e04a48f09e0ec6c9d2f3c75071ab1337a08505f96fb98f9e08fdf55"
+  },
+  "sources": {
+    "10504": "61c3b71919e6cb92a37bae1e427ff682b8b236d8e435f7e9c51400a53732f041",
+    "1050b": "96242dabf808eeb23f0b062e7a45e3a75668c6e37d30f4b7f0c197e22c6d2729",
+    "1050c": "86d2782cdf1080e2971accb068e9d810a19c3c85a3c0c8550e91a3ab5a52a834",
+    "1050e": "bdc9c5b0d3c2b14f1c1e5ada1c30cd0b97adee06a1d5a34a7fa2d35c0cc11e1f"
+  },
+  "outputs": {
+    "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/derived/10504-derived.png": "61c47dee335c42cd6d7c9a986f612e0fafc5bec72c5523efe15c8b30fd436689",
+    "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/derived/1050b-derived.png": "9b7b4bbf16d15fdd18cdc3c02b440d720aadf0746686f0ed6b9d001c9a4c78fc",
+    "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/derived/1050c-derived.png": "7cee0d016aa506acfcabf468381d56ba27d89600a5cb1fabf938e5e9381fc7d1",
+    "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/derived/1050e-derived.png": "a4a6ba053dc3af5882057a3adc5d69d793864aa1428b4b44392b83d7f4442807"
+  },
+  "Original_functional_cells": 134,
+  "Original_functional_HD_credit": 0,
+  "actual_three_parent_calls_shared_across_two_jobs_not_six": true,
+  "truth": "Derived Original-owned geometry plus three genuine generated material masters. Water/pavement only0/3 from quiet master, exact existing1/2/4 donor fields preserved. Each final PNG is DERIVED, never an untouched imagegen return."
+}

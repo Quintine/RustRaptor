@@ -1,0 +1,49 @@
+{
+  "Root_GO": true,
+  "source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-joint11-SourceG2-H5654-context-author-20261020-v1/compose_joint39_genuine11_SourceG2_H5654.rs",
+    "sha256": "773e788193117bbcfe435c109033d66646937f8cccaa96395c9d4f67239fc7b6",
+    "size": 18605,
+    "mtime_ns": 1792483986019308661,
+    "mode": 33188
+  },
+  "recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-joint11-SourceG2-H5654-context-author-20261020-v1/SEALED-JOINT39-GENUINE11-SOURCEG2-H5654-RECIPE.json",
+    "sha256": "1afb0756f4f622c150b3250b53cdd39fe4542b4491bf259d60fe01c8bd42db70",
+    "size": 57495,
+    "mtime_ns": 1792483842733883618,
+    "mode": 33188
+  },
+  "actual_G2_library": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "sha256": "5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676",
+    "size": 22772516,
+    "mtime_ns": 1792326752687554590,
+    "mode": 33060
+  },
+  "compile_argv": [
+    "/usr/bin/rustc",
+    "--edition=2024",
+    "-O",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-joint11-SourceG2-H5654-context-author-20261020-v1/compose_joint39_genuine11_SourceG2_H5654.rs",
+    "--extern",
+    "raptor_replica=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "--extern",
+    "serde_json=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libserde_json-89b5c242431768d3.rlib",
+    "--extern",
+    "flate2=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps/libflate2-808a135ff259ee28.rlib",
+    "-L",
+    "dependency=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps",
+    "-L",
+    "native=/home/quintine/.local/lib",
+    "-o",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-joint11-SourceG2-H5654-context-author-20261020-v1/compose-joint39-genuine11-currentG2"
+  ],
+  "constructor_argv": [
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-joint11-SourceG2-H5654-context-author-20261020-v1/compose-joint39-genuine11-currentG2",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-joint11-SourceG2-H5654-context-author-20261020-v1/SEALED-JOINT39-GENUINE11-SOURCEG2-H5654-RECIPE.json",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-joint11-SourceG2-H5654-context-author-20261020-v1/actual-once-joint39-genuine11-G2"
+  ],
+  "no_World_QA_enginebuild_image_cleanup_canonical": true,
+  "floor_bytes": 1932735284
+}

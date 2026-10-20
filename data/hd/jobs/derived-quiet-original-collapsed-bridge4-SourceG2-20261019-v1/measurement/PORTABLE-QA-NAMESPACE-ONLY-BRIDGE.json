@@ -1,0 +1,40 @@
+{
+  "status": "EXACT_EXISTING_CURRENTG2_NATIVE_REPORTS_NO_NEW_QA",
+  "literal_actual_QA": {
+    "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/measurement/literal-actual-SourceG2-runtime-qa.json",
+    "sha256": "c27cd63d0051b253ac144c96ef20185e0445809f7cc2339820c18133453469d7"
+  },
+  "literal_actual_bank": {
+    "path": "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/measurement/literal-actual-POST-retention-indexed-bank.json",
+    "sha256": "6cd5a3012307981dcc23a1ddc29dc639bb17664ba3ea6d67c9f4f45914cdfe88"
+  },
+  "old_identity": {
+    "candidate_sha256": "7631cd293353d5e059a89520d45f155cde2cc67eb4e72e9ad8f3b6c5c941ff7d",
+    "frame_bindings_sha256": "ce651e2aec542dcc2798298909cd782a3a2ea5aa2a4136e6fcea2521d7f99f0d",
+    "artwork_sha256": {
+      "10504-derived.png": "61c47dee335c42cd6d7c9a986f612e0fafc5bec72c5523efe15c8b30fd436689",
+      "1050b-derived.png": "9b7b4bbf16d15fdd18cdc3c02b440d720aadf0746686f0ed6b9d001c9a4c78fc",
+      "1050c-derived.png": "7cee0d016aa506acfcabf468381d56ba27d89600a5cb1fabf938e5e9381fc7d1",
+      "1050e-derived.png": "a4a6ba053dc3af5882057a3adc5d69d793864aa1428b4b44392b83d7f4442807"
+    },
+    "library": ".reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "library_sha256": "5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676",
+    "library_modified_ns": 1792326752687554590
+  },
+  "portable_identity": {
+    "candidate_sha256": "571ea0a809b6bfc10fb5fb5acc082d04226a2bc30587c369e17c94f34d562733",
+    "frame_bindings_sha256": "29de54e1f29f06dc10e4785656a534784d9506b58cc14b2f69752af1ca49a0f6",
+    "artwork_sha256": {
+      "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/derived/10504-derived.png": "61c47dee335c42cd6d7c9a986f612e0fafc5bec72c5523efe15c8b30fd436689",
+      "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/derived/1050b-derived.png": "9b7b4bbf16d15fdd18cdc3c02b440d720aadf0746686f0ed6b9d001c9a4c78fc",
+      "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/derived/1050c-derived.png": "7cee0d016aa506acfcabf468381d56ba27d89600a5cb1fabf938e5e9381fc7d1",
+      "jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/derived/1050e-derived.png": "a4a6ba053dc3af5882057a3adc5d69d793864aa1428b4b44392b83d7f4442807"
+    },
+    "library": "target/hd-review-libraries/5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676/libraptor_replica.rlib",
+    "library_sha256": "5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676",
+    "library_modified_ns": 1792326752687554590
+  },
+  "frame_reports_byte_semantically_unchanged": true,
+  "retention_semantics": "Actual bank is POST-SourceNx-retention. Context prejoin compared only outside166cellmask, isolated SourceNx restoration matches entire literal bank. Joined restore uses whole Original3x3 SourceNx.",
+  "new_QA_calls": 0
+}

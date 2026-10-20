@@ -1,0 +1,109 @@
+{
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "operation": "nine-tiles",
+  "palette": {
+    "path": "inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "sources": [
+    {
+      "path": "inputs/10502.pic",
+      "sha256": "412a22ffdc6c4bc25c534e2a5b10878adeb2e938f526fceb2918bead09d537d5",
+      "asset": "10502"
+    },
+    {
+      "path": "inputs/10506.pic",
+      "sha256": "a5ecb160c8edbc1502f0069b80d066f65877737eaffa948401ed3eb00224276b",
+      "asset": "10506"
+    },
+    {
+      "path": "inputs/10508.pic",
+      "sha256": "83b0eb5df8794a63690a306962fc9f4c0fc2795634c257acf76c15bc83870ee7",
+      "asset": "10508"
+    },
+    {
+      "path": "inputs/10509.pic",
+      "sha256": "ad820e692971cf846c7f150ffddb0b0a8966f1b6afa035d8a83ba1a325b90ea2",
+      "asset": "10509"
+    },
+    {
+      "path": "inputs/1050a.pic",
+      "sha256": "7516dde8481dc40892327f551cd04812d69a7db79c28ebc1af451fc0e7a507fa",
+      "asset": "1050a"
+    }
+  ],
+  "donors": {
+    "0": {
+      "path": "ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23",
+      "box": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "texture_period": [
+        512,
+        512
+      ]
+    },
+    "1": {
+      "path": "inputs/new-road5-master.png",
+      "sha256": "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c",
+      "box": [
+        200,
+        260,
+        100,
+        50
+      ],
+      "texture_period": [
+        256,
+        128
+      ]
+    },
+    "2": {
+      "path": "inputs/new-bridge4-master.png",
+      "sha256": "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b",
+      "box": [
+        30,
+        30,
+        170,
+        130
+      ],
+      "texture_period": [
+        256,
+        256
+      ]
+    },
+    "3": {
+      "path": "ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23",
+      "box": [
+        887,
+        0,
+        887,
+        887
+      ],
+      "texture_period": [
+        512,
+        512
+      ]
+    },
+    "4": {
+      "path": "inputs/new-road5-master.png",
+      "sha256": "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c",
+      "box": [
+        20,
+        350,
+        110,
+        18
+      ],
+      "texture_period": [
+        512,
+        64
+      ]
+    }
+  },
+  "lineage": "Both fresh masters are genuine untouched builtin returns. Road5 soil donor uses contemporaneous sameOriginalfamily bridge4 redbank material; bridge4 paint donor uses contemporaneous road5 ochre edge. No generated shape is reused as geometry.",
+  "functional_contract": "SourceNx opaque component masks and low-frequency palette color; bounded genuine RGB fine-band donors. All Source240..255 functional support retained exactly, and complete Scale1..4 logical owner unions declared Original detail/noHDcredit. All donor provenance and Source IDs/SHAs explicit."
+}

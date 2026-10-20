@@ -1,0 +1,299 @@
+{
+  "status": "approved",
+  "frame_bindings_sha256": "91104539398b0062a31048465d6a0c326d4815c445194162999641a7c7c4bdca",
+  "candidate_sha256": "15390277c9f457bf7ff4ca7c9a4c7c40fa2fdb2394967c124b750d5ba6c2156d",
+  "source_and_all_scale_visual_review": {
+    "different_intrinsic": {
+      "path": "jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/reviews/QUALIFIED-10510-10516-10517-DIFFERENT-ALLNATIVE-INTRINSIC-ART-REVIEW.json",
+      "sha256": "d8ab803d21a89590da535b31208be28bdf8b4c57d92bf19f3186210eab38959a"
+    },
+    "scales": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "Root": {
+      "path": "jobs/terrain-destroyed10516-10517-Original-primary2-20261019/proofs/ROOT-FIRSTUSED3-APPROVED-INTRINSIC-AND-FINITE-CONTEXT.json",
+      "sha256": "48965f75e40caba74bb21101162258914e484d0d1989efa12181c53cde0dbcfe"
+    }
+  },
+  "independent_review": {
+    "intrinsic": {
+      "path": "jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/reviews/QUALIFIED-10510-10516-10517-DIFFERENT-ALLNATIVE-INTRINSIC-ART-REVIEW.json",
+      "sha256": "d8ab803d21a89590da535b31208be28bdf8b4c57d92bf19f3186210eab38959a"
+    },
+    "literal_genuine_context": {
+      "path": "jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/reviews/QUALIFIED-FIRST7-USED3-DIFFERENT-GENUINE14-ALLNATIVE-CONTEXT-ART-REVIEW.json",
+      "sha256": "2a21be2eae3af9b15e1f863135638946edd836dfb74912169804b66bb0f62430"
+    },
+    "finite_prior_input_carry": {
+      "path": "jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/reviews/PASS-FINITE33-H5636-H5647-DISJOINT11-CARRY.json",
+      "sha256": "a30296d16c1f846e6c2ec74998a5cece2e610e954229629956ab8e8b7b807008"
+    }
+  },
+  "runtime_qa": "jobs/terrain-destroyed10516-10517-Original-primary2-20261019/runtime-qa.json",
+  "retained_original_detail_review": {
+    "cells_by_asset": {
+      "10517": [
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          14,
+          8
+        ],
+        [
+          14,
+          9
+        ],
+        [
+          14,
+          10
+        ],
+        [
+          15,
+          8
+        ],
+        [
+          15,
+          9
+        ],
+        [
+          15,
+          10
+        ]
+      ]
+    },
+    "retained_original_not_generated_HD": true,
+    "policy_version": "retained-original-details-v2-painted0255",
+    "painted_Source_palette_domain": [
+      0,
+      255
+    ],
+    "functional_palette_effects_are_retained_Original": true,
+    "frame_bindings_sha256": "91104539398b0062a31048465d6a0c326d4815c445194162999641a7c7c4bdca",
+    "hybrid_allscale_and_genuine_context_independent_review": true
+  },
+  "reviewer": "/root",
+  "coordinator_record_author": "/root/publication_review",
+  "Root_current_append_approval": {
+    "approved": true,
+    "authority_role": "project_root",
+    "actual_qualified_art_approval": {
+      "path": "jobs/terrain-destroyed10516-10517-Original-primary2-20261019/proofs/ROOT-FIRSTUSED3-APPROVED-INTRINSIC-AND-FINITE-CONTEXT.json",
+      "sha256": "48965f75e40caba74bb21101162258914e484d0d1989efa12181c53cde0dbcfe"
+    },
+    "historical_pending_coordinator": {
+      "path": "jobs/terrain-destroyed10516-10517-Original-primary2-20261019/proofs/coordinator-before-actual-Root-approval.json",
+      "sha256": "904c4e5171f88815696b66a1d833cd9d389a27c6f622578d4f89aa5d847c755d"
+    },
+    "historical_pending_statements_superseded_only_by_actual_Root_qualification": true,
+    "notes": "Selected assets 10516, 10517. Root approves only these complete selected static definitions after personal complete Source/native1\u20134 boards and finite genuine context review, with different author ART reviews bound. Original geometry, retained functional/gray/fidelity cells and source-owned support earn no generated-HD detail credit. Material variation, coarse shapes, low-scale softness and inherited seams retain the exact per-cohort qualifications in the pinned Root notes. Literal older scene epochs remain historical; the separate actual SourceG2 H5654 plus39-overlay joint11 check is Root-native4 and independently all-scale approved (719b4c8b/5b9a82b2). No World/full-mission timing or universal seamlessness claim. Append only the named selected assets; no additional animation or held companion credit."
+  },
+  "qualification_limits": [
+    "LiteralSourceG2/H5636 genuine14 legal static saved contexts with separate finite disjoint11 carryH5647; no new scene/World/combat/timing capture.",
+    "Retained62 gray Source cues10510 and57 gray Source cues10517 receive no generated HD credit. Native1 downsampling, coarse Source geometry/tonal roles and inherited joins remain accepted limits."
+  ]
+}

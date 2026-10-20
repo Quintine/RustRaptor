@@ -1,0 +1,42 @@
+{
+  "argv": [
+    "rustc",
+    "--edition=2024",
+    "-C",
+    "opt-level=1",
+    "-C",
+    "debuginfo=0",
+    "--extern",
+    "raptor_replica=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "--extern",
+    "serde_json=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libserde_json-89b5c242431768d3.rlib",
+    "--extern",
+    "flate2=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps/libflate2-808a135ff259ee28.rlib",
+    "-L",
+    "dependency=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps",
+    "-L",
+    "native=/home/quintine/Projects/RaptorReplica/RustRaptor/lib",
+    "-L",
+    "native=/home/quintine/.local/lib",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-currentG2-genuine-S2W3-static12-author-20261019-v1/compose_terrain_five_static12_currentG2.rs",
+    "-o",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-currentG2-genuine-S2W3-static12-author-20261019-v1/compose-terrain-five-static12-currentG2"
+  ],
+  "exit_code": 0,
+  "seconds": 4.324226322001778,
+  "stdout": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-currentG2-genuine-S2W3-static12-author-20261019-v1/ACTUAL-ADAPTER-COMPILE.stdout",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size": 0,
+    "mtime_ns": 1792394064399676123,
+    "mode": 33188
+  },
+  "stderr": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-currentG2-genuine-S2W3-static12-author-20261019-v1/ACTUAL-ADAPTER-COMPILE.stderr",
+    "sha256": "bfa1d7061c594b59e7fd5ced30e30b34d68c2be2902e4abd84ff7b54be0083c3",
+    "size": 595,
+    "mtime_ns": 1792394068681432739,
+    "mode": 33188
+  },
+  "free_bytes": 4100505600
+}

@@ -1,0 +1,104 @@
+{
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "operation": "nine-tiles",
+  "palette": {
+    "path": "inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "sources": [
+    {
+      "path": "inputs/10504.pic",
+      "sha256": "61c3b71919e6cb92a37bae1e427ff682b8b236d8e435f7e9c51400a53732f041",
+      "asset": "10504"
+    },
+    {
+      "path": "inputs/1050b.pic",
+      "sha256": "96242dabf808eeb23f0b062e7a45e3a75668c6e37d30f4b7f0c197e22c6d2729",
+      "asset": "1050b"
+    },
+    {
+      "path": "inputs/1050c.pic",
+      "sha256": "86d2782cdf1080e2971accb068e9d810a19c3c85a3c0c8550e91a3ab5a52a834",
+      "asset": "1050c"
+    },
+    {
+      "path": "inputs/1050e.pic",
+      "sha256": "bdc9c5b0d3c2b14f1c1e5ada1c30cd0b97adee06a1d5a34a7fa2d35c0cc11e1f",
+      "asset": "1050e"
+    }
+  ],
+  "donors": {
+    "0": {
+      "path": "ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23",
+      "box": [
+        0,
+        0,
+        887,
+        887
+      ],
+      "texture_period": [
+        512,
+        512
+      ]
+    },
+    "1": {
+      "path": "inputs/new-bridge4-master.png",
+      "sha256": "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b",
+      "box": [
+        254,
+        50,
+        30,
+        180
+      ],
+      "texture_period": [
+        64,
+        512
+      ]
+    },
+    "2": {
+      "path": "inputs/new-bridge4-master.png",
+      "sha256": "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b",
+      "box": [
+        30,
+        30,
+        170,
+        130
+      ],
+      "texture_period": [
+        256,
+        256
+      ]
+    },
+    "3": {
+      "path": "ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+      "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23",
+      "box": [
+        887,
+        0,
+        887,
+        887
+      ],
+      "texture_period": [
+        512,
+        512
+      ]
+    },
+    "4": {
+      "path": "inputs/new-road5-master.png",
+      "sha256": "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c",
+      "box": [
+        20,
+        350,
+        110,
+        18
+      ],
+      "texture_period": [
+        512,
+        64
+      ]
+    }
+  },
+  "lineage": "Both fresh masters are genuine untouched builtin returns. Road5 soil donor uses contemporaneous sameOriginalfamily bridge4 redbank material; bridge4 paint donor uses contemporaneous road5 ochre edge. No generated shape is reused as geometry.",
+  "functional_contract": "SourceNx opaque component masks and low-frequency palette color; bounded genuine RGB fine-band donors. All Source240..255 functional support retained exactly, and complete Scale1..4 logical owner unions declared Original detail/noHDcredit. All donor provenance and Source IDs/SHAs explicit."
+}

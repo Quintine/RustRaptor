@@ -1,0 +1,16 @@
+warning: unused import: `Read`
+ --> /home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-shoreline4-H5647-affected-endpoint3-context-successor-author-20261019-v1/compose_affected_endpoint3.rs:2:52
+  |
+2 | use std::{collections::{BTreeMap,BTreeSet},fs,io::{Read,Write},path::Path};
+  |                                                    ^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `logical_sprite`
+ --> /home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-shoreline4-H5647-affected-endpoint3-context-successor-author-20261019-v1/compose_affected_endpoint3.rs:3:154
+  |
+3 | ...ls,OriginalPalette},render::{Canvas,upscale},terrain_hd::{logical_sprite,selected_art,TerrainHd,Replacement,RetainedOriginalPlacem...
+  |                                                              ^^^^^^^^^^^^^^
+
+warning: 2 warnings emitted
+

@@ -1,0 +1,40 @@
+{
+  "status": "ACTUAL_ONE_PORTABLE_RECIPE_REPRODUCTION",
+  "argv": [
+    "/home/quintine/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/reproducer/terrain_component_cleanup.py",
+    "--recipe",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/reproducer/recipe.json",
+    "--output",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/proofs/actual-portable-replay"
+  ],
+  "exit_code": 0,
+  "timeout_seconds": 120,
+  "timed_out": false,
+  "RLIMIT_AS_bytes": 4294967296,
+  "RLIMIT_CPU_soft_hard_seconds": [
+    110,
+    120
+  ],
+  "BLAS_OMP_MKL_thread_limits": 1,
+  "automatic_retries": 0,
+  "tool_sha256": "cb639e9e115efc4ebfe6a07cf29012e3d22bc4c2881d90f5586ae243acf651b2",
+  "public_tool": {
+    "path": "tools/fine1054f_source_components/terrain_component_cleanup.py",
+    "sha256": "cb639e9e115efc4ebfe6a07cf29012e3d22bc4c2881d90f5586ae243acf651b2"
+  },
+  "recipe_sha256": "0fea03fc4708ba28835ff0c739d65c067bdab5bc9addb54cf1aa4748335cea82",
+  "stdout": {
+    "path": "jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/proofs/actual-portable-replay.stdout",
+    "sha256": "3867141c23e0c8cd61229edb3c4dbd60dd97ac8bd8c16b3ed893feb3e22cceaa"
+  },
+  "stderr": {
+    "path": "jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/proofs/actual-portable-replay.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "Root_approval": {
+    "path": "jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/proofs/ROOT-FINE6-APPROVED-INTRINSIC-AND-FINITE-CONTEXT.json",
+    "sha256": "df706f071c7f1e6f45863957e14a055dc8bc9a1e418f12b8b7cb10bae6495a91"
+  },
+  "new_engine_QA_World_or_generator_calls": 0
+}

@@ -1,0 +1,5010 @@
+{
+  "status": "SOURCE_ONLY_ALL39_CROSS_COHORT_CONSUMED_INPUT_AUDIT_NO_RENDER",
+  "prospective_manifest": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/PROSPECTIVE39-ALL21-PRIVATE-SOURCE-JOB-BINDINGS-NOT-FINAL.json",
+    "sha256": "323c9564b1e195b79137c2bbfd591ccbd6b4248799999549f64662af583e8a7c"
+  },
+  "all39_targets": {
+    "10504": "quiet9",
+    "1050b": "quiet9",
+    "1050c": "quiet9",
+    "1050e": "quiet9",
+    "10502": "quiet9",
+    "10506": "quiet9",
+    "10508": "quiet9",
+    "10509": "quiet9",
+    "1050a": "quiet9",
+    "10514": "shoreline4",
+    "10515": "shoreline4",
+    "1051b": "shoreline4",
+    "1051c": "shoreline4",
+    "10510": "used3",
+    "10516": "used3",
+    "10517": "used3",
+    "10370": "industrial12",
+    "302e1": "industrial12",
+    "30380": "industrial12",
+    "30465": "industrial12",
+    "40372": "industrial12",
+    "20593": "industrial12",
+    "20594": "industrial12",
+    "2059a": "industrial12",
+    "2059b": "industrial12",
+    "2059c": "industrial12",
+    "205fe": "industrial12",
+    "205ff": "industrial12",
+    "2068f": "infantry5",
+    "20690": "infantry5",
+    "20698": "infantry5",
+    "20699": "infantry5",
+    "2069c": "infantry5",
+    "10536": "fine6",
+    "1053e": "fine6",
+    "1054f": "fine6",
+    "10561": "fine6",
+    "1059e": "fine6",
+    "105a7": "fine6"
+  },
+  "all21_candidates": [
+    {
+      "cohort": "quiet9",
+      "assets": [
+        "10504",
+        "1050b",
+        "1050c",
+        "1050e"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-collapsed-bridge4-SourceG2-20261019-v1/candidate.json",
+        "sha256": "571ea0a809b6bfc10fb5fb5acc082d04226a2bc30587c369e17c94f34d562733"
+      }
+    },
+    {
+      "cohort": "quiet9",
+      "assets": [
+        "10502",
+        "10506",
+        "10508",
+        "10509",
+        "1050a"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/candidate.json",
+        "sha256": "e1d2df4fdf2d1bdb486c31adbdc6ffa85bf9a2247f4b781d9f265d672ee5e2c9"
+      }
+    },
+    {
+      "cohort": "shoreline4",
+      "assets": [
+        "10514"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/candidate.json",
+        "sha256": "57247467d7be0dd572509b5e3c1b1fae36d385b95a8b34345eae67af4c19fa05"
+      }
+    },
+    {
+      "cohort": "shoreline4",
+      "assets": [
+        "10515"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10515-Original-primary-retained-gray-SourceG2-20261019/candidate.json",
+        "sha256": "3c353928571fdf6d62c264da06f504709009b88dfd1fa0b919e5af1d29aa86ca"
+      }
+    },
+    {
+      "cohort": "shoreline4",
+      "assets": [
+        "1051b"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline1051b-Original-primary-retained-gray-SourceG2-20261019/candidate.json",
+        "sha256": "e122cf7febaacbe0f82f8977fcf00e96e1cc5cb2f06b3b5fc22dc2bd1b1b0749"
+      }
+    },
+    {
+      "cohort": "shoreline4",
+      "assets": [
+        "1051c"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline1051c-Original-primary-retained-gray-SourceG2-20261019/candidate.json",
+        "sha256": "8b1e8b1dd15144d36a19772f97fe52752af83b83406170bcbef8e78798c6ed9c"
+      }
+    },
+    {
+      "cohort": "used3",
+      "assets": [
+        "10510"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/candidate.json",
+        "sha256": "941527e52fc8e41f52bb5966b86faeea1f76fca6dda3a2a0e18ce05ab31a9e30"
+      }
+    },
+    {
+      "cohort": "used3",
+      "assets": [
+        "10516",
+        "10517"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-destroyed10516-10517-Original-primary2-20261019/candidate.json",
+        "sha256": "15390277c9f457bf7ff4ca7c9a4c7c40fa2fdb2394967c124b750d5ba6c2156d"
+      }
+    },
+    {
+      "cohort": "industrial12",
+      "assets": [
+        "10370"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/candidate.json",
+        "sha256": "7845d50f92bf0b89c4892a5bc4f6856bb17067c1008e28ba99cabb261554c945"
+      }
+    },
+    {
+      "cohort": "industrial12",
+      "assets": [
+        "302e1"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-302e1-SourceG2-complete1-20261019/candidate.json",
+        "sha256": "3fa3fb11893633538ce4597a51f50f464a80e04e3dfe9e90f293f43365fe05de"
+      }
+    },
+    {
+      "cohort": "industrial12",
+      "assets": [
+        "30380"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-30380-SourceG2-complete1-20261019/candidate.json",
+        "sha256": "2bff20cece20363be9f760df8b4c1af93b80b3cf28dc7b55019cc5de46cc322b"
+      }
+    },
+    {
+      "cohort": "industrial12",
+      "assets": [
+        "30465"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-30465-SourceG2-complete1-20261019/candidate.json",
+        "sha256": "7e58a72cbfae380fcd967c27604c25bed5669a150e391250b699416eb6c15a66"
+      }
+    },
+    {
+      "cohort": "industrial12",
+      "assets": [
+        "40372"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-40372-SourceG2-complete1-20261019/candidate.json",
+        "sha256": "4045c437809ffe5e7d918cd61494cd19a52c6c583e589d12d09490f01e91189c"
+      }
+    },
+    {
+      "cohort": "industrial12",
+      "assets": [
+        "20593",
+        "20594",
+        "2059a",
+        "2059b",
+        "2059c"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-industrial-farm5-SourceG2-20261019-v1/candidate.json",
+        "sha256": "f8bf4cf31c4927baae39c0ec7a3217838e243f85993f699213823d2da8060be1"
+      }
+    },
+    {
+      "cohort": "industrial12",
+      "assets": [
+        "205fe",
+        "205ff"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-industrial-earth2-SourceG2-20261019-v1/candidate.json",
+        "sha256": "9ede56efa0445ba39b154b1f9191d9e5e8b79b5e70fbdcf3219ac51c558c97ba"
+      }
+    },
+    {
+      "cohort": "infantry5",
+      "assets": [
+        "2068f",
+        "20690",
+        "20698",
+        "20699",
+        "2069c"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/candidate.json",
+        "sha256": "0f0e9f53c86e69583f1c623f10fd1b60341dd6d47a2d523f23f86411a678580e"
+      }
+    },
+    {
+      "cohort": "fine6",
+      "assets": [
+        "10536",
+        "1053e"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/candidate.json",
+        "sha256": "093e08bddce96b614e11dbc9eb092957f68189525017ccd7c1fba2659da95ee0"
+      }
+    },
+    {
+      "cohort": "fine6",
+      "assets": [
+        "1054f"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-1054f-fine-material-complete1-20261019-v1/candidate.json",
+        "sha256": "d836f5264ea1f6990e39d8e4b02120dcb12f1bd3064584b18e090673c0eac7b2"
+      }
+    },
+    {
+      "cohort": "fine6",
+      "assets": [
+        "10561"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-10561-fine-material-complete1-20261019-v1/candidate.json",
+        "sha256": "f986d8203e53020a3afae7c38bd526c7533a459ad12d20f42809f6dc9d514a6f"
+      }
+    },
+    {
+      "cohort": "fine6",
+      "assets": [
+        "1059e"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-1059e-fine-material-complete1-20261019-v1/candidate.json",
+        "sha256": "1ae2fe52f08afb3a93371279961cf9721374c39de3cfa9fd57f86c39a773637d"
+      }
+    },
+    {
+      "cohort": "fine6",
+      "assets": [
+        "105a7"
+      ],
+      "candidate": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-105a7-fine-material-complete1-20261019-v1/candidate.json",
+        "sha256": "3ab29fcbaefd6f89cbd9769e51d1342e4abff894ad2b6b1d84557ede196ef763"
+      }
+    }
+  ],
+  "independent_Original32_catalog_MAP_FLATS_pins": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/INDEX",
+      "sha256": "4ce78e5e638b6603114dd233ceaa41f386c0963ba4aa02ecf88ce0215b096681"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/FLATSG1_ITM",
+      "sha256": "882cd3f7d793e427771877ce5b74d6f6db4ed19385ebe79ade51b7a22bb70140"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/FLATSG2_ITM",
+      "sha256": "dc079c9af2e05357c40bf4d1c1299e51563dda28be75db060bb1f8e7c3581bae"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/FLATSG3_ITM",
+      "sha256": "1611bd91aa62d353bcd8a0ce298803a75a82aa03b1acd866fb256e07b7e89d5a"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/misc/FLATSG4_ITM",
+      "sha256": "6a880587e587c64f08a7c841be55eba5a93ea64042a88383b47b81033e2bee11"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP1G1_MAP",
+      "sha256": "bfa4386e554ee029a9ac7f2f5d0c4cb5c3000e5d7512c7c8246d75deecb48939"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP2G1_MAP",
+      "sha256": "f6a2f140f86a6bd91b6d137f149c69a7509e37ef93f54513d16ac826a02d5d69"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP3G1_MAP",
+      "sha256": "d119b94ecf744c4b4a14ea1f2de99898050efeddfb6438a8393d0a91f7ca5dc9"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP4G1_MAP",
+      "sha256": "908e65d46cceaa17f4243f54e5f40773051950423e4a5f840fa92742c94f7cff"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP5G1_MAP",
+      "sha256": "4eb985c26cbe5862d73282e8c0af06589e667ddd3c9ee19f5f436cf4150b9f36"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP6G1_MAP",
+      "sha256": "605f63c38a82689a2d776a641576be1a61ad97da52cbaa8f76dea74798d024e2"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP7G1_MAP",
+      "sha256": "03b016972af559632627c37d5cfb321f24d6f09c18b6465039cc3d5b2051ffbc"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP8G1_MAP",
+      "sha256": "bdc13404abe376689fc78fac4b585a641d68bfc8939cc6b51cc5811d734555bf"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP9G1_MAP",
+      "sha256": "f09110d48c0a86989333aa5087e48b02ea06aff7488777e5365f1f3b5c8e835f"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP1G2_MAP",
+      "sha256": "b2bf31aacf9e686c0583ecaf78d5af870f3b326d57e78382aa3d279f778cfbd5"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP2G2_MAP",
+      "sha256": "0776eabbb0e18b76a2121fa0ec505099b77564af8abe721bb2a05aca43d12ebd"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP3G2_MAP",
+      "sha256": "e071f964e54556946595b3fbda178ece3995efe3a1978589586d60f59ad82719"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP4G2_MAP",
+      "sha256": "8f15fe7ef807a5d75f4c345213bfe4e4694b53cdb38204f5aa3dc0c45dcfce09"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP5G2_MAP",
+      "sha256": "c5f907c0c743554998128fcb0047c262815c77c2ac2aa6c4941a91f4820a0aac"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP6G2_MAP",
+      "sha256": "3573cbc922e985145220c5acc30cffcea0bbb26834142fc9e5a496790f5b8483"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP7G2_MAP",
+      "sha256": "555e6d42a4c4edc50f100b54d4d7850339c902ca32cc408b420fa5c4d50254fe"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP8G2_MAP",
+      "sha256": "7556d96680a0bb382e629ce2ffb2d4a5e1e15b5b87ba450350d8d0e4ac387d51"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP9G2_MAP",
+      "sha256": "a1c7a1d1ca473bff76259bb40b3d51fe728b00997efdbcb4b4400ceef9db99c2"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP1G3_MAP",
+      "sha256": "2687a6d2e601e67f16f3ec69ff8b007dcfa6610f3dd812af4a1a20e9c1db036e"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP2G3_MAP",
+      "sha256": "1d87c8760de45b12c0f43d9354cbd81cfd6993a34933aae6940b87712c4b29e3"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP3G3_MAP",
+      "sha256": "76b8443d883c56d4de1a9874cbeeef3b009036bf53982ef8d5b49a233e8098be"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP4G3_MAP",
+      "sha256": "7b1ec34500093951f8202d26780360f8ab83fb1cb9fcc18ebdd14e6db20eb026"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP5G3_MAP",
+      "sha256": "af69d2ca9295b5763c1b5fe84464d58661ef534faa912a914db9458b9115190c"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP6G3_MAP",
+      "sha256": "78429a723d8e73a0b46134cbb99abf0904a4c39ddb9ff25b26ac9c2703159d36"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP7G3_MAP",
+      "sha256": "9f5d2ef60050c1b41e57146d8df871507ceda20757158b4a84bd0f9f8c8b9bf3"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP8G3_MAP",
+      "sha256": "8e8dc013dad4628d3737337e4125f4155d70ed94ebb5c5edf0b8cdc8d5eb5525"
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/data/maps/MAP9G3_MAP",
+      "sha256": "e1bd018fc5286e864d94e56e691a4e6ab23f5c87c3069be4f94779422fcdd1f0"
+    }
+  ],
+  "actual_MAP_FLATS_endpoint_slot_checks": 843,
+  "unique_context_contracts": 9,
+  "context_contracts": [
+    {
+      "cohort": "quiet9",
+      "pin": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "array_key": "endpoints"
+    },
+    {
+      "cohort": "shoreline4",
+      "pin": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "array_key": "endpoints"
+    },
+    {
+      "cohort": "used3",
+      "pin": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "array_key": "cases"
+    },
+    {
+      "cohort": "industrial12",
+      "pin": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-hd-focused30380-SourceG2-genuine1-context-author-20261019-v1-SEALED-FOCUSED30380-GENUINE1-CURRENTG2-RECIPE-f1348e3016c3.json",
+        "sha256": "f1348e3016c396c2579e910257fb4315f49fe7a1cfd8b79452aca55845834cee"
+      },
+      "array_key": "cases"
+    },
+    {
+      "cohort": "industrial12",
+      "pin": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-hd-followon4-SourceG2-genuine6-context-author-20261019-v1-SEALED-FOLLOWON4-GENUINE6-CURRENTG2-RECIPE-2339dee75a98.json",
+        "sha256": "2339dee75a98411a191c68f2c9e15d14753e7def1e1fc8a46efa4be14998b7d0"
+      },
+      "array_key": "cases"
+    },
+    {
+      "cohort": "industrial12",
+      "pin": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2-SEALED-QUIET302E1-GENUINE1-CURRENTG2-RECIPE-c4bbcc4c251f.json",
+        "sha256": "c4bbcc4c251f6ddbed280ecd565efe0ed7392c2070032f049019b23114738670"
+      },
+      "array_key": "cases"
+    },
+    {
+      "cohort": "industrial12",
+      "pin": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-industrial7-SEALED-INDUSTRIAL7-GENUINE10-CURRENTG2-H5647-RECIPE.json-8524ec5da804.json",
+        "sha256": "8524ec5da804fa3714a6f32105fbce9f176f30e17fba1720f94b340c2260e812"
+      },
+      "array_key": "cases"
+    },
+    {
+      "cohort": "infantry5",
+      "pin": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/SEALED-TERRAIN-FIVE-GENUINE12-CURRENTG2-RECIPE.json",
+        "sha256": "fac4030dd61c7ccd7eda6c8687b4e910b802f6cd87c6ad695162214e846cc1ac"
+      },
+      "array_key": "cases"
+    },
+    {
+      "cohort": "fine6",
+      "pin": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/lineage/fine6-literal-sourceG2-H5647-reviews/context-actual-H5647/ALL27-MAP-4FLATS-CENSUS-AND-FINITE9-ENDPOINTS.json",
+        "sha256": "0d0a59428c1ac4090b66f983c4eef024effb170cbcb468d07c2c88823056166e"
+      },
+      "array_key": "cases"
+    }
+  ],
+  "all_context_endpoints": [
+    {
+      "cohort": "quiet9",
+      "case_index": 0,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 9,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10527",
+        "10503",
+        "10528",
+        "1052e",
+        "10509",
+        "10538",
+        "10521",
+        "10501",
+        "10521"
+      ],
+      "own_new_targets_present": [
+        "10509"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 1,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 9,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10527",
+        "10503",
+        "10528",
+        "1052e",
+        "1050a",
+        "10538",
+        "10521",
+        "10501",
+        "10521"
+      ],
+      "own_new_targets_present": [
+        "1050a"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 10,
+          "column": 2,
+          "intact": "10509",
+          "settled": "1050a",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 425
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 2,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 10,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1052e",
+        "10509",
+        "10538",
+        "10521",
+        "10501",
+        "10521",
+        "10512",
+        "10513",
+        "10528"
+      ],
+      "own_new_targets_present": [
+        "10509"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 6,
+          "row": 12,
+          "column": 1,
+          "intact": "10512",
+          "settled": "10516",
+          "raw_health": 20,
+          "reward": 150,
+          "game": 0,
+          "flat": 434,
+          "new_owner": "used3"
+        },
+        {
+          "slot": 7,
+          "row": 12,
+          "column": 2,
+          "intact": "10513",
+          "settled": "10517",
+          "raw_health": 20,
+          "reward": 150,
+          "game": 0,
+          "flat": 435,
+          "new_owner": "used3"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 3,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 10,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1052e",
+        "10509",
+        "10538",
+        "10521",
+        "10502",
+        "10521",
+        "10512",
+        "10513",
+        "10528"
+      ],
+      "own_new_targets_present": [
+        "10502",
+        "10509"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 11,
+          "column": 2,
+          "intact": "10501",
+          "settled": "10502",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 417
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 6,
+          "row": 12,
+          "column": 1,
+          "intact": "10512",
+          "settled": "10516",
+          "raw_health": 20,
+          "reward": 150,
+          "game": 0,
+          "flat": 434,
+          "new_owner": "used3"
+        },
+        {
+          "slot": 7,
+          "row": 12,
+          "column": 2,
+          "intact": "10513",
+          "settled": "10517",
+          "raw_health": 20,
+          "reward": 150,
+          "game": 0,
+          "flat": 435,
+          "new_owner": "used3"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 4,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 111,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10425",
+        "103e5",
+        "10458",
+        "10433",
+        "103e7",
+        "10456",
+        "103d0",
+        "103db",
+        "104d1"
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 1,
+          "row": 111,
+          "column": 2,
+          "intact": "103e5",
+          "settled": "10510",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 133,
+          "new_owner": "used3"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 5,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 111,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10425",
+        "103e5",
+        "10458",
+        "10433",
+        "1050e",
+        "10456",
+        "103d0",
+        "103db",
+        "104d1"
+      ],
+      "own_new_targets_present": [
+        "1050e"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 112,
+          "column": 2,
+          "intact": "103e7",
+          "settled": "1050e",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 135
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 1,
+          "row": 111,
+          "column": 2,
+          "intact": "103e5",
+          "settled": "10510",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 133,
+          "new_owner": "used3"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 6,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_2",
+      "window_row0": 50,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "103d2",
+        "1042b",
+        "1042d",
+        "103da",
+        "103d5",
+        "103d6",
+        "104d2",
+        "103dc",
+        "103dd"
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 7,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_2",
+      "window_row0": 50,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "103d2",
+        "1042b",
+        "1042d",
+        "103da",
+        "10504",
+        "103d6",
+        "104d2",
+        "103dc",
+        "103dd"
+      ],
+      "own_new_targets_present": [
+        "10504"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 51,
+          "column": 2,
+          "intact": "103d5",
+          "settled": "10504",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 117
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 8,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_2",
+      "window_row0": 50,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1042b",
+        "1042d",
+        "103d0",
+        "103d5",
+        "103d6",
+        "103db",
+        "103dc",
+        "103dd",
+        "104d1"
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 9,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_2",
+      "window_row0": 50,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1042b",
+        "1042d",
+        "103d0",
+        "103d5",
+        "1050b",
+        "103db",
+        "103dc",
+        "103dd",
+        "104d1"
+      ],
+      "own_new_targets_present": [
+        "1050b"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 51,
+          "column": 3,
+          "intact": "103d6",
+          "settled": "1050b",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 118
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 10,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_2",
+      "window_row0": 54,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "104e4",
+        "103dc",
+        "103dd",
+        "103df",
+        "103e3",
+        "103e4",
+        "10424",
+        "1042f",
+        "1042d"
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 11,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_2",
+      "window_row0": 54,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "104e4",
+        "103dc",
+        "103dd",
+        "103df",
+        "1050c",
+        "103e4",
+        "10424",
+        "1042f",
+        "1042d"
+      ],
+      "own_new_targets_present": [
+        "1050c"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 55,
+          "column": 2,
+          "intact": "103e3",
+          "settled": "1050c",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 131
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 12,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 11,
+      "window_column0": -1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        null,
+        "10520",
+        "10521",
+        null,
+        "10505",
+        "10512",
+        null,
+        "10535",
+        "10519"
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 5,
+          "row": 12,
+          "column": 1,
+          "intact": "10512",
+          "settled": "10516",
+          "raw_health": 20,
+          "reward": 150,
+          "game": 0,
+          "flat": 434,
+          "new_owner": "used3"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 13,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 11,
+      "window_column0": -1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        null,
+        "10520",
+        "10521",
+        null,
+        "10506",
+        "10512",
+        null,
+        "10535",
+        "10519"
+      ],
+      "own_new_targets_present": [
+        "10506"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 12,
+          "column": 0,
+          "intact": "10505",
+          "settled": "10506",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 421
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 5,
+          "row": 12,
+          "column": 1,
+          "intact": "10512",
+          "settled": "10516",
+          "raw_health": 20,
+          "reward": 150,
+          "game": 0,
+          "flat": 434,
+          "new_owner": "used3"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 14,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 13,
+      "window_column0": 7,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10528",
+        "10536",
+        null,
+        "10528",
+        "10507",
+        null,
+        "1053a",
+        "10536",
+        null
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [
+        "10536"
+      ],
+      "batch_new_foreign_slots": [
+        {
+          "slot": 1,
+          "row": 13,
+          "column": 8,
+          "asset": "10536",
+          "new_owner": "fine6"
+        },
+        {
+          "slot": 7,
+          "row": 15,
+          "column": 8,
+          "asset": "10536",
+          "new_owner": "fine6"
+        }
+      ],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "quiet9",
+      "case_index": 15,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+        "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 13,
+      "window_column0": 7,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10528",
+        "10536",
+        null,
+        "10528",
+        "10508",
+        null,
+        "1053a",
+        "10536",
+        null
+      ],
+      "own_new_targets_present": [
+        "10508"
+      ],
+      "batch_new_foreign_consumed": [
+        "10536"
+      ],
+      "batch_new_foreign_slots": [
+        {
+          "slot": 1,
+          "row": 13,
+          "column": 8,
+          "asset": "10536",
+          "new_owner": "fine6"
+        },
+        {
+          "slot": 7,
+          "row": 15,
+          "column": 8,
+          "asset": "10536",
+          "new_owner": "fine6"
+        }
+      ],
+      "cross_cohort_cardinal_pairs": [
+        {
+          "slots": [
+            1,
+            4
+          ],
+          "assets": [
+            "10536",
+            "10508"
+          ],
+          "cohorts": [
+            "fine6",
+            "quiet9"
+          ]
+        },
+        {
+          "slots": [
+            4,
+            7
+          ],
+          "assets": [
+            "10508",
+            "10536"
+          ],
+          "cohorts": [
+            "quiet9",
+            "fine6"
+          ]
+        }
+      ],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 14,
+          "column": 8,
+          "intact": "10507",
+          "settled": "10508",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 423
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 0,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 126,
+      "window_column0": 0,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "103d1",
+        "103d2",
+        "1042b",
+        "104d2",
+        "1051b",
+        "1042b",
+        "104e4",
+        "1051b",
+        "1042b"
+      ],
+      "own_new_targets_present": [
+        "1051b"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 1,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 127,
+      "window_column0": 0,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "104d2",
+        "1051b",
+        "1042b",
+        "104e4",
+        "1051b",
+        "1042b",
+        "103d3",
+        "103e0",
+        "1042b"
+      ],
+      "own_new_targets_present": [
+        "1051b"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 2,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 57,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10420",
+        "103e9",
+        "103ea",
+        "1047b",
+        "10514",
+        "104b7",
+        "10417",
+        "103d7",
+        "103d8"
+      ],
+      "own_new_targets_present": [
+        "10514"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 3,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_5",
+      "window_row0": 23,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10427",
+        "10434",
+        "103d0",
+        "103d6",
+        "10515",
+        "103db",
+        "103dd",
+        "1049c",
+        "103d8"
+      ],
+      "own_new_targets_present": [
+        "10515"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 3,
+          "row": 24,
+          "column": 1,
+          "intact": "103d6",
+          "settled": "1050b",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 118,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 4,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 109,
+      "window_column0": 6,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "103da",
+        "103d2",
+        "10380",
+        "104d4",
+        "1051b",
+        "1038e",
+        "10458",
+        "103e6",
+        "10425"
+      ],
+      "own_new_targets_present": [
+        "1051b"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 5,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 108,
+      "window_column0": 0,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "103d4",
+        "103d8",
+        "104dd",
+        "103de",
+        "1051c",
+        "103d4",
+        "10362",
+        "1040f",
+        "10514"
+      ],
+      "own_new_targets_present": [
+        "10514",
+        "1051c"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 6,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_2",
+      "window_row0": 18,
+      "window_column0": 5,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "104b8",
+        "103d8",
+        "104b8",
+        "103d3",
+        "1051c",
+        "103df",
+        "1051b",
+        "10362",
+        "1047a"
+      ],
+      "own_new_targets_present": [
+        "1051b",
+        "1051c"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 7,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_3",
+      "window_row0": 57,
+      "window_column0": 4,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1039b",
+        "1039c",
+        "10514",
+        "103d0",
+        "10515",
+        "103db",
+        "103db",
+        "103d3",
+        "1051c"
+      ],
+      "own_new_targets_present": [
+        "10514",
+        "10515",
+        "1051c"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 8,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_4",
+      "window_row0": 65,
+      "window_column0": 6,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10515",
+        "103d2",
+        "10375",
+        "103d8",
+        "1051b",
+        "1038d",
+        "103d4",
+        "103da",
+        "10515"
+      ],
+      "own_new_targets_present": [
+        "10515",
+        "1051b"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 9,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_6",
+      "window_row0": 33,
+      "window_column0": 0,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "103d4",
+        "104b8",
+        "104b8",
+        "103de",
+        "1051c",
+        "103d4",
+        "103a9",
+        "1038d",
+        "10514"
+      ],
+      "own_new_targets_present": [
+        "10514",
+        "1051c"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 10,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_7",
+      "window_row0": 64,
+      "window_column0": 6,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "104b3",
+        "104b3",
+        "103d0",
+        "103d0",
+        "10515",
+        "103db",
+        "103db",
+        "104b8",
+        "103d3"
+      ],
+      "own_new_targets_present": [
+        "10515"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 11,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_8",
+      "window_row0": 130,
+      "window_column0": 4,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "104b8",
+        "103da",
+        "10515",
+        "103df",
+        "1051c",
+        "103d4",
+        "10462",
+        "104c1",
+        "10514"
+      ],
+      "own_new_targets_present": [
+        "10514",
+        "10515",
+        "1051c"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 12,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 0,
+      "window_column0": 0,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "103d4",
+        "103d8",
+        "104b8",
+        "103de",
+        "1051c",
+        "103d4",
+        "1037e",
+        "104b6",
+        "10514"
+      ],
+      "own_new_targets_present": [
+        "10514",
+        "1051c"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 13,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 1,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1051c",
+        "103d4",
+        "104b7",
+        "104b6",
+        "10514",
+        "103d8",
+        "103d0",
+        "103db",
+        "10408"
+      ],
+      "own_new_targets_present": [
+        "10514",
+        "1051c"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 14,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 57,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10420",
+        "104ea",
+        "103ea",
+        "1047b",
+        "10514",
+        "104b7",
+        "10417",
+        "103d7",
+        "103d8"
+      ],
+      "own_new_targets_present": [
+        "10514"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 1,
+          "row": 57,
+          "column": 3,
+          "intact": "103e9",
+          "settled": "104ea",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 137
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 15,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_5",
+      "window_row0": 23,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10427",
+        "10434",
+        "103d0",
+        "1050b",
+        "10515",
+        "103db",
+        "103dd",
+        "1049c",
+        "103d8"
+      ],
+      "own_new_targets_present": [
+        "10515"
+      ],
+      "batch_new_foreign_consumed": [
+        "1050b"
+      ],
+      "batch_new_foreign_slots": [
+        {
+          "slot": 3,
+          "row": 24,
+          "column": 1,
+          "asset": "1050b",
+          "new_owner": "quiet9"
+        }
+      ],
+      "cross_cohort_cardinal_pairs": [
+        {
+          "slots": [
+            3,
+            4
+          ],
+          "assets": [
+            "1050b",
+            "10515"
+          ],
+          "cohorts": [
+            "quiet9",
+            "shoreline4"
+          ]
+        }
+      ],
+      "genuine_settled_changes": [
+        {
+          "slot": 3,
+          "row": 24,
+          "column": 1,
+          "intact": "103d6",
+          "settled": "1050b",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 118
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 16,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 109,
+      "window_column0": 6,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "103da",
+        "103d2",
+        "10380",
+        "104d4",
+        "1051b",
+        "1038e",
+        "10458",
+        "10511",
+        "10425"
+      ],
+      "own_new_targets_present": [
+        "1051b"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 7,
+          "row": 111,
+          "column": 7,
+          "intact": "103e6",
+          "settled": "10511",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 134
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "shoreline4",
+      "case_index": 17,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+        "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+      },
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 108,
+      "window_column0": 0,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "103d4",
+        "103d8",
+        "104dd",
+        "103de",
+        "1051c",
+        "103d4",
+        "10362",
+        "10410",
+        "10514"
+      ],
+      "own_new_targets_present": [
+        "10514",
+        "1051c"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 7,
+          "row": 110,
+          "column": 1,
+          "intact": "1040f",
+          "settled": "10410",
+          "raw_health": 5,
+          "reward": 25,
+          "game": 0,
+          "flat": 175
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 0,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 110,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1040f",
+        "10514",
+        "103d8",
+        "10425",
+        "103e5",
+        "10458",
+        "10433",
+        "103e7",
+        "10456"
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [
+        "10514"
+      ],
+      "batch_new_foreign_slots": [
+        {
+          "slot": 1,
+          "row": 110,
+          "column": 2,
+          "asset": "10514",
+          "new_owner": "shoreline4"
+        }
+      ],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 7,
+          "row": 112,
+          "column": 2,
+          "intact": "103e7",
+          "settled": "1050e",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 135,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 1,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 110,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1040f",
+        "10514",
+        "103d8",
+        "10425",
+        "10510",
+        "10458",
+        "10433",
+        "103e7",
+        "10456"
+      ],
+      "own_new_targets_present": [
+        "10510"
+      ],
+      "batch_new_foreign_consumed": [
+        "10514"
+      ],
+      "batch_new_foreign_slots": [
+        {
+          "slot": 1,
+          "row": 110,
+          "column": 2,
+          "asset": "10514",
+          "new_owner": "shoreline4"
+        }
+      ],
+      "cross_cohort_cardinal_pairs": [
+        {
+          "slots": [
+            1,
+            4
+          ],
+          "assets": [
+            "10514",
+            "10510"
+          ],
+          "cohorts": [
+            "shoreline4",
+            "used3"
+          ]
+        }
+      ],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 111,
+          "column": 2,
+          "intact": "103e5",
+          "settled": "10510",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 133
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 7,
+          "row": 112,
+          "column": 2,
+          "intact": "103e7",
+          "settled": "1050e",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 135,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 2,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_4",
+      "window_row0": 60,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1042d",
+        "10514",
+        "103d3",
+        "1042e",
+        "103e5",
+        "103e6",
+        "10433",
+        "103e7",
+        "103e8"
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [
+        "10514"
+      ],
+      "batch_new_foreign_slots": [
+        {
+          "slot": 1,
+          "row": 60,
+          "column": 3,
+          "asset": "10514",
+          "new_owner": "shoreline4"
+        }
+      ],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 7,
+          "row": 62,
+          "column": 3,
+          "intact": "103e7",
+          "settled": "1050e",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 135,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 3,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_4",
+      "window_row0": 60,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1042d",
+        "10514",
+        "103d3",
+        "1042e",
+        "10510",
+        "103e6",
+        "10433",
+        "103e7",
+        "103e8"
+      ],
+      "own_new_targets_present": [
+        "10510"
+      ],
+      "batch_new_foreign_consumed": [
+        "10514"
+      ],
+      "batch_new_foreign_slots": [
+        {
+          "slot": 1,
+          "row": 60,
+          "column": 3,
+          "asset": "10514",
+          "new_owner": "shoreline4"
+        }
+      ],
+      "cross_cohort_cardinal_pairs": [
+        {
+          "slots": [
+            1,
+            4
+          ],
+          "assets": [
+            "10514",
+            "10510"
+          ],
+          "cohorts": [
+            "shoreline4",
+            "used3"
+          ]
+        }
+      ],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 61,
+          "column": 3,
+          "intact": "103e5",
+          "settled": "10510",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 133
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 7,
+          "row": 62,
+          "column": 3,
+          "intact": "103e7",
+          "settled": "1050e",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 135,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 4,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_5",
+      "window_row0": 20,
+      "window_column0": 3,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "104b3",
+        "10514",
+        "103d8",
+        "10425",
+        "103e5",
+        "10458",
+        "10433",
+        "103e7",
+        "10456"
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [
+        "10514"
+      ],
+      "batch_new_foreign_slots": [
+        {
+          "slot": 1,
+          "row": 20,
+          "column": 4,
+          "asset": "10514",
+          "new_owner": "shoreline4"
+        }
+      ],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 7,
+          "row": 22,
+          "column": 4,
+          "intact": "103e7",
+          "settled": "1050e",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 135,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 5,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_5",
+      "window_row0": 20,
+      "window_column0": 3,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "104b3",
+        "10514",
+        "103d8",
+        "10425",
+        "10510",
+        "10458",
+        "10433",
+        "103e7",
+        "10456"
+      ],
+      "own_new_targets_present": [
+        "10510"
+      ],
+      "batch_new_foreign_consumed": [
+        "10514"
+      ],
+      "batch_new_foreign_slots": [
+        {
+          "slot": 1,
+          "row": 20,
+          "column": 4,
+          "asset": "10514",
+          "new_owner": "shoreline4"
+        }
+      ],
+      "cross_cohort_cardinal_pairs": [
+        {
+          "slots": [
+            1,
+            4
+          ],
+          "assets": [
+            "10514",
+            "10510"
+          ],
+          "cohorts": [
+            "shoreline4",
+            "used3"
+          ]
+        }
+      ],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 21,
+          "column": 4,
+          "intact": "103e5",
+          "settled": "10510",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 133
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 7,
+          "row": 22,
+          "column": 4,
+          "intact": "103e7",
+          "settled": "1050e",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 135,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 6,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_5",
+      "window_row0": 136,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "104b2",
+        "103d0",
+        "103db",
+        "10425",
+        "103e5",
+        "10458",
+        "10433",
+        "103e7",
+        "10456"
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 7,
+          "row": 138,
+          "column": 3,
+          "intact": "103e7",
+          "settled": "1050e",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 135,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 7,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_5",
+      "window_row0": 136,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "104b2",
+        "103d0",
+        "103db",
+        "10425",
+        "10510",
+        "10458",
+        "10433",
+        "103e7",
+        "10456"
+      ],
+      "own_new_targets_present": [
+        "10510"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 137,
+          "column": 3,
+          "intact": "103e5",
+          "settled": "10510",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 133
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 7,
+          "row": 138,
+          "column": 3,
+          "intact": "103e7",
+          "settled": "1050e",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 135,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 8,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_6",
+      "window_row0": 36,
+      "window_column0": 0,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "103a9",
+        "103d0",
+        "103db",
+        "10425",
+        "103e5",
+        "10458",
+        "10433",
+        "103e7",
+        "10456"
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 7,
+          "row": 38,
+          "column": 1,
+          "intact": "103e7",
+          "settled": "1050e",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 135,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 9,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_6",
+      "window_row0": 36,
+      "window_column0": 0,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "103a9",
+        "103d0",
+        "103db",
+        "10425",
+        "10510",
+        "10458",
+        "10433",
+        "103e7",
+        "10456"
+      ],
+      "own_new_targets_present": [
+        "10510"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 37,
+          "column": 1,
+          "intact": "103e5",
+          "settled": "10510",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 133
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 7,
+          "row": 38,
+          "column": 1,
+          "intact": "103e7",
+          "settled": "1050e",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 135,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 10,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 11,
+      "window_column0": 0,
+      "width_tiles": 4,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10520",
+        "10521",
+        "10501",
+        "10521",
+        "10505",
+        "10512",
+        "10513",
+        "10528",
+        "10535",
+        "10519",
+        "1051a",
+        "10523"
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 2,
+          "row": 11,
+          "column": 2,
+          "intact": "10501",
+          "settled": "10502",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 417,
+          "new_owner": "quiet9"
+        },
+        {
+          "slot": 4,
+          "row": 12,
+          "column": 0,
+          "intact": "10505",
+          "settled": "10506",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 421,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 11,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 11,
+      "window_column0": 0,
+      "width_tiles": 4,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10520",
+        "10521",
+        "10501",
+        "10521",
+        "10505",
+        "10516",
+        "10513",
+        "10528",
+        "10535",
+        "10519",
+        "1051a",
+        "10523"
+      ],
+      "own_new_targets_present": [
+        "10516"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 5,
+          "row": 12,
+          "column": 1,
+          "intact": "10512",
+          "settled": "10516",
+          "raw_health": 20,
+          "reward": 150,
+          "game": 0,
+          "flat": 434
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 2,
+          "row": 11,
+          "column": 2,
+          "intact": "10501",
+          "settled": "10502",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 417,
+          "new_owner": "quiet9"
+        },
+        {
+          "slot": 4,
+          "row": 12,
+          "column": 0,
+          "intact": "10505",
+          "settled": "10506",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 421,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 12,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 11,
+      "window_column0": 0,
+      "width_tiles": 4,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10520",
+        "10521",
+        "10501",
+        "10521",
+        "10505",
+        "10512",
+        "10517",
+        "10528",
+        "10535",
+        "10519",
+        "1051a",
+        "10523"
+      ],
+      "own_new_targets_present": [
+        "10517"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 6,
+          "row": 12,
+          "column": 2,
+          "intact": "10513",
+          "settled": "10517",
+          "raw_health": 20,
+          "reward": 150,
+          "game": 0,
+          "flat": 435
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 2,
+          "row": 11,
+          "column": 2,
+          "intact": "10501",
+          "settled": "10502",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 417,
+          "new_owner": "quiet9"
+        },
+        {
+          "slot": 4,
+          "row": 12,
+          "column": 0,
+          "intact": "10505",
+          "settled": "10506",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 421,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "used3",
+      "case_index": 13,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+        "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 11,
+      "window_column0": 0,
+      "width_tiles": 4,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10520",
+        "10521",
+        "10501",
+        "10521",
+        "10505",
+        "10516",
+        "10517",
+        "10528",
+        "10535",
+        "10519",
+        "1051a",
+        "10523"
+      ],
+      "own_new_targets_present": [
+        "10516",
+        "10517"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 5,
+          "row": 12,
+          "column": 1,
+          "intact": "10512",
+          "settled": "10516",
+          "raw_health": 20,
+          "reward": 150,
+          "game": 0,
+          "flat": 434
+        },
+        {
+          "slot": 6,
+          "row": 12,
+          "column": 2,
+          "intact": "10513",
+          "settled": "10517",
+          "raw_health": 20,
+          "reward": 150,
+          "game": 0,
+          "flat": 435
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 2,
+          "row": 11,
+          "column": 2,
+          "intact": "10501",
+          "settled": "10502",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 417,
+          "new_owner": "quiet9"
+        },
+        {
+          "slot": 4,
+          "row": 12,
+          "column": 0,
+          "intact": "10505",
+          "settled": "10506",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 421,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 0,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-hd-focused30380-SourceG2-genuine1-context-author-20261019-v1-SEALED-FOCUSED30380-GENUINE1-CURRENTG2-RECIPE-f1348e3016c3.json",
+        "sha256": "f1348e3016c396c2579e910257fb4315f49fe7a1cfd8b79452aca55845834cee"
+      },
+      "mission": "base:sector_3_wave_7",
+      "window_row0": 68,
+      "window_column0": 3,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "30378",
+        "30379",
+        "3037a",
+        "3037f",
+        "30380",
+        "30381",
+        "30386",
+        "30387",
+        "30388"
+      ],
+      "own_new_targets_present": [
+        "30380"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 0,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-hd-followon4-SourceG2-genuine6-context-author-20261019-v1-SEALED-FOLLOWON4-GENUINE6-CURRENTG2-RECIPE-2339dee75a98.json",
+        "sha256": "2339dee75a98411a191c68f2c9e15d14753e7def1e1fc8a46efa4be14998b7d0"
+      },
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 35,
+      "window_column0": 6,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "103e0",
+        "10361",
+        "103de",
+        "103d2",
+        "1036e",
+        "10370",
+        "103da",
+        "10515",
+        "103d1"
+      ],
+      "own_new_targets_present": [
+        "10370"
+      ],
+      "batch_new_foreign_consumed": [
+        "10515"
+      ],
+      "batch_new_foreign_slots": [
+        {
+          "slot": 7,
+          "row": 37,
+          "column": 7,
+          "asset": "10515",
+          "new_owner": "shoreline4"
+        }
+      ],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 1,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-hd-followon4-SourceG2-genuine6-context-author-20261019-v1-SEALED-FOLLOWON4-GENUINE6-CURRENTG2-RECIPE-2339dee75a98.json",
+        "sha256": "2339dee75a98411a191c68f2c9e15d14753e7def1e1fc8a46efa4be14998b7d0"
+      },
+      "mission": "base:sector_1_wave_2",
+      "window_row0": 27,
+      "window_column0": 5,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10360",
+        "105c6",
+        "1041e",
+        "1036e",
+        "10370",
+        "103d0",
+        "103d1",
+        "10515",
+        "103db"
+      ],
+      "own_new_targets_present": [
+        "10370"
+      ],
+      "batch_new_foreign_consumed": [
+        "10515"
+      ],
+      "batch_new_foreign_slots": [
+        {
+          "slot": 7,
+          "row": 29,
+          "column": 6,
+          "asset": "10515",
+          "new_owner": "shoreline4"
+        }
+      ],
+      "cross_cohort_cardinal_pairs": [
+        {
+          "slots": [
+            4,
+            7
+          ],
+          "assets": [
+            "10370",
+            "10515"
+          ],
+          "cohorts": [
+            "industrial12",
+            "shoreline4"
+          ]
+        }
+      ],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 2,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-hd-followon4-SourceG2-genuine6-context-author-20261019-v1-SEALED-FOLLOWON4-GENUINE6-CURRENTG2-RECIPE-2339dee75a98.json",
+        "sha256": "2339dee75a98411a191c68f2c9e15d14753e7def1e1fc8a46efa4be14998b7d0"
+      },
+      "mission": "base:sector_2_wave_6",
+      "window_row0": 76,
+      "window_column0": 6,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "104b3",
+        "10360",
+        "10362",
+        "104b3",
+        "1036e",
+        "10370",
+        "104b3",
+        "104b2",
+        "103a9"
+      ],
+      "own_new_targets_present": [
+        "10370"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 3,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-hd-followon4-SourceG2-genuine6-context-author-20261019-v1-SEALED-FOLLOWON4-GENUINE6-CURRENTG2-RECIPE-2339dee75a98.json",
+        "sha256": "2339dee75a98411a191c68f2c9e15d14753e7def1e1fc8a46efa4be14998b7d0"
+      },
+      "mission": "base:sector_3_wave_3",
+      "window_row0": 5,
+      "window_column0": 3,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "3028c",
+        "3028a",
+        "3028f",
+        "3028f",
+        "302e1",
+        "3028a",
+        "301c3",
+        "301c3",
+        "301c4"
+      ],
+      "own_new_targets_present": [
+        "302e1"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": true
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 4,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-hd-followon4-SourceG2-genuine6-context-author-20261019-v1-SEALED-FOLLOWON4-GENUINE6-CURRENTG2-RECIPE-2339dee75a98.json",
+        "sha256": "2339dee75a98411a191c68f2c9e15d14753e7def1e1fc8a46efa4be14998b7d0"
+      },
+      "mission": "base:sector_3_wave_2",
+      "window_row0": 63,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "303a9",
+        "303a9",
+        "303aa",
+        "303aa",
+        "30465",
+        "303ab",
+        "303ab",
+        "303a9",
+        "303ab"
+      ],
+      "own_new_targets_present": [
+        "30465"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 5,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-hd-followon4-SourceG2-genuine6-context-author-20261019-v1-SEALED-FOLLOWON4-GENUINE6-CURRENTG2-RECIPE-2339dee75a98.json",
+        "sha256": "2339dee75a98411a191c68f2c9e15d14753e7def1e1fc8a46efa4be14998b7d0"
+      },
+      "mission": "base:sector_3_wave_6",
+      "window_row0": 96,
+      "window_column0": 3,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "4037d",
+        "4037d",
+        "40386",
+        "40370",
+        "40372",
+        "4037d",
+        "4037d",
+        "4036e",
+        "4036f"
+      ],
+      "own_new_targets_present": [
+        "40372"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 0,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2-SEALED-QUIET302E1-GENUINE1-CURRENTG2-RECIPE-c4bbcc4c251f.json",
+        "sha256": "c4bbcc4c251f6ddbed280ecd565efe0ed7392c2070032f049019b23114738670"
+      },
+      "mission": "base:sector_3_wave_3",
+      "window_row0": 5,
+      "window_column0": 3,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "3028c",
+        "3028a",
+        "3028f",
+        "3028f",
+        "302e1",
+        "3028a",
+        "301c3",
+        "301c3",
+        "301c4"
+      ],
+      "own_new_targets_present": [
+        "302e1"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 0,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-industrial7-SEALED-INDUSTRIAL7-GENUINE10-CURRENTG2-H5647-RECIPE.json-8524ec5da804.json",
+        "sha256": "8524ec5da804fa3714a6f32105fbce9f176f30e17fba1720f94b340c2260e812"
+      },
+      "mission": "base:sector_2_wave_2",
+      "window_row0": 36,
+      "window_column0": 0,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "20154",
+        "20154",
+        "20155",
+        "20593",
+        "20594",
+        "2015c",
+        "20594",
+        "20593",
+        "2015c"
+      ],
+      "own_new_targets_present": [
+        "20593",
+        "20594"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 1,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-industrial7-SEALED-INDUSTRIAL7-GENUINE10-CURRENTG2-H5647-RECIPE.json-8524ec5da804.json",
+        "sha256": "8524ec5da804fa3714a6f32105fbce9f176f30e17fba1720f94b340c2260e812"
+      },
+      "mission": "base:sector_2_wave_5",
+      "window_row0": 84,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "20154",
+        "20154",
+        "20155",
+        "20594",
+        "20593",
+        "2015c",
+        "20594",
+        "2015b",
+        "2015c"
+      ],
+      "own_new_targets_present": [
+        "20593",
+        "20594"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 2,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-industrial7-SEALED-INDUSTRIAL7-GENUINE10-CURRENTG2-H5647-RECIPE.json-8524ec5da804.json",
+        "sha256": "8524ec5da804fa3714a6f32105fbce9f176f30e17fba1720f94b340c2260e812"
+      },
+      "mission": "base:sector_2_wave_2",
+      "window_row0": 107,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "20593",
+        "2015b",
+        "20594",
+        "2015b",
+        "2059b",
+        "20593",
+        "2013c",
+        "2059a",
+        "2015b"
+      ],
+      "own_new_targets_present": [
+        "20593",
+        "20594",
+        "2059a",
+        "2059b"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 3,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-industrial7-SEALED-INDUSTRIAL7-GENUINE10-CURRENTG2-H5647-RECIPE.json-8524ec5da804.json",
+        "sha256": "8524ec5da804fa3714a6f32105fbce9f176f30e17fba1720f94b340c2260e812"
+      },
+      "mission": "base:sector_2_wave_2",
+      "window_row0": 108,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "2015b",
+        "2059b",
+        "20593",
+        "2013c",
+        "2059a",
+        "2015b",
+        "2013c",
+        "2013c",
+        "2058f"
+      ],
+      "own_new_targets_present": [
+        "20593",
+        "2059a",
+        "2059b"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 4,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-industrial7-SEALED-INDUSTRIAL7-GENUINE10-CURRENTG2-H5647-RECIPE.json-8524ec5da804.json",
+        "sha256": "8524ec5da804fa3714a6f32105fbce9f176f30e17fba1720f94b340c2260e812"
+      },
+      "mission": "base:sector_2_wave_5",
+      "window_row0": 109,
+      "window_column0": 5,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "20594",
+        "20594",
+        "20594",
+        "20593",
+        "2059b",
+        "20594",
+        "20590",
+        "2059a",
+        "20594"
+      ],
+      "own_new_targets_present": [
+        "20593",
+        "20594",
+        "2059a",
+        "2059b"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 5,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-industrial7-SEALED-INDUSTRIAL7-GENUINE10-CURRENTG2-H5647-RECIPE.json-8524ec5da804.json",
+        "sha256": "8524ec5da804fa3714a6f32105fbce9f176f30e17fba1720f94b340c2260e812"
+      },
+      "mission": "base:sector_2_wave_5",
+      "window_row0": 110,
+      "window_column0": 5,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "20593",
+        "2059b",
+        "20594",
+        "20590",
+        "2059a",
+        "20594",
+        "20590",
+        "2058f",
+        "2058f"
+      ],
+      "own_new_targets_present": [
+        "20593",
+        "20594",
+        "2059a",
+        "2059b"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 6,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-industrial7-SEALED-INDUSTRIAL7-GENUINE10-CURRENTG2-H5647-RECIPE.json-8524ec5da804.json",
+        "sha256": "8524ec5da804fa3714a6f32105fbce9f176f30e17fba1720f94b340c2260e812"
+      },
+      "mission": "base:sector_2_wave_9",
+      "window_row0": 16,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "20601",
+        "20602",
+        "20603",
+        "205fd",
+        "205fe",
+        "205ff",
+        "205f8",
+        "205f9",
+        "205fa"
+      ],
+      "own_new_targets_present": [
+        "205fe",
+        "205ff"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 7,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-industrial7-SEALED-INDUSTRIAL7-GENUINE10-CURRENTG2-H5647-RECIPE.json-8524ec5da804.json",
+        "sha256": "8524ec5da804fa3714a6f32105fbce9f176f30e17fba1720f94b340c2260e812"
+      },
+      "mission": "base:sector_2_wave_9",
+      "window_row0": 16,
+      "window_column0": 3,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "20602",
+        "20603",
+        "20604",
+        "205fe",
+        "205ff",
+        "20600",
+        "205f9",
+        "205fa",
+        "205fb"
+      ],
+      "own_new_targets_present": [
+        "205fe",
+        "205ff"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 8,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-industrial7-SEALED-INDUSTRIAL7-GENUINE10-CURRENTG2-H5647-RECIPE.json-8524ec5da804.json",
+        "sha256": "8524ec5da804fa3714a6f32105fbce9f176f30e17fba1720f94b340c2260e812"
+      },
+      "mission": "base:sector_2_wave_2",
+      "window_row0": 108,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "2015b",
+        "2059b",
+        "20593",
+        "2013c",
+        "2059c",
+        "2015b",
+        "2013c",
+        "2013c",
+        "2058f"
+      ],
+      "own_new_targets_present": [
+        "20593",
+        "2059b",
+        "2059c"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 109,
+          "column": 2,
+          "intact": "2059a",
+          "settled": "2059c",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 1,
+          "flat": 1165
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "industrial12",
+      "case_index": 9,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-industrial7-SEALED-INDUSTRIAL7-GENUINE10-CURRENTG2-H5647-RECIPE.json-8524ec5da804.json",
+        "sha256": "8524ec5da804fa3714a6f32105fbce9f176f30e17fba1720f94b340c2260e812"
+      },
+      "mission": "base:sector_2_wave_5",
+      "window_row0": 110,
+      "window_column0": 5,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "20593",
+        "2059b",
+        "20594",
+        "20590",
+        "2059c",
+        "20594",
+        "20590",
+        "2058f",
+        "2058f"
+      ],
+      "own_new_targets_present": [
+        "20593",
+        "20594",
+        "2059b",
+        "2059c"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 111,
+          "column": 6,
+          "intact": "2059a",
+          "settled": "2059c",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 1,
+          "flat": 1165
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "infantry5",
+      "case_index": 0,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/SEALED-TERRAIN-FIVE-GENUINE12-CURRENTG2-RECIPE.json",
+        "sha256": "fac4030dd61c7ccd7eda6c8687b4e910b802f6cd87c6ad695162214e846cc1ac"
+      },
+      "mission": "base:sector_2_wave_3",
+      "window_row0": 20,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 5,
+      "ordered_source_ids": [
+        "2027b",
+        "2069a",
+        "2069a",
+        "205d1",
+        "20698",
+        "20644",
+        "205d2",
+        "20698",
+        "205c5",
+        "205d1",
+        "20698",
+        "205cc",
+        "205d2",
+        "205c5",
+        "205c9"
+      ],
+      "own_new_targets_present": [
+        "20698"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "infantry5",
+      "case_index": 1,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/SEALED-TERRAIN-FIVE-GENUINE12-CURRENTG2-RECIPE.json",
+        "sha256": "fac4030dd61c7ccd7eda6c8687b4e910b802f6cd87c6ad695162214e846cc1ac"
+      },
+      "mission": "base:sector_2_wave_3",
+      "window_row0": 20,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 5,
+      "ordered_source_ids": [
+        "2027b",
+        "2069a",
+        "2069a",
+        "205d1",
+        "20699",
+        "20644",
+        "205d2",
+        "20698",
+        "205c5",
+        "205d1",
+        "20698",
+        "205cc",
+        "205d2",
+        "205c5",
+        "205c9"
+      ],
+      "own_new_targets_present": [
+        "20698",
+        "20699"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 21,
+          "column": 3,
+          "intact": "20698",
+          "settled": "20699",
+          "raw_health": 5,
+          "reward": 50,
+          "game": 1,
+          "flat": 1419
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "infantry5",
+      "case_index": 2,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/SEALED-TERRAIN-FIVE-GENUINE12-CURRENTG2-RECIPE.json",
+        "sha256": "fac4030dd61c7ccd7eda6c8687b4e910b802f6cd87c6ad695162214e846cc1ac"
+      },
+      "mission": "base:sector_2_wave_3",
+      "window_row0": 20,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 5,
+      "ordered_source_ids": [
+        "2027b",
+        "2069a",
+        "2069a",
+        "205d1",
+        "20698",
+        "20644",
+        "205d2",
+        "20699",
+        "205c5",
+        "205d1",
+        "20698",
+        "205cc",
+        "205d2",
+        "205c5",
+        "205c9"
+      ],
+      "own_new_targets_present": [
+        "20698",
+        "20699"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 7,
+          "row": 22,
+          "column": 3,
+          "intact": "20698",
+          "settled": "20699",
+          "raw_health": 5,
+          "reward": 50,
+          "game": 1,
+          "flat": 1419
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "infantry5",
+      "case_index": 3,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/SEALED-TERRAIN-FIVE-GENUINE12-CURRENTG2-RECIPE.json",
+        "sha256": "fac4030dd61c7ccd7eda6c8687b4e910b802f6cd87c6ad695162214e846cc1ac"
+      },
+      "mission": "base:sector_2_wave_3",
+      "window_row0": 20,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 5,
+      "ordered_source_ids": [
+        "2027b",
+        "2069a",
+        "2069a",
+        "205d1",
+        "20699",
+        "20644",
+        "205d2",
+        "20699",
+        "205c5",
+        "205d1",
+        "20698",
+        "205cc",
+        "205d2",
+        "205c5",
+        "205c9"
+      ],
+      "own_new_targets_present": [
+        "20698",
+        "20699"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 21,
+          "column": 3,
+          "intact": "20698",
+          "settled": "20699",
+          "raw_health": 5,
+          "reward": 50,
+          "game": 1,
+          "flat": 1419
+        },
+        {
+          "slot": 7,
+          "row": 22,
+          "column": 3,
+          "intact": "20698",
+          "settled": "20699",
+          "raw_health": 5,
+          "reward": 50,
+          "game": 1,
+          "flat": 1419
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "infantry5",
+      "case_index": 4,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/SEALED-TERRAIN-FIVE-GENUINE12-CURRENTG2-RECIPE.json",
+        "sha256": "fac4030dd61c7ccd7eda6c8687b4e910b802f6cd87c6ad695162214e846cc1ac"
+      },
+      "mission": "base:sector_2_wave_3",
+      "window_row0": 20,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 5,
+      "ordered_source_ids": [
+        "2027b",
+        "2069a",
+        "2069a",
+        "205d1",
+        "20698",
+        "20644",
+        "205d2",
+        "20698",
+        "205c5",
+        "205d1",
+        "20699",
+        "205cc",
+        "205d2",
+        "205c5",
+        "205c9"
+      ],
+      "own_new_targets_present": [
+        "20698",
+        "20699"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 10,
+          "row": 23,
+          "column": 3,
+          "intact": "20698",
+          "settled": "20699",
+          "raw_health": 5,
+          "reward": 50,
+          "game": 1,
+          "flat": 1419
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "infantry5",
+      "case_index": 5,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/SEALED-TERRAIN-FIVE-GENUINE12-CURRENTG2-RECIPE.json",
+        "sha256": "fac4030dd61c7ccd7eda6c8687b4e910b802f6cd87c6ad695162214e846cc1ac"
+      },
+      "mission": "base:sector_2_wave_3",
+      "window_row0": 20,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 5,
+      "ordered_source_ids": [
+        "2027b",
+        "2069a",
+        "2069a",
+        "205d1",
+        "20699",
+        "20644",
+        "205d2",
+        "20698",
+        "205c5",
+        "205d1",
+        "20699",
+        "205cc",
+        "205d2",
+        "205c5",
+        "205c9"
+      ],
+      "own_new_targets_present": [
+        "20698",
+        "20699"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 21,
+          "column": 3,
+          "intact": "20698",
+          "settled": "20699",
+          "raw_health": 5,
+          "reward": 50,
+          "game": 1,
+          "flat": 1419
+        },
+        {
+          "slot": 10,
+          "row": 23,
+          "column": 3,
+          "intact": "20698",
+          "settled": "20699",
+          "raw_health": 5,
+          "reward": 50,
+          "game": 1,
+          "flat": 1419
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "infantry5",
+      "case_index": 6,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/SEALED-TERRAIN-FIVE-GENUINE12-CURRENTG2-RECIPE.json",
+        "sha256": "fac4030dd61c7ccd7eda6c8687b4e910b802f6cd87c6ad695162214e846cc1ac"
+      },
+      "mission": "base:sector_2_wave_3",
+      "window_row0": 20,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 5,
+      "ordered_source_ids": [
+        "2027b",
+        "2069a",
+        "2069a",
+        "205d1",
+        "20698",
+        "20644",
+        "205d2",
+        "20699",
+        "205c5",
+        "205d1",
+        "20699",
+        "205cc",
+        "205d2",
+        "205c5",
+        "205c9"
+      ],
+      "own_new_targets_present": [
+        "20698",
+        "20699"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 7,
+          "row": 22,
+          "column": 3,
+          "intact": "20698",
+          "settled": "20699",
+          "raw_health": 5,
+          "reward": 50,
+          "game": 1,
+          "flat": 1419
+        },
+        {
+          "slot": 10,
+          "row": 23,
+          "column": 3,
+          "intact": "20698",
+          "settled": "20699",
+          "raw_health": 5,
+          "reward": 50,
+          "game": 1,
+          "flat": 1419
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "infantry5",
+      "case_index": 7,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/SEALED-TERRAIN-FIVE-GENUINE12-CURRENTG2-RECIPE.json",
+        "sha256": "fac4030dd61c7ccd7eda6c8687b4e910b802f6cd87c6ad695162214e846cc1ac"
+      },
+      "mission": "base:sector_2_wave_3",
+      "window_row0": 20,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 5,
+      "ordered_source_ids": [
+        "2027b",
+        "2069a",
+        "2069a",
+        "205d1",
+        "20699",
+        "20644",
+        "205d2",
+        "20699",
+        "205c5",
+        "205d1",
+        "20699",
+        "205cc",
+        "205d2",
+        "205c5",
+        "205c9"
+      ],
+      "own_new_targets_present": [
+        "20699"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 21,
+          "column": 3,
+          "intact": "20698",
+          "settled": "20699",
+          "raw_health": 5,
+          "reward": 50,
+          "game": 1,
+          "flat": 1419
+        },
+        {
+          "slot": 7,
+          "row": 22,
+          "column": 3,
+          "intact": "20698",
+          "settled": "20699",
+          "raw_health": 5,
+          "reward": 50,
+          "game": 1,
+          "flat": 1419
+        },
+        {
+          "slot": 10,
+          "row": 23,
+          "column": 3,
+          "intact": "20698",
+          "settled": "20699",
+          "raw_health": 5,
+          "reward": 50,
+          "game": 1,
+          "flat": 1419
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "infantry5",
+      "case_index": 8,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/SEALED-TERRAIN-FIVE-GENUINE12-CURRENTG2-RECIPE.json",
+        "sha256": "fac4030dd61c7ccd7eda6c8687b4e910b802f6cd87c6ad695162214e846cc1ac"
+      },
+      "mission": "base:sector_2_wave_3",
+      "window_row0": 25,
+      "window_column0": 5,
+      "width_tiles": 3,
+      "height_tiles": 4,
+      "ordered_source_ids": [
+        "205c1",
+        "205d4",
+        "205c2",
+        "205ce",
+        "2068f",
+        "205cc",
+        "205ce",
+        "20690",
+        "205cc",
+        "205d5",
+        "205d2",
+        "205cc"
+      ],
+      "own_new_targets_present": [
+        "2068f",
+        "20690"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "infantry5",
+      "case_index": 9,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/SEALED-TERRAIN-FIVE-GENUINE12-CURRENTG2-RECIPE.json",
+        "sha256": "fac4030dd61c7ccd7eda6c8687b4e910b802f6cd87c6ad695162214e846cc1ac"
+      },
+      "mission": "base:sector_2_wave_3",
+      "window_row0": 25,
+      "window_column0": 5,
+      "width_tiles": 3,
+      "height_tiles": 4,
+      "ordered_source_ids": [
+        "205c1",
+        "205d4",
+        "205c2",
+        "205ce",
+        "20695",
+        "205cc",
+        "205ce",
+        "20690",
+        "205cc",
+        "205d5",
+        "205d2",
+        "205cc"
+      ],
+      "own_new_targets_present": [
+        "20690"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 26,
+          "column": 6,
+          "intact": "2068f",
+          "settled": "20695",
+          "raw_health": 20,
+          "reward": 100,
+          "game": 1,
+          "flat": 1410
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "infantry5",
+      "case_index": 10,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/SEALED-TERRAIN-FIVE-GENUINE12-CURRENTG2-RECIPE.json",
+        "sha256": "fac4030dd61c7ccd7eda6c8687b4e910b802f6cd87c6ad695162214e846cc1ac"
+      },
+      "mission": "base:sector_2_wave_3",
+      "window_row0": 25,
+      "window_column0": 5,
+      "width_tiles": 3,
+      "height_tiles": 4,
+      "ordered_source_ids": [
+        "205c1",
+        "205d4",
+        "205c2",
+        "205ce",
+        "2068f",
+        "205cc",
+        "205ce",
+        "2069c",
+        "205cc",
+        "205d5",
+        "205d2",
+        "205cc"
+      ],
+      "own_new_targets_present": [
+        "2068f",
+        "2069c"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 7,
+          "row": 27,
+          "column": 6,
+          "intact": "20690",
+          "settled": "2069c",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 1,
+          "flat": 1411
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "infantry5",
+      "case_index": 11,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/SEALED-TERRAIN-FIVE-GENUINE12-CURRENTG2-RECIPE.json",
+        "sha256": "fac4030dd61c7ccd7eda6c8687b4e910b802f6cd87c6ad695162214e846cc1ac"
+      },
+      "mission": "base:sector_2_wave_3",
+      "window_row0": 25,
+      "window_column0": 5,
+      "width_tiles": 3,
+      "height_tiles": 4,
+      "ordered_source_ids": [
+        "205c1",
+        "205d4",
+        "205c2",
+        "205ce",
+        "20695",
+        "205cc",
+        "205ce",
+        "2069c",
+        "205cc",
+        "205d5",
+        "205d2",
+        "205cc"
+      ],
+      "own_new_targets_present": [
+        "2069c"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 26,
+          "column": 6,
+          "intact": "2068f",
+          "settled": "20695",
+          "raw_health": 20,
+          "reward": 100,
+          "game": 1,
+          "flat": 1410
+        },
+        {
+          "slot": 7,
+          "row": 27,
+          "column": 6,
+          "intact": "20690",
+          "settled": "2069c",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 1,
+          "flat": 1411
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "fine6",
+      "case_index": 0,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/lineage/fine6-literal-sourceG2-H5647-reviews/context-actual-H5647/ALL27-MAP-4FLATS-CENSUS-AND-FINITE9-ENDPOINTS.json",
+        "sha256": "0d0a59428c1ac4090b66f983c4eef024effb170cbcb468d07c2c88823056166e"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 12,
+      "window_column0": 6,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10528",
+        "10526",
+        "10529",
+        "10526",
+        "10528",
+        "10536",
+        "10534",
+        "10528",
+        "10507"
+      ],
+      "own_new_targets_present": [
+        "10536"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [
+        {
+          "slot": 8,
+          "row": 14,
+          "column": 8,
+          "intact": "10507",
+          "settled": "10508",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 423,
+          "new_owner": "quiet9"
+        }
+      ],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "fine6",
+      "case_index": 1,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/lineage/fine6-literal-sourceG2-H5647-reviews/context-actual-H5647/ALL27-MAP-4FLATS-CENSUS-AND-FINITE9-ENDPOINTS.json",
+        "sha256": "0d0a59428c1ac4090b66f983c4eef024effb170cbcb468d07c2c88823056166e"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 18,
+      "window_column0": 0,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10537",
+        "10521",
+        "10521",
+        "10528",
+        "1053e",
+        "1054c",
+        "10528",
+        "10545",
+        "10553"
+      ],
+      "own_new_targets_present": [
+        "1053e"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "fine6",
+      "case_index": 2,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/lineage/fine6-literal-sourceG2-H5647-reviews/context-actual-H5647/ALL27-MAP-4FLATS-CENSUS-AND-FINITE9-ENDPOINTS.json",
+        "sha256": "0d0a59428c1ac4090b66f983c4eef024effb170cbcb468d07c2c88823056166e"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 14,
+      "window_column0": 4,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1052b",
+        "1052c",
+        "10534",
+        "10532",
+        "10533",
+        "10528",
+        "10528",
+        "10528",
+        "10528"
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "fine6",
+      "case_index": 3,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/lineage/fine6-literal-sourceG2-H5647-reviews/context-actual-H5647/ALL27-MAP-4FLATS-CENSUS-AND-FINITE9-ENDPOINTS.json",
+        "sha256": "0d0a59428c1ac4090b66f983c4eef024effb170cbcb468d07c2c88823056166e"
+      },
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 14,
+      "window_column0": 4,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1052b",
+        "1052c",
+        "10534",
+        "10532",
+        "1054f",
+        "10528",
+        "10528",
+        "10528",
+        "10528"
+      ],
+      "own_new_targets_present": [
+        "1054f"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 15,
+          "column": 5,
+          "intact": "10533",
+          "settled": "1054f",
+          "raw_health": 30,
+          "reward": 150,
+          "game": 0,
+          "flat": 467
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "fine6",
+      "case_index": 4,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/lineage/fine6-literal-sourceG2-H5647-reviews/context-actual-H5647/ALL27-MAP-4FLATS-CENSUS-AND-FINITE9-ENDPOINTS.json",
+        "sha256": "0d0a59428c1ac4090b66f983c4eef024effb170cbcb468d07c2c88823056166e"
+      },
+      "mission": "base:sector_1_wave_8",
+      "window_row0": 14,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1055c",
+        "1055a",
+        "1055b",
+        "10563",
+        "10561",
+        "10562",
+        "1056a",
+        "1056b",
+        "1056c"
+      ],
+      "own_new_targets_present": [
+        "10561"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "fine6",
+      "case_index": 5,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/lineage/fine6-literal-sourceG2-H5647-reviews/context-actual-H5647/ALL27-MAP-4FLATS-CENSUS-AND-FINITE9-ENDPOINTS.json",
+        "sha256": "0d0a59428c1ac4090b66f983c4eef024effb170cbcb468d07c2c88823056166e"
+      },
+      "mission": "base:sector_1_wave_8",
+      "window_row0": 14,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1055c",
+        "1055a",
+        "1055b",
+        "10563",
+        "10564",
+        "10562",
+        "1056a",
+        "1056b",
+        "1056c"
+      ],
+      "own_new_targets_present": [],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 15,
+          "column": 3,
+          "intact": "10561",
+          "settled": "10564",
+          "raw_health": 26,
+          "reward": 100,
+          "game": 0,
+          "flat": 513
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "fine6",
+      "case_index": 6,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/lineage/fine6-literal-sourceG2-H5647-reviews/context-actual-H5647/ALL27-MAP-4FLATS-CENSUS-AND-FINITE9-ENDPOINTS.json",
+        "sha256": "0d0a59428c1ac4090b66f983c4eef024effb170cbcb468d07c2c88823056166e"
+      },
+      "mission": "base:sector_1_wave_6",
+      "window_row0": 42,
+      "window_column0": 6,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1041e",
+        "105c0",
+        "10599",
+        "105a7",
+        "1059e",
+        "105a0",
+        "105bc",
+        "105b9",
+        "10599"
+      ],
+      "own_new_targets_present": [
+        "1059e",
+        "105a7"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "fine6",
+      "case_index": 7,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/lineage/fine6-literal-sourceG2-H5647-reviews/context-actual-H5647/ALL27-MAP-4FLATS-CENSUS-AND-FINITE9-ENDPOINTS.json",
+        "sha256": "0d0a59428c1ac4090b66f983c4eef024effb170cbcb468d07c2c88823056166e"
+      },
+      "mission": "base:sector_1_wave_6",
+      "window_row0": 42,
+      "window_column0": 6,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1041e",
+        "105c0",
+        "10599",
+        "105a8",
+        "1059e",
+        "105a0",
+        "105bc",
+        "105b9",
+        "10599"
+      ],
+      "own_new_targets_present": [
+        "1059e"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 3,
+          "row": 43,
+          "column": 6,
+          "intact": "105a7",
+          "settled": "105a8",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 583
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    },
+    {
+      "cohort": "fine6",
+      "case_index": 8,
+      "source_recipe": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-original-first-dock-and-red-ground-10536-1053e-complete2-20261019-v1/lineage/fine6-literal-sourceG2-H5647-reviews/context-actual-H5647/ALL27-MAP-4FLATS-CENSUS-AND-FINITE9-ENDPOINTS.json",
+        "sha256": "0d0a59428c1ac4090b66f983c4eef024effb170cbcb468d07c2c88823056166e"
+      },
+      "mission": "base:sector_1_wave_6",
+      "window_row0": 42,
+      "window_column0": 6,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1041e",
+        "105c0",
+        "10599",
+        "105a7",
+        "1059f",
+        "105a0",
+        "105bc",
+        "105b9",
+        "10599"
+      ],
+      "own_new_targets_present": [
+        "105a7"
+      ],
+      "batch_new_foreign_consumed": [],
+      "batch_new_foreign_slots": [],
+      "cross_cohort_cardinal_pairs": [],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 43,
+          "column": 7,
+          "intact": "1059e",
+          "settled": "1059f",
+          "raw_health": 28,
+          "reward": 50,
+          "game": 0,
+          "flat": 574
+        }
+      ],
+      "latent_legal_new_foreign_settled_variants_NOT_rendered_here": [],
+      "historical_superseded_302e1_HOLD": false
+    }
+  ],
+  "active_endpoints_excluding_old302e1HOLD": 86,
+  "affected_active_endpoints": 11,
+  "affected_by_cohort": {
+    "quiet9": [
+      14,
+      15
+    ],
+    "shoreline4": [
+      15
+    ],
+    "used3": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "industrial12": [
+      0,
+      1
+    ]
+  },
+  "cross_cohort_consumed_edges": [
+    {
+      "consumer_cohort": "quiet9",
+      "new_material_cohort": "fine6",
+      "assets": [
+        "10536"
+      ]
+    },
+    {
+      "consumer_cohort": "shoreline4",
+      "new_material_cohort": "quiet9",
+      "assets": [
+        "1050b"
+      ]
+    },
+    {
+      "consumer_cohort": "used3",
+      "new_material_cohort": "shoreline4",
+      "assets": [
+        "10514"
+      ]
+    },
+    {
+      "consumer_cohort": "industrial12",
+      "new_material_cohort": "shoreline4",
+      "assets": [
+        "10515"
+      ]
+    }
+  ],
+  "minimal_exact_endpoint_set_after_identity_dedup": [
+    {
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 13,
+      "window_column0": 7,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10528",
+        "10536",
+        null,
+        "10528",
+        "10507",
+        null,
+        "1053a",
+        "10536",
+        null
+      ],
+      "genuine_settled_changes": [],
+      "required_by": [
+        {
+          "cohort": "quiet9",
+          "case_index": 14,
+          "new_foreign": [
+            "10536"
+          ],
+          "source_recipe": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+            "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+          }
+        }
+      ]
+    },
+    {
+      "mission": "base:sector_1_wave_9",
+      "window_row0": 13,
+      "window_column0": 7,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10528",
+        "10536",
+        null,
+        "10528",
+        "10508",
+        null,
+        "1053a",
+        "10536",
+        null
+      ],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 14,
+          "column": 8,
+          "intact": "10507",
+          "settled": "10508",
+          "raw_health": 10,
+          "reward": 50,
+          "game": 0,
+          "flat": 423
+        }
+      ],
+      "required_by": [
+        {
+          "cohort": "quiet9",
+          "case_index": 15,
+          "new_foreign": [
+            "10536"
+          ],
+          "source_recipe": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/lineage/quiet9-actualSourceG2-H5647-context-and-intrinsic-20261019/context/FROZEN-QUIET9-G2-LITERAL-BASELINE-GENUINE-SOURCE-CONTRACT.json",
+            "sha256": "0a7a29612e48cabd0d034a19fdc1408e46ad7238e5dc27e302ceb520e3a2170c"
+          }
+        }
+      ]
+    },
+    {
+      "mission": "base:sector_1_wave_5",
+      "window_row0": 23,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10427",
+        "10434",
+        "103d0",
+        "1050b",
+        "10515",
+        "103db",
+        "103dd",
+        "1049c",
+        "103d8"
+      ],
+      "genuine_settled_changes": [
+        {
+          "slot": 3,
+          "row": 24,
+          "column": 1,
+          "intact": "103d6",
+          "settled": "1050b",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 118
+        }
+      ],
+      "required_by": [
+        {
+          "cohort": "shoreline4",
+          "case_index": 15,
+          "new_foreign": [
+            "1050b"
+          ],
+          "source_recipe": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/proofs/genuine-context-H5636/FROZEN-SHORELINE4-GENUINE18-CURRENTG2-H5636-CONTRACT.json",
+            "sha256": "8c13586cb313a8aec60224e52b0ddace802908f2c6137ce657c254960c8eb447"
+          }
+        }
+      ]
+    },
+    {
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 110,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1040f",
+        "10514",
+        "103d8",
+        "10425",
+        "103e5",
+        "10458",
+        "10433",
+        "103e7",
+        "10456"
+      ],
+      "genuine_settled_changes": [],
+      "required_by": [
+        {
+          "cohort": "used3",
+          "case_index": 0,
+          "new_foreign": [
+            "10514"
+          ],
+          "source_recipe": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+            "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+          }
+        }
+      ]
+    },
+    {
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 110,
+      "window_column0": 1,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1040f",
+        "10514",
+        "103d8",
+        "10425",
+        "10510",
+        "10458",
+        "10433",
+        "103e7",
+        "10456"
+      ],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 111,
+          "column": 2,
+          "intact": "103e5",
+          "settled": "10510",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 133
+        }
+      ],
+      "required_by": [
+        {
+          "cohort": "used3",
+          "case_index": 1,
+          "new_foreign": [
+            "10514"
+          ],
+          "source_recipe": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+            "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+          }
+        }
+      ]
+    },
+    {
+      "mission": "base:sector_1_wave_4",
+      "window_row0": 60,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1042d",
+        "10514",
+        "103d3",
+        "1042e",
+        "103e5",
+        "103e6",
+        "10433",
+        "103e7",
+        "103e8"
+      ],
+      "genuine_settled_changes": [],
+      "required_by": [
+        {
+          "cohort": "used3",
+          "case_index": 2,
+          "new_foreign": [
+            "10514"
+          ],
+          "source_recipe": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+            "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+          }
+        }
+      ]
+    },
+    {
+      "mission": "base:sector_1_wave_4",
+      "window_row0": 60,
+      "window_column0": 2,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "1042d",
+        "10514",
+        "103d3",
+        "1042e",
+        "10510",
+        "103e6",
+        "10433",
+        "103e7",
+        "103e8"
+      ],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 61,
+          "column": 3,
+          "intact": "103e5",
+          "settled": "10510",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 133
+        }
+      ],
+      "required_by": [
+        {
+          "cohort": "used3",
+          "case_index": 3,
+          "new_foreign": [
+            "10514"
+          ],
+          "source_recipe": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+            "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+          }
+        }
+      ]
+    },
+    {
+      "mission": "base:sector_1_wave_5",
+      "window_row0": 20,
+      "window_column0": 3,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "104b3",
+        "10514",
+        "103d8",
+        "10425",
+        "103e5",
+        "10458",
+        "10433",
+        "103e7",
+        "10456"
+      ],
+      "genuine_settled_changes": [],
+      "required_by": [
+        {
+          "cohort": "used3",
+          "case_index": 4,
+          "new_foreign": [
+            "10514"
+          ],
+          "source_recipe": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+            "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+          }
+        }
+      ]
+    },
+    {
+      "mission": "base:sector_1_wave_5",
+      "window_row0": 20,
+      "window_column0": 3,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "104b3",
+        "10514",
+        "103d8",
+        "10425",
+        "10510",
+        "10458",
+        "10433",
+        "103e7",
+        "10456"
+      ],
+      "genuine_settled_changes": [
+        {
+          "slot": 4,
+          "row": 21,
+          "column": 4,
+          "intact": "103e5",
+          "settled": "10510",
+          "raw_health": 15,
+          "reward": 50,
+          "game": 0,
+          "flat": 133
+        }
+      ],
+      "required_by": [
+        {
+          "cohort": "used3",
+          "case_index": 5,
+          "new_foreign": [
+            "10514"
+          ],
+          "source_recipe": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/terrain-damagedshore10510-Original-primary1-20261019/evidence/context-metadata/SEALED-FIRST7-GENUINE14-CURRENTG2-H5636-RECIPE.json",
+            "sha256": "1555a6860ed816c2c8503ce3fbd37c400ccecf59aec081a44c9c2f5d0df79c86"
+          }
+        }
+      ]
+    },
+    {
+      "mission": "base:sector_1_wave_1",
+      "window_row0": 35,
+      "window_column0": 6,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "103e0",
+        "10361",
+        "103de",
+        "103d2",
+        "1036e",
+        "10370",
+        "103da",
+        "10515",
+        "103d1"
+      ],
+      "genuine_settled_changes": [],
+      "required_by": [
+        {
+          "cohort": "industrial12",
+          "case_index": 0,
+          "new_foreign": [
+            "10515"
+          ],
+          "source_recipe": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-hd-followon4-SourceG2-genuine6-context-author-20261019-v1-SEALED-FOLLOWON4-GENUINE6-CURRENTG2-RECIPE-2339dee75a98.json",
+            "sha256": "2339dee75a98411a191c68f2c9e15d14753e7def1e1fc8a46efa4be14998b7d0"
+          }
+        }
+      ]
+    },
+    {
+      "mission": "base:sector_1_wave_2",
+      "window_row0": 27,
+      "window_column0": 5,
+      "width_tiles": 3,
+      "height_tiles": 3,
+      "ordered_source_ids": [
+        "10360",
+        "105c6",
+        "1041e",
+        "1036e",
+        "10370",
+        "103d0",
+        "103d1",
+        "10515",
+        "103db"
+      ],
+      "genuine_settled_changes": [],
+      "required_by": [
+        {
+          "cohort": "industrial12",
+          "case_index": 1,
+          "new_foreign": [
+            "10515"
+          ],
+          "source_recipe": {
+            "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-next39-private-source-normalization-after5654-20261019-v1/data/hd/jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/context-hd-followon4-SourceG2-genuine6-context-author-20261019-v1-SEALED-FOLLOWON4-GENUINE6-CURRENTG2-RECIPE-2339dee75a98.json",
+            "sha256": "2339dee75a98411a191c68f2c9e15d14753e7def1e1fc8a46efa4be14998b7d0"
+          }
+        }
+      ]
+    }
+  ],
+  "joint_endpoint_count": 11,
+  "recommendation": "Existing finite pixel receipts stay literal H5636/H5647/H5654. For every affected active real endpoint in minimal identity-deduplicated set, use same reviewed SourceG2 static terrain compositor with ALL39 definitions in one temporary proposal bank, native1..4; compare corresponding old proposal endpoint and joint proposal plus unchanged external controls, preserved reserved/ordinary Source retention, Source31black/geometry and real settled actor. Different physical ART review of changed whole contexts then namespace appendices. No fullgame/World/campaign timing needed. Do not describe affected old context carry as disjoint.",
+  "latent_variant_scope": "Listed latent legal settled variants are Source-only discovery, not new actual outputs or acceptance; Root may add bounded variants when they create untested cardinal new/new joins.",
+  "actual_new_render_QA_cleanup_compile_calls": 0,
+  "canonical_tool_Git_mutations": 0
+}

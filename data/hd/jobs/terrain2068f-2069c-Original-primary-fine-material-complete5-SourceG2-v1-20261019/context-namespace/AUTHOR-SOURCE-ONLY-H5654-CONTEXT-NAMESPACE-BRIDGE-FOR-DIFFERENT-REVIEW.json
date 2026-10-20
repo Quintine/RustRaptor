@@ -1,0 +1,66 @@
+{
+  "status": "AUTHOR_METADATA_BRIDGE_DIFFERENT_NORMALIZATION_REQUIRED_NOT_ADMISSION",
+  "reviewer": "/root/infantry_remaining",
+  "author": "/root/infantry_remaining",
+  "standalone_selection_context": {
+    "candidate": {
+      "path": "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/candidate.json",
+      "sha256": "0f0e9f53c86e69583f1c623f10fd1b60341dd6d47a2d523f23f86411a678580e"
+    },
+    "baseline": {
+      "path": "hd.json",
+      "sha256": "104dc8f0d154f6a3e8edf6c72283205cb1f323daf8c225a8ca3a56680ac87f5b"
+    },
+    "future_projection": {
+      "path": "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/context-namespace/future-H5654-plus-selected5-5659.json",
+      "sha256": "94f2bbacb772e3f212e99542c96d682032e6a9357bd8db095b6cf69a94fdd945"
+    },
+    "changed_case_closure": {
+      "path": "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/context-namespace/changed-case-closure-H5654-selected5.json",
+      "sha256": "7f959eaa96c2089148118451b361554f70fa503aafcc842e3c5f6214db6d82fe"
+    },
+    "selected_assets": [
+      "2068f",
+      "20690",
+      "20698",
+      "20699",
+      "2069c"
+    ],
+    "frame_bindings_sha256": "f09c93f537d8c41e0fab377f6e2d61bb2c0b0b60965ce5d93dd5d018337730d6",
+    "technical_verdict": "QUALIFIED_CONTEXT_INTEGRATION"
+  },
+  "exact_frozen_v2_candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-portable-carried11-Source-successor-20261019-v2/portable-project/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/candidate.json",
+    "sha256": "0f0e9f53c86e69583f1c623f10fd1b60341dd6d47a2d523f23f86411a678580e"
+  },
+  "actual_literal_context_proof": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-portable-carried11-Source-successor-20261019-v2/portable-project/data/hd/jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/proofs/genuine-static12/actual-once-terrain-five-genuine12-currentG2/ACTUAL-TERRAIN-FIVE-GENUINE12-SOURCEG2-CONTEXTS.json",
+    "sha256": "27ea5ce5cbde23199bee240ace296472c556abe50f18942d23e7c9952fcf2984"
+  },
+  "actual_literal_context_manifest": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-currentG2-genuine-S2W3-static12-author-20261019-v1/SNAPSHOT-ACTUAL-CURRENT-HD-MANIFEST.json",
+    "sha256": "104dc8f0d154f6a3e8edf6c72283205cb1f323daf8c225a8ca3a56680ac87f5b"
+  },
+  "literal_to_portable_mapping": {
+    "derived5/2068f-derived.png": "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/derived5/2068f-derived.png",
+    "derived5/20690-derived.png": "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/derived5/20690-derived.png",
+    "derived5/20698-derived.png": "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/derived5/20698-derived.png",
+    "derived5/20699-derived.png": "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/derived5/20699-derived.png",
+    "derived5/2069c-derived.png": "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/derived5/2069c-derived.png"
+  },
+  "all_selected_renderer_fields_exact_except_bijective_file_namespace": true,
+  "PNG_bytes_exact": true,
+  "baseline_rows": 5654,
+  "new_selected_rows": 5,
+  "future_rows": 5659,
+  "full_future_rows_exact_union": true,
+  "retained_detail_scope": "Original cells are functional retention, not generated HD detail.",
+  "new_generation": 0,
+  "new_derivation": 0,
+  "new_QA": 0,
+  "new_constructor": 0,
+  "new_World": 0,
+  "canonical": 0,
+  "registrar": 0,
+  "public_copy_plan": "Copy the two context-namespace JSON files under the same new job; do not overwrite canonical hd.json/provenance.json with historical baselines. Root admission and any future finite baseline carry remain separate."
+}

@@ -1,0 +1,43 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "industrial-Source-shape-genuine-fine-RGB-band-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/inputs/4e13c035095d2ead5a115280389d6f8000f0441676f0b1b2e4fba2efaaaf7862-genuine-master.png",
+        "sha256": "4e13c035095d2ead5a115280389d6f8000f0441676f0b1b2e4fba2efaaaf7862"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/industrial-earth2-imagegen_receipt-391277876454.json",
+        "sha256": "3912778764545cc8cd4e50cbea94b879b3c4413c4ed5bb422dbe84bb723e349e"
+      },
+      "prompt": {
+        "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/proofs/industrial-earth2-prompt-e23226fe692b.txt",
+        "sha256": "e23226fe692b7956a8d514478a5476f3b71beb34d6ae97b4d09b3fdd0709de20"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/hd_industrial_fine_cleanup.py",
+      "sha256": "6685ec45a54c00429ef05bac9a00d54ed0bc481ecb3ee8e6cc100a67dadb5be3"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-terrain-10370-SourceG2-complete1-20261019/shared-lineage/reproducer/earth2-recipe.json",
+    "sha256": "41bb1d0f0bfe3d19281cd9e35cfbd613f69dedd055a50b458d67a707fff0ff74"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-industrial-earth2-SourceG2-20261019-v1/execution-receipt.json",
+    "sha256": "ddc7a68da347867f57dcacd7c8fbdfed3b81f0fe6f39a27f62e2918493e31c9b"
+  },
+  "sources": {
+    "205fe": "9dd58fe65d28f14abcad1e60e8e9a1b67ffca18ce2bde5de7f590e145e16bb0d",
+    "205ff": "66dc43a16fa27341616eeef8b200c402b34188680f9f432ba20ecf5041f56f4c"
+  },
+  "outputs": {
+    "jobs/derived-industrial-earth2-SourceG2-20261019-v1/derived/205fe-derived.png": "cd0bd8cde78d92a40b882428d7677340f1b5076685ab598e1af21c1b2070ecd2",
+    "jobs/derived-industrial-earth2-SourceG2-20261019-v1/derived/205ff-derived.png": "ddd6ecad98bced3d5f685630e6faaf1769ba141bd1e997c9bacaf226f6e55684"
+  }
+}

@@ -1,0 +1,500 @@
+{
+  "status": "PASS_DIFFERENT_FILE_ONLY_ALL20_NATIVE_AND_SOURCE20_BODY_RETENTION_AUDIT",
+  "candidate": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-actual-derived-currentG2-author-20261019-v1/candidate.json",
+    "sha256": "23becae7229df66af6bae0a4dc560fb8a750440d98f31b51ca1f16d4fe6cf92a"
+  },
+  "QA": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-actual-derived-currentG2-author-20261019-v1/actual-currentG2-intrinsic5/runtime-qa.json",
+    "sha256": "6e05843fa05beaee60e5b38363ad02ea27debe2e63224473c0447cc2997665b9"
+  },
+  "rows": [
+    {
+      "asset": "2068f",
+      "candidate_frame": {
+        "frame": 0,
+        "file": "derived5/2068f-derived.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "883289cef6e737b8edd9ef51800a666c6f9fa005ac4bc57cae1caa64187c127f",
+        "original_detail_cells": [
+          [
+            6,
+            31
+          ],
+          [
+            7,
+            12
+          ],
+          [
+            7,
+            30
+          ],
+          [
+            11,
+            22
+          ],
+          [
+            13,
+            22
+          ],
+          [
+            15,
+            10
+          ],
+          [
+            16,
+            9
+          ],
+          [
+            19,
+            22
+          ],
+          [
+            24,
+            13
+          ],
+          [
+            24,
+            30
+          ],
+          [
+            24,
+            31
+          ],
+          [
+            25,
+            12
+          ],
+          [
+            25,
+            30
+          ],
+          [
+            25,
+            31
+          ]
+        ]
+      },
+      "actual_derived": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-actual-derived-currentG2-author-20261019-v1/derived5/2068f-derived.png",
+        "sha256": "21fbfb99439977ff9e98bca30ffb00f27e5a8238a12084f8b7288a5ceec698bb"
+      },
+      "all512_specialSourceNxRGB_exact": true,
+      "scales": [
+        {
+          "scale": 1,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 12,
+          "retained_owner_samples_exact_no_HD_credit": 14,
+          "nonretained_changed_from_SourceNx": 511,
+          "Source_green_support": 302,
+          "Source_green_support_remains_green": 240
+        },
+        {
+          "scale": 2,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 42,
+          "retained_owner_samples_exact_no_HD_credit": 56,
+          "nonretained_changed_from_SourceNx": 1224,
+          "Source_green_support": 1239,
+          "Source_green_support_remains_green": 1162
+        },
+        {
+          "scale": 3,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 88,
+          "retained_owner_samples_exact_no_HD_credit": 126,
+          "nonretained_changed_from_SourceNx": 3018,
+          "Source_green_support": 2882,
+          "Source_green_support_remains_green": 2542
+        },
+        {
+          "scale": 4,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 146,
+          "retained_owner_samples_exact_no_HD_credit": 224,
+          "nonretained_changed_from_SourceNx": 3993,
+          "Source_green_support": 5271,
+          "Source_green_support_remains_green": 4958
+        }
+      ]
+    },
+    {
+      "asset": "20690",
+      "candidate_frame": {
+        "frame": 0,
+        "file": "derived5/20690-derived.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "7ed202d8729c03004af33dc95fdb74bedcd174c829ad8028f79c0883935464e4"
+      },
+      "actual_derived": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-actual-derived-currentG2-author-20261019-v1/derived5/20690-derived.png",
+        "sha256": "253fec91eee43f2146f196d18f256722db6fc9c3dc8628fbd486d3cb2e370c83"
+      },
+      "all512_specialSourceNxRGB_exact": true,
+      "scales": [
+        {
+          "scale": 1,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 0,
+          "retained_owner_samples_exact_no_HD_credit": 0,
+          "nonretained_changed_from_SourceNx": 483,
+          "Source_green_support": 303,
+          "Source_green_support_remains_green": 243
+        },
+        {
+          "scale": 2,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 0,
+          "retained_owner_samples_exact_no_HD_credit": 0,
+          "nonretained_changed_from_SourceNx": 1110,
+          "Source_green_support": 1248,
+          "Source_green_support_remains_green": 1166
+        },
+        {
+          "scale": 3,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 0,
+          "retained_owner_samples_exact_no_HD_credit": 0,
+          "nonretained_changed_from_SourceNx": 2866,
+          "Source_green_support": 2897,
+          "Source_green_support_remains_green": 2548
+        },
+        {
+          "scale": 4,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 0,
+          "retained_owner_samples_exact_no_HD_credit": 0,
+          "nonretained_changed_from_SourceNx": 3738,
+          "Source_green_support": 5310,
+          "Source_green_support_remains_green": 4992
+        }
+      ]
+    },
+    {
+      "asset": "20698",
+      "candidate_frame": {
+        "frame": 0,
+        "file": "derived5/20698-derived.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "e85d9e4bd9966245796354d1339cf5a548f71564fdff4598fb26187e618d1ac6"
+      },
+      "actual_derived": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-actual-derived-currentG2-author-20261019-v1/derived5/20698-derived.png",
+        "sha256": "7b875ba1cacd27f405ff0caf46f8ff7c4b094f289a3cf0a3315542ef503910aa"
+      },
+      "all512_specialSourceNxRGB_exact": true,
+      "scales": [
+        {
+          "scale": 1,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 0,
+          "retained_owner_samples_exact_no_HD_credit": 0,
+          "nonretained_changed_from_SourceNx": 585,
+          "Source_green_support": 301,
+          "Source_green_support_remains_green": 241
+        },
+        {
+          "scale": 2,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 0,
+          "retained_owner_samples_exact_no_HD_credit": 0,
+          "nonretained_changed_from_SourceNx": 1525,
+          "Source_green_support": 1249,
+          "Source_green_support_remains_green": 1154
+        },
+        {
+          "scale": 3,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 0,
+          "retained_owner_samples_exact_no_HD_credit": 0,
+          "nonretained_changed_from_SourceNx": 3571,
+          "Source_green_support": 2911,
+          "Source_green_support_remains_green": 2613
+        },
+        {
+          "scale": 4,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 0,
+          "retained_owner_samples_exact_no_HD_credit": 0,
+          "nonretained_changed_from_SourceNx": 5123,
+          "Source_green_support": 5383,
+          "Source_green_support_remains_green": 5035
+        }
+      ]
+    },
+    {
+      "asset": "20699",
+      "candidate_frame": {
+        "frame": 0,
+        "file": "derived5/20699-derived.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "7855cff3fa9e4616805ffa8b90bb4efd92ded5c2621ba768de86df09656d7691",
+        "original_detail_cells": [
+          [
+            4,
+            13
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            12,
+            14
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            13
+          ],
+          [
+            16,
+            15
+          ],
+          [
+            17,
+            15
+          ],
+          [
+            17,
+            16
+          ],
+          [
+            17,
+            20
+          ],
+          [
+            18,
+            9
+          ],
+          [
+            21,
+            12
+          ],
+          [
+            23,
+            18
+          ],
+          [
+            24,
+            13
+          ],
+          [
+            25,
+            11
+          ],
+          [
+            26,
+            16
+          ]
+        ]
+      },
+      "actual_derived": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-actual-derived-currentG2-author-20261019-v1/derived5/20699-derived.png",
+        "sha256": "4a12a19801d4ec71f04beb88cbd73f29f98f0fbefb72de96ee68ab951fc39768"
+      },
+      "all512_specialSourceNxRGB_exact": true,
+      "scales": [
+        {
+          "scale": 1,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 16,
+          "retained_owner_samples_exact_no_HD_credit": 16,
+          "nonretained_changed_from_SourceNx": 439,
+          "Source_green_support": 166,
+          "Source_green_support_remains_green": 121
+        },
+        {
+          "scale": 2,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 58,
+          "retained_owner_samples_exact_no_HD_credit": 64,
+          "nonretained_changed_from_SourceNx": 1131,
+          "Source_green_support": 658,
+          "Source_green_support_remains_green": 586
+        },
+        {
+          "scale": 3,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 126,
+          "retained_owner_samples_exact_no_HD_credit": 144,
+          "nonretained_changed_from_SourceNx": 2678,
+          "Source_green_support": 1496,
+          "Source_green_support_remains_green": 1321
+        },
+        {
+          "scale": 4,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 210,
+          "retained_owner_samples_exact_no_HD_credit": 256,
+          "nonretained_changed_from_SourceNx": 4345,
+          "Source_green_support": 2686,
+          "Source_green_support_remains_green": 2534
+        }
+      ]
+    },
+    {
+      "asset": "2069c",
+      "candidate_frame": {
+        "frame": 0,
+        "file": "derived5/2069c-derived.png",
+        "logical_width": 32,
+        "logical_height": 32,
+        "origin": [
+          0,
+          0
+        ],
+        "source_sha256": "0ddf1975af9188206903e74e2394877d92501719e03589d97779a85ecb8b8537",
+        "original_detail_cells": [
+          [
+            3,
+            11
+          ],
+          [
+            9,
+            5
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            12,
+            18
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            9
+          ],
+          [
+            14,
+            2
+          ],
+          [
+            14,
+            8
+          ],
+          [
+            14,
+            9
+          ],
+          [
+            16,
+            17
+          ],
+          [
+            21,
+            8
+          ],
+          [
+            25,
+            23
+          ]
+        ]
+      },
+      "actual_derived": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-terrain2068f-2069c-five-actual-derived-currentG2-author-20261019-v1/derived5/2069c-derived.png",
+        "sha256": "65ab5059f1dae8321585408e7554d92b7d349405b6cb51aae7cdac79a9d7fe68"
+      },
+      "all512_specialSourceNxRGB_exact": true,
+      "scales": [
+        {
+          "scale": 1,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 12,
+          "retained_owner_samples_exact_no_HD_credit": 13,
+          "nonretained_changed_from_SourceNx": 329,
+          "Source_green_support": 135,
+          "Source_green_support_remains_green": 117
+        },
+        {
+          "scale": 2,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 46,
+          "retained_owner_samples_exact_no_HD_credit": 52,
+          "nonretained_changed_from_SourceNx": 832,
+          "Source_green_support": 553,
+          "Source_green_support_remains_green": 533
+        },
+        {
+          "scale": 3,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 100,
+          "retained_owner_samples_exact_no_HD_credit": 117,
+          "nonretained_changed_from_SourceNx": 2148,
+          "Source_green_support": 1245,
+          "Source_green_support_remains_green": 1173
+        },
+        {
+          "scale": 4,
+          "Source_and_actual_whole_page_bodies_exact": true,
+          "PPM_palette_indexed_exact": true,
+          "all_special_ordinary_and_cycling_labels_exact": 156,
+          "retained_owner_samples_exact_no_HD_credit": 208,
+          "nonretained_changed_from_SourceNx": 3452,
+          "Source_green_support": 2247,
+          "Source_green_support_remains_green": 2211
+        }
+      ]
+    }
+  ],
+  "all20native_indexed_samples": 153600,
+  "all40Source_native_whole_page_bodies_exact": true,
+  "new_actual_art_cleanup_QA_engine_calls": 0,
+  "limits": "Ordinary/nonretained differences includeSource-guided lowfrequency color aswellasfinegeneratedRGB; noapproval bycount. ActualSource/raw/derived/allnativewholeappearance reviewedseparately;specialSourceRGB andmetadata Sourceowners arezeroHDcredit."
+}

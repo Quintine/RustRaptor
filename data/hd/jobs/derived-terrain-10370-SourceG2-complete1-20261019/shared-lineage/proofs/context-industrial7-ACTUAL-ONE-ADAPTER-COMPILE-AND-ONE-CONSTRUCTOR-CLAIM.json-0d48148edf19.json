@@ -1,0 +1,49 @@
+{
+  "Root_GO": true,
+  "source": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-industrial7-SourceG2-H5647-genuine10-context-author-20261019-v1/compose_industrial7_SourceG2_H5647.rs",
+    "sha256": "ccc7350afdfdac774884b16d63d9db708f510d490a406af57b870d96f29d94af",
+    "size": 18158,
+    "mtime_ns": 1792385498074196874,
+    "mode": 33188
+  },
+  "recipe": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-industrial7-SourceG2-H5647-genuine10-context-author-20261019-v1/SEALED-INDUSTRIAL7-GENUINE10-CURRENTG2-H5647-RECIPE.json",
+    "sha256": "8524ec5da804fa3714a6f32105fbce9f176f30e17fba1720f94b340c2260e812",
+    "size": 49019,
+    "mtime_ns": 1792385435125961384,
+    "mode": 33188
+  },
+  "actual_G2_library": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "sha256": "5b6bbd03874da298dae953dc1c0f472d24f27031df4f46616368faefb0801676",
+    "size": 22772516,
+    "mtime_ns": 1792326752687554590,
+    "mode": 33060
+  },
+  "compile_argv": [
+    "/usr/bin/rustc",
+    "--edition=2024",
+    "-O",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-industrial7-SourceG2-H5647-genuine10-context-author-20261019-v1/compose_industrial7_SourceG2_H5647.rs",
+    "--extern",
+    "raptor_replica=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libraptor_replica.rlib",
+    "--extern",
+    "serde_json=/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-stag-SourceG2-diagnostic-actual-Linux-Windows-release-build-20261018-v1/SourceG2-compiled-libraries/libserde_json-89b5c242431768d3.rlib",
+    "--extern",
+    "flate2=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps/libflate2-808a135ff259ee28.rlib",
+    "-L",
+    "dependency=/home/quintine/Projects/RaptorReplica/RustRaptor/target/desktop-runtime/release/deps",
+    "-L",
+    "native=/home/quintine/.local/lib",
+    "-o",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-industrial7-SourceG2-H5647-genuine10-context-author-20261019-v1/compose-industrial7-currentG2"
+  ],
+  "constructor_argv": [
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-industrial7-SourceG2-H5647-genuine10-context-author-20261019-v1/compose-industrial7-currentG2",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-industrial7-SourceG2-H5647-genuine10-context-author-20261019-v1/SEALED-INDUSTRIAL7-GENUINE10-CURRENTG2-H5647-RECIPE.json",
+    "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-industrial7-SourceG2-H5647-genuine10-context-author-20261019-v1/actual-once-industrial7-genuine10-G2-H5647"
+  ],
+  "no_World_QA_enginebuild_image_cleanup_canonical": true,
+  "floor_bytes": 1800000000
+}

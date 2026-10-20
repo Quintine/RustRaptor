@@ -1,0 +1,74 @@
+{
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "operation": "next-pair-tiles",
+  "palette": {
+    "path": "inputs/PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "sources": [
+    {
+      "asset": "10536",
+      "path": "inputs/10536.pic",
+      "sha256": "a759f036325d08115b5994bde532481956bf6d1c9b368522407b93b5e0c4f1fb"
+    },
+    {
+      "asset": "1053e",
+      "path": "inputs/1053e.pic",
+      "sha256": "6e65cd7f381b64e21b4d11a2842246cc1336a46e91afd7803fba27b5c9cc65b9"
+    }
+  ],
+  "donors": {
+    "0": {
+      "path": "inputs/new-pair-master.png",
+      "sha256": "c80f61d519adbab3f9d6032fb7f1730cac2e3e8c1af9cd569a83440c0a656840",
+      "box": [
+        570,
+        80,
+        220,
+        220
+      ]
+    },
+    "1": {
+      "path": "inputs/new-pair-master.png",
+      "sha256": "c80f61d519adbab3f9d6032fb7f1730cac2e3e8c1af9cd569a83440c0a656840",
+      "box": [
+        194,
+        320,
+        26,
+        180
+      ]
+    },
+    "2": {
+      "path": "inputs/new-pair-master.png",
+      "sha256": "c80f61d519adbab3f9d6032fb7f1730cac2e3e8c1af9cd569a83440c0a656840",
+      "box": [
+        25,
+        50,
+        150,
+        170
+      ]
+    },
+    "3": {
+      "path": "inputs/new-pair-master.png",
+      "sha256": "c80f61d519adbab3f9d6032fb7f1730cac2e3e8c1af9cd569a83440c0a656840",
+      "box": [
+        270,
+        10,
+        20,
+        65
+      ]
+    },
+    "4": {
+      "path": "inputs/new-pair-master.png",
+      "sha256": "c80f61d519adbab3f9d6032fb7f1730cac2e3e8c1af9cd569a83440c0a656840",
+      "box": [
+        1080,
+        600,
+        45,
+        45
+      ]
+    }
+  },
+  "lineage": "All donors from untouched own builtin Source-primary pair c80f61d5. Geometry from exact Original Source. No donor repetition. Finer bounded sigma3 clip16 strength0.5 RGB band explicitly reduces coarse motif carry vs prior nine selector; no parameter search or earlier output mutation.",
+  "functional_contract": "All exact SourceNx protected support retained; union Scale1..4 logical owners excluded from HD credit. Source geometry and palette low-frequency material colors are not claimed as new detail."
+}

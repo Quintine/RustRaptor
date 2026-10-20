@@ -1,0 +1,931 @@
+{
+  "status": "TECHNICAL_SAVED_ONLY_PASS_NOT_PHYSICAL_ART_APPROVAL",
+  "actual_proof": {
+    "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/ACTUAL-QUIET302E1-GENUINE1-SOURCEG2-CONTEXTS.json",
+    "sha256": "88258046156019aa14f1f219c3e62107d45e6586c69ea8d4c8894b00cc483040",
+    "size": 122019,
+    "mtime_ns": 1792400503377038734,
+    "mode": 33188
+  },
+  "components": 20,
+  "unique_role_bodies": 12,
+  "page_bodies": 12,
+  "SourceNx_controls": 4,
+  "total_index_class_RGB_samples": 983040,
+  "totals": {
+    "retained_baseline": 0,
+    "retained_proposal": 210,
+    "outside": 240000,
+    "fallback": 61440,
+    "own_original": 30720,
+    "foreign_interior": 141120,
+    "delta": 10122,
+    "final_global244_index_differences": 0
+  },
+  "stage_checks": [
+    {
+      "asset": "302e1",
+      "scale": 1,
+      "restored_SourceNx_matches_accepted_final_G2": true,
+      "protected_logical_cells": 7,
+      "unretained_global244_fringe": 0
+    },
+    {
+      "asset": "302e1",
+      "scale": 2,
+      "restored_SourceNx_matches_accepted_final_G2": true,
+      "protected_logical_cells": 7,
+      "unretained_global244_fringe": 0
+    },
+    {
+      "asset": "302e1",
+      "scale": 3,
+      "restored_SourceNx_matches_accepted_final_G2": true,
+      "protected_logical_cells": 7,
+      "unretained_global244_fringe": 0
+    },
+    {
+      "asset": "302e1",
+      "scale": 4,
+      "restored_SourceNx_matches_accepted_final_G2": true,
+      "protected_logical_cells": 7,
+      "unretained_global244_fringe": 0
+    }
+  ],
+  "record_checks": [
+    {
+      "case_index": 0,
+      "scale": 1,
+      "all_SourceNx_class_reserved_outside_fallback_foreign_exact": true,
+      "retained_joined_SourceNx_exact": true,
+      "changed": 325
+    },
+    {
+      "case_index": 0,
+      "scale": 2,
+      "all_SourceNx_class_reserved_outside_fallback_foreign_exact": true,
+      "retained_joined_SourceNx_exact": true,
+      "changed": 1291
+    },
+    {
+      "case_index": 0,
+      "scale": 3,
+      "all_SourceNx_class_reserved_outside_fallback_foreign_exact": true,
+      "retained_joined_SourceNx_exact": true,
+      "changed": 3259
+    },
+    {
+      "case_index": 0,
+      "scale": 4,
+      "all_SourceNx_class_reserved_outside_fallback_foreign_exact": true,
+      "retained_joined_SourceNx_exact": true,
+      "changed": 5247
+    }
+  ],
+  "actual_raw_planes": [
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/301c4-s1.indices-u16le.gz",
+      "sha256": "311a7b923132b4755194ea798ba4f699a7cbcc5564189095f82129c848689369",
+      "size": 330,
+      "mtime_ns": 1792400502996038757,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/301c4-s1.classes-u8.gz",
+      "sha256": "acb5604b126ac894c1eb11c4575bf2072fea61232a888e453770c79d7ed56419",
+      "size": 35,
+      "mtime_ns": 1792400502996038757,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/301c4-s1.ppm.gz",
+      "sha256": "db0b079adbd0109db933cf7157aeaabc67d10f5459525b114124814b349dea8f",
+      "size": 402,
+      "mtime_ns": 1792400502996038757,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/301c4-s2.indices-u16le.gz",
+      "sha256": "3587cb922a104b510381204302c6fddf2c474f9ef778480763ac038a79eb5504",
+      "size": 1146,
+      "mtime_ns": 1792400502997038757,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/301c4-s2.classes-u8.gz",
+      "sha256": "ea1b439b3af25ba7600cf10965eb5fa00a956dd0fdc52093d79ab9c6d95bf7d2",
+      "size": 38,
+      "mtime_ns": 1792400502997038757,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/301c4-s2.ppm.gz",
+      "sha256": "2bde565ce9dc4b2c74a9726225cedd06b776474257b087f51ad6beae85e1378a",
+      "size": 1356,
+      "mtime_ns": 1792400502997038757,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/301c4-s3.indices-u16le.gz",
+      "sha256": "ff1064d77a98f72fa9a0f7e636e3d1b651c2887da405444b41f1139830353ee8",
+      "size": 2577,
+      "mtime_ns": 1792400502999038757,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/301c4-s3.classes-u8.gz",
+      "sha256": "06883042d05536343afd6905faf651f55d2bbc126d06b1d82db0cecb3602cae4",
+      "size": 44,
+      "mtime_ns": 1792400502999038757,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/301c4-s3.ppm.gz",
+      "sha256": "e034e995d46ec5747d55fa78ae00b6c83c87ba799203ce96b84313fb6eaa5695",
+      "size": 3104,
+      "mtime_ns": 1792400503001038757,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/301c4-s4.indices-u16le.gz",
+      "sha256": "f6099fc0b465852db640448d5868b1ebbaf1fca5582835c5a5de51f621ba3435",
+      "size": 4829,
+      "mtime_ns": 1792400503004038757,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/301c4-s4.classes-u8.gz",
+      "sha256": "e9343a661a9ca94a5ec38193ee69a4f0c0321830b4e09b6f35e479249f4fe27e",
+      "size": 50,
+      "mtime_ns": 1792400503004038757,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/301c4-s4.ppm.gz",
+      "sha256": "d666079f779f7014a2d5c959e7eca1de07ab8425ab1f3f21c253c3a2e1665161",
+      "size": 5816,
+      "mtime_ns": 1792400503006038757,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028a-s1.indices-u16le.gz",
+      "sha256": "a9546f29a05df2a03f4a8c2698c1740b6bff11b290ccf1a1d6e93776dbdadea9",
+      "size": 350,
+      "mtime_ns": 1792400503069038753,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028a-s1.classes-u8.gz",
+      "sha256": "acb5604b126ac894c1eb11c4575bf2072fea61232a888e453770c79d7ed56419",
+      "size": 35,
+      "mtime_ns": 1792400503069038753,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028a-s1.ppm.gz",
+      "sha256": "af63020e4a5a902c938ce578b598241097295d189f60f86b988480f99a67b871",
+      "size": 438,
+      "mtime_ns": 1792400503069038753,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028a-s2.indices-u16le.gz",
+      "sha256": "92735eb55f1b3ca7add3603b1aa0f7d77efb34ee95a253acc5bfaf8f4c6b6f4f",
+      "size": 1279,
+      "mtime_ns": 1792400503071038753,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028a-s2.classes-u8.gz",
+      "sha256": "ea1b439b3af25ba7600cf10965eb5fa00a956dd0fdc52093d79ab9c6d95bf7d2",
+      "size": 38,
+      "mtime_ns": 1792400503071038753,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028a-s2.ppm.gz",
+      "sha256": "c51339aa3f1bef5c8fb5839ef1c679d3672c921435912dd542319851a5cce9bc",
+      "size": 1539,
+      "mtime_ns": 1792400503072038753,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028a-s3.indices-u16le.gz",
+      "sha256": "c0375b67fd788aab68e4215894b109f59c319c35f889e6da62c0f93b052bf76b",
+      "size": 2629,
+      "mtime_ns": 1792400503074038753,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028a-s3.classes-u8.gz",
+      "sha256": "06883042d05536343afd6905faf651f55d2bbc126d06b1d82db0cecb3602cae4",
+      "size": 44,
+      "mtime_ns": 1792400503074038753,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028a-s3.ppm.gz",
+      "sha256": "b3749eede2af8d62c349dcdc11841ab0da9cf6e19e15cad8c701e199560ffee6",
+      "size": 3193,
+      "mtime_ns": 1792400503075038753,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028a-s4.indices-u16le.gz",
+      "sha256": "16b3b13db9bfb7ff7dde99752a3d250e57fa0b7d28bc60c6c6ed87e510825c61",
+      "size": 4456,
+      "mtime_ns": 1792400503079038752,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028a-s4.classes-u8.gz",
+      "sha256": "e9343a661a9ca94a5ec38193ee69a4f0c0321830b4e09b6f35e479249f4fe27e",
+      "size": 50,
+      "mtime_ns": 1792400503079038752,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028a-s4.ppm.gz",
+      "sha256": "32ad118197907c6bc7d037a82fdfcbe2f48f1a3c6a71c134282a74de42de2d07",
+      "size": 5429,
+      "mtime_ns": 1792400503081038752,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028c-s1.indices-u16le.gz",
+      "sha256": "24a7d06ebb4e21715ad49e1afec0805f4962972379a92d99fedde5e196bf694d",
+      "size": 416,
+      "mtime_ns": 1792400503141038748,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028c-s1.classes-u8.gz",
+      "sha256": "acb5604b126ac894c1eb11c4575bf2072fea61232a888e453770c79d7ed56419",
+      "size": 35,
+      "mtime_ns": 1792400503141038748,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028c-s1.ppm.gz",
+      "sha256": "eb608967ccce487723a0db8d832149506b31f4a430a1e65502f6ddc62d5906b2",
+      "size": 494,
+      "mtime_ns": 1792400503141038748,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028c-s2.indices-u16le.gz",
+      "sha256": "b36eaa660492f6ee01761c18685b1c4df01efadb7541b87618db8f16cdcf5389",
+      "size": 1300,
+      "mtime_ns": 1792400503142038748,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028c-s2.classes-u8.gz",
+      "sha256": "ea1b439b3af25ba7600cf10965eb5fa00a956dd0fdc52093d79ab9c6d95bf7d2",
+      "size": 38,
+      "mtime_ns": 1792400503143038748,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028c-s2.ppm.gz",
+      "sha256": "02ccb2300072dc0412038c5108acbf536f7a10a7087d1d2990a3002b5a10b6e5",
+      "size": 1541,
+      "mtime_ns": 1792400503143038748,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028c-s3.indices-u16le.gz",
+      "sha256": "3184460fcc1bfc804bf422e8f7427f9d1e5798c9fe675891c302d645a8c6e968",
+      "size": 2722,
+      "mtime_ns": 1792400503146038748,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028c-s3.classes-u8.gz",
+      "sha256": "06883042d05536343afd6905faf651f55d2bbc126d06b1d82db0cecb3602cae4",
+      "size": 44,
+      "mtime_ns": 1792400503146038748,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028c-s3.ppm.gz",
+      "sha256": "76998847e4d1abf6ea0d67bad47a6d6accd120e9d6a512321eeadad553ee8d16",
+      "size": 3295,
+      "mtime_ns": 1792400503147038748,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028c-s4.indices-u16le.gz",
+      "sha256": "243eb30d45dab928c287aa9220a6f826ce29de2d7b3012835398f9090ce86325",
+      "size": 4741,
+      "mtime_ns": 1792400503150038748,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028c-s4.classes-u8.gz",
+      "sha256": "e9343a661a9ca94a5ec38193ee69a4f0c0321830b4e09b6f35e479249f4fe27e",
+      "size": 50,
+      "mtime_ns": 1792400503150038748,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028c-s4.ppm.gz",
+      "sha256": "30cb2b457db6fa0094ce886951943536ad52775941b76aa1249572f21b06e54e",
+      "size": 5712,
+      "mtime_ns": 1792400503152038748,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028f-s1.indices-u16le.gz",
+      "sha256": "aae910d1c4880bbe51f5e6f02130fa9cc06f00160f3dc04f982e3ffd2d556063",
+      "size": 370,
+      "mtime_ns": 1792400503210038744,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028f-s1.classes-u8.gz",
+      "sha256": "acb5604b126ac894c1eb11c4575bf2072fea61232a888e453770c79d7ed56419",
+      "size": 35,
+      "mtime_ns": 1792400503210038744,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028f-s1.ppm.gz",
+      "sha256": "d81a3aa1ad4c23aa573944f095f922321e146ec3170956018504950143e00b4a",
+      "size": 447,
+      "mtime_ns": 1792400503210038744,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028f-s2.indices-u16le.gz",
+      "sha256": "5bdbb3080ae5caf04e41055b652ee210db04718ce4d450e031c429ee3ac4e1a1",
+      "size": 1113,
+      "mtime_ns": 1792400503211038744,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028f-s2.classes-u8.gz",
+      "sha256": "ea1b439b3af25ba7600cf10965eb5fa00a956dd0fdc52093d79ab9c6d95bf7d2",
+      "size": 38,
+      "mtime_ns": 1792400503211038744,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028f-s2.ppm.gz",
+      "sha256": "a1c860e37b1097ed7a37288e506e5c01597c01420c7c7ba73499d2535e84dee0",
+      "size": 1354,
+      "mtime_ns": 1792400503211038744,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028f-s3.indices-u16le.gz",
+      "sha256": "7e98edf4d1789bccc9ce6041f7c062589494c40b3ca487518af8e3375b4cee25",
+      "size": 2426,
+      "mtime_ns": 1792400503214038744,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028f-s3.classes-u8.gz",
+      "sha256": "06883042d05536343afd6905faf651f55d2bbc126d06b1d82db0cecb3602cae4",
+      "size": 44,
+      "mtime_ns": 1792400503214038744,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028f-s3.ppm.gz",
+      "sha256": "526a603eb77f7048a9753471073772a1d60786b4d809e5406c7013c9c597bb60",
+      "size": 2951,
+      "mtime_ns": 1792400503215038744,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028f-s4.indices-u16le.gz",
+      "sha256": "5404dfb4618c44ceca79321fcc00eea6d82e6b2ff7a421591e698487a8b33fa6",
+      "size": 4335,
+      "mtime_ns": 1792400503217038744,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028f-s4.classes-u8.gz",
+      "sha256": "e9343a661a9ca94a5ec38193ee69a4f0c0321830b4e09b6f35e479249f4fe27e",
+      "size": 50,
+      "mtime_ns": 1792400503217038744,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/3028f-s4.ppm.gz",
+      "sha256": "523fe2a1a2df0e99cabe04bdd15b27fcd294ebb16c0be6e7b89179c32b356f4d",
+      "size": 5272,
+      "mtime_ns": 1792400503219038744,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/302e1-s1.indices-u16le.gz",
+      "sha256": "bdaddc7ccdb6524245c192ba61c991f10fdfee3a734d3654473fc8f67550daf8",
+      "size": 490,
+      "mtime_ns": 1792400503225038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/302e1-s1.classes-u8.gz",
+      "sha256": "acb5604b126ac894c1eb11c4575bf2072fea61232a888e453770c79d7ed56419",
+      "size": 35,
+      "mtime_ns": 1792400503225038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/302e1-s1.ppm.gz",
+      "sha256": "36b369335a0d6195f8924af3acaa623b53a7883499c242c8f94a4a2c202a5747",
+      "size": 656,
+      "mtime_ns": 1792400503225038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/302e1-s2.indices-u16le.gz",
+      "sha256": "98705b4748abc935dc9b7f87c1d1fb5b7a16f072ac5404794622da98fd5f4565",
+      "size": 1582,
+      "mtime_ns": 1792400503227038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/302e1-s2.classes-u8.gz",
+      "sha256": "ea1b439b3af25ba7600cf10965eb5fa00a956dd0fdc52093d79ab9c6d95bf7d2",
+      "size": 38,
+      "mtime_ns": 1792400503227038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/302e1-s2.ppm.gz",
+      "sha256": "201c7d2bdbd41285b7f1706ebf656fd3b14fdf59ecdfb3ce7fefbfcab10a726b",
+      "size": 1942,
+      "mtime_ns": 1792400503227038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/302e1-s3.indices-u16le.gz",
+      "sha256": "3cf3a8f4c153d25e60e76c8b27581705a708ab3e15af5d743f09c4a77d1464c4",
+      "size": 3198,
+      "mtime_ns": 1792400503230038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/302e1-s3.classes-u8.gz",
+      "sha256": "06883042d05536343afd6905faf651f55d2bbc126d06b1d82db0cecb3602cae4",
+      "size": 44,
+      "mtime_ns": 1792400503230038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/302e1-s3.ppm.gz",
+      "sha256": "87e7689fe946880194733732e78fb0d3a8aa94c486073f8137074cc9ed784cbe",
+      "size": 3902,
+      "mtime_ns": 1792400503231038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/302e1-s4.indices-u16le.gz",
+      "sha256": "c3badc945470ecdb7e87e886bce8d1c9d1edf1c50452ef4ee9ac992014d98336",
+      "size": 4772,
+      "mtime_ns": 1792400503234038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/302e1-s4.classes-u8.gz",
+      "sha256": "e9343a661a9ca94a5ec38193ee69a4f0c0321830b4e09b6f35e479249f4fe27e",
+      "size": 50,
+      "mtime_ns": 1792400503234038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/components/302e1-s4.ppm.gz",
+      "sha256": "9108e5678f7289dedc747964c5d0414534cc3f16e03cfb86b2a0f473705e181d",
+      "size": 5767,
+      "mtime_ns": 1792400503235038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s1-Original_joined_SourceNx.indices-u16le.gz",
+      "sha256": "e897981c3380d3acbc5fa9f825cc5a2dfd2d20b24dfb45e717080f8901ab3688",
+      "size": 2762,
+      "mtime_ns": 1792400503237038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s1-Original_joined_SourceNx.classes-u8.gz",
+      "sha256": "06883042d05536343afd6905faf651f55d2bbc126d06b1d82db0cecb3602cae4",
+      "size": 44,
+      "mtime_ns": 1792400503237038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s1-Original_joined_SourceNx.ppm.gz",
+      "sha256": "be13054fe96fb214f4b2b11774b4e3a5de96ffe8214370f9ba4e2f3e1f44b4a6",
+      "size": 3333,
+      "mtime_ns": 1792400503238038743,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s1-immutable_actual_H_baseline.indices-u16le.gz",
+      "sha256": "a21134f858fff0b319c9bd7f8696e680d0c1fd3acd9f64a5bb3d7e45a1095eba",
+      "size": 2753,
+      "mtime_ns": 1792400503239038742,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s1-immutable_actual_H_baseline.classes-u8.gz",
+      "sha256": "06883042d05536343afd6905faf651f55d2bbc126d06b1d82db0cecb3602cae4",
+      "size": 44,
+      "mtime_ns": 1792400503239038742,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s1-immutable_actual_H_baseline.ppm.gz",
+      "sha256": "1880b765bf1ff3882e01f65322c9bae8986e72a84a8606c28d67863fad406267",
+      "size": 3347,
+      "mtime_ns": 1792400503240038742,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s1-selected_quiet302e1_proposal.indices-u16le.gz",
+      "sha256": "12e613aa154965fd88e3a0d80898d6829f484f99c18778c0aa231d9b611dce1a",
+      "size": 2683,
+      "mtime_ns": 1792400503241038742,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s1-selected_quiet302e1_proposal.classes-u8.gz",
+      "sha256": "06883042d05536343afd6905faf651f55d2bbc126d06b1d82db0cecb3602cae4",
+      "size": 44,
+      "mtime_ns": 1792400503241038742,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s1-selected_quiet302e1_proposal.ppm.gz",
+      "sha256": "4ee0f4655e1dd9bc030943fc0dff479f4cfc37ef4f84361050e008425f7aea51",
+      "size": 3280,
+      "mtime_ns": 1792400503243038742,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s2-Original_joined_SourceNx.indices-u16le.gz",
+      "sha256": "91acc567bf8b5a3fb1484bd773b2da1f41194b4ec410db3c8a4b858240548b62",
+      "size": 7289,
+      "mtime_ns": 1792400503248038742,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s2-Original_joined_SourceNx.classes-u8.gz",
+      "sha256": "72c87d45e90093dd8398fa4401c272cd880a96e57ea1b16a5ed084b5d17d6efb",
+      "size": 70,
+      "mtime_ns": 1792400503248038742,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s2-Original_joined_SourceNx.ppm.gz",
+      "sha256": "3f933949ff65843c6500b856da661b4b0dac8496a3f3ea5e43faff22886b9c4f",
+      "size": 9124,
+      "mtime_ns": 1792400503251038742,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s2-immutable_actual_H_baseline.indices-u16le.gz",
+      "sha256": "c5c7f7bceb91a067806924e15ba2fd3fadd355c290b7f0592478ea05c8f71605",
+      "size": 8653,
+      "mtime_ns": 1792400503254038742,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s2-immutable_actual_H_baseline.classes-u8.gz",
+      "sha256": "72c87d45e90093dd8398fa4401c272cd880a96e57ea1b16a5ed084b5d17d6efb",
+      "size": 70,
+      "mtime_ns": 1792400503254038742,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s2-immutable_actual_H_baseline.ppm.gz",
+      "sha256": "c64b17015310dfa050bc6dce953071a6b1379cbc9ac42b6da77a90ca3a315fd7",
+      "size": 11121,
+      "mtime_ns": 1792400503258038741,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s2-selected_quiet302e1_proposal.indices-u16le.gz",
+      "sha256": "876cf702145f101382afae248eafe355a6757ed902cdcad0f81da555efeda504",
+      "size": 8997,
+      "mtime_ns": 1792400503261038741,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s2-selected_quiet302e1_proposal.classes-u8.gz",
+      "sha256": "72c87d45e90093dd8398fa4401c272cd880a96e57ea1b16a5ed084b5d17d6efb",
+      "size": 70,
+      "mtime_ns": 1792400503261038741,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s2-selected_quiet302e1_proposal.ppm.gz",
+      "sha256": "9125203c52b632e5e0007d8027b180990cb8b984ff92be458cd0192cf99245a5",
+      "size": 11495,
+      "mtime_ns": 1792400503265038741,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s3-Original_joined_SourceNx.indices-u16le.gz",
+      "sha256": "a159242d785e52deb6c2415e159e4728ed2753c8e09a5746e5e1bcc6d928b487",
+      "size": 11742,
+      "mtime_ns": 1792400503273038740,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s3-Original_joined_SourceNx.classes-u8.gz",
+      "sha256": "18b39ff11fd119ad8de11ab2ed417880af281cc498ca8603dde2ba910a9bd2d1",
+      "size": 115,
+      "mtime_ns": 1792400503273038740,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s3-Original_joined_SourceNx.ppm.gz",
+      "sha256": "8694708813c21d33c10c57d36c5997e45a61c911f507cb3da16d98791489d563",
+      "size": 14690,
+      "mtime_ns": 1792400503278038740,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s3-immutable_actual_H_baseline.indices-u16le.gz",
+      "sha256": "0fd481f74f02c9d751ca22d0d67ef0d4cc3a5a3025ae5bb3f2214cb06664e83a",
+      "size": 18603,
+      "mtime_ns": 1792400503284038740,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s3-immutable_actual_H_baseline.classes-u8.gz",
+      "sha256": "18b39ff11fd119ad8de11ab2ed417880af281cc498ca8603dde2ba910a9bd2d1",
+      "size": 115,
+      "mtime_ns": 1792400503284038740,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s3-immutable_actual_H_baseline.ppm.gz",
+      "sha256": "d728a399de01b1537be88f7fcb0dcb9a385f62254e2ccbe871ed927ca112a35e",
+      "size": 22603,
+      "mtime_ns": 1792400503291038739,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s3-selected_quiet302e1_proposal.indices-u16le.gz",
+      "sha256": "abae8d760a0d38d1a11fb2ddf498665a73904faa1b6e0f7d1052d149322a7cd6",
+      "size": 19872,
+      "mtime_ns": 1792400503298038739,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s3-selected_quiet302e1_proposal.classes-u8.gz",
+      "sha256": "18b39ff11fd119ad8de11ab2ed417880af281cc498ca8603dde2ba910a9bd2d1",
+      "size": 115,
+      "mtime_ns": 1792400503299038739,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s3-selected_quiet302e1_proposal.ppm.gz",
+      "sha256": "1430bd8b3d34d1df779a1191620c3034947a71b2c0ffe9a55e6dad23f782aecd",
+      "size": 24065,
+      "mtime_ns": 1792400503306038738,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s4-Original_joined_SourceNx.indices-u16le.gz",
+      "sha256": "7adf30bc78cf9598001c7db408f1368f0b463fd5f1dcf9db62f4d5a4c41cb4b5",
+      "size": 17407,
+      "mtime_ns": 1792400503320038738,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s4-Original_joined_SourceNx.classes-u8.gz",
+      "sha256": "51b9f51d05d4b486af3c20efd95e0233826ce266c4425c4cc90fc156ccd5edda",
+      "size": 178,
+      "mtime_ns": 1792400503320038738,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s4-Original_joined_SourceNx.ppm.gz",
+      "sha256": "aa132cde629d5aaef0e7ea918dd546d0a6d48a00ec5cf3a9b2bf6b2d0ed86b0e",
+      "size": 22061,
+      "mtime_ns": 1792400503327038737,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s4-immutable_actual_H_baseline.indices-u16le.gz",
+      "sha256": "0939fd1f9ee8fa874fdd1bce13fc006a7e4642df2c5bcca3b9a102bf7ec2070f",
+      "size": 31758,
+      "mtime_ns": 1792400503338038736,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s4-immutable_actual_H_baseline.classes-u8.gz",
+      "sha256": "51b9f51d05d4b486af3c20efd95e0233826ce266c4425c4cc90fc156ccd5edda",
+      "size": 178,
+      "mtime_ns": 1792400503339038736,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s4-immutable_actual_H_baseline.ppm.gz",
+      "sha256": "2015b59c771b5110fec1d1b0dbcf04f1a9f041e7a3e1d3038fc623a78dbff758",
+      "size": 38883,
+      "mtime_ns": 1792400503351038736,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s4-selected_quiet302e1_proposal.indices-u16le.gz",
+      "sha256": "3389706ab7904208d7ef9a3986c5410162742b4901eed63f3fc6b6ecddc7a80a",
+      "size": 33725,
+      "mtime_ns": 1792400503364038735,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s4-selected_quiet302e1_proposal.classes-u8.gz",
+      "sha256": "51b9f51d05d4b486af3c20efd95e0233826ce266c4425c4cc90fc156ccd5edda",
+      "size": 178,
+      "mtime_ns": 1792400503364038735,
+      "mode": 33188
+    },
+    {
+      "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/actual-once-quiet302e1-genuine1-G2/planes/case00-s4-selected_quiet302e1_proposal.ppm.gz",
+      "sha256": "d9b3244da8e90bd4715a3e83e21d7b97f526a21e9c4d662778ad221f86d38bd8",
+      "size": 41097,
+      "mtime_ns": 1792400503376038734,
+      "mode": 33188
+    }
+  ],
+  "pages": [
+    {
+      "case_index": 0,
+      "page": {
+        "path": "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/hd-quiet302e1-SourceG2-genuine1-context-author-20261019-v2/whole-saved-native-context-pages/case00-WHOLE-Original-capturedH-proposed1-native1to4.png",
+        "sha256": "9d87c375e19dd8999d31886356862e7ede30dc5e51155732d46afc28c27f1670",
+        "size": 177310,
+        "mtime_ns": 1792400527756037241,
+        "mode": 33188
+      },
+      "dimensions": [
+        1208,
+        1232
+      ],
+      "panes": [
+        {
+          "case_index": 0,
+          "scale": 1,
+          "role": "Original_joined_SourceNx",
+          "xywh": [
+            8,
+            52,
+            192,
+            192
+          ],
+          "nearest_display_factor": 2
+        },
+        {
+          "case_index": 0,
+          "scale": 1,
+          "role": "immutable_actual_H_baseline",
+          "xywh": [
+            408,
+            52,
+            192,
+            192
+          ],
+          "nearest_display_factor": 2
+        },
+        {
+          "case_index": 0,
+          "scale": 1,
+          "role": "selected_quiet302e1_proposal",
+          "xywh": [
+            808,
+            52,
+            192,
+            192
+          ],
+          "nearest_display_factor": 2
+        },
+        {
+          "case_index": 0,
+          "scale": 2,
+          "role": "Original_joined_SourceNx",
+          "xywh": [
+            8,
+            280,
+            192,
+            192
+          ],
+          "nearest_display_factor": 1
+        },
+        {
+          "case_index": 0,
+          "scale": 2,
+          "role": "immutable_actual_H_baseline",
+          "xywh": [
+            408,
+            280,
+            192,
+            192
+          ],
+          "nearest_display_factor": 1
+        },
+        {
+          "case_index": 0,
+          "scale": 2,
+          "role": "selected_quiet302e1_proposal",
+          "xywh": [
+            808,
+            280,
+            192,
+            192
+          ],
+          "nearest_display_factor": 1
+        },
+        {
+          "case_index": 0,
+          "scale": 3,
+          "role": "Original_joined_SourceNx",
+          "xywh": [
+            8,
+            508,
+            288,
+            288
+          ],
+          "nearest_display_factor": 1
+        },
+        {
+          "case_index": 0,
+          "scale": 3,
+          "role": "immutable_actual_H_baseline",
+          "xywh": [
+            408,
+            508,
+            288,
+            288
+          ],
+          "nearest_display_factor": 1
+        },
+        {
+          "case_index": 0,
+          "scale": 3,
+          "role": "selected_quiet302e1_proposal",
+          "xywh": [
+            808,
+            508,
+            288,
+            288
+          ],
+          "nearest_display_factor": 1
+        },
+        {
+          "case_index": 0,
+          "scale": 4,
+          "role": "Original_joined_SourceNx",
+          "xywh": [
+            8,
+            832,
+            384,
+            384
+          ],
+          "nearest_display_factor": 1
+        },
+        {
+          "case_index": 0,
+          "scale": 4,
+          "role": "immutable_actual_H_baseline",
+          "xywh": [
+            408,
+            832,
+            384,
+            384
+          ],
+          "nearest_display_factor": 1
+        },
+        {
+          "case_index": 0,
+          "scale": 4,
+          "role": "selected_quiet302e1_proposal",
+          "xywh": [
+            808,
+            832,
+            384,
+            384
+          ],
+          "nearest_display_factor": 1
+        }
+      ]
+    }
+  ],
+  "ordered_pages": [],
+  "retained_Original_selected_owner_counts": {
+    "302e1": 7
+  },
+  "actual_constructor_exit_code": 0,
+  "file_only_metadata_recovery": false,
+  "retained_Original_cells_no_HDcredit": true,
+  "global_intrinsic244_fringe_distinction_preserved": true,
+  "World": 0,
+  "new_raster_or_generation": 0
+}

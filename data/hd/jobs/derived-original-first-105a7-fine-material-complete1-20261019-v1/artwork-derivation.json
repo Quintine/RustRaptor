@@ -1,0 +1,59 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-original-first-105a7-fine-material-complete1-20261019-v1/generation-provenance/singleton1059e/ACTUAL-ORIGINAL-PRIMARY-RETURNED-UNTOUCHED.png",
+        "sha256": "72f75613c04054d23b94da26b3beb3ee6fb3d63be9d739aebdb353f0c9577c7b"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-original-first-105a7-fine-material-complete1-20261019-v1/generation-provenance/singleton1059e/ACTUAL-BUILTIN-PRIMITIVE-RECEIPT.json",
+        "sha256": "99d2b8f8faa0006d222b7f0b287f45c53c4b4c605d5f9fc174b6b9143de098ef"
+      },
+      "prompt": {
+        "path": "jobs/derived-original-first-105a7-fine-material-complete1-20261019-v1/generation-provenance/singleton1059e/prompt.txt",
+        "sha256": "ee27003ce13c85ca27bb5d09d965516206ce2dd9a414da7ff578da9959356d72"
+      }
+    },
+    {
+      "raw_png": {
+        "path": "jobs/derived-original-first-105a7-fine-material-complete1-20261019-v1/generation-provenance/pair105a4-105a7/ACTUAL-ORIGINAL-PRIMARY-RETURNED-UNTOUCHED.png",
+        "sha256": "b305fbe79b583b5c8b3fc356871db3b9ad42953b54e02bf876b4170f73946add"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-original-first-105a7-fine-material-complete1-20261019-v1/generation-provenance/pair105a4-105a7/ACTUAL-BUILTIN-PRIMITIVE-RECEIPT.json",
+        "sha256": "a399a80aa09cc5259c8e77896d0044e20147c6c8ff8ec3efb6326d75c090c8df"
+      },
+      "prompt": {
+        "path": "jobs/derived-original-first-105a7-fine-material-complete1-20261019-v1/generation-provenance/pair105a4-105a7/prompt.txt",
+        "sha256": "c6ebe8754d2136c64c42bfc66cccd403ba3c3bc73570d9f26c6e98ffe55144c2"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/fine1059e_source_components/terrain_component_cleanup.py",
+      "sha256": "57132a11256eac6f3952b2dedf23edd68c68a0c99048abbad9dbb6512c9854fb"
+    },
+    {
+      "path": "tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-original-first-105a7-fine-material-complete1-20261019-v1/reproducer/recipe.json",
+    "sha256": "275c7dbbfe1678cecd074555d9a958673535b70e4e0df11d22e604ae5748419d"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-original-first-105a7-fine-material-complete1-20261019-v1/execution-receipt.json",
+    "sha256": "13ee7f827ddcb66c066d401d3239d39da99e2e31682d419639a481839060114d"
+  },
+  "sources": {
+    "105a7": "a2df4bd0a8bde84f68909c2cead77308be57bf24342662be2720d808b5c5c4c6"
+  },
+  "outputs": {
+    "jobs/derived-original-first-105a7-fine-material-complete1-20261019-v1/105a7-derived.png": "41e0e40a2eb43327ef93df891852967013adab2d902e2f5a324c26a5db1b7167"
+  }
+}

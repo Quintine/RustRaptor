@@ -1,0 +1,200 @@
+{
+  "status": "approved",
+  "candidate_sha256": "57247467d7be0dd572509b5e3c1b1fae36d385b95a8b34345eae67af4c19fa05",
+  "frame_bindings_sha256": "70b9ec9fc8d066dbcbe1f89467c8baeaf5c908394e6ba09d2c9464b8983761d2",
+  "runtime_qa": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/runtime-qa.json",
+  "source_and_all_scale_visual_review": true,
+  "independent_review": {
+    "literal_prior_context": {
+      "path": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/review/independent-context-H5636/QUALIFIED-SHORELINE4-DIFFERENT-GENUINE18-ALLNATIVE-CONTEXT-ART-REVIEW-CORRECT-ARTIST-SUCCESSOR.json",
+      "sha256": "2346eb71ed0ba510d6d1baa564813dfa8adf372149456afc23cb57cc0a4f1ea9"
+    },
+    "actual_changed_endpoint_context": {
+      "path": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/review/independent-context-H5647-changed-endpoint3/DIFFERENT-QUALIFIED-SHORELINE4-H5647-ENDPOINT3-ALL4-AND-ORDERED-DELTA.json",
+      "sha256": "2931cdd5c112ae650eb7d552992bd5c79681f920e943c7a2eb384a216d1db9c8"
+    },
+    "Root_intrinsic_and_finite_context": {
+      "path": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/proofs/ROOT-SHORELINE4-APPROVED-INTRINSIC-AND-FINITE-CONTEXT.json",
+      "sha256": "b00ecd17e01ff374afa08afd6e01d7b267712f90f32d454867330b709d29ec29"
+    }
+  },
+  "context_H5636_independent": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/review/independent-context-H5636/QUALIFIED-SHORELINE4-DIFFERENT-GENUINE18-ALLNATIVE-CONTEXT-ART-REVIEW-CORRECT-ARTIST-SUCCESSOR.json",
+  "context_changed_H5647_independent_pending": false,
+  "Root_unclipped_presentation_review_pending": false,
+  "retained_original_detail_review": {
+    "policy_version": "retained-original-details-v2-painted0255",
+    "cells_by_asset": {
+      "10514": [
+        [
+          15,
+          0
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          16,
+          2
+        ],
+        [
+          16,
+          29
+        ],
+        [
+          16,
+          30
+        ],
+        [
+          16,
+          31
+        ],
+        [
+          17,
+          3
+        ],
+        [
+          17,
+          26
+        ],
+        [
+          17,
+          27
+        ],
+        [
+          17,
+          28
+        ],
+        [
+          18,
+          3
+        ],
+        [
+          18,
+          24
+        ],
+        [
+          18,
+          25
+        ],
+        [
+          20,
+          5
+        ],
+        [
+          20,
+          22
+        ],
+        [
+          20,
+          23
+        ],
+        [
+          21,
+          4
+        ],
+        [
+          21,
+          5
+        ],
+        [
+          21,
+          6
+        ],
+        [
+          21,
+          8
+        ],
+        [
+          21,
+          13
+        ],
+        [
+          21,
+          20
+        ],
+        [
+          22,
+          7
+        ],
+        [
+          22,
+          12
+        ],
+        [
+          22,
+          14
+        ],
+        [
+          22,
+          15
+        ],
+        [
+          22,
+          16
+        ],
+        [
+          22,
+          17
+        ],
+        [
+          22,
+          19
+        ],
+        [
+          22,
+          20
+        ],
+        [
+          23,
+          11
+        ],
+        [
+          23,
+          12
+        ],
+        [
+          23,
+          18
+        ]
+      ]
+    },
+    "retained_original_not_generated_HD": true,
+    "painted_Source_palette_domain": [
+      0,
+      255
+    ],
+    "functional_palette_effects_are_retained_Original": true,
+    "hybrid_allscale_and_genuine_context_independent_review": true,
+    "frame_bindings_sha256": "70b9ec9fc8d066dbcbe1f89467c8baeaf5c908394e6ba09d2c9464b8983761d2"
+  },
+  "shared_lineage": {
+    "path": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/SHARED-COHORT-LINEAGE.json",
+    "sha256": "af1964e8e5fb637efa548cae6942c61d54a01280218f5dfa7d10336a80319c6e"
+  },
+  "Root_fixed4_intrinsic_approved": true,
+  "context_changed_H5647_independent": {
+    "path": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/lineage/review/independent-context-H5647-changed-endpoint3/DIFFERENT-QUALIFIED-SHORELINE4-H5647-ENDPOINT3-ALL4-AND-ORDERED-DELTA.json",
+    "sha256": "2931cdd5c112ae650eb7d552992bd5c79681f920e943c7a2eb384a216d1db9c8"
+  },
+  "reviewer": "/root",
+  "coordinator_record_author": "/root/publication_review",
+  "Root_current_append_approval": {
+    "approved": true,
+    "authority_role": "project_root",
+    "actual_qualified_art_approval": {
+      "path": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/proofs/ROOT-SHORELINE4-APPROVED-INTRINSIC-AND-FINITE-CONTEXT.json",
+      "sha256": "b00ecd17e01ff374afa08afd6e01d7b267712f90f32d454867330b709d29ec29"
+    },
+    "historical_pending_coordinator": {
+      "path": "jobs/terrain-shoreline10514-Original-primary-retained-gray-SourceG2-20261019/proofs/coordinator-before-actual-Root-approval.json",
+      "sha256": "0e5ca25fefc2d13fa05b1c0d42b1dda862fddb2f431f85a34a1ee73fdda7a3f8"
+    },
+    "historical_pending_statements_superseded_only_by_actual_Root_qualification": true,
+    "notes": "Selected assets 10514. Root approves only these complete selected static definitions after personal complete Source/native1\u20134 boards and finite genuine context review, with different author ART reviews bound. Original geometry, retained functional/gray/fidelity cells and source-owned support earn no generated-HD detail credit. Material variation, coarse shapes, low-scale softness and inherited seams retain the exact per-cohort qualifications in the pinned Root notes. Literal older scene epochs remain historical; the separate actual SourceG2 H5654 plus39-overlay joint11 check is Root-native4 and independently all-scale approved (719b4c8b/5b9a82b2). No World/full-mission timing or universal seamlessness claim. Append only the named selected assets; no additional animation or held companion credit."
+  },
+  "qualification_limits": [
+    "SourceG2 literalH5636 genuine scenes plus changedH5647 three endpoints; Root fixed4 intrinsic note and final finite-context note remain literal. No new scene or allmissions claim.",
+    "Retained ordinary gray functional/structural cells are Original, no generated HD credit; inherited joins, native1 softness and renderer edge clipping limits preserved in the included proof files."
+  ]
+}

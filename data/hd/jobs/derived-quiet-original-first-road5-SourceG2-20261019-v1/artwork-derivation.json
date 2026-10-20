@@ -1,0 +1,85 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "Source-shape-component-material-RGB-band-and-finite-T-landmark-warp-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/inputs/new-road5-master.png",
+        "sha256": "e8924ebaff3f50f76ce2d2bfafd6d835685b65333546a8ee534613b93156d27c"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/generation/road-damage5/literal-provider-receipt.json",
+        "sha256": "6f7ae1eb6d3761e881309c468da26943879e3247b862f58b23174bd3bb5def0a"
+      },
+      "prompt": {
+        "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/generation/road-damage5/prompt.txt",
+        "sha256": "067395b4de361849ec0fe4ed9b5dadc1dbdb8d3183ca008ce8fe2195dabeae11"
+      }
+    },
+    {
+      "raw_png": {
+        "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/inputs/new-bridge4-master.png",
+        "sha256": "de756d0b0c46e6361e19143be77af5a3281c1b92933f60ba20f363343cdebf6b"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/generation/collapsed-bridge4/literal-provider-receipt.json",
+        "sha256": "e81085762aea31e121ecea33684e8ba1b16a8a33348623e35325aa05cfaa7129"
+      },
+      "prompt": {
+        "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/generation/collapsed-bridge4/prompt.txt",
+        "sha256": "69d0a594d4d70613ba1156ee54b52a59801667f2460d75c72be6c87307f0f8dc"
+      }
+    },
+    {
+      "raw_png": {
+        "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/ACTUAL-ONE-QUIET-WATER-PAVEMENT-RETURN-UNTOUCHED.png",
+        "sha256": "4fa10c1d0d738dcfbd6249fa03f0d79ca061fbedafe6e146439d0e39f1b62d23"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/generation/quiet-material-plate/literal-provider-receipt.json",
+        "sha256": "3d49643b216a0426e615924c80f7d98e7638d03600f98f8942031f40286e2327"
+      },
+      "prompt": {
+        "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/generation/quiet-material-plate/prompt.txt",
+        "sha256": "fe381488e83c507ac376225ecbf80978a5666f8de4c66a4ecf80c01f4b470a53"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/quiet9_source_components/terrain_component_cleanup.py",
+      "sha256": "ff286585834d42aff8fca0951a118aaa5c3b51294dc078b3b1fe8d04b37f5fbd"
+    },
+    {
+      "path": "tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/cleanup-recipe.json",
+    "sha256": "e7c5eda42987c36e13499a224c5a40da8dd843a3de179f78f9162056865513ca"
+  },
+  "execution_receipt": {
+    "path": "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/measurement/portable-cleanup-binding.json",
+    "sha256": "fcf6ee3a8ada8fdff6d1f2ae107e42416f11c3bfaa887d1e4810970dd8eb1a10"
+  },
+  "sources": {
+    "10502": "412a22ffdc6c4bc25c534e2a5b10878adeb2e938f526fceb2918bead09d537d5",
+    "10506": "a5ecb160c8edbc1502f0069b80d066f65877737eaffa948401ed3eb00224276b",
+    "10508": "83b0eb5df8794a63690a306962fc9f4c0fc2795634c257acf76c15bc83870ee7",
+    "10509": "ad820e692971cf846c7f150ffddb0b0a8966f1b6afa035d8a83ba1a325b90ea2",
+    "1050a": "7516dde8481dc40892327f551cd04812d69a7db79c28ebc1af451fc0e7a507fa"
+  },
+  "outputs": {
+    "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/derived/10502-derived.png": "c22dab3891374bed35989be491548b1492c94b570bdad50fc3ffa81ea8941492",
+    "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/derived/10506-derived.png": "54cc9866a9a8fc0f1d38d62ded895c6334dbc95346f8f255482bc012ec0cf563",
+    "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/derived/10508-derived.png": "de79a23765bc310d5b5a8c572c7e45202229e59d56dfe00373cdedfe9ae8fe3b",
+    "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/derived/10509-derived.png": "41f38e0d17383244aa7a96815040d1c6b924fa4d5686c958dae185bbb00ebbcc",
+    "jobs/derived-quiet-original-first-road5-SourceG2-20261019-v1/derived/1050a-derived.png": "af8535bb17513a4bafced3e85de65961a3cd41c76005d5bd9a6c70299dfd6dff"
+  },
+  "Original_functional_cells": 32,
+  "Original_functional_HD_credit": 0,
+  "actual_three_parent_calls_shared_across_two_jobs_not_six": true,
+  "truth": "Derived Original-owned geometry plus three genuine generated material masters. Water/pavement only0/3 from quiet master, exact existing1/2/4 donor fields preserved. Each final PNG is DERIVED, never an untouched imagegen return."
+}

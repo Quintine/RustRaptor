@@ -1,0 +1,45 @@
+{
+  "method": "industrial-Source-shape-genuine-fine-RGB-band-v1",
+  "palette": {
+    "path": "inputs/1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204-PALETTE_DAT",
+    "sha256": "1cf6adb926d1dee1888b3e3d33b51a7049b3e5eb5f90a3067ef71c8970547204"
+  },
+  "frames": [
+    {
+      "asset": "205fe",
+      "source": {
+        "path": "inputs/9dd58fe65d28f14abcad1e60e8e9a1b67ffca18ce2bde5de7f590e145e16bb0d-205fe.pic",
+        "sha256": "9dd58fe65d28f14abcad1e60e8e9a1b67ffca18ce2bde5de7f590e145e16bb0d"
+      },
+      "donor": {
+        "path": "inputs/4e13c035095d2ead5a115280389d6f8000f0441676f0b1b2e4fba2efaaaf7862-genuine-master.png",
+        "sha256": "4e13c035095d2ead5a115280389d6f8000f0441676f0b1b2e4fba2efaaaf7862",
+        "box": [
+          0,
+          0,
+          887,
+          887
+        ]
+      }
+    },
+    {
+      "asset": "205ff",
+      "source": {
+        "path": "inputs/66dc43a16fa27341616eeef8b200c402b34188680f9f432ba20ecf5041f56f4c-205ff.pic",
+        "sha256": "66dc43a16fa27341616eeef8b200c402b34188680f9f432ba20ecf5041f56f4c"
+      },
+      "donor": {
+        "path": "inputs/4e13c035095d2ead5a115280389d6f8000f0441676f0b1b2e4fba2efaaaf7862-genuine-master.png",
+        "sha256": "4e13c035095d2ead5a115280389d6f8000f0441676f0b1b2e4fba2efaaaf7862",
+        "box": [
+          887,
+          0,
+          887,
+          887
+        ]
+      }
+    }
+  ],
+  "lineage": "Own genuine Original-primary builtin returned master, untouched original preserved. Only restrained fine generated RGB band sigma3,clip16,strength0.5 is used, no coarse generated structure/palette. Complete own tile crop stretched once to512; no tiling or procedural noise.",
+  "functional_contract": "Exact SourceNx material owners and protected240..255 SourceRGBA retained. Source245..251 embers in2059c are explicitly retained, never generated HD credit. All Scale1..4 owner support union is declared before actual G2 QA."
+}

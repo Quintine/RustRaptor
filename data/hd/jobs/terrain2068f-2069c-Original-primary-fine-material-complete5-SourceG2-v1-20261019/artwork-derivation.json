@@ -1,0 +1,237 @@
+{
+  "format_version": 1,
+  "kind": "deterministic_cleanup",
+  "method": "terrain-five-Source-separated-materials-genuine-fine-RGB-band-v1",
+  "parents": [
+    {
+      "raw_png": {
+        "path": "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/inputs/genuine-master.png",
+        "sha256": "750c669a711524faceb9f17f335ea60f8c56da8b6a2c3db0818ce50f2bc8154e"
+      },
+      "imagegen_receipt": {
+        "path": "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/generation/ACTUAL-ONE-BUILTIN-SAFE-PRIMITIVES-AND-IMMEDIATE-LEASE-RELEASE.json",
+        "sha256": "e350c68f9701a921d03b4f0721415184b205974a9d1b321a23e3e6dca2a46446"
+      },
+      "prompt": {
+        "path": "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/generation/EXACT-ONE-ORIGINAL-PRIMARY-FIVE-PROMPT.txt",
+        "sha256": "ec596dfa9855420715208e7d7458c7c693fb6d6e0dc21f6e9c6e9a6d8479d3ca"
+      }
+    }
+  ],
+  "tools": [
+    {
+      "path": "tools/terrain_five_fine_cleanup.py",
+      "sha256": "a2ebca44516fc850482bd3ca312e778d3596cd47202869f41a14c57927ef5f59"
+    },
+    {
+      "path": "tools/hd_terrain_cleanup.py",
+      "sha256": "3284cf6f85ced107dfc364ea90e15aed341d478bea7e308024b5bc5218b03092"
+    }
+  ],
+  "recipe": {
+    "path": "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/cleanup-recipe.json",
+    "sha256": "bee843dcb35c5bd9d15d1f13a918e8ecf8a2df3a5e04bffb62d3e624734cd3ca"
+  },
+  "execution_receipt": {
+    "path": "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/execution-receipt.json",
+    "sha256": "d48f18ea057cbdbc074edaf80c1183994b9823c33bcfee17b4e4c5ebf1745307"
+  },
+  "sources": {
+    "2068f": "883289cef6e737b8edd9ef51800a666c6f9fa005ac4bc57cae1caa64187c127f",
+    "20690": "7ed202d8729c03004af33dc95fdb74bedcd174c829ad8028f79c0883935464e4",
+    "20698": "e85d9e4bd9966245796354d1339cf5a548f71564fdff4598fb26187e618d1ac6",
+    "20699": "7855cff3fa9e4616805ffa8b90bb4efd92ded5c2621ba768de86df09656d7691",
+    "2069c": "0ddf1975af9188206903e74e2394877d92501719e03589d97779a85ecb8b8537"
+  },
+  "outputs": {
+    "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/derived5/2068f-derived.png": "21fbfb99439977ff9e98bca30ffb00f27e5a8238a12084f8b7288a5ceec698bb",
+    "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/derived5/20690-derived.png": "253fec91eee43f2146f196d18f256722db6fc9c3dc8628fbd486d3cb2e370c83",
+    "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/derived5/20698-derived.png": "7b875ba1cacd27f405ff0caf46f8ff7c4b094f289a3cf0a3315542ef503910aa",
+    "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/derived5/20699-derived.png": "4a12a19801d4ec71f04beb88cbd73f29f98f0fbefb72de96ee68ab951fc39768",
+    "jobs/terrain2068f-2069c-Original-primary-fine-material-complete5-SourceG2-v1-20261019/derived5/2069c-derived.png": "65ab5059f1dae8321585408e7554d92b7d349405b6cb51aae7cdac79a9d7fe68"
+  },
+  "scope": "Literal one actual a2eb/bee843 execution. Same fixed own-crop sigma3/clip16/strength0.5 fine RGB band; Source geometry/material base and exact functional retention have zero new HD credit. No recipe replay, generation, QA or constructor during packaging.",
+  "retained_Original_cells_by_asset": {
+    "2068f": [
+      [
+        6,
+        31
+      ],
+      [
+        7,
+        12
+      ],
+      [
+        7,
+        30
+      ],
+      [
+        11,
+        22
+      ],
+      [
+        13,
+        22
+      ],
+      [
+        15,
+        10
+      ],
+      [
+        16,
+        9
+      ],
+      [
+        19,
+        22
+      ],
+      [
+        24,
+        13
+      ],
+      [
+        24,
+        30
+      ],
+      [
+        24,
+        31
+      ],
+      [
+        25,
+        12
+      ],
+      [
+        25,
+        30
+      ],
+      [
+        25,
+        31
+      ]
+    ],
+    "20690": [],
+    "20698": [],
+    "20699": [
+      [
+        4,
+        13
+      ],
+      [
+        11,
+        5
+      ],
+      [
+        12,
+        4
+      ],
+      [
+        12,
+        14
+      ],
+      [
+        13,
+        8
+      ],
+      [
+        13,
+        13
+      ],
+      [
+        16,
+        15
+      ],
+      [
+        17,
+        15
+      ],
+      [
+        17,
+        16
+      ],
+      [
+        17,
+        20
+      ],
+      [
+        18,
+        9
+      ],
+      [
+        21,
+        12
+      ],
+      [
+        23,
+        18
+      ],
+      [
+        24,
+        13
+      ],
+      [
+        25,
+        11
+      ],
+      [
+        26,
+        16
+      ]
+    ],
+    "2069c": [
+      [
+        3,
+        11
+      ],
+      [
+        9,
+        5
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        12,
+        18
+      ],
+      [
+        13,
+        8
+      ],
+      [
+        13,
+        9
+      ],
+      [
+        14,
+        2
+      ],
+      [
+        14,
+        8
+      ],
+      [
+        14,
+        9
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        21,
+        8
+      ],
+      [
+        25,
+        23
+      ]
+    ]
+  },
+  "unused_sixth_raw_panel": "Near-black RGB0..9, fully excluded from all five crops; not literal zero."
+}
