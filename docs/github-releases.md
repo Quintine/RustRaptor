@@ -84,3 +84,14 @@ Upload the versioned release manifest, checksum list and installers, check compl
 publish the draft only after all checks pass. Native Windows CI and local
 representative rendering/audio evidence retain their actual commit and scope;
 archive integrity checks do not imply a fresh full playthrough.
+
+## Hosted export for this preview
+
+The manually dispatched **Upload frozen preview to existing draft** workflow
+packages the immutable `7ecaa42b29ff0db5d2f7cdfe6da0a3221dfea555` game
+checkpoint on a GitHub runner. Its publishing controller is checked out
+separately from the later maintenance commit; the release tag stays fixed.
+The controller requires the existing empty preview draft, verifies every local
+and remote asset, and retains the frozen plan and receipts as an Actions
+artifact. It leaves the draft unpublished for final review. It cannot be reused
+for a different release without explicitly updating its fixed identity guards.
