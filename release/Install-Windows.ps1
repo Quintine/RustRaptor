@@ -98,6 +98,7 @@ try {
         }
     }
     if ($platformCount -ne 1 -or $data.Count -eq 0 -or $assets.Count -ne ($data.Count + 1)) { throw 'Incomplete release asset manifest.' }
+    Add-Type -AssemblyName System.IO.Compression
     Add-Type -AssemblyName System.IO.Compression.FileSystem
     foreach ($asset in $assets) {
         $name = $asset.name

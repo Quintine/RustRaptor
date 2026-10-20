@@ -2,6 +2,7 @@
 # network download, admin rights or long-path registry configuration is needed.
 param([string]$Installer = (Join-Path $PSScriptRoot 'Install-Windows.ps1'))
 $ErrorActionPreference = 'Stop'
+Add-Type -AssemblyName System.IO.Compression
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $temp = Join-Path ([IO.Path]::GetTempPath()) ('Raptor-installer-test-' + [guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Path $temp | Out-Null
