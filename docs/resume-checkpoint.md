@@ -1,3 +1,11 @@
+# Resumed — 20 October 2026
+
+Work resumed at the user’s request. The installed artwork remains **5,654 reviewed pictures / 3,741 sequences**, with **99 originals awaiting publication**. Three historical accepted QA receipts have been restored byte-for-byte, with their exact runtime-manifest entries; no artwork, engine binary or mod changed. See [the restoration receipt](hd-proof-repair-2026-10-20.json). The runtime now contains **14,497 data files / 8,907,233,712 bytes**.
+
+Agents have resumed the saved private batches. The next 39 pictures remain unpublished pending final visual review, reproducibility checks and combined terrain-context checks. The paused checkpoint below is retained as historical evidence and is superseded by this resumed status.
+
+# Earlier paused checkpoint — preserved below
+
 # Paused at user request — 19 October 2026
 
 All agents stopped; no background artwork, rendering or build process remains. The published game is at `126d28ba`: **5,654 reviewed pictures / 3,741 sequences**, with **58 of the requested 157 completed and 99 still awaiting publication**. Installed validation accepts all 5,654 HD pictures with zero rejects; 491 public synthetic tests and the native Windows workflow for this game commit passed.

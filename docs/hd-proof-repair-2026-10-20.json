@@ -1,0 +1,35 @@
+{
+  "status": "ACTUAL_EXACT3_HISTORICAL_QA_RESTORED",
+  "utc": "2026-10-20T07:58:03.950728+00:00",
+  "git_parent": "df15b85eafcefe94c2fe7bd606cb60ba351828c5",
+  "plan_sha256": "8ed16d1c1c0bace20077beb34105b434c825d2998b32fc39668988433e4ff16c",
+  "restored": [
+    {
+      "path": "data/hd/registered-class-review/batch-3592-final-successor-metadata/jobs/terrain-2058d-2059c/runtime-qa-exact-alias.json",
+      "sha256": "b0e10436b27cc70966db25422c3c0227f6333abdf57cddf22d6e9ec3f015d1c5",
+      "bytes": 57970,
+      "historical_provenance_record": 460
+    },
+    {
+      "path": "data/hd/registered-class-review/batch-3592-final-successor-metadata/jobs/terrain-205fd-2060c/runtime-qa-exact-alias.json",
+      "sha256": "ea977812a05b80f790a613ac7d55cc86615beca2a06c885fc7f885afe7a49d46",
+      "bytes": 72519,
+      "historical_provenance_record": 462
+    },
+    {
+      "path": "data/hd/registered-class-review/batch-3592-final-successor-metadata/jobs/terrain-2068d-2069c/runtime-qa-exact-alias.json",
+      "sha256": "cb83dfbf4903feddb3842151f007ae1658583d1380579abe96de4207d006db21",
+      "bytes": 57991,
+      "historical_provenance_record": 464
+    }
+  ],
+  "data_files": 14497,
+  "data_bytes": 8907233712,
+  "registered_frames_unchanged": 5654,
+  "complete_sequences_unchanged": 3741,
+  "remaining_unchanged": 99,
+  "existing_legacy_mirror_retained_without_writes": true,
+  "HD_headers_provenance_binaries_and_windows_manifest_unchanged": true,
+  "new_art_QA_registrar_or_Rust_builds": 0,
+  "runtime_manifest_sha256": "de17853df9263a2f0fcd173b1e03680f557d5b57d1aab8fa1280961e3aa12b3e"
+}
