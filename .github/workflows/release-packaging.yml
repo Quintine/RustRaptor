@@ -1,0 +1,54 @@
+name: Release packaging
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/release-packaging.yml'
+      - 'release/**'
+      - 'tools/export_release.py'
+      - 'tools/test_export_release.py'
+      - 'tools/assemble_runtime.py'
+  pull_request:
+    paths:
+      - '.github/workflows/release-packaging.yml'
+      - 'release/**'
+      - 'tools/export_release.py'
+      - 'tools/test_export_release.py'
+      - 'tools/assemble_runtime.py'
+
+permissions:
+  contents: read
+
+jobs:
+  linux-exporter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools
+            release
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify exporter and Linux installer using synthetic ZIPs
+        run: |
+          bash -n release/Install-Linux.sh
+          python -B -m unittest discover -s tools -p test_export_release.py -v
+
+  windows-installer:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - name: Allow long names during checkout
+        shell: powershell
+        run: git config --global core.longpaths true
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            release
+      - name: Verify native PowerShell 5.1 installer and long-path extraction
+        shell: powershell
+        run: .\release\Test-Install-Windows.ps1

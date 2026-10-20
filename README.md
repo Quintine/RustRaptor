@@ -18,7 +18,9 @@ the launcher falls back to Cargo when no packaged executable is present.
 `--data DIR` selects another catalog. Some optional comparison tests use retained source.
 On Windows, double-click `run.cmd`; it starts the included
 `bin/raptor-rust.exe` with its adjacent SDL2 DLL and the same data and mods.
-See [Windows builds and packaging](docs/windows-build.md).
+See [Windows builds and packaging](docs/windows-build.md). Downloadable Linux and Windows packages are
+published in [GitHub Releases](https://github.com/Quintine/RustRaptor/releases);
+see the [download and installation guide](docs/github-releases.md).
 
 Refresh the executable and copied original/approved-HD data with
 `python3 tools/assemble_runtime.py`. Add `--zip dist/RustRaptor-linux-x86_64.zip`
