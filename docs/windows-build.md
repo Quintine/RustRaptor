@@ -57,7 +57,18 @@ The [Windows workflow](../.github/workflows/windows.yml) runs simulation,
 modding and save tests on Windows, validates packaged assets and all local
 mods, captures SDL gameplay and publishes the zip as a workflow artifact.
 
-## Current runtime and validation
+## Current v1.0.0 runtime
+
+The included version 1.0.0 GNU executable has SHA-256
+`187a927767c7042c6c54f0307ac30c08504b1bd46c3b742e34617afa798d93f0`.
+It shares **5,743 approved HD frames**, **32,373 data files / 10,376,039,515 bytes**
+and **45 mods** with Linux. Ten original pictures retain original-art fallback.
+The release does not claim complete HD coverage. PE imports and SDL dependencies
+are unchanged from SourceG2; the runtime manifests contain the exact current hashes.
+Fresh native Windows execution for this rebuilt version is pending its CI run.
+Earlier CI and exported-folder observations below retain their actual snapshots.
+
+## Historical runtime and validation
 
 The included GNU executable uses the reviewed **2,935-frame HD snapshot**;
 the shared manifest binds **7,816 data files** and the package contains

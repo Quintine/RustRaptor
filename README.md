@@ -1,5 +1,7 @@
 # RustRaptor
 
+**v1.0.0 artwork note:** HD coverage is **5,743 of 5,753 original pictures**. Ten pictures retain their original graphics; HD coverage is not complete. All original game data and the 45 bundled mods remain included.
+
 The independent Linux and Windows Rust game and its complete local mod packages live here.
 SDL2 handles platform services; gameplay, asset decoding, rendering, audio,
 saving and mod scripting run in Rust.

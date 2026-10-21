@@ -34,7 +34,7 @@ try {
     $longMember = 'data/' + (('long-proof-component/' * 20)) + 'accepted.json'
     $data = New-FixtureArchive 'RustRaptor-data-01-of-01.zip' 'shared-data' $longMember
     $core = New-FixtureArchive 'RustRaptor-windows-x86_64.zip' 'windows' 'run.cmd'
-    $manifest = @{format_version=1; tag='v0.1.0-preview.20261020'; assets=@($data, $core)}
+    $manifest = @{format_version=1; tag='v1.0.0'; assets=@($data, $core)}
     $manifestPath = Join-Path $global:RaptorInstallerFixtureDownloads 'release-manifest.json'
     $manifest | ConvertTo-Json -Depth 12 | Set-Content -LiteralPath $manifestPath -Encoding UTF8
     $destination = Join-Path $temp 'portable folder'

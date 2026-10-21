@@ -4122,5 +4122,89 @@
     "new_World_intrinsicQA_imagegen_game_build_calls_during_assembly": 0,
     "native_Windows_scope": "Dated native5654 SUCCESS39229967668 for126d28ba; no native 5743 claim.",
     "scope": "Exact50 Terrain pictures:32 Source-guided derived, nine untouched genuine-atlas references, three references to a partly derived shared atlas and six lossless genuine-atlas crops.304fb alone is patched;304fa/304fc cell pixels are unchanged inside that derived file.211 retained Original cells and all Source construction get zero generated detail credit.2043f/20458 are unused catalogue-only, not runtime-placed. Literal original measurements and separate joint35 H5654+89 overlay remain distinct; the overlay is not a full5743 measured bank. Different peer checked all 560 saved native roles; Root all 35 native4. Static finite controls do not claim every caller, World, complete missions, audio or performance. Ten provider-refused originals remain unapproved."
+  },
+  "v1_0_0_distribution": {
+    "status": "v1_0_0_fresh_binaries_local_CLI_and_SDL_pass_native_Windows_and_export_pending",
+    "version": "1.0.0",
+    "approved_hd_frames": 5743,
+    "source_picture_targets": 5753,
+    "remaining_original_pictures": 10,
+    "complete_remaster": false,
+    "remaining_ids": [
+      "1035b",
+      "1035c",
+      "1035d",
+      "1035e",
+      "300a1",
+      "301ae",
+      "40374",
+      "404d2",
+      "4050b",
+      "40512"
+    ],
+    "engine_scope": "Same18Rustsourcefiles as SourceG2; Cargo package version only changed. No new artwork, simulation, mod or data changes. Earlier receipts retain their actual binaries and scope.",
+    "linux_binary_sha256": "14d85a8377078cf6abba44d72bc4eb8ef2760c6a3c810dd51e2d55d4ff91a5af",
+    "windows_binary_sha256": "187a927767c7042c6c54f0307ac30c08504b1bd46c3b742e34617afa798d93f0",
+    "data_files": 32373,
+    "data_bytes": 10376039515,
+    "data_manifest_map_unchanged": true,
+    "installed_cli": [
+      {
+        "args": [
+          "--verify-assets"
+        ],
+        "exit": 0,
+        "stdout": "Verified 6449 assets; 27 missions, 528 enemies, 16 weapons, 24 items\n",
+        "stderr": "",
+        "elapsed_seconds": 0.5691442220122553
+      },
+      {
+        "args": [
+          "--validate-hd"
+        ],
+        "exit": 0,
+        "stdout": "HD pack: 5743 registered, 5743 validated, 0 rejected supplied frames\n",
+        "stderr": "",
+        "elapsed_seconds": 160.12859854800627
+      },
+      {
+        "args": [
+          "--mods",
+          "/home/quintine/Projects/RaptorReplica/RustRaptor/mods",
+          "--profile-root",
+          "/home/quintine/Projects/RaptorReplica/RustRaptor/.reference/v1-release-prep-20261021/root-state/validation-profile",
+          "--validate-mods",
+          "aurora,ion_lance,iron_coast_boss,iron_coast_boss_2,iron_coast_boss_3,iron_coast_boss_4,iron_coast_boss_5,iron_coast_boss_6,iron_coast_campaign,iron_coast_depth_charge,iron_coast_mission_1,iron_coast_mission_2,iron_coast_mission_3,iron_coast_mission_4,iron_coast_mission_5,iron_coast_mission_6,iron_coast_music,iron_coast_railburst,iron_coast_scout,iron_coast_stage2_boss_1,iron_coast_stage2_boss_2,iron_coast_stage2_boss_3,iron_coast_stage2_boss_4,iron_coast_stage2_boss_5,iron_coast_stage2_boss_6,iron_coast_stage2_boss_7,iron_coast_stage2_boss_8,iron_coast_stage2_campaign,iron_coast_stage2_interceptor,iron_coast_stage2_mission_1,iron_coast_stage2_mission_2,iron_coast_stage2_mission_3,iron_coast_stage2_mission_4,iron_coast_stage2_mission_5,iron_coast_stage2_mission_6,iron_coast_stage2_mission_7,iron_coast_stage2_mission_8,iron_coast_stage2_music,iron_coast_stage2_siege,iron_coast_stage2_skimmer,iron_coast_turret,lightning_cannon,lightning_shield,pulse_cannon,seeker_swarm"
+        ],
+        "exit": 0,
+        "stdout": "Validated 45 mods; 1 override(s)\n",
+        "stderr": "",
+        "elapsed_seconds": 8.680746864993125
+      }
+    ],
+    "linux_SDL_smoke": {
+      "frames": 240,
+      "resolution": [
+        1920,
+        1080
+      ],
+      "HD_mode": true,
+      "mission": "base:sector_1_wave_1",
+      "audio": {
+        "frames": 132300,
+        "rate": 44100,
+        "channels": 2,
+        "nonzero_samples": 260239
+      },
+      "screenshot_sha256": "65a65351583a1f4602268ca67280e8f7e6f2e2904d5e09fd0db508a24da00ab0",
+      "audio_sha256": "fe037b25fc2f0267b3ed151ed20a1502070433765a1ae173855402010c3bdefe",
+      "scope": "240 render frames of base sector1wave1, software SDL/dummy audio capture; not hardware audio or complete mission playthrough"
+    },
+    "packaging_tests": {
+      "exporter": 22,
+      "publisher_guards": 10
+    },
+    "native_windows_execution": "pending new1.0.0 CI; prior7ec result is historical",
+    "distribution_note": "Ten pictures retain original graphics. v1.0.0 does not claim complete HD coverage."
   }
 }

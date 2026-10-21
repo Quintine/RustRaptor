@@ -97,5 +97,56 @@ class FrozenDraftUploadTests(unittest.TestCase):
                 upload.DraftExporter(package, state, root / 'single')
 
 
+class ConfigurableReleaseTargetTests(unittest.TestCase):
+    def test_stable_and_preview_guards_require_the_explicit_expected_state(self):
+        stable = upload.ReleaseTarget('c' * 40, 'v1.0.0', 12345, False)
+        release = {'id': 12345, 'tag_name': 'v1.0.0', 'target_commitish': 'c' * 40,
+                   'draft': True, 'prerelease': False}
+        upload.checked_release(release, stable)
+        with self.assertRaises(ValueError):
+            upload.checked_release(dict(release, prerelease=True), stable)
+        with self.assertRaises(ValueError):
+            upload.checked_release(release)  # Legacy preview defaults cannot match stable.
+        reference = {'ref': 'refs/tags/v1.0.0', 'object': {'type': 'commit', 'sha': 'c' * 40}}
+        upload.checked_tag(reference, target=stable)
+        with self.assertRaises(ValueError):
+            upload.checked_tag(dict(reference, object={'type': 'commit', 'sha': upload.COMMIT}), target=stable)
+
+    def test_invalid_exact_release_inputs_fail_before_any_directory_or_upload(self):
+        for values in (("main", 'v1.0.0', 123, False), ('A' * 40, 'v1.0.0', 123, False),
+                       ('c' * 40, '../v1', 123, False), ('c' * 40, 'v1/other', 123, False),
+                       ('c' * 40, 'v1.0.0', 0, False), ('c' * 40, 'v1.0.0', True, False),
+                       ('c' * 40, 'v1.0.0', 123, 'false')):
+            with self.subTest(values=values), self.assertRaises(ValueError):
+                upload.ReleaseTarget(*values)
+
+    def test_explicit_release_routes_api_and_upload_to_its_exact_id_and_tag(self):
+        target = upload.ReleaseTarget('c' * 40, 'v1.0.0', 12345, False)
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            package = root / 'frozen'
+            package.mkdir()
+            controller = upload.DraftExporter(package, root / 'state', root / 'single', target)
+            reference = {'ref': 'refs/tags/v1.0.0', 'object': {'type': 'commit', 'sha': 'c' * 40}}
+            release = {'id': 12345, 'tag_name': 'v1.0.0', 'target_commitish': 'c' * 40,
+                       'draft': True, 'prerelease': False, 'assets': []}
+            with patch.object(controller, 'api', side_effect=[reference, release]) as api:
+                self.assertEqual(controller.release(), release)
+                self.assertEqual(api.call_args_list[0].args[0], 'repos/Quintine/RustRaptor/git/ref/tags/v1.0.0')
+                self.assertEqual(api.call_args_list[1].args[0], 'repos/Quintine/RustRaptor/releases/12345')
+            archive = root / 'single/one.zip'
+            archive.write_bytes(b'fixture')
+            wrong = {'name': 'one.zip', 'size': archive.stat().st_size, 'state': 'uploaded', 'digest': 'sha256:' + '0' * 64}
+            with patch.object(controller, 'snapshot'), patch.object(controller, 'release', return_value=release), \
+                 patch.object(controller, 'log'), patch.object(upload.subprocess, 'run') as run:
+                run.return_value.returncode = 0
+                run.return_value.stdout = json.dumps(wrong)
+                run.return_value.stderr = ''
+                with self.assertRaises(ValueError):
+                    controller.upload(archive, 'one.zip', upload.digest(archive), archive.stat().st_size)
+                self.assertIn('/releases/12345/assets?name=one.zip', run.call_args.args[0][4])
+                self.assertTrue(archive.exists())
+
+
 if __name__ == '__main__':
     unittest.main()

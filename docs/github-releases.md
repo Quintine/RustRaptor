@@ -1,6 +1,8 @@
 # Downloadable releases
 
-Current release: [0.1.0 Preview — Linux and Windows](https://github.com/Quintine/RustRaptor/releases/tag/v0.1.0-preview.20261020).
+Current release: [v1.0.0 — Linux and Windows](https://github.com/Quintine/RustRaptor/releases/tag/v1.0.0).
+
+**Artwork note:** 5,743 of 5,753 original pictures have approved HD remasters. Ten retain original-art fallback; v1.0.0 does not claim complete HD coverage.
 
 The GitHub release provides playable Linux x86_64 and Windows x86_64 packages.
 Cargo, Python, the old engine and a Git checkout are unnecessary for play.
@@ -79,7 +81,7 @@ export copy before producing the next. Keep receipts. After all assets exist:
 ```sh
 python3 tools/export_release.py checksums --plan /tmp/release-plan.json \
   --receipts /path/to/receipts --output /tmp/SHA256SUMS \
-  --manifest-output /tmp/release-manifest.json --tag v0.1.0-preview.20261020
+  --manifest-output /tmp/release-manifest.json --tag v1.0.0
 ```
 
 Upload the versioned release manifest, checksum list and installers, check complete remote membership, and
@@ -87,13 +89,15 @@ publish the draft only after all checks pass. Native Windows CI and local
 representative rendering/audio evidence retain their actual commit and scope;
 archive integrity checks do not imply a fresh full playthrough.
 
-## Hosted export for this preview
+## Hosted export
 
-The manually dispatched **Upload frozen preview to existing draft** workflow
-packages the immutable `7ecaa42b29ff0db5d2f7cdfe6da0a3221dfea555` game
-checkpoint on a GitHub runner. Its publishing controller is checked out
-separately from the later maintenance commit; the release tag stays fixed.
-The controller requires the existing empty preview draft, verifies every local
-and remote asset, and retains the frozen plan and receipts as an Actions
-artifact. It leaves the draft unpublished for final review. It cannot be reused
-for a different release without explicitly updating its fixed identity guards.
+The manually dispatched **Upload frozen release to existing draft** workflow
+accepts the exact tested 40-character commit, existing version tag, empty draft
+release ID and expected prerelease flag. For v1.0.0 select `false` for prerelease.
+The publishing controller is checked out separately from the immutable game
+checkpoint. Every source and remote release identity is checked, all archives
+are verified, and the frozen plan and receipts are retained as an Actions
+artifact. The job leaves the draft unpublished for final review.
+
+The older preview workflow retains its fixed 20 October checkpoint and cannot
+modify its already-published release. Neither workflow publishes automatically.

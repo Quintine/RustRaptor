@@ -1,0 +1,112 @@
+name: Upload frozen release to existing draft
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: Exact tested 40-character game commit
+        required: true
+        type: string
+      tag:
+        description: Exact existing game tag
+        required: true
+        type: string
+      release_id:
+        description: Exact existing empty draft release ID
+        required: true
+        type: string
+      prerelease:
+        description: Expected prerelease flag on the existing draft
+        required: true
+        default: false
+        type: boolean
+
+permissions: {}
+
+concurrency:
+  group: frozen-draft-release-${{ inputs.release_id }}
+  cancel-in-progress: false
+
+jobs:
+  upload-draft:
+    if: github.repository == 'Quintine/RustRaptor'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    permissions:
+      contents: write
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      FROZEN_COMMIT: ${{ inputs.commit }}
+      RELEASE_TAG: ${{ inputs.tag }}
+      RELEASE_ID: ${{ inputs.release_id }}
+      EXPECT_PRERELEASE: ${{ inputs.prerelease }}
+    steps:
+      - name: Validate exact release inputs before any checkout
+        shell: bash
+        run: |
+          python3 - <<'PYTHON'
+          import os, re
+          assert re.fullmatch('[0-9a-f]{40}', os.environ['FROZEN_COMMIT']), 'Exact commit required'
+          assert re.fullmatch(r'v[0-9A-Za-z._-]+', os.environ['RELEASE_TAG']), 'Safe exact tag required'
+          assert re.fullmatch('[1-9][0-9]*', os.environ['RELEASE_ID']), 'Positive release ID required'
+          assert os.environ['EXPECT_PRERELEASE'] in ('true', 'false'), 'Boolean prerelease expectation required'
+          PYTHON
+      - name: Make room before any source checkout
+        shell: bash
+        run: |
+          set -euo pipefail
+          minimum=25000000000
+          available() { df --output=avail -B1 "$GITHUB_WORKSPACE" | tail -1 | tr -d ' '; }
+          for directory in /usr/local/lib/android /usr/share/dotnet /opt/ghc; do
+            if (( $(available) >= minimum )); then break; fi
+            sudo rm -rf -- "$directory"
+          done
+          (( $(available) >= minimum )) || { echo 'Need at least 25GB free before source checkout.' >&2; exit 1; }
+          df -h "$GITHUB_WORKSPACE"
+      - name: Fetch only the publishing controller from this maintenance commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          path: controller
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /tools/upload_draft_release.py
+            /tools/test_upload_draft_release.py
+          persist-credentials: false
+      - name: Fetch the immutable tested game checkpoint
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.commit }}
+          path: frozen
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test the existing exporter and publishing guards
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -B -m unittest discover -s frozen/tools -p test_export_release.py -v
+          python -B -m unittest discover -s controller/tools -p test_upload_draft_release.py -v
+      - name: Export and verify every asset on the existing draft
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          python -B controller/tools/upload_draft_release.py
+          --package "$GITHUB_WORKSPACE/frozen"
+          --state "$RUNNER_TEMP/RustRaptor-draft-export-state"
+          --temporary "$RUNNER_TEMP/RustRaptor-single-export"
+          --commit "$FROZEN_COMMIT"
+          --tag "$RELEASE_TAG"
+          --release-id "$RELEASE_ID"
+          --prerelease "$EXPECT_PRERELEASE"
+      - name: Retain frozen plan, local receipts, remote proofs and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: frozen-release-draft-export-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/RustRaptor-draft-export-state
+          if-no-files-found: warn
+          retention-days: 30

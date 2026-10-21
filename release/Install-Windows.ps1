@@ -1,6 +1,6 @@
 param([string]$Destination = (Get-Location).Path)
 $ErrorActionPreference = 'Stop'
-$tag = 'v0.1.0-preview.20261020'
+$tag = 'v1.0.0'
 $base = "https://github.com/Quintine/RustRaptor/releases/download/$tag"
 if (-not [Environment]::Is64BitOperatingSystem) { throw 'RustRaptor requires 64-bit Windows.' }
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12

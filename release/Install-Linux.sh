@@ -16,7 +16,7 @@ import tempfile
 import urllib.request
 import zipfile
 
-TAG = 'v0.1.0-preview.20261020'
+TAG = 'v1.0.0'
 BASE = 'https://github.com/Quintine/RustRaptor/releases/download/' + TAG
 
 
